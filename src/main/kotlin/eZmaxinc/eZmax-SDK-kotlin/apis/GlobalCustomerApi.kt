@@ -11,8 +11,8 @@
 */
 package eZmaxinc/eZmax-SDK-kotlin.apis
 
-import eZmaxinc/eZmax-SDK-kotlin.models.FranchisereferalincomeMinusCreateObjectMinusV1MinusRequest
-import eZmaxinc/eZmax-SDK-kotlin.models.FranchisereferalincomeMinusCreateObjectMinusV1MinusResponse
+import eZmaxinc/eZmax-SDK-kotlin.models.CommonMinusResponseMinusError
+import eZmaxinc/eZmax-SDK-kotlin.models.GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse
 
 import eZmaxinc/eZmax-SDK-kotlin.infrastructure.ApiClient
 import eZmaxinc/eZmax-SDK-kotlin.infrastructure.ClientException
@@ -26,7 +26,7 @@ import eZmaxinc/eZmax-SDK-kotlin.infrastructure.ResponseType
 import eZmaxinc/eZmax-SDK-kotlin.infrastructure.Success
 import eZmaxinc/eZmax-SDK-kotlin.infrastructure.toMultiValue
 
-class ObjectFranchisereferalincomeApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath) {
+class GlobalCustomerApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
@@ -35,25 +35,26 @@ class ObjectFranchisereferalincomeApi(basePath: kotlin.String = defaultBasePath)
     }
 
     /**
-    * Create a new Franchisereferalincome
-    * The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
-    * @param franchisereferalincomeMinusCreateObjectMinusV1MinusRequest  
-    * @return FranchisereferalincomeMinusCreateObjectMinusV1MinusResponse
+    * Get customer endpoint
+    * Retrieve the customer&#39;s specific server endpoint where to send requests. This will help locate the proper region (ie: sInfrastructureregionCode) and the proper environment (ie: sInfrastructureenvironmenttypeDescription) where the customer&#39;s data is stored.
+    * @param pksCustomerCode The customer code assigned to your account 
+    * @param sInfrastructureproductCode The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)
+    * @return GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun franchisereferalincomeCreateObjectV1(franchisereferalincomeMinusCreateObjectMinusV1MinusRequest: kotlin.collections.List<FranchisereferalincomeMinusCreateObjectMinusV1MinusRequest>) : FranchisereferalincomeMinusCreateObjectMinusV1MinusResponse {
-        val localVariableConfig = franchisereferalincomeCreateObjectV1RequestConfig(franchisereferalincomeMinusCreateObjectMinusV1MinusRequest = franchisereferalincomeMinusCreateObjectMinusV1MinusRequest)
+    fun globalCustomerGetEndpointV1(pksCustomerCode: kotlin.String, sInfrastructureproductCode: kotlin.String?) : GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse {
+        val localVariableConfig = globalCustomerGetEndpointV1RequestConfig(pksCustomerCode = pksCustomerCode, sInfrastructureproductCode = sInfrastructureproductCode)
 
-        val localVarResponse = request<FranchisereferalincomeMinusCreateObjectMinusV1MinusResponse>(
+        val localVarResponse = request<GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse>(
             localVariableConfig
         )
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as FranchisereferalincomeMinusCreateObjectMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -68,19 +69,25 @@ class ObjectFranchisereferalincomeApi(basePath: kotlin.String = defaultBasePath)
     }
 
     /**
-    * To obtain the request config of the operation franchisereferalincomeCreateObjectV1
+    * To obtain the request config of the operation globalCustomerGetEndpointV1
     *
-    * @param franchisereferalincomeMinusCreateObjectMinusV1MinusRequest  
+    * @param pksCustomerCode The customer code assigned to your account 
+    * @param sInfrastructureproductCode The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)
     * @return RequestConfig
     */
-    fun franchisereferalincomeCreateObjectV1RequestConfig(franchisereferalincomeMinusCreateObjectMinusV1MinusRequest: kotlin.collections.List<FranchisereferalincomeMinusCreateObjectMinusV1MinusRequest>) : RequestConfig {
-        val localVariableBody: kotlin.Any? = franchisereferalincomeMinusCreateObjectMinusV1MinusRequest
-        val localVariableQuery: MultiValueMap = mutableMapOf()
+    fun globalCustomerGetEndpointV1RequestConfig(pksCustomerCode: kotlin.String, sInfrastructureproductCode: kotlin.String?) : RequestConfig {
+        val localVariableBody: kotlin.Any? = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
+            .apply {
+                if (sInfrastructureproductCode != null) {
+                    put("sInfrastructureproductCode", listOf(sInfrastructureproductCode.toString()))
+                }
+            }
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         
         val localVariableConfig = RequestConfig(
-            method = RequestMethod.POST,
-            path = "/1/object/franchisereferalincome",
+            method = RequestMethod.GET,
+            path = "/1/customer/{pksCustomerCode}/endpoint".replace("{"+"pksCustomerCode"+"}", "$pksCustomerCode"),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

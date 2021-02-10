@@ -91,6 +91,8 @@ docs/FranchisereferalincomeCreateObjectV1Response.md
 docs/FranchisereferalincomeCreateObjectV1ResponseMPayload.md
 docs/FranchisereferalincomeRequest.md
 docs/FranchisereferalincomeRequestCompound.md
+docs/GlobalCustomerApi.md
+docs/GlobalCustomerGetEndpointV1Response.md
 docs/ModuleUserApi.md
 docs/MultilingualApikeyDescription.md
 docs/ObjectActivesessionApi.md
@@ -118,6 +120,7 @@ docs/WebhookUserUserCreated.md
 docs/WebhookUserUserCreatedAllOf.md
 docs/WebsiteRequest.md
 settings.gradle
+src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/apis/GlobalCustomerApi.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/apis/ModuleUserApi.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/apis/ObjectActivesessionApi.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/apis/ObjectApikeyApi.kt
@@ -233,6 +236,7 @@ src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/FranchisereferalincomeMinusCrea
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/FranchisereferalincomeMinusCreateObjectMinusV1MinusResponseMinusMPayload.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/FranchisereferalincomeMinusRequest.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/FranchisereferalincomeMinusRequestCompound.kt
+src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/MultilingualMinusApikeyDescription.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/PhoneMinusRequest.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/UserMinusCreateEzsignuserMinusV1MinusRequest.kt

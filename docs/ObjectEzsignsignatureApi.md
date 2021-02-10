@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**ezsignsignatureCreateObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureCreateObjectV1) | **POST** /1/object/ezsignsignature | Create a new Ezsignsignature
 [**ezsignsignatureDeleteObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureDeleteObjectV1) | **DELETE** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Delete an existing Ezsignsignature
 [**ezsignsignatureEditObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureEditObjectV1) | **PUT** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Modify an existing Ezsignsignature
-[**ezsignsignatureGetObjectGetChildrenV1**](ObjectEzsignsignatureApi.md#ezsignsignatureGetObjectGetChildrenV1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID}/getChildren | Retrieve an existing Ezsignsignature&#39;s children IDs
+[**ezsignsignatureGetChildrenV1**](ObjectEzsignsignatureApi.md#ezsignsignatureGetChildrenV1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID}/getChildren | Retrieve an existing Ezsignsignature&#39;s children IDs
 [**ezsignsignatureGetObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureGetObjectV1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
 
 
@@ -159,9 +159,9 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ezsignsignatureGetObjectGetChildrenV1"></a>
-# **ezsignsignatureGetObjectGetChildrenV1**
-> ezsignsignatureGetObjectGetChildrenV1(pkiEzsignsignatureID)
+<a name="ezsignsignatureGetChildrenV1"></a>
+# **ezsignsignatureGetChildrenV1**
+> ezsignsignatureGetChildrenV1(pkiEzsignsignatureID)
 
 Retrieve an existing Ezsignsignature&#39;s children IDs
 
@@ -174,12 +174,12 @@ Retrieve an existing Ezsignsignature&#39;s children IDs
 val apiInstance = ObjectEzsignsignatureApi()
 val pkiEzsignsignatureID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsignsignature
 try {
-    apiInstance.ezsignsignatureGetObjectGetChildrenV1(pkiEzsignsignatureID)
+    apiInstance.ezsignsignatureGetChildrenV1(pkiEzsignsignatureID)
 } catch (e: ClientException) {
-    println("4xx response calling ObjectEzsignsignatureApi#ezsignsignatureGetObjectGetChildrenV1")
+    println("4xx response calling ObjectEzsignsignatureApi#ezsignsignatureGetChildrenV1")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling ObjectEzsignsignatureApi#ezsignsignatureGetObjectGetChildrenV1")
+    println("5xx response calling ObjectEzsignsignatureApi#ezsignsignatureGetChildrenV1")
     e.printStackTrace()
 }
 ```

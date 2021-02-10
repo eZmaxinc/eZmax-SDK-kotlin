@@ -11,23 +11,17 @@
 */
 package eZmaxinc/eZmax-SDK-kotlin.models
 
-import eZmaxinc/eZmax-SDK-kotlin.models.EzsignfoldersignerassociationMinusRequest
-import eZmaxinc/eZmax-SDK-kotlin.models.EzsignsignerMinusRequestCompound
 
 import com.squareup.moshi.Json
 
 /**
- * An Ezsignfoldersignerassociation Object and children to create a complete structure
- * @param fkiEzsignfolderID A reference to a valid Ezsignfolder.  That value is returned after a successful Ezsignfolder Creation.
- * @param fkiUserID A reference to a valid User.  This is only used if the signatory will be a user from the system.
+ * Response for the /1/customer/{pksCustomerCode}/endpoint API Request
+ * @param sEndpointURL The endpoint's URL
  */
 
-data class EzsignfoldersignerassociationMinusRequestCompound (
-    /* A reference to a valid Ezsignfolder.  That value is returned after a successful Ezsignfolder Creation. */
-    @Json(name = "fkiEzsignfolderID")
-    val fkiEzsignfolderID: kotlin.Int,
-    /* A reference to a valid User.  This is only used if the signatory will be a user from the system. */
-    @Json(name = "fkiUserID")
-    val fkiUserID: kotlin.Int? = null
+data class GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse (
+    /* The endpoint's URL */
+    @Json(name = "sEndpointURL")
+    val sEndpointURL: kotlin.String
 )
 

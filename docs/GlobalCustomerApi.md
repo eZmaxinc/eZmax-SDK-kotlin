@@ -1,0 +1,61 @@
+# GlobalCustomerApi
+
+All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/rest*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**globalCustomerGetEndpointV1**](GlobalCustomerApi.md#globalCustomerGetEndpointV1) | **GET** /1/customer/{pksCustomerCode}/endpoint | Get customer endpoint
+
+
+<a name="globalCustomerGetEndpointV1"></a>
+# **globalCustomerGetEndpointV1**
+> GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse globalCustomerGetEndpointV1(pksCustomerCode, sInfrastructureproductCode)
+
+Get customer endpoint
+
+Retrieve the customer&#39;s specific server endpoint where to send requests. This will help locate the proper region (ie: sInfrastructureregionCode) and the proper environment (ie: sInfrastructureenvironmenttypeDescription) where the customer&#39;s data is stored.
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxinc/eZmax-SDK-kotlin.infrastructure.*
+//import eZmaxinc/eZmax-SDK-kotlin.models.*
+
+val apiInstance = GlobalCustomerApi()
+val pksCustomerCode : kotlin.String = pksCustomerCode_example // kotlin.String | The customer code assigned to your account
+val sInfrastructureproductCode : kotlin.String = sInfrastructureproductCode_example // kotlin.String | The infrastructure product Code  If undefined, \"appcluster01\" is assumed
+try {
+    val result : GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse = apiInstance.globalCustomerGetEndpointV1(pksCustomerCode, sInfrastructureproductCode)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling GlobalCustomerApi#globalCustomerGetEndpointV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling GlobalCustomerApi#globalCustomerGetEndpointV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pksCustomerCode** | **kotlin.String**| The customer code assigned to your account |
+ **sInfrastructureproductCode** | **kotlin.String**| The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed | [optional] [enum: appcluster01, ezsignuser]
+
+### Return type
+
+[**GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse**](GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+

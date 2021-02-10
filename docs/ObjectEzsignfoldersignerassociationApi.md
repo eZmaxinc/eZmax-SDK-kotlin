@@ -7,8 +7,8 @@ Method | HTTP request | Description
 [**ezsignfoldersignerassociationCreateObjectV1**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationCreateObjectV1) | **POST** /1/object/ezsignfoldersignerassociation | Create a new Ezsignfoldersignerassociation
 [**ezsignfoldersignerassociationDeleteObjectV1**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationDeleteObjectV1) | **DELETE** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} | Delete an existing Ezsignfoldersignerassociation
 [**ezsignfoldersignerassociationEditObjectV1**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationEditObjectV1) | **PUT** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} | Modify an existing Ezsignfoldersignerassociation
+[**ezsignfoldersignerassociationGetChildrenV1**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationGetChildrenV1) | **GET** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getChildren | Retrieve an existing Ezsignfoldersignerassociation&#39;s children IDs
 [**ezsignfoldersignerassociationGetInPersonLoginUrlV1**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationGetInPersonLoginUrlV1) | **GET** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getInPersonLoginUrl | Retrieve a Login Url to allow In-Person signing
-[**ezsignfoldersignerassociationGetObjectGetChildrenV1**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationGetObjectGetChildrenV1) | **GET** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getChildren | Retrieve an existing Ezsignfoldersignerassociation&#39;s children IDs
 [**ezsignfoldersignerassociationGetObjectV1**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationGetObjectV1) | **GET** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} | Retrieve an existing Ezsignfoldersignerassociation
 
 
@@ -160,6 +160,53 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a name="ezsignfoldersignerassociationGetChildrenV1"></a>
+# **ezsignfoldersignerassociationGetChildrenV1**
+> ezsignfoldersignerassociationGetChildrenV1(pkiEzsignfoldersignerassociationID)
+
+Retrieve an existing Ezsignfoldersignerassociation&#39;s children IDs
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxinc/eZmax-SDK-kotlin.infrastructure.*
+//import eZmaxinc/eZmax-SDK-kotlin.models.*
+
+val apiInstance = ObjectEzsignfoldersignerassociationApi()
+val pkiEzsignfoldersignerassociationID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsignfoldersignerassociation
+try {
+    apiInstance.ezsignfoldersignerassociationGetChildrenV1(pkiEzsignfoldersignerassociationID)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsignfoldersignerassociationApi#ezsignfoldersignerassociationGetChildrenV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsignfoldersignerassociationApi#ezsignfoldersignerassociationGetChildrenV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfoldersignerassociationID** | **kotlin.Int**| The unique ID of the Ezsignfoldersignerassociation |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
 <a name="ezsignfoldersignerassociationGetInPersonLoginUrlV1"></a>
 # **ezsignfoldersignerassociationGetInPersonLoginUrlV1**
 > EzsignfoldersignerassociationMinusGetInPersonLoginUrlMinusV1MinusResponse ezsignfoldersignerassociationGetInPersonLoginUrlV1(pkiEzsignfoldersignerassociationID)
@@ -197,53 +244,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignfoldersignerassociationMinusGetInPersonLoginUrlMinusV1MinusResponse**](EzsignfoldersignerassociationMinusGetInPersonLoginUrlMinusV1MinusResponse.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="ezsignfoldersignerassociationGetObjectGetChildrenV1"></a>
-# **ezsignfoldersignerassociationGetObjectGetChildrenV1**
-> ezsignfoldersignerassociationGetObjectGetChildrenV1(pkiEzsignfoldersignerassociationID)
-
-Retrieve an existing Ezsignfoldersignerassociation&#39;s children IDs
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxinc/eZmax-SDK-kotlin.infrastructure.*
-//import eZmaxinc/eZmax-SDK-kotlin.models.*
-
-val apiInstance = ObjectEzsignfoldersignerassociationApi()
-val pkiEzsignfoldersignerassociationID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsignfoldersignerassociation
-try {
-    apiInstance.ezsignfoldersignerassociationGetObjectGetChildrenV1(pkiEzsignfoldersignerassociationID)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectEzsignfoldersignerassociationApi#ezsignfoldersignerassociationGetObjectGetChildrenV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectEzsignfoldersignerassociationApi#ezsignfoldersignerassociationGetObjectGetChildrenV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsignfoldersignerassociationID** | **kotlin.Int**| The unique ID of the Ezsignfoldersignerassociation |
-
-### Return type
-
-null (empty response body)
 
 ### Authorization
 
