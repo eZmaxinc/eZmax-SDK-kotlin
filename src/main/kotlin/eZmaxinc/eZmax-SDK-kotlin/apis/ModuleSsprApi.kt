@@ -11,8 +11,7 @@
 */
 package eZmaxinc/eZmax-SDK-kotlin.apis
 
-import eZmaxinc/eZmax-SDK-kotlin.models.UserMinusCreateEzsignuserMinusV1MinusRequest
-import eZmaxinc/eZmax-SDK-kotlin.models.UserMinusCreateEzsignuserMinusV1MinusResponse
+import eZmaxinc/eZmax-SDK-kotlin.models.CommonMinusResponseMinusError
 
 import eZmaxinc/eZmax-SDK-kotlin.infrastructure.ApiClient
 import eZmaxinc/eZmax-SDK-kotlin.infrastructure.ClientException
@@ -26,7 +25,7 @@ import eZmaxinc/eZmax-SDK-kotlin.infrastructure.ResponseType
 import eZmaxinc/eZmax-SDK-kotlin.infrastructure.Success
 import eZmaxinc/eZmax-SDK-kotlin.infrastructure.toMultiValue
 
-class ModuleUserApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath) {
+class ModuleSsprApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
@@ -35,25 +34,23 @@ class ModuleUserApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
     }
 
     /**
-    * Create a new User of type Ezsignuser
-    * The endpoint allows to initiate the creation or a user of type Ezsignuser.  The user will be created only once the email verification process will be completed
-    * @param userMinusCreateEzsignuserMinusV1MinusRequest  
-    * @return UserMinusCreateEzsignuserMinusV1MinusResponse
+    * Remind of forgotten username(s)
+    * This endpoint returns an email with the username(s) matching the email address provided in case of forgotten username
+    * @return void
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
-    @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun userCreateEzsignuserV1(userMinusCreateEzsignuserMinusV1MinusRequest: kotlin.collections.List<UserMinusCreateEzsignuserMinusV1MinusRequest>) : UserMinusCreateEzsignuserMinusV1MinusResponse {
-        val localVariableConfig = userCreateEzsignuserV1RequestConfig(userMinusCreateEzsignuserMinusV1MinusRequest = userMinusCreateEzsignuserMinusV1MinusRequest)
+    fun ssprRemindUsernamesV1() : Unit {
+        val localVariableConfig = ssprRemindUsernamesV1RequestConfig()
 
-        val localVarResponse = request<UserMinusCreateEzsignuserMinusV1MinusResponse>(
+        val localVarResponse = request<Any?>(
             localVariableConfig
         )
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as UserMinusCreateEzsignuserMinusV1MinusResponse
+            ResponseType.Success -> Unit
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -68,19 +65,18 @@ class ModuleUserApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
     }
 
     /**
-    * To obtain the request config of the operation userCreateEzsignuserV1
+    * To obtain the request config of the operation ssprRemindUsernamesV1
     *
-    * @param userMinusCreateEzsignuserMinusV1MinusRequest  
     * @return RequestConfig
     */
-    fun userCreateEzsignuserV1RequestConfig(userMinusCreateEzsignuserMinusV1MinusRequest: kotlin.collections.List<UserMinusCreateEzsignuserMinusV1MinusRequest>) : RequestConfig {
-        val localVariableBody: kotlin.Any? = userMinusCreateEzsignuserMinusV1MinusRequest
+    fun ssprRemindUsernamesV1RequestConfig() : RequestConfig {
+        val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         
         val localVariableConfig = RequestConfig(
             method = RequestMethod.POST,
-            path = "/1/module/user/createezsignuser",
+            path = "/1/module/sspr/remindUsernames",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
