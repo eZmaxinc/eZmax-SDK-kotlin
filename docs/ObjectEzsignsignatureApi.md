@@ -6,7 +6,6 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ezsignsignatureCreateObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureCreateObjectV1) | **POST** /1/object/ezsignsignature | Create a new Ezsignsignature
 [**ezsignsignatureDeleteObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureDeleteObjectV1) | **DELETE** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Delete an existing Ezsignsignature
-[**ezsignsignatureEditObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureEditObjectV1) | **PUT** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Modify an existing Ezsignsignature
 [**ezsignsignatureGetChildrenV1**](ObjectEzsignsignatureApi.md#ezsignsignatureGetChildrenV1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID}/getChildren | Retrieve an existing Ezsignsignature&#39;s children IDs
 [**ezsignsignatureGetObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureGetObjectV1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
 
@@ -107,56 +106,6 @@ Configure Authorization:
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="ezsignsignatureEditObjectV1"></a>
-# **ezsignsignatureEditObjectV1**
-> EzsignsignatureMinusEditObjectMinusV1MinusResponse ezsignsignatureEditObjectV1(pkiEzsignsignatureID, ezsignsignatureMinusEditObjectMinusV1MinusRequest)
-
-Modify an existing Ezsignsignature
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxinc/eZmax-SDK-kotlin.infrastructure.*
-//import eZmaxinc/eZmax-SDK-kotlin.models.*
-
-val apiInstance = ObjectEzsignsignatureApi()
-val pkiEzsignsignatureID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsignsignature
-val ezsignsignatureMinusEditObjectMinusV1MinusRequest : EzsignsignatureMinusEditObjectMinusV1MinusRequest =  // EzsignsignatureMinusEditObjectMinusV1MinusRequest | 
-try {
-    val result : EzsignsignatureMinusEditObjectMinusV1MinusResponse = apiInstance.ezsignsignatureEditObjectV1(pkiEzsignsignatureID, ezsignsignatureMinusEditObjectMinusV1MinusRequest)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectEzsignsignatureApi#ezsignsignatureEditObjectV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectEzsignsignatureApi#ezsignsignatureEditObjectV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsignsignatureID** | **kotlin.Int**| The unique ID of the Ezsignsignature |
- **ezsignsignatureMinusEditObjectMinusV1MinusRequest** | [**EzsignsignatureMinusEditObjectMinusV1MinusRequest**](EzsignsignatureMinusEditObjectMinusV1MinusRequest.md)|  |
-
-### Return type
-
-[**EzsignsignatureMinusEditObjectMinusV1MinusResponse**](EzsignsignatureMinusEditObjectMinusV1MinusResponse.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="ezsignsignatureGetChildrenV1"></a>

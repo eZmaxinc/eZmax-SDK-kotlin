@@ -32,8 +32,6 @@ docs/EzsigndocumentCreateObjectV1Request.md
 docs/EzsigndocumentCreateObjectV1Response.md
 docs/EzsigndocumentCreateObjectV1ResponseMPayload.md
 docs/EzsigndocumentDeleteObjectV1Response.md
-docs/EzsigndocumentEditObjectV1Request.md
-docs/EzsigndocumentEditObjectV1Response.md
 docs/EzsigndocumentGetDownloadUrlV1Response.md
 docs/EzsigndocumentGetDownloadUrlV1ResponseMPayload.md
 docs/EzsigndocumentGetObjectV1Response.md
@@ -47,8 +45,6 @@ docs/EzsignfolderCreateObjectV1Request.md
 docs/EzsignfolderCreateObjectV1Response.md
 docs/EzsignfolderCreateObjectV1ResponseMPayload.md
 docs/EzsignfolderDeleteObjectV1Response.md
-docs/EzsignfolderEditObjectV1Request.md
-docs/EzsignfolderEditObjectV1Response.md
 docs/EzsignfolderGetObjectV1Response.md
 docs/EzsignfolderGetObjectV1ResponseMPayload.md
 docs/EzsignfolderRequest.md
@@ -62,8 +58,6 @@ docs/EzsignfoldersignerassociationCreateObjectV1Request.md
 docs/EzsignfoldersignerassociationCreateObjectV1Response.md
 docs/EzsignfoldersignerassociationCreateObjectV1ResponseMPayload.md
 docs/EzsignfoldersignerassociationDeleteObjectV1Response.md
-docs/EzsignfoldersignerassociationEditObjectV1Request.md
-docs/EzsignfoldersignerassociationEditObjectV1Response.md
 docs/EzsignfoldersignerassociationGetInPersonLoginUrlV1Response.md
 docs/EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload.md
 docs/EzsignfoldersignerassociationGetObjectV1Response.md
@@ -73,8 +67,6 @@ docs/EzsignsignatureCreateObjectV1Request.md
 docs/EzsignsignatureCreateObjectV1Response.md
 docs/EzsignsignatureCreateObjectV1ResponseMPayload.md
 docs/EzsignsignatureDeleteObjectV1Response.md
-docs/EzsignsignatureEditObjectV1Request.md
-docs/EzsignsignatureEditObjectV1Response.md
 docs/EzsignsignatureGetObjectV1Response.md
 docs/EzsignsignatureRequest.md
 docs/EzsignsignatureRequestCompound.md
@@ -107,6 +99,14 @@ docs/ObjectFranchiseofficeApi.md
 docs/ObjectFranchisereferalincomeApi.md
 docs/ObjectPeriodApi.md
 docs/PhoneRequest.md
+docs/UNUSEDEzsigndocumentEditObjectV1Request.md
+docs/UNUSEDEzsigndocumentEditObjectV1Response.md
+docs/UNUSEDEzsignfolderEditObjectV1Request.md
+docs/UNUSEDEzsignfolderEditObjectV1Response.md
+docs/UNUSEDEzsignfoldersignerassociationEditObjectV1Request.md
+docs/UNUSEDEzsignfoldersignerassociationEditObjectV1Response.md
+docs/UNUSEDEzsignsignatureEditObjectV1Request.md
+docs/UNUSEDEzsignsignatureEditObjectV1Response.md
 docs/UserCreateEzsignuserV1Request.md
 docs/UserCreateEzsignuserV1Response.md
 docs/UserCreateEzsignuserV1ResponseMPayload.md
@@ -179,8 +179,6 @@ src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/EzsigndocumentMinusCreateObject
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/EzsigndocumentMinusCreateObjectMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/EzsigndocumentMinusCreateObjectMinusV1MinusResponseMinusMPayload.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/EzsigndocumentMinusDeleteObjectMinusV1MinusResponse.kt
-src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/EzsigndocumentMinusEditObjectMinusV1MinusRequest.kt
-src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/EzsigndocumentMinusEditObjectMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/EzsigndocumentMinusGetDownloadUrlMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/EzsigndocumentMinusGetDownloadUrlMinusV1MinusResponseMinusMPayload.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/EzsigndocumentMinusGetObjectMinusV1MinusResponse.kt
@@ -194,8 +192,6 @@ src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/EzsignfolderMinusCreateObjectMi
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/EzsignfolderMinusCreateObjectMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/EzsignfolderMinusCreateObjectMinusV1MinusResponseMinusMPayload.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/EzsignfolderMinusDeleteObjectMinusV1MinusResponse.kt
-src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/EzsignfolderMinusEditObjectMinusV1MinusRequest.kt
-src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/EzsignfolderMinusEditObjectMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/EzsignfolderMinusGetObjectMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/EzsignfolderMinusGetObjectMinusV1MinusResponseMinusMPayload.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/EzsignfolderMinusRequest.kt
@@ -209,8 +205,6 @@ src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/EzsignfoldersignerassociationMi
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/EzsignfoldersignerassociationMinusCreateObjectMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/EzsignfoldersignerassociationMinusCreateObjectMinusV1MinusResponseMinusMPayload.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/EzsignfoldersignerassociationMinusDeleteObjectMinusV1MinusResponse.kt
-src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/EzsignfoldersignerassociationMinusEditObjectMinusV1MinusRequest.kt
-src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/EzsignfoldersignerassociationMinusEditObjectMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/EzsignfoldersignerassociationMinusGetInPersonLoginUrlMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/EzsignfoldersignerassociationMinusGetInPersonLoginUrlMinusV1MinusResponseMinusMPayload.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/EzsignfoldersignerassociationMinusGetObjectMinusV1MinusResponse.kt
@@ -220,8 +214,6 @@ src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/EzsignsignatureMinusCreateObjec
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/EzsignsignatureMinusCreateObjectMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/EzsignsignatureMinusCreateObjectMinusV1MinusResponseMinusMPayload.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/EzsignsignatureMinusDeleteObjectMinusV1MinusResponse.kt
-src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/EzsignsignatureMinusEditObjectMinusV1MinusRequest.kt
-src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/EzsignsignatureMinusEditObjectMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/EzsignsignatureMinusGetObjectMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/EzsignsignatureMinusRequest.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/EzsignsignatureMinusRequestCompound.kt
@@ -241,6 +233,14 @@ src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/FranchisereferalincomeMinusRequ
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/MultilingualMinusApikeyDescription.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/PhoneMinusRequest.kt
+src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/UNUSEDMinusEzsigndocumentMinusEditObjectMinusV1MinusRequest.kt
+src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/UNUSEDMinusEzsigndocumentMinusEditObjectMinusV1MinusResponse.kt
+src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/UNUSEDMinusEzsignfolderMinusEditObjectMinusV1MinusRequest.kt
+src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/UNUSEDMinusEzsignfolderMinusEditObjectMinusV1MinusResponse.kt
+src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/UNUSEDMinusEzsignfoldersignerassociationMinusEditObjectMinusV1MinusRequest.kt
+src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/UNUSEDMinusEzsignfoldersignerassociationMinusEditObjectMinusV1MinusResponse.kt
+src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/UNUSEDMinusEzsignsignatureMinusEditObjectMinusV1MinusRequest.kt
+src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/UNUSEDMinusEzsignsignatureMinusEditObjectMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/UserMinusCreateEzsignuserMinusV1MinusRequest.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/UserMinusCreateEzsignuserMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/UserMinusCreateEzsignuserMinusV1MinusResponseMinusMPayload.kt

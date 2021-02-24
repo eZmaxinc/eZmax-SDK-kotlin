@@ -6,7 +6,6 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ezsignfolderCreateObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderCreateObjectV1) | **POST** /1/object/ezsignfolder | Create a new Ezsignfolder
 [**ezsignfolderDeleteObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderDeleteObjectV1) | **DELETE** /1/object/ezsignfolder/{pkiEzsignfolderID} | Delete an existing Ezsignfolder
-[**ezsignfolderEditObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderEditObjectV1) | **PUT** /1/object/ezsignfolder/{pkiEzsignfolderID} | Modify an existing Ezsignfolder
 [**ezsignfolderGetChildrenV1**](ObjectEzsignfolderApi.md#ezsignfolderGetChildrenV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getChildren | Retrieve an existing Ezsignfolder&#39;s children IDs
 [**ezsignfolderGetObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderGetObjectV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID} | Retrieve an existing Ezsignfolder
 [**ezsignfolderSendV1**](ObjectEzsignfolderApi.md#ezsignfolderSendV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/send | Send the Ezsignfolder to the signatories for signature
@@ -108,56 +107,6 @@ Configure Authorization:
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="ezsignfolderEditObjectV1"></a>
-# **ezsignfolderEditObjectV1**
-> EzsignfolderMinusEditObjectMinusV1MinusResponse ezsignfolderEditObjectV1(pkiEzsignfolderID, ezsignfolderMinusEditObjectMinusV1MinusRequest)
-
-Modify an existing Ezsignfolder
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxinc/eZmax-SDK-kotlin.infrastructure.*
-//import eZmaxinc/eZmax-SDK-kotlin.models.*
-
-val apiInstance = ObjectEzsignfolderApi()
-val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsignfolder
-val ezsignfolderMinusEditObjectMinusV1MinusRequest : EzsignfolderMinusEditObjectMinusV1MinusRequest =  // EzsignfolderMinusEditObjectMinusV1MinusRequest | 
-try {
-    val result : EzsignfolderMinusEditObjectMinusV1MinusResponse = apiInstance.ezsignfolderEditObjectV1(pkiEzsignfolderID, ezsignfolderMinusEditObjectMinusV1MinusRequest)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectEzsignfolderApi#ezsignfolderEditObjectV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectEzsignfolderApi#ezsignfolderEditObjectV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsignfolderID** | **kotlin.Int**| The unique ID of the Ezsignfolder |
- **ezsignfolderMinusEditObjectMinusV1MinusRequest** | [**EzsignfolderMinusEditObjectMinusV1MinusRequest**](EzsignfolderMinusEditObjectMinusV1MinusRequest.md)|  |
-
-### Return type
-
-[**EzsignfolderMinusEditObjectMinusV1MinusResponse**](EzsignfolderMinusEditObjectMinusV1MinusResponse.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="ezsignfolderGetChildrenV1"></a>

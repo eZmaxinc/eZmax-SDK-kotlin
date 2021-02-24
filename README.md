@@ -43,25 +43,21 @@ Class | Method | HTTP request | Description
 *ObjectEzsigndocumentApi* | [**ezsigndocumentApplyEzsigntemplateV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentapplyezsigntemplatev1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate | Apply an Ezsign Template to the Ezsigndocument.
 *ObjectEzsigndocumentApi* | [**ezsigndocumentCreateObjectV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentcreateobjectv1) | **POST** /1/object/ezsigndocument | Create a new Ezsigndocument
 *ObjectEzsigndocumentApi* | [**ezsigndocumentDeleteObjectV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentdeleteobjectv1) | **DELETE** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Delete an existing Ezsigndocument
-*ObjectEzsigndocumentApi* | [**ezsigndocumentEditObjectV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumenteditobjectv1) | **PUT** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Modify an existing Ezsigndocument
 *ObjectEzsigndocumentApi* | [**ezsigndocumentGetChildrenV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentgetchildrenv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getChildren | Retrieve an existing Ezsigndocument's children IDs
 *ObjectEzsigndocumentApi* | [**ezsigndocumentGetDownloadUrlV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentgetdownloadurlv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getDownloadUrl/{eDocumentType} | Retrieve a URL to download documents.
 *ObjectEzsigndocumentApi* | [**ezsigndocumentGetObjectV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentgetobjectv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Retrieve an existing Ezsigndocument
 *ObjectEzsignfolderApi* | [**ezsignfolderCreateObjectV1**](docs/ObjectEzsignfolderApi.md#ezsignfoldercreateobjectv1) | **POST** /1/object/ezsignfolder | Create a new Ezsignfolder
 *ObjectEzsignfolderApi* | [**ezsignfolderDeleteObjectV1**](docs/ObjectEzsignfolderApi.md#ezsignfolderdeleteobjectv1) | **DELETE** /1/object/ezsignfolder/{pkiEzsignfolderID} | Delete an existing Ezsignfolder
-*ObjectEzsignfolderApi* | [**ezsignfolderEditObjectV1**](docs/ObjectEzsignfolderApi.md#ezsignfoldereditobjectv1) | **PUT** /1/object/ezsignfolder/{pkiEzsignfolderID} | Modify an existing Ezsignfolder
 *ObjectEzsignfolderApi* | [**ezsignfolderGetChildrenV1**](docs/ObjectEzsignfolderApi.md#ezsignfoldergetchildrenv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getChildren | Retrieve an existing Ezsignfolder's children IDs
 *ObjectEzsignfolderApi* | [**ezsignfolderGetObjectV1**](docs/ObjectEzsignfolderApi.md#ezsignfoldergetobjectv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID} | Retrieve an existing Ezsignfolder
 *ObjectEzsignfolderApi* | [**ezsignfolderSendV1**](docs/ObjectEzsignfolderApi.md#ezsignfoldersendv1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/send | Send the Ezsignfolder to the signatories for signature
 *ObjectEzsignfoldersignerassociationApi* | [**ezsignfoldersignerassociationCreateObjectV1**](docs/ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationcreateobjectv1) | **POST** /1/object/ezsignfoldersignerassociation | Create a new Ezsignfoldersignerassociation
 *ObjectEzsignfoldersignerassociationApi* | [**ezsignfoldersignerassociationDeleteObjectV1**](docs/ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationdeleteobjectv1) | **DELETE** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} | Delete an existing Ezsignfoldersignerassociation
-*ObjectEzsignfoldersignerassociationApi* | [**ezsignfoldersignerassociationEditObjectV1**](docs/ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationeditobjectv1) | **PUT** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} | Modify an existing Ezsignfoldersignerassociation
 *ObjectEzsignfoldersignerassociationApi* | [**ezsignfoldersignerassociationGetChildrenV1**](docs/ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationgetchildrenv1) | **GET** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getChildren | Retrieve an existing Ezsignfoldersignerassociation's children IDs
 *ObjectEzsignfoldersignerassociationApi* | [**ezsignfoldersignerassociationGetInPersonLoginUrlV1**](docs/ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationgetinpersonloginurlv1) | **GET** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getInPersonLoginUrl | Retrieve a Login Url to allow In-Person signing
 *ObjectEzsignfoldersignerassociationApi* | [**ezsignfoldersignerassociationGetObjectV1**](docs/ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationgetobjectv1) | **GET** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} | Retrieve an existing Ezsignfoldersignerassociation
 *ObjectEzsignsignatureApi* | [**ezsignsignatureCreateObjectV1**](docs/ObjectEzsignsignatureApi.md#ezsignsignaturecreateobjectv1) | **POST** /1/object/ezsignsignature | Create a new Ezsignsignature
 *ObjectEzsignsignatureApi* | [**ezsignsignatureDeleteObjectV1**](docs/ObjectEzsignsignatureApi.md#ezsignsignaturedeleteobjectv1) | **DELETE** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Delete an existing Ezsignsignature
-*ObjectEzsignsignatureApi* | [**ezsignsignatureEditObjectV1**](docs/ObjectEzsignsignatureApi.md#ezsignsignatureeditobjectv1) | **PUT** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Modify an existing Ezsignsignature
 *ObjectEzsignsignatureApi* | [**ezsignsignatureGetChildrenV1**](docs/ObjectEzsignsignatureApi.md#ezsignsignaturegetchildrenv1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID}/getChildren | Retrieve an existing Ezsignsignature's children IDs
 *ObjectEzsignsignatureApi* | [**ezsignsignatureGetObjectV1**](docs/ObjectEzsignsignatureApi.md#ezsignsignaturegetobjectv1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
 *ObjectFranchisebrokerApi* | [**franchisebrokerGetAutocompleteV1**](docs/ObjectFranchisebrokerApi.md#franchisebrokergetautocompletev1) | **GET** /1/object/franchisebroker/getAutocomplete/{sSelector} | Retrieve Franchisebrokers and IDs
@@ -104,8 +100,6 @@ Class | Method | HTTP request | Description
  - [eZmaxinc/eZmax-SDK-kotlin.models.EzsigndocumentMinusCreateObjectMinusV1MinusResponse](docs/EzsigndocumentMinusCreateObjectMinusV1MinusResponse.md)
  - [eZmaxinc/eZmax-SDK-kotlin.models.EzsigndocumentMinusCreateObjectMinusV1MinusResponseMinusMPayload](docs/EzsigndocumentMinusCreateObjectMinusV1MinusResponseMinusMPayload.md)
  - [eZmaxinc/eZmax-SDK-kotlin.models.EzsigndocumentMinusDeleteObjectMinusV1MinusResponse](docs/EzsigndocumentMinusDeleteObjectMinusV1MinusResponse.md)
- - [eZmaxinc/eZmax-SDK-kotlin.models.EzsigndocumentMinusEditObjectMinusV1MinusRequest](docs/EzsigndocumentMinusEditObjectMinusV1MinusRequest.md)
- - [eZmaxinc/eZmax-SDK-kotlin.models.EzsigndocumentMinusEditObjectMinusV1MinusResponse](docs/EzsigndocumentMinusEditObjectMinusV1MinusResponse.md)
  - [eZmaxinc/eZmax-SDK-kotlin.models.EzsigndocumentMinusGetDownloadUrlMinusV1MinusResponse](docs/EzsigndocumentMinusGetDownloadUrlMinusV1MinusResponse.md)
  - [eZmaxinc/eZmax-SDK-kotlin.models.EzsigndocumentMinusGetDownloadUrlMinusV1MinusResponseMinusMPayload](docs/EzsigndocumentMinusGetDownloadUrlMinusV1MinusResponseMinusMPayload.md)
  - [eZmaxinc/eZmax-SDK-kotlin.models.EzsigndocumentMinusGetObjectMinusV1MinusResponse](docs/EzsigndocumentMinusGetObjectMinusV1MinusResponse.md)
@@ -119,8 +113,6 @@ Class | Method | HTTP request | Description
  - [eZmaxinc/eZmax-SDK-kotlin.models.EzsignfolderMinusCreateObjectMinusV1MinusResponse](docs/EzsignfolderMinusCreateObjectMinusV1MinusResponse.md)
  - [eZmaxinc/eZmax-SDK-kotlin.models.EzsignfolderMinusCreateObjectMinusV1MinusResponseMinusMPayload](docs/EzsignfolderMinusCreateObjectMinusV1MinusResponseMinusMPayload.md)
  - [eZmaxinc/eZmax-SDK-kotlin.models.EzsignfolderMinusDeleteObjectMinusV1MinusResponse](docs/EzsignfolderMinusDeleteObjectMinusV1MinusResponse.md)
- - [eZmaxinc/eZmax-SDK-kotlin.models.EzsignfolderMinusEditObjectMinusV1MinusRequest](docs/EzsignfolderMinusEditObjectMinusV1MinusRequest.md)
- - [eZmaxinc/eZmax-SDK-kotlin.models.EzsignfolderMinusEditObjectMinusV1MinusResponse](docs/EzsignfolderMinusEditObjectMinusV1MinusResponse.md)
  - [eZmaxinc/eZmax-SDK-kotlin.models.EzsignfolderMinusGetObjectMinusV1MinusResponse](docs/EzsignfolderMinusGetObjectMinusV1MinusResponse.md)
  - [eZmaxinc/eZmax-SDK-kotlin.models.EzsignfolderMinusGetObjectMinusV1MinusResponseMinusMPayload](docs/EzsignfolderMinusGetObjectMinusV1MinusResponseMinusMPayload.md)
  - [eZmaxinc/eZmax-SDK-kotlin.models.EzsignfolderMinusRequest](docs/EzsignfolderMinusRequest.md)
@@ -134,8 +126,6 @@ Class | Method | HTTP request | Description
  - [eZmaxinc/eZmax-SDK-kotlin.models.EzsignfoldersignerassociationMinusCreateObjectMinusV1MinusResponse](docs/EzsignfoldersignerassociationMinusCreateObjectMinusV1MinusResponse.md)
  - [eZmaxinc/eZmax-SDK-kotlin.models.EzsignfoldersignerassociationMinusCreateObjectMinusV1MinusResponseMinusMPayload](docs/EzsignfoldersignerassociationMinusCreateObjectMinusV1MinusResponseMinusMPayload.md)
  - [eZmaxinc/eZmax-SDK-kotlin.models.EzsignfoldersignerassociationMinusDeleteObjectMinusV1MinusResponse](docs/EzsignfoldersignerassociationMinusDeleteObjectMinusV1MinusResponse.md)
- - [eZmaxinc/eZmax-SDK-kotlin.models.EzsignfoldersignerassociationMinusEditObjectMinusV1MinusRequest](docs/EzsignfoldersignerassociationMinusEditObjectMinusV1MinusRequest.md)
- - [eZmaxinc/eZmax-SDK-kotlin.models.EzsignfoldersignerassociationMinusEditObjectMinusV1MinusResponse](docs/EzsignfoldersignerassociationMinusEditObjectMinusV1MinusResponse.md)
  - [eZmaxinc/eZmax-SDK-kotlin.models.EzsignfoldersignerassociationMinusGetInPersonLoginUrlMinusV1MinusResponse](docs/EzsignfoldersignerassociationMinusGetInPersonLoginUrlMinusV1MinusResponse.md)
  - [eZmaxinc/eZmax-SDK-kotlin.models.EzsignfoldersignerassociationMinusGetInPersonLoginUrlMinusV1MinusResponseMinusMPayload](docs/EzsignfoldersignerassociationMinusGetInPersonLoginUrlMinusV1MinusResponseMinusMPayload.md)
  - [eZmaxinc/eZmax-SDK-kotlin.models.EzsignfoldersignerassociationMinusGetObjectMinusV1MinusResponse](docs/EzsignfoldersignerassociationMinusGetObjectMinusV1MinusResponse.md)
@@ -145,8 +135,6 @@ Class | Method | HTTP request | Description
  - [eZmaxinc/eZmax-SDK-kotlin.models.EzsignsignatureMinusCreateObjectMinusV1MinusResponse](docs/EzsignsignatureMinusCreateObjectMinusV1MinusResponse.md)
  - [eZmaxinc/eZmax-SDK-kotlin.models.EzsignsignatureMinusCreateObjectMinusV1MinusResponseMinusMPayload](docs/EzsignsignatureMinusCreateObjectMinusV1MinusResponseMinusMPayload.md)
  - [eZmaxinc/eZmax-SDK-kotlin.models.EzsignsignatureMinusDeleteObjectMinusV1MinusResponse](docs/EzsignsignatureMinusDeleteObjectMinusV1MinusResponse.md)
- - [eZmaxinc/eZmax-SDK-kotlin.models.EzsignsignatureMinusEditObjectMinusV1MinusRequest](docs/EzsignsignatureMinusEditObjectMinusV1MinusRequest.md)
- - [eZmaxinc/eZmax-SDK-kotlin.models.EzsignsignatureMinusEditObjectMinusV1MinusResponse](docs/EzsignsignatureMinusEditObjectMinusV1MinusResponse.md)
  - [eZmaxinc/eZmax-SDK-kotlin.models.EzsignsignatureMinusGetObjectMinusV1MinusResponse](docs/EzsignsignatureMinusGetObjectMinusV1MinusResponse.md)
  - [eZmaxinc/eZmax-SDK-kotlin.models.EzsignsignatureMinusRequest](docs/EzsignsignatureMinusRequest.md)
  - [eZmaxinc/eZmax-SDK-kotlin.models.EzsignsignatureMinusRequestCompound](docs/EzsignsignatureMinusRequestCompound.md)
@@ -166,6 +154,14 @@ Class | Method | HTTP request | Description
  - [eZmaxinc/eZmax-SDK-kotlin.models.GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse](docs/GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse.md)
  - [eZmaxinc/eZmax-SDK-kotlin.models.MultilingualMinusApikeyDescription](docs/MultilingualMinusApikeyDescription.md)
  - [eZmaxinc/eZmax-SDK-kotlin.models.PhoneMinusRequest](docs/PhoneMinusRequest.md)
+ - [eZmaxinc/eZmax-SDK-kotlin.models.UNUSEDMinusEzsigndocumentMinusEditObjectMinusV1MinusRequest](docs/UNUSEDMinusEzsigndocumentMinusEditObjectMinusV1MinusRequest.md)
+ - [eZmaxinc/eZmax-SDK-kotlin.models.UNUSEDMinusEzsigndocumentMinusEditObjectMinusV1MinusResponse](docs/UNUSEDMinusEzsigndocumentMinusEditObjectMinusV1MinusResponse.md)
+ - [eZmaxinc/eZmax-SDK-kotlin.models.UNUSEDMinusEzsignfolderMinusEditObjectMinusV1MinusRequest](docs/UNUSEDMinusEzsignfolderMinusEditObjectMinusV1MinusRequest.md)
+ - [eZmaxinc/eZmax-SDK-kotlin.models.UNUSEDMinusEzsignfolderMinusEditObjectMinusV1MinusResponse](docs/UNUSEDMinusEzsignfolderMinusEditObjectMinusV1MinusResponse.md)
+ - [eZmaxinc/eZmax-SDK-kotlin.models.UNUSEDMinusEzsignfoldersignerassociationMinusEditObjectMinusV1MinusRequest](docs/UNUSEDMinusEzsignfoldersignerassociationMinusEditObjectMinusV1MinusRequest.md)
+ - [eZmaxinc/eZmax-SDK-kotlin.models.UNUSEDMinusEzsignfoldersignerassociationMinusEditObjectMinusV1MinusResponse](docs/UNUSEDMinusEzsignfoldersignerassociationMinusEditObjectMinusV1MinusResponse.md)
+ - [eZmaxinc/eZmax-SDK-kotlin.models.UNUSEDMinusEzsignsignatureMinusEditObjectMinusV1MinusRequest](docs/UNUSEDMinusEzsignsignatureMinusEditObjectMinusV1MinusRequest.md)
+ - [eZmaxinc/eZmax-SDK-kotlin.models.UNUSEDMinusEzsignsignatureMinusEditObjectMinusV1MinusResponse](docs/UNUSEDMinusEzsignsignatureMinusEditObjectMinusV1MinusResponse.md)
  - [eZmaxinc/eZmax-SDK-kotlin.models.UserMinusCreateEzsignuserMinusV1MinusRequest](docs/UserMinusCreateEzsignuserMinusV1MinusRequest.md)
  - [eZmaxinc/eZmax-SDK-kotlin.models.UserMinusCreateEzsignuserMinusV1MinusResponse](docs/UserMinusCreateEzsignuserMinusV1MinusResponse.md)
  - [eZmaxinc/eZmax-SDK-kotlin.models.UserMinusCreateEzsignuserMinusV1MinusResponseMinusMPayload](docs/UserMinusCreateEzsignuserMinusV1MinusResponseMinusMPayload.md)

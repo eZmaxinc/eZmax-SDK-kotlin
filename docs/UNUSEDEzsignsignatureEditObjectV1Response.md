@@ -1,5 +1,5 @@
 
-# EzsignfolderMinusEditObjectMinusV1MinusResponse
+# UNUSEDMinusEzsignsignatureMinusEditObjectMinusV1MinusResponse
 
 ## Properties
 Name | Type | Description | Notes

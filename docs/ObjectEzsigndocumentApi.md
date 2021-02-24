@@ -7,7 +7,6 @@ Method | HTTP request | Description
 [**ezsigndocumentApplyEzsigntemplateV1**](ObjectEzsigndocumentApi.md#ezsigndocumentApplyEzsigntemplateV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate | Apply an Ezsign Template to the Ezsigndocument.
 [**ezsigndocumentCreateObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentCreateObjectV1) | **POST** /1/object/ezsigndocument | Create a new Ezsigndocument
 [**ezsigndocumentDeleteObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentDeleteObjectV1) | **DELETE** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Delete an existing Ezsigndocument
-[**ezsigndocumentEditObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentEditObjectV1) | **PUT** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Modify an existing Ezsigndocument
 [**ezsigndocumentGetChildrenV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetChildrenV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getChildren | Retrieve an existing Ezsigndocument&#39;s children IDs
 [**ezsigndocumentGetDownloadUrlV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetDownloadUrlV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getDownloadUrl/{eDocumentType} | Retrieve a URL to download documents.
 [**ezsigndocumentGetObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetObjectV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Retrieve an existing Ezsigndocument
@@ -161,56 +160,6 @@ Configure Authorization:
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="ezsigndocumentEditObjectV1"></a>
-# **ezsigndocumentEditObjectV1**
-> EzsigndocumentMinusEditObjectMinusV1MinusResponse ezsigndocumentEditObjectV1(pkiEzsigndocumentID, ezsigndocumentMinusEditObjectMinusV1MinusRequest)
-
-Modify an existing Ezsigndocument
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxinc/eZmax-SDK-kotlin.infrastructure.*
-//import eZmaxinc/eZmax-SDK-kotlin.models.*
-
-val apiInstance = ObjectEzsigndocumentApi()
-val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsigndocument
-val ezsigndocumentMinusEditObjectMinusV1MinusRequest : EzsigndocumentMinusEditObjectMinusV1MinusRequest =  // EzsigndocumentMinusEditObjectMinusV1MinusRequest | 
-try {
-    val result : EzsigndocumentMinusEditObjectMinusV1MinusResponse = apiInstance.ezsigndocumentEditObjectV1(pkiEzsigndocumentID, ezsigndocumentMinusEditObjectMinusV1MinusRequest)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectEzsigndocumentApi#ezsigndocumentEditObjectV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectEzsigndocumentApi#ezsigndocumentEditObjectV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsigndocumentID** | **kotlin.Int**| The unique ID of the Ezsigndocument |
- **ezsigndocumentMinusEditObjectMinusV1MinusRequest** | [**EzsigndocumentMinusEditObjectMinusV1MinusRequest**](EzsigndocumentMinusEditObjectMinusV1MinusRequest.md)|  |
-
-### Return type
-
-[**EzsigndocumentMinusEditObjectMinusV1MinusResponse**](EzsigndocumentMinusEditObjectMinusV1MinusResponse.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="ezsigndocumentGetChildrenV1"></a>
