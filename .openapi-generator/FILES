@@ -78,6 +78,7 @@ docs/FieldEEzsignfolderSendreminderfrequency.md
 docs/FieldEEzsignfolderStep.md
 docs/FieldEPhoneType.md
 docs/FieldEUserType.md
+docs/FieldEUserTypeSSPR.md
 docs/FranchisereferalincomeCreateObjectV1Request.md
 docs/FranchisereferalincomeCreateObjectV1Response.md
 docs/FranchisereferalincomeCreateObjectV1ResponseMPayload.md
@@ -99,6 +100,11 @@ docs/ObjectFranchiseofficeApi.md
 docs/ObjectFranchisereferalincomeApi.md
 docs/ObjectPeriodApi.md
 docs/PhoneRequest.md
+docs/SsprResetPasswordRequestV1Request.md
+docs/SsprResetPasswordV1Request.md
+docs/SsprSendUsernamesV1Request.md
+docs/SsprUnlockAccountRequestV1Request.md
+docs/SsprUnlockAccountV1Request.md
 docs/UNUSEDEzsigndocumentEditObjectV1Request.md
 docs/UNUSEDEzsigndocumentEditObjectV1Response.md
 docs/UNUSEDEzsignfolderEditObjectV1Request.md
@@ -225,6 +231,7 @@ src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/FieldMinusEEzsignfolderSendremi
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/FieldMinusEEzsignfolderStep.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/FieldMinusEPhoneType.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/FieldMinusEUserType.kt
+src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/FieldMinusEUserTypeSSPR.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/FranchisereferalincomeMinusCreateObjectMinusV1MinusRequest.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/FranchisereferalincomeMinusCreateObjectMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/FranchisereferalincomeMinusCreateObjectMinusV1MinusResponseMinusMPayload.kt
@@ -233,6 +240,11 @@ src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/FranchisereferalincomeMinusRequ
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/MultilingualMinusApikeyDescription.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/PhoneMinusRequest.kt
+src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/SsprMinusResetPasswordMinusV1MinusRequest.kt
+src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/SsprMinusResetPasswordRequestMinusV1MinusRequest.kt
+src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/SsprMinusSendUsernamesMinusV1MinusRequest.kt
+src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/SsprMinusUnlockAccountMinusV1MinusRequest.kt
+src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/SsprMinusUnlockAccountRequestMinusV1MinusRequest.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/UNUSEDMinusEzsigndocumentMinusEditObjectMinusV1MinusRequest.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/UNUSEDMinusEzsigndocumentMinusEditObjectMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/UNUSEDMinusEzsignfolderMinusEditObjectMinusV1MinusRequest.kt

@@ -36,7 +36,11 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *GlobalCustomerApi* | [**globalCustomerGetEndpointV1**](docs/GlobalCustomerApi.md#globalcustomergetendpointv1) | **GET** /1/customer/{pksCustomerCode}/endpoint | Get customer endpoint
-*ModuleSsprApi* | [**ssprRemindUsernamesV1**](docs/ModuleSsprApi.md#ssprremindusernamesv1) | **POST** /1/module/sspr/remindUsernames | Remind of forgotten username(s)
+*ModuleSsprApi* | [**ssprResetPasswordRequestV1**](docs/ModuleSsprApi.md#ssprresetpasswordrequestv1) | **POST** /1/module/sspr/resetPasswordRequest/ | Reset Password Request
+*ModuleSsprApi* | [**ssprResetPasswordV1**](docs/ModuleSsprApi.md#ssprresetpasswordv1) | **POST** /1/module/sspr/resetPassword | Reset Password
+*ModuleSsprApi* | [**ssprSendUsernamesV1**](docs/ModuleSsprApi.md#ssprsendusernamesv1) | **POST** /1/module/sspr/sendUsernames | Send username(s)
+*ModuleSsprApi* | [**ssprUnlockAccountRequestV1**](docs/ModuleSsprApi.md#ssprunlockaccountrequestv1) | **POST** /1/module/sspr/unlockAccountRequest | Unlock Account Request
+*ModuleSsprApi* | [**ssprUnlockAccountV1**](docs/ModuleSsprApi.md#ssprunlockaccountv1) | **POST** /1/module/sspr/unlockAccount | Unlock Account
 *ModuleUserApi* | [**userCreateEzsignuserV1**](docs/ModuleUserApi.md#usercreateezsignuserv1) | **POST** /1/module/user/createezsignuser | Create a new User of type Ezsignuser
 *ObjectActivesessionApi* | [**activesessionGetCurrentV1**](docs/ObjectActivesessionApi.md#activesessiongetcurrentv1) | **GET** /1/object/activesession/getCurrent | Get Current Activesession
 *ObjectApikeyApi* | [**apikeyCreateObjectV1**](docs/ObjectApikeyApi.md#apikeycreateobjectv1) | **POST** /1/object/apikey | Create a new Apikey
@@ -146,6 +150,7 @@ Class | Method | HTTP request | Description
  - [eZmaxinc/eZmax-SDK-kotlin.models.FieldMinusEEzsignfolderStep](docs/FieldMinusEEzsignfolderStep.md)
  - [eZmaxinc/eZmax-SDK-kotlin.models.FieldMinusEPhoneType](docs/FieldMinusEPhoneType.md)
  - [eZmaxinc/eZmax-SDK-kotlin.models.FieldMinusEUserType](docs/FieldMinusEUserType.md)
+ - [eZmaxinc/eZmax-SDK-kotlin.models.FieldMinusEUserTypeSSPR](docs/FieldMinusEUserTypeSSPR.md)
  - [eZmaxinc/eZmax-SDK-kotlin.models.FranchisereferalincomeMinusCreateObjectMinusV1MinusRequest](docs/FranchisereferalincomeMinusCreateObjectMinusV1MinusRequest.md)
  - [eZmaxinc/eZmax-SDK-kotlin.models.FranchisereferalincomeMinusCreateObjectMinusV1MinusResponse](docs/FranchisereferalincomeMinusCreateObjectMinusV1MinusResponse.md)
  - [eZmaxinc/eZmax-SDK-kotlin.models.FranchisereferalincomeMinusCreateObjectMinusV1MinusResponseMinusMPayload](docs/FranchisereferalincomeMinusCreateObjectMinusV1MinusResponseMinusMPayload.md)
@@ -154,6 +159,11 @@ Class | Method | HTTP request | Description
  - [eZmaxinc/eZmax-SDK-kotlin.models.GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse](docs/GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse.md)
  - [eZmaxinc/eZmax-SDK-kotlin.models.MultilingualMinusApikeyDescription](docs/MultilingualMinusApikeyDescription.md)
  - [eZmaxinc/eZmax-SDK-kotlin.models.PhoneMinusRequest](docs/PhoneMinusRequest.md)
+ - [eZmaxinc/eZmax-SDK-kotlin.models.SsprMinusResetPasswordMinusV1MinusRequest](docs/SsprMinusResetPasswordMinusV1MinusRequest.md)
+ - [eZmaxinc/eZmax-SDK-kotlin.models.SsprMinusResetPasswordRequestMinusV1MinusRequest](docs/SsprMinusResetPasswordRequestMinusV1MinusRequest.md)
+ - [eZmaxinc/eZmax-SDK-kotlin.models.SsprMinusSendUsernamesMinusV1MinusRequest](docs/SsprMinusSendUsernamesMinusV1MinusRequest.md)
+ - [eZmaxinc/eZmax-SDK-kotlin.models.SsprMinusUnlockAccountMinusV1MinusRequest](docs/SsprMinusUnlockAccountMinusV1MinusRequest.md)
+ - [eZmaxinc/eZmax-SDK-kotlin.models.SsprMinusUnlockAccountRequestMinusV1MinusRequest](docs/SsprMinusUnlockAccountRequestMinusV1MinusRequest.md)
  - [eZmaxinc/eZmax-SDK-kotlin.models.UNUSEDMinusEzsigndocumentMinusEditObjectMinusV1MinusRequest](docs/UNUSEDMinusEzsigndocumentMinusEditObjectMinusV1MinusRequest.md)
  - [eZmaxinc/eZmax-SDK-kotlin.models.UNUSEDMinusEzsigndocumentMinusEditObjectMinusV1MinusResponse](docs/UNUSEDMinusEzsigndocumentMinusEditObjectMinusV1MinusResponse.md)
  - [eZmaxinc/eZmax-SDK-kotlin.models.UNUSEDMinusEzsignfolderMinusEditObjectMinusV1MinusRequest](docs/UNUSEDMinusEzsignfolderMinusEditObjectMinusV1MinusRequest.md)
