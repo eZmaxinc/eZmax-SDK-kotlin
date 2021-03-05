@@ -105,6 +105,7 @@ docs/SsprResetPasswordV1Request.md
 docs/SsprSendUsernamesV1Request.md
 docs/SsprUnlockAccountRequestV1Request.md
 docs/SsprUnlockAccountV1Request.md
+docs/SsprValidateTokenV1Request.md
 docs/UNUSEDEzsigndocumentEditObjectV1Request.md
 docs/UNUSEDEzsigndocumentEditObjectV1Response.md
 docs/UNUSEDEzsignfolderEditObjectV1Request.md
@@ -245,6 +246,7 @@ src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/SsprMinusResetPasswordRequestMi
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/SsprMinusSendUsernamesMinusV1MinusRequest.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/SsprMinusUnlockAccountMinusV1MinusRequest.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/SsprMinusUnlockAccountRequestMinusV1MinusRequest.kt
+src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/SsprMinusValidateTokenMinusV1MinusRequest.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/UNUSEDMinusEzsigndocumentMinusEditObjectMinusV1MinusRequest.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/UNUSEDMinusEzsigndocumentMinusEditObjectMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxinc/eZmax-SDK-kotlin/models/UNUSEDMinusEzsignfolderMinusEditObjectMinusV1MinusRequest.kt

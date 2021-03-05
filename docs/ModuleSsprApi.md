@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**ssprSendUsernamesV1**](ModuleSsprApi.md#ssprSendUsernamesV1) | **POST** /1/module/sspr/sendUsernames | Send username(s)
 [**ssprUnlockAccountRequestV1**](ModuleSsprApi.md#ssprUnlockAccountRequestV1) | **POST** /1/module/sspr/unlockAccountRequest | Unlock Account Request
 [**ssprUnlockAccountV1**](ModuleSsprApi.md#ssprUnlockAccountV1) | **POST** /1/module/sspr/unlockAccount | Unlock Account
+[**ssprValidateTokenV1**](ModuleSsprApi.md#ssprValidateTokenV1) | **POST** /1/module/sspr/validateToken | Validate Token
 
 
 <a name="ssprResetPasswordRequestV1"></a>
@@ -239,6 +240,55 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ssprMinusUnlockAccountMinusV1MinusRequest** | [**SsprMinusUnlockAccountMinusV1MinusRequest**](SsprMinusUnlockAccountMinusV1MinusRequest.md)|  |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="ssprValidateTokenV1"></a>
+# **ssprValidateTokenV1**
+> ssprValidateTokenV1(ssprMinusValidateTokenMinusV1MinusRequest)
+
+Validate Token
+
+This endpoint validates if a Token is valid and not expired. If the token has less than an hour to its life, the TTL is reset to 1 hour.  sEmailAddress must be set if eUserTypeSSPR &#x3D; EzsignUser  sUserLoginname must be set if eUserTypeSSPR &#x3D; Native
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxinc/eZmax-SDK-kotlin.infrastructure.*
+//import eZmaxinc/eZmax-SDK-kotlin.models.*
+
+val apiInstance = ModuleSsprApi()
+val ssprMinusValidateTokenMinusV1MinusRequest : SsprMinusValidateTokenMinusV1MinusRequest =  // SsprMinusValidateTokenMinusV1MinusRequest | 
+try {
+    apiInstance.ssprValidateTokenV1(ssprMinusValidateTokenMinusV1MinusRequest)
+} catch (e: ClientException) {
+    println("4xx response calling ModuleSsprApi#ssprValidateTokenV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ModuleSsprApi#ssprValidateTokenV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ssprMinusValidateTokenMinusV1MinusRequest** | [**SsprMinusValidateTokenMinusV1MinusRequest**](SsprMinusValidateTokenMinusV1MinusRequest.md)|  |
 
 ### Return type
 

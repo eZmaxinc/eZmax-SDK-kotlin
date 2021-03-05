@@ -1,5 +1,5 @@
 
-# SsprMinusResetPasswordMinusV1MinusRequest
+# SsprMinusValidateTokenMinusV1MinusRequest
 
 ## Properties
 Name | Type | Description | Notes
@@ -8,7 +8,6 @@ Name | Type | Description | Notes
 **fkiLanguageID** | **kotlin.Int** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| | 
 **eUserTypeSSPR** | [**FieldMinusEUserTypeSSPR**](FieldMinusEUserTypeSSPR.md) |  | 
 **binUserSSPRtoken** | **kotlin.String** | Hex Encoded Secret SSPR token | 
-**sPassword** | **kotlin.String** | A Password.  Must meet complexity requirements | 
 **sEmailAddress** | **kotlin.String** | The email address. |  [optional]
 **sUserLoginname** | **kotlin.String** | The Login name of the User. |  [optional]
 

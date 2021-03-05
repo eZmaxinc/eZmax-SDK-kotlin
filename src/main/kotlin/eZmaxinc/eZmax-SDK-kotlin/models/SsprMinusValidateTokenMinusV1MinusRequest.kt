@@ -16,7 +16,7 @@ import eZmaxinc/eZmax-SDK-kotlin.models.FieldMinusEUserTypeSSPR
 import com.squareup.moshi.Json
 
 /**
- * Request for the /1/module/sspr/unlockAccount API Request
+ * Request for the /1/module/sspr/validateToken API Request
  * @param pksCustomerCode The customer code assigned to your account
  * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
  * @param eUserTypeSSPR 
@@ -25,7 +25,7 @@ import com.squareup.moshi.Json
  * @param sUserLoginname The Login name of the User.
  */
 
-data class SsprMinusUnlockAccountMinusV1MinusRequest (
+data class SsprMinusValidateTokenMinusV1MinusRequest (
     /* The customer code assigned to your account */
     @Json(name = "pksCustomerCode")
     val pksCustomerCode: kotlin.String,
