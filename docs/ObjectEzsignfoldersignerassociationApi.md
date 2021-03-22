@@ -22,8 +22,8 @@ The endpoint allows to create one or many elements at once.  The array can conta
 ### Example
 ```kotlin
 // Import classes:
-//import eZmaxinc/eZmax-SDK-kotlin.infrastructure.*
-//import eZmaxinc/eZmax-SDK-kotlin.models.*
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsignfoldersignerassociationApi()
 val ezsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest : kotlin.collections.List<EzsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest> =  // kotlin.collections.List<EzsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest> | 
@@ -70,8 +70,8 @@ Delete an existing Ezsignfoldersignerassociation
 ### Example
 ```kotlin
 // Import classes:
-//import eZmaxinc/eZmax-SDK-kotlin.infrastructure.*
-//import eZmaxinc/eZmax-SDK-kotlin.models.*
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsignfoldersignerassociationApi()
 val pkiEzsignfoldersignerassociationID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsignfoldersignerassociation
@@ -118,8 +118,8 @@ Retrieve an existing Ezsignfoldersignerassociation&#39;s children IDs
 ### Example
 ```kotlin
 // Import classes:
-//import eZmaxinc/eZmax-SDK-kotlin.infrastructure.*
-//import eZmaxinc/eZmax-SDK-kotlin.models.*
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsignfoldersignerassociationApi()
 val pkiEzsignfoldersignerassociationID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsignfoldersignerassociation
@@ -167,8 +167,8 @@ This endpoint returns a Login Url that can be used in a browser or embedded in a
 ### Example
 ```kotlin
 // Import classes:
-//import eZmaxinc/eZmax-SDK-kotlin.infrastructure.*
-//import eZmaxinc/eZmax-SDK-kotlin.models.*
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsignfoldersignerassociationApi()
 val pkiEzsignfoldersignerassociationID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsignfoldersignerassociation
@@ -215,8 +215,8 @@ Retrieve an existing Ezsignfoldersignerassociation
 ### Example
 ```kotlin
 // Import classes:
-//import eZmaxinc/eZmax-SDK-kotlin.infrastructure.*
-//import eZmaxinc/eZmax-SDK-kotlin.models.*
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsignfoldersignerassociationApi()
 val pkiEzsignfoldersignerassociationID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsignfoldersignerassociation

@@ -18,8 +18,8 @@ Get the list of Franchiseoffices to be used in a dropdown or autocomplete contro
 ### Example
 ```kotlin
 // Import classes:
-//import eZmaxinc/eZmax-SDK-kotlin.infrastructure.*
-//import eZmaxinc/eZmax-SDK-kotlin.models.*
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
 
 val apiInstance = ObjectFranchiseofficeApi()
 val sSelector : kotlin.String = sSelector_example // kotlin.String | The type of Franchiseoffices to return

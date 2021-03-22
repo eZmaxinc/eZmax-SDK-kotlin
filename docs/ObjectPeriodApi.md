@@ -18,8 +18,8 @@ Get the list of Periods to be used in a dropdown or autocomplete control.
 ### Example
 ```kotlin
 // Import classes:
-//import eZmaxinc/eZmax-SDK-kotlin.infrastructure.*
-//import eZmaxinc/eZmax-SDK-kotlin.models.*
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
 
 val apiInstance = ObjectPeriodApi()
 val sSelector : kotlin.String = sSelector_example // kotlin.String | The types of Periods to return

@@ -18,8 +18,8 @@ The endpoint allows to initiate the creation or a user of type Ezsignuser.  The 
 ### Example
 ```kotlin
 // Import classes:
-//import eZmaxinc/eZmax-SDK-kotlin.infrastructure.*
-//import eZmaxinc/eZmax-SDK-kotlin.models.*
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
 
 val apiInstance = ModuleUserApi()
 val userMinusCreateEzsignuserMinusV1MinusRequest : kotlin.collections.List<UserMinusCreateEzsignuserMinusV1MinusRequest> =  // kotlin.collections.List<UserMinusCreateEzsignuserMinusV1MinusRequest> | 

@@ -18,8 +18,8 @@ Retrieve the details about the current activesession
 ### Example
 ```kotlin
 // Import classes:
-//import eZmaxinc/eZmax-SDK-kotlin.infrastructure.*
-//import eZmaxinc/eZmax-SDK-kotlin.models.*
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
 
 val apiInstance = ObjectActivesessionApi()
 try {

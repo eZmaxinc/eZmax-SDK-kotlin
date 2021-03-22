@@ -23,8 +23,8 @@ This endpoint sends an email with a link to reset the user&#39;s password.  sEma
 ### Example
 ```kotlin
 // Import classes:
-//import eZmaxinc/eZmax-SDK-kotlin.infrastructure.*
-//import eZmaxinc/eZmax-SDK-kotlin.models.*
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
 
 val apiInstance = ModuleSsprApi()
 val ssprMinusResetPasswordRequestMinusV1MinusRequest : SsprMinusResetPasswordRequestMinusV1MinusRequest =  // SsprMinusResetPasswordRequestMinusV1MinusRequest | 
@@ -72,8 +72,8 @@ This endpoint resets the user&#39;s password.  sEmailAddress must be set if eUse
 ### Example
 ```kotlin
 // Import classes:
-//import eZmaxinc/eZmax-SDK-kotlin.infrastructure.*
-//import eZmaxinc/eZmax-SDK-kotlin.models.*
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
 
 val apiInstance = ModuleSsprApi()
 val ssprMinusResetPasswordMinusV1MinusRequest : SsprMinusResetPasswordMinusV1MinusRequest =  // SsprMinusResetPasswordMinusV1MinusRequest | 
@@ -121,8 +121,8 @@ This endpoint returns an email with the username(s) matching the email address p
 ### Example
 ```kotlin
 // Import classes:
-//import eZmaxinc/eZmax-SDK-kotlin.infrastructure.*
-//import eZmaxinc/eZmax-SDK-kotlin.models.*
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
 
 val apiInstance = ModuleSsprApi()
 val ssprMinusSendUsernamesMinusV1MinusRequest : SsprMinusSendUsernamesMinusV1MinusRequest =  // SsprMinusSendUsernamesMinusV1MinusRequest | 
@@ -170,8 +170,8 @@ This endpoint sends an email with a link to unlock the user account.  sEmailAddr
 ### Example
 ```kotlin
 // Import classes:
-//import eZmaxinc/eZmax-SDK-kotlin.infrastructure.*
-//import eZmaxinc/eZmax-SDK-kotlin.models.*
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
 
 val apiInstance = ModuleSsprApi()
 val ssprMinusUnlockAccountRequestMinusV1MinusRequest : SsprMinusUnlockAccountRequestMinusV1MinusRequest =  // SsprMinusUnlockAccountRequestMinusV1MinusRequest | 
@@ -219,8 +219,8 @@ This endpoint unlocks the user account.  sEmailAddress must be set if eUserTypeS
 ### Example
 ```kotlin
 // Import classes:
-//import eZmaxinc/eZmax-SDK-kotlin.infrastructure.*
-//import eZmaxinc/eZmax-SDK-kotlin.models.*
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
 
 val apiInstance = ModuleSsprApi()
 val ssprMinusUnlockAccountMinusV1MinusRequest : SsprMinusUnlockAccountMinusV1MinusRequest =  // SsprMinusUnlockAccountMinusV1MinusRequest | 
@@ -268,8 +268,8 @@ This endpoint validates if a Token is valid and not expired.  sEmailAddress must
 ### Example
 ```kotlin
 // Import classes:
-//import eZmaxinc/eZmax-SDK-kotlin.infrastructure.*
-//import eZmaxinc/eZmax-SDK-kotlin.models.*
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
 
 val apiInstance = ModuleSsprApi()
 val ssprMinusValidateTokenMinusV1MinusRequest : SsprMinusValidateTokenMinusV1MinusRequest =  // SsprMinusValidateTokenMinusV1MinusRequest | 

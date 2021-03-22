@@ -18,8 +18,8 @@ Retrieve the customer&#39;s specific server endpoint where to send requests. Thi
 ### Example
 ```kotlin
 // Import classes:
-//import eZmaxinc/eZmax-SDK-kotlin.infrastructure.*
-//import eZmaxinc/eZmax-SDK-kotlin.models.*
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
 
 val apiInstance = GlobalCustomerApi()
 val pksCustomerCode : kotlin.String = pksCustomerCode_example // kotlin.String | The customer code assigned to your account

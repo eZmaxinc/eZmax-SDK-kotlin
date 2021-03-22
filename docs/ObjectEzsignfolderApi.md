@@ -22,8 +22,8 @@ The endpoint allows to create one or many elements at once.  The array can conta
 ### Example
 ```kotlin
 // Import classes:
-//import eZmaxinc/eZmax-SDK-kotlin.infrastructure.*
-//import eZmaxinc/eZmax-SDK-kotlin.models.*
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsignfolderApi()
 val ezsignfolderMinusCreateObjectMinusV1MinusRequest : kotlin.collections.List<EzsignfolderMinusCreateObjectMinusV1MinusRequest> =  // kotlin.collections.List<EzsignfolderMinusCreateObjectMinusV1MinusRequest> | 
@@ -70,8 +70,8 @@ Delete an existing Ezsignfolder
 ### Example
 ```kotlin
 // Import classes:
-//import eZmaxinc/eZmax-SDK-kotlin.infrastructure.*
-//import eZmaxinc/eZmax-SDK-kotlin.models.*
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsignfolderApi()
 val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsignfolder
@@ -118,8 +118,8 @@ Retrieve an existing Ezsignfolder&#39;s children IDs
 ### Example
 ```kotlin
 // Import classes:
-//import eZmaxinc/eZmax-SDK-kotlin.infrastructure.*
-//import eZmaxinc/eZmax-SDK-kotlin.models.*
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsignfolderApi()
 val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsignfolder
@@ -165,8 +165,8 @@ Retrieve an existing Ezsignfolder
 ### Example
 ```kotlin
 // Import classes:
-//import eZmaxinc/eZmax-SDK-kotlin.infrastructure.*
-//import eZmaxinc/eZmax-SDK-kotlin.models.*
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsignfolderApi()
 val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsignfolder
@@ -213,8 +213,8 @@ Send the Ezsignfolder to the signatories for signature
 ### Example
 ```kotlin
 // Import classes:
-//import eZmaxinc/eZmax-SDK-kotlin.infrastructure.*
-//import eZmaxinc/eZmax-SDK-kotlin.models.*
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsignfolderApi()
 val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsignfolder

@@ -21,8 +21,8 @@ The endpoint allows to create one or many elements at once.  The array can conta
 ### Example
 ```kotlin
 // Import classes:
-//import eZmaxinc/eZmax-SDK-kotlin.infrastructure.*
-//import eZmaxinc/eZmax-SDK-kotlin.models.*
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsignsignatureApi()
 val ezsignsignatureMinusCreateObjectMinusV1MinusRequest : kotlin.collections.List<EzsignsignatureMinusCreateObjectMinusV1MinusRequest> =  // kotlin.collections.List<EzsignsignatureMinusCreateObjectMinusV1MinusRequest> | 
@@ -69,8 +69,8 @@ Delete an existing Ezsignsignature
 ### Example
 ```kotlin
 // Import classes:
-//import eZmaxinc/eZmax-SDK-kotlin.infrastructure.*
-//import eZmaxinc/eZmax-SDK-kotlin.models.*
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsignsignatureApi()
 val pkiEzsignsignatureID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsignsignature
@@ -117,8 +117,8 @@ Retrieve an existing Ezsignsignature&#39;s children IDs
 ### Example
 ```kotlin
 // Import classes:
-//import eZmaxinc/eZmax-SDK-kotlin.infrastructure.*
-//import eZmaxinc/eZmax-SDK-kotlin.models.*
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsignsignatureApi()
 val pkiEzsignsignatureID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsignsignature
@@ -164,8 +164,8 @@ Retrieve an existing Ezsignsignature
 ### Example
 ```kotlin
 // Import classes:
-//import eZmaxinc/eZmax-SDK-kotlin.infrastructure.*
-//import eZmaxinc/eZmax-SDK-kotlin.models.*
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsignsignatureApi()
 val pkiEzsignsignatureID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsignsignature

@@ -23,8 +23,8 @@ This endpoint applies a predefined template to the ezsign document. This allows 
 ### Example
 ```kotlin
 // Import classes:
-//import eZmaxinc/eZmax-SDK-kotlin.infrastructure.*
-//import eZmaxinc/eZmax-SDK-kotlin.models.*
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsigndocumentApi()
 val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsigndocument
@@ -75,8 +75,8 @@ The endpoint allows to create one or many elements at once.  The array can conta
 ### Example
 ```kotlin
 // Import classes:
-//import eZmaxinc/eZmax-SDK-kotlin.infrastructure.*
-//import eZmaxinc/eZmax-SDK-kotlin.models.*
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsigndocumentApi()
 val ezsigndocumentMinusCreateObjectMinusV1MinusRequest : kotlin.collections.List<EzsigndocumentMinusCreateObjectMinusV1MinusRequest> =  // kotlin.collections.List<EzsigndocumentMinusCreateObjectMinusV1MinusRequest> | 
@@ -123,8 +123,8 @@ Delete an existing Ezsigndocument
 ### Example
 ```kotlin
 // Import classes:
-//import eZmaxinc/eZmax-SDK-kotlin.infrastructure.*
-//import eZmaxinc/eZmax-SDK-kotlin.models.*
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsigndocumentApi()
 val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsigndocument
@@ -171,8 +171,8 @@ Retrieve an existing Ezsigndocument&#39;s children IDs
 ### Example
 ```kotlin
 // Import classes:
-//import eZmaxinc/eZmax-SDK-kotlin.infrastructure.*
-//import eZmaxinc/eZmax-SDK-kotlin.models.*
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsigndocumentApi()
 val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsigndocument
@@ -220,8 +220,8 @@ This endpoint returns URLs to different files that can be downloaded during the 
 ### Example
 ```kotlin
 // Import classes:
-//import eZmaxinc/eZmax-SDK-kotlin.infrastructure.*
-//import eZmaxinc/eZmax-SDK-kotlin.models.*
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsigndocumentApi()
 val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsigndocument
@@ -270,8 +270,8 @@ Retrieve an existing Ezsigndocument
 ### Example
 ```kotlin
 // Import classes:
-//import eZmaxinc/eZmax-SDK-kotlin.infrastructure.*
-//import eZmaxinc/eZmax-SDK-kotlin.models.*
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsigndocumentApi()
 val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsigndocument

@@ -18,8 +18,8 @@ The endpoint allows to create one or many elements at once.  The array can conta
 ### Example
 ```kotlin
 // Import classes:
-//import eZmaxinc/eZmax-SDK-kotlin.infrastructure.*
-//import eZmaxinc/eZmax-SDK-kotlin.models.*
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
 
 val apiInstance = ObjectFranchisereferalincomeApi()
 val franchisereferalincomeMinusCreateObjectMinusV1MinusRequest : kotlin.collections.List<FranchisereferalincomeMinusCreateObjectMinusV1MinusRequest> =  // kotlin.collections.List<FranchisereferalincomeMinusCreateObjectMinusV1MinusRequest> | 
