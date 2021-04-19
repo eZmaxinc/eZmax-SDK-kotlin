@@ -149,6 +149,8 @@ src/main/kotlin/eZmaxApi/infrastructure/ApiAbstractions.kt
 src/main/kotlin/eZmaxApi/infrastructure/ApiClient.kt
 src/main/kotlin/eZmaxApi/infrastructure/ApiInfrastructureResponse.kt
 src/main/kotlin/eZmaxApi/infrastructure/ApplicationDelegates.kt
+src/main/kotlin/eZmaxApi/infrastructure/BigDecimalAdapter.kt
+src/main/kotlin/eZmaxApi/infrastructure/BigIntegerAdapter.kt
 src/main/kotlin/eZmaxApi/infrastructure/ByteArrayAdapter.kt
 src/main/kotlin/eZmaxApi/infrastructure/Errors.kt
 src/main/kotlin/eZmaxApi/infrastructure/LocalDateAdapter.kt
