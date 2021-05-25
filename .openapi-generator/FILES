@@ -11,6 +11,9 @@ docs/ApikeyRequest.md
 docs/ApikeyRequestCompound.md
 docs/ApikeyResponse.md
 docs/AttemptResponse.md
+docs/AuthenticateAuthenticateV2Request.md
+docs/AuthenticateAuthenticateV2Response.md
+docs/AuthenticateAuthenticateV2ResponseMPayload.md
 docs/CommonAudit.md
 docs/CommonGetAutocompleteV1Response.md
 docs/CommonGetAutocompleteV1ResponseMPayload.md
@@ -86,6 +89,7 @@ docs/FranchisereferalincomeRequest.md
 docs/FranchisereferalincomeRequestCompound.md
 docs/GlobalCustomerApi.md
 docs/GlobalCustomerGetEndpointV1Response.md
+docs/ModuleAuthenticateApi.md
 docs/ModuleSsprApi.md
 docs/ModuleUserApi.md
 docs/MultilingualApikeyDescription.md
@@ -133,6 +137,7 @@ gradlew
 gradlew.bat
 settings.gradle
 src/main/kotlin/eZmaxApi/apis/GlobalCustomerApi.kt
+src/main/kotlin/eZmaxApi/apis/ModuleAuthenticateApi.kt
 src/main/kotlin/eZmaxApi/apis/ModuleSsprApi.kt
 src/main/kotlin/eZmaxApi/apis/ModuleUserApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectActivesessionApi.kt
@@ -160,6 +165,7 @@ src/main/kotlin/eZmaxApi/infrastructure/RequestConfig.kt
 src/main/kotlin/eZmaxApi/infrastructure/RequestMethod.kt
 src/main/kotlin/eZmaxApi/infrastructure/ResponseExtensions.kt
 src/main/kotlin/eZmaxApi/infrastructure/Serializer.kt
+src/main/kotlin/eZmaxApi/infrastructure/URIAdapter.kt
 src/main/kotlin/eZmaxApi/infrastructure/UUIDAdapter.kt
 src/main/kotlin/eZmaxApi/models/ActivesessionMinusGetCurrentMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/ActivesessionMinusGetCurrentMinusV1MinusResponseMinusMPayload.kt
@@ -171,6 +177,9 @@ src/main/kotlin/eZmaxApi/models/ApikeyMinusRequest.kt
 src/main/kotlin/eZmaxApi/models/ApikeyMinusRequestCompound.kt
 src/main/kotlin/eZmaxApi/models/ApikeyMinusResponse.kt
 src/main/kotlin/eZmaxApi/models/AttemptMinusResponse.kt
+src/main/kotlin/eZmaxApi/models/AuthenticateMinusAuthenticateMinusV2MinusRequest.kt
+src/main/kotlin/eZmaxApi/models/AuthenticateMinusAuthenticateMinusV2MinusResponse.kt
+src/main/kotlin/eZmaxApi/models/AuthenticateMinusAuthenticateMinusV2MinusResponseMinusMPayload.kt
 src/main/kotlin/eZmaxApi/models/CommonMinusAudit.kt
 src/main/kotlin/eZmaxApi/models/CommonMinusGetAutocompleteMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/CommonMinusGetAutocompleteMinusV1MinusResponseMinusMPayload.kt

@@ -36,6 +36,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *GlobalCustomerApi* | [**globalCustomerGetEndpointV1**](docs/GlobalCustomerApi.md#globalcustomergetendpointv1) | **GET** /1/customer/{pksCustomerCode}/endpoint | Get customer endpoint
+*ModuleAuthenticateApi* | [**authenticateAuthenticateV2**](docs/ModuleAuthenticateApi.md#authenticateauthenticatev2) | **POST** /2/module/authenticate/authenticate/ezsignuser/{eSessionType} | Authenticate a user
 *ModuleSsprApi* | [**ssprResetPasswordRequestV1**](docs/ModuleSsprApi.md#ssprresetpasswordrequestv1) | **POST** /1/module/sspr/resetPasswordRequest | Reset Password Request
 *ModuleSsprApi* | [**ssprResetPasswordV1**](docs/ModuleSsprApi.md#ssprresetpasswordv1) | **POST** /1/module/sspr/resetPassword | Reset Password
 *ModuleSsprApi* | [**ssprSendUsernamesV1**](docs/ModuleSsprApi.md#ssprsendusernamesv1) | **POST** /1/module/sspr/sendUsernames | Send username(s)
@@ -84,6 +85,9 @@ Class | Method | HTTP request | Description
  - [eZmaxApi.models.ApikeyMinusRequestCompound](docs/ApikeyMinusRequestCompound.md)
  - [eZmaxApi.models.ApikeyMinusResponse](docs/ApikeyMinusResponse.md)
  - [eZmaxApi.models.AttemptMinusResponse](docs/AttemptMinusResponse.md)
+ - [eZmaxApi.models.AuthenticateMinusAuthenticateMinusV2MinusRequest](docs/AuthenticateMinusAuthenticateMinusV2MinusRequest.md)
+ - [eZmaxApi.models.AuthenticateMinusAuthenticateMinusV2MinusResponse](docs/AuthenticateMinusAuthenticateMinusV2MinusResponse.md)
+ - [eZmaxApi.models.AuthenticateMinusAuthenticateMinusV2MinusResponseMinusMPayload](docs/AuthenticateMinusAuthenticateMinusV2MinusResponseMinusMPayload.md)
  - [eZmaxApi.models.CommonMinusAudit](docs/CommonMinusAudit.md)
  - [eZmaxApi.models.CommonMinusGetAutocompleteMinusV1MinusResponse](docs/CommonMinusGetAutocompleteMinusV1MinusResponse.md)
  - [eZmaxApi.models.CommonMinusGetAutocompleteMinusV1MinusResponseMinusMPayload](docs/CommonMinusGetAutocompleteMinusV1MinusResponseMinusMPayload.md)
