@@ -153,6 +153,7 @@ Class | Method | HTTP request | Description
  - [eZmaxApi.models.FieldMinusEEzsigndocumentStep](docs/FieldMinusEEzsigndocumentStep.md)
  - [eZmaxApi.models.FieldMinusEEzsignfolderSendreminderfrequency](docs/FieldMinusEEzsignfolderSendreminderfrequency.md)
  - [eZmaxApi.models.FieldMinusEEzsignfolderStep](docs/FieldMinusEEzsignfolderStep.md)
+ - [eZmaxApi.models.FieldMinusEEzsignsignatureType](docs/FieldMinusEEzsignsignatureType.md)
  - [eZmaxApi.models.FieldMinusEPhoneType](docs/FieldMinusEPhoneType.md)
  - [eZmaxApi.models.FieldMinusEUserType](docs/FieldMinusEUserType.md)
  - [eZmaxApi.models.FieldMinusEUserTypeSSPR](docs/FieldMinusEUserTypeSSPR.md)

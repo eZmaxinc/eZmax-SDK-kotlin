@@ -79,6 +79,7 @@ docs/EzsignsignerRequestCompoundContact.md
 docs/FieldEEzsigndocumentStep.md
 docs/FieldEEzsignfolderSendreminderfrequency.md
 docs/FieldEEzsignfolderStep.md
+docs/FieldEEzsignsignatureType.md
 docs/FieldEPhoneType.md
 docs/FieldEUserType.md
 docs/FieldEUserTypeSSPR.md
@@ -245,6 +246,7 @@ src/main/kotlin/eZmaxApi/models/EzsignsignerMinusRequestCompoundMinusContact.kt
 src/main/kotlin/eZmaxApi/models/FieldMinusEEzsigndocumentStep.kt
 src/main/kotlin/eZmaxApi/models/FieldMinusEEzsignfolderSendreminderfrequency.kt
 src/main/kotlin/eZmaxApi/models/FieldMinusEEzsignfolderStep.kt
+src/main/kotlin/eZmaxApi/models/FieldMinusEEzsignsignatureType.kt
 src/main/kotlin/eZmaxApi/models/FieldMinusEPhoneType.kt
 src/main/kotlin/eZmaxApi/models/FieldMinusEUserType.kt
 src/main/kotlin/eZmaxApi/models/FieldMinusEUserTypeSSPR.kt

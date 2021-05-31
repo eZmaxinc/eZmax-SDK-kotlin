@@ -1,5 +1,5 @@
 group 'com.ezmax'
-version '1.0.43'
+version '1.0.44'
 
 wrapper {
     gradleVersion = '6.8.3'
@@ -7,7 +7,7 @@ wrapper {
 }
 
 buildscript {
-    ext.kotlin_version = '1.4.30'
+    ext.kotlin_version = '1.5.0'
 
     repositories {
         maven { url "https://repo1.maven.org/maven2" }
