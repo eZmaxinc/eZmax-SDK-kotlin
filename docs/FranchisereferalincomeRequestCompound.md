@@ -4,6 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**objAddress** | [**AddressMinusRequest**](AddressMinusRequest.md) |  | 
 **aObjContact** | [**kotlin.collections.List&lt;ContactMinusRequestCompound&gt;**](ContactMinusRequestCompound.md) |  | 
 **fkiFranchisebrokerID** | **kotlin.Int** | The unique ID of the Franchisebroker | 
 **fkiFranchisereferalincomeprogramID** | **kotlin.Int** | The unique ID of the Franchisereferalincomeprogram | 
@@ -16,7 +17,6 @@ Name | Type | Description | Notes
 **tFranchisereferalincomeComment** | **kotlin.String** | A comment about the transaction | 
 **fkiFranchiseofficeID** | **kotlin.Int** | The unique ID of the Franchisereoffice | 
 **sFranchisereferalincomeRemoteid** | **kotlin.String** |  | 
-**objAddress** | [**AddressMinusRequest**](AddressMinusRequest.md) |  |  [optional]
 
 
 
