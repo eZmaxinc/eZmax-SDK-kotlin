@@ -103,7 +103,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     /**
     * Delete an existing Ezsignfoldersignerassociation
     * 
-    * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation 
+    * @param pkiEzsignfoldersignerassociationID  
     * @return EzsignfoldersignerassociationMinusDeleteObjectMinusV1MinusResponse
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
@@ -136,7 +136,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     /**
     * To obtain the request config of the operation ezsignfoldersignerassociationDeleteObjectV1
     *
-    * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation 
+    * @param pkiEzsignfoldersignerassociationID  
     * @return RequestConfig
     */
     fun ezsignfoldersignerassociationDeleteObjectV1RequestConfig(pkiEzsignfoldersignerassociationID: kotlin.Int) : RequestConfig<Unit> {
@@ -156,7 +156,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     /**
     * Retrieve an existing Ezsignfoldersignerassociation&#39;s children IDs
     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-    * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation 
+    * @param pkiEzsignfoldersignerassociationID  
     * @return void
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
@@ -188,7 +188,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     /**
     * To obtain the request config of the operation ezsignfoldersignerassociationGetChildrenV1
     *
-    * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation 
+    * @param pkiEzsignfoldersignerassociationID  
     * @return RequestConfig
     */
     fun ezsignfoldersignerassociationGetChildrenV1RequestConfig(pkiEzsignfoldersignerassociationID: kotlin.Int) : RequestConfig<Unit> {
@@ -208,7 +208,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     /**
     * Retrieve a Login Url to allow In-Person signing
     * This endpoint returns a Login Url that can be used in a browser or embedded in an I-Frame to allow in person signing.  The signer Login type must be configured as In-Person.
-    * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation 
+    * @param pkiEzsignfoldersignerassociationID  
     * @return EzsignfoldersignerassociationMinusGetInPersonLoginUrlMinusV1MinusResponse
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
@@ -241,7 +241,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     /**
     * To obtain the request config of the operation ezsignfoldersignerassociationGetInPersonLoginUrlV1
     *
-    * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation 
+    * @param pkiEzsignfoldersignerassociationID  
     * @return RequestConfig
     */
     fun ezsignfoldersignerassociationGetInPersonLoginUrlV1RequestConfig(pkiEzsignfoldersignerassociationID: kotlin.Int) : RequestConfig<Unit> {
@@ -261,7 +261,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     /**
     * Retrieve an existing Ezsignfoldersignerassociation
     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-    * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation 
+    * @param pkiEzsignfoldersignerassociationID  
     * @return EzsignfoldersignerassociationMinusGetObjectMinusV1MinusResponse
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
@@ -294,7 +294,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     /**
     * To obtain the request config of the operation ezsignfoldersignerassociationGetObjectV1
     *
-    * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation 
+    * @param pkiEzsignfoldersignerassociationID  
     * @return RequestConfig
     */
     fun ezsignfoldersignerassociationGetObjectV1RequestConfig(pkiEzsignfoldersignerassociationID: kotlin.Int) : RequestConfig<Unit> {

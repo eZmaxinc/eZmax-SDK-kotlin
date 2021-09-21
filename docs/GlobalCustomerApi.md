@@ -22,7 +22,7 @@ Retrieve the customer&#39;s specific server endpoint where to send requests. Thi
 //import eZmaxApi.models.*
 
 val apiInstance = GlobalCustomerApi()
-val pksCustomerCode : kotlin.String = pksCustomerCode_example // kotlin.String | The customer code assigned to your account
+val pksCustomerCode : kotlin.String = pksCustomerCode_example // kotlin.String | 
 val sInfrastructureproductCode : kotlin.String = sInfrastructureproductCode_example // kotlin.String | The infrastructure product Code  If undefined, \"appcluster01\" is assumed
 try {
     val result : GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse = apiInstance.globalCustomerGetEndpointV1(pksCustomerCode, sInfrastructureproductCode)
@@ -40,7 +40,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pksCustomerCode** | **kotlin.String**| The customer code assigned to your account |
+ **pksCustomerCode** | **kotlin.String**|  |
  **sInfrastructureproductCode** | **kotlin.String**| The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed | [optional] [enum: appcluster01, ezsignuser]
 
 ### Return type

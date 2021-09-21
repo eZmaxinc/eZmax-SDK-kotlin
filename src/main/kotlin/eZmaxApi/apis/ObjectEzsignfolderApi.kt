@@ -104,7 +104,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     /**
     * Delete an existing Ezsignfolder
     * 
-    * @param pkiEzsignfolderID The unique ID of the Ezsignfolder 
+    * @param pkiEzsignfolderID  
     * @return EzsignfolderMinusDeleteObjectMinusV1MinusResponse
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
@@ -137,7 +137,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     /**
     * To obtain the request config of the operation ezsignfolderDeleteObjectV1
     *
-    * @param pkiEzsignfolderID The unique ID of the Ezsignfolder 
+    * @param pkiEzsignfolderID  
     * @return RequestConfig
     */
     fun ezsignfolderDeleteObjectV1RequestConfig(pkiEzsignfolderID: kotlin.Int) : RequestConfig<Unit> {
@@ -157,7 +157,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     /**
     * Retrieve an existing Ezsignfolder&#39;s children IDs
     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-    * @param pkiEzsignfolderID The unique ID of the Ezsignfolder 
+    * @param pkiEzsignfolderID  
     * @return void
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
@@ -189,7 +189,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     /**
     * To obtain the request config of the operation ezsignfolderGetChildrenV1
     *
-    * @param pkiEzsignfolderID The unique ID of the Ezsignfolder 
+    * @param pkiEzsignfolderID  
     * @return RequestConfig
     */
     fun ezsignfolderGetChildrenV1RequestConfig(pkiEzsignfolderID: kotlin.Int) : RequestConfig<Unit> {
@@ -207,9 +207,62 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     }
 
     /**
+    * Retrieve an existing Ezsignfolder&#39;s forms data
+    * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+    * @param pkiEzsignfolderID  
+    * @return java.io.File
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignfolderGetFormsDataV1(pkiEzsignfolderID: kotlin.Int) : java.io.File {
+        val localVariableConfig = ezsignfolderGetFormsDataV1RequestConfig(pkiEzsignfolderID = pkiEzsignfolderID)
+
+        val localVarResponse = request<Unit, java.io.File>(
+            localVariableConfig
+        )
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as java.io.File
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+    * To obtain the request config of the operation ezsignfolderGetFormsDataV1
+    *
+    * @param pkiEzsignfolderID  
+    * @return RequestConfig
+    */
+    fun ezsignfolderGetFormsDataV1RequestConfig(pkiEzsignfolderID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData".replace("{"+"pkiEzsignfolderID"+"}", "$pkiEzsignfolderID"),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
     * Retrieve an existing Ezsignfolder
     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-    * @param pkiEzsignfolderID The unique ID of the Ezsignfolder 
+    * @param pkiEzsignfolderID  
     * @return EzsignfolderMinusGetObjectMinusV1MinusResponse
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
@@ -242,7 +295,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     /**
     * To obtain the request config of the operation ezsignfolderGetObjectV1
     *
-    * @param pkiEzsignfolderID The unique ID of the Ezsignfolder 
+    * @param pkiEzsignfolderID  
     * @return RequestConfig
     */
     fun ezsignfolderGetObjectV1RequestConfig(pkiEzsignfolderID: kotlin.Int) : RequestConfig<Unit> {
@@ -262,7 +315,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     /**
     * Send the Ezsignfolder to the signatories for signature
     * 
-    * @param pkiEzsignfolderID The unique ID of the Ezsignfolder 
+    * @param pkiEzsignfolderID  
     * @param ezsignfolderMinusSendMinusV1MinusRequest  
     * @return EzsignfolderMinusSendMinusV1MinusResponse
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -296,7 +349,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     /**
     * To obtain the request config of the operation ezsignfolderSendV1
     *
-    * @param pkiEzsignfolderID The unique ID of the Ezsignfolder 
+    * @param pkiEzsignfolderID  
     * @param ezsignfolderMinusSendMinusV1MinusRequest  
     * @return RequestConfig
     */

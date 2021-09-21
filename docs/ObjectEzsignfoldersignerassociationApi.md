@@ -74,7 +74,7 @@ Delete an existing Ezsignfoldersignerassociation
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsignfoldersignerassociationApi()
-val pkiEzsignfoldersignerassociationID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsignfoldersignerassociation
+val pkiEzsignfoldersignerassociationID : kotlin.Int = 56 // kotlin.Int | 
 try {
     val result : EzsignfoldersignerassociationMinusDeleteObjectMinusV1MinusResponse = apiInstance.ezsignfoldersignerassociationDeleteObjectV1(pkiEzsignfoldersignerassociationID)
     println(result)
@@ -91,7 +91,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignfoldersignerassociationID** | **kotlin.Int**| The unique ID of the Ezsignfoldersignerassociation |
+ **pkiEzsignfoldersignerassociationID** | **kotlin.Int**|  |
 
 ### Return type
 
@@ -124,7 +124,7 @@ Retrieve an existing Ezsignfoldersignerassociation&#39;s children IDs
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsignfoldersignerassociationApi()
-val pkiEzsignfoldersignerassociationID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsignfoldersignerassociation
+val pkiEzsignfoldersignerassociationID : kotlin.Int = 56 // kotlin.Int | 
 try {
     apiInstance.ezsignfoldersignerassociationGetChildrenV1(pkiEzsignfoldersignerassociationID)
 } catch (e: ClientException) {
@@ -140,7 +140,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignfoldersignerassociationID** | **kotlin.Int**| The unique ID of the Ezsignfoldersignerassociation |
+ **pkiEzsignfoldersignerassociationID** | **kotlin.Int**|  |
 
 ### Return type
 
@@ -173,7 +173,7 @@ This endpoint returns a Login Url that can be used in a browser or embedded in a
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsignfoldersignerassociationApi()
-val pkiEzsignfoldersignerassociationID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsignfoldersignerassociation
+val pkiEzsignfoldersignerassociationID : kotlin.Int = 56 // kotlin.Int | 
 try {
     val result : EzsignfoldersignerassociationMinusGetInPersonLoginUrlMinusV1MinusResponse = apiInstance.ezsignfoldersignerassociationGetInPersonLoginUrlV1(pkiEzsignfoldersignerassociationID)
     println(result)
@@ -190,7 +190,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignfoldersignerassociationID** | **kotlin.Int**| The unique ID of the Ezsignfoldersignerassociation |
+ **pkiEzsignfoldersignerassociationID** | **kotlin.Int**|  |
 
 ### Return type
 
@@ -223,7 +223,7 @@ Retrieve an existing Ezsignfoldersignerassociation
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsignfoldersignerassociationApi()
-val pkiEzsignfoldersignerassociationID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsignfoldersignerassociation
+val pkiEzsignfoldersignerassociationID : kotlin.Int = 56 // kotlin.Int | 
 try {
     val result : EzsignfoldersignerassociationMinusGetObjectMinusV1MinusResponse = apiInstance.ezsignfoldersignerassociationGetObjectV1(pkiEzsignfoldersignerassociationID)
     println(result)
@@ -240,7 +240,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignfoldersignerassociationID** | **kotlin.Int**| The unique ID of the Ezsignfoldersignerassociation |
+ **pkiEzsignfoldersignerassociationID** | **kotlin.Int**|  |
 
 ### Return type
 

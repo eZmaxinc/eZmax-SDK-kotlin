@@ -28,12 +28,12 @@ import com.squareup.moshi.Json
  * An Ezsignsignature Object
  *
  * @param fkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation
- * @param iEzsignpagePagenumber The page number in the document where to apply the signature
+ * @param iEzsignpagePagenumber The page number in the Ezsigndocument
  * @param iEzsignsignatureX The X coordinate (Horizontal) where to put the signature block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 2 inches from the left border of the page, you would use \"200\" for the X coordinate.
  * @param iEzsignsignatureY The Y coordinate (Vertical) where to put the signature block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.
  * @param iEzsignsignatureStep The step when the Ezsignsigner will be invited to sign.
  * @param eEzsignsignatureType 
- * @param fkiEzsigndocumentID The unique ID of the Ezsigntemplate
+ * @param fkiEzsigndocumentID The unique ID of the Ezsigndocument
  */
 
 data class EzsignsignatureMinusRequest (
@@ -42,7 +42,7 @@ data class EzsignsignatureMinusRequest (
     @Json(name = "fkiEzsignfoldersignerassociationID")
     val fkiEzsignfoldersignerassociationID: kotlin.Int,
 
-    /* The page number in the document where to apply the signature */
+    /* The page number in the Ezsigndocument */
     @Json(name = "iEzsignpagePagenumber")
     val iEzsignpagePagenumber: kotlin.Int,
 
@@ -61,7 +61,7 @@ data class EzsignsignatureMinusRequest (
     @Json(name = "eEzsignsignatureType")
     val eEzsignsignatureType: FieldMinusEEzsignsignatureType,
 
-    /* The unique ID of the Ezsigntemplate */
+    /* The unique ID of the Ezsigndocument */
     @Json(name = "fkiEzsigndocumentID")
     val fkiEzsigndocumentID: kotlin.Int
 

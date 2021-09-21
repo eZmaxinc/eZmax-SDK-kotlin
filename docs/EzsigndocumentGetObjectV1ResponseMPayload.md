@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **dtEzsigndocumentDuedate** | **kotlin.String** | The maximum date and time at which the document can be signed. | 
 **fkiLanguageID** | **kotlin.Int** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| | 
 **sEzsigndocumentName** | **kotlin.String** | The name of the document that will be presented to Ezsignfoldersignerassociations | 
-**pkiEzsigndocumentID** | **kotlin.Int** | The unique ID of the Ezsigntemplate | 
+**pkiEzsigndocumentID** | **kotlin.Int** | The unique ID of the Ezsigndocument | 
 **eEzsigndocumentStep** | [**FieldMinusEEzsigndocumentStep**](FieldMinusEEzsigndocumentStep.md) |  | 
 **dtEzsigndocumentFirstsend** | **kotlin.String** | The date and time when the Ezsigndocument was first sent. | 
 **dtEzsigndocumentLastsend** | **kotlin.String** | The date and time when the Ezsigndocument was sent the last time. | 

@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**ezsignfolderCreateObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderCreateObjectV1) | **POST** /1/object/ezsignfolder | Create a new Ezsignfolder
 [**ezsignfolderDeleteObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderDeleteObjectV1) | **DELETE** /1/object/ezsignfolder/{pkiEzsignfolderID} | Delete an existing Ezsignfolder
 [**ezsignfolderGetChildrenV1**](ObjectEzsignfolderApi.md#ezsignfolderGetChildrenV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getChildren | Retrieve an existing Ezsignfolder&#39;s children IDs
+[**ezsignfolderGetFormsDataV1**](ObjectEzsignfolderApi.md#ezsignfolderGetFormsDataV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData | Retrieve an existing Ezsignfolder&#39;s forms data
 [**ezsignfolderGetObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderGetObjectV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID} | Retrieve an existing Ezsignfolder
 [**ezsignfolderSendV1**](ObjectEzsignfolderApi.md#ezsignfolderSendV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/send | Send the Ezsignfolder to the signatories for signature
 
@@ -74,7 +75,7 @@ Delete an existing Ezsignfolder
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsignfolderApi()
-val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsignfolder
+val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
 try {
     val result : EzsignfolderMinusDeleteObjectMinusV1MinusResponse = apiInstance.ezsignfolderDeleteObjectV1(pkiEzsignfolderID)
     println(result)
@@ -91,7 +92,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignfolderID** | **kotlin.Int**| The unique ID of the Ezsignfolder |
+ **pkiEzsignfolderID** | **kotlin.Int**|  |
 
 ### Return type
 
@@ -124,7 +125,7 @@ Retrieve an existing Ezsignfolder&#39;s children IDs
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsignfolderApi()
-val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsignfolder
+val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
 try {
     apiInstance.ezsignfolderGetChildrenV1(pkiEzsignfolderID)
 } catch (e: ClientException) {
@@ -140,7 +141,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignfolderID** | **kotlin.Int**| The unique ID of the Ezsignfolder |
+ **pkiEzsignfolderID** | **kotlin.Int**|  |
 
 ### Return type
 
@@ -158,6 +159,56 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+<a name="ezsignfolderGetFormsDataV1"></a>
+# **ezsignfolderGetFormsDataV1**
+> java.io.File ezsignfolderGetFormsDataV1(pkiEzsignfolderID)
+
+Retrieve an existing Ezsignfolder&#39;s forms data
+
+## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsignfolderApi()
+val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : java.io.File = apiInstance.ezsignfolderGetFormsDataV1(pkiEzsignfolderID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsignfolderApi#ezsignfolderGetFormsDataV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsignfolderApi#ezsignfolderGetFormsDataV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **kotlin.Int**|  |
+
+### Return type
+
+[**java.io.File**](java.io.File.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/zip, application/json
+
 <a name="ezsignfolderGetObjectV1"></a>
 # **ezsignfolderGetObjectV1**
 > EzsignfolderMinusGetObjectMinusV1MinusResponse ezsignfolderGetObjectV1(pkiEzsignfolderID)
@@ -173,7 +224,7 @@ Retrieve an existing Ezsignfolder
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsignfolderApi()
-val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsignfolder
+val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
 try {
     val result : EzsignfolderMinusGetObjectMinusV1MinusResponse = apiInstance.ezsignfolderGetObjectV1(pkiEzsignfolderID)
     println(result)
@@ -190,7 +241,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignfolderID** | **kotlin.Int**| The unique ID of the Ezsignfolder |
+ **pkiEzsignfolderID** | **kotlin.Int**|  |
 
 ### Return type
 
@@ -221,7 +272,7 @@ Send the Ezsignfolder to the signatories for signature
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsignfolderApi()
-val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsignfolder
+val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
 val ezsignfolderMinusSendMinusV1MinusRequest : EzsignfolderMinusSendMinusV1MinusRequest =  // EzsignfolderMinusSendMinusV1MinusRequest | 
 try {
     val result : EzsignfolderMinusSendMinusV1MinusResponse = apiInstance.ezsignfolderSendV1(pkiEzsignfolderID, ezsignfolderMinusSendMinusV1MinusRequest)
@@ -239,7 +290,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignfolderID** | **kotlin.Int**| The unique ID of the Ezsignfolder |
+ **pkiEzsignfolderID** | **kotlin.Int**|  |
  **ezsignfolderMinusSendMinusV1MinusRequest** | [**EzsignfolderMinusSendMinusV1MinusRequest**](EzsignfolderMinusSendMinusV1MinusRequest.md)|  |
 
 ### Return type

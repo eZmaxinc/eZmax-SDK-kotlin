@@ -46,7 +46,7 @@ class GlobalCustomerApi(basePath: kotlin.String = defaultBasePath) : ApiClient(b
     /**
     * Get customer endpoint
     * Retrieve the customer&#39;s specific server endpoint where to send requests. This will help locate the proper region (ie: sInfrastructureregionCode) and the proper environment (ie: sInfrastructureenvironmenttypeDescription) where the customer&#39;s data is stored.
-    * @param pksCustomerCode The customer code assigned to your account 
+    * @param pksCustomerCode  
     * @param sInfrastructureproductCode The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)
     * @return GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -80,7 +80,7 @@ class GlobalCustomerApi(basePath: kotlin.String = defaultBasePath) : ApiClient(b
     /**
     * To obtain the request config of the operation globalCustomerGetEndpointV1
     *
-    * @param pksCustomerCode The customer code assigned to your account 
+    * @param pksCustomerCode  
     * @param sInfrastructureproductCode The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)
     * @return RequestConfig
     */

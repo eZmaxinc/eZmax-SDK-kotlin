@@ -73,7 +73,7 @@ Delete an existing Ezsignsignature
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsignsignatureApi()
-val pkiEzsignsignatureID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsignsignature
+val pkiEzsignsignatureID : kotlin.Int = 56 // kotlin.Int | 
 try {
     val result : EzsignsignatureMinusDeleteObjectMinusV1MinusResponse = apiInstance.ezsignsignatureDeleteObjectV1(pkiEzsignsignatureID)
     println(result)
@@ -90,7 +90,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignsignatureID** | **kotlin.Int**| The unique ID of the Ezsignsignature |
+ **pkiEzsignsignatureID** | **kotlin.Int**|  |
 
 ### Return type
 
@@ -123,7 +123,7 @@ Retrieve an existing Ezsignsignature&#39;s children IDs
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsignsignatureApi()
-val pkiEzsignsignatureID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsignsignature
+val pkiEzsignsignatureID : kotlin.Int = 56 // kotlin.Int | 
 try {
     apiInstance.ezsignsignatureGetChildrenV1(pkiEzsignsignatureID)
 } catch (e: ClientException) {
@@ -139,7 +139,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignsignatureID** | **kotlin.Int**| The unique ID of the Ezsignsignature |
+ **pkiEzsignsignatureID** | **kotlin.Int**|  |
 
 ### Return type
 
@@ -172,7 +172,7 @@ Retrieve an existing Ezsignsignature
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsignsignatureApi()
-val pkiEzsignsignatureID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsignsignature
+val pkiEzsignsignatureID : kotlin.Int = 56 // kotlin.Int | 
 try {
     val result : EzsignsignatureMinusGetObjectMinusV1MinusResponse = apiInstance.ezsignsignatureGetObjectV1(pkiEzsignsignatureID)
     println(result)
@@ -189,7 +189,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignsignatureID** | **kotlin.Int**| The unique ID of the Ezsignsignature |
+ **pkiEzsignsignatureID** | **kotlin.Int**|  |
 
 ### Return type
 

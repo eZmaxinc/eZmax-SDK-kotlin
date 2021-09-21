@@ -102,7 +102,7 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath) : ApiC
     /**
     * Delete an existing Ezsignsignature
     * 
-    * @param pkiEzsignsignatureID The unique ID of the Ezsignsignature 
+    * @param pkiEzsignsignatureID  
     * @return EzsignsignatureMinusDeleteObjectMinusV1MinusResponse
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
@@ -135,7 +135,7 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath) : ApiC
     /**
     * To obtain the request config of the operation ezsignsignatureDeleteObjectV1
     *
-    * @param pkiEzsignsignatureID The unique ID of the Ezsignsignature 
+    * @param pkiEzsignsignatureID  
     * @return RequestConfig
     */
     fun ezsignsignatureDeleteObjectV1RequestConfig(pkiEzsignsignatureID: kotlin.Int) : RequestConfig<Unit> {
@@ -155,7 +155,7 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath) : ApiC
     /**
     * Retrieve an existing Ezsignsignature&#39;s children IDs
     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-    * @param pkiEzsignsignatureID The unique ID of the Ezsignsignature 
+    * @param pkiEzsignsignatureID  
     * @return void
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
@@ -187,7 +187,7 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath) : ApiC
     /**
     * To obtain the request config of the operation ezsignsignatureGetChildrenV1
     *
-    * @param pkiEzsignsignatureID The unique ID of the Ezsignsignature 
+    * @param pkiEzsignsignatureID  
     * @return RequestConfig
     */
     fun ezsignsignatureGetChildrenV1RequestConfig(pkiEzsignsignatureID: kotlin.Int) : RequestConfig<Unit> {
@@ -207,7 +207,7 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath) : ApiC
     /**
     * Retrieve an existing Ezsignsignature
     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-    * @param pkiEzsignsignatureID The unique ID of the Ezsignsignature 
+    * @param pkiEzsignsignatureID  
     * @return EzsignsignatureMinusGetObjectMinusV1MinusResponse
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
@@ -240,7 +240,7 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath) : ApiC
     /**
     * To obtain the request config of the operation ezsignsignatureGetObjectV1
     *
-    * @param pkiEzsignsignatureID The unique ID of the Ezsignsignature 
+    * @param pkiEzsignsignatureID  
     * @return RequestConfig
     */
     fun ezsignsignatureGetObjectV1RequestConfig(pkiEzsignsignatureID: kotlin.Int) : RequestConfig<Unit> {

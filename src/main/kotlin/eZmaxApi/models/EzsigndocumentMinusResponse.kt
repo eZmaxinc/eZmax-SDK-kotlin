@@ -21,7 +21,6 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.CommonMinusAudit
-import eZmaxApi.models.EzsigndocumentResponseAllOf
 import eZmaxApi.models.FieldMinusEEzsigndocumentStep
 
 import com.squareup.moshi.Json
@@ -33,7 +32,7 @@ import com.squareup.moshi.Json
  * @param dtEzsigndocumentDuedate The maximum date and time at which the document can be signed.
  * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
  * @param sEzsigndocumentName The name of the document that will be presented to Ezsignfoldersignerassociations
- * @param pkiEzsigndocumentID The unique ID of the Ezsigntemplate
+ * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument
  * @param eEzsigndocumentStep 
  * @param dtEzsigndocumentFirstsend The date and time when the Ezsigndocument was first sent.
  * @param dtEzsigndocumentLastsend The date and time when the Ezsigndocument was sent the last time.
@@ -64,7 +63,7 @@ data class EzsigndocumentMinusResponse (
     @Json(name = "sEzsigndocumentName")
     val sEzsigndocumentName: kotlin.String,
 
-    /* The unique ID of the Ezsigntemplate */
+    /* The unique ID of the Ezsigndocument */
     @Json(name = "pkiEzsigndocumentID")
     val pkiEzsigndocumentID: kotlin.Int,
 

@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**ezsigndocumentDeleteObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentDeleteObjectV1) | **DELETE** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Delete an existing Ezsigndocument
 [**ezsigndocumentGetChildrenV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetChildrenV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getChildren | Retrieve an existing Ezsigndocument&#39;s children IDs
 [**ezsigndocumentGetDownloadUrlV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetDownloadUrlV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getDownloadUrl/{eDocumentType} | Retrieve a URL to download documents.
+[**ezsigndocumentGetEzsignpagesV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetEzsignpagesV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignpages | Retrieve an existing Ezsigndocument&#39;s Ezsignpages
 [**ezsigndocumentGetFormDataV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetFormDataV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getFormData | Retrieve an existing Ezsigndocument&#39;s Form Data
 [**ezsigndocumentGetObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetObjectV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Retrieve an existing Ezsigndocument
 [**ezsigndocumentGetWordsPositionsV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetWordsPositionsV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions | Retrieve positions X,Y of given words from a Ezsigndocument
@@ -29,7 +30,7 @@ This endpoint applies a predefined template to the ezsign document. This allows 
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsigndocumentApi()
-val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsigndocument
+val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | 
 val ezsigndocumentMinusApplyEzsigntemplateMinusV1MinusRequest : EzsigndocumentMinusApplyEzsigntemplateMinusV1MinusRequest =  // EzsigndocumentMinusApplyEzsigntemplateMinusV1MinusRequest | 
 try {
     val result : EzsigndocumentMinusApplyEzsigntemplateMinusV1MinusResponse = apiInstance.ezsigndocumentApplyEzsigntemplateV1(pkiEzsigndocumentID, ezsigndocumentMinusApplyEzsigntemplateMinusV1MinusRequest)
@@ -47,7 +48,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsigndocumentID** | **kotlin.Int**| The unique ID of the Ezsigndocument |
+ **pkiEzsigndocumentID** | **kotlin.Int**|  |
  **ezsigndocumentMinusApplyEzsigntemplateMinusV1MinusRequest** | [**EzsigndocumentMinusApplyEzsigntemplateMinusV1MinusRequest**](EzsigndocumentMinusApplyEzsigntemplateMinusV1MinusRequest.md)|  |
 
 ### Return type
@@ -129,7 +130,7 @@ Delete an existing Ezsigndocument
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsigndocumentApi()
-val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsigndocument
+val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | 
 try {
     val result : EzsigndocumentMinusDeleteObjectMinusV1MinusResponse = apiInstance.ezsigndocumentDeleteObjectV1(pkiEzsigndocumentID)
     println(result)
@@ -146,7 +147,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsigndocumentID** | **kotlin.Int**| The unique ID of the Ezsigndocument |
+ **pkiEzsigndocumentID** | **kotlin.Int**|  |
 
 ### Return type
 
@@ -179,7 +180,7 @@ Retrieve an existing Ezsigndocument&#39;s children IDs
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsigndocumentApi()
-val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsigndocument
+val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | 
 try {
     apiInstance.ezsigndocumentGetChildrenV1(pkiEzsigndocumentID)
 } catch (e: ClientException) {
@@ -195,7 +196,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsigndocumentID** | **kotlin.Int**| The unique ID of the Ezsigndocument |
+ **pkiEzsigndocumentID** | **kotlin.Int**|  |
 
 ### Return type
 
@@ -228,7 +229,7 @@ This endpoint returns URLs to different files that can be downloaded during the 
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsigndocumentApi()
-val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsigndocument
+val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | 
 val eDocumentType : kotlin.String = eDocumentType_example // kotlin.String | The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **Signed** Is the final document once all signatures were applied. 3. **Proofdocument** Is the evidence report. 4. **Proof** Is the complete evidence archive including all of the above and more. 
 try {
     val result : EzsigndocumentMinusGetDownloadUrlMinusV1MinusResponse = apiInstance.ezsigndocumentGetDownloadUrlV1(pkiEzsigndocumentID, eDocumentType)
@@ -246,12 +247,62 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsigndocumentID** | **kotlin.Int**| The unique ID of the Ezsigndocument |
+ **pkiEzsigndocumentID** | **kotlin.Int**|  |
  **eDocumentType** | **kotlin.String**| The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **Signed** Is the final document once all signatures were applied. 3. **Proofdocument** Is the evidence report. 4. **Proof** Is the complete evidence archive including all of the above and more.  | [enum: Initial, Signed, Proof, Proofdocument]
 
 ### Return type
 
 [**EzsigndocumentMinusGetDownloadUrlMinusV1MinusResponse**](EzsigndocumentMinusGetDownloadUrlMinusV1MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="ezsigndocumentGetEzsignpagesV1"></a>
+# **ezsigndocumentGetEzsignpagesV1**
+> EzsigndocumentMinusGetEzsignpagesMinusV1MinusResponse ezsigndocumentGetEzsignpagesV1(pkiEzsigndocumentID)
+
+Retrieve an existing Ezsigndocument&#39;s Ezsignpages
+
+## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsigndocumentApi()
+val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : EzsigndocumentMinusGetEzsignpagesMinusV1MinusResponse = apiInstance.ezsigndocumentGetEzsignpagesV1(pkiEzsigndocumentID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsigndocumentApi#ezsigndocumentGetEzsignpagesV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsigndocumentApi#ezsigndocumentGetEzsignpagesV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigndocumentID** | **kotlin.Int**|  |
+
+### Return type
+
+[**EzsigndocumentMinusGetEzsignpagesMinusV1MinusResponse**](EzsigndocumentMinusGetEzsignpagesMinusV1MinusResponse.md)
 
 ### Authorization
 
@@ -280,7 +331,7 @@ Retrieve an existing Ezsigndocument&#39;s Form Data
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsigndocumentApi()
-val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsigndocument
+val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | 
 try {
     val result : java.io.File = apiInstance.ezsigndocumentGetFormDataV1(pkiEzsigndocumentID)
     println(result)
@@ -297,7 +348,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsigndocumentID** | **kotlin.Int**| The unique ID of the Ezsigndocument |
+ **pkiEzsigndocumentID** | **kotlin.Int**|  |
 
 ### Return type
 
@@ -330,7 +381,7 @@ Retrieve an existing Ezsigndocument
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsigndocumentApi()
-val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsigndocument
+val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | 
 try {
     val result : EzsigndocumentMinusGetObjectMinusV1MinusResponse = apiInstance.ezsigndocumentGetObjectV1(pkiEzsigndocumentID)
     println(result)
@@ -347,7 +398,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsigndocumentID** | **kotlin.Int**| The unique ID of the Ezsigndocument |
+ **pkiEzsigndocumentID** | **kotlin.Int**|  |
 
 ### Return type
 
@@ -380,7 +431,7 @@ Retrieve positions X,Y of given words from a Ezsigndocument
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsigndocumentApi()
-val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsigndocument
+val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | 
 val ezsigndocumentMinusGetWordsPositionsMinusV1MinusRequest : EzsigndocumentMinusGetWordsPositionsMinusV1MinusRequest =  // EzsigndocumentMinusGetWordsPositionsMinusV1MinusRequest | 
 try {
     val result : EzsigndocumentMinusGetWordsPositionsMinusV1MinusResponse = apiInstance.ezsigndocumentGetWordsPositionsV1(pkiEzsigndocumentID, ezsigndocumentMinusGetWordsPositionsMinusV1MinusRequest)
@@ -398,7 +449,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsigndocumentID** | **kotlin.Int**| The unique ID of the Ezsigndocument |
+ **pkiEzsigndocumentID** | **kotlin.Int**|  |
  **ezsigndocumentMinusGetWordsPositionsMinusV1MinusRequest** | [**EzsigndocumentMinusGetWordsPositionsMinusV1MinusRequest**](EzsigndocumentMinusGetWordsPositionsMinusV1MinusRequest.md)|  |
 
 ### Return type

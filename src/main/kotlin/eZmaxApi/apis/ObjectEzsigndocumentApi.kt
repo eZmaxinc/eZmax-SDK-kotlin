@@ -27,6 +27,7 @@ import eZmaxApi.models.EzsigndocumentMinusCreateObjectMinusV1MinusRequest
 import eZmaxApi.models.EzsigndocumentMinusCreateObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsigndocumentMinusDeleteObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsigndocumentMinusGetDownloadUrlMinusV1MinusResponse
+import eZmaxApi.models.EzsigndocumentMinusGetEzsignpagesMinusV1MinusResponse
 import eZmaxApi.models.EzsigndocumentMinusGetObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsigndocumentMinusGetWordsPositionsMinusV1MinusRequest
 import eZmaxApi.models.EzsigndocumentMinusGetWordsPositionsMinusV1MinusResponse
@@ -54,7 +55,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath) : ApiCl
     /**
     * Apply an Ezsign Template to the Ezsigndocument.
     * This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
-    * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument 
+    * @param pkiEzsigndocumentID  
     * @param ezsigndocumentMinusApplyEzsigntemplateMinusV1MinusRequest  
     * @return EzsigndocumentMinusApplyEzsigntemplateMinusV1MinusResponse
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -88,7 +89,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath) : ApiCl
     /**
     * To obtain the request config of the operation ezsigndocumentApplyEzsigntemplateV1
     *
-    * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument 
+    * @param pkiEzsigndocumentID  
     * @param ezsigndocumentMinusApplyEzsigntemplateMinusV1MinusRequest  
     * @return RequestConfig
     */
@@ -162,7 +163,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath) : ApiCl
     /**
     * Delete an existing Ezsigndocument
     * 
-    * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument 
+    * @param pkiEzsigndocumentID  
     * @return EzsigndocumentMinusDeleteObjectMinusV1MinusResponse
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
@@ -195,7 +196,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath) : ApiCl
     /**
     * To obtain the request config of the operation ezsigndocumentDeleteObjectV1
     *
-    * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument 
+    * @param pkiEzsigndocumentID  
     * @return RequestConfig
     */
     fun ezsigndocumentDeleteObjectV1RequestConfig(pkiEzsigndocumentID: kotlin.Int) : RequestConfig<Unit> {
@@ -215,7 +216,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath) : ApiCl
     /**
     * Retrieve an existing Ezsigndocument&#39;s children IDs
     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-    * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument 
+    * @param pkiEzsigndocumentID  
     * @return void
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
@@ -247,7 +248,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath) : ApiCl
     /**
     * To obtain the request config of the operation ezsigndocumentGetChildrenV1
     *
-    * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument 
+    * @param pkiEzsigndocumentID  
     * @return RequestConfig
     */
     fun ezsigndocumentGetChildrenV1RequestConfig(pkiEzsigndocumentID: kotlin.Int) : RequestConfig<Unit> {
@@ -267,7 +268,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath) : ApiCl
     /**
     * Retrieve a URL to download documents.
     * This endpoint returns URLs to different files that can be downloaded during the signing process.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
-    * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument 
+    * @param pkiEzsigndocumentID  
     * @param eDocumentType The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **Signed** Is the final document once all signatures were applied. 3. **Proofdocument** Is the evidence report. 4. **Proof** Is the complete evidence archive including all of the above and more.  
     * @return EzsigndocumentMinusGetDownloadUrlMinusV1MinusResponse
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -301,7 +302,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath) : ApiCl
     /**
     * To obtain the request config of the operation ezsigndocumentGetDownloadUrlV1
     *
-    * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument 
+    * @param pkiEzsigndocumentID  
     * @param eDocumentType The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **Signed** Is the final document once all signatures were applied. 3. **Proofdocument** Is the evidence report. 4. **Proof** Is the complete evidence archive including all of the above and more.  
     * @return RequestConfig
     */
@@ -320,9 +321,62 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath) : ApiCl
     }
 
     /**
+    * Retrieve an existing Ezsigndocument&#39;s Ezsignpages
+    * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+    * @param pkiEzsigndocumentID  
+    * @return EzsigndocumentMinusGetEzsignpagesMinusV1MinusResponse
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsigndocumentGetEzsignpagesV1(pkiEzsigndocumentID: kotlin.Int) : EzsigndocumentMinusGetEzsignpagesMinusV1MinusResponse {
+        val localVariableConfig = ezsigndocumentGetEzsignpagesV1RequestConfig(pkiEzsigndocumentID = pkiEzsigndocumentID)
+
+        val localVarResponse = request<Unit, EzsigndocumentMinusGetEzsignpagesMinusV1MinusResponse>(
+            localVariableConfig
+        )
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigndocumentMinusGetEzsignpagesMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+    * To obtain the request config of the operation ezsigndocumentGetEzsignpagesV1
+    *
+    * @param pkiEzsigndocumentID  
+    * @return RequestConfig
+    */
+    fun ezsigndocumentGetEzsignpagesV1RequestConfig(pkiEzsigndocumentID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignpages".replace("{"+"pkiEzsigndocumentID"+"}", "$pkiEzsigndocumentID"),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
     * Retrieve an existing Ezsigndocument&#39;s Form Data
     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-    * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument 
+    * @param pkiEzsigndocumentID  
     * @return java.io.File
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
@@ -355,7 +409,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath) : ApiCl
     /**
     * To obtain the request config of the operation ezsigndocumentGetFormDataV1
     *
-    * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument 
+    * @param pkiEzsigndocumentID  
     * @return RequestConfig
     */
     fun ezsigndocumentGetFormDataV1RequestConfig(pkiEzsigndocumentID: kotlin.Int) : RequestConfig<Unit> {
@@ -375,7 +429,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath) : ApiCl
     /**
     * Retrieve an existing Ezsigndocument
     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-    * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument 
+    * @param pkiEzsigndocumentID  
     * @return EzsigndocumentMinusGetObjectMinusV1MinusResponse
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
@@ -408,7 +462,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath) : ApiCl
     /**
     * To obtain the request config of the operation ezsigndocumentGetObjectV1
     *
-    * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument 
+    * @param pkiEzsigndocumentID  
     * @return RequestConfig
     */
     fun ezsigndocumentGetObjectV1RequestConfig(pkiEzsigndocumentID: kotlin.Int) : RequestConfig<Unit> {
@@ -428,7 +482,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath) : ApiCl
     /**
     * Retrieve positions X,Y of given words from a Ezsigndocument
     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-    * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument 
+    * @param pkiEzsigndocumentID  
     * @param ezsigndocumentMinusGetWordsPositionsMinusV1MinusRequest  
     * @return EzsigndocumentMinusGetWordsPositionsMinusV1MinusResponse
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -462,7 +516,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath) : ApiCl
     /**
     * To obtain the request config of the operation ezsigndocumentGetWordsPositionsV1
     *
-    * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument 
+    * @param pkiEzsigndocumentID  
     * @param ezsigndocumentMinusGetWordsPositionsMinusV1MinusRequest  
     * @return RequestConfig
     */
