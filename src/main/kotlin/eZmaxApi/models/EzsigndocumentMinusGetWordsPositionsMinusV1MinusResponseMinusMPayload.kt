@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.0.48
+ * The version of the OpenAPI document: 1.1.0
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -20,7 +20,7 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.WordPositionMinusResponse
+import eZmaxApi.models.CustomMinusWordPositionMinusResponse
 
 import com.squareup.moshi.Json
 
@@ -34,7 +34,7 @@ data class EzsigndocumentMinusGetWordsPositionsMinusV1MinusResponseMinusMPayload
 
     /* An array of words with an array of pages and positions X,Y  They are returned with the sames words that was sent in the request. */
     @Json(name = "a_sWords")
-    val aSWords: kotlin.collections.List<WordPositionMinusResponse>
+    val aSWords: kotlin.collections.List<CustomMinusWordPositionMinusResponse>
 
 )
 

@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.0.48
+ * The version of the OpenAPI document: 1.1.0
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -23,11 +23,14 @@ package eZmaxApi.apis
 import eZmaxApi.models.CommonMinusResponseMinusError
 import eZmaxApi.models.EzsigndocumentMinusApplyEzsigntemplateMinusV1MinusRequest
 import eZmaxApi.models.EzsigndocumentMinusApplyEzsigntemplateMinusV1MinusResponse
+import eZmaxApi.models.EzsigndocumentMinusApplyEzsigntemplateMinusV2MinusRequest
+import eZmaxApi.models.EzsigndocumentMinusApplyEzsigntemplateMinusV2MinusResponse
 import eZmaxApi.models.EzsigndocumentMinusCreateObjectMinusV1MinusRequest
 import eZmaxApi.models.EzsigndocumentMinusCreateObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsigndocumentMinusDeleteObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsigndocumentMinusGetDownloadUrlMinusV1MinusResponse
 import eZmaxApi.models.EzsigndocumentMinusGetEzsignpagesMinusV1MinusResponse
+import eZmaxApi.models.EzsigndocumentMinusGetFormDataMinusV1MinusResponse
 import eZmaxApi.models.EzsigndocumentMinusGetObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsigndocumentMinusGetWordsPositionsMinusV1MinusRequest
 import eZmaxApi.models.EzsigndocumentMinusGetWordsPositionsMinusV1MinusResponse
@@ -54,7 +57,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath) : ApiCl
 
     /**
     * Apply an Ezsign Template to the Ezsigndocument.
-    * This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+    * This function is deprecated. Please use *applyEzsigntemplate* instead which is doing the same thing but with a capital \&quot;E\&quot; to normalize the nomenclature.  This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
     * @param pkiEzsigndocumentID  
     * @param ezsigndocumentMinusApplyEzsigntemplateMinusV1MinusRequest  
     * @return EzsigndocumentMinusApplyEzsigntemplateMinusV1MinusResponse
@@ -64,7 +67,9 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath) : ApiCl
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsigndocumentApplyEzsigntemplateV1(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentMinusApplyEzsigntemplateMinusV1MinusRequest: EzsigndocumentMinusApplyEzsigntemplateMinusV1MinusRequest) : EzsigndocumentMinusApplyEzsigntemplateMinusV1MinusResponse {
+        @Suppress("DEPRECATION")
         val localVariableConfig = ezsigndocumentApplyEzsigntemplateV1RequestConfig(pkiEzsigndocumentID = pkiEzsigndocumentID, ezsigndocumentMinusApplyEzsigntemplateMinusV1MinusRequest = ezsigndocumentMinusApplyEzsigntemplateMinusV1MinusRequest)
 
         val localVarResponse = request<EzsigndocumentMinusApplyEzsigntemplateMinusV1MinusRequest, EzsigndocumentMinusApplyEzsigntemplateMinusV1MinusResponse>(
@@ -93,6 +98,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath) : ApiCl
     * @param ezsigndocumentMinusApplyEzsigntemplateMinusV1MinusRequest  
     * @return RequestConfig
     */
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsigndocumentApplyEzsigntemplateV1RequestConfig(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentMinusApplyEzsigntemplateMinusV1MinusRequest: EzsigndocumentMinusApplyEzsigntemplateMinusV1MinusRequest) : RequestConfig<EzsigndocumentMinusApplyEzsigntemplateMinusV1MinusRequest> {
         val localVariableBody = ezsigndocumentMinusApplyEzsigntemplateMinusV1MinusRequest
         val localVariableQuery: MultiValueMap = mutableMapOf()
@@ -101,6 +107,61 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath) : ApiCl
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate".replace("{"+"pkiEzsigndocumentID"+"}", "$pkiEzsigndocumentID"),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+    * Apply an Ezsign Template to the Ezsigndocument.
+    * This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+    * @param pkiEzsigndocumentID  
+    * @param ezsigndocumentMinusApplyEzsigntemplateMinusV2MinusRequest  
+    * @return EzsigndocumentMinusApplyEzsigntemplateMinusV2MinusResponse
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsigndocumentApplyEzsigntemplateV2(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentMinusApplyEzsigntemplateMinusV2MinusRequest: EzsigndocumentMinusApplyEzsigntemplateMinusV2MinusRequest) : EzsigndocumentMinusApplyEzsigntemplateMinusV2MinusResponse {
+        val localVariableConfig = ezsigndocumentApplyEzsigntemplateV2RequestConfig(pkiEzsigndocumentID = pkiEzsigndocumentID, ezsigndocumentMinusApplyEzsigntemplateMinusV2MinusRequest = ezsigndocumentMinusApplyEzsigntemplateMinusV2MinusRequest)
+
+        val localVarResponse = request<EzsigndocumentMinusApplyEzsigntemplateMinusV2MinusRequest, EzsigndocumentMinusApplyEzsigntemplateMinusV2MinusResponse>(
+            localVariableConfig
+        )
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigndocumentMinusApplyEzsigntemplateMinusV2MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+    * To obtain the request config of the operation ezsigndocumentApplyEzsigntemplateV2
+    *
+    * @param pkiEzsigndocumentID  
+    * @param ezsigndocumentMinusApplyEzsigntemplateMinusV2MinusRequest  
+    * @return RequestConfig
+    */
+    fun ezsigndocumentApplyEzsigntemplateV2RequestConfig(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentMinusApplyEzsigntemplateMinusV2MinusRequest: EzsigndocumentMinusApplyEzsigntemplateMinusV2MinusRequest) : RequestConfig<EzsigndocumentMinusApplyEzsigntemplateMinusV2MinusRequest> {
+        val localVariableBody = ezsigndocumentMinusApplyEzsigntemplateMinusV2MinusRequest
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate".replace("{"+"pkiEzsigndocumentID"+"}", "$pkiEzsigndocumentID"),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -322,7 +383,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath) : ApiCl
 
     /**
     * Retrieve an existing Ezsigndocument&#39;s Ezsignpages
-    * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+    * 
     * @param pkiEzsigndocumentID  
     * @return EzsigndocumentMinusGetEzsignpagesMinusV1MinusResponse
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -377,22 +438,22 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath) : ApiCl
     * Retrieve an existing Ezsigndocument&#39;s Form Data
     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
     * @param pkiEzsigndocumentID  
-    * @return java.io.File
+    * @return EzsigndocumentMinusGetFormDataMinusV1MinusResponse
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsigndocumentGetFormDataV1(pkiEzsigndocumentID: kotlin.Int) : java.io.File {
+    fun ezsigndocumentGetFormDataV1(pkiEzsigndocumentID: kotlin.Int) : EzsigndocumentMinusGetFormDataMinusV1MinusResponse {
         val localVariableConfig = ezsigndocumentGetFormDataV1RequestConfig(pkiEzsigndocumentID = pkiEzsigndocumentID)
 
-        val localVarResponse = request<Unit, java.io.File>(
+        val localVarResponse = request<Unit, EzsigndocumentMinusGetFormDataMinusV1MinusResponse>(
             localVariableConfig
         )
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as java.io.File
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigndocumentMinusGetFormDataMinusV1MinusResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {

@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.0.48
+ * The version of the OpenAPI document: 1.1.0
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -24,6 +24,7 @@ import eZmaxApi.models.CommonMinusResponseMinusError
 import eZmaxApi.models.EzsignfolderMinusCreateObjectMinusV1MinusRequest
 import eZmaxApi.models.EzsignfolderMinusCreateObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsignfolderMinusDeleteObjectMinusV1MinusResponse
+import eZmaxApi.models.EzsignfolderMinusGetFormsDataMinusV1MinusResponse
 import eZmaxApi.models.EzsignfolderMinusGetObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsignfolderMinusSendMinusV1MinusRequest
 import eZmaxApi.models.EzsignfolderMinusSendMinusV1MinusResponse
@@ -210,22 +211,22 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     * Retrieve an existing Ezsignfolder&#39;s forms data
     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
     * @param pkiEzsignfolderID  
-    * @return java.io.File
+    * @return EzsignfolderMinusGetFormsDataMinusV1MinusResponse
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignfolderGetFormsDataV1(pkiEzsignfolderID: kotlin.Int) : java.io.File {
+    fun ezsignfolderGetFormsDataV1(pkiEzsignfolderID: kotlin.Int) : EzsignfolderMinusGetFormsDataMinusV1MinusResponse {
         val localVariableConfig = ezsignfolderGetFormsDataV1RequestConfig(pkiEzsignfolderID = pkiEzsignfolderID)
 
-        val localVarResponse = request<Unit, java.io.File>(
+        val localVarResponse = request<Unit, EzsignfolderMinusGetFormsDataMinusV1MinusResponse>(
             localVariableConfig
         )
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as java.io.File
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfolderMinusGetFormsDataMinusV1MinusResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {

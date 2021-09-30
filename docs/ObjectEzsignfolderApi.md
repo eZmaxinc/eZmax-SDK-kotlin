@@ -161,7 +161,7 @@ Configure Authorization:
 
 <a name="ezsignfolderGetFormsDataV1"></a>
 # **ezsignfolderGetFormsDataV1**
-> java.io.File ezsignfolderGetFormsDataV1(pkiEzsignfolderID)
+> EzsignfolderMinusGetFormsDataMinusV1MinusResponse ezsignfolderGetFormsDataV1(pkiEzsignfolderID)
 
 Retrieve an existing Ezsignfolder&#39;s forms data
 
@@ -176,7 +176,7 @@ Retrieve an existing Ezsignfolder&#39;s forms data
 val apiInstance = ObjectEzsignfolderApi()
 val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : java.io.File = apiInstance.ezsignfolderGetFormsDataV1(pkiEzsignfolderID)
+    val result : EzsignfolderMinusGetFormsDataMinusV1MinusResponse = apiInstance.ezsignfolderGetFormsDataV1(pkiEzsignfolderID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignfolderApi#ezsignfolderGetFormsDataV1")
@@ -195,7 +195,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**java.io.File**](java.io.File.md)
+[**EzsignfolderMinusGetFormsDataMinusV1MinusResponse**](EzsignfolderMinusGetFormsDataMinusV1MinusResponse.md)
 
 ### Authorization
 
@@ -207,7 +207,7 @@ Configure Authorization:
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/zip, application/json
+ - **Accept**: application/json, application/zip
 
 <a name="ezsignfolderGetObjectV1"></a>
 # **ezsignfolderGetObjectV1**

@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.0.48
+ * The version of the OpenAPI document: 1.1.0
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -31,7 +31,7 @@ import com.squareup.moshi.Json
  * @param iY The Y coordinate (Vertical) where the Word occurence was found.  Coordinate is calculated at 100dpi (dot per inch).
  */
 
-data class WordPositionMinusResponse (
+data class CustomMinusWordPositionMinusResponse (
 
     /* The page where the word occurence was found */
     @Json(name = "iPage")

@@ -5,6 +5,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ezsigndocumentApplyEzsigntemplateV1**](ObjectEzsigndocumentApi.md#ezsigndocumentApplyEzsigntemplateV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate | Apply an Ezsign Template to the Ezsigndocument.
+[**ezsigndocumentApplyEzsigntemplateV2**](ObjectEzsigndocumentApi.md#ezsigndocumentApplyEzsigntemplateV2) | **POST** /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate | Apply an Ezsign Template to the Ezsigndocument.
 [**ezsigndocumentCreateObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentCreateObjectV1) | **POST** /1/object/ezsigndocument | Create a new Ezsigndocument
 [**ezsigndocumentDeleteObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentDeleteObjectV1) | **DELETE** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Delete an existing Ezsigndocument
 [**ezsigndocumentGetChildrenV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetChildrenV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getChildren | Retrieve an existing Ezsigndocument&#39;s children IDs
@@ -21,7 +22,7 @@ Method | HTTP request | Description
 
 Apply an Ezsign Template to the Ezsigndocument.
 
-This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+This function is deprecated. Please use *applyEzsigntemplate* instead which is doing the same thing but with a capital \&quot;E\&quot; to normalize the nomenclature.  This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
 
 ### Example
 ```kotlin
@@ -54,6 +55,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsigndocumentMinusApplyEzsigntemplateMinusV1MinusResponse**](EzsigndocumentMinusApplyEzsigntemplateMinusV1MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="ezsigndocumentApplyEzsigntemplateV2"></a>
+# **ezsigndocumentApplyEzsigntemplateV2**
+> EzsigndocumentMinusApplyEzsigntemplateMinusV2MinusResponse ezsigndocumentApplyEzsigntemplateV2(pkiEzsigndocumentID, ezsigndocumentMinusApplyEzsigntemplateMinusV2MinusRequest)
+
+Apply an Ezsign Template to the Ezsigndocument.
+
+This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsigndocumentApi()
+val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | 
+val ezsigndocumentMinusApplyEzsigntemplateMinusV2MinusRequest : EzsigndocumentMinusApplyEzsigntemplateMinusV2MinusRequest =  // EzsigndocumentMinusApplyEzsigntemplateMinusV2MinusRequest | 
+try {
+    val result : EzsigndocumentMinusApplyEzsigntemplateMinusV2MinusResponse = apiInstance.ezsigndocumentApplyEzsigntemplateV2(pkiEzsigndocumentID, ezsigndocumentMinusApplyEzsigntemplateMinusV2MinusRequest)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsigndocumentApi#ezsigndocumentApplyEzsigntemplateV2")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsigndocumentApi#ezsigndocumentApplyEzsigntemplateV2")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigndocumentID** | **kotlin.Int**|  |
+ **ezsigndocumentMinusApplyEzsigntemplateMinusV2MinusRequest** | [**EzsigndocumentMinusApplyEzsigntemplateMinusV2MinusRequest**](EzsigndocumentMinusApplyEzsigntemplateMinusV2MinusRequest.md)|  |
+
+### Return type
+
+[**EzsigndocumentMinusApplyEzsigntemplateMinusV2MinusResponse**](EzsigndocumentMinusApplyEzsigntemplateMinusV2MinusResponse.md)
 
 ### Authorization
 
@@ -272,8 +325,6 @@ Configure Authorization:
 
 Retrieve an existing Ezsigndocument&#39;s Ezsignpages
 
-## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-
 ### Example
 ```kotlin
 // Import classes:
@@ -318,7 +369,7 @@ Configure Authorization:
 
 <a name="ezsigndocumentGetFormDataV1"></a>
 # **ezsigndocumentGetFormDataV1**
-> java.io.File ezsigndocumentGetFormDataV1(pkiEzsigndocumentID)
+> EzsigndocumentMinusGetFormDataMinusV1MinusResponse ezsigndocumentGetFormDataV1(pkiEzsigndocumentID)
 
 Retrieve an existing Ezsigndocument&#39;s Form Data
 
@@ -333,7 +384,7 @@ Retrieve an existing Ezsigndocument&#39;s Form Data
 val apiInstance = ObjectEzsigndocumentApi()
 val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : java.io.File = apiInstance.ezsigndocumentGetFormDataV1(pkiEzsigndocumentID)
+    val result : EzsigndocumentMinusGetFormDataMinusV1MinusResponse = apiInstance.ezsigndocumentGetFormDataV1(pkiEzsigndocumentID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigndocumentApi#ezsigndocumentGetFormDataV1")
@@ -352,7 +403,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**java.io.File**](java.io.File.md)
+[**EzsigndocumentMinusGetFormDataMinusV1MinusResponse**](EzsigndocumentMinusGetFormDataMinusV1MinusResponse.md)
 
 ### Authorization
 
@@ -364,7 +415,7 @@ Configure Authorization:
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/zip, application/json
+ - **Accept**: application/json, application/zip, text/csv
 
 <a name="ezsigndocumentGetObjectV1"></a>
 # **ezsigndocumentGetObjectV1**
