@@ -30,7 +30,7 @@ import com.squareup.moshi.Json
  * @param fkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation
  * @param sContactFirstname The First name of the contact
  * @param sContactLastname The Last name of the contact
- * @param aObjEzsignformfieldgroupCompound This array contains the labels or each Form fields in the form but WITHOUT the values
+ * @param aObjEzsignformfieldgroupCompound 
  * @param fkiUserID The unique ID of the User
  */
 
@@ -48,7 +48,6 @@ data class CustomMinusFormDataSignerMinusResponse (
     @Json(name = "sContactLastname")
     val sContactLastname: kotlin.String,
 
-    /* This array contains the labels or each Form fields in the form but WITHOUT the values */
     @Json(name = "a_objEzsignformfieldgroupCompound")
     val aObjEzsignformfieldgroupCompound: kotlin.collections.List<EzsignformfieldgroupMinusResponseCompound>,
 

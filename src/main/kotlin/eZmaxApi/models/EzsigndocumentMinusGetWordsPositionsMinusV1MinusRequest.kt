@@ -26,13 +26,30 @@ import com.squareup.moshi.Json
 /**
  * Request for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request
  *
- * @param aSWords 
+ * @param eGet Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search in *a_sWord*.
+ * @param aSWord Array of words to find in the document
  */
 
 data class EzsigndocumentMinusGetWordsPositionsMinusV1MinusRequest (
 
-    @Json(name = "a_sWords")
-    val aSWords: kotlin.collections.List<kotlin.String>
+    /* Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search in *a_sWord*. */
+    @Json(name = "eGet")
+    val eGet: EzsigndocumentMinusGetWordsPositionsMinusV1MinusRequest.EGet? = null,
 
-)
+    /* Array of words to find in the document */
+    @Json(name = "a_sWord")
+    val aSWord: kotlin.collections.List<kotlin.String>? = null
+
+) {
+
+    /**
+     * Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search in *a_sWord*.
+     *
+     * Values: All,Words
+     */
+    enum class EGet(val value: kotlin.String) {
+        @Json(name = "All") All("All"),
+        @Json(name = "Words") Words("Words");
+    }
+}
 
