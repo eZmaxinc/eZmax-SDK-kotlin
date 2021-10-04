@@ -28,7 +28,7 @@ import com.squareup.moshi.Json
  * A Word Position Object
  *
  * @param sWord The searched word
- * @param objWordPositionOccurence The found occurences for the seached word
+ * @param aObjWordPositionOccurence The found occurences for the seached word
  */
 
 data class CustomMinusWordPositionWordMinusResponse (
@@ -38,8 +38,8 @@ data class CustomMinusWordPositionWordMinusResponse (
     val sWord: kotlin.String,
 
     /* The found occurences for the seached word */
-    @Json(name = "objWordPositionOccurence")
-    val objWordPositionOccurence: kotlin.collections.List<CustomMinusWordPositionOccurenceMinusResponse>
+    @Json(name = "a_objWordPositionOccurence")
+    val aObjWordPositionOccurence: kotlin.collections.List<CustomMinusWordPositionOccurenceMinusResponse>
 
 )
 
