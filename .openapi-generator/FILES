@@ -36,7 +36,8 @@ docs/ContactinformationsRequestCompoundAllOf.md
 docs/CustomFormDataDocumentResponse.md
 docs/CustomFormDataFolderResponse.md
 docs/CustomFormDataSignerResponse.md
-docs/CustomWordPositionResponse.md
+docs/CustomWordPositionOccurenceResponse.md
+docs/CustomWordPositionWordResponse.md
 docs/EmailRequest.md
 docs/EzsigndocumentApplyEzsigntemplateV1Request.md
 docs/EzsigndocumentApplyEzsigntemplateV1Response.md
@@ -62,7 +63,6 @@ docs/EzsigndocumentGetObjectV1ResponseMPayload.md
 docs/EzsigndocumentGetWordsPositionsV1Request.md
 docs/EzsigndocumentGetWordsPositionsV1Response.md
 docs/EzsigndocumentGetWordsPositionsV1ResponseAllOf.md
-docs/EzsigndocumentGetWordsPositionsV1ResponseMPayload.md
 docs/EzsigndocumentRequest.md
 docs/EzsigndocumentRequestCompound.md
 docs/EzsigndocumentResponse.md
@@ -244,7 +244,8 @@ src/main/kotlin/eZmaxApi/models/ContactinformationsRequestCompoundAllOf.kt
 src/main/kotlin/eZmaxApi/models/CustomMinusFormDataDocumentMinusResponse.kt
 src/main/kotlin/eZmaxApi/models/CustomMinusFormDataFolderMinusResponse.kt
 src/main/kotlin/eZmaxApi/models/CustomMinusFormDataSignerMinusResponse.kt
-src/main/kotlin/eZmaxApi/models/CustomMinusWordPositionMinusResponse.kt
+src/main/kotlin/eZmaxApi/models/CustomMinusWordPositionOccurenceMinusResponse.kt
+src/main/kotlin/eZmaxApi/models/CustomMinusWordPositionWordMinusResponse.kt
 src/main/kotlin/eZmaxApi/models/EmailMinusRequest.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentCreateObjectV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentGetDownloadUrlV1ResponseAllOf.kt
@@ -270,7 +271,6 @@ src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusGetObjectMinusV1MinusResponse
 src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusGetObjectMinusV1MinusResponseMinusMPayload.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusGetWordsPositionsMinusV1MinusRequest.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusGetWordsPositionsMinusV1MinusResponse.kt
-src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusGetWordsPositionsMinusV1MinusResponseMinusMPayload.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusRequest.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusRequestCompound.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusResponse.kt

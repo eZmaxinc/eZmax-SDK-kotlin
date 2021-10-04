@@ -23,23 +23,24 @@ package eZmaxApi.models
 import eZmaxApi.models.CommonMinusResponse
 import eZmaxApi.models.CommonMinusResponseMinusObjDebug
 import eZmaxApi.models.CommonMinusResponseMinusObjDebugPayload
+import eZmaxApi.models.CustomMinusWordPositionWordMinusResponse
 import eZmaxApi.models.EzsigndocumentGetWordsPositionsV1ResponseAllOf
-import eZmaxApi.models.EzsigndocumentMinusGetWordsPositionsMinusV1MinusResponseMinusMPayload
 
 import com.squareup.moshi.Json
 
 /**
  * Response for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request
  *
- * @param mPayload 
+ * @param mPayload Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request
  * @param objDebugPayload 
  * @param objDebug 
  */
 
 data class EzsigndocumentMinusGetWordsPositionsMinusV1MinusResponse (
 
+    /* Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request */
     @Json(name = "mPayload")
-    val mPayload: EzsigndocumentMinusGetWordsPositionsMinusV1MinusResponseMinusMPayload,
+    val mPayload: kotlin.collections.List<CustomMinusWordPositionWordMinusResponse>,
 
     @Json(name = "objDebugPayload")
     val objDebugPayload: CommonMinusResponseMinusObjDebugPayload? = null,

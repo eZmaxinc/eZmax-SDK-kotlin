@@ -31,7 +31,7 @@ import com.squareup.moshi.Json
  * @param iY The Y coordinate (Vertical) where the Word occurence was found.  Coordinate is calculated at 100dpi (dot per inch).
  */
 
-data class CustomMinusWordPositionMinusResponse (
+data class CustomMinusWordPositionOccurenceMinusResponse (
 
     /* The page where the word occurence was found */
     @Json(name = "iPage")

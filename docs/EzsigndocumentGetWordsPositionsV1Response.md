@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**EzsigndocumentMinusGetWordsPositionsMinusV1MinusResponseMinusMPayload**](EzsigndocumentMinusGetWordsPositionsMinusV1MinusResponseMinusMPayload.md) |  | 
+**mPayload** | [**kotlin.collections.List&lt;CustomMinusWordPositionWordMinusResponse&gt;**](CustomMinusWordPositionWordMinusResponse.md) | Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request | 
 **objDebugPayload** | [**CommonMinusResponseMinusObjDebugPayload**](CommonMinusResponseMinusObjDebugPayload.md) |  |  [optional]
 **objDebug** | [**CommonMinusResponseMinusObjDebug**](CommonMinusResponseMinusObjDebug.md) |  |  [optional]
 

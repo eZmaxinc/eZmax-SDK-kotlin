@@ -20,20 +20,21 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.EzsigndocumentMinusGetWordsPositionsMinusV1MinusResponseMinusMPayload
+import eZmaxApi.models.CustomMinusWordPositionWordMinusResponse
 
 import com.squareup.moshi.Json
 
 /**
  * 
  *
- * @param mPayload 
+ * @param mPayload Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request
  */
 
 data class EzsigndocumentGetWordsPositionsV1ResponseAllOf (
 
+    /* Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request */
     @Json(name = "mPayload")
-    val mPayload: EzsigndocumentMinusGetWordsPositionsMinusV1MinusResponseMinusMPayload
+    val mPayload: kotlin.collections.List<CustomMinusWordPositionWordMinusResponse>
 
 )
 
