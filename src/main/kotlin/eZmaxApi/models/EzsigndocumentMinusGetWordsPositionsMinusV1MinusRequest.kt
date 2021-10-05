@@ -26,15 +26,20 @@ import com.squareup.moshi.Json
 /**
  * Request for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request
  *
- * @param eGet Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search in *a_sWord*.
+ * @param eGet Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search for in *a_sWord*.
+ * @param bWordCaseSensitive IF *true*, words will be searched case-sensitive and results will be returned case-sensitive. IF *false*, words will be searched case-insensitive and results will be returned case-insensitive.
  * @param aSWord Array of words to find in the document
  */
 
 data class EzsigndocumentMinusGetWordsPositionsMinusV1MinusRequest (
 
-    /* Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search in *a_sWord*. */
+    /* Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search for in *a_sWord*. */
     @Json(name = "eGet")
-    val eGet: EzsigndocumentMinusGetWordsPositionsMinusV1MinusRequest.EGet? = null,
+    val eGet: EzsigndocumentMinusGetWordsPositionsMinusV1MinusRequest.EGet,
+
+    /* IF *true*, words will be searched case-sensitive and results will be returned case-sensitive. IF *false*, words will be searched case-insensitive and results will be returned case-insensitive. */
+    @Json(name = "bWordCaseSensitive")
+    val bWordCaseSensitive: kotlin.Boolean,
 
     /* Array of words to find in the document */
     @Json(name = "a_sWord")
@@ -43,7 +48,7 @@ data class EzsigndocumentMinusGetWordsPositionsMinusV1MinusRequest (
 ) {
 
     /**
-     * Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search in *a_sWord*.
+     * Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search for in *a_sWord*.
      *
      * Values: All,Words
      */

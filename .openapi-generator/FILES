@@ -21,6 +21,7 @@ docs/CommonAudit.md
 docs/CommonGetAutocompleteV1Response.md
 docs/CommonGetAutocompleteV1ResponseAllOf.md
 docs/CommonGetAutocompleteV1ResponseMPayload.md
+docs/CommonGetListV1ResponseMPayload.md
 docs/CommonResponse.md
 docs/CommonResponseError.md
 docs/CommonResponseObjDebug.md
@@ -97,6 +98,11 @@ docs/EzsignfoldersignerassociationGetObjectV1ResponseAllOf.md
 docs/EzsignfoldersignerassociationRequest.md
 docs/EzsignfoldersignerassociationRequestCompound.md
 docs/EzsignfoldersignerassociationRequestCompoundAllOf.md
+docs/EzsignfoldertypeGetListV1Response.md
+docs/EzsignfoldertypeGetListV1ResponseAllOf.md
+docs/EzsignfoldertypeGetListV1ResponseMPayload.md
+docs/EzsignfoldertypeGetListV1ResponseMPayloadAllOf.md
+docs/EzsignfoldertypeListElement.md
 docs/EzsignformfieldResponse.md
 docs/EzsignformfieldResponseCompound.md
 docs/EzsignformfieldgroupResponse.md
@@ -141,6 +147,7 @@ docs/ObjectApikeyApi.md
 docs/ObjectEzsigndocumentApi.md
 docs/ObjectEzsignfolderApi.md
 docs/ObjectEzsignfoldersignerassociationApi.md
+docs/ObjectEzsignfoldertypeApi.md
 docs/ObjectEzsignsignatureApi.md
 docs/ObjectFranchisebrokerApi.md
 docs/ObjectFranchiseofficeApi.md
@@ -188,6 +195,7 @@ src/main/kotlin/eZmaxApi/apis/ObjectApikeyApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectEzsigndocumentApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectEzsignfolderApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectEzsignfoldersignerassociationApi.kt
+src/main/kotlin/eZmaxApi/apis/ObjectEzsignfoldertypeApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectEzsignsignatureApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectFranchisebrokerApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectFranchiseofficeApi.kt
@@ -229,6 +237,7 @@ src/main/kotlin/eZmaxApi/models/CommonGetAutocompleteV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/CommonMinusAudit.kt
 src/main/kotlin/eZmaxApi/models/CommonMinusGetAutocompleteMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/CommonMinusGetAutocompleteMinusV1MinusResponseMinusMPayload.kt
+src/main/kotlin/eZmaxApi/models/CommonMinusGetListMinusV1MinusResponseMinusMPayload.kt
 src/main/kotlin/eZmaxApi/models/CommonMinusResponse.kt
 src/main/kotlin/eZmaxApi/models/CommonMinusResponseMinusError.kt
 src/main/kotlin/eZmaxApi/models/CommonMinusResponseMinusObjDebug.kt
@@ -305,6 +314,11 @@ src/main/kotlin/eZmaxApi/models/EzsignfoldersignerassociationMinusGetObjectMinus
 src/main/kotlin/eZmaxApi/models/EzsignfoldersignerassociationMinusRequest.kt
 src/main/kotlin/eZmaxApi/models/EzsignfoldersignerassociationMinusRequestCompound.kt
 src/main/kotlin/eZmaxApi/models/EzsignfoldersignerassociationRequestCompoundAllOf.kt
+src/main/kotlin/eZmaxApi/models/EzsignfoldertypeGetListV1ResponseAllOf.kt
+src/main/kotlin/eZmaxApi/models/EzsignfoldertypeGetListV1ResponseMPayloadAllOf.kt
+src/main/kotlin/eZmaxApi/models/EzsignfoldertypeMinusGetListMinusV1MinusResponse.kt
+src/main/kotlin/eZmaxApi/models/EzsignfoldertypeMinusGetListMinusV1MinusResponseMinusMPayload.kt
+src/main/kotlin/eZmaxApi/models/EzsignfoldertypeMinusListElement.kt
 src/main/kotlin/eZmaxApi/models/EzsignformfieldMinusResponse.kt
 src/main/kotlin/eZmaxApi/models/EzsignformfieldMinusResponseCompound.kt
 src/main/kotlin/eZmaxApi/models/EzsignformfieldgroupMinusResponse.kt
