@@ -23,6 +23,7 @@ package eZmaxApi.models
 import eZmaxApi.models.CommonMinusResponse
 import eZmaxApi.models.CommonMinusResponseMinusObjDebug
 import eZmaxApi.models.CommonMinusResponseMinusObjDebugPayload
+import eZmaxApi.models.EzsignfolderCreateObjectV1ResponseAllOf
 import eZmaxApi.models.EzsignfolderMinusCreateObjectMinusV1MinusResponseMinusMPayload
 
 import com.squareup.moshi.Json
@@ -30,11 +31,15 @@ import com.squareup.moshi.Json
 /**
  * Response for the /1/object/ezsignfolder/createObject API Request
  *
+ * @param mPayload 
  * @param objDebugPayload 
  * @param objDebug 
  */
 
 data class EzsignfolderMinusCreateObjectMinusV1MinusResponse (
+
+    @Json(name = "mPayload")
+    val mPayload: EzsignfolderMinusCreateObjectMinusV1MinusResponseMinusMPayload,
 
     @Json(name = "objDebugPayload")
     val objDebugPayload: CommonMinusResponseMinusObjDebugPayload? = null,

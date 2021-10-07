@@ -70,6 +70,7 @@ docs/EzsigndocumentResponse.md
 docs/EzsigndocumentResponseCompound.md
 docs/EzsignfolderCreateObjectV1Request.md
 docs/EzsignfolderCreateObjectV1Response.md
+docs/EzsignfolderCreateObjectV1ResponseAllOf.md
 docs/EzsignfolderCreateObjectV1ResponseMPayload.md
 docs/EzsignfolderDeleteObjectV1Response.md
 docs/EzsignfolderGetFormsDataV1Response.md
@@ -285,6 +286,7 @@ src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusRequest.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusRequestCompound.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusResponse.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusResponseCompound.kt
+src/main/kotlin/eZmaxApi/models/EzsignfolderCreateObjectV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsignfolderGetFormsDataV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsignfolderGetObjectV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsignfolderMinusCreateObjectMinusV1MinusRequest.kt
