@@ -20,7 +20,9 @@
 
 package eZmaxApi.apis
 
+import eZmaxApi.models.CommonMinusResponseMinusError
 import eZmaxApi.models.EzsignfoldertypeMinusGetListMinusV1MinusResponse
+import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
 
 import eZmaxApi.infrastructure.ApiClient
 import eZmaxApi.infrastructure.ClientException
@@ -44,7 +46,12 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath) : Api
 
     /**
     * Retrieve Ezsignfoldertype list
-    * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+    * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+    * @param eOrderBy Specify how you want the results to be sorted (optional)
+    * @param iRowMax  (optional)
+    * @param iRowOffset  (optional)
+    * @param acceptLanguage  (optional)
+    * @param sFilter  (optional)
     * @return EzsignfoldertypeMinusGetListMinusV1MinusResponse
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
@@ -52,8 +59,8 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath) : Api
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignfoldertypeGetListV1() : EzsignfoldertypeMinusGetListMinusV1MinusResponse {
-        val localVariableConfig = ezsignfoldertypeGetListV1RequestConfig()
+    fun ezsignfoldertypeGetListV1(eOrderBy: kotlin.String?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : EzsignfoldertypeMinusGetListMinusV1MinusResponse {
+        val localVariableConfig = ezsignfoldertypeGetListV1RequestConfig(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
 
         val localVarResponse = request<Unit, EzsignfoldertypeMinusGetListMinusV1MinusResponse>(
             localVariableConfig
@@ -77,12 +84,32 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath) : Api
     /**
     * To obtain the request config of the operation ezsignfoldertypeGetListV1
     *
+    * @param eOrderBy Specify how you want the results to be sorted (optional)
+    * @param iRowMax  (optional)
+    * @param iRowOffset  (optional)
+    * @param acceptLanguage  (optional)
+    * @param sFilter  (optional)
     * @return RequestConfig
     */
-    fun ezsignfoldertypeGetListV1RequestConfig() : RequestConfig<Unit> {
+    fun ezsignfoldertypeGetListV1RequestConfig(eOrderBy: kotlin.String?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
         val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
+            .apply {
+                if (eOrderBy != null) {
+                    put("eOrderBy", listOf(eOrderBy.toString()))
+                }
+                if (iRowMax != null) {
+                    put("iRowMax", listOf(iRowMax.toString()))
+                }
+                if (iRowOffset != null) {
+                    put("iRowOffset", listOf(iRowOffset.toString()))
+                }
+                if (sFilter != null) {
+                    put("sFilter", listOf(sFilter.toString()))
+                }
+            }
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
 
         return RequestConfig(
             method = RequestMethod.GET,

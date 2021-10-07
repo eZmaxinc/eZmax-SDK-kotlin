@@ -25,14 +25,14 @@ import eZmaxApi.models.CustomMinusFormDataDocumentMinusResponse
 import com.squareup.moshi.Json
 
 /**
- * A form Data Folder Object
+ * A forms Data Folder Object
  *
  * @param pkiEzsignfolderID The unique ID of the Ezsignfolder
  * @param sEzsignfolderDescription The description of the Ezsign Folder
  * @param aObjFormDataDocument 
  */
 
-data class CustomMinusFormDataFolderMinusResponse (
+data class CustomMinusFormsDataFolderMinusResponse (
 
     /* The unique ID of the Ezsignfolder */
     @Json(name = "pkiEzsignfolderID")

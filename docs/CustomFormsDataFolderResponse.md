@@ -1,5 +1,5 @@
 
-# CustomMinusFormDataFolderMinusResponse
+# CustomMinusFormsDataFolderMinusResponse
 
 ## Properties
 Name | Type | Description | Notes

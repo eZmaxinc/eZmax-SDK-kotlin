@@ -21,7 +21,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.CustomMinusFormDataDocumentMinusResponse
-import eZmaxApi.models.CustomMinusFormDataFolderMinusResponse
+import eZmaxApi.models.CustomMinusFormsDataFolderMinusResponse
 
 import com.squareup.moshi.Json
 

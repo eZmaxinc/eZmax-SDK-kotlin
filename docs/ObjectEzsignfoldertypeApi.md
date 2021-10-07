@@ -9,11 +9,11 @@ Method | HTTP request | Description
 
 <a name="ezsignfoldertypeGetListV1"></a>
 # **ezsignfoldertypeGetListV1**
-> EzsignfoldertypeMinusGetListMinusV1MinusResponse ezsignfoldertypeGetListV1()
+> EzsignfoldertypeMinusGetListMinusV1MinusResponse ezsignfoldertypeGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
 Retrieve Ezsignfoldertype list
 
-## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
 
 ### Example
 ```kotlin
@@ -22,8 +22,13 @@ Retrieve Ezsignfoldertype list
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsignfoldertypeApi()
+val eOrderBy : kotlin.String = eOrderBy_example // kotlin.String | Specify how you want the results to be sorted
+val iRowMax : kotlin.Int = 56 // kotlin.Int | 
+val iRowOffset : kotlin.Int = 56 // kotlin.Int | 
+val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
+val sFilter : kotlin.String = sFilter_example // kotlin.String | 
 try {
-    val result : EzsignfoldertypeMinusGetListMinusV1MinusResponse = apiInstance.ezsignfoldertypeGetListV1()
+    val result : EzsignfoldertypeMinusGetListMinusV1MinusResponse = apiInstance.ezsignfoldertypeGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignfoldertypeApi#ezsignfoldertypeGetListV1")
@@ -35,7 +40,14 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: sEzsignfoldertypeNameX, sEzsignfoldertypeNameX desc]
+ **iRowMax** | **kotlin.Int**|  | [optional]
+ **iRowOffset** | **kotlin.Int**|  | [optional]
+ **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
+ **sFilter** | **kotlin.String**|  | [optional]
 
 ### Return type
 
@@ -51,5 +63,5 @@ Configure Authorization:
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
 

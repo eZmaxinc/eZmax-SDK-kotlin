@@ -35,8 +35,8 @@ docs/ContactinformationsRequest.md
 docs/ContactinformationsRequestCompound.md
 docs/ContactinformationsRequestCompoundAllOf.md
 docs/CustomFormDataDocumentResponse.md
-docs/CustomFormDataFolderResponse.md
 docs/CustomFormDataSignerResponse.md
+docs/CustomFormsDataFolderResponse.md
 docs/CustomWordPositionOccurenceResponse.md
 docs/CustomWordPositionWordResponse.md
 docs/EmailRequest.md
@@ -138,6 +138,7 @@ docs/FranchisereferalincomeRequestCompound.md
 docs/FranchisereferalincomeRequestCompoundAllOf.md
 docs/GlobalCustomerApi.md
 docs/GlobalCustomerGetEndpointV1Response.md
+docs/HeaderAcceptLanguage.md
 docs/ModuleAuthenticateApi.md
 docs/ModuleSsprApi.md
 docs/ModuleUserApi.md
@@ -251,8 +252,8 @@ src/main/kotlin/eZmaxApi/models/ContactinformationsMinusRequest.kt
 src/main/kotlin/eZmaxApi/models/ContactinformationsMinusRequestCompound.kt
 src/main/kotlin/eZmaxApi/models/ContactinformationsRequestCompoundAllOf.kt
 src/main/kotlin/eZmaxApi/models/CustomMinusFormDataDocumentMinusResponse.kt
-src/main/kotlin/eZmaxApi/models/CustomMinusFormDataFolderMinusResponse.kt
 src/main/kotlin/eZmaxApi/models/CustomMinusFormDataSignerMinusResponse.kt
+src/main/kotlin/eZmaxApi/models/CustomMinusFormsDataFolderMinusResponse.kt
 src/main/kotlin/eZmaxApi/models/CustomMinusWordPositionOccurenceMinusResponse.kt
 src/main/kotlin/eZmaxApi/models/CustomMinusWordPositionWordMinusResponse.kt
 src/main/kotlin/eZmaxApi/models/EmailMinusRequest.kt
@@ -353,6 +354,7 @@ src/main/kotlin/eZmaxApi/models/FranchisereferalincomeMinusRequest.kt
 src/main/kotlin/eZmaxApi/models/FranchisereferalincomeMinusRequestCompound.kt
 src/main/kotlin/eZmaxApi/models/FranchisereferalincomeRequestCompoundAllOf.kt
 src/main/kotlin/eZmaxApi/models/GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse.kt
+src/main/kotlin/eZmaxApi/models/HeaderMinusAcceptMinusLanguage.kt
 src/main/kotlin/eZmaxApi/models/MultilingualMinusApikeyDescription.kt
 src/main/kotlin/eZmaxApi/models/PhoneMinusRequest.kt
 src/main/kotlin/eZmaxApi/models/SsprMinusResetPasswordMinusV1MinusRequest.kt
