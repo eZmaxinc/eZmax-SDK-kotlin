@@ -20,26 +20,19 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.CommonMinusResponseGetList
 import eZmaxApi.models.CommonMinusResponseMinusObjDebug
 import eZmaxApi.models.CommonMinusResponseMinusObjDebugPayloadGetList
-import eZmaxApi.models.EzsignfoldertypeGetListV1ResponseAllOf
-import eZmaxApi.models.EzsignfoldertypeMinusGetListMinusV1MinusResponseMinusMPayload
 
 import com.squareup.moshi.Json
 
 /**
- * Response for the /1/object/ezsignfoldertype/getList API Request
+ * All API response will inherit this based Response
  *
- * @param mPayload 
  * @param objDebugPayload 
  * @param objDebug 
  */
 
-data class EzsignfoldertypeMinusGetListMinusV1MinusResponse (
-
-    @Json(name = "mPayload")
-    val mPayload: EzsignfoldertypeMinusGetListMinusV1MinusResponseMinusMPayload,
+data class CommonMinusResponseGetList (
 
     @Json(name = "objDebugPayload")
     val objDebugPayload: CommonMinusResponseMinusObjDebugPayloadGetList? = null,

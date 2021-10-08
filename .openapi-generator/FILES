@@ -24,8 +24,12 @@ docs/CommonGetAutocompleteV1ResponseMPayload.md
 docs/CommonGetListV1ResponseMPayload.md
 docs/CommonResponse.md
 docs/CommonResponseError.md
+docs/CommonResponseFilter.md
+docs/CommonResponseGetList.md
 docs/CommonResponseObjDebug.md
 docs/CommonResponseObjDebugPayload.md
+docs/CommonResponseObjDebugPayloadGetList.md
+docs/CommonResponseObjDebugPayloadGetListAllOf.md
 docs/CommonResponseObjSQLQuery.md
 docs/CommonWebhook.md
 docs/ContactRequest.md
@@ -126,6 +130,7 @@ docs/EzsignsignerRequestCompoundContact.md
 docs/FieldEEzsigndocumentStep.md
 docs/FieldEEzsignfolderSendreminderfrequency.md
 docs/FieldEEzsignfolderStep.md
+docs/FieldEEzsignfoldertypePrivacylevel.md
 docs/FieldEEzsignsignatureType.md
 docs/FieldEPhoneType.md
 docs/FieldEUserType.md
@@ -241,11 +246,15 @@ src/main/kotlin/eZmaxApi/models/CommonMinusGetAutocompleteMinusV1MinusResponse.k
 src/main/kotlin/eZmaxApi/models/CommonMinusGetAutocompleteMinusV1MinusResponseMinusMPayload.kt
 src/main/kotlin/eZmaxApi/models/CommonMinusGetListMinusV1MinusResponseMinusMPayload.kt
 src/main/kotlin/eZmaxApi/models/CommonMinusResponse.kt
+src/main/kotlin/eZmaxApi/models/CommonMinusResponseGetList.kt
 src/main/kotlin/eZmaxApi/models/CommonMinusResponseMinusError.kt
+src/main/kotlin/eZmaxApi/models/CommonMinusResponseMinusFilter.kt
 src/main/kotlin/eZmaxApi/models/CommonMinusResponseMinusObjDebug.kt
 src/main/kotlin/eZmaxApi/models/CommonMinusResponseMinusObjDebugPayload.kt
+src/main/kotlin/eZmaxApi/models/CommonMinusResponseMinusObjDebugPayloadGetList.kt
 src/main/kotlin/eZmaxApi/models/CommonMinusResponseMinusObjSQLQuery.kt
 src/main/kotlin/eZmaxApi/models/CommonMinusWebhook.kt
+src/main/kotlin/eZmaxApi/models/CommonResponseObjDebugPayloadGetListAllOf.kt
 src/main/kotlin/eZmaxApi/models/ContactMinusRequest.kt
 src/main/kotlin/eZmaxApi/models/ContactMinusRequestCompound.kt
 src/main/kotlin/eZmaxApi/models/ContactRequestCompoundAllOf.kt
@@ -344,6 +353,7 @@ src/main/kotlin/eZmaxApi/models/EzsignsignerRequestCompoundAllOf.kt
 src/main/kotlin/eZmaxApi/models/FieldMinusEEzsigndocumentStep.kt
 src/main/kotlin/eZmaxApi/models/FieldMinusEEzsignfolderSendreminderfrequency.kt
 src/main/kotlin/eZmaxApi/models/FieldMinusEEzsignfolderStep.kt
+src/main/kotlin/eZmaxApi/models/FieldMinusEEzsignfoldertypePrivacylevel.kt
 src/main/kotlin/eZmaxApi/models/FieldMinusEEzsignsignatureType.kt
 src/main/kotlin/eZmaxApi/models/FieldMinusEPhoneType.kt
 src/main/kotlin/eZmaxApi/models/FieldMinusEUserType.kt

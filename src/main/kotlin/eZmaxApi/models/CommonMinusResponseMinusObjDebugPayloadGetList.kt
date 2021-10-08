@@ -20,6 +20,9 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.CommonMinusResponseMinusFilter
+import eZmaxApi.models.CommonMinusResponseMinusObjDebugPayload
+import eZmaxApi.models.CommonResponseObjDebugPayloadGetListAllOf
 
 import com.squareup.moshi.Json
 
@@ -29,9 +32,11 @@ import com.squareup.moshi.Json
  * @param iVersionMin The minimum version of the function that can be called
  * @param iVersionMax The maximum version of the function that can be called
  * @param aRequiredPermission An array of permissions required to access this function.  If the value \"0\" is present in the array, anyone can call this function.  You must have one of the permission to access the function. You don't need to have all of them.
+ * @param aFilter 
+ * @param aOrderBy List of available values for *eOrderBy*
  */
 
-data class CommonMinusResponseMinusObjDebugPayload (
+data class CommonMinusResponseMinusObjDebugPayloadGetList (
 
     /* The minimum version of the function that can be called */
     @Json(name = "iVersionMin")
@@ -43,7 +48,14 @@ data class CommonMinusResponseMinusObjDebugPayload (
 
     /* An array of permissions required to access this function.  If the value \"0\" is present in the array, anyone can call this function.  You must have one of the permission to access the function. You don't need to have all of them. */
     @Json(name = "a_RequiredPermission")
-    val aRequiredPermission: kotlin.collections.List<kotlin.Int>
+    val aRequiredPermission: kotlin.collections.List<kotlin.Int>,
+
+    @Json(name = "a_Filter")
+    val aFilter: CommonMinusResponseMinusFilter,
+
+    /* List of available values for *eOrderBy* */
+    @Json(name = "a_OrderBy")
+    val aOrderBy: kotlin.collections.Map<kotlin.String, kotlin.String>
 
 )
 

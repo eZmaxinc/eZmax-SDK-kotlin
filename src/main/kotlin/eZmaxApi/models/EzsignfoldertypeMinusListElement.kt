@@ -20,6 +20,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.FieldMinusEEzsignfoldertypePrivacylevel
 
 import com.squareup.moshi.Json
 
@@ -27,7 +28,9 @@ import com.squareup.moshi.Json
  * An Ezsignfoldertype List Element
  *
  * @param pkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
+ * @param eEzsignfoldertypePrivacylevel 
  * @param sEzsignfoldertypeNameX The name of the Ezsignfoldertype in the language of the requester
+ * @param bEzsignfoldertypeIsactive Whether the Ezsignfoldertype is active or not
  */
 
 data class EzsignfoldertypeMinusListElement (
@@ -36,9 +39,16 @@ data class EzsignfoldertypeMinusListElement (
     @Json(name = "pkiEzsignfoldertypeID")
     val pkiEzsignfoldertypeID: kotlin.Int,
 
+    @Json(name = "eEzsignfoldertypePrivacylevel")
+    val eEzsignfoldertypePrivacylevel: FieldMinusEEzsignfoldertypePrivacylevel,
+
     /* The name of the Ezsignfoldertype in the language of the requester */
     @Json(name = "sEzsignfoldertypeNameX")
-    val sEzsignfoldertypeNameX: kotlin.String
+    val sEzsignfoldertypeNameX: kotlin.String,
+
+    /* Whether the Ezsignfoldertype is active or not */
+    @Json(name = "bEzsignfoldertypeIsactive")
+    val bEzsignfoldertypeIsactive: kotlin.Boolean
 
 )
 
