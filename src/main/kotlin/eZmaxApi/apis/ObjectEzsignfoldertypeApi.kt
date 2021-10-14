@@ -20,6 +20,7 @@
 
 package eZmaxApi.apis
 
+import eZmaxApi.models.CommonMinusGetAutocompleteMinusV1MinusResponse
 import eZmaxApi.models.CommonMinusResponseMinusError
 import eZmaxApi.models.EzsignfoldertypeMinusGetListMinusV1MinusResponse
 import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
@@ -45,8 +46,71 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath) : Api
     }
 
     /**
+    * Retrieve Ezsignfoldertypes and IDs
+    * Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete control.
+    * @param sSelector The type of Ezsignfoldertypes to return 
+    * @param acceptLanguage  (optional)
+    * @param sQuery Allow to filter the returned results (optional)
+    * @return CommonMinusGetAutocompleteMinusV1MinusResponse
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignfoldertypeGetAutocompleteV1(sSelector: kotlin.String, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sQuery: kotlin.String?) : CommonMinusGetAutocompleteMinusV1MinusResponse {
+        val localVariableConfig = ezsignfoldertypeGetAutocompleteV1RequestConfig(sSelector = sSelector, acceptLanguage = acceptLanguage, sQuery = sQuery)
+
+        val localVarResponse = request<Unit, CommonMinusGetAutocompleteMinusV1MinusResponse>(
+            localVariableConfig
+        )
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonMinusGetAutocompleteMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+    * To obtain the request config of the operation ezsignfoldertypeGetAutocompleteV1
+    *
+    * @param sSelector The type of Ezsignfoldertypes to return 
+    * @param acceptLanguage  (optional)
+    * @param sQuery Allow to filter the returned results (optional)
+    * @return RequestConfig
+    */
+    fun ezsignfoldertypeGetAutocompleteV1RequestConfig(sSelector: kotlin.String, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sQuery: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
+            .apply {
+                if (sQuery != null) {
+                    put("sQuery", listOf(sQuery.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/ezsignfoldertype/getAutocomplete/{sSelector}/".replace("{"+"sSelector"+"}", "$sSelector"),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
     * Retrieve Ezsignfoldertype list
-    * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+    * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
     * @param eOrderBy Specify how you want the results to be sorted (optional)
     * @param iRowMax  (optional)
     * @param iRowOffset  (optional)

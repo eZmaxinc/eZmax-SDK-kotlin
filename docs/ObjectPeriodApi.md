@@ -23,7 +23,7 @@ Get the list of Periods to be used in a dropdown or autocomplete control.
 
 val apiInstance = ObjectPeriodApi()
 val sSelector : kotlin.String = sSelector_example // kotlin.String | The types of Periods to return
-val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter on the option value
+val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter the returned results
 try {
     val result : CommonMinusGetAutocompleteMinusV1MinusResponse = apiInstance.periodGetAutocompleteV1(sSelector, sQuery)
     println(result)
@@ -41,7 +41,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **kotlin.String**| The types of Periods to return | [enum: ActiveNormal, ActiveNormalAndEndOfYear, AllNormal, AllNormalAndEndOfYear]
- **sQuery** | **kotlin.String**| Allow to filter on the option value | [optional]
+ **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional]
 
 ### Return type
 

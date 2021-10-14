@@ -46,7 +46,7 @@ class ObjectPeriodApi(basePath: kotlin.String = defaultBasePath) : ApiClient(bas
     * Retrieve Periods and IDs
     * Get the list of Periods to be used in a dropdown or autocomplete control.
     * @param sSelector The types of Periods to return 
-    * @param sQuery Allow to filter on the option value (optional)
+    * @param sQuery Allow to filter the returned results (optional)
     * @return CommonMinusGetAutocompleteMinusV1MinusResponse
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
@@ -80,7 +80,7 @@ class ObjectPeriodApi(basePath: kotlin.String = defaultBasePath) : ApiClient(bas
     * To obtain the request config of the operation periodGetAutocompleteV1
     *
     * @param sSelector The types of Periods to return 
-    * @param sQuery Allow to filter on the option value (optional)
+    * @param sQuery Allow to filter the returned results (optional)
     * @return RequestConfig
     */
     fun periodGetAutocompleteV1RequestConfig(sSelector: kotlin.String, sQuery: kotlin.String?) : RequestConfig<Unit> {

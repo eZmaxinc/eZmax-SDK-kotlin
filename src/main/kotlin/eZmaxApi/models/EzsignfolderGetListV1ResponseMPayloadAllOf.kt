@@ -20,21 +20,20 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.CustomMinusAutocompleteElementMinusResponse
+import eZmaxApi.models.EzsignfolderMinusListElement
 
 import com.squareup.moshi.Json
 
 /**
  * 
  *
- * @param mPayload Generic Autocomplete Response
+ * @param aObjEzsignfolder 
  */
 
-data class CommonGetAutocompleteV1ResponseAllOf (
+data class EzsignfolderGetListV1ResponseMPayloadAllOf (
 
-    /* Generic Autocomplete Response */
-    @Json(name = "mPayload")
-    val mPayload: kotlin.collections.List<CustomMinusAutocompleteElementMinusResponse>
+    @Json(name = "a_objEzsignfolder")
+    val aObjEzsignfolder: kotlin.collections.List<EzsignfolderMinusListElement>
 
 )
 

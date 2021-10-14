@@ -23,7 +23,7 @@ Get the list of Franchisebrokers to be used in a dropdown or autocomplete contro
 
 val apiInstance = ObjectFranchisebrokerApi()
 val sSelector : kotlin.String = sSelector_example // kotlin.String | The type of Franchisebrokers to return
-val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter on the option value
+val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter the returned results
 try {
     val result : CommonMinusGetAutocompleteMinusV1MinusResponse = apiInstance.franchisebrokerGetAutocompleteV1(sSelector, sQuery)
     println(result)
@@ -41,7 +41,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **kotlin.String**| The type of Franchisebrokers to return | [enum: Active, All]
- **sQuery** | **kotlin.String**| Allow to filter on the option value | [optional]
+ **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional]
 
 ### Return type
 

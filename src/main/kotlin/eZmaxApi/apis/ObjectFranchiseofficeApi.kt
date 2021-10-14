@@ -46,7 +46,7 @@ class ObjectFranchiseofficeApi(basePath: kotlin.String = defaultBasePath) : ApiC
     * Retrieve Franchiseoffices and IDs
     * Get the list of Franchiseoffices to be used in a dropdown or autocomplete control.
     * @param sSelector The type of Franchiseoffices to return 
-    * @param sQuery Allow to filter on the option value (optional)
+    * @param sQuery Allow to filter the returned results (optional)
     * @return CommonMinusGetAutocompleteMinusV1MinusResponse
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
@@ -80,7 +80,7 @@ class ObjectFranchiseofficeApi(basePath: kotlin.String = defaultBasePath) : ApiC
     * To obtain the request config of the operation franchiseofficeGetAutocompleteV1
     *
     * @param sSelector The type of Franchiseoffices to return 
-    * @param sQuery Allow to filter on the option value (optional)
+    * @param sQuery Allow to filter the returned results (optional)
     * @return RequestConfig
     */
     fun franchiseofficeGetAutocompleteV1RequestConfig(sSelector: kotlin.String, sQuery: kotlin.String?) : RequestConfig<Unit> {

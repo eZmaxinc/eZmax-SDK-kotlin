@@ -20,7 +20,6 @@ docs/AuthenticateAuthenticateV2ResponseMPayload.md
 docs/CommonAudit.md
 docs/CommonGetAutocompleteV1Response.md
 docs/CommonGetAutocompleteV1ResponseAllOf.md
-docs/CommonGetAutocompleteV1ResponseMPayload.md
 docs/CommonGetListV1ResponseMPayload.md
 docs/CommonResponse.md
 docs/CommonResponseError.md
@@ -38,6 +37,7 @@ docs/ContactRequestCompoundAllOf.md
 docs/ContactinformationsRequest.md
 docs/ContactinformationsRequestCompound.md
 docs/ContactinformationsRequestCompoundAllOf.md
+docs/CustomAutocompleteElementResponse.md
 docs/CustomFormDataDocumentResponse.md
 docs/CustomFormDataSignerResponse.md
 docs/CustomFormsDataFolderResponse.md
@@ -80,9 +80,14 @@ docs/EzsignfolderDeleteObjectV1Response.md
 docs/EzsignfolderGetFormsDataV1Response.md
 docs/EzsignfolderGetFormsDataV1ResponseAllOf.md
 docs/EzsignfolderGetFormsDataV1ResponseMPayload.md
+docs/EzsignfolderGetListV1Response.md
+docs/EzsignfolderGetListV1ResponseAllOf.md
+docs/EzsignfolderGetListV1ResponseMPayload.md
+docs/EzsignfolderGetListV1ResponseMPayloadAllOf.md
 docs/EzsignfolderGetObjectV1Response.md
 docs/EzsignfolderGetObjectV1ResponseAllOf.md
 docs/EzsignfolderGetObjectV1ResponseMPayload.md
+docs/EzsignfolderListElement.md
 docs/EzsignfolderRequest.md
 docs/EzsignfolderRequestCompound.md
 docs/EzsignfolderRequestCompoundAllOf.md
@@ -243,7 +248,6 @@ src/main/kotlin/eZmaxApi/models/AuthenticateMinusAuthenticateMinusV2MinusRespons
 src/main/kotlin/eZmaxApi/models/CommonGetAutocompleteV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/CommonMinusAudit.kt
 src/main/kotlin/eZmaxApi/models/CommonMinusGetAutocompleteMinusV1MinusResponse.kt
-src/main/kotlin/eZmaxApi/models/CommonMinusGetAutocompleteMinusV1MinusResponseMinusMPayload.kt
 src/main/kotlin/eZmaxApi/models/CommonMinusGetListMinusV1MinusResponseMinusMPayload.kt
 src/main/kotlin/eZmaxApi/models/CommonMinusResponse.kt
 src/main/kotlin/eZmaxApi/models/CommonMinusResponseGetList.kt
@@ -261,6 +265,7 @@ src/main/kotlin/eZmaxApi/models/ContactRequestCompoundAllOf.kt
 src/main/kotlin/eZmaxApi/models/ContactinformationsMinusRequest.kt
 src/main/kotlin/eZmaxApi/models/ContactinformationsMinusRequestCompound.kt
 src/main/kotlin/eZmaxApi/models/ContactinformationsRequestCompoundAllOf.kt
+src/main/kotlin/eZmaxApi/models/CustomMinusAutocompleteElementMinusResponse.kt
 src/main/kotlin/eZmaxApi/models/CustomMinusFormDataDocumentMinusResponse.kt
 src/main/kotlin/eZmaxApi/models/CustomMinusFormDataSignerMinusResponse.kt
 src/main/kotlin/eZmaxApi/models/CustomMinusFormsDataFolderMinusResponse.kt
@@ -297,6 +302,8 @@ src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusResponse.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusResponseCompound.kt
 src/main/kotlin/eZmaxApi/models/EzsignfolderCreateObjectV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsignfolderGetFormsDataV1ResponseAllOf.kt
+src/main/kotlin/eZmaxApi/models/EzsignfolderGetListV1ResponseAllOf.kt
+src/main/kotlin/eZmaxApi/models/EzsignfolderGetListV1ResponseMPayloadAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsignfolderGetObjectV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsignfolderMinusCreateObjectMinusV1MinusRequest.kt
 src/main/kotlin/eZmaxApi/models/EzsignfolderMinusCreateObjectMinusV1MinusResponse.kt
@@ -304,8 +311,11 @@ src/main/kotlin/eZmaxApi/models/EzsignfolderMinusCreateObjectMinusV1MinusRespons
 src/main/kotlin/eZmaxApi/models/EzsignfolderMinusDeleteObjectMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/EzsignfolderMinusGetFormsDataMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/EzsignfolderMinusGetFormsDataMinusV1MinusResponseMinusMPayload.kt
+src/main/kotlin/eZmaxApi/models/EzsignfolderMinusGetListMinusV1MinusResponse.kt
+src/main/kotlin/eZmaxApi/models/EzsignfolderMinusGetListMinusV1MinusResponseMinusMPayload.kt
 src/main/kotlin/eZmaxApi/models/EzsignfolderMinusGetObjectMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/EzsignfolderMinusGetObjectMinusV1MinusResponseMinusMPayload.kt
+src/main/kotlin/eZmaxApi/models/EzsignfolderMinusListElement.kt
 src/main/kotlin/eZmaxApi/models/EzsignfolderMinusRequest.kt
 src/main/kotlin/eZmaxApi/models/EzsignfolderMinusRequestCompound.kt
 src/main/kotlin/eZmaxApi/models/EzsignfolderMinusResponse.kt

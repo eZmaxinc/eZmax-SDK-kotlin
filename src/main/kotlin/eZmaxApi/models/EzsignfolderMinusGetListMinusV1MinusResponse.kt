@@ -20,30 +20,29 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.CommonGetAutocompleteV1ResponseAllOf
-import eZmaxApi.models.CommonMinusResponse
+import eZmaxApi.models.CommonMinusResponseGetList
 import eZmaxApi.models.CommonMinusResponseMinusObjDebug
-import eZmaxApi.models.CommonMinusResponseMinusObjDebugPayload
-import eZmaxApi.models.CustomMinusAutocompleteElementMinusResponse
+import eZmaxApi.models.CommonMinusResponseMinusObjDebugPayloadGetList
+import eZmaxApi.models.EzsignfolderGetListV1ResponseAllOf
+import eZmaxApi.models.EzsignfolderMinusGetListMinusV1MinusResponseMinusMPayload
 
 import com.squareup.moshi.Json
 
 /**
- * Response for the /1/object/xxx/getAutocomplete API Request
+ * Response for the /1/object/ezsignfolder/getList API Request
  *
- * @param mPayload Generic Autocomplete Response
+ * @param mPayload 
  * @param objDebugPayload 
  * @param objDebug 
  */
 
-data class CommonMinusGetAutocompleteMinusV1MinusResponse (
+data class EzsignfolderMinusGetListMinusV1MinusResponse (
 
-    /* Generic Autocomplete Response */
     @Json(name = "mPayload")
-    val mPayload: kotlin.collections.List<CustomMinusAutocompleteElementMinusResponse>,
+    val mPayload: EzsignfolderMinusGetListMinusV1MinusResponseMinusMPayload,
 
     @Json(name = "objDebugPayload")
-    val objDebugPayload: CommonMinusResponseMinusObjDebugPayload? = null,
+    val objDebugPayload: CommonMinusResponseMinusObjDebugPayloadGetList? = null,
 
     @Json(name = "objDebug")
     val objDebug: CommonMinusResponseMinusObjDebug? = null

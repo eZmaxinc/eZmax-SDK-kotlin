@@ -4,8 +4,63 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**ezsignfoldertypeGetAutocompleteV1**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeGetAutocompleteV1) | **GET** /1/object/ezsignfoldertype/getAutocomplete/{sSelector}/ | Retrieve Ezsignfoldertypes and IDs
 [**ezsignfoldertypeGetListV1**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeGetListV1) | **GET** /1/object/ezsignfoldertype/getList | Retrieve Ezsignfoldertype list
 
+
+<a name="ezsignfoldertypeGetAutocompleteV1"></a>
+# **ezsignfoldertypeGetAutocompleteV1**
+> CommonMinusGetAutocompleteMinusV1MinusResponse ezsignfoldertypeGetAutocompleteV1(sSelector, acceptLanguage, sQuery)
+
+Retrieve Ezsignfoldertypes and IDs
+
+Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete control.
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsignfoldertypeApi()
+val sSelector : kotlin.String = sSelector_example // kotlin.String | The type of Ezsignfoldertypes to return
+val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
+val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter the returned results
+try {
+    val result : CommonMinusGetAutocompleteMinusV1MinusResponse = apiInstance.ezsignfoldertypeGetAutocompleteV1(sSelector, acceptLanguage, sQuery)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsignfoldertypeApi#ezsignfoldertypeGetAutocompleteV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsignfoldertypeApi#ezsignfoldertypeGetAutocompleteV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sSelector** | **kotlin.String**| The type of Ezsignfoldertypes to return | [enum: Active, All]
+ **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
+ **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional]
+
+### Return type
+
+[**CommonMinusGetAutocompleteMinusV1MinusResponse**](CommonMinusGetAutocompleteMinusV1MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 <a name="ezsignfoldertypeGetListV1"></a>
 # **ezsignfoldertypeGetListV1**
@@ -13,7 +68,7 @@ Method | HTTP request | Description
 
 Retrieve Ezsignfoldertype list
 
-## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
 
 ### Example
 ```kotlin

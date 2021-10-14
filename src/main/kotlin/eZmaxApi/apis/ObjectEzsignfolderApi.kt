@@ -25,9 +25,11 @@ import eZmaxApi.models.EzsignfolderMinusCreateObjectMinusV1MinusRequest
 import eZmaxApi.models.EzsignfolderMinusCreateObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsignfolderMinusDeleteObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsignfolderMinusGetFormsDataMinusV1MinusResponse
+import eZmaxApi.models.EzsignfolderMinusGetListMinusV1MinusResponse
 import eZmaxApi.models.EzsignfolderMinusGetObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsignfolderMinusSendMinusV1MinusRequest
 import eZmaxApi.models.EzsignfolderMinusSendMinusV1MinusResponse
+import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
 
 import eZmaxApi.infrastructure.ApiClient
 import eZmaxApi.infrastructure.ClientException
@@ -209,7 +211,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
 
     /**
     * Retrieve an existing Ezsignfolder&#39;s forms data
-    * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+    * 
     * @param pkiEzsignfolderID  
     * @return EzsignfolderMinusGetFormsDataMinusV1MinusResponse
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -254,6 +256,82 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData".replace("{"+"pkiEzsignfolderID"+"}", "$pkiEzsignfolderID"),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+    * Retrieve Ezsignfolder list
+    * 
+    * @param eOrderBy Specify how you want the results to be sorted (optional)
+    * @param iRowMax  (optional)
+    * @param iRowOffset  (optional)
+    * @param acceptLanguage  (optional)
+    * @param sFilter  (optional)
+    * @return EzsignfolderMinusGetListMinusV1MinusResponse
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignfolderGetListV1(eOrderBy: kotlin.String?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : EzsignfolderMinusGetListMinusV1MinusResponse {
+        val localVariableConfig = ezsignfolderGetListV1RequestConfig(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
+
+        val localVarResponse = request<Unit, EzsignfolderMinusGetListMinusV1MinusResponse>(
+            localVariableConfig
+        )
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfolderMinusGetListMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+    * To obtain the request config of the operation ezsignfolderGetListV1
+    *
+    * @param eOrderBy Specify how you want the results to be sorted (optional)
+    * @param iRowMax  (optional)
+    * @param iRowOffset  (optional)
+    * @param acceptLanguage  (optional)
+    * @param sFilter  (optional)
+    * @return RequestConfig
+    */
+    fun ezsignfolderGetListV1RequestConfig(eOrderBy: kotlin.String?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
+            .apply {
+                if (eOrderBy != null) {
+                    put("eOrderBy", listOf(eOrderBy.toString()))
+                }
+                if (iRowMax != null) {
+                    put("iRowMax", listOf(iRowMax.toString()))
+                }
+                if (iRowOffset != null) {
+                    put("iRowOffset", listOf(iRowOffset.toString()))
+                }
+                if (sFilter != null) {
+                    put("sFilter", listOf(sFilter.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/ezsignfolder/getList",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

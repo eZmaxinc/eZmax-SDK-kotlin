@@ -436,7 +436,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath) : ApiCl
 
     /**
     * Retrieve an existing Ezsigndocument&#39;s Form Data
-    * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+    * 
     * @param pkiEzsigndocumentID  
     * @return EzsigndocumentMinusGetFormDataMinusV1MinusResponse
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -542,7 +542,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath) : ApiCl
 
     /**
     * Retrieve positions X,Y of given words from a Ezsigndocument
-    * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+    * 
     * @param pkiEzsigndocumentID  
     * @param ezsigndocumentMinusGetWordsPositionsMinusV1MinusRequest  
     * @return EzsigndocumentMinusGetWordsPositionsMinusV1MinusResponse

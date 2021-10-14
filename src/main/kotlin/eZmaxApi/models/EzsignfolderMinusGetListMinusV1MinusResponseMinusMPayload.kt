@@ -21,23 +21,23 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.CommonMinusGetListMinusV1MinusResponseMinusMPayload
-import eZmaxApi.models.EzsignfoldertypeGetListV1ResponseMPayloadAllOf
-import eZmaxApi.models.EzsignfoldertypeMinusListElement
+import eZmaxApi.models.EzsignfolderGetListV1ResponseMPayloadAllOf
+import eZmaxApi.models.EzsignfolderMinusListElement
 
 import com.squareup.moshi.Json
 
 /**
- * Payload for the /1/object/ezsignfoldertype/getList API Request
+ * Payload for the /1/object/ezsignfolder/getList API Request
  *
- * @param aObjEzsignfoldertype 
+ * @param aObjEzsignfolder 
  * @param iRowReturned The number of rows returned
  * @param iRowFiltered The number of rows matching your filters (if any) or the total number of rows
  */
 
-data class EzsignfoldertypeMinusGetListMinusV1MinusResponseMinusMPayload (
+data class EzsignfolderMinusGetListMinusV1MinusResponseMinusMPayload (
 
-    @Json(name = "a_objEzsignfoldertype")
-    val aObjEzsignfoldertype: kotlin.collections.List<EzsignfoldertypeMinusListElement>,
+    @Json(name = "a_objEzsignfolder")
+    val aObjEzsignfolder: kotlin.collections.List<EzsignfolderMinusListElement>,
 
     /* The number of rows returned */
     @Json(name = "iRowReturned")
