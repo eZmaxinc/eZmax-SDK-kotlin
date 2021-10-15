@@ -26,7 +26,7 @@ import com.squareup.moshi.Json
 /**
  * The signature step of the Ezsignfolder.
  *
- * Values: Unsent,Sent,PartiallySigned,Expired,Signed,Completed,Archived
+ * Values: Unsent,Sent,PartiallySigned,Expired,Completed,Archived
  */
 
 enum class FieldMinusEEzsignfolderStep(val value: kotlin.String) {
@@ -42,9 +42,6 @@ enum class FieldMinusEEzsignfolderStep(val value: kotlin.String) {
 
     @Json(name = "Expired")
     Expired("Expired"),
-
-    @Json(name = "Signed")
-    Signed("Signed"),
 
     @Json(name = "Completed")
     Completed("Completed"),

@@ -101,7 +101,7 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath) : Api
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/1/object/ezsignfoldertype/getAutocomplete/{sSelector}/".replace("{"+"sSelector"+"}", "$sSelector"),
+            path = "/1/object/ezsignfoldertype/getAutocomplete/{sSelector}".replace("{"+"sSelector"+"}", "$sSelector"),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
