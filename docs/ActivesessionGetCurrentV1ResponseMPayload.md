@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **sCustomerCode** | **kotlin.String** | The customer code specific to the client in which the API request is being made | 
-**eActivesessionSessiontype** | [**inline**](#EActivesessionSessiontype) | The type of session used for the API request call | 
+**eActivesessionSessiontype** | [**inline**](#EActivesessionSessiontypeEnum) | The type of session used for the API request call | 
 **fkiLanguageID** | **kotlin.Int** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| | 
 **sCompanyNameX** | **kotlin.String** | The name of the active Company in the current language | 
 **sDepartmentNameX** | **kotlin.String** | The name of the active Department in the current language | 
@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **fkiApikeyID** | **kotlin.Int** | The unique ID of the Apikey | 
 
 
-<a name="EActivesessionSessiontype"></a>
+<a name="EActivesessionSessiontypeEnum"></a>
 ## Enum: eActivesessionSessiontype
 Name | Value
 ---- | -----
