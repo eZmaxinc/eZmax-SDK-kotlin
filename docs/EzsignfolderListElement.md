@@ -10,8 +10,8 @@ Name | Type | Description | Notes
 **sEzsignfolderDescription** | **kotlin.String** | The description of the Ezsign Folder | 
 **eEzsignfolderStep** | [**FieldMinusEEzsignfolderStep**](FieldMinusEEzsignfolderStep.md) |  | 
 **dtCreatedDate** | **kotlin.String** | The date and time at which the object was created | 
-**dtEzsignfolderSentdate** | [**OneOfLessThanStringCommaNullGreaterThan**](OneOfLessThanStringCommaNullGreaterThan.md) |  | 
-**dtDueDate** | [**OneOfLessThanStringCommaNullGreaterThan**](OneOfLessThanStringCommaNullGreaterThan.md) | The date at which no more signature will be accepted on the folder | 
+**dtEzsignfolderSentdate** | [**OneOfLessThanStringCommaObjectGreaterThan**](OneOfLessThanStringCommaObjectGreaterThan.md) |  | 
+**dtDueDate** | [**OneOfLessThanStringCommaObjectGreaterThan**](OneOfLessThanStringCommaObjectGreaterThan.md) | The date at which no more signature will be accepted on the folder | 
 **iTotalDocument** | **kotlin.Int** | The total number of Ezsigndocument in the folder | 
 **iTotalDocumentEdm** | **kotlin.Int** | The total number of Ezsigndocument in the folder that were saved in the edm system | 
 **iTotalSignature** | **kotlin.Int** | The total number of signature blocks in all Ezsigndocuments in the folder | 

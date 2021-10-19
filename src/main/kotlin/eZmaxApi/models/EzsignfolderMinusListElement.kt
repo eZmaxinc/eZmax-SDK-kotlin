@@ -21,7 +21,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.FieldMinusEEzsignfolderStep
-import eZmaxApi.models.OneOfLessThanStringCommaNullGreaterThan
+import eZmaxApi.models.OneOfLessThanStringCommaObjectGreaterThan
 
 import com.squareup.moshi.Json
 
@@ -68,11 +68,11 @@ data class EzsignfolderMinusListElement (
     val dtCreatedDate: kotlin.String,
 
     @Json(name = "dtEzsignfolderSentdate")
-    val dtEzsignfolderSentdate: OneOfLessThanStringCommaNullGreaterThan?,
+    val dtEzsignfolderSentdate: OneOfLessThanStringCommaObjectGreaterThan?,
 
     /* The date at which no more signature will be accepted on the folder */
     @Json(name = "dtDueDate")
-    val dtDueDate: OneOfLessThanStringCommaNullGreaterThan?,
+    val dtDueDate: OneOfLessThanStringCommaObjectGreaterThan?,
 
     /* The total number of Ezsigndocument in the folder */
     @Json(name = "iTotalDocument")

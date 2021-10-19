@@ -49,8 +49,8 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath) : Api
     * Retrieve Ezsignfoldertypes and IDs
     * Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete control.
     * @param sSelector The type of Ezsignfoldertypes to return 
-    * @param acceptLanguage  (optional)
     * @param sQuery Allow to filter the returned results (optional)
+    * @param acceptLanguage  (optional)
     * @return CommonMinusGetAutocompleteMinusV1MinusResponse
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
@@ -58,8 +58,8 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath) : Api
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignfoldertypeGetAutocompleteV1(sSelector: kotlin.String, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sQuery: kotlin.String?) : CommonMinusGetAutocompleteMinusV1MinusResponse {
-        val localVariableConfig = ezsignfoldertypeGetAutocompleteV1RequestConfig(sSelector = sSelector, acceptLanguage = acceptLanguage, sQuery = sQuery)
+    fun ezsignfoldertypeGetAutocompleteV1(sSelector: kotlin.String, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : CommonMinusGetAutocompleteMinusV1MinusResponse {
+        val localVariableConfig = ezsignfoldertypeGetAutocompleteV1RequestConfig(sSelector = sSelector, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         val localVarResponse = request<Unit, CommonMinusGetAutocompleteMinusV1MinusResponse>(
             localVariableConfig
@@ -84,11 +84,11 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath) : Api
     * To obtain the request config of the operation ezsignfoldertypeGetAutocompleteV1
     *
     * @param sSelector The type of Ezsignfoldertypes to return 
-    * @param acceptLanguage  (optional)
     * @param sQuery Allow to filter the returned results (optional)
+    * @param acceptLanguage  (optional)
     * @return RequestConfig
     */
-    fun ezsignfoldertypeGetAutocompleteV1RequestConfig(sSelector: kotlin.String, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sQuery: kotlin.String?) : RequestConfig<Unit> {
+    fun ezsignfoldertypeGetAutocompleteV1RequestConfig(sSelector: kotlin.String, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
             .apply {

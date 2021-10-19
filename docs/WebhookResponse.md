@@ -5,29 +5,29 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiWebhookID** | **kotlin.Int** | The Webhook ID. This value is visible in the admin interface. | 
-**eWebhookModule** | [**inline**](#EWebhookModuleEnum) | The Module generating the Event. | 
+**eWebhookModule** | [**inline**](#EWebhookModule) | The Module generating the Event. | 
 **pksCustomerCode** | **kotlin.String** | The customer code assigned to your account | 
 **sWebhookUrl** | **kotlin.String** | The url being called | 
 **sWebhookEmailfailed** | **kotlin.String** | The email that will receive the webhook in case all attempts fail. | 
-**eWebhookEzsignevent** | [**inline**](#EWebhookEzsigneventEnum) | This Ezsign Event. This property will be set only if the Module is \&quot;Ezsign\&quot;. |  [optional]
-**eWebhookManagementevent** | [**inline**](#EWebhookManagementeventEnum) | This Management Event. This property will be set only if the Module is \&quot;Management\&quot;. |  [optional]
+**eWebhookEzsignevent** | [**inline**](#EWebhookEzsignevent) | This Ezsign Event. This property will be set only if the Module is \&quot;Ezsign\&quot;. |  [optional]
+**eWebhookManagementevent** | [**inline**](#EWebhookManagementevent) | This Management Event. This property will be set only if the Module is \&quot;Management\&quot;. |  [optional]
 
 
-<a name="EWebhookModuleEnum"></a>
+<a name="EWebhookModule"></a>
 ## Enum: eWebhookModule
 Name | Value
 ---- | -----
 eWebhookModule | Ezsign, Management
 
 
-<a name="EWebhookEzsigneventEnum"></a>
+<a name="EWebhookEzsignevent"></a>
 ## Enum: eWebhookEzsignevent
 Name | Value
 ---- | -----
 eWebhookEzsignevent | DocumentCompleted, FolderCompleted
 
 
-<a name="EWebhookManagementeventEnum"></a>
+<a name="EWebhookManagementevent"></a>
 ## Enum: eWebhookManagementevent
 Name | Value
 ---- | -----
