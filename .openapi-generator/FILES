@@ -95,6 +95,7 @@ docs/EzsignfolderResponse.md
 docs/EzsignfolderResponseCompound.md
 docs/EzsignfolderSendV1Request.md
 docs/EzsignfolderSendV1Response.md
+docs/EzsignfolderUnsendV1Response.md
 docs/EzsignfoldersignerassociationCreateObjectV1Request.md
 docs/EzsignfoldersignerassociationCreateObjectV1Response.md
 docs/EzsignfoldersignerassociationCreateObjectV1ResponseAllOf.md
@@ -150,7 +151,13 @@ docs/FranchisereferalincomeRequestCompoundAllOf.md
 docs/GlobalCustomerApi.md
 docs/GlobalCustomerGetEndpointV1Response.md
 docs/HeaderAcceptLanguage.md
+docs/ListSaveListpresentationV1Request.md
+docs/ListSaveListpresentationV1Response.md
+docs/ListSaveListpresentationV1ResponseAllOf.md
+docs/ListSaveListpresentationV1ResponseMPayload.md
+docs/ListpresentationRequest.md
 docs/ModuleAuthenticateApi.md
+docs/ModuleListApi.md
 docs/ModuleSsprApi.md
 docs/ModuleUserApi.md
 docs/MultilingualApikeyDescription.md
@@ -200,6 +207,7 @@ gradlew.bat
 settings.gradle
 src/main/kotlin/eZmaxApi/apis/GlobalCustomerApi.kt
 src/main/kotlin/eZmaxApi/apis/ModuleAuthenticateApi.kt
+src/main/kotlin/eZmaxApi/apis/ModuleListApi.kt
 src/main/kotlin/eZmaxApi/apis/ModuleSsprApi.kt
 src/main/kotlin/eZmaxApi/apis/ModuleUserApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectActivesessionApi.kt
@@ -322,6 +330,7 @@ src/main/kotlin/eZmaxApi/models/EzsignfolderMinusResponse.kt
 src/main/kotlin/eZmaxApi/models/EzsignfolderMinusResponseCompound.kt
 src/main/kotlin/eZmaxApi/models/EzsignfolderMinusSendMinusV1MinusRequest.kt
 src/main/kotlin/eZmaxApi/models/EzsignfolderMinusSendMinusV1MinusResponse.kt
+src/main/kotlin/eZmaxApi/models/EzsignfolderMinusUnsendMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/EzsignfolderRequestCompoundAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsignfoldersignerassociationCreateObjectV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseAllOf.kt
@@ -377,6 +386,11 @@ src/main/kotlin/eZmaxApi/models/FranchisereferalincomeMinusRequestCompound.kt
 src/main/kotlin/eZmaxApi/models/FranchisereferalincomeRequestCompoundAllOf.kt
 src/main/kotlin/eZmaxApi/models/GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/HeaderMinusAcceptMinusLanguage.kt
+src/main/kotlin/eZmaxApi/models/ListMinusSaveListpresentationMinusV1MinusRequest.kt
+src/main/kotlin/eZmaxApi/models/ListMinusSaveListpresentationMinusV1MinusResponse.kt
+src/main/kotlin/eZmaxApi/models/ListMinusSaveListpresentationMinusV1MinusResponseMinusMPayload.kt
+src/main/kotlin/eZmaxApi/models/ListSaveListpresentationV1ResponseAllOf.kt
+src/main/kotlin/eZmaxApi/models/ListpresentationMinusRequest.kt
 src/main/kotlin/eZmaxApi/models/MultilingualMinusApikeyDescription.kt
 src/main/kotlin/eZmaxApi/models/PhoneMinusRequest.kt
 src/main/kotlin/eZmaxApi/models/SsprMinusResetPasswordMinusV1MinusRequest.kt

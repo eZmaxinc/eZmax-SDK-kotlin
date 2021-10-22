@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.0
+ * The version of the OpenAPI document: 1.1.1
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -29,6 +29,7 @@ import eZmaxApi.models.EzsignfolderMinusGetListMinusV1MinusResponse
 import eZmaxApi.models.EzsignfolderMinusGetObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsignfolderMinusSendMinusV1MinusRequest
 import eZmaxApi.models.EzsignfolderMinusSendMinusV1MinusResponse
+import eZmaxApi.models.EzsignfolderMinusUnsendMinusV1MinusResponse
 import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
 
 import eZmaxApi.infrastructure.ApiClient
@@ -440,6 +441,61 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/send".replace("{"+"pkiEzsignfolderID"+"}", "$pkiEzsignfolderID"),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+    * Unsend the Ezsignfolder
+    * Once an Ezsignfolder has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsignfolder and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on \&quot;Non-completed\&quot; Ezsigndocuments will be lost.
+    * @param pkiEzsignfolderID  
+    * @param body  
+    * @return EzsignfolderMinusUnsendMinusV1MinusResponse
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignfolderUnsendV1(pkiEzsignfolderID: kotlin.Int, body: kotlin.String) : EzsignfolderMinusUnsendMinusV1MinusResponse {
+        val localVariableConfig = ezsignfolderUnsendV1RequestConfig(pkiEzsignfolderID = pkiEzsignfolderID, body = body)
+
+        val localVarResponse = request<kotlin.String, EzsignfolderMinusUnsendMinusV1MinusResponse>(
+            localVariableConfig
+        )
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfolderMinusUnsendMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+    * To obtain the request config of the operation ezsignfolderUnsendV1
+    *
+    * @param pkiEzsignfolderID  
+    * @param body  
+    * @return RequestConfig
+    */
+    fun ezsignfolderUnsendV1RequestConfig(pkiEzsignfolderID: kotlin.Int, body: kotlin.String) : RequestConfig<kotlin.String> {
+        val localVariableBody = body
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/unsend".replace("{"+"pkiEzsignfolderID"+"}", "$pkiEzsignfolderID"),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
