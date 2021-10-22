@@ -32,6 +32,7 @@ import com.squareup.moshi.Json
  * @param aSColumnName An array of column names that the user chose to bee visible
  * @param iListpresentationRowMax The maximum numbers of results to be returned
  * @param iListpresentationRowOffset The starting element from where to start retrieving the results. For example if you started at iRowOffset=0 and asked for iRowMax=100, to get the next 100 results, you could specify iRowOffset=100&iRowMax=100,
+ * @param bListpresentationDefault Set to true if the user chose this Listpresentation as the default one. A single element should be set to true
  */
 
 data class ListpresentationMinusRequest (
@@ -58,7 +59,11 @@ data class ListpresentationMinusRequest (
 
     /* The starting element from where to start retrieving the results. For example if you started at iRowOffset=0 and asked for iRowMax=100, to get the next 100 results, you could specify iRowOffset=100&iRowMax=100, */
     @Json(name = "iListpresentationRowOffset")
-    val iListpresentationRowOffset: kotlin.Int
+    val iListpresentationRowOffset: kotlin.Int,
+
+    /* Set to true if the user chose this Listpresentation as the default one. A single element should be set to true */
+    @Json(name = "bListpresentationDefault")
+    val bListpresentationDefault: kotlin.Boolean
 
 )
 
