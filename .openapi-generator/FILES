@@ -151,10 +151,11 @@ docs/FranchisereferalincomeRequestCompoundAllOf.md
 docs/GlobalCustomerApi.md
 docs/GlobalCustomerGetEndpointV1Response.md
 docs/HeaderAcceptLanguage.md
+docs/ListGetListpresentationV1Response.md
+docs/ListGetListpresentationV1ResponseAllOf.md
+docs/ListGetListpresentationV1ResponseMPayload.md
 docs/ListSaveListpresentationV1Request.md
 docs/ListSaveListpresentationV1Response.md
-docs/ListSaveListpresentationV1ResponseAllOf.md
-docs/ListSaveListpresentationV1ResponseMPayload.md
 docs/ListpresentationRequest.md
 docs/ModuleAuthenticateApi.md
 docs/ModuleListApi.md
@@ -386,10 +387,11 @@ src/main/kotlin/eZmaxApi/models/FranchisereferalincomeMinusRequestCompound.kt
 src/main/kotlin/eZmaxApi/models/FranchisereferalincomeRequestCompoundAllOf.kt
 src/main/kotlin/eZmaxApi/models/GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/HeaderMinusAcceptMinusLanguage.kt
+src/main/kotlin/eZmaxApi/models/ListGetListpresentationV1ResponseAllOf.kt
+src/main/kotlin/eZmaxApi/models/ListMinusGetListpresentationMinusV1MinusResponse.kt
+src/main/kotlin/eZmaxApi/models/ListMinusGetListpresentationMinusV1MinusResponseMinusMPayload.kt
 src/main/kotlin/eZmaxApi/models/ListMinusSaveListpresentationMinusV1MinusRequest.kt
 src/main/kotlin/eZmaxApi/models/ListMinusSaveListpresentationMinusV1MinusResponse.kt
-src/main/kotlin/eZmaxApi/models/ListMinusSaveListpresentationMinusV1MinusResponseMinusMPayload.kt
-src/main/kotlin/eZmaxApi/models/ListSaveListpresentationV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/ListpresentationMinusRequest.kt
 src/main/kotlin/eZmaxApi/models/MultilingualMinusApikeyDescription.kt
 src/main/kotlin/eZmaxApi/models/PhoneMinusRequest.kt

@@ -1,5 +1,5 @@
 
-# ListMinusSaveListpresentationMinusV1MinusResponseMinusMPayload
+# ListMinusGetListpresentationMinusV1MinusResponseMinusMPayload
 
 ## Properties
 Name | Type | Description | Notes

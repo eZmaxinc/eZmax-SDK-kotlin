@@ -21,6 +21,7 @@
 package eZmaxApi.apis
 
 import eZmaxApi.models.CommonMinusResponseMinusError
+import eZmaxApi.models.ListMinusGetListpresentationMinusV1MinusResponse
 import eZmaxApi.models.ListMinusSaveListpresentationMinusV1MinusRequest
 import eZmaxApi.models.ListMinusSaveListpresentationMinusV1MinusResponse
 
@@ -45,6 +46,59 @@ class ModuleListApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
     }
 
     /**
+    * Get all Listpresentation for a specific list
+    * Retrive previously saved Listpresentation
+    * @param sListName The list Name 
+    * @return ListMinusGetListpresentationMinusV1MinusResponse
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun listGetListpresentationV1(sListName: kotlin.String) : ListMinusGetListpresentationMinusV1MinusResponse {
+        val localVariableConfig = listGetListpresentationV1RequestConfig(sListName = sListName)
+
+        val localVarResponse = request<Unit, ListMinusGetListpresentationMinusV1MinusResponse>(
+            localVariableConfig
+        )
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ListMinusGetListpresentationMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+    * To obtain the request config of the operation listGetListpresentationV1
+    *
+    * @param sListName The list Name 
+    * @return RequestConfig
+    */
+    fun listGetListpresentationV1RequestConfig(sListName: kotlin.String) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/module/list/listpresentation/{sListName}".replace("{"+"sListName"+"}", "$sListName"),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
     * Save all Listpresentation for a specific list
     * Users can create many Listpresentations for lists in the system. They can customize orber by, filters, numbers of rows, etc.
     * @param sListName The list Name 
@@ -56,8 +110,8 @@ class ModuleListApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun listListpresentationV1(sListName: kotlin.String, listMinusSaveListpresentationMinusV1MinusRequest: ListMinusSaveListpresentationMinusV1MinusRequest) : ListMinusSaveListpresentationMinusV1MinusResponse {
-        val localVariableConfig = listListpresentationV1RequestConfig(sListName = sListName, listMinusSaveListpresentationMinusV1MinusRequest = listMinusSaveListpresentationMinusV1MinusRequest)
+    fun listSaveListpresentationV1(sListName: kotlin.String, listMinusSaveListpresentationMinusV1MinusRequest: ListMinusSaveListpresentationMinusV1MinusRequest) : ListMinusSaveListpresentationMinusV1MinusResponse {
+        val localVariableConfig = listSaveListpresentationV1RequestConfig(sListName = sListName, listMinusSaveListpresentationMinusV1MinusRequest = listMinusSaveListpresentationMinusV1MinusRequest)
 
         val localVarResponse = request<ListMinusSaveListpresentationMinusV1MinusRequest, ListMinusSaveListpresentationMinusV1MinusResponse>(
             localVariableConfig
@@ -79,13 +133,13 @@ class ModuleListApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
     }
 
     /**
-    * To obtain the request config of the operation listListpresentationV1
+    * To obtain the request config of the operation listSaveListpresentationV1
     *
     * @param sListName The list Name 
     * @param listMinusSaveListpresentationMinusV1MinusRequest  
     * @return RequestConfig
     */
-    fun listListpresentationV1RequestConfig(sListName: kotlin.String, listMinusSaveListpresentationMinusV1MinusRequest: ListMinusSaveListpresentationMinusV1MinusRequest) : RequestConfig<ListMinusSaveListpresentationMinusV1MinusRequest> {
+    fun listSaveListpresentationV1RequestConfig(sListName: kotlin.String, listMinusSaveListpresentationMinusV1MinusRequest: ListMinusSaveListpresentationMinusV1MinusRequest) : RequestConfig<ListMinusSaveListpresentationMinusV1MinusRequest> {
         val localVariableBody = listMinusSaveListpresentationMinusV1MinusRequest
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()

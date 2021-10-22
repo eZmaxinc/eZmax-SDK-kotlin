@@ -37,7 +37,8 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *GlobalCustomerApi* | [**globalCustomerGetEndpointV1**](docs/GlobalCustomerApi.md#globalcustomergetendpointv1) | **GET** /1/customer/{pksCustomerCode}/endpoint | Get customer endpoint
 *ModuleAuthenticateApi* | [**authenticateAuthenticateV2**](docs/ModuleAuthenticateApi.md#authenticateauthenticatev2) | **POST** /2/module/authenticate/authenticate/{eSessionType} | Authenticate a user
-*ModuleListApi* | [**listListpresentationV1**](docs/ModuleListApi.md#listlistpresentationv1) | **POST** /1/module/list/listpresentation/{sListName} | Save all Listpresentation for a specific list
+*ModuleListApi* | [**listGetListpresentationV1**](docs/ModuleListApi.md#listgetlistpresentationv1) | **GET** /1/module/list/listpresentation/{sListName} | Get all Listpresentation for a specific list
+*ModuleListApi* | [**listSaveListpresentationV1**](docs/ModuleListApi.md#listsavelistpresentationv1) | **POST** /1/module/list/listpresentation/{sListName} | Save all Listpresentation for a specific list
 *ModuleSsprApi* | [**ssprResetPasswordRequestV1**](docs/ModuleSsprApi.md#ssprresetpasswordrequestv1) | **POST** /1/module/sspr/resetPasswordRequest | Reset Password Request
 *ModuleSsprApi* | [**ssprResetPasswordV1**](docs/ModuleSsprApi.md#ssprresetpasswordv1) | **POST** /1/module/sspr/resetPassword | Reset Password
 *ModuleSsprApi* | [**ssprSendUsernamesV1**](docs/ModuleSsprApi.md#ssprsendusernamesv1) | **POST** /1/module/sspr/sendUsernames | Send username(s)
@@ -234,10 +235,11 @@ Class | Method | HTTP request | Description
  - [eZmaxApi.models.FranchisereferalincomeRequestCompoundAllOf](docs/FranchisereferalincomeRequestCompoundAllOf.md)
  - [eZmaxApi.models.GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse](docs/GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse.md)
  - [eZmaxApi.models.HeaderMinusAcceptMinusLanguage](docs/HeaderMinusAcceptMinusLanguage.md)
+ - [eZmaxApi.models.ListGetListpresentationV1ResponseAllOf](docs/ListGetListpresentationV1ResponseAllOf.md)
+ - [eZmaxApi.models.ListMinusGetListpresentationMinusV1MinusResponse](docs/ListMinusGetListpresentationMinusV1MinusResponse.md)
+ - [eZmaxApi.models.ListMinusGetListpresentationMinusV1MinusResponseMinusMPayload](docs/ListMinusGetListpresentationMinusV1MinusResponseMinusMPayload.md)
  - [eZmaxApi.models.ListMinusSaveListpresentationMinusV1MinusRequest](docs/ListMinusSaveListpresentationMinusV1MinusRequest.md)
  - [eZmaxApi.models.ListMinusSaveListpresentationMinusV1MinusResponse](docs/ListMinusSaveListpresentationMinusV1MinusResponse.md)
- - [eZmaxApi.models.ListMinusSaveListpresentationMinusV1MinusResponseMinusMPayload](docs/ListMinusSaveListpresentationMinusV1MinusResponseMinusMPayload.md)
- - [eZmaxApi.models.ListSaveListpresentationV1ResponseAllOf](docs/ListSaveListpresentationV1ResponseAllOf.md)
  - [eZmaxApi.models.ListpresentationMinusRequest](docs/ListpresentationMinusRequest.md)
  - [eZmaxApi.models.MultilingualMinusApikeyDescription](docs/MultilingualMinusApikeyDescription.md)
  - [eZmaxApi.models.PhoneMinusRequest](docs/PhoneMinusRequest.md)

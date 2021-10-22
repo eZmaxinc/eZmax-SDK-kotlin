@@ -20,20 +20,20 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.ListMinusSaveListpresentationMinusV1MinusResponseMinusMPayload
+import eZmaxApi.models.ListpresentationMinusRequest
 
 import com.squareup.moshi.Json
 
 /**
- * 
+ * Payload for the GET /1/module/list/listpresentation/{sListName} API Request
  *
- * @param mPayload 
+ * @param aObjListpresentation 
  */
 
-data class ListSaveListpresentationV1ResponseAllOf (
+data class ListMinusGetListpresentationMinusV1MinusResponseMinusMPayload (
 
-    @Json(name = "mPayload")
-    val mPayload: ListMinusSaveListpresentationMinusV1MinusResponseMinusMPayload
+    @Json(name = "a_objListpresentation")
+    val aObjListpresentation: kotlin.collections.List<ListpresentationMinusRequest>
 
 )
 

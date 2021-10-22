@@ -23,17 +23,23 @@ package eZmaxApi.models
 import eZmaxApi.models.CommonMinusResponse
 import eZmaxApi.models.CommonMinusResponseMinusObjDebug
 import eZmaxApi.models.CommonMinusResponseMinusObjDebugPayload
+import eZmaxApi.models.ListGetListpresentationV1ResponseAllOf
+import eZmaxApi.models.ListMinusGetListpresentationMinusV1MinusResponseMinusMPayload
 
 import com.squareup.moshi.Json
 
 /**
- * Response for the POST /1/module/list/listpresentation/{sListName} API Request
+ * Response for the GET /1/module/list/listpresentation/{sListName} API Request
  *
+ * @param mPayload 
  * @param objDebugPayload 
  * @param objDebug 
  */
 
-data class ListMinusSaveListpresentationMinusV1MinusResponse (
+data class ListMinusGetListpresentationMinusV1MinusResponse (
+
+    @Json(name = "mPayload")
+    val mPayload: ListMinusGetListpresentationMinusV1MinusResponseMinusMPayload,
 
     @Json(name = "objDebugPayload")
     val objDebugPayload: CommonMinusResponseMinusObjDebugPayload? = null,
