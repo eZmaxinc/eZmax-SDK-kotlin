@@ -23,6 +23,8 @@ docs/CommonGetAutocompleteV1ResponseAllOf.md
 docs/CommonGetListV1ResponseMPayload.md
 docs/CommonResponse.md
 docs/CommonResponseError.md
+docs/CommonResponseErrorSTemporaryFileUrl.md
+docs/CommonResponseErrorSTemporaryFileUrlAllOf.md
 docs/CommonResponseFilter.md
 docs/CommonResponseGetList.md
 docs/CommonResponseObjDebug.md
@@ -261,12 +263,14 @@ src/main/kotlin/eZmaxApi/models/CommonMinusGetListMinusV1MinusResponseMinusMPayl
 src/main/kotlin/eZmaxApi/models/CommonMinusResponse.kt
 src/main/kotlin/eZmaxApi/models/CommonMinusResponseGetList.kt
 src/main/kotlin/eZmaxApi/models/CommonMinusResponseMinusError.kt
+src/main/kotlin/eZmaxApi/models/CommonMinusResponseMinusErrorMinusSTemporaryFileUrl.kt
 src/main/kotlin/eZmaxApi/models/CommonMinusResponseMinusFilter.kt
 src/main/kotlin/eZmaxApi/models/CommonMinusResponseMinusObjDebug.kt
 src/main/kotlin/eZmaxApi/models/CommonMinusResponseMinusObjDebugPayload.kt
 src/main/kotlin/eZmaxApi/models/CommonMinusResponseMinusObjDebugPayloadGetList.kt
 src/main/kotlin/eZmaxApi/models/CommonMinusResponseMinusObjSQLQuery.kt
 src/main/kotlin/eZmaxApi/models/CommonMinusWebhook.kt
+src/main/kotlin/eZmaxApi/models/CommonResponseErrorSTemporaryFileUrlAllOf.kt
 src/main/kotlin/eZmaxApi/models/CommonResponseObjDebugPayloadGetListAllOf.kt
 src/main/kotlin/eZmaxApi/models/ContactMinusRequest.kt
 src/main/kotlin/eZmaxApi/models/ContactMinusRequestCompound.kt

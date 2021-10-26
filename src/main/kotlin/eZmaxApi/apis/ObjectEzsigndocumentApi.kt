@@ -21,6 +21,7 @@
 package eZmaxApi.apis
 
 import eZmaxApi.models.CommonMinusResponseMinusError
+import eZmaxApi.models.CommonMinusResponseMinusErrorMinusSTemporaryFileUrl
 import eZmaxApi.models.EzsigndocumentMinusApplyEzsigntemplateMinusV1MinusRequest
 import eZmaxApi.models.EzsigndocumentMinusApplyEzsigntemplateMinusV1MinusResponse
 import eZmaxApi.models.EzsigndocumentMinusApplyEzsigntemplateMinusV2MinusRequest
