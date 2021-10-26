@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.1
+ * The version of the OpenAPI document: 1.1.2
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -21,6 +21,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.FieldMinusEEzsignfolderStep
+import eZmaxApi.models.FieldMinusEEzsignfoldertypePrivacylevel
 import eZmaxApi.models.OneOfLessThanStringCommaObjectGreaterThan
 
 import com.squareup.moshi.Json
@@ -30,6 +31,7 @@ import com.squareup.moshi.Json
  *
  * @param pkiEzsignfolderID The unique ID of the Ezsignfolder
  * @param fkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
+ * @param eEzsignfoldertypePrivacylevel 
  * @param sEzsignfoldertypeNameX The name of the Ezsignfoldertype in the language of the requester
  * @param sEzsignfolderDescription The description of the Ezsign Folder
  * @param eEzsignfolderStep 
@@ -51,6 +53,9 @@ data class EzsignfolderMinusListElement (
     /* The unique ID of the Ezsignfoldertype. */
     @Json(name = "fkiEzsignfoldertypeID")
     val fkiEzsignfoldertypeID: kotlin.Int,
+
+    @Json(name = "eEzsignfoldertypePrivacylevel")
+    val eEzsignfoldertypePrivacylevel: FieldMinusEEzsignfoldertypePrivacylevel,
 
     /* The name of the Ezsignfoldertype in the language of the requester */
     @Json(name = "sEzsignfoldertypeNameX")

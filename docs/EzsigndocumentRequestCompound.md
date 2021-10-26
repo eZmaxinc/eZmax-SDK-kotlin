@@ -11,6 +11,8 @@ Name | Type | Description | Notes
 **fkiLanguageID** | **kotlin.Int** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| | 
 **sEzsigndocumentName** | **kotlin.String** | The name of the document that will be presented to Ezsignfoldersignerassociations | 
 **sEzsigndocumentBase64** | **kotlin.ByteArray** | The Base64 encoded binary content of the document.  This field is Required when eEzsigndocumentSource &#x3D; Base64. |  [optional]
+**sEzsigndocumentUrl** | **kotlin.String** | The url where the document content resides.  This field is Required when eEzsigndocumentSource &#x3D; Url. |  [optional]
+**bEzsigndocumentForcerepair** | **kotlin.Boolean** | Try to repair the document or flatten it if it cannot be used for electronic signature.  |  [optional]
 **sEzsigndocumentPassword** | **kotlin.String** | If the source document is password protected, the password to open/modify it. |  [optional]
 
 
@@ -18,7 +20,7 @@ Name | Type | Description | Notes
 ## Enum: eEzsigndocumentSource
 Name | Value
 ---- | -----
-eEzsigndocumentSource | Base64
+eEzsigndocumentSource | Base64, Url
 
 
 <a name="EEzsigndocumentFormat"></a>
