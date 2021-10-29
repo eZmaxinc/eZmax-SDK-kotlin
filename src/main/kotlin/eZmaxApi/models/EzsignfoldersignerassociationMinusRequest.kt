@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.2
+ * The version of the OpenAPI document: 1.1.3
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -26,19 +26,24 @@ import com.squareup.moshi.Json
 /**
  * An Ezsignfoldersignerassociation Object
  *
- * @param fkiEzsignfolderID A reference to a valid Ezsignfolder.  That value is returned after a successful Ezsignfolder Creation.
- * @param fkiUserID A reference to a valid User.  This is only used if the signatory will be a user from the system.
+ * @param fkiEzsignfolderID The unique ID of the Ezsignfolder
+ * @param fkiUserID The unique ID of the User
+ * @param bEzsignfoldersignerassociationReceivecopy If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document.
  */
 
 data class EzsignfoldersignerassociationMinusRequest (
 
-    /* A reference to a valid Ezsignfolder.  That value is returned after a successful Ezsignfolder Creation. */
+    /* The unique ID of the Ezsignfolder */
     @Json(name = "fkiEzsignfolderID")
     val fkiEzsignfolderID: kotlin.Int,
 
-    /* A reference to a valid User.  This is only used if the signatory will be a user from the system. */
+    /* The unique ID of the User */
     @Json(name = "fkiUserID")
-    val fkiUserID: kotlin.Int? = null
+    val fkiUserID: kotlin.Int? = null,
+
+    /* If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document. */
+    @Json(name = "bEzsignfoldersignerassociationReceivecopy")
+    val bEzsignfoldersignerassociationReceivecopy: kotlin.Boolean? = null
 
 )
 
