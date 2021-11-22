@@ -24,6 +24,7 @@ import eZmaxApi.models.CommonMinusResponseMinusError
 import eZmaxApi.models.GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse
 
 import eZmaxApi.infrastructure.ApiClient
+import eZmaxApi.infrastructure.ApiInfrastructureResponse
 import eZmaxApi.infrastructure.ClientException
 import eZmaxApi.infrastructure.ClientError
 import eZmaxApi.infrastructure.ServerException
@@ -39,7 +40,7 @@ class GlobalCustomerApi(basePath: kotlin.String = defaultBasePath) : ApiClient(b
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
-            System.getProperties().getProperty("eZmaxApi.baseUrl", "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
+            System.getProperties().getProperty(ApiClient.baseUrlKey, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
     }
 
@@ -56,11 +57,7 @@ class GlobalCustomerApi(basePath: kotlin.String = defaultBasePath) : ApiClient(b
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun globalCustomerGetEndpointV1(pksCustomerCode: kotlin.String, sInfrastructureproductCode: kotlin.String?) : GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse {
-        val localVariableConfig = globalCustomerGetEndpointV1RequestConfig(pksCustomerCode = pksCustomerCode, sInfrastructureproductCode = sInfrastructureproductCode)
-
-        val localVarResponse = request<Unit, GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse>(
-            localVariableConfig
-        )
+        val localVarResponse = globalCustomerGetEndpointV1WithHttpInfo(pksCustomerCode = pksCustomerCode, sInfrastructureproductCode = sInfrastructureproductCode)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse
@@ -75,6 +72,26 @@ class GlobalCustomerApi(basePath: kotlin.String = defaultBasePath) : ApiClient(b
                 throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
             }
         }
+    }
+
+    /**
+    * Get customer endpoint
+    * Retrieve the customer&#39;s specific server endpoint where to send requests. This will help locate the proper region (ie: sInfrastructureregionCode) and the proper environment (ie: sInfrastructureenvironmenttypeDescription) where the customer&#39;s data is stored.
+    * @param pksCustomerCode  
+    * @param sInfrastructureproductCode The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)
+    * @return ApiInfrastructureResponse<GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse?>
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun globalCustomerGetEndpointV1WithHttpInfo(pksCustomerCode: kotlin.String, sInfrastructureproductCode: kotlin.String?) : ApiInfrastructureResponse<GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse?> {
+        val localVariableConfig = globalCustomerGetEndpointV1RequestConfig(pksCustomerCode = pksCustomerCode, sInfrastructureproductCode = sInfrastructureproductCode)
+
+        return request<Unit, GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse>(
+            localVariableConfig
+        )
     }
 
     /**

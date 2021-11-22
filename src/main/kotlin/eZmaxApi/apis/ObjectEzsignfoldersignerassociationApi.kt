@@ -28,6 +28,7 @@ import eZmaxApi.models.EzsignfoldersignerassociationMinusGetInPersonLoginUrlMinu
 import eZmaxApi.models.EzsignfoldersignerassociationMinusGetObjectMinusV1MinusResponse
 
 import eZmaxApi.infrastructure.ApiClient
+import eZmaxApi.infrastructure.ApiInfrastructureResponse
 import eZmaxApi.infrastructure.ClientException
 import eZmaxApi.infrastructure.ClientError
 import eZmaxApi.infrastructure.ServerException
@@ -43,7 +44,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
-            System.getProperties().getProperty("eZmaxApi.baseUrl", "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
+            System.getProperties().getProperty(ApiClient.baseUrlKey, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
     }
 
@@ -59,11 +60,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ezsignfoldersignerassociationCreateObjectV1(ezsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest: kotlin.collections.List<EzsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest>) : EzsignfoldersignerassociationMinusCreateObjectMinusV1MinusResponse {
-        val localVariableConfig = ezsignfoldersignerassociationCreateObjectV1RequestConfig(ezsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest = ezsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest)
-
-        val localVarResponse = request<kotlin.collections.List<EzsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest>, EzsignfoldersignerassociationMinusCreateObjectMinusV1MinusResponse>(
-            localVariableConfig
-        )
+        val localVarResponse = ezsignfoldersignerassociationCreateObjectV1WithHttpInfo(ezsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest = ezsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfoldersignerassociationMinusCreateObjectMinusV1MinusResponse
@@ -78,6 +75,25 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
                 throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
             }
         }
+    }
+
+    /**
+    * Create a new Ezsignfoldersignerassociation
+    * The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
+    * @param ezsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest  
+    * @return ApiInfrastructureResponse<EzsignfoldersignerassociationMinusCreateObjectMinusV1MinusResponse?>
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignfoldersignerassociationCreateObjectV1WithHttpInfo(ezsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest: kotlin.collections.List<EzsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest>) : ApiInfrastructureResponse<EzsignfoldersignerassociationMinusCreateObjectMinusV1MinusResponse?> {
+        val localVariableConfig = ezsignfoldersignerassociationCreateObjectV1RequestConfig(ezsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest = ezsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest)
+
+        return request<kotlin.collections.List<EzsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest>, EzsignfoldersignerassociationMinusCreateObjectMinusV1MinusResponse>(
+            localVariableConfig
+        )
     }
 
     /**
@@ -112,11 +128,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ezsignfoldersignerassociationDeleteObjectV1(pkiEzsignfoldersignerassociationID: kotlin.Int) : EzsignfoldersignerassociationMinusDeleteObjectMinusV1MinusResponse {
-        val localVariableConfig = ezsignfoldersignerassociationDeleteObjectV1RequestConfig(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID)
-
-        val localVarResponse = request<Unit, EzsignfoldersignerassociationMinusDeleteObjectMinusV1MinusResponse>(
-            localVariableConfig
-        )
+        val localVarResponse = ezsignfoldersignerassociationDeleteObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfoldersignerassociationMinusDeleteObjectMinusV1MinusResponse
@@ -131,6 +143,25 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
                 throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
             }
         }
+    }
+
+    /**
+    * Delete an existing Ezsignfoldersignerassociation
+    * 
+    * @param pkiEzsignfoldersignerassociationID  
+    * @return ApiInfrastructureResponse<EzsignfoldersignerassociationMinusDeleteObjectMinusV1MinusResponse?>
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignfoldersignerassociationDeleteObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID: kotlin.Int) : ApiInfrastructureResponse<EzsignfoldersignerassociationMinusDeleteObjectMinusV1MinusResponse?> {
+        val localVariableConfig = ezsignfoldersignerassociationDeleteObjectV1RequestConfig(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID)
+
+        return request<Unit, EzsignfoldersignerassociationMinusDeleteObjectMinusV1MinusResponse>(
+            localVariableConfig
+        )
     }
 
     /**
@@ -164,11 +195,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     */
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ezsignfoldersignerassociationGetChildrenV1(pkiEzsignfoldersignerassociationID: kotlin.Int) : Unit {
-        val localVariableConfig = ezsignfoldersignerassociationGetChildrenV1RequestConfig(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID)
-
-        val localVarResponse = request<Unit, Unit>(
-            localVariableConfig
-        )
+        val localVarResponse = ezsignfoldersignerassociationGetChildrenV1WithHttpInfo(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> Unit
@@ -183,6 +210,24 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
                 throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
             }
         }
+    }
+
+    /**
+    * Retrieve an existing Ezsignfoldersignerassociation&#39;s children IDs
+    * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+    * @param pkiEzsignfoldersignerassociationID  
+    * @return ApiInfrastructureResponse<Unit?>
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignfoldersignerassociationGetChildrenV1WithHttpInfo(pkiEzsignfoldersignerassociationID: kotlin.Int) : ApiInfrastructureResponse<Unit?> {
+        val localVariableConfig = ezsignfoldersignerassociationGetChildrenV1RequestConfig(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID)
+
+        return request<Unit, Unit>(
+            localVariableConfig
+        )
     }
 
     /**
@@ -217,11 +262,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ezsignfoldersignerassociationGetInPersonLoginUrlV1(pkiEzsignfoldersignerassociationID: kotlin.Int) : EzsignfoldersignerassociationMinusGetInPersonLoginUrlMinusV1MinusResponse {
-        val localVariableConfig = ezsignfoldersignerassociationGetInPersonLoginUrlV1RequestConfig(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID)
-
-        val localVarResponse = request<Unit, EzsignfoldersignerassociationMinusGetInPersonLoginUrlMinusV1MinusResponse>(
-            localVariableConfig
-        )
+        val localVarResponse = ezsignfoldersignerassociationGetInPersonLoginUrlV1WithHttpInfo(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfoldersignerassociationMinusGetInPersonLoginUrlMinusV1MinusResponse
@@ -236,6 +277,25 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
                 throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
             }
         }
+    }
+
+    /**
+    * Retrieve a Login Url to allow In-Person signing
+    * This endpoint returns a Login Url that can be used in a browser or embedded in an I-Frame to allow in person signing.  The signer Login type must be configured as In-Person.
+    * @param pkiEzsignfoldersignerassociationID  
+    * @return ApiInfrastructureResponse<EzsignfoldersignerassociationMinusGetInPersonLoginUrlMinusV1MinusResponse?>
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignfoldersignerassociationGetInPersonLoginUrlV1WithHttpInfo(pkiEzsignfoldersignerassociationID: kotlin.Int) : ApiInfrastructureResponse<EzsignfoldersignerassociationMinusGetInPersonLoginUrlMinusV1MinusResponse?> {
+        val localVariableConfig = ezsignfoldersignerassociationGetInPersonLoginUrlV1RequestConfig(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID)
+
+        return request<Unit, EzsignfoldersignerassociationMinusGetInPersonLoginUrlMinusV1MinusResponse>(
+            localVariableConfig
+        )
     }
 
     /**
@@ -270,11 +330,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ezsignfoldersignerassociationGetObjectV1(pkiEzsignfoldersignerassociationID: kotlin.Int) : EzsignfoldersignerassociationMinusGetObjectMinusV1MinusResponse {
-        val localVariableConfig = ezsignfoldersignerassociationGetObjectV1RequestConfig(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID)
-
-        val localVarResponse = request<Unit, EzsignfoldersignerassociationMinusGetObjectMinusV1MinusResponse>(
-            localVariableConfig
-        )
+        val localVarResponse = ezsignfoldersignerassociationGetObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfoldersignerassociationMinusGetObjectMinusV1MinusResponse
@@ -289,6 +345,25 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
                 throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
             }
         }
+    }
+
+    /**
+    * Retrieve an existing Ezsignfoldersignerassociation
+    * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+    * @param pkiEzsignfoldersignerassociationID  
+    * @return ApiInfrastructureResponse<EzsignfoldersignerassociationMinusGetObjectMinusV1MinusResponse?>
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignfoldersignerassociationGetObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID: kotlin.Int) : ApiInfrastructureResponse<EzsignfoldersignerassociationMinusGetObjectMinusV1MinusResponse?> {
+        val localVariableConfig = ezsignfoldersignerassociationGetObjectV1RequestConfig(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID)
+
+        return request<Unit, EzsignfoldersignerassociationMinusGetObjectMinusV1MinusResponse>(
+            localVariableConfig
+        )
     }
 
     /**

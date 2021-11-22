@@ -29,6 +29,7 @@ import eZmaxApi.models.SsprMinusUnlockAccountRequestMinusV1MinusRequest
 import eZmaxApi.models.SsprMinusValidateTokenMinusV1MinusRequest
 
 import eZmaxApi.infrastructure.ApiClient
+import eZmaxApi.infrastructure.ApiInfrastructureResponse
 import eZmaxApi.infrastructure.ClientException
 import eZmaxApi.infrastructure.ClientError
 import eZmaxApi.infrastructure.ServerException
@@ -44,7 +45,7 @@ class ModuleSsprApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
-            System.getProperties().getProperty("eZmaxApi.baseUrl", "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
+            System.getProperties().getProperty(ApiClient.baseUrlKey, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
     }
 
@@ -59,11 +60,7 @@ class ModuleSsprApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
     */
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ssprResetPasswordRequestV1(ssprMinusResetPasswordRequestMinusV1MinusRequest: SsprMinusResetPasswordRequestMinusV1MinusRequest) : Unit {
-        val localVariableConfig = ssprResetPasswordRequestV1RequestConfig(ssprMinusResetPasswordRequestMinusV1MinusRequest = ssprMinusResetPasswordRequestMinusV1MinusRequest)
-
-        val localVarResponse = request<SsprMinusResetPasswordRequestMinusV1MinusRequest, Unit>(
-            localVariableConfig
-        )
+        val localVarResponse = ssprResetPasswordRequestV1WithHttpInfo(ssprMinusResetPasswordRequestMinusV1MinusRequest = ssprMinusResetPasswordRequestMinusV1MinusRequest)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> Unit
@@ -78,6 +75,24 @@ class ModuleSsprApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
                 throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
             }
         }
+    }
+
+    /**
+    * Reset Password Request
+    * This endpoint sends an email with a link to reset the user&#39;s password.  sEmailAddress must be set if eUserTypeSSPR &#x3D; EzsignUser  sUserLoginname must be set if eUserTypeSSPR &#x3D; Native
+    * @param ssprMinusResetPasswordRequestMinusV1MinusRequest  
+    * @return ApiInfrastructureResponse<Unit?>
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ssprResetPasswordRequestV1WithHttpInfo(ssprMinusResetPasswordRequestMinusV1MinusRequest: SsprMinusResetPasswordRequestMinusV1MinusRequest) : ApiInfrastructureResponse<Unit?> {
+        val localVariableConfig = ssprResetPasswordRequestV1RequestConfig(ssprMinusResetPasswordRequestMinusV1MinusRequest = ssprMinusResetPasswordRequestMinusV1MinusRequest)
+
+        return request<SsprMinusResetPasswordRequestMinusV1MinusRequest, Unit>(
+            localVariableConfig
+        )
     }
 
     /**
@@ -111,11 +126,7 @@ class ModuleSsprApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
     */
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ssprResetPasswordV1(ssprMinusResetPasswordMinusV1MinusRequest: SsprMinusResetPasswordMinusV1MinusRequest) : Unit {
-        val localVariableConfig = ssprResetPasswordV1RequestConfig(ssprMinusResetPasswordMinusV1MinusRequest = ssprMinusResetPasswordMinusV1MinusRequest)
-
-        val localVarResponse = request<SsprMinusResetPasswordMinusV1MinusRequest, Unit>(
-            localVariableConfig
-        )
+        val localVarResponse = ssprResetPasswordV1WithHttpInfo(ssprMinusResetPasswordMinusV1MinusRequest = ssprMinusResetPasswordMinusV1MinusRequest)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> Unit
@@ -130,6 +141,24 @@ class ModuleSsprApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
                 throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
             }
         }
+    }
+
+    /**
+    * Reset Password
+    * This endpoint resets the user&#39;s password.  sEmailAddress must be set if eUserTypeSSPR &#x3D; EzsignUser  sUserLoginname must be set if eUserTypeSSPR &#x3D; Native
+    * @param ssprMinusResetPasswordMinusV1MinusRequest  
+    * @return ApiInfrastructureResponse<Unit?>
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ssprResetPasswordV1WithHttpInfo(ssprMinusResetPasswordMinusV1MinusRequest: SsprMinusResetPasswordMinusV1MinusRequest) : ApiInfrastructureResponse<Unit?> {
+        val localVariableConfig = ssprResetPasswordV1RequestConfig(ssprMinusResetPasswordMinusV1MinusRequest = ssprMinusResetPasswordMinusV1MinusRequest)
+
+        return request<SsprMinusResetPasswordMinusV1MinusRequest, Unit>(
+            localVariableConfig
+        )
     }
 
     /**
@@ -163,11 +192,7 @@ class ModuleSsprApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
     */
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ssprSendUsernamesV1(ssprMinusSendUsernamesMinusV1MinusRequest: SsprMinusSendUsernamesMinusV1MinusRequest) : Unit {
-        val localVariableConfig = ssprSendUsernamesV1RequestConfig(ssprMinusSendUsernamesMinusV1MinusRequest = ssprMinusSendUsernamesMinusV1MinusRequest)
-
-        val localVarResponse = request<SsprMinusSendUsernamesMinusV1MinusRequest, Unit>(
-            localVariableConfig
-        )
+        val localVarResponse = ssprSendUsernamesV1WithHttpInfo(ssprMinusSendUsernamesMinusV1MinusRequest = ssprMinusSendUsernamesMinusV1MinusRequest)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> Unit
@@ -182,6 +207,24 @@ class ModuleSsprApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
                 throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
             }
         }
+    }
+
+    /**
+    * Send username(s)
+    * This endpoint returns an email with the username(s) matching the email address provided in case of forgotten username
+    * @param ssprMinusSendUsernamesMinusV1MinusRequest  
+    * @return ApiInfrastructureResponse<Unit?>
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ssprSendUsernamesV1WithHttpInfo(ssprMinusSendUsernamesMinusV1MinusRequest: SsprMinusSendUsernamesMinusV1MinusRequest) : ApiInfrastructureResponse<Unit?> {
+        val localVariableConfig = ssprSendUsernamesV1RequestConfig(ssprMinusSendUsernamesMinusV1MinusRequest = ssprMinusSendUsernamesMinusV1MinusRequest)
+
+        return request<SsprMinusSendUsernamesMinusV1MinusRequest, Unit>(
+            localVariableConfig
+        )
     }
 
     /**
@@ -215,11 +258,7 @@ class ModuleSsprApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
     */
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ssprUnlockAccountRequestV1(ssprMinusUnlockAccountRequestMinusV1MinusRequest: SsprMinusUnlockAccountRequestMinusV1MinusRequest) : Unit {
-        val localVariableConfig = ssprUnlockAccountRequestV1RequestConfig(ssprMinusUnlockAccountRequestMinusV1MinusRequest = ssprMinusUnlockAccountRequestMinusV1MinusRequest)
-
-        val localVarResponse = request<SsprMinusUnlockAccountRequestMinusV1MinusRequest, Unit>(
-            localVariableConfig
-        )
+        val localVarResponse = ssprUnlockAccountRequestV1WithHttpInfo(ssprMinusUnlockAccountRequestMinusV1MinusRequest = ssprMinusUnlockAccountRequestMinusV1MinusRequest)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> Unit
@@ -234,6 +273,24 @@ class ModuleSsprApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
                 throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
             }
         }
+    }
+
+    /**
+    * Unlock Account Request
+    * This endpoint sends an email with a link to unlock the user account.  sEmailAddress must be set if eUserTypeSSPR &#x3D; EzsignUser  sUserLoginname must be set if eUserTypeSSPR &#x3D; Native
+    * @param ssprMinusUnlockAccountRequestMinusV1MinusRequest  
+    * @return ApiInfrastructureResponse<Unit?>
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ssprUnlockAccountRequestV1WithHttpInfo(ssprMinusUnlockAccountRequestMinusV1MinusRequest: SsprMinusUnlockAccountRequestMinusV1MinusRequest) : ApiInfrastructureResponse<Unit?> {
+        val localVariableConfig = ssprUnlockAccountRequestV1RequestConfig(ssprMinusUnlockAccountRequestMinusV1MinusRequest = ssprMinusUnlockAccountRequestMinusV1MinusRequest)
+
+        return request<SsprMinusUnlockAccountRequestMinusV1MinusRequest, Unit>(
+            localVariableConfig
+        )
     }
 
     /**
@@ -267,11 +324,7 @@ class ModuleSsprApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
     */
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ssprUnlockAccountV1(ssprMinusUnlockAccountMinusV1MinusRequest: SsprMinusUnlockAccountMinusV1MinusRequest) : Unit {
-        val localVariableConfig = ssprUnlockAccountV1RequestConfig(ssprMinusUnlockAccountMinusV1MinusRequest = ssprMinusUnlockAccountMinusV1MinusRequest)
-
-        val localVarResponse = request<SsprMinusUnlockAccountMinusV1MinusRequest, Unit>(
-            localVariableConfig
-        )
+        val localVarResponse = ssprUnlockAccountV1WithHttpInfo(ssprMinusUnlockAccountMinusV1MinusRequest = ssprMinusUnlockAccountMinusV1MinusRequest)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> Unit
@@ -286,6 +339,24 @@ class ModuleSsprApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
                 throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
             }
         }
+    }
+
+    /**
+    * Unlock Account
+    * This endpoint unlocks the user account.  sEmailAddress must be set if eUserTypeSSPR &#x3D; EzsignUser  sUserLoginname must be set if eUserTypeSSPR &#x3D; Native
+    * @param ssprMinusUnlockAccountMinusV1MinusRequest  
+    * @return ApiInfrastructureResponse<Unit?>
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ssprUnlockAccountV1WithHttpInfo(ssprMinusUnlockAccountMinusV1MinusRequest: SsprMinusUnlockAccountMinusV1MinusRequest) : ApiInfrastructureResponse<Unit?> {
+        val localVariableConfig = ssprUnlockAccountV1RequestConfig(ssprMinusUnlockAccountMinusV1MinusRequest = ssprMinusUnlockAccountMinusV1MinusRequest)
+
+        return request<SsprMinusUnlockAccountMinusV1MinusRequest, Unit>(
+            localVariableConfig
+        )
     }
 
     /**
@@ -319,11 +390,7 @@ class ModuleSsprApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
     */
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ssprValidateTokenV1(ssprMinusValidateTokenMinusV1MinusRequest: SsprMinusValidateTokenMinusV1MinusRequest) : Unit {
-        val localVariableConfig = ssprValidateTokenV1RequestConfig(ssprMinusValidateTokenMinusV1MinusRequest = ssprMinusValidateTokenMinusV1MinusRequest)
-
-        val localVarResponse = request<SsprMinusValidateTokenMinusV1MinusRequest, Unit>(
-            localVariableConfig
-        )
+        val localVarResponse = ssprValidateTokenV1WithHttpInfo(ssprMinusValidateTokenMinusV1MinusRequest = ssprMinusValidateTokenMinusV1MinusRequest)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> Unit
@@ -338,6 +405,24 @@ class ModuleSsprApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
                 throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
             }
         }
+    }
+
+    /**
+    * Validate Token
+    * This endpoint validates if a Token is valid and not expired.  sEmailAddress must be set if eUserTypeSSPR &#x3D; EzsignUser  sUserLoginname must be set if eUserTypeSSPR &#x3D; Native
+    * @param ssprMinusValidateTokenMinusV1MinusRequest  
+    * @return ApiInfrastructureResponse<Unit?>
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ssprValidateTokenV1WithHttpInfo(ssprMinusValidateTokenMinusV1MinusRequest: SsprMinusValidateTokenMinusV1MinusRequest) : ApiInfrastructureResponse<Unit?> {
+        val localVariableConfig = ssprValidateTokenV1RequestConfig(ssprMinusValidateTokenMinusV1MinusRequest = ssprMinusValidateTokenMinusV1MinusRequest)
+
+        return request<SsprMinusValidateTokenMinusV1MinusRequest, Unit>(
+            localVariableConfig
+        )
     }
 
     /**

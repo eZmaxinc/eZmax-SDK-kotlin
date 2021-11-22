@@ -23,6 +23,7 @@ package eZmaxApi.apis
 import eZmaxApi.models.ActivesessionMinusGetCurrentMinusV1MinusResponse
 
 import eZmaxApi.infrastructure.ApiClient
+import eZmaxApi.infrastructure.ApiInfrastructureResponse
 import eZmaxApi.infrastructure.ClientException
 import eZmaxApi.infrastructure.ClientError
 import eZmaxApi.infrastructure.ServerException
@@ -38,7 +39,7 @@ class ObjectActivesessionApi(basePath: kotlin.String = defaultBasePath) : ApiCli
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
-            System.getProperties().getProperty("eZmaxApi.baseUrl", "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
+            System.getProperties().getProperty(ApiClient.baseUrlKey, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
     }
 
@@ -53,11 +54,7 @@ class ObjectActivesessionApi(basePath: kotlin.String = defaultBasePath) : ApiCli
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun activesessionGetCurrentV1() : ActivesessionMinusGetCurrentMinusV1MinusResponse {
-        val localVariableConfig = activesessionGetCurrentV1RequestConfig()
-
-        val localVarResponse = request<Unit, ActivesessionMinusGetCurrentMinusV1MinusResponse>(
-            localVariableConfig
-        )
+        val localVarResponse = activesessionGetCurrentV1WithHttpInfo()
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as ActivesessionMinusGetCurrentMinusV1MinusResponse
@@ -72,6 +69,24 @@ class ObjectActivesessionApi(basePath: kotlin.String = defaultBasePath) : ApiCli
                 throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
             }
         }
+    }
+
+    /**
+    * Get Current Activesession
+    * Retrieve the details about the current activesession
+    * @return ApiInfrastructureResponse<ActivesessionMinusGetCurrentMinusV1MinusResponse?>
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun activesessionGetCurrentV1WithHttpInfo() : ApiInfrastructureResponse<ActivesessionMinusGetCurrentMinusV1MinusResponse?> {
+        val localVariableConfig = activesessionGetCurrentV1RequestConfig()
+
+        return request<Unit, ActivesessionMinusGetCurrentMinusV1MinusResponse>(
+            localVariableConfig
+        )
     }
 
     /**

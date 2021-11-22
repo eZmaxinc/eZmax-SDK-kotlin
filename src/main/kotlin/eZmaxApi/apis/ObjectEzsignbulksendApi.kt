@@ -20,7 +20,9 @@
 
 package eZmaxApi.apis
 
-import eZmaxApi.models.CommonMinusGetAutocompleteMinusV1MinusResponse
+import eZmaxApi.models.CommonMinusResponseMinusError
+import eZmaxApi.models.EzsignbulksendMinusGetListMinusV1MinusResponse
+import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
 
 import eZmaxApi.infrastructure.ApiClient
 import eZmaxApi.infrastructure.ApiInfrastructureResponse
@@ -35,7 +37,7 @@ import eZmaxApi.infrastructure.ResponseType
 import eZmaxApi.infrastructure.Success
 import eZmaxApi.infrastructure.toMultiValue
 
-class ObjectFranchisebrokerApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath) {
+class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
@@ -44,22 +46,25 @@ class ObjectFranchisebrokerApi(basePath: kotlin.String = defaultBasePath) : ApiC
     }
 
     /**
-    * Retrieve Franchisebrokers and IDs
-    * Get the list of Franchisebrokers to be used in a dropdown or autocomplete control.
-    * @param sSelector The type of Franchisebrokers to return 
-    * @param sQuery Allow to filter the returned results (optional)
-    * @return CommonMinusGetAutocompleteMinusV1MinusResponse
+    * Retrieve Ezsignbulksend list
+    * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+    * @param eOrderBy Specify how you want the results to be sorted (optional)
+    * @param iRowMax  (optional)
+    * @param iRowOffset  (optional)
+    * @param acceptLanguage  (optional)
+    * @param sFilter  (optional)
+    * @return EzsignbulksendMinusGetListMinusV1MinusResponse
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun franchisebrokerGetAutocompleteV1(sSelector: kotlin.String, sQuery: kotlin.String?) : CommonMinusGetAutocompleteMinusV1MinusResponse {
-        val localVarResponse = franchisebrokerGetAutocompleteV1WithHttpInfo(sSelector = sSelector, sQuery = sQuery)
+    fun ezsignbulksendGetListV1(eOrderBy: kotlin.String?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : EzsignbulksendMinusGetListMinusV1MinusResponse {
+        val localVarResponse = ezsignbulksendGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonMinusGetAutocompleteMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignbulksendMinusGetListMinusV1MinusResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -74,45 +79,61 @@ class ObjectFranchisebrokerApi(basePath: kotlin.String = defaultBasePath) : ApiC
     }
 
     /**
-    * Retrieve Franchisebrokers and IDs
-    * Get the list of Franchisebrokers to be used in a dropdown or autocomplete control.
-    * @param sSelector The type of Franchisebrokers to return 
-    * @param sQuery Allow to filter the returned results (optional)
-    * @return ApiInfrastructureResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?>
+    * Retrieve Ezsignbulksend list
+    * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+    * @param eOrderBy Specify how you want the results to be sorted (optional)
+    * @param iRowMax  (optional)
+    * @param iRowOffset  (optional)
+    * @param acceptLanguage  (optional)
+    * @param sFilter  (optional)
+    * @return ApiInfrastructureResponse<EzsignbulksendMinusGetListMinusV1MinusResponse?>
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun franchisebrokerGetAutocompleteV1WithHttpInfo(sSelector: kotlin.String, sQuery: kotlin.String?) : ApiInfrastructureResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?> {
-        val localVariableConfig = franchisebrokerGetAutocompleteV1RequestConfig(sSelector = sSelector, sQuery = sQuery)
+    fun ezsignbulksendGetListV1WithHttpInfo(eOrderBy: kotlin.String?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : ApiInfrastructureResponse<EzsignbulksendMinusGetListMinusV1MinusResponse?> {
+        val localVariableConfig = ezsignbulksendGetListV1RequestConfig(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
 
-        return request<Unit, CommonMinusGetAutocompleteMinusV1MinusResponse>(
+        return request<Unit, EzsignbulksendMinusGetListMinusV1MinusResponse>(
             localVariableConfig
         )
     }
 
     /**
-    * To obtain the request config of the operation franchisebrokerGetAutocompleteV1
+    * To obtain the request config of the operation ezsignbulksendGetListV1
     *
-    * @param sSelector The type of Franchisebrokers to return 
-    * @param sQuery Allow to filter the returned results (optional)
+    * @param eOrderBy Specify how you want the results to be sorted (optional)
+    * @param iRowMax  (optional)
+    * @param iRowOffset  (optional)
+    * @param acceptLanguage  (optional)
+    * @param sFilter  (optional)
     * @return RequestConfig
     */
-    fun franchisebrokerGetAutocompleteV1RequestConfig(sSelector: kotlin.String, sQuery: kotlin.String?) : RequestConfig<Unit> {
+    fun ezsignbulksendGetListV1RequestConfig(eOrderBy: kotlin.String?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
             .apply {
-                if (sQuery != null) {
-                    put("sQuery", listOf(sQuery.toString()))
+                if (eOrderBy != null) {
+                    put("eOrderBy", listOf(eOrderBy.toString()))
+                }
+                if (iRowMax != null) {
+                    put("iRowMax", listOf(iRowMax.toString()))
+                }
+                if (iRowOffset != null) {
+                    put("iRowOffset", listOf(iRowOffset.toString()))
+                }
+                if (sFilter != null) {
+                    put("sFilter", listOf(sFilter.toString()))
                 }
             }
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/1/object/franchisebroker/getAutocomplete/{sSelector}".replace("{"+"sSelector"+"}", "$sSelector"),
+            path = "/1/object/ezsignbulksend/getList",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

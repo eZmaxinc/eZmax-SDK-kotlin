@@ -26,6 +26,7 @@ import eZmaxApi.models.ListMinusSaveListpresentationMinusV1MinusRequest
 import eZmaxApi.models.ListMinusSaveListpresentationMinusV1MinusResponse
 
 import eZmaxApi.infrastructure.ApiClient
+import eZmaxApi.infrastructure.ApiInfrastructureResponse
 import eZmaxApi.infrastructure.ClientException
 import eZmaxApi.infrastructure.ClientError
 import eZmaxApi.infrastructure.ServerException
@@ -41,7 +42,7 @@ class ModuleListApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
-            System.getProperties().getProperty("eZmaxApi.baseUrl", "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
+            System.getProperties().getProperty(ApiClient.baseUrlKey, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
     }
 
@@ -57,11 +58,7 @@ class ModuleListApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun listGetListpresentationV1(sListName: kotlin.String) : ListMinusGetListpresentationMinusV1MinusResponse {
-        val localVariableConfig = listGetListpresentationV1RequestConfig(sListName = sListName)
-
-        val localVarResponse = request<Unit, ListMinusGetListpresentationMinusV1MinusResponse>(
-            localVariableConfig
-        )
+        val localVarResponse = listGetListpresentationV1WithHttpInfo(sListName = sListName)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as ListMinusGetListpresentationMinusV1MinusResponse
@@ -76,6 +73,25 @@ class ModuleListApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
                 throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
             }
         }
+    }
+
+    /**
+    * Get all Listpresentation for a specific list
+    * Retrive previously saved Listpresentation
+    * @param sListName The list Name 
+    * @return ApiInfrastructureResponse<ListMinusGetListpresentationMinusV1MinusResponse?>
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun listGetListpresentationV1WithHttpInfo(sListName: kotlin.String) : ApiInfrastructureResponse<ListMinusGetListpresentationMinusV1MinusResponse?> {
+        val localVariableConfig = listGetListpresentationV1RequestConfig(sListName = sListName)
+
+        return request<Unit, ListMinusGetListpresentationMinusV1MinusResponse>(
+            localVariableConfig
+        )
     }
 
     /**
@@ -111,11 +127,7 @@ class ModuleListApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun listSaveListpresentationV1(sListName: kotlin.String, listMinusSaveListpresentationMinusV1MinusRequest: ListMinusSaveListpresentationMinusV1MinusRequest) : ListMinusSaveListpresentationMinusV1MinusResponse {
-        val localVariableConfig = listSaveListpresentationV1RequestConfig(sListName = sListName, listMinusSaveListpresentationMinusV1MinusRequest = listMinusSaveListpresentationMinusV1MinusRequest)
-
-        val localVarResponse = request<ListMinusSaveListpresentationMinusV1MinusRequest, ListMinusSaveListpresentationMinusV1MinusResponse>(
-            localVariableConfig
-        )
+        val localVarResponse = listSaveListpresentationV1WithHttpInfo(sListName = sListName, listMinusSaveListpresentationMinusV1MinusRequest = listMinusSaveListpresentationMinusV1MinusRequest)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as ListMinusSaveListpresentationMinusV1MinusResponse
@@ -130,6 +142,26 @@ class ModuleListApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
                 throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
             }
         }
+    }
+
+    /**
+    * Save all Listpresentation for a specific list
+    * Users can create many Listpresentations for lists in the system. They can customize orber by, filters, numbers of rows, etc.
+    * @param sListName The list Name 
+    * @param listMinusSaveListpresentationMinusV1MinusRequest  
+    * @return ApiInfrastructureResponse<ListMinusSaveListpresentationMinusV1MinusResponse?>
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun listSaveListpresentationV1WithHttpInfo(sListName: kotlin.String, listMinusSaveListpresentationMinusV1MinusRequest: ListMinusSaveListpresentationMinusV1MinusRequest) : ApiInfrastructureResponse<ListMinusSaveListpresentationMinusV1MinusResponse?> {
+        val localVariableConfig = listSaveListpresentationV1RequestConfig(sListName = sListName, listMinusSaveListpresentationMinusV1MinusRequest = listMinusSaveListpresentationMinusV1MinusRequest)
+
+        return request<ListMinusSaveListpresentationMinusV1MinusRequest, ListMinusSaveListpresentationMinusV1MinusResponse>(
+            localVariableConfig
+        )
     }
 
     /**

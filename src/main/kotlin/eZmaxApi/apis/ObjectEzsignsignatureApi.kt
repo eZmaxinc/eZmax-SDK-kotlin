@@ -27,6 +27,7 @@ import eZmaxApi.models.EzsignsignatureMinusDeleteObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsignsignatureMinusGetObjectMinusV1MinusResponse
 
 import eZmaxApi.infrastructure.ApiClient
+import eZmaxApi.infrastructure.ApiInfrastructureResponse
 import eZmaxApi.infrastructure.ClientException
 import eZmaxApi.infrastructure.ClientError
 import eZmaxApi.infrastructure.ServerException
@@ -42,7 +43,7 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath) : ApiC
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
-            System.getProperties().getProperty("eZmaxApi.baseUrl", "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
+            System.getProperties().getProperty(ApiClient.baseUrlKey, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
     }
 
@@ -58,11 +59,7 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath) : ApiC
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ezsignsignatureCreateObjectV1(ezsignsignatureMinusCreateObjectMinusV1MinusRequest: kotlin.collections.List<EzsignsignatureMinusCreateObjectMinusV1MinusRequest>) : EzsignsignatureMinusCreateObjectMinusV1MinusResponse {
-        val localVariableConfig = ezsignsignatureCreateObjectV1RequestConfig(ezsignsignatureMinusCreateObjectMinusV1MinusRequest = ezsignsignatureMinusCreateObjectMinusV1MinusRequest)
-
-        val localVarResponse = request<kotlin.collections.List<EzsignsignatureMinusCreateObjectMinusV1MinusRequest>, EzsignsignatureMinusCreateObjectMinusV1MinusResponse>(
-            localVariableConfig
-        )
+        val localVarResponse = ezsignsignatureCreateObjectV1WithHttpInfo(ezsignsignatureMinusCreateObjectMinusV1MinusRequest = ezsignsignatureMinusCreateObjectMinusV1MinusRequest)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignsignatureMinusCreateObjectMinusV1MinusResponse
@@ -77,6 +74,25 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath) : ApiC
                 throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
             }
         }
+    }
+
+    /**
+    * Create a new Ezsignsignature
+    * The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
+    * @param ezsignsignatureMinusCreateObjectMinusV1MinusRequest  
+    * @return ApiInfrastructureResponse<EzsignsignatureMinusCreateObjectMinusV1MinusResponse?>
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignsignatureCreateObjectV1WithHttpInfo(ezsignsignatureMinusCreateObjectMinusV1MinusRequest: kotlin.collections.List<EzsignsignatureMinusCreateObjectMinusV1MinusRequest>) : ApiInfrastructureResponse<EzsignsignatureMinusCreateObjectMinusV1MinusResponse?> {
+        val localVariableConfig = ezsignsignatureCreateObjectV1RequestConfig(ezsignsignatureMinusCreateObjectMinusV1MinusRequest = ezsignsignatureMinusCreateObjectMinusV1MinusRequest)
+
+        return request<kotlin.collections.List<EzsignsignatureMinusCreateObjectMinusV1MinusRequest>, EzsignsignatureMinusCreateObjectMinusV1MinusResponse>(
+            localVariableConfig
+        )
     }
 
     /**
@@ -111,11 +127,7 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath) : ApiC
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ezsignsignatureDeleteObjectV1(pkiEzsignsignatureID: kotlin.Int) : EzsignsignatureMinusDeleteObjectMinusV1MinusResponse {
-        val localVariableConfig = ezsignsignatureDeleteObjectV1RequestConfig(pkiEzsignsignatureID = pkiEzsignsignatureID)
-
-        val localVarResponse = request<Unit, EzsignsignatureMinusDeleteObjectMinusV1MinusResponse>(
-            localVariableConfig
-        )
+        val localVarResponse = ezsignsignatureDeleteObjectV1WithHttpInfo(pkiEzsignsignatureID = pkiEzsignsignatureID)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignsignatureMinusDeleteObjectMinusV1MinusResponse
@@ -130,6 +142,25 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath) : ApiC
                 throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
             }
         }
+    }
+
+    /**
+    * Delete an existing Ezsignsignature
+    * 
+    * @param pkiEzsignsignatureID  
+    * @return ApiInfrastructureResponse<EzsignsignatureMinusDeleteObjectMinusV1MinusResponse?>
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignsignatureDeleteObjectV1WithHttpInfo(pkiEzsignsignatureID: kotlin.Int) : ApiInfrastructureResponse<EzsignsignatureMinusDeleteObjectMinusV1MinusResponse?> {
+        val localVariableConfig = ezsignsignatureDeleteObjectV1RequestConfig(pkiEzsignsignatureID = pkiEzsignsignatureID)
+
+        return request<Unit, EzsignsignatureMinusDeleteObjectMinusV1MinusResponse>(
+            localVariableConfig
+        )
     }
 
     /**
@@ -163,11 +194,7 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath) : ApiC
     */
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ezsignsignatureGetChildrenV1(pkiEzsignsignatureID: kotlin.Int) : Unit {
-        val localVariableConfig = ezsignsignatureGetChildrenV1RequestConfig(pkiEzsignsignatureID = pkiEzsignsignatureID)
-
-        val localVarResponse = request<Unit, Unit>(
-            localVariableConfig
-        )
+        val localVarResponse = ezsignsignatureGetChildrenV1WithHttpInfo(pkiEzsignsignatureID = pkiEzsignsignatureID)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> Unit
@@ -182,6 +209,24 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath) : ApiC
                 throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
             }
         }
+    }
+
+    /**
+    * Retrieve an existing Ezsignsignature&#39;s children IDs
+    * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+    * @param pkiEzsignsignatureID  
+    * @return ApiInfrastructureResponse<Unit?>
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignsignatureGetChildrenV1WithHttpInfo(pkiEzsignsignatureID: kotlin.Int) : ApiInfrastructureResponse<Unit?> {
+        val localVariableConfig = ezsignsignatureGetChildrenV1RequestConfig(pkiEzsignsignatureID = pkiEzsignsignatureID)
+
+        return request<Unit, Unit>(
+            localVariableConfig
+        )
     }
 
     /**
@@ -216,11 +261,7 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath) : ApiC
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ezsignsignatureGetObjectV1(pkiEzsignsignatureID: kotlin.Int) : EzsignsignatureMinusGetObjectMinusV1MinusResponse {
-        val localVariableConfig = ezsignsignatureGetObjectV1RequestConfig(pkiEzsignsignatureID = pkiEzsignsignatureID)
-
-        val localVarResponse = request<Unit, EzsignsignatureMinusGetObjectMinusV1MinusResponse>(
-            localVariableConfig
-        )
+        val localVarResponse = ezsignsignatureGetObjectV1WithHttpInfo(pkiEzsignsignatureID = pkiEzsignsignatureID)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignsignatureMinusGetObjectMinusV1MinusResponse
@@ -235,6 +276,25 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath) : ApiC
                 throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
             }
         }
+    }
+
+    /**
+    * Retrieve an existing Ezsignsignature
+    * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+    * @param pkiEzsignsignatureID  
+    * @return ApiInfrastructureResponse<EzsignsignatureMinusGetObjectMinusV1MinusResponse?>
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignsignatureGetObjectV1WithHttpInfo(pkiEzsignsignatureID: kotlin.Int) : ApiInfrastructureResponse<EzsignsignatureMinusGetObjectMinusV1MinusResponse?> {
+        val localVariableConfig = ezsignsignatureGetObjectV1RequestConfig(pkiEzsignsignatureID = pkiEzsignsignatureID)
+
+        return request<Unit, EzsignsignatureMinusGetObjectMinusV1MinusResponse>(
+            localVariableConfig
+        )
     }
 
     /**

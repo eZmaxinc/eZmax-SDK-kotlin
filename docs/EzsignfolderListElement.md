@@ -8,15 +8,15 @@ Name | Type | Description | Notes
 **fkiEzsignfoldertypeID** | **kotlin.Int** | The unique ID of the Ezsignfoldertype. | 
 **eEzsignfoldertypePrivacylevel** | [**FieldMinusEEzsignfoldertypePrivacylevel**](FieldMinusEEzsignfoldertypePrivacylevel.md) |  | 
 **sEzsignfoldertypeNameX** | **kotlin.String** | The name of the Ezsignfoldertype in the language of the requester | 
-**sEzsignfolderDescription** | **kotlin.String** | The description of the Ezsign Folder | 
+**sEzsignfolderDescription** | **kotlin.String** | The description of the Ezsignfolder | 
 **eEzsignfolderStep** | [**FieldMinusEEzsignfolderStep**](FieldMinusEEzsignfolderStep.md) |  | 
 **dtCreatedDate** | **kotlin.String** | The date and time at which the object was created | 
 **dtEzsignfolderSentdate** | [**OneOfLessThanStringCommaObjectGreaterThan**](OneOfLessThanStringCommaObjectGreaterThan.md) |  | 
 **dtDueDate** | [**OneOfLessThanStringCommaObjectGreaterThan**](OneOfLessThanStringCommaObjectGreaterThan.md) | The date at which no more signature will be accepted on the folder | 
-**iTotalDocument** | **kotlin.Int** | The total number of Ezsigndocument in the folder | 
-**iTotalDocumentEdm** | **kotlin.Int** | The total number of Ezsigndocument in the folder that were saved in the edm system | 
-**iTotalSignature** | **kotlin.Int** | The total number of signature blocks in all Ezsigndocuments in the folder | 
-**iTotalSignatureSigned** | **kotlin.Int** | The total number of already signed signature blocks in all Ezsigndocuments in the folder | 
+**iEzsigndocument** | **kotlin.Int** | The total number of Ezsigndocument in the folder | 
+**iEzsigndocumentEdm** | **kotlin.Int** | The total number of Ezsigndocument in the folder that were saved in the edm system | 
+**iEzsignsignature** | **kotlin.Int** | The total number of signature blocks in all Ezsigndocuments in the folder | 
+**iEzsignsignatureSigned** | **kotlin.Int** | The total number of already signed signature blocks in all Ezsigndocuments in the folder | 
 
 
 

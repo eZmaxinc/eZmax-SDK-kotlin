@@ -33,15 +33,15 @@ import com.squareup.moshi.Json
  * @param fkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
  * @param eEzsignfoldertypePrivacylevel 
  * @param sEzsignfoldertypeNameX The name of the Ezsignfoldertype in the language of the requester
- * @param sEzsignfolderDescription The description of the Ezsign Folder
+ * @param sEzsignfolderDescription The description of the Ezsignfolder
  * @param eEzsignfolderStep 
  * @param dtCreatedDate The date and time at which the object was created
  * @param dtEzsignfolderSentdate 
  * @param dtDueDate The date at which no more signature will be accepted on the folder
- * @param iTotalDocument The total number of Ezsigndocument in the folder
- * @param iTotalDocumentEdm The total number of Ezsigndocument in the folder that were saved in the edm system
- * @param iTotalSignature The total number of signature blocks in all Ezsigndocuments in the folder
- * @param iTotalSignatureSigned The total number of already signed signature blocks in all Ezsigndocuments in the folder
+ * @param iEzsigndocument The total number of Ezsigndocument in the folder
+ * @param iEzsigndocumentEdm The total number of Ezsigndocument in the folder that were saved in the edm system
+ * @param iEzsignsignature The total number of signature blocks in all Ezsigndocuments in the folder
+ * @param iEzsignsignatureSigned The total number of already signed signature blocks in all Ezsigndocuments in the folder
  */
 
 data class EzsignfolderMinusListElement (
@@ -61,7 +61,7 @@ data class EzsignfolderMinusListElement (
     @Json(name = "sEzsignfoldertypeNameX")
     val sEzsignfoldertypeNameX: kotlin.String,
 
-    /* The description of the Ezsign Folder */
+    /* The description of the Ezsignfolder */
     @Json(name = "sEzsignfolderDescription")
     val sEzsignfolderDescription: kotlin.String,
 
@@ -80,20 +80,20 @@ data class EzsignfolderMinusListElement (
     val dtDueDate: OneOfLessThanStringCommaObjectGreaterThan?,
 
     /* The total number of Ezsigndocument in the folder */
-    @Json(name = "iTotalDocument")
-    val iTotalDocument: kotlin.Int,
+    @Json(name = "iEzsigndocument")
+    val iEzsigndocument: kotlin.Int,
 
     /* The total number of Ezsigndocument in the folder that were saved in the edm system */
-    @Json(name = "iTotalDocumentEdm")
-    val iTotalDocumentEdm: kotlin.Int,
+    @Json(name = "iEzsigndocumentEdm")
+    val iEzsigndocumentEdm: kotlin.Int,
 
     /* The total number of signature blocks in all Ezsigndocuments in the folder */
-    @Json(name = "iTotalSignature")
-    val iTotalSignature: kotlin.Int,
+    @Json(name = "iEzsignsignature")
+    val iEzsignsignature: kotlin.Int,
 
     /* The total number of already signed signature blocks in all Ezsigndocuments in the folder */
-    @Json(name = "iTotalSignatureSigned")
-    val iTotalSignatureSigned: kotlin.Int
+    @Json(name = "iEzsignsignatureSigned")
+    val iEzsignsignatureSigned: kotlin.Int
 
 )
 

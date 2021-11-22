@@ -24,6 +24,7 @@ import eZmaxApi.models.FranchisereferalincomeMinusCreateObjectMinusV1MinusReques
 import eZmaxApi.models.FranchisereferalincomeMinusCreateObjectMinusV1MinusResponse
 
 import eZmaxApi.infrastructure.ApiClient
+import eZmaxApi.infrastructure.ApiInfrastructureResponse
 import eZmaxApi.infrastructure.ClientException
 import eZmaxApi.infrastructure.ClientError
 import eZmaxApi.infrastructure.ServerException
@@ -39,7 +40,7 @@ class ObjectFranchisereferalincomeApi(basePath: kotlin.String = defaultBasePath)
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
-            System.getProperties().getProperty("eZmaxApi.baseUrl", "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
+            System.getProperties().getProperty(ApiClient.baseUrlKey, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
     }
 
@@ -55,11 +56,7 @@ class ObjectFranchisereferalincomeApi(basePath: kotlin.String = defaultBasePath)
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun franchisereferalincomeCreateObjectV1(franchisereferalincomeMinusCreateObjectMinusV1MinusRequest: kotlin.collections.List<FranchisereferalincomeMinusCreateObjectMinusV1MinusRequest>) : FranchisereferalincomeMinusCreateObjectMinusV1MinusResponse {
-        val localVariableConfig = franchisereferalincomeCreateObjectV1RequestConfig(franchisereferalincomeMinusCreateObjectMinusV1MinusRequest = franchisereferalincomeMinusCreateObjectMinusV1MinusRequest)
-
-        val localVarResponse = request<kotlin.collections.List<FranchisereferalincomeMinusCreateObjectMinusV1MinusRequest>, FranchisereferalincomeMinusCreateObjectMinusV1MinusResponse>(
-            localVariableConfig
-        )
+        val localVarResponse = franchisereferalincomeCreateObjectV1WithHttpInfo(franchisereferalincomeMinusCreateObjectMinusV1MinusRequest = franchisereferalincomeMinusCreateObjectMinusV1MinusRequest)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as FranchisereferalincomeMinusCreateObjectMinusV1MinusResponse
@@ -74,6 +71,25 @@ class ObjectFranchisereferalincomeApi(basePath: kotlin.String = defaultBasePath)
                 throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
             }
         }
+    }
+
+    /**
+    * Create a new Franchisereferalincome
+    * The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
+    * @param franchisereferalincomeMinusCreateObjectMinusV1MinusRequest  
+    * @return ApiInfrastructureResponse<FranchisereferalincomeMinusCreateObjectMinusV1MinusResponse?>
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun franchisereferalincomeCreateObjectV1WithHttpInfo(franchisereferalincomeMinusCreateObjectMinusV1MinusRequest: kotlin.collections.List<FranchisereferalincomeMinusCreateObjectMinusV1MinusRequest>) : ApiInfrastructureResponse<FranchisereferalincomeMinusCreateObjectMinusV1MinusResponse?> {
+        val localVariableConfig = franchisereferalincomeCreateObjectV1RequestConfig(franchisereferalincomeMinusCreateObjectMinusV1MinusRequest = franchisereferalincomeMinusCreateObjectMinusV1MinusRequest)
+
+        return request<kotlin.collections.List<FranchisereferalincomeMinusCreateObjectMinusV1MinusRequest>, FranchisereferalincomeMinusCreateObjectMinusV1MinusResponse>(
+            localVariableConfig
+        )
     }
 
     /**

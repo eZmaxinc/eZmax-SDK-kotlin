@@ -29,7 +29,7 @@ import com.squareup.moshi.Json
  * Payload for the /1/object/ezsignfolder/{pkiEzsigndocument}/getFormsData API Request
  *
  * @param pkiEzsignfolderID The unique ID of the Ezsignfolder
- * @param sEzsignfolderDescription The description of the Ezsign Folder
+ * @param sEzsignfolderDescription The description of the Ezsignfolder
  * @param aObjFormDataDocument 
  */
 
@@ -39,7 +39,7 @@ data class EzsignfolderMinusGetFormsDataMinusV1MinusResponseMinusMPayload (
     @Json(name = "pkiEzsignfolderID")
     val pkiEzsignfolderID: kotlin.Int,
 
-    /* The description of the Ezsign Folder */
+    /* The description of the Ezsignfolder */
     @Json(name = "sEzsignfolderDescription")
     val sEzsignfolderDescription: kotlin.String,
 

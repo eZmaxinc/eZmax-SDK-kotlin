@@ -26,6 +26,7 @@ import eZmaxApi.models.EzsignfoldertypeMinusGetListMinusV1MinusResponse
 import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
 
 import eZmaxApi.infrastructure.ApiClient
+import eZmaxApi.infrastructure.ApiInfrastructureResponse
 import eZmaxApi.infrastructure.ClientException
 import eZmaxApi.infrastructure.ClientError
 import eZmaxApi.infrastructure.ServerException
@@ -41,7 +42,7 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath) : Api
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
-            System.getProperties().getProperty("eZmaxApi.baseUrl", "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
+            System.getProperties().getProperty(ApiClient.baseUrlKey, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
     }
 
@@ -59,11 +60,7 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath) : Api
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ezsignfoldertypeGetAutocompleteV1(sSelector: kotlin.String, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : CommonMinusGetAutocompleteMinusV1MinusResponse {
-        val localVariableConfig = ezsignfoldertypeGetAutocompleteV1RequestConfig(sSelector = sSelector, sQuery = sQuery, acceptLanguage = acceptLanguage)
-
-        val localVarResponse = request<Unit, CommonMinusGetAutocompleteMinusV1MinusResponse>(
-            localVariableConfig
-        )
+        val localVarResponse = ezsignfoldertypeGetAutocompleteV1WithHttpInfo(sSelector = sSelector, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as CommonMinusGetAutocompleteMinusV1MinusResponse
@@ -78,6 +75,27 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath) : Api
                 throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
             }
         }
+    }
+
+    /**
+    * Retrieve Ezsignfoldertypes and IDs
+    * Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete control.
+    * @param sSelector The type of Ezsignfoldertypes to return 
+    * @param sQuery Allow to filter the returned results (optional)
+    * @param acceptLanguage  (optional)
+    * @return ApiInfrastructureResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?>
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignfoldertypeGetAutocompleteV1WithHttpInfo(sSelector: kotlin.String, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : ApiInfrastructureResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?> {
+        val localVariableConfig = ezsignfoldertypeGetAutocompleteV1RequestConfig(sSelector = sSelector, sQuery = sQuery, acceptLanguage = acceptLanguage)
+
+        return request<Unit, CommonMinusGetAutocompleteMinusV1MinusResponse>(
+            localVariableConfig
+        )
     }
 
     /**
@@ -124,11 +142,7 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath) : Api
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ezsignfoldertypeGetListV1(eOrderBy: kotlin.String?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : EzsignfoldertypeMinusGetListMinusV1MinusResponse {
-        val localVariableConfig = ezsignfoldertypeGetListV1RequestConfig(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
-
-        val localVarResponse = request<Unit, EzsignfoldertypeMinusGetListMinusV1MinusResponse>(
-            localVariableConfig
-        )
+        val localVarResponse = ezsignfoldertypeGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfoldertypeMinusGetListMinusV1MinusResponse
@@ -143,6 +157,29 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath) : Api
                 throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
             }
         }
+    }
+
+    /**
+    * Retrieve Ezsignfoldertype list
+    * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+    * @param eOrderBy Specify how you want the results to be sorted (optional)
+    * @param iRowMax  (optional)
+    * @param iRowOffset  (optional)
+    * @param acceptLanguage  (optional)
+    * @param sFilter  (optional)
+    * @return ApiInfrastructureResponse<EzsignfoldertypeMinusGetListMinusV1MinusResponse?>
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignfoldertypeGetListV1WithHttpInfo(eOrderBy: kotlin.String?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : ApiInfrastructureResponse<EzsignfoldertypeMinusGetListMinusV1MinusResponse?> {
+        val localVariableConfig = ezsignfoldertypeGetListV1RequestConfig(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
+
+        return request<Unit, EzsignfoldertypeMinusGetListMinusV1MinusResponse>(
+            localVariableConfig
+        )
     }
 
     /**

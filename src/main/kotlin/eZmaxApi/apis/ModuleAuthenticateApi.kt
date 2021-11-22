@@ -25,6 +25,7 @@ import eZmaxApi.models.AuthenticateMinusAuthenticateMinusV2MinusResponse
 import eZmaxApi.models.CommonMinusResponseMinusError
 
 import eZmaxApi.infrastructure.ApiClient
+import eZmaxApi.infrastructure.ApiInfrastructureResponse
 import eZmaxApi.infrastructure.ClientException
 import eZmaxApi.infrastructure.ClientError
 import eZmaxApi.infrastructure.ServerException
@@ -40,7 +41,7 @@ class ModuleAuthenticateApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
-            System.getProperties().getProperty("eZmaxApi.baseUrl", "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
+            System.getProperties().getProperty(ApiClient.baseUrlKey, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
     }
 
@@ -57,11 +58,7 @@ class ModuleAuthenticateApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun authenticateAuthenticateV2(eSessionType: kotlin.String, authenticateMinusAuthenticateMinusV2MinusRequest: AuthenticateMinusAuthenticateMinusV2MinusRequest) : AuthenticateMinusAuthenticateMinusV2MinusResponse {
-        val localVariableConfig = authenticateAuthenticateV2RequestConfig(eSessionType = eSessionType, authenticateMinusAuthenticateMinusV2MinusRequest = authenticateMinusAuthenticateMinusV2MinusRequest)
-
-        val localVarResponse = request<AuthenticateMinusAuthenticateMinusV2MinusRequest, AuthenticateMinusAuthenticateMinusV2MinusResponse>(
-            localVariableConfig
-        )
+        val localVarResponse = authenticateAuthenticateV2WithHttpInfo(eSessionType = eSessionType, authenticateMinusAuthenticateMinusV2MinusRequest = authenticateMinusAuthenticateMinusV2MinusRequest)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as AuthenticateMinusAuthenticateMinusV2MinusResponse
@@ -76,6 +73,26 @@ class ModuleAuthenticateApi(basePath: kotlin.String = defaultBasePath) : ApiClie
                 throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
             }
         }
+    }
+
+    /**
+    * Authenticate a user
+    * This endpoint authenticates a user.
+    * @param eSessionType  
+    * @param authenticateMinusAuthenticateMinusV2MinusRequest  
+    * @return ApiInfrastructureResponse<AuthenticateMinusAuthenticateMinusV2MinusResponse?>
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun authenticateAuthenticateV2WithHttpInfo(eSessionType: kotlin.String, authenticateMinusAuthenticateMinusV2MinusRequest: AuthenticateMinusAuthenticateMinusV2MinusRequest) : ApiInfrastructureResponse<AuthenticateMinusAuthenticateMinusV2MinusResponse?> {
+        val localVariableConfig = authenticateAuthenticateV2RequestConfig(eSessionType = eSessionType, authenticateMinusAuthenticateMinusV2MinusRequest = authenticateMinusAuthenticateMinusV2MinusRequest)
+
+        return request<AuthenticateMinusAuthenticateMinusV2MinusRequest, AuthenticateMinusAuthenticateMinusV2MinusResponse>(
+            localVariableConfig
+        )
     }
 
     /**

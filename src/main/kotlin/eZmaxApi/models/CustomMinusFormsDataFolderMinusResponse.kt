@@ -28,7 +28,7 @@ import com.squareup.moshi.Json
  * A forms Data Folder Object
  *
  * @param pkiEzsignfolderID The unique ID of the Ezsignfolder
- * @param sEzsignfolderDescription The description of the Ezsign Folder
+ * @param sEzsignfolderDescription The description of the Ezsignfolder
  * @param aObjFormDataDocument 
  */
 
@@ -38,7 +38,7 @@ data class CustomMinusFormsDataFolderMinusResponse (
     @Json(name = "pkiEzsignfolderID")
     val pkiEzsignfolderID: kotlin.Int,
 
-    /* The description of the Ezsign Folder */
+    /* The description of the Ezsignfolder */
     @Json(name = "sEzsignfolderDescription")
     val sEzsignfolderDescription: kotlin.String,
 

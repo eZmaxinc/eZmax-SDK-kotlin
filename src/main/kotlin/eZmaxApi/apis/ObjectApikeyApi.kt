@@ -24,6 +24,7 @@ import eZmaxApi.models.ApikeyMinusCreateObjectMinusV1MinusRequest
 import eZmaxApi.models.ApikeyMinusCreateObjectMinusV1MinusResponse
 
 import eZmaxApi.infrastructure.ApiClient
+import eZmaxApi.infrastructure.ApiInfrastructureResponse
 import eZmaxApi.infrastructure.ClientException
 import eZmaxApi.infrastructure.ClientError
 import eZmaxApi.infrastructure.ServerException
@@ -39,7 +40,7 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath) : ApiClient(bas
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
-            System.getProperties().getProperty("eZmaxApi.baseUrl", "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
+            System.getProperties().getProperty(ApiClient.baseUrlKey, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
     }
 
@@ -55,11 +56,7 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath) : ApiClient(bas
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun apikeyCreateObjectV1(apikeyMinusCreateObjectMinusV1MinusRequest: kotlin.collections.List<ApikeyMinusCreateObjectMinusV1MinusRequest>) : ApikeyMinusCreateObjectMinusV1MinusResponse {
-        val localVariableConfig = apikeyCreateObjectV1RequestConfig(apikeyMinusCreateObjectMinusV1MinusRequest = apikeyMinusCreateObjectMinusV1MinusRequest)
-
-        val localVarResponse = request<kotlin.collections.List<ApikeyMinusCreateObjectMinusV1MinusRequest>, ApikeyMinusCreateObjectMinusV1MinusResponse>(
-            localVariableConfig
-        )
+        val localVarResponse = apikeyCreateObjectV1WithHttpInfo(apikeyMinusCreateObjectMinusV1MinusRequest = apikeyMinusCreateObjectMinusV1MinusRequest)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as ApikeyMinusCreateObjectMinusV1MinusResponse
@@ -74,6 +71,25 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath) : ApiClient(bas
                 throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
             }
         }
+    }
+
+    /**
+    * Create a new Apikey
+    * The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
+    * @param apikeyMinusCreateObjectMinusV1MinusRequest  
+    * @return ApiInfrastructureResponse<ApikeyMinusCreateObjectMinusV1MinusResponse?>
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun apikeyCreateObjectV1WithHttpInfo(apikeyMinusCreateObjectMinusV1MinusRequest: kotlin.collections.List<ApikeyMinusCreateObjectMinusV1MinusRequest>) : ApiInfrastructureResponse<ApikeyMinusCreateObjectMinusV1MinusResponse?> {
+        val localVariableConfig = apikeyCreateObjectV1RequestConfig(apikeyMinusCreateObjectMinusV1MinusRequest = apikeyMinusCreateObjectMinusV1MinusRequest)
+
+        return request<kotlin.collections.List<ApikeyMinusCreateObjectMinusV1MinusRequest>, ApikeyMinusCreateObjectMinusV1MinusResponse>(
+            localVariableConfig
+        )
     }
 
     /**

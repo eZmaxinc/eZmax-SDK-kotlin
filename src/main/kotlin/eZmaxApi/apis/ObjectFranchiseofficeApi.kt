@@ -23,6 +23,7 @@ package eZmaxApi.apis
 import eZmaxApi.models.CommonMinusGetAutocompleteMinusV1MinusResponse
 
 import eZmaxApi.infrastructure.ApiClient
+import eZmaxApi.infrastructure.ApiInfrastructureResponse
 import eZmaxApi.infrastructure.ClientException
 import eZmaxApi.infrastructure.ClientError
 import eZmaxApi.infrastructure.ServerException
@@ -38,7 +39,7 @@ class ObjectFranchiseofficeApi(basePath: kotlin.String = defaultBasePath) : ApiC
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
-            System.getProperties().getProperty("eZmaxApi.baseUrl", "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
+            System.getProperties().getProperty(ApiClient.baseUrlKey, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
     }
 
@@ -55,11 +56,7 @@ class ObjectFranchiseofficeApi(basePath: kotlin.String = defaultBasePath) : ApiC
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun franchiseofficeGetAutocompleteV1(sSelector: kotlin.String, sQuery: kotlin.String?) : CommonMinusGetAutocompleteMinusV1MinusResponse {
-        val localVariableConfig = franchiseofficeGetAutocompleteV1RequestConfig(sSelector = sSelector, sQuery = sQuery)
-
-        val localVarResponse = request<Unit, CommonMinusGetAutocompleteMinusV1MinusResponse>(
-            localVariableConfig
-        )
+        val localVarResponse = franchiseofficeGetAutocompleteV1WithHttpInfo(sSelector = sSelector, sQuery = sQuery)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as CommonMinusGetAutocompleteMinusV1MinusResponse
@@ -74,6 +71,26 @@ class ObjectFranchiseofficeApi(basePath: kotlin.String = defaultBasePath) : ApiC
                 throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
             }
         }
+    }
+
+    /**
+    * Retrieve Franchiseoffices and IDs
+    * Get the list of Franchiseoffices to be used in a dropdown or autocomplete control.
+    * @param sSelector The type of Franchiseoffices to return 
+    * @param sQuery Allow to filter the returned results (optional)
+    * @return ApiInfrastructureResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?>
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun franchiseofficeGetAutocompleteV1WithHttpInfo(sSelector: kotlin.String, sQuery: kotlin.String?) : ApiInfrastructureResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?> {
+        val localVariableConfig = franchiseofficeGetAutocompleteV1RequestConfig(sSelector = sSelector, sQuery = sQuery)
+
+        return request<Unit, CommonMinusGetAutocompleteMinusV1MinusResponse>(
+            localVariableConfig
+        )
     }
 
     /**

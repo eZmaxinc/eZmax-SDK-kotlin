@@ -44,6 +44,7 @@ open class ApiClient(val baseUrl: String) {
         var username: String? = null
         var password: String? = null
         var accessToken: String? = null
+        const val baseUrlKey = "eZmaxApi.baseUrl"
 
         @JvmStatic
         val client: OkHttpClient by lazy {
