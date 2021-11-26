@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjEzsignfolder** | [**kotlin.collections.List&lt;EzsignbulksendMinusListElement&gt;**](EzsignbulksendMinusListElement.md) |  |  [optional]
+**aObjEzsignbulksend** | [**kotlin.collections.List&lt;EzsignbulksendMinusListElement&gt;**](EzsignbulksendMinusListElement.md) |  | 
 
 
 

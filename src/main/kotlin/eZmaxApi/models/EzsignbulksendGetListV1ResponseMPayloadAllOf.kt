@@ -27,13 +27,13 @@ import com.squareup.moshi.Json
 /**
  * 
  *
- * @param aObjEzsignfolder 
+ * @param aObjEzsignbulksend 
  */
 
 data class EzsignbulksendGetListV1ResponseMPayloadAllOf (
 
-    @Json(name = "a_objEzsignfolder")
-    val aObjEzsignfolder: kotlin.collections.List<EzsignbulksendMinusListElement>? = null
+    @Json(name = "a_objEzsignbulksend")
+    val aObjEzsignbulksend: kotlin.collections.List<EzsignbulksendMinusListElement>
 
 )
 

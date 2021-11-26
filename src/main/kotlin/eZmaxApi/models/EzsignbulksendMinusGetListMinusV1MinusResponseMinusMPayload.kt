@@ -29,12 +29,15 @@ import com.squareup.moshi.Json
 /**
  * Payload for the /1/object/ezsignbulksend/getList API Request
  *
+ * @param aObjEzsignbulksend 
  * @param iRowReturned The number of rows returned
  * @param iRowFiltered The number of rows matching your filters (if any) or the total number of rows
- * @param aObjEzsignfolder 
  */
 
 data class EzsignbulksendMinusGetListMinusV1MinusResponseMinusMPayload (
+
+    @Json(name = "a_objEzsignbulksend")
+    val aObjEzsignbulksend: kotlin.collections.List<EzsignbulksendMinusListElement>,
 
     /* The number of rows returned */
     @Json(name = "iRowReturned")
@@ -42,10 +45,7 @@ data class EzsignbulksendMinusGetListMinusV1MinusResponseMinusMPayload (
 
     /* The number of rows matching your filters (if any) or the total number of rows */
     @Json(name = "iRowFiltered")
-    val iRowFiltered: kotlin.Int,
-
-    @Json(name = "a_objEzsignfolder")
-    val aObjEzsignfolder: kotlin.collections.List<EzsignbulksendMinusListElement>? = null
+    val iRowFiltered: kotlin.Int
 
 )
 
