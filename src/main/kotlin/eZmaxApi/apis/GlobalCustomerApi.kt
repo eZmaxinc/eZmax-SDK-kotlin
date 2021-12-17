@@ -20,11 +20,13 @@
 
 package eZmaxApi.apis
 
+import java.io.IOException
+
 import eZmaxApi.models.CommonMinusResponseMinusError
 import eZmaxApi.models.GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse
 
 import eZmaxApi.infrastructure.ApiClient
-import eZmaxApi.infrastructure.ApiInfrastructureResponse
+import eZmaxApi.infrastructure.ApiResponse
 import eZmaxApi.infrastructure.ClientException
 import eZmaxApi.infrastructure.ClientError
 import eZmaxApi.infrastructure.ServerException
@@ -50,12 +52,14 @@ class GlobalCustomerApi(basePath: kotlin.String = defaultBasePath) : ApiClient(b
     * @param pksCustomerCode  
     * @param sInfrastructureproductCode The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)
     * @return GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
     @Suppress("UNCHECKED_CAST")
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun globalCustomerGetEndpointV1(pksCustomerCode: kotlin.String, sInfrastructureproductCode: kotlin.String?) : GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse {
         val localVarResponse = globalCustomerGetEndpointV1WithHttpInfo(pksCustomerCode = pksCustomerCode, sInfrastructureproductCode = sInfrastructureproductCode)
 
@@ -79,14 +83,13 @@ class GlobalCustomerApi(basePath: kotlin.String = defaultBasePath) : ApiClient(b
     * Retrieve the customer&#39;s specific server endpoint where to send requests. This will help locate the proper region (ie: sInfrastructureregionCode) and the proper environment (ie: sInfrastructureenvironmenttypeDescription) where the customer&#39;s data is stored.
     * @param pksCustomerCode  
     * @param sInfrastructureproductCode The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)
-    * @return ApiInfrastructureResponse<GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse?>
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
+    * @return ApiResponse<GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse?>
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     */
     @Suppress("UNCHECKED_CAST")
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun globalCustomerGetEndpointV1WithHttpInfo(pksCustomerCode: kotlin.String, sInfrastructureproductCode: kotlin.String?) : ApiInfrastructureResponse<GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse?> {
+    @Throws(IllegalStateException::class, IOException::class)
+    fun globalCustomerGetEndpointV1WithHttpInfo(pksCustomerCode: kotlin.String, sInfrastructureproductCode: kotlin.String?) : ApiResponse<GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse?> {
         val localVariableConfig = globalCustomerGetEndpointV1RequestConfig(pksCustomerCode = pksCustomerCode, sInfrastructureproductCode = sInfrastructureproductCode)
 
         return request<Unit, GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse>(
@@ -110,6 +113,7 @@ class GlobalCustomerApi(basePath: kotlin.String = defaultBasePath) : ApiClient(b
                 }
             }
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
 
         return RequestConfig(
             method = RequestMethod.GET,

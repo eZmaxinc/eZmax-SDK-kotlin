@@ -69,7 +69,7 @@ data class EzsignfolderMinusGetObjectMinusV1MinusResponseMinusMPayload (
 
     /* The date and time at which the Ezsign folder was sent the last time. */
     @Json(name = "dtEzsignfolderSentdate")
-    val dtEzsignfolderSentdate: kotlin.String,
+    val dtEzsignfolderSentdate: kotlin.String?,
 
     @Json(name = "eEzsignfolderStep")
     val eEzsignfolderStep: FieldMinusEEzsignfolderStep,

@@ -207,7 +207,7 @@ Configure Authorization:
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/zip
+ - **Accept**: application/json
 
 <a name="ezsignfolderGetListV1"></a>
 # **ezsignfolderGetListV1**
@@ -265,7 +265,7 @@ Configure Authorization:
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+ - **Accept**: application/json
 
 <a name="ezsignfolderGetObjectV1"></a>
 # **ezsignfolderGetObjectV1**

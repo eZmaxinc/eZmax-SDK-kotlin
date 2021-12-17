@@ -22,7 +22,6 @@ package eZmaxApi.models
 
 import eZmaxApi.models.FieldMinusEEzsignfolderStep
 import eZmaxApi.models.FieldMinusEEzsignfoldertypePrivacylevel
-import eZmaxApi.models.OneOfLessThanStringCommaObjectGreaterThan
 
 import com.squareup.moshi.Json
 
@@ -36,8 +35,8 @@ import com.squareup.moshi.Json
  * @param sEzsignfolderDescription The description of the Ezsignfolder
  * @param eEzsignfolderStep 
  * @param dtCreatedDate The date and time at which the object was created
- * @param dtEzsignfolderSentdate 
- * @param dtDueDate The date at which no more signature will be accepted on the folder
+ * @param dtEzsignfolderSentdate The date and time at which the Ezsign folder was sent the last time.
+ * @param dtDueDate Represent a Date Time. The timezone is the one configured in the User's profile.
  * @param iEzsigndocument The total number of Ezsigndocument in the folder
  * @param iEzsigndocumentEdm The total number of Ezsigndocument in the folder that were saved in the edm system
  * @param iEzsignsignature The total number of signature blocks in all Ezsigndocuments in the folder
@@ -72,12 +71,13 @@ data class EzsignfolderMinusListElement (
     @Json(name = "dtCreatedDate")
     val dtCreatedDate: kotlin.String,
 
+    /* The date and time at which the Ezsign folder was sent the last time. */
     @Json(name = "dtEzsignfolderSentdate")
-    val dtEzsignfolderSentdate: OneOfLessThanStringCommaObjectGreaterThan?,
+    val dtEzsignfolderSentdate: kotlin.String?,
 
-    /* The date at which no more signature will be accepted on the folder */
+    /* Represent a Date Time. The timezone is the one configured in the User's profile. */
     @Json(name = "dtDueDate")
-    val dtDueDate: OneOfLessThanStringCommaObjectGreaterThan?,
+    val dtDueDate: kotlin.String?,
 
     /* The total number of Ezsigndocument in the folder */
     @Json(name = "iEzsigndocument")

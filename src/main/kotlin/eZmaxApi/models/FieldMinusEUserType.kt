@@ -107,12 +107,12 @@ enum class FieldMinusEUserType(val value: kotlin.String) {
         /**
          * Converts the provided [data] to a [String] on success, null otherwise.
          */
-        fun encode(data: Any?): kotlin.String? = if (data is FieldMinusEUserType) "$data" else null
+        fun encode(data: kotlin.Any?): kotlin.String? = if (data is FieldMinusEUserType) "$data" else null
 
         /**
          * Returns a valid [FieldMinusEUserType] for [data], null otherwise.
          */
-        fun decode(data: Any?): FieldMinusEUserType? = data?.let {
+        fun decode(data: kotlin.Any?): FieldMinusEUserType? = data?.let {
           val normalizedData = "$it".lowercase()
           values().firstOrNull { value ->
             it == value || normalizedData == "$value".lowercase()

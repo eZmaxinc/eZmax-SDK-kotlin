@@ -20,12 +20,14 @@
 
 package eZmaxApi.apis
 
+import java.io.IOException
+
 import eZmaxApi.models.CommonMinusResponseMinusError
 import eZmaxApi.models.EzsigntemplatepackageMinusGetListMinusV1MinusResponse
 import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
 
 import eZmaxApi.infrastructure.ApiClient
-import eZmaxApi.infrastructure.ApiInfrastructureResponse
+import eZmaxApi.infrastructure.ApiResponse
 import eZmaxApi.infrastructure.ClientException
 import eZmaxApi.infrastructure.ClientError
 import eZmaxApi.infrastructure.ServerException
@@ -54,12 +56,14 @@ class ObjectEzsigntemplatepackageApi(basePath: kotlin.String = defaultBasePath) 
     * @param acceptLanguage  (optional)
     * @param sFilter  (optional)
     * @return EzsigntemplatepackageMinusGetListMinusV1MinusResponse
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
     @Suppress("UNCHECKED_CAST")
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ezsigntemplatepackageGetListV1(eOrderBy: kotlin.String?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : EzsigntemplatepackageMinusGetListMinusV1MinusResponse {
         val localVarResponse = ezsigntemplatepackageGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
 
@@ -86,14 +90,13 @@ class ObjectEzsigntemplatepackageApi(basePath: kotlin.String = defaultBasePath) 
     * @param iRowOffset  (optional)
     * @param acceptLanguage  (optional)
     * @param sFilter  (optional)
-    * @return ApiInfrastructureResponse<EzsigntemplatepackageMinusGetListMinusV1MinusResponse?>
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
+    * @return ApiResponse<EzsigntemplatepackageMinusGetListMinusV1MinusResponse?>
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     */
     @Suppress("UNCHECKED_CAST")
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsigntemplatepackageGetListV1WithHttpInfo(eOrderBy: kotlin.String?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : ApiInfrastructureResponse<EzsigntemplatepackageMinusGetListMinusV1MinusResponse?> {
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsigntemplatepackageGetListV1WithHttpInfo(eOrderBy: kotlin.String?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : ApiResponse<EzsigntemplatepackageMinusGetListMinusV1MinusResponse?> {
         val localVariableConfig = ezsigntemplatepackageGetListV1RequestConfig(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
 
         return request<Unit, EzsigntemplatepackageMinusGetListMinusV1MinusResponse>(
@@ -130,6 +133,7 @@ class ObjectEzsigntemplatepackageApi(basePath: kotlin.String = defaultBasePath) 
             }
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
+        localVariableHeaders["Accept"] = "application/json"
 
         return RequestConfig(
             method = RequestMethod.GET,

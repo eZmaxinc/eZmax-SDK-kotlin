@@ -20,10 +20,12 @@
 
 package eZmaxApi.apis
 
+import java.io.IOException
+
 import eZmaxApi.models.ActivesessionMinusGetCurrentMinusV1MinusResponse
 
 import eZmaxApi.infrastructure.ApiClient
-import eZmaxApi.infrastructure.ApiInfrastructureResponse
+import eZmaxApi.infrastructure.ApiResponse
 import eZmaxApi.infrastructure.ClientException
 import eZmaxApi.infrastructure.ClientError
 import eZmaxApi.infrastructure.ServerException
@@ -47,12 +49,14 @@ class ObjectActivesessionApi(basePath: kotlin.String = defaultBasePath) : ApiCli
     * Get Current Activesession
     * Retrieve the details about the current activesession
     * @return ActivesessionMinusGetCurrentMinusV1MinusResponse
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
     @Suppress("UNCHECKED_CAST")
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun activesessionGetCurrentV1() : ActivesessionMinusGetCurrentMinusV1MinusResponse {
         val localVarResponse = activesessionGetCurrentV1WithHttpInfo()
 
@@ -74,14 +78,13 @@ class ObjectActivesessionApi(basePath: kotlin.String = defaultBasePath) : ApiCli
     /**
     * Get Current Activesession
     * Retrieve the details about the current activesession
-    * @return ApiInfrastructureResponse<ActivesessionMinusGetCurrentMinusV1MinusResponse?>
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
+    * @return ApiResponse<ActivesessionMinusGetCurrentMinusV1MinusResponse?>
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     */
     @Suppress("UNCHECKED_CAST")
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun activesessionGetCurrentV1WithHttpInfo() : ApiInfrastructureResponse<ActivesessionMinusGetCurrentMinusV1MinusResponse?> {
+    @Throws(IllegalStateException::class, IOException::class)
+    fun activesessionGetCurrentV1WithHttpInfo() : ApiResponse<ActivesessionMinusGetCurrentMinusV1MinusResponse?> {
         val localVariableConfig = activesessionGetCurrentV1RequestConfig()
 
         return request<Unit, ActivesessionMinusGetCurrentMinusV1MinusResponse>(
@@ -98,6 +101,7 @@ class ObjectActivesessionApi(basePath: kotlin.String = defaultBasePath) : ApiCli
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
 
         return RequestConfig(
             method = RequestMethod.GET,

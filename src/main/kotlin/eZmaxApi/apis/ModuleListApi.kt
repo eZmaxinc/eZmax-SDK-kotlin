@@ -20,13 +20,15 @@
 
 package eZmaxApi.apis
 
+import java.io.IOException
+
 import eZmaxApi.models.CommonMinusResponseMinusError
 import eZmaxApi.models.ListMinusGetListpresentationMinusV1MinusResponse
 import eZmaxApi.models.ListMinusSaveListpresentationMinusV1MinusRequest
 import eZmaxApi.models.ListMinusSaveListpresentationMinusV1MinusResponse
 
 import eZmaxApi.infrastructure.ApiClient
-import eZmaxApi.infrastructure.ApiInfrastructureResponse
+import eZmaxApi.infrastructure.ApiResponse
 import eZmaxApi.infrastructure.ClientException
 import eZmaxApi.infrastructure.ClientError
 import eZmaxApi.infrastructure.ServerException
@@ -51,12 +53,14 @@ class ModuleListApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
     * Retrive previously saved Listpresentation
     * @param sListName The list Name 
     * @return ListMinusGetListpresentationMinusV1MinusResponse
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
     @Suppress("UNCHECKED_CAST")
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun listGetListpresentationV1(sListName: kotlin.String) : ListMinusGetListpresentationMinusV1MinusResponse {
         val localVarResponse = listGetListpresentationV1WithHttpInfo(sListName = sListName)
 
@@ -79,14 +83,13 @@ class ModuleListApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
     * Get all Listpresentation for a specific list
     * Retrive previously saved Listpresentation
     * @param sListName The list Name 
-    * @return ApiInfrastructureResponse<ListMinusGetListpresentationMinusV1MinusResponse?>
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
+    * @return ApiResponse<ListMinusGetListpresentationMinusV1MinusResponse?>
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     */
     @Suppress("UNCHECKED_CAST")
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun listGetListpresentationV1WithHttpInfo(sListName: kotlin.String) : ApiInfrastructureResponse<ListMinusGetListpresentationMinusV1MinusResponse?> {
+    @Throws(IllegalStateException::class, IOException::class)
+    fun listGetListpresentationV1WithHttpInfo(sListName: kotlin.String) : ApiResponse<ListMinusGetListpresentationMinusV1MinusResponse?> {
         val localVariableConfig = listGetListpresentationV1RequestConfig(sListName = sListName)
 
         return request<Unit, ListMinusGetListpresentationMinusV1MinusResponse>(
@@ -104,6 +107,7 @@ class ModuleListApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
 
         return RequestConfig(
             method = RequestMethod.GET,
@@ -120,12 +124,14 @@ class ModuleListApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
     * @param sListName The list Name 
     * @param listMinusSaveListpresentationMinusV1MinusRequest  
     * @return ListMinusSaveListpresentationMinusV1MinusResponse
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
     @Suppress("UNCHECKED_CAST")
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun listSaveListpresentationV1(sListName: kotlin.String, listMinusSaveListpresentationMinusV1MinusRequest: ListMinusSaveListpresentationMinusV1MinusRequest) : ListMinusSaveListpresentationMinusV1MinusResponse {
         val localVarResponse = listSaveListpresentationV1WithHttpInfo(sListName = sListName, listMinusSaveListpresentationMinusV1MinusRequest = listMinusSaveListpresentationMinusV1MinusRequest)
 
@@ -149,14 +155,13 @@ class ModuleListApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
     * Users can create many Listpresentations for lists in the system. They can customize orber by, filters, numbers of rows, etc.
     * @param sListName The list Name 
     * @param listMinusSaveListpresentationMinusV1MinusRequest  
-    * @return ApiInfrastructureResponse<ListMinusSaveListpresentationMinusV1MinusResponse?>
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
+    * @return ApiResponse<ListMinusSaveListpresentationMinusV1MinusResponse?>
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     */
     @Suppress("UNCHECKED_CAST")
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun listSaveListpresentationV1WithHttpInfo(sListName: kotlin.String, listMinusSaveListpresentationMinusV1MinusRequest: ListMinusSaveListpresentationMinusV1MinusRequest) : ApiInfrastructureResponse<ListMinusSaveListpresentationMinusV1MinusResponse?> {
+    @Throws(IllegalStateException::class, IOException::class)
+    fun listSaveListpresentationV1WithHttpInfo(sListName: kotlin.String, listMinusSaveListpresentationMinusV1MinusRequest: ListMinusSaveListpresentationMinusV1MinusRequest) : ApiResponse<ListMinusSaveListpresentationMinusV1MinusResponse?> {
         val localVariableConfig = listSaveListpresentationV1RequestConfig(sListName = sListName, listMinusSaveListpresentationMinusV1MinusRequest = listMinusSaveListpresentationMinusV1MinusRequest)
 
         return request<ListMinusSaveListpresentationMinusV1MinusRequest, ListMinusSaveListpresentationMinusV1MinusResponse>(
@@ -175,6 +180,8 @@ class ModuleListApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
         val localVariableBody = listMinusSaveListpresentationMinusV1MinusRequest
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
 
         return RequestConfig(
             method = RequestMethod.POST,

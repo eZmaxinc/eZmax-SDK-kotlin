@@ -20,11 +20,13 @@
 
 package eZmaxApi.apis
 
+import java.io.IOException
+
 import eZmaxApi.models.UserMinusCreateEzsignuserMinusV1MinusRequest
 import eZmaxApi.models.UserMinusCreateEzsignuserMinusV1MinusResponse
 
 import eZmaxApi.infrastructure.ApiClient
-import eZmaxApi.infrastructure.ApiInfrastructureResponse
+import eZmaxApi.infrastructure.ApiResponse
 import eZmaxApi.infrastructure.ClientException
 import eZmaxApi.infrastructure.ClientError
 import eZmaxApi.infrastructure.ServerException
@@ -49,12 +51,14 @@ class ModuleUserApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
     * The endpoint allows to initiate the creation or a user of type Ezsignuser.  The user will be created only once the email verification process will be completed
     * @param userMinusCreateEzsignuserMinusV1MinusRequest  
     * @return UserMinusCreateEzsignuserMinusV1MinusResponse
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
     @Suppress("UNCHECKED_CAST")
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun userCreateEzsignuserV1(userMinusCreateEzsignuserMinusV1MinusRequest: kotlin.collections.List<UserMinusCreateEzsignuserMinusV1MinusRequest>) : UserMinusCreateEzsignuserMinusV1MinusResponse {
         val localVarResponse = userCreateEzsignuserV1WithHttpInfo(userMinusCreateEzsignuserMinusV1MinusRequest = userMinusCreateEzsignuserMinusV1MinusRequest)
 
@@ -77,14 +81,13 @@ class ModuleUserApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
     * Create a new User of type Ezsignuser
     * The endpoint allows to initiate the creation or a user of type Ezsignuser.  The user will be created only once the email verification process will be completed
     * @param userMinusCreateEzsignuserMinusV1MinusRequest  
-    * @return ApiInfrastructureResponse<UserMinusCreateEzsignuserMinusV1MinusResponse?>
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
+    * @return ApiResponse<UserMinusCreateEzsignuserMinusV1MinusResponse?>
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     */
     @Suppress("UNCHECKED_CAST")
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun userCreateEzsignuserV1WithHttpInfo(userMinusCreateEzsignuserMinusV1MinusRequest: kotlin.collections.List<UserMinusCreateEzsignuserMinusV1MinusRequest>) : ApiInfrastructureResponse<UserMinusCreateEzsignuserMinusV1MinusResponse?> {
+    @Throws(IllegalStateException::class, IOException::class)
+    fun userCreateEzsignuserV1WithHttpInfo(userMinusCreateEzsignuserMinusV1MinusRequest: kotlin.collections.List<UserMinusCreateEzsignuserMinusV1MinusRequest>) : ApiResponse<UserMinusCreateEzsignuserMinusV1MinusResponse?> {
         val localVariableConfig = userCreateEzsignuserV1RequestConfig(userMinusCreateEzsignuserMinusV1MinusRequest = userMinusCreateEzsignuserMinusV1MinusRequest)
 
         return request<kotlin.collections.List<UserMinusCreateEzsignuserMinusV1MinusRequest>, UserMinusCreateEzsignuserMinusV1MinusResponse>(
@@ -102,6 +105,8 @@ class ModuleUserApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
         val localVariableBody = userMinusCreateEzsignuserMinusV1MinusRequest
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
 
         return RequestConfig(
             method = RequestMethod.POST,

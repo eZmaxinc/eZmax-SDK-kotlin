@@ -20,6 +20,8 @@
 
 package eZmaxApi.apis
 
+import java.io.IOException
+
 import eZmaxApi.models.CommonMinusResponseMinusError
 import eZmaxApi.models.EzsignfolderMinusCreateObjectMinusV1MinusRequest
 import eZmaxApi.models.EzsignfolderMinusCreateObjectMinusV1MinusResponse
@@ -33,7 +35,7 @@ import eZmaxApi.models.EzsignfolderMinusUnsendMinusV1MinusResponse
 import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
 
 import eZmaxApi.infrastructure.ApiClient
-import eZmaxApi.infrastructure.ApiInfrastructureResponse
+import eZmaxApi.infrastructure.ApiResponse
 import eZmaxApi.infrastructure.ClientException
 import eZmaxApi.infrastructure.ClientError
 import eZmaxApi.infrastructure.ServerException
@@ -58,12 +60,14 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     * The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
     * @param ezsignfolderMinusCreateObjectMinusV1MinusRequest  
     * @return EzsignfolderMinusCreateObjectMinusV1MinusResponse
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
     @Suppress("UNCHECKED_CAST")
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ezsignfolderCreateObjectV1(ezsignfolderMinusCreateObjectMinusV1MinusRequest: kotlin.collections.List<EzsignfolderMinusCreateObjectMinusV1MinusRequest>) : EzsignfolderMinusCreateObjectMinusV1MinusResponse {
         val localVarResponse = ezsignfolderCreateObjectV1WithHttpInfo(ezsignfolderMinusCreateObjectMinusV1MinusRequest = ezsignfolderMinusCreateObjectMinusV1MinusRequest)
 
@@ -86,14 +90,13 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     * Create a new Ezsignfolder
     * The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
     * @param ezsignfolderMinusCreateObjectMinusV1MinusRequest  
-    * @return ApiInfrastructureResponse<EzsignfolderMinusCreateObjectMinusV1MinusResponse?>
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
+    * @return ApiResponse<EzsignfolderMinusCreateObjectMinusV1MinusResponse?>
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     */
     @Suppress("UNCHECKED_CAST")
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignfolderCreateObjectV1WithHttpInfo(ezsignfolderMinusCreateObjectMinusV1MinusRequest: kotlin.collections.List<EzsignfolderMinusCreateObjectMinusV1MinusRequest>) : ApiInfrastructureResponse<EzsignfolderMinusCreateObjectMinusV1MinusResponse?> {
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignfolderCreateObjectV1WithHttpInfo(ezsignfolderMinusCreateObjectMinusV1MinusRequest: kotlin.collections.List<EzsignfolderMinusCreateObjectMinusV1MinusRequest>) : ApiResponse<EzsignfolderMinusCreateObjectMinusV1MinusResponse?> {
         val localVariableConfig = ezsignfolderCreateObjectV1RequestConfig(ezsignfolderMinusCreateObjectMinusV1MinusRequest = ezsignfolderMinusCreateObjectMinusV1MinusRequest)
 
         return request<kotlin.collections.List<EzsignfolderMinusCreateObjectMinusV1MinusRequest>, EzsignfolderMinusCreateObjectMinusV1MinusResponse>(
@@ -111,6 +114,8 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
         val localVariableBody = ezsignfolderMinusCreateObjectMinusV1MinusRequest
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
 
         return RequestConfig(
             method = RequestMethod.POST,
@@ -126,12 +131,14 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     * 
     * @param pkiEzsignfolderID  
     * @return EzsignfolderMinusDeleteObjectMinusV1MinusResponse
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
     @Suppress("UNCHECKED_CAST")
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ezsignfolderDeleteObjectV1(pkiEzsignfolderID: kotlin.Int) : EzsignfolderMinusDeleteObjectMinusV1MinusResponse {
         val localVarResponse = ezsignfolderDeleteObjectV1WithHttpInfo(pkiEzsignfolderID = pkiEzsignfolderID)
 
@@ -154,14 +161,13 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     * Delete an existing Ezsignfolder
     * 
     * @param pkiEzsignfolderID  
-    * @return ApiInfrastructureResponse<EzsignfolderMinusDeleteObjectMinusV1MinusResponse?>
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
+    * @return ApiResponse<EzsignfolderMinusDeleteObjectMinusV1MinusResponse?>
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     */
     @Suppress("UNCHECKED_CAST")
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignfolderDeleteObjectV1WithHttpInfo(pkiEzsignfolderID: kotlin.Int) : ApiInfrastructureResponse<EzsignfolderMinusDeleteObjectMinusV1MinusResponse?> {
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignfolderDeleteObjectV1WithHttpInfo(pkiEzsignfolderID: kotlin.Int) : ApiResponse<EzsignfolderMinusDeleteObjectMinusV1MinusResponse?> {
         val localVariableConfig = ezsignfolderDeleteObjectV1RequestConfig(pkiEzsignfolderID = pkiEzsignfolderID)
 
         return request<Unit, EzsignfolderMinusDeleteObjectMinusV1MinusResponse>(
@@ -179,6 +185,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
 
         return RequestConfig(
             method = RequestMethod.DELETE,
@@ -194,11 +201,13 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
     * @param pkiEzsignfolderID  
     * @return void
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ezsignfolderGetChildrenV1(pkiEzsignfolderID: kotlin.Int) : Unit {
         val localVarResponse = ezsignfolderGetChildrenV1WithHttpInfo(pkiEzsignfolderID = pkiEzsignfolderID)
 
@@ -221,13 +230,12 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     * Retrieve an existing Ezsignfolder&#39;s children IDs
     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
     * @param pkiEzsignfolderID  
-    * @return ApiInfrastructureResponse<Unit?>
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
+    * @return ApiResponse<Unit?>
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     */
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignfolderGetChildrenV1WithHttpInfo(pkiEzsignfolderID: kotlin.Int) : ApiInfrastructureResponse<Unit?> {
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignfolderGetChildrenV1WithHttpInfo(pkiEzsignfolderID: kotlin.Int) : ApiResponse<Unit?> {
         val localVariableConfig = ezsignfolderGetChildrenV1RequestConfig(pkiEzsignfolderID = pkiEzsignfolderID)
 
         return request<Unit, Unit>(
@@ -245,6 +253,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
 
         return RequestConfig(
             method = RequestMethod.GET,
@@ -260,12 +269,14 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     * 
     * @param pkiEzsignfolderID  
     * @return EzsignfolderMinusGetFormsDataMinusV1MinusResponse
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
     @Suppress("UNCHECKED_CAST")
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ezsignfolderGetFormsDataV1(pkiEzsignfolderID: kotlin.Int) : EzsignfolderMinusGetFormsDataMinusV1MinusResponse {
         val localVarResponse = ezsignfolderGetFormsDataV1WithHttpInfo(pkiEzsignfolderID = pkiEzsignfolderID)
 
@@ -288,14 +299,13 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     * Retrieve an existing Ezsignfolder&#39;s forms data
     * 
     * @param pkiEzsignfolderID  
-    * @return ApiInfrastructureResponse<EzsignfolderMinusGetFormsDataMinusV1MinusResponse?>
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
+    * @return ApiResponse<EzsignfolderMinusGetFormsDataMinusV1MinusResponse?>
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     */
     @Suppress("UNCHECKED_CAST")
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignfolderGetFormsDataV1WithHttpInfo(pkiEzsignfolderID: kotlin.Int) : ApiInfrastructureResponse<EzsignfolderMinusGetFormsDataMinusV1MinusResponse?> {
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignfolderGetFormsDataV1WithHttpInfo(pkiEzsignfolderID: kotlin.Int) : ApiResponse<EzsignfolderMinusGetFormsDataMinusV1MinusResponse?> {
         val localVariableConfig = ezsignfolderGetFormsDataV1RequestConfig(pkiEzsignfolderID = pkiEzsignfolderID)
 
         return request<Unit, EzsignfolderMinusGetFormsDataMinusV1MinusResponse>(
@@ -313,6 +323,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
 
         return RequestConfig(
             method = RequestMethod.GET,
@@ -332,12 +343,14 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     * @param acceptLanguage  (optional)
     * @param sFilter  (optional)
     * @return EzsignfolderMinusGetListMinusV1MinusResponse
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
     @Suppress("UNCHECKED_CAST")
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ezsignfolderGetListV1(eOrderBy: kotlin.String?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : EzsignfolderMinusGetListMinusV1MinusResponse {
         val localVarResponse = ezsignfolderGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
 
@@ -364,14 +377,13 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     * @param iRowOffset  (optional)
     * @param acceptLanguage  (optional)
     * @param sFilter  (optional)
-    * @return ApiInfrastructureResponse<EzsignfolderMinusGetListMinusV1MinusResponse?>
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
+    * @return ApiResponse<EzsignfolderMinusGetListMinusV1MinusResponse?>
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     */
     @Suppress("UNCHECKED_CAST")
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignfolderGetListV1WithHttpInfo(eOrderBy: kotlin.String?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : ApiInfrastructureResponse<EzsignfolderMinusGetListMinusV1MinusResponse?> {
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignfolderGetListV1WithHttpInfo(eOrderBy: kotlin.String?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : ApiResponse<EzsignfolderMinusGetListMinusV1MinusResponse?> {
         val localVariableConfig = ezsignfolderGetListV1RequestConfig(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
 
         return request<Unit, EzsignfolderMinusGetListMinusV1MinusResponse>(
@@ -408,6 +420,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
             }
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
+        localVariableHeaders["Accept"] = "application/json"
 
         return RequestConfig(
             method = RequestMethod.GET,
@@ -423,12 +436,14 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
     * @param pkiEzsignfolderID  
     * @return EzsignfolderMinusGetObjectMinusV1MinusResponse
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
     @Suppress("UNCHECKED_CAST")
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ezsignfolderGetObjectV1(pkiEzsignfolderID: kotlin.Int) : EzsignfolderMinusGetObjectMinusV1MinusResponse {
         val localVarResponse = ezsignfolderGetObjectV1WithHttpInfo(pkiEzsignfolderID = pkiEzsignfolderID)
 
@@ -451,14 +466,13 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     * Retrieve an existing Ezsignfolder
     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
     * @param pkiEzsignfolderID  
-    * @return ApiInfrastructureResponse<EzsignfolderMinusGetObjectMinusV1MinusResponse?>
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
+    * @return ApiResponse<EzsignfolderMinusGetObjectMinusV1MinusResponse?>
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     */
     @Suppress("UNCHECKED_CAST")
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignfolderGetObjectV1WithHttpInfo(pkiEzsignfolderID: kotlin.Int) : ApiInfrastructureResponse<EzsignfolderMinusGetObjectMinusV1MinusResponse?> {
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignfolderGetObjectV1WithHttpInfo(pkiEzsignfolderID: kotlin.Int) : ApiResponse<EzsignfolderMinusGetObjectMinusV1MinusResponse?> {
         val localVariableConfig = ezsignfolderGetObjectV1RequestConfig(pkiEzsignfolderID = pkiEzsignfolderID)
 
         return request<Unit, EzsignfolderMinusGetObjectMinusV1MinusResponse>(
@@ -476,6 +490,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
 
         return RequestConfig(
             method = RequestMethod.GET,
@@ -492,12 +507,14 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     * @param pkiEzsignfolderID  
     * @param ezsignfolderMinusSendMinusV1MinusRequest  
     * @return EzsignfolderMinusSendMinusV1MinusResponse
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
     @Suppress("UNCHECKED_CAST")
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ezsignfolderSendV1(pkiEzsignfolderID: kotlin.Int, ezsignfolderMinusSendMinusV1MinusRequest: EzsignfolderMinusSendMinusV1MinusRequest) : EzsignfolderMinusSendMinusV1MinusResponse {
         val localVarResponse = ezsignfolderSendV1WithHttpInfo(pkiEzsignfolderID = pkiEzsignfolderID, ezsignfolderMinusSendMinusV1MinusRequest = ezsignfolderMinusSendMinusV1MinusRequest)
 
@@ -521,14 +538,13 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     * 
     * @param pkiEzsignfolderID  
     * @param ezsignfolderMinusSendMinusV1MinusRequest  
-    * @return ApiInfrastructureResponse<EzsignfolderMinusSendMinusV1MinusResponse?>
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
+    * @return ApiResponse<EzsignfolderMinusSendMinusV1MinusResponse?>
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     */
     @Suppress("UNCHECKED_CAST")
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignfolderSendV1WithHttpInfo(pkiEzsignfolderID: kotlin.Int, ezsignfolderMinusSendMinusV1MinusRequest: EzsignfolderMinusSendMinusV1MinusRequest) : ApiInfrastructureResponse<EzsignfolderMinusSendMinusV1MinusResponse?> {
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignfolderSendV1WithHttpInfo(pkiEzsignfolderID: kotlin.Int, ezsignfolderMinusSendMinusV1MinusRequest: EzsignfolderMinusSendMinusV1MinusRequest) : ApiResponse<EzsignfolderMinusSendMinusV1MinusResponse?> {
         val localVariableConfig = ezsignfolderSendV1RequestConfig(pkiEzsignfolderID = pkiEzsignfolderID, ezsignfolderMinusSendMinusV1MinusRequest = ezsignfolderMinusSendMinusV1MinusRequest)
 
         return request<EzsignfolderMinusSendMinusV1MinusRequest, EzsignfolderMinusSendMinusV1MinusResponse>(
@@ -547,6 +563,8 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
         val localVariableBody = ezsignfolderMinusSendMinusV1MinusRequest
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
 
         return RequestConfig(
             method = RequestMethod.POST,
@@ -563,12 +581,14 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     * @param pkiEzsignfolderID  
     * @param body  
     * @return EzsignfolderMinusUnsendMinusV1MinusResponse
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
     @Suppress("UNCHECKED_CAST")
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ezsignfolderUnsendV1(pkiEzsignfolderID: kotlin.Int, body: kotlin.String) : EzsignfolderMinusUnsendMinusV1MinusResponse {
         val localVarResponse = ezsignfolderUnsendV1WithHttpInfo(pkiEzsignfolderID = pkiEzsignfolderID, body = body)
 
@@ -592,14 +612,13 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     * Once an Ezsignfolder has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsignfolder and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on \&quot;Non-completed\&quot; Ezsigndocuments will be lost.
     * @param pkiEzsignfolderID  
     * @param body  
-    * @return ApiInfrastructureResponse<EzsignfolderMinusUnsendMinusV1MinusResponse?>
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
+    * @return ApiResponse<EzsignfolderMinusUnsendMinusV1MinusResponse?>
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     */
     @Suppress("UNCHECKED_CAST")
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignfolderUnsendV1WithHttpInfo(pkiEzsignfolderID: kotlin.Int, body: kotlin.String) : ApiInfrastructureResponse<EzsignfolderMinusUnsendMinusV1MinusResponse?> {
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignfolderUnsendV1WithHttpInfo(pkiEzsignfolderID: kotlin.Int, body: kotlin.String) : ApiResponse<EzsignfolderMinusUnsendMinusV1MinusResponse?> {
         val localVariableConfig = ezsignfolderUnsendV1RequestConfig(pkiEzsignfolderID = pkiEzsignfolderID, body = body)
 
         return request<kotlin.String, EzsignfolderMinusUnsendMinusV1MinusResponse>(
@@ -618,6 +637,8 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
         val localVariableBody = body
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
 
         return RequestConfig(
             method = RequestMethod.POST,

@@ -20,6 +20,8 @@
 
 package eZmaxApi.apis
 
+import java.io.IOException
+
 import eZmaxApi.models.CommonMinusResponseMinusError
 import eZmaxApi.models.SsprMinusResetPasswordMinusV1MinusRequest
 import eZmaxApi.models.SsprMinusResetPasswordRequestMinusV1MinusRequest
@@ -29,7 +31,7 @@ import eZmaxApi.models.SsprMinusUnlockAccountRequestMinusV1MinusRequest
 import eZmaxApi.models.SsprMinusValidateTokenMinusV1MinusRequest
 
 import eZmaxApi.infrastructure.ApiClient
-import eZmaxApi.infrastructure.ApiInfrastructureResponse
+import eZmaxApi.infrastructure.ApiResponse
 import eZmaxApi.infrastructure.ClientException
 import eZmaxApi.infrastructure.ClientError
 import eZmaxApi.infrastructure.ServerException
@@ -54,11 +56,13 @@ class ModuleSsprApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
     * This endpoint sends an email with a link to reset the user&#39;s password.  sEmailAddress must be set if eUserTypeSSPR &#x3D; EzsignUser  sUserLoginname must be set if eUserTypeSSPR &#x3D; Native
     * @param ssprMinusResetPasswordRequestMinusV1MinusRequest  
     * @return void
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ssprResetPasswordRequestV1(ssprMinusResetPasswordRequestMinusV1MinusRequest: SsprMinusResetPasswordRequestMinusV1MinusRequest) : Unit {
         val localVarResponse = ssprResetPasswordRequestV1WithHttpInfo(ssprMinusResetPasswordRequestMinusV1MinusRequest = ssprMinusResetPasswordRequestMinusV1MinusRequest)
 
@@ -81,13 +85,12 @@ class ModuleSsprApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
     * Reset Password Request
     * This endpoint sends an email with a link to reset the user&#39;s password.  sEmailAddress must be set if eUserTypeSSPR &#x3D; EzsignUser  sUserLoginname must be set if eUserTypeSSPR &#x3D; Native
     * @param ssprMinusResetPasswordRequestMinusV1MinusRequest  
-    * @return ApiInfrastructureResponse<Unit?>
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
+    * @return ApiResponse<Unit?>
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     */
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ssprResetPasswordRequestV1WithHttpInfo(ssprMinusResetPasswordRequestMinusV1MinusRequest: SsprMinusResetPasswordRequestMinusV1MinusRequest) : ApiInfrastructureResponse<Unit?> {
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ssprResetPasswordRequestV1WithHttpInfo(ssprMinusResetPasswordRequestMinusV1MinusRequest: SsprMinusResetPasswordRequestMinusV1MinusRequest) : ApiResponse<Unit?> {
         val localVariableConfig = ssprResetPasswordRequestV1RequestConfig(ssprMinusResetPasswordRequestMinusV1MinusRequest = ssprMinusResetPasswordRequestMinusV1MinusRequest)
 
         return request<SsprMinusResetPasswordRequestMinusV1MinusRequest, Unit>(
@@ -105,6 +108,8 @@ class ModuleSsprApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
         val localVariableBody = ssprMinusResetPasswordRequestMinusV1MinusRequest
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
 
         return RequestConfig(
             method = RequestMethod.POST,
@@ -120,11 +125,13 @@ class ModuleSsprApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
     * This endpoint resets the user&#39;s password.  sEmailAddress must be set if eUserTypeSSPR &#x3D; EzsignUser  sUserLoginname must be set if eUserTypeSSPR &#x3D; Native
     * @param ssprMinusResetPasswordMinusV1MinusRequest  
     * @return void
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ssprResetPasswordV1(ssprMinusResetPasswordMinusV1MinusRequest: SsprMinusResetPasswordMinusV1MinusRequest) : Unit {
         val localVarResponse = ssprResetPasswordV1WithHttpInfo(ssprMinusResetPasswordMinusV1MinusRequest = ssprMinusResetPasswordMinusV1MinusRequest)
 
@@ -147,13 +154,12 @@ class ModuleSsprApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
     * Reset Password
     * This endpoint resets the user&#39;s password.  sEmailAddress must be set if eUserTypeSSPR &#x3D; EzsignUser  sUserLoginname must be set if eUserTypeSSPR &#x3D; Native
     * @param ssprMinusResetPasswordMinusV1MinusRequest  
-    * @return ApiInfrastructureResponse<Unit?>
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
+    * @return ApiResponse<Unit?>
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     */
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ssprResetPasswordV1WithHttpInfo(ssprMinusResetPasswordMinusV1MinusRequest: SsprMinusResetPasswordMinusV1MinusRequest) : ApiInfrastructureResponse<Unit?> {
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ssprResetPasswordV1WithHttpInfo(ssprMinusResetPasswordMinusV1MinusRequest: SsprMinusResetPasswordMinusV1MinusRequest) : ApiResponse<Unit?> {
         val localVariableConfig = ssprResetPasswordV1RequestConfig(ssprMinusResetPasswordMinusV1MinusRequest = ssprMinusResetPasswordMinusV1MinusRequest)
 
         return request<SsprMinusResetPasswordMinusV1MinusRequest, Unit>(
@@ -171,6 +177,8 @@ class ModuleSsprApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
         val localVariableBody = ssprMinusResetPasswordMinusV1MinusRequest
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
 
         return RequestConfig(
             method = RequestMethod.POST,
@@ -186,11 +194,13 @@ class ModuleSsprApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
     * This endpoint returns an email with the username(s) matching the email address provided in case of forgotten username
     * @param ssprMinusSendUsernamesMinusV1MinusRequest  
     * @return void
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ssprSendUsernamesV1(ssprMinusSendUsernamesMinusV1MinusRequest: SsprMinusSendUsernamesMinusV1MinusRequest) : Unit {
         val localVarResponse = ssprSendUsernamesV1WithHttpInfo(ssprMinusSendUsernamesMinusV1MinusRequest = ssprMinusSendUsernamesMinusV1MinusRequest)
 
@@ -213,13 +223,12 @@ class ModuleSsprApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
     * Send username(s)
     * This endpoint returns an email with the username(s) matching the email address provided in case of forgotten username
     * @param ssprMinusSendUsernamesMinusV1MinusRequest  
-    * @return ApiInfrastructureResponse<Unit?>
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
+    * @return ApiResponse<Unit?>
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     */
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ssprSendUsernamesV1WithHttpInfo(ssprMinusSendUsernamesMinusV1MinusRequest: SsprMinusSendUsernamesMinusV1MinusRequest) : ApiInfrastructureResponse<Unit?> {
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ssprSendUsernamesV1WithHttpInfo(ssprMinusSendUsernamesMinusV1MinusRequest: SsprMinusSendUsernamesMinusV1MinusRequest) : ApiResponse<Unit?> {
         val localVariableConfig = ssprSendUsernamesV1RequestConfig(ssprMinusSendUsernamesMinusV1MinusRequest = ssprMinusSendUsernamesMinusV1MinusRequest)
 
         return request<SsprMinusSendUsernamesMinusV1MinusRequest, Unit>(
@@ -237,6 +246,8 @@ class ModuleSsprApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
         val localVariableBody = ssprMinusSendUsernamesMinusV1MinusRequest
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
 
         return RequestConfig(
             method = RequestMethod.POST,
@@ -252,11 +263,13 @@ class ModuleSsprApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
     * This endpoint sends an email with a link to unlock the user account.  sEmailAddress must be set if eUserTypeSSPR &#x3D; EzsignUser  sUserLoginname must be set if eUserTypeSSPR &#x3D; Native
     * @param ssprMinusUnlockAccountRequestMinusV1MinusRequest  
     * @return void
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ssprUnlockAccountRequestV1(ssprMinusUnlockAccountRequestMinusV1MinusRequest: SsprMinusUnlockAccountRequestMinusV1MinusRequest) : Unit {
         val localVarResponse = ssprUnlockAccountRequestV1WithHttpInfo(ssprMinusUnlockAccountRequestMinusV1MinusRequest = ssprMinusUnlockAccountRequestMinusV1MinusRequest)
 
@@ -279,13 +292,12 @@ class ModuleSsprApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
     * Unlock Account Request
     * This endpoint sends an email with a link to unlock the user account.  sEmailAddress must be set if eUserTypeSSPR &#x3D; EzsignUser  sUserLoginname must be set if eUserTypeSSPR &#x3D; Native
     * @param ssprMinusUnlockAccountRequestMinusV1MinusRequest  
-    * @return ApiInfrastructureResponse<Unit?>
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
+    * @return ApiResponse<Unit?>
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     */
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ssprUnlockAccountRequestV1WithHttpInfo(ssprMinusUnlockAccountRequestMinusV1MinusRequest: SsprMinusUnlockAccountRequestMinusV1MinusRequest) : ApiInfrastructureResponse<Unit?> {
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ssprUnlockAccountRequestV1WithHttpInfo(ssprMinusUnlockAccountRequestMinusV1MinusRequest: SsprMinusUnlockAccountRequestMinusV1MinusRequest) : ApiResponse<Unit?> {
         val localVariableConfig = ssprUnlockAccountRequestV1RequestConfig(ssprMinusUnlockAccountRequestMinusV1MinusRequest = ssprMinusUnlockAccountRequestMinusV1MinusRequest)
 
         return request<SsprMinusUnlockAccountRequestMinusV1MinusRequest, Unit>(
@@ -303,6 +315,8 @@ class ModuleSsprApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
         val localVariableBody = ssprMinusUnlockAccountRequestMinusV1MinusRequest
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
 
         return RequestConfig(
             method = RequestMethod.POST,
@@ -318,11 +332,13 @@ class ModuleSsprApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
     * This endpoint unlocks the user account.  sEmailAddress must be set if eUserTypeSSPR &#x3D; EzsignUser  sUserLoginname must be set if eUserTypeSSPR &#x3D; Native
     * @param ssprMinusUnlockAccountMinusV1MinusRequest  
     * @return void
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ssprUnlockAccountV1(ssprMinusUnlockAccountMinusV1MinusRequest: SsprMinusUnlockAccountMinusV1MinusRequest) : Unit {
         val localVarResponse = ssprUnlockAccountV1WithHttpInfo(ssprMinusUnlockAccountMinusV1MinusRequest = ssprMinusUnlockAccountMinusV1MinusRequest)
 
@@ -345,13 +361,12 @@ class ModuleSsprApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
     * Unlock Account
     * This endpoint unlocks the user account.  sEmailAddress must be set if eUserTypeSSPR &#x3D; EzsignUser  sUserLoginname must be set if eUserTypeSSPR &#x3D; Native
     * @param ssprMinusUnlockAccountMinusV1MinusRequest  
-    * @return ApiInfrastructureResponse<Unit?>
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
+    * @return ApiResponse<Unit?>
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     */
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ssprUnlockAccountV1WithHttpInfo(ssprMinusUnlockAccountMinusV1MinusRequest: SsprMinusUnlockAccountMinusV1MinusRequest) : ApiInfrastructureResponse<Unit?> {
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ssprUnlockAccountV1WithHttpInfo(ssprMinusUnlockAccountMinusV1MinusRequest: SsprMinusUnlockAccountMinusV1MinusRequest) : ApiResponse<Unit?> {
         val localVariableConfig = ssprUnlockAccountV1RequestConfig(ssprMinusUnlockAccountMinusV1MinusRequest = ssprMinusUnlockAccountMinusV1MinusRequest)
 
         return request<SsprMinusUnlockAccountMinusV1MinusRequest, Unit>(
@@ -369,6 +384,8 @@ class ModuleSsprApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
         val localVariableBody = ssprMinusUnlockAccountMinusV1MinusRequest
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
 
         return RequestConfig(
             method = RequestMethod.POST,
@@ -384,11 +401,13 @@ class ModuleSsprApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
     * This endpoint validates if a Token is valid and not expired.  sEmailAddress must be set if eUserTypeSSPR &#x3D; EzsignUser  sUserLoginname must be set if eUserTypeSSPR &#x3D; Native
     * @param ssprMinusValidateTokenMinusV1MinusRequest  
     * @return void
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ssprValidateTokenV1(ssprMinusValidateTokenMinusV1MinusRequest: SsprMinusValidateTokenMinusV1MinusRequest) : Unit {
         val localVarResponse = ssprValidateTokenV1WithHttpInfo(ssprMinusValidateTokenMinusV1MinusRequest = ssprMinusValidateTokenMinusV1MinusRequest)
 
@@ -411,13 +430,12 @@ class ModuleSsprApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
     * Validate Token
     * This endpoint validates if a Token is valid and not expired.  sEmailAddress must be set if eUserTypeSSPR &#x3D; EzsignUser  sUserLoginname must be set if eUserTypeSSPR &#x3D; Native
     * @param ssprMinusValidateTokenMinusV1MinusRequest  
-    * @return ApiInfrastructureResponse<Unit?>
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
+    * @return ApiResponse<Unit?>
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     */
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ssprValidateTokenV1WithHttpInfo(ssprMinusValidateTokenMinusV1MinusRequest: SsprMinusValidateTokenMinusV1MinusRequest) : ApiInfrastructureResponse<Unit?> {
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ssprValidateTokenV1WithHttpInfo(ssprMinusValidateTokenMinusV1MinusRequest: SsprMinusValidateTokenMinusV1MinusRequest) : ApiResponse<Unit?> {
         val localVariableConfig = ssprValidateTokenV1RequestConfig(ssprMinusValidateTokenMinusV1MinusRequest = ssprMinusValidateTokenMinusV1MinusRequest)
 
         return request<SsprMinusValidateTokenMinusV1MinusRequest, Unit>(
@@ -435,6 +453,8 @@ class ModuleSsprApi(basePath: kotlin.String = defaultBasePath) : ApiClient(baseP
         val localVariableBody = ssprMinusValidateTokenMinusV1MinusRequest
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
 
         return RequestConfig(
             method = RequestMethod.POST,

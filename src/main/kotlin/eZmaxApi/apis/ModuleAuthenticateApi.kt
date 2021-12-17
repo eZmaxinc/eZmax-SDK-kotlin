@@ -20,12 +20,14 @@
 
 package eZmaxApi.apis
 
+import java.io.IOException
+
 import eZmaxApi.models.AuthenticateMinusAuthenticateMinusV2MinusRequest
 import eZmaxApi.models.AuthenticateMinusAuthenticateMinusV2MinusResponse
 import eZmaxApi.models.CommonMinusResponseMinusError
 
 import eZmaxApi.infrastructure.ApiClient
-import eZmaxApi.infrastructure.ApiInfrastructureResponse
+import eZmaxApi.infrastructure.ApiResponse
 import eZmaxApi.infrastructure.ClientException
 import eZmaxApi.infrastructure.ClientError
 import eZmaxApi.infrastructure.ServerException
@@ -51,12 +53,14 @@ class ModuleAuthenticateApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     * @param eSessionType  
     * @param authenticateMinusAuthenticateMinusV2MinusRequest  
     * @return AuthenticateMinusAuthenticateMinusV2MinusResponse
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
     @Suppress("UNCHECKED_CAST")
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun authenticateAuthenticateV2(eSessionType: kotlin.String, authenticateMinusAuthenticateMinusV2MinusRequest: AuthenticateMinusAuthenticateMinusV2MinusRequest) : AuthenticateMinusAuthenticateMinusV2MinusResponse {
         val localVarResponse = authenticateAuthenticateV2WithHttpInfo(eSessionType = eSessionType, authenticateMinusAuthenticateMinusV2MinusRequest = authenticateMinusAuthenticateMinusV2MinusRequest)
 
@@ -80,14 +84,13 @@ class ModuleAuthenticateApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     * This endpoint authenticates a user.
     * @param eSessionType  
     * @param authenticateMinusAuthenticateMinusV2MinusRequest  
-    * @return ApiInfrastructureResponse<AuthenticateMinusAuthenticateMinusV2MinusResponse?>
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
+    * @return ApiResponse<AuthenticateMinusAuthenticateMinusV2MinusResponse?>
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     */
     @Suppress("UNCHECKED_CAST")
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun authenticateAuthenticateV2WithHttpInfo(eSessionType: kotlin.String, authenticateMinusAuthenticateMinusV2MinusRequest: AuthenticateMinusAuthenticateMinusV2MinusRequest) : ApiInfrastructureResponse<AuthenticateMinusAuthenticateMinusV2MinusResponse?> {
+    @Throws(IllegalStateException::class, IOException::class)
+    fun authenticateAuthenticateV2WithHttpInfo(eSessionType: kotlin.String, authenticateMinusAuthenticateMinusV2MinusRequest: AuthenticateMinusAuthenticateMinusV2MinusRequest) : ApiResponse<AuthenticateMinusAuthenticateMinusV2MinusResponse?> {
         val localVariableConfig = authenticateAuthenticateV2RequestConfig(eSessionType = eSessionType, authenticateMinusAuthenticateMinusV2MinusRequest = authenticateMinusAuthenticateMinusV2MinusRequest)
 
         return request<AuthenticateMinusAuthenticateMinusV2MinusRequest, AuthenticateMinusAuthenticateMinusV2MinusResponse>(
@@ -106,6 +109,8 @@ class ModuleAuthenticateApi(basePath: kotlin.String = defaultBasePath) : ApiClie
         val localVariableBody = authenticateMinusAuthenticateMinusV2MinusRequest
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
 
         return RequestConfig(
             method = RequestMethod.POST,

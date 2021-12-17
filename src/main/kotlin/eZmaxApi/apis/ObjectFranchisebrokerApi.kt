@@ -20,10 +20,12 @@
 
 package eZmaxApi.apis
 
+import java.io.IOException
+
 import eZmaxApi.models.CommonMinusGetAutocompleteMinusV1MinusResponse
 
 import eZmaxApi.infrastructure.ApiClient
-import eZmaxApi.infrastructure.ApiInfrastructureResponse
+import eZmaxApi.infrastructure.ApiResponse
 import eZmaxApi.infrastructure.ClientException
 import eZmaxApi.infrastructure.ClientError
 import eZmaxApi.infrastructure.ServerException
@@ -49,12 +51,14 @@ class ObjectFranchisebrokerApi(basePath: kotlin.String = defaultBasePath) : ApiC
     * @param sSelector The type of Franchisebrokers to return 
     * @param sQuery Allow to filter the returned results (optional)
     * @return CommonMinusGetAutocompleteMinusV1MinusResponse
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
     @Suppress("UNCHECKED_CAST")
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun franchisebrokerGetAutocompleteV1(sSelector: kotlin.String, sQuery: kotlin.String?) : CommonMinusGetAutocompleteMinusV1MinusResponse {
         val localVarResponse = franchisebrokerGetAutocompleteV1WithHttpInfo(sSelector = sSelector, sQuery = sQuery)
 
@@ -78,14 +82,13 @@ class ObjectFranchisebrokerApi(basePath: kotlin.String = defaultBasePath) : ApiC
     * Get the list of Franchisebrokers to be used in a dropdown or autocomplete control.
     * @param sSelector The type of Franchisebrokers to return 
     * @param sQuery Allow to filter the returned results (optional)
-    * @return ApiInfrastructureResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?>
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
+    * @return ApiResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?>
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
     */
     @Suppress("UNCHECKED_CAST")
-    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun franchisebrokerGetAutocompleteV1WithHttpInfo(sSelector: kotlin.String, sQuery: kotlin.String?) : ApiInfrastructureResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?> {
+    @Throws(IllegalStateException::class, IOException::class)
+    fun franchisebrokerGetAutocompleteV1WithHttpInfo(sSelector: kotlin.String, sQuery: kotlin.String?) : ApiResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?> {
         val localVariableConfig = franchisebrokerGetAutocompleteV1RequestConfig(sSelector = sSelector, sQuery = sQuery)
 
         return request<Unit, CommonMinusGetAutocompleteMinusV1MinusResponse>(
@@ -109,6 +112,7 @@ class ObjectFranchisebrokerApi(basePath: kotlin.String = defaultBasePath) : ApiC
                 }
             }
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
 
         return RequestConfig(
             method = RequestMethod.GET,

@@ -413,7 +413,7 @@ Configure Authorization:
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/zip, text/csv
+ - **Accept**: application/json
 
 <a name="ezsigndocumentGetObjectV1"></a>
 # **ezsigndocumentGetObjectV1**

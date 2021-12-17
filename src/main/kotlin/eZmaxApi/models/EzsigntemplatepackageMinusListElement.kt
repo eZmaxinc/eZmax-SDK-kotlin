@@ -21,7 +21,6 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.FieldMinusEEzsigntemplatepackageType
-import eZmaxApi.models.OneOfLessThanIntegerCommaObjectGreaterThan
 
 import com.squareup.moshi.Json
 
@@ -29,9 +28,9 @@ import com.squareup.moshi.Json
  * An Ezsigntemplatepackage List Element
  *
  * @param pkiEzsigntemplatepackageID The unique ID of the Ezsigntemplatepackage
- * @param fkiDepartmentID 
- * @param fkiTeamID 
- * @param fkiEzsignfoldertypeID 
+ * @param fkiDepartmentID The unique ID of the Department.
+ * @param fkiTeamID The unique ID of the Team
+ * @param fkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
  * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
  * @param eEzsigntemplatepackageType 
  * @param sEzsigntemplatepackageDescription The description of the Ezsigntemplatepackage
@@ -45,14 +44,17 @@ data class EzsigntemplatepackageMinusListElement (
     @Json(name = "pkiEzsigntemplatepackageID")
     val pkiEzsigntemplatepackageID: kotlin.Int,
 
+    /* The unique ID of the Department. */
     @Json(name = "fkiDepartmentID")
-    val fkiDepartmentID: OneOfLessThanIntegerCommaObjectGreaterThan?,
+    val fkiDepartmentID: kotlin.Int?,
 
+    /* The unique ID of the Team */
     @Json(name = "fkiTeamID")
-    val fkiTeamID: OneOfLessThanIntegerCommaObjectGreaterThan?,
+    val fkiTeamID: kotlin.Int?,
 
+    /* The unique ID of the Ezsignfoldertype. */
     @Json(name = "fkiEzsignfoldertypeID")
-    val fkiEzsignfoldertypeID: OneOfLessThanIntegerCommaObjectGreaterThan?,
+    val fkiEzsignfoldertypeID: kotlin.Int?,
 
     /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| */
     @Json(name = "fkiLanguageID")

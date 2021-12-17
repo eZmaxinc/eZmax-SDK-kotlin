@@ -20,7 +20,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.OneOfLessThanIntegerCommaStringGreaterThan
 
 import com.squareup.moshi.Json
 
@@ -44,7 +43,7 @@ data class CustomMinusAutocompleteElementMinusResponse (
 
     /* The Unique ID of the element */
     @Json(name = "mValue")
-    val mValue: OneOfLessThanIntegerCommaStringGreaterThan?
+    val mValue: kotlin.String
 
 )
 

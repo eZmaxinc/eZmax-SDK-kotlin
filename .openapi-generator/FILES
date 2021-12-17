@@ -241,7 +241,7 @@ src/main/kotlin/eZmaxApi/apis/ObjectFranchisereferalincomeApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectPeriodApi.kt
 src/main/kotlin/eZmaxApi/infrastructure/ApiAbstractions.kt
 src/main/kotlin/eZmaxApi/infrastructure/ApiClient.kt
-src/main/kotlin/eZmaxApi/infrastructure/ApiInfrastructureResponse.kt
+src/main/kotlin/eZmaxApi/infrastructure/ApiResponse.kt
 src/main/kotlin/eZmaxApi/infrastructure/BigDecimalAdapter.kt
 src/main/kotlin/eZmaxApi/infrastructure/BigIntegerAdapter.kt
 src/main/kotlin/eZmaxApi/infrastructure/ByteArrayAdapter.kt
