@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.3
+ * The version of the OpenAPI document: 1.1.4
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -20,20 +20,20 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.EzsignfoldersignerassociationMinusGetObjectMinusV1MinusResponseMinusMPayload
 
 import com.squareup.moshi.Json
 
 /**
  * 
  *
- * @param mPayload Payload for the /1/object/ezsignfoldersignerassociation/getObject API Request
+ * @param mPayload 
  */
 
 data class EzsignfoldersignerassociationGetObjectV1ResponseAllOf (
 
-    /* Payload for the /1/object/ezsignfoldersignerassociation/getObject API Request */
     @Json(name = "mPayload")
-    val mPayload: kotlin.Any
+    val mPayload: EzsignfoldersignerassociationMinusGetObjectMinusV1MinusResponseMinusMPayload
 
 )
 

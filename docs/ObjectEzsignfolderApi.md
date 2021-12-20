@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ezsignfolderCreateObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderCreateObjectV1) | **POST** /1/object/ezsignfolder | Create a new Ezsignfolder
 [**ezsignfolderDeleteObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderDeleteObjectV1) | **DELETE** /1/object/ezsignfolder/{pkiEzsignfolderID} | Delete an existing Ezsignfolder
-[**ezsignfolderGetChildrenV1**](ObjectEzsignfolderApi.md#ezsignfolderGetChildrenV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getChildren | Retrieve an existing Ezsignfolder&#39;s children IDs
+[**ezsignfolderGetEzsigndocumentsV1**](ObjectEzsignfolderApi.md#ezsignfolderGetEzsigndocumentsV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
 [**ezsignfolderGetFormsDataV1**](ObjectEzsignfolderApi.md#ezsignfolderGetFormsDataV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData | Retrieve an existing Ezsignfolder&#39;s forms data
 [**ezsignfolderGetListV1**](ObjectEzsignfolderApi.md#ezsignfolderGetListV1) | **GET** /1/object/ezsignfolder/getList | Retrieve Ezsignfolder list
 [**ezsignfolderGetObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderGetObjectV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID} | Retrieve an existing Ezsignfolder
@@ -112,13 +112,11 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsignfolderGetChildrenV1"></a>
-# **ezsignfolderGetChildrenV1**
-> ezsignfolderGetChildrenV1(pkiEzsignfolderID)
+<a name="ezsignfolderGetEzsigndocumentsV1"></a>
+# **ezsignfolderGetEzsigndocumentsV1**
+> EzsignfolderMinusGetEzsigndocumentsMinusV1MinusResponse ezsignfolderGetEzsigndocumentsV1(pkiEzsignfolderID)
 
-Retrieve an existing Ezsignfolder&#39;s children IDs
-
-## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
 
 ### Example
 ```kotlin
@@ -129,12 +127,13 @@ Retrieve an existing Ezsignfolder&#39;s children IDs
 val apiInstance = ObjectEzsignfolderApi()
 val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    apiInstance.ezsignfolderGetChildrenV1(pkiEzsignfolderID)
+    val result : EzsignfolderMinusGetEzsigndocumentsMinusV1MinusResponse = apiInstance.ezsignfolderGetEzsigndocumentsV1(pkiEzsignfolderID)
+    println(result)
 } catch (e: ClientException) {
-    println("4xx response calling ObjectEzsignfolderApi#ezsignfolderGetChildrenV1")
+    println("4xx response calling ObjectEzsignfolderApi#ezsignfolderGetEzsigndocumentsV1")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling ObjectEzsignfolderApi#ezsignfolderGetChildrenV1")
+    println("5xx response calling ObjectEzsignfolderApi#ezsignfolderGetEzsigndocumentsV1")
     e.printStackTrace()
 }
 ```
@@ -147,7 +146,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**EzsignfolderMinusGetEzsigndocumentsMinusV1MinusResponse**](EzsignfolderMinusGetEzsigndocumentsMinusV1MinusResponse.md)
 
 ### Authorization
 
@@ -272,8 +271,6 @@ Configure Authorization:
 > EzsignfolderMinusGetObjectMinusV1MinusResponse ezsignfolderGetObjectV1(pkiEzsignfolderID)
 
 Retrieve an existing Ezsignfolder
-
-## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
 
 ### Example
 ```kotlin

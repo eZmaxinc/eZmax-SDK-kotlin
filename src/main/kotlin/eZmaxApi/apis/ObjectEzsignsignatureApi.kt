@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.3
+ * The version of the OpenAPI document: 1.1.4
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -184,74 +184,6 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath) : ApiC
         return RequestConfig(
             method = RequestMethod.DELETE,
             path = "/1/object/ezsignsignature/{pkiEzsignsignatureID}".replace("{"+"pkiEzsignsignatureID"+"}", "$pkiEzsignsignatureID"),
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            body = localVariableBody
-        )
-    }
-
-    /**
-    * Retrieve an existing Ezsignsignature&#39;s children IDs
-    * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-    * @param pkiEzsignsignatureID  
-    * @return void
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
-    */
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignsignatureGetChildrenV1(pkiEzsignsignatureID: kotlin.Int) : Unit {
-        val localVarResponse = ezsignsignatureGetChildrenV1WithHttpInfo(pkiEzsignsignatureID = pkiEzsignsignatureID)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> Unit
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-    * Retrieve an existing Ezsignsignature&#39;s children IDs
-    * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-    * @param pkiEzsignsignatureID  
-    * @return ApiResponse<Unit?>
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    */
-    @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignsignatureGetChildrenV1WithHttpInfo(pkiEzsignsignatureID: kotlin.Int) : ApiResponse<Unit?> {
-        val localVariableConfig = ezsignsignatureGetChildrenV1RequestConfig(pkiEzsignsignatureID = pkiEzsignsignatureID)
-
-        return request<Unit, Unit>(
-            localVariableConfig
-        )
-    }
-
-    /**
-    * To obtain the request config of the operation ezsignsignatureGetChildrenV1
-    *
-    * @param pkiEzsignsignatureID  
-    * @return RequestConfig
-    */
-    fun ezsignsignatureGetChildrenV1RequestConfig(pkiEzsignsignatureID: kotlin.Int) : RequestConfig<Unit> {
-        val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.GET,
-            path = "/1/object/ezsignsignature/{pkiEzsignsignatureID}/getChildren".replace("{"+"pkiEzsignsignatureID"+"}", "$pkiEzsignsignatureID"),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

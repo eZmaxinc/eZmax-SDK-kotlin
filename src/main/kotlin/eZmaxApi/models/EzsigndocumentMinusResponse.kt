@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.3
+ * The version of the OpenAPI document: 1.1.4
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -29,7 +29,7 @@ import com.squareup.moshi.Json
  * An Ezsigndocument Object
  *
  * @param fkiEzsignfolderID The unique ID of the Ezsignfolder
- * @param dtEzsigndocumentDuedate The maximum date and time at which the document can be signed.
+ * @param dtEzsigndocumentDuedate The maximum date and time at which the Ezsigndocument can be signed.
  * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
  * @param sEzsigndocumentName The name of the document that will be presented to Ezsignfoldersignerassociations
  * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument
@@ -51,7 +51,7 @@ data class EzsigndocumentMinusResponse (
     @Json(name = "fkiEzsignfolderID")
     val fkiEzsignfolderID: kotlin.Int,
 
-    /* The maximum date and time at which the document can be signed. */
+    /* The maximum date and time at which the Ezsigndocument can be signed. */
     @Json(name = "dtEzsigndocumentDuedate")
     val dtEzsigndocumentDuedate: kotlin.String,
 

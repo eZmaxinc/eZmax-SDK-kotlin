@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.3
+ * The version of the OpenAPI document: 1.1.4
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -192,74 +192,6 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     }
 
     /**
-    * Retrieve an existing Ezsignfoldersignerassociation&#39;s children IDs
-    * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-    * @param pkiEzsignfoldersignerassociationID  
-    * @return void
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
-    */
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignfoldersignerassociationGetChildrenV1(pkiEzsignfoldersignerassociationID: kotlin.Int) : Unit {
-        val localVarResponse = ezsignfoldersignerassociationGetChildrenV1WithHttpInfo(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> Unit
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-    * Retrieve an existing Ezsignfoldersignerassociation&#39;s children IDs
-    * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-    * @param pkiEzsignfoldersignerassociationID  
-    * @return ApiResponse<Unit?>
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    */
-    @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignfoldersignerassociationGetChildrenV1WithHttpInfo(pkiEzsignfoldersignerassociationID: kotlin.Int) : ApiResponse<Unit?> {
-        val localVariableConfig = ezsignfoldersignerassociationGetChildrenV1RequestConfig(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID)
-
-        return request<Unit, Unit>(
-            localVariableConfig
-        )
-    }
-
-    /**
-    * To obtain the request config of the operation ezsignfoldersignerassociationGetChildrenV1
-    *
-    * @param pkiEzsignfoldersignerassociationID  
-    * @return RequestConfig
-    */
-    fun ezsignfoldersignerassociationGetChildrenV1RequestConfig(pkiEzsignfoldersignerassociationID: kotlin.Int) : RequestConfig<Unit> {
-        val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.GET,
-            path = "/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getChildren".replace("{"+"pkiEzsignfoldersignerassociationID"+"}", "$pkiEzsignfoldersignerassociationID"),
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            body = localVariableBody
-        )
-    }
-
-    /**
     * Retrieve a Login Url to allow In-Person signing
     * This endpoint returns a Login Url that can be used in a browser or embedded in an I-Frame to allow in person signing.  The signer Login type must be configured as In-Person.
     * @param pkiEzsignfoldersignerassociationID  
@@ -331,7 +263,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
 
     /**
     * Retrieve an existing Ezsignfoldersignerassociation
-    * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+    * 
     * @param pkiEzsignfoldersignerassociationID  
     * @return EzsignfoldersignerassociationMinusGetObjectMinusV1MinusResponse
     * @throws IllegalStateException If the request is not correctly configured
@@ -362,7 +294,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
 
     /**
     * Retrieve an existing Ezsignfoldersignerassociation
-    * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+    * 
     * @param pkiEzsignfoldersignerassociationID  
     * @return ApiResponse<EzsignfoldersignerassociationMinusGetObjectMinusV1MinusResponse?>
     * @throws IllegalStateException If the request is not correctly configured

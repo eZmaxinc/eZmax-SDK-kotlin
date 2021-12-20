@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**kotlin.Any**](.md) | Payload for the /1/object/ezsignfoldersignerassociation/getObject API Request | 
+**mPayload** | [**EzsignfoldersignerassociationMinusGetObjectMinusV1MinusResponseMinusMPayload**](EzsignfoldersignerassociationMinusGetObjectMinusV1MinusResponseMinusMPayload.md) |  | 
 
 
 
