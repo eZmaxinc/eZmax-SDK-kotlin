@@ -20,21 +20,20 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.EzsignfoldersignerassociationMinusRequest
+import eZmaxApi.models.EzsignsignerMinusResponseCompoundMinusContact
 
 import com.squareup.moshi.Json
 
 /**
  * 
  *
- * @param aEzsignfoldersignerassociation An array of signers that will be invited to sign the Ezsigndocuments
+ * @param objContact 
  */
 
-data class EzsignfolderRequestCompoundAllOf (
+data class EzsignsignerResponseCompoundAllOf (
 
-    /* An array of signers that will be invited to sign the Ezsigndocuments */
-    @Json(name = "a_Ezsignfoldersignerassociation")
-    val aEzsignfoldersignerassociation: kotlin.collections.List<EzsignfoldersignerassociationMinusRequest>
+    @Json(name = "objContact")
+    val objContact: EzsignsignerMinusResponseCompoundMinusContact
 
 )
 

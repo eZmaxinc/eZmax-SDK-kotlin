@@ -4,6 +4,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**iEzsigndocumentStepformtotal** | **kotlin.Int** | The total number of steps in the form filling phase | 
+**iEzsigndocumentStepformcurrent** | **kotlin.Int** | The current step in the form filling phase | 
+**iEzsigndocumentStepsignaturetotal** | **kotlin.Int** | The total number of steps in the signature filling phase | 
+**iEzsigndocumentStepsignatureCurrent** | **kotlin.Int** | The current step in the signature phase | 
+**aObjEzsignfoldersignerassociationstatus** | [**kotlin.collections.List&lt;CustomMinusEzsignfoldersignerassociationstatusMinusResponse&gt;**](CustomMinusEzsignfoldersignerassociationstatusMinusResponse.md) |  | 
 **fkiEzsignfolderID** | **kotlin.Int** | The unique ID of the Ezsignfolder | 
 **dtEzsigndocumentDuedate** | **kotlin.String** | The maximum date and time at which the Ezsigndocument can be signed. | 
 **fkiLanguageID** | **kotlin.Int** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| | 

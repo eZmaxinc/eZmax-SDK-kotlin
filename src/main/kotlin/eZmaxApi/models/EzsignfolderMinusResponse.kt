@@ -41,6 +41,8 @@ import com.squareup.moshi.Json
  * @param eEzsignfolderSendreminderfrequency 
  * @param dtEzsignfolderDuedate The maximum date and time at which the Ezsignfolder can be signed.
  * @param dtEzsignfolderSentdate The date and time at which the Ezsign folder was sent the last time.
+ * @param dtEzsignfolderScheduledarchive The scheduled date and time at which the Ezsignfolder should be archived.
+ * @param dtEzsignfolderScheduleddestruction The scheduled date and time at which the Ezsignfolder should be Destroyed.
  * @param eEzsignfolderStep 
  * @param dtEzsignfolderClose The date and time at which the folder was closed. Either by applying the last signature or by completing it prematurely.
  * @param objAudit 
@@ -94,6 +96,14 @@ data class EzsignfolderMinusResponse (
     /* The date and time at which the Ezsign folder was sent the last time. */
     @Json(name = "dtEzsignfolderSentdate")
     val dtEzsignfolderSentdate: kotlin.String?,
+
+    /* The scheduled date and time at which the Ezsignfolder should be archived. */
+    @Json(name = "dtEzsignfolderScheduledarchive")
+    val dtEzsignfolderScheduledarchive: kotlin.String,
+
+    /* The scheduled date and time at which the Ezsignfolder should be Destroyed. */
+    @Json(name = "dtEzsignfolderScheduleddestruction")
+    val dtEzsignfolderScheduleddestruction: kotlin.String,
 
     @Json(name = "eEzsignfolderStep")
     val eEzsignfolderStep: FieldMinusEEzsignfolderStep,

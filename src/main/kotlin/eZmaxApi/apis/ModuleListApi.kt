@@ -27,6 +27,8 @@ import eZmaxApi.models.ListMinusGetListpresentationMinusV1MinusResponse
 import eZmaxApi.models.ListMinusSaveListpresentationMinusV1MinusRequest
 import eZmaxApi.models.ListMinusSaveListpresentationMinusV1MinusResponse
 
+import com.squareup.moshi.Json
+
 import eZmaxApi.infrastructure.ApiClient
 import eZmaxApi.infrastructure.ApiResponse
 import eZmaxApi.infrastructure.ClientException

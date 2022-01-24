@@ -24,6 +24,8 @@ import java.io.IOException
 
 import eZmaxApi.models.CommonMinusGetAutocompleteMinusV1MinusResponse
 
+import com.squareup.moshi.Json
+
 import eZmaxApi.infrastructure.ApiClient
 import eZmaxApi.infrastructure.ApiResponse
 import eZmaxApi.infrastructure.ClientException
@@ -46,6 +48,15 @@ class ObjectFranchiseofficeApi(basePath: kotlin.String = defaultBasePath) : ApiC
     }
 
     /**
+     * enum for parameter sSelector
+     */
+     enum class SSelector_franchiseofficeGetAutocompleteV1(val value: kotlin.String) {
+         @Json(name = "Active") Active("Active"),
+         @Json(name = "All") All("All"),
+         ;
+     }
+
+    /**
     * Retrieve Franchiseoffices and IDs
     * Get the list of Franchiseoffices to be used in a dropdown or autocomplete control.
     * @param sSelector The type of Franchiseoffices to return 
@@ -59,7 +70,7 @@ class ObjectFranchiseofficeApi(basePath: kotlin.String = defaultBasePath) : ApiC
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun franchiseofficeGetAutocompleteV1(sSelector: kotlin.String, sQuery: kotlin.String?) : CommonMinusGetAutocompleteMinusV1MinusResponse {
+    fun franchiseofficeGetAutocompleteV1(sSelector: SSelector_franchiseofficeGetAutocompleteV1, sQuery: kotlin.String?) : CommonMinusGetAutocompleteMinusV1MinusResponse {
         val localVarResponse = franchiseofficeGetAutocompleteV1WithHttpInfo(sSelector = sSelector, sQuery = sQuery)
 
         return when (localVarResponse.responseType) {
@@ -88,7 +99,7 @@ class ObjectFranchiseofficeApi(basePath: kotlin.String = defaultBasePath) : ApiC
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun franchiseofficeGetAutocompleteV1WithHttpInfo(sSelector: kotlin.String, sQuery: kotlin.String?) : ApiResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?> {
+    fun franchiseofficeGetAutocompleteV1WithHttpInfo(sSelector: SSelector_franchiseofficeGetAutocompleteV1, sQuery: kotlin.String?) : ApiResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?> {
         val localVariableConfig = franchiseofficeGetAutocompleteV1RequestConfig(sSelector = sSelector, sQuery = sQuery)
 
         return request<Unit, CommonMinusGetAutocompleteMinusV1MinusResponse>(
@@ -103,9 +114,9 @@ class ObjectFranchiseofficeApi(basePath: kotlin.String = defaultBasePath) : ApiC
     * @param sQuery Allow to filter the returned results (optional)
     * @return RequestConfig
     */
-    fun franchiseofficeGetAutocompleteV1RequestConfig(sSelector: kotlin.String, sQuery: kotlin.String?) : RequestConfig<Unit> {
+    fun franchiseofficeGetAutocompleteV1RequestConfig(sSelector: SSelector_franchiseofficeGetAutocompleteV1, sQuery: kotlin.String?) : RequestConfig<Unit> {
         val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
                 if (sQuery != null) {
                     put("sQuery", listOf(sQuery.toString()))

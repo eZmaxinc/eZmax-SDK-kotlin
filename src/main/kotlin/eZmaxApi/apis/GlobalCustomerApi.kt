@@ -25,6 +25,8 @@ import java.io.IOException
 import eZmaxApi.models.CommonMinusResponseMinusError
 import eZmaxApi.models.GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse
 
+import com.squareup.moshi.Json
+
 import eZmaxApi.infrastructure.ApiClient
 import eZmaxApi.infrastructure.ApiResponse
 import eZmaxApi.infrastructure.ClientException
@@ -47,6 +49,15 @@ class GlobalCustomerApi(basePath: kotlin.String = defaultBasePath) : ApiClient(b
     }
 
     /**
+     * enum for parameter sInfrastructureproductCode
+     */
+     enum class SInfrastructureproductCode_globalCustomerGetEndpointV1(val value: kotlin.String) {
+         @Json(name = "appcluster01") appcluster01("appcluster01"),
+         @Json(name = "ezsignuser") ezsignuser("ezsignuser"),
+         ;
+     }
+
+    /**
     * Get customer endpoint
     * Retrieve the customer&#39;s specific server endpoint where to send requests. This will help locate the proper region (ie: sInfrastructureregionCode) and the proper environment (ie: sInfrastructureenvironmenttypeDescription) where the customer&#39;s data is stored.
     * @param pksCustomerCode  
@@ -60,7 +71,7 @@ class GlobalCustomerApi(basePath: kotlin.String = defaultBasePath) : ApiClient(b
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun globalCustomerGetEndpointV1(pksCustomerCode: kotlin.String, sInfrastructureproductCode: kotlin.String?) : GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse {
+    fun globalCustomerGetEndpointV1(pksCustomerCode: kotlin.String, sInfrastructureproductCode: SInfrastructureproductCode_globalCustomerGetEndpointV1?) : GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse {
         val localVarResponse = globalCustomerGetEndpointV1WithHttpInfo(pksCustomerCode = pksCustomerCode, sInfrastructureproductCode = sInfrastructureproductCode)
 
         return when (localVarResponse.responseType) {
@@ -89,7 +100,7 @@ class GlobalCustomerApi(basePath: kotlin.String = defaultBasePath) : ApiClient(b
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun globalCustomerGetEndpointV1WithHttpInfo(pksCustomerCode: kotlin.String, sInfrastructureproductCode: kotlin.String?) : ApiResponse<GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse?> {
+    fun globalCustomerGetEndpointV1WithHttpInfo(pksCustomerCode: kotlin.String, sInfrastructureproductCode: SInfrastructureproductCode_globalCustomerGetEndpointV1?) : ApiResponse<GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse?> {
         val localVariableConfig = globalCustomerGetEndpointV1RequestConfig(pksCustomerCode = pksCustomerCode, sInfrastructureproductCode = sInfrastructureproductCode)
 
         return request<Unit, GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse>(
@@ -104,9 +115,9 @@ class GlobalCustomerApi(basePath: kotlin.String = defaultBasePath) : ApiClient(b
     * @param sInfrastructureproductCode The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)
     * @return RequestConfig
     */
-    fun globalCustomerGetEndpointV1RequestConfig(pksCustomerCode: kotlin.String, sInfrastructureproductCode: kotlin.String?) : RequestConfig<Unit> {
+    fun globalCustomerGetEndpointV1RequestConfig(pksCustomerCode: kotlin.String, sInfrastructureproductCode: SInfrastructureproductCode_globalCustomerGetEndpointV1?) : RequestConfig<Unit> {
         val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
                 if (sInfrastructureproductCode != null) {
                     put("sInfrastructureproductCode", listOf(sInfrastructureproductCode.toString()))

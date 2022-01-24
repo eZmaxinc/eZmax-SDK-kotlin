@@ -29,6 +29,8 @@ import eZmaxApi.models.EzsignfoldersignerassociationMinusDeleteObjectMinusV1Minu
 import eZmaxApi.models.EzsignfoldersignerassociationMinusGetInPersonLoginUrlMinusV1MinusResponse
 import eZmaxApi.models.EzsignfoldersignerassociationMinusGetObjectMinusV1MinusResponse
 
+import com.squareup.moshi.Json
+
 import eZmaxApi.infrastructure.ApiClient
 import eZmaxApi.infrastructure.ApiResponse
 import eZmaxApi.infrastructure.ClientException

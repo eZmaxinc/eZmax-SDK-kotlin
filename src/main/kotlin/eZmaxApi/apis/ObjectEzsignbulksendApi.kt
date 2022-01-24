@@ -26,6 +26,8 @@ import eZmaxApi.models.CommonMinusResponseMinusError
 import eZmaxApi.models.EzsignbulksendMinusGetListMinusV1MinusResponse
 import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
 
+import com.squareup.moshi.Json
+
 import eZmaxApi.infrastructure.ApiClient
 import eZmaxApi.infrastructure.ApiResponse
 import eZmaxApi.infrastructure.ClientException
@@ -48,6 +50,35 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath) : ApiCl
     }
 
     /**
+     * enum for parameter eOrderBy
+     */
+     enum class EOrderBy_ezsignbulksendGetListV1(val value: kotlin.String) {
+         @Json(name = "pkiEzsignbulksendID_ASC") pkiEzsignbulksendID_ASC("pkiEzsignbulksendID_ASC"),
+         @Json(name = "pkiEzsignbulksendID_DESC") pkiEzsignbulksendID_DESC("pkiEzsignbulksendID_DESC"),
+         @Json(name = "fkiEzsignfoldertypeID_ASC") fkiEzsignfoldertypeID_ASC("fkiEzsignfoldertypeID_ASC"),
+         @Json(name = "fkiEzsignfoldertypeID_DESC") fkiEzsignfoldertypeID_DESC("fkiEzsignfoldertypeID_DESC"),
+         @Json(name = "sEzsignbulksendDescription_ASC") sEzsignbulksendDescription_ASC("sEzsignbulksendDescription_ASC"),
+         @Json(name = "sEzsignbulksendDescription_DESC") sEzsignbulksendDescription_DESC("sEzsignbulksendDescription_DESC"),
+         @Json(name = "sEzsignfoldertypeNameX_ASC") sEzsignfoldertypeNameX_ASC("sEzsignfoldertypeNameX_ASC"),
+         @Json(name = "sEzsignfoldertypeNameX_DESC") sEzsignfoldertypeNameX_DESC("sEzsignfoldertypeNameX_DESC"),
+         @Json(name = "eEzsignfoldertypePrivacylevel_ASC") eEzsignfoldertypePrivacylevel_ASC("eEzsignfoldertypePrivacylevel_ASC"),
+         @Json(name = "eEzsignfoldertypePrivacylevel_DESC") eEzsignfoldertypePrivacylevel_DESC("eEzsignfoldertypePrivacylevel_DESC"),
+         @Json(name = "bEzsignbulksendIsactive_ASC") bEzsignbulksendIsactive_ASC("bEzsignbulksendIsactive_ASC"),
+         @Json(name = "bEzsignbulksendIsactive_DESC") bEzsignbulksendIsactive_DESC("bEzsignbulksendIsactive_DESC"),
+         @Json(name = "iEzsignbulksendtransmission_ASC") iEzsignbulksendtransmission_ASC("iEzsignbulksendtransmission_ASC"),
+         @Json(name = "iEzsignbulksendtransmission_DESC") iEzsignbulksendtransmission_DESC("iEzsignbulksendtransmission_DESC"),
+         @Json(name = "iEzsignfolder_ASC") iEzsignfolder_ASC("iEzsignfolder_ASC"),
+         @Json(name = "iEzsignfolder_DESC") iEzsignfolder_DESC("iEzsignfolder_DESC"),
+         @Json(name = "iEzsigndocument_ASC") iEzsigndocument_ASC("iEzsigndocument_ASC"),
+         @Json(name = "iEzsigndocument_DESC") iEzsigndocument_DESC("iEzsigndocument_DESC"),
+         @Json(name = "iEzsignsignature_ASC") iEzsignsignature_ASC("iEzsignsignature_ASC"),
+         @Json(name = "iEzsignsignature_DESC") iEzsignsignature_DESC("iEzsignsignature_DESC"),
+         @Json(name = "iEzsignsignatureSigned_ASC") iEzsignsignatureSigned_ASC("iEzsignsignatureSigned_ASC"),
+         @Json(name = "iEzsignsignatureSigned_DESC") iEzsignsignatureSigned_DESC("iEzsignsignatureSigned_DESC"),
+         ;
+     }
+
+    /**
     * Retrieve Ezsignbulksend list
     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
     * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -64,7 +95,7 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath) : ApiCl
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignbulksendGetListV1(eOrderBy: kotlin.String?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : EzsignbulksendMinusGetListMinusV1MinusResponse {
+    fun ezsignbulksendGetListV1(eOrderBy: EOrderBy_ezsignbulksendGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : EzsignbulksendMinusGetListMinusV1MinusResponse {
         val localVarResponse = ezsignbulksendGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
 
         return when (localVarResponse.responseType) {
@@ -96,7 +127,7 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath) : ApiCl
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignbulksendGetListV1WithHttpInfo(eOrderBy: kotlin.String?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : ApiResponse<EzsignbulksendMinusGetListMinusV1MinusResponse?> {
+    fun ezsignbulksendGetListV1WithHttpInfo(eOrderBy: EOrderBy_ezsignbulksendGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : ApiResponse<EzsignbulksendMinusGetListMinusV1MinusResponse?> {
         val localVariableConfig = ezsignbulksendGetListV1RequestConfig(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
 
         return request<Unit, EzsignbulksendMinusGetListMinusV1MinusResponse>(
@@ -114,9 +145,9 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath) : ApiCl
     * @param sFilter  (optional)
     * @return RequestConfig
     */
-    fun ezsignbulksendGetListV1RequestConfig(eOrderBy: kotlin.String?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
+    fun ezsignbulksendGetListV1RequestConfig(eOrderBy: EOrderBy_ezsignbulksendGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
         val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
                 if (eOrderBy != null) {
                     put("eOrderBy", listOf(eOrderBy.toString()))

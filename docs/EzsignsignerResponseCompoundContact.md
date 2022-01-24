@@ -1,5 +1,5 @@
 
-# EzsignsignerMinusRequestCompoundMinusContact
+# EzsignsignerMinusResponseCompoundMinusContact
 
 ## Properties
 Name | Type | Description | Notes

@@ -21,6 +21,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.CommonMinusAudit
+import eZmaxApi.models.CustomMinusEzsignfoldersignerassociationstatusMinusResponse
 import eZmaxApi.models.EzsigndocumentMinusResponse
 import eZmaxApi.models.FieldMinusEEzsigndocumentStep
 

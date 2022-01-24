@@ -27,6 +27,7 @@ import eZmaxApi.models.EzsignfolderMinusCreateObjectMinusV1MinusRequest
 import eZmaxApi.models.EzsignfolderMinusCreateObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsignfolderMinusDeleteObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsignfolderMinusGetEzsigndocumentsMinusV1MinusResponse
+import eZmaxApi.models.EzsignfolderMinusGetEzsignfoldersignerassociationsMinusV1MinusResponse
 import eZmaxApi.models.EzsignfolderMinusGetFormsDataMinusV1MinusResponse
 import eZmaxApi.models.EzsignfolderMinusGetListMinusV1MinusResponse
 import eZmaxApi.models.EzsignfolderMinusGetObjectMinusV1MinusResponse
@@ -34,6 +35,8 @@ import eZmaxApi.models.EzsignfolderMinusSendMinusV1MinusRequest
 import eZmaxApi.models.EzsignfolderMinusSendMinusV1MinusResponse
 import eZmaxApi.models.EzsignfolderMinusUnsendMinusV1MinusResponse
 import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
+
+import com.squareup.moshi.Json
 
 import eZmaxApi.infrastructure.ApiClient
 import eZmaxApi.infrastructure.ApiResponse
@@ -268,6 +271,76 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     }
 
     /**
+    * Retrieve an existing Ezsignfolder&#39;s Ezsignfoldersignerassociations
+    * 
+    * @param pkiEzsignfolderID  
+    * @return EzsignfolderMinusGetEzsignfoldersignerassociationsMinusV1MinusResponse
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignfolderGetEzsignfoldersignerassociationsV1(pkiEzsignfolderID: kotlin.Int) : EzsignfolderMinusGetEzsignfoldersignerassociationsMinusV1MinusResponse {
+        val localVarResponse = ezsignfolderGetEzsignfoldersignerassociationsV1WithHttpInfo(pkiEzsignfolderID = pkiEzsignfolderID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfolderMinusGetEzsignfoldersignerassociationsMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+    * Retrieve an existing Ezsignfolder&#39;s Ezsignfoldersignerassociations
+    * 
+    * @param pkiEzsignfolderID  
+    * @return ApiResponse<EzsignfolderMinusGetEzsignfoldersignerassociationsMinusV1MinusResponse?>
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
+    */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignfolderGetEzsignfoldersignerassociationsV1WithHttpInfo(pkiEzsignfolderID: kotlin.Int) : ApiResponse<EzsignfolderMinusGetEzsignfoldersignerassociationsMinusV1MinusResponse?> {
+        val localVariableConfig = ezsignfolderGetEzsignfoldersignerassociationsV1RequestConfig(pkiEzsignfolderID = pkiEzsignfolderID)
+
+        return request<Unit, EzsignfolderMinusGetEzsignfoldersignerassociationsMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+    * To obtain the request config of the operation ezsignfolderGetEzsignfoldersignerassociationsV1
+    *
+    * @param pkiEzsignfolderID  
+    * @return RequestConfig
+    */
+    fun ezsignfolderGetEzsignfoldersignerassociationsV1RequestConfig(pkiEzsignfolderID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations".replace("{"+"pkiEzsignfolderID"+"}", "$pkiEzsignfolderID"),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
     * Retrieve an existing Ezsignfolder&#39;s forms data
     * 
     * @param pkiEzsignfolderID  
@@ -338,6 +411,37 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     }
 
     /**
+     * enum for parameter eOrderBy
+     */
+     enum class EOrderBy_ezsignfolderGetListV1(val value: kotlin.String) {
+         @Json(name = "pkiEzsignfolderID_ASC") pkiEzsignfolderID_ASC("pkiEzsignfolderID_ASC"),
+         @Json(name = "pkiEzsignfolderID_DESC") pkiEzsignfolderID_DESC("pkiEzsignfolderID_DESC"),
+         @Json(name = "sEzsignfolderDescription_ASC") sEzsignfolderDescription_ASC("sEzsignfolderDescription_ASC"),
+         @Json(name = "sEzsignfolderDescription_DESC") sEzsignfolderDescription_DESC("sEzsignfolderDescription_DESC"),
+         @Json(name = "dtCreatedDate_ASC") dtCreatedDate_ASC("dtCreatedDate_ASC"),
+         @Json(name = "dtCreatedDate_DESC") dtCreatedDate_DESC("dtCreatedDate_DESC"),
+         @Json(name = "fkiEzsignfoldertypeID_ASC") fkiEzsignfoldertypeID_ASC("fkiEzsignfoldertypeID_ASC"),
+         @Json(name = "fkiEzsignfoldertypeID_DESC") fkiEzsignfoldertypeID_DESC("fkiEzsignfoldertypeID_DESC"),
+         @Json(name = "sEzsignfoldertypeNameX_ASC") sEzsignfoldertypeNameX_ASC("sEzsignfoldertypeNameX_ASC"),
+         @Json(name = "sEzsignfoldertypeNameX_DESC") sEzsignfoldertypeNameX_DESC("sEzsignfoldertypeNameX_DESC"),
+         @Json(name = "eEzsignfolderStep_ASC") eEzsignfolderStep_ASC("eEzsignfolderStep_ASC"),
+         @Json(name = "eEzsignfolderStep_DESC") eEzsignfolderStep_DESC("eEzsignfolderStep_DESC"),
+         @Json(name = "dtEzsignfolderSentdate_ASC") dtEzsignfolderSentdate_ASC("dtEzsignfolderSentdate_ASC"),
+         @Json(name = "dtEzsignfolderSentdate_DESC") dtEzsignfolderSentdate_DESC("dtEzsignfolderSentdate_DESC"),
+         @Json(name = "dtDueDate_ASC") dtDueDate_ASC("dtDueDate_ASC"),
+         @Json(name = "dtDueDate_DESC") dtDueDate_DESC("dtDueDate_DESC"),
+         @Json(name = "iTotalDocument_ASC") iTotalDocument_ASC("iTotalDocument_ASC"),
+         @Json(name = "iTotalDocument_DESC") iTotalDocument_DESC("iTotalDocument_DESC"),
+         @Json(name = "iTotalDocumentEdm_ASC") iTotalDocumentEdm_ASC("iTotalDocumentEdm_ASC"),
+         @Json(name = "iTotalDocumentEdm_DESC") iTotalDocumentEdm_DESC("iTotalDocumentEdm_DESC"),
+         @Json(name = "iTotalSignature_ASC") iTotalSignature_ASC("iTotalSignature_ASC"),
+         @Json(name = "iTotalSignature_DESC") iTotalSignature_DESC("iTotalSignature_DESC"),
+         @Json(name = "iTotalSignatureSigned_ASC") iTotalSignatureSigned_ASC("iTotalSignatureSigned_ASC"),
+         @Json(name = "iTotalSignatureSigned_DESC") iTotalSignatureSigned_DESC("iTotalSignatureSigned_DESC"),
+         ;
+     }
+
+    /**
     * Retrieve Ezsignfolder list
     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived | | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
     * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -354,7 +458,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignfolderGetListV1(eOrderBy: kotlin.String?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : EzsignfolderMinusGetListMinusV1MinusResponse {
+    fun ezsignfolderGetListV1(eOrderBy: EOrderBy_ezsignfolderGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : EzsignfolderMinusGetListMinusV1MinusResponse {
         val localVarResponse = ezsignfolderGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
 
         return when (localVarResponse.responseType) {
@@ -386,7 +490,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignfolderGetListV1WithHttpInfo(eOrderBy: kotlin.String?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : ApiResponse<EzsignfolderMinusGetListMinusV1MinusResponse?> {
+    fun ezsignfolderGetListV1WithHttpInfo(eOrderBy: EOrderBy_ezsignfolderGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : ApiResponse<EzsignfolderMinusGetListMinusV1MinusResponse?> {
         val localVariableConfig = ezsignfolderGetListV1RequestConfig(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
 
         return request<Unit, EzsignfolderMinusGetListMinusV1MinusResponse>(
@@ -404,9 +508,9 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     * @param sFilter  (optional)
     * @return RequestConfig
     */
-    fun ezsignfolderGetListV1RequestConfig(eOrderBy: kotlin.String?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
+    fun ezsignfolderGetListV1RequestConfig(eOrderBy: EOrderBy_ezsignfolderGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
         val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
                 if (eOrderBy != null) {
                     put("eOrderBy", listOf(eOrderBy.toString()))

@@ -26,6 +26,8 @@ import eZmaxApi.models.CommonMinusResponseMinusError
 import eZmaxApi.models.EzsigntemplatepackageMinusGetListMinusV1MinusResponse
 import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
 
+import com.squareup.moshi.Json
+
 import eZmaxApi.infrastructure.ApiClient
 import eZmaxApi.infrastructure.ApiResponse
 import eZmaxApi.infrastructure.ClientException
@@ -48,6 +50,31 @@ class ObjectEzsigntemplatepackageApi(basePath: kotlin.String = defaultBasePath) 
     }
 
     /**
+     * enum for parameter eOrderBy
+     */
+     enum class EOrderBy_ezsigntemplatepackageGetListV1(val value: kotlin.String) {
+         @Json(name = "pkiEzsigntemplatepackageID_ASC") pkiEzsigntemplatepackageID_ASC("pkiEzsigntemplatepackageID_ASC"),
+         @Json(name = "pkiEzsigntemplatepackageID_DESC") pkiEzsigntemplatepackageID_DESC("pkiEzsigntemplatepackageID_DESC"),
+         @Json(name = "fkiDepartmentID_ASC") fkiDepartmentID_ASC("fkiDepartmentID_ASC"),
+         @Json(name = "fkiDepartmentID_DESC") fkiDepartmentID_DESC("fkiDepartmentID_DESC"),
+         @Json(name = "fkiTeamID_ASC") fkiTeamID_ASC("fkiTeamID_ASC"),
+         @Json(name = "fkiTeamID_DESC") fkiTeamID_DESC("fkiTeamID_DESC"),
+         @Json(name = "fkiEzsignfoldertypeID_ASC") fkiEzsignfoldertypeID_ASC("fkiEzsignfoldertypeID_ASC"),
+         @Json(name = "fkiEzsignfoldertypeID_DESC") fkiEzsignfoldertypeID_DESC("fkiEzsignfoldertypeID_DESC"),
+         @Json(name = "fkiLanguageID_ASC") fkiLanguageID_ASC("fkiLanguageID_ASC"),
+         @Json(name = "fkiLanguageID_DESC") fkiLanguageID_DESC("fkiLanguageID_DESC"),
+         @Json(name = "eEzsigntemplatepackageType_ASC") eEzsigntemplatepackageType_ASC("eEzsigntemplatepackageType_ASC"),
+         @Json(name = "eEzsigntemplatepackageType_DESC") eEzsigntemplatepackageType_DESC("eEzsigntemplatepackageType_DESC"),
+         @Json(name = "sEzsigntemplatepackageDescription_ASC") sEzsigntemplatepackageDescription_ASC("sEzsigntemplatepackageDescription_ASC"),
+         @Json(name = "sEzsigntemplatepackageDescription_DESC") sEzsigntemplatepackageDescription_DESC("sEzsigntemplatepackageDescription_DESC"),
+         @Json(name = "bEzsigntemplatepackageIsactive_ASC") bEzsigntemplatepackageIsactive_ASC("bEzsigntemplatepackageIsactive_ASC"),
+         @Json(name = "bEzsigntemplatepackageIsactive_DESC") bEzsigntemplatepackageIsactive_DESC("bEzsigntemplatepackageIsactive_DESC"),
+         @Json(name = "iEzsigntemplatepackagemembership_ASC") iEzsigntemplatepackagemembership_ASC("iEzsigntemplatepackagemembership_ASC"),
+         @Json(name = "iEzsigntemplatepackagemembership_DESC") iEzsigntemplatepackagemembership_DESC("iEzsigntemplatepackagemembership_DESC"),
+         ;
+     }
+
+    /**
     * Retrieve Ezsigntemplatepackage list
     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsigntemplatepackageType | Company&lt;br&gt;Department&lt;br&gt;Team&lt;br&gt;User&lt;br&gt;Usergroup |
     * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -64,7 +91,7 @@ class ObjectEzsigntemplatepackageApi(basePath: kotlin.String = defaultBasePath) 
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsigntemplatepackageGetListV1(eOrderBy: kotlin.String?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : EzsigntemplatepackageMinusGetListMinusV1MinusResponse {
+    fun ezsigntemplatepackageGetListV1(eOrderBy: EOrderBy_ezsigntemplatepackageGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : EzsigntemplatepackageMinusGetListMinusV1MinusResponse {
         val localVarResponse = ezsigntemplatepackageGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
 
         return when (localVarResponse.responseType) {
@@ -96,7 +123,7 @@ class ObjectEzsigntemplatepackageApi(basePath: kotlin.String = defaultBasePath) 
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsigntemplatepackageGetListV1WithHttpInfo(eOrderBy: kotlin.String?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : ApiResponse<EzsigntemplatepackageMinusGetListMinusV1MinusResponse?> {
+    fun ezsigntemplatepackageGetListV1WithHttpInfo(eOrderBy: EOrderBy_ezsigntemplatepackageGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : ApiResponse<EzsigntemplatepackageMinusGetListMinusV1MinusResponse?> {
         val localVariableConfig = ezsigntemplatepackageGetListV1RequestConfig(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
 
         return request<Unit, EzsigntemplatepackageMinusGetListMinusV1MinusResponse>(
@@ -114,9 +141,9 @@ class ObjectEzsigntemplatepackageApi(basePath: kotlin.String = defaultBasePath) 
     * @param sFilter  (optional)
     * @return RequestConfig
     */
-    fun ezsigntemplatepackageGetListV1RequestConfig(eOrderBy: kotlin.String?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
+    fun ezsigntemplatepackageGetListV1RequestConfig(eOrderBy: EOrderBy_ezsigntemplatepackageGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
         val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
                 if (eOrderBy != null) {
                     put("eOrderBy", listOf(eOrderBy.toString()))

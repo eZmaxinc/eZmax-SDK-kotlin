@@ -26,6 +26,8 @@ import eZmaxApi.models.AuthenticateMinusAuthenticateMinusV2MinusRequest
 import eZmaxApi.models.AuthenticateMinusAuthenticateMinusV2MinusResponse
 import eZmaxApi.models.CommonMinusResponseMinusError
 
+import com.squareup.moshi.Json
+
 import eZmaxApi.infrastructure.ApiClient
 import eZmaxApi.infrastructure.ApiResponse
 import eZmaxApi.infrastructure.ClientException
@@ -48,6 +50,14 @@ class ModuleAuthenticateApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     }
 
     /**
+     * enum for parameter eSessionType
+     */
+     enum class ESessionType_authenticateAuthenticateV2(val value: kotlin.String) {
+         @Json(name = "ezsignuser") ezsignuser("ezsignuser"),
+         ;
+     }
+
+    /**
     * Authenticate a user
     * This endpoint authenticates a user.
     * @param eSessionType  
@@ -61,7 +71,7 @@ class ModuleAuthenticateApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun authenticateAuthenticateV2(eSessionType: kotlin.String, authenticateMinusAuthenticateMinusV2MinusRequest: AuthenticateMinusAuthenticateMinusV2MinusRequest) : AuthenticateMinusAuthenticateMinusV2MinusResponse {
+    fun authenticateAuthenticateV2(eSessionType: ESessionType_authenticateAuthenticateV2, authenticateMinusAuthenticateMinusV2MinusRequest: AuthenticateMinusAuthenticateMinusV2MinusRequest) : AuthenticateMinusAuthenticateMinusV2MinusResponse {
         val localVarResponse = authenticateAuthenticateV2WithHttpInfo(eSessionType = eSessionType, authenticateMinusAuthenticateMinusV2MinusRequest = authenticateMinusAuthenticateMinusV2MinusRequest)
 
         return when (localVarResponse.responseType) {
@@ -90,7 +100,7 @@ class ModuleAuthenticateApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun authenticateAuthenticateV2WithHttpInfo(eSessionType: kotlin.String, authenticateMinusAuthenticateMinusV2MinusRequest: AuthenticateMinusAuthenticateMinusV2MinusRequest) : ApiResponse<AuthenticateMinusAuthenticateMinusV2MinusResponse?> {
+    fun authenticateAuthenticateV2WithHttpInfo(eSessionType: ESessionType_authenticateAuthenticateV2, authenticateMinusAuthenticateMinusV2MinusRequest: AuthenticateMinusAuthenticateMinusV2MinusRequest) : ApiResponse<AuthenticateMinusAuthenticateMinusV2MinusResponse?> {
         val localVariableConfig = authenticateAuthenticateV2RequestConfig(eSessionType = eSessionType, authenticateMinusAuthenticateMinusV2MinusRequest = authenticateMinusAuthenticateMinusV2MinusRequest)
 
         return request<AuthenticateMinusAuthenticateMinusV2MinusRequest, AuthenticateMinusAuthenticateMinusV2MinusResponse>(
@@ -105,7 +115,7 @@ class ModuleAuthenticateApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     * @param authenticateMinusAuthenticateMinusV2MinusRequest  
     * @return RequestConfig
     */
-    fun authenticateAuthenticateV2RequestConfig(eSessionType: kotlin.String, authenticateMinusAuthenticateMinusV2MinusRequest: AuthenticateMinusAuthenticateMinusV2MinusRequest) : RequestConfig<AuthenticateMinusAuthenticateMinusV2MinusRequest> {
+    fun authenticateAuthenticateV2RequestConfig(eSessionType: ESessionType_authenticateAuthenticateV2, authenticateMinusAuthenticateMinusV2MinusRequest: AuthenticateMinusAuthenticateMinusV2MinusRequest) : RequestConfig<AuthenticateMinusAuthenticateMinusV2MinusRequest> {
         val localVariableBody = authenticateMinusAuthenticateMinusV2MinusRequest
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()

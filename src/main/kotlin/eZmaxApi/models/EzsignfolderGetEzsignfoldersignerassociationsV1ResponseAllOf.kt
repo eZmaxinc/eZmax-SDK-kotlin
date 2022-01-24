@@ -20,20 +20,20 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.EzsigndocumentMinusResponseCompound
+import eZmaxApi.models.EzsignfolderMinusGetEzsignfoldersignerassociationsMinusV1MinusResponseMinusMPayload
 
 import com.squareup.moshi.Json
 
 /**
- * Payload for the /1/object/ezsignfolder/{pkiEzsignfolder}/getEzsigndocuments API Request
+ * 
  *
- * @param aObjEzsigndocument 
+ * @param mPayload 
  */
 
-data class EzsignfolderMinusGetEzsigndocumentsMinusV1MinusResponseMinusMPayload (
+data class EzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf (
 
-    @Json(name = "a_objEzsigndocument")
-    val aObjEzsigndocument: kotlin.collections.List<EzsigndocumentMinusResponseCompound>
+    @Json(name = "mPayload")
+    val mPayload: EzsignfolderMinusGetEzsignfoldersignerassociationsMinusV1MinusResponseMinusMPayload
 
 )
 

@@ -30,6 +30,8 @@ import eZmaxApi.models.SsprMinusUnlockAccountMinusV1MinusRequest
 import eZmaxApi.models.SsprMinusUnlockAccountRequestMinusV1MinusRequest
 import eZmaxApi.models.SsprMinusValidateTokenMinusV1MinusRequest
 
+import com.squareup.moshi.Json
+
 import eZmaxApi.infrastructure.ApiClient
 import eZmaxApi.infrastructure.ApiResponse
 import eZmaxApi.infrastructure.ClientException

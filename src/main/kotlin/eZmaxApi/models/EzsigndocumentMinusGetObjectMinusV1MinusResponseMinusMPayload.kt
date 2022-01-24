@@ -21,7 +21,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.CommonMinusAudit
-import eZmaxApi.models.EzsigndocumentMinusResponse
+import eZmaxApi.models.EzsigndocumentMinusResponseCompound
 import eZmaxApi.models.FieldMinusEEzsigndocumentStep
 
 import com.squareup.moshi.Json

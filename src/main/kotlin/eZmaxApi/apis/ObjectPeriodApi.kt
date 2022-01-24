@@ -24,6 +24,8 @@ import java.io.IOException
 
 import eZmaxApi.models.CommonMinusGetAutocompleteMinusV1MinusResponse
 
+import com.squareup.moshi.Json
+
 import eZmaxApi.infrastructure.ApiClient
 import eZmaxApi.infrastructure.ApiResponse
 import eZmaxApi.infrastructure.ClientException
@@ -46,6 +48,17 @@ class ObjectPeriodApi(basePath: kotlin.String = defaultBasePath) : ApiClient(bas
     }
 
     /**
+     * enum for parameter sSelector
+     */
+     enum class SSelector_periodGetAutocompleteV1(val value: kotlin.String) {
+         @Json(name = "ActiveNormal") ActiveNormal("ActiveNormal"),
+         @Json(name = "ActiveNormalAndEndOfYear") ActiveNormalAndEndOfYear("ActiveNormalAndEndOfYear"),
+         @Json(name = "AllNormal") AllNormal("AllNormal"),
+         @Json(name = "AllNormalAndEndOfYear") AllNormalAndEndOfYear("AllNormalAndEndOfYear"),
+         ;
+     }
+
+    /**
     * Retrieve Periods and IDs
     * Get the list of Periods to be used in a dropdown or autocomplete control.
     * @param sSelector The types of Periods to return 
@@ -59,7 +72,7 @@ class ObjectPeriodApi(basePath: kotlin.String = defaultBasePath) : ApiClient(bas
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun periodGetAutocompleteV1(sSelector: kotlin.String, sQuery: kotlin.String?) : CommonMinusGetAutocompleteMinusV1MinusResponse {
+    fun periodGetAutocompleteV1(sSelector: SSelector_periodGetAutocompleteV1, sQuery: kotlin.String?) : CommonMinusGetAutocompleteMinusV1MinusResponse {
         val localVarResponse = periodGetAutocompleteV1WithHttpInfo(sSelector = sSelector, sQuery = sQuery)
 
         return when (localVarResponse.responseType) {
@@ -88,7 +101,7 @@ class ObjectPeriodApi(basePath: kotlin.String = defaultBasePath) : ApiClient(bas
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun periodGetAutocompleteV1WithHttpInfo(sSelector: kotlin.String, sQuery: kotlin.String?) : ApiResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?> {
+    fun periodGetAutocompleteV1WithHttpInfo(sSelector: SSelector_periodGetAutocompleteV1, sQuery: kotlin.String?) : ApiResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?> {
         val localVariableConfig = periodGetAutocompleteV1RequestConfig(sSelector = sSelector, sQuery = sQuery)
 
         return request<Unit, CommonMinusGetAutocompleteMinusV1MinusResponse>(
@@ -103,9 +116,9 @@ class ObjectPeriodApi(basePath: kotlin.String = defaultBasePath) : ApiClient(bas
     * @param sQuery Allow to filter the returned results (optional)
     * @return RequestConfig
     */
-    fun periodGetAutocompleteV1RequestConfig(sSelector: kotlin.String, sQuery: kotlin.String?) : RequestConfig<Unit> {
+    fun periodGetAutocompleteV1RequestConfig(sSelector: SSelector_periodGetAutocompleteV1, sQuery: kotlin.String?) : RequestConfig<Unit> {
         val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
                 if (sQuery != null) {
                     put("sQuery", listOf(sQuery.toString()))

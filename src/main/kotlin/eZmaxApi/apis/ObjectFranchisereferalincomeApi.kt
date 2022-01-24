@@ -25,6 +25,8 @@ import java.io.IOException
 import eZmaxApi.models.FranchisereferalincomeMinusCreateObjectMinusV1MinusRequest
 import eZmaxApi.models.FranchisereferalincomeMinusCreateObjectMinusV1MinusResponse
 
+import com.squareup.moshi.Json
+
 import eZmaxApi.infrastructure.ApiClient
 import eZmaxApi.infrastructure.ApiResponse
 import eZmaxApi.infrastructure.ClientException

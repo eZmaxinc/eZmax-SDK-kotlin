@@ -38,6 +38,8 @@ import eZmaxApi.models.EzsigndocumentMinusGetObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsigndocumentMinusGetWordsPositionsMinusV1MinusRequest
 import eZmaxApi.models.EzsigndocumentMinusGetWordsPositionsMinusV1MinusResponse
 
+import com.squareup.moshi.Json
+
 import eZmaxApi.infrastructure.ApiClient
 import eZmaxApi.infrastructure.ApiResponse
 import eZmaxApi.infrastructure.ClientException
@@ -354,6 +356,17 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath) : ApiCl
     }
 
     /**
+     * enum for parameter eDocumentType
+     */
+     enum class EDocumentType_ezsigndocumentGetDownloadUrlV1(val value: kotlin.String) {
+         @Json(name = "Initial") Initial("Initial"),
+         @Json(name = "Signed") Signed("Signed"),
+         @Json(name = "Proof") Proof("Proof"),
+         @Json(name = "Proofdocument") Proofdocument("Proofdocument"),
+         ;
+     }
+
+    /**
     * Retrieve a URL to download documents.
     * This endpoint returns URLs to different files that can be downloaded during the signing process.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
     * @param pkiEzsigndocumentID  
@@ -367,7 +380,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath) : ApiCl
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsigndocumentGetDownloadUrlV1(pkiEzsigndocumentID: kotlin.Int, eDocumentType: kotlin.String) : EzsigndocumentMinusGetDownloadUrlMinusV1MinusResponse {
+    fun ezsigndocumentGetDownloadUrlV1(pkiEzsigndocumentID: kotlin.Int, eDocumentType: EDocumentType_ezsigndocumentGetDownloadUrlV1) : EzsigndocumentMinusGetDownloadUrlMinusV1MinusResponse {
         val localVarResponse = ezsigndocumentGetDownloadUrlV1WithHttpInfo(pkiEzsigndocumentID = pkiEzsigndocumentID, eDocumentType = eDocumentType)
 
         return when (localVarResponse.responseType) {
@@ -396,7 +409,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath) : ApiCl
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsigndocumentGetDownloadUrlV1WithHttpInfo(pkiEzsigndocumentID: kotlin.Int, eDocumentType: kotlin.String) : ApiResponse<EzsigndocumentMinusGetDownloadUrlMinusV1MinusResponse?> {
+    fun ezsigndocumentGetDownloadUrlV1WithHttpInfo(pkiEzsigndocumentID: kotlin.Int, eDocumentType: EDocumentType_ezsigndocumentGetDownloadUrlV1) : ApiResponse<EzsigndocumentMinusGetDownloadUrlMinusV1MinusResponse?> {
         val localVariableConfig = ezsigndocumentGetDownloadUrlV1RequestConfig(pkiEzsigndocumentID = pkiEzsigndocumentID, eDocumentType = eDocumentType)
 
         return request<Unit, EzsigndocumentMinusGetDownloadUrlMinusV1MinusResponse>(
@@ -411,7 +424,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath) : ApiCl
     * @param eDocumentType The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **Signed** Is the final document once all signatures were applied. 3. **Proofdocument** Is the evidence report. 4. **Proof** Is the complete evidence archive including all of the above and more.  
     * @return RequestConfig
     */
-    fun ezsigndocumentGetDownloadUrlV1RequestConfig(pkiEzsigndocumentID: kotlin.Int, eDocumentType: kotlin.String) : RequestConfig<Unit> {
+    fun ezsigndocumentGetDownloadUrlV1RequestConfig(pkiEzsigndocumentID: kotlin.Int, eDocumentType: EDocumentType_ezsigndocumentGetDownloadUrlV1) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
