@@ -21,7 +21,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.CommonMinusAudit
-import eZmaxApi.models.EzsignfolderMinusResponse
+import eZmaxApi.models.EzsignfolderMinusResponseCompound
 import eZmaxApi.models.FieldMinusEEzsignfolderSendreminderfrequency
 import eZmaxApi.models.FieldMinusEEzsignfolderStep
 
