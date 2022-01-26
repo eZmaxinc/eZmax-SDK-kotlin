@@ -21,6 +21,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.EzsignsignatureMinusRequest
+import eZmaxApi.models.EzsignsignaturecustomdateMinusRequest
 import eZmaxApi.models.FieldMinusEEzsignsignatureType
 
 import com.squareup.moshi.Json

@@ -146,6 +146,7 @@ docs/EzsignsignatureGetObjectV1Response.md
 docs/EzsignsignatureGetObjectV1ResponseAllOf.md
 docs/EzsignsignatureRequest.md
 docs/EzsignsignatureRequestCompound.md
+docs/EzsignsignaturecustomdateRequest.md
 docs/EzsignsignerRequest.md
 docs/EzsignsignerRequestCompound.md
 docs/EzsignsignerRequestCompoundAllOf.md
@@ -414,6 +415,7 @@ src/main/kotlin/eZmaxApi/models/EzsignsignatureMinusDeleteObjectMinusV1MinusResp
 src/main/kotlin/eZmaxApi/models/EzsignsignatureMinusGetObjectMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/EzsignsignatureMinusRequest.kt
 src/main/kotlin/eZmaxApi/models/EzsignsignatureMinusRequestCompound.kt
+src/main/kotlin/eZmaxApi/models/EzsignsignaturecustomdateMinusRequest.kt
 src/main/kotlin/eZmaxApi/models/EzsignsignerMinusRequest.kt
 src/main/kotlin/eZmaxApi/models/EzsignsignerMinusRequestCompound.kt
 src/main/kotlin/eZmaxApi/models/EzsignsignerMinusRequestCompoundMinusContact.kt

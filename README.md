@@ -231,6 +231,7 @@ Class | Method | HTTP request | Description
  - [eZmaxApi.models.EzsignsignatureMinusGetObjectMinusV1MinusResponse](docs/EzsignsignatureMinusGetObjectMinusV1MinusResponse.md)
  - [eZmaxApi.models.EzsignsignatureMinusRequest](docs/EzsignsignatureMinusRequest.md)
  - [eZmaxApi.models.EzsignsignatureMinusRequestCompound](docs/EzsignsignatureMinusRequestCompound.md)
+ - [eZmaxApi.models.EzsignsignaturecustomdateMinusRequest](docs/EzsignsignaturecustomdateMinusRequest.md)
  - [eZmaxApi.models.EzsignsignerMinusRequest](docs/EzsignsignerMinusRequest.md)
  - [eZmaxApi.models.EzsignsignerMinusRequestCompound](docs/EzsignsignerMinusRequestCompound.md)
  - [eZmaxApi.models.EzsignsignerMinusRequestCompoundMinusContact](docs/EzsignsignerMinusRequestCompoundMinusContact.md)
