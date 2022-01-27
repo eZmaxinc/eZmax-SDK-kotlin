@@ -29,8 +29,6 @@ import com.squareup.moshi.Json
  *
  * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation
  * @param fkiEzsignfolderID The unique ID of the Ezsignfolder
- * @param fkiEzsignsignerID The unique ID of the Ezsignsigner
- * @param fkiUserID The unique ID of the User
  * @param bEzsignfoldersignerassociationReceivecopy If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document.
  */
 
@@ -43,14 +41,6 @@ data class EzsignfoldersignerassociationMinusGetObjectMinusV1MinusResponseMinusM
     /* The unique ID of the Ezsignfolder */
     @Json(name = "fkiEzsignfolderID")
     val fkiEzsignfolderID: kotlin.Int,
-
-    /* The unique ID of the Ezsignsigner */
-    @Json(name = "fkiEzsignsignerID")
-    val fkiEzsignsignerID: kotlin.Int?,
-
-    /* The unique ID of the User */
-    @Json(name = "fkiUserID")
-    val fkiUserID: kotlin.Int?,
 
     /* If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document. */
     @Json(name = "bEzsignfoldersignerassociationReceivecopy")

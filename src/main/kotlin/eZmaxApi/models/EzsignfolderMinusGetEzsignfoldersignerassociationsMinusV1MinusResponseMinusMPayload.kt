@@ -20,7 +20,7 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.EzsignfoldersignerassociationMinusResponse
+import eZmaxApi.models.EzsignfoldersignerassociationMinusResponseCompound
 
 import com.squareup.moshi.Json
 
@@ -33,7 +33,7 @@ import com.squareup.moshi.Json
 data class EzsignfolderMinusGetEzsignfoldersignerassociationsMinusV1MinusResponseMinusMPayload (
 
     @Json(name = "a_objEzsignfoldersignerassociation")
-    val aObjEzsignfoldersignerassociation: kotlin.collections.List<EzsignfoldersignerassociationMinusResponse>
+    val aObjEzsignfoldersignerassociation: kotlin.collections.List<EzsignfoldersignerassociationMinusResponseCompound>
 
 )
 

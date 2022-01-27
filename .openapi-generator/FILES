@@ -126,6 +126,7 @@ docs/EzsignfoldersignerassociationRequestCompound.md
 docs/EzsignfoldersignerassociationRequestCompoundAllOf.md
 docs/EzsignfoldersignerassociationResponse.md
 docs/EzsignfoldersignerassociationResponseCompound.md
+docs/EzsignfoldersignerassociationResponseCompoundUser.md
 docs/EzsignfoldertypeGetListV1Response.md
 docs/EzsignfoldertypeGetListV1ResponseAllOf.md
 docs/EzsignfoldertypeGetListV1ResponseMPayload.md
@@ -394,6 +395,7 @@ src/main/kotlin/eZmaxApi/models/EzsignfoldersignerassociationMinusRequest.kt
 src/main/kotlin/eZmaxApi/models/EzsignfoldersignerassociationMinusRequestCompound.kt
 src/main/kotlin/eZmaxApi/models/EzsignfoldersignerassociationMinusResponse.kt
 src/main/kotlin/eZmaxApi/models/EzsignfoldersignerassociationMinusResponseCompound.kt
+src/main/kotlin/eZmaxApi/models/EzsignfoldersignerassociationMinusResponseCompoundMinusUser.kt
 src/main/kotlin/eZmaxApi/models/EzsignfoldersignerassociationRequestCompoundAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsignfoldertypeGetListV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsignfoldertypeGetListV1ResponseMPayloadAllOf.kt

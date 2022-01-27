@@ -210,6 +210,7 @@ Class | Method | HTTP request | Description
  - [eZmaxApi.models.EzsignfoldersignerassociationMinusRequestCompound](docs/EzsignfoldersignerassociationMinusRequestCompound.md)
  - [eZmaxApi.models.EzsignfoldersignerassociationMinusResponse](docs/EzsignfoldersignerassociationMinusResponse.md)
  - [eZmaxApi.models.EzsignfoldersignerassociationMinusResponseCompound](docs/EzsignfoldersignerassociationMinusResponseCompound.md)
+ - [eZmaxApi.models.EzsignfoldersignerassociationMinusResponseCompoundMinusUser](docs/EzsignfoldersignerassociationMinusResponseCompoundMinusUser.md)
  - [eZmaxApi.models.EzsignfoldersignerassociationRequestCompoundAllOf](docs/EzsignfoldersignerassociationRequestCompoundAllOf.md)
  - [eZmaxApi.models.EzsignfoldertypeGetListV1ResponseAllOf](docs/EzsignfoldertypeGetListV1ResponseAllOf.md)
  - [eZmaxApi.models.EzsignfoldertypeGetListV1ResponseMPayloadAllOf](docs/EzsignfoldertypeGetListV1ResponseMPayloadAllOf.md)
