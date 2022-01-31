@@ -299,6 +299,7 @@ Class | Method | HTTP request | Description
  - [eZmaxApi.models.WebhookMinusUserMinusUserCreated](docs/WebhookMinusUserMinusUserCreated.md)
  - [eZmaxApi.models.WebhookUserUserCreatedAllOf](docs/WebhookUserUserCreatedAllOf.md)
  - [eZmaxApi.models.WebsiteMinusRequest](docs/WebsiteMinusRequest.md)
+ - [eZmaxApi.models.Xxxx](docs/Xxxx.md)
 
 
 <a name="documentation-for-authorization"></a>

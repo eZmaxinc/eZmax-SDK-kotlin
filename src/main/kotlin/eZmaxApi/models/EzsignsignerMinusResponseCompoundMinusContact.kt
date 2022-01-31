@@ -26,6 +26,7 @@ import com.squareup.moshi.Json
 /**
  * A Ezsignsigner->Contact Object and children to create a complete structure
  *
+ * @param pkiContactID The unique ID of the Contact
  * @param sContactFirstname The First name of the contact
  * @param sContactLastname The Last name of the contact
  * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
@@ -35,6 +36,10 @@ import com.squareup.moshi.Json
  */
 
 data class EzsignsignerMinusResponseCompoundMinusContact (
+
+    /* The unique ID of the Contact */
+    @Json(name = "pkiContactID")
+    val pkiContactID: kotlin.Int,
 
     /* The First name of the contact */
     @Json(name = "sContactFirstname")

@@ -4,6 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**pkiContactID** | **kotlin.Int** | The unique ID of the Contact | 
 **sContactFirstname** | **kotlin.String** | The First name of the contact | 
 **sContactLastname** | **kotlin.String** | The Last name of the contact | 
 **fkiLanguageID** | **kotlin.Int** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| | 

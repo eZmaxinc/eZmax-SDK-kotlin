@@ -232,6 +232,7 @@ docs/WebhookResponse.md
 docs/WebhookUserUserCreated.md
 docs/WebhookUserUserCreatedAllOf.md
 docs/WebsiteRequest.md
+docs/Xxxx.md
 gradle/wrapper/gradle-wrapper.jar
 gradle/wrapper/gradle-wrapper.properties
 gradlew
@@ -484,3 +485,4 @@ src/main/kotlin/eZmaxApi/models/WebhookMinusResponse.kt
 src/main/kotlin/eZmaxApi/models/WebhookMinusUserMinusUserCreated.kt
 src/main/kotlin/eZmaxApi/models/WebhookUserUserCreatedAllOf.kt
 src/main/kotlin/eZmaxApi/models/WebsiteMinusRequest.kt
+src/main/kotlin/eZmaxApi/models/Xxxx.kt
