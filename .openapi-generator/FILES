@@ -81,6 +81,7 @@ docs/EzsigndocumentRequest.md
 docs/EzsigndocumentRequestCompound.md
 docs/EzsigndocumentResponse.md
 docs/EzsigndocumentResponseCompound.md
+docs/EzsigndocumentResponseCompoundAllOf.md
 docs/EzsignfolderCreateObjectV1Request.md
 docs/EzsignfolderCreateObjectV1Response.md
 docs/EzsignfolderCreateObjectV1ResponseAllOf.md
@@ -126,6 +127,7 @@ docs/EzsignfoldersignerassociationRequestCompound.md
 docs/EzsignfoldersignerassociationRequestCompoundAllOf.md
 docs/EzsignfoldersignerassociationResponse.md
 docs/EzsignfoldersignerassociationResponseCompound.md
+docs/EzsignfoldersignerassociationResponseCompoundAllOf.md
 docs/EzsignfoldersignerassociationResponseCompoundUser.md
 docs/EzsignfoldertypeGetListV1Response.md
 docs/EzsignfoldertypeGetListV1ResponseAllOf.md
@@ -147,6 +149,7 @@ docs/EzsignsignatureGetObjectV1Response.md
 docs/EzsignsignatureGetObjectV1ResponseAllOf.md
 docs/EzsignsignatureRequest.md
 docs/EzsignsignatureRequestCompound.md
+docs/EzsignsignatureRequestCompoundAllOf.md
 docs/EzsignsignaturecustomdateRequest.md
 docs/EzsignsignerRequest.md
 docs/EzsignsignerRequestCompound.md
@@ -161,6 +164,7 @@ docs/EzsigntemplatepackageGetListV1ResponseAllOf.md
 docs/EzsigntemplatepackageGetListV1ResponseMPayload.md
 docs/EzsigntemplatepackageGetListV1ResponseMPayloadAllOf.md
 docs/EzsigntemplatepackageListElement.md
+docs/FieldEActivesessionWeekdaystart.md
 docs/FieldEEzsigndocumentStep.md
 docs/FieldEEzsignfolderSendreminderfrequency.md
 docs/FieldEEzsignfolderStep.md
@@ -352,6 +356,7 @@ src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusRequest.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusRequestCompound.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusResponse.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusResponseCompound.kt
+src/main/kotlin/eZmaxApi/models/EzsigndocumentResponseCompoundAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsignfolderCreateObjectV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsignfolderGetEzsigndocumentsV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf.kt
@@ -398,6 +403,7 @@ src/main/kotlin/eZmaxApi/models/EzsignfoldersignerassociationMinusResponse.kt
 src/main/kotlin/eZmaxApi/models/EzsignfoldersignerassociationMinusResponseCompound.kt
 src/main/kotlin/eZmaxApi/models/EzsignfoldersignerassociationMinusResponseCompoundMinusUser.kt
 src/main/kotlin/eZmaxApi/models/EzsignfoldersignerassociationRequestCompoundAllOf.kt
+src/main/kotlin/eZmaxApi/models/EzsignfoldersignerassociationResponseCompoundAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsignfoldertypeGetListV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsignfoldertypeGetListV1ResponseMPayloadAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsignfoldertypeMinusGetListMinusV1MinusResponse.kt
@@ -418,6 +424,7 @@ src/main/kotlin/eZmaxApi/models/EzsignsignatureMinusDeleteObjectMinusV1MinusResp
 src/main/kotlin/eZmaxApi/models/EzsignsignatureMinusGetObjectMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/EzsignsignatureMinusRequest.kt
 src/main/kotlin/eZmaxApi/models/EzsignsignatureMinusRequestCompound.kt
+src/main/kotlin/eZmaxApi/models/EzsignsignatureRequestCompoundAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsignsignaturecustomdateMinusRequest.kt
 src/main/kotlin/eZmaxApi/models/EzsignsignerMinusRequest.kt
 src/main/kotlin/eZmaxApi/models/EzsignsignerMinusRequestCompound.kt
@@ -432,6 +439,7 @@ src/main/kotlin/eZmaxApi/models/EzsigntemplatepackageGetListV1ResponseMPayloadAl
 src/main/kotlin/eZmaxApi/models/EzsigntemplatepackageMinusGetListMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/EzsigntemplatepackageMinusGetListMinusV1MinusResponseMinusMPayload.kt
 src/main/kotlin/eZmaxApi/models/EzsigntemplatepackageMinusListElement.kt
+src/main/kotlin/eZmaxApi/models/FieldMinusEActivesessionWeekdaystart.kt
 src/main/kotlin/eZmaxApi/models/FieldMinusEEzsigndocumentStep.kt
 src/main/kotlin/eZmaxApi/models/FieldMinusEEzsignfolderSendreminderfrequency.kt
 src/main/kotlin/eZmaxApi/models/FieldMinusEEzsignfolderStep.kt

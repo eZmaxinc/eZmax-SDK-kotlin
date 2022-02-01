@@ -23,6 +23,7 @@ package eZmaxApi.models
 import eZmaxApi.models.CommonMinusAudit
 import eZmaxApi.models.CustomMinusEzsignfoldersignerassociationstatusMinusResponse
 import eZmaxApi.models.EzsigndocumentMinusResponse
+import eZmaxApi.models.EzsigndocumentResponseCompoundAllOf
 import eZmaxApi.models.FieldMinusEEzsigndocumentStep
 
 import com.squareup.moshi.Json
@@ -30,6 +31,11 @@ import com.squareup.moshi.Json
 /**
  * An Ezsigndocument Object and children to create a complete structure
  *
+ * @param iEzsigndocumentStepformtotal The total number of steps in the form filling phase
+ * @param iEzsigndocumentStepformcurrent The current step in the form filling phase
+ * @param iEzsigndocumentStepsignaturetotal The total number of steps in the signature filling phase
+ * @param iEzsigndocumentStepsignatureCurrent The current step in the signature phase
+ * @param aObjEzsignfoldersignerassociationstatus 
  * @param fkiEzsignfolderID The unique ID of the Ezsignfolder
  * @param dtEzsigndocumentDuedate The maximum date and time at which the Ezsigndocument can be signed.
  * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
@@ -48,6 +54,25 @@ import com.squareup.moshi.Json
  */
 
 data class EzsigndocumentMinusResponseCompound (
+
+    /* The total number of steps in the form filling phase */
+    @Json(name = "iEzsigndocumentStepformtotal")
+    val iEzsigndocumentStepformtotal: kotlin.Int,
+
+    /* The current step in the form filling phase */
+    @Json(name = "iEzsigndocumentStepformcurrent")
+    val iEzsigndocumentStepformcurrent: kotlin.Int,
+
+    /* The total number of steps in the signature filling phase */
+    @Json(name = "iEzsigndocumentStepsignaturetotal")
+    val iEzsigndocumentStepsignaturetotal: kotlin.Int,
+
+    /* The current step in the signature phase */
+    @Json(name = "iEzsigndocumentStepsignatureCurrent")
+    val iEzsigndocumentStepsignatureCurrent: kotlin.Int,
+
+    @Json(name = "a_objEzsignfoldersignerassociationstatus")
+    val aObjEzsignfoldersignerassociationstatus: kotlin.collections.List<CustomMinusEzsignfoldersignerassociationstatusMinusResponse>,
 
     /* The unique ID of the Ezsignfolder */
     @Json(name = "fkiEzsignfolderID")

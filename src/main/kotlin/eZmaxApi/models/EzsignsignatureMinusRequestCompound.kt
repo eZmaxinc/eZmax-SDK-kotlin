@@ -21,6 +21,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.EzsignsignatureMinusRequest
+import eZmaxApi.models.EzsignsignatureRequestCompoundAllOf
 import eZmaxApi.models.EzsignsignaturecustomdateMinusRequest
 import eZmaxApi.models.FieldMinusEEzsignsignatureType
 
@@ -36,6 +37,8 @@ import com.squareup.moshi.Json
  * @param iEzsignsignatureStep The step when the Ezsignsigner will be invited to sign or fill form fields
  * @param eEzsignsignatureType 
  * @param fkiEzsigndocumentID The unique ID of the Ezsigndocument
+ * @param bEzsignsignatureCustomdate Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is \"Name\" or \"Handwritten\")
+ * @param aObjEzsignsignaturecustomdate An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all.
  */
 
 data class EzsignsignatureMinusRequestCompound (
@@ -65,7 +68,15 @@ data class EzsignsignatureMinusRequestCompound (
 
     /* The unique ID of the Ezsigndocument */
     @Json(name = "fkiEzsigndocumentID")
-    val fkiEzsigndocumentID: kotlin.Int
+    val fkiEzsigndocumentID: kotlin.Int,
+
+    /* Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is \"Name\" or \"Handwritten\") */
+    @Json(name = "bEzsignsignatureCustomdate")
+    val bEzsignsignatureCustomdate: kotlin.Boolean? = null,
+
+    /* An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all. */
+    @Json(name = "a_objEzsignsignaturecustomdate")
+    val aObjEzsignsignaturecustomdate: kotlin.collections.List<EzsignsignaturecustomdateMinusRequest>? = null
 
 )
 

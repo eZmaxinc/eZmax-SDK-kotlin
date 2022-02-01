@@ -20,6 +20,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.FieldMinusEActivesessionWeekdaystart
 
 import com.squareup.moshi.Json
 
@@ -28,6 +29,7 @@ import com.squareup.moshi.Json
  *
  * @param sCustomerCode The customer code specific to the client in which the API request is being made
  * @param eActivesessionSessiontype The type of session used for the API request call
+ * @param eActivesessionWeekdaystart 
  * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
  * @param sCompanyNameX The name of the active Company in the current language
  * @param sDepartmentNameX The name of the active Department in the current language
@@ -46,6 +48,9 @@ data class ActivesessionMinusGetCurrentMinusV1MinusResponseMinusMPayload (
     /* The type of session used for the API request call */
     @Json(name = "eActivesessionSessiontype")
     val eActivesessionSessiontype: ActivesessionMinusGetCurrentMinusV1MinusResponseMinusMPayload.EActivesessionSessiontype,
+
+    @Json(name = "eActivesessionWeekdaystart")
+    val eActivesessionWeekdaystart: FieldMinusEActivesessionWeekdaystart,
 
     /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| */
     @Json(name = "fkiLanguageID")
