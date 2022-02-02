@@ -20,9 +20,10 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.ActivesessionMinusResponseCompound
+import eZmaxApi.models.ActivesessionMinusResponse
 import eZmaxApi.models.ActivesessionMinusResponseCompoundMinusApikey
 import eZmaxApi.models.ActivesessionMinusResponseCompoundMinusUser
+import eZmaxApi.models.ActivesessionResponseCompoundAllOf
 import eZmaxApi.models.FieldMinusEActivesessionSessiontype
 import eZmaxApi.models.FieldMinusEActivesessionWeekdaystart
 
@@ -45,7 +46,7 @@ import com.squareup.moshi.Json
  * @param objApikey 
  */
 
-data class ActivesessionMinusGetCurrentMinusV1MinusResponseMinusMPayload (
+data class ActivesessionMinusResponseCompound (
 
     /* An array of permissions granted to the user or api key */
     @Json(name = "a_pkiPermissionID")

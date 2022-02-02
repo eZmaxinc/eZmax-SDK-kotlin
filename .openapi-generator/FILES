@@ -4,6 +4,11 @@ build.gradle
 docs/ActivesessionGetCurrentV1Response.md
 docs/ActivesessionGetCurrentV1ResponseAllOf.md
 docs/ActivesessionGetCurrentV1ResponseMPayload.md
+docs/ActivesessionResponse.md
+docs/ActivesessionResponseCompound.md
+docs/ActivesessionResponseCompoundAllOf.md
+docs/ActivesessionResponseCompoundApikey.md
+docs/ActivesessionResponseCompoundUser.md
 docs/AddressRequest.md
 docs/ApikeyCreateObjectV1Request.md
 docs/ApikeyCreateObjectV1Response.md
@@ -164,6 +169,7 @@ docs/EzsigntemplatepackageGetListV1ResponseAllOf.md
 docs/EzsigntemplatepackageGetListV1ResponseMPayload.md
 docs/EzsigntemplatepackageGetListV1ResponseMPayloadAllOf.md
 docs/EzsigntemplatepackageListElement.md
+docs/FieldEActivesessionSessiontype.md
 docs/FieldEActivesessionWeekdaystart.md
 docs/FieldEEzsigndocumentStep.md
 docs/FieldEEzsignfolderSendreminderfrequency.md
@@ -236,7 +242,6 @@ docs/WebhookResponse.md
 docs/WebhookUserUserCreated.md
 docs/WebhookUserUserCreatedAllOf.md
 docs/WebsiteRequest.md
-docs/Xxxx.md
 gradle/wrapper/gradle-wrapper.jar
 gradle/wrapper/gradle-wrapper.properties
 gradlew
@@ -279,6 +284,11 @@ src/main/kotlin/eZmaxApi/infrastructure/UUIDAdapter.kt
 src/main/kotlin/eZmaxApi/models/ActivesessionGetCurrentV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/ActivesessionMinusGetCurrentMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/ActivesessionMinusGetCurrentMinusV1MinusResponseMinusMPayload.kt
+src/main/kotlin/eZmaxApi/models/ActivesessionMinusResponse.kt
+src/main/kotlin/eZmaxApi/models/ActivesessionMinusResponseCompound.kt
+src/main/kotlin/eZmaxApi/models/ActivesessionMinusResponseCompoundMinusApikey.kt
+src/main/kotlin/eZmaxApi/models/ActivesessionMinusResponseCompoundMinusUser.kt
+src/main/kotlin/eZmaxApi/models/ActivesessionResponseCompoundAllOf.kt
 src/main/kotlin/eZmaxApi/models/AddressMinusRequest.kt
 src/main/kotlin/eZmaxApi/models/ApikeyCreateObjectV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/ApikeyMinusCreateObjectMinusV1MinusRequest.kt
@@ -439,6 +449,7 @@ src/main/kotlin/eZmaxApi/models/EzsigntemplatepackageGetListV1ResponseMPayloadAl
 src/main/kotlin/eZmaxApi/models/EzsigntemplatepackageMinusGetListMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/EzsigntemplatepackageMinusGetListMinusV1MinusResponseMinusMPayload.kt
 src/main/kotlin/eZmaxApi/models/EzsigntemplatepackageMinusListElement.kt
+src/main/kotlin/eZmaxApi/models/FieldMinusEActivesessionSessiontype.kt
 src/main/kotlin/eZmaxApi/models/FieldMinusEActivesessionWeekdaystart.kt
 src/main/kotlin/eZmaxApi/models/FieldMinusEEzsigndocumentStep.kt
 src/main/kotlin/eZmaxApi/models/FieldMinusEEzsignfolderSendreminderfrequency.kt
@@ -493,4 +504,3 @@ src/main/kotlin/eZmaxApi/models/WebhookMinusResponse.kt
 src/main/kotlin/eZmaxApi/models/WebhookMinusUserMinusUserCreated.kt
 src/main/kotlin/eZmaxApi/models/WebhookUserUserCreatedAllOf.kt
 src/main/kotlin/eZmaxApi/models/WebsiteMinusRequest.kt
-src/main/kotlin/eZmaxApi/models/Xxxx.kt

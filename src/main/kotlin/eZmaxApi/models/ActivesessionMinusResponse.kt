@@ -20,20 +20,14 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.ActivesessionMinusResponseCompound
-import eZmaxApi.models.ActivesessionMinusResponseCompoundMinusApikey
-import eZmaxApi.models.ActivesessionMinusResponseCompoundMinusUser
 import eZmaxApi.models.FieldMinusEActivesessionSessiontype
 import eZmaxApi.models.FieldMinusEActivesessionWeekdaystart
 
 import com.squareup.moshi.Json
 
 /**
- * Payload for the /1/object/activesession/getCurrent API Request
+ * An Activesession Object
  *
- * @param aPkiPermissionID An array of permissions granted to the user or api key
- * @param objUserReal 
- * @param aEModuleInternalname An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key.
  * @param eActivesessionSessiontype 
  * @param eActivesessionWeekdaystart 
  * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
@@ -41,22 +35,9 @@ import com.squareup.moshi.Json
  * @param sDepartmentNameX The Name of the Department in the language of the requester
  * @param bActivesessionDebug Whether the active session is in debug or not
  * @param pksCustomerCode The customer code assigned to your account
- * @param objUserCloned 
- * @param objApikey 
  */
 
-data class ActivesessionMinusGetCurrentMinusV1MinusResponseMinusMPayload (
-
-    /* An array of permissions granted to the user or api key */
-    @Json(name = "a_pkiPermissionID")
-    val aPkiPermissionID: kotlin.collections.List<kotlin.Int>,
-
-    @Json(name = "objUserReal")
-    val objUserReal: ActivesessionMinusResponseCompoundMinusUser,
-
-    /* An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key. */
-    @Json(name = "a_eModuleInternalname")
-    val aEModuleInternalname: kotlin.collections.List<kotlin.String>,
+data class ActivesessionMinusResponse (
 
     @Json(name = "eActivesessionSessiontype")
     val eActivesessionSessiontype: FieldMinusEActivesessionSessiontype,
@@ -82,13 +63,7 @@ data class ActivesessionMinusGetCurrentMinusV1MinusResponseMinusMPayload (
 
     /* The customer code assigned to your account */
     @Json(name = "pksCustomerCode")
-    val pksCustomerCode: kotlin.String,
-
-    @Json(name = "objUserCloned")
-    val objUserCloned: ActivesessionMinusResponseCompoundMinusUser? = null,
-
-    @Json(name = "objApikey")
-    val objApikey: ActivesessionMinusResponseCompoundMinusApikey? = null
+    val pksCustomerCode: kotlin.String
 
 )
 

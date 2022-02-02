@@ -1,5 +1,5 @@
 
-# ActivesessionMinusGetCurrentMinusV1MinusResponseMinusMPayload
+# ActivesessionMinusResponseCompound
 
 ## Properties
 Name | Type | Description | Notes

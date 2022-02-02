@@ -89,6 +89,11 @@ Class | Method | HTTP request | Description
  - [eZmaxApi.models.ActivesessionGetCurrentV1ResponseAllOf](docs/ActivesessionGetCurrentV1ResponseAllOf.md)
  - [eZmaxApi.models.ActivesessionMinusGetCurrentMinusV1MinusResponse](docs/ActivesessionMinusGetCurrentMinusV1MinusResponse.md)
  - [eZmaxApi.models.ActivesessionMinusGetCurrentMinusV1MinusResponseMinusMPayload](docs/ActivesessionMinusGetCurrentMinusV1MinusResponseMinusMPayload.md)
+ - [eZmaxApi.models.ActivesessionMinusResponse](docs/ActivesessionMinusResponse.md)
+ - [eZmaxApi.models.ActivesessionMinusResponseCompound](docs/ActivesessionMinusResponseCompound.md)
+ - [eZmaxApi.models.ActivesessionMinusResponseCompoundMinusApikey](docs/ActivesessionMinusResponseCompoundMinusApikey.md)
+ - [eZmaxApi.models.ActivesessionMinusResponseCompoundMinusUser](docs/ActivesessionMinusResponseCompoundMinusUser.md)
+ - [eZmaxApi.models.ActivesessionResponseCompoundAllOf](docs/ActivesessionResponseCompoundAllOf.md)
  - [eZmaxApi.models.AddressMinusRequest](docs/AddressMinusRequest.md)
  - [eZmaxApi.models.ApikeyCreateObjectV1ResponseAllOf](docs/ApikeyCreateObjectV1ResponseAllOf.md)
  - [eZmaxApi.models.ApikeyMinusCreateObjectMinusV1MinusRequest](docs/ApikeyMinusCreateObjectMinusV1MinusRequest.md)
@@ -249,6 +254,7 @@ Class | Method | HTTP request | Description
  - [eZmaxApi.models.EzsigntemplatepackageMinusGetListMinusV1MinusResponse](docs/EzsigntemplatepackageMinusGetListMinusV1MinusResponse.md)
  - [eZmaxApi.models.EzsigntemplatepackageMinusGetListMinusV1MinusResponseMinusMPayload](docs/EzsigntemplatepackageMinusGetListMinusV1MinusResponseMinusMPayload.md)
  - [eZmaxApi.models.EzsigntemplatepackageMinusListElement](docs/EzsigntemplatepackageMinusListElement.md)
+ - [eZmaxApi.models.FieldMinusEActivesessionSessiontype](docs/FieldMinusEActivesessionSessiontype.md)
  - [eZmaxApi.models.FieldMinusEActivesessionWeekdaystart](docs/FieldMinusEActivesessionWeekdaystart.md)
  - [eZmaxApi.models.FieldMinusEEzsigndocumentStep](docs/FieldMinusEEzsigndocumentStep.md)
  - [eZmaxApi.models.FieldMinusEEzsignfolderSendreminderfrequency](docs/FieldMinusEEzsignfolderSendreminderfrequency.md)
@@ -303,7 +309,6 @@ Class | Method | HTTP request | Description
  - [eZmaxApi.models.WebhookMinusUserMinusUserCreated](docs/WebhookMinusUserMinusUserCreated.md)
  - [eZmaxApi.models.WebhookUserUserCreatedAllOf](docs/WebhookUserUserCreatedAllOf.md)
  - [eZmaxApi.models.WebsiteMinusRequest](docs/WebsiteMinusRequest.md)
- - [eZmaxApi.models.Xxxx](docs/Xxxx.md)
 
 
 <a name="documentation-for-authorization"></a>
