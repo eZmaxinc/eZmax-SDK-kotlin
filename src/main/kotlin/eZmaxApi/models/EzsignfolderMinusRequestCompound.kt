@@ -33,6 +33,7 @@ import com.squareup.moshi.Json
  * @param sEzsignfolderDescription The description of the Ezsignfolder
  * @param tEzsignfolderNote Somes extra notes about the eZsign Folder
  * @param eEzsignfolderSendreminderfrequency 
+ * @param pkiEzsignfolderID The unique ID of the Ezsignfolder
  */
 
 data class EzsignfolderMinusRequestCompound (
@@ -54,7 +55,11 @@ data class EzsignfolderMinusRequestCompound (
     val tEzsignfolderNote: kotlin.String,
 
     @Json(name = "eEzsignfolderSendreminderfrequency")
-    val eEzsignfolderSendreminderfrequency: FieldMinusEEzsignfolderSendreminderfrequency
+    val eEzsignfolderSendreminderfrequency: FieldMinusEEzsignfolderSendreminderfrequency,
+
+    /* The unique ID of the Ezsignfolder */
+    @Json(name = "pkiEzsignfolderID")
+    val pkiEzsignfolderID: kotlin.Int? = null
 
 )
 

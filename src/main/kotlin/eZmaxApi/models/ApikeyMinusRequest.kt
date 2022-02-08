@@ -29,6 +29,7 @@ import com.squareup.moshi.Json
  *
  * @param fkiUserID The unique ID of the User
  * @param objApikeyDescription 
+ * @param pkiApikeyID The unique ID of the Apikey
  */
 
 data class ApikeyMinusRequest (
@@ -38,7 +39,11 @@ data class ApikeyMinusRequest (
     val fkiUserID: kotlin.Int,
 
     @Json(name = "objApikeyDescription")
-    val objApikeyDescription: MultilingualMinusApikeyDescription
+    val objApikeyDescription: MultilingualMinusApikeyDescription,
+
+    /* The unique ID of the Apikey */
+    @Json(name = "pkiApikeyID")
+    val pkiApikeyID: kotlin.Int? = null
 
 )
 

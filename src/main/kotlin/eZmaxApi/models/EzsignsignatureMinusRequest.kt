@@ -34,6 +34,7 @@ import com.squareup.moshi.Json
  * @param iEzsignsignatureStep The step when the Ezsignsigner will be invited to sign or fill form fields
  * @param eEzsignsignatureType 
  * @param fkiEzsigndocumentID The unique ID of the Ezsigndocument
+ * @param pkiEzsignsignatureID The unique ID of the Ezsignsignature
  */
 
 data class EzsignsignatureMinusRequest (
@@ -63,7 +64,11 @@ data class EzsignsignatureMinusRequest (
 
     /* The unique ID of the Ezsigndocument */
     @Json(name = "fkiEzsigndocumentID")
-    val fkiEzsigndocumentID: kotlin.Int
+    val fkiEzsigndocumentID: kotlin.Int,
+
+    /* The unique ID of the Ezsignsignature */
+    @Json(name = "pkiEzsignsignatureID")
+    val pkiEzsignsignatureID: kotlin.Int? = null
 
 )
 

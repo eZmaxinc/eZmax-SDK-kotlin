@@ -26,6 +26,8 @@ import eZmaxApi.models.CommonMinusResponseMinusError
 import eZmaxApi.models.EzsignfolderMinusCreateObjectMinusV1MinusRequest
 import eZmaxApi.models.EzsignfolderMinusCreateObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsignfolderMinusDeleteObjectMinusV1MinusResponse
+import eZmaxApi.models.EzsignfolderMinusEditObjectMinusV1MinusRequest
+import eZmaxApi.models.EzsignfolderMinusEditObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsignfolderMinusGetEzsigndocumentsMinusV1MinusResponse
 import eZmaxApi.models.EzsignfolderMinusGetEzsignfoldersignerassociationsMinusV1MinusResponse
 import eZmaxApi.models.EzsignfolderMinusGetFormsDataMinusV1MinusResponse
@@ -193,6 +195,80 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
 
         return RequestConfig(
             method = RequestMethod.DELETE,
+            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}".replace("{"+"pkiEzsignfolderID"+"}", "$pkiEzsignfolderID"),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+    * Edit an Ezsignfolder
+    * 
+    * @param pkiEzsignfolderID  
+    * @param ezsignfolderMinusEditObjectMinusV1MinusRequest  
+    * @return EzsignfolderMinusEditObjectMinusV1MinusResponse
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignfolderEditObjectV1(pkiEzsignfolderID: kotlin.Int, ezsignfolderMinusEditObjectMinusV1MinusRequest: EzsignfolderMinusEditObjectMinusV1MinusRequest) : EzsignfolderMinusEditObjectMinusV1MinusResponse {
+        val localVarResponse = ezsignfolderEditObjectV1WithHttpInfo(pkiEzsignfolderID = pkiEzsignfolderID, ezsignfolderMinusEditObjectMinusV1MinusRequest = ezsignfolderMinusEditObjectMinusV1MinusRequest)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfolderMinusEditObjectMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+    * Edit an Ezsignfolder
+    * 
+    * @param pkiEzsignfolderID  
+    * @param ezsignfolderMinusEditObjectMinusV1MinusRequest  
+    * @return ApiResponse<EzsignfolderMinusEditObjectMinusV1MinusResponse?>
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
+    */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignfolderEditObjectV1WithHttpInfo(pkiEzsignfolderID: kotlin.Int, ezsignfolderMinusEditObjectMinusV1MinusRequest: EzsignfolderMinusEditObjectMinusV1MinusRequest) : ApiResponse<EzsignfolderMinusEditObjectMinusV1MinusResponse?> {
+        val localVariableConfig = ezsignfolderEditObjectV1RequestConfig(pkiEzsignfolderID = pkiEzsignfolderID, ezsignfolderMinusEditObjectMinusV1MinusRequest = ezsignfolderMinusEditObjectMinusV1MinusRequest)
+
+        return request<EzsignfolderMinusEditObjectMinusV1MinusRequest, EzsignfolderMinusEditObjectMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+    * To obtain the request config of the operation ezsignfolderEditObjectV1
+    *
+    * @param pkiEzsignfolderID  
+    * @param ezsignfolderMinusEditObjectMinusV1MinusRequest  
+    * @return RequestConfig
+    */
+    fun ezsignfolderEditObjectV1RequestConfig(pkiEzsignfolderID: kotlin.Int, ezsignfolderMinusEditObjectMinusV1MinusRequest: EzsignfolderMinusEditObjectMinusV1MinusRequest) : RequestConfig<EzsignfolderMinusEditObjectMinusV1MinusRequest> {
+        val localVariableBody = ezsignfolderMinusEditObjectMinusV1MinusRequest
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.PUT,
             path = "/1/object/ezsignfolder/{pkiEzsignfolderID}".replace("{"+"pkiEzsignfolderID"+"}", "$pkiEzsignfolderID"),
             query = localVariableQuery,
             headers = localVariableHeaders,

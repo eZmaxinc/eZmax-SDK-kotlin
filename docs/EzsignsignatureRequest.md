@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **iEzsignsignatureStep** | **kotlin.Int** | The step when the Ezsignsigner will be invited to sign or fill form fields | 
 **eEzsignsignatureType** | [**FieldMinusEEzsignsignatureType**](FieldMinusEEzsignsignatureType.md) |  | 
 **fkiEzsigndocumentID** | **kotlin.Int** | The unique ID of the Ezsigndocument | 
+**pkiEzsignsignatureID** | **kotlin.Int** | The unique ID of the Ezsignsignature |  [optional]
 
 
 

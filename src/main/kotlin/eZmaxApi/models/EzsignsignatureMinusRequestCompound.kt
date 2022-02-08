@@ -39,6 +39,7 @@ import com.squareup.moshi.Json
  * @param fkiEzsigndocumentID The unique ID of the Ezsigndocument
  * @param bEzsignsignatureCustomdate Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is \"Name\" or \"Handwritten\")
  * @param aObjEzsignsignaturecustomdate An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all.
+ * @param pkiEzsignsignatureID The unique ID of the Ezsignsignature
  */
 
 data class EzsignsignatureMinusRequestCompound (
@@ -76,7 +77,11 @@ data class EzsignsignatureMinusRequestCompound (
 
     /* An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all. */
     @Json(name = "a_objEzsignsignaturecustomdate")
-    val aObjEzsignsignaturecustomdate: kotlin.collections.List<EzsignsignaturecustomdateMinusRequest>? = null
+    val aObjEzsignsignaturecustomdate: kotlin.collections.List<EzsignsignaturecustomdateMinusRequest>? = null,
+
+    /* The unique ID of the Ezsignsignature */
+    @Json(name = "pkiEzsignsignatureID")
+    val pkiEzsignsignatureID: kotlin.Int? = null
 
 )
 

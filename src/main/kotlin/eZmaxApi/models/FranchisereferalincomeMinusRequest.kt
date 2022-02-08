@@ -37,6 +37,7 @@ import com.squareup.moshi.Json
  * @param tFranchisereferalincomeComment A comment about the transaction
  * @param fkiFranchiseofficeID The unique ID of the Franchisereoffice
  * @param sFranchisereferalincomeRemoteid 
+ * @param pkiFranchisereferalincomeID The unique ID of the Franchisereferalincome
  */
 
 data class FranchisereferalincomeMinusRequest (
@@ -82,7 +83,11 @@ data class FranchisereferalincomeMinusRequest (
     val fkiFranchiseofficeID: kotlin.Int,
 
     @Json(name = "sFranchisereferalincomeRemoteid")
-    val sFranchisereferalincomeRemoteid: kotlin.String
+    val sFranchisereferalincomeRemoteid: kotlin.String,
+
+    /* The unique ID of the Franchisereferalincome */
+    @Json(name = "pkiFranchisereferalincomeID")
+    val pkiFranchisereferalincomeID: kotlin.Int? = null
 
 )
 

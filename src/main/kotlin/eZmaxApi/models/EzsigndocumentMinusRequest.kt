@@ -32,6 +32,7 @@ import com.squareup.moshi.Json
  * @param dtEzsigndocumentDuedate The maximum date and time at which the Ezsigndocument can be signed.
  * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
  * @param sEzsigndocumentName The name of the document that will be presented to Ezsignfoldersignerassociations
+ * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument
  * @param sEzsigndocumentBase64 The Base64 encoded binary content of the document.  This field is Required when eEzsigndocumentSource = Base64.
  * @param sEzsigndocumentUrl The url where the document content resides.  This field is Required when eEzsigndocumentSource = Url.
  * @param bEzsigndocumentForcerepair Try to repair the document or flatten it if it cannot be used for electronic signature. 
@@ -63,6 +64,10 @@ data class EzsigndocumentMinusRequest (
     /* The name of the document that will be presented to Ezsignfoldersignerassociations */
     @Json(name = "sEzsigndocumentName")
     val sEzsigndocumentName: kotlin.String,
+
+    /* The unique ID of the Ezsigndocument */
+    @Json(name = "pkiEzsigndocumentID")
+    val pkiEzsigndocumentID: kotlin.Int? = null,
 
     /* The Base64 encoded binary content of the document.  This field is Required when eEzsigndocumentSource = Base64. */
     @Json(name = "sEzsigndocumentBase64")

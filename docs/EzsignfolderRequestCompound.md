@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **sEzsignfolderDescription** | **kotlin.String** | The description of the Ezsignfolder | 
 **tEzsignfolderNote** | **kotlin.String** | Somes extra notes about the eZsign Folder | 
 **eEzsignfolderSendreminderfrequency** | [**FieldMinusEEzsignfolderSendreminderfrequency**](FieldMinusEEzsignfolderSendreminderfrequency.md) |  | 
+**pkiEzsignfolderID** | **kotlin.Int** | The unique ID of the Ezsignfolder |  [optional]
 
 
 
