@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**ezsigndocumentGetFormDataV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetFormDataV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getFormData | Retrieve an existing Ezsigndocument&#39;s Form Data
 [**ezsigndocumentGetObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetObjectV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Retrieve an existing Ezsigndocument
 [**ezsigndocumentGetWordsPositionsV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetWordsPositionsV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions | Retrieve positions X,Y of given words from a Ezsigndocument
+[**ezsigndocumentPatchObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentPatchObjectV1) | **PATCH** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Patch an existing Ezsigndocument
 
 
 <a name="ezsigndocumentApplyEzsigntemplateV1"></a>
@@ -452,6 +453,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsigndocumentMinusGetWordsPositionsMinusV1MinusResponse**](EzsigndocumentMinusGetWordsPositionsMinusV1MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="ezsigndocumentPatchObjectV1"></a>
+# **ezsigndocumentPatchObjectV1**
+> EzsigndocumentMinusPatchObjectMinusV1MinusResponse ezsigndocumentPatchObjectV1(pkiEzsigndocumentID, ezsigndocumentMinusPatchObjectMinusV1MinusRequest)
+
+Patch an existing Ezsigndocument
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsigndocumentApi()
+val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | 
+val ezsigndocumentMinusPatchObjectMinusV1MinusRequest : EzsigndocumentMinusPatchObjectMinusV1MinusRequest =  // EzsigndocumentMinusPatchObjectMinusV1MinusRequest | 
+try {
+    val result : EzsigndocumentMinusPatchObjectMinusV1MinusResponse = apiInstance.ezsigndocumentPatchObjectV1(pkiEzsigndocumentID, ezsigndocumentMinusPatchObjectMinusV1MinusRequest)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsigndocumentApi#ezsigndocumentPatchObjectV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsigndocumentApi#ezsigndocumentPatchObjectV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigndocumentID** | **kotlin.Int**|  |
+ **ezsigndocumentMinusPatchObjectMinusV1MinusRequest** | [**EzsigndocumentMinusPatchObjectMinusV1MinusRequest**](EzsigndocumentMinusPatchObjectMinusV1MinusRequest.md)|  |
+
+### Return type
+
+[**EzsigndocumentMinusPatchObjectMinusV1MinusResponse**](EzsigndocumentMinusPatchObjectMinusV1MinusResponse.md)
 
 ### Authorization
 

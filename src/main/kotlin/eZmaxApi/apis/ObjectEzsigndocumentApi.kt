@@ -37,6 +37,8 @@ import eZmaxApi.models.EzsigndocumentMinusGetFormDataMinusV1MinusResponse
 import eZmaxApi.models.EzsigndocumentMinusGetObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsigndocumentMinusGetWordsPositionsMinusV1MinusRequest
 import eZmaxApi.models.EzsigndocumentMinusGetWordsPositionsMinusV1MinusResponse
+import eZmaxApi.models.EzsigndocumentMinusPatchObjectMinusV1MinusRequest
+import eZmaxApi.models.EzsigndocumentMinusPatchObjectMinusV1MinusResponse
 
 import com.squareup.moshi.Json
 
@@ -717,6 +719,80 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath) : ApiCl
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions".replace("{"+"pkiEzsigndocumentID"+"}", "$pkiEzsigndocumentID"),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+    * Patch an existing Ezsigndocument
+    * 
+    * @param pkiEzsigndocumentID  
+    * @param ezsigndocumentMinusPatchObjectMinusV1MinusRequest  
+    * @return EzsigndocumentMinusPatchObjectMinusV1MinusResponse
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsigndocumentPatchObjectV1(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentMinusPatchObjectMinusV1MinusRequest: EzsigndocumentMinusPatchObjectMinusV1MinusRequest) : EzsigndocumentMinusPatchObjectMinusV1MinusResponse {
+        val localVarResponse = ezsigndocumentPatchObjectV1WithHttpInfo(pkiEzsigndocumentID = pkiEzsigndocumentID, ezsigndocumentMinusPatchObjectMinusV1MinusRequest = ezsigndocumentMinusPatchObjectMinusV1MinusRequest)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigndocumentMinusPatchObjectMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+    * Patch an existing Ezsigndocument
+    * 
+    * @param pkiEzsigndocumentID  
+    * @param ezsigndocumentMinusPatchObjectMinusV1MinusRequest  
+    * @return ApiResponse<EzsigndocumentMinusPatchObjectMinusV1MinusResponse?>
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
+    */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsigndocumentPatchObjectV1WithHttpInfo(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentMinusPatchObjectMinusV1MinusRequest: EzsigndocumentMinusPatchObjectMinusV1MinusRequest) : ApiResponse<EzsigndocumentMinusPatchObjectMinusV1MinusResponse?> {
+        val localVariableConfig = ezsigndocumentPatchObjectV1RequestConfig(pkiEzsigndocumentID = pkiEzsigndocumentID, ezsigndocumentMinusPatchObjectMinusV1MinusRequest = ezsigndocumentMinusPatchObjectMinusV1MinusRequest)
+
+        return request<EzsigndocumentMinusPatchObjectMinusV1MinusRequest, EzsigndocumentMinusPatchObjectMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+    * To obtain the request config of the operation ezsigndocumentPatchObjectV1
+    *
+    * @param pkiEzsigndocumentID  
+    * @param ezsigndocumentMinusPatchObjectMinusV1MinusRequest  
+    * @return RequestConfig
+    */
+    fun ezsigndocumentPatchObjectV1RequestConfig(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentMinusPatchObjectMinusV1MinusRequest: EzsigndocumentMinusPatchObjectMinusV1MinusRequest) : RequestConfig<EzsigndocumentMinusPatchObjectMinusV1MinusRequest> {
+        val localVariableBody = ezsigndocumentMinusPatchObjectMinusV1MinusRequest
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.PATCH,
+            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}".replace("{"+"pkiEzsigndocumentID"+"}", "$pkiEzsigndocumentID"),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
