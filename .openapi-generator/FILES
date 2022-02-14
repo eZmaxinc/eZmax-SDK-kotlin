@@ -155,6 +155,8 @@ docs/EzsignsignatureCreateObjectV1Response.md
 docs/EzsignsignatureCreateObjectV1ResponseAllOf.md
 docs/EzsignsignatureCreateObjectV1ResponseMPayload.md
 docs/EzsignsignatureDeleteObjectV1Response.md
+docs/EzsignsignatureEditObjectV1Request.md
+docs/EzsignsignatureEditObjectV1Response.md
 docs/EzsignsignatureGetObjectV1Response.md
 docs/EzsignsignatureGetObjectV1ResponseAllOf.md
 docs/EzsignsignatureRequest.md
@@ -441,6 +443,8 @@ src/main/kotlin/eZmaxApi/models/EzsignsignatureMinusCreateObjectMinusV1MinusRequ
 src/main/kotlin/eZmaxApi/models/EzsignsignatureMinusCreateObjectMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/EzsignsignatureMinusCreateObjectMinusV1MinusResponseMinusMPayload.kt
 src/main/kotlin/eZmaxApi/models/EzsignsignatureMinusDeleteObjectMinusV1MinusResponse.kt
+src/main/kotlin/eZmaxApi/models/EzsignsignatureMinusEditObjectMinusV1MinusRequest.kt
+src/main/kotlin/eZmaxApi/models/EzsignsignatureMinusEditObjectMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/EzsignsignatureMinusGetObjectMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/EzsignsignatureMinusRequest.kt
 src/main/kotlin/eZmaxApi/models/EzsignsignatureMinusRequestCompound.kt
