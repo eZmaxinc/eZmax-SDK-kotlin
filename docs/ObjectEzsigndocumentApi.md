@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**ezsigndocumentApplyEzsigntemplateV2**](ObjectEzsigndocumentApi.md#ezsigndocumentApplyEzsigntemplateV2) | **POST** /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate | Apply an Ezsign Template to the Ezsigndocument.
 [**ezsigndocumentCreateObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentCreateObjectV1) | **POST** /1/object/ezsigndocument | Create a new Ezsigndocument
 [**ezsigndocumentDeleteObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentDeleteObjectV1) | **DELETE** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Delete an existing Ezsigndocument
+[**ezsigndocumentEditEzsignsignaturesV1**](ObjectEzsigndocumentApi.md#ezsigndocumentEditEzsignsignaturesV1) | **PUT** /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures | Edit multiple ezsignsignatures
 [**ezsigndocumentGetDownloadUrlV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetDownloadUrlV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getDownloadUrl/{eDocumentType} | Retrieve a URL to download documents.
 [**ezsigndocumentGetEzsignpagesV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetEzsignpagesV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignpages | Retrieve an existing Ezsigndocument&#39;s Ezsignpages
 [**ezsigndocumentGetFormDataV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetFormDataV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getFormData | Retrieve an existing Ezsigndocument&#39;s Form Data
@@ -216,6 +217,58 @@ Configure Authorization:
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="ezsigndocumentEditEzsignsignaturesV1"></a>
+# **ezsigndocumentEditEzsignsignaturesV1**
+> EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusResponse ezsigndocumentEditEzsignsignaturesV1(pkiEzsigndocumentID, ezsignsignatureMinusRequestCompound)
+
+Edit multiple ezsignsignatures
+
+Using this endpoint, you can edit multiple ezsignsignatures at the same time.
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsigndocumentApi()
+val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | 
+val ezsignsignatureMinusRequestCompound : kotlin.collections.List<EzsignsignatureMinusRequestCompound> =  // kotlin.collections.List<EzsignsignatureMinusRequestCompound> | 
+try {
+    val result : EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusResponse = apiInstance.ezsigndocumentEditEzsignsignaturesV1(pkiEzsigndocumentID, ezsignsignatureMinusRequestCompound)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsigndocumentApi#ezsigndocumentEditEzsignsignaturesV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsigndocumentApi#ezsigndocumentEditEzsignsignaturesV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigndocumentID** | **kotlin.Int**|  |
+ **ezsignsignatureMinusRequestCompound** | [**kotlin.collections.List&lt;EzsignsignatureMinusRequestCompound&gt;**](EzsignsignatureMinusRequestCompound.md)|  |
+
+### Return type
+
+[**EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusResponse**](EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="ezsigndocumentGetDownloadUrlV1"></a>

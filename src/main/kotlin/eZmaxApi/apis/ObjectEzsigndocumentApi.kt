@@ -31,6 +31,7 @@ import eZmaxApi.models.EzsigndocumentMinusApplyEzsigntemplateMinusV2MinusRespons
 import eZmaxApi.models.EzsigndocumentMinusCreateObjectMinusV1MinusRequest
 import eZmaxApi.models.EzsigndocumentMinusCreateObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsigndocumentMinusDeleteObjectMinusV1MinusResponse
+import eZmaxApi.models.EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusResponse
 import eZmaxApi.models.EzsigndocumentMinusGetDownloadUrlMinusV1MinusResponse
 import eZmaxApi.models.EzsigndocumentMinusGetEzsignpagesMinusV1MinusResponse
 import eZmaxApi.models.EzsigndocumentMinusGetFormDataMinusV1MinusResponse
@@ -39,6 +40,7 @@ import eZmaxApi.models.EzsigndocumentMinusGetWordsPositionsMinusV1MinusRequest
 import eZmaxApi.models.EzsigndocumentMinusGetWordsPositionsMinusV1MinusResponse
 import eZmaxApi.models.EzsigndocumentMinusPatchObjectMinusV1MinusRequest
 import eZmaxApi.models.EzsigndocumentMinusPatchObjectMinusV1MinusResponse
+import eZmaxApi.models.EzsignsignatureMinusRequestCompound
 
 import com.squareup.moshi.Json
 
@@ -351,6 +353,80 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath) : ApiCl
         return RequestConfig(
             method = RequestMethod.DELETE,
             path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}".replace("{"+"pkiEzsigndocumentID"+"}", "$pkiEzsigndocumentID"),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+    * Edit multiple ezsignsignatures
+    * Using this endpoint, you can edit multiple ezsignsignatures at the same time.
+    * @param pkiEzsigndocumentID  
+    * @param ezsignsignatureMinusRequestCompound  
+    * @return EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusResponse
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsigndocumentEditEzsignsignaturesV1(pkiEzsigndocumentID: kotlin.Int, ezsignsignatureMinusRequestCompound: kotlin.collections.List<EzsignsignatureMinusRequestCompound>) : EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusResponse {
+        val localVarResponse = ezsigndocumentEditEzsignsignaturesV1WithHttpInfo(pkiEzsigndocumentID = pkiEzsigndocumentID, ezsignsignatureMinusRequestCompound = ezsignsignatureMinusRequestCompound)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+    * Edit multiple ezsignsignatures
+    * Using this endpoint, you can edit multiple ezsignsignatures at the same time.
+    * @param pkiEzsigndocumentID  
+    * @param ezsignsignatureMinusRequestCompound  
+    * @return ApiResponse<EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusResponse?>
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
+    */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsigndocumentEditEzsignsignaturesV1WithHttpInfo(pkiEzsigndocumentID: kotlin.Int, ezsignsignatureMinusRequestCompound: kotlin.collections.List<EzsignsignatureMinusRequestCompound>) : ApiResponse<EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusResponse?> {
+        val localVariableConfig = ezsigndocumentEditEzsignsignaturesV1RequestConfig(pkiEzsigndocumentID = pkiEzsigndocumentID, ezsignsignatureMinusRequestCompound = ezsignsignatureMinusRequestCompound)
+
+        return request<kotlin.collections.List<EzsignsignatureMinusRequestCompound>, EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+    * To obtain the request config of the operation ezsigndocumentEditEzsignsignaturesV1
+    *
+    * @param pkiEzsigndocumentID  
+    * @param ezsignsignatureMinusRequestCompound  
+    * @return RequestConfig
+    */
+    fun ezsigndocumentEditEzsignsignaturesV1RequestConfig(pkiEzsigndocumentID: kotlin.Int, ezsignsignatureMinusRequestCompound: kotlin.collections.List<EzsignsignatureMinusRequestCompound>) : RequestConfig<kotlin.collections.List<EzsignsignatureMinusRequestCompound>> {
+        val localVariableBody = ezsignsignatureMinusRequestCompound
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.PUT,
+            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures".replace("{"+"pkiEzsigndocumentID"+"}", "$pkiEzsigndocumentID"),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

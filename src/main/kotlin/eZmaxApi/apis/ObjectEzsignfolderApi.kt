@@ -203,7 +203,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     }
 
     /**
-    * Modify an existing Ezsignfolder
+    * Edit an existing Ezsignfolder
     * 
     * @param pkiEzsignfolderID  
     * @param ezsignfolderMinusEditObjectMinusV1MinusRequest  
@@ -235,7 +235,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     }
 
     /**
-    * Modify an existing Ezsignfolder
+    * Edit an existing Ezsignfolder
     * 
     * @param pkiEzsignfolderID  
     * @param ezsignfolderMinusEditObjectMinusV1MinusRequest  
