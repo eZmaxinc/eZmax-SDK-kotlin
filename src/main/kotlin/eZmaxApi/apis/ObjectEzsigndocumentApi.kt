@@ -31,6 +31,7 @@ import eZmaxApi.models.EzsigndocumentMinusApplyEzsigntemplateMinusV2MinusRespons
 import eZmaxApi.models.EzsigndocumentMinusCreateObjectMinusV1MinusRequest
 import eZmaxApi.models.EzsigndocumentMinusCreateObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsigndocumentMinusDeleteObjectMinusV1MinusResponse
+import eZmaxApi.models.EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusRequest
 import eZmaxApi.models.EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusResponse
 import eZmaxApi.models.EzsigndocumentMinusGetDownloadUrlMinusV1MinusResponse
 import eZmaxApi.models.EzsigndocumentMinusGetEzsignpagesMinusV1MinusResponse
@@ -40,7 +41,6 @@ import eZmaxApi.models.EzsigndocumentMinusGetWordsPositionsMinusV1MinusRequest
 import eZmaxApi.models.EzsigndocumentMinusGetWordsPositionsMinusV1MinusResponse
 import eZmaxApi.models.EzsigndocumentMinusPatchObjectMinusV1MinusRequest
 import eZmaxApi.models.EzsigndocumentMinusPatchObjectMinusV1MinusResponse
-import eZmaxApi.models.EzsignsignatureMinusRequestCompound
 
 import com.squareup.moshi.Json
 
@@ -363,7 +363,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath) : ApiCl
     * Edit multiple ezsignsignatures
     * Using this endpoint, you can edit multiple ezsignsignatures at the same time.
     * @param pkiEzsigndocumentID  
-    * @param ezsignsignatureMinusRequestCompound  
+    * @param ezsigndocumentMinusEditEzsignsignaturesMinusV1MinusRequest  
     * @return EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusResponse
     * @throws IllegalStateException If the request is not correctly configured
     * @throws IOException Rethrows the OkHttp execute method exception
@@ -373,8 +373,8 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath) : ApiCl
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsigndocumentEditEzsignsignaturesV1(pkiEzsigndocumentID: kotlin.Int, ezsignsignatureMinusRequestCompound: kotlin.collections.List<EzsignsignatureMinusRequestCompound>) : EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusResponse {
-        val localVarResponse = ezsigndocumentEditEzsignsignaturesV1WithHttpInfo(pkiEzsigndocumentID = pkiEzsigndocumentID, ezsignsignatureMinusRequestCompound = ezsignsignatureMinusRequestCompound)
+    fun ezsigndocumentEditEzsignsignaturesV1(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentMinusEditEzsignsignaturesMinusV1MinusRequest: EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusRequest) : EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusResponse {
+        val localVarResponse = ezsigndocumentEditEzsignsignaturesV1WithHttpInfo(pkiEzsigndocumentID = pkiEzsigndocumentID, ezsigndocumentMinusEditEzsignsignaturesMinusV1MinusRequest = ezsigndocumentMinusEditEzsignsignaturesMinusV1MinusRequest)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusResponse
@@ -395,17 +395,17 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath) : ApiCl
     * Edit multiple ezsignsignatures
     * Using this endpoint, you can edit multiple ezsignsignatures at the same time.
     * @param pkiEzsigndocumentID  
-    * @param ezsignsignatureMinusRequestCompound  
+    * @param ezsigndocumentMinusEditEzsignsignaturesMinusV1MinusRequest  
     * @return ApiResponse<EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusResponse?>
     * @throws IllegalStateException If the request is not correctly configured
     * @throws IOException Rethrows the OkHttp execute method exception
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsigndocumentEditEzsignsignaturesV1WithHttpInfo(pkiEzsigndocumentID: kotlin.Int, ezsignsignatureMinusRequestCompound: kotlin.collections.List<EzsignsignatureMinusRequestCompound>) : ApiResponse<EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusResponse?> {
-        val localVariableConfig = ezsigndocumentEditEzsignsignaturesV1RequestConfig(pkiEzsigndocumentID = pkiEzsigndocumentID, ezsignsignatureMinusRequestCompound = ezsignsignatureMinusRequestCompound)
+    fun ezsigndocumentEditEzsignsignaturesV1WithHttpInfo(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentMinusEditEzsignsignaturesMinusV1MinusRequest: EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusRequest) : ApiResponse<EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusResponse?> {
+        val localVariableConfig = ezsigndocumentEditEzsignsignaturesV1RequestConfig(pkiEzsigndocumentID = pkiEzsigndocumentID, ezsigndocumentMinusEditEzsignsignaturesMinusV1MinusRequest = ezsigndocumentMinusEditEzsignsignaturesMinusV1MinusRequest)
 
-        return request<kotlin.collections.List<EzsignsignatureMinusRequestCompound>, EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusResponse>(
+        return request<EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusRequest, EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusResponse>(
             localVariableConfig
         )
     }
@@ -414,11 +414,11 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath) : ApiCl
     * To obtain the request config of the operation ezsigndocumentEditEzsignsignaturesV1
     *
     * @param pkiEzsigndocumentID  
-    * @param ezsignsignatureMinusRequestCompound  
+    * @param ezsigndocumentMinusEditEzsignsignaturesMinusV1MinusRequest  
     * @return RequestConfig
     */
-    fun ezsigndocumentEditEzsignsignaturesV1RequestConfig(pkiEzsigndocumentID: kotlin.Int, ezsignsignatureMinusRequestCompound: kotlin.collections.List<EzsignsignatureMinusRequestCompound>) : RequestConfig<kotlin.collections.List<EzsignsignatureMinusRequestCompound>> {
-        val localVariableBody = ezsignsignatureMinusRequestCompound
+    fun ezsigndocumentEditEzsignsignaturesV1RequestConfig(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentMinusEditEzsignsignaturesMinusV1MinusRequest: EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusRequest) : RequestConfig<EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusRequest> {
+        val localVariableBody = ezsigndocumentMinusEditEzsignsignaturesMinusV1MinusRequest
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Content-Type"] = "application/json"

@@ -161,6 +161,7 @@ Class | Method | HTTP request | Description
  - [eZmaxApi.models.EzsigndocumentMinusCreateObjectMinusV1MinusResponse](docs/EzsigndocumentMinusCreateObjectMinusV1MinusResponse.md)
  - [eZmaxApi.models.EzsigndocumentMinusCreateObjectMinusV1MinusResponseMinusMPayload](docs/EzsigndocumentMinusCreateObjectMinusV1MinusResponseMinusMPayload.md)
  - [eZmaxApi.models.EzsigndocumentMinusDeleteObjectMinusV1MinusResponse](docs/EzsigndocumentMinusDeleteObjectMinusV1MinusResponse.md)
+ - [eZmaxApi.models.EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusRequest](docs/EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusRequest.md)
  - [eZmaxApi.models.EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusResponse](docs/EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusResponse.md)
  - [eZmaxApi.models.EzsigndocumentMinusGetDownloadUrlMinusV1MinusResponse](docs/EzsigndocumentMinusGetDownloadUrlMinusV1MinusResponse.md)
  - [eZmaxApi.models.EzsigndocumentMinusGetDownloadUrlMinusV1MinusResponseMinusMPayload](docs/EzsigndocumentMinusGetDownloadUrlMinusV1MinusResponseMinusMPayload.md)

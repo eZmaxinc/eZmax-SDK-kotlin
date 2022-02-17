@@ -221,7 +221,7 @@ Configure Authorization:
 
 <a name="ezsigndocumentEditEzsignsignaturesV1"></a>
 # **ezsigndocumentEditEzsignsignaturesV1**
-> EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusResponse ezsigndocumentEditEzsignsignaturesV1(pkiEzsigndocumentID, ezsignsignatureMinusRequestCompound)
+> EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusResponse ezsigndocumentEditEzsignsignaturesV1(pkiEzsigndocumentID, ezsigndocumentMinusEditEzsignsignaturesMinusV1MinusRequest)
 
 Edit multiple ezsignsignatures
 
@@ -235,9 +235,9 @@ Using this endpoint, you can edit multiple ezsignsignatures at the same time.
 
 val apiInstance = ObjectEzsigndocumentApi()
 val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | 
-val ezsignsignatureMinusRequestCompound : kotlin.collections.List<EzsignsignatureMinusRequestCompound> =  // kotlin.collections.List<EzsignsignatureMinusRequestCompound> | 
+val ezsigndocumentMinusEditEzsignsignaturesMinusV1MinusRequest : EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusRequest =  // EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusRequest | 
 try {
-    val result : EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusResponse = apiInstance.ezsigndocumentEditEzsignsignaturesV1(pkiEzsigndocumentID, ezsignsignatureMinusRequestCompound)
+    val result : EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusResponse = apiInstance.ezsigndocumentEditEzsignsignaturesV1(pkiEzsigndocumentID, ezsigndocumentMinusEditEzsignsignaturesMinusV1MinusRequest)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigndocumentApi#ezsigndocumentEditEzsignsignaturesV1")
@@ -253,7 +253,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiEzsigndocumentID** | **kotlin.Int**|  |
- **ezsignsignatureMinusRequestCompound** | [**kotlin.collections.List&lt;EzsignsignatureMinusRequestCompound&gt;**](EzsignsignatureMinusRequestCompound.md)|  |
+ **ezsigndocumentMinusEditEzsignsignaturesMinusV1MinusRequest** | [**EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusRequest**](EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusRequest.md)|  |
 
 ### Return type
 
