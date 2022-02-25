@@ -5,6 +5,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ezsignfolderCreateObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderCreateObjectV1) | **POST** /1/object/ezsignfolder | Create a new Ezsignfolder
+[**ezsignfolderCreateObjectV2**](ObjectEzsignfolderApi.md#ezsignfolderCreateObjectV2) | **POST** /2/object/ezsignfolder | Create a new Ezsignfolder
 [**ezsignfolderDeleteObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderDeleteObjectV1) | **DELETE** /1/object/ezsignfolder/{pkiEzsignfolderID} | Delete an existing Ezsignfolder
 [**ezsignfolderEditObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderEditObjectV1) | **PUT** /1/object/ezsignfolder/{pkiEzsignfolderID} | Edit an existing Ezsignfolder
 [**ezsignfolderGetEzsigndocumentsV1**](ObjectEzsignfolderApi.md#ezsignfolderGetEzsigndocumentsV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
@@ -53,6 +54,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignfolderMinusCreateObjectMinusV1MinusResponse**](EzsignfolderMinusCreateObjectMinusV1MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="ezsignfolderCreateObjectV2"></a>
+# **ezsignfolderCreateObjectV2**
+> EzsignfolderMinusCreateObjectMinusV2MinusResponse ezsignfolderCreateObjectV2(ezsignfolderMinusCreateObjectMinusV2MinusRequest)
+
+Create a new Ezsignfolder
+
+The endpoint allows to create one or many elements at once.
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsignfolderApi()
+val ezsignfolderMinusCreateObjectMinusV2MinusRequest : EzsignfolderMinusCreateObjectMinusV2MinusRequest =  // EzsignfolderMinusCreateObjectMinusV2MinusRequest | 
+try {
+    val result : EzsignfolderMinusCreateObjectMinusV2MinusResponse = apiInstance.ezsignfolderCreateObjectV2(ezsignfolderMinusCreateObjectMinusV2MinusRequest)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsignfolderApi#ezsignfolderCreateObjectV2")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsignfolderApi#ezsignfolderCreateObjectV2")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ezsignfolderMinusCreateObjectMinusV2MinusRequest** | [**EzsignfolderMinusCreateObjectMinusV2MinusRequest**](EzsignfolderMinusCreateObjectMinusV2MinusRequest.md)|  |
+
+### Return type
+
+[**EzsignfolderMinusCreateObjectMinusV2MinusResponse**](EzsignfolderMinusCreateObjectMinusV2MinusResponse.md)
 
 ### Authorization
 

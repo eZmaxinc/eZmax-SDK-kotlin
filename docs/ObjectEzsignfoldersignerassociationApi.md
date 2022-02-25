@@ -5,6 +5,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ezsignfoldersignerassociationCreateObjectV1**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationCreateObjectV1) | **POST** /1/object/ezsignfoldersignerassociation | Create a new Ezsignfoldersignerassociation
+[**ezsignfoldersignerassociationCreateObjectV2**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationCreateObjectV2) | **POST** /2/object/ezsignfoldersignerassociation | Create a new Ezsignfoldersignerassociation
 [**ezsignfoldersignerassociationDeleteObjectV1**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationDeleteObjectV1) | **DELETE** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} | Delete an existing Ezsignfoldersignerassociation
 [**ezsignfoldersignerassociationGetInPersonLoginUrlV1**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationGetInPersonLoginUrlV1) | **GET** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getInPersonLoginUrl | Retrieve a Login Url to allow In-Person signing
 [**ezsignfoldersignerassociationGetObjectV1**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationGetObjectV1) | **GET** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} | Retrieve an existing Ezsignfoldersignerassociation
@@ -47,6 +48,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignfoldersignerassociationMinusCreateObjectMinusV1MinusResponse**](EzsignfoldersignerassociationMinusCreateObjectMinusV1MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="ezsignfoldersignerassociationCreateObjectV2"></a>
+# **ezsignfoldersignerassociationCreateObjectV2**
+> EzsignfoldersignerassociationMinusCreateObjectMinusV2MinusResponse ezsignfoldersignerassociationCreateObjectV2(ezsignfoldersignerassociationMinusCreateObjectMinusV2MinusRequest)
+
+Create a new Ezsignfoldersignerassociation
+
+The endpoint allows to create one or many elements at once.
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsignfoldersignerassociationApi()
+val ezsignfoldersignerassociationMinusCreateObjectMinusV2MinusRequest : EzsignfoldersignerassociationMinusCreateObjectMinusV2MinusRequest =  // EzsignfoldersignerassociationMinusCreateObjectMinusV2MinusRequest | 
+try {
+    val result : EzsignfoldersignerassociationMinusCreateObjectMinusV2MinusResponse = apiInstance.ezsignfoldersignerassociationCreateObjectV2(ezsignfoldersignerassociationMinusCreateObjectMinusV2MinusRequest)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsignfoldersignerassociationApi#ezsignfoldersignerassociationCreateObjectV2")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsignfoldersignerassociationApi#ezsignfoldersignerassociationCreateObjectV2")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ezsignfoldersignerassociationMinusCreateObjectMinusV2MinusRequest** | [**EzsignfoldersignerassociationMinusCreateObjectMinusV2MinusRequest**](EzsignfoldersignerassociationMinusCreateObjectMinusV2MinusRequest.md)|  |
+
+### Return type
+
+[**EzsignfoldersignerassociationMinusCreateObjectMinusV2MinusResponse**](EzsignfoldersignerassociationMinusCreateObjectMinusV2MinusResponse.md)
 
 ### Authorization
 

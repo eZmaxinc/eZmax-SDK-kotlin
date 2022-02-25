@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**ezsigndocumentApplyEzsigntemplateV1**](ObjectEzsigndocumentApi.md#ezsigndocumentApplyEzsigntemplateV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate | Apply an Ezsign Template to the Ezsigndocument.
 [**ezsigndocumentApplyEzsigntemplateV2**](ObjectEzsigndocumentApi.md#ezsigndocumentApplyEzsigntemplateV2) | **POST** /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate | Apply an Ezsign Template to the Ezsigndocument.
 [**ezsigndocumentCreateObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentCreateObjectV1) | **POST** /1/object/ezsigndocument | Create a new Ezsigndocument
+[**ezsigndocumentCreateObjectV2**](ObjectEzsigndocumentApi.md#ezsigndocumentCreateObjectV2) | **POST** /2/object/ezsigndocument | Create a new Ezsigndocument
 [**ezsigndocumentDeleteObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentDeleteObjectV1) | **DELETE** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Delete an existing Ezsigndocument
 [**ezsigndocumentEditEzsignsignaturesV1**](ObjectEzsigndocumentApi.md#ezsigndocumentEditEzsignsignaturesV1) | **PUT** /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures | Edit multiple ezsignsignatures
 [**ezsigndocumentEndPrematurelyV1**](ObjectEzsigndocumentApi.md#ezsigndocumentEndPrematurelyV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/endPrematurely | End prematurely
@@ -160,6 +161,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsigndocumentMinusCreateObjectMinusV1MinusResponse**](EzsigndocumentMinusCreateObjectMinusV1MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="ezsigndocumentCreateObjectV2"></a>
+# **ezsigndocumentCreateObjectV2**
+> EzsigndocumentMinusCreateObjectMinusV2MinusResponse ezsigndocumentCreateObjectV2(ezsigndocumentMinusCreateObjectMinusV2MinusRequest)
+
+Create a new Ezsigndocument
+
+The endpoint allows to create one or many elements at once.
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsigndocumentApi()
+val ezsigndocumentMinusCreateObjectMinusV2MinusRequest : EzsigndocumentMinusCreateObjectMinusV2MinusRequest =  // EzsigndocumentMinusCreateObjectMinusV2MinusRequest | 
+try {
+    val result : EzsigndocumentMinusCreateObjectMinusV2MinusResponse = apiInstance.ezsigndocumentCreateObjectV2(ezsigndocumentMinusCreateObjectMinusV2MinusRequest)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsigndocumentApi#ezsigndocumentCreateObjectV2")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsigndocumentApi#ezsigndocumentCreateObjectV2")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ezsigndocumentMinusCreateObjectMinusV2MinusRequest** | [**EzsigndocumentMinusCreateObjectMinusV2MinusRequest**](EzsigndocumentMinusCreateObjectMinusV2MinusRequest.md)|  |
+
+### Return type
+
+[**EzsigndocumentMinusCreateObjectMinusV2MinusResponse**](EzsigndocumentMinusCreateObjectMinusV2MinusResponse.md)
 
 ### Authorization
 

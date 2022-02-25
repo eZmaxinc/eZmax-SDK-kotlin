@@ -25,6 +25,8 @@ import java.io.IOException
 import eZmaxApi.models.CommonMinusResponseMinusError
 import eZmaxApi.models.EzsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest
 import eZmaxApi.models.EzsignfoldersignerassociationMinusCreateObjectMinusV1MinusResponse
+import eZmaxApi.models.EzsignfoldersignerassociationMinusCreateObjectMinusV2MinusRequest
+import eZmaxApi.models.EzsignfoldersignerassociationMinusCreateObjectMinusV2MinusResponse
 import eZmaxApi.models.EzsignfoldersignerassociationMinusDeleteObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsignfoldersignerassociationMinusGetInPersonLoginUrlMinusV1MinusResponse
 import eZmaxApi.models.EzsignfoldersignerassociationMinusGetObjectMinusV1MinusResponse
@@ -65,7 +67,9 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsignfoldersignerassociationCreateObjectV1(ezsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest: kotlin.collections.List<EzsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest>) : EzsignfoldersignerassociationMinusCreateObjectMinusV1MinusResponse {
+        @Suppress("DEPRECATION")
         val localVarResponse = ezsignfoldersignerassociationCreateObjectV1WithHttpInfo(ezsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest = ezsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest)
 
         return when (localVarResponse.responseType) {
@@ -93,7 +97,9 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsignfoldersignerassociationCreateObjectV1WithHttpInfo(ezsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest: kotlin.collections.List<EzsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest>) : ApiResponse<EzsignfoldersignerassociationMinusCreateObjectMinusV1MinusResponse?> {
+        @Suppress("DEPRECATION")
         val localVariableConfig = ezsignfoldersignerassociationCreateObjectV1RequestConfig(ezsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest = ezsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest)
 
         return request<kotlin.collections.List<EzsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest>, EzsignfoldersignerassociationMinusCreateObjectMinusV1MinusResponse>(
@@ -107,6 +113,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     * @param ezsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest  
     * @return RequestConfig
     */
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsignfoldersignerassociationCreateObjectV1RequestConfig(ezsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest: kotlin.collections.List<EzsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest>) : RequestConfig<kotlin.collections.List<EzsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest>> {
         val localVariableBody = ezsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest
         val localVariableQuery: MultiValueMap = mutableMapOf()
@@ -117,6 +124,77 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/ezsignfoldersignerassociation",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+    * Create a new Ezsignfoldersignerassociation
+    * The endpoint allows to create one or many elements at once.
+    * @param ezsignfoldersignerassociationMinusCreateObjectMinusV2MinusRequest  
+    * @return EzsignfoldersignerassociationMinusCreateObjectMinusV2MinusResponse
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignfoldersignerassociationCreateObjectV2(ezsignfoldersignerassociationMinusCreateObjectMinusV2MinusRequest: EzsignfoldersignerassociationMinusCreateObjectMinusV2MinusRequest) : EzsignfoldersignerassociationMinusCreateObjectMinusV2MinusResponse {
+        val localVarResponse = ezsignfoldersignerassociationCreateObjectV2WithHttpInfo(ezsignfoldersignerassociationMinusCreateObjectMinusV2MinusRequest = ezsignfoldersignerassociationMinusCreateObjectMinusV2MinusRequest)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfoldersignerassociationMinusCreateObjectMinusV2MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+    * Create a new Ezsignfoldersignerassociation
+    * The endpoint allows to create one or many elements at once.
+    * @param ezsignfoldersignerassociationMinusCreateObjectMinusV2MinusRequest  
+    * @return ApiResponse<EzsignfoldersignerassociationMinusCreateObjectMinusV2MinusResponse?>
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
+    */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignfoldersignerassociationCreateObjectV2WithHttpInfo(ezsignfoldersignerassociationMinusCreateObjectMinusV2MinusRequest: EzsignfoldersignerassociationMinusCreateObjectMinusV2MinusRequest) : ApiResponse<EzsignfoldersignerassociationMinusCreateObjectMinusV2MinusResponse?> {
+        val localVariableConfig = ezsignfoldersignerassociationCreateObjectV2RequestConfig(ezsignfoldersignerassociationMinusCreateObjectMinusV2MinusRequest = ezsignfoldersignerassociationMinusCreateObjectMinusV2MinusRequest)
+
+        return request<EzsignfoldersignerassociationMinusCreateObjectMinusV2MinusRequest, EzsignfoldersignerassociationMinusCreateObjectMinusV2MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+    * To obtain the request config of the operation ezsignfoldersignerassociationCreateObjectV2
+    *
+    * @param ezsignfoldersignerassociationMinusCreateObjectMinusV2MinusRequest  
+    * @return RequestConfig
+    */
+    fun ezsignfoldersignerassociationCreateObjectV2RequestConfig(ezsignfoldersignerassociationMinusCreateObjectMinusV2MinusRequest: EzsignfoldersignerassociationMinusCreateObjectMinusV2MinusRequest) : RequestConfig<EzsignfoldersignerassociationMinusCreateObjectMinusV2MinusRequest> {
+        val localVariableBody = ezsignfoldersignerassociationMinusCreateObjectMinusV2MinusRequest
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/2/object/ezsignfoldersignerassociation",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

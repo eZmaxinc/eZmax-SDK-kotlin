@@ -25,6 +25,8 @@ import java.io.IOException
 import eZmaxApi.models.CommonMinusResponseMinusError
 import eZmaxApi.models.EzsignfolderMinusCreateObjectMinusV1MinusRequest
 import eZmaxApi.models.EzsignfolderMinusCreateObjectMinusV1MinusResponse
+import eZmaxApi.models.EzsignfolderMinusCreateObjectMinusV2MinusRequest
+import eZmaxApi.models.EzsignfolderMinusCreateObjectMinusV2MinusResponse
 import eZmaxApi.models.EzsignfolderMinusDeleteObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsignfolderMinusEditObjectMinusV1MinusRequest
 import eZmaxApi.models.EzsignfolderMinusEditObjectMinusV1MinusResponse
@@ -74,7 +76,9 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsignfolderCreateObjectV1(ezsignfolderMinusCreateObjectMinusV1MinusRequest: kotlin.collections.List<EzsignfolderMinusCreateObjectMinusV1MinusRequest>) : EzsignfolderMinusCreateObjectMinusV1MinusResponse {
+        @Suppress("DEPRECATION")
         val localVarResponse = ezsignfolderCreateObjectV1WithHttpInfo(ezsignfolderMinusCreateObjectMinusV1MinusRequest = ezsignfolderMinusCreateObjectMinusV1MinusRequest)
 
         return when (localVarResponse.responseType) {
@@ -102,7 +106,9 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsignfolderCreateObjectV1WithHttpInfo(ezsignfolderMinusCreateObjectMinusV1MinusRequest: kotlin.collections.List<EzsignfolderMinusCreateObjectMinusV1MinusRequest>) : ApiResponse<EzsignfolderMinusCreateObjectMinusV1MinusResponse?> {
+        @Suppress("DEPRECATION")
         val localVariableConfig = ezsignfolderCreateObjectV1RequestConfig(ezsignfolderMinusCreateObjectMinusV1MinusRequest = ezsignfolderMinusCreateObjectMinusV1MinusRequest)
 
         return request<kotlin.collections.List<EzsignfolderMinusCreateObjectMinusV1MinusRequest>, EzsignfolderMinusCreateObjectMinusV1MinusResponse>(
@@ -116,6 +122,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     * @param ezsignfolderMinusCreateObjectMinusV1MinusRequest  
     * @return RequestConfig
     */
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsignfolderCreateObjectV1RequestConfig(ezsignfolderMinusCreateObjectMinusV1MinusRequest: kotlin.collections.List<EzsignfolderMinusCreateObjectMinusV1MinusRequest>) : RequestConfig<kotlin.collections.List<EzsignfolderMinusCreateObjectMinusV1MinusRequest>> {
         val localVariableBody = ezsignfolderMinusCreateObjectMinusV1MinusRequest
         val localVariableQuery: MultiValueMap = mutableMapOf()
@@ -126,6 +133,77 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/ezsignfolder",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+    * Create a new Ezsignfolder
+    * The endpoint allows to create one or many elements at once.
+    * @param ezsignfolderMinusCreateObjectMinusV2MinusRequest  
+    * @return EzsignfolderMinusCreateObjectMinusV2MinusResponse
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignfolderCreateObjectV2(ezsignfolderMinusCreateObjectMinusV2MinusRequest: EzsignfolderMinusCreateObjectMinusV2MinusRequest) : EzsignfolderMinusCreateObjectMinusV2MinusResponse {
+        val localVarResponse = ezsignfolderCreateObjectV2WithHttpInfo(ezsignfolderMinusCreateObjectMinusV2MinusRequest = ezsignfolderMinusCreateObjectMinusV2MinusRequest)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfolderMinusCreateObjectMinusV2MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+    * Create a new Ezsignfolder
+    * The endpoint allows to create one or many elements at once.
+    * @param ezsignfolderMinusCreateObjectMinusV2MinusRequest  
+    * @return ApiResponse<EzsignfolderMinusCreateObjectMinusV2MinusResponse?>
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
+    */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignfolderCreateObjectV2WithHttpInfo(ezsignfolderMinusCreateObjectMinusV2MinusRequest: EzsignfolderMinusCreateObjectMinusV2MinusRequest) : ApiResponse<EzsignfolderMinusCreateObjectMinusV2MinusResponse?> {
+        val localVariableConfig = ezsignfolderCreateObjectV2RequestConfig(ezsignfolderMinusCreateObjectMinusV2MinusRequest = ezsignfolderMinusCreateObjectMinusV2MinusRequest)
+
+        return request<EzsignfolderMinusCreateObjectMinusV2MinusRequest, EzsignfolderMinusCreateObjectMinusV2MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+    * To obtain the request config of the operation ezsignfolderCreateObjectV2
+    *
+    * @param ezsignfolderMinusCreateObjectMinusV2MinusRequest  
+    * @return RequestConfig
+    */
+    fun ezsignfolderCreateObjectV2RequestConfig(ezsignfolderMinusCreateObjectMinusV2MinusRequest: EzsignfolderMinusCreateObjectMinusV2MinusRequest) : RequestConfig<EzsignfolderMinusCreateObjectMinusV2MinusRequest> {
+        val localVariableBody = ezsignfolderMinusCreateObjectMinusV2MinusRequest
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/2/object/ezsignfolder",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

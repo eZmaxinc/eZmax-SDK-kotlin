@@ -24,6 +24,8 @@ import java.io.IOException
 
 import eZmaxApi.models.FranchisereferalincomeMinusCreateObjectMinusV1MinusRequest
 import eZmaxApi.models.FranchisereferalincomeMinusCreateObjectMinusV1MinusResponse
+import eZmaxApi.models.FranchisereferalincomeMinusCreateObjectMinusV2MinusRequest
+import eZmaxApi.models.FranchisereferalincomeMinusCreateObjectMinusV2MinusResponse
 
 import com.squareup.moshi.Json
 
@@ -61,7 +63,9 @@ class ObjectFranchisereferalincomeApi(basePath: kotlin.String = defaultBasePath)
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun franchisereferalincomeCreateObjectV1(franchisereferalincomeMinusCreateObjectMinusV1MinusRequest: kotlin.collections.List<FranchisereferalincomeMinusCreateObjectMinusV1MinusRequest>) : FranchisereferalincomeMinusCreateObjectMinusV1MinusResponse {
+        @Suppress("DEPRECATION")
         val localVarResponse = franchisereferalincomeCreateObjectV1WithHttpInfo(franchisereferalincomeMinusCreateObjectMinusV1MinusRequest = franchisereferalincomeMinusCreateObjectMinusV1MinusRequest)
 
         return when (localVarResponse.responseType) {
@@ -89,7 +93,9 @@ class ObjectFranchisereferalincomeApi(basePath: kotlin.String = defaultBasePath)
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun franchisereferalincomeCreateObjectV1WithHttpInfo(franchisereferalincomeMinusCreateObjectMinusV1MinusRequest: kotlin.collections.List<FranchisereferalincomeMinusCreateObjectMinusV1MinusRequest>) : ApiResponse<FranchisereferalincomeMinusCreateObjectMinusV1MinusResponse?> {
+        @Suppress("DEPRECATION")
         val localVariableConfig = franchisereferalincomeCreateObjectV1RequestConfig(franchisereferalincomeMinusCreateObjectMinusV1MinusRequest = franchisereferalincomeMinusCreateObjectMinusV1MinusRequest)
 
         return request<kotlin.collections.List<FranchisereferalincomeMinusCreateObjectMinusV1MinusRequest>, FranchisereferalincomeMinusCreateObjectMinusV1MinusResponse>(
@@ -103,6 +109,7 @@ class ObjectFranchisereferalincomeApi(basePath: kotlin.String = defaultBasePath)
     * @param franchisereferalincomeMinusCreateObjectMinusV1MinusRequest  
     * @return RequestConfig
     */
+    @Deprecated(message = "This operation is deprecated.")
     fun franchisereferalincomeCreateObjectV1RequestConfig(franchisereferalincomeMinusCreateObjectMinusV1MinusRequest: kotlin.collections.List<FranchisereferalincomeMinusCreateObjectMinusV1MinusRequest>) : RequestConfig<kotlin.collections.List<FranchisereferalincomeMinusCreateObjectMinusV1MinusRequest>> {
         val localVariableBody = franchisereferalincomeMinusCreateObjectMinusV1MinusRequest
         val localVariableQuery: MultiValueMap = mutableMapOf()
@@ -113,6 +120,77 @@ class ObjectFranchisereferalincomeApi(basePath: kotlin.String = defaultBasePath)
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/franchisereferalincome",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+    * Create a new Franchisereferalincome
+    * The endpoint allows to create one or many elements at once.
+    * @param franchisereferalincomeMinusCreateObjectMinusV2MinusRequest  
+    * @return FranchisereferalincomeMinusCreateObjectMinusV2MinusResponse
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun franchisereferalincomeCreateObjectV2(franchisereferalincomeMinusCreateObjectMinusV2MinusRequest: FranchisereferalincomeMinusCreateObjectMinusV2MinusRequest) : FranchisereferalincomeMinusCreateObjectMinusV2MinusResponse {
+        val localVarResponse = franchisereferalincomeCreateObjectV2WithHttpInfo(franchisereferalincomeMinusCreateObjectMinusV2MinusRequest = franchisereferalincomeMinusCreateObjectMinusV2MinusRequest)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as FranchisereferalincomeMinusCreateObjectMinusV2MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+    * Create a new Franchisereferalincome
+    * The endpoint allows to create one or many elements at once.
+    * @param franchisereferalincomeMinusCreateObjectMinusV2MinusRequest  
+    * @return ApiResponse<FranchisereferalincomeMinusCreateObjectMinusV2MinusResponse?>
+    * @throws IllegalStateException If the request is not correctly configured
+    * @throws IOException Rethrows the OkHttp execute method exception
+    */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun franchisereferalincomeCreateObjectV2WithHttpInfo(franchisereferalincomeMinusCreateObjectMinusV2MinusRequest: FranchisereferalincomeMinusCreateObjectMinusV2MinusRequest) : ApiResponse<FranchisereferalincomeMinusCreateObjectMinusV2MinusResponse?> {
+        val localVariableConfig = franchisereferalincomeCreateObjectV2RequestConfig(franchisereferalincomeMinusCreateObjectMinusV2MinusRequest = franchisereferalincomeMinusCreateObjectMinusV2MinusRequest)
+
+        return request<FranchisereferalincomeMinusCreateObjectMinusV2MinusRequest, FranchisereferalincomeMinusCreateObjectMinusV2MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+    * To obtain the request config of the operation franchisereferalincomeCreateObjectV2
+    *
+    * @param franchisereferalincomeMinusCreateObjectMinusV2MinusRequest  
+    * @return RequestConfig
+    */
+    fun franchisereferalincomeCreateObjectV2RequestConfig(franchisereferalincomeMinusCreateObjectMinusV2MinusRequest: FranchisereferalincomeMinusCreateObjectMinusV2MinusRequest) : RequestConfig<FranchisereferalincomeMinusCreateObjectMinusV2MinusRequest> {
+        val localVariableBody = franchisereferalincomeMinusCreateObjectMinusV2MinusRequest
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/2/object/franchisereferalincome",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
