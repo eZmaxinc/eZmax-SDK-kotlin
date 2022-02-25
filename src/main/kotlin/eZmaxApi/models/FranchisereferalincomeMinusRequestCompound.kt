@@ -40,7 +40,7 @@ import com.squareup.moshi.Json
  * @param dFranchisereferalincomeFranchisoramount The amount that will be kept by the franchisor
  * @param dFranchisereferalincomeAgentamount The amount that will be given to the agent
  * @param dtFranchisereferalincomeDisbursed The date the amounts were disbursed
- * @param tFranchisereferalincomeComment A comment about the transaction
+ * @param tFranchisereferalincomeComment Comment about the transaction
  * @param fkiFranchiseofficeID The unique ID of the Franchisereoffice
  * @param sFranchisereferalincomeRemoteid 
  * @param pkiFranchisereferalincomeID The unique ID of the Franchisereferalincome
@@ -51,6 +51,7 @@ data class FranchisereferalincomeMinusRequestCompound (
     @Json(name = "objAddress")
     val objAddress: AddressMinusRequest,
 
+    /*  */
     @Json(name = "a_objContact")
     val aObjContact: kotlin.collections.List<ContactMinusRequestCompound>,
 
@@ -86,7 +87,7 @@ data class FranchisereferalincomeMinusRequestCompound (
     @Json(name = "dtFranchisereferalincomeDisbursed")
     val dtFranchisereferalincomeDisbursed: kotlin.String,
 
-    /* A comment about the transaction */
+    /* Comment about the transaction */
     @Json(name = "tFranchisereferalincomeComment")
     val tFranchisereferalincomeComment: kotlin.String,
 
@@ -94,6 +95,7 @@ data class FranchisereferalincomeMinusRequestCompound (
     @Json(name = "fkiFranchiseofficeID")
     val fkiFranchiseofficeID: kotlin.Int,
 
+    /*  */
     @Json(name = "sFranchisereferalincomeRemoteid")
     val sFranchisereferalincomeRemoteid: kotlin.String,
 

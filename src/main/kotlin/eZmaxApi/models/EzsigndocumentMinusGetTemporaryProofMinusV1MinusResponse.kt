@@ -23,17 +23,23 @@ package eZmaxApi.models
 import eZmaxApi.models.CommonMinusResponse
 import eZmaxApi.models.CommonMinusResponseMinusObjDebug
 import eZmaxApi.models.CommonMinusResponseMinusObjDebugPayload
+import eZmaxApi.models.EzsigndocumentGetTemporaryProofV1ResponseAllOf
+import eZmaxApi.models.EzsigndocumentMinusGetTemporaryProofMinusV1MinusResponseMinusMPayload
 
 import com.squareup.moshi.Json
 
 /**
- * Response for the /1/object/ezsignsignature/editObject API Request
+ * Response for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof API Request
  *
+ * @param mPayload 
  * @param objDebugPayload 
  * @param objDebug 
  */
 
-data class UNUSEDMinusEzsignsignatureMinusEditObjectMinusV1MinusResponse (
+data class EzsigndocumentMinusGetTemporaryProofMinusV1MinusResponse (
+
+    @Json(name = "mPayload")
+    val mPayload: EzsigndocumentMinusGetTemporaryProofMinusV1MinusResponseMinusMPayload,
 
     @Json(name = "objDebugPayload")
     val objDebugPayload: CommonMinusResponseMinusObjDebugPayload? = null,

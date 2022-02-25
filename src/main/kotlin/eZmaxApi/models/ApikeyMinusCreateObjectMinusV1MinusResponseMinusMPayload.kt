@@ -32,6 +32,7 @@ import com.squareup.moshi.Json
 
 data class ApikeyMinusCreateObjectMinusV1MinusResponseMinusMPayload (
 
+    /*  */
     @Json(name = "a_objApikey")
     val aObjApikey: kotlin.collections.List<ApikeyMinusResponse>
 

@@ -32,6 +32,7 @@ import com.squareup.moshi.Json
 
 data class EzsigndocumentMinusGetEzsignpagesMinusV1MinusResponseMinusMPayload (
 
+    /*  */
     @Json(name = "a_objEzsignpage")
     val aObjEzsignpage: kotlin.collections.List<EzsignpageMinusResponse>
 

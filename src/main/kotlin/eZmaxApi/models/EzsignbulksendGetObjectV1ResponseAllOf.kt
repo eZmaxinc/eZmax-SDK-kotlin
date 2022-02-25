@@ -20,20 +20,20 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.EzsignsignatureMinusRequest
+import eZmaxApi.models.EzsignbulksendMinusGetObjectMinusV1MinusResponseMinusMPayload
 
 import com.squareup.moshi.Json
 
 /**
- * Request for the /1/object/ezsignsignature/editObject API Request
+ * 
  *
- * @param objEzsignsignature 
+ * @param mPayload 
  */
 
-data class UNUSEDMinusEzsignsignatureMinusEditObjectMinusV1MinusRequest (
+data class EzsignbulksendGetObjectV1ResponseAllOf (
 
-    @Json(name = "objEzsignsignature")
-    val objEzsignsignature: EzsignsignatureMinusRequest? = null
+    @Json(name = "mPayload")
+    val mPayload: EzsignbulksendMinusGetObjectMinusV1MinusResponseMinusMPayload
 
 )
 

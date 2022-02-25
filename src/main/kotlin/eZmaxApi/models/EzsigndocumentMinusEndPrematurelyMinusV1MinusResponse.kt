@@ -27,13 +27,13 @@ import eZmaxApi.models.CommonMinusResponseMinusObjDebugPayload
 import com.squareup.moshi.Json
 
 /**
- * Response for the /1/object/ezsigndocument/editObject API Request
+ * Response for the /1/object/ezsigndocument/{pkiEzsigndocument}/endPrematurely API Request
  *
  * @param objDebugPayload 
  * @param objDebug 
  */
 
-data class UNUSEDMinusEzsigndocumentMinusEditObjectMinusV1MinusResponse (
+data class EzsigndocumentMinusEndPrematurelyMinusV1MinusResponse (
 
     @Json(name = "objDebugPayload")
     val objDebugPayload: CommonMinusResponseMinusObjDebugPayload? = null,

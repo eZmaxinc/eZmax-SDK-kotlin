@@ -72,6 +72,8 @@ Configure Authorization:
 
 Delete an existing Ezsignfolder
 
+
+
 ### Example
 ```kotlin
 // Import classes:
@@ -119,6 +121,8 @@ Configure Authorization:
 > EzsignfolderMinusEditObjectMinusV1MinusResponse ezsignfolderEditObjectV1(pkiEzsignfolderID, ezsignfolderMinusEditObjectMinusV1MinusRequest)
 
 Edit an existing Ezsignfolder
+
+
 
 ### Example
 ```kotlin
@@ -170,6 +174,8 @@ Configure Authorization:
 
 Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
 
+
+
 ### Example
 ```kotlin
 // Import classes:
@@ -218,6 +224,8 @@ Configure Authorization:
 
 Retrieve an existing Ezsignfolder&#39;s Ezsignfoldersignerassociations
 
+
+
 ### Example
 ```kotlin
 // Import classes:
@@ -265,6 +273,8 @@ Configure Authorization:
 > EzsignfolderMinusGetFormsDataMinusV1MinusResponse ezsignfolderGetFormsDataV1(pkiEzsignfolderID)
 
 Retrieve an existing Ezsignfolder&#39;s forms data
+
+
 
 ### Example
 ```kotlin
@@ -372,6 +382,8 @@ Configure Authorization:
 
 Retrieve an existing Ezsignfolder
 
+
+
 ### Example
 ```kotlin
 // Import classes:
@@ -419,6 +431,8 @@ Configure Authorization:
 > EzsignfolderMinusSendMinusV1MinusResponse ezsignfolderSendV1(pkiEzsignfolderID, ezsignfolderMinusSendMinusV1MinusRequest)
 
 Send the Ezsignfolder to the signatories for signature
+
+
 
 ### Example
 ```kotlin
@@ -480,7 +494,7 @@ Once an Ezsignfolder has been sent to signatories, it cannot be modified.  Using
 
 val apiInstance = ObjectEzsignfolderApi()
 val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
-val body : kotlin.String = body_example // kotlin.String | 
+val body : kotlin.Any = Object // kotlin.Any | 
 try {
     val result : EzsignfolderMinusUnsendMinusV1MinusResponse = apiInstance.ezsignfolderUnsendV1(pkiEzsignfolderID, body)
     println(result)
@@ -498,7 +512,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiEzsignfolderID** | **kotlin.Int**|  |
- **body** | **kotlin.String**|  |
+ **body** | **kotlin.Any**|  |
 
 ### Return type
 

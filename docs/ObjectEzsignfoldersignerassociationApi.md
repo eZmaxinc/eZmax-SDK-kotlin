@@ -66,6 +66,8 @@ Configure Authorization:
 
 Delete an existing Ezsignfoldersignerassociation
 
+
+
 ### Example
 ```kotlin
 // Import classes:
@@ -163,6 +165,8 @@ Configure Authorization:
 > EzsignfoldersignerassociationMinusGetObjectMinusV1MinusResponse ezsignfoldersignerassociationGetObjectV1(pkiEzsignfoldersignerassociationID)
 
 Retrieve an existing Ezsignfoldersignerassociation
+
+
 
 ### Example
 ```kotlin

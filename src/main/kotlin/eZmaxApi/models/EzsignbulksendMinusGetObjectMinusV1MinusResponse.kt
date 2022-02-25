@@ -23,17 +23,23 @@ package eZmaxApi.models
 import eZmaxApi.models.CommonMinusResponse
 import eZmaxApi.models.CommonMinusResponseMinusObjDebug
 import eZmaxApi.models.CommonMinusResponseMinusObjDebugPayload
+import eZmaxApi.models.EzsignbulksendGetObjectV1ResponseAllOf
+import eZmaxApi.models.EzsignbulksendMinusGetObjectMinusV1MinusResponseMinusMPayload
 
 import com.squareup.moshi.Json
 
 /**
- * Response for the /1/object/ezsignfoldersignerassociation/editObject API Request
+ * Response for the /1/object/ezsignbulksend/getObject API Request
  *
+ * @param mPayload 
  * @param objDebugPayload 
  * @param objDebug 
  */
 
-data class UNUSEDMinusEzsignfoldersignerassociationMinusEditObjectMinusV1MinusResponse (
+data class EzsignbulksendMinusGetObjectMinusV1MinusResponse (
+
+    @Json(name = "mPayload")
+    val mPayload: EzsignbulksendMinusGetObjectMinusV1MinusResponseMinusMPayload,
 
     @Json(name = "objDebugPayload")
     val objDebugPayload: CommonMinusResponseMinusObjDebugPayload? = null,

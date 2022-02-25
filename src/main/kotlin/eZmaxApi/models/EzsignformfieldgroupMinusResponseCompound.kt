@@ -39,6 +39,7 @@ data class EzsignformfieldgroupMinusResponseCompound (
     @Json(name = "sEzsignformfieldgroupLabel")
     val sEzsignformfieldgroupLabel: kotlin.String,
 
+    /*  */
     @Json(name = "a_objEzsignformfield")
     val aObjEzsignformfield: kotlin.collections.List<EzsignformfieldMinusResponse>
 

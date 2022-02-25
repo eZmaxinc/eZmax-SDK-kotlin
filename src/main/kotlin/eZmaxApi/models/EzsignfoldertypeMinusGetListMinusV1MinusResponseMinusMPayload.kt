@@ -36,6 +36,7 @@ import com.squareup.moshi.Json
 
 data class EzsignfoldertypeMinusGetListMinusV1MinusResponseMinusMPayload (
 
+    /*  */
     @Json(name = "a_objEzsignfoldertype")
     val aObjEzsignfoldertype: kotlin.collections.List<EzsignfoldertypeMinusListElement>,
 

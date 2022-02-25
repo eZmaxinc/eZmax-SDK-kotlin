@@ -39,25 +39,22 @@ Class | Method | HTTP request | Description
 *ModuleAuthenticateApi* | [**authenticateAuthenticateV2**](docs/ModuleAuthenticateApi.md#authenticateauthenticatev2) | **POST** /2/module/authenticate/authenticate/{eSessionType} | Authenticate a user
 *ModuleListApi* | [**listGetListpresentationV1**](docs/ModuleListApi.md#listgetlistpresentationv1) | **GET** /1/module/list/listpresentation/{sListName} | Get all Listpresentation for a specific list
 *ModuleListApi* | [**listSaveListpresentationV1**](docs/ModuleListApi.md#listsavelistpresentationv1) | **POST** /1/module/list/listpresentation/{sListName} | Save all Listpresentation for a specific list
-*ModuleSsprApi* | [**ssprResetPasswordRequestV1**](docs/ModuleSsprApi.md#ssprresetpasswordrequestv1) | **POST** /1/module/sspr/resetPasswordRequest | Reset Password Request
-*ModuleSsprApi* | [**ssprResetPasswordV1**](docs/ModuleSsprApi.md#ssprresetpasswordv1) | **POST** /1/module/sspr/resetPassword | Reset Password
-*ModuleSsprApi* | [**ssprSendUsernamesV1**](docs/ModuleSsprApi.md#ssprsendusernamesv1) | **POST** /1/module/sspr/sendUsernames | Send username(s)
-*ModuleSsprApi* | [**ssprUnlockAccountRequestV1**](docs/ModuleSsprApi.md#ssprunlockaccountrequestv1) | **POST** /1/module/sspr/unlockAccountRequest | Unlock Account Request
-*ModuleSsprApi* | [**ssprUnlockAccountV1**](docs/ModuleSsprApi.md#ssprunlockaccountv1) | **POST** /1/module/sspr/unlockAccount | Unlock Account
-*ModuleSsprApi* | [**ssprValidateTokenV1**](docs/ModuleSsprApi.md#ssprvalidatetokenv1) | **POST** /1/module/sspr/validateToken | Validate Token
 *ModuleUserApi* | [**userCreateEzsignuserV1**](docs/ModuleUserApi.md#usercreateezsignuserv1) | **POST** /1/module/user/createezsignuser | Create a new User of type Ezsignuser
 *ObjectActivesessionApi* | [**activesessionGetCurrentV1**](docs/ObjectActivesessionApi.md#activesessiongetcurrentv1) | **GET** /1/object/activesession/getCurrent | Get Current Activesession
 *ObjectApikeyApi* | [**apikeyCreateObjectV1**](docs/ObjectApikeyApi.md#apikeycreateobjectv1) | **POST** /1/object/apikey | Create a new Apikey
 *ObjectEzsignbulksendApi* | [**ezsignbulksendGetListV1**](docs/ObjectEzsignbulksendApi.md#ezsignbulksendgetlistv1) | **GET** /1/object/ezsignbulksend/getList | Retrieve Ezsignbulksend list
+*ObjectEzsignbulksendApi* | [**ezsignbulksendGetObjectV1**](docs/ObjectEzsignbulksendApi.md#ezsignbulksendgetobjectv1) | **GET** /1/object/ezsignbulksend/{pkiEzsignbulksendID} | Retrieve an existing Ezsignbulksend
 *ObjectEzsigndocumentApi* | [**ezsigndocumentApplyEzsigntemplateV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentapplyezsigntemplatev1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate | Apply an Ezsign Template to the Ezsigndocument.
 *ObjectEzsigndocumentApi* | [**ezsigndocumentApplyEzsigntemplateV2**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentapplyezsigntemplatev2) | **POST** /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate | Apply an Ezsign Template to the Ezsigndocument.
 *ObjectEzsigndocumentApi* | [**ezsigndocumentCreateObjectV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentcreateobjectv1) | **POST** /1/object/ezsigndocument | Create a new Ezsigndocument
 *ObjectEzsigndocumentApi* | [**ezsigndocumentDeleteObjectV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentdeleteobjectv1) | **DELETE** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Delete an existing Ezsigndocument
 *ObjectEzsigndocumentApi* | [**ezsigndocumentEditEzsignsignaturesV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumenteditezsignsignaturesv1) | **PUT** /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures | Edit multiple ezsignsignatures
+*ObjectEzsigndocumentApi* | [**ezsigndocumentEndPrematurelyV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentendprematurelyv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/endPrematurely | End prematurely
 *ObjectEzsigndocumentApi* | [**ezsigndocumentGetDownloadUrlV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentgetdownloadurlv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getDownloadUrl/{eDocumentType} | Retrieve a URL to download documents.
 *ObjectEzsigndocumentApi* | [**ezsigndocumentGetEzsignpagesV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentgetezsignpagesv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignpages | Retrieve an existing Ezsigndocument's Ezsignpages
 *ObjectEzsigndocumentApi* | [**ezsigndocumentGetFormDataV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentgetformdatav1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getFormData | Retrieve an existing Ezsigndocument's Form Data
 *ObjectEzsigndocumentApi* | [**ezsigndocumentGetObjectV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentgetobjectv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Retrieve an existing Ezsigndocument
+*ObjectEzsigndocumentApi* | [**ezsigndocumentGetTemporaryProofV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentgettemporaryproofv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof | Retrieve the temporary proof
 *ObjectEzsigndocumentApi* | [**ezsigndocumentGetWordsPositionsV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentgetwordspositionsv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions | Retrieve positions X,Y of given words from a Ezsigndocument
 *ObjectEzsigndocumentApi* | [**ezsigndocumentPatchObjectV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentpatchobjectv1) | **PATCH** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Patch an existing Ezsigndocument
 *ObjectEzsignfolderApi* | [**ezsignfolderCreateObjectV1**](docs/ObjectEzsignfolderApi.md#ezsignfoldercreateobjectv1) | **POST** /1/object/ezsignfolder | Create a new Ezsignfolder
@@ -144,14 +141,20 @@ Class | Method | HTTP request | Description
  - [eZmaxApi.models.EmailMinusRequest](docs/EmailMinusRequest.md)
  - [eZmaxApi.models.EzsignbulksendGetListV1ResponseAllOf](docs/EzsignbulksendGetListV1ResponseAllOf.md)
  - [eZmaxApi.models.EzsignbulksendGetListV1ResponseMPayloadAllOf](docs/EzsignbulksendGetListV1ResponseMPayloadAllOf.md)
+ - [eZmaxApi.models.EzsignbulksendGetObjectV1ResponseAllOf](docs/EzsignbulksendGetObjectV1ResponseAllOf.md)
  - [eZmaxApi.models.EzsignbulksendMinusGetListMinusV1MinusResponse](docs/EzsignbulksendMinusGetListMinusV1MinusResponse.md)
  - [eZmaxApi.models.EzsignbulksendMinusGetListMinusV1MinusResponseMinusMPayload](docs/EzsignbulksendMinusGetListMinusV1MinusResponseMinusMPayload.md)
+ - [eZmaxApi.models.EzsignbulksendMinusGetObjectMinusV1MinusResponse](docs/EzsignbulksendMinusGetObjectMinusV1MinusResponse.md)
+ - [eZmaxApi.models.EzsignbulksendMinusGetObjectMinusV1MinusResponseMinusMPayload](docs/EzsignbulksendMinusGetObjectMinusV1MinusResponseMinusMPayload.md)
  - [eZmaxApi.models.EzsignbulksendMinusListElement](docs/EzsignbulksendMinusListElement.md)
+ - [eZmaxApi.models.EzsignbulksendMinusResponse](docs/EzsignbulksendMinusResponse.md)
+ - [eZmaxApi.models.EzsignbulksendMinusResponseCompound](docs/EzsignbulksendMinusResponseCompound.md)
  - [eZmaxApi.models.EzsigndocumentCreateObjectV1ResponseAllOf](docs/EzsigndocumentCreateObjectV1ResponseAllOf.md)
  - [eZmaxApi.models.EzsigndocumentGetDownloadUrlV1ResponseAllOf](docs/EzsigndocumentGetDownloadUrlV1ResponseAllOf.md)
  - [eZmaxApi.models.EzsigndocumentGetEzsignpagesV1ResponseAllOf](docs/EzsigndocumentGetEzsignpagesV1ResponseAllOf.md)
  - [eZmaxApi.models.EzsigndocumentGetFormDataV1ResponseAllOf](docs/EzsigndocumentGetFormDataV1ResponseAllOf.md)
  - [eZmaxApi.models.EzsigndocumentGetObjectV1ResponseAllOf](docs/EzsigndocumentGetObjectV1ResponseAllOf.md)
+ - [eZmaxApi.models.EzsigndocumentGetTemporaryProofV1ResponseAllOf](docs/EzsigndocumentGetTemporaryProofV1ResponseAllOf.md)
  - [eZmaxApi.models.EzsigndocumentGetWordsPositionsV1ResponseAllOf](docs/EzsigndocumentGetWordsPositionsV1ResponseAllOf.md)
  - [eZmaxApi.models.EzsigndocumentMinusApplyEzsigntemplateMinusV1MinusRequest](docs/EzsigndocumentMinusApplyEzsigntemplateMinusV1MinusRequest.md)
  - [eZmaxApi.models.EzsigndocumentMinusApplyEzsigntemplateMinusV1MinusResponse](docs/EzsigndocumentMinusApplyEzsigntemplateMinusV1MinusResponse.md)
@@ -163,6 +166,7 @@ Class | Method | HTTP request | Description
  - [eZmaxApi.models.EzsigndocumentMinusDeleteObjectMinusV1MinusResponse](docs/EzsigndocumentMinusDeleteObjectMinusV1MinusResponse.md)
  - [eZmaxApi.models.EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusRequest](docs/EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusRequest.md)
  - [eZmaxApi.models.EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusResponse](docs/EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusResponse.md)
+ - [eZmaxApi.models.EzsigndocumentMinusEndPrematurelyMinusV1MinusResponse](docs/EzsigndocumentMinusEndPrematurelyMinusV1MinusResponse.md)
  - [eZmaxApi.models.EzsigndocumentMinusGetDownloadUrlMinusV1MinusResponse](docs/EzsigndocumentMinusGetDownloadUrlMinusV1MinusResponse.md)
  - [eZmaxApi.models.EzsigndocumentMinusGetDownloadUrlMinusV1MinusResponseMinusMPayload](docs/EzsigndocumentMinusGetDownloadUrlMinusV1MinusResponseMinusMPayload.md)
  - [eZmaxApi.models.EzsigndocumentMinusGetEzsignpagesMinusV1MinusResponse](docs/EzsigndocumentMinusGetEzsignpagesMinusV1MinusResponse.md)
@@ -171,6 +175,8 @@ Class | Method | HTTP request | Description
  - [eZmaxApi.models.EzsigndocumentMinusGetFormDataMinusV1MinusResponseMinusMPayload](docs/EzsigndocumentMinusGetFormDataMinusV1MinusResponseMinusMPayload.md)
  - [eZmaxApi.models.EzsigndocumentMinusGetObjectMinusV1MinusResponse](docs/EzsigndocumentMinusGetObjectMinusV1MinusResponse.md)
  - [eZmaxApi.models.EzsigndocumentMinusGetObjectMinusV1MinusResponseMinusMPayload](docs/EzsigndocumentMinusGetObjectMinusV1MinusResponseMinusMPayload.md)
+ - [eZmaxApi.models.EzsigndocumentMinusGetTemporaryProofMinusV1MinusResponse](docs/EzsigndocumentMinusGetTemporaryProofMinusV1MinusResponse.md)
+ - [eZmaxApi.models.EzsigndocumentMinusGetTemporaryProofMinusV1MinusResponseMinusMPayload](docs/EzsigndocumentMinusGetTemporaryProofMinusV1MinusResponseMinusMPayload.md)
  - [eZmaxApi.models.EzsigndocumentMinusGetWordsPositionsMinusV1MinusRequest](docs/EzsigndocumentMinusGetWordsPositionsMinusV1MinusRequest.md)
  - [eZmaxApi.models.EzsigndocumentMinusGetWordsPositionsMinusV1MinusResponse](docs/EzsigndocumentMinusGetWordsPositionsMinusV1MinusResponse.md)
  - [eZmaxApi.models.EzsigndocumentMinusPatchObjectMinusV1MinusRequest](docs/EzsigndocumentMinusPatchObjectMinusV1MinusRequest.md)
@@ -181,6 +187,7 @@ Class | Method | HTTP request | Description
  - [eZmaxApi.models.EzsigndocumentMinusResponse](docs/EzsigndocumentMinusResponse.md)
  - [eZmaxApi.models.EzsigndocumentMinusResponseCompound](docs/EzsigndocumentMinusResponseCompound.md)
  - [eZmaxApi.models.EzsigndocumentResponseCompoundAllOf](docs/EzsigndocumentResponseCompoundAllOf.md)
+ - [eZmaxApi.models.EzsigndocumentlogMinusResponse](docs/EzsigndocumentlogMinusResponse.md)
  - [eZmaxApi.models.EzsignfolderCreateObjectV1ResponseAllOf](docs/EzsignfolderCreateObjectV1ResponseAllOf.md)
  - [eZmaxApi.models.EzsignfolderGetEzsigndocumentsV1ResponseAllOf](docs/EzsignfolderGetEzsigndocumentsV1ResponseAllOf.md)
  - [eZmaxApi.models.EzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf](docs/EzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf.md)
@@ -270,6 +277,7 @@ Class | Method | HTTP request | Description
  - [eZmaxApi.models.FieldMinusEActivesessionSessiontype](docs/FieldMinusEActivesessionSessiontype.md)
  - [eZmaxApi.models.FieldMinusEActivesessionWeekdaystart](docs/FieldMinusEActivesessionWeekdaystart.md)
  - [eZmaxApi.models.FieldMinusEEzsigndocumentStep](docs/FieldMinusEEzsigndocumentStep.md)
+ - [eZmaxApi.models.FieldMinusEEzsigndocumentlogType](docs/FieldMinusEEzsigndocumentlogType.md)
  - [eZmaxApi.models.FieldMinusEEzsignfolderSendreminderfrequency](docs/FieldMinusEEzsignfolderSendreminderfrequency.md)
  - [eZmaxApi.models.FieldMinusEEzsignfolderStep](docs/FieldMinusEEzsignfolderStep.md)
  - [eZmaxApi.models.FieldMinusEEzsignfoldertypePrivacylevel](docs/FieldMinusEEzsignfoldertypePrivacylevel.md)
@@ -301,14 +309,6 @@ Class | Method | HTTP request | Description
  - [eZmaxApi.models.SsprMinusUnlockAccountMinusV1MinusRequest](docs/SsprMinusUnlockAccountMinusV1MinusRequest.md)
  - [eZmaxApi.models.SsprMinusUnlockAccountRequestMinusV1MinusRequest](docs/SsprMinusUnlockAccountRequestMinusV1MinusRequest.md)
  - [eZmaxApi.models.SsprMinusValidateTokenMinusV1MinusRequest](docs/SsprMinusValidateTokenMinusV1MinusRequest.md)
- - [eZmaxApi.models.UNUSEDMinusEzsigndocumentMinusEditObjectMinusV1MinusRequest](docs/UNUSEDMinusEzsigndocumentMinusEditObjectMinusV1MinusRequest.md)
- - [eZmaxApi.models.UNUSEDMinusEzsigndocumentMinusEditObjectMinusV1MinusResponse](docs/UNUSEDMinusEzsigndocumentMinusEditObjectMinusV1MinusResponse.md)
- - [eZmaxApi.models.UNUSEDMinusEzsignfolderMinusEditObjectMinusV1MinusRequest](docs/UNUSEDMinusEzsignfolderMinusEditObjectMinusV1MinusRequest.md)
- - [eZmaxApi.models.UNUSEDMinusEzsignfolderMinusEditObjectMinusV1MinusResponse](docs/UNUSEDMinusEzsignfolderMinusEditObjectMinusV1MinusResponse.md)
- - [eZmaxApi.models.UNUSEDMinusEzsignfoldersignerassociationMinusEditObjectMinusV1MinusRequest](docs/UNUSEDMinusEzsignfoldersignerassociationMinusEditObjectMinusV1MinusRequest.md)
- - [eZmaxApi.models.UNUSEDMinusEzsignfoldersignerassociationMinusEditObjectMinusV1MinusResponse](docs/UNUSEDMinusEzsignfoldersignerassociationMinusEditObjectMinusV1MinusResponse.md)
- - [eZmaxApi.models.UNUSEDMinusEzsignsignatureMinusEditObjectMinusV1MinusRequest](docs/UNUSEDMinusEzsignsignatureMinusEditObjectMinusV1MinusRequest.md)
- - [eZmaxApi.models.UNUSEDMinusEzsignsignatureMinusEditObjectMinusV1MinusResponse](docs/UNUSEDMinusEzsignsignatureMinusEditObjectMinusV1MinusResponse.md)
  - [eZmaxApi.models.UserCreateEzsignuserV1ResponseAllOf](docs/UserCreateEzsignuserV1ResponseAllOf.md)
  - [eZmaxApi.models.UserMinusCreateEzsignuserMinusV1MinusRequest](docs/UserMinusCreateEzsignuserMinusV1MinusRequest.md)
  - [eZmaxApi.models.UserMinusCreateEzsignuserMinusV1MinusResponse](docs/UserMinusCreateEzsignuserMinusV1MinusResponse.md)

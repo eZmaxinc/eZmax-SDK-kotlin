@@ -66,6 +66,8 @@ Configure Authorization:
 
 Delete an existing Ezsignsignature
 
+
+
 ### Example
 ```kotlin
 // Import classes:
@@ -113,6 +115,8 @@ Configure Authorization:
 > EzsignsignatureMinusEditObjectMinusV1MinusResponse ezsignsignatureEditObjectV1(pkiEzsignsignatureID, ezsignsignatureMinusEditObjectMinusV1MinusRequest)
 
 Edit an existing Ezsignsignature
+
+
 
 ### Example
 ```kotlin

@@ -32,6 +32,7 @@ import com.squareup.moshi.Json
 
 data class EzsigntemplatepackageGetListV1ResponseMPayloadAllOf (
 
+    /*  */
     @Json(name = "a_objEzsigntemplatepackage")
     val aObjEzsigntemplatepackage: kotlin.collections.List<EzsigntemplatepackageMinusListElement>
 

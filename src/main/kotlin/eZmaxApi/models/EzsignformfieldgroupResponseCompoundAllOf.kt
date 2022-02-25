@@ -32,6 +32,7 @@ import com.squareup.moshi.Json
 
 data class EzsignformfieldgroupResponseCompoundAllOf (
 
+    /*  */
     @Json(name = "a_objEzsignformfield")
     val aObjEzsignformfield: kotlin.collections.List<EzsignformfieldMinusResponse>
 

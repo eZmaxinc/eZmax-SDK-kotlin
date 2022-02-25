@@ -34,6 +34,7 @@ import com.squareup.moshi.Json
 
 data class FranchisereferalincomeRequestCompoundAllOf (
 
+    /*  */
     @Json(name = "a_objContact")
     val aObjContact: kotlin.collections.List<ContactMinusRequestCompound>,
 

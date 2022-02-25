@@ -44,15 +44,19 @@ import com.squareup.moshi.Json
 
 data class ContactinformationsMinusRequestCompound (
 
+    /*  */
     @Json(name = "a_objAddress")
     val aObjAddress: kotlin.collections.List<AddressMinusRequest>,
 
+    /*  */
     @Json(name = "a_objPhone")
     val aObjPhone: kotlin.collections.List<PhoneMinusRequest>,
 
+    /*  */
     @Json(name = "a_objEmail")
     val aObjEmail: kotlin.collections.List<EmailMinusRequest>,
 
+    /*  */
     @Json(name = "a_objWebsite")
     val aObjWebsite: kotlin.collections.List<WebsiteMinusRequest>,
 

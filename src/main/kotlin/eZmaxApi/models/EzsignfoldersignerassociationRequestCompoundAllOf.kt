@@ -33,7 +33,7 @@ import com.squareup.moshi.Json
 data class EzsignfoldersignerassociationRequestCompoundAllOf (
 
     @Json(name = "objEzsignsigner")
-    val objEzsignsigner: EzsignsignerMinusRequestCompound? = null
+    val objEzsignsigner: EzsignsignerMinusRequestCompound
 
 )
 

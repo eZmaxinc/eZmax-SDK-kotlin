@@ -5,6 +5,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ezsignbulksendGetListV1**](ObjectEzsignbulksendApi.md#ezsignbulksendGetListV1) | **GET** /1/object/ezsignbulksend/getList | Retrieve Ezsignbulksend list
+[**ezsignbulksendGetObjectV1**](ObjectEzsignbulksendApi.md#ezsignbulksendGetObjectV1) | **GET** /1/object/ezsignbulksend/{pkiEzsignbulksendID} | Retrieve an existing Ezsignbulksend
 
 
 <a name="ezsignbulksendGetListV1"></a>
@@ -52,6 +53,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignbulksendMinusGetListMinusV1MinusResponse**](EzsignbulksendMinusGetListMinusV1MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="ezsignbulksendGetObjectV1"></a>
+# **ezsignbulksendGetObjectV1**
+> EzsignbulksendMinusGetObjectMinusV1MinusResponse ezsignbulksendGetObjectV1(pkiEzsignbulksendID)
+
+Retrieve an existing Ezsignbulksend
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsignbulksendApi()
+val pkiEzsignbulksendID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : EzsignbulksendMinusGetObjectMinusV1MinusResponse = apiInstance.ezsignbulksendGetObjectV1(pkiEzsignbulksendID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsignbulksendApi#ezsignbulksendGetObjectV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsignbulksendApi#ezsignbulksendGetObjectV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignbulksendID** | **kotlin.Int**|  |
+
+### Return type
+
+[**EzsignbulksendMinusGetObjectMinusV1MinusResponse**](EzsignbulksendMinusGetObjectMinusV1MinusResponse.md)
 
 ### Authorization
 

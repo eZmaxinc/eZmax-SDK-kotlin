@@ -52,6 +52,7 @@ data class CustomMinusFormDataDocumentMinusResponse (
     @Json(name = "dtModifiedDate")
     val dtModifiedDate: kotlin.String,
 
+    /*  */
     @Json(name = "a_objFormDataSigner")
     val aObjFormDataSigner: kotlin.collections.List<CustomMinusFormDataSignerMinusResponse>
 

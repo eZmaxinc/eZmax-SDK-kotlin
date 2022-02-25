@@ -20,20 +20,20 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.EzsigndocumentMinusRequest
+import eZmaxApi.models.EzsigndocumentMinusGetTemporaryProofMinusV1MinusResponseMinusMPayload
 
 import com.squareup.moshi.Json
 
 /**
- * Request for the /1/object/ezsigndocument/editObject API Request
+ * 
  *
- * @param objEzsigndocument 
+ * @param mPayload 
  */
 
-data class UNUSEDMinusEzsigndocumentMinusEditObjectMinusV1MinusRequest (
+data class EzsigndocumentGetTemporaryProofV1ResponseAllOf (
 
-    @Json(name = "objEzsigndocument")
-    val objEzsigndocument: EzsigndocumentMinusRequest? = null
+    @Json(name = "mPayload")
+    val mPayload: EzsigndocumentMinusGetTemporaryProofMinusV1MinusResponseMinusMPayload
 
 )
 

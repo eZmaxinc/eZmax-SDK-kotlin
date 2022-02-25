@@ -57,7 +57,12 @@ docs/EzsignbulksendGetListV1Response.md
 docs/EzsignbulksendGetListV1ResponseAllOf.md
 docs/EzsignbulksendGetListV1ResponseMPayload.md
 docs/EzsignbulksendGetListV1ResponseMPayloadAllOf.md
+docs/EzsignbulksendGetObjectV1Response.md
+docs/EzsignbulksendGetObjectV1ResponseAllOf.md
+docs/EzsignbulksendGetObjectV1ResponseMPayload.md
 docs/EzsignbulksendListElement.md
+docs/EzsignbulksendResponse.md
+docs/EzsignbulksendResponseCompound.md
 docs/EzsigndocumentApplyEzsigntemplateV1Request.md
 docs/EzsigndocumentApplyEzsigntemplateV1Response.md
 docs/EzsigndocumentApplyEzsigntemplateV2Request.md
@@ -69,6 +74,7 @@ docs/EzsigndocumentCreateObjectV1ResponseMPayload.md
 docs/EzsigndocumentDeleteObjectV1Response.md
 docs/EzsigndocumentEditEzsignsignaturesV1Request.md
 docs/EzsigndocumentEditEzsignsignaturesV1Response.md
+docs/EzsigndocumentEndPrematurelyV1Response.md
 docs/EzsigndocumentGetDownloadUrlV1Response.md
 docs/EzsigndocumentGetDownloadUrlV1ResponseAllOf.md
 docs/EzsigndocumentGetDownloadUrlV1ResponseMPayload.md
@@ -81,6 +87,9 @@ docs/EzsigndocumentGetFormDataV1ResponseMPayload.md
 docs/EzsigndocumentGetObjectV1Response.md
 docs/EzsigndocumentGetObjectV1ResponseAllOf.md
 docs/EzsigndocumentGetObjectV1ResponseMPayload.md
+docs/EzsigndocumentGetTemporaryProofV1Response.md
+docs/EzsigndocumentGetTemporaryProofV1ResponseAllOf.md
+docs/EzsigndocumentGetTemporaryProofV1ResponseMPayload.md
 docs/EzsigndocumentGetWordsPositionsV1Request.md
 docs/EzsigndocumentGetWordsPositionsV1Response.md
 docs/EzsigndocumentGetWordsPositionsV1ResponseAllOf.md
@@ -92,6 +101,7 @@ docs/EzsigndocumentRequestPatch.md
 docs/EzsigndocumentResponse.md
 docs/EzsigndocumentResponseCompound.md
 docs/EzsigndocumentResponseCompoundAllOf.md
+docs/EzsigndocumentlogResponse.md
 docs/EzsignfolderCreateObjectV1Request.md
 docs/EzsignfolderCreateObjectV1Response.md
 docs/EzsignfolderCreateObjectV1ResponseAllOf.md
@@ -181,6 +191,7 @@ docs/EzsigntemplatepackageListElement.md
 docs/FieldEActivesessionSessiontype.md
 docs/FieldEActivesessionWeekdaystart.md
 docs/FieldEEzsigndocumentStep.md
+docs/FieldEEzsigndocumentlogType.md
 docs/FieldEEzsignfolderSendreminderfrequency.md
 docs/FieldEEzsignfolderStep.md
 docs/FieldEEzsignfoldertypePrivacylevel.md
@@ -207,7 +218,6 @@ docs/ListSaveListpresentationV1Response.md
 docs/ListpresentationRequest.md
 docs/ModuleAuthenticateApi.md
 docs/ModuleListApi.md
-docs/ModuleSsprApi.md
 docs/ModuleUserApi.md
 docs/MultilingualApikeyDescription.md
 docs/ObjectActivesessionApi.md
@@ -230,14 +240,6 @@ docs/SsprSendUsernamesV1Request.md
 docs/SsprUnlockAccountRequestV1Request.md
 docs/SsprUnlockAccountV1Request.md
 docs/SsprValidateTokenV1Request.md
-docs/UNUSEDEzsigndocumentEditObjectV1Request.md
-docs/UNUSEDEzsigndocumentEditObjectV1Response.md
-docs/UNUSEDEzsignfolderEditObjectV1Request.md
-docs/UNUSEDEzsignfolderEditObjectV1Response.md
-docs/UNUSEDEzsignfoldersignerassociationEditObjectV1Request.md
-docs/UNUSEDEzsignfoldersignerassociationEditObjectV1Response.md
-docs/UNUSEDEzsignsignatureEditObjectV1Request.md
-docs/UNUSEDEzsignsignatureEditObjectV1Response.md
 docs/UserCreateEzsignuserV1Request.md
 docs/UserCreateEzsignuserV1Response.md
 docs/UserCreateEzsignuserV1ResponseAllOf.md
@@ -259,7 +261,6 @@ settings.gradle
 src/main/kotlin/eZmaxApi/apis/GlobalCustomerApi.kt
 src/main/kotlin/eZmaxApi/apis/ModuleAuthenticateApi.kt
 src/main/kotlin/eZmaxApi/apis/ModuleListApi.kt
-src/main/kotlin/eZmaxApi/apis/ModuleSsprApi.kt
 src/main/kotlin/eZmaxApi/apis/ModuleUserApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectActivesessionApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectApikeyApi.kt
@@ -344,14 +345,20 @@ src/main/kotlin/eZmaxApi/models/CustomMinusWordPositionWordMinusResponse.kt
 src/main/kotlin/eZmaxApi/models/EmailMinusRequest.kt
 src/main/kotlin/eZmaxApi/models/EzsignbulksendGetListV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsignbulksendGetListV1ResponseMPayloadAllOf.kt
+src/main/kotlin/eZmaxApi/models/EzsignbulksendGetObjectV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsignbulksendMinusGetListMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/EzsignbulksendMinusGetListMinusV1MinusResponseMinusMPayload.kt
+src/main/kotlin/eZmaxApi/models/EzsignbulksendMinusGetObjectMinusV1MinusResponse.kt
+src/main/kotlin/eZmaxApi/models/EzsignbulksendMinusGetObjectMinusV1MinusResponseMinusMPayload.kt
 src/main/kotlin/eZmaxApi/models/EzsignbulksendMinusListElement.kt
+src/main/kotlin/eZmaxApi/models/EzsignbulksendMinusResponse.kt
+src/main/kotlin/eZmaxApi/models/EzsignbulksendMinusResponseCompound.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentCreateObjectV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentGetDownloadUrlV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentGetEzsignpagesV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentGetFormDataV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentGetObjectV1ResponseAllOf.kt
+src/main/kotlin/eZmaxApi/models/EzsigndocumentGetTemporaryProofV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentGetWordsPositionsV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusApplyEzsigntemplateMinusV1MinusRequest.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusApplyEzsigntemplateMinusV1MinusResponse.kt
@@ -363,6 +370,7 @@ src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusCreateObjectMinusV1MinusRespo
 src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusDeleteObjectMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusRequest.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusResponse.kt
+src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusEndPrematurelyMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusGetDownloadUrlMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusGetDownloadUrlMinusV1MinusResponseMinusMPayload.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusGetEzsignpagesMinusV1MinusResponse.kt
@@ -371,6 +379,8 @@ src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusGetFormDataMinusV1MinusRespon
 src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusGetFormDataMinusV1MinusResponseMinusMPayload.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusGetObjectMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusGetObjectMinusV1MinusResponseMinusMPayload.kt
+src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusGetTemporaryProofMinusV1MinusResponse.kt
+src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusGetTemporaryProofMinusV1MinusResponseMinusMPayload.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusGetWordsPositionsMinusV1MinusRequest.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusGetWordsPositionsMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusPatchObjectMinusV1MinusRequest.kt
@@ -381,6 +391,7 @@ src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusRequestPatch.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusResponse.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusResponseCompound.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentResponseCompoundAllOf.kt
+src/main/kotlin/eZmaxApi/models/EzsigndocumentlogMinusResponse.kt
 src/main/kotlin/eZmaxApi/models/EzsignfolderCreateObjectV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsignfolderGetEzsigndocumentsV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf.kt
@@ -470,6 +481,7 @@ src/main/kotlin/eZmaxApi/models/EzsigntemplatepackageMinusListElement.kt
 src/main/kotlin/eZmaxApi/models/FieldMinusEActivesessionSessiontype.kt
 src/main/kotlin/eZmaxApi/models/FieldMinusEActivesessionWeekdaystart.kt
 src/main/kotlin/eZmaxApi/models/FieldMinusEEzsigndocumentStep.kt
+src/main/kotlin/eZmaxApi/models/FieldMinusEEzsigndocumentlogType.kt
 src/main/kotlin/eZmaxApi/models/FieldMinusEEzsignfolderSendreminderfrequency.kt
 src/main/kotlin/eZmaxApi/models/FieldMinusEEzsignfolderStep.kt
 src/main/kotlin/eZmaxApi/models/FieldMinusEEzsignfoldertypePrivacylevel.kt
@@ -501,14 +513,6 @@ src/main/kotlin/eZmaxApi/models/SsprMinusSendUsernamesMinusV1MinusRequest.kt
 src/main/kotlin/eZmaxApi/models/SsprMinusUnlockAccountMinusV1MinusRequest.kt
 src/main/kotlin/eZmaxApi/models/SsprMinusUnlockAccountRequestMinusV1MinusRequest.kt
 src/main/kotlin/eZmaxApi/models/SsprMinusValidateTokenMinusV1MinusRequest.kt
-src/main/kotlin/eZmaxApi/models/UNUSEDMinusEzsigndocumentMinusEditObjectMinusV1MinusRequest.kt
-src/main/kotlin/eZmaxApi/models/UNUSEDMinusEzsigndocumentMinusEditObjectMinusV1MinusResponse.kt
-src/main/kotlin/eZmaxApi/models/UNUSEDMinusEzsignfolderMinusEditObjectMinusV1MinusRequest.kt
-src/main/kotlin/eZmaxApi/models/UNUSEDMinusEzsignfolderMinusEditObjectMinusV1MinusResponse.kt
-src/main/kotlin/eZmaxApi/models/UNUSEDMinusEzsignfoldersignerassociationMinusEditObjectMinusV1MinusRequest.kt
-src/main/kotlin/eZmaxApi/models/UNUSEDMinusEzsignfoldersignerassociationMinusEditObjectMinusV1MinusResponse.kt
-src/main/kotlin/eZmaxApi/models/UNUSEDMinusEzsignsignatureMinusEditObjectMinusV1MinusRequest.kt
-src/main/kotlin/eZmaxApi/models/UNUSEDMinusEzsignsignatureMinusEditObjectMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/UserCreateEzsignuserV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/UserMinusCreateEzsignuserMinusV1MinusRequest.kt
 src/main/kotlin/eZmaxApi/models/UserMinusCreateEzsignuserMinusV1MinusResponse.kt

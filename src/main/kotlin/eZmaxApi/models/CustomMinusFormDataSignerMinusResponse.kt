@@ -48,6 +48,7 @@ data class CustomMinusFormDataSignerMinusResponse (
     @Json(name = "sContactLastname")
     val sContactLastname: kotlin.String,
 
+    /*  */
     @Json(name = "a_objEzsignformfieldgroupCompound")
     val aObjEzsignformfieldgroupCompound: kotlin.collections.List<EzsignformfieldgroupMinusResponseCompound>,
 

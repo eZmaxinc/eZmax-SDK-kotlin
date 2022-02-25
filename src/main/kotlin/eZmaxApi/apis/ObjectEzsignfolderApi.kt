@@ -772,7 +772,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignfolderUnsendV1(pkiEzsignfolderID: kotlin.Int, body: kotlin.String) : EzsignfolderMinusUnsendMinusV1MinusResponse {
+    fun ezsignfolderUnsendV1(pkiEzsignfolderID: kotlin.Int, body: kotlin.Any) : EzsignfolderMinusUnsendMinusV1MinusResponse {
         val localVarResponse = ezsignfolderUnsendV1WithHttpInfo(pkiEzsignfolderID = pkiEzsignfolderID, body = body)
 
         return when (localVarResponse.responseType) {
@@ -801,10 +801,10 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignfolderUnsendV1WithHttpInfo(pkiEzsignfolderID: kotlin.Int, body: kotlin.String) : ApiResponse<EzsignfolderMinusUnsendMinusV1MinusResponse?> {
+    fun ezsignfolderUnsendV1WithHttpInfo(pkiEzsignfolderID: kotlin.Int, body: kotlin.Any) : ApiResponse<EzsignfolderMinusUnsendMinusV1MinusResponse?> {
         val localVariableConfig = ezsignfolderUnsendV1RequestConfig(pkiEzsignfolderID = pkiEzsignfolderID, body = body)
 
-        return request<kotlin.String, EzsignfolderMinusUnsendMinusV1MinusResponse>(
+        return request<kotlin.Any, EzsignfolderMinusUnsendMinusV1MinusResponse>(
             localVariableConfig
         )
     }
@@ -816,7 +816,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
     * @param body  
     * @return RequestConfig
     */
-    fun ezsignfolderUnsendV1RequestConfig(pkiEzsignfolderID: kotlin.Int, body: kotlin.String) : RequestConfig<kotlin.String> {
+    fun ezsignfolderUnsendV1RequestConfig(pkiEzsignfolderID: kotlin.Int, body: kotlin.Any) : RequestConfig<kotlin.Any> {
         val localVariableBody = body
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()

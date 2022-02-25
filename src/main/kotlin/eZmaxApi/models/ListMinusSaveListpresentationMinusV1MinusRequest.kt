@@ -32,6 +32,7 @@ import com.squareup.moshi.Json
 
 data class ListMinusSaveListpresentationMinusV1MinusRequest (
 
+    /*  */
     @Json(name = "a_objListpresentation")
     val aObjListpresentation: kotlin.collections.List<ListpresentationMinusRequest>
 

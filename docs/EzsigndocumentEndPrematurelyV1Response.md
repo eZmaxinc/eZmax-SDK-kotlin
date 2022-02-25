@@ -1,5 +1,5 @@
 
-# UNUSEDMinusEzsignsignatureMinusEditObjectMinusV1MinusResponse
+# EzsigndocumentMinusEndPrematurelyMinusV1MinusResponse
 
 ## Properties
 Name | Type | Description | Notes
