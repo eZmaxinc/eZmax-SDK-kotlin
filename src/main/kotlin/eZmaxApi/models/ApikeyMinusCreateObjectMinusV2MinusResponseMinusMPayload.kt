@@ -20,7 +20,7 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.ApikeyMinusResponse
+import eZmaxApi.models.ApikeyMinusResponseCompound
 
 import com.squareup.moshi.Json
 
@@ -33,7 +33,7 @@ import com.squareup.moshi.Json
 data class ApikeyMinusCreateObjectMinusV2MinusResponseMinusMPayload (
 
     @Json(name = "a_objApikey")
-    val aObjApikey: kotlin.collections.List<ApikeyMinusResponse>
+    val aObjApikey: kotlin.collections.List<ApikeyMinusResponseCompound>
 
 )
 

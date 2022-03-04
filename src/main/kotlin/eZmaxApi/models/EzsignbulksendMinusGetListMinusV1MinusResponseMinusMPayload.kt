@@ -36,7 +36,6 @@ import com.squareup.moshi.Json
 
 data class EzsignbulksendMinusGetListMinusV1MinusResponseMinusMPayload (
 
-    /*  */
     @Json(name = "a_objEzsignbulksend")
     val aObjEzsignbulksend: kotlin.collections.List<EzsignbulksendMinusListElement>,
 

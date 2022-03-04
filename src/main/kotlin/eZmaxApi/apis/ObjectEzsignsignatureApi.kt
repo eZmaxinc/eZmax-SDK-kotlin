@@ -348,7 +348,7 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath) : ApiC
 
     /**
     * Retrieve an existing Ezsignsignature
-    * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+    * 
     * @param pkiEzsignsignatureID  
     * @return EzsignsignatureMinusGetObjectMinusV1MinusResponse
     * @throws IllegalStateException If the request is not correctly configured
@@ -379,7 +379,7 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath) : ApiC
 
     /**
     * Retrieve an existing Ezsignsignature
-    * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+    * 
     * @param pkiEzsignsignatureID  
     * @return ApiResponse<EzsignsignatureMinusGetObjectMinusV1MinusResponse?>
     * @throws IllegalStateException If the request is not correctly configured

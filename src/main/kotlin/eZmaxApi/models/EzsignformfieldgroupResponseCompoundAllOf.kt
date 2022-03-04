@@ -20,7 +20,9 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.EzsignformfieldMinusResponse
+import eZmaxApi.models.CustomMinusDropdownElementMinusResponseCompound
+import eZmaxApi.models.EzsignformfieldMinusResponseCompound
+import eZmaxApi.models.EzsignformfieldgroupsignerMinusResponseCompound
 
 import com.squareup.moshi.Json
 
@@ -28,13 +30,20 @@ import com.squareup.moshi.Json
  * 
  *
  * @param aObjEzsignformfield 
+ * @param aObjEzsignformfieldgroupsigner 
+ * @param aObjDropdownElement 
  */
 
 data class EzsignformfieldgroupResponseCompoundAllOf (
 
-    /*  */
     @Json(name = "a_objEzsignformfield")
-    val aObjEzsignformfield: kotlin.collections.List<EzsignformfieldMinusResponse>
+    val aObjEzsignformfield: kotlin.collections.List<EzsignformfieldMinusResponseCompound>,
+
+    @Json(name = "a_objEzsignformfieldgroupsigner")
+    val aObjEzsignformfieldgroupsigner: EzsignformfieldgroupsignerMinusResponseCompound,
+
+    @Json(name = "a_objDropdownElement")
+    val aObjDropdownElement: kotlin.collections.List<CustomMinusDropdownElementMinusResponseCompound>? = null
 
 )
 

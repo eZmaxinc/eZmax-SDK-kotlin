@@ -20,7 +20,7 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.EzsignformfieldgroupMinusResponseCompound
+import eZmaxApi.models.CustomMinusFormDataEzsignformfieldgroupMinusResponse
 
 import com.squareup.moshi.Json
 
@@ -30,7 +30,7 @@ import com.squareup.moshi.Json
  * @param fkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation
  * @param sContactFirstname The First name of the contact
  * @param sContactLastname The Last name of the contact
- * @param aObjEzsignformfieldgroupCompound 
+ * @param aObjEzsignformfieldgroup 
  * @param fkiUserID The unique ID of the User
  */
 
@@ -48,9 +48,8 @@ data class CustomMinusFormDataSignerMinusResponse (
     @Json(name = "sContactLastname")
     val sContactLastname: kotlin.String,
 
-    /*  */
-    @Json(name = "a_objEzsignformfieldgroupCompound")
-    val aObjEzsignformfieldgroupCompound: kotlin.collections.List<EzsignformfieldgroupMinusResponseCompound>,
+    @Json(name = "a_objEzsignformfieldgroup")
+    val aObjEzsignformfieldgroup: kotlin.collections.List<CustomMinusFormDataEzsignformfieldgroupMinusResponse>,
 
     /* The unique ID of the User */
     @Json(name = "fkiUserID")

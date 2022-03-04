@@ -20,9 +20,9 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.AttemptMinusResponse
+import eZmaxApi.models.AttemptMinusResponseCompound
 import eZmaxApi.models.CommonMinusWebhook
-import eZmaxApi.models.UserMinusResponse
+import eZmaxApi.models.UserMinusResponseCompound
 import eZmaxApi.models.WebhookMinusResponse
 import eZmaxApi.models.WebhookUserUserCreatedAllOf
 
@@ -39,14 +39,14 @@ import com.squareup.moshi.Json
 data class WebhookMinusUserMinusUserCreated (
 
     @Json(name = "objUser")
-    val objUser: UserMinusResponse,
+    val objUser: UserMinusResponseCompound,
 
     @Json(name = "objWebhook")
     val objWebhook: WebhookMinusResponse,
 
     /* An array containing details of previous attempts that were made to deliver the message. The array is empty if it's the first attempt. */
     @Json(name = "a_objAttempt")
-    val aObjAttempt: kotlin.collections.List<AttemptMinusResponse>
+    val aObjAttempt: kotlin.collections.List<AttemptMinusResponseCompound>
 
 )
 

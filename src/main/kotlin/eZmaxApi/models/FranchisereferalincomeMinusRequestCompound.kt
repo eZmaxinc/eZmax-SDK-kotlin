@@ -30,8 +30,6 @@ import com.squareup.moshi.Json
 /**
  * A Franchisereferalincome Object and children to create a complete structure
  *
- * @param objAddress 
- * @param aObjContact 
  * @param fkiFranchisebrokerID The unique ID of the Franchisebroker
  * @param fkiFranchisereferalincomeprogramID The unique ID of the Franchisereferalincomeprogram
  * @param fkiPeriodID The unique ID of the Period
@@ -43,17 +41,12 @@ import com.squareup.moshi.Json
  * @param tFranchisereferalincomeComment Comment about the transaction
  * @param fkiFranchiseofficeID The unique ID of the Franchisereoffice
  * @param sFranchisereferalincomeRemoteid 
+ * @param objAddress 
+ * @param aObjContact 
  * @param pkiFranchisereferalincomeID The unique ID of the Franchisereferalincome
  */
 
 data class FranchisereferalincomeMinusRequestCompound (
-
-    @Json(name = "objAddress")
-    val objAddress: AddressMinusRequest,
-
-    /*  */
-    @Json(name = "a_objContact")
-    val aObjContact: kotlin.collections.List<ContactMinusRequestCompound>,
 
     /* The unique ID of the Franchisebroker */
     @Json(name = "fkiFranchisebrokerID")
@@ -98,6 +91,12 @@ data class FranchisereferalincomeMinusRequestCompound (
     /*  */
     @Json(name = "sFranchisereferalincomeRemoteid")
     val sFranchisereferalincomeRemoteid: kotlin.String,
+
+    @Json(name = "objAddress")
+    val objAddress: AddressMinusRequest,
+
+    @Json(name = "a_objContact")
+    val aObjContact: kotlin.collections.List<ContactMinusRequestCompound>,
 
     /* The unique ID of the Franchisereferalincome */
     @Json(name = "pkiFranchisereferalincomeID")

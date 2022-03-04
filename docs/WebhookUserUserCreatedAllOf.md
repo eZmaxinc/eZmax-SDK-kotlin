@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objUser** | [**UserMinusResponse**](UserMinusResponse.md) |  | 
+**objUser** | [**UserMinusResponseCompound**](UserMinusResponseCompound.md) |  | 
 
 
 

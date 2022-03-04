@@ -20,7 +20,7 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.EzsignpageMinusResponse
+import eZmaxApi.models.EzsignpageMinusResponseCompound
 
 import com.squareup.moshi.Json
 
@@ -32,9 +32,8 @@ import com.squareup.moshi.Json
 
 data class EzsigndocumentMinusGetEzsignpagesMinusV1MinusResponseMinusMPayload (
 
-    /*  */
     @Json(name = "a_objEzsignpage")
-    val aObjEzsignpage: kotlin.collections.List<EzsignpageMinusResponse>
+    val aObjEzsignpage: kotlin.collections.List<EzsignpageMinusResponseCompound>
 
 )
 

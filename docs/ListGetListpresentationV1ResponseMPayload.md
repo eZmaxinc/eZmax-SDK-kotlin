@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjListpresentation** | [**kotlin.collections.List&lt;ListpresentationMinusRequest&gt;**](ListpresentationMinusRequest.md) |  | 
+**aObjListpresentation** | [**kotlin.collections.List&lt;ListpresentationMinusResponseCompound&gt;**](ListpresentationMinusResponseCompound.md) |  | 
 
 
 

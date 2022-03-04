@@ -43,7 +43,6 @@ data class EzsignfolderMinusGetFormsDataMinusV1MinusResponseMinusMPayload (
     @Json(name = "sEzsignfolderDescription")
     val sEzsignfolderDescription: kotlin.String,
 
-    /*  */
     @Json(name = "a_objFormDataDocument")
     val aObjFormDataDocument: kotlin.collections.List<CustomMinusFormDataDocumentMinusResponse>
 

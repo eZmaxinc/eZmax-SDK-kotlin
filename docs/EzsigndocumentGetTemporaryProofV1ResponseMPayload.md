@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjEzsigndocumentlog** | [**EzsigndocumentlogMinusResponse**](EzsigndocumentlogMinusResponse.md) |  | 
+**aObjEzsigndocumentlog** | [**EzsigndocumentlogMinusResponseCompound**](EzsigndocumentlogMinusResponseCompound.md) |  | 
 
 
 

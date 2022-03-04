@@ -20,7 +20,7 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.UserMinusResponse
+import eZmaxApi.models.UserMinusResponseCompound
 
 import com.squareup.moshi.Json
 
@@ -33,7 +33,7 @@ import com.squareup.moshi.Json
 data class WebhookUserUserCreatedAllOf (
 
     @Json(name = "objUser")
-    val objUser: UserMinusResponse
+    val objUser: UserMinusResponseCompound
 
 )
 

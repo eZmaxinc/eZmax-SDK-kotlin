@@ -37,7 +37,6 @@ data class EzsigndocumentMinusApplyEzsigntemplateMinusV1MinusRequest (
     @Json(name = "fkiEzsigntemplateID")
     val fkiEzsigntemplateID: kotlin.Int,
 
-    /*  */
     @Json(name = "a_sEzsigntemplatesigner")
     val aSEzsigntemplatesigner: kotlin.collections.List<kotlin.String>,
 

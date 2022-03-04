@@ -32,7 +32,6 @@ import com.squareup.moshi.Json
 
 data class EzsignfolderMinusGetEzsignfoldersignerassociationsMinusV1MinusResponseMinusMPayload (
 
-    /*  */
     @Json(name = "a_objEzsignfoldersignerassociation")
     val aObjEzsignfoldersignerassociation: kotlin.collections.List<EzsignfoldersignerassociationMinusResponseCompound>
 

@@ -20,7 +20,7 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.ListpresentationMinusRequest
+import eZmaxApi.models.ListpresentationMinusRequestCompound
 
 import com.squareup.moshi.Json
 
@@ -32,9 +32,8 @@ import com.squareup.moshi.Json
 
 data class ListMinusSaveListpresentationMinusV1MinusRequest (
 
-    /*  */
     @Json(name = "a_objListpresentation")
-    val aObjListpresentation: kotlin.collections.List<ListpresentationMinusRequest>
+    val aObjListpresentation: kotlin.collections.List<ListpresentationMinusRequestCompound>
 
 )
 

@@ -20,7 +20,7 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.EzsignsignaturecustomdateMinusRequest
+import eZmaxApi.models.EzsignsignaturecustomdateMinusRequestCompound
 
 import com.squareup.moshi.Json
 
@@ -39,7 +39,7 @@ data class EzsignsignatureRequestCompoundAllOf (
 
     /* An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all. */
     @Json(name = "a_objEzsignsignaturecustomdate")
-    val aObjEzsignsignaturecustomdate: kotlin.collections.List<EzsignsignaturecustomdateMinusRequest>? = null
+    val aObjEzsignsignaturecustomdate: kotlin.collections.List<EzsignsignaturecustomdateMinusRequestCompound>? = null
 
 )
 

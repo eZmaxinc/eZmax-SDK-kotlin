@@ -20,7 +20,7 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.AttemptMinusResponse
+import eZmaxApi.models.AttemptMinusResponseCompound
 import eZmaxApi.models.CommonMinusWebhook
 import eZmaxApi.models.EzsignfolderMinusResponse
 import eZmaxApi.models.WebhookEzsignFolderCompletedAllOf
@@ -46,7 +46,7 @@ data class WebhookMinusEzsignMinusFolderCompleted (
 
     /* An array containing details of previous attempts that were made to deliver the message. The array is empty if it's the first attempt. */
     @Json(name = "a_objAttempt")
-    val aObjAttempt: kotlin.collections.List<AttemptMinusResponse>
+    val aObjAttempt: kotlin.collections.List<AttemptMinusResponseCompound>
 
 )
 

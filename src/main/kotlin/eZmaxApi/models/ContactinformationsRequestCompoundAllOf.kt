@@ -20,10 +20,10 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.AddressMinusRequest
-import eZmaxApi.models.EmailMinusRequest
-import eZmaxApi.models.PhoneMinusRequest
-import eZmaxApi.models.WebsiteMinusRequest
+import eZmaxApi.models.AddressMinusRequestCompound
+import eZmaxApi.models.EmailMinusRequestCompound
+import eZmaxApi.models.PhoneMinusRequestCompound
+import eZmaxApi.models.WebsiteMinusRequestCompound
 
 import com.squareup.moshi.Json
 
@@ -38,21 +38,17 @@ import com.squareup.moshi.Json
 
 data class ContactinformationsRequestCompoundAllOf (
 
-    /*  */
     @Json(name = "a_objAddress")
-    val aObjAddress: kotlin.collections.List<AddressMinusRequest>,
+    val aObjAddress: kotlin.collections.List<AddressMinusRequestCompound>,
 
-    /*  */
     @Json(name = "a_objPhone")
-    val aObjPhone: kotlin.collections.List<PhoneMinusRequest>,
+    val aObjPhone: kotlin.collections.List<PhoneMinusRequestCompound>,
 
-    /*  */
     @Json(name = "a_objEmail")
-    val aObjEmail: kotlin.collections.List<EmailMinusRequest>,
+    val aObjEmail: kotlin.collections.List<EmailMinusRequestCompound>,
 
-    /*  */
     @Json(name = "a_objWebsite")
-    val aObjWebsite: kotlin.collections.List<WebsiteMinusRequest>
+    val aObjWebsite: kotlin.collections.List<WebsiteMinusRequestCompound>
 
 )
 

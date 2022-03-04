@@ -24,22 +24,22 @@ import eZmaxApi.models.CommonMinusResponse
 import eZmaxApi.models.CommonMinusResponseMinusObjDebug
 import eZmaxApi.models.CommonMinusResponseMinusObjDebugPayload
 import eZmaxApi.models.EzsignsignatureGetObjectV1ResponseAllOf
+import eZmaxApi.models.EzsignsignatureMinusGetObjectMinusV1MinusResponseMinusMPayload
 
 import com.squareup.moshi.Json
 
 /**
  * Response for the /1/object/ezsignsignature/getObject API Request
  *
- * @param mPayload Payload for the /1/object/ezsignsignature/getObject API Request
+ * @param mPayload 
  * @param objDebugPayload 
  * @param objDebug 
  */
 
 data class EzsignsignatureMinusGetObjectMinusV1MinusResponse (
 
-    /* Payload for the /1/object/ezsignsignature/getObject API Request */
     @Json(name = "mPayload")
-    val mPayload: kotlin.Any,
+    val mPayload: EzsignsignatureMinusGetObjectMinusV1MinusResponseMinusMPayload,
 
     @Json(name = "objDebugPayload")
     val objDebugPayload: CommonMinusResponseMinusObjDebugPayload? = null,

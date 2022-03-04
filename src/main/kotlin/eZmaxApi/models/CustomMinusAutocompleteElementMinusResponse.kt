@@ -24,7 +24,7 @@ package eZmaxApi.models
 import com.squareup.moshi.Json
 
 /**
- * Generic Autocomplete Response
+ * Generic AutocompleteElement Response
  *
  * @param sCategory The Category for the dropdown or an empty string if not categorized
  * @param sLabel The Description of the element

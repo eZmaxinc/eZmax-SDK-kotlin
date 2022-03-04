@@ -20,7 +20,7 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.EzsigndocumentlogMinusResponse
+import eZmaxApi.models.EzsigndocumentlogMinusResponseCompound
 
 import com.squareup.moshi.Json
 
@@ -33,7 +33,7 @@ import com.squareup.moshi.Json
 data class EzsigndocumentMinusGetTemporaryProofMinusV1MinusResponseMinusMPayload (
 
     @Json(name = "a_objEzsigndocumentlog")
-    val aObjEzsigndocumentlog: EzsigndocumentlogMinusResponse
+    val aObjEzsigndocumentlog: EzsigndocumentlogMinusResponseCompound
 
 )
 

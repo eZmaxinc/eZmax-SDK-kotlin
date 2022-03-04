@@ -4,10 +4,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjAddress** | [**kotlin.collections.List&lt;AddressMinusRequest&gt;**](AddressMinusRequest.md) |  | 
-**aObjPhone** | [**kotlin.collections.List&lt;PhoneMinusRequest&gt;**](PhoneMinusRequest.md) |  | 
-**aObjEmail** | [**kotlin.collections.List&lt;EmailMinusRequest&gt;**](EmailMinusRequest.md) |  | 
-**aObjWebsite** | [**kotlin.collections.List&lt;WebsiteMinusRequest&gt;**](WebsiteMinusRequest.md) |  | 
+**aObjAddress** | [**kotlin.collections.List&lt;AddressMinusRequestCompound&gt;**](AddressMinusRequestCompound.md) |  | 
+**aObjPhone** | [**kotlin.collections.List&lt;PhoneMinusRequestCompound&gt;**](PhoneMinusRequestCompound.md) |  | 
+**aObjEmail** | [**kotlin.collections.List&lt;EmailMinusRequestCompound&gt;**](EmailMinusRequestCompound.md) |  | 
+**aObjWebsite** | [**kotlin.collections.List&lt;WebsiteMinusRequestCompound&gt;**](WebsiteMinusRequestCompound.md) |  | 
 
 
 
