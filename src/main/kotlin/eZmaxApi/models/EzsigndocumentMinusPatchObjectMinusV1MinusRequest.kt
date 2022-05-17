@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -25,7 +25,7 @@ import eZmaxApi.models.EzsigndocumentMinusRequestPatch
 import com.squareup.moshi.Json
 
 /**
- * Request for the /1/object/ezsigndocument/pathObject API Request
+ * Request for PATCH /1/object/ezsigndocument/{pkiEzsigndocumentID}
  *
  * @param objEzsigndocument 
  */

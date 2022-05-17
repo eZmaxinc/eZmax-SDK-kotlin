@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -98,7 +98,7 @@ data class EzsignformfieldgroupMinusResponseCompound (
     val aObjEzsignformfield: kotlin.collections.List<EzsignformfieldMinusResponseCompound>,
 
     @Json(name = "a_objEzsignformfieldgroupsigner")
-    val aObjEzsignformfieldgroupsigner: EzsignformfieldgroupsignerMinusResponseCompound,
+    val aObjEzsignformfieldgroupsigner: kotlin.collections.List<EzsignformfieldgroupsignerMinusResponseCompound>,
 
     /* The maximum length for the value in the Ezsignformfieldgroup  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea** */
     @Json(name = "iEzsignformfieldgroupMaxlength")

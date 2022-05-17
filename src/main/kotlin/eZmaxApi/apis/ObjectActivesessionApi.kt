@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -33,6 +33,7 @@ import eZmaxApi.infrastructure.ClientError
 import eZmaxApi.infrastructure.ServerException
 import eZmaxApi.infrastructure.ServerError
 import eZmaxApi.infrastructure.MultiValueMap
+import eZmaxApi.infrastructure.PartConfig
 import eZmaxApi.infrastructure.RequestConfig
 import eZmaxApi.infrastructure.RequestMethod
 import eZmaxApi.infrastructure.ResponseType
@@ -48,15 +49,15 @@ class ObjectActivesessionApi(basePath: kotlin.String = defaultBasePath) : ApiCli
     }
 
     /**
-    * Get Current Activesession
-    * Retrieve the details about the current activesession
-    * @return ActivesessionMinusGetCurrentMinusV1MinusResponse
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
-    */
+     * Get Current Activesession
+     * Retrieve the details about the current activesession
+     * @return ActivesessionMinusGetCurrentMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun activesessionGetCurrentV1() : ActivesessionMinusGetCurrentMinusV1MinusResponse {
@@ -78,12 +79,12 @@ class ObjectActivesessionApi(basePath: kotlin.String = defaultBasePath) : ApiCli
     }
 
     /**
-    * Get Current Activesession
-    * Retrieve the details about the current activesession
-    * @return ApiResponse<ActivesessionMinusGetCurrentMinusV1MinusResponse?>
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    */
+     * Get Current Activesession
+     * Retrieve the details about the current activesession
+     * @return ApiResponse<ActivesessionMinusGetCurrentMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
     fun activesessionGetCurrentV1WithHttpInfo() : ApiResponse<ActivesessionMinusGetCurrentMinusV1MinusResponse?> {
@@ -95,10 +96,10 @@ class ObjectActivesessionApi(basePath: kotlin.String = defaultBasePath) : ApiCli
     }
 
     /**
-    * To obtain the request config of the operation activesessionGetCurrentV1
-    *
-    * @return RequestConfig
-    */
+     * To obtain the request config of the operation activesessionGetCurrentV1
+     *
+     * @return RequestConfig
+     */
     fun activesessionGetCurrentV1RequestConfig() : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()

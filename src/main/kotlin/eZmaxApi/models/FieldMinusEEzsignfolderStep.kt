@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -26,7 +26,7 @@ import com.squareup.moshi.Json
 /**
  * The signature step of the Ezsignfolder.
  *
- * Values: Unsent,Sent,PartiallySigned,Expired,Completed,Archived
+ * Values: Unsent,Sent,PartiallySigned,Expired,Completed,Archived,Disposed
  */
 
 enum class FieldMinusEEzsignfolderStep(val value: kotlin.String) {
@@ -47,7 +47,10 @@ enum class FieldMinusEEzsignfolderStep(val value: kotlin.String) {
     Completed("Completed"),
 
     @Json(name = "Archived")
-    Archived("Archived");
+    Archived("Archived"),
+
+    @Json(name = "Disposed")
+    Disposed("Disposed");
 
     /**
      * Override toString() to avoid using the enum variable name as the value, and instead use

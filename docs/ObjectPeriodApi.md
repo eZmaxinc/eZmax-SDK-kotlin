@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="periodGetAutocompleteV1"></a>
 # **periodGetAutocompleteV1**
-> CommonMinusGetAutocompleteMinusV1MinusResponse periodGetAutocompleteV1(sSelector, sQuery)
+> CommonMinusGetAutocompleteMinusV1MinusResponse periodGetAutocompleteV1(sSelector, sQuery, acceptLanguage)
 
 Retrieve Periods and IDs
 
@@ -24,8 +24,9 @@ Get the list of Periods to be used in a dropdown or autocomplete control.
 val apiInstance = ObjectPeriodApi()
 val sSelector : kotlin.String = sSelector_example // kotlin.String | The types of Periods to return
 val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter the returned results
+val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
 try {
-    val result : CommonMinusGetAutocompleteMinusV1MinusResponse = apiInstance.periodGetAutocompleteV1(sSelector, sQuery)
+    val result : CommonMinusGetAutocompleteMinusV1MinusResponse = apiInstance.periodGetAutocompleteV1(sSelector, sQuery, acceptLanguage)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectPeriodApi#periodGetAutocompleteV1")
@@ -42,6 +43,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **kotlin.String**| The types of Periods to return | [enum: ActiveNormal, ActiveNormalAndEndOfYear, AllNormal, AllNormalAndEndOfYear]
  **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional]
+ **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
 
 ### Return type
 

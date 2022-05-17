@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="franchisebrokerGetAutocompleteV1"></a>
 # **franchisebrokerGetAutocompleteV1**
-> CommonMinusGetAutocompleteMinusV1MinusResponse franchisebrokerGetAutocompleteV1(sSelector, sQuery)
+> CommonMinusGetAutocompleteMinusV1MinusResponse franchisebrokerGetAutocompleteV1(sSelector, sQuery, acceptLanguage)
 
 Retrieve Franchisebrokers and IDs
 
@@ -24,8 +24,9 @@ Get the list of Franchisebrokers to be used in a dropdown or autocomplete contro
 val apiInstance = ObjectFranchisebrokerApi()
 val sSelector : kotlin.String = sSelector_example // kotlin.String | The type of Franchisebrokers to return
 val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter the returned results
+val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
 try {
-    val result : CommonMinusGetAutocompleteMinusV1MinusResponse = apiInstance.franchisebrokerGetAutocompleteV1(sSelector, sQuery)
+    val result : CommonMinusGetAutocompleteMinusV1MinusResponse = apiInstance.franchisebrokerGetAutocompleteV1(sSelector, sQuery, acceptLanguage)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectFranchisebrokerApi#franchisebrokerGetAutocompleteV1")
@@ -42,6 +43,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **kotlin.String**| The type of Franchisebrokers to return | [enum: Active, All]
  **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional]
+ **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
 
 ### Return type
 

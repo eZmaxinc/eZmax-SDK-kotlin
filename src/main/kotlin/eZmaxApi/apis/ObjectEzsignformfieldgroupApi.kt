@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -39,6 +39,7 @@ import eZmaxApi.infrastructure.ClientError
 import eZmaxApi.infrastructure.ServerException
 import eZmaxApi.infrastructure.ServerError
 import eZmaxApi.infrastructure.MultiValueMap
+import eZmaxApi.infrastructure.PartConfig
 import eZmaxApi.infrastructure.RequestConfig
 import eZmaxApi.infrastructure.RequestMethod
 import eZmaxApi.infrastructure.ResponseType
@@ -54,16 +55,16 @@ class ObjectEzsignformfieldgroupApi(basePath: kotlin.String = defaultBasePath) :
     }
 
     /**
-    * Create a new Ezsignformfieldgroup
-    * The endpoint allows to create one or many elements at once.
-    * @param ezsignformfieldgroupMinusCreateObjectMinusV1MinusRequest  
-    * @return EzsignformfieldgroupMinusCreateObjectMinusV1MinusResponse
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
-    */
+     * Create a new Ezsignformfieldgroup
+     * The endpoint allows to create one or many elements at once.
+     * @param ezsignformfieldgroupMinusCreateObjectMinusV1MinusRequest 
+     * @return EzsignformfieldgroupMinusCreateObjectMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ezsignformfieldgroupCreateObjectV1(ezsignformfieldgroupMinusCreateObjectMinusV1MinusRequest: EzsignformfieldgroupMinusCreateObjectMinusV1MinusRequest) : EzsignformfieldgroupMinusCreateObjectMinusV1MinusResponse {
@@ -85,13 +86,13 @@ class ObjectEzsignformfieldgroupApi(basePath: kotlin.String = defaultBasePath) :
     }
 
     /**
-    * Create a new Ezsignformfieldgroup
-    * The endpoint allows to create one or many elements at once.
-    * @param ezsignformfieldgroupMinusCreateObjectMinusV1MinusRequest  
-    * @return ApiResponse<EzsignformfieldgroupMinusCreateObjectMinusV1MinusResponse?>
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    */
+     * Create a new Ezsignformfieldgroup
+     * The endpoint allows to create one or many elements at once.
+     * @param ezsignformfieldgroupMinusCreateObjectMinusV1MinusRequest 
+     * @return ApiResponse<EzsignformfieldgroupMinusCreateObjectMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
     fun ezsignformfieldgroupCreateObjectV1WithHttpInfo(ezsignformfieldgroupMinusCreateObjectMinusV1MinusRequest: EzsignformfieldgroupMinusCreateObjectMinusV1MinusRequest) : ApiResponse<EzsignformfieldgroupMinusCreateObjectMinusV1MinusResponse?> {
@@ -103,11 +104,11 @@ class ObjectEzsignformfieldgroupApi(basePath: kotlin.String = defaultBasePath) :
     }
 
     /**
-    * To obtain the request config of the operation ezsignformfieldgroupCreateObjectV1
-    *
-    * @param ezsignformfieldgroupMinusCreateObjectMinusV1MinusRequest  
-    * @return RequestConfig
-    */
+     * To obtain the request config of the operation ezsignformfieldgroupCreateObjectV1
+     *
+     * @param ezsignformfieldgroupMinusCreateObjectMinusV1MinusRequest 
+     * @return RequestConfig
+     */
     fun ezsignformfieldgroupCreateObjectV1RequestConfig(ezsignformfieldgroupMinusCreateObjectMinusV1MinusRequest: EzsignformfieldgroupMinusCreateObjectMinusV1MinusRequest) : RequestConfig<EzsignformfieldgroupMinusCreateObjectMinusV1MinusRequest> {
         val localVariableBody = ezsignformfieldgroupMinusCreateObjectMinusV1MinusRequest
         val localVariableQuery: MultiValueMap = mutableMapOf()
@@ -125,16 +126,16 @@ class ObjectEzsignformfieldgroupApi(basePath: kotlin.String = defaultBasePath) :
     }
 
     /**
-    * Delete an existing Ezsignformfieldgroup
-    * 
-    * @param pkiEzsignformfieldgroupID  
-    * @return EzsignformfieldgroupMinusDeleteObjectMinusV1MinusResponse
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
-    */
+     * Delete an existing Ezsignformfieldgroup
+     * 
+     * @param pkiEzsignformfieldgroupID 
+     * @return EzsignformfieldgroupMinusDeleteObjectMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ezsignformfieldgroupDeleteObjectV1(pkiEzsignformfieldgroupID: kotlin.Int) : EzsignformfieldgroupMinusDeleteObjectMinusV1MinusResponse {
@@ -156,13 +157,13 @@ class ObjectEzsignformfieldgroupApi(basePath: kotlin.String = defaultBasePath) :
     }
 
     /**
-    * Delete an existing Ezsignformfieldgroup
-    * 
-    * @param pkiEzsignformfieldgroupID  
-    * @return ApiResponse<EzsignformfieldgroupMinusDeleteObjectMinusV1MinusResponse?>
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    */
+     * Delete an existing Ezsignformfieldgroup
+     * 
+     * @param pkiEzsignformfieldgroupID 
+     * @return ApiResponse<EzsignformfieldgroupMinusDeleteObjectMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
     fun ezsignformfieldgroupDeleteObjectV1WithHttpInfo(pkiEzsignformfieldgroupID: kotlin.Int) : ApiResponse<EzsignformfieldgroupMinusDeleteObjectMinusV1MinusResponse?> {
@@ -174,11 +175,11 @@ class ObjectEzsignformfieldgroupApi(basePath: kotlin.String = defaultBasePath) :
     }
 
     /**
-    * To obtain the request config of the operation ezsignformfieldgroupDeleteObjectV1
-    *
-    * @param pkiEzsignformfieldgroupID  
-    * @return RequestConfig
-    */
+     * To obtain the request config of the operation ezsignformfieldgroupDeleteObjectV1
+     *
+     * @param pkiEzsignformfieldgroupID 
+     * @return RequestConfig
+     */
     fun ezsignformfieldgroupDeleteObjectV1RequestConfig(pkiEzsignformfieldgroupID: kotlin.Int) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
@@ -195,17 +196,17 @@ class ObjectEzsignformfieldgroupApi(basePath: kotlin.String = defaultBasePath) :
     }
 
     /**
-    * Edit an existing Ezsignformfieldgroup
-    * 
-    * @param pkiEzsignformfieldgroupID  
-    * @param ezsignformfieldgroupMinusEditObjectMinusV1MinusRequest  
-    * @return EzsignformfieldgroupMinusEditObjectMinusV1MinusResponse
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
-    */
+     * Edit an existing Ezsignformfieldgroup
+     * 
+     * @param pkiEzsignformfieldgroupID 
+     * @param ezsignformfieldgroupMinusEditObjectMinusV1MinusRequest 
+     * @return EzsignformfieldgroupMinusEditObjectMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ezsignformfieldgroupEditObjectV1(pkiEzsignformfieldgroupID: kotlin.Int, ezsignformfieldgroupMinusEditObjectMinusV1MinusRequest: EzsignformfieldgroupMinusEditObjectMinusV1MinusRequest) : EzsignformfieldgroupMinusEditObjectMinusV1MinusResponse {
@@ -227,14 +228,14 @@ class ObjectEzsignformfieldgroupApi(basePath: kotlin.String = defaultBasePath) :
     }
 
     /**
-    * Edit an existing Ezsignformfieldgroup
-    * 
-    * @param pkiEzsignformfieldgroupID  
-    * @param ezsignformfieldgroupMinusEditObjectMinusV1MinusRequest  
-    * @return ApiResponse<EzsignformfieldgroupMinusEditObjectMinusV1MinusResponse?>
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    */
+     * Edit an existing Ezsignformfieldgroup
+     * 
+     * @param pkiEzsignformfieldgroupID 
+     * @param ezsignformfieldgroupMinusEditObjectMinusV1MinusRequest 
+     * @return ApiResponse<EzsignformfieldgroupMinusEditObjectMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
     fun ezsignformfieldgroupEditObjectV1WithHttpInfo(pkiEzsignformfieldgroupID: kotlin.Int, ezsignformfieldgroupMinusEditObjectMinusV1MinusRequest: EzsignformfieldgroupMinusEditObjectMinusV1MinusRequest) : ApiResponse<EzsignformfieldgroupMinusEditObjectMinusV1MinusResponse?> {
@@ -246,12 +247,12 @@ class ObjectEzsignformfieldgroupApi(basePath: kotlin.String = defaultBasePath) :
     }
 
     /**
-    * To obtain the request config of the operation ezsignformfieldgroupEditObjectV1
-    *
-    * @param pkiEzsignformfieldgroupID  
-    * @param ezsignformfieldgroupMinusEditObjectMinusV1MinusRequest  
-    * @return RequestConfig
-    */
+     * To obtain the request config of the operation ezsignformfieldgroupEditObjectV1
+     *
+     * @param pkiEzsignformfieldgroupID 
+     * @param ezsignformfieldgroupMinusEditObjectMinusV1MinusRequest 
+     * @return RequestConfig
+     */
     fun ezsignformfieldgroupEditObjectV1RequestConfig(pkiEzsignformfieldgroupID: kotlin.Int, ezsignformfieldgroupMinusEditObjectMinusV1MinusRequest: EzsignformfieldgroupMinusEditObjectMinusV1MinusRequest) : RequestConfig<EzsignformfieldgroupMinusEditObjectMinusV1MinusRequest> {
         val localVariableBody = ezsignformfieldgroupMinusEditObjectMinusV1MinusRequest
         val localVariableQuery: MultiValueMap = mutableMapOf()
@@ -269,16 +270,16 @@ class ObjectEzsignformfieldgroupApi(basePath: kotlin.String = defaultBasePath) :
     }
 
     /**
-    * Retrieve an existing Ezsignformfieldgroup
-    * 
-    * @param pkiEzsignformfieldgroupID  
-    * @return EzsignformfieldgroupMinusGetObjectMinusV1MinusResponse
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
-    */
+     * Retrieve an existing Ezsignformfieldgroup
+     * 
+     * @param pkiEzsignformfieldgroupID 
+     * @return EzsignformfieldgroupMinusGetObjectMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ezsignformfieldgroupGetObjectV1(pkiEzsignformfieldgroupID: kotlin.Int) : EzsignformfieldgroupMinusGetObjectMinusV1MinusResponse {
@@ -300,13 +301,13 @@ class ObjectEzsignformfieldgroupApi(basePath: kotlin.String = defaultBasePath) :
     }
 
     /**
-    * Retrieve an existing Ezsignformfieldgroup
-    * 
-    * @param pkiEzsignformfieldgroupID  
-    * @return ApiResponse<EzsignformfieldgroupMinusGetObjectMinusV1MinusResponse?>
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    */
+     * Retrieve an existing Ezsignformfieldgroup
+     * 
+     * @param pkiEzsignformfieldgroupID 
+     * @return ApiResponse<EzsignformfieldgroupMinusGetObjectMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
     fun ezsignformfieldgroupGetObjectV1WithHttpInfo(pkiEzsignformfieldgroupID: kotlin.Int) : ApiResponse<EzsignformfieldgroupMinusGetObjectMinusV1MinusResponse?> {
@@ -318,11 +319,11 @@ class ObjectEzsignformfieldgroupApi(basePath: kotlin.String = defaultBasePath) :
     }
 
     /**
-    * To obtain the request config of the operation ezsignformfieldgroupGetObjectV1
-    *
-    * @param pkiEzsignformfieldgroupID  
-    * @return RequestConfig
-    */
+     * To obtain the request config of the operation ezsignformfieldgroupGetObjectV1
+     *
+     * @param pkiEzsignformfieldgroupID 
+     * @return RequestConfig
+     */
     fun ezsignformfieldgroupGetObjectV1RequestConfig(pkiEzsignformfieldgroupID: kotlin.Int) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()

@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -25,7 +25,7 @@ import eZmaxApi.models.EzsignformfieldgroupMinusResponseCompound
 import com.squareup.moshi.Json
 
 /**
- * Payload for the /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignformfieldgroups API Request
+ * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignformfieldgroups
  *
  * @param aObjEzsignformfieldgroup 
  */
@@ -33,7 +33,7 @@ import com.squareup.moshi.Json
 data class EzsigndocumentMinusGetEzsignformfieldgroupsMinusV1MinusResponseMinusMPayload (
 
     @Json(name = "a_objEzsignformfieldgroup")
-    val aObjEzsignformfieldgroup: kotlin.collections.List<EzsignformfieldgroupMinusResponseCompound>? = null
+    val aObjEzsignformfieldgroup: kotlin.collections.List<EzsignformfieldgroupMinusResponseCompound>
 
 )
 

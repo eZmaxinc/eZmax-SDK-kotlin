@@ -4,8 +4,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**sApikeyDescription1** | **kotlin.String** | Value in French |  [optional]
-**sApikeyDescription2** | **kotlin.String** | Value in English |  [optional]
+**sApikeyDescription1** | **kotlin.String** | The description of the Apikey in French |  [optional]
+**sApikeyDescription2** | **kotlin.String** | The description of the Apikey in English |  [optional]
 
 
 

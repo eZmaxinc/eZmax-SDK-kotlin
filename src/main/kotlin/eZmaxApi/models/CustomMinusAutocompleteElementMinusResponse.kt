@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -28,6 +28,7 @@ import com.squareup.moshi.Json
  *
  * @param sCategory The Category for the dropdown or an empty string if not categorized
  * @param sLabel The Description of the element
+ * @param sValue The Unique ID of the element
  * @param mValue The Unique ID of the element
  */
 
@@ -42,8 +43,13 @@ data class CustomMinusAutocompleteElementMinusResponse (
     val sLabel: kotlin.String,
 
     /* The Unique ID of the element */
+    @Json(name = "sValue")
+    val sValue: kotlin.String,
+
+    /* The Unique ID of the element */
     @Json(name = "mValue")
-    val mValue: kotlin.String
+    @Deprecated(message = "This property is deprecated.")
+    val mValue: kotlin.String? = null
 
 )
 

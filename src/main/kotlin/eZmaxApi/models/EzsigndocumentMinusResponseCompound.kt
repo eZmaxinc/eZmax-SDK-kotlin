@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -45,6 +45,7 @@ import com.squareup.moshi.Json
  * @param iEzsigndocumentSignaturetotal The number of total signatures that were requested in the Ezsigndocument.
  * @param sEzsigndocumentMD5initial MD5 Hash of the initial PDF Document before signatures were applied to it.
  * @param sEzsigndocumentMD5signed MD5 Hash of the final PDF Document after all signatures were applied to it.
+ * @param bEzsigndocumentEzsignform If the Ezsigndocument contains an Ezsignform or not
  * @param objAudit 
  * @param iEzsigndocumentStepformtotal The total number of steps in the form filling phase
  * @param iEzsigndocumentStepformcurrent The current step in the form filling phase
@@ -109,6 +110,10 @@ data class EzsigndocumentMinusResponseCompound (
     /* MD5 Hash of the final PDF Document after all signatures were applied to it. */
     @Json(name = "sEzsigndocumentMD5signed")
     val sEzsigndocumentMD5signed: kotlin.String,
+
+    /* If the Ezsigndocument contains an Ezsignform or not */
+    @Json(name = "bEzsigndocumentEzsignform")
+    val bEzsigndocumentEzsignform: kotlin.Boolean,
 
     @Json(name = "objAudit")
     val objAudit: CommonMinusAudit,

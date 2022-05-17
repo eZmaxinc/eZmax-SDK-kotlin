@@ -4,18 +4,125 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**ezsignfolderArchiveV1**](ObjectEzsignfolderApi.md#ezsignfolderArchiveV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/archive | Archive the Ezsignfolder
+[**ezsignfolderBatchDownloadV1**](ObjectEzsignfolderApi.md#ezsignfolderBatchDownloadV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/batchDownload | Download multiples files from an Ezsignfolder
 [**ezsignfolderCreateObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderCreateObjectV1) | **POST** /1/object/ezsignfolder | Create a new Ezsignfolder
 [**ezsignfolderCreateObjectV2**](ObjectEzsignfolderApi.md#ezsignfolderCreateObjectV2) | **POST** /2/object/ezsignfolder | Create a new Ezsignfolder
 [**ezsignfolderDeleteObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderDeleteObjectV1) | **DELETE** /1/object/ezsignfolder/{pkiEzsignfolderID} | Delete an existing Ezsignfolder
 [**ezsignfolderEditObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderEditObjectV1) | **PUT** /1/object/ezsignfolder/{pkiEzsignfolderID} | Edit an existing Ezsignfolder
+[**ezsignfolderGetActionableElementsV1**](ObjectEzsignfolderApi.md#ezsignfolderGetActionableElementsV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements | Retrieve actionable elements for the Ezsignfolder
 [**ezsignfolderGetEzsigndocumentsV1**](ObjectEzsignfolderApi.md#ezsignfolderGetEzsigndocumentsV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
 [**ezsignfolderGetEzsignfoldersignerassociationsV1**](ObjectEzsignfolderApi.md#ezsignfolderGetEzsignfoldersignerassociationsV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations | Retrieve an existing Ezsignfolder&#39;s Ezsignfoldersignerassociations
 [**ezsignfolderGetFormsDataV1**](ObjectEzsignfolderApi.md#ezsignfolderGetFormsDataV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData | Retrieve an existing Ezsignfolder&#39;s forms data
 [**ezsignfolderGetListV1**](ObjectEzsignfolderApi.md#ezsignfolderGetListV1) | **GET** /1/object/ezsignfolder/getList | Retrieve Ezsignfolder list
 [**ezsignfolderGetObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderGetObjectV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID} | Retrieve an existing Ezsignfolder
+[**ezsignfolderImportEzsigntemplatepackageV1**](ObjectEzsignfolderApi.md#ezsignfolderImportEzsigntemplatepackageV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage | Import an Ezsigntemplatepackage in the Ezsignfolder.
+[**ezsignfolderReorderV1**](ObjectEzsignfolderApi.md#ezsignfolderReorderV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/reorder | Reorder Ezsigndocuments in the Ezsignfolder
 [**ezsignfolderSendV1**](ObjectEzsignfolderApi.md#ezsignfolderSendV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/send | Send the Ezsignfolder to the signatories for signature
 [**ezsignfolderUnsendV1**](ObjectEzsignfolderApi.md#ezsignfolderUnsendV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/unsend | Unsend the Ezsignfolder
 
+
+<a name="ezsignfolderArchiveV1"></a>
+# **ezsignfolderArchiveV1**
+> EzsignfolderMinusArchiveMinusV1MinusResponse ezsignfolderArchiveV1(pkiEzsignfolderID, body)
+
+Archive the Ezsignfolder
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsignfolderApi()
+val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
+val body : kotlin.Any = Object // kotlin.Any | 
+try {
+    val result : EzsignfolderMinusArchiveMinusV1MinusResponse = apiInstance.ezsignfolderArchiveV1(pkiEzsignfolderID, body)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsignfolderApi#ezsignfolderArchiveV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsignfolderApi#ezsignfolderArchiveV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **kotlin.Int**|  |
+ **body** | **kotlin.Any**|  |
+
+### Return type
+
+[**EzsignfolderMinusArchiveMinusV1MinusResponse**](EzsignfolderMinusArchiveMinusV1MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="ezsignfolderBatchDownloadV1"></a>
+# **ezsignfolderBatchDownloadV1**
+> java.io.File ezsignfolderBatchDownloadV1(pkiEzsignfolderID, ezsignfolderMinusBatchDownloadMinusV1MinusRequest)
+
+Download multiples files from an Ezsignfolder
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsignfolderApi()
+val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
+val ezsignfolderMinusBatchDownloadMinusV1MinusRequest : EzsignfolderMinusBatchDownloadMinusV1MinusRequest =  // EzsignfolderMinusBatchDownloadMinusV1MinusRequest | 
+try {
+    val result : java.io.File = apiInstance.ezsignfolderBatchDownloadV1(pkiEzsignfolderID, ezsignfolderMinusBatchDownloadMinusV1MinusRequest)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsignfolderApi#ezsignfolderBatchDownloadV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsignfolderApi#ezsignfolderBatchDownloadV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **kotlin.Int**|  |
+ **ezsignfolderMinusBatchDownloadMinusV1MinusRequest** | [**EzsignfolderMinusBatchDownloadMinusV1MinusRequest**](EzsignfolderMinusBatchDownloadMinusV1MinusRequest.md)|  |
+
+### Return type
+
+[**java.io.File**](java.io.File.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 <a name="ezsignfolderCreateObjectV1"></a>
 # **ezsignfolderCreateObjectV1**
@@ -123,8 +230,6 @@ Configure Authorization:
 
 Delete an existing Ezsignfolder
 
-
-
 ### Example
 ```kotlin
 // Import classes:
@@ -217,6 +322,56 @@ Configure Authorization:
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="ezsignfolderGetActionableElementsV1"></a>
+# **ezsignfolderGetActionableElementsV1**
+> EzsignfolderMinusGetActionableElementsMinusV1MinusResponse ezsignfolderGetActionableElementsV1(pkiEzsignfolderID)
+
+Retrieve actionable elements for the Ezsignfolder
+
+Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsignfolderApi()
+val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : EzsignfolderMinusGetActionableElementsMinusV1MinusResponse = apiInstance.ezsignfolderGetActionableElementsV1(pkiEzsignfolderID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsignfolderApi#ezsignfolderGetActionableElementsV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsignfolderApi#ezsignfolderGetActionableElementsV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **kotlin.Int**|  |
+
+### Return type
+
+[**EzsignfolderMinusGetActionableElementsMinusV1MinusResponse**](EzsignfolderMinusGetActionableElementsMinusV1MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="ezsignfolderGetEzsigndocumentsV1"></a>
@@ -375,7 +530,7 @@ Configure Authorization:
 
 Retrieve Ezsignfolder list
 
-Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived | | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
 
 ### Example
 ```kotlin
@@ -433,8 +588,6 @@ Configure Authorization:
 
 Retrieve an existing Ezsignfolder
 
-
-
 ### Example
 ```kotlin
 // Import classes:
@@ -475,6 +628,108 @@ Configure Authorization:
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="ezsignfolderImportEzsigntemplatepackageV1"></a>
+# **ezsignfolderImportEzsigntemplatepackageV1**
+> EzsignfolderMinusImportEzsigntemplatepackageMinusV1MinusResponse ezsignfolderImportEzsigntemplatepackageV1(pkiEzsignfolderID, ezsignfolderMinusImportEzsigntemplatepackageMinusV1MinusRequest)
+
+Import an Ezsigntemplatepackage in the Ezsignfolder.
+
+This endpoint imports all of the Ezsigntemplates from the Ezsigntemplatepackage into the Ezsignfolder as Ezsigndocuments.  This allows to automatically apply all the Ezsigntemplateformfieldgroups and Ezsigntemplatesignatures on the newly created Ezsigndocuments in a single step.
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsignfolderApi()
+val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
+val ezsignfolderMinusImportEzsigntemplatepackageMinusV1MinusRequest : EzsignfolderMinusImportEzsigntemplatepackageMinusV1MinusRequest =  // EzsignfolderMinusImportEzsigntemplatepackageMinusV1MinusRequest | 
+try {
+    val result : EzsignfolderMinusImportEzsigntemplatepackageMinusV1MinusResponse = apiInstance.ezsignfolderImportEzsigntemplatepackageV1(pkiEzsignfolderID, ezsignfolderMinusImportEzsigntemplatepackageMinusV1MinusRequest)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsignfolderApi#ezsignfolderImportEzsigntemplatepackageV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsignfolderApi#ezsignfolderImportEzsigntemplatepackageV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **kotlin.Int**|  |
+ **ezsignfolderMinusImportEzsigntemplatepackageMinusV1MinusRequest** | [**EzsignfolderMinusImportEzsigntemplatepackageMinusV1MinusRequest**](EzsignfolderMinusImportEzsigntemplatepackageMinusV1MinusRequest.md)|  |
+
+### Return type
+
+[**EzsignfolderMinusImportEzsigntemplatepackageMinusV1MinusResponse**](EzsignfolderMinusImportEzsigntemplatepackageMinusV1MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="ezsignfolderReorderV1"></a>
+# **ezsignfolderReorderV1**
+> EzsignfolderMinusReorderMinusV1MinusResponse ezsignfolderReorderV1(pkiEzsignfolderID, ezsignfolderMinusReorderMinusV1MinusRequest)
+
+Reorder Ezsigndocuments in the Ezsignfolder
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsignfolderApi()
+val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
+val ezsignfolderMinusReorderMinusV1MinusRequest : EzsignfolderMinusReorderMinusV1MinusRequest =  // EzsignfolderMinusReorderMinusV1MinusRequest | 
+try {
+    val result : EzsignfolderMinusReorderMinusV1MinusResponse = apiInstance.ezsignfolderReorderV1(pkiEzsignfolderID, ezsignfolderMinusReorderMinusV1MinusRequest)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsignfolderApi#ezsignfolderReorderV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsignfolderApi#ezsignfolderReorderV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **kotlin.Int**|  |
+ **ezsignfolderMinusReorderMinusV1MinusRequest** | [**EzsignfolderMinusReorderMinusV1MinusRequest**](EzsignfolderMinusReorderMinusV1MinusRequest.md)|  |
+
+### Return type
+
+[**EzsignfolderMinusReorderMinusV1MinusResponse**](EzsignfolderMinusReorderMinusV1MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="ezsignfolderSendV1"></a>

@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -24,7 +24,7 @@ package eZmaxApi.models
 import com.squareup.moshi.Json
 
 /**
- * Payload for the /2/object/ezsignfoldersignerassociation/createObject API Request
+ * Payload for POST /2/object/ezsignfoldersignerassociation
  *
  * @param aPkiEzsignfoldersignerassociationID An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request.
  */

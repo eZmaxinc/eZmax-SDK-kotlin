@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -31,6 +31,8 @@ import eZmaxApi.models.EzsignsignatureMinusDeleteObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsignsignatureMinusEditObjectMinusV1MinusRequest
 import eZmaxApi.models.EzsignsignatureMinusEditObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsignsignatureMinusGetObjectMinusV1MinusResponse
+import eZmaxApi.models.EzsignsignatureMinusSignMinusV1MinusRequest
+import eZmaxApi.models.EzsignsignatureMinusSignMinusV1MinusResponse
 
 import com.squareup.moshi.Json
 
@@ -41,6 +43,7 @@ import eZmaxApi.infrastructure.ClientError
 import eZmaxApi.infrastructure.ServerException
 import eZmaxApi.infrastructure.ServerError
 import eZmaxApi.infrastructure.MultiValueMap
+import eZmaxApi.infrastructure.PartConfig
 import eZmaxApi.infrastructure.RequestConfig
 import eZmaxApi.infrastructure.RequestMethod
 import eZmaxApi.infrastructure.ResponseType
@@ -56,16 +59,16 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath) : ApiC
     }
 
     /**
-    * Create a new Ezsignsignature
-    * The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
-    * @param ezsignsignatureMinusCreateObjectMinusV1MinusRequest  
-    * @return EzsignsignatureMinusCreateObjectMinusV1MinusResponse
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
-    */
+     * Create a new Ezsignsignature
+     * The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
+     * @param ezsignsignatureMinusCreateObjectMinusV1MinusRequest 
+     * @return EzsignsignatureMinusCreateObjectMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     @Deprecated(message = "This operation is deprecated.")
@@ -89,13 +92,13 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath) : ApiC
     }
 
     /**
-    * Create a new Ezsignsignature
-    * The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
-    * @param ezsignsignatureMinusCreateObjectMinusV1MinusRequest  
-    * @return ApiResponse<EzsignsignatureMinusCreateObjectMinusV1MinusResponse?>
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    */
+     * Create a new Ezsignsignature
+     * The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
+     * @param ezsignsignatureMinusCreateObjectMinusV1MinusRequest 
+     * @return ApiResponse<EzsignsignatureMinusCreateObjectMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
     @Deprecated(message = "This operation is deprecated.")
@@ -109,11 +112,11 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath) : ApiC
     }
 
     /**
-    * To obtain the request config of the operation ezsignsignatureCreateObjectV1
-    *
-    * @param ezsignsignatureMinusCreateObjectMinusV1MinusRequest  
-    * @return RequestConfig
-    */
+     * To obtain the request config of the operation ezsignsignatureCreateObjectV1
+     *
+     * @param ezsignsignatureMinusCreateObjectMinusV1MinusRequest 
+     * @return RequestConfig
+     */
     @Deprecated(message = "This operation is deprecated.")
     fun ezsignsignatureCreateObjectV1RequestConfig(ezsignsignatureMinusCreateObjectMinusV1MinusRequest: kotlin.collections.List<EzsignsignatureMinusCreateObjectMinusV1MinusRequest>) : RequestConfig<kotlin.collections.List<EzsignsignatureMinusCreateObjectMinusV1MinusRequest>> {
         val localVariableBody = ezsignsignatureMinusCreateObjectMinusV1MinusRequest
@@ -132,16 +135,16 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath) : ApiC
     }
 
     /**
-    * Create a new Ezsignsignature
-    * The endpoint allows to create one or many elements at once.
-    * @param ezsignsignatureMinusCreateObjectMinusV2MinusRequest  
-    * @return EzsignsignatureMinusCreateObjectMinusV2MinusResponse
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
-    */
+     * Create a new Ezsignsignature
+     * The endpoint allows to create one or many elements at once.
+     * @param ezsignsignatureMinusCreateObjectMinusV2MinusRequest 
+     * @return EzsignsignatureMinusCreateObjectMinusV2MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ezsignsignatureCreateObjectV2(ezsignsignatureMinusCreateObjectMinusV2MinusRequest: EzsignsignatureMinusCreateObjectMinusV2MinusRequest) : EzsignsignatureMinusCreateObjectMinusV2MinusResponse {
@@ -163,13 +166,13 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath) : ApiC
     }
 
     /**
-    * Create a new Ezsignsignature
-    * The endpoint allows to create one or many elements at once.
-    * @param ezsignsignatureMinusCreateObjectMinusV2MinusRequest  
-    * @return ApiResponse<EzsignsignatureMinusCreateObjectMinusV2MinusResponse?>
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    */
+     * Create a new Ezsignsignature
+     * The endpoint allows to create one or many elements at once.
+     * @param ezsignsignatureMinusCreateObjectMinusV2MinusRequest 
+     * @return ApiResponse<EzsignsignatureMinusCreateObjectMinusV2MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
     fun ezsignsignatureCreateObjectV2WithHttpInfo(ezsignsignatureMinusCreateObjectMinusV2MinusRequest: EzsignsignatureMinusCreateObjectMinusV2MinusRequest) : ApiResponse<EzsignsignatureMinusCreateObjectMinusV2MinusResponse?> {
@@ -181,11 +184,11 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath) : ApiC
     }
 
     /**
-    * To obtain the request config of the operation ezsignsignatureCreateObjectV2
-    *
-    * @param ezsignsignatureMinusCreateObjectMinusV2MinusRequest  
-    * @return RequestConfig
-    */
+     * To obtain the request config of the operation ezsignsignatureCreateObjectV2
+     *
+     * @param ezsignsignatureMinusCreateObjectMinusV2MinusRequest 
+     * @return RequestConfig
+     */
     fun ezsignsignatureCreateObjectV2RequestConfig(ezsignsignatureMinusCreateObjectMinusV2MinusRequest: EzsignsignatureMinusCreateObjectMinusV2MinusRequest) : RequestConfig<EzsignsignatureMinusCreateObjectMinusV2MinusRequest> {
         val localVariableBody = ezsignsignatureMinusCreateObjectMinusV2MinusRequest
         val localVariableQuery: MultiValueMap = mutableMapOf()
@@ -203,16 +206,16 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath) : ApiC
     }
 
     /**
-    * Delete an existing Ezsignsignature
-    * 
-    * @param pkiEzsignsignatureID  
-    * @return EzsignsignatureMinusDeleteObjectMinusV1MinusResponse
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
-    */
+     * Delete an existing Ezsignsignature
+     * 
+     * @param pkiEzsignsignatureID 
+     * @return EzsignsignatureMinusDeleteObjectMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ezsignsignatureDeleteObjectV1(pkiEzsignsignatureID: kotlin.Int) : EzsignsignatureMinusDeleteObjectMinusV1MinusResponse {
@@ -234,13 +237,13 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath) : ApiC
     }
 
     /**
-    * Delete an existing Ezsignsignature
-    * 
-    * @param pkiEzsignsignatureID  
-    * @return ApiResponse<EzsignsignatureMinusDeleteObjectMinusV1MinusResponse?>
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    */
+     * Delete an existing Ezsignsignature
+     * 
+     * @param pkiEzsignsignatureID 
+     * @return ApiResponse<EzsignsignatureMinusDeleteObjectMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
     fun ezsignsignatureDeleteObjectV1WithHttpInfo(pkiEzsignsignatureID: kotlin.Int) : ApiResponse<EzsignsignatureMinusDeleteObjectMinusV1MinusResponse?> {
@@ -252,11 +255,11 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath) : ApiC
     }
 
     /**
-    * To obtain the request config of the operation ezsignsignatureDeleteObjectV1
-    *
-    * @param pkiEzsignsignatureID  
-    * @return RequestConfig
-    */
+     * To obtain the request config of the operation ezsignsignatureDeleteObjectV1
+     *
+     * @param pkiEzsignsignatureID 
+     * @return RequestConfig
+     */
     fun ezsignsignatureDeleteObjectV1RequestConfig(pkiEzsignsignatureID: kotlin.Int) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
@@ -273,17 +276,17 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath) : ApiC
     }
 
     /**
-    * Edit an existing Ezsignsignature
-    * 
-    * @param pkiEzsignsignatureID  
-    * @param ezsignsignatureMinusEditObjectMinusV1MinusRequest  
-    * @return EzsignsignatureMinusEditObjectMinusV1MinusResponse
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
-    */
+     * Edit an existing Ezsignsignature
+     * 
+     * @param pkiEzsignsignatureID 
+     * @param ezsignsignatureMinusEditObjectMinusV1MinusRequest 
+     * @return EzsignsignatureMinusEditObjectMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ezsignsignatureEditObjectV1(pkiEzsignsignatureID: kotlin.Int, ezsignsignatureMinusEditObjectMinusV1MinusRequest: EzsignsignatureMinusEditObjectMinusV1MinusRequest) : EzsignsignatureMinusEditObjectMinusV1MinusResponse {
@@ -305,14 +308,14 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath) : ApiC
     }
 
     /**
-    * Edit an existing Ezsignsignature
-    * 
-    * @param pkiEzsignsignatureID  
-    * @param ezsignsignatureMinusEditObjectMinusV1MinusRequest  
-    * @return ApiResponse<EzsignsignatureMinusEditObjectMinusV1MinusResponse?>
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    */
+     * Edit an existing Ezsignsignature
+     * 
+     * @param pkiEzsignsignatureID 
+     * @param ezsignsignatureMinusEditObjectMinusV1MinusRequest 
+     * @return ApiResponse<EzsignsignatureMinusEditObjectMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
     fun ezsignsignatureEditObjectV1WithHttpInfo(pkiEzsignsignatureID: kotlin.Int, ezsignsignatureMinusEditObjectMinusV1MinusRequest: EzsignsignatureMinusEditObjectMinusV1MinusRequest) : ApiResponse<EzsignsignatureMinusEditObjectMinusV1MinusResponse?> {
@@ -324,12 +327,12 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath) : ApiC
     }
 
     /**
-    * To obtain the request config of the operation ezsignsignatureEditObjectV1
-    *
-    * @param pkiEzsignsignatureID  
-    * @param ezsignsignatureMinusEditObjectMinusV1MinusRequest  
-    * @return RequestConfig
-    */
+     * To obtain the request config of the operation ezsignsignatureEditObjectV1
+     *
+     * @param pkiEzsignsignatureID 
+     * @param ezsignsignatureMinusEditObjectMinusV1MinusRequest 
+     * @return RequestConfig
+     */
     fun ezsignsignatureEditObjectV1RequestConfig(pkiEzsignsignatureID: kotlin.Int, ezsignsignatureMinusEditObjectMinusV1MinusRequest: EzsignsignatureMinusEditObjectMinusV1MinusRequest) : RequestConfig<EzsignsignatureMinusEditObjectMinusV1MinusRequest> {
         val localVariableBody = ezsignsignatureMinusEditObjectMinusV1MinusRequest
         val localVariableQuery: MultiValueMap = mutableMapOf()
@@ -347,16 +350,16 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath) : ApiC
     }
 
     /**
-    * Retrieve an existing Ezsignsignature
-    * 
-    * @param pkiEzsignsignatureID  
-    * @return EzsignsignatureMinusGetObjectMinusV1MinusResponse
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
-    */
+     * Retrieve an existing Ezsignsignature
+     * 
+     * @param pkiEzsignsignatureID 
+     * @return EzsignsignatureMinusGetObjectMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ezsignsignatureGetObjectV1(pkiEzsignsignatureID: kotlin.Int) : EzsignsignatureMinusGetObjectMinusV1MinusResponse {
@@ -378,13 +381,13 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath) : ApiC
     }
 
     /**
-    * Retrieve an existing Ezsignsignature
-    * 
-    * @param pkiEzsignsignatureID  
-    * @return ApiResponse<EzsignsignatureMinusGetObjectMinusV1MinusResponse?>
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    */
+     * Retrieve an existing Ezsignsignature
+     * 
+     * @param pkiEzsignsignatureID 
+     * @return ApiResponse<EzsignsignatureMinusGetObjectMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
     fun ezsignsignatureGetObjectV1WithHttpInfo(pkiEzsignsignatureID: kotlin.Int) : ApiResponse<EzsignsignatureMinusGetObjectMinusV1MinusResponse?> {
@@ -396,11 +399,11 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath) : ApiC
     }
 
     /**
-    * To obtain the request config of the operation ezsignsignatureGetObjectV1
-    *
-    * @param pkiEzsignsignatureID  
-    * @return RequestConfig
-    */
+     * To obtain the request config of the operation ezsignsignatureGetObjectV1
+     *
+     * @param pkiEzsignsignatureID 
+     * @return RequestConfig
+     */
     fun ezsignsignatureGetObjectV1RequestConfig(pkiEzsignsignatureID: kotlin.Int) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
@@ -410,6 +413,80 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath) : ApiC
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/ezsignsignature/{pkiEzsignsignatureID}".replace("{"+"pkiEzsignsignatureID"+"}", "$pkiEzsignsignatureID"),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Sign the Ezsignsignature
+     * 
+     * @param pkiEzsignsignatureID 
+     * @param ezsignsignatureMinusSignMinusV1MinusRequest 
+     * @return EzsignsignatureMinusSignMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignsignatureSignV1(pkiEzsignsignatureID: kotlin.Int, ezsignsignatureMinusSignMinusV1MinusRequest: EzsignsignatureMinusSignMinusV1MinusRequest) : EzsignsignatureMinusSignMinusV1MinusResponse {
+        val localVarResponse = ezsignsignatureSignV1WithHttpInfo(pkiEzsignsignatureID = pkiEzsignsignatureID, ezsignsignatureMinusSignMinusV1MinusRequest = ezsignsignatureMinusSignMinusV1MinusRequest)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignsignatureMinusSignMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Sign the Ezsignsignature
+     * 
+     * @param pkiEzsignsignatureID 
+     * @param ezsignsignatureMinusSignMinusV1MinusRequest 
+     * @return ApiResponse<EzsignsignatureMinusSignMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignsignatureSignV1WithHttpInfo(pkiEzsignsignatureID: kotlin.Int, ezsignsignatureMinusSignMinusV1MinusRequest: EzsignsignatureMinusSignMinusV1MinusRequest) : ApiResponse<EzsignsignatureMinusSignMinusV1MinusResponse?> {
+        val localVariableConfig = ezsignsignatureSignV1RequestConfig(pkiEzsignsignatureID = pkiEzsignsignatureID, ezsignsignatureMinusSignMinusV1MinusRequest = ezsignsignatureMinusSignMinusV1MinusRequest)
+
+        return request<EzsignsignatureMinusSignMinusV1MinusRequest, EzsignsignatureMinusSignMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsignsignatureSignV1
+     *
+     * @param pkiEzsignsignatureID 
+     * @param ezsignsignatureMinusSignMinusV1MinusRequest 
+     * @return RequestConfig
+     */
+    fun ezsignsignatureSignV1RequestConfig(pkiEzsignsignatureID: kotlin.Int, ezsignsignatureMinusSignMinusV1MinusRequest: EzsignsignatureMinusSignMinusV1MinusRequest) : RequestConfig<EzsignsignatureMinusSignMinusV1MinusRequest> {
+        val localVariableBody = ezsignsignatureMinusSignMinusV1MinusRequest
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/ezsignsignature/{pkiEzsignsignatureID}/sign".replace("{"+"pkiEzsignsignatureID"+"}", "$pkiEzsignsignatureID"),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

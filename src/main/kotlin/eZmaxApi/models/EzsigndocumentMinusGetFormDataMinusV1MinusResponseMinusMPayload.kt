@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -21,40 +21,19 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.CustomMinusFormDataDocumentMinusResponse
-import eZmaxApi.models.CustomMinusFormDataSignerMinusResponse
 
 import com.squareup.moshi.Json
 
 /**
- * Payload for the /1/object/ezsigndocument/{pkiEzsigndocument}/getFormData API Request
+ * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getFormData
  *
- * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument
- * @param fkiEzsignfolderID The unique ID of the Ezsignfolder
- * @param sEzsigndocumentName The name of the document that will be presented to Ezsignfoldersignerassociations
- * @param dtModifiedDate The date and time at which the object was last modified
- * @param aObjFormDataSigner 
+ * @param objFormDataDocument 
  */
 
 data class EzsigndocumentMinusGetFormDataMinusV1MinusResponseMinusMPayload (
 
-    /* The unique ID of the Ezsigndocument */
-    @Json(name = "pkiEzsigndocumentID")
-    val pkiEzsigndocumentID: kotlin.Int,
-
-    /* The unique ID of the Ezsignfolder */
-    @Json(name = "fkiEzsignfolderID")
-    val fkiEzsignfolderID: kotlin.Int,
-
-    /* The name of the document that will be presented to Ezsignfoldersignerassociations */
-    @Json(name = "sEzsigndocumentName")
-    val sEzsigndocumentName: kotlin.String,
-
-    /* The date and time at which the object was last modified */
-    @Json(name = "dtModifiedDate")
-    val dtModifiedDate: kotlin.String,
-
-    @Json(name = "a_objFormDataSigner")
-    val aObjFormDataSigner: kotlin.collections.List<CustomMinusFormDataSignerMinusResponse>
+    @Json(name = "objFormDataDocument")
+    val objFormDataDocument: CustomMinusFormDataDocumentMinusResponse
 
 )
 

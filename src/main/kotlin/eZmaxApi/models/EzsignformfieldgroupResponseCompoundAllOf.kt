@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -40,7 +40,7 @@ data class EzsignformfieldgroupResponseCompoundAllOf (
     val aObjEzsignformfield: kotlin.collections.List<EzsignformfieldMinusResponseCompound>,
 
     @Json(name = "a_objEzsignformfieldgroupsigner")
-    val aObjEzsignformfieldgroupsigner: EzsignformfieldgroupsignerMinusResponseCompound,
+    val aObjEzsignformfieldgroupsigner: kotlin.collections.List<EzsignformfieldgroupsignerMinusResponseCompound>,
 
     @Json(name = "a_objDropdownElement")
     val aObjDropdownElement: kotlin.collections.List<CustomMinusDropdownElementMinusResponseCompound>? = null

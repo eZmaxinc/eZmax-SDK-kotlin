@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -25,7 +25,7 @@ import eZmaxApi.models.ApikeyMinusResponseCompound
 import com.squareup.moshi.Json
 
 /**
- * Payload for the /2/object/apikey/createObject API Request
+ * Payload for POST /2/object/apikey
  *
  * @param aObjApikey 
  */

@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -26,7 +26,7 @@ import com.squareup.moshi.Json
 /**
  * The location of the tooltip relative to the Ezsignformfieldgroup's location.
  *
- * Values: TopLeft,TopCenter,TopRight,MiddleLeft,MiddleCenter,MiddleRight,BottomLeft,BottomCenter,BottomRight
+ * Values: TopLeft,TopCenter,TopRight,MiddleLeft,MiddleRight,BottomLeft,BottomCenter,BottomRight
  */
 
 enum class FieldMinusEEzsignformfieldgroupTooltipposition(val value: kotlin.String) {
@@ -42,9 +42,6 @@ enum class FieldMinusEEzsignformfieldgroupTooltipposition(val value: kotlin.Stri
 
     @Json(name = "MiddleLeft")
     MiddleLeft("MiddleLeft"),
-
-    @Json(name = "MiddleCenter")
-    MiddleCenter("MiddleCenter"),
 
     @Json(name = "MiddleRight")
     MiddleRight("MiddleRight"),

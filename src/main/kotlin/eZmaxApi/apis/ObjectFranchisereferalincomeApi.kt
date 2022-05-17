@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -36,6 +36,7 @@ import eZmaxApi.infrastructure.ClientError
 import eZmaxApi.infrastructure.ServerException
 import eZmaxApi.infrastructure.ServerError
 import eZmaxApi.infrastructure.MultiValueMap
+import eZmaxApi.infrastructure.PartConfig
 import eZmaxApi.infrastructure.RequestConfig
 import eZmaxApi.infrastructure.RequestMethod
 import eZmaxApi.infrastructure.ResponseType
@@ -51,16 +52,16 @@ class ObjectFranchisereferalincomeApi(basePath: kotlin.String = defaultBasePath)
     }
 
     /**
-    * Create a new Franchisereferalincome
-    * The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
-    * @param franchisereferalincomeMinusCreateObjectMinusV1MinusRequest  
-    * @return FranchisereferalincomeMinusCreateObjectMinusV1MinusResponse
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
-    */
+     * Create a new Franchisereferalincome
+     * The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
+     * @param franchisereferalincomeMinusCreateObjectMinusV1MinusRequest 
+     * @return FranchisereferalincomeMinusCreateObjectMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     @Deprecated(message = "This operation is deprecated.")
@@ -84,13 +85,13 @@ class ObjectFranchisereferalincomeApi(basePath: kotlin.String = defaultBasePath)
     }
 
     /**
-    * Create a new Franchisereferalincome
-    * The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
-    * @param franchisereferalincomeMinusCreateObjectMinusV1MinusRequest  
-    * @return ApiResponse<FranchisereferalincomeMinusCreateObjectMinusV1MinusResponse?>
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    */
+     * Create a new Franchisereferalincome
+     * The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
+     * @param franchisereferalincomeMinusCreateObjectMinusV1MinusRequest 
+     * @return ApiResponse<FranchisereferalincomeMinusCreateObjectMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
     @Deprecated(message = "This operation is deprecated.")
@@ -104,11 +105,11 @@ class ObjectFranchisereferalincomeApi(basePath: kotlin.String = defaultBasePath)
     }
 
     /**
-    * To obtain the request config of the operation franchisereferalincomeCreateObjectV1
-    *
-    * @param franchisereferalincomeMinusCreateObjectMinusV1MinusRequest  
-    * @return RequestConfig
-    */
+     * To obtain the request config of the operation franchisereferalincomeCreateObjectV1
+     *
+     * @param franchisereferalincomeMinusCreateObjectMinusV1MinusRequest 
+     * @return RequestConfig
+     */
     @Deprecated(message = "This operation is deprecated.")
     fun franchisereferalincomeCreateObjectV1RequestConfig(franchisereferalincomeMinusCreateObjectMinusV1MinusRequest: kotlin.collections.List<FranchisereferalincomeMinusCreateObjectMinusV1MinusRequest>) : RequestConfig<kotlin.collections.List<FranchisereferalincomeMinusCreateObjectMinusV1MinusRequest>> {
         val localVariableBody = franchisereferalincomeMinusCreateObjectMinusV1MinusRequest
@@ -127,16 +128,16 @@ class ObjectFranchisereferalincomeApi(basePath: kotlin.String = defaultBasePath)
     }
 
     /**
-    * Create a new Franchisereferalincome
-    * The endpoint allows to create one or many elements at once.
-    * @param franchisereferalincomeMinusCreateObjectMinusV2MinusRequest  
-    * @return FranchisereferalincomeMinusCreateObjectMinusV2MinusResponse
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
-    */
+     * Create a new Franchisereferalincome
+     * The endpoint allows to create one or many elements at once.
+     * @param franchisereferalincomeMinusCreateObjectMinusV2MinusRequest 
+     * @return FranchisereferalincomeMinusCreateObjectMinusV2MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun franchisereferalincomeCreateObjectV2(franchisereferalincomeMinusCreateObjectMinusV2MinusRequest: FranchisereferalincomeMinusCreateObjectMinusV2MinusRequest) : FranchisereferalincomeMinusCreateObjectMinusV2MinusResponse {
@@ -158,13 +159,13 @@ class ObjectFranchisereferalincomeApi(basePath: kotlin.String = defaultBasePath)
     }
 
     /**
-    * Create a new Franchisereferalincome
-    * The endpoint allows to create one or many elements at once.
-    * @param franchisereferalincomeMinusCreateObjectMinusV2MinusRequest  
-    * @return ApiResponse<FranchisereferalincomeMinusCreateObjectMinusV2MinusResponse?>
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    */
+     * Create a new Franchisereferalincome
+     * The endpoint allows to create one or many elements at once.
+     * @param franchisereferalincomeMinusCreateObjectMinusV2MinusRequest 
+     * @return ApiResponse<FranchisereferalincomeMinusCreateObjectMinusV2MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
     fun franchisereferalincomeCreateObjectV2WithHttpInfo(franchisereferalincomeMinusCreateObjectMinusV2MinusRequest: FranchisereferalincomeMinusCreateObjectMinusV2MinusRequest) : ApiResponse<FranchisereferalincomeMinusCreateObjectMinusV2MinusResponse?> {
@@ -176,11 +177,11 @@ class ObjectFranchisereferalincomeApi(basePath: kotlin.String = defaultBasePath)
     }
 
     /**
-    * To obtain the request config of the operation franchisereferalincomeCreateObjectV2
-    *
-    * @param franchisereferalincomeMinusCreateObjectMinusV2MinusRequest  
-    * @return RequestConfig
-    */
+     * To obtain the request config of the operation franchisereferalincomeCreateObjectV2
+     *
+     * @param franchisereferalincomeMinusCreateObjectMinusV2MinusRequest 
+     * @return RequestConfig
+     */
     fun franchisereferalincomeCreateObjectV2RequestConfig(franchisereferalincomeMinusCreateObjectMinusV2MinusRequest: FranchisereferalincomeMinusCreateObjectMinusV2MinusRequest) : RequestConfig<FranchisereferalincomeMinusCreateObjectMinusV2MinusRequest> {
         val localVariableBody = franchisereferalincomeMinusCreateObjectMinusV2MinusRequest
         val localVariableQuery: MultiValueMap = mutableMapOf()

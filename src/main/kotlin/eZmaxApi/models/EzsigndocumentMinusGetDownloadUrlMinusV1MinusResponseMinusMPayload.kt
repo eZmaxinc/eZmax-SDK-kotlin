@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -24,7 +24,7 @@ package eZmaxApi.models
 import com.squareup.moshi.Json
 
 /**
- * Payload for the /1/object/ezsigndocument/{pkiEzsigndocument}/getDownloadUrl API Request
+ * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getDownloadUrl
  *
  * @param sDownloadUrl The Url to the requested document.  Url will expire after 5 minutes.
  */

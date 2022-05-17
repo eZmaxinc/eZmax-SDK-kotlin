@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -25,7 +25,7 @@ import eZmaxApi.models.EzsignsignatureMinusResponseCompound
 import com.squareup.moshi.Json
 
 /**
- * Payload for the /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignsignatures API Request
+ * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignsignatures
  *
  * @param aObjEzsignsignature 
  */
@@ -33,7 +33,7 @@ import com.squareup.moshi.Json
 data class EzsigndocumentMinusGetEzsignsignaturesMinusV1MinusResponseMinusMPayload (
 
     @Json(name = "a_objEzsignsignature")
-    val aObjEzsignsignature: kotlin.collections.List<EzsignsignatureMinusResponseCompound>? = null
+    val aObjEzsignsignature: kotlin.collections.List<EzsignsignatureMinusResponseCompound>
 
 )
 

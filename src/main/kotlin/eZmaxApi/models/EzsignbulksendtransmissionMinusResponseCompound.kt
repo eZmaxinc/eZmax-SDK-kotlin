@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -21,7 +21,9 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.CommonMinusAudit
+import eZmaxApi.models.CustomMinusEzsignfoldertransmissionMinusResponse
 import eZmaxApi.models.EzsignbulksendtransmissionMinusResponse
+import eZmaxApi.models.EzsignbulksendtransmissionResponseCompoundAllOf
 
 import com.squareup.moshi.Json
 
@@ -33,6 +35,7 @@ import com.squareup.moshi.Json
  * @param sEzsignbulksendtransmissionDescription The description of the Ezsignbulksendtransmission
  * @param iEzsignbulksendtransmissionErrors The number of errors during the Ezsignbulksendtransmission
  * @param objAudit 
+ * @param aObjEzsignfoldertransmission 
  */
 
 data class EzsignbulksendtransmissionMinusResponseCompound (
@@ -54,7 +57,10 @@ data class EzsignbulksendtransmissionMinusResponseCompound (
     val iEzsignbulksendtransmissionErrors: kotlin.Int,
 
     @Json(name = "objAudit")
-    val objAudit: CommonMinusAudit
+    val objAudit: CommonMinusAudit,
+
+    @Json(name = "a_objEzsignfoldertransmission")
+    val aObjEzsignfoldertransmission: kotlin.collections.List<CustomMinusEzsignfoldertransmissionMinusResponse>
 
 )
 

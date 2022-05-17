@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -28,7 +28,7 @@ import eZmaxApi.models.FieldMinusEEzsignfolderStep
 import com.squareup.moshi.Json
 
 /**
- * Payload for the /1/object/ezsignfolder/getObject API Request
+ * Payload for GET /1/object/ezsignfolder/{pkiEzsignfolderID}
  *
  * @param pkiEzsignfolderID The unique ID of the Ezsignfolder
  * @param fkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
@@ -40,13 +40,13 @@ import com.squareup.moshi.Json
  * @param sEzsignfolderDescription The description of the Ezsignfolder
  * @param tEzsignfolderNote Note about the Ezsignfolder
  * @param eEzsignfolderSendreminderfrequency 
- * @param dtEzsignfolderDuedate The maximum date and time at which the Ezsignfolder can be signed.
- * @param dtEzsignfolderSentdate The date and time at which the Ezsign folder was sent the last time.
  * @param dtEzsignfolderScheduledarchive The scheduled date and time at which the Ezsignfolder should be archived.
  * @param dtEzsignfolderScheduleddestruction The scheduled date and time at which the Ezsignfolder should be Destroyed.
  * @param eEzsignfolderStep 
  * @param dtEzsignfolderClose The date and time at which the folder was closed. Either by applying the last signature or by completing it prematurely.
  * @param objAudit 
+ * @param dtEzsignfolderDuedate The maximum date and time at which the Ezsignfolder can be signed.
+ * @param dtEzsignfolderSentdate The date and time at which the Ezsign folder was sent the last time.
  */
 
 data class EzsignfolderMinusGetObjectMinusV1MinusResponseMinusMPayload (
@@ -90,14 +90,6 @@ data class EzsignfolderMinusGetObjectMinusV1MinusResponseMinusMPayload (
     @Json(name = "eEzsignfolderSendreminderfrequency")
     val eEzsignfolderSendreminderfrequency: FieldMinusEEzsignfolderSendreminderfrequency,
 
-    /* The maximum date and time at which the Ezsignfolder can be signed. */
-    @Json(name = "dtEzsignfolderDuedate")
-    val dtEzsignfolderDuedate: kotlin.String,
-
-    /* The date and time at which the Ezsign folder was sent the last time. */
-    @Json(name = "dtEzsignfolderSentdate")
-    val dtEzsignfolderSentdate: kotlin.String?,
-
     /* The scheduled date and time at which the Ezsignfolder should be archived. */
     @Json(name = "dtEzsignfolderScheduledarchive")
     val dtEzsignfolderScheduledarchive: kotlin.String,
@@ -114,7 +106,15 @@ data class EzsignfolderMinusGetObjectMinusV1MinusResponseMinusMPayload (
     val dtEzsignfolderClose: kotlin.String,
 
     @Json(name = "objAudit")
-    val objAudit: CommonMinusAudit
+    val objAudit: CommonMinusAudit,
+
+    /* The maximum date and time at which the Ezsignfolder can be signed. */
+    @Json(name = "dtEzsignfolderDuedate")
+    val dtEzsignfolderDuedate: kotlin.String? = null,
+
+    /* The date and time at which the Ezsign folder was sent the last time. */
+    @Json(name = "dtEzsignfolderSentdate")
+    val dtEzsignfolderSentdate: kotlin.String? = null
 
 )
 

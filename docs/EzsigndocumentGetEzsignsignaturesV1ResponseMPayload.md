@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjEzsignsignature** | [**kotlin.collections.List&lt;EzsignsignatureMinusResponseCompound&gt;**](EzsignsignatureMinusResponseCompound.md) |  |  [optional]
+**aObjEzsignsignature** | [**kotlin.collections.List&lt;EzsignsignatureMinusResponseCompound&gt;**](EzsignsignatureMinusResponseCompound.md) |  | 
 
 
 

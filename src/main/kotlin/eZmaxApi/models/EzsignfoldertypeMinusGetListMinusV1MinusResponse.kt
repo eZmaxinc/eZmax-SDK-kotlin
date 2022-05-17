@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -29,7 +29,7 @@ import eZmaxApi.models.EzsignfoldertypeMinusGetListMinusV1MinusResponseMinusMPay
 import com.squareup.moshi.Json
 
 /**
- * Response for the /1/object/ezsignfoldertype/getList API Request
+ * Response for GET /1/object/ezsignfoldertype/getList
  *
  * @param mPayload 
  * @param objDebugPayload 

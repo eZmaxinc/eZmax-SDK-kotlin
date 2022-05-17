@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -27,25 +27,17 @@ import com.squareup.moshi.Json
 /**
  * An Ezsigndocumentlog Object
  *
- * @param fkiUserID The unique ID of the User
- * @param fkiEzsignsignerID The unique ID of the Ezsignsigner
  * @param dtEzsigndocumentlogDatetime The date and time at which the event was logged
  * @param eEzsigndocumentlogType 
  * @param sEzsigndocumentlogDetail The detail of the Ezsigndocumentlog
  * @param sEzsigndocumentlogLastname The last name of the User or Ezsignsigner
  * @param sEzsigndocumentlogFirstname The first name of the User or Ezsignsigner
  * @param sEzsigndocumentlogIP Represent an IP address.
+ * @param fkiUserID The unique ID of the User
+ * @param fkiEzsignsignerID The unique ID of the Ezsignsigner
  */
 
 data class EzsigndocumentlogMinusResponse (
-
-    /* The unique ID of the User */
-    @Json(name = "fkiUserID")
-    val fkiUserID: kotlin.Int?,
-
-    /* The unique ID of the Ezsignsigner */
-    @Json(name = "fkiEzsignsignerID")
-    val fkiEzsignsignerID: kotlin.Int?,
 
     /* The date and time at which the event was logged */
     @Json(name = "dtEzsigndocumentlogDatetime")
@@ -68,7 +60,15 @@ data class EzsigndocumentlogMinusResponse (
 
     /* Represent an IP address. */
     @Json(name = "sEzsigndocumentlogIP")
-    val sEzsigndocumentlogIP: kotlin.String
+    val sEzsigndocumentlogIP: kotlin.String,
+
+    /* The unique ID of the User */
+    @Json(name = "fkiUserID")
+    val fkiUserID: kotlin.Int? = null,
+
+    /* The unique ID of the Ezsignsigner */
+    @Json(name = "fkiEzsignsignerID")
+    val fkiEzsignsignerID: kotlin.Int? = null
 
 )
 

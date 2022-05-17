@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -23,17 +23,23 @@ package eZmaxApi.models
 import eZmaxApi.models.CommonMinusResponse
 import eZmaxApi.models.CommonMinusResponseMinusObjDebug
 import eZmaxApi.models.CommonMinusResponseMinusObjDebugPayload
+import eZmaxApi.models.EzsigndocumentEditEzsignsignaturesV1ResponseAllOf
+import eZmaxApi.models.EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusResponseMinusMPayload
 
 import com.squareup.moshi.Json
 
 /**
- * Response for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures API Request
+ * Response for PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures
  *
+ * @param mPayload 
  * @param objDebugPayload 
  * @param objDebug 
  */
 
 data class EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusResponse (
+
+    @Json(name = "mPayload")
+    val mPayload: EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusResponseMinusMPayload,
 
     @Json(name = "objDebugPayload")
     val objDebugPayload: CommonMinusResponseMinusObjDebugPayload? = null,

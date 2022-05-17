@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -26,16 +26,22 @@ import com.squareup.moshi.Json
 /**
  * A webhook object
  *
+ * @param pksCustomerCode The customer code assigned to your account
  * @param pkiWebhookID The Webhook ID. This value is visible in the admin interface.
  * @param eWebhookModule The Module generating the Event.
- * @param pksCustomerCode The customer code assigned to your account
  * @param sWebhookUrl The url being called
+ * @param bWebhookTest Wheter the webhook received is a manual test or a real event
+ * @param bWebhookSkipsslvalidation Wheter the server's SSL certificate should be validated or not. Not recommended for production use.
  * @param sWebhookEmailfailed The email that will receive the webhook in case all attempts fail.
  * @param eWebhookEzsignevent This Ezsign Event. This property will be set only if the Module is \"Ezsign\".
  * @param eWebhookManagementevent This Management Event. This property will be set only if the Module is \"Management\".
  */
 
 data class WebhookMinusResponse (
+
+    /* The customer code assigned to your account */
+    @Json(name = "pksCustomerCode")
+    val pksCustomerCode: kotlin.String,
 
     /* The Webhook ID. This value is visible in the admin interface. */
     @Json(name = "pkiWebhookID")
@@ -45,13 +51,17 @@ data class WebhookMinusResponse (
     @Json(name = "eWebhookModule")
     val eWebhookModule: WebhookMinusResponse.EWebhookModule,
 
-    /* The customer code assigned to your account */
-    @Json(name = "pksCustomerCode")
-    val pksCustomerCode: kotlin.String,
-
     /* The url being called */
     @Json(name = "sWebhookUrl")
     val sWebhookUrl: kotlin.String,
+
+    /* Wheter the webhook received is a manual test or a real event */
+    @Json(name = "bWebhookTest")
+    val bWebhookTest: kotlin.Boolean,
+
+    /* Wheter the server's SSL certificate should be validated or not. Not recommended for production use. */
+    @Json(name = "bWebhookSkipsslvalidation")
+    val bWebhookSkipsslvalidation: kotlin.Boolean,
 
     /* The email that will receive the webhook in case all attempts fail. */
     @Json(name = "sWebhookEmailfailed")

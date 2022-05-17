@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -36,6 +36,7 @@ import eZmaxApi.infrastructure.ClientError
 import eZmaxApi.infrastructure.ServerException
 import eZmaxApi.infrastructure.ServerError
 import eZmaxApi.infrastructure.MultiValueMap
+import eZmaxApi.infrastructure.PartConfig
 import eZmaxApi.infrastructure.RequestConfig
 import eZmaxApi.infrastructure.RequestMethod
 import eZmaxApi.infrastructure.ResponseType
@@ -55,26 +56,25 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath) : Api
      */
      enum class SSelector_ezsignfoldertypeGetAutocompleteV1(val value: kotlin.String) {
          @Json(name = "Active") Active("Active"),
-         @Json(name = "All") All("All"),
-         ;
+         @Json(name = "All") All("All")
      }
 
     /**
-    * Retrieve Ezsignfoldertypes and IDs
-    * Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete control.
-    * @param sSelector The type of Ezsignfoldertypes to return 
-    * @param sQuery Allow to filter the returned results (optional)
-    * @param acceptLanguage  (optional)
-    * @return CommonMinusGetAutocompleteMinusV1MinusResponse
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
-    */
+     * Retrieve Ezsignfoldertypes and IDs
+     * Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete control.
+     * @param sSelector The type of Ezsignfoldertypes to return
+     * @param sQuery Allow to filter the returned results (optional)
+     * @param acceptLanguage  (optional)
+     * @return CommonMinusGetAutocompleteMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignfoldertypeGetAutocompleteV1(sSelector: SSelector_ezsignfoldertypeGetAutocompleteV1, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : CommonMinusGetAutocompleteMinusV1MinusResponse {
+    fun ezsignfoldertypeGetAutocompleteV1(sSelector: SSelector_ezsignfoldertypeGetAutocompleteV1, sQuery: kotlin.String? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null) : CommonMinusGetAutocompleteMinusV1MinusResponse {
         val localVarResponse = ezsignfoldertypeGetAutocompleteV1WithHttpInfo(sSelector = sSelector, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return when (localVarResponse.responseType) {
@@ -93,15 +93,15 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath) : Api
     }
 
     /**
-    * Retrieve Ezsignfoldertypes and IDs
-    * Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete control.
-    * @param sSelector The type of Ezsignfoldertypes to return 
-    * @param sQuery Allow to filter the returned results (optional)
-    * @param acceptLanguage  (optional)
-    * @return ApiResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?>
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    */
+     * Retrieve Ezsignfoldertypes and IDs
+     * Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete control.
+     * @param sSelector The type of Ezsignfoldertypes to return
+     * @param sQuery Allow to filter the returned results (optional)
+     * @param acceptLanguage  (optional)
+     * @return ApiResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
     fun ezsignfoldertypeGetAutocompleteV1WithHttpInfo(sSelector: SSelector_ezsignfoldertypeGetAutocompleteV1, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : ApiResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?> {
@@ -113,13 +113,13 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath) : Api
     }
 
     /**
-    * To obtain the request config of the operation ezsignfoldertypeGetAutocompleteV1
-    *
-    * @param sSelector The type of Ezsignfoldertypes to return 
-    * @param sQuery Allow to filter the returned results (optional)
-    * @param acceptLanguage  (optional)
-    * @return RequestConfig
-    */
+     * To obtain the request config of the operation ezsignfoldertypeGetAutocompleteV1
+     *
+     * @param sSelector The type of Ezsignfoldertypes to return
+     * @param sQuery Allow to filter the returned results (optional)
+     * @param acceptLanguage  (optional)
+     * @return RequestConfig
+     */
     fun ezsignfoldertypeGetAutocompleteV1RequestConfig(sSelector: SSelector_ezsignfoldertypeGetAutocompleteV1, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
@@ -152,28 +152,27 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath) : Api
          @Json(name = "sEzsignfoldertypeNameX_ASC") sEzsignfoldertypeNameX_ASC("sEzsignfoldertypeNameX_ASC"),
          @Json(name = "sEzsignfoldertypeNameX_DESC") sEzsignfoldertypeNameX_DESC("sEzsignfoldertypeNameX_DESC"),
          @Json(name = "bEzsignfoldertypeIsactive_ASC") bEzsignfoldertypeIsactive_ASC("bEzsignfoldertypeIsactive_ASC"),
-         @Json(name = "bEzsignfoldertypeIsactive_DESC") bEzsignfoldertypeIsactive_DESC("bEzsignfoldertypeIsactive_DESC"),
-         ;
+         @Json(name = "bEzsignfoldertypeIsactive_DESC") bEzsignfoldertypeIsactive_DESC("bEzsignfoldertypeIsactive_DESC")
      }
 
     /**
-    * Retrieve Ezsignfoldertype list
-    * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
-    * @param eOrderBy Specify how you want the results to be sorted (optional)
-    * @param iRowMax  (optional)
-    * @param iRowOffset  (optional)
-    * @param acceptLanguage  (optional)
-    * @param sFilter  (optional)
-    * @return EzsignfoldertypeMinusGetListMinusV1MinusResponse
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
-    */
+     * Retrieve Ezsignfoldertype list
+     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return EzsignfoldertypeMinusGetListMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignfoldertypeGetListV1(eOrderBy: EOrderBy_ezsignfoldertypeGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : EzsignfoldertypeMinusGetListMinusV1MinusResponse {
+    fun ezsignfoldertypeGetListV1(eOrderBy: EOrderBy_ezsignfoldertypeGetListV1? = null, iRowMax: kotlin.Int? = null, iRowOffset: kotlin.Int? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null, sFilter: kotlin.String? = null) : EzsignfoldertypeMinusGetListMinusV1MinusResponse {
         val localVarResponse = ezsignfoldertypeGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
 
         return when (localVarResponse.responseType) {
@@ -192,17 +191,17 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath) : Api
     }
 
     /**
-    * Retrieve Ezsignfoldertype list
-    * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
-    * @param eOrderBy Specify how you want the results to be sorted (optional)
-    * @param iRowMax  (optional)
-    * @param iRowOffset  (optional)
-    * @param acceptLanguage  (optional)
-    * @param sFilter  (optional)
-    * @return ApiResponse<EzsignfoldertypeMinusGetListMinusV1MinusResponse?>
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    */
+     * Retrieve Ezsignfoldertype list
+     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return ApiResponse<EzsignfoldertypeMinusGetListMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
     fun ezsignfoldertypeGetListV1WithHttpInfo(eOrderBy: EOrderBy_ezsignfoldertypeGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : ApiResponse<EzsignfoldertypeMinusGetListMinusV1MinusResponse?> {
@@ -214,15 +213,15 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath) : Api
     }
 
     /**
-    * To obtain the request config of the operation ezsignfoldertypeGetListV1
-    *
-    * @param eOrderBy Specify how you want the results to be sorted (optional)
-    * @param iRowMax  (optional)
-    * @param iRowOffset  (optional)
-    * @param acceptLanguage  (optional)
-    * @param sFilter  (optional)
-    * @return RequestConfig
-    */
+     * To obtain the request config of the operation ezsignfoldertypeGetListV1
+     *
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return RequestConfig
+     */
     fun ezsignfoldertypeGetListV1RequestConfig(eOrderBy: EOrderBy_ezsignfoldertypeGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()

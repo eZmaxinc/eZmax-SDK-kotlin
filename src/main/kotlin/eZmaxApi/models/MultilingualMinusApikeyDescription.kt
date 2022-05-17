@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -26,17 +26,17 @@ import com.squareup.moshi.Json
 /**
  * Description of the API Key  
  *
- * @param sApikeyDescription1 Value in French
- * @param sApikeyDescription2 Value in English
+ * @param sApikeyDescription1 The description of the Apikey in French
+ * @param sApikeyDescription2 The description of the Apikey in English
  */
 
 data class MultilingualMinusApikeyDescription (
 
-    /* Value in French */
+    /* The description of the Apikey in French */
     @Json(name = "sApikeyDescription1")
     val sApikeyDescription1: kotlin.String? = null,
 
-    /* Value in English */
+    /* The description of the Apikey in English */
     @Json(name = "sApikeyDescription2")
     val sApikeyDescription2: kotlin.String? = null
 

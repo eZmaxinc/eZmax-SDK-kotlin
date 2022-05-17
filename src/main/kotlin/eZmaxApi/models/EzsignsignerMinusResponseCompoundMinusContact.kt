@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -32,6 +32,7 @@ import com.squareup.moshi.Json
  * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
  * @param sEmailAddress The email address.
  * @param sPhoneE164 A phone number in E.164 Format
+ * @param sPhoneExtension The extension of the phone number.  The extension is the \"123\" section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers
  * @param sPhoneE164Cell A phone number in E.164 Format
  */
 
@@ -60,6 +61,10 @@ data class EzsignsignerMinusResponseCompoundMinusContact (
     /* A phone number in E.164 Format */
     @Json(name = "sPhoneE164")
     val sPhoneE164: kotlin.String? = null,
+
+    /* The extension of the phone number.  The extension is the \"123\" section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers */
+    @Json(name = "sPhoneExtension")
+    val sPhoneExtension: kotlin.String? = null,
 
     /* A phone number in E.164 Format */
     @Json(name = "sPhoneE164Cell")

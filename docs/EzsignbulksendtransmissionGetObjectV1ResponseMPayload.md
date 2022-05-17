@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **sEzsignbulksendtransmissionDescription** | **kotlin.String** | The description of the Ezsignbulksendtransmission | 
 **iEzsignbulksendtransmissionErrors** | **kotlin.Int** | The number of errors during the Ezsignbulksendtransmission | 
 **objAudit** | [**CommonMinusAudit**](CommonMinusAudit.md) |  | 
+**aObjEzsignfoldertransmission** | [**kotlin.collections.List&lt;CustomMinusEzsignfoldertransmissionMinusResponse&gt;**](CustomMinusEzsignfoldertransmissionMinusResponse.md) |  | 
 
 
 

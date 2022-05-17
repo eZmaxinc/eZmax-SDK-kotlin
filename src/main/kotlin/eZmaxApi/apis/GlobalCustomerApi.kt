@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -34,6 +34,7 @@ import eZmaxApi.infrastructure.ClientError
 import eZmaxApi.infrastructure.ServerException
 import eZmaxApi.infrastructure.ServerError
 import eZmaxApi.infrastructure.MultiValueMap
+import eZmaxApi.infrastructure.PartConfig
 import eZmaxApi.infrastructure.RequestConfig
 import eZmaxApi.infrastructure.RequestMethod
 import eZmaxApi.infrastructure.ResponseType
@@ -53,25 +54,24 @@ class GlobalCustomerApi(basePath: kotlin.String = defaultBasePath) : ApiClient(b
      */
      enum class SInfrastructureproductCode_globalCustomerGetEndpointV1(val value: kotlin.String) {
          @Json(name = "appcluster01") appcluster01("appcluster01"),
-         @Json(name = "ezsignuser") ezsignuser("ezsignuser"),
-         ;
+         @Json(name = "ezsignuser") ezsignuser("ezsignuser")
      }
 
     /**
-    * Get customer endpoint
-    * Retrieve the customer&#39;s specific server endpoint where to send requests. This will help locate the proper region (ie: sInfrastructureregionCode) and the proper environment (ie: sInfrastructureenvironmenttypeDescription) where the customer&#39;s data is stored.
-    * @param pksCustomerCode  
-    * @param sInfrastructureproductCode The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)
-    * @return GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
-    */
+     * Get customer endpoint
+     * Retrieve the customer&#39;s specific server endpoint where to send requests. This will help locate the proper region (ie: sInfrastructureregionCode) and the proper environment (ie: sInfrastructureenvironmenttypeDescription) where the customer&#39;s data is stored.
+     * @param pksCustomerCode 
+     * @param sInfrastructureproductCode The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)
+     * @return GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun globalCustomerGetEndpointV1(pksCustomerCode: kotlin.String, sInfrastructureproductCode: SInfrastructureproductCode_globalCustomerGetEndpointV1?) : GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse {
+    fun globalCustomerGetEndpointV1(pksCustomerCode: kotlin.String, sInfrastructureproductCode: SInfrastructureproductCode_globalCustomerGetEndpointV1? = null) : GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse {
         val localVarResponse = globalCustomerGetEndpointV1WithHttpInfo(pksCustomerCode = pksCustomerCode, sInfrastructureproductCode = sInfrastructureproductCode)
 
         return when (localVarResponse.responseType) {
@@ -90,14 +90,14 @@ class GlobalCustomerApi(basePath: kotlin.String = defaultBasePath) : ApiClient(b
     }
 
     /**
-    * Get customer endpoint
-    * Retrieve the customer&#39;s specific server endpoint where to send requests. This will help locate the proper region (ie: sInfrastructureregionCode) and the proper environment (ie: sInfrastructureenvironmenttypeDescription) where the customer&#39;s data is stored.
-    * @param pksCustomerCode  
-    * @param sInfrastructureproductCode The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)
-    * @return ApiResponse<GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse?>
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    */
+     * Get customer endpoint
+     * Retrieve the customer&#39;s specific server endpoint where to send requests. This will help locate the proper region (ie: sInfrastructureregionCode) and the proper environment (ie: sInfrastructureenvironmenttypeDescription) where the customer&#39;s data is stored.
+     * @param pksCustomerCode 
+     * @param sInfrastructureproductCode The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)
+     * @return ApiResponse<GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
     fun globalCustomerGetEndpointV1WithHttpInfo(pksCustomerCode: kotlin.String, sInfrastructureproductCode: SInfrastructureproductCode_globalCustomerGetEndpointV1?) : ApiResponse<GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse?> {
@@ -109,12 +109,12 @@ class GlobalCustomerApi(basePath: kotlin.String = defaultBasePath) : ApiClient(b
     }
 
     /**
-    * To obtain the request config of the operation globalCustomerGetEndpointV1
-    *
-    * @param pksCustomerCode  
-    * @param sInfrastructureproductCode The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)
-    * @return RequestConfig
-    */
+     * To obtain the request config of the operation globalCustomerGetEndpointV1
+     *
+     * @param pksCustomerCode 
+     * @param sInfrastructureproductCode The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)
+     * @return RequestConfig
+     */
     fun globalCustomerGetEndpointV1RequestConfig(pksCustomerCode: kotlin.String, sInfrastructureproductCode: SInfrastructureproductCode_globalCustomerGetEndpointV1?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()

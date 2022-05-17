@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -23,9 +23,19 @@ package eZmaxApi.apis
 import java.io.IOException
 
 import eZmaxApi.models.CommonMinusResponseMinusError
+import eZmaxApi.models.EzsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusRequest
+import eZmaxApi.models.EzsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusResponse
+import eZmaxApi.models.EzsignbulksendMinusCreateObjectMinusV1MinusRequest
+import eZmaxApi.models.EzsignbulksendMinusCreateObjectMinusV1MinusResponse
+import eZmaxApi.models.EzsignbulksendMinusDeleteObjectMinusV1MinusResponse
+import eZmaxApi.models.EzsignbulksendMinusEditObjectMinusV1MinusRequest
+import eZmaxApi.models.EzsignbulksendMinusEditObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsignbulksendMinusGetEzsignbulksendtransmissionsMinusV1MinusResponse
+import eZmaxApi.models.EzsignbulksendMinusGetFormsDataMinusV1MinusResponse
 import eZmaxApi.models.EzsignbulksendMinusGetListMinusV1MinusResponse
 import eZmaxApi.models.EzsignbulksendMinusGetObjectMinusV1MinusResponse
+import eZmaxApi.models.EzsignbulksendMinusReorderMinusV1MinusRequest
+import eZmaxApi.models.EzsignbulksendMinusReorderMinusV1MinusResponse
 import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
 
 import com.squareup.moshi.Json
@@ -37,6 +47,7 @@ import eZmaxApi.infrastructure.ClientError
 import eZmaxApi.infrastructure.ServerException
 import eZmaxApi.infrastructure.ServerError
 import eZmaxApi.infrastructure.MultiValueMap
+import eZmaxApi.infrastructure.PartConfig
 import eZmaxApi.infrastructure.RequestConfig
 import eZmaxApi.infrastructure.RequestMethod
 import eZmaxApi.infrastructure.ResponseType
@@ -52,16 +63,389 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath) : ApiCl
     }
 
     /**
-    * Retrieve an existing Ezsignbulksend&#39;s Ezsignbulksendtransmissions
-    * 
-    * @param pkiEzsignbulksendID  
-    * @return EzsignbulksendMinusGetEzsignbulksendtransmissionsMinusV1MinusResponse
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
-    */
+     * Create a new Ezsignbulksendtransmission in the Ezsignbulksend
+     * 
+     * @param pkiEzsignbulksendID 
+     * @param ezsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusRequest 
+     * @return EzsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignbulksendCreateEzsignbulksendtransmissionV1(pkiEzsignbulksendID: kotlin.Int, ezsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusRequest: EzsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusRequest) : EzsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusResponse {
+        val localVarResponse = ezsignbulksendCreateEzsignbulksendtransmissionV1WithHttpInfo(pkiEzsignbulksendID = pkiEzsignbulksendID, ezsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusRequest = ezsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusRequest)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Create a new Ezsignbulksendtransmission in the Ezsignbulksend
+     * 
+     * @param pkiEzsignbulksendID 
+     * @param ezsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusRequest 
+     * @return ApiResponse<EzsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignbulksendCreateEzsignbulksendtransmissionV1WithHttpInfo(pkiEzsignbulksendID: kotlin.Int, ezsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusRequest: EzsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusRequest) : ApiResponse<EzsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusResponse?> {
+        val localVariableConfig = ezsignbulksendCreateEzsignbulksendtransmissionV1RequestConfig(pkiEzsignbulksendID = pkiEzsignbulksendID, ezsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusRequest = ezsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusRequest)
+
+        return request<EzsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusRequest, EzsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsignbulksendCreateEzsignbulksendtransmissionV1
+     *
+     * @param pkiEzsignbulksendID 
+     * @param ezsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusRequest 
+     * @return RequestConfig
+     */
+    fun ezsignbulksendCreateEzsignbulksendtransmissionV1RequestConfig(pkiEzsignbulksendID: kotlin.Int, ezsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusRequest: EzsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusRequest) : RequestConfig<EzsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusRequest> {
+        val localVariableBody = ezsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusRequest
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission".replace("{"+"pkiEzsignbulksendID"+"}", "$pkiEzsignbulksendID"),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Create a new Ezsignbulksend
+     * The endpoint allows to create one or many elements at once.
+     * @param ezsignbulksendMinusCreateObjectMinusV1MinusRequest 
+     * @return EzsignbulksendMinusCreateObjectMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignbulksendCreateObjectV1(ezsignbulksendMinusCreateObjectMinusV1MinusRequest: EzsignbulksendMinusCreateObjectMinusV1MinusRequest) : EzsignbulksendMinusCreateObjectMinusV1MinusResponse {
+        val localVarResponse = ezsignbulksendCreateObjectV1WithHttpInfo(ezsignbulksendMinusCreateObjectMinusV1MinusRequest = ezsignbulksendMinusCreateObjectMinusV1MinusRequest)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignbulksendMinusCreateObjectMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Create a new Ezsignbulksend
+     * The endpoint allows to create one or many elements at once.
+     * @param ezsignbulksendMinusCreateObjectMinusV1MinusRequest 
+     * @return ApiResponse<EzsignbulksendMinusCreateObjectMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignbulksendCreateObjectV1WithHttpInfo(ezsignbulksendMinusCreateObjectMinusV1MinusRequest: EzsignbulksendMinusCreateObjectMinusV1MinusRequest) : ApiResponse<EzsignbulksendMinusCreateObjectMinusV1MinusResponse?> {
+        val localVariableConfig = ezsignbulksendCreateObjectV1RequestConfig(ezsignbulksendMinusCreateObjectMinusV1MinusRequest = ezsignbulksendMinusCreateObjectMinusV1MinusRequest)
+
+        return request<EzsignbulksendMinusCreateObjectMinusV1MinusRequest, EzsignbulksendMinusCreateObjectMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsignbulksendCreateObjectV1
+     *
+     * @param ezsignbulksendMinusCreateObjectMinusV1MinusRequest 
+     * @return RequestConfig
+     */
+    fun ezsignbulksendCreateObjectV1RequestConfig(ezsignbulksendMinusCreateObjectMinusV1MinusRequest: EzsignbulksendMinusCreateObjectMinusV1MinusRequest) : RequestConfig<EzsignbulksendMinusCreateObjectMinusV1MinusRequest> {
+        val localVariableBody = ezsignbulksendMinusCreateObjectMinusV1MinusRequest
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/ezsignbulksend",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Delete an existing Ezsignbulksend
+     * 
+     * @param pkiEzsignbulksendID 
+     * @return EzsignbulksendMinusDeleteObjectMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignbulksendDeleteObjectV1(pkiEzsignbulksendID: kotlin.Int) : EzsignbulksendMinusDeleteObjectMinusV1MinusResponse {
+        val localVarResponse = ezsignbulksendDeleteObjectV1WithHttpInfo(pkiEzsignbulksendID = pkiEzsignbulksendID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignbulksendMinusDeleteObjectMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Delete an existing Ezsignbulksend
+     * 
+     * @param pkiEzsignbulksendID 
+     * @return ApiResponse<EzsignbulksendMinusDeleteObjectMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignbulksendDeleteObjectV1WithHttpInfo(pkiEzsignbulksendID: kotlin.Int) : ApiResponse<EzsignbulksendMinusDeleteObjectMinusV1MinusResponse?> {
+        val localVariableConfig = ezsignbulksendDeleteObjectV1RequestConfig(pkiEzsignbulksendID = pkiEzsignbulksendID)
+
+        return request<Unit, EzsignbulksendMinusDeleteObjectMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsignbulksendDeleteObjectV1
+     *
+     * @param pkiEzsignbulksendID 
+     * @return RequestConfig
+     */
+    fun ezsignbulksendDeleteObjectV1RequestConfig(pkiEzsignbulksendID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.DELETE,
+            path = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}".replace("{"+"pkiEzsignbulksendID"+"}", "$pkiEzsignbulksendID"),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Edit an existing Ezsignbulksend
+     * 
+     * @param pkiEzsignbulksendID 
+     * @param ezsignbulksendMinusEditObjectMinusV1MinusRequest 
+     * @return EzsignbulksendMinusEditObjectMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignbulksendEditObjectV1(pkiEzsignbulksendID: kotlin.Int, ezsignbulksendMinusEditObjectMinusV1MinusRequest: EzsignbulksendMinusEditObjectMinusV1MinusRequest) : EzsignbulksendMinusEditObjectMinusV1MinusResponse {
+        val localVarResponse = ezsignbulksendEditObjectV1WithHttpInfo(pkiEzsignbulksendID = pkiEzsignbulksendID, ezsignbulksendMinusEditObjectMinusV1MinusRequest = ezsignbulksendMinusEditObjectMinusV1MinusRequest)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignbulksendMinusEditObjectMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Edit an existing Ezsignbulksend
+     * 
+     * @param pkiEzsignbulksendID 
+     * @param ezsignbulksendMinusEditObjectMinusV1MinusRequest 
+     * @return ApiResponse<EzsignbulksendMinusEditObjectMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignbulksendEditObjectV1WithHttpInfo(pkiEzsignbulksendID: kotlin.Int, ezsignbulksendMinusEditObjectMinusV1MinusRequest: EzsignbulksendMinusEditObjectMinusV1MinusRequest) : ApiResponse<EzsignbulksendMinusEditObjectMinusV1MinusResponse?> {
+        val localVariableConfig = ezsignbulksendEditObjectV1RequestConfig(pkiEzsignbulksendID = pkiEzsignbulksendID, ezsignbulksendMinusEditObjectMinusV1MinusRequest = ezsignbulksendMinusEditObjectMinusV1MinusRequest)
+
+        return request<EzsignbulksendMinusEditObjectMinusV1MinusRequest, EzsignbulksendMinusEditObjectMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsignbulksendEditObjectV1
+     *
+     * @param pkiEzsignbulksendID 
+     * @param ezsignbulksendMinusEditObjectMinusV1MinusRequest 
+     * @return RequestConfig
+     */
+    fun ezsignbulksendEditObjectV1RequestConfig(pkiEzsignbulksendID: kotlin.Int, ezsignbulksendMinusEditObjectMinusV1MinusRequest: EzsignbulksendMinusEditObjectMinusV1MinusRequest) : RequestConfig<EzsignbulksendMinusEditObjectMinusV1MinusRequest> {
+        val localVariableBody = ezsignbulksendMinusEditObjectMinusV1MinusRequest
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.PUT,
+            path = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}".replace("{"+"pkiEzsignbulksendID"+"}", "$pkiEzsignbulksendID"),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * enum for parameter eCsvSeparator
+     */
+     enum class ECsvSeparator_ezsignbulksendGetCsvTemplateV1(val value: kotlin.String) {
+         @Json(name = "Comma") Comma("Comma"),
+         @Json(name = "Semicolon") Semicolon("Semicolon")
+     }
+
+    /**
+     * Retrieve an existing Ezsignbulksend&#39;s empty Csv template
+     * 
+     * @param pkiEzsignbulksendID 
+     * @param eCsvSeparator Separator that will be used to separate fields
+     * @return kotlin.String
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignbulksendGetCsvTemplateV1(pkiEzsignbulksendID: kotlin.Int, eCsvSeparator: ECsvSeparator_ezsignbulksendGetCsvTemplateV1) : kotlin.String {
+        val localVarResponse = ezsignbulksendGetCsvTemplateV1WithHttpInfo(pkiEzsignbulksendID = pkiEzsignbulksendID, eCsvSeparator = eCsvSeparator)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.String
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve an existing Ezsignbulksend&#39;s empty Csv template
+     * 
+     * @param pkiEzsignbulksendID 
+     * @param eCsvSeparator Separator that will be used to separate fields
+     * @return ApiResponse<kotlin.String?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignbulksendGetCsvTemplateV1WithHttpInfo(pkiEzsignbulksendID: kotlin.Int, eCsvSeparator: ECsvSeparator_ezsignbulksendGetCsvTemplateV1) : ApiResponse<kotlin.String?> {
+        val localVariableConfig = ezsignbulksendGetCsvTemplateV1RequestConfig(pkiEzsignbulksendID = pkiEzsignbulksendID, eCsvSeparator = eCsvSeparator)
+
+        return request<Unit, kotlin.String>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsignbulksendGetCsvTemplateV1
+     *
+     * @param pkiEzsignbulksendID 
+     * @param eCsvSeparator Separator that will be used to separate fields
+     * @return RequestConfig
+     */
+    fun ezsignbulksendGetCsvTemplateV1RequestConfig(pkiEzsignbulksendID: kotlin.Int, eCsvSeparator: ECsvSeparator_ezsignbulksendGetCsvTemplateV1) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                put("eCsvSeparator", listOf(eCsvSeparator.toString()))
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}/getCsvTemplate".replace("{"+"pkiEzsignbulksendID"+"}", "$pkiEzsignbulksendID"),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Retrieve an existing Ezsignbulksend&#39;s Ezsignbulksendtransmissions
+     * 
+     * @param pkiEzsignbulksendID 
+     * @return EzsignbulksendMinusGetEzsignbulksendtransmissionsMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ezsignbulksendGetEzsignbulksendtransmissionsV1(pkiEzsignbulksendID: kotlin.Int) : EzsignbulksendMinusGetEzsignbulksendtransmissionsMinusV1MinusResponse {
@@ -83,13 +467,13 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath) : ApiCl
     }
 
     /**
-    * Retrieve an existing Ezsignbulksend&#39;s Ezsignbulksendtransmissions
-    * 
-    * @param pkiEzsignbulksendID  
-    * @return ApiResponse<EzsignbulksendMinusGetEzsignbulksendtransmissionsMinusV1MinusResponse?>
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    */
+     * Retrieve an existing Ezsignbulksend&#39;s Ezsignbulksendtransmissions
+     * 
+     * @param pkiEzsignbulksendID 
+     * @return ApiResponse<EzsignbulksendMinusGetEzsignbulksendtransmissionsMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
     fun ezsignbulksendGetEzsignbulksendtransmissionsV1WithHttpInfo(pkiEzsignbulksendID: kotlin.Int) : ApiResponse<EzsignbulksendMinusGetEzsignbulksendtransmissionsMinusV1MinusResponse?> {
@@ -101,11 +485,11 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath) : ApiCl
     }
 
     /**
-    * To obtain the request config of the operation ezsignbulksendGetEzsignbulksendtransmissionsV1
-    *
-    * @param pkiEzsignbulksendID  
-    * @return RequestConfig
-    */
+     * To obtain the request config of the operation ezsignbulksendGetEzsignbulksendtransmissionsV1
+     *
+     * @param pkiEzsignbulksendID 
+     * @return RequestConfig
+     */
     fun ezsignbulksendGetEzsignbulksendtransmissionsV1RequestConfig(pkiEzsignbulksendID: kotlin.Int) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
@@ -115,6 +499,76 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath) : ApiCl
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignbulksendtransmissions".replace("{"+"pkiEzsignbulksendID"+"}", "$pkiEzsignbulksendID"),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Retrieve an existing Ezsignbulksend&#39;s forms data
+     * 
+     * @param pkiEzsignbulksendID 
+     * @return EzsignbulksendMinusGetFormsDataMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignbulksendGetFormsDataV1(pkiEzsignbulksendID: kotlin.Int) : EzsignbulksendMinusGetFormsDataMinusV1MinusResponse {
+        val localVarResponse = ezsignbulksendGetFormsDataV1WithHttpInfo(pkiEzsignbulksendID = pkiEzsignbulksendID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignbulksendMinusGetFormsDataMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve an existing Ezsignbulksend&#39;s forms data
+     * 
+     * @param pkiEzsignbulksendID 
+     * @return ApiResponse<EzsignbulksendMinusGetFormsDataMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignbulksendGetFormsDataV1WithHttpInfo(pkiEzsignbulksendID: kotlin.Int) : ApiResponse<EzsignbulksendMinusGetFormsDataMinusV1MinusResponse?> {
+        val localVariableConfig = ezsignbulksendGetFormsDataV1RequestConfig(pkiEzsignbulksendID = pkiEzsignbulksendID)
+
+        return request<Unit, EzsignbulksendMinusGetFormsDataMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsignbulksendGetFormsDataV1
+     *
+     * @param pkiEzsignbulksendID 
+     * @return RequestConfig
+     */
+    fun ezsignbulksendGetFormsDataV1RequestConfig(pkiEzsignbulksendID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}/getFormsData".replace("{"+"pkiEzsignbulksendID"+"}", "$pkiEzsignbulksendID"),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -135,6 +589,8 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath) : ApiCl
          @Json(name = "sEzsignfoldertypeNameX_DESC") sEzsignfoldertypeNameX_DESC("sEzsignfoldertypeNameX_DESC"),
          @Json(name = "eEzsignfoldertypePrivacylevel_ASC") eEzsignfoldertypePrivacylevel_ASC("eEzsignfoldertypePrivacylevel_ASC"),
          @Json(name = "eEzsignfoldertypePrivacylevel_DESC") eEzsignfoldertypePrivacylevel_DESC("eEzsignfoldertypePrivacylevel_DESC"),
+         @Json(name = "bEzsignbulksendNeedvalidation_ASC") bEzsignbulksendNeedvalidation_ASC("bEzsignbulksendNeedvalidation_ASC"),
+         @Json(name = "bEzsignbulksendNeedvalidation_DESC") bEzsignbulksendNeedvalidation_DESC("bEzsignbulksendNeedvalidation_DESC"),
          @Json(name = "bEzsignbulksendIsactive_ASC") bEzsignbulksendIsactive_ASC("bEzsignbulksendIsactive_ASC"),
          @Json(name = "bEzsignbulksendIsactive_DESC") bEzsignbulksendIsactive_DESC("bEzsignbulksendIsactive_DESC"),
          @Json(name = "iEzsignbulksendtransmission_ASC") iEzsignbulksendtransmission_ASC("iEzsignbulksendtransmission_ASC"),
@@ -146,28 +602,27 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath) : ApiCl
          @Json(name = "iEzsignsignature_ASC") iEzsignsignature_ASC("iEzsignsignature_ASC"),
          @Json(name = "iEzsignsignature_DESC") iEzsignsignature_DESC("iEzsignsignature_DESC"),
          @Json(name = "iEzsignsignatureSigned_ASC") iEzsignsignatureSigned_ASC("iEzsignsignatureSigned_ASC"),
-         @Json(name = "iEzsignsignatureSigned_DESC") iEzsignsignatureSigned_DESC("iEzsignsignatureSigned_DESC"),
-         ;
+         @Json(name = "iEzsignsignatureSigned_DESC") iEzsignsignatureSigned_DESC("iEzsignsignatureSigned_DESC")
      }
 
     /**
-    * Retrieve Ezsignbulksend list
-    * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
-    * @param eOrderBy Specify how you want the results to be sorted (optional)
-    * @param iRowMax  (optional)
-    * @param iRowOffset  (optional)
-    * @param acceptLanguage  (optional)
-    * @param sFilter  (optional)
-    * @return EzsignbulksendMinusGetListMinusV1MinusResponse
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
-    */
+     * Retrieve Ezsignbulksend list
+     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return EzsignbulksendMinusGetListMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignbulksendGetListV1(eOrderBy: EOrderBy_ezsignbulksendGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : EzsignbulksendMinusGetListMinusV1MinusResponse {
+    fun ezsignbulksendGetListV1(eOrderBy: EOrderBy_ezsignbulksendGetListV1? = null, iRowMax: kotlin.Int? = null, iRowOffset: kotlin.Int? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null, sFilter: kotlin.String? = null) : EzsignbulksendMinusGetListMinusV1MinusResponse {
         val localVarResponse = ezsignbulksendGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
 
         return when (localVarResponse.responseType) {
@@ -186,17 +641,17 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath) : ApiCl
     }
 
     /**
-    * Retrieve Ezsignbulksend list
-    * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
-    * @param eOrderBy Specify how you want the results to be sorted (optional)
-    * @param iRowMax  (optional)
-    * @param iRowOffset  (optional)
-    * @param acceptLanguage  (optional)
-    * @param sFilter  (optional)
-    * @return ApiResponse<EzsignbulksendMinusGetListMinusV1MinusResponse?>
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    */
+     * Retrieve Ezsignbulksend list
+     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return ApiResponse<EzsignbulksendMinusGetListMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
     fun ezsignbulksendGetListV1WithHttpInfo(eOrderBy: EOrderBy_ezsignbulksendGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : ApiResponse<EzsignbulksendMinusGetListMinusV1MinusResponse?> {
@@ -208,15 +663,15 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath) : ApiCl
     }
 
     /**
-    * To obtain the request config of the operation ezsignbulksendGetListV1
-    *
-    * @param eOrderBy Specify how you want the results to be sorted (optional)
-    * @param iRowMax  (optional)
-    * @param iRowOffset  (optional)
-    * @param acceptLanguage  (optional)
-    * @param sFilter  (optional)
-    * @return RequestConfig
-    */
+     * To obtain the request config of the operation ezsignbulksendGetListV1
+     *
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return RequestConfig
+     */
     fun ezsignbulksendGetListV1RequestConfig(eOrderBy: EOrderBy_ezsignbulksendGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
@@ -248,16 +703,16 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath) : ApiCl
     }
 
     /**
-    * Retrieve an existing Ezsignbulksend
-    * 
-    * @param pkiEzsignbulksendID  
-    * @return EzsignbulksendMinusGetObjectMinusV1MinusResponse
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
-    */
+     * Retrieve an existing Ezsignbulksend
+     * 
+     * @param pkiEzsignbulksendID 
+     * @return EzsignbulksendMinusGetObjectMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ezsignbulksendGetObjectV1(pkiEzsignbulksendID: kotlin.Int) : EzsignbulksendMinusGetObjectMinusV1MinusResponse {
@@ -279,13 +734,13 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath) : ApiCl
     }
 
     /**
-    * Retrieve an existing Ezsignbulksend
-    * 
-    * @param pkiEzsignbulksendID  
-    * @return ApiResponse<EzsignbulksendMinusGetObjectMinusV1MinusResponse?>
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    */
+     * Retrieve an existing Ezsignbulksend
+     * 
+     * @param pkiEzsignbulksendID 
+     * @return ApiResponse<EzsignbulksendMinusGetObjectMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
     fun ezsignbulksendGetObjectV1WithHttpInfo(pkiEzsignbulksendID: kotlin.Int) : ApiResponse<EzsignbulksendMinusGetObjectMinusV1MinusResponse?> {
@@ -297,11 +752,11 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath) : ApiCl
     }
 
     /**
-    * To obtain the request config of the operation ezsignbulksendGetObjectV1
-    *
-    * @param pkiEzsignbulksendID  
-    * @return RequestConfig
-    */
+     * To obtain the request config of the operation ezsignbulksendGetObjectV1
+     *
+     * @param pkiEzsignbulksendID 
+     * @return RequestConfig
+     */
     fun ezsignbulksendGetObjectV1RequestConfig(pkiEzsignbulksendID: kotlin.Int) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
@@ -311,6 +766,80 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath) : ApiCl
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}".replace("{"+"pkiEzsignbulksendID"+"}", "$pkiEzsignbulksendID"),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Reorder Ezsignbulksenddocumentmappings in the Ezsignbulksend
+     * 
+     * @param pkiEzsignbulksendID 
+     * @param ezsignbulksendMinusReorderMinusV1MinusRequest 
+     * @return EzsignbulksendMinusReorderMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignbulksendReorderV1(pkiEzsignbulksendID: kotlin.Int, ezsignbulksendMinusReorderMinusV1MinusRequest: EzsignbulksendMinusReorderMinusV1MinusRequest) : EzsignbulksendMinusReorderMinusV1MinusResponse {
+        val localVarResponse = ezsignbulksendReorderV1WithHttpInfo(pkiEzsignbulksendID = pkiEzsignbulksendID, ezsignbulksendMinusReorderMinusV1MinusRequest = ezsignbulksendMinusReorderMinusV1MinusRequest)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignbulksendMinusReorderMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Reorder Ezsignbulksenddocumentmappings in the Ezsignbulksend
+     * 
+     * @param pkiEzsignbulksendID 
+     * @param ezsignbulksendMinusReorderMinusV1MinusRequest 
+     * @return ApiResponse<EzsignbulksendMinusReorderMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignbulksendReorderV1WithHttpInfo(pkiEzsignbulksendID: kotlin.Int, ezsignbulksendMinusReorderMinusV1MinusRequest: EzsignbulksendMinusReorderMinusV1MinusRequest) : ApiResponse<EzsignbulksendMinusReorderMinusV1MinusResponse?> {
+        val localVariableConfig = ezsignbulksendReorderV1RequestConfig(pkiEzsignbulksendID = pkiEzsignbulksendID, ezsignbulksendMinusReorderMinusV1MinusRequest = ezsignbulksendMinusReorderMinusV1MinusRequest)
+
+        return request<EzsignbulksendMinusReorderMinusV1MinusRequest, EzsignbulksendMinusReorderMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsignbulksendReorderV1
+     *
+     * @param pkiEzsignbulksendID 
+     * @param ezsignbulksendMinusReorderMinusV1MinusRequest 
+     * @return RequestConfig
+     */
+    fun ezsignbulksendReorderV1RequestConfig(pkiEzsignbulksendID: kotlin.Int, ezsignbulksendMinusReorderMinusV1MinusRequest: EzsignbulksendMinusReorderMinusV1MinusRequest) : RequestConfig<EzsignbulksendMinusReorderMinusV1MinusRequest> {
+        val localVariableBody = ezsignbulksendMinusReorderMinusV1MinusRequest
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}/reorder".replace("{"+"pkiEzsignbulksendID"+"}", "$pkiEzsignbulksendID"),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

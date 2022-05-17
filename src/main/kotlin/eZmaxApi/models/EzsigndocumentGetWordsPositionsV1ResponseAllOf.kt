@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -27,12 +27,12 @@ import com.squareup.moshi.Json
 /**
  * 
  *
- * @param mPayload Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request
+ * @param mPayload Payload for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
  */
 
 data class EzsigndocumentGetWordsPositionsV1ResponseAllOf (
 
-    /* Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request */
+    /* Payload for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions */
     @Json(name = "mPayload")
     val mPayload: kotlin.collections.List<CustomMinusWordPositionWordMinusResponse>
 

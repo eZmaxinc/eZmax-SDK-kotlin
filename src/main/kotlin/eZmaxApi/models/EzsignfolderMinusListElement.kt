@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -35,12 +35,12 @@ import com.squareup.moshi.Json
  * @param sEzsignfolderDescription The description of the Ezsignfolder
  * @param eEzsignfolderStep 
  * @param dtCreatedDate The date and time at which the object was created
- * @param dtEzsignfolderSentdate The date and time at which the Ezsign folder was sent the last time.
- * @param dtDueDate Represent a Date Time. The timezone is the one configured in the User's profile.
  * @param iEzsigndocument The total number of Ezsigndocument in the folder
  * @param iEzsigndocumentEdm The total number of Ezsigndocument in the folder that were saved in the edm system
  * @param iEzsignsignature The total number of signature blocks in all Ezsigndocuments in the folder
  * @param iEzsignsignatureSigned The total number of already signed signature blocks in all Ezsigndocuments in the folder
+ * @param dtEzsignfolderSentdate The date and time at which the Ezsign folder was sent the last time.
+ * @param dtEzsignfolderDuedate The maximum date and time at which the Ezsignfolder can be signed.
  */
 
 data class EzsignfolderMinusListElement (
@@ -71,14 +71,6 @@ data class EzsignfolderMinusListElement (
     @Json(name = "dtCreatedDate")
     val dtCreatedDate: kotlin.String,
 
-    /* The date and time at which the Ezsign folder was sent the last time. */
-    @Json(name = "dtEzsignfolderSentdate")
-    val dtEzsignfolderSentdate: kotlin.String?,
-
-    /* Represent a Date Time. The timezone is the one configured in the User's profile. */
-    @Json(name = "dtDueDate")
-    val dtDueDate: kotlin.String?,
-
     /* The total number of Ezsigndocument in the folder */
     @Json(name = "iEzsigndocument")
     val iEzsigndocument: kotlin.Int,
@@ -93,7 +85,15 @@ data class EzsignfolderMinusListElement (
 
     /* The total number of already signed signature blocks in all Ezsigndocuments in the folder */
     @Json(name = "iEzsignsignatureSigned")
-    val iEzsignsignatureSigned: kotlin.Int
+    val iEzsignsignatureSigned: kotlin.Int,
+
+    /* The date and time at which the Ezsign folder was sent the last time. */
+    @Json(name = "dtEzsignfolderSentdate")
+    val dtEzsignfolderSentdate: kotlin.String? = null,
+
+    /* The maximum date and time at which the Ezsignfolder can be signed. */
+    @Json(name = "dtEzsignfolderDuedate")
+    val dtEzsignfolderDuedate: kotlin.String? = null
 
 )
 

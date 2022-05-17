@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -24,16 +24,16 @@ package eZmaxApi.models
 import com.squareup.moshi.Json
 
 /**
- * Request for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate API Request
+ * Request for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate
  *
- * @param fkiEzsigntemplateID The unique ID of the Ezsigndocument
+ * @param fkiEzsigntemplateID The unique ID of the Ezsigntemplate
  * @param aSEzsigntemplatesigner 
  * @param aPkiEzsignfoldersignerassociationID 
  */
 
 data class EzsigndocumentMinusApplyEzsigntemplateMinusV1MinusRequest (
 
-    /* The unique ID of the Ezsigndocument */
+    /* The unique ID of the Ezsigntemplate */
     @Json(name = "fkiEzsigntemplateID")
     val fkiEzsigntemplateID: kotlin.Int,
 

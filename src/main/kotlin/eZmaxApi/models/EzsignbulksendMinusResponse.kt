@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -30,8 +30,11 @@ import com.squareup.moshi.Json
  * @param pkiEzsignbulksendID The unique ID of the Ezsignbulksend
  * @param fkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
  * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
+ * @param sLanguageNameX The Name of the Language in the language of the requester
+ * @param sEzsignfoldertypeNameX The name of the Ezsignfoldertype in the language of the requester
  * @param sEzsignbulksendDescription The description of the Ezsignbulksend
  * @param tEzsignbulksendNote Note about the Ezsignbulksend
+ * @param bEzsignbulksendNeedvalidation Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation
  * @param bEzsignbulksendIsactive Whether the Ezsignbulksend is active or not
  * @param objAudit 
  */
@@ -50,6 +53,14 @@ data class EzsignbulksendMinusResponse (
     @Json(name = "fkiLanguageID")
     val fkiLanguageID: kotlin.Int,
 
+    /* The Name of the Language in the language of the requester */
+    @Json(name = "sLanguageNameX")
+    val sLanguageNameX: kotlin.String,
+
+    /* The name of the Ezsignfoldertype in the language of the requester */
+    @Json(name = "sEzsignfoldertypeNameX")
+    val sEzsignfoldertypeNameX: kotlin.String,
+
     /* The description of the Ezsignbulksend */
     @Json(name = "sEzsignbulksendDescription")
     val sEzsignbulksendDescription: kotlin.String,
@@ -57,6 +68,10 @@ data class EzsignbulksendMinusResponse (
     /* Note about the Ezsignbulksend */
     @Json(name = "tEzsignbulksendNote")
     val tEzsignbulksendNote: kotlin.String,
+
+    /* Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation */
+    @Json(name = "bEzsignbulksendNeedvalidation")
+    val bEzsignbulksendNeedvalidation: kotlin.Boolean,
 
     /* Whether the Ezsignbulksend is active or not */
     @Json(name = "bEzsignbulksendIsactive")

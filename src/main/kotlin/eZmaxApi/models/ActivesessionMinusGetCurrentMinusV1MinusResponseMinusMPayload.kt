@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -23,15 +23,15 @@ package eZmaxApi.models
 import eZmaxApi.models.ActivesessionMinusResponseCompound
 import eZmaxApi.models.ActivesessionMinusResponseCompoundMinusApikey
 import eZmaxApi.models.ActivesessionMinusResponseCompoundMinusUser
-import eZmaxApi.models.FieldMinusEActivesessionSessiontype
+import eZmaxApi.models.FieldMinusEActivesessionUsertype
 import eZmaxApi.models.FieldMinusEActivesessionWeekdaystart
 
 import com.squareup.moshi.Json
 
 /**
- * Payload for the /1/object/activesession/getCurrent API Request
+ * Payload for GET /1/object/activesession/getCurrent
  *
- * @param eActivesessionSessiontype 
+ * @param eActivesessionUsertype 
  * @param eActivesessionWeekdaystart 
  * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
  * @param sCompanyNameX The Name of the Company in the language of the requester
@@ -47,8 +47,8 @@ import com.squareup.moshi.Json
 
 data class ActivesessionMinusGetCurrentMinusV1MinusResponseMinusMPayload (
 
-    @Json(name = "eActivesessionSessiontype")
-    val eActivesessionSessiontype: FieldMinusEActivesessionSessiontype,
+    @Json(name = "eActivesessionUsertype")
+    val eActivesessionUsertype: FieldMinusEActivesessionUsertype,
 
     @Json(name = "eActivesessionWeekdaystart")
     val eActivesessionWeekdaystart: FieldMinusEActivesessionWeekdaystart,

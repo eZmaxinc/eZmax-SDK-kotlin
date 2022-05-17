@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -28,6 +28,8 @@ import eZmaxApi.models.EzsignfoldersignerassociationMinusCreateObjectMinusV1Minu
 import eZmaxApi.models.EzsignfoldersignerassociationMinusCreateObjectMinusV2MinusRequest
 import eZmaxApi.models.EzsignfoldersignerassociationMinusCreateObjectMinusV2MinusResponse
 import eZmaxApi.models.EzsignfoldersignerassociationMinusDeleteObjectMinusV1MinusResponse
+import eZmaxApi.models.EzsignfoldersignerassociationMinusEditObjectMinusV1MinusRequest
+import eZmaxApi.models.EzsignfoldersignerassociationMinusEditObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsignfoldersignerassociationMinusGetInPersonLoginUrlMinusV1MinusResponse
 import eZmaxApi.models.EzsignfoldersignerassociationMinusGetObjectMinusV1MinusResponse
 
@@ -40,6 +42,7 @@ import eZmaxApi.infrastructure.ClientError
 import eZmaxApi.infrastructure.ServerException
 import eZmaxApi.infrastructure.ServerError
 import eZmaxApi.infrastructure.MultiValueMap
+import eZmaxApi.infrastructure.PartConfig
 import eZmaxApi.infrastructure.RequestConfig
 import eZmaxApi.infrastructure.RequestMethod
 import eZmaxApi.infrastructure.ResponseType
@@ -55,16 +58,16 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     }
 
     /**
-    * Create a new Ezsignfoldersignerassociation
-    * The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
-    * @param ezsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest  
-    * @return EzsignfoldersignerassociationMinusCreateObjectMinusV1MinusResponse
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
-    */
+     * Create a new Ezsignfoldersignerassociation
+     * The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
+     * @param ezsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest 
+     * @return EzsignfoldersignerassociationMinusCreateObjectMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     @Deprecated(message = "This operation is deprecated.")
@@ -88,13 +91,13 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     }
 
     /**
-    * Create a new Ezsignfoldersignerassociation
-    * The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
-    * @param ezsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest  
-    * @return ApiResponse<EzsignfoldersignerassociationMinusCreateObjectMinusV1MinusResponse?>
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    */
+     * Create a new Ezsignfoldersignerassociation
+     * The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
+     * @param ezsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest 
+     * @return ApiResponse<EzsignfoldersignerassociationMinusCreateObjectMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
     @Deprecated(message = "This operation is deprecated.")
@@ -108,11 +111,11 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     }
 
     /**
-    * To obtain the request config of the operation ezsignfoldersignerassociationCreateObjectV1
-    *
-    * @param ezsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest  
-    * @return RequestConfig
-    */
+     * To obtain the request config of the operation ezsignfoldersignerassociationCreateObjectV1
+     *
+     * @param ezsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest 
+     * @return RequestConfig
+     */
     @Deprecated(message = "This operation is deprecated.")
     fun ezsignfoldersignerassociationCreateObjectV1RequestConfig(ezsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest: kotlin.collections.List<EzsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest>) : RequestConfig<kotlin.collections.List<EzsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest>> {
         val localVariableBody = ezsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest
@@ -131,16 +134,16 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     }
 
     /**
-    * Create a new Ezsignfoldersignerassociation
-    * The endpoint allows to create one or many elements at once.
-    * @param ezsignfoldersignerassociationMinusCreateObjectMinusV2MinusRequest  
-    * @return EzsignfoldersignerassociationMinusCreateObjectMinusV2MinusResponse
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
-    */
+     * Create a new Ezsignfoldersignerassociation
+     * The endpoint allows to create one or many elements at once.
+     * @param ezsignfoldersignerassociationMinusCreateObjectMinusV2MinusRequest 
+     * @return EzsignfoldersignerassociationMinusCreateObjectMinusV2MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ezsignfoldersignerassociationCreateObjectV2(ezsignfoldersignerassociationMinusCreateObjectMinusV2MinusRequest: EzsignfoldersignerassociationMinusCreateObjectMinusV2MinusRequest) : EzsignfoldersignerassociationMinusCreateObjectMinusV2MinusResponse {
@@ -162,13 +165,13 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     }
 
     /**
-    * Create a new Ezsignfoldersignerassociation
-    * The endpoint allows to create one or many elements at once.
-    * @param ezsignfoldersignerassociationMinusCreateObjectMinusV2MinusRequest  
-    * @return ApiResponse<EzsignfoldersignerassociationMinusCreateObjectMinusV2MinusResponse?>
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    */
+     * Create a new Ezsignfoldersignerassociation
+     * The endpoint allows to create one or many elements at once.
+     * @param ezsignfoldersignerassociationMinusCreateObjectMinusV2MinusRequest 
+     * @return ApiResponse<EzsignfoldersignerassociationMinusCreateObjectMinusV2MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
     fun ezsignfoldersignerassociationCreateObjectV2WithHttpInfo(ezsignfoldersignerassociationMinusCreateObjectMinusV2MinusRequest: EzsignfoldersignerassociationMinusCreateObjectMinusV2MinusRequest) : ApiResponse<EzsignfoldersignerassociationMinusCreateObjectMinusV2MinusResponse?> {
@@ -180,11 +183,11 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     }
 
     /**
-    * To obtain the request config of the operation ezsignfoldersignerassociationCreateObjectV2
-    *
-    * @param ezsignfoldersignerassociationMinusCreateObjectMinusV2MinusRequest  
-    * @return RequestConfig
-    */
+     * To obtain the request config of the operation ezsignfoldersignerassociationCreateObjectV2
+     *
+     * @param ezsignfoldersignerassociationMinusCreateObjectMinusV2MinusRequest 
+     * @return RequestConfig
+     */
     fun ezsignfoldersignerassociationCreateObjectV2RequestConfig(ezsignfoldersignerassociationMinusCreateObjectMinusV2MinusRequest: EzsignfoldersignerassociationMinusCreateObjectMinusV2MinusRequest) : RequestConfig<EzsignfoldersignerassociationMinusCreateObjectMinusV2MinusRequest> {
         val localVariableBody = ezsignfoldersignerassociationMinusCreateObjectMinusV2MinusRequest
         val localVariableQuery: MultiValueMap = mutableMapOf()
@@ -202,16 +205,16 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     }
 
     /**
-    * Delete an existing Ezsignfoldersignerassociation
-    * 
-    * @param pkiEzsignfoldersignerassociationID  
-    * @return EzsignfoldersignerassociationMinusDeleteObjectMinusV1MinusResponse
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
-    */
+     * Delete an existing Ezsignfoldersignerassociation
+     * 
+     * @param pkiEzsignfoldersignerassociationID 
+     * @return EzsignfoldersignerassociationMinusDeleteObjectMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ezsignfoldersignerassociationDeleteObjectV1(pkiEzsignfoldersignerassociationID: kotlin.Int) : EzsignfoldersignerassociationMinusDeleteObjectMinusV1MinusResponse {
@@ -233,13 +236,13 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     }
 
     /**
-    * Delete an existing Ezsignfoldersignerassociation
-    * 
-    * @param pkiEzsignfoldersignerassociationID  
-    * @return ApiResponse<EzsignfoldersignerassociationMinusDeleteObjectMinusV1MinusResponse?>
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    */
+     * Delete an existing Ezsignfoldersignerassociation
+     * 
+     * @param pkiEzsignfoldersignerassociationID 
+     * @return ApiResponse<EzsignfoldersignerassociationMinusDeleteObjectMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
     fun ezsignfoldersignerassociationDeleteObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID: kotlin.Int) : ApiResponse<EzsignfoldersignerassociationMinusDeleteObjectMinusV1MinusResponse?> {
@@ -251,11 +254,11 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     }
 
     /**
-    * To obtain the request config of the operation ezsignfoldersignerassociationDeleteObjectV1
-    *
-    * @param pkiEzsignfoldersignerassociationID  
-    * @return RequestConfig
-    */
+     * To obtain the request config of the operation ezsignfoldersignerassociationDeleteObjectV1
+     *
+     * @param pkiEzsignfoldersignerassociationID 
+     * @return RequestConfig
+     */
     fun ezsignfoldersignerassociationDeleteObjectV1RequestConfig(pkiEzsignfoldersignerassociationID: kotlin.Int) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
@@ -272,16 +275,90 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     }
 
     /**
-    * Retrieve a Login Url to allow In-Person signing
-    * This endpoint returns a Login Url that can be used in a browser or embedded in an I-Frame to allow in person signing.  The signer Login type must be configured as In-Person.
-    * @param pkiEzsignfoldersignerassociationID  
-    * @return EzsignfoldersignerassociationMinusGetInPersonLoginUrlMinusV1MinusResponse
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
-    */
+     * Edit an existing Ezsignfoldersignerassociation
+     * 
+     * @param pkiEzsignfoldersignerassociationID 
+     * @param ezsignfoldersignerassociationMinusEditObjectMinusV1MinusRequest 
+     * @return EzsignfoldersignerassociationMinusEditObjectMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignfoldersignerassociationEditObjectV1(pkiEzsignfoldersignerassociationID: kotlin.Int, ezsignfoldersignerassociationMinusEditObjectMinusV1MinusRequest: EzsignfoldersignerassociationMinusEditObjectMinusV1MinusRequest) : EzsignfoldersignerassociationMinusEditObjectMinusV1MinusResponse {
+        val localVarResponse = ezsignfoldersignerassociationEditObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationMinusEditObjectMinusV1MinusRequest = ezsignfoldersignerassociationMinusEditObjectMinusV1MinusRequest)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfoldersignerassociationMinusEditObjectMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Edit an existing Ezsignfoldersignerassociation
+     * 
+     * @param pkiEzsignfoldersignerassociationID 
+     * @param ezsignfoldersignerassociationMinusEditObjectMinusV1MinusRequest 
+     * @return ApiResponse<EzsignfoldersignerassociationMinusEditObjectMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignfoldersignerassociationEditObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID: kotlin.Int, ezsignfoldersignerassociationMinusEditObjectMinusV1MinusRequest: EzsignfoldersignerassociationMinusEditObjectMinusV1MinusRequest) : ApiResponse<EzsignfoldersignerassociationMinusEditObjectMinusV1MinusResponse?> {
+        val localVariableConfig = ezsignfoldersignerassociationEditObjectV1RequestConfig(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationMinusEditObjectMinusV1MinusRequest = ezsignfoldersignerassociationMinusEditObjectMinusV1MinusRequest)
+
+        return request<EzsignfoldersignerassociationMinusEditObjectMinusV1MinusRequest, EzsignfoldersignerassociationMinusEditObjectMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsignfoldersignerassociationEditObjectV1
+     *
+     * @param pkiEzsignfoldersignerassociationID 
+     * @param ezsignfoldersignerassociationMinusEditObjectMinusV1MinusRequest 
+     * @return RequestConfig
+     */
+    fun ezsignfoldersignerassociationEditObjectV1RequestConfig(pkiEzsignfoldersignerassociationID: kotlin.Int, ezsignfoldersignerassociationMinusEditObjectMinusV1MinusRequest: EzsignfoldersignerassociationMinusEditObjectMinusV1MinusRequest) : RequestConfig<EzsignfoldersignerassociationMinusEditObjectMinusV1MinusRequest> {
+        val localVariableBody = ezsignfoldersignerassociationMinusEditObjectMinusV1MinusRequest
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.PUT,
+            path = "/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}".replace("{"+"pkiEzsignfoldersignerassociationID"+"}", "$pkiEzsignfoldersignerassociationID"),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Retrieve a Login Url to allow In-Person signing
+     * This endpoint returns a Login Url that can be used in a browser or embedded in an I-Frame to allow in person signing.  The signer Login type must be configured as In-Person.
+     * @param pkiEzsignfoldersignerassociationID 
+     * @return EzsignfoldersignerassociationMinusGetInPersonLoginUrlMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ezsignfoldersignerassociationGetInPersonLoginUrlV1(pkiEzsignfoldersignerassociationID: kotlin.Int) : EzsignfoldersignerassociationMinusGetInPersonLoginUrlMinusV1MinusResponse {
@@ -303,13 +380,13 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     }
 
     /**
-    * Retrieve a Login Url to allow In-Person signing
-    * This endpoint returns a Login Url that can be used in a browser or embedded in an I-Frame to allow in person signing.  The signer Login type must be configured as In-Person.
-    * @param pkiEzsignfoldersignerassociationID  
-    * @return ApiResponse<EzsignfoldersignerassociationMinusGetInPersonLoginUrlMinusV1MinusResponse?>
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    */
+     * Retrieve a Login Url to allow In-Person signing
+     * This endpoint returns a Login Url that can be used in a browser or embedded in an I-Frame to allow in person signing.  The signer Login type must be configured as In-Person.
+     * @param pkiEzsignfoldersignerassociationID 
+     * @return ApiResponse<EzsignfoldersignerassociationMinusGetInPersonLoginUrlMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
     fun ezsignfoldersignerassociationGetInPersonLoginUrlV1WithHttpInfo(pkiEzsignfoldersignerassociationID: kotlin.Int) : ApiResponse<EzsignfoldersignerassociationMinusGetInPersonLoginUrlMinusV1MinusResponse?> {
@@ -321,11 +398,11 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     }
 
     /**
-    * To obtain the request config of the operation ezsignfoldersignerassociationGetInPersonLoginUrlV1
-    *
-    * @param pkiEzsignfoldersignerassociationID  
-    * @return RequestConfig
-    */
+     * To obtain the request config of the operation ezsignfoldersignerassociationGetInPersonLoginUrlV1
+     *
+     * @param pkiEzsignfoldersignerassociationID 
+     * @return RequestConfig
+     */
     fun ezsignfoldersignerassociationGetInPersonLoginUrlV1RequestConfig(pkiEzsignfoldersignerassociationID: kotlin.Int) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
@@ -342,16 +419,16 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     }
 
     /**
-    * Retrieve an existing Ezsignfoldersignerassociation
-    * 
-    * @param pkiEzsignfoldersignerassociationID  
-    * @return EzsignfoldersignerassociationMinusGetObjectMinusV1MinusResponse
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
-    */
+     * Retrieve an existing Ezsignfoldersignerassociation
+     * 
+     * @param pkiEzsignfoldersignerassociationID 
+     * @return EzsignfoldersignerassociationMinusGetObjectMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun ezsignfoldersignerassociationGetObjectV1(pkiEzsignfoldersignerassociationID: kotlin.Int) : EzsignfoldersignerassociationMinusGetObjectMinusV1MinusResponse {
@@ -373,13 +450,13 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     }
 
     /**
-    * Retrieve an existing Ezsignfoldersignerassociation
-    * 
-    * @param pkiEzsignfoldersignerassociationID  
-    * @return ApiResponse<EzsignfoldersignerassociationMinusGetObjectMinusV1MinusResponse?>
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    */
+     * Retrieve an existing Ezsignfoldersignerassociation
+     * 
+     * @param pkiEzsignfoldersignerassociationID 
+     * @return ApiResponse<EzsignfoldersignerassociationMinusGetObjectMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
     fun ezsignfoldersignerassociationGetObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID: kotlin.Int) : ApiResponse<EzsignfoldersignerassociationMinusGetObjectMinusV1MinusResponse?> {
@@ -391,11 +468,11 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     }
 
     /**
-    * To obtain the request config of the operation ezsignfoldersignerassociationGetObjectV1
-    *
-    * @param pkiEzsignfoldersignerassociationID  
-    * @return RequestConfig
-    */
+     * To obtain the request config of the operation ezsignfoldersignerassociationGetObjectV1
+     *
+     * @param pkiEzsignfoldersignerassociationID 
+     * @return RequestConfig
+     */
     fun ezsignfoldersignerassociationGetObjectV1RequestConfig(pkiEzsignfoldersignerassociationID: kotlin.Int) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()

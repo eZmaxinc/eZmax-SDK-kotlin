@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -23,6 +23,7 @@ package eZmaxApi.apis
 import java.io.IOException
 
 import eZmaxApi.models.CommonMinusGetAutocompleteMinusV1MinusResponse
+import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
 
 import com.squareup.moshi.Json
 
@@ -33,6 +34,7 @@ import eZmaxApi.infrastructure.ClientError
 import eZmaxApi.infrastructure.ServerException
 import eZmaxApi.infrastructure.ServerError
 import eZmaxApi.infrastructure.MultiValueMap
+import eZmaxApi.infrastructure.PartConfig
 import eZmaxApi.infrastructure.RequestConfig
 import eZmaxApi.infrastructure.RequestMethod
 import eZmaxApi.infrastructure.ResponseType
@@ -54,26 +56,26 @@ class ObjectPeriodApi(basePath: kotlin.String = defaultBasePath) : ApiClient(bas
          @Json(name = "ActiveNormal") ActiveNormal("ActiveNormal"),
          @Json(name = "ActiveNormalAndEndOfYear") ActiveNormalAndEndOfYear("ActiveNormalAndEndOfYear"),
          @Json(name = "AllNormal") AllNormal("AllNormal"),
-         @Json(name = "AllNormalAndEndOfYear") AllNormalAndEndOfYear("AllNormalAndEndOfYear"),
-         ;
+         @Json(name = "AllNormalAndEndOfYear") AllNormalAndEndOfYear("AllNormalAndEndOfYear")
      }
 
     /**
-    * Retrieve Periods and IDs
-    * Get the list of Periods to be used in a dropdown or autocomplete control.
-    * @param sSelector The types of Periods to return 
-    * @param sQuery Allow to filter the returned results (optional)
-    * @return CommonMinusGetAutocompleteMinusV1MinusResponse
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
-    */
+     * Retrieve Periods and IDs
+     * Get the list of Periods to be used in a dropdown or autocomplete control.
+     * @param sSelector The types of Periods to return
+     * @param sQuery Allow to filter the returned results (optional)
+     * @param acceptLanguage  (optional)
+     * @return CommonMinusGetAutocompleteMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun periodGetAutocompleteV1(sSelector: SSelector_periodGetAutocompleteV1, sQuery: kotlin.String?) : CommonMinusGetAutocompleteMinusV1MinusResponse {
-        val localVarResponse = periodGetAutocompleteV1WithHttpInfo(sSelector = sSelector, sQuery = sQuery)
+    fun periodGetAutocompleteV1(sSelector: SSelector_periodGetAutocompleteV1, sQuery: kotlin.String? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null) : CommonMinusGetAutocompleteMinusV1MinusResponse {
+        val localVarResponse = periodGetAutocompleteV1WithHttpInfo(sSelector = sSelector, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as CommonMinusGetAutocompleteMinusV1MinusResponse
@@ -91,18 +93,19 @@ class ObjectPeriodApi(basePath: kotlin.String = defaultBasePath) : ApiClient(bas
     }
 
     /**
-    * Retrieve Periods and IDs
-    * Get the list of Periods to be used in a dropdown or autocomplete control.
-    * @param sSelector The types of Periods to return 
-    * @param sQuery Allow to filter the returned results (optional)
-    * @return ApiResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?>
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    */
+     * Retrieve Periods and IDs
+     * Get the list of Periods to be used in a dropdown or autocomplete control.
+     * @param sSelector The types of Periods to return
+     * @param sQuery Allow to filter the returned results (optional)
+     * @param acceptLanguage  (optional)
+     * @return ApiResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun periodGetAutocompleteV1WithHttpInfo(sSelector: SSelector_periodGetAutocompleteV1, sQuery: kotlin.String?) : ApiResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?> {
-        val localVariableConfig = periodGetAutocompleteV1RequestConfig(sSelector = sSelector, sQuery = sQuery)
+    fun periodGetAutocompleteV1WithHttpInfo(sSelector: SSelector_periodGetAutocompleteV1, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : ApiResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?> {
+        val localVariableConfig = periodGetAutocompleteV1RequestConfig(sSelector = sSelector, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return request<Unit, CommonMinusGetAutocompleteMinusV1MinusResponse>(
             localVariableConfig
@@ -110,13 +113,14 @@ class ObjectPeriodApi(basePath: kotlin.String = defaultBasePath) : ApiClient(bas
     }
 
     /**
-    * To obtain the request config of the operation periodGetAutocompleteV1
-    *
-    * @param sSelector The types of Periods to return 
-    * @param sQuery Allow to filter the returned results (optional)
-    * @return RequestConfig
-    */
-    fun periodGetAutocompleteV1RequestConfig(sSelector: SSelector_periodGetAutocompleteV1, sQuery: kotlin.String?) : RequestConfig<Unit> {
+     * To obtain the request config of the operation periodGetAutocompleteV1
+     *
+     * @param sSelector The types of Periods to return
+     * @param sQuery Allow to filter the returned results (optional)
+     * @param acceptLanguage  (optional)
+     * @return RequestConfig
+     */
+    fun periodGetAutocompleteV1RequestConfig(sSelector: SSelector_periodGetAutocompleteV1, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
@@ -125,6 +129,7 @@ class ObjectPeriodApi(basePath: kotlin.String = defaultBasePath) : ApiClient(bas
                 }
             }
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
         localVariableHeaders["Accept"] = "application/json"
 
         return RequestConfig(

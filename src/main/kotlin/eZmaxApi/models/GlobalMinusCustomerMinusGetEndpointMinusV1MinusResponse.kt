@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -24,7 +24,7 @@ package eZmaxApi.models
 import com.squareup.moshi.Json
 
 /**
- * Response for the /1/customer/{pksCustomerCode}/endpoint API Request
+ * Response for GET /1/customer/{pksCustomerCode}/endpoint
  *
  * @param sEndpointURL The endpoint's URL
  */

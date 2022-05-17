@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -24,7 +24,7 @@ package eZmaxApi.models
 import com.squareup.moshi.Json
 
 /**
- * Payload for the /1/module/user/createEzsignuser API Request
+ * Payload for POST /1/module/user/createEzsignuser
  *
  * @param aSEmailAddressSuccess An array of email addresses that succeeded.
  * @param aSEmailAddressFailure An array of email addresses that failed.

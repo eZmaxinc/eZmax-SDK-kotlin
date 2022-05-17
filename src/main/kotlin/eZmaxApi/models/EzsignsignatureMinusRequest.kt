@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -20,6 +20,8 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.FieldMinusEEzsignsignatureFont
+import eZmaxApi.models.FieldMinusEEzsignsignatureTooltipposition
 import eZmaxApi.models.FieldMinusEEzsignsignatureType
 
 import com.squareup.moshi.Json
@@ -30,11 +32,14 @@ import com.squareup.moshi.Json
  * @param fkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation
  * @param iEzsignpagePagenumber The page number in the Ezsigndocument
  * @param iEzsignsignatureX The X coordinate (Horizontal) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 2 inches from the left border of the page, you would use \"200\" for the X coordinate.
- * @param iEzsignsignatureY The Y coordinate (Vertical) where to put the signature block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.
+ * @param iEzsignsignatureY The Y coordinate (Vertical) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.
  * @param iEzsignsignatureStep The step when the Ezsignsigner will be invited to sign
  * @param eEzsignsignatureType 
  * @param fkiEzsigndocumentID The unique ID of the Ezsigndocument
  * @param pkiEzsignsignatureID The unique ID of the Ezsignsignature
+ * @param tEzsignsignatureTooltip A tooltip that will be presented to Ezsignsigner about the Ezsignsignature
+ * @param eEzsignsignatureTooltipposition 
+ * @param eEzsignsignatureFont 
  */
 
 data class EzsignsignatureMinusRequest (
@@ -51,7 +56,7 @@ data class EzsignsignatureMinusRequest (
     @Json(name = "iEzsignsignatureX")
     val iEzsignsignatureX: kotlin.Int,
 
-    /* The Y coordinate (Vertical) where to put the signature block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 3 inches from the top border of the page, you would use \"300\" for the Y coordinate. */
+    /* The Y coordinate (Vertical) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 3 inches from the top border of the page, you would use \"300\" for the Y coordinate. */
     @Json(name = "iEzsignsignatureY")
     val iEzsignsignatureY: kotlin.Int,
 
@@ -68,7 +73,17 @@ data class EzsignsignatureMinusRequest (
 
     /* The unique ID of the Ezsignsignature */
     @Json(name = "pkiEzsignsignatureID")
-    val pkiEzsignsignatureID: kotlin.Int? = null
+    val pkiEzsignsignatureID: kotlin.Int? = null,
+
+    /* A tooltip that will be presented to Ezsignsigner about the Ezsignsignature */
+    @Json(name = "tEzsignsignatureTooltip")
+    val tEzsignsignatureTooltip: kotlin.String? = null,
+
+    @Json(name = "eEzsignsignatureTooltipposition")
+    val eEzsignsignatureTooltipposition: FieldMinusEEzsignsignatureTooltipposition? = null,
+
+    @Json(name = "eEzsignsignatureFont")
+    val eEzsignsignatureFont: FieldMinusEEzsignsignatureFont? = null
 
 )
 

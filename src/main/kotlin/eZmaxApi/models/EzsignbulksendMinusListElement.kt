@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -20,7 +20,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.FieldMinusEEzsignfoldertypePrivacylevel
 
 import com.squareup.moshi.Json
 
@@ -31,7 +30,7 @@ import com.squareup.moshi.Json
  * @param fkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
  * @param sEzsignbulksendDescription The description of the Ezsignbulksend
  * @param sEzsignfoldertypeNameX The name of the Ezsignfoldertype in the language of the requester
- * @param eEzsignfoldertypePrivacylevel 
+ * @param bEzsignbulksendNeedvalidation Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation
  * @param bEzsignbulksendIsactive Whether the Ezsignbulksend is active or not
  * @param iEzsignbulksendtransmission The total number of Ezsignbulksendtransmissions in the Ezsignbulksend
  * @param iEzsignfolder The total number of Ezsignfolders in the Ezsignbulksend
@@ -58,8 +57,9 @@ data class EzsignbulksendMinusListElement (
     @Json(name = "sEzsignfoldertypeNameX")
     val sEzsignfoldertypeNameX: kotlin.String,
 
-    @Json(name = "eEzsignfoldertypePrivacylevel")
-    val eEzsignfoldertypePrivacylevel: FieldMinusEEzsignfoldertypePrivacylevel,
+    /* Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation */
+    @Json(name = "bEzsignbulksendNeedvalidation")
+    val bEzsignbulksendNeedvalidation: kotlin.Boolean,
 
     /* Whether the Ezsignbulksend is active or not */
     @Json(name = "bEzsignbulksendIsactive")

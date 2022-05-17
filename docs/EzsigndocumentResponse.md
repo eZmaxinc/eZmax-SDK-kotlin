@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **iEzsigndocumentSignaturetotal** | **kotlin.Int** | The number of total signatures that were requested in the Ezsigndocument. | 
 **sEzsigndocumentMD5initial** | **kotlin.String** | MD5 Hash of the initial PDF Document before signatures were applied to it. | 
 **sEzsigndocumentMD5signed** | **kotlin.String** | MD5 Hash of the final PDF Document after all signatures were applied to it. | 
+**bEzsigndocumentEzsignform** | **kotlin.Boolean** | If the Ezsigndocument contains an Ezsignform or not | 
 **objAudit** | [**CommonMinusAudit**](CommonMinusAudit.md) |  | 
 
 

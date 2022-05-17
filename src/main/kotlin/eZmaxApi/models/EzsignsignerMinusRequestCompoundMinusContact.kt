@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -30,8 +30,11 @@ import com.squareup.moshi.Json
  * @param sContactLastname The Last name of the contact
  * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
  * @param sEmailAddress The email address.
- * @param sPhoneNumber The Phone number of the contact. Use format \"5149901516\" for North American Numbers (Without \"1\" for long distance code) you would dial like this: 1-514-990-1516. Use format \"498945233886\" for international numbers (Without \"011\") you would dial like this: +49 89 452 33 88-6. In this example \"49\" is the country code of Germany.
- * @param sPhoneNumberCell The Cell Phone number of the contact. Use format \"5149901516\" for North American Numbers (Without \"1\" for long distance code) you would dial like this: 1-514-990-1516. Use format \"498945233886\" for international numbers (Without \"011\") you would dial like this: +49 89 452 33 88-6. In this example \"49\" is the country code of Germany.
+ * @param sPhoneE164 A phone number in E.164 Format
+ * @param sPhoneExtension The extension of the phone number.  The extension is the \"123\" section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers
+ * @param sPhoneE164Cell A phone number in E.164 Format
+ * @param sPhoneNumber 
+ * @param sPhoneNumberCell 
  */
 
 data class EzsignsignerMinusRequestCompoundMinusContact (
@@ -52,12 +55,24 @@ data class EzsignsignerMinusRequestCompoundMinusContact (
     @Json(name = "sEmailAddress")
     val sEmailAddress: kotlin.String? = null,
 
-    /* The Phone number of the contact. Use format \"5149901516\" for North American Numbers (Without \"1\" for long distance code) you would dial like this: 1-514-990-1516. Use format \"498945233886\" for international numbers (Without \"011\") you would dial like this: +49 89 452 33 88-6. In this example \"49\" is the country code of Germany. */
+    /* A phone number in E.164 Format */
+    @Json(name = "sPhoneE164")
+    val sPhoneE164: kotlin.String? = null,
+
+    /* The extension of the phone number.  The extension is the \"123\" section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers */
+    @Json(name = "sPhoneExtension")
+    val sPhoneExtension: kotlin.String? = null,
+
+    /* A phone number in E.164 Format */
+    @Json(name = "sPhoneE164Cell")
+    val sPhoneE164Cell: kotlin.String? = null,
+
     @Json(name = "sPhoneNumber")
+    @Deprecated(message = "This property is deprecated.")
     val sPhoneNumber: kotlin.String? = null,
 
-    /* The Cell Phone number of the contact. Use format \"5149901516\" for North American Numbers (Without \"1\" for long distance code) you would dial like this: 1-514-990-1516. Use format \"498945233886\" for international numbers (Without \"011\") you would dial like this: +49 89 452 33 88-6. In this example \"49\" is the country code of Germany. */
     @Json(name = "sPhoneNumberCell")
+    @Deprecated(message = "This property is deprecated.")
     val sPhoneNumberCell: kotlin.String? = null
 
 )

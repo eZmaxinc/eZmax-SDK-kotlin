@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **fkiEzsignfoldertypeID** | **kotlin.Int** | The unique ID of the Ezsignfoldertype. | 
 **sEzsignbulksendDescription** | **kotlin.String** | The description of the Ezsignbulksend | 
 **sEzsignfoldertypeNameX** | **kotlin.String** | The name of the Ezsignfoldertype in the language of the requester | 
-**eEzsignfoldertypePrivacylevel** | [**FieldMinusEEzsignfoldertypePrivacylevel**](FieldMinusEEzsignfoldertypePrivacylevel.md) |  | 
+**bEzsignbulksendNeedvalidation** | **kotlin.Boolean** | Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation | 
 **bEzsignbulksendIsactive** | **kotlin.Boolean** | Whether the Ezsignbulksend is active or not | 
 **iEzsignbulksendtransmission** | **kotlin.Int** | The total number of Ezsignbulksendtransmissions in the Ezsignbulksend | 
 **iEzsignfolder** | **kotlin.Int** | The total number of Ezsignfolders in the Ezsignbulksend | 

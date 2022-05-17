@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -25,7 +25,7 @@ import eZmaxApi.models.EzsigndocumentlogMinusResponseCompound
 import com.squareup.moshi.Json
 
 /**
- * Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof API Request
+ * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof
  *
  * @param aObjEzsigndocumentlog 
  */
@@ -33,7 +33,7 @@ import com.squareup.moshi.Json
 data class EzsigndocumentMinusGetTemporaryProofMinusV1MinusResponseMinusMPayload (
 
     @Json(name = "a_objEzsigndocumentlog")
-    val aObjEzsigndocumentlog: EzsigndocumentlogMinusResponseCompound
+    val aObjEzsigndocumentlog: kotlin.collections.List<EzsigndocumentlogMinusResponseCompound>
 
 )
 

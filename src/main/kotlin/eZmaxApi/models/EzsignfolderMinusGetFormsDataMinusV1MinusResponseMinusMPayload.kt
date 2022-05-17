@@ -1,5 +1,5 @@
 /**
- * eZmax API Definition
+ * eZmax API Definition (Full)
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
@@ -20,31 +20,20 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.CustomMinusFormDataDocumentMinusResponse
 import eZmaxApi.models.CustomMinusFormsDataFolderMinusResponse
 
 import com.squareup.moshi.Json
 
 /**
- * Payload for the /1/object/ezsignfolder/{pkiEzsigndocument}/getFormsData API Request
+ * Payload for GET /1/object/ezsignfolder/{pkiEzsigndocument}/getFormsData
  *
- * @param pkiEzsignfolderID The unique ID of the Ezsignfolder
- * @param sEzsignfolderDescription The description of the Ezsignfolder
- * @param aObjFormDataDocument 
+ * @param objFormsDataFolder 
  */
 
 data class EzsignfolderMinusGetFormsDataMinusV1MinusResponseMinusMPayload (
 
-    /* The unique ID of the Ezsignfolder */
-    @Json(name = "pkiEzsignfolderID")
-    val pkiEzsignfolderID: kotlin.Int,
-
-    /* The description of the Ezsignfolder */
-    @Json(name = "sEzsignfolderDescription")
-    val sEzsignfolderDescription: kotlin.String,
-
-    @Json(name = "a_objFormDataDocument")
-    val aObjFormDataDocument: kotlin.collections.List<CustomMinusFormDataDocumentMinusResponse>
+    @Json(name = "objFormsDataFolder")
+    val objFormsDataFolder: CustomMinusFormsDataFolderMinusResponse
 
 )
 

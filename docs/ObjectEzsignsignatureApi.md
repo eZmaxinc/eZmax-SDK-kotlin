@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**ezsignsignatureDeleteObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureDeleteObjectV1) | **DELETE** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Delete an existing Ezsignsignature
 [**ezsignsignatureEditObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureEditObjectV1) | **PUT** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Edit an existing Ezsignsignature
 [**ezsignsignatureGetObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureGetObjectV1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
+[**ezsignsignatureSignV1**](ObjectEzsignsignatureApi.md#ezsignsignatureSignV1) | **POST** /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign | Sign the Ezsignsignature
 
 
 <a name="ezsignsignatureCreateObjectV1"></a>
@@ -261,5 +262,57 @@ Configure Authorization:
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="ezsignsignatureSignV1"></a>
+# **ezsignsignatureSignV1**
+> EzsignsignatureMinusSignMinusV1MinusResponse ezsignsignatureSignV1(pkiEzsignsignatureID, ezsignsignatureMinusSignMinusV1MinusRequest)
+
+Sign the Ezsignsignature
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsignsignatureApi()
+val pkiEzsignsignatureID : kotlin.Int = 56 // kotlin.Int | 
+val ezsignsignatureMinusSignMinusV1MinusRequest : EzsignsignatureMinusSignMinusV1MinusRequest =  // EzsignsignatureMinusSignMinusV1MinusRequest | 
+try {
+    val result : EzsignsignatureMinusSignMinusV1MinusResponse = apiInstance.ezsignsignatureSignV1(pkiEzsignsignatureID, ezsignsignatureMinusSignMinusV1MinusRequest)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsignsignatureApi#ezsignsignatureSignV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsignsignatureApi#ezsignsignatureSignV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignsignatureID** | **kotlin.Int**|  |
+ **ezsignsignatureMinusSignMinusV1MinusRequest** | [**EzsignsignatureMinusSignMinusV1MinusRequest**](EzsignsignatureMinusSignMinusV1MinusRequest.md)|  |
+
+### Return type
+
+[**EzsignsignatureMinusSignMinusV1MinusResponse**](EzsignsignatureMinusSignMinusV1MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
