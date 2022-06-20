@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.7
+ * The version of the OpenAPI document: 1.1.8
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -29,8 +29,8 @@ import com.squareup.moshi.Json
  * Generic Error Message
  *
  * @param sErrorMessage More detail about the error
- * @param sTemporaryFileUrl The Temporary File Url of the document that was uploaded. That url can be reused instead of uploading the file again.
  * @param eErrorCode The error code. See documentation for valid values
+ * @param sTemporaryFileUrl The Temporary File Url of the document that was uploaded. That url can be reused instead of uploading the file again.
  */
 
 data class CommonMinusResponseMinusErrorMinusSTemporaryFileUrl (
@@ -39,13 +39,13 @@ data class CommonMinusResponseMinusErrorMinusSTemporaryFileUrl (
     @Json(name = "sErrorMessage")
     val sErrorMessage: kotlin.String,
 
-    /* The Temporary File Url of the document that was uploaded. That url can be reused instead of uploading the file again. */
-    @Json(name = "sTemporaryFileUrl")
-    val sTemporaryFileUrl: kotlin.String? = null,
-
     /* The error code. See documentation for valid values */
     @Json(name = "eErrorCode")
-    val eErrorCode: kotlin.String? = null
+    val eErrorCode: kotlin.String,
+
+    /* The Temporary File Url of the document that was uploaded. That url can be reused instead of uploading the file again. */
+    @Json(name = "sTemporaryFileUrl")
+    val sTemporaryFileUrl: kotlin.String? = null
 
 )
 

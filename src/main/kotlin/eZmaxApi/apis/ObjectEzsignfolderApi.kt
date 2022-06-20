@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.7
+ * The version of the OpenAPI document: 1.1.8
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -21,6 +21,7 @@
 package eZmaxApi.apis
 
 import java.io.IOException
+import okhttp3.OkHttpClient
 
 import eZmaxApi.models.CommonMinusResponseMinusError
 import eZmaxApi.models.EzsignfolderMinusArchiveMinusV1MinusResponse
@@ -30,6 +31,9 @@ import eZmaxApi.models.EzsignfolderMinusCreateObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsignfolderMinusCreateObjectMinusV2MinusRequest
 import eZmaxApi.models.EzsignfolderMinusCreateObjectMinusV2MinusResponse
 import eZmaxApi.models.EzsignfolderMinusDeleteObjectMinusV1MinusResponse
+import eZmaxApi.models.EzsignfolderMinusDisposeEzsignfoldersMinusV1MinusRequest
+import eZmaxApi.models.EzsignfolderMinusDisposeEzsignfoldersMinusV1MinusResponse
+import eZmaxApi.models.EzsignfolderMinusDisposeMinusV1MinusResponse
 import eZmaxApi.models.EzsignfolderMinusEditObjectMinusV1MinusRequest
 import eZmaxApi.models.EzsignfolderMinusEditObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsignfolderMinusGetActionableElementsMinusV1MinusResponse
@@ -63,7 +67,7 @@ import eZmaxApi.infrastructure.ResponseType
 import eZmaxApi.infrastructure.Success
 import eZmaxApi.infrastructure.toMultiValue
 
-class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath) {
+class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = ApiClient.defaultClient) : ApiClient(basePath) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
@@ -430,6 +434,151 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath) : ApiClie
         return RequestConfig(
             method = RequestMethod.DELETE,
             path = "/1/object/ezsignfolder/{pkiEzsignfolderID}".replace("{"+"pkiEzsignfolderID"+"}", "$pkiEzsignfolderID"),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Dispose Ezsignfolders
+     * 
+     * @param ezsignfolderMinusDisposeEzsignfoldersMinusV1MinusRequest 
+     * @return EzsignfolderMinusDisposeEzsignfoldersMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignfolderDisposeEzsignfoldersV1(ezsignfolderMinusDisposeEzsignfoldersMinusV1MinusRequest: EzsignfolderMinusDisposeEzsignfoldersMinusV1MinusRequest) : EzsignfolderMinusDisposeEzsignfoldersMinusV1MinusResponse {
+        val localVarResponse = ezsignfolderDisposeEzsignfoldersV1WithHttpInfo(ezsignfolderMinusDisposeEzsignfoldersMinusV1MinusRequest = ezsignfolderMinusDisposeEzsignfoldersMinusV1MinusRequest)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfolderMinusDisposeEzsignfoldersMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Dispose Ezsignfolders
+     * 
+     * @param ezsignfolderMinusDisposeEzsignfoldersMinusV1MinusRequest 
+     * @return ApiResponse<EzsignfolderMinusDisposeEzsignfoldersMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignfolderDisposeEzsignfoldersV1WithHttpInfo(ezsignfolderMinusDisposeEzsignfoldersMinusV1MinusRequest: EzsignfolderMinusDisposeEzsignfoldersMinusV1MinusRequest) : ApiResponse<EzsignfolderMinusDisposeEzsignfoldersMinusV1MinusResponse?> {
+        val localVariableConfig = ezsignfolderDisposeEzsignfoldersV1RequestConfig(ezsignfolderMinusDisposeEzsignfoldersMinusV1MinusRequest = ezsignfolderMinusDisposeEzsignfoldersMinusV1MinusRequest)
+
+        return request<EzsignfolderMinusDisposeEzsignfoldersMinusV1MinusRequest, EzsignfolderMinusDisposeEzsignfoldersMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsignfolderDisposeEzsignfoldersV1
+     *
+     * @param ezsignfolderMinusDisposeEzsignfoldersMinusV1MinusRequest 
+     * @return RequestConfig
+     */
+    fun ezsignfolderDisposeEzsignfoldersV1RequestConfig(ezsignfolderMinusDisposeEzsignfoldersMinusV1MinusRequest: EzsignfolderMinusDisposeEzsignfoldersMinusV1MinusRequest) : RequestConfig<EzsignfolderMinusDisposeEzsignfoldersMinusV1MinusRequest> {
+        val localVariableBody = ezsignfolderMinusDisposeEzsignfoldersMinusV1MinusRequest
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/ezsignfolder/disposeEzsignfolders",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Dispose the Ezsignfolder
+     * 
+     * @param pkiEzsignfolderID 
+     * @param body 
+     * @return EzsignfolderMinusDisposeMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignfolderDisposeV1(pkiEzsignfolderID: kotlin.Int, body: kotlin.Any) : EzsignfolderMinusDisposeMinusV1MinusResponse {
+        val localVarResponse = ezsignfolderDisposeV1WithHttpInfo(pkiEzsignfolderID = pkiEzsignfolderID, body = body)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfolderMinusDisposeMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Dispose the Ezsignfolder
+     * 
+     * @param pkiEzsignfolderID 
+     * @param body 
+     * @return ApiResponse<EzsignfolderMinusDisposeMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignfolderDisposeV1WithHttpInfo(pkiEzsignfolderID: kotlin.Int, body: kotlin.Any) : ApiResponse<EzsignfolderMinusDisposeMinusV1MinusResponse?> {
+        val localVariableConfig = ezsignfolderDisposeV1RequestConfig(pkiEzsignfolderID = pkiEzsignfolderID, body = body)
+
+        return request<kotlin.Any, EzsignfolderMinusDisposeMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsignfolderDisposeV1
+     *
+     * @param pkiEzsignfolderID 
+     * @param body 
+     * @return RequestConfig
+     */
+    fun ezsignfolderDisposeV1RequestConfig(pkiEzsignfolderID: kotlin.Int, body: kotlin.Any) : RequestConfig<kotlin.Any> {
+        val localVariableBody = body
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/dispose".replace("{"+"pkiEzsignfolderID"+"}", "$pkiEzsignfolderID"),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

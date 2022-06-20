@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.7
+ * The version of the OpenAPI document: 1.1.8
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -38,7 +38,7 @@ data class CommonMinusResponseMinusError (
 
     /* The error code. See documentation for valid values */
     @Json(name = "eErrorCode")
-    val eErrorCode: kotlin.String? = null
+    val eErrorCode: kotlin.String
 
 )
 

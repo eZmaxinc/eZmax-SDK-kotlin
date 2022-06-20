@@ -13,14 +13,15 @@ Name | Type | Description | Notes
 **sEzsigntsarequirementDescriptionX** | **kotlin.String** | The description of the Ezsigntsarequirement in the language of the requester | 
 **sEzsignfolderDescription** | **kotlin.String** | The description of the Ezsignfolder | 
 **tEzsignfolderNote** | **kotlin.String** | Note about the Ezsignfolder | 
+**bEzsignfolderIsdisposable** | **kotlin.Boolean** | If the Ezsigndocument can be disposed | 
 **eEzsignfolderSendreminderfrequency** | [**FieldMinusEEzsignfolderSendreminderfrequency**](FieldMinusEEzsignfolderSendreminderfrequency.md) |  | 
-**dtEzsignfolderScheduledarchive** | **kotlin.String** | The scheduled date and time at which the Ezsignfolder should be archived. | 
-**dtEzsignfolderScheduleddestruction** | **kotlin.String** | The scheduled date and time at which the Ezsignfolder should be Destroyed. | 
 **eEzsignfolderStep** | [**FieldMinusEEzsignfolderStep**](FieldMinusEEzsignfolderStep.md) |  | 
 **dtEzsignfolderClose** | **kotlin.String** | The date and time at which the folder was closed. Either by applying the last signature or by completing it prematurely. | 
 **objAudit** | [**CommonMinusAudit**](CommonMinusAudit.md) |  | 
 **dtEzsignfolderDuedate** | **kotlin.String** | The maximum date and time at which the Ezsignfolder can be signed. |  [optional]
 **dtEzsignfolderSentdate** | **kotlin.String** | The date and time at which the Ezsign folder was sent the last time. |  [optional]
+**dtEzsignfolderScheduledarchive** | **kotlin.String** | The scheduled date and time at which the Ezsignfolder should be archived. |  [optional]
+**dtEzsignfolderScheduleddispose** | **kotlin.String** | The scheduled date at which the Ezsignfolder should be Disposed. |  [optional]
 
 
 

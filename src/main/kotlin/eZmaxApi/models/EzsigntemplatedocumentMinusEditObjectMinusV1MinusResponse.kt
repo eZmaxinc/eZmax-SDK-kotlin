@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.7
+ * The version of the OpenAPI document: 1.1.8
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -23,6 +23,8 @@ package eZmaxApi.models
 import eZmaxApi.models.CommonMinusResponse
 import eZmaxApi.models.CommonMinusResponseMinusObjDebug
 import eZmaxApi.models.CommonMinusResponseMinusObjDebugPayload
+import eZmaxApi.models.CommonMinusResponseMinusWarning
+import eZmaxApi.models.EzsigntemplatedocumentEditObjectV1ResponseAllOf
 
 import com.squareup.moshi.Json
 
@@ -31,6 +33,7 @@ import com.squareup.moshi.Json
  *
  * @param objDebugPayload 
  * @param objDebug 
+ * @param aObjWarning 
  */
 
 data class EzsigntemplatedocumentMinusEditObjectMinusV1MinusResponse (
@@ -39,7 +42,10 @@ data class EzsigntemplatedocumentMinusEditObjectMinusV1MinusResponse (
     val objDebugPayload: CommonMinusResponseMinusObjDebugPayload? = null,
 
     @Json(name = "objDebug")
-    val objDebug: CommonMinusResponseMinusObjDebug? = null
+    val objDebug: CommonMinusResponseMinusObjDebug? = null,
+
+    @Json(name = "a_objWarning")
+    val aObjWarning: kotlin.collections.List<CommonMinusResponseMinusWarning>? = null
 
 )
 

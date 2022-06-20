@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.7
+ * The version of the OpenAPI document: 1.1.8
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -21,8 +21,10 @@
 package eZmaxApi.apis
 
 import java.io.IOException
+import okhttp3.OkHttpClient
 
 import eZmaxApi.models.ActivesessionMinusGetCurrentMinusV1MinusResponse
+import eZmaxApi.models.CommonMinusResponseMinusRedirectMinusSSecretquestionTextX
 
 import com.squareup.moshi.Json
 
@@ -40,7 +42,7 @@ import eZmaxApi.infrastructure.ResponseType
 import eZmaxApi.infrastructure.Success
 import eZmaxApi.infrastructure.toMultiValue
 
-class ObjectActivesessionApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath) {
+class ObjectActivesessionApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = ApiClient.defaultClient) : ApiClient(basePath) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {

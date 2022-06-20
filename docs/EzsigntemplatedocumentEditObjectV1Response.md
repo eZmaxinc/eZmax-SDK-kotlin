@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **objDebugPayload** | [**CommonMinusResponseMinusObjDebugPayload**](CommonMinusResponseMinusObjDebugPayload.md) |  |  [optional]
 **objDebug** | [**CommonMinusResponseMinusObjDebug**](CommonMinusResponseMinusObjDebug.md) |  |  [optional]
+**aObjWarning** | [**kotlin.collections.List&lt;CommonMinusResponseMinusWarning&gt;**](CommonMinusResponseMinusWarning.md) |  |  [optional]
 
 
 

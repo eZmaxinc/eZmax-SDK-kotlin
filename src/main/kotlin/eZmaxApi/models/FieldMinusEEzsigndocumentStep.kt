@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.7
+ * The version of the OpenAPI document: 1.1.8
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -26,7 +26,7 @@ import com.squareup.moshi.Json
 /**
  * The signature step of the Ezsigndocument.
  *
- * Values: Unsent,Unsigned,PartiallySigned,DeclinedToSign,PrematurelyEnded,Completed
+ * Values: Unsent,Unsigned,PartiallySigned,DeclinedToSign,PrematurelyEnded,Completed,Disposed
  */
 
 enum class FieldMinusEEzsigndocumentStep(val value: kotlin.String) {
@@ -47,7 +47,10 @@ enum class FieldMinusEEzsigndocumentStep(val value: kotlin.String) {
     PrematurelyEnded("PrematurelyEnded"),
 
     @Json(name = "Completed")
-    Completed("Completed");
+    Completed("Completed"),
+
+    @Json(name = "Disposed")
+    Disposed("Disposed");
 
     /**
      * Override toString() to avoid using the enum variable name as the value, and instead use

@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.7
+ * The version of the OpenAPI document: 1.1.8
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -20,6 +20,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.FieldMinusEUserEzsignsendreminderfrequency
 
 import com.squareup.moshi.Json
 
@@ -27,10 +28,15 @@ import com.squareup.moshi.Json
  * An Activesession->User Object and children to create a complete structure
  *
  * @param pkiUserID The unique ID of the User
+ * @param fkiTimezoneID The unique ID of the Timezone
  * @param sAvatarUrl The url of the picture used as avatar
  * @param sUserFirstname The First name of the user
  * @param sUserLastname The Last name of the user
  * @param sEmailAddress The email address.
+ * @param eUserEzsignsendreminderfrequency 
+ * @param iUserInterfacecolor The int32 representation of the interface color. For example, RGB color #39435B would be 3752795
+ * @param bUserInterfacedark Whether to use a dark mode interface
+ * @param iUserListresult The number of rows to return by default in lists
  */
 
 data class ActivesessionMinusResponseCompoundMinusUser (
@@ -38,6 +44,10 @@ data class ActivesessionMinusResponseCompoundMinusUser (
     /* The unique ID of the User */
     @Json(name = "pkiUserID")
     val pkiUserID: kotlin.Int,
+
+    /* The unique ID of the Timezone */
+    @Json(name = "fkiTimezoneID")
+    val fkiTimezoneID: kotlin.Int,
 
     /* The url of the picture used as avatar */
     @Json(name = "sAvatarUrl")
@@ -53,7 +63,22 @@ data class ActivesessionMinusResponseCompoundMinusUser (
 
     /* The email address. */
     @Json(name = "sEmailAddress")
-    val sEmailAddress: kotlin.String
+    val sEmailAddress: kotlin.String,
+
+    @Json(name = "eUserEzsignsendreminderfrequency")
+    val eUserEzsignsendreminderfrequency: FieldMinusEUserEzsignsendreminderfrequency,
+
+    /* The int32 representation of the interface color. For example, RGB color #39435B would be 3752795 */
+    @Json(name = "iUserInterfacecolor")
+    val iUserInterfacecolor: kotlin.Int,
+
+    /* Whether to use a dark mode interface */
+    @Json(name = "bUserInterfacedark")
+    val bUserInterfacedark: kotlin.Boolean,
+
+    /* The number of rows to return by default in lists */
+    @Json(name = "iUserListresult")
+    val iUserListresult: kotlin.Int
 
 )
 

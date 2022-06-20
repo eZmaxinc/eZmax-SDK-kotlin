@@ -43,6 +43,8 @@ docs/CommonResponseObjDebugPayload.md
 docs/CommonResponseObjDebugPayloadGetList.md
 docs/CommonResponseObjDebugPayloadGetListAllOf.md
 docs/CommonResponseObjSQLQuery.md
+docs/CommonResponseRedirectSSecretquestionTextX.md
+docs/CommonResponseWarning.md
 docs/CommonWebhook.md
 docs/ContactRequest.md
 docs/ContactRequestCompound.md
@@ -219,6 +221,9 @@ docs/EzsignfolderCreateObjectV2Response.md
 docs/EzsignfolderCreateObjectV2ResponseAllOf.md
 docs/EzsignfolderCreateObjectV2ResponseMPayload.md
 docs/EzsignfolderDeleteObjectV1Response.md
+docs/EzsignfolderDisposeEzsignfoldersV1Request.md
+docs/EzsignfolderDisposeEzsignfoldersV1Response.md
+docs/EzsignfolderDisposeV1Response.md
 docs/EzsignfolderEditObjectV1Request.md
 docs/EzsignfolderEditObjectV1Response.md
 docs/EzsignfolderGetActionableElementsV1Response.md
@@ -378,6 +383,7 @@ docs/EzsigntemplatedocumentEditEzsigntemplatesignaturesV1ResponseAllOf.md
 docs/EzsigntemplatedocumentEditEzsigntemplatesignaturesV1ResponseMPayload.md
 docs/EzsigntemplatedocumentEditObjectV1Request.md
 docs/EzsigntemplatedocumentEditObjectV1Response.md
+docs/EzsigntemplatedocumentEditObjectV1ResponseAllOf.md
 docs/EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1Response.md
 docs/EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1ResponseAllOf.md
 docs/EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1ResponseMPayload.md
@@ -548,6 +554,7 @@ docs/FieldEEzsigntemplatesignatureTooltipposition.md
 docs/FieldEEzsigntemplatesignatureType.md
 docs/FieldENotificationpreferenceStatus.md
 docs/FieldEPhoneType.md
+docs/FieldEUserEzsignsendreminderfrequency.md
 docs/FieldEUserType.md
 docs/FranchisereferalincomeCreateObjectV1Request.md
 docs/FranchisereferalincomeCreateObjectV1Response.md
@@ -570,9 +577,14 @@ docs/NotificationsectionGetNotificationtestsV1Response.md
 docs/NotificationsectionGetNotificationtestsV1ResponseAllOf.md
 docs/NotificationsectionGetNotificationtestsV1ResponseMPayload.md
 docs/NotificationsubsectionResponse.md
+docs/NotificationtestGetElementsV1Response.md
+docs/NotificationtestGetElementsV1ResponseAllOf.md
+docs/NotificationtestGetElementsV1ResponseMPayload.md
 docs/NotificationtestResponse.md
 docs/ObjectActivesessionApi.md
 docs/ObjectApikeyApi.md
+docs/ObjectBillingentityinternalApi.md
+docs/ObjectBrandingApi.md
 docs/ObjectEzsignbulksendApi.md
 docs/ObjectEzsignbulksenddocumentmappingApi.md
 docs/ObjectEzsignbulksendsignermappingApi.md
@@ -597,8 +609,13 @@ docs/ObjectFranchisebrokerApi.md
 docs/ObjectFranchiseofficeApi.md
 docs/ObjectFranchisereferalincomeApi.md
 docs/ObjectNotificationsectionApi.md
+docs/ObjectNotificationtestApi.md
 docs/ObjectPeriodApi.md
 docs/ObjectSecretquestionApi.md
+docs/ObjectTaxassignmentApi.md
+docs/ObjectTimezoneApi.md
+docs/ObjectUserApi.md
+docs/ObjectUsergroupApi.md
 docs/PhoneRequest.md
 docs/PhoneRequestCompound.md
 docs/UserCreateEzsignuserV1Request.md
@@ -626,6 +643,8 @@ src/main/kotlin/eZmaxApi/apis/ModuleEzsignApi.kt
 src/main/kotlin/eZmaxApi/apis/ModuleUserApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectActivesessionApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectApikeyApi.kt
+src/main/kotlin/eZmaxApi/apis/ObjectBillingentityinternalApi.kt
+src/main/kotlin/eZmaxApi/apis/ObjectBrandingApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectEzsignbulksendApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectEzsignbulksenddocumentmappingApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectEzsignbulksendsignermappingApi.kt
@@ -650,8 +669,13 @@ src/main/kotlin/eZmaxApi/apis/ObjectFranchisebrokerApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectFranchiseofficeApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectFranchisereferalincomeApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectNotificationsectionApi.kt
+src/main/kotlin/eZmaxApi/apis/ObjectNotificationtestApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectPeriodApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectSecretquestionApi.kt
+src/main/kotlin/eZmaxApi/apis/ObjectTaxassignmentApi.kt
+src/main/kotlin/eZmaxApi/apis/ObjectTimezoneApi.kt
+src/main/kotlin/eZmaxApi/apis/ObjectUserApi.kt
+src/main/kotlin/eZmaxApi/apis/ObjectUsergroupApi.kt
 src/main/kotlin/eZmaxApi/infrastructure/ApiAbstractions.kt
 src/main/kotlin/eZmaxApi/infrastructure/ApiClient.kt
 src/main/kotlin/eZmaxApi/infrastructure/ApiResponse.kt
@@ -709,6 +733,8 @@ src/main/kotlin/eZmaxApi/models/CommonMinusResponseMinusObjDebug.kt
 src/main/kotlin/eZmaxApi/models/CommonMinusResponseMinusObjDebugPayload.kt
 src/main/kotlin/eZmaxApi/models/CommonMinusResponseMinusObjDebugPayloadGetList.kt
 src/main/kotlin/eZmaxApi/models/CommonMinusResponseMinusObjSQLQuery.kt
+src/main/kotlin/eZmaxApi/models/CommonMinusResponseMinusRedirectMinusSSecretquestionTextX.kt
+src/main/kotlin/eZmaxApi/models/CommonMinusResponseMinusWarning.kt
 src/main/kotlin/eZmaxApi/models/CommonMinusWebhook.kt
 src/main/kotlin/eZmaxApi/models/CommonResponseErrorSTemporaryFileUrlAllOf.kt
 src/main/kotlin/eZmaxApi/models/CommonResponseObjDebugPayloadGetListAllOf.kt
@@ -895,6 +921,9 @@ src/main/kotlin/eZmaxApi/models/EzsignfolderMinusCreateObjectMinusV2MinusRequest
 src/main/kotlin/eZmaxApi/models/EzsignfolderMinusCreateObjectMinusV2MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/EzsignfolderMinusCreateObjectMinusV2MinusResponseMinusMPayload.kt
 src/main/kotlin/eZmaxApi/models/EzsignfolderMinusDeleteObjectMinusV1MinusResponse.kt
+src/main/kotlin/eZmaxApi/models/EzsignfolderMinusDisposeEzsignfoldersMinusV1MinusRequest.kt
+src/main/kotlin/eZmaxApi/models/EzsignfolderMinusDisposeEzsignfoldersMinusV1MinusResponse.kt
+src/main/kotlin/eZmaxApi/models/EzsignfolderMinusDisposeMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/EzsignfolderMinusEditObjectMinusV1MinusRequest.kt
 src/main/kotlin/eZmaxApi/models/EzsignfolderMinusEditObjectMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/EzsignfolderMinusGetActionableElementsMinusV1MinusResponse.kt
@@ -1035,6 +1064,7 @@ src/main/kotlin/eZmaxApi/models/EzsigntemplateResponseCompoundAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsigntemplatedocumentCreateObjectV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsigntemplatedocumentEditEzsigntemplatesignaturesV1ResponseAllOf.kt
+src/main/kotlin/eZmaxApi/models/EzsigntemplatedocumentEditObjectV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsigntemplatedocumentGetEzsigntemplatesignaturesV1ResponseAllOf.kt
@@ -1216,6 +1246,7 @@ src/main/kotlin/eZmaxApi/models/FieldMinusEEzsigntemplatesignatureTooltippositio
 src/main/kotlin/eZmaxApi/models/FieldMinusEEzsigntemplatesignatureType.kt
 src/main/kotlin/eZmaxApi/models/FieldMinusENotificationpreferenceStatus.kt
 src/main/kotlin/eZmaxApi/models/FieldMinusEPhoneType.kt
+src/main/kotlin/eZmaxApi/models/FieldMinusEUserEzsignsendreminderfrequency.kt
 src/main/kotlin/eZmaxApi/models/FieldMinusEUserType.kt
 src/main/kotlin/eZmaxApi/models/FranchisereferalincomeCreateObjectV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/FranchisereferalincomeCreateObjectV2ResponseAllOf.kt
@@ -1235,6 +1266,9 @@ src/main/kotlin/eZmaxApi/models/NotificationsectionGetNotificationtestsV1Respons
 src/main/kotlin/eZmaxApi/models/NotificationsectionMinusGetNotificationtestsMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/NotificationsectionMinusGetNotificationtestsMinusV1MinusResponseMinusMPayload.kt
 src/main/kotlin/eZmaxApi/models/NotificationsubsectionMinusResponse.kt
+src/main/kotlin/eZmaxApi/models/NotificationtestGetElementsV1ResponseAllOf.kt
+src/main/kotlin/eZmaxApi/models/NotificationtestMinusGetElementsMinusV1MinusResponse.kt
+src/main/kotlin/eZmaxApi/models/NotificationtestMinusGetElementsMinusV1MinusResponseMinusMPayload.kt
 src/main/kotlin/eZmaxApi/models/NotificationtestMinusResponse.kt
 src/main/kotlin/eZmaxApi/models/PhoneMinusRequest.kt
 src/main/kotlin/eZmaxApi/models/PhoneMinusRequestCompound.kt

@@ -16,5 +16,7 @@
 
     * `Completed` (value: `"Completed"`)
 
+    * `Disposed` (value: `"Disposed"`)
+
 
 
