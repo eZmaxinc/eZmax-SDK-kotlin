@@ -10,8 +10,6 @@ Name | Type | Description | Notes
 **sEzsigndocumentName** | **kotlin.String** | The name of the document that will be presented to Ezsignfoldersignerassociations | 
 **pkiEzsigndocumentID** | **kotlin.Int** | The unique ID of the Ezsigndocument | 
 **eEzsigndocumentStep** | [**FieldMinusEEzsigndocumentStep**](FieldMinusEEzsigndocumentStep.md) |  | 
-**dtEzsigndocumentFirstsend** | **kotlin.String** | The date and time when the Ezsigndocument was first sent. | 
-**dtEzsigndocumentLastsend** | **kotlin.String** | The date and time when the Ezsigndocument was sent the last time. | 
 **iEzsigndocumentOrder** | **kotlin.Int** | The order in which the Ezsigndocument will be presented to the signatory in the Ezsignfolder. | 
 **iEzsigndocumentPagetotal** | **kotlin.Int** | The number of pages in the Ezsigndocument. | 
 **iEzsigndocumentSignaturesigned** | **kotlin.Int** | The number of signatures that were signed in the document. | 
@@ -20,6 +18,8 @@ Name | Type | Description | Notes
 **sEzsigndocumentMD5signed** | **kotlin.String** | MD5 Hash of the final PDF Document after all signatures were applied to it. | 
 **bEzsigndocumentEzsignform** | **kotlin.Boolean** | If the Ezsigndocument contains an Ezsignform or not | 
 **objAudit** | [**CommonMinusAudit**](CommonMinusAudit.md) |  | 
+**dtEzsigndocumentFirstsend** | **kotlin.String** | The date and time when the Ezsigndocument was first sent. |  [optional]
+**dtEzsigndocumentLastsend** | **kotlin.String** | The date and time when the Ezsigndocument was sent the last time. |  [optional]
 
 
 

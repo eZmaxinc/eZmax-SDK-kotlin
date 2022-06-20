@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.8
+ * The version of the OpenAPI document: 1.1.9
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -37,8 +37,6 @@ import com.squareup.moshi.Json
  * @param sEzsigndocumentName The name of the document that will be presented to Ezsignfoldersignerassociations
  * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument
  * @param eEzsigndocumentStep 
- * @param dtEzsigndocumentFirstsend The date and time when the Ezsigndocument was first sent.
- * @param dtEzsigndocumentLastsend The date and time when the Ezsigndocument was sent the last time.
  * @param iEzsigndocumentOrder The order in which the Ezsigndocument will be presented to the signatory in the Ezsignfolder.
  * @param iEzsigndocumentPagetotal The number of pages in the Ezsigndocument.
  * @param iEzsigndocumentSignaturesigned The number of signatures that were signed in the document.
@@ -52,6 +50,8 @@ import com.squareup.moshi.Json
  * @param iEzsigndocumentStepsignaturetotal The total number of steps in the signature filling phase
  * @param iEzsigndocumentStepsignatureCurrent The current step in the signature phase
  * @param aObjEzsignfoldersignerassociationstatus 
+ * @param dtEzsigndocumentFirstsend The date and time when the Ezsigndocument was first sent.
+ * @param dtEzsigndocumentLastsend The date and time when the Ezsigndocument was sent the last time.
  */
 
 data class EzsigndocumentMinusResponseCompound (
@@ -78,14 +78,6 @@ data class EzsigndocumentMinusResponseCompound (
 
     @Json(name = "eEzsigndocumentStep")
     val eEzsigndocumentStep: FieldMinusEEzsigndocumentStep,
-
-    /* The date and time when the Ezsigndocument was first sent. */
-    @Json(name = "dtEzsigndocumentFirstsend")
-    val dtEzsigndocumentFirstsend: kotlin.String,
-
-    /* The date and time when the Ezsigndocument was sent the last time. */
-    @Json(name = "dtEzsigndocumentLastsend")
-    val dtEzsigndocumentLastsend: kotlin.String,
 
     /* The order in which the Ezsigndocument will be presented to the signatory in the Ezsignfolder. */
     @Json(name = "iEzsigndocumentOrder")
@@ -135,7 +127,15 @@ data class EzsigndocumentMinusResponseCompound (
     val iEzsigndocumentStepsignatureCurrent: kotlin.Int,
 
     @Json(name = "a_objEzsignfoldersignerassociationstatus")
-    val aObjEzsignfoldersignerassociationstatus: kotlin.collections.List<CustomMinusEzsignfoldersignerassociationstatusMinusResponse>
+    val aObjEzsignfoldersignerassociationstatus: kotlin.collections.List<CustomMinusEzsignfoldersignerassociationstatusMinusResponse>,
+
+    /* The date and time when the Ezsigndocument was first sent. */
+    @Json(name = "dtEzsigndocumentFirstsend")
+    val dtEzsigndocumentFirstsend: kotlin.String? = null,
+
+    /* The date and time when the Ezsigndocument was sent the last time. */
+    @Json(name = "dtEzsigndocumentLastsend")
+    val dtEzsigndocumentLastsend: kotlin.String? = null
 
 )
 

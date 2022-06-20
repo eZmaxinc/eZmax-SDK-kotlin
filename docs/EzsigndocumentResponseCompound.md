@@ -10,8 +10,6 @@ Name | Type | Description | Notes
 **sEzsigndocumentName** | **kotlin.String** | The name of the document that will be presented to Ezsignfoldersignerassociations | 
 **pkiEzsigndocumentID** | **kotlin.Int** | The unique ID of the Ezsigndocument | 
 **eEzsigndocumentStep** | [**FieldMinusEEzsigndocumentStep**](FieldMinusEEzsigndocumentStep.md) |  | 
-**dtEzsigndocumentFirstsend** | **kotlin.String** | The date and time when the Ezsigndocument was first sent. | 
-**dtEzsigndocumentLastsend** | **kotlin.String** | The date and time when the Ezsigndocument was sent the last time. | 
 **iEzsigndocumentOrder** | **kotlin.Int** | The order in which the Ezsigndocument will be presented to the signatory in the Ezsignfolder. | 
 **iEzsigndocumentPagetotal** | **kotlin.Int** | The number of pages in the Ezsigndocument. | 
 **iEzsigndocumentSignaturesigned** | **kotlin.Int** | The number of signatures that were signed in the document. | 
@@ -25,6 +23,8 @@ Name | Type | Description | Notes
 **iEzsigndocumentStepsignaturetotal** | **kotlin.Int** | The total number of steps in the signature filling phase | 
 **iEzsigndocumentStepsignatureCurrent** | **kotlin.Int** | The current step in the signature phase | 
 **aObjEzsignfoldersignerassociationstatus** | [**kotlin.collections.List&lt;CustomMinusEzsignfoldersignerassociationstatusMinusResponse&gt;**](CustomMinusEzsignfoldersignerassociationstatusMinusResponse.md) |  | 
+**dtEzsigndocumentFirstsend** | **kotlin.String** | The date and time when the Ezsigndocument was first sent. |  [optional]
+**dtEzsigndocumentLastsend** | **kotlin.String** | The date and time when the Ezsigndocument was sent the last time. |  [optional]
 
 
 

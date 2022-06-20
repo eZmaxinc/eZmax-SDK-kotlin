@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.8
+ * The version of the OpenAPI document: 1.1.9
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -42,12 +42,12 @@ import com.squareup.moshi.Json
  * @param bEzsignfolderIsdisposable If the Ezsigndocument can be disposed
  * @param eEzsignfolderSendreminderfrequency 
  * @param eEzsignfolderStep 
- * @param dtEzsignfolderClose The date and time at which the folder was closed. Either by applying the last signature or by completing it prematurely.
  * @param objAudit 
  * @param dtEzsignfolderDuedate The maximum date and time at which the Ezsignfolder can be signed.
  * @param dtEzsignfolderSentdate The date and time at which the Ezsign folder was sent the last time.
  * @param dtEzsignfolderScheduledarchive The scheduled date and time at which the Ezsignfolder should be archived.
  * @param dtEzsignfolderScheduleddispose The scheduled date at which the Ezsignfolder should be Disposed.
+ * @param dtEzsignfolderClose The date and time at which the folder was closed. Either by applying the last signature or by completing it prematurely.
  */
 
 data class EzsignfolderMinusResponseCompound (
@@ -98,10 +98,6 @@ data class EzsignfolderMinusResponseCompound (
     @Json(name = "eEzsignfolderStep")
     val eEzsignfolderStep: FieldMinusEEzsignfolderStep,
 
-    /* The date and time at which the folder was closed. Either by applying the last signature or by completing it prematurely. */
-    @Json(name = "dtEzsignfolderClose")
-    val dtEzsignfolderClose: kotlin.String,
-
     @Json(name = "objAudit")
     val objAudit: CommonMinusAudit,
 
@@ -119,7 +115,11 @@ data class EzsignfolderMinusResponseCompound (
 
     /* The scheduled date at which the Ezsignfolder should be Disposed. */
     @Json(name = "dtEzsignfolderScheduleddispose")
-    val dtEzsignfolderScheduleddispose: kotlin.String? = null
+    val dtEzsignfolderScheduleddispose: kotlin.String? = null,
+
+    /* The date and time at which the folder was closed. Either by applying the last signature or by completing it prematurely. */
+    @Json(name = "dtEzsignfolderClose")
+    val dtEzsignfolderClose: kotlin.String? = null
 
 )
 
