@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.9
+ * The version of the OpenAPI document: 1.1.10
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -30,6 +30,7 @@ import com.squareup.moshi.Json
  * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation
  * @param fkiUserID The unique ID of the User
  * @param bEzsignfoldersignerassociationReceivecopy If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document.
+ * @param tEzsignfoldersignerassociationMessage A custom text message that will be added to the email sent.
  */
 
 data class EzsignfoldersignerassociationMinusRequest (
@@ -48,7 +49,11 @@ data class EzsignfoldersignerassociationMinusRequest (
 
     /* If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document. */
     @Json(name = "bEzsignfoldersignerassociationReceivecopy")
-    val bEzsignfoldersignerassociationReceivecopy: kotlin.Boolean? = null
+    val bEzsignfoldersignerassociationReceivecopy: kotlin.Boolean? = null,
+
+    /* A custom text message that will be added to the email sent. */
+    @Json(name = "tEzsignfoldersignerassociationMessage")
+    val tEzsignfoldersignerassociationMessage: kotlin.String? = null
 
 )
 

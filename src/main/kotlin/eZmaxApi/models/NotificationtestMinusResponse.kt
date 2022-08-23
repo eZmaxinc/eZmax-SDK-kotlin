@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.9
+ * The version of the OpenAPI document: 1.1.10
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -20,6 +20,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.MultilingualMinusNotificationtestName
 
 import com.squareup.moshi.Json
 
@@ -27,6 +28,7 @@ import com.squareup.moshi.Json
  * A Notificationtest Object
  *
  * @param pkiNotificationtestID The unique ID of the Notificationtest
+ * @param objNotificationtestName 
  * @param fkiNotificationsubsectionID The unique ID of the Notificationsubsection
  * @param sNotificationtestFunction The function name of the Notificationtest
  * @param sNotificationtestNameX The name of the Notificationtest in the language of the requester
@@ -37,6 +39,9 @@ data class NotificationtestMinusResponse (
     /* The unique ID of the Notificationtest */
     @Json(name = "pkiNotificationtestID")
     val pkiNotificationtestID: kotlin.Int,
+
+    @Json(name = "objNotificationtestName")
+    val objNotificationtestName: MultilingualMinusNotificationtestName,
 
     /* The unique ID of the Notificationsubsection */
     @Json(name = "fkiNotificationsubsectionID")

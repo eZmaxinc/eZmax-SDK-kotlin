@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.9
+ * The version of the OpenAPI document: 1.1.10
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -42,12 +42,16 @@ import eZmaxApi.models.EzsignfolderMinusGetEzsignfoldersignerassociationsMinusV1
 import eZmaxApi.models.EzsignfolderMinusGetFormsDataMinusV1MinusResponse
 import eZmaxApi.models.EzsignfolderMinusGetListMinusV1MinusResponse
 import eZmaxApi.models.EzsignfolderMinusGetObjectMinusV1MinusResponse
+import eZmaxApi.models.EzsignfolderMinusImportEzsignfoldersignerassociationsMinusV1MinusRequest
+import eZmaxApi.models.EzsignfolderMinusImportEzsignfoldersignerassociationsMinusV1MinusResponse
 import eZmaxApi.models.EzsignfolderMinusImportEzsigntemplatepackageMinusV1MinusRequest
 import eZmaxApi.models.EzsignfolderMinusImportEzsigntemplatepackageMinusV1MinusResponse
 import eZmaxApi.models.EzsignfolderMinusReorderMinusV1MinusRequest
 import eZmaxApi.models.EzsignfolderMinusReorderMinusV1MinusResponse
 import eZmaxApi.models.EzsignfolderMinusSendMinusV1MinusRequest
 import eZmaxApi.models.EzsignfolderMinusSendMinusV1MinusResponse
+import eZmaxApi.models.EzsignfolderMinusSendMinusV2MinusRequest
+import eZmaxApi.models.EzsignfolderMinusSendMinusV2MinusResponse
 import eZmaxApi.models.EzsignfolderMinusUnsendMinusV1MinusResponse
 import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
 
@@ -142,7 +146,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: O
 
         return RequestConfig(
             method = RequestMethod.POST,
-            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/archive".replace("{"+"pkiEzsignfolderID"+"}", "$pkiEzsignfolderID"),
+            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/archive".replace("{"+"pkiEzsignfolderID"+"}", pkiEzsignfolderID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -216,7 +220,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: O
 
         return RequestConfig(
             method = RequestMethod.POST,
-            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/batchDownload".replace("{"+"pkiEzsignfolderID"+"}", "$pkiEzsignfolderID"),
+            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/batchDownload".replace("{"+"pkiEzsignfolderID"+"}", pkiEzsignfolderID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -433,7 +437,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: O
 
         return RequestConfig(
             method = RequestMethod.DELETE,
-            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}".replace("{"+"pkiEzsignfolderID"+"}", "$pkiEzsignfolderID"),
+            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}".replace("{"+"pkiEzsignfolderID"+"}", pkiEzsignfolderID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -578,7 +582,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: O
 
         return RequestConfig(
             method = RequestMethod.POST,
-            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/dispose".replace("{"+"pkiEzsignfolderID"+"}", "$pkiEzsignfolderID"),
+            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/dispose".replace("{"+"pkiEzsignfolderID"+"}", pkiEzsignfolderID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -652,7 +656,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: O
 
         return RequestConfig(
             method = RequestMethod.PUT,
-            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}".replace("{"+"pkiEzsignfolderID"+"}", "$pkiEzsignfolderID"),
+            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}".replace("{"+"pkiEzsignfolderID"+"}", pkiEzsignfolderID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -722,7 +726,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: O
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements".replace("{"+"pkiEzsignfolderID"+"}", "$pkiEzsignfolderID"),
+            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements".replace("{"+"pkiEzsignfolderID"+"}", pkiEzsignfolderID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -792,7 +796,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: O
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments".replace("{"+"pkiEzsignfolderID"+"}", "$pkiEzsignfolderID"),
+            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments".replace("{"+"pkiEzsignfolderID"+"}", pkiEzsignfolderID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -862,7 +866,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: O
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations".replace("{"+"pkiEzsignfolderID"+"}", "$pkiEzsignfolderID"),
+            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations".replace("{"+"pkiEzsignfolderID"+"}", pkiEzsignfolderID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -932,7 +936,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: O
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData".replace("{"+"pkiEzsignfolderID"+"}", "$pkiEzsignfolderID"),
+            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData".replace("{"+"pkiEzsignfolderID"+"}", pkiEzsignfolderID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -1129,7 +1133,81 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: O
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}".replace("{"+"pkiEzsignfolderID"+"}", "$pkiEzsignfolderID"),
+            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}".replace("{"+"pkiEzsignfolderID"+"}", pkiEzsignfolderID.toString()),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Import an existing Ezsignfoldersignerassociation into this Ezsignfolder
+     * 
+     * @param pkiEzsignfolderID 
+     * @param ezsignfolderMinusImportEzsignfoldersignerassociationsMinusV1MinusRequest 
+     * @return EzsignfolderMinusImportEzsignfoldersignerassociationsMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignfolderImportEzsignfoldersignerassociationsV1(pkiEzsignfolderID: kotlin.Int, ezsignfolderMinusImportEzsignfoldersignerassociationsMinusV1MinusRequest: EzsignfolderMinusImportEzsignfoldersignerassociationsMinusV1MinusRequest) : EzsignfolderMinusImportEzsignfoldersignerassociationsMinusV1MinusResponse {
+        val localVarResponse = ezsignfolderImportEzsignfoldersignerassociationsV1WithHttpInfo(pkiEzsignfolderID = pkiEzsignfolderID, ezsignfolderMinusImportEzsignfoldersignerassociationsMinusV1MinusRequest = ezsignfolderMinusImportEzsignfoldersignerassociationsMinusV1MinusRequest)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfolderMinusImportEzsignfoldersignerassociationsMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Import an existing Ezsignfoldersignerassociation into this Ezsignfolder
+     * 
+     * @param pkiEzsignfolderID 
+     * @param ezsignfolderMinusImportEzsignfoldersignerassociationsMinusV1MinusRequest 
+     * @return ApiResponse<EzsignfolderMinusImportEzsignfoldersignerassociationsMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignfolderImportEzsignfoldersignerassociationsV1WithHttpInfo(pkiEzsignfolderID: kotlin.Int, ezsignfolderMinusImportEzsignfoldersignerassociationsMinusV1MinusRequest: EzsignfolderMinusImportEzsignfoldersignerassociationsMinusV1MinusRequest) : ApiResponse<EzsignfolderMinusImportEzsignfoldersignerassociationsMinusV1MinusResponse?> {
+        val localVariableConfig = ezsignfolderImportEzsignfoldersignerassociationsV1RequestConfig(pkiEzsignfolderID = pkiEzsignfolderID, ezsignfolderMinusImportEzsignfoldersignerassociationsMinusV1MinusRequest = ezsignfolderMinusImportEzsignfoldersignerassociationsMinusV1MinusRequest)
+
+        return request<EzsignfolderMinusImportEzsignfoldersignerassociationsMinusV1MinusRequest, EzsignfolderMinusImportEzsignfoldersignerassociationsMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsignfolderImportEzsignfoldersignerassociationsV1
+     *
+     * @param pkiEzsignfolderID 
+     * @param ezsignfolderMinusImportEzsignfoldersignerassociationsMinusV1MinusRequest 
+     * @return RequestConfig
+     */
+    fun ezsignfolderImportEzsignfoldersignerassociationsV1RequestConfig(pkiEzsignfolderID: kotlin.Int, ezsignfolderMinusImportEzsignfoldersignerassociationsMinusV1MinusRequest: EzsignfolderMinusImportEzsignfoldersignerassociationsMinusV1MinusRequest) : RequestConfig<EzsignfolderMinusImportEzsignfoldersignerassociationsMinusV1MinusRequest> {
+        val localVariableBody = ezsignfolderMinusImportEzsignfoldersignerassociationsMinusV1MinusRequest
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsignfoldersignerassociations".replace("{"+"pkiEzsignfolderID"+"}", pkiEzsignfolderID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -1203,7 +1281,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: O
 
         return RequestConfig(
             method = RequestMethod.POST,
-            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage".replace("{"+"pkiEzsignfolderID"+"}", "$pkiEzsignfolderID"),
+            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage".replace("{"+"pkiEzsignfolderID"+"}", pkiEzsignfolderID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -1277,7 +1355,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: O
 
         return RequestConfig(
             method = RequestMethod.POST,
-            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/reorder".replace("{"+"pkiEzsignfolderID"+"}", "$pkiEzsignfolderID"),
+            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/reorder".replace("{"+"pkiEzsignfolderID"+"}", pkiEzsignfolderID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -1298,7 +1376,9 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: O
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsignfolderSendV1(pkiEzsignfolderID: kotlin.Int, ezsignfolderMinusSendMinusV1MinusRequest: EzsignfolderMinusSendMinusV1MinusRequest) : EzsignfolderMinusSendMinusV1MinusResponse {
+        @Suppress("DEPRECATION")
         val localVarResponse = ezsignfolderSendV1WithHttpInfo(pkiEzsignfolderID = pkiEzsignfolderID, ezsignfolderMinusSendMinusV1MinusRequest = ezsignfolderMinusSendMinusV1MinusRequest)
 
         return when (localVarResponse.responseType) {
@@ -1327,7 +1407,9 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: O
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsignfolderSendV1WithHttpInfo(pkiEzsignfolderID: kotlin.Int, ezsignfolderMinusSendMinusV1MinusRequest: EzsignfolderMinusSendMinusV1MinusRequest) : ApiResponse<EzsignfolderMinusSendMinusV1MinusResponse?> {
+        @Suppress("DEPRECATION")
         val localVariableConfig = ezsignfolderSendV1RequestConfig(pkiEzsignfolderID = pkiEzsignfolderID, ezsignfolderMinusSendMinusV1MinusRequest = ezsignfolderMinusSendMinusV1MinusRequest)
 
         return request<EzsignfolderMinusSendMinusV1MinusRequest, EzsignfolderMinusSendMinusV1MinusResponse>(
@@ -1342,6 +1424,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: O
      * @param ezsignfolderMinusSendMinusV1MinusRequest 
      * @return RequestConfig
      */
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsignfolderSendV1RequestConfig(pkiEzsignfolderID: kotlin.Int, ezsignfolderMinusSendMinusV1MinusRequest: EzsignfolderMinusSendMinusV1MinusRequest) : RequestConfig<EzsignfolderMinusSendMinusV1MinusRequest> {
         val localVariableBody = ezsignfolderMinusSendMinusV1MinusRequest
         val localVariableQuery: MultiValueMap = mutableMapOf()
@@ -1351,7 +1434,81 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: O
 
         return RequestConfig(
             method = RequestMethod.POST,
-            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/send".replace("{"+"pkiEzsignfolderID"+"}", "$pkiEzsignfolderID"),
+            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/send".replace("{"+"pkiEzsignfolderID"+"}", pkiEzsignfolderID.toString()),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Send the Ezsignfolder to the signatories for signature
+     * 
+     * @param pkiEzsignfolderID 
+     * @param ezsignfolderMinusSendMinusV2MinusRequest 
+     * @return EzsignfolderMinusSendMinusV2MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignfolderSendV2(pkiEzsignfolderID: kotlin.Int, ezsignfolderMinusSendMinusV2MinusRequest: EzsignfolderMinusSendMinusV2MinusRequest) : EzsignfolderMinusSendMinusV2MinusResponse {
+        val localVarResponse = ezsignfolderSendV2WithHttpInfo(pkiEzsignfolderID = pkiEzsignfolderID, ezsignfolderMinusSendMinusV2MinusRequest = ezsignfolderMinusSendMinusV2MinusRequest)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfolderMinusSendMinusV2MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Send the Ezsignfolder to the signatories for signature
+     * 
+     * @param pkiEzsignfolderID 
+     * @param ezsignfolderMinusSendMinusV2MinusRequest 
+     * @return ApiResponse<EzsignfolderMinusSendMinusV2MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignfolderSendV2WithHttpInfo(pkiEzsignfolderID: kotlin.Int, ezsignfolderMinusSendMinusV2MinusRequest: EzsignfolderMinusSendMinusV2MinusRequest) : ApiResponse<EzsignfolderMinusSendMinusV2MinusResponse?> {
+        val localVariableConfig = ezsignfolderSendV2RequestConfig(pkiEzsignfolderID = pkiEzsignfolderID, ezsignfolderMinusSendMinusV2MinusRequest = ezsignfolderMinusSendMinusV2MinusRequest)
+
+        return request<EzsignfolderMinusSendMinusV2MinusRequest, EzsignfolderMinusSendMinusV2MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsignfolderSendV2
+     *
+     * @param pkiEzsignfolderID 
+     * @param ezsignfolderMinusSendMinusV2MinusRequest 
+     * @return RequestConfig
+     */
+    fun ezsignfolderSendV2RequestConfig(pkiEzsignfolderID: kotlin.Int, ezsignfolderMinusSendMinusV2MinusRequest: EzsignfolderMinusSendMinusV2MinusRequest) : RequestConfig<EzsignfolderMinusSendMinusV2MinusRequest> {
+        val localVariableBody = ezsignfolderMinusSendMinusV2MinusRequest
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/2/object/ezsignfolder/{pkiEzsignfolderID}/send".replace("{"+"pkiEzsignfolderID"+"}", pkiEzsignfolderID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -1425,7 +1582,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: O
 
         return RequestConfig(
             method = RequestMethod.POST,
-            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/unsend".replace("{"+"pkiEzsignfolderID"+"}", "$pkiEzsignfolderID"),
+            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/unsend".replace("{"+"pkiEzsignfolderID"+"}", pkiEzsignfolderID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

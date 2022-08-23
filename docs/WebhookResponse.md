@@ -4,36 +4,17 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**pksCustomerCode** | **kotlin.String** | The customer code assigned to your account | 
-**pkiWebhookID** | **kotlin.Int** | The Webhook ID. This value is visible in the admin interface. | 
-**eWebhookModule** | [**inline**](#EWebhookModule) | The Module generating the Event. | 
-**sWebhookUrl** | **kotlin.String** | The url being called | 
-**bWebhookTest** | **kotlin.Boolean** | Wheter the webhook received is a manual test or a real event | 
-**bWebhookSkipsslvalidation** | **kotlin.Boolean** | Wheter the server&#39;s SSL certificate should be validated or not. Not recommended for production use. | 
-**sWebhookEmailfailed** | **kotlin.String** | The email that will receive the webhook in case all attempts fail. | 
-**eWebhookEzsignevent** | [**inline**](#EWebhookEzsignevent) | This Ezsign Event. This property will be set only if the Module is \&quot;Ezsign\&quot;. |  [optional]
-**eWebhookManagementevent** | [**inline**](#EWebhookManagementevent) | This Management Event. This property will be set only if the Module is \&quot;Management\&quot;. |  [optional]
-
-
-<a name="EWebhookModule"></a>
-## Enum: eWebhookModule
-Name | Value
----- | -----
-eWebhookModule | Ezsign, Management
-
-
-<a name="EWebhookEzsignevent"></a>
-## Enum: eWebhookEzsignevent
-Name | Value
----- | -----
-eWebhookEzsignevent | DocumentCompleted, FolderCompleted
-
-
-<a name="EWebhookManagementevent"></a>
-## Enum: eWebhookManagementevent
-Name | Value
----- | -----
-eWebhookManagementevent | UserCreated
+**pkiWebhookID** | **kotlin.Int** | The unique ID of the Webhook | 
+**sWebhookDescription** | **kotlin.String** | The description of the Webhook | 
+**eWebhookModule** | [**FieldMinusEWebhookModule**](FieldMinusEWebhookModule.md) |  | 
+**sWebhookUrl** | **kotlin.String** | The URL of the Webhook callback | 
+**sWebhookEmailfailed** | **kotlin.String** | The email that will receive the Webhook in case all attempts fail | 
+**bWebhookSkipsslvalidation** | **kotlin.Boolean** | Wheter the server&#39;s SSL certificate should be validated or not. Not recommended to skip for production use | 
+**fkiEzsignfoldertypeID** | **kotlin.Int** | The unique ID of the Ezsignfoldertype. |  [optional]
+**sEzsignfoldertypeNameX** | **kotlin.String** | The name of the Ezsignfoldertype in the language of the requester |  [optional]
+**eWebhookEzsignevent** | [**FieldMinusEWebhookEzsignevent**](FieldMinusEWebhookEzsignevent.md) |  |  [optional]
+**eWebhookManagementevent** | [**FieldMinusEWebhookManagementevent**](FieldMinusEWebhookManagementevent.md) |  |  [optional]
+**bWebhookIsactive** | **kotlin.Boolean** | Whether the Webhook is active or not |  [optional]
 
 
 

@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.9
+ * The version of the OpenAPI document: 1.1.10
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -192,7 +192,7 @@ class ObjectEzsigntemplateApi(basePath: kotlin.String = defaultBasePath, client:
 
         return RequestConfig(
             method = RequestMethod.DELETE,
-            path = "/1/object/ezsigntemplate/{pkiEzsigntemplateID}".replace("{"+"pkiEzsigntemplateID"+"}", "$pkiEzsigntemplateID"),
+            path = "/1/object/ezsigntemplate/{pkiEzsigntemplateID}".replace("{"+"pkiEzsigntemplateID"+"}", pkiEzsigntemplateID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -266,7 +266,7 @@ class ObjectEzsigntemplateApi(basePath: kotlin.String = defaultBasePath, client:
 
         return RequestConfig(
             method = RequestMethod.PUT,
-            path = "/1/object/ezsigntemplate/{pkiEzsigntemplateID}".replace("{"+"pkiEzsigntemplateID"+"}", "$pkiEzsigntemplateID"),
+            path = "/1/object/ezsigntemplate/{pkiEzsigntemplateID}".replace("{"+"pkiEzsigntemplateID"+"}", pkiEzsigntemplateID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -281,9 +281,19 @@ class ObjectEzsigntemplateApi(basePath: kotlin.String = defaultBasePath, client:
      }
 
     /**
+     * enum for parameter eFilterActive
+     */
+     enum class EFilterActive_ezsigntemplateGetAutocompleteV1(val value: kotlin.String) {
+         @Json(name = "All") All("All"),
+         @Json(name = "Active") Active("Active"),
+         @Json(name = "Inactive") Inactive("Inactive")
+     }
+
+    /**
      * Retrieve Ezsigntemplate and IDs
      * Get the list of Ezsigntemplate to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezsigntemplate to return
+     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return CommonMinusGetAutocompleteMinusV1MinusResponse
@@ -295,8 +305,8 @@ class ObjectEzsigntemplateApi(basePath: kotlin.String = defaultBasePath, client:
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsigntemplateGetAutocompleteV1(sSelector: SSelector_ezsigntemplateGetAutocompleteV1, sQuery: kotlin.String? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null) : CommonMinusGetAutocompleteMinusV1MinusResponse {
-        val localVarResponse = ezsigntemplateGetAutocompleteV1WithHttpInfo(sSelector = sSelector, sQuery = sQuery, acceptLanguage = acceptLanguage)
+    fun ezsigntemplateGetAutocompleteV1(sSelector: SSelector_ezsigntemplateGetAutocompleteV1, eFilterActive: EFilterActive_ezsigntemplateGetAutocompleteV1? = Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null) : CommonMinusGetAutocompleteMinusV1MinusResponse {
+        val localVarResponse = ezsigntemplateGetAutocompleteV1WithHttpInfo(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as CommonMinusGetAutocompleteMinusV1MinusResponse
@@ -317,6 +327,7 @@ class ObjectEzsigntemplateApi(basePath: kotlin.String = defaultBasePath, client:
      * Retrieve Ezsigntemplate and IDs
      * Get the list of Ezsigntemplate to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezsigntemplate to return
+     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return ApiResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?>
@@ -325,8 +336,8 @@ class ObjectEzsigntemplateApi(basePath: kotlin.String = defaultBasePath, client:
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsigntemplateGetAutocompleteV1WithHttpInfo(sSelector: SSelector_ezsigntemplateGetAutocompleteV1, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : ApiResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?> {
-        val localVariableConfig = ezsigntemplateGetAutocompleteV1RequestConfig(sSelector = sSelector, sQuery = sQuery, acceptLanguage = acceptLanguage)
+    fun ezsigntemplateGetAutocompleteV1WithHttpInfo(sSelector: SSelector_ezsigntemplateGetAutocompleteV1, eFilterActive: EFilterActive_ezsigntemplateGetAutocompleteV1?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : ApiResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?> {
+        val localVariableConfig = ezsigntemplateGetAutocompleteV1RequestConfig(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return request<Unit, CommonMinusGetAutocompleteMinusV1MinusResponse>(
             localVariableConfig
@@ -337,14 +348,18 @@ class ObjectEzsigntemplateApi(basePath: kotlin.String = defaultBasePath, client:
      * To obtain the request config of the operation ezsigntemplateGetAutocompleteV1
      *
      * @param sSelector The type of Ezsigntemplate to return
+     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return RequestConfig
      */
-    fun ezsigntemplateGetAutocompleteV1RequestConfig(sSelector: SSelector_ezsigntemplateGetAutocompleteV1, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : RequestConfig<Unit> {
+    fun ezsigntemplateGetAutocompleteV1RequestConfig(sSelector: SSelector_ezsigntemplateGetAutocompleteV1, eFilterActive: EFilterActive_ezsigntemplateGetAutocompleteV1?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
+                if (eFilterActive != null) {
+                    put("eFilterActive", listOf(eFilterActive.toString()))
+                }
                 if (sQuery != null) {
                     put("sQuery", listOf(sQuery.toString()))
                 }
@@ -355,7 +370,7 @@ class ObjectEzsigntemplateApi(basePath: kotlin.String = defaultBasePath, client:
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/1/object/ezsigntemplate/getAutocomplete/{sSelector}".replace("{"+"sSelector"+"}", "$sSelector"),
+            path = "/1/object/ezsigntemplate/getAutocomplete/{sSelector}".replace("{"+"sSelector"+"}", sSelector.value.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -548,7 +563,7 @@ class ObjectEzsigntemplateApi(basePath: kotlin.String = defaultBasePath, client:
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/1/object/ezsigntemplate/{pkiEzsigntemplateID}".replace("{"+"pkiEzsigntemplateID"+"}", "$pkiEzsigntemplateID"),
+            path = "/1/object/ezsigntemplate/{pkiEzsigntemplateID}".replace("{"+"pkiEzsigntemplateID"+"}", pkiEzsigntemplateID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

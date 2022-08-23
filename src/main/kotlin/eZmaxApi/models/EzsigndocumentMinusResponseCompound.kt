@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.9
+ * The version of the OpenAPI document: 1.1.10
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -50,6 +50,7 @@ import com.squareup.moshi.Json
  * @param iEzsigndocumentStepsignaturetotal The total number of steps in the signature filling phase
  * @param iEzsigndocumentStepsignatureCurrent The current step in the signature phase
  * @param aObjEzsignfoldersignerassociationstatus 
+ * @param dtEzsignformCompleted The date and time at which the Ezsignform has been completed.
  * @param dtEzsigndocumentFirstsend The date and time when the Ezsigndocument was first sent.
  * @param dtEzsigndocumentLastsend The date and time when the Ezsigndocument was sent the last time.
  */
@@ -128,6 +129,10 @@ data class EzsigndocumentMinusResponseCompound (
 
     @Json(name = "a_objEzsignfoldersignerassociationstatus")
     val aObjEzsignfoldersignerassociationstatus: kotlin.collections.List<CustomMinusEzsignfoldersignerassociationstatusMinusResponse>,
+
+    /* The date and time at which the Ezsignform has been completed. */
+    @Json(name = "dtEzsignformCompleted")
+    val dtEzsignformCompleted: kotlin.String? = null,
 
     /* The date and time when the Ezsigndocument was first sent. */
     @Json(name = "dtEzsigndocumentFirstsend")

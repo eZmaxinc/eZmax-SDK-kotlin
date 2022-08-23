@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.9
+ * The version of the OpenAPI document: 1.1.10
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -187,7 +187,7 @@ class ObjectEzsignbulksendsignermappingApi(basePath: kotlin.String = defaultBase
 
         return RequestConfig(
             method = RequestMethod.DELETE,
-            path = "/1/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}".replace("{"+"pkiEzsignbulksendsignermappingID"+"}", "$pkiEzsignbulksendsignermappingID"),
+            path = "/1/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}".replace("{"+"pkiEzsignbulksendsignermappingID"+"}", pkiEzsignbulksendsignermappingID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -257,7 +257,7 @@ class ObjectEzsignbulksendsignermappingApi(basePath: kotlin.String = defaultBase
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/1/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}".replace("{"+"pkiEzsignbulksendsignermappingID"+"}", "$pkiEzsignbulksendsignermappingID"),
+            path = "/1/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}".replace("{"+"pkiEzsignbulksendsignermappingID"+"}", pkiEzsignbulksendsignermappingID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

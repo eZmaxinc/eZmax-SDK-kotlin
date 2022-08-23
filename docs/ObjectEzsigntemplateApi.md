@@ -166,7 +166,7 @@ Configure Authorization:
 
 <a name="ezsigntemplateGetAutocompleteV1"></a>
 # **ezsigntemplateGetAutocompleteV1**
-> CommonMinusGetAutocompleteMinusV1MinusResponse ezsigntemplateGetAutocompleteV1(sSelector, sQuery, acceptLanguage)
+> CommonMinusGetAutocompleteMinusV1MinusResponse ezsigntemplateGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
 
 Retrieve Ezsigntemplate and IDs
 
@@ -180,10 +180,11 @@ Get the list of Ezsigntemplate to be used in a dropdown or autocomplete control.
 
 val apiInstance = ObjectEzsigntemplateApi()
 val sSelector : kotlin.String = sSelector_example // kotlin.String | The type of Ezsigntemplate to return
+val eFilterActive : kotlin.String = eFilterActive_example // kotlin.String | Specify which results we want to display.
 val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter the returned results
 val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
 try {
-    val result : CommonMinusGetAutocompleteMinusV1MinusResponse = apiInstance.ezsigntemplateGetAutocompleteV1(sSelector, sQuery, acceptLanguage)
+    val result : CommonMinusGetAutocompleteMinusV1MinusResponse = apiInstance.ezsigntemplateGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplateApi#ezsigntemplateGetAutocompleteV1")
@@ -199,6 +200,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **kotlin.String**| The type of Ezsigntemplate to return | [enum: All]
+ **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
  **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional]
  **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
 

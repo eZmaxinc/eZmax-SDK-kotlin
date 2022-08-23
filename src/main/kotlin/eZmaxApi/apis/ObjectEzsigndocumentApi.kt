@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.9
+ * The version of the OpenAPI document: 1.1.10
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -149,7 +149,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
 
         return RequestConfig(
             method = RequestMethod.POST,
-            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate".replace("{"+"pkiEzsigndocumentID"+"}", "$pkiEzsigndocumentID"),
+            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate".replace("{"+"pkiEzsigndocumentID"+"}", pkiEzsigndocumentID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -223,7 +223,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
 
         return RequestConfig(
             method = RequestMethod.POST,
-            path = "/2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate".replace("{"+"pkiEzsigndocumentID"+"}", "$pkiEzsigndocumentID"),
+            path = "/2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate".replace("{"+"pkiEzsigndocumentID"+"}", pkiEzsigndocumentID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -440,7 +440,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
 
         return RequestConfig(
             method = RequestMethod.DELETE,
-            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}".replace("{"+"pkiEzsigndocumentID"+"}", "$pkiEzsigndocumentID"),
+            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}".replace("{"+"pkiEzsigndocumentID"+"}", pkiEzsigndocumentID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -514,7 +514,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
 
         return RequestConfig(
             method = RequestMethod.PUT,
-            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignformfieldgroups".replace("{"+"pkiEzsigndocumentID"+"}", "$pkiEzsigndocumentID"),
+            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignformfieldgroups".replace("{"+"pkiEzsigndocumentID"+"}", pkiEzsigndocumentID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -588,7 +588,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
 
         return RequestConfig(
             method = RequestMethod.PUT,
-            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures".replace("{"+"pkiEzsigndocumentID"+"}", "$pkiEzsigndocumentID"),
+            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures".replace("{"+"pkiEzsigndocumentID"+"}", pkiEzsigndocumentID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -662,7 +662,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
 
         return RequestConfig(
             method = RequestMethod.POST,
-            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/endPrematurely".replace("{"+"pkiEzsigndocumentID"+"}", "$pkiEzsigndocumentID"),
+            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/endPrematurely".replace("{"+"pkiEzsigndocumentID"+"}", pkiEzsigndocumentID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -732,7 +732,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements".replace("{"+"pkiEzsigndocumentID"+"}", "$pkiEzsigndocumentID"),
+            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements".replace("{"+"pkiEzsigndocumentID"+"}", pkiEzsigndocumentID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -815,7 +815,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/getDownloadUrl/{eDocumentType}".replace("{"+"pkiEzsigndocumentID"+"}", "$pkiEzsigndocumentID").replace("{"+"eDocumentType"+"}", "$eDocumentType"),
+            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/getDownloadUrl/{eDocumentType}".replace("{"+"pkiEzsigndocumentID"+"}", pkiEzsigndocumentID.toString()).replace("{"+"eDocumentType"+"}", eDocumentType.value.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -885,7 +885,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignformfieldgroups".replace("{"+"pkiEzsigndocumentID"+"}", "$pkiEzsigndocumentID"),
+            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignformfieldgroups".replace("{"+"pkiEzsigndocumentID"+"}", pkiEzsigndocumentID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -955,7 +955,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignpages".replace("{"+"pkiEzsigndocumentID"+"}", "$pkiEzsigndocumentID"),
+            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignpages".replace("{"+"pkiEzsigndocumentID"+"}", pkiEzsigndocumentID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -1025,7 +1025,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignsignatures".replace("{"+"pkiEzsigndocumentID"+"}", "$pkiEzsigndocumentID"),
+            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignsignatures".replace("{"+"pkiEzsigndocumentID"+"}", pkiEzsigndocumentID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -1095,7 +1095,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/getFormData".replace("{"+"pkiEzsigndocumentID"+"}", "$pkiEzsigndocumentID"),
+            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/getFormData".replace("{"+"pkiEzsigndocumentID"+"}", pkiEzsigndocumentID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -1165,7 +1165,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}".replace("{"+"pkiEzsigndocumentID"+"}", "$pkiEzsigndocumentID"),
+            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}".replace("{"+"pkiEzsigndocumentID"+"}", pkiEzsigndocumentID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -1235,7 +1235,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof".replace("{"+"pkiEzsigndocumentID"+"}", "$pkiEzsigndocumentID"),
+            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof".replace("{"+"pkiEzsigndocumentID"+"}", pkiEzsigndocumentID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -1309,7 +1309,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
 
         return RequestConfig(
             method = RequestMethod.POST,
-            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions".replace("{"+"pkiEzsigndocumentID"+"}", "$pkiEzsigndocumentID"),
+            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions".replace("{"+"pkiEzsigndocumentID"+"}", pkiEzsigndocumentID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -1383,7 +1383,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
 
         return RequestConfig(
             method = RequestMethod.PATCH,
-            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}".replace("{"+"pkiEzsigndocumentID"+"}", "$pkiEzsigndocumentID"),
+            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}".replace("{"+"pkiEzsigndocumentID"+"}", pkiEzsigndocumentID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -1457,7 +1457,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
 
         return RequestConfig(
             method = RequestMethod.POST,
-            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/unsend".replace("{"+"pkiEzsigndocumentID"+"}", "$pkiEzsigndocumentID"),
+            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/unsend".replace("{"+"pkiEzsigndocumentID"+"}", pkiEzsigndocumentID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

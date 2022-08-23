@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.9
+ * The version of the OpenAPI document: 1.1.10
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -114,7 +114,7 @@ class ObjectEzsignbulksendtransmissionApi(basePath: kotlin.String = defaultBaseP
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getCsvErrors".replace("{"+"pkiEzsignbulksendtransmissionID"+"}", "$pkiEzsignbulksendtransmissionID"),
+            path = "/1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getCsvErrors".replace("{"+"pkiEzsignbulksendtransmissionID"+"}", pkiEzsignbulksendtransmissionID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -184,7 +184,7 @@ class ObjectEzsignbulksendtransmissionApi(basePath: kotlin.String = defaultBaseP
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getFormsData".replace("{"+"pkiEzsignbulksendtransmissionID"+"}", "$pkiEzsignbulksendtransmissionID"),
+            path = "/1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getFormsData".replace("{"+"pkiEzsignbulksendtransmissionID"+"}", pkiEzsignbulksendtransmissionID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -254,7 +254,7 @@ class ObjectEzsignbulksendtransmissionApi(basePath: kotlin.String = defaultBaseP
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}".replace("{"+"pkiEzsignbulksendtransmissionID"+"}", "$pkiEzsignbulksendtransmissionID"),
+            path = "/1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}".replace("{"+"pkiEzsignbulksendtransmissionID"+"}", pkiEzsignbulksendtransmissionID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

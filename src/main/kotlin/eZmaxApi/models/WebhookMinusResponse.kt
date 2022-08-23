@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.9
+ * The version of the OpenAPI document: 1.1.10
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -20,88 +20,70 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.FieldMinusEWebhookEzsignevent
+import eZmaxApi.models.FieldMinusEWebhookManagementevent
+import eZmaxApi.models.FieldMinusEWebhookModule
 
 import com.squareup.moshi.Json
 
 /**
  * A webhook object
  *
- * @param pksCustomerCode The customer code assigned to your account
- * @param pkiWebhookID The Webhook ID. This value is visible in the admin interface.
- * @param eWebhookModule The Module generating the Event.
- * @param sWebhookUrl The url being called
- * @param bWebhookTest Wheter the webhook received is a manual test or a real event
- * @param bWebhookSkipsslvalidation Wheter the server's SSL certificate should be validated or not. Not recommended for production use.
- * @param sWebhookEmailfailed The email that will receive the webhook in case all attempts fail.
- * @param eWebhookEzsignevent This Ezsign Event. This property will be set only if the Module is \"Ezsign\".
- * @param eWebhookManagementevent This Management Event. This property will be set only if the Module is \"Management\".
+ * @param pkiWebhookID The unique ID of the Webhook
+ * @param sWebhookDescription The description of the Webhook
+ * @param eWebhookModule 
+ * @param sWebhookUrl The URL of the Webhook callback
+ * @param sWebhookEmailfailed The email that will receive the Webhook in case all attempts fail
+ * @param bWebhookSkipsslvalidation Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use
+ * @param fkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
+ * @param sEzsignfoldertypeNameX The name of the Ezsignfoldertype in the language of the requester
+ * @param eWebhookEzsignevent 
+ * @param eWebhookManagementevent 
+ * @param bWebhookIsactive Whether the Webhook is active or not
  */
 
 data class WebhookMinusResponse (
 
-    /* The customer code assigned to your account */
-    @Json(name = "pksCustomerCode")
-    val pksCustomerCode: kotlin.String,
-
-    /* The Webhook ID. This value is visible in the admin interface. */
+    /* The unique ID of the Webhook */
     @Json(name = "pkiWebhookID")
     val pkiWebhookID: kotlin.Int,
 
-    /* The Module generating the Event. */
-    @Json(name = "eWebhookModule")
-    val eWebhookModule: WebhookMinusResponse.EWebhookModule,
+    /* The description of the Webhook */
+    @Json(name = "sWebhookDescription")
+    val sWebhookDescription: kotlin.String,
 
-    /* The url being called */
+    @Json(name = "eWebhookModule")
+    val eWebhookModule: FieldMinusEWebhookModule,
+
+    /* The URL of the Webhook callback */
     @Json(name = "sWebhookUrl")
     val sWebhookUrl: kotlin.String,
 
-    /* Wheter the webhook received is a manual test or a real event */
-    @Json(name = "bWebhookTest")
-    val bWebhookTest: kotlin.Boolean,
-
-    /* Wheter the server's SSL certificate should be validated or not. Not recommended for production use. */
-    @Json(name = "bWebhookSkipsslvalidation")
-    val bWebhookSkipsslvalidation: kotlin.Boolean,
-
-    /* The email that will receive the webhook in case all attempts fail. */
+    /* The email that will receive the Webhook in case all attempts fail */
     @Json(name = "sWebhookEmailfailed")
     val sWebhookEmailfailed: kotlin.String,
 
-    /* This Ezsign Event. This property will be set only if the Module is \"Ezsign\". */
+    /* Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use */
+    @Json(name = "bWebhookSkipsslvalidation")
+    val bWebhookSkipsslvalidation: kotlin.Boolean,
+
+    /* The unique ID of the Ezsignfoldertype. */
+    @Json(name = "fkiEzsignfoldertypeID")
+    val fkiEzsignfoldertypeID: kotlin.Int? = null,
+
+    /* The name of the Ezsignfoldertype in the language of the requester */
+    @Json(name = "sEzsignfoldertypeNameX")
+    val sEzsignfoldertypeNameX: kotlin.String? = null,
+
     @Json(name = "eWebhookEzsignevent")
-    val eWebhookEzsignevent: WebhookMinusResponse.EWebhookEzsignevent? = null,
+    val eWebhookEzsignevent: FieldMinusEWebhookEzsignevent? = null,
 
-    /* This Management Event. This property will be set only if the Module is \"Management\". */
     @Json(name = "eWebhookManagementevent")
-    val eWebhookManagementevent: WebhookMinusResponse.EWebhookManagementevent? = null
+    val eWebhookManagementevent: FieldMinusEWebhookManagementevent? = null,
 
-) {
+    /* Whether the Webhook is active or not */
+    @Json(name = "bWebhookIsactive")
+    val bWebhookIsactive: kotlin.Boolean? = null
 
-    /**
-     * The Module generating the Event.
-     *
-     * Values: Ezsign,Management
-     */
-    enum class EWebhookModule(val value: kotlin.String) {
-        @Json(name = "Ezsign") Ezsign("Ezsign"),
-        @Json(name = "Management") Management("Management");
-    }
-    /**
-     * This Ezsign Event. This property will be set only if the Module is \"Ezsign\".
-     *
-     * Values: DocumentCompleted,FolderCompleted
-     */
-    enum class EWebhookEzsignevent(val value: kotlin.String) {
-        @Json(name = "DocumentCompleted") DocumentCompleted("DocumentCompleted"),
-        @Json(name = "FolderCompleted") FolderCompleted("FolderCompleted");
-    }
-    /**
-     * This Management Event. This property will be set only if the Module is \"Management\".
-     *
-     * Values: UserCreated
-     */
-    enum class EWebhookManagementevent(val value: kotlin.String) {
-        @Json(name = "UserCreated") UserCreated("UserCreated");
-    }
-}
+)
 

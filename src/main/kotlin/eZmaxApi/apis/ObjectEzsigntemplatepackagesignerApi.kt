@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.9
+ * The version of the OpenAPI document: 1.1.10
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -189,7 +189,7 @@ class ObjectEzsigntemplatepackagesignerApi(basePath: kotlin.String = defaultBase
 
         return RequestConfig(
             method = RequestMethod.DELETE,
-            path = "/1/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID}".replace("{"+"pkiEzsigntemplatepackagesignerID"+"}", "$pkiEzsigntemplatepackagesignerID"),
+            path = "/1/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID}".replace("{"+"pkiEzsigntemplatepackagesignerID"+"}", pkiEzsigntemplatepackagesignerID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -263,7 +263,7 @@ class ObjectEzsigntemplatepackagesignerApi(basePath: kotlin.String = defaultBase
 
         return RequestConfig(
             method = RequestMethod.PUT,
-            path = "/1/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID}".replace("{"+"pkiEzsigntemplatepackagesignerID"+"}", "$pkiEzsigntemplatepackagesignerID"),
+            path = "/1/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID}".replace("{"+"pkiEzsigntemplatepackagesignerID"+"}", pkiEzsigntemplatepackagesignerID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -333,7 +333,7 @@ class ObjectEzsigntemplatepackagesignerApi(basePath: kotlin.String = defaultBase
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/1/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID}".replace("{"+"pkiEzsigntemplatepackagesignerID"+"}", "$pkiEzsigntemplatepackagesignerID"),
+            path = "/1/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID}".replace("{"+"pkiEzsigntemplatepackagesignerID"+"}", pkiEzsigntemplatepackagesignerID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

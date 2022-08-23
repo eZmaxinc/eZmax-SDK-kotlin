@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.9
+ * The version of the OpenAPI document: 1.1.10
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -26,12 +26,12 @@ import com.squareup.moshi.Json
 /**
  * 
  *
- * @param bDisabled 
+ * @param bDisabled Indicates if the element is disabled in the context
  */
 
 data class CustomAutocompleteElementDisabledResponseAllOf (
 
-    /*  */
+    /* Indicates if the element is disabled in the context */
     @Json(name = "bDisabled")
     val bDisabled: kotlin.Boolean
 

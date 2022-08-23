@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.9
+ * The version of the OpenAPI document: 1.1.10
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -129,7 +129,7 @@ class GlobalCustomerApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/1/customer/{pksCustomerCode}/endpoint".replace("{"+"pksCustomerCode"+"}", "$pksCustomerCode"),
+            path = "/1/customer/{pksCustomerCode}/endpoint".replace("{"+"pksCustomerCode"+"}", pksCustomerCode.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

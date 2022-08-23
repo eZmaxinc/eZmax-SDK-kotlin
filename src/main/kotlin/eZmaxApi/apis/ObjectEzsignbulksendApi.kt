@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.9
+ * The version of the OpenAPI document: 1.1.10
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -130,7 +130,7 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
 
         return RequestConfig(
             method = RequestMethod.POST,
-            path = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission".replace("{"+"pkiEzsignbulksendID"+"}", "$pkiEzsignbulksendID"),
+            path = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission".replace("{"+"pkiEzsignbulksendID"+"}", pkiEzsignbulksendID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -271,7 +271,7 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
 
         return RequestConfig(
             method = RequestMethod.DELETE,
-            path = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}".replace("{"+"pkiEzsignbulksendID"+"}", "$pkiEzsignbulksendID"),
+            path = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}".replace("{"+"pkiEzsignbulksendID"+"}", pkiEzsignbulksendID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -345,7 +345,7 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
 
         return RequestConfig(
             method = RequestMethod.PUT,
-            path = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}".replace("{"+"pkiEzsignbulksendID"+"}", "$pkiEzsignbulksendID"),
+            path = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}".replace("{"+"pkiEzsignbulksendID"+"}", pkiEzsignbulksendID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -429,7 +429,7 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}/getCsvTemplate".replace("{"+"pkiEzsignbulksendID"+"}", "$pkiEzsignbulksendID"),
+            path = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}/getCsvTemplate".replace("{"+"pkiEzsignbulksendID"+"}", pkiEzsignbulksendID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -499,7 +499,7 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignbulksendtransmissions".replace("{"+"pkiEzsignbulksendID"+"}", "$pkiEzsignbulksendID"),
+            path = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignbulksendtransmissions".replace("{"+"pkiEzsignbulksendID"+"}", pkiEzsignbulksendID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -569,7 +569,7 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}/getFormsData".replace("{"+"pkiEzsignbulksendID"+"}", "$pkiEzsignbulksendID"),
+            path = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}/getFormsData".replace("{"+"pkiEzsignbulksendID"+"}", pkiEzsignbulksendID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -592,8 +592,6 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
          @Json(name = "eEzsignfoldertypePrivacylevel_DESC") eEzsignfoldertypePrivacylevel_DESC("eEzsignfoldertypePrivacylevel_DESC"),
          @Json(name = "bEzsignbulksendNeedvalidation_ASC") bEzsignbulksendNeedvalidation_ASC("bEzsignbulksendNeedvalidation_ASC"),
          @Json(name = "bEzsignbulksendNeedvalidation_DESC") bEzsignbulksendNeedvalidation_DESC("bEzsignbulksendNeedvalidation_DESC"),
-         @Json(name = "bEzsignbulksendIsactive_ASC") bEzsignbulksendIsactive_ASC("bEzsignbulksendIsactive_ASC"),
-         @Json(name = "bEzsignbulksendIsactive_DESC") bEzsignbulksendIsactive_DESC("bEzsignbulksendIsactive_DESC"),
          @Json(name = "iEzsignbulksendtransmission_ASC") iEzsignbulksendtransmission_ASC("iEzsignbulksendtransmission_ASC"),
          @Json(name = "iEzsignbulksendtransmission_DESC") iEzsignbulksendtransmission_DESC("iEzsignbulksendtransmission_DESC"),
          @Json(name = "iEzsignfolder_ASC") iEzsignfolder_ASC("iEzsignfolder_ASC"),
@@ -603,7 +601,9 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
          @Json(name = "iEzsignsignature_ASC") iEzsignsignature_ASC("iEzsignsignature_ASC"),
          @Json(name = "iEzsignsignature_DESC") iEzsignsignature_DESC("iEzsignsignature_DESC"),
          @Json(name = "iEzsignsignatureSigned_ASC") iEzsignsignatureSigned_ASC("iEzsignsignatureSigned_ASC"),
-         @Json(name = "iEzsignsignatureSigned_DESC") iEzsignsignatureSigned_DESC("iEzsignsignatureSigned_DESC")
+         @Json(name = "iEzsignsignatureSigned_DESC") iEzsignsignatureSigned_DESC("iEzsignsignatureSigned_DESC"),
+         @Json(name = "bEzsignbulksendIsactive_ASC") bEzsignbulksendIsactive_ASC("bEzsignbulksendIsactive_ASC"),
+         @Json(name = "bEzsignbulksendIsactive_DESC") bEzsignbulksendIsactive_DESC("bEzsignbulksendIsactive_DESC")
      }
 
     /**
@@ -766,7 +766,7 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}".replace("{"+"pkiEzsignbulksendID"+"}", "$pkiEzsignbulksendID"),
+            path = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}".replace("{"+"pkiEzsignbulksendID"+"}", pkiEzsignbulksendID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -840,7 +840,7 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
 
         return RequestConfig(
             method = RequestMethod.POST,
-            path = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}/reorder".replace("{"+"pkiEzsignbulksendID"+"}", "$pkiEzsignbulksendID"),
+            path = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}/reorder".replace("{"+"pkiEzsignbulksendID"+"}", pkiEzsignbulksendID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

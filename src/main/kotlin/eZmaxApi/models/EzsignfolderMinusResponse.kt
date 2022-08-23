@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.9
+ * The version of the OpenAPI document: 1.1.10
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -41,6 +41,7 @@ import com.squareup.moshi.Json
  * @param bEzsignfolderIsdisposable If the Ezsigndocument can be disposed
  * @param eEzsignfolderSendreminderfrequency 
  * @param eEzsignfolderStep 
+ * @param tEzsignfolderMessage A custom text message that will be added to the email sent.
  * @param objAudit 
  * @param dtEzsignfolderDuedate The maximum date and time at which the Ezsignfolder can be signed.
  * @param dtEzsignfolderSentdate The date and time at which the Ezsign folder was sent the last time.
@@ -96,6 +97,10 @@ data class EzsignfolderMinusResponse (
 
     @Json(name = "eEzsignfolderStep")
     val eEzsignfolderStep: FieldMinusEEzsignfolderStep,
+
+    /* A custom text message that will be added to the email sent. */
+    @Json(name = "tEzsignfolderMessage")
+    val tEzsignfolderMessage: kotlin.String,
 
     @Json(name = "objAudit")
     val objAudit: CommonMinusAudit,

@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.9
+ * The version of the OpenAPI document: 1.1.10
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -20,6 +20,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.MultilingualMinusNotificationsubsectionName
 
 import com.squareup.moshi.Json
 
@@ -29,6 +30,8 @@ import com.squareup.moshi.Json
  * @param pkiNotificationsubsectionID The unique ID of the Notificationsubsection
  * @param fkiNotificationsectionID The unique ID of the Notificationsection
  * @param sNotificationsubsectionNameX The name of the Notificationsubsection in the language of the requester
+ * @param objNotificationsubsectionName 
+ * @param sNotificationsectionNameX The name of the Notificationsection in the language of the requester
  */
 
 data class NotificationsubsectionMinusResponse (
@@ -43,7 +46,14 @@ data class NotificationsubsectionMinusResponse (
 
     /* The name of the Notificationsubsection in the language of the requester */
     @Json(name = "sNotificationsubsectionNameX")
-    val sNotificationsubsectionNameX: kotlin.String
+    val sNotificationsubsectionNameX: kotlin.String,
+
+    @Json(name = "objNotificationsubsectionName")
+    val objNotificationsubsectionName: MultilingualMinusNotificationsubsectionName? = null,
+
+    /* The name of the Notificationsection in the language of the requester */
+    @Json(name = "sNotificationsectionNameX")
+    val sNotificationsectionNameX: kotlin.String? = null
 
 )
 

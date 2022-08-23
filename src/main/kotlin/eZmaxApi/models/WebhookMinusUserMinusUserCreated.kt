@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.9
+ * The version of the OpenAPI document: 1.1.10
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -22,8 +22,8 @@ package eZmaxApi.models
 
 import eZmaxApi.models.AttemptMinusResponseCompound
 import eZmaxApi.models.CommonMinusWebhook
+import eZmaxApi.models.CustomMinusWebhookMinusResponse
 import eZmaxApi.models.UserMinusResponseCompound
-import eZmaxApi.models.WebhookMinusResponse
 import eZmaxApi.models.WebhookUserUserCreatedAllOf
 
 import com.squareup.moshi.Json
@@ -42,7 +42,7 @@ data class WebhookMinusUserMinusUserCreated (
     val objUser: UserMinusResponseCompound,
 
     @Json(name = "objWebhook")
-    val objWebhook: WebhookMinusResponse,
+    val objWebhook: CustomMinusWebhookMinusResponse,
 
     /* An array containing details of previous attempts that were made to deliver the message. The array is empty if it's the first attempt. */
     @Json(name = "a_objAttempt")

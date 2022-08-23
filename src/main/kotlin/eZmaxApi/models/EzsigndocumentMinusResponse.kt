@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.9
+ * The version of the OpenAPI document: 1.1.10
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -42,6 +42,7 @@ import com.squareup.moshi.Json
  * @param sEzsigndocumentMD5signed MD5 Hash of the final PDF Document after all signatures were applied to it.
  * @param bEzsigndocumentEzsignform If the Ezsigndocument contains an Ezsignform or not
  * @param objAudit 
+ * @param dtEzsignformCompleted The date and time at which the Ezsignform has been completed.
  * @param dtEzsigndocumentFirstsend The date and time when the Ezsigndocument was first sent.
  * @param dtEzsigndocumentLastsend The date and time when the Ezsigndocument was sent the last time.
  */
@@ -101,6 +102,10 @@ data class EzsigndocumentMinusResponse (
 
     @Json(name = "objAudit")
     val objAudit: CommonMinusAudit,
+
+    /* The date and time at which the Ezsignform has been completed. */
+    @Json(name = "dtEzsignformCompleted")
+    val dtEzsignformCompleted: kotlin.String? = null,
 
     /* The date and time when the Ezsigndocument was first sent. */
     @Json(name = "dtEzsigndocumentFirstsend")

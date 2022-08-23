@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.9
+ * The version of the OpenAPI document: 1.1.10
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -31,12 +31,12 @@ import com.squareup.moshi.Json
  * @param sEzsignbulksendDescription The description of the Ezsignbulksend
  * @param sEzsignfoldertypeNameX The name of the Ezsignfoldertype in the language of the requester
  * @param bEzsignbulksendNeedvalidation Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation
- * @param bEzsignbulksendIsactive Whether the Ezsignbulksend is active or not
  * @param iEzsignbulksendtransmission The total number of Ezsignbulksendtransmissions in the Ezsignbulksend
  * @param iEzsignfolder The total number of Ezsignfolders in the Ezsignbulksend
  * @param iEzsigndocument The total number of Ezsigndocuments in the Ezsignbulksend
  * @param iEzsignsignature The total number of Ezsignsignature in the Ezsignbulksend
  * @param iEzsignsignatureSigned The total number of already signed Ezsignsignature blocks in the Ezsignbulksend
+ * @param bEzsignbulksendIsactive Whether the Ezsignbulksend is active or not
  */
 
 data class EzsignbulksendMinusListElement (
@@ -61,10 +61,6 @@ data class EzsignbulksendMinusListElement (
     @Json(name = "bEzsignbulksendNeedvalidation")
     val bEzsignbulksendNeedvalidation: kotlin.Boolean,
 
-    /* Whether the Ezsignbulksend is active or not */
-    @Json(name = "bEzsignbulksendIsactive")
-    val bEzsignbulksendIsactive: kotlin.Boolean,
-
     /* The total number of Ezsignbulksendtransmissions in the Ezsignbulksend */
     @Json(name = "iEzsignbulksendtransmission")
     val iEzsignbulksendtransmission: kotlin.Int,
@@ -83,7 +79,11 @@ data class EzsignbulksendMinusListElement (
 
     /* The total number of already signed Ezsignsignature blocks in the Ezsignbulksend */
     @Json(name = "iEzsignsignatureSigned")
-    val iEzsignsignatureSigned: kotlin.Int
+    val iEzsignsignatureSigned: kotlin.Int,
+
+    /* Whether the Ezsignbulksend is active or not */
+    @Json(name = "bEzsignbulksendIsactive")
+    val bEzsignbulksendIsactive: kotlin.Boolean
 
 )
 

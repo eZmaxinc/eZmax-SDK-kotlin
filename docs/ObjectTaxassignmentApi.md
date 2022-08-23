@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="taxassignmentGetAutocompleteV1"></a>
 # **taxassignmentGetAutocompleteV1**
-> CommonMinusGetAutocompleteMinusV1MinusResponse taxassignmentGetAutocompleteV1(sSelector, sQuery, acceptLanguage)
+> CommonMinusGetAutocompleteMinusV1MinusResponse taxassignmentGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
 
 Retrieve Taxassignments and IDs
 
@@ -23,10 +23,11 @@ Get the list of Taxassignment to be used in a dropdown or autocomplete control.
 
 val apiInstance = ObjectTaxassignmentApi()
 val sSelector : kotlin.String = sSelector_example // kotlin.String | The type of Taxassignments to return
+val eFilterActive : kotlin.String = eFilterActive_example // kotlin.String | Specify which results we want to display.
 val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter the returned results
 val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
 try {
-    val result : CommonMinusGetAutocompleteMinusV1MinusResponse = apiInstance.taxassignmentGetAutocompleteV1(sSelector, sQuery, acceptLanguage)
+    val result : CommonMinusGetAutocompleteMinusV1MinusResponse = apiInstance.taxassignmentGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectTaxassignmentApi#taxassignmentGetAutocompleteV1")
@@ -42,6 +43,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **kotlin.String**| The type of Taxassignments to return | [enum: All, AllButNonrecoverable]
+ **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
  **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional]
  **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
 

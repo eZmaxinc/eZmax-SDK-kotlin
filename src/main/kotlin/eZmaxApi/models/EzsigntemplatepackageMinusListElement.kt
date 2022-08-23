@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.9
+ * The version of the OpenAPI document: 1.1.10
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -30,10 +30,10 @@ import com.squareup.moshi.Json
  * @param fkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
  * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
  * @param sEzsigntemplatepackageDescription The description of the Ezsigntemplatepackage
- * @param bEzsigntemplatepackageIsactive Whether the Ezsigntemplatepackage is active or not
  * @param bEzsigntemplatepackageNeedvalidation Whether the Ezsignbulksend was automatically modified and needs a manual validation
  * @param iEzsigntemplatepackagemembership The total number of Ezsigntemplatepackagemembership in the Ezsigntemplatepackage
  * @param sEzsignfoldertypeNameX The name of the Ezsignfoldertype in the language of the requester
+ * @param bEzsigntemplatepackageIsactive Whether the Ezsigntemplatepackage is active or not
  */
 
 data class EzsigntemplatepackageMinusListElement (
@@ -54,10 +54,6 @@ data class EzsigntemplatepackageMinusListElement (
     @Json(name = "sEzsigntemplatepackageDescription")
     val sEzsigntemplatepackageDescription: kotlin.String,
 
-    /* Whether the Ezsigntemplatepackage is active or not */
-    @Json(name = "bEzsigntemplatepackageIsactive")
-    val bEzsigntemplatepackageIsactive: kotlin.Boolean,
-
     /* Whether the Ezsignbulksend was automatically modified and needs a manual validation */
     @Json(name = "bEzsigntemplatepackageNeedvalidation")
     val bEzsigntemplatepackageNeedvalidation: kotlin.Boolean,
@@ -68,7 +64,11 @@ data class EzsigntemplatepackageMinusListElement (
 
     /* The name of the Ezsignfoldertype in the language of the requester */
     @Json(name = "sEzsignfoldertypeNameX")
-    val sEzsignfoldertypeNameX: kotlin.String
+    val sEzsignfoldertypeNameX: kotlin.String,
+
+    /* Whether the Ezsigntemplatepackage is active or not */
+    @Json(name = "bEzsigntemplatepackageIsactive")
+    val bEzsigntemplatepackageIsactive: kotlin.Boolean
 
 )
 

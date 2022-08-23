@@ -18,9 +18,11 @@ Method | HTTP request | Description
 [**ezsignfolderGetFormsDataV1**](ObjectEzsignfolderApi.md#ezsignfolderGetFormsDataV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData | Retrieve an existing Ezsignfolder&#39;s forms data
 [**ezsignfolderGetListV1**](ObjectEzsignfolderApi.md#ezsignfolderGetListV1) | **GET** /1/object/ezsignfolder/getList | Retrieve Ezsignfolder list
 [**ezsignfolderGetObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderGetObjectV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID} | Retrieve an existing Ezsignfolder
+[**ezsignfolderImportEzsignfoldersignerassociationsV1**](ObjectEzsignfolderApi.md#ezsignfolderImportEzsignfoldersignerassociationsV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsignfoldersignerassociations | Import an existing Ezsignfoldersignerassociation into this Ezsignfolder
 [**ezsignfolderImportEzsigntemplatepackageV1**](ObjectEzsignfolderApi.md#ezsignfolderImportEzsigntemplatepackageV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage | Import an Ezsigntemplatepackage in the Ezsignfolder.
 [**ezsignfolderReorderV1**](ObjectEzsignfolderApi.md#ezsignfolderReorderV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/reorder | Reorder Ezsigndocuments in the Ezsignfolder
 [**ezsignfolderSendV1**](ObjectEzsignfolderApi.md#ezsignfolderSendV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/send | Send the Ezsignfolder to the signatories for signature
+[**ezsignfolderSendV2**](ObjectEzsignfolderApi.md#ezsignfolderSendV2) | **POST** /2/object/ezsignfolder/{pkiEzsignfolderID}/send | Send the Ezsignfolder to the signatories for signature
 [**ezsignfolderUnsendV1**](ObjectEzsignfolderApi.md#ezsignfolderUnsendV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/unsend | Unsend the Ezsignfolder
 
 
@@ -734,6 +736,58 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+<a name="ezsignfolderImportEzsignfoldersignerassociationsV1"></a>
+# **ezsignfolderImportEzsignfoldersignerassociationsV1**
+> EzsignfolderMinusImportEzsignfoldersignerassociationsMinusV1MinusResponse ezsignfolderImportEzsignfoldersignerassociationsV1(pkiEzsignfolderID, ezsignfolderMinusImportEzsignfoldersignerassociationsMinusV1MinusRequest)
+
+Import an existing Ezsignfoldersignerassociation into this Ezsignfolder
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsignfolderApi()
+val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
+val ezsignfolderMinusImportEzsignfoldersignerassociationsMinusV1MinusRequest : EzsignfolderMinusImportEzsignfoldersignerassociationsMinusV1MinusRequest =  // EzsignfolderMinusImportEzsignfoldersignerassociationsMinusV1MinusRequest | 
+try {
+    val result : EzsignfolderMinusImportEzsignfoldersignerassociationsMinusV1MinusResponse = apiInstance.ezsignfolderImportEzsignfoldersignerassociationsV1(pkiEzsignfolderID, ezsignfolderMinusImportEzsignfoldersignerassociationsMinusV1MinusRequest)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsignfolderApi#ezsignfolderImportEzsignfoldersignerassociationsV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsignfolderApi#ezsignfolderImportEzsignfoldersignerassociationsV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **kotlin.Int**|  |
+ **ezsignfolderMinusImportEzsignfoldersignerassociationsMinusV1MinusRequest** | [**EzsignfolderMinusImportEzsignfoldersignerassociationsMinusV1MinusRequest**](EzsignfolderMinusImportEzsignfoldersignerassociationsMinusV1MinusRequest.md)|  |
+
+### Return type
+
+[**EzsignfolderMinusImportEzsignfoldersignerassociationsMinusV1MinusResponse**](EzsignfolderMinusImportEzsignfoldersignerassociationsMinusV1MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a name="ezsignfolderImportEzsigntemplatepackageV1"></a>
 # **ezsignfolderImportEzsigntemplatepackageV1**
 > EzsignfolderMinusImportEzsigntemplatepackageMinusV1MinusResponse ezsignfolderImportEzsigntemplatepackageV1(pkiEzsignfolderID, ezsignfolderMinusImportEzsigntemplatepackageMinusV1MinusRequest)
@@ -875,6 +929,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignfolderMinusSendMinusV1MinusResponse**](EzsignfolderMinusSendMinusV1MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="ezsignfolderSendV2"></a>
+# **ezsignfolderSendV2**
+> EzsignfolderMinusSendMinusV2MinusResponse ezsignfolderSendV2(pkiEzsignfolderID, ezsignfolderMinusSendMinusV2MinusRequest)
+
+Send the Ezsignfolder to the signatories for signature
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsignfolderApi()
+val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
+val ezsignfolderMinusSendMinusV2MinusRequest : EzsignfolderMinusSendMinusV2MinusRequest =  // EzsignfolderMinusSendMinusV2MinusRequest | 
+try {
+    val result : EzsignfolderMinusSendMinusV2MinusResponse = apiInstance.ezsignfolderSendV2(pkiEzsignfolderID, ezsignfolderMinusSendMinusV2MinusRequest)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsignfolderApi#ezsignfolderSendV2")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsignfolderApi#ezsignfolderSendV2")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **kotlin.Int**|  |
+ **ezsignfolderMinusSendMinusV2MinusRequest** | [**EzsignfolderMinusSendMinusV2MinusRequest**](EzsignfolderMinusSendMinusV2MinusRequest.md)|  |
+
+### Return type
+
+[**EzsignfolderMinusSendMinusV2MinusResponse**](EzsignfolderMinusSendMinusV2MinusResponse.md)
 
 ### Authorization
 

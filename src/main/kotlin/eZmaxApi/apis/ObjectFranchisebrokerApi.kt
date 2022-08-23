@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.9
+ * The version of the OpenAPI document: 1.1.10
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -59,9 +59,19 @@ class ObjectFranchisebrokerApi(basePath: kotlin.String = defaultBasePath, client
      }
 
     /**
+     * enum for parameter eFilterActive
+     */
+     enum class EFilterActive_franchisebrokerGetAutocompleteV1(val value: kotlin.String) {
+         @Json(name = "All") All("All"),
+         @Json(name = "Active") Active("Active"),
+         @Json(name = "Inactive") Inactive("Inactive")
+     }
+
+    /**
      * Retrieve Franchisebrokers and IDs
      * Get the list of Franchisebrokers to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Franchisebrokers to return
+     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return CommonMinusGetAutocompleteMinusV1MinusResponse
@@ -73,8 +83,8 @@ class ObjectFranchisebrokerApi(basePath: kotlin.String = defaultBasePath, client
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun franchisebrokerGetAutocompleteV1(sSelector: SSelector_franchisebrokerGetAutocompleteV1, sQuery: kotlin.String? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null) : CommonMinusGetAutocompleteMinusV1MinusResponse {
-        val localVarResponse = franchisebrokerGetAutocompleteV1WithHttpInfo(sSelector = sSelector, sQuery = sQuery, acceptLanguage = acceptLanguage)
+    fun franchisebrokerGetAutocompleteV1(sSelector: SSelector_franchisebrokerGetAutocompleteV1, eFilterActive: EFilterActive_franchisebrokerGetAutocompleteV1? = Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null) : CommonMinusGetAutocompleteMinusV1MinusResponse {
+        val localVarResponse = franchisebrokerGetAutocompleteV1WithHttpInfo(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as CommonMinusGetAutocompleteMinusV1MinusResponse
@@ -95,6 +105,7 @@ class ObjectFranchisebrokerApi(basePath: kotlin.String = defaultBasePath, client
      * Retrieve Franchisebrokers and IDs
      * Get the list of Franchisebrokers to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Franchisebrokers to return
+     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return ApiResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?>
@@ -103,8 +114,8 @@ class ObjectFranchisebrokerApi(basePath: kotlin.String = defaultBasePath, client
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun franchisebrokerGetAutocompleteV1WithHttpInfo(sSelector: SSelector_franchisebrokerGetAutocompleteV1, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : ApiResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?> {
-        val localVariableConfig = franchisebrokerGetAutocompleteV1RequestConfig(sSelector = sSelector, sQuery = sQuery, acceptLanguage = acceptLanguage)
+    fun franchisebrokerGetAutocompleteV1WithHttpInfo(sSelector: SSelector_franchisebrokerGetAutocompleteV1, eFilterActive: EFilterActive_franchisebrokerGetAutocompleteV1?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : ApiResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?> {
+        val localVariableConfig = franchisebrokerGetAutocompleteV1RequestConfig(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return request<Unit, CommonMinusGetAutocompleteMinusV1MinusResponse>(
             localVariableConfig
@@ -115,14 +126,18 @@ class ObjectFranchisebrokerApi(basePath: kotlin.String = defaultBasePath, client
      * To obtain the request config of the operation franchisebrokerGetAutocompleteV1
      *
      * @param sSelector The type of Franchisebrokers to return
+     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return RequestConfig
      */
-    fun franchisebrokerGetAutocompleteV1RequestConfig(sSelector: SSelector_franchisebrokerGetAutocompleteV1, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : RequestConfig<Unit> {
+    fun franchisebrokerGetAutocompleteV1RequestConfig(sSelector: SSelector_franchisebrokerGetAutocompleteV1, eFilterActive: EFilterActive_franchisebrokerGetAutocompleteV1?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
+                if (eFilterActive != null) {
+                    put("eFilterActive", listOf(eFilterActive.toString()))
+                }
                 if (sQuery != null) {
                     put("sQuery", listOf(sQuery.toString()))
                 }
@@ -133,7 +148,7 @@ class ObjectFranchisebrokerApi(basePath: kotlin.String = defaultBasePath, client
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/1/object/franchisebroker/getAutocomplete/{sSelector}".replace("{"+"sSelector"+"}", "$sSelector"),
+            path = "/1/object/franchisebroker/getAutocomplete/{sSelector}".replace("{"+"sSelector"+"}", sSelector.value.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

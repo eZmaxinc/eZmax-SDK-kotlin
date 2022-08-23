@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **bEzsignfolderIsdisposable** | **kotlin.Boolean** | If the Ezsigndocument can be disposed | 
 **eEzsignfolderSendreminderfrequency** | [**FieldMinusEEzsignfolderSendreminderfrequency**](FieldMinusEEzsignfolderSendreminderfrequency.md) |  | 
 **eEzsignfolderStep** | [**FieldMinusEEzsignfolderStep**](FieldMinusEEzsignfolderStep.md) |  | 
+**tEzsignfolderMessage** | **kotlin.String** | A custom text message that will be added to the email sent. | 
 **objAudit** | [**CommonMinusAudit**](CommonMinusAudit.md) |  | 
 **dtEzsignfolderDuedate** | **kotlin.String** | The maximum date and time at which the Ezsignfolder can be signed. |  [optional]
 **dtEzsignfolderSentdate** | **kotlin.String** | The date and time at which the Ezsign folder was sent the last time. |  [optional]

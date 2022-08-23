@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.9
+ * The version of the OpenAPI document: 1.1.10
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -60,10 +60,20 @@ class ObjectEzsigntsarequirementApi(basePath: kotlin.String = defaultBasePath, c
      }
 
     /**
+     * enum for parameter eFilterActive
+     */
+     enum class EFilterActive_ezsigntsarequirementGetAutocompleteV1(val value: kotlin.String) {
+         @Json(name = "All") All("All"),
+         @Json(name = "Active") Active("Active"),
+         @Json(name = "Inactive") Inactive("Inactive")
+     }
+
+    /**
      * Retrieve Ezsigntsarequirements and IDs
      * Get the list of Ezsigntsarequirement to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezsigntsarequirements to return
      * @param fkiEzsignfoldertypeID  (optional)
+     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return CommonMinusGetAutocompleteDisabledMinusV1MinusResponse
@@ -75,8 +85,8 @@ class ObjectEzsigntsarequirementApi(basePath: kotlin.String = defaultBasePath, c
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsigntsarequirementGetAutocompleteV1(sSelector: SSelector_ezsigntsarequirementGetAutocompleteV1, fkiEzsignfoldertypeID: kotlin.Int? = null, sQuery: kotlin.String? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null) : CommonMinusGetAutocompleteDisabledMinusV1MinusResponse {
-        val localVarResponse = ezsigntsarequirementGetAutocompleteV1WithHttpInfo(sSelector = sSelector, fkiEzsignfoldertypeID = fkiEzsignfoldertypeID, sQuery = sQuery, acceptLanguage = acceptLanguage)
+    fun ezsigntsarequirementGetAutocompleteV1(sSelector: SSelector_ezsigntsarequirementGetAutocompleteV1, fkiEzsignfoldertypeID: kotlin.Int? = null, eFilterActive: EFilterActive_ezsigntsarequirementGetAutocompleteV1? = Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null) : CommonMinusGetAutocompleteDisabledMinusV1MinusResponse {
+        val localVarResponse = ezsigntsarequirementGetAutocompleteV1WithHttpInfo(sSelector = sSelector, fkiEzsignfoldertypeID = fkiEzsignfoldertypeID, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as CommonMinusGetAutocompleteDisabledMinusV1MinusResponse
@@ -98,6 +108,7 @@ class ObjectEzsigntsarequirementApi(basePath: kotlin.String = defaultBasePath, c
      * Get the list of Ezsigntsarequirement to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezsigntsarequirements to return
      * @param fkiEzsignfoldertypeID  (optional)
+     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return ApiResponse<CommonMinusGetAutocompleteDisabledMinusV1MinusResponse?>
@@ -106,8 +117,8 @@ class ObjectEzsigntsarequirementApi(basePath: kotlin.String = defaultBasePath, c
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsigntsarequirementGetAutocompleteV1WithHttpInfo(sSelector: SSelector_ezsigntsarequirementGetAutocompleteV1, fkiEzsignfoldertypeID: kotlin.Int?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : ApiResponse<CommonMinusGetAutocompleteDisabledMinusV1MinusResponse?> {
-        val localVariableConfig = ezsigntsarequirementGetAutocompleteV1RequestConfig(sSelector = sSelector, fkiEzsignfoldertypeID = fkiEzsignfoldertypeID, sQuery = sQuery, acceptLanguage = acceptLanguage)
+    fun ezsigntsarequirementGetAutocompleteV1WithHttpInfo(sSelector: SSelector_ezsigntsarequirementGetAutocompleteV1, fkiEzsignfoldertypeID: kotlin.Int?, eFilterActive: EFilterActive_ezsigntsarequirementGetAutocompleteV1?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : ApiResponse<CommonMinusGetAutocompleteDisabledMinusV1MinusResponse?> {
+        val localVariableConfig = ezsigntsarequirementGetAutocompleteV1RequestConfig(sSelector = sSelector, fkiEzsignfoldertypeID = fkiEzsignfoldertypeID, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return request<Unit, CommonMinusGetAutocompleteDisabledMinusV1MinusResponse>(
             localVariableConfig
@@ -119,16 +130,20 @@ class ObjectEzsigntsarequirementApi(basePath: kotlin.String = defaultBasePath, c
      *
      * @param sSelector The type of Ezsigntsarequirements to return
      * @param fkiEzsignfoldertypeID  (optional)
+     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return RequestConfig
      */
-    fun ezsigntsarequirementGetAutocompleteV1RequestConfig(sSelector: SSelector_ezsigntsarequirementGetAutocompleteV1, fkiEzsignfoldertypeID: kotlin.Int?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : RequestConfig<Unit> {
+    fun ezsigntsarequirementGetAutocompleteV1RequestConfig(sSelector: SSelector_ezsigntsarequirementGetAutocompleteV1, fkiEzsignfoldertypeID: kotlin.Int?, eFilterActive: EFilterActive_ezsigntsarequirementGetAutocompleteV1?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
                 if (fkiEzsignfoldertypeID != null) {
                     put("fkiEzsignfoldertypeID", listOf(fkiEzsignfoldertypeID.toString()))
+                }
+                if (eFilterActive != null) {
+                    put("eFilterActive", listOf(eFilterActive.toString()))
                 }
                 if (sQuery != null) {
                     put("sQuery", listOf(sQuery.toString()))
@@ -140,7 +155,7 @@ class ObjectEzsigntsarequirementApi(basePath: kotlin.String = defaultBasePath, c
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/1/object/ezsigntsarequirement/getAutocomplete/{sSelector}".replace("{"+"sSelector"+"}", "$sSelector"),
+            path = "/1/object/ezsigntsarequirement/getAutocomplete/{sSelector}".replace("{"+"sSelector"+"}", sSelector.value.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

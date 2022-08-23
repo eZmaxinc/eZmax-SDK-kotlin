@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjEzsignfoldersignerassociation** | [**kotlin.collections.List&lt;EzsignfoldersignerassociationMinusResponseCompound&gt;**](EzsignfoldersignerassociationMinusResponseCompound.md) |  | 
+**aObjEzsignfoldersignerassociation** | [**kotlin.collections.List&lt;CustomMinusEzsignfoldersignerassociationActionableElementMinusResponse&gt;**](CustomMinusEzsignfoldersignerassociationActionableElementMinusResponse.md) |  | 
 
 
 

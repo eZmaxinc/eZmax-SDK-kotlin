@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="secretquestionGetAutocompleteV1"></a>
 # **secretquestionGetAutocompleteV1**
-> CommonMinusGetAutocompleteMinusV1MinusResponse secretquestionGetAutocompleteV1(sSelector, sQuery, acceptLanguage)
+> CommonMinusGetAutocompleteMinusV1MinusResponse secretquestionGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
 
 Retrieve Secretquestions and IDs
 
@@ -23,10 +23,11 @@ Get the list of Secretquestions to be used in a dropdown or autocomplete control
 
 val apiInstance = ObjectSecretquestionApi()
 val sSelector : kotlin.String = sSelector_example // kotlin.String | The type of Secretquestions to return
+val eFilterActive : kotlin.String = eFilterActive_example // kotlin.String | Specify which results we want to display.
 val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter the returned results
 val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
 try {
-    val result : CommonMinusGetAutocompleteMinusV1MinusResponse = apiInstance.secretquestionGetAutocompleteV1(sSelector, sQuery, acceptLanguage)
+    val result : CommonMinusGetAutocompleteMinusV1MinusResponse = apiInstance.secretquestionGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectSecretquestionApi#secretquestionGetAutocompleteV1")
@@ -42,6 +43,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **kotlin.String**| The type of Secretquestions to return | [enum: All]
+ **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
  **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional]
  **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
 

@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.9
+ * The version of the OpenAPI document: 1.1.10
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -113,7 +113,7 @@ class ObjectNotificationtestApi(basePath: kotlin.String = defaultBasePath, clien
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/1/object/notificationtest/{pkiNotificationtestID}/getElements".replace("{"+"pkiNotificationtestID"+"}", "$pkiNotificationtestID"),
+            path = "/1/object/notificationtest/{pkiNotificationtestID}/getElements".replace("{"+"pkiNotificationtestID"+"}", pkiNotificationtestID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
