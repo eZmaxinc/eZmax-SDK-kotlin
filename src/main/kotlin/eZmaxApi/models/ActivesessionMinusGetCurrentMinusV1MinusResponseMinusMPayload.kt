@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.10
+ * The version of the OpenAPI document: 1.1.11
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -41,6 +41,7 @@ import com.squareup.moshi.Json
  * @param aPkiPermissionID An array of permissions granted to the user or api key
  * @param objUserReal 
  * @param aEModuleInternalname An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key.
+ * @param fkiSystemconfigurationtypeID The unique ID of the Systemconfigurationtype
  * @param objUserCloned 
  * @param objApikey 
  */
@@ -83,6 +84,10 @@ data class ActivesessionMinusGetCurrentMinusV1MinusResponseMinusMPayload (
     /* An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key. */
     @Json(name = "a_eModuleInternalname")
     val aEModuleInternalname: kotlin.collections.List<kotlin.String>,
+
+    /* The unique ID of the Systemconfigurationtype */
+    @Json(name = "fkiSystemconfigurationtypeID")
+    val fkiSystemconfigurationtypeID: kotlin.Int? = null,
 
     @Json(name = "objUserCloned")
     val objUserCloned: ActivesessionMinusResponseCompoundMinusUser? = null,

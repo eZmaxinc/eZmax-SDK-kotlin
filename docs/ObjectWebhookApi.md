@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**webhookGetHistoryV1**](ObjectWebhookApi.md#webhookGetHistoryV1) | **GET** /1/object/webhook/{pkiWebhookID}/getHistory | Retrieve the logs for recent Webhook calls
 [**webhookGetListV1**](ObjectWebhookApi.md#webhookGetListV1) | **GET** /1/object/webhook/getList | Retrieve Webhook list
 [**webhookGetObjectV1**](ObjectWebhookApi.md#webhookGetObjectV1) | **GET** /1/object/webhook/{pkiWebhookID} | Retrieve an existing Webhook
-[**webhookTestUrlV1**](ObjectWebhookApi.md#webhookTestUrlV1) | **POST** /1/object/webhook/{pkiWebhookID}/test | Test the Webhook by calling the Url
+[**webhookTestV1**](ObjectWebhookApi.md#webhookTestV1) | **POST** /1/object/webhook/{pkiWebhookID}/test | Test the Webhook by calling the Url
 
 
 <a name="webhookCreateObjectV1"></a>
@@ -325,9 +325,9 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="webhookTestUrlV1"></a>
-# **webhookTestUrlV1**
-> WebhookMinusTestMinusV1MinusResponse webhookTestUrlV1(pkiWebhookID)
+<a name="webhookTestV1"></a>
+# **webhookTestV1**
+> WebhookMinusTestMinusV1MinusResponse webhookTestV1(pkiWebhookID, body)
 
 Test the Webhook by calling the Url
 
@@ -341,14 +341,15 @@ Test the Webhook by calling the Url
 
 val apiInstance = ObjectWebhookApi()
 val pkiWebhookID : kotlin.Int = 56 // kotlin.Int | 
+val body : kotlin.Any = Object // kotlin.Any | 
 try {
-    val result : WebhookMinusTestMinusV1MinusResponse = apiInstance.webhookTestUrlV1(pkiWebhookID)
+    val result : WebhookMinusTestMinusV1MinusResponse = apiInstance.webhookTestV1(pkiWebhookID, body)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling ObjectWebhookApi#webhookTestUrlV1")
+    println("4xx response calling ObjectWebhookApi#webhookTestV1")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling ObjectWebhookApi#webhookTestUrlV1")
+    println("5xx response calling ObjectWebhookApi#webhookTestV1")
     e.printStackTrace()
 }
 ```
@@ -358,6 +359,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiWebhookID** | **kotlin.Int**|  |
+ **body** | **kotlin.Any**|  |
 
 ### Return type
 
@@ -372,6 +374,6 @@ Configure Authorization:
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 

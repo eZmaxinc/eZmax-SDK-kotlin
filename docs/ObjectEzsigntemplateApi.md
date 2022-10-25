@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**ezsigntemplateDeleteObjectV1**](ObjectEzsigntemplateApi.md#ezsigntemplateDeleteObjectV1) | **DELETE** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Delete an existing Ezsigntemplate
 [**ezsigntemplateEditObjectV1**](ObjectEzsigntemplateApi.md#ezsigntemplateEditObjectV1) | **PUT** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Edit an existing Ezsigntemplate
 [**ezsigntemplateGetAutocompleteV1**](ObjectEzsigntemplateApi.md#ezsigntemplateGetAutocompleteV1) | **GET** /1/object/ezsigntemplate/getAutocomplete/{sSelector} | Retrieve Ezsigntemplate and IDs
+[**ezsigntemplateGetAutocompleteV2**](ObjectEzsigntemplateApi.md#ezsigntemplateGetAutocompleteV2) | **GET** /2/object/ezsigntemplate/getAutocomplete/{sSelector} | Retrieve Ezsigntemplates and IDs
 [**ezsigntemplateGetListV1**](ObjectEzsigntemplateApi.md#ezsigntemplateGetListV1) | **GET** /1/object/ezsigntemplate/getList | Retrieve Ezsigntemplate list
 [**ezsigntemplateGetObjectV1**](ObjectEzsigntemplateApi.md#ezsigntemplateGetObjectV1) | **GET** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate
 
@@ -207,6 +208,62 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CommonMinusGetAutocompleteMinusV1MinusResponse**](CommonMinusGetAutocompleteMinusV1MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="ezsigntemplateGetAutocompleteV2"></a>
+# **ezsigntemplateGetAutocompleteV2**
+> EzsigntemplateMinusGetAutocompleteMinusV2MinusResponse ezsigntemplateGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+
+Retrieve Ezsigntemplates and IDs
+
+Get the list of Ezsigntemplate to be used in a dropdown or autocomplete control.
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsigntemplateApi()
+val sSelector : kotlin.String = sSelector_example // kotlin.String | The type of Ezsigntemplates to return
+val eFilterActive : kotlin.String = eFilterActive_example // kotlin.String | Specify which results we want to display.
+val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter the returned results
+val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
+try {
+    val result : EzsigntemplateMinusGetAutocompleteMinusV2MinusResponse = apiInstance.ezsigntemplateGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsigntemplateApi#ezsigntemplateGetAutocompleteV2")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsigntemplateApi#ezsigntemplateGetAutocompleteV2")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sSelector** | **kotlin.String**| The type of Ezsigntemplates to return | [enum: All]
+ **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
+ **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional]
+ **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
+
+### Return type
+
+[**EzsigntemplateMinusGetAutocompleteMinusV2MinusResponse**](EzsigntemplateMinusGetAutocompleteMinusV2MinusResponse.md)
 
 ### Authorization
 

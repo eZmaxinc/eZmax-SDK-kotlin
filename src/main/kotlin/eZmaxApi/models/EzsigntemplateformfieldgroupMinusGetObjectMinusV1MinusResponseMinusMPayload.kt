@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.10
+ * The version of the OpenAPI document: 1.1.11
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -39,12 +39,12 @@ import com.squareup.moshi.Json
  * @param eEzsigntemplateformfieldgroupSignerrequirement 
  * @param sEzsigntemplateformfieldgroupLabel The Label for the Ezsigntemplateformfieldgroup
  * @param iEzsigntemplateformfieldgroupStep The step when the Ezsigntemplatesigner will be invited to fill the form fields
- * @param sEzsigntemplateformfieldgroupDefaultvalue The default value for the Ezsigntemplateformfieldgroup
  * @param iEzsigntemplateformfieldgroupFilledmin The minimum number of Ezsigntemplateformfield that must be filled in the Ezsigntemplateformfieldgroup
  * @param iEzsigntemplateformfieldgroupFilledmax The maximum number of Ezsigntemplateformfield that must be filled in the Ezsigntemplateformfieldgroup
  * @param bEzsigntemplateformfieldgroupReadonly Whether the Ezsigntemplateformfieldgroup is read only or not.
  * @param aObjEzsigntemplateformfieldgroupsigner 
  * @param aObjEzsigntemplateformfield 
+ * @param sEzsigntemplateformfieldgroupDefaultvalue The default value for the Ezsigntemplateformfieldgroup
  * @param iEzsigntemplateformfieldgroupMaxlength The maximum length for the value in the Ezsigntemplateformfieldgroup  This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea**
  * @param bEzsigntemplateformfieldgroupEncrypted Whether the Ezsigntemplateformfieldgroup is encrypted in the database or not. Encrypted values are not displayed on the Ezsigndocument. This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea**
  * @param sEzsigntemplateformfieldgroupRegexp A regular expression to indicate what values are acceptable for the Ezsigntemplateformfieldgroup.  This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea**
@@ -77,10 +77,6 @@ data class EzsigntemplateformfieldgroupMinusGetObjectMinusV1MinusResponseMinusMP
     @Json(name = "iEzsigntemplateformfieldgroupStep")
     val iEzsigntemplateformfieldgroupStep: kotlin.Int,
 
-    /* The default value for the Ezsigntemplateformfieldgroup */
-    @Json(name = "sEzsigntemplateformfieldgroupDefaultvalue")
-    val sEzsigntemplateformfieldgroupDefaultvalue: kotlin.String,
-
     /* The minimum number of Ezsigntemplateformfield that must be filled in the Ezsigntemplateformfieldgroup */
     @Json(name = "iEzsigntemplateformfieldgroupFilledmin")
     val iEzsigntemplateformfieldgroupFilledmin: kotlin.Int,
@@ -98,6 +94,10 @@ data class EzsigntemplateformfieldgroupMinusGetObjectMinusV1MinusResponseMinusMP
 
     @Json(name = "a_objEzsigntemplateformfield")
     val aObjEzsigntemplateformfield: kotlin.collections.List<EzsigntemplateformfieldMinusResponseCompound>,
+
+    /* The default value for the Ezsigntemplateformfieldgroup */
+    @Json(name = "sEzsigntemplateformfieldgroupDefaultvalue")
+    val sEzsigntemplateformfieldgroupDefaultvalue: kotlin.String? = null,
 
     /* The maximum length for the value in the Ezsigntemplateformfieldgroup  This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea** */
     @Json(name = "iEzsigntemplateformfieldgroupMaxlength")

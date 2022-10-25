@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.10
+ * The version of the OpenAPI document: 1.1.11
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -31,6 +31,7 @@ import eZmaxApi.models.EzsignfoldersignerassociationMinusCreateObjectMinusV2Minu
 import eZmaxApi.models.EzsignfoldersignerassociationMinusDeleteObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsignfoldersignerassociationMinusEditObjectMinusV1MinusRequest
 import eZmaxApi.models.EzsignfoldersignerassociationMinusEditObjectMinusV1MinusResponse
+import eZmaxApi.models.EzsignfoldersignerassociationMinusForceDisconnectMinusV1MinusResponse
 import eZmaxApi.models.EzsignfoldersignerassociationMinusGetInPersonLoginUrlMinusV1MinusResponse
 import eZmaxApi.models.EzsignfoldersignerassociationMinusGetObjectMinusV1MinusResponse
 
@@ -343,6 +344,80 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
         return RequestConfig(
             method = RequestMethod.PUT,
             path = "/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}".replace("{"+"pkiEzsignfoldersignerassociationID"+"}", pkiEzsignfoldersignerassociationID.toString()),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Disconnects the Ezsignfoldersignerassociation
+     * 
+     * @param pkiEzsignfoldersignerassociationID 
+     * @param body 
+     * @return EzsignfoldersignerassociationMinusForceDisconnectMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignfoldersignerassociationForceDisconnectV1(pkiEzsignfoldersignerassociationID: kotlin.Int, body: kotlin.Any) : EzsignfoldersignerassociationMinusForceDisconnectMinusV1MinusResponse {
+        val localVarResponse = ezsignfoldersignerassociationForceDisconnectV1WithHttpInfo(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID, body = body)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfoldersignerassociationMinusForceDisconnectMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Disconnects the Ezsignfoldersignerassociation
+     * 
+     * @param pkiEzsignfoldersignerassociationID 
+     * @param body 
+     * @return ApiResponse<EzsignfoldersignerassociationMinusForceDisconnectMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignfoldersignerassociationForceDisconnectV1WithHttpInfo(pkiEzsignfoldersignerassociationID: kotlin.Int, body: kotlin.Any) : ApiResponse<EzsignfoldersignerassociationMinusForceDisconnectMinusV1MinusResponse?> {
+        val localVariableConfig = ezsignfoldersignerassociationForceDisconnectV1RequestConfig(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID, body = body)
+
+        return request<kotlin.Any, EzsignfoldersignerassociationMinusForceDisconnectMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsignfoldersignerassociationForceDisconnectV1
+     *
+     * @param pkiEzsignfoldersignerassociationID 
+     * @param body 
+     * @return RequestConfig
+     */
+    fun ezsignfoldersignerassociationForceDisconnectV1RequestConfig(pkiEzsignfoldersignerassociationID: kotlin.Int, body: kotlin.Any) : RequestConfig<kotlin.Any> {
+        val localVariableBody = body
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/forceDisconnect".replace("{"+"pkiEzsignfoldersignerassociationID"+"}", pkiEzsignfoldersignerassociationID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

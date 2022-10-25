@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.10
+ * The version of the OpenAPI document: 1.1.11
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -24,6 +24,7 @@ import eZmaxApi.models.CommonMinusAudit
 import eZmaxApi.models.EzsignbulksendMinusResponseCompound
 import eZmaxApi.models.EzsignbulksenddocumentmappingMinusResponseCompound
 import eZmaxApi.models.EzsignbulksendsignermappingMinusResponse
+import eZmaxApi.models.FieldMinusEEzsignfoldertypePrivacylevel
 
 import com.squareup.moshi.Json
 
@@ -34,6 +35,7 @@ import com.squareup.moshi.Json
  * @param fkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
  * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
  * @param sLanguageNameX The Name of the Language in the language of the requester
+ * @param eEzsignfoldertypePrivacylevel 
  * @param sEzsignfoldertypeNameX The name of the Ezsignfoldertype in the language of the requester
  * @param sEzsignbulksendDescription The description of the Ezsignbulksend
  * @param tEzsignbulksendNote Note about the Ezsignbulksend
@@ -61,6 +63,9 @@ data class EzsignbulksendMinusGetObjectMinusV1MinusResponseMinusMPayload (
     /* The Name of the Language in the language of the requester */
     @Json(name = "sLanguageNameX")
     val sLanguageNameX: kotlin.String,
+
+    @Json(name = "eEzsignfoldertypePrivacylevel")
+    val eEzsignfoldertypePrivacylevel: FieldMinusEEzsignfoldertypePrivacylevel,
 
     /* The name of the Ezsignfoldertype in the language of the requester */
     @Json(name = "sEzsignfoldertypeNameX")

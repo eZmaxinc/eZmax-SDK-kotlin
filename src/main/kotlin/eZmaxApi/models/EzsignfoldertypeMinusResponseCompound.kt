@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.10
+ * The version of the OpenAPI document: 1.1.11
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -47,6 +47,8 @@ import com.squareup.moshi.Json
  * @param bEzsignfoldertypeSendsummarytodocumentowner Whether we send the summary to the Ezsigndocument's owner
  * @param bEzsignfoldertypeSendsummarytofolderowner Whether we send the summary to the Ezsignfolder's owner
  * @param bEzsignfoldertypeSendsummarytocolleague Whether we send the summary to the colleagues
+ * @param bEzsignfoldertypeIncludeproofsigner Whether we include the proof with the signed Ezsigndocument for Ezsignsigners
+ * @param bEzsignfoldertypeIncludeproofuser Whether we include the proof with the signed Ezsigndocument for users
  * @param bEzsignfoldertypeIsactive Whether the Ezsignfoldertype is active or not
  * @param fkiBillingentityinternalID The unique ID of the Billingentityinternal.
  * @param fkiUsergroupID The unique ID of the Usergroup
@@ -126,6 +128,14 @@ data class EzsignfoldertypeMinusResponseCompound (
     /* Whether we send the summary to the colleagues */
     @Json(name = "bEzsignfoldertypeSendsummarytocolleague")
     val bEzsignfoldertypeSendsummarytocolleague: kotlin.Boolean,
+
+    /* Whether we include the proof with the signed Ezsigndocument for Ezsignsigners */
+    @Json(name = "bEzsignfoldertypeIncludeproofsigner")
+    val bEzsignfoldertypeIncludeproofsigner: kotlin.Boolean,
+
+    /* Whether we include the proof with the signed Ezsigndocument for users */
+    @Json(name = "bEzsignfoldertypeIncludeproofuser")
+    val bEzsignfoldertypeIncludeproofuser: kotlin.Boolean,
 
     /* Whether the Ezsignfoldertype is active or not */
     @Json(name = "bEzsignfoldertypeIsactive")

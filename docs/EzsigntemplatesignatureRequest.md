@@ -12,9 +12,14 @@ Name | Type | Description | Notes
 **iEzsigntemplatesignatureStep** | **kotlin.Int** | The step when the Ezsigntemplatesigner will be invited to sign | 
 **eEzsigntemplatesignatureType** | [**FieldMinusEEzsigntemplatesignatureType**](FieldMinusEEzsigntemplatesignatureType.md) |  | 
 **pkiEzsigntemplatesignatureID** | **kotlin.Int** | The unique ID of the Ezsigntemplatesignature |  [optional]
+**fkiEzsigntemplatesignerIDValidation** | **kotlin.Int** | The unique ID of the Ezsigntemplatesigner |  [optional]
 **tEzsigntemplatesignatureTooltip** | **kotlin.String** | A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplatesignature |  [optional]
 **eEzsigntemplatesignatureTooltipposition** | [**FieldMinusEEzsigntemplatesignatureTooltipposition**](FieldMinusEEzsigntemplatesignatureTooltipposition.md) |  |  [optional]
 **eEzsigntemplatesignatureFont** | [**FieldMinusEEzsigntemplatesignatureFont**](FieldMinusEEzsigntemplatesignatureFont.md) |  |  [optional]
+**bEzsigntemplatesignatureRequired** | **kotlin.Boolean** | Whether the Ezsigntemplatesignature is required or not. This field is relevant only with Ezsigntemplatesignature with eEzsigntemplatesignatureType &#x3D; Attachments. |  [optional]
+**eEzsigntemplatesignatureAttachmentnamesource** | [**FieldMinusEEzsigntemplatesignatureAttachmentnamesource**](FieldMinusEEzsigntemplatesignatureAttachmentnamesource.md) |  |  [optional]
+**sEzsigntemplatesignatureAttachmentdescription** | **kotlin.String** | The description attached to the attachment name added in Ezsigntemplatesignature of eEzsigntemplatesignatureType Attachments |  [optional]
+**iEzsigntemplatesignatureValidationstep** | **kotlin.Int** | The step when the Ezsigntemplatesigner will be invited to validate the Ezsigntemplatesignature of eEzsigntemplatesignatureType Attachments |  [optional]
 
 
 

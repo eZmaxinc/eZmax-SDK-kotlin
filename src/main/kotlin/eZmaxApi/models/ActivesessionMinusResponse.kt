@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.10
+ * The version of the OpenAPI document: 1.1.11
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -35,6 +35,7 @@ import com.squareup.moshi.Json
  * @param sDepartmentNameX The Name of the Department in the language of the requester
  * @param bActivesessionDebug Whether the active session is in debug or not
  * @param pksCustomerCode The customer code assigned to your account
+ * @param fkiSystemconfigurationtypeID The unique ID of the Systemconfigurationtype
  */
 
 data class ActivesessionMinusResponse (
@@ -63,7 +64,11 @@ data class ActivesessionMinusResponse (
 
     /* The customer code assigned to your account */
     @Json(name = "pksCustomerCode")
-    val pksCustomerCode: kotlin.String
+    val pksCustomerCode: kotlin.String,
+
+    /* The unique ID of the Systemconfigurationtype */
+    @Json(name = "fkiSystemconfigurationtypeID")
+    val fkiSystemconfigurationtypeID: kotlin.Int? = null
 
 )
 

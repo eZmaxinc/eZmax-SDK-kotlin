@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.10
+ * The version of the OpenAPI document: 1.1.11
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -32,6 +32,7 @@ import eZmaxApi.models.EzsigntemplatepackageMinusEditEzsigntemplatepackagesigner
 import eZmaxApi.models.EzsigntemplatepackageMinusEditEzsigntemplatepackagesignersMinusV1MinusResponse
 import eZmaxApi.models.EzsigntemplatepackageMinusEditObjectMinusV1MinusRequest
 import eZmaxApi.models.EzsigntemplatepackageMinusEditObjectMinusV1MinusResponse
+import eZmaxApi.models.EzsigntemplatepackageMinusGetAutocompleteMinusV2MinusResponse
 import eZmaxApi.models.EzsigntemplatepackageMinusGetListMinusV1MinusResponse
 import eZmaxApi.models.EzsigntemplatepackageMinusGetObjectMinusV1MinusResponse
 import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
@@ -382,7 +383,9 @@ class ObjectEzsigntemplatepackageApi(basePath: kotlin.String = defaultBasePath, 
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsigntemplatepackageGetAutocompleteV1(sSelector: SSelector_ezsigntemplatepackageGetAutocompleteV1, eFilterActive: EFilterActive_ezsigntemplatepackageGetAutocompleteV1? = Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null) : CommonMinusGetAutocompleteDisabledMinusV1MinusResponse {
+        @Suppress("DEPRECATION")
         val localVarResponse = ezsigntemplatepackageGetAutocompleteV1WithHttpInfo(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return when (localVarResponse.responseType) {
@@ -413,7 +416,9 @@ class ObjectEzsigntemplatepackageApi(basePath: kotlin.String = defaultBasePath, 
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsigntemplatepackageGetAutocompleteV1WithHttpInfo(sSelector: SSelector_ezsigntemplatepackageGetAutocompleteV1, eFilterActive: EFilterActive_ezsigntemplatepackageGetAutocompleteV1?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : ApiResponse<CommonMinusGetAutocompleteDisabledMinusV1MinusResponse?> {
+        @Suppress("DEPRECATION")
         val localVariableConfig = ezsigntemplatepackageGetAutocompleteV1RequestConfig(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return request<Unit, CommonMinusGetAutocompleteDisabledMinusV1MinusResponse>(
@@ -430,6 +435,7 @@ class ObjectEzsigntemplatepackageApi(basePath: kotlin.String = defaultBasePath, 
      * @param acceptLanguage  (optional)
      * @return RequestConfig
      */
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsigntemplatepackageGetAutocompleteV1RequestConfig(sSelector: SSelector_ezsigntemplatepackageGetAutocompleteV1, eFilterActive: EFilterActive_ezsigntemplatepackageGetAutocompleteV1?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
@@ -448,6 +454,111 @@ class ObjectEzsigntemplatepackageApi(basePath: kotlin.String = defaultBasePath, 
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/ezsigntemplatepackage/getAutocomplete/{sSelector}".replace("{"+"sSelector"+"}", sSelector.value.toString()),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * enum for parameter sSelector
+     */
+     enum class SSelector_ezsigntemplatepackageGetAutocompleteV2(val value: kotlin.String) {
+         @Json(name = "All") All("All"),
+         @Json(name = "AllMultipleCopiesDisabled") AllMultipleCopiesDisabled("AllMultipleCopiesDisabled")
+     }
+
+    /**
+     * enum for parameter eFilterActive
+     */
+     enum class EFilterActive_ezsigntemplatepackageGetAutocompleteV2(val value: kotlin.String) {
+         @Json(name = "All") All("All"),
+         @Json(name = "Active") Active("Active"),
+         @Json(name = "Inactive") Inactive("Inactive")
+     }
+
+    /**
+     * Retrieve Ezsigntemplatepackages and IDs
+     * Get the list of Ezsigntemplatepackage to be used in a dropdown or autocomplete control.
+     * @param sSelector The type of Ezsigntemplatepackages to return
+     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param sQuery Allow to filter the returned results (optional)
+     * @param acceptLanguage  (optional)
+     * @return EzsigntemplatepackageMinusGetAutocompleteMinusV2MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsigntemplatepackageGetAutocompleteV2(sSelector: SSelector_ezsigntemplatepackageGetAutocompleteV2, eFilterActive: EFilterActive_ezsigntemplatepackageGetAutocompleteV2? = Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null) : EzsigntemplatepackageMinusGetAutocompleteMinusV2MinusResponse {
+        val localVarResponse = ezsigntemplatepackageGetAutocompleteV2WithHttpInfo(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigntemplatepackageMinusGetAutocompleteMinusV2MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve Ezsigntemplatepackages and IDs
+     * Get the list of Ezsigntemplatepackage to be used in a dropdown or autocomplete control.
+     * @param sSelector The type of Ezsigntemplatepackages to return
+     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param sQuery Allow to filter the returned results (optional)
+     * @param acceptLanguage  (optional)
+     * @return ApiResponse<EzsigntemplatepackageMinusGetAutocompleteMinusV2MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsigntemplatepackageGetAutocompleteV2WithHttpInfo(sSelector: SSelector_ezsigntemplatepackageGetAutocompleteV2, eFilterActive: EFilterActive_ezsigntemplatepackageGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : ApiResponse<EzsigntemplatepackageMinusGetAutocompleteMinusV2MinusResponse?> {
+        val localVariableConfig = ezsigntemplatepackageGetAutocompleteV2RequestConfig(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
+
+        return request<Unit, EzsigntemplatepackageMinusGetAutocompleteMinusV2MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsigntemplatepackageGetAutocompleteV2
+     *
+     * @param sSelector The type of Ezsigntemplatepackages to return
+     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param sQuery Allow to filter the returned results (optional)
+     * @param acceptLanguage  (optional)
+     * @return RequestConfig
+     */
+    fun ezsigntemplatepackageGetAutocompleteV2RequestConfig(sSelector: SSelector_ezsigntemplatepackageGetAutocompleteV2, eFilterActive: EFilterActive_ezsigntemplatepackageGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (eFilterActive != null) {
+                    put("eFilterActive", listOf(eFilterActive.toString()))
+                }
+                if (sQuery != null) {
+                    put("sQuery", listOf(sQuery.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/2/object/ezsigntemplatepackage/getAutocomplete/{sSelector}".replace("{"+"sSelector"+"}", sSelector.value.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.10
+ * The version of the OpenAPI document: 1.1.11
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -23,6 +23,7 @@ package eZmaxApi.models
 import eZmaxApi.models.EzsigntemplatesignatureMinusRequest
 import eZmaxApi.models.EzsigntemplatesignatureRequestCompoundAllOf
 import eZmaxApi.models.EzsigntemplatesignaturecustomdateMinusRequestCompound
+import eZmaxApi.models.FieldMinusEEzsigntemplatesignatureAttachmentnamesource
 import eZmaxApi.models.FieldMinusEEzsigntemplatesignatureFont
 import eZmaxApi.models.FieldMinusEEzsigntemplatesignatureTooltipposition
 import eZmaxApi.models.FieldMinusEEzsigntemplatesignatureType
@@ -40,9 +41,14 @@ import com.squareup.moshi.Json
  * @param iEzsigntemplatesignatureStep The step when the Ezsigntemplatesigner will be invited to sign
  * @param eEzsigntemplatesignatureType 
  * @param pkiEzsigntemplatesignatureID The unique ID of the Ezsigntemplatesignature
+ * @param fkiEzsigntemplatesignerIDValidation The unique ID of the Ezsigntemplatesigner
  * @param tEzsigntemplatesignatureTooltip A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplatesignature
  * @param eEzsigntemplatesignatureTooltipposition 
  * @param eEzsigntemplatesignatureFont 
+ * @param bEzsigntemplatesignatureRequired Whether the Ezsigntemplatesignature is required or not. This field is relevant only with Ezsigntemplatesignature with eEzsigntemplatesignatureType = Attachments.
+ * @param eEzsigntemplatesignatureAttachmentnamesource 
+ * @param sEzsigntemplatesignatureAttachmentdescription The description attached to the attachment name added in Ezsigntemplatesignature of eEzsigntemplatesignatureType Attachments
+ * @param iEzsigntemplatesignatureValidationstep The step when the Ezsigntemplatesigner will be invited to validate the Ezsigntemplatesignature of eEzsigntemplatesignatureType Attachments
  * @param bEzsigntemplatesignatureCustomdate Whether the Ezsigntemplatesignature has a custom date format or not. (Only possible when eEzsigntemplatesignatureType is **Name** or **Handwritten**)
  * @param aObjEzsigntemplatesignaturecustomdate An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsigntemplatesignatureCustomdate is true.  Use an empty array if you don't want to have a date at all.
  */
@@ -80,6 +86,10 @@ data class EzsigntemplatesignatureMinusRequestCompound (
     @Json(name = "pkiEzsigntemplatesignatureID")
     val pkiEzsigntemplatesignatureID: kotlin.Int? = null,
 
+    /* The unique ID of the Ezsigntemplatesigner */
+    @Json(name = "fkiEzsigntemplatesignerIDValidation")
+    val fkiEzsigntemplatesignerIDValidation: kotlin.Int? = null,
+
     /* A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplatesignature */
     @Json(name = "tEzsigntemplatesignatureTooltip")
     val tEzsigntemplatesignatureTooltip: kotlin.String? = null,
@@ -89,6 +99,21 @@ data class EzsigntemplatesignatureMinusRequestCompound (
 
     @Json(name = "eEzsigntemplatesignatureFont")
     val eEzsigntemplatesignatureFont: FieldMinusEEzsigntemplatesignatureFont? = null,
+
+    /* Whether the Ezsigntemplatesignature is required or not. This field is relevant only with Ezsigntemplatesignature with eEzsigntemplatesignatureType = Attachments. */
+    @Json(name = "bEzsigntemplatesignatureRequired")
+    val bEzsigntemplatesignatureRequired: kotlin.Boolean? = null,
+
+    @Json(name = "eEzsigntemplatesignatureAttachmentnamesource")
+    val eEzsigntemplatesignatureAttachmentnamesource: FieldMinusEEzsigntemplatesignatureAttachmentnamesource? = null,
+
+    /* The description attached to the attachment name added in Ezsigntemplatesignature of eEzsigntemplatesignatureType Attachments */
+    @Json(name = "sEzsigntemplatesignatureAttachmentdescription")
+    val sEzsigntemplatesignatureAttachmentdescription: kotlin.String? = null,
+
+    /* The step when the Ezsigntemplatesigner will be invited to validate the Ezsigntemplatesignature of eEzsigntemplatesignatureType Attachments */
+    @Json(name = "iEzsigntemplatesignatureValidationstep")
+    val iEzsigntemplatesignatureValidationstep: kotlin.Int? = null,
 
     /* Whether the Ezsigntemplatesignature has a custom date format or not. (Only possible when eEzsigntemplatesignatureType is **Name** or **Handwritten**) */
     @Json(name = "bEzsigntemplatesignatureCustomdate")

@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.10
+ * The version of the OpenAPI document: 1.1.11
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -27,6 +27,7 @@ import eZmaxApi.models.BrandingMinusCreateObjectMinusV1MinusRequest
 import eZmaxApi.models.BrandingMinusCreateObjectMinusV1MinusResponse
 import eZmaxApi.models.BrandingMinusEditObjectMinusV1MinusRequest
 import eZmaxApi.models.BrandingMinusEditObjectMinusV1MinusResponse
+import eZmaxApi.models.BrandingMinusGetAutocompleteMinusV2MinusResponse
 import eZmaxApi.models.BrandingMinusGetListMinusV1MinusResponse
 import eZmaxApi.models.BrandingMinusGetObjectMinusV1MinusResponse
 import eZmaxApi.models.CommonMinusGetAutocompleteMinusV1MinusResponse
@@ -234,7 +235,9 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun brandingGetAutocompleteV1(sSelector: SSelector_brandingGetAutocompleteV1, eFilterActive: EFilterActive_brandingGetAutocompleteV1? = Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null) : CommonMinusGetAutocompleteMinusV1MinusResponse {
+        @Suppress("DEPRECATION")
         val localVarResponse = brandingGetAutocompleteV1WithHttpInfo(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return when (localVarResponse.responseType) {
@@ -265,7 +268,9 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun brandingGetAutocompleteV1WithHttpInfo(sSelector: SSelector_brandingGetAutocompleteV1, eFilterActive: EFilterActive_brandingGetAutocompleteV1?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : ApiResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?> {
+        @Suppress("DEPRECATION")
         val localVariableConfig = brandingGetAutocompleteV1RequestConfig(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return request<Unit, CommonMinusGetAutocompleteMinusV1MinusResponse>(
@@ -282,6 +287,7 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      * @param acceptLanguage  (optional)
      * @return RequestConfig
      */
+    @Deprecated(message = "This operation is deprecated.")
     fun brandingGetAutocompleteV1RequestConfig(sSelector: SSelector_brandingGetAutocompleteV1, eFilterActive: EFilterActive_brandingGetAutocompleteV1?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
@@ -300,6 +306,110 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/branding/getAutocomplete/{sSelector}".replace("{"+"sSelector"+"}", sSelector.value.toString()),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * enum for parameter sSelector
+     */
+     enum class SSelector_brandingGetAutocompleteV2(val value: kotlin.String) {
+         @Json(name = "All") All("All")
+     }
+
+    /**
+     * enum for parameter eFilterActive
+     */
+     enum class EFilterActive_brandingGetAutocompleteV2(val value: kotlin.String) {
+         @Json(name = "All") All("All"),
+         @Json(name = "Active") Active("Active"),
+         @Json(name = "Inactive") Inactive("Inactive")
+     }
+
+    /**
+     * Retrieve Brandings and IDs
+     * Get the list of Branding to be used in a dropdown or autocomplete control.
+     * @param sSelector The type of Brandings to return
+     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param sQuery Allow to filter the returned results (optional)
+     * @param acceptLanguage  (optional)
+     * @return BrandingMinusGetAutocompleteMinusV2MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun brandingGetAutocompleteV2(sSelector: SSelector_brandingGetAutocompleteV2, eFilterActive: EFilterActive_brandingGetAutocompleteV2? = Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null) : BrandingMinusGetAutocompleteMinusV2MinusResponse {
+        val localVarResponse = brandingGetAutocompleteV2WithHttpInfo(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as BrandingMinusGetAutocompleteMinusV2MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve Brandings and IDs
+     * Get the list of Branding to be used in a dropdown or autocomplete control.
+     * @param sSelector The type of Brandings to return
+     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param sQuery Allow to filter the returned results (optional)
+     * @param acceptLanguage  (optional)
+     * @return ApiResponse<BrandingMinusGetAutocompleteMinusV2MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun brandingGetAutocompleteV2WithHttpInfo(sSelector: SSelector_brandingGetAutocompleteV2, eFilterActive: EFilterActive_brandingGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : ApiResponse<BrandingMinusGetAutocompleteMinusV2MinusResponse?> {
+        val localVariableConfig = brandingGetAutocompleteV2RequestConfig(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
+
+        return request<Unit, BrandingMinusGetAutocompleteMinusV2MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation brandingGetAutocompleteV2
+     *
+     * @param sSelector The type of Brandings to return
+     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param sQuery Allow to filter the returned results (optional)
+     * @param acceptLanguage  (optional)
+     * @return RequestConfig
+     */
+    fun brandingGetAutocompleteV2RequestConfig(sSelector: SSelector_brandingGetAutocompleteV2, eFilterActive: EFilterActive_brandingGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (eFilterActive != null) {
+                    put("eFilterActive", listOf(eFilterActive.toString()))
+                }
+                if (sQuery != null) {
+                    put("sQuery", listOf(sQuery.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/2/object/branding/getAutocomplete/{sSelector}".replace("{"+"sSelector"+"}", sSelector.value.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

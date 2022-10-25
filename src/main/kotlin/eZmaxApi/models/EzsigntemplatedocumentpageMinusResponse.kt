@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.10
+ * The version of the OpenAPI document: 1.1.11
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -32,7 +32,7 @@ import com.squareup.moshi.Json
  * @param iEzsigntemplatedocumentpageWidthpdf The Width of the page in points calculated at 72 DPI
  * @param iEzsigntemplatedocumentpageHeightpdf The Height of the page in points calculated at 72 DPI
  * @param iEzsigntemplatedocumentpagePagenumber The page number in the Ezsigntemplatedocument
- * @param sImageUrl The Url to the Ezsigntemplatedocumentpage's rasterized image.  Url will expire after 5 minutes.
+ * @param sComputedImageurl The Url to the Ezsigntemplatedocumentpage's rasterized image.  Url will expire after 5 minutes.
  */
 
 data class EzsigntemplatedocumentpageMinusResponse (
@@ -62,8 +62,8 @@ data class EzsigntemplatedocumentpageMinusResponse (
     val iEzsigntemplatedocumentpagePagenumber: kotlin.Int,
 
     /* The Url to the Ezsigntemplatedocumentpage's rasterized image.  Url will expire after 5 minutes. */
-    @Json(name = "sImageUrl")
-    val sImageUrl: kotlin.String
+    @Json(name = "sComputedImageurl")
+    val sComputedImageurl: kotlin.String
 
 )
 

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **iEzsigntemplatedocumentpageWidthpdf** | **kotlin.Int** | The Width of the page in points calculated at 72 DPI | 
 **iEzsigntemplatedocumentpageHeightpdf** | **kotlin.Int** | The Height of the page in points calculated at 72 DPI | 
 **iEzsigntemplatedocumentpagePagenumber** | **kotlin.Int** | The page number in the Ezsigntemplatedocument | 
-**sImageUrl** | **kotlin.String** | The Url to the Ezsigntemplatedocumentpage&#39;s rasterized image.  Url will expire after 5 minutes. | 
+**sComputedImageurl** | **kotlin.String** | The Url to the Ezsigntemplatedocumentpage&#39;s rasterized image.  Url will expire after 5 minutes. | 
 
 
 

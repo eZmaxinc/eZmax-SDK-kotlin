@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.10
+ * The version of the OpenAPI document: 1.1.11
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -24,6 +24,7 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 
 import eZmaxApi.models.CommonMinusResponseMinusError
+import eZmaxApi.models.CommonMinusResponseMinusErrorMinusTooManyRequests
 import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
 import eZmaxApi.models.WebhookMinusCreateObjectMinusV1MinusRequest
 import eZmaxApi.models.WebhookMinusCreateObjectMinusV1MinusResponse
@@ -553,6 +554,7 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: OkHttp
      * Test the Webhook by calling the Url
      * 
      * @param pkiWebhookID 
+     * @param body 
      * @return WebhookMinusTestMinusV1MinusResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -562,8 +564,8 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: OkHttp
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun webhookTestUrlV1(pkiWebhookID: kotlin.Int) : WebhookMinusTestMinusV1MinusResponse {
-        val localVarResponse = webhookTestUrlV1WithHttpInfo(pkiWebhookID = pkiWebhookID)
+    fun webhookTestV1(pkiWebhookID: kotlin.Int, body: kotlin.Any) : WebhookMinusTestMinusV1MinusResponse {
+        val localVarResponse = webhookTestV1WithHttpInfo(pkiWebhookID = pkiWebhookID, body = body)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as WebhookMinusTestMinusV1MinusResponse
@@ -584,30 +586,33 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: OkHttp
      * Test the Webhook by calling the Url
      * 
      * @param pkiWebhookID 
+     * @param body 
      * @return ApiResponse<WebhookMinusTestMinusV1MinusResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun webhookTestUrlV1WithHttpInfo(pkiWebhookID: kotlin.Int) : ApiResponse<WebhookMinusTestMinusV1MinusResponse?> {
-        val localVariableConfig = webhookTestUrlV1RequestConfig(pkiWebhookID = pkiWebhookID)
+    fun webhookTestV1WithHttpInfo(pkiWebhookID: kotlin.Int, body: kotlin.Any) : ApiResponse<WebhookMinusTestMinusV1MinusResponse?> {
+        val localVariableConfig = webhookTestV1RequestConfig(pkiWebhookID = pkiWebhookID, body = body)
 
-        return request<Unit, WebhookMinusTestMinusV1MinusResponse>(
+        return request<kotlin.Any, WebhookMinusTestMinusV1MinusResponse>(
             localVariableConfig
         )
     }
 
     /**
-     * To obtain the request config of the operation webhookTestUrlV1
+     * To obtain the request config of the operation webhookTestV1
      *
      * @param pkiWebhookID 
+     * @param body 
      * @return RequestConfig
      */
-    fun webhookTestUrlV1RequestConfig(pkiWebhookID: kotlin.Int) : RequestConfig<Unit> {
-        val localVariableBody = null
+    fun webhookTestV1RequestConfig(pkiWebhookID: kotlin.Int, body: kotlin.Any) : RequestConfig<kotlin.Any> {
+        val localVariableBody = body
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
         localVariableHeaders["Accept"] = "application/json"
 
         return RequestConfig(
