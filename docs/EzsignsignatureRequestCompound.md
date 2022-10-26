@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **tEzsignsignatureTooltip** | **kotlin.String** | A tooltip that will be presented to Ezsignsigner about the Ezsignsignature |  [optional]
 **eEzsignsignatureTooltipposition** | [**FieldMinusEEzsignsignatureTooltipposition**](FieldMinusEEzsignsignatureTooltipposition.md) |  |  [optional]
 **eEzsignsignatureFont** | [**FieldMinusEEzsignsignatureFont**](FieldMinusEEzsignsignatureFont.md) |  |  [optional]
-**fkiUserID** | **kotlin.Int** | The unique ID of the User |  [optional]
+**fkiEzsignfoldersignerassociationIDValidation** | **kotlin.Int** | The unique ID of the Ezsignfoldersignerassociation |  [optional]
 **bEzsignsignatureRequired** | **kotlin.Boolean** | Whether the Ezsignsignature is required or not. This field is relevant only with Ezsignsignature with eEzsignsignatureType &#x3D; Attachments. |  [optional]
 **eEzsignsignatureAttachmentnamesource** | [**FieldMinusEEzsignsignatureAttachmentnamesource**](FieldMinusEEzsignsignatureAttachmentnamesource.md) |  |  [optional]
 **sEzsignsignatureAttachmentdescription** | **kotlin.String** | The description attached to the attachment name added in Ezsignsignature of eEzsignsignatureType Attachments |  [optional]
