@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.12
+ * The version of the OpenAPI document: 1.1.13
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -46,6 +46,7 @@ import eZmaxApi.models.EzsigndocumentMinusGetEzsignpagesMinusV1MinusResponse
 import eZmaxApi.models.EzsigndocumentMinusGetEzsignsignaturesMinusV1MinusResponse
 import eZmaxApi.models.EzsigndocumentMinusGetFormDataMinusV1MinusResponse
 import eZmaxApi.models.EzsigndocumentMinusGetObjectMinusV1MinusResponse
+import eZmaxApi.models.EzsigndocumentMinusGetObjectMinusV2MinusResponse
 import eZmaxApi.models.EzsigndocumentMinusGetTemporaryProofMinusV1MinusResponse
 import eZmaxApi.models.EzsigndocumentMinusGetWordsPositionsMinusV1MinusRequest
 import eZmaxApi.models.EzsigndocumentMinusGetWordsPositionsMinusV1MinusResponse
@@ -1115,7 +1116,9 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsigndocumentGetObjectV1(pkiEzsigndocumentID: kotlin.Int) : EzsigndocumentMinusGetObjectMinusV1MinusResponse {
+        @Suppress("DEPRECATION")
         val localVarResponse = ezsigndocumentGetObjectV1WithHttpInfo(pkiEzsigndocumentID = pkiEzsigndocumentID)
 
         return when (localVarResponse.responseType) {
@@ -1143,7 +1146,9 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsigndocumentGetObjectV1WithHttpInfo(pkiEzsigndocumentID: kotlin.Int) : ApiResponse<EzsigndocumentMinusGetObjectMinusV1MinusResponse?> {
+        @Suppress("DEPRECATION")
         val localVariableConfig = ezsigndocumentGetObjectV1RequestConfig(pkiEzsigndocumentID = pkiEzsigndocumentID)
 
         return request<Unit, EzsigndocumentMinusGetObjectMinusV1MinusResponse>(
@@ -1157,6 +1162,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
      * @param pkiEzsigndocumentID 
      * @return RequestConfig
      */
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsigndocumentGetObjectV1RequestConfig(pkiEzsigndocumentID: kotlin.Int) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
@@ -1166,6 +1172,76 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}".replace("{"+"pkiEzsigndocumentID"+"}", pkiEzsigndocumentID.toString()),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Retrieve an existing Ezsigndocument
+     * 
+     * @param pkiEzsigndocumentID 
+     * @return EzsigndocumentMinusGetObjectMinusV2MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsigndocumentGetObjectV2(pkiEzsigndocumentID: kotlin.Int) : EzsigndocumentMinusGetObjectMinusV2MinusResponse {
+        val localVarResponse = ezsigndocumentGetObjectV2WithHttpInfo(pkiEzsigndocumentID = pkiEzsigndocumentID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigndocumentMinusGetObjectMinusV2MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve an existing Ezsigndocument
+     * 
+     * @param pkiEzsigndocumentID 
+     * @return ApiResponse<EzsigndocumentMinusGetObjectMinusV2MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsigndocumentGetObjectV2WithHttpInfo(pkiEzsigndocumentID: kotlin.Int) : ApiResponse<EzsigndocumentMinusGetObjectMinusV2MinusResponse?> {
+        val localVariableConfig = ezsigndocumentGetObjectV2RequestConfig(pkiEzsigndocumentID = pkiEzsigndocumentID)
+
+        return request<Unit, EzsigndocumentMinusGetObjectMinusV2MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsigndocumentGetObjectV2
+     *
+     * @param pkiEzsigndocumentID 
+     * @return RequestConfig
+     */
+    fun ezsigndocumentGetObjectV2RequestConfig(pkiEzsigndocumentID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/2/object/ezsigndocument/{pkiEzsigndocumentID}".replace("{"+"pkiEzsigndocumentID"+"}", pkiEzsigndocumentID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

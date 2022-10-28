@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.12
+ * The version of the OpenAPI document: 1.1.13
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -34,6 +34,7 @@ import eZmaxApi.models.WebhookMinusEditObjectMinusV1MinusResponse
 import eZmaxApi.models.WebhookMinusGetHistoryMinusV1MinusResponse
 import eZmaxApi.models.WebhookMinusGetListMinusV1MinusResponse
 import eZmaxApi.models.WebhookMinusGetObjectMinusV1MinusResponse
+import eZmaxApi.models.WebhookMinusGetObjectMinusV2MinusResponse
 import eZmaxApi.models.WebhookMinusTestMinusV1MinusResponse
 
 import com.squareup.moshi.Json
@@ -493,7 +494,9 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: OkHttp
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun webhookGetObjectV1(pkiWebhookID: kotlin.Int) : WebhookMinusGetObjectMinusV1MinusResponse {
+        @Suppress("DEPRECATION")
         val localVarResponse = webhookGetObjectV1WithHttpInfo(pkiWebhookID = pkiWebhookID)
 
         return when (localVarResponse.responseType) {
@@ -521,7 +524,9 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: OkHttp
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun webhookGetObjectV1WithHttpInfo(pkiWebhookID: kotlin.Int) : ApiResponse<WebhookMinusGetObjectMinusV1MinusResponse?> {
+        @Suppress("DEPRECATION")
         val localVariableConfig = webhookGetObjectV1RequestConfig(pkiWebhookID = pkiWebhookID)
 
         return request<Unit, WebhookMinusGetObjectMinusV1MinusResponse>(
@@ -535,6 +540,7 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: OkHttp
      * @param pkiWebhookID 
      * @return RequestConfig
      */
+    @Deprecated(message = "This operation is deprecated.")
     fun webhookGetObjectV1RequestConfig(pkiWebhookID: kotlin.Int) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
@@ -544,6 +550,76 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: OkHttp
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/webhook/{pkiWebhookID}".replace("{"+"pkiWebhookID"+"}", pkiWebhookID.toString()),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Retrieve an existing Webhook
+     * 
+     * @param pkiWebhookID 
+     * @return WebhookMinusGetObjectMinusV2MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun webhookGetObjectV2(pkiWebhookID: kotlin.Int) : WebhookMinusGetObjectMinusV2MinusResponse {
+        val localVarResponse = webhookGetObjectV2WithHttpInfo(pkiWebhookID = pkiWebhookID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as WebhookMinusGetObjectMinusV2MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve an existing Webhook
+     * 
+     * @param pkiWebhookID 
+     * @return ApiResponse<WebhookMinusGetObjectMinusV2MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun webhookGetObjectV2WithHttpInfo(pkiWebhookID: kotlin.Int) : ApiResponse<WebhookMinusGetObjectMinusV2MinusResponse?> {
+        val localVariableConfig = webhookGetObjectV2RequestConfig(pkiWebhookID = pkiWebhookID)
+
+        return request<Unit, WebhookMinusGetObjectMinusV2MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation webhookGetObjectV2
+     *
+     * @param pkiWebhookID 
+     * @return RequestConfig
+     */
+    fun webhookGetObjectV2RequestConfig(pkiWebhookID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/2/object/webhook/{pkiWebhookID}".replace("{"+"pkiWebhookID"+"}", pkiWebhookID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

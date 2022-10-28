@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**ezsignbulksendGetFormsDataV1**](ObjectEzsignbulksendApi.md#ezsignbulksendGetFormsDataV1) | **GET** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getFormsData | Retrieve an existing Ezsignbulksend&#39;s forms data
 [**ezsignbulksendGetListV1**](ObjectEzsignbulksendApi.md#ezsignbulksendGetListV1) | **GET** /1/object/ezsignbulksend/getList | Retrieve Ezsignbulksend list
 [**ezsignbulksendGetObjectV1**](ObjectEzsignbulksendApi.md#ezsignbulksendGetObjectV1) | **GET** /1/object/ezsignbulksend/{pkiEzsignbulksendID} | Retrieve an existing Ezsignbulksend
+[**ezsignbulksendGetObjectV2**](ObjectEzsignbulksendApi.md#ezsignbulksendGetObjectV2) | **GET** /2/object/ezsignbulksend/{pkiEzsignbulksendID} | Retrieve an existing Ezsignbulksend
 [**ezsignbulksendReorderV1**](ObjectEzsignbulksendApi.md#ezsignbulksendReorderV1) | **POST** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/reorder | Reorder Ezsignbulksenddocumentmappings in the Ezsignbulksend
 
 
@@ -465,6 +466,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignbulksendMinusGetObjectMinusV1MinusResponse**](EzsignbulksendMinusGetObjectMinusV1MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="ezsignbulksendGetObjectV2"></a>
+# **ezsignbulksendGetObjectV2**
+> EzsignbulksendMinusGetObjectMinusV2MinusResponse ezsignbulksendGetObjectV2(pkiEzsignbulksendID)
+
+Retrieve an existing Ezsignbulksend
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsignbulksendApi()
+val pkiEzsignbulksendID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : EzsignbulksendMinusGetObjectMinusV2MinusResponse = apiInstance.ezsignbulksendGetObjectV2(pkiEzsignbulksendID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsignbulksendApi#ezsignbulksendGetObjectV2")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsignbulksendApi#ezsignbulksendGetObjectV2")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignbulksendID** | **kotlin.Int**|  |
+
+### Return type
+
+[**EzsignbulksendMinusGetObjectMinusV2MinusResponse**](EzsignbulksendMinusGetObjectMinusV2MinusResponse.md)
 
 ### Authorization
 

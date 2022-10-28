@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.12
+ * The version of the OpenAPI document: 1.1.13
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -45,7 +45,7 @@ import com.squareup.moshi.Json
  * @param sEzsignsignatureAttachmentdescription The description attached to the attachment name added in Ezsignsignature of eEzsignsignatureType Attachments
  * @param eEzsignsignatureAttachmentnamesource 
  * @param bEzsignsignatureRequired Whether the Ezsignsignature is required or not. This field is relevant only with Ezsignsignature with eEzsignsignatureType = Attachments.
- * @param fkiUserID The unique ID of the User
+ * @param fkiEzsignfoldersignerassociationIDValidation The unique ID of the Ezsignfoldersignerassociation
  */
 
 data class EzsignsignatureMinusResponse (
@@ -106,9 +106,9 @@ data class EzsignsignatureMinusResponse (
     @Json(name = "bEzsignsignatureRequired")
     val bEzsignsignatureRequired: kotlin.Boolean? = null,
 
-    /* The unique ID of the User */
-    @Json(name = "fkiUserID")
-    val fkiUserID: kotlin.Int? = null
+    /* The unique ID of the Ezsignfoldersignerassociation */
+    @Json(name = "fkiEzsignfoldersignerassociationIDValidation")
+    val fkiEzsignfoldersignerassociationIDValidation: kotlin.Int? = null
 
 )
 

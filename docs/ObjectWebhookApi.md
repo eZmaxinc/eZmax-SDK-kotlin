@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**webhookGetHistoryV1**](ObjectWebhookApi.md#webhookGetHistoryV1) | **GET** /1/object/webhook/{pkiWebhookID}/getHistory | Retrieve the logs for recent Webhook calls
 [**webhookGetListV1**](ObjectWebhookApi.md#webhookGetListV1) | **GET** /1/object/webhook/getList | Retrieve Webhook list
 [**webhookGetObjectV1**](ObjectWebhookApi.md#webhookGetObjectV1) | **GET** /1/object/webhook/{pkiWebhookID} | Retrieve an existing Webhook
+[**webhookGetObjectV2**](ObjectWebhookApi.md#webhookGetObjectV2) | **GET** /2/object/webhook/{pkiWebhookID} | Retrieve an existing Webhook
 [**webhookTestV1**](ObjectWebhookApi.md#webhookTestV1) | **POST** /1/object/webhook/{pkiWebhookID}/test | Test the Webhook by calling the Url
 
 
@@ -312,6 +313,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**WebhookMinusGetObjectMinusV1MinusResponse**](WebhookMinusGetObjectMinusV1MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="webhookGetObjectV2"></a>
+# **webhookGetObjectV2**
+> WebhookMinusGetObjectMinusV2MinusResponse webhookGetObjectV2(pkiWebhookID)
+
+Retrieve an existing Webhook
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectWebhookApi()
+val pkiWebhookID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : WebhookMinusGetObjectMinusV2MinusResponse = apiInstance.webhookGetObjectV2(pkiWebhookID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectWebhookApi#webhookGetObjectV2")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectWebhookApi#webhookGetObjectV2")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiWebhookID** | **kotlin.Int**|  |
+
+### Return type
+
+[**WebhookMinusGetObjectMinusV2MinusResponse**](WebhookMinusGetObjectMinusV2MinusResponse.md)
 
 ### Authorization
 

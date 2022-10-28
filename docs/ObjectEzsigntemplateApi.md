@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**ezsigntemplateGetAutocompleteV2**](ObjectEzsigntemplateApi.md#ezsigntemplateGetAutocompleteV2) | **GET** /2/object/ezsigntemplate/getAutocomplete/{sSelector} | Retrieve Ezsigntemplates and IDs
 [**ezsigntemplateGetListV1**](ObjectEzsigntemplateApi.md#ezsigntemplateGetListV1) | **GET** /1/object/ezsigntemplate/getList | Retrieve Ezsigntemplate list
 [**ezsigntemplateGetObjectV1**](ObjectEzsigntemplateApi.md#ezsigntemplateGetObjectV1) | **GET** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate
+[**ezsigntemplateGetObjectV2**](ObjectEzsigntemplateApi.md#ezsigntemplateGetObjectV2) | **GET** /2/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate
 
 
 <a name="ezsigntemplateCreateObjectV1"></a>
@@ -372,6 +373,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsigntemplateMinusGetObjectMinusV1MinusResponse**](EzsigntemplateMinusGetObjectMinusV1MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="ezsigntemplateGetObjectV2"></a>
+# **ezsigntemplateGetObjectV2**
+> EzsigntemplateMinusGetObjectMinusV2MinusResponse ezsigntemplateGetObjectV2(pkiEzsigntemplateID)
+
+Retrieve an existing Ezsigntemplate
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsigntemplateApi()
+val pkiEzsigntemplateID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : EzsigntemplateMinusGetObjectMinusV2MinusResponse = apiInstance.ezsigntemplateGetObjectV2(pkiEzsigntemplateID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsigntemplateApi#ezsigntemplateGetObjectV2")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsigntemplateApi#ezsigntemplateGetObjectV2")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigntemplateID** | **kotlin.Int**|  |
+
+### Return type
+
+[**EzsigntemplateMinusGetObjectMinusV2MinusResponse**](EzsigntemplateMinusGetObjectMinusV2MinusResponse.md)
 
 ### Authorization
 

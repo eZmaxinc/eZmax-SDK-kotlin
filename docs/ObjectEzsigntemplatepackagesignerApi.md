@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**ezsigntemplatepackagesignerDeleteObjectV1**](ObjectEzsigntemplatepackagesignerApi.md#ezsigntemplatepackagesignerDeleteObjectV1) | **DELETE** /1/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID} | Delete an existing Ezsigntemplatepackagesigner
 [**ezsigntemplatepackagesignerEditObjectV1**](ObjectEzsigntemplatepackagesignerApi.md#ezsigntemplatepackagesignerEditObjectV1) | **PUT** /1/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID} | Edit an existing Ezsigntemplatepackagesigner
 [**ezsigntemplatepackagesignerGetObjectV1**](ObjectEzsigntemplatepackagesignerApi.md#ezsigntemplatepackagesignerGetObjectV1) | **GET** /1/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID} | Retrieve an existing Ezsigntemplatepackagesigner
+[**ezsigntemplatepackagesignerGetObjectV2**](ObjectEzsigntemplatepackagesignerApi.md#ezsigntemplatepackagesignerGetObjectV2) | **GET** /2/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID} | Retrieve an existing Ezsigntemplatepackagesigner
 
 
 <a name="ezsigntemplatepackagesignerCreateObjectV1"></a>
@@ -199,6 +200,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsigntemplatepackagesignerMinusGetObjectMinusV1MinusResponse**](EzsigntemplatepackagesignerMinusGetObjectMinusV1MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="ezsigntemplatepackagesignerGetObjectV2"></a>
+# **ezsigntemplatepackagesignerGetObjectV2**
+> EzsigntemplatepackagesignerMinusGetObjectMinusV2MinusResponse ezsigntemplatepackagesignerGetObjectV2(pkiEzsigntemplatepackagesignerID)
+
+Retrieve an existing Ezsigntemplatepackagesigner
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsigntemplatepackagesignerApi()
+val pkiEzsigntemplatepackagesignerID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : EzsigntemplatepackagesignerMinusGetObjectMinusV2MinusResponse = apiInstance.ezsigntemplatepackagesignerGetObjectV2(pkiEzsigntemplatepackagesignerID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsigntemplatepackagesignerApi#ezsigntemplatepackagesignerGetObjectV2")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsigntemplatepackagesignerApi#ezsigntemplatepackagesignerGetObjectV2")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigntemplatepackagesignerID** | **kotlin.Int**|  |
+
+### Return type
+
+[**EzsigntemplatepackagesignerMinusGetObjectMinusV2MinusResponse**](EzsigntemplatepackagesignerMinusGetObjectMinusV2MinusResponse.md)
 
 ### Authorization
 

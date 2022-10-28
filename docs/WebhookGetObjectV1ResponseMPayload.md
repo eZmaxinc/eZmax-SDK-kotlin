@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **sWebhookUrl** | **kotlin.String** | The URL of the Webhook callback | 
 **sWebhookEmailfailed** | **kotlin.String** | The email that will receive the Webhook in case all attempts fail | 
 **bWebhookSkipsslvalidation** | **kotlin.Boolean** | Wheter the server&#39;s SSL certificate should be validated or not. Not recommended to skip for production use | 
+**sWebhookEvent** | **kotlin.String** | The concatenated string to describe the Webhook event | 
 **fkiEzsignfoldertypeID** | **kotlin.Int** | The unique ID of the Ezsignfoldertype. |  [optional]
 **sEzsignfoldertypeNameX** | **kotlin.String** | The name of the Ezsignfoldertype in the language of the requester |  [optional]
 **eWebhookEzsignevent** | [**FieldMinusEWebhookEzsignevent**](FieldMinusEWebhookEzsignevent.md) |  |  [optional]

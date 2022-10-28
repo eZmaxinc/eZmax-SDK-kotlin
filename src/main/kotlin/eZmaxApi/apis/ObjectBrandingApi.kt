@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.12
+ * The version of the OpenAPI document: 1.1.13
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -30,6 +30,7 @@ import eZmaxApi.models.BrandingMinusEditObjectMinusV1MinusResponse
 import eZmaxApi.models.BrandingMinusGetAutocompleteMinusV2MinusResponse
 import eZmaxApi.models.BrandingMinusGetListMinusV1MinusResponse
 import eZmaxApi.models.BrandingMinusGetObjectMinusV1MinusResponse
+import eZmaxApi.models.BrandingMinusGetObjectMinusV2MinusResponse
 import eZmaxApi.models.CommonMinusGetAutocompleteMinusV1MinusResponse
 import eZmaxApi.models.CommonMinusResponseMinusError
 import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
@@ -550,7 +551,9 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun brandingGetObjectV1(pkiBrandingID: kotlin.Int) : BrandingMinusGetObjectMinusV1MinusResponse {
+        @Suppress("DEPRECATION")
         val localVarResponse = brandingGetObjectV1WithHttpInfo(pkiBrandingID = pkiBrandingID)
 
         return when (localVarResponse.responseType) {
@@ -578,7 +581,9 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun brandingGetObjectV1WithHttpInfo(pkiBrandingID: kotlin.Int) : ApiResponse<BrandingMinusGetObjectMinusV1MinusResponse?> {
+        @Suppress("DEPRECATION")
         val localVariableConfig = brandingGetObjectV1RequestConfig(pkiBrandingID = pkiBrandingID)
 
         return request<Unit, BrandingMinusGetObjectMinusV1MinusResponse>(
@@ -592,6 +597,7 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      * @param pkiBrandingID 
      * @return RequestConfig
      */
+    @Deprecated(message = "This operation is deprecated.")
     fun brandingGetObjectV1RequestConfig(pkiBrandingID: kotlin.Int) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
@@ -601,6 +607,76 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/branding/{pkiBrandingID}".replace("{"+"pkiBrandingID"+"}", pkiBrandingID.toString()),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Retrieve an existing Branding
+     * 
+     * @param pkiBrandingID 
+     * @return BrandingMinusGetObjectMinusV2MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun brandingGetObjectV2(pkiBrandingID: kotlin.Int) : BrandingMinusGetObjectMinusV2MinusResponse {
+        val localVarResponse = brandingGetObjectV2WithHttpInfo(pkiBrandingID = pkiBrandingID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as BrandingMinusGetObjectMinusV2MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve an existing Branding
+     * 
+     * @param pkiBrandingID 
+     * @return ApiResponse<BrandingMinusGetObjectMinusV2MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun brandingGetObjectV2WithHttpInfo(pkiBrandingID: kotlin.Int) : ApiResponse<BrandingMinusGetObjectMinusV2MinusResponse?> {
+        val localVariableConfig = brandingGetObjectV2RequestConfig(pkiBrandingID = pkiBrandingID)
+
+        return request<Unit, BrandingMinusGetObjectMinusV2MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation brandingGetObjectV2
+     *
+     * @param pkiBrandingID 
+     * @return RequestConfig
+     */
+    fun brandingGetObjectV2RequestConfig(pkiBrandingID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/2/object/branding/{pkiBrandingID}".replace("{"+"pkiBrandingID"+"}", pkiBrandingID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

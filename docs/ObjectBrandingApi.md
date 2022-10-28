@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**brandingGetAutocompleteV2**](ObjectBrandingApi.md#brandingGetAutocompleteV2) | **GET** /2/object/branding/getAutocomplete/{sSelector} | Retrieve Brandings and IDs
 [**brandingGetListV1**](ObjectBrandingApi.md#brandingGetListV1) | **GET** /1/object/branding/getList | Retrieve Branding list
 [**brandingGetObjectV1**](ObjectBrandingApi.md#brandingGetObjectV1) | **GET** /1/object/branding/{pkiBrandingID} | Retrieve an existing Branding
+[**brandingGetObjectV2**](ObjectBrandingApi.md#brandingGetObjectV2) | **GET** /2/object/branding/{pkiBrandingID} | Retrieve an existing Branding
 
 
 <a name="brandingCreateObjectV1"></a>
@@ -321,6 +322,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**BrandingMinusGetObjectMinusV1MinusResponse**](BrandingMinusGetObjectMinusV1MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="brandingGetObjectV2"></a>
+# **brandingGetObjectV2**
+> BrandingMinusGetObjectMinusV2MinusResponse brandingGetObjectV2(pkiBrandingID)
+
+Retrieve an existing Branding
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectBrandingApi()
+val pkiBrandingID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : BrandingMinusGetObjectMinusV2MinusResponse = apiInstance.brandingGetObjectV2(pkiBrandingID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectBrandingApi#brandingGetObjectV2")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectBrandingApi#brandingGetObjectV2")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiBrandingID** | **kotlin.Int**|  |
+
+### Return type
+
+[**BrandingMinusGetObjectMinusV2MinusResponse**](BrandingMinusGetObjectMinusV2MinusResponse.md)
 
 ### Authorization
 

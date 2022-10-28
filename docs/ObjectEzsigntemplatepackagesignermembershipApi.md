@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**ezsigntemplatepackagesignermembershipCreateObjectV1**](ObjectEzsigntemplatepackagesignermembershipApi.md#ezsigntemplatepackagesignermembershipCreateObjectV1) | **POST** /1/object/ezsigntemplatepackagesignermembership | Create a new Ezsigntemplatepackagesignermembership
 [**ezsigntemplatepackagesignermembershipDeleteObjectV1**](ObjectEzsigntemplatepackagesignermembershipApi.md#ezsigntemplatepackagesignermembershipDeleteObjectV1) | **DELETE** /1/object/ezsigntemplatepackagesignermembership/{pkiEzsigntemplatepackagesignermembershipID} | Delete an existing Ezsigntemplatepackagesignermembership
 [**ezsigntemplatepackagesignermembershipGetObjectV1**](ObjectEzsigntemplatepackagesignermembershipApi.md#ezsigntemplatepackagesignermembershipGetObjectV1) | **GET** /1/object/ezsigntemplatepackagesignermembership/{pkiEzsigntemplatepackagesignermembershipID} | Retrieve an existing Ezsigntemplatepackagesignermembership
+[**ezsigntemplatepackagesignermembershipGetObjectV2**](ObjectEzsigntemplatepackagesignermembershipApi.md#ezsigntemplatepackagesignermembershipGetObjectV2) | **GET** /2/object/ezsigntemplatepackagesignermembership/{pkiEzsigntemplatepackagesignermembershipID} | Retrieve an existing Ezsigntemplatepackagesignermembership
 
 
 <a name="ezsigntemplatepackagesignermembershipCreateObjectV1"></a>
@@ -146,6 +147,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsigntemplatepackagesignermembershipMinusGetObjectMinusV1MinusResponse**](EzsigntemplatepackagesignermembershipMinusGetObjectMinusV1MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="ezsigntemplatepackagesignermembershipGetObjectV2"></a>
+# **ezsigntemplatepackagesignermembershipGetObjectV2**
+> EzsigntemplatepackagesignermembershipMinusGetObjectMinusV2MinusResponse ezsigntemplatepackagesignermembershipGetObjectV2(pkiEzsigntemplatepackagesignermembershipID)
+
+Retrieve an existing Ezsigntemplatepackagesignermembership
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsigntemplatepackagesignermembershipApi()
+val pkiEzsigntemplatepackagesignermembershipID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : EzsigntemplatepackagesignermembershipMinusGetObjectMinusV2MinusResponse = apiInstance.ezsigntemplatepackagesignermembershipGetObjectV2(pkiEzsigntemplatepackagesignermembershipID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsigntemplatepackagesignermembershipApi#ezsigntemplatepackagesignermembershipGetObjectV2")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsigntemplatepackagesignermembershipApi#ezsigntemplatepackagesignermembershipGetObjectV2")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigntemplatepackagesignermembershipID** | **kotlin.Int**|  |
+
+### Return type
+
+[**EzsigntemplatepackagesignermembershipMinusGetObjectMinusV2MinusResponse**](EzsigntemplatepackagesignermembershipMinusGetObjectMinusV2MinusResponse.md)
 
 ### Authorization
 

@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**ezsignsignatureDeleteObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureDeleteObjectV1) | **DELETE** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Delete an existing Ezsignsignature
 [**ezsignsignatureEditObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureEditObjectV1) | **PUT** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Edit an existing Ezsignsignature
 [**ezsignsignatureGetObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureGetObjectV1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
+[**ezsignsignatureGetObjectV2**](ObjectEzsignsignatureApi.md#ezsignsignatureGetObjectV2) | **GET** /2/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
 [**ezsignsignatureSignV1**](ObjectEzsignsignatureApi.md#ezsignsignatureSignV1) | **POST** /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign | Sign the Ezsignsignature
 
 
@@ -251,6 +252,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignsignatureMinusGetObjectMinusV1MinusResponse**](EzsignsignatureMinusGetObjectMinusV1MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="ezsignsignatureGetObjectV2"></a>
+# **ezsignsignatureGetObjectV2**
+> EzsignsignatureMinusGetObjectMinusV2MinusResponse ezsignsignatureGetObjectV2(pkiEzsignsignatureID)
+
+Retrieve an existing Ezsignsignature
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsignsignatureApi()
+val pkiEzsignsignatureID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : EzsignsignatureMinusGetObjectMinusV2MinusResponse = apiInstance.ezsignsignatureGetObjectV2(pkiEzsignsignatureID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsignsignatureApi#ezsignsignatureGetObjectV2")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsignsignatureApi#ezsignsignatureGetObjectV2")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignsignatureID** | **kotlin.Int**|  |
+
+### Return type
+
+[**EzsignsignatureMinusGetObjectMinusV2MinusResponse**](EzsignsignatureMinusGetObjectMinusV2MinusResponse.md)
 
 ### Authorization
 

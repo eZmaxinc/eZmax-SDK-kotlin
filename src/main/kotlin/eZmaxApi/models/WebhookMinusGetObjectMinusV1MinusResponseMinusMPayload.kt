@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.12
+ * The version of the OpenAPI document: 1.1.13
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -36,6 +36,7 @@ import com.squareup.moshi.Json
  * @param sWebhookUrl The URL of the Webhook callback
  * @param sWebhookEmailfailed The email that will receive the Webhook in case all attempts fail
  * @param bWebhookSkipsslvalidation Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use
+ * @param sWebhookEvent The concatenated string to describe the Webhook event
  * @param fkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
  * @param sEzsignfoldertypeNameX The name of the Ezsignfoldertype in the language of the requester
  * @param eWebhookEzsignevent 
@@ -67,6 +68,10 @@ data class WebhookMinusGetObjectMinusV1MinusResponseMinusMPayload (
     /* Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use */
     @Json(name = "bWebhookSkipsslvalidation")
     val bWebhookSkipsslvalidation: kotlin.Boolean,
+
+    /* The concatenated string to describe the Webhook event */
+    @Json(name = "sWebhookEvent")
+    val sWebhookEvent: kotlin.String,
 
     /* The unique ID of the Ezsignfoldertype. */
     @Json(name = "fkiEzsignfoldertypeID")

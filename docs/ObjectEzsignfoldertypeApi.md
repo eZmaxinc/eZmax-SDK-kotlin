@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**ezsignfoldertypeGetAutocompleteV2**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeGetAutocompleteV2) | **GET** /2/object/ezsignfoldertype/getAutocomplete/{sSelector} | Retrieve Ezsignfoldertypes and IDs
 [**ezsignfoldertypeGetListV1**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeGetListV1) | **GET** /1/object/ezsignfoldertype/getList | Retrieve Ezsignfoldertype list
 [**ezsignfoldertypeGetObjectV1**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeGetObjectV1) | **GET** /1/object/ezsignfoldertype/{pkiEzsignfoldertypeID} | Retrieve an existing Ezsignfoldertype
+[**ezsignfoldertypeGetObjectV2**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeGetObjectV2) | **GET** /2/object/ezsignfoldertype/{pkiEzsignfoldertypeID} | Retrieve an existing Ezsignfoldertype
 
 
 <a name="ezsignfoldertypeCreateObjectV1"></a>
@@ -321,6 +322,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignfoldertypeMinusGetObjectMinusV1MinusResponse**](EzsignfoldertypeMinusGetObjectMinusV1MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="ezsignfoldertypeGetObjectV2"></a>
+# **ezsignfoldertypeGetObjectV2**
+> EzsignfoldertypeMinusGetObjectMinusV2MinusResponse ezsignfoldertypeGetObjectV2(pkiEzsignfoldertypeID)
+
+Retrieve an existing Ezsignfoldertype
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsignfoldertypeApi()
+val pkiEzsignfoldertypeID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : EzsignfoldertypeMinusGetObjectMinusV2MinusResponse = apiInstance.ezsignfoldertypeGetObjectV2(pkiEzsignfoldertypeID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsignfoldertypeApi#ezsignfoldertypeGetObjectV2")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsignfoldertypeApi#ezsignfoldertypeGetObjectV2")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfoldertypeID** | **kotlin.Int**|  |
+
+### Return type
+
+[**EzsignfoldertypeMinusGetObjectMinusV2MinusResponse**](EzsignfoldertypeMinusGetObjectMinusV2MinusResponse.md)
 
 ### Authorization
 

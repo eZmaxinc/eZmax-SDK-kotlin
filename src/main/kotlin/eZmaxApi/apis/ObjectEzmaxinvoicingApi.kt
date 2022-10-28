@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.12
+ * The version of the OpenAPI document: 1.1.13
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -27,6 +27,7 @@ import eZmaxApi.models.CommonMinusGetAutocompleteMinusV1MinusResponse
 import eZmaxApi.models.CommonMinusResponseMinusError
 import eZmaxApi.models.EzmaxinvoicingMinusGetAutocompleteMinusV2MinusResponse
 import eZmaxApi.models.EzmaxinvoicingMinusGetObjectMinusV1MinusResponse
+import eZmaxApi.models.EzmaxinvoicingMinusGetObjectMinusV2MinusResponse
 import eZmaxApi.models.EzmaxinvoicingMinusGetProvisionalMinusV1MinusResponse
 import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
 
@@ -280,7 +281,9 @@ class ObjectEzmaxinvoicingApi(basePath: kotlin.String = defaultBasePath, client:
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun ezmaxinvoicingGetObjectV1(pkiEzmaxinvoicingID: kotlin.Int) : EzmaxinvoicingMinusGetObjectMinusV1MinusResponse {
+        @Suppress("DEPRECATION")
         val localVarResponse = ezmaxinvoicingGetObjectV1WithHttpInfo(pkiEzmaxinvoicingID = pkiEzmaxinvoicingID)
 
         return when (localVarResponse.responseType) {
@@ -308,7 +311,9 @@ class ObjectEzmaxinvoicingApi(basePath: kotlin.String = defaultBasePath, client:
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun ezmaxinvoicingGetObjectV1WithHttpInfo(pkiEzmaxinvoicingID: kotlin.Int) : ApiResponse<EzmaxinvoicingMinusGetObjectMinusV1MinusResponse?> {
+        @Suppress("DEPRECATION")
         val localVariableConfig = ezmaxinvoicingGetObjectV1RequestConfig(pkiEzmaxinvoicingID = pkiEzmaxinvoicingID)
 
         return request<Unit, EzmaxinvoicingMinusGetObjectMinusV1MinusResponse>(
@@ -322,6 +327,7 @@ class ObjectEzmaxinvoicingApi(basePath: kotlin.String = defaultBasePath, client:
      * @param pkiEzmaxinvoicingID 
      * @return RequestConfig
      */
+    @Deprecated(message = "This operation is deprecated.")
     fun ezmaxinvoicingGetObjectV1RequestConfig(pkiEzmaxinvoicingID: kotlin.Int) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
@@ -331,6 +337,76 @@ class ObjectEzmaxinvoicingApi(basePath: kotlin.String = defaultBasePath, client:
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}".replace("{"+"pkiEzmaxinvoicingID"+"}", pkiEzmaxinvoicingID.toString()),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Retrieve an existing Ezmaxinvoicing
+     * 
+     * @param pkiEzmaxinvoicingID 
+     * @return EzmaxinvoicingMinusGetObjectMinusV2MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezmaxinvoicingGetObjectV2(pkiEzmaxinvoicingID: kotlin.Int) : EzmaxinvoicingMinusGetObjectMinusV2MinusResponse {
+        val localVarResponse = ezmaxinvoicingGetObjectV2WithHttpInfo(pkiEzmaxinvoicingID = pkiEzmaxinvoicingID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzmaxinvoicingMinusGetObjectMinusV2MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve an existing Ezmaxinvoicing
+     * 
+     * @param pkiEzmaxinvoicingID 
+     * @return ApiResponse<EzmaxinvoicingMinusGetObjectMinusV2MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezmaxinvoicingGetObjectV2WithHttpInfo(pkiEzmaxinvoicingID: kotlin.Int) : ApiResponse<EzmaxinvoicingMinusGetObjectMinusV2MinusResponse?> {
+        val localVariableConfig = ezmaxinvoicingGetObjectV2RequestConfig(pkiEzmaxinvoicingID = pkiEzmaxinvoicingID)
+
+        return request<Unit, EzmaxinvoicingMinusGetObjectMinusV2MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezmaxinvoicingGetObjectV2
+     *
+     * @param pkiEzmaxinvoicingID 
+     * @return RequestConfig
+     */
+    fun ezmaxinvoicingGetObjectV2RequestConfig(pkiEzmaxinvoicingID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/2/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}".replace("{"+"pkiEzmaxinvoicingID"+"}", pkiEzmaxinvoicingID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

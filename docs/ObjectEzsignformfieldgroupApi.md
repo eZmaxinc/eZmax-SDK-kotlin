@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**ezsignformfieldgroupDeleteObjectV1**](ObjectEzsignformfieldgroupApi.md#ezsignformfieldgroupDeleteObjectV1) | **DELETE** /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID} | Delete an existing Ezsignformfieldgroup
 [**ezsignformfieldgroupEditObjectV1**](ObjectEzsignformfieldgroupApi.md#ezsignformfieldgroupEditObjectV1) | **PUT** /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID} | Edit an existing Ezsignformfieldgroup
 [**ezsignformfieldgroupGetObjectV1**](ObjectEzsignformfieldgroupApi.md#ezsignformfieldgroupGetObjectV1) | **GET** /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID} | Retrieve an existing Ezsignformfieldgroup
+[**ezsignformfieldgroupGetObjectV2**](ObjectEzsignformfieldgroupApi.md#ezsignformfieldgroupGetObjectV2) | **GET** /2/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID} | Retrieve an existing Ezsignformfieldgroup
 
 
 <a name="ezsignformfieldgroupCreateObjectV1"></a>
@@ -197,6 +198,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignformfieldgroupMinusGetObjectMinusV1MinusResponse**](EzsignformfieldgroupMinusGetObjectMinusV1MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="ezsignformfieldgroupGetObjectV2"></a>
+# **ezsignformfieldgroupGetObjectV2**
+> EzsignformfieldgroupMinusGetObjectMinusV2MinusResponse ezsignformfieldgroupGetObjectV2(pkiEzsignformfieldgroupID)
+
+Retrieve an existing Ezsignformfieldgroup
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsignformfieldgroupApi()
+val pkiEzsignformfieldgroupID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : EzsignformfieldgroupMinusGetObjectMinusV2MinusResponse = apiInstance.ezsignformfieldgroupGetObjectV2(pkiEzsignformfieldgroupID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsignformfieldgroupApi#ezsignformfieldgroupGetObjectV2")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsignformfieldgroupApi#ezsignformfieldgroupGetObjectV2")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignformfieldgroupID** | **kotlin.Int**|  |
+
+### Return type
+
+[**EzsignformfieldgroupMinusGetObjectMinusV2MinusResponse**](EzsignformfieldgroupMinusGetObjectMinusV2MinusResponse.md)
 
 ### Authorization
 

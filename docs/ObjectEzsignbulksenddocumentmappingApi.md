@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**ezsignbulksenddocumentmappingCreateObjectV1**](ObjectEzsignbulksenddocumentmappingApi.md#ezsignbulksenddocumentmappingCreateObjectV1) | **POST** /1/object/ezsignbulksenddocumentmapping | Create a new Ezsignbulksenddocumentmapping
 [**ezsignbulksenddocumentmappingDeleteObjectV1**](ObjectEzsignbulksenddocumentmappingApi.md#ezsignbulksenddocumentmappingDeleteObjectV1) | **DELETE** /1/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID} | Delete an existing Ezsignbulksenddocumentmapping
 [**ezsignbulksenddocumentmappingGetObjectV1**](ObjectEzsignbulksenddocumentmappingApi.md#ezsignbulksenddocumentmappingGetObjectV1) | **GET** /1/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID} | Retrieve an existing Ezsignbulksenddocumentmapping
+[**ezsignbulksenddocumentmappingGetObjectV2**](ObjectEzsignbulksenddocumentmappingApi.md#ezsignbulksenddocumentmappingGetObjectV2) | **GET** /2/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID} | Retrieve an existing Ezsignbulksenddocumentmapping
 
 
 <a name="ezsignbulksenddocumentmappingCreateObjectV1"></a>
@@ -146,6 +147,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignbulksenddocumentmappingMinusGetObjectMinusV1MinusResponse**](EzsignbulksenddocumentmappingMinusGetObjectMinusV1MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="ezsignbulksenddocumentmappingGetObjectV2"></a>
+# **ezsignbulksenddocumentmappingGetObjectV2**
+> EzsignbulksenddocumentmappingMinusGetObjectMinusV2MinusResponse ezsignbulksenddocumentmappingGetObjectV2(pkiEzsignbulksenddocumentmappingID)
+
+Retrieve an existing Ezsignbulksenddocumentmapping
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsignbulksenddocumentmappingApi()
+val pkiEzsignbulksenddocumentmappingID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : EzsignbulksenddocumentmappingMinusGetObjectMinusV2MinusResponse = apiInstance.ezsignbulksenddocumentmappingGetObjectV2(pkiEzsignbulksenddocumentmappingID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsignbulksenddocumentmappingApi#ezsignbulksenddocumentmappingGetObjectV2")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsignbulksenddocumentmappingApi#ezsignbulksenddocumentmappingGetObjectV2")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignbulksenddocumentmappingID** | **kotlin.Int**|  |
+
+### Return type
+
+[**EzsignbulksenddocumentmappingMinusGetObjectMinusV2MinusResponse**](EzsignbulksenddocumentmappingMinusGetObjectMinusV2MinusResponse.md)
 
 ### Authorization
 

@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.12
+ * The version of the OpenAPI document: 1.1.13
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -30,6 +30,7 @@ import eZmaxApi.models.EzsigntemplateformfieldgroupMinusDeleteObjectMinusV1Minus
 import eZmaxApi.models.EzsigntemplateformfieldgroupMinusEditObjectMinusV1MinusRequest
 import eZmaxApi.models.EzsigntemplateformfieldgroupMinusEditObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsigntemplateformfieldgroupMinusGetObjectMinusV1MinusResponse
+import eZmaxApi.models.EzsigntemplateformfieldgroupMinusGetObjectMinusV2MinusResponse
 
 import com.squareup.moshi.Json
 
@@ -283,7 +284,9 @@ class ObjectEzsigntemplateformfieldgroupApi(basePath: kotlin.String = defaultBas
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsigntemplateformfieldgroupGetObjectV1(pkiEzsigntemplateformfieldgroupID: kotlin.Int) : EzsigntemplateformfieldgroupMinusGetObjectMinusV1MinusResponse {
+        @Suppress("DEPRECATION")
         val localVarResponse = ezsigntemplateformfieldgroupGetObjectV1WithHttpInfo(pkiEzsigntemplateformfieldgroupID = pkiEzsigntemplateformfieldgroupID)
 
         return when (localVarResponse.responseType) {
@@ -311,7 +314,9 @@ class ObjectEzsigntemplateformfieldgroupApi(basePath: kotlin.String = defaultBas
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsigntemplateformfieldgroupGetObjectV1WithHttpInfo(pkiEzsigntemplateformfieldgroupID: kotlin.Int) : ApiResponse<EzsigntemplateformfieldgroupMinusGetObjectMinusV1MinusResponse?> {
+        @Suppress("DEPRECATION")
         val localVariableConfig = ezsigntemplateformfieldgroupGetObjectV1RequestConfig(pkiEzsigntemplateformfieldgroupID = pkiEzsigntemplateformfieldgroupID)
 
         return request<Unit, EzsigntemplateformfieldgroupMinusGetObjectMinusV1MinusResponse>(
@@ -325,6 +330,7 @@ class ObjectEzsigntemplateformfieldgroupApi(basePath: kotlin.String = defaultBas
      * @param pkiEzsigntemplateformfieldgroupID 
      * @return RequestConfig
      */
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsigntemplateformfieldgroupGetObjectV1RequestConfig(pkiEzsigntemplateformfieldgroupID: kotlin.Int) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
@@ -334,6 +340,76 @@ class ObjectEzsigntemplateformfieldgroupApi(basePath: kotlin.String = defaultBas
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID}".replace("{"+"pkiEzsigntemplateformfieldgroupID"+"}", pkiEzsigntemplateformfieldgroupID.toString()),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Retrieve an existing Ezsigntemplateformfieldgroup
+     * 
+     * @param pkiEzsigntemplateformfieldgroupID 
+     * @return EzsigntemplateformfieldgroupMinusGetObjectMinusV2MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsigntemplateformfieldgroupGetObjectV2(pkiEzsigntemplateformfieldgroupID: kotlin.Int) : EzsigntemplateformfieldgroupMinusGetObjectMinusV2MinusResponse {
+        val localVarResponse = ezsigntemplateformfieldgroupGetObjectV2WithHttpInfo(pkiEzsigntemplateformfieldgroupID = pkiEzsigntemplateformfieldgroupID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigntemplateformfieldgroupMinusGetObjectMinusV2MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve an existing Ezsigntemplateformfieldgroup
+     * 
+     * @param pkiEzsigntemplateformfieldgroupID 
+     * @return ApiResponse<EzsigntemplateformfieldgroupMinusGetObjectMinusV2MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsigntemplateformfieldgroupGetObjectV2WithHttpInfo(pkiEzsigntemplateformfieldgroupID: kotlin.Int) : ApiResponse<EzsigntemplateformfieldgroupMinusGetObjectMinusV2MinusResponse?> {
+        val localVariableConfig = ezsigntemplateformfieldgroupGetObjectV2RequestConfig(pkiEzsigntemplateformfieldgroupID = pkiEzsigntemplateformfieldgroupID)
+
+        return request<Unit, EzsigntemplateformfieldgroupMinusGetObjectMinusV2MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsigntemplateformfieldgroupGetObjectV2
+     *
+     * @param pkiEzsigntemplateformfieldgroupID 
+     * @return RequestConfig
+     */
+    fun ezsigntemplateformfieldgroupGetObjectV2RequestConfig(pkiEzsigntemplateformfieldgroupID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/2/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID}".replace("{"+"pkiEzsigntemplateformfieldgroupID"+"}", pkiEzsigntemplateformfieldgroupID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
