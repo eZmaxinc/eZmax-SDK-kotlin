@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.13
+ * The version of the OpenAPI document: 1.1.14
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -20,20 +20,20 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.FranchisebrokerMinusGetAutocompleteMinusV2MinusResponseMinusMPayload
 
 import com.squareup.moshi.Json
 
 /**
  * 
  *
- * @param mPayload Payload for POST /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign
+ * @param mPayload 
  */
 
-data class EzsignsignatureSignV1ResponseAllOf (
+data class FranchisebrokerGetAutocompleteV2ResponseAllOf (
 
-    /* Payload for POST /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign */
     @Json(name = "mPayload")
-    val mPayload: kotlin.Any
+    val mPayload: FranchisebrokerMinusGetAutocompleteMinusV2MinusResponseMinusMPayload
 
 )
 

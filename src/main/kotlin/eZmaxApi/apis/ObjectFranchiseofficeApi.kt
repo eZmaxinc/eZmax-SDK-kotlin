@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.13
+ * The version of the OpenAPI document: 1.1.14
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -24,6 +24,7 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 
 import eZmaxApi.models.CommonMinusGetAutocompleteMinusV1MinusResponse
+import eZmaxApi.models.FranchiseofficeMinusGetAutocompleteMinusV2MinusResponse
 import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
 
 import com.squareup.moshi.Json
@@ -83,7 +84,9 @@ class ObjectFranchiseofficeApi(basePath: kotlin.String = defaultBasePath, client
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun franchiseofficeGetAutocompleteV1(sSelector: SSelector_franchiseofficeGetAutocompleteV1, eFilterActive: EFilterActive_franchiseofficeGetAutocompleteV1? = Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null) : CommonMinusGetAutocompleteMinusV1MinusResponse {
+        @Suppress("DEPRECATION")
         val localVarResponse = franchiseofficeGetAutocompleteV1WithHttpInfo(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return when (localVarResponse.responseType) {
@@ -114,7 +117,9 @@ class ObjectFranchiseofficeApi(basePath: kotlin.String = defaultBasePath, client
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun franchiseofficeGetAutocompleteV1WithHttpInfo(sSelector: SSelector_franchiseofficeGetAutocompleteV1, eFilterActive: EFilterActive_franchiseofficeGetAutocompleteV1?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : ApiResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?> {
+        @Suppress("DEPRECATION")
         val localVariableConfig = franchiseofficeGetAutocompleteV1RequestConfig(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return request<Unit, CommonMinusGetAutocompleteMinusV1MinusResponse>(
@@ -131,6 +136,7 @@ class ObjectFranchiseofficeApi(basePath: kotlin.String = defaultBasePath, client
      * @param acceptLanguage  (optional)
      * @return RequestConfig
      */
+    @Deprecated(message = "This operation is deprecated.")
     fun franchiseofficeGetAutocompleteV1RequestConfig(sSelector: SSelector_franchiseofficeGetAutocompleteV1, eFilterActive: EFilterActive_franchiseofficeGetAutocompleteV1?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
@@ -149,6 +155,110 @@ class ObjectFranchiseofficeApi(basePath: kotlin.String = defaultBasePath, client
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/franchiseoffice/getAutocomplete/{sSelector}".replace("{"+"sSelector"+"}", sSelector.value.toString()),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * enum for parameter sSelector
+     */
+     enum class SSelector_franchiseofficeGetAutocompleteV2(val value: kotlin.String) {
+         @Json(name = "All") All("All")
+     }
+
+    /**
+     * enum for parameter eFilterActive
+     */
+     enum class EFilterActive_franchiseofficeGetAutocompleteV2(val value: kotlin.String) {
+         @Json(name = "All") All("All"),
+         @Json(name = "Active") Active("Active"),
+         @Json(name = "Inactive") Inactive("Inactive")
+     }
+
+    /**
+     * Retrieve Franchiseoffices and IDs
+     * Get the list of Franchiseoffice to be used in a dropdown or autocomplete control.
+     * @param sSelector The type of Franchiseoffices to return
+     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param sQuery Allow to filter the returned results (optional)
+     * @param acceptLanguage  (optional)
+     * @return FranchiseofficeMinusGetAutocompleteMinusV2MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun franchiseofficeGetAutocompleteV2(sSelector: SSelector_franchiseofficeGetAutocompleteV2, eFilterActive: EFilterActive_franchiseofficeGetAutocompleteV2? = Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null) : FranchiseofficeMinusGetAutocompleteMinusV2MinusResponse {
+        val localVarResponse = franchiseofficeGetAutocompleteV2WithHttpInfo(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as FranchiseofficeMinusGetAutocompleteMinusV2MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve Franchiseoffices and IDs
+     * Get the list of Franchiseoffice to be used in a dropdown or autocomplete control.
+     * @param sSelector The type of Franchiseoffices to return
+     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param sQuery Allow to filter the returned results (optional)
+     * @param acceptLanguage  (optional)
+     * @return ApiResponse<FranchiseofficeMinusGetAutocompleteMinusV2MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun franchiseofficeGetAutocompleteV2WithHttpInfo(sSelector: SSelector_franchiseofficeGetAutocompleteV2, eFilterActive: EFilterActive_franchiseofficeGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : ApiResponse<FranchiseofficeMinusGetAutocompleteMinusV2MinusResponse?> {
+        val localVariableConfig = franchiseofficeGetAutocompleteV2RequestConfig(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
+
+        return request<Unit, FranchiseofficeMinusGetAutocompleteMinusV2MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation franchiseofficeGetAutocompleteV2
+     *
+     * @param sSelector The type of Franchiseoffices to return
+     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param sQuery Allow to filter the returned results (optional)
+     * @param acceptLanguage  (optional)
+     * @return RequestConfig
+     */
+    fun franchiseofficeGetAutocompleteV2RequestConfig(sSelector: SSelector_franchiseofficeGetAutocompleteV2, eFilterActive: EFilterActive_franchiseofficeGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (eFilterActive != null) {
+                    put("eFilterActive", listOf(eFilterActive.toString()))
+                }
+                if (sQuery != null) {
+                    put("sQuery", listOf(sQuery.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/2/object/franchiseoffice/getAutocomplete/{sSelector}".replace("{"+"sSelector"+"}", sSelector.value.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

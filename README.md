@@ -209,12 +209,15 @@ Class | Method | HTTP request | Description
 *ObjectEzsigntsarequirementApi* | [**ezsigntsarequirementGetAutocompleteV1**](docs/ObjectEzsigntsarequirementApi.md#ezsigntsarequirementgetautocompletev1) | **GET** /1/object/ezsigntsarequirement/getAutocomplete/{sSelector} | Retrieve Ezsigntsarequirements and IDs
 *ObjectEzsigntsarequirementApi* | [**ezsigntsarequirementGetAutocompleteV2**](docs/ObjectEzsigntsarequirementApi.md#ezsigntsarequirementgetautocompletev2) | **GET** /2/object/ezsigntsarequirement/getAutocomplete/{sSelector} | Retrieve Ezsigntsarequirements and IDs
 *ObjectFranchisebrokerApi* | [**franchisebrokerGetAutocompleteV1**](docs/ObjectFranchisebrokerApi.md#franchisebrokergetautocompletev1) | **GET** /1/object/franchisebroker/getAutocomplete/{sSelector} | Retrieve Franchisebrokers and IDs
+*ObjectFranchisebrokerApi* | [**franchisebrokerGetAutocompleteV2**](docs/ObjectFranchisebrokerApi.md#franchisebrokergetautocompletev2) | **GET** /2/object/franchisebroker/getAutocomplete/{sSelector} | Retrieve Franchisebrokers and IDs
 *ObjectFranchiseofficeApi* | [**franchiseofficeGetAutocompleteV1**](docs/ObjectFranchiseofficeApi.md#franchiseofficegetautocompletev1) | **GET** /1/object/franchiseoffice/getAutocomplete/{sSelector} | Retrieve Franchiseoffices and IDs
+*ObjectFranchiseofficeApi* | [**franchiseofficeGetAutocompleteV2**](docs/ObjectFranchiseofficeApi.md#franchiseofficegetautocompletev2) | **GET** /2/object/franchiseoffice/getAutocomplete/{sSelector} | Retrieve Franchiseoffices and IDs
 *ObjectFranchisereferalincomeApi* | [**franchisereferalincomeCreateObjectV1**](docs/ObjectFranchisereferalincomeApi.md#franchisereferalincomecreateobjectv1) | **POST** /1/object/franchisereferalincome | Create a new Franchisereferalincome
 *ObjectFranchisereferalincomeApi* | [**franchisereferalincomeCreateObjectV2**](docs/ObjectFranchisereferalincomeApi.md#franchisereferalincomecreateobjectv2) | **POST** /2/object/franchisereferalincome | Create a new Franchisereferalincome
 *ObjectNotificationsectionApi* | [**notificationsectionGetNotificationtestsV1**](docs/ObjectNotificationsectionApi.md#notificationsectiongetnotificationtestsv1) | **GET** /1/object/notificationsection/{pkiNotificationsectionID}/getNotificationtests | Retrieve an existing Notificationsection's Notificationtests
 *ObjectNotificationtestApi* | [**notificationtestGetElementsV1**](docs/ObjectNotificationtestApi.md#notificationtestgetelementsv1) | **GET** /1/object/notificationtest/{pkiNotificationtestID}/getElements | Retrieve an existing Notificationtest's Elements
 *ObjectPeriodApi* | [**periodGetAutocompleteV1**](docs/ObjectPeriodApi.md#periodgetautocompletev1) | **GET** /1/object/period/getAutocomplete/{sSelector} | Retrieve Periods and IDs
+*ObjectPeriodApi* | [**periodGetAutocompleteV2**](docs/ObjectPeriodApi.md#periodgetautocompletev2) | **GET** /2/object/period/getAutocomplete/{sSelector} | Retrieve Periods and IDs
 *ObjectSecretquestionApi* | [**secretquestionGetAutocompleteV1**](docs/ObjectSecretquestionApi.md#secretquestiongetautocompletev1) | **GET** /1/object/secretquestion/getAutocomplete/{sSelector} | Retrieve Secretquestions and IDs
 *ObjectSecretquestionApi* | [**secretquestionGetAutocompleteV2**](docs/ObjectSecretquestionApi.md#secretquestiongetautocompletev2) | **GET** /2/object/secretquestion/getAutocomplete/{sSelector} | Retrieve Secretquestions and IDs
 *ObjectTaxassignmentApi* | [**taxassignmentGetAutocompleteV1**](docs/ObjectTaxassignmentApi.md#taxassignmentgetautocompletev1) | **GET** /1/object/taxassignment/getAutocomplete/{sSelector} | Retrieve Taxassignments and IDs
@@ -719,7 +722,6 @@ Class | Method | HTTP request | Description
  - [eZmaxApi.models.EzsignsignatureMinusSignMinusV1MinusResponse](docs/EzsignsignatureMinusSignMinusV1MinusResponse.md)
  - [eZmaxApi.models.EzsignsignatureRequestCompoundAllOf](docs/EzsignsignatureRequestCompoundAllOf.md)
  - [eZmaxApi.models.EzsignsignatureResponseCompoundAllOf](docs/EzsignsignatureResponseCompoundAllOf.md)
- - [eZmaxApi.models.EzsignsignatureSignV1ResponseAllOf](docs/EzsignsignatureSignV1ResponseAllOf.md)
  - [eZmaxApi.models.EzsignsignaturecustomdateMinusRequest](docs/EzsignsignaturecustomdateMinusRequest.md)
  - [eZmaxApi.models.EzsignsignaturecustomdateMinusRequestCompound](docs/EzsignsignaturecustomdateMinusRequestCompound.md)
  - [eZmaxApi.models.EzsignsignaturecustomdateMinusResponse](docs/EzsignsignaturecustomdateMinusResponse.md)
@@ -993,6 +995,14 @@ Class | Method | HTTP request | Description
  - [eZmaxApi.models.FieldMinusEWebhookEzsignevent](docs/FieldMinusEWebhookEzsignevent.md)
  - [eZmaxApi.models.FieldMinusEWebhookManagementevent](docs/FieldMinusEWebhookManagementevent.md)
  - [eZmaxApi.models.FieldMinusEWebhookModule](docs/FieldMinusEWebhookModule.md)
+ - [eZmaxApi.models.FranchisebrokerGetAutocompleteV2ResponseAllOf](docs/FranchisebrokerGetAutocompleteV2ResponseAllOf.md)
+ - [eZmaxApi.models.FranchisebrokerMinusAutocompleteElementMinusResponse](docs/FranchisebrokerMinusAutocompleteElementMinusResponse.md)
+ - [eZmaxApi.models.FranchisebrokerMinusGetAutocompleteMinusV2MinusResponse](docs/FranchisebrokerMinusGetAutocompleteMinusV2MinusResponse.md)
+ - [eZmaxApi.models.FranchisebrokerMinusGetAutocompleteMinusV2MinusResponseMinusMPayload](docs/FranchisebrokerMinusGetAutocompleteMinusV2MinusResponseMinusMPayload.md)
+ - [eZmaxApi.models.FranchiseofficeGetAutocompleteV2ResponseAllOf](docs/FranchiseofficeGetAutocompleteV2ResponseAllOf.md)
+ - [eZmaxApi.models.FranchiseofficeMinusAutocompleteElementMinusResponse](docs/FranchiseofficeMinusAutocompleteElementMinusResponse.md)
+ - [eZmaxApi.models.FranchiseofficeMinusGetAutocompleteMinusV2MinusResponse](docs/FranchiseofficeMinusGetAutocompleteMinusV2MinusResponse.md)
+ - [eZmaxApi.models.FranchiseofficeMinusGetAutocompleteMinusV2MinusResponseMinusMPayload](docs/FranchiseofficeMinusGetAutocompleteMinusV2MinusResponseMinusMPayload.md)
  - [eZmaxApi.models.FranchisereferalincomeCreateObjectV1ResponseAllOf](docs/FranchisereferalincomeCreateObjectV1ResponseAllOf.md)
  - [eZmaxApi.models.FranchisereferalincomeCreateObjectV2ResponseAllOf](docs/FranchisereferalincomeCreateObjectV2ResponseAllOf.md)
  - [eZmaxApi.models.FranchisereferalincomeMinusCreateObjectMinusV1MinusRequest](docs/FranchisereferalincomeMinusCreateObjectMinusV1MinusRequest.md)
@@ -1021,6 +1031,10 @@ Class | Method | HTTP request | Description
  - [eZmaxApi.models.NotificationtestMinusGetElementsMinusV1MinusResponse](docs/NotificationtestMinusGetElementsMinusV1MinusResponse.md)
  - [eZmaxApi.models.NotificationtestMinusGetElementsMinusV1MinusResponseMinusMPayload](docs/NotificationtestMinusGetElementsMinusV1MinusResponseMinusMPayload.md)
  - [eZmaxApi.models.NotificationtestMinusResponse](docs/NotificationtestMinusResponse.md)
+ - [eZmaxApi.models.PeriodGetAutocompleteV2ResponseAllOf](docs/PeriodGetAutocompleteV2ResponseAllOf.md)
+ - [eZmaxApi.models.PeriodMinusAutocompleteElementMinusResponse](docs/PeriodMinusAutocompleteElementMinusResponse.md)
+ - [eZmaxApi.models.PeriodMinusGetAutocompleteMinusV2MinusResponse](docs/PeriodMinusGetAutocompleteMinusV2MinusResponse.md)
+ - [eZmaxApi.models.PeriodMinusGetAutocompleteMinusV2MinusResponseMinusMPayload](docs/PeriodMinusGetAutocompleteMinusV2MinusResponseMinusMPayload.md)
  - [eZmaxApi.models.PhoneMinusRequest](docs/PhoneMinusRequest.md)
  - [eZmaxApi.models.PhoneMinusRequestCompound](docs/PhoneMinusRequestCompound.md)
  - [eZmaxApi.models.SecretquestionGetAutocompleteV2ResponseAllOf](docs/SecretquestionGetAutocompleteV2ResponseAllOf.md)

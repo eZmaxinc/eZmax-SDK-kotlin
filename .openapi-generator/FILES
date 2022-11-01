@@ -481,7 +481,6 @@ docs/EzsignsignatureResponseCompound.md
 docs/EzsignsignatureResponseCompoundAllOf.md
 docs/EzsignsignatureSignV1Request.md
 docs/EzsignsignatureSignV1Response.md
-docs/EzsignsignatureSignV1ResponseAllOf.md
 docs/EzsignsignaturecustomdateRequest.md
 docs/EzsignsignaturecustomdateRequestCompound.md
 docs/EzsignsignaturecustomdateResponse.md
@@ -755,6 +754,14 @@ docs/FieldEVersionhistoryUsertype.md
 docs/FieldEWebhookEzsignevent.md
 docs/FieldEWebhookManagementevent.md
 docs/FieldEWebhookModule.md
+docs/FranchisebrokerAutocompleteElementResponse.md
+docs/FranchisebrokerGetAutocompleteV2Response.md
+docs/FranchisebrokerGetAutocompleteV2ResponseAllOf.md
+docs/FranchisebrokerGetAutocompleteV2ResponseMPayload.md
+docs/FranchiseofficeAutocompleteElementResponse.md
+docs/FranchiseofficeGetAutocompleteV2Response.md
+docs/FranchiseofficeGetAutocompleteV2ResponseAllOf.md
+docs/FranchiseofficeGetAutocompleteV2ResponseMPayload.md
 docs/FranchisereferalincomeCreateObjectV1Request.md
 docs/FranchisereferalincomeCreateObjectV1Response.md
 docs/FranchisereferalincomeCreateObjectV1ResponseAllOf.md
@@ -825,6 +832,10 @@ docs/ObjectUserApi.md
 docs/ObjectUsergroupApi.md
 docs/ObjectVersionhistoryApi.md
 docs/ObjectWebhookApi.md
+docs/PeriodAutocompleteElementResponse.md
+docs/PeriodGetAutocompleteV2Response.md
+docs/PeriodGetAutocompleteV2ResponseAllOf.md
+docs/PeriodGetAutocompleteV2ResponseMPayload.md
 docs/PhoneRequest.md
 docs/PhoneRequestCompound.md
 docs/SecretquestionAutocompleteElementResponse.md
@@ -1438,7 +1449,6 @@ src/main/kotlin/eZmaxApi/models/EzsignsignatureMinusSignMinusV1MinusRequest.kt
 src/main/kotlin/eZmaxApi/models/EzsignsignatureMinusSignMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/EzsignsignatureRequestCompoundAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsignsignatureResponseCompoundAllOf.kt
-src/main/kotlin/eZmaxApi/models/EzsignsignatureSignV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsignsignaturecustomdateMinusRequest.kt
 src/main/kotlin/eZmaxApi/models/EzsignsignaturecustomdateMinusRequestCompound.kt
 src/main/kotlin/eZmaxApi/models/EzsignsignaturecustomdateMinusResponse.kt
@@ -1712,6 +1722,14 @@ src/main/kotlin/eZmaxApi/models/FieldMinusEVersionhistoryUsertype.kt
 src/main/kotlin/eZmaxApi/models/FieldMinusEWebhookEzsignevent.kt
 src/main/kotlin/eZmaxApi/models/FieldMinusEWebhookManagementevent.kt
 src/main/kotlin/eZmaxApi/models/FieldMinusEWebhookModule.kt
+src/main/kotlin/eZmaxApi/models/FranchisebrokerGetAutocompleteV2ResponseAllOf.kt
+src/main/kotlin/eZmaxApi/models/FranchisebrokerMinusAutocompleteElementMinusResponse.kt
+src/main/kotlin/eZmaxApi/models/FranchisebrokerMinusGetAutocompleteMinusV2MinusResponse.kt
+src/main/kotlin/eZmaxApi/models/FranchisebrokerMinusGetAutocompleteMinusV2MinusResponseMinusMPayload.kt
+src/main/kotlin/eZmaxApi/models/FranchiseofficeGetAutocompleteV2ResponseAllOf.kt
+src/main/kotlin/eZmaxApi/models/FranchiseofficeMinusAutocompleteElementMinusResponse.kt
+src/main/kotlin/eZmaxApi/models/FranchiseofficeMinusGetAutocompleteMinusV2MinusResponse.kt
+src/main/kotlin/eZmaxApi/models/FranchiseofficeMinusGetAutocompleteMinusV2MinusResponseMinusMPayload.kt
 src/main/kotlin/eZmaxApi/models/FranchisereferalincomeCreateObjectV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/FranchisereferalincomeCreateObjectV2ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/FranchisereferalincomeMinusCreateObjectMinusV1MinusRequest.kt
@@ -1740,6 +1758,10 @@ src/main/kotlin/eZmaxApi/models/NotificationtestGetElementsV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/NotificationtestMinusGetElementsMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/NotificationtestMinusGetElementsMinusV1MinusResponseMinusMPayload.kt
 src/main/kotlin/eZmaxApi/models/NotificationtestMinusResponse.kt
+src/main/kotlin/eZmaxApi/models/PeriodGetAutocompleteV2ResponseAllOf.kt
+src/main/kotlin/eZmaxApi/models/PeriodMinusAutocompleteElementMinusResponse.kt
+src/main/kotlin/eZmaxApi/models/PeriodMinusGetAutocompleteMinusV2MinusResponse.kt
+src/main/kotlin/eZmaxApi/models/PeriodMinusGetAutocompleteMinusV2MinusResponseMinusMPayload.kt
 src/main/kotlin/eZmaxApi/models/PhoneMinusRequest.kt
 src/main/kotlin/eZmaxApi/models/PhoneMinusRequestCompound.kt
 src/main/kotlin/eZmaxApi/models/SecretquestionGetAutocompleteV2ResponseAllOf.kt
