@@ -24,6 +24,7 @@ Method | HTTP request | Description
 [**ezsignfolderReorderV1**](ObjectEzsignfolderApi.md#ezsignfolderReorderV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/reorder | Reorder Ezsigndocuments in the Ezsignfolder
 [**ezsignfolderSendV1**](ObjectEzsignfolderApi.md#ezsignfolderSendV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/send | Send the Ezsignfolder to the signatories for signature
 [**ezsignfolderSendV2**](ObjectEzsignfolderApi.md#ezsignfolderSendV2) | **POST** /2/object/ezsignfolder/{pkiEzsignfolderID}/send | Send the Ezsignfolder to the signatories for signature
+[**ezsignfolderSendV3**](ObjectEzsignfolderApi.md#ezsignfolderSendV3) | **POST** /3/object/ezsignfolder/{pkiEzsignfolderID}/send | Send the Ezsignfolder to the signatories for signature
 [**ezsignfolderUnsendV1**](ObjectEzsignfolderApi.md#ezsignfolderUnsendV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/unsend | Unsend the Ezsignfolder
 
 
@@ -1032,6 +1033,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignfolderMinusSendMinusV2MinusResponse**](EzsignfolderMinusSendMinusV2MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="ezsignfolderSendV3"></a>
+# **ezsignfolderSendV3**
+> EzsignfolderMinusSendMinusV3MinusResponse ezsignfolderSendV3(pkiEzsignfolderID, ezsignfolderMinusSendMinusV3MinusRequest)
+
+Send the Ezsignfolder to the signatories for signature
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsignfolderApi()
+val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
+val ezsignfolderMinusSendMinusV3MinusRequest : EzsignfolderMinusSendMinusV3MinusRequest =  // EzsignfolderMinusSendMinusV3MinusRequest | 
+try {
+    val result : EzsignfolderMinusSendMinusV3MinusResponse = apiInstance.ezsignfolderSendV3(pkiEzsignfolderID, ezsignfolderMinusSendMinusV3MinusRequest)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsignfolderApi#ezsignfolderSendV3")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsignfolderApi#ezsignfolderSendV3")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **kotlin.Int**|  |
+ **ezsignfolderMinusSendMinusV3MinusRequest** | [**EzsignfolderMinusSendMinusV3MinusRequest**](EzsignfolderMinusSendMinusV3MinusRequest.md)|  |
+
+### Return type
+
+[**EzsignfolderMinusSendMinusV3MinusResponse**](EzsignfolderMinusSendMinusV3MinusResponse.md)
 
 ### Authorization
 

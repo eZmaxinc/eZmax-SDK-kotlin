@@ -18,11 +18,12 @@ Name | Type | Description | Notes
 **eEzsignfolderStep** | [**FieldMinusEEzsignfolderStep**](FieldMinusEEzsignfolderStep.md) |  | 
 **tEzsignfolderMessage** | **kotlin.String** | A custom text message that will be added to the email sent. | 
 **objAudit** | [**CommonMinusAudit**](CommonMinusAudit.md) |  | 
+**dtEzsignfolderDelayedsenddate** | **kotlin.String** | The date and time at which the Ezsignfolder will be sent in the future. |  [optional]
 **dtEzsignfolderDuedate** | **kotlin.String** | The maximum date and time at which the Ezsignfolder can be signed. |  [optional]
-**dtEzsignfolderSentdate** | **kotlin.String** | The date and time at which the Ezsign folder was sent the last time. |  [optional]
+**dtEzsignfolderSentdate** | **kotlin.String** | The date and time at which the Ezsignfolder was sent the last time. |  [optional]
 **dtEzsignfolderScheduledarchive** | **kotlin.String** | The scheduled date and time at which the Ezsignfolder should be archived. |  [optional]
 **dtEzsignfolderScheduleddispose** | **kotlin.String** | The scheduled date at which the Ezsignfolder should be Disposed. |  [optional]
-**dtEzsignfolderClose** | **kotlin.String** | The date and time at which the folder was closed. Either by applying the last signature or by completing it prematurely. |  [optional]
+**dtEzsignfolderClose** | **kotlin.String** | The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely. |  [optional]
 
 
 

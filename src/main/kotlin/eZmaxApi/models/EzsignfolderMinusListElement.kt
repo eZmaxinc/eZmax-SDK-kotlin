@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.14
+ * The version of the OpenAPI document: 1.1.15
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -39,7 +39,7 @@ import com.squareup.moshi.Json
  * @param iEzsigndocumentEdm The total number of Ezsigndocument in the folder that were saved in the edm system
  * @param iEzsignsignature The total number of signature blocks in all Ezsigndocuments in the folder
  * @param iEzsignsignatureSigned The total number of already signed signature blocks in all Ezsigndocuments in the folder
- * @param dtEzsignfolderSentdate The date and time at which the Ezsign folder was sent the last time.
+ * @param dtEzsignfolderSentdate The date and time at which the Ezsignfolder was sent the last time.
  * @param dtEzsignfolderDuedate The maximum date and time at which the Ezsignfolder can be signed.
  */
 
@@ -87,7 +87,7 @@ data class EzsignfolderMinusListElement (
     @Json(name = "iEzsignsignatureSigned")
     val iEzsignsignatureSigned: kotlin.Int,
 
-    /* The date and time at which the Ezsign folder was sent the last time. */
+    /* The date and time at which the Ezsignfolder was sent the last time. */
     @Json(name = "dtEzsignfolderSentdate")
     val dtEzsignfolderSentdate: kotlin.String? = null,
 

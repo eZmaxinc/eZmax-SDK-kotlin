@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.14
+ * The version of the OpenAPI document: 1.1.15
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -26,13 +26,16 @@ import com.squareup.moshi.Json
 /**
  * The signature step of the Ezsignfolder.
  *
- * Values: Unsent,Sent,PartiallySigned,Expired,Completed,Archived,Disposed
+ * Values: Unsent,PendingSend,Sent,PartiallySigned,Expired,Completed,Archived,Disposed
  */
 
 enum class FieldMinusEEzsignfolderStep(val value: kotlin.String) {
 
     @Json(name = "Unsent")
     Unsent("Unsent"),
+
+    @Json(name = "PendingSend")
+    PendingSend("PendingSend"),
 
     @Json(name = "Sent")
     Sent("Sent"),

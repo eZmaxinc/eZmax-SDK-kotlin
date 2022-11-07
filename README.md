@@ -122,6 +122,7 @@ Class | Method | HTTP request | Description
 *ObjectEzsignfolderApi* | [**ezsignfolderReorderV1**](docs/ObjectEzsignfolderApi.md#ezsignfolderreorderv1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/reorder | Reorder Ezsigndocuments in the Ezsignfolder
 *ObjectEzsignfolderApi* | [**ezsignfolderSendV1**](docs/ObjectEzsignfolderApi.md#ezsignfoldersendv1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/send | Send the Ezsignfolder to the signatories for signature
 *ObjectEzsignfolderApi* | [**ezsignfolderSendV2**](docs/ObjectEzsignfolderApi.md#ezsignfoldersendv2) | **POST** /2/object/ezsignfolder/{pkiEzsignfolderID}/send | Send the Ezsignfolder to the signatories for signature
+*ObjectEzsignfolderApi* | [**ezsignfolderSendV3**](docs/ObjectEzsignfolderApi.md#ezsignfoldersendv3) | **POST** /3/object/ezsignfolder/{pkiEzsignfolderID}/send | Send the Ezsignfolder to the signatories for signature
 *ObjectEzsignfolderApi* | [**ezsignfolderUnsendV1**](docs/ObjectEzsignfolderApi.md#ezsignfolderunsendv1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/unsend | Unsend the Ezsignfolder
 *ObjectEzsignfoldersignerassociationApi* | [**ezsignfoldersignerassociationCreateObjectV1**](docs/ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationcreateobjectv1) | **POST** /1/object/ezsignfoldersignerassociation | Create a new Ezsignfoldersignerassociation
 *ObjectEzsignfoldersignerassociationApi* | [**ezsignfoldersignerassociationCreateObjectV2**](docs/ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationcreateobjectv2) | **POST** /2/object/ezsignfoldersignerassociation | Create a new Ezsignfoldersignerassociation
@@ -131,6 +132,7 @@ Class | Method | HTTP request | Description
 *ObjectEzsignfoldersignerassociationApi* | [**ezsignfoldersignerassociationGetInPersonLoginUrlV1**](docs/ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationgetinpersonloginurlv1) | **GET** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getInPersonLoginUrl | Retrieve a Login Url to allow In-Person signing
 *ObjectEzsignfoldersignerassociationApi* | [**ezsignfoldersignerassociationGetObjectV1**](docs/ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationgetobjectv1) | **GET** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} | Retrieve an existing Ezsignfoldersignerassociation
 *ObjectEzsignfoldersignerassociationApi* | [**ezsignfoldersignerassociationGetObjectV2**](docs/ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationgetobjectv2) | **GET** /2/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} | Retrieve an existing Ezsignfoldersignerassociation
+*ObjectEzsignfoldersignerassociationApi* | [**ezsignfoldersignerassociationPatchObjectV1**](docs/ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationpatchobjectv1) | **PATCH** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} | Patch an existing Ezsignfoldersignerassociation
 *ObjectEzsignfoldertypeApi* | [**ezsignfoldertypeCreateObjectV1**](docs/ObjectEzsignfoldertypeApi.md#ezsignfoldertypecreateobjectv1) | **POST** /1/object/ezsignfoldertype | Create a new Ezsignfoldertype
 *ObjectEzsignfoldertypeApi* | [**ezsignfoldertypeEditObjectV1**](docs/ObjectEzsignfoldertypeApi.md#ezsignfoldertypeeditobjectv1) | **PUT** /1/object/ezsignfoldertype/{pkiEzsignfoldertypeID} | Edit an existing Ezsignfoldertype
 *ObjectEzsignfoldertypeApi* | [**ezsignfoldertypeGetAutocompleteV1**](docs/ObjectEzsignfoldertypeApi.md#ezsignfoldertypegetautocompletev1) | **GET** /1/object/ezsignfoldertype/getAutocomplete/{sSelector} | Retrieve Ezsignfoldertypes and IDs
@@ -613,6 +615,8 @@ Class | Method | HTTP request | Description
  - [eZmaxApi.models.EzsignfolderMinusSendMinusV1MinusResponse](docs/EzsignfolderMinusSendMinusV1MinusResponse.md)
  - [eZmaxApi.models.EzsignfolderMinusSendMinusV2MinusRequest](docs/EzsignfolderMinusSendMinusV2MinusRequest.md)
  - [eZmaxApi.models.EzsignfolderMinusSendMinusV2MinusResponse](docs/EzsignfolderMinusSendMinusV2MinusResponse.md)
+ - [eZmaxApi.models.EzsignfolderMinusSendMinusV3MinusRequest](docs/EzsignfolderMinusSendMinusV3MinusRequest.md)
+ - [eZmaxApi.models.EzsignfolderMinusSendMinusV3MinusResponse](docs/EzsignfolderMinusSendMinusV3MinusResponse.md)
  - [eZmaxApi.models.EzsignfolderMinusUnsendMinusV1MinusResponse](docs/EzsignfolderMinusUnsendMinusV1MinusResponse.md)
  - [eZmaxApi.models.EzsignfoldersignerassociationCreateObjectV1ResponseAllOf](docs/EzsignfoldersignerassociationCreateObjectV1ResponseAllOf.md)
  - [eZmaxApi.models.EzsignfoldersignerassociationCreateObjectV2ResponseAllOf](docs/EzsignfoldersignerassociationCreateObjectV2ResponseAllOf.md)
@@ -635,8 +639,11 @@ Class | Method | HTTP request | Description
  - [eZmaxApi.models.EzsignfoldersignerassociationMinusGetObjectMinusV1MinusResponseMinusMPayload](docs/EzsignfoldersignerassociationMinusGetObjectMinusV1MinusResponseMinusMPayload.md)
  - [eZmaxApi.models.EzsignfoldersignerassociationMinusGetObjectMinusV2MinusResponse](docs/EzsignfoldersignerassociationMinusGetObjectMinusV2MinusResponse.md)
  - [eZmaxApi.models.EzsignfoldersignerassociationMinusGetObjectMinusV2MinusResponseMinusMPayload](docs/EzsignfoldersignerassociationMinusGetObjectMinusV2MinusResponseMinusMPayload.md)
+ - [eZmaxApi.models.EzsignfoldersignerassociationMinusPatchObjectMinusV1MinusRequest](docs/EzsignfoldersignerassociationMinusPatchObjectMinusV1MinusRequest.md)
+ - [eZmaxApi.models.EzsignfoldersignerassociationMinusPatchObjectMinusV1MinusResponse](docs/EzsignfoldersignerassociationMinusPatchObjectMinusV1MinusResponse.md)
  - [eZmaxApi.models.EzsignfoldersignerassociationMinusRequest](docs/EzsignfoldersignerassociationMinusRequest.md)
  - [eZmaxApi.models.EzsignfoldersignerassociationMinusRequestCompound](docs/EzsignfoldersignerassociationMinusRequestCompound.md)
+ - [eZmaxApi.models.EzsignfoldersignerassociationMinusRequestPatch](docs/EzsignfoldersignerassociationMinusRequestPatch.md)
  - [eZmaxApi.models.EzsignfoldersignerassociationMinusResponse](docs/EzsignfoldersignerassociationMinusResponse.md)
  - [eZmaxApi.models.EzsignfoldersignerassociationMinusResponseCompound](docs/EzsignfoldersignerassociationMinusResponseCompound.md)
  - [eZmaxApi.models.EzsignfoldersignerassociationMinusResponseCompoundMinusUser](docs/EzsignfoldersignerassociationMinusResponseCompoundMinusUser.md)

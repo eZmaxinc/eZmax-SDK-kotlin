@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.14
+ * The version of the OpenAPI document: 1.1.15
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -32,6 +32,7 @@ import com.squareup.moshi.Json
  *
  * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation
  * @param fkiEzsignfolderID The unique ID of the Ezsignfolder
+ * @param bEzsignfoldersignerassociationDelayedsend If this flag is true the signatory is part of a delayed send.
  * @param bEzsignfoldersignerassociationReceivecopy If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document.
  * @param tEzsignfoldersignerassociationMessage A custom text message that will be added to the email sent.
  * @param bEzsignfoldersignerassociationHasactionableelementsCurrent Indicates if the Ezsignfoldersignerassociation has actionable elements in the current step
@@ -49,6 +50,10 @@ data class CustomMinusEzsignfoldersignerassociationActionableElementMinusRespons
     /* The unique ID of the Ezsignfolder */
     @Json(name = "fkiEzsignfolderID")
     val fkiEzsignfolderID: kotlin.Int,
+
+    /* If this flag is true the signatory is part of a delayed send. */
+    @Json(name = "bEzsignfoldersignerassociationDelayedsend")
+    val bEzsignfoldersignerassociationDelayedsend: kotlin.Boolean,
 
     /* If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document. */
     @Json(name = "bEzsignfoldersignerassociationReceivecopy")

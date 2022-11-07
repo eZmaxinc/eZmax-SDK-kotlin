@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.14
+ * The version of the OpenAPI document: 1.1.15
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -35,6 +35,8 @@ import eZmaxApi.models.EzsignfoldersignerassociationMinusForceDisconnectMinusV1M
 import eZmaxApi.models.EzsignfoldersignerassociationMinusGetInPersonLoginUrlMinusV1MinusResponse
 import eZmaxApi.models.EzsignfoldersignerassociationMinusGetObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsignfoldersignerassociationMinusGetObjectMinusV2MinusResponse
+import eZmaxApi.models.EzsignfoldersignerassociationMinusPatchObjectMinusV1MinusRequest
+import eZmaxApi.models.EzsignfoldersignerassociationMinusPatchObjectMinusV1MinusResponse
 
 import com.squareup.moshi.Json
 
@@ -634,6 +636,80 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/2/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}".replace("{"+"pkiEzsignfoldersignerassociationID"+"}", pkiEzsignfoldersignerassociationID.toString()),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Patch an existing Ezsignfoldersignerassociation
+     * 
+     * @param pkiEzsignfoldersignerassociationID 
+     * @param ezsignfoldersignerassociationMinusPatchObjectMinusV1MinusRequest 
+     * @return EzsignfoldersignerassociationMinusPatchObjectMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignfoldersignerassociationPatchObjectV1(pkiEzsignfoldersignerassociationID: kotlin.Int, ezsignfoldersignerassociationMinusPatchObjectMinusV1MinusRequest: EzsignfoldersignerassociationMinusPatchObjectMinusV1MinusRequest) : EzsignfoldersignerassociationMinusPatchObjectMinusV1MinusResponse {
+        val localVarResponse = ezsignfoldersignerassociationPatchObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationMinusPatchObjectMinusV1MinusRequest = ezsignfoldersignerassociationMinusPatchObjectMinusV1MinusRequest)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfoldersignerassociationMinusPatchObjectMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Patch an existing Ezsignfoldersignerassociation
+     * 
+     * @param pkiEzsignfoldersignerassociationID 
+     * @param ezsignfoldersignerassociationMinusPatchObjectMinusV1MinusRequest 
+     * @return ApiResponse<EzsignfoldersignerassociationMinusPatchObjectMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignfoldersignerassociationPatchObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID: kotlin.Int, ezsignfoldersignerassociationMinusPatchObjectMinusV1MinusRequest: EzsignfoldersignerassociationMinusPatchObjectMinusV1MinusRequest) : ApiResponse<EzsignfoldersignerassociationMinusPatchObjectMinusV1MinusResponse?> {
+        val localVariableConfig = ezsignfoldersignerassociationPatchObjectV1RequestConfig(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationMinusPatchObjectMinusV1MinusRequest = ezsignfoldersignerassociationMinusPatchObjectMinusV1MinusRequest)
+
+        return request<EzsignfoldersignerassociationMinusPatchObjectMinusV1MinusRequest, EzsignfoldersignerassociationMinusPatchObjectMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsignfoldersignerassociationPatchObjectV1
+     *
+     * @param pkiEzsignfoldersignerassociationID 
+     * @param ezsignfoldersignerassociationMinusPatchObjectMinusV1MinusRequest 
+     * @return RequestConfig
+     */
+    fun ezsignfoldersignerassociationPatchObjectV1RequestConfig(pkiEzsignfoldersignerassociationID: kotlin.Int, ezsignfoldersignerassociationMinusPatchObjectMinusV1MinusRequest: EzsignfoldersignerassociationMinusPatchObjectMinusV1MinusRequest) : RequestConfig<EzsignfoldersignerassociationMinusPatchObjectMinusV1MinusRequest> {
+        val localVariableBody = ezsignfoldersignerassociationMinusPatchObjectMinusV1MinusRequest
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.PATCH,
+            path = "/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}".replace("{"+"pkiEzsignfoldersignerassociationID"+"}", pkiEzsignfoldersignerassociationID.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

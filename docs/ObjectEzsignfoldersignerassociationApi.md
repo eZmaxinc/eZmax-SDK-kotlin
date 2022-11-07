@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**ezsignfoldersignerassociationGetInPersonLoginUrlV1**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationGetInPersonLoginUrlV1) | **GET** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getInPersonLoginUrl | Retrieve a Login Url to allow In-Person signing
 [**ezsignfoldersignerassociationGetObjectV1**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationGetObjectV1) | **GET** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} | Retrieve an existing Ezsignfoldersignerassociation
 [**ezsignfoldersignerassociationGetObjectV2**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationGetObjectV2) | **GET** /2/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} | Retrieve an existing Ezsignfoldersignerassociation
+[**ezsignfoldersignerassociationPatchObjectV1**](ObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationPatchObjectV1) | **PATCH** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} | Patch an existing Ezsignfoldersignerassociation
 
 
 <a name="ezsignfoldersignerassociationCreateObjectV1"></a>
@@ -416,5 +417,55 @@ Configure Authorization:
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="ezsignfoldersignerassociationPatchObjectV1"></a>
+# **ezsignfoldersignerassociationPatchObjectV1**
+> EzsignfoldersignerassociationMinusPatchObjectMinusV1MinusResponse ezsignfoldersignerassociationPatchObjectV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationMinusPatchObjectMinusV1MinusRequest)
+
+Patch an existing Ezsignfoldersignerassociation
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsignfoldersignerassociationApi()
+val pkiEzsignfoldersignerassociationID : kotlin.Int = 56 // kotlin.Int | 
+val ezsignfoldersignerassociationMinusPatchObjectMinusV1MinusRequest : EzsignfoldersignerassociationMinusPatchObjectMinusV1MinusRequest =  // EzsignfoldersignerassociationMinusPatchObjectMinusV1MinusRequest | 
+try {
+    val result : EzsignfoldersignerassociationMinusPatchObjectMinusV1MinusResponse = apiInstance.ezsignfoldersignerassociationPatchObjectV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationMinusPatchObjectMinusV1MinusRequest)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsignfoldersignerassociationApi#ezsignfoldersignerassociationPatchObjectV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsignfoldersignerassociationApi#ezsignfoldersignerassociationPatchObjectV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfoldersignerassociationID** | **kotlin.Int**|  |
+ **ezsignfoldersignerassociationMinusPatchObjectMinusV1MinusRequest** | [**EzsignfoldersignerassociationMinusPatchObjectMinusV1MinusRequest**](EzsignfoldersignerassociationMinusPatchObjectMinusV1MinusRequest.md)|  |
+
+### Return type
+
+[**EzsignfoldersignerassociationMinusPatchObjectMinusV1MinusResponse**](EzsignfoldersignerassociationMinusPatchObjectMinusV1MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
