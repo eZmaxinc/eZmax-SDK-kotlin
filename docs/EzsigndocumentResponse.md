@@ -18,9 +18,11 @@ Name | Type | Description | Notes
 **sEzsigndocumentMD5signed** | **kotlin.String** | MD5 Hash of the final PDF Document after all signatures were applied to it. | 
 **bEzsigndocumentEzsignform** | **kotlin.Boolean** | If the Ezsigndocument contains an Ezsignform or not | 
 **objAudit** | [**CommonMinusAudit**](CommonMinusAudit.md) |  | 
+**fkiEzsignfoldersignerassociationIDDeclinedtosign** | **kotlin.Int** | The unique ID of the Ezsignfoldersignerassociation |  [optional]
 **dtEzsignformCompleted** | **kotlin.String** | The date and time at which the Ezsignform has been completed. |  [optional]
 **dtEzsigndocumentFirstsend** | **kotlin.String** | The date and time when the Ezsigndocument was first sent. |  [optional]
 **dtEzsigndocumentLastsend** | **kotlin.String** | The date and time when the Ezsigndocument was sent the last time. |  [optional]
+**tEzsigndocumentDeclinedtosignreason** | **kotlin.String** | A custom text message that will contain the refusal message if the Ezsigndocument is declined to sign |  [optional]
 
 
 

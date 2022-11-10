@@ -4,6 +4,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**ezsigntemplateCopyV1**](ObjectEzsigntemplateApi.md#ezsigntemplateCopyV1) | **POST** /1/object/ezsigntemplate/{pkiEzsigntemplateID}/copy | Copy the Ezsigntemplate
 [**ezsigntemplateCreateObjectV1**](ObjectEzsigntemplateApi.md#ezsigntemplateCreateObjectV1) | **POST** /1/object/ezsigntemplate | Create a new Ezsigntemplate
 [**ezsigntemplateDeleteObjectV1**](ObjectEzsigntemplateApi.md#ezsigntemplateDeleteObjectV1) | **DELETE** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Delete an existing Ezsigntemplate
 [**ezsigntemplateEditObjectV1**](ObjectEzsigntemplateApi.md#ezsigntemplateEditObjectV1) | **PUT** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Edit an existing Ezsigntemplate
@@ -13,6 +14,58 @@ Method | HTTP request | Description
 [**ezsigntemplateGetObjectV1**](ObjectEzsigntemplateApi.md#ezsigntemplateGetObjectV1) | **GET** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate
 [**ezsigntemplateGetObjectV2**](ObjectEzsigntemplateApi.md#ezsigntemplateGetObjectV2) | **GET** /2/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate
 
+
+<a name="ezsigntemplateCopyV1"></a>
+# **ezsigntemplateCopyV1**
+> EzsigntemplateMinusCopyMinusV1MinusResponse ezsigntemplateCopyV1(pkiEzsigntemplateID, ezsigntemplateMinusCopyMinusV1MinusRequest)
+
+Copy the Ezsigntemplate
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsigntemplateApi()
+val pkiEzsigntemplateID : kotlin.Int = 56 // kotlin.Int | 
+val ezsigntemplateMinusCopyMinusV1MinusRequest : EzsigntemplateMinusCopyMinusV1MinusRequest =  // EzsigntemplateMinusCopyMinusV1MinusRequest | 
+try {
+    val result : EzsigntemplateMinusCopyMinusV1MinusResponse = apiInstance.ezsigntemplateCopyV1(pkiEzsigntemplateID, ezsigntemplateMinusCopyMinusV1MinusRequest)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsigntemplateApi#ezsigntemplateCopyV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsigntemplateApi#ezsigntemplateCopyV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigntemplateID** | **kotlin.Int**|  |
+ **ezsigntemplateMinusCopyMinusV1MinusRequest** | [**EzsigntemplateMinusCopyMinusV1MinusRequest**](EzsigntemplateMinusCopyMinusV1MinusRequest.md)|  |
+
+### Return type
+
+[**EzsigntemplateMinusCopyMinusV1MinusResponse**](EzsigntemplateMinusCopyMinusV1MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 <a name="ezsigntemplateCreateObjectV1"></a>
 # **ezsigntemplateCreateObjectV1**

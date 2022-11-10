@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.15
+ * The version of the OpenAPI document: 1.1.16
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -25,6 +25,8 @@ import okhttp3.OkHttpClient
 
 import eZmaxApi.models.CommonMinusGetAutocompleteMinusV1MinusResponse
 import eZmaxApi.models.CommonMinusResponseMinusError
+import eZmaxApi.models.EzsigntemplateMinusCopyMinusV1MinusRequest
+import eZmaxApi.models.EzsigntemplateMinusCopyMinusV1MinusResponse
 import eZmaxApi.models.EzsigntemplateMinusCreateObjectMinusV1MinusRequest
 import eZmaxApi.models.EzsigntemplateMinusCreateObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsigntemplateMinusDeleteObjectMinusV1MinusResponse
@@ -58,6 +60,80 @@ class ObjectEzsigntemplateApi(basePath: kotlin.String = defaultBasePath, client:
         val defaultBasePath: String by lazy {
             System.getProperties().getProperty(ApiClient.baseUrlKey, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
+    }
+
+    /**
+     * Copy the Ezsigntemplate
+     * 
+     * @param pkiEzsigntemplateID 
+     * @param ezsigntemplateMinusCopyMinusV1MinusRequest 
+     * @return EzsigntemplateMinusCopyMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsigntemplateCopyV1(pkiEzsigntemplateID: kotlin.Int, ezsigntemplateMinusCopyMinusV1MinusRequest: EzsigntemplateMinusCopyMinusV1MinusRequest) : EzsigntemplateMinusCopyMinusV1MinusResponse {
+        val localVarResponse = ezsigntemplateCopyV1WithHttpInfo(pkiEzsigntemplateID = pkiEzsigntemplateID, ezsigntemplateMinusCopyMinusV1MinusRequest = ezsigntemplateMinusCopyMinusV1MinusRequest)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigntemplateMinusCopyMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Copy the Ezsigntemplate
+     * 
+     * @param pkiEzsigntemplateID 
+     * @param ezsigntemplateMinusCopyMinusV1MinusRequest 
+     * @return ApiResponse<EzsigntemplateMinusCopyMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsigntemplateCopyV1WithHttpInfo(pkiEzsigntemplateID: kotlin.Int, ezsigntemplateMinusCopyMinusV1MinusRequest: EzsigntemplateMinusCopyMinusV1MinusRequest) : ApiResponse<EzsigntemplateMinusCopyMinusV1MinusResponse?> {
+        val localVariableConfig = ezsigntemplateCopyV1RequestConfig(pkiEzsigntemplateID = pkiEzsigntemplateID, ezsigntemplateMinusCopyMinusV1MinusRequest = ezsigntemplateMinusCopyMinusV1MinusRequest)
+
+        return request<EzsigntemplateMinusCopyMinusV1MinusRequest, EzsigntemplateMinusCopyMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsigntemplateCopyV1
+     *
+     * @param pkiEzsigntemplateID 
+     * @param ezsigntemplateMinusCopyMinusV1MinusRequest 
+     * @return RequestConfig
+     */
+    fun ezsigntemplateCopyV1RequestConfig(pkiEzsigntemplateID: kotlin.Int, ezsigntemplateMinusCopyMinusV1MinusRequest: EzsigntemplateMinusCopyMinusV1MinusRequest) : RequestConfig<EzsigntemplateMinusCopyMinusV1MinusRequest> {
+        val localVariableBody = ezsigntemplateMinusCopyMinusV1MinusRequest
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/ezsigntemplate/{pkiEzsigntemplateID}/copy".replace("{"+"pkiEzsigntemplateID"+"}", pkiEzsigntemplateID.toString()),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
     }
 
     /**

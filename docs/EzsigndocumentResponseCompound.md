@@ -23,9 +23,11 @@ Name | Type | Description | Notes
 **iEzsigndocumentStepsignaturetotal** | **kotlin.Int** | The total number of steps in the signature filling phase | 
 **iEzsigndocumentStepsignatureCurrent** | **kotlin.Int** | The current step in the signature phase | 
 **aObjEzsignfoldersignerassociationstatus** | [**kotlin.collections.List&lt;CustomMinusEzsignfoldersignerassociationstatusMinusResponse&gt;**](CustomMinusEzsignfoldersignerassociationstatusMinusResponse.md) |  | 
+**fkiEzsignfoldersignerassociationIDDeclinedtosign** | **kotlin.Int** | The unique ID of the Ezsignfoldersignerassociation |  [optional]
 **dtEzsignformCompleted** | **kotlin.String** | The date and time at which the Ezsignform has been completed. |  [optional]
 **dtEzsigndocumentFirstsend** | **kotlin.String** | The date and time when the Ezsigndocument was first sent. |  [optional]
 **dtEzsigndocumentLastsend** | **kotlin.String** | The date and time when the Ezsigndocument was sent the last time. |  [optional]
+**tEzsigndocumentDeclinedtosignreason** | **kotlin.String** | A custom text message that will contain the refusal message if the Ezsigndocument is declined to sign |  [optional]
 
 
 

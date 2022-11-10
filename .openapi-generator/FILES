@@ -499,6 +499,10 @@ docs/EzsignsignerResponseCompound.md
 docs/EzsignsignerResponseCompoundAllOf.md
 docs/EzsignsignerResponseCompoundContact.md
 docs/EzsigntemplateAutocompleteElementResponse.md
+docs/EzsigntemplateCopyV1Request.md
+docs/EzsigntemplateCopyV1Response.md
+docs/EzsigntemplateCopyV1ResponseAllOf.md
+docs/EzsigntemplateCopyV1ResponseMPayload.md
 docs/EzsigntemplateCreateObjectV1Request.md
 docs/EzsigntemplateCreateObjectV1Response.md
 docs/EzsigntemplateCreateObjectV1ResponseAllOf.md
@@ -1471,6 +1475,7 @@ src/main/kotlin/eZmaxApi/models/EzsignsignerMinusResponseCompound.kt
 src/main/kotlin/eZmaxApi/models/EzsignsignerMinusResponseCompoundMinusContact.kt
 src/main/kotlin/eZmaxApi/models/EzsignsignerRequestCompoundAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsignsignerResponseCompoundAllOf.kt
+src/main/kotlin/eZmaxApi/models/EzsigntemplateCopyV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsigntemplateCreateObjectV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsigntemplateGetAutocompleteV2ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsigntemplateGetListV1ResponseAllOf.kt
@@ -1478,6 +1483,9 @@ src/main/kotlin/eZmaxApi/models/EzsigntemplateGetListV1ResponseMPayloadAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsigntemplateGetObjectV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsigntemplateGetObjectV2ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsigntemplateMinusAutocompleteElementMinusResponse.kt
+src/main/kotlin/eZmaxApi/models/EzsigntemplateMinusCopyMinusV1MinusRequest.kt
+src/main/kotlin/eZmaxApi/models/EzsigntemplateMinusCopyMinusV1MinusResponse.kt
+src/main/kotlin/eZmaxApi/models/EzsigntemplateMinusCopyMinusV1MinusResponseMinusMPayload.kt
 src/main/kotlin/eZmaxApi/models/EzsigntemplateMinusCreateObjectMinusV1MinusRequest.kt
 src/main/kotlin/eZmaxApi/models/EzsigntemplateMinusCreateObjectMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/EzsigntemplateMinusCreateObjectMinusV1MinusResponseMinusMPayload.kt

@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.15
+ * The version of the OpenAPI document: 1.1.16
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -27,6 +27,7 @@ import com.squareup.moshi.Json
  * A Custom Ezmaxpricing Object
  *
  * @param pkiEzmaxpricingID The unique ID of the Ezmaxpricing
+ * @param dEzmaxpricingRebateezsignallagents The rebate offered when eZsign is taken for all agents
  * @param dtEzmaxpricingStart The start date of the Ezmaxpricing
  * @param dtEzmaxpricingEnd The end date of the Ezmaxpricing
  */
@@ -36,6 +37,10 @@ data class CustomMinusEzmaxpricingMinusResponse (
     /* The unique ID of the Ezmaxpricing */
     @Json(name = "pkiEzmaxpricingID")
     val pkiEzmaxpricingID: kotlin.Int,
+
+    /* The rebate offered when eZsign is taken for all agents */
+    @Json(name = "dEzmaxpricingRebateezsignallagents")
+    val dEzmaxpricingRebateezsignallagents: kotlin.String,
 
     /* The start date of the Ezmaxpricing */
     @Json(name = "dtEzmaxpricingStart")

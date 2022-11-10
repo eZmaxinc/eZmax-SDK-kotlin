@@ -3,7 +3,7 @@
  *
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
- * The version of the OpenAPI document: 1.1.15
+ * The version of the OpenAPI document: 1.1.16
  * Contact: support-api@ezmax.ca
  *
  * Please note:
@@ -42,9 +42,11 @@ import com.squareup.moshi.Json
  * @param sEzsigndocumentMD5signed MD5 Hash of the final PDF Document after all signatures were applied to it.
  * @param bEzsigndocumentEzsignform If the Ezsigndocument contains an Ezsignform or not
  * @param objAudit 
+ * @param fkiEzsignfoldersignerassociationIDDeclinedtosign The unique ID of the Ezsignfoldersignerassociation
  * @param dtEzsignformCompleted The date and time at which the Ezsignform has been completed.
  * @param dtEzsigndocumentFirstsend The date and time when the Ezsigndocument was first sent.
  * @param dtEzsigndocumentLastsend The date and time when the Ezsigndocument was sent the last time.
+ * @param tEzsigndocumentDeclinedtosignreason A custom text message that will contain the refusal message if the Ezsigndocument is declined to sign
  */
 
 data class EzsigndocumentMinusResponse (
@@ -103,6 +105,10 @@ data class EzsigndocumentMinusResponse (
     @Json(name = "objAudit")
     val objAudit: CommonMinusAudit,
 
+    /* The unique ID of the Ezsignfoldersignerassociation */
+    @Json(name = "fkiEzsignfoldersignerassociationIDDeclinedtosign")
+    val fkiEzsignfoldersignerassociationIDDeclinedtosign: kotlin.Int? = null,
+
     /* The date and time at which the Ezsignform has been completed. */
     @Json(name = "dtEzsignformCompleted")
     val dtEzsignformCompleted: kotlin.String? = null,
@@ -113,7 +119,11 @@ data class EzsigndocumentMinusResponse (
 
     /* The date and time when the Ezsigndocument was sent the last time. */
     @Json(name = "dtEzsigndocumentLastsend")
-    val dtEzsigndocumentLastsend: kotlin.String? = null
+    val dtEzsigndocumentLastsend: kotlin.String? = null,
+
+    /* A custom text message that will contain the refusal message if the Ezsigndocument is declined to sign */
+    @Json(name = "tEzsigndocumentDeclinedtosignreason")
+    val tEzsigndocumentDeclinedtosignreason: kotlin.String? = null
 
 )
 
