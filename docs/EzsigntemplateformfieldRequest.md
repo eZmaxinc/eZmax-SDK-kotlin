@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **iEzsigntemplateformfieldWidth** | **kotlin.Int** | The Width of the Ezsigntemplateformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsigntemplateformfieldgroupType.  | eEzsigntemplateformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22-65535     | | Radio                     | 22           | | Text                      | 22-65535     | | Textarea                  | 22-65535     | | 
 **iEzsigntemplateformfieldHeight** | **kotlin.Int** | The Height of the Ezsigntemplateformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsigntemplateformfieldgroupType.  | eEzsigntemplateformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22           | | Radio                     | 22           | | Text                      | 22           | | Textarea                  | 22-65535     |  | 
 **pkiEzsigntemplateformfieldID** | **kotlin.Int** | The unique ID of the Ezsigntemplateformfield |  [optional]
-**sEzsigntemplateformfieldValue** | **kotlin.String** | The value for the Ezsigntemplateformfield  This can only be set if eEzsigntemplateformfieldgroupType is Checkbox or Radio |  [optional]
+**sEzsigntemplateformfieldValue** | **kotlin.String** | The value for the Ezsigntemplateformfield |  [optional]
 **bEzsigntemplateformfieldSelected** | **kotlin.Boolean** | Whether the Ezsigntemplateformfield is selected or not by default.  This can only be set if eEzsigntemplateformfieldgroupType is **Checkbox** or **Radio** |  [optional]
 
 
