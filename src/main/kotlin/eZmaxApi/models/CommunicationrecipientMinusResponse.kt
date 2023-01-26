@@ -15,8 +15,11 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.DescriptionstaticMinusResponseCompound
+import eZmaxApi.models.EmailstaticMinusResponseCompound
+import eZmaxApi.models.FieldMinusECommunicationrecipientObjecttype
 import eZmaxApi.models.FieldMinusECommunicationrecipientType
-import eZmaxApi.models.PhoneMinusResponseCompound
+import eZmaxApi.models.PhonestaticMinusResponseCompound
 
 import com.squareup.moshi.Json
 
@@ -24,6 +27,9 @@ import com.squareup.moshi.Json
  * A Communicationrecipient Object
  *
  * @param pkiCommunicationrecipientID The unique ID of the Communicationrecipient.
+ * @param eCommunicationrecipientType 
+ * @param objDescriptionstatic 
+ * @param eCommunicationrecipientObjecttype 
  * @param fkiAgentID The unique ID of the Agent.
  * @param fkiBrokerID The unique ID of the Broker.
  * @param fkiContactID The unique ID of the Contact
@@ -32,8 +38,6 @@ import com.squareup.moshi.Json
  * @param fkiEzsignsignerID The unique ID of the Ezsignsigner
  * @param fkiFranchiseofficeID The unique ID of the Franchisereoffice
  * @param fkiUserID The unique ID of the User
- * @param sEmailAddress The email address.
- * @param eCommunicationrecipientType 
  * @param fkiAgentincorporationID The unique ID of the Agentincorporation.
  * @param fkiAssistantID The unique ID of the Assistant.
  * @param fkiExternalbrokerID The unique ID of the Externalbroker.
@@ -41,7 +45,8 @@ import com.squareup.moshi.Json
  * @param fkiNotaryID The unique ID of the Notary.
  * @param fkiRewardmemberID The unique ID of the Rewardmember.
  * @param fkiSupplierID The unique ID of the Supplier.
- * @param objPhoneSms 
+ * @param objEmailstatic 
+ * @param objPhonestatic 
  */
 
 
@@ -50,6 +55,15 @@ data class CommunicationrecipientMinusResponse (
     /* The unique ID of the Communicationrecipient. */
     @Json(name = "pkiCommunicationrecipientID")
     val pkiCommunicationrecipientID: kotlin.Int,
+
+    @Json(name = "eCommunicationrecipientType")
+    val eCommunicationrecipientType: FieldMinusECommunicationrecipientType,
+
+    @Json(name = "objDescriptionstatic")
+    val objDescriptionstatic: DescriptionstaticMinusResponseCompound,
+
+    @Json(name = "eCommunicationrecipientObjecttype")
+    val eCommunicationrecipientObjecttype: FieldMinusECommunicationrecipientObjecttype? = null,
 
     /* The unique ID of the Agent. */
     @Json(name = "fkiAgentID")
@@ -83,13 +97,6 @@ data class CommunicationrecipientMinusResponse (
     @Json(name = "fkiUserID")
     val fkiUserID: kotlin.Int? = null,
 
-    /* The email address. */
-    @Json(name = "sEmailAddress")
-    val sEmailAddress: kotlin.String? = null,
-
-    @Json(name = "eCommunicationrecipientType")
-    val eCommunicationrecipientType: FieldMinusECommunicationrecipientType? = null,
-
     /* The unique ID of the Agentincorporation. */
     @Json(name = "fkiAgentincorporationID")
     val fkiAgentincorporationID: kotlin.Int? = null,
@@ -118,8 +125,11 @@ data class CommunicationrecipientMinusResponse (
     @Json(name = "fkiSupplierID")
     val fkiSupplierID: kotlin.Int? = null,
 
-    @Json(name = "objPhoneSms")
-    val objPhoneSms: PhoneMinusResponseCompound? = null
+    @Json(name = "objEmailstatic")
+    val objEmailstatic: EmailstaticMinusResponseCompound? = null,
+
+    @Json(name = "objPhonestatic")
+    val objPhonestatic: PhonestaticMinusResponseCompound? = null
 
 )
 

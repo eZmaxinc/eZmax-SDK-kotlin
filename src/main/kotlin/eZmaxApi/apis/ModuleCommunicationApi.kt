@@ -21,7 +21,6 @@ import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommonMinusResponseMinusError
 import eZmaxApi.models.CommunicationMinusGetCountMinusV1MinusResponse
-import eZmaxApi.models.CommunicationMinusGetListMinusV1MinusResponse
 
 import com.squareup.moshi.Json
 
@@ -48,16 +47,16 @@ class ModuleCommunicationApi(basePath: kotlin.String = defaultBasePath, client: 
     }
 
     /**
-     * enum for parameter eCommunicationModule
+     * enum for parameter eCommunicationObjecttype
      */
-     enum class ECommunicationModule_communicationGetCommunicationCountV1(val value: kotlin.String) {
+     enum class ECommunicationObjecttype_communicationGetCommunicationCountV1(val value: kotlin.String) {
          @Json(name = "Ezsignfolder") Ezsignfolder("Ezsignfolder")
      }
 
     /**
-     * Get the number of communication
-     * Get the number of communication in specified module
-     * @param eCommunicationModule Specify the requested module
+     * Retrieve Communication count
+     * 
+     * @param eCommunicationObjecttype The object type for the Communication
      * @param pkiEzsignfolderID The unique ID of the Ezsignfolder (optional)
      * @return CommunicationMinusGetCountMinusV1MinusResponse
      * @throws IllegalStateException If the request is not correctly configured
@@ -68,8 +67,8 @@ class ModuleCommunicationApi(basePath: kotlin.String = defaultBasePath, client: 
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun communicationGetCommunicationCountV1(eCommunicationModule: ECommunicationModule_communicationGetCommunicationCountV1, pkiEzsignfolderID: kotlin.Int? = null) : CommunicationMinusGetCountMinusV1MinusResponse {
-        val localVarResponse = communicationGetCommunicationCountV1WithHttpInfo(eCommunicationModule = eCommunicationModule, pkiEzsignfolderID = pkiEzsignfolderID)
+    fun communicationGetCommunicationCountV1(eCommunicationObjecttype: ECommunicationObjecttype_communicationGetCommunicationCountV1, pkiEzsignfolderID: kotlin.Int? = null) : CommunicationMinusGetCountMinusV1MinusResponse {
+        val localVarResponse = communicationGetCommunicationCountV1WithHttpInfo(eCommunicationObjecttype = eCommunicationObjecttype, pkiEzsignfolderID = pkiEzsignfolderID)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as CommunicationMinusGetCountMinusV1MinusResponse
@@ -87,9 +86,9 @@ class ModuleCommunicationApi(basePath: kotlin.String = defaultBasePath, client: 
     }
 
     /**
-     * Get the number of communication
-     * Get the number of communication in specified module
-     * @param eCommunicationModule Specify the requested module
+     * Retrieve Communication count
+     * 
+     * @param eCommunicationObjecttype The object type for the Communication
      * @param pkiEzsignfolderID The unique ID of the Ezsignfolder (optional)
      * @return ApiResponse<CommunicationMinusGetCountMinusV1MinusResponse?>
      * @throws IllegalStateException If the request is not correctly configured
@@ -97,8 +96,8 @@ class ModuleCommunicationApi(basePath: kotlin.String = defaultBasePath, client: 
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun communicationGetCommunicationCountV1WithHttpInfo(eCommunicationModule: ECommunicationModule_communicationGetCommunicationCountV1, pkiEzsignfolderID: kotlin.Int?) : ApiResponse<CommunicationMinusGetCountMinusV1MinusResponse?> {
-        val localVariableConfig = communicationGetCommunicationCountV1RequestConfig(eCommunicationModule = eCommunicationModule, pkiEzsignfolderID = pkiEzsignfolderID)
+    fun communicationGetCommunicationCountV1WithHttpInfo(eCommunicationObjecttype: ECommunicationObjecttype_communicationGetCommunicationCountV1, pkiEzsignfolderID: kotlin.Int?) : ApiResponse<CommunicationMinusGetCountMinusV1MinusResponse?> {
+        val localVariableConfig = communicationGetCommunicationCountV1RequestConfig(eCommunicationObjecttype = eCommunicationObjecttype, pkiEzsignfolderID = pkiEzsignfolderID)
 
         return request<Unit, CommunicationMinusGetCountMinusV1MinusResponse>(
             localVariableConfig
@@ -108,15 +107,15 @@ class ModuleCommunicationApi(basePath: kotlin.String = defaultBasePath, client: 
     /**
      * To obtain the request config of the operation communicationGetCommunicationCountV1
      *
-     * @param eCommunicationModule Specify the requested module
+     * @param eCommunicationObjecttype The object type for the Communication
      * @param pkiEzsignfolderID The unique ID of the Ezsignfolder (optional)
      * @return RequestConfig
      */
-    fun communicationGetCommunicationCountV1RequestConfig(eCommunicationModule: ECommunicationModule_communicationGetCommunicationCountV1, pkiEzsignfolderID: kotlin.Int?) : RequestConfig<Unit> {
+    fun communicationGetCommunicationCountV1RequestConfig(eCommunicationObjecttype: ECommunicationObjecttype_communicationGetCommunicationCountV1, pkiEzsignfolderID: kotlin.Int?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
-                put("eCommunicationModule", listOf(eCommunicationModule.toString()))
+                put("eCommunicationObjecttype", listOf(eCommunicationObjecttype.toString()))
                 if (pkiEzsignfolderID != null) {
                     put("pkiEzsignfolderID", listOf(pkiEzsignfolderID.toString()))
                 }
@@ -126,93 +125,7 @@ class ModuleCommunicationApi(basePath: kotlin.String = defaultBasePath, client: 
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/1/module/communication/getCommunicationCount",
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            body = localVariableBody
-        )
-    }
-
-    /**
-     * enum for parameter eCommunicationModule
-     */
-     enum class ECommunicationModule_communicationGetCommunicationListV1(val value: kotlin.String) {
-         @Json(name = "Ezsignfolder") Ezsignfolder("Ezsignfolder")
-     }
-
-    /**
-     * Retrieve communication list
-     * Retrieve communication list
-     * @param eCommunicationModule Specify the requested module
-     * @param pkiEzsignfolderID The unique ID of the Ezsignfolder (optional)
-     * @return CommunicationMinusGetListMinusV1MinusResponse
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun communicationGetCommunicationListV1(eCommunicationModule: ECommunicationModule_communicationGetCommunicationListV1, pkiEzsignfolderID: kotlin.Int? = null) : CommunicationMinusGetListMinusV1MinusResponse {
-        val localVarResponse = communicationGetCommunicationListV1WithHttpInfo(eCommunicationModule = eCommunicationModule, pkiEzsignfolderID = pkiEzsignfolderID)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommunicationMinusGetListMinusV1MinusResponse
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * Retrieve communication list
-     * Retrieve communication list
-     * @param eCommunicationModule Specify the requested module
-     * @param pkiEzsignfolderID The unique ID of the Ezsignfolder (optional)
-     * @return ApiResponse<CommunicationMinusGetListMinusV1MinusResponse?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    fun communicationGetCommunicationListV1WithHttpInfo(eCommunicationModule: ECommunicationModule_communicationGetCommunicationListV1, pkiEzsignfolderID: kotlin.Int?) : ApiResponse<CommunicationMinusGetListMinusV1MinusResponse?> {
-        val localVariableConfig = communicationGetCommunicationListV1RequestConfig(eCommunicationModule = eCommunicationModule, pkiEzsignfolderID = pkiEzsignfolderID)
-
-        return request<Unit, CommunicationMinusGetListMinusV1MinusResponse>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation communicationGetCommunicationListV1
-     *
-     * @param eCommunicationModule Specify the requested module
-     * @param pkiEzsignfolderID The unique ID of the Ezsignfolder (optional)
-     * @return RequestConfig
-     */
-    fun communicationGetCommunicationListV1RequestConfig(eCommunicationModule: ECommunicationModule_communicationGetCommunicationListV1, pkiEzsignfolderID: kotlin.Int?) : RequestConfig<Unit> {
-        val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
-            .apply {
-                put("eCommunicationModule", listOf(eCommunicationModule.toString()))
-                if (pkiEzsignfolderID != null) {
-                    put("pkiEzsignfolderID", listOf(pkiEzsignfolderID.toString()))
-                }
-            }
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.GET,
-            path = "/1/module/communication/getCommunicationList",
+            path = "/1/module/communication/getCount",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

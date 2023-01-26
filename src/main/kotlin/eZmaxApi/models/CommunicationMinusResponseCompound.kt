@@ -15,13 +15,13 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.CommonMinusAudit
 import eZmaxApi.models.CommunicationattachmentMinusResponseCompound
-import eZmaxApi.models.CommunicationexternalimageMinusResponseCompound
 import eZmaxApi.models.CommunicationexternalrecipientMinusResponseCompound
-import eZmaxApi.models.CommunicationimageMinusResponseCompound
 import eZmaxApi.models.CommunicationrecipientMinusResponseCompound
+import eZmaxApi.models.ComputedMinusECommunicationDirection
 import eZmaxApi.models.CustomMinusContactNameMinusResponse
-import eZmaxApi.models.FieldMinusECommunicationEmailimportance
+import eZmaxApi.models.FieldMinusECommunicationImportance
 import eZmaxApi.models.FieldMinusECommunicationType
 
 import com.squareup.moshi.Json
@@ -30,16 +30,16 @@ import com.squareup.moshi.Json
  * A Communication Object
  *
  * @param pkiCommunicationID The unique ID of the Communication.
+ * @param eCommunicationImportance 
  * @param eCommunicationType 
- * @param sCommunicationSubject The Subject of the Communication
- * @param dtCommunicationSentdate The send date and time at which the Communication was sent.
+ * @param sCommunicationSubject The subject of the Communication
+ * @param eCommunicationDirection 
+ * @param iCommunicationrecipientCount The count of Communicationrecipient
  * @param objContactFrom 
+ * @param objAudit 
  * @param aObjCommunicationattachment 
  * @param aObjCommunicationrecipient 
  * @param aObjCommunicationexternalrecipient 
- * @param aObjCommunicationimage 
- * @param aObjCommunicationexternalimage 
- * @param eCommunicationEmailimportance 
  */
 
 
@@ -49,19 +49,28 @@ data class CommunicationMinusResponseCompound (
     @Json(name = "pkiCommunicationID")
     val pkiCommunicationID: kotlin.Int,
 
+    @Json(name = "eCommunicationImportance")
+    val eCommunicationImportance: FieldMinusECommunicationImportance,
+
     @Json(name = "eCommunicationType")
     val eCommunicationType: FieldMinusECommunicationType,
 
-    /* The Subject of the Communication */
+    /* The subject of the Communication */
     @Json(name = "sCommunicationSubject")
     val sCommunicationSubject: kotlin.String,
 
-    /* The send date and time at which the Communication was sent. */
-    @Json(name = "dtCommunicationSentdate")
-    val dtCommunicationSentdate: kotlin.String,
+    @Json(name = "eCommunicationDirection")
+    val eCommunicationDirection: ComputedMinusECommunicationDirection,
+
+    /* The count of Communicationrecipient */
+    @Json(name = "iCommunicationrecipientCount")
+    val iCommunicationrecipientCount: kotlin.Int,
 
     @Json(name = "objContactFrom")
     val objContactFrom: CustomMinusContactNameMinusResponse,
+
+    @Json(name = "objAudit")
+    val objAudit: CommonMinusAudit,
 
     @Json(name = "a_objCommunicationattachment")
     val aObjCommunicationattachment: kotlin.collections.List<CommunicationattachmentMinusResponseCompound>,
@@ -70,16 +79,7 @@ data class CommunicationMinusResponseCompound (
     val aObjCommunicationrecipient: kotlin.collections.List<CommunicationrecipientMinusResponseCompound>,
 
     @Json(name = "a_objCommunicationexternalrecipient")
-    val aObjCommunicationexternalrecipient: kotlin.collections.List<CommunicationexternalrecipientMinusResponseCompound>,
-
-    @Json(name = "a_objCommunicationimage")
-    val aObjCommunicationimage: kotlin.collections.List<CommunicationimageMinusResponseCompound>,
-
-    @Json(name = "a_objCommunicationexternalimage")
-    val aObjCommunicationexternalimage: kotlin.collections.List<CommunicationexternalimageMinusResponseCompound>,
-
-    @Json(name = "eCommunicationEmailimportance")
-    val eCommunicationEmailimportance: FieldMinusECommunicationEmailimportance? = null
+    val aObjCommunicationexternalrecipient: kotlin.collections.List<CommunicationexternalrecipientMinusResponseCompound>
 
 )
 

@@ -28,6 +28,7 @@ import com.squareup.moshi.Json
  * @param dEzmaxinvoicingsummaryexternaldetailRebate The rebate for the product
  * @param dEzmaxinvoicingsummaryexternaldetailTotal The total invoiced for the product
  * @param bEzmaxinvoicingsummaryexternaldetailAdjustment Whether it's an adjustment
+ * @param tEzmaxproductHelpX The help message of the Ezmaxproduct in the language of the requester
  * @param pkiEzmaxinvoicingsummaryexternaldetailID The unique ID of the Ezmaxinvoicingsummaryexternaldetail
  * @param fkiEzmaxinvoicingsummaryexternalID The unique ID of the Ezmaxinvoicingsummaryexternal
  */
@@ -62,6 +63,10 @@ data class EzmaxinvoicingsummaryexternaldetailMinusResponse (
     /* Whether it's an adjustment */
     @Json(name = "bEzmaxinvoicingsummaryexternaldetailAdjustment")
     val bEzmaxinvoicingsummaryexternaldetailAdjustment: kotlin.Boolean,
+
+    /* The help message of the Ezmaxproduct in the language of the requester */
+    @Json(name = "tEzmaxproductHelpX")
+    val tEzmaxproductHelpX: kotlin.String,
 
     /* The unique ID of the Ezmaxinvoicingsummaryexternaldetail */
     @Json(name = "pkiEzmaxinvoicingsummaryexternaldetailID")

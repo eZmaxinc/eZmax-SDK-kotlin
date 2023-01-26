@@ -16,9 +16,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.CommunicationattachmentMinusResponseCompound
-import eZmaxApi.models.CommunicationexternalimageMinusResponseCompound
 import eZmaxApi.models.CommunicationexternalrecipientMinusResponseCompound
-import eZmaxApi.models.CommunicationimageMinusResponseCompound
 import eZmaxApi.models.CommunicationrecipientMinusResponseCompound
 
 import com.squareup.moshi.Json
@@ -29,8 +27,6 @@ import com.squareup.moshi.Json
  * @param aObjCommunicationattachment 
  * @param aObjCommunicationrecipient 
  * @param aObjCommunicationexternalrecipient 
- * @param aObjCommunicationimage 
- * @param aObjCommunicationexternalimage 
  */
 
 
@@ -43,13 +39,7 @@ data class CommunicationResponseCompoundAllOf (
     val aObjCommunicationrecipient: kotlin.collections.List<CommunicationrecipientMinusResponseCompound>,
 
     @Json(name = "a_objCommunicationexternalrecipient")
-    val aObjCommunicationexternalrecipient: kotlin.collections.List<CommunicationexternalrecipientMinusResponseCompound>,
-
-    @Json(name = "a_objCommunicationimage")
-    val aObjCommunicationimage: kotlin.collections.List<CommunicationimageMinusResponseCompound>,
-
-    @Json(name = "a_objCommunicationexternalimage")
-    val aObjCommunicationexternalimage: kotlin.collections.List<CommunicationexternalimageMinusResponseCompound>
+    val aObjCommunicationexternalrecipient: kotlin.collections.List<CommunicationexternalrecipientMinusResponseCompound>
 
 )
 

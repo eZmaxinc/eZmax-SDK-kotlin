@@ -46,8 +46,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *GlobalCustomerApi* | [**globalCustomerGetEndpointV1**](docs/GlobalCustomerApi.md#globalcustomergetendpointv1) | **GET** /1/customer/{pksCustomerCode}/endpoint | Get customer endpoint
-*ModuleCommunicationApi* | [**communicationGetCommunicationCountV1**](docs/ModuleCommunicationApi.md#communicationgetcommunicationcountv1) | **GET** /1/module/communication/getCommunicationCount | Get the number of communication
-*ModuleCommunicationApi* | [**communicationGetCommunicationListV1**](docs/ModuleCommunicationApi.md#communicationgetcommunicationlistv1) | **GET** /1/module/communication/getCommunicationList | Retrieve communication list
+*ModuleCommunicationApi* | [**communicationGetCommunicationCountV1**](docs/ModuleCommunicationApi.md#communicationgetcommunicationcountv1) | **GET** /1/module/communication/getCount | Retrieve Communication count
 *ModuleEzsignApi* | [**ezsignSuggestSignersV1**](docs/ModuleEzsignApi.md#ezsignsuggestsignersv1) | **GET** /1/module/ezsign/suggestSigners | Suggest signers
 *ModuleEzsignApi* | [**ezsignSuggestTemplatesV1**](docs/ModuleEzsignApi.md#ezsignsuggesttemplatesv1) | **GET** /1/module/ezsign/suggestTemplates | Suggest templates
 *ModuleUserApi* | [**userCreateEzsignuserV1**](docs/ModuleUserApi.md#usercreateezsignuserv1) | **POST** /1/module/user/createezsignuser | Create a new User of type Ezsignuser
@@ -63,6 +62,7 @@ Class | Method | HTTP request | Description
 *ObjectBrandingApi* | [**brandingGetListV1**](docs/ObjectBrandingApi.md#brandinggetlistv1) | **GET** /1/object/branding/getList | Retrieve Branding list
 *ObjectBrandingApi* | [**brandingGetObjectV1**](docs/ObjectBrandingApi.md#brandinggetobjectv1) | **GET** /1/object/branding/{pkiBrandingID} | Retrieve an existing Branding
 *ObjectBrandingApi* | [**brandingGetObjectV2**](docs/ObjectBrandingApi.md#brandinggetobjectv2) | **GET** /2/object/branding/{pkiBrandingID} | Retrieve an existing Branding
+*ObjectCommunicationApi* | [**communicationGetListV1**](docs/ObjectCommunicationApi.md#communicationgetlistv1) | **GET** /1/object/communication/getList | Retrieve Communication list
 *ObjectCommunicationApi* | [**communicationGetObjectV2**](docs/ObjectCommunicationApi.md#communicationgetobjectv2) | **GET** /2/object/communication/{pkiCommunicationID} | Retrieve an existing Communication
 *ObjectDepartmentApi* | [**departmentGetAutocompleteV1**](docs/ObjectDepartmentApi.md#departmentgetautocompletev1) | **GET** /1/object/department/getAutocomplete/{sSelector} | Retrieve Departments and IDs
 *ObjectDepartmentApi* | [**departmentGetAutocompleteV2**](docs/ObjectDepartmentApi.md#departmentgetautocompletev2) | **GET** /2/object/department/getAutocomplete/{sSelector} | Retrieve Departments and IDs
@@ -232,6 +232,12 @@ Class | Method | HTTP request | Description
 *ObjectFranchisereferalincomeApi* | [**franchisereferalincomeCreateObjectV2**](docs/ObjectFranchisereferalincomeApi.md#franchisereferalincomecreateobjectv2) | **POST** /2/object/franchisereferalincome | Create a new Franchisereferalincome
 *ObjectNotificationsectionApi* | [**notificationsectionGetNotificationtestsV1**](docs/ObjectNotificationsectionApi.md#notificationsectiongetnotificationtestsv1) | **GET** /1/object/notificationsection/{pkiNotificationsectionID}/getNotificationtests | Retrieve an existing Notificationsection's Notificationtests
 *ObjectNotificationtestApi* | [**notificationtestGetElementsV1**](docs/ObjectNotificationtestApi.md#notificationtestgetelementsv1) | **GET** /1/object/notificationtest/{pkiNotificationtestID}/getElements | Retrieve an existing Notificationtest's Elements
+*ObjectPaymenttermApi* | [**paymenttermCreateObjectV1**](docs/ObjectPaymenttermApi.md#paymenttermcreateobjectv1) | **POST** /1/object/paymentterm | Create a new Paymentterm
+*ObjectPaymenttermApi* | [**paymenttermDeleteObjectV1**](docs/ObjectPaymenttermApi.md#paymenttermdeleteobjectv1) | **DELETE** /1/object/paymentterm/{pkiPaymenttermID} | Delete an existing Paymentterm
+*ObjectPaymenttermApi* | [**paymenttermEditObjectV1**](docs/ObjectPaymenttermApi.md#paymenttermeditobjectv1) | **PUT** /1/object/paymentterm/{pkiPaymenttermID} | Edit an existing Paymentterm
+*ObjectPaymenttermApi* | [**paymenttermGetAutocompleteV2**](docs/ObjectPaymenttermApi.md#paymenttermgetautocompletev2) | **GET** /2/object/paymentterm/getAutocomplete/{sSelector} | Retrieve Paymentterms and IDs
+*ObjectPaymenttermApi* | [**paymenttermGetListV1**](docs/ObjectPaymenttermApi.md#paymenttermgetlistv1) | **GET** /1/object/paymentterm/getList | Retrieve Paymentterm list
+*ObjectPaymenttermApi* | [**paymenttermGetObjectV2**](docs/ObjectPaymenttermApi.md#paymenttermgetobjectv2) | **GET** /2/object/paymentterm/{pkiPaymenttermID} | Retrieve an existing Paymentterm
 *ObjectPeriodApi* | [**periodGetAutocompleteV1**](docs/ObjectPeriodApi.md#periodgetautocompletev1) | **GET** /1/object/period/getAutocomplete/{sSelector} | Retrieve Periods and IDs
 *ObjectPeriodApi* | [**periodGetAutocompleteV2**](docs/ObjectPeriodApi.md#periodgetautocompletev2) | **GET** /2/object/period/getAutocomplete/{sSelector} | Retrieve Periods and IDs
 *ObjectSecretquestionApi* | [**secretquestionGetAutocompleteV1**](docs/ObjectSecretquestionApi.md#secretquestiongetautocompletev1) | **GET** /1/object/secretquestion/getAutocomplete/{sSelector} | Retrieve Secretquestions and IDs
@@ -336,6 +342,7 @@ Class | Method | HTTP request | Description
  - [eZmaxApi.models.CommonResponseObjDebugPayloadGetListAllOf](docs/CommonResponseObjDebugPayloadGetListAllOf.md)
  - [eZmaxApi.models.CommunicationGetCountV1ResponseAllOf](docs/CommunicationGetCountV1ResponseAllOf.md)
  - [eZmaxApi.models.CommunicationGetListV1ResponseAllOf](docs/CommunicationGetListV1ResponseAllOf.md)
+ - [eZmaxApi.models.CommunicationGetListV1ResponseMPayloadAllOf](docs/CommunicationGetListV1ResponseMPayloadAllOf.md)
  - [eZmaxApi.models.CommunicationGetObjectV2ResponseAllOf](docs/CommunicationGetObjectV2ResponseAllOf.md)
  - [eZmaxApi.models.CommunicationMinusGetCountMinusV1MinusResponse](docs/CommunicationMinusGetCountMinusV1MinusResponse.md)
  - [eZmaxApi.models.CommunicationMinusGetCountMinusV1MinusResponseMinusMPayload](docs/CommunicationMinusGetCountMinusV1MinusResponseMinusMPayload.md)
@@ -349,14 +356,11 @@ Class | Method | HTTP request | Description
  - [eZmaxApi.models.CommunicationResponseCompoundAllOf](docs/CommunicationResponseCompoundAllOf.md)
  - [eZmaxApi.models.CommunicationattachmentMinusResponse](docs/CommunicationattachmentMinusResponse.md)
  - [eZmaxApi.models.CommunicationattachmentMinusResponseCompound](docs/CommunicationattachmentMinusResponseCompound.md)
- - [eZmaxApi.models.CommunicationexternalimageMinusResponse](docs/CommunicationexternalimageMinusResponse.md)
- - [eZmaxApi.models.CommunicationexternalimageMinusResponseCompound](docs/CommunicationexternalimageMinusResponseCompound.md)
  - [eZmaxApi.models.CommunicationexternalrecipientMinusResponse](docs/CommunicationexternalrecipientMinusResponse.md)
  - [eZmaxApi.models.CommunicationexternalrecipientMinusResponseCompound](docs/CommunicationexternalrecipientMinusResponseCompound.md)
- - [eZmaxApi.models.CommunicationimageMinusResponse](docs/CommunicationimageMinusResponse.md)
- - [eZmaxApi.models.CommunicationimageMinusResponseCompound](docs/CommunicationimageMinusResponseCompound.md)
  - [eZmaxApi.models.CommunicationrecipientMinusResponse](docs/CommunicationrecipientMinusResponse.md)
  - [eZmaxApi.models.CommunicationrecipientMinusResponseCompound](docs/CommunicationrecipientMinusResponseCompound.md)
+ - [eZmaxApi.models.ComputedMinusECommunicationDirection](docs/ComputedMinusECommunicationDirection.md)
  - [eZmaxApi.models.ContactMinusRequest](docs/ContactMinusRequest.md)
  - [eZmaxApi.models.ContactMinusRequestCompound](docs/ContactMinusRequestCompound.md)
  - [eZmaxApi.models.ContactRequestCompoundAllOf](docs/ContactRequestCompoundAllOf.md)
@@ -407,8 +411,12 @@ Class | Method | HTTP request | Description
  - [eZmaxApi.models.DepartmentMinusGetAutocompleteMinusV2MinusResponseMinusMPayload](docs/DepartmentMinusGetAutocompleteMinusV2MinusResponseMinusMPayload.md)
  - [eZmaxApi.models.DepartmentMinusGetMembersMinusV1MinusResponse](docs/DepartmentMinusGetMembersMinusV1MinusResponse.md)
  - [eZmaxApi.models.DepartmentMinusGetMembersMinusV1MinusResponseMinusMPayload](docs/DepartmentMinusGetMembersMinusV1MinusResponseMinusMPayload.md)
+ - [eZmaxApi.models.DescriptionstaticMinusResponse](docs/DescriptionstaticMinusResponse.md)
+ - [eZmaxApi.models.DescriptionstaticMinusResponseCompound](docs/DescriptionstaticMinusResponseCompound.md)
  - [eZmaxApi.models.EmailMinusRequest](docs/EmailMinusRequest.md)
  - [eZmaxApi.models.EmailMinusRequestCompound](docs/EmailMinusRequestCompound.md)
+ - [eZmaxApi.models.EmailstaticMinusResponse](docs/EmailstaticMinusResponse.md)
+ - [eZmaxApi.models.EmailstaticMinusResponseCompound](docs/EmailstaticMinusResponseCompound.md)
  - [eZmaxApi.models.EzmaxinvoicingGetAutocompleteV2ResponseAllOf](docs/EzmaxinvoicingGetAutocompleteV2ResponseAllOf.md)
  - [eZmaxApi.models.EzmaxinvoicingGetObjectV1ResponseAllOf](docs/EzmaxinvoicingGetObjectV1ResponseAllOf.md)
  - [eZmaxApi.models.EzmaxinvoicingGetObjectV2ResponseAllOf](docs/EzmaxinvoicingGetObjectV2ResponseAllOf.md)
@@ -1008,9 +1016,10 @@ Class | Method | HTTP request | Description
  - [eZmaxApi.models.FieldMinusEActivesessionUsertype](docs/FieldMinusEActivesessionUsertype.md)
  - [eZmaxApi.models.FieldMinusEActivesessionWeekdaystart](docs/FieldMinusEActivesessionWeekdaystart.md)
  - [eZmaxApi.models.FieldMinusEBrandingLogo](docs/FieldMinusEBrandingLogo.md)
- - [eZmaxApi.models.FieldMinusECommunicationEmailimportance](docs/FieldMinusECommunicationEmailimportance.md)
+ - [eZmaxApi.models.FieldMinusECommunicationImportance](docs/FieldMinusECommunicationImportance.md)
  - [eZmaxApi.models.FieldMinusECommunicationType](docs/FieldMinusECommunicationType.md)
  - [eZmaxApi.models.FieldMinusECommunicationexternalrecipientType](docs/FieldMinusECommunicationexternalrecipientType.md)
+ - [eZmaxApi.models.FieldMinusECommunicationrecipientObjecttype](docs/FieldMinusECommunicationrecipientObjecttype.md)
  - [eZmaxApi.models.FieldMinusECommunicationrecipientType](docs/FieldMinusECommunicationrecipientType.md)
  - [eZmaxApi.models.FieldMinusEEzmaxinvoicingPaymenttype](docs/FieldMinusEEzmaxinvoicingPaymenttype.md)
  - [eZmaxApi.models.FieldMinusEEzmaxinvoicingagentVariationezmax](docs/FieldMinusEEzmaxinvoicingagentVariationezmax.md)
@@ -1074,6 +1083,7 @@ Class | Method | HTTP request | Description
  - [eZmaxApi.models.MultilingualMinusEzsignfoldertypeName](docs/MultilingualMinusEzsignfoldertypeName.md)
  - [eZmaxApi.models.MultilingualMinusNotificationsubsectionName](docs/MultilingualMinusNotificationsubsectionName.md)
  - [eZmaxApi.models.MultilingualMinusNotificationtestName](docs/MultilingualMinusNotificationtestName.md)
+ - [eZmaxApi.models.MultilingualMinusPaymenttermDescription](docs/MultilingualMinusPaymenttermDescription.md)
  - [eZmaxApi.models.MultilingualMinusVersionhistoryDetail](docs/MultilingualMinusVersionhistoryDetail.md)
  - [eZmaxApi.models.NotificationsectionGetNotificationtestsV1ResponseAllOf](docs/NotificationsectionGetNotificationtestsV1ResponseAllOf.md)
  - [eZmaxApi.models.NotificationsectionMinusGetNotificationtestsMinusV1MinusResponse](docs/NotificationsectionMinusGetNotificationtestsMinusV1MinusResponse.md)
@@ -1083,14 +1093,37 @@ Class | Method | HTTP request | Description
  - [eZmaxApi.models.NotificationtestMinusGetElementsMinusV1MinusResponse](docs/NotificationtestMinusGetElementsMinusV1MinusResponse.md)
  - [eZmaxApi.models.NotificationtestMinusGetElementsMinusV1MinusResponseMinusMPayload](docs/NotificationtestMinusGetElementsMinusV1MinusResponseMinusMPayload.md)
  - [eZmaxApi.models.NotificationtestMinusResponse](docs/NotificationtestMinusResponse.md)
+ - [eZmaxApi.models.PaymenttermCreateObjectV1ResponseAllOf](docs/PaymenttermCreateObjectV1ResponseAllOf.md)
+ - [eZmaxApi.models.PaymenttermGetAutocompleteV2ResponseAllOf](docs/PaymenttermGetAutocompleteV2ResponseAllOf.md)
+ - [eZmaxApi.models.PaymenttermGetListV1ResponseAllOf](docs/PaymenttermGetListV1ResponseAllOf.md)
+ - [eZmaxApi.models.PaymenttermGetListV1ResponseMPayloadAllOf](docs/PaymenttermGetListV1ResponseMPayloadAllOf.md)
+ - [eZmaxApi.models.PaymenttermGetObjectV2ResponseAllOf](docs/PaymenttermGetObjectV2ResponseAllOf.md)
+ - [eZmaxApi.models.PaymenttermMinusAutocompleteElementMinusResponse](docs/PaymenttermMinusAutocompleteElementMinusResponse.md)
+ - [eZmaxApi.models.PaymenttermMinusCreateObjectMinusV1MinusRequest](docs/PaymenttermMinusCreateObjectMinusV1MinusRequest.md)
+ - [eZmaxApi.models.PaymenttermMinusCreateObjectMinusV1MinusResponse](docs/PaymenttermMinusCreateObjectMinusV1MinusResponse.md)
+ - [eZmaxApi.models.PaymenttermMinusCreateObjectMinusV1MinusResponseMinusMPayload](docs/PaymenttermMinusCreateObjectMinusV1MinusResponseMinusMPayload.md)
+ - [eZmaxApi.models.PaymenttermMinusDeleteObjectMinusV1MinusResponse](docs/PaymenttermMinusDeleteObjectMinusV1MinusResponse.md)
+ - [eZmaxApi.models.PaymenttermMinusEditObjectMinusV1MinusRequest](docs/PaymenttermMinusEditObjectMinusV1MinusRequest.md)
+ - [eZmaxApi.models.PaymenttermMinusEditObjectMinusV1MinusResponse](docs/PaymenttermMinusEditObjectMinusV1MinusResponse.md)
+ - [eZmaxApi.models.PaymenttermMinusGetAutocompleteMinusV2MinusResponse](docs/PaymenttermMinusGetAutocompleteMinusV2MinusResponse.md)
+ - [eZmaxApi.models.PaymenttermMinusGetAutocompleteMinusV2MinusResponseMinusMPayload](docs/PaymenttermMinusGetAutocompleteMinusV2MinusResponseMinusMPayload.md)
+ - [eZmaxApi.models.PaymenttermMinusGetListMinusV1MinusResponse](docs/PaymenttermMinusGetListMinusV1MinusResponse.md)
+ - [eZmaxApi.models.PaymenttermMinusGetListMinusV1MinusResponseMinusMPayload](docs/PaymenttermMinusGetListMinusV1MinusResponseMinusMPayload.md)
+ - [eZmaxApi.models.PaymenttermMinusGetObjectMinusV2MinusResponse](docs/PaymenttermMinusGetObjectMinusV2MinusResponse.md)
+ - [eZmaxApi.models.PaymenttermMinusGetObjectMinusV2MinusResponseMinusMPayload](docs/PaymenttermMinusGetObjectMinusV2MinusResponseMinusMPayload.md)
+ - [eZmaxApi.models.PaymenttermMinusListElement](docs/PaymenttermMinusListElement.md)
+ - [eZmaxApi.models.PaymenttermMinusRequest](docs/PaymenttermMinusRequest.md)
+ - [eZmaxApi.models.PaymenttermMinusRequestCompound](docs/PaymenttermMinusRequestCompound.md)
+ - [eZmaxApi.models.PaymenttermMinusResponse](docs/PaymenttermMinusResponse.md)
+ - [eZmaxApi.models.PaymenttermMinusResponseCompound](docs/PaymenttermMinusResponseCompound.md)
  - [eZmaxApi.models.PeriodGetAutocompleteV2ResponseAllOf](docs/PeriodGetAutocompleteV2ResponseAllOf.md)
  - [eZmaxApi.models.PeriodMinusAutocompleteElementMinusResponse](docs/PeriodMinusAutocompleteElementMinusResponse.md)
  - [eZmaxApi.models.PeriodMinusGetAutocompleteMinusV2MinusResponse](docs/PeriodMinusGetAutocompleteMinusV2MinusResponse.md)
  - [eZmaxApi.models.PeriodMinusGetAutocompleteMinusV2MinusResponseMinusMPayload](docs/PeriodMinusGetAutocompleteMinusV2MinusResponseMinusMPayload.md)
  - [eZmaxApi.models.PhoneMinusRequest](docs/PhoneMinusRequest.md)
  - [eZmaxApi.models.PhoneMinusRequestCompound](docs/PhoneMinusRequestCompound.md)
- - [eZmaxApi.models.PhoneMinusResponse](docs/PhoneMinusResponse.md)
- - [eZmaxApi.models.PhoneMinusResponseCompound](docs/PhoneMinusResponseCompound.md)
+ - [eZmaxApi.models.PhonestaticMinusResponse](docs/PhonestaticMinusResponse.md)
+ - [eZmaxApi.models.PhonestaticMinusResponseCompound](docs/PhonestaticMinusResponseCompound.md)
  - [eZmaxApi.models.SecretquestionGetAutocompleteV2ResponseAllOf](docs/SecretquestionGetAutocompleteV2ResponseAllOf.md)
  - [eZmaxApi.models.SecretquestionMinusAutocompleteElementMinusResponse](docs/SecretquestionMinusAutocompleteElementMinusResponse.md)
  - [eZmaxApi.models.SecretquestionMinusGetAutocompleteMinusV2MinusResponse](docs/SecretquestionMinusGetAutocompleteMinusV2MinusResponse.md)

@@ -20,7 +20,9 @@ import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommonMinusResponseMinusError
+import eZmaxApi.models.CommunicationMinusGetListMinusV1MinusResponse
 import eZmaxApi.models.CommunicationMinusGetObjectMinusV2MinusResponse
+import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
 
 import com.squareup.moshi.Json
 
@@ -44,6 +46,129 @@ class ObjectCommunicationApi(basePath: kotlin.String = defaultBasePath, client: 
         val defaultBasePath: String by lazy {
             System.getProperties().getProperty(ApiClient.baseUrlKey, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
+    }
+
+    /**
+     * enum for parameter eOrderBy
+     */
+     enum class EOrderBy_communicationGetListV1(val value: kotlin.String) {
+         @Json(name = "pkiCommunicationID_ASC") pkiCommunicationID_ASC("pkiCommunicationID_ASC"),
+         @Json(name = "pkiCommunicationID_DESC") pkiCommunicationID_DESC("pkiCommunicationID_DESC"),
+         @Json(name = "fkiEzsignfolderID_ASC") fkiEzsignfolderID_ASC("fkiEzsignfolderID_ASC"),
+         @Json(name = "fkiEzsignfolderID_DESC") fkiEzsignfolderID_DESC("fkiEzsignfolderID_DESC"),
+         @Json(name = "dtCreatedDate_ASC") dtCreatedDate_ASC("dtCreatedDate_ASC"),
+         @Json(name = "dtCreatedDate_DESC") dtCreatedDate_DESC("dtCreatedDate_DESC"),
+         @Json(name = "eCommunicationDirection_ASC") eCommunicationDirection_ASC("eCommunicationDirection_ASC"),
+         @Json(name = "eCommunicationDirection_DESC") eCommunicationDirection_DESC("eCommunicationDirection_DESC"),
+         @Json(name = "eCommunicationImportance_ASC") eCommunicationImportance_ASC("eCommunicationImportance_ASC"),
+         @Json(name = "eCommunicationImportance_DESC") eCommunicationImportance_DESC("eCommunicationImportance_DESC"),
+         @Json(name = "eCommunicationType_ASC") eCommunicationType_ASC("eCommunicationType_ASC"),
+         @Json(name = "eCommunicationType_DESC") eCommunicationType_DESC("eCommunicationType_DESC"),
+         @Json(name = "iCommunicationrecipientCount_ASC") iCommunicationrecipientCount_ASC("iCommunicationrecipientCount_ASC"),
+         @Json(name = "iCommunicationrecipientCount_DESC") iCommunicationrecipientCount_DESC("iCommunicationrecipientCount_DESC"),
+         @Json(name = "sCommunicationSubject_ASC") sCommunicationSubject_ASC("sCommunicationSubject_ASC"),
+         @Json(name = "sCommunicationSubject_DESC") sCommunicationSubject_DESC("sCommunicationSubject_DESC"),
+         @Json(name = "sCommunicationSender_ASC") sCommunicationSender_ASC("sCommunicationSender_ASC"),
+         @Json(name = "sCommunicationSender_DESC") sCommunicationSender_DESC("sCommunicationSender_DESC"),
+         @Json(name = "sCommunicationRecipient_ASC") sCommunicationRecipient_ASC("sCommunicationRecipient_ASC"),
+         @Json(name = "sCommunicationRecipient_DESC") sCommunicationRecipient_DESC("sCommunicationRecipient_DESC")
+     }
+
+    /**
+     * Retrieve Communication list
+     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eCommunicationImportance | High&lt;br&gt;Normal&lt;br&gt;Low | | eCommunicationType | Email&lt;br&gt;Fax&lt;br&gt;Sms | | eCommunicationDirection | Inbound&lt;br&gt;Outbound |
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return CommunicationMinusGetListMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun communicationGetListV1(eOrderBy: EOrderBy_communicationGetListV1? = null, iRowMax: kotlin.Int? = null, iRowOffset: kotlin.Int? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null, sFilter: kotlin.String? = null) : CommunicationMinusGetListMinusV1MinusResponse {
+        val localVarResponse = communicationGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommunicationMinusGetListMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve Communication list
+     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eCommunicationImportance | High&lt;br&gt;Normal&lt;br&gt;Low | | eCommunicationType | Email&lt;br&gt;Fax&lt;br&gt;Sms | | eCommunicationDirection | Inbound&lt;br&gt;Outbound |
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return ApiResponse<CommunicationMinusGetListMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun communicationGetListV1WithHttpInfo(eOrderBy: EOrderBy_communicationGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : ApiResponse<CommunicationMinusGetListMinusV1MinusResponse?> {
+        val localVariableConfig = communicationGetListV1RequestConfig(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
+
+        return request<Unit, CommunicationMinusGetListMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation communicationGetListV1
+     *
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return RequestConfig
+     */
+    fun communicationGetListV1RequestConfig(eOrderBy: EOrderBy_communicationGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (eOrderBy != null) {
+                    put("eOrderBy", listOf(eOrderBy.toString()))
+                }
+                if (iRowMax != null) {
+                    put("iRowMax", listOf(iRowMax.toString()))
+                }
+                if (iRowOffset != null) {
+                    put("iRowOffset", listOf(iRowOffset.toString()))
+                }
+                if (sFilter != null) {
+                    put("sFilter", listOf(sFilter.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/communication/getList",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
     }
 
     /**

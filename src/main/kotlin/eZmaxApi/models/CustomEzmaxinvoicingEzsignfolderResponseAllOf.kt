@@ -26,7 +26,7 @@ import com.squareup.moshi.Json
  * @param bEzsigntsarequirementBillable Whether the TSA requirement is billable or not
  * @param bEzsignfolderMfaused Whether the MFA was used or not for the Ezsignfolder
  * @param bEzsignfolderPaymentused Whether there was a signature is of type payment
- * @param bEzsignfolderAllowed 
+ * @param bEzsignfolderAllowed Whether you have access to the Ezsignfolder or not
  */
 
 
@@ -52,6 +52,7 @@ data class CustomEzmaxinvoicingEzsignfolderResponseAllOf (
     @Json(name = "bEzsignfolderPaymentused")
     val bEzsignfolderPaymentused: kotlin.Boolean,
 
+    /* Whether you have access to the Ezsignfolder or not */
     @Json(name = "bEzsignfolderAllowed")
     val bEzsignfolderAllowed: kotlin.Boolean
 

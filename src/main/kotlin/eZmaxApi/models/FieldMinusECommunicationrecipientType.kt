@@ -19,7 +19,7 @@ package eZmaxApi.models
 import com.squareup.moshi.Json
 
 /**
- * The Type for the Communicationrecipient
+ * The type for the Communicationrecipient
  *
  * Values: To,Cc,Bcc
  */

@@ -20,16 +20,26 @@ import eZmaxApi.models.CommunicationMinusListElement
 import com.squareup.moshi.Json
 
 /**
- * Payload for GET /1/module/communication/getList
+ * Payload for GET /1/object/communication/getList
  *
  * @param aObjCommunication 
+ * @param iRowReturned The number of rows returned
+ * @param iRowFiltered The number of rows matching your filters (if any) or the total number of rows
  */
 
 
 data class CommunicationMinusGetListMinusV1MinusResponseMinusMPayload (
 
     @Json(name = "a_objCommunication")
-    val aObjCommunication: kotlin.collections.List<CommunicationMinusListElement>
+    val aObjCommunication: kotlin.collections.List<CommunicationMinusListElement>,
+
+    /* The number of rows returned */
+    @Json(name = "iRowReturned")
+    val iRowReturned: kotlin.Int,
+
+    /* The number of rows matching your filters (if any) or the total number of rows */
+    @Json(name = "iRowFiltered")
+    val iRowFiltered: kotlin.Int
 
 )
 

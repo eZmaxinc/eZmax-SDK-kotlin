@@ -21,7 +21,7 @@ import com.squareup.moshi.Json
 /**
  * A Period AutocompleteElement Response
  *
- * @param sPeriodYYYYMM The period YYYYMM
+ * @param sPeriodYYYYMM The YYYYMM of the Period
  * @param pkiPeriodID The unique ID of the Period
  * @param bPeriodIsactive Whether the Period is active or not
  */
@@ -29,7 +29,7 @@ import com.squareup.moshi.Json
 
 data class PeriodMinusAutocompleteElementMinusResponse (
 
-    /* The period YYYYMM */
+    /* The YYYYMM of the Period */
     @Json(name = "sPeriodYYYYMM")
     val sPeriodYYYYMM: kotlin.String,
 

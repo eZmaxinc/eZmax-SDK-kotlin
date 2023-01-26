@@ -19,7 +19,7 @@ package eZmaxApi.models
 import com.squareup.moshi.Json
 
 /**
- * The Type of Communicationexternalrecipient
+ * The type of Communicationexternalrecipient
  *
  * Values: To,Cc,Bcc
  */

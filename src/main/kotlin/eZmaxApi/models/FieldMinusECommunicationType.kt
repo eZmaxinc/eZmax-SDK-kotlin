@@ -19,7 +19,7 @@ package eZmaxApi.models
 import com.squareup.moshi.Json
 
 /**
- * The Type for the Communication
+ * The type of the Communication
  *
  * Values: Email,Fax,Sms
  */

@@ -19,15 +19,15 @@ package eZmaxApi.models
 import com.squareup.moshi.Json
 
 /**
- * Payload for GET /1/module/communication/getCount
+ * Payload for GET /1/module/communication/getCommunicationCount
  *
- * @param iCommunicationCount The number of total signatures in the Ezsigntemplate.
+ * @param iCommunicationCount The count of Communication.
  */
 
 
 data class CommunicationMinusGetCountMinusV1MinusResponseMinusMPayload (
 
-    /* The number of total signatures in the Ezsigntemplate. */
+    /* The count of Communication. */
     @Json(name = "iCommunicationCount")
     val iCommunicationCount: kotlin.Int
 

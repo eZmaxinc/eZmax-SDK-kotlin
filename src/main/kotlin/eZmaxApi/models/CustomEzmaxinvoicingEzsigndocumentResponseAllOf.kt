@@ -25,7 +25,7 @@ import com.squareup.moshi.Json
  * @param sName 
  * @param sEzsignfolderDescription The description of the Ezsignfolder
  * @param sEzsigndocumentName The name of the document that will be presented to Ezsignfoldersignerassociations
- * @param bEzsignfolderAllowed 
+ * @param bEzsignfolderAllowed Whether you have access to the Ezsignfolder or not
  */
 
 
@@ -46,6 +46,7 @@ data class CustomEzmaxinvoicingEzsigndocumentResponseAllOf (
     @Json(name = "sEzsigndocumentName")
     val sEzsigndocumentName: kotlin.String,
 
+    /* Whether you have access to the Ezsignfolder or not */
     @Json(name = "bEzsignfolderAllowed")
     val bEzsignfolderAllowed: kotlin.Boolean
 

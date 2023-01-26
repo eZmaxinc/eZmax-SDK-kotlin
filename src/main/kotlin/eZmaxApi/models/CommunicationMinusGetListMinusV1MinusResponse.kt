@@ -16,13 +16,13 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.CommonMinusResponseMinusObjDebug
-import eZmaxApi.models.CommonMinusResponseMinusObjDebugPayload
+import eZmaxApi.models.CommonMinusResponseMinusObjDebugPayloadGetList
 import eZmaxApi.models.CommunicationMinusGetListMinusV1MinusResponseMinusMPayload
 
 import com.squareup.moshi.Json
 
 /**
- * Response for GET /1/module/communication/getList
+ * Response for GET /1/object/communication/getList
  *
  * @param mPayload 
  * @param objDebugPayload 
@@ -36,7 +36,7 @@ data class CommunicationMinusGetListMinusV1MinusResponse (
     val mPayload: CommunicationMinusGetListMinusV1MinusResponseMinusMPayload,
 
     @Json(name = "objDebugPayload")
-    val objDebugPayload: CommonMinusResponseMinusObjDebugPayload? = null,
+    val objDebugPayload: CommonMinusResponseMinusObjDebugPayloadGetList? = null,
 
     @Json(name = "objDebug")
     val objDebug: CommonMinusResponseMinusObjDebug? = null

@@ -19,21 +19,18 @@ package eZmaxApi.models
 import com.squareup.moshi.Json
 
 /**
- * The importance of Email for the Communication
+ * The direction of the Communication
  *
- * Values: High,Normal,Low
+ * Values: Outbound,Inbound
  */
 
-enum class FieldMinusECommunicationEmailimportance(val value: kotlin.String) {
+enum class ComputedMinusECommunicationDirection(val value: kotlin.String) {
 
-    @Json(name = "High")
-    High("High"),
+    @Json(name = "Outbound")
+    Outbound("Outbound"),
 
-    @Json(name = "Normal")
-    Normal("Normal"),
-
-    @Json(name = "Low")
-    Low("Low");
+    @Json(name = "Inbound")
+    Inbound("Inbound");
 
     /**
      * Override toString() to avoid using the enum variable name as the value, and instead use
@@ -48,12 +45,12 @@ enum class FieldMinusECommunicationEmailimportance(val value: kotlin.String) {
         /**
          * Converts the provided [data] to a [String] on success, null otherwise.
          */
-        fun encode(data: kotlin.Any?): kotlin.String? = if (data is FieldMinusECommunicationEmailimportance) "$data" else null
+        fun encode(data: kotlin.Any?): kotlin.String? = if (data is ComputedMinusECommunicationDirection) "$data" else null
 
         /**
-         * Returns a valid [FieldMinusECommunicationEmailimportance] for [data], null otherwise.
+         * Returns a valid [ComputedMinusECommunicationDirection] for [data], null otherwise.
          */
-        fun decode(data: kotlin.Any?): FieldMinusECommunicationEmailimportance? = data?.let {
+        fun decode(data: kotlin.Any?): ComputedMinusECommunicationDirection? = data?.let {
           val normalizedData = "$it".lowercase()
           values().firstOrNull { value ->
             it == value || normalizedData == "$value".lowercase()

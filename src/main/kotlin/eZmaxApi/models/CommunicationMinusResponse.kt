@@ -15,8 +15,10 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.CommonMinusAudit
+import eZmaxApi.models.ComputedMinusECommunicationDirection
 import eZmaxApi.models.CustomMinusContactNameMinusResponse
-import eZmaxApi.models.FieldMinusECommunicationEmailimportance
+import eZmaxApi.models.FieldMinusECommunicationImportance
 import eZmaxApi.models.FieldMinusECommunicationType
 
 import com.squareup.moshi.Json
@@ -25,11 +27,13 @@ import com.squareup.moshi.Json
  * A Communication Object
  *
  * @param pkiCommunicationID The unique ID of the Communication.
+ * @param eCommunicationImportance 
  * @param eCommunicationType 
- * @param sCommunicationSubject The Subject of the Communication
- * @param dtCommunicationSentdate The send date and time at which the Communication was sent.
+ * @param sCommunicationSubject The subject of the Communication
+ * @param eCommunicationDirection 
+ * @param iCommunicationrecipientCount The count of Communicationrecipient
  * @param objContactFrom 
- * @param eCommunicationEmailimportance 
+ * @param objAudit 
  */
 
 
@@ -39,22 +43,28 @@ data class CommunicationMinusResponse (
     @Json(name = "pkiCommunicationID")
     val pkiCommunicationID: kotlin.Int,
 
+    @Json(name = "eCommunicationImportance")
+    val eCommunicationImportance: FieldMinusECommunicationImportance,
+
     @Json(name = "eCommunicationType")
     val eCommunicationType: FieldMinusECommunicationType,
 
-    /* The Subject of the Communication */
+    /* The subject of the Communication */
     @Json(name = "sCommunicationSubject")
     val sCommunicationSubject: kotlin.String,
 
-    /* The send date and time at which the Communication was sent. */
-    @Json(name = "dtCommunicationSentdate")
-    val dtCommunicationSentdate: kotlin.String,
+    @Json(name = "eCommunicationDirection")
+    val eCommunicationDirection: ComputedMinusECommunicationDirection,
+
+    /* The count of Communicationrecipient */
+    @Json(name = "iCommunicationrecipientCount")
+    val iCommunicationrecipientCount: kotlin.Int,
 
     @Json(name = "objContactFrom")
     val objContactFrom: CustomMinusContactNameMinusResponse,
 
-    @Json(name = "eCommunicationEmailimportance")
-    val eCommunicationEmailimportance: FieldMinusECommunicationEmailimportance? = null
+    @Json(name = "objAudit")
+    val objAudit: CommonMinusAudit
 
 )
 

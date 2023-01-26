@@ -26,14 +26,15 @@ import com.squareup.moshi.Json
  * @param dtEzmaxinvoicingsummaryglobalStart The start date for the Ezmaxinvoicingsummaryglobal
  * @param dtEzmaxinvoicingsummaryglobalEnd The end date for the Ezmaxinvoicingsummaryglobal
  * @param iEzmaxinvoicingsummaryglobalDays The number of days for the Ezmaxinvoicingsummaryglobal
- * @param dEzmaxinvoicingsummaryglobalCountreal The The count item calculated
- * @param dEzmaxinvoicingsummaryglobalCountbilled The The count item billed
+ * @param dEzmaxinvoicingsummaryglobalCountreal The count item calculated
+ * @param dEzmaxinvoicingsummaryglobalCountbilled The count item billed
  * @param dEzmaxinvoicingsummaryglobalSubtotal The Ezmaxinvoicingsummaryglobal subtotal
  * @param dEzmaxinvoicingsummaryglobalRebateamount The rebate amount for the Ezmaxinvoicingsummaryglobal
  * @param dEzmaxinvoicingsummaryglobalRebatepercent The rebate percentage of the Ezmaxinvoicingsummaryglobal
  * @param dEzmaxinvoicingsummaryglobalRebatetotal The rebate amount total for the Ezmaxinvoicingsummaryglobal
  * @param dEzmaxinvoicingsummaryglobalTotal The Ezmaxinvoicingsummaryglobal total
  * @param bEzmaxinvoicingsummaryglobalAdjustment Whether it is adjustment for the Ezmaxinvoicingsummaryglobal
+ * @param tEzmaxproductHelpX The help message of the Ezmaxproduct in the language of the requester
  * @param pkiEzmaxinvoicingsummaryglobalID The unique ID of the Ezmaxinvoicingsummaryglobal
  * @param fkiEzmaxinvoicingID The unique ID of the Ezmaxinvoicing
  * @param dEzmaxinvoicingsummaryglobalRepresentative The amount of commission for the representative
@@ -64,11 +65,11 @@ data class EzmaxinvoicingsummaryglobalMinusResponse (
     @Json(name = "iEzmaxinvoicingsummaryglobalDays")
     val iEzmaxinvoicingsummaryglobalDays: kotlin.Int,
 
-    /* The The count item calculated */
+    /* The count item calculated */
     @Json(name = "dEzmaxinvoicingsummaryglobalCountreal")
     val dEzmaxinvoicingsummaryglobalCountreal: kotlin.String,
 
-    /* The The count item billed */
+    /* The count item billed */
     @Json(name = "dEzmaxinvoicingsummaryglobalCountbilled")
     val dEzmaxinvoicingsummaryglobalCountbilled: kotlin.String,
 
@@ -95,6 +96,10 @@ data class EzmaxinvoicingsummaryglobalMinusResponse (
     /* Whether it is adjustment for the Ezmaxinvoicingsummaryglobal */
     @Json(name = "bEzmaxinvoicingsummaryglobalAdjustment")
     val bEzmaxinvoicingsummaryglobalAdjustment: kotlin.Boolean,
+
+    /* The help message of the Ezmaxproduct in the language of the requester */
+    @Json(name = "tEzmaxproductHelpX")
+    val tEzmaxproductHelpX: kotlin.String,
 
     /* The unique ID of the Ezmaxinvoicingsummaryglobal */
     @Json(name = "pkiEzmaxinvoicingsummaryglobalID")

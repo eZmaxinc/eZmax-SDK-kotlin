@@ -15,8 +15,10 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.DescriptionstaticMinusResponseCompound
+import eZmaxApi.models.EmailstaticMinusResponseCompound
 import eZmaxApi.models.FieldMinusECommunicationexternalrecipientType
-import eZmaxApi.models.PhoneMinusResponseCompound
+import eZmaxApi.models.PhonestaticMinusResponseCompound
 
 import com.squareup.moshi.Json
 
@@ -25,9 +27,9 @@ import com.squareup.moshi.Json
  *
  * @param pkiCommunicationexternalrecipientID The unique ID of the Communicationexternalrecipient
  * @param eCommunicationexternalrecipientType 
- * @param sCommunicationexternalrecipientName The Name of the Communicationexternalrecipient
- * @param sEmailAddress The email address.
- * @param objPhoneSms 
+ * @param objDescriptionstatic 
+ * @param objEmailstatic 
+ * @param objPhonestatic 
  */
 
 
@@ -40,16 +42,14 @@ data class CommunicationexternalrecipientMinusResponse (
     @Json(name = "eCommunicationexternalrecipientType")
     val eCommunicationexternalrecipientType: FieldMinusECommunicationexternalrecipientType,
 
-    /* The Name of the Communicationexternalrecipient */
-    @Json(name = "sCommunicationexternalrecipientName")
-    val sCommunicationexternalrecipientName: kotlin.String,
+    @Json(name = "objDescriptionstatic")
+    val objDescriptionstatic: DescriptionstaticMinusResponseCompound,
 
-    /* The email address. */
-    @Json(name = "sEmailAddress")
-    val sEmailAddress: kotlin.String? = null,
+    @Json(name = "objEmailstatic")
+    val objEmailstatic: EmailstaticMinusResponseCompound? = null,
 
-    @Json(name = "objPhoneSms")
-    val objPhoneSms: PhoneMinusResponseCompound? = null
+    @Json(name = "objPhonestatic")
+    val objPhonestatic: PhonestaticMinusResponseCompound? = null
 
 )
 

@@ -15,8 +15,8 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.CustomMinusContactNameMinusResponse
-import eZmaxApi.models.FieldMinusECommunicationEmailimportance
+import eZmaxApi.models.ComputedMinusECommunicationDirection
+import eZmaxApi.models.FieldMinusECommunicationImportance
 import eZmaxApi.models.FieldMinusECommunicationType
 
 import com.squareup.moshi.Json
@@ -25,11 +25,17 @@ import com.squareup.moshi.Json
  * A Communication List Element
  *
  * @param pkiCommunicationID The unique ID of the Communication.
+ * @param dtCreatedDate The date and time at which the object was created
+ * @param eCommunicationDirection 
+ * @param eCommunicationImportance 
  * @param eCommunicationType 
- * @param sCommunicationSubject The Subject of the Communication
- * @param dtCommunicationSentdate The send date and time at which the Communication was sent.
- * @param objContactFrom 
- * @param eCommunicationEmailimportance 
+ * @param iCommunicationrecipientCount The count of Communicationrecipient
+ * @param sCommunicationSubject The subject of the Communication
+ * @param sCommunicationSender The sender name of the Communication
+ * @param sCommunicationRecipient The recipients' name of the Communication
+ * @param fkiEzsignfolderID The unique ID of the Ezsignfolder
+ * @param fkiInscriptionID The unique ID of the Inscription.
+ * @param fkiInscriptionnotauthenticatedID The unique ID of the Inscriptionnotauthenticated.
  */
 
 
@@ -39,22 +45,46 @@ data class CommunicationMinusListElement (
     @Json(name = "pkiCommunicationID")
     val pkiCommunicationID: kotlin.Int,
 
+    /* The date and time at which the object was created */
+    @Json(name = "dtCreatedDate")
+    val dtCreatedDate: kotlin.String,
+
+    @Json(name = "eCommunicationDirection")
+    val eCommunicationDirection: ComputedMinusECommunicationDirection,
+
+    @Json(name = "eCommunicationImportance")
+    val eCommunicationImportance: FieldMinusECommunicationImportance,
+
     @Json(name = "eCommunicationType")
     val eCommunicationType: FieldMinusECommunicationType,
 
-    /* The Subject of the Communication */
+    /* The count of Communicationrecipient */
+    @Json(name = "iCommunicationrecipientCount")
+    val iCommunicationrecipientCount: kotlin.Int,
+
+    /* The subject of the Communication */
     @Json(name = "sCommunicationSubject")
     val sCommunicationSubject: kotlin.String,
 
-    /* The send date and time at which the Communication was sent. */
-    @Json(name = "dtCommunicationSentdate")
-    val dtCommunicationSentdate: kotlin.String,
+    /* The sender name of the Communication */
+    @Json(name = "sCommunicationSender")
+    val sCommunicationSender: kotlin.String,
 
-    @Json(name = "objContactFrom")
-    val objContactFrom: CustomMinusContactNameMinusResponse,
+    /* The recipients' name of the Communication */
+    @Json(name = "sCommunicationRecipient")
+    val sCommunicationRecipient: kotlin.String,
 
-    @Json(name = "eCommunicationEmailimportance")
-    val eCommunicationEmailimportance: FieldMinusECommunicationEmailimportance? = null
+    /* The unique ID of the Ezsignfolder */
+    @Json(name = "fkiEzsignfolderID")
+    val fkiEzsignfolderID: kotlin.Int? = null,
+
+    /* The unique ID of the Inscription. */
+    @Json(name = "fkiInscriptionID")
+    val fkiInscriptionID: kotlin.Int? = null,
+
+    /* The unique ID of the Inscriptionnotauthenticated. */
+    @Json(name = "fkiInscriptionnotauthenticatedID")
+    val fkiInscriptionnotauthenticatedID: kotlin.Int? = null
 
 )
 

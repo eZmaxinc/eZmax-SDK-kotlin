@@ -22,7 +22,7 @@ import eZmaxApi.models.CommunicationMinusGetCountMinusV1MinusResponseMinusMPaylo
 import com.squareup.moshi.Json
 
 /**
- * Response for GET /1/module/communication/getCount
+ * Response for GET /1/module/communication/getCommunicationCount
  *
  * @param mPayload 
  * @param objDebugPayload 

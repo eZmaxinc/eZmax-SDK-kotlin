@@ -5,6 +5,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiCommunicationrecipientID** | **kotlin.Int** | The unique ID of the Communicationrecipient. | 
+**eCommunicationrecipientType** | [**FieldMinusECommunicationrecipientType**](FieldMinusECommunicationrecipientType.md) |  | 
+**objDescriptionstatic** | [**DescriptionstaticMinusResponseCompound**](DescriptionstaticMinusResponseCompound.md) |  | 
+**eCommunicationrecipientObjecttype** | [**FieldMinusECommunicationrecipientObjecttype**](FieldMinusECommunicationrecipientObjecttype.md) |  |  [optional]
 **fkiAgentID** | **kotlin.Int** | The unique ID of the Agent. |  [optional]
 **fkiBrokerID** | **kotlin.Int** | The unique ID of the Broker. |  [optional]
 **fkiContactID** | **kotlin.Int** | The unique ID of the Contact |  [optional]
@@ -13,8 +16,6 @@ Name | Type | Description | Notes
 **fkiEzsignsignerID** | **kotlin.Int** | The unique ID of the Ezsignsigner |  [optional]
 **fkiFranchiseofficeID** | **kotlin.Int** | The unique ID of the Franchisereoffice |  [optional]
 **fkiUserID** | **kotlin.Int** | The unique ID of the User |  [optional]
-**sEmailAddress** | **kotlin.String** | The email address. |  [optional]
-**eCommunicationrecipientType** | [**FieldMinusECommunicationrecipientType**](FieldMinusECommunicationrecipientType.md) |  |  [optional]
 **fkiAgentincorporationID** | **kotlin.Int** | The unique ID of the Agentincorporation. |  [optional]
 **fkiAssistantID** | **kotlin.Int** | The unique ID of the Assistant. |  [optional]
 **fkiExternalbrokerID** | **kotlin.Int** | The unique ID of the Externalbroker. |  [optional]
@@ -22,7 +23,8 @@ Name | Type | Description | Notes
 **fkiNotaryID** | **kotlin.Int** | The unique ID of the Notary. |  [optional]
 **fkiRewardmemberID** | **kotlin.Int** | The unique ID of the Rewardmember. |  [optional]
 **fkiSupplierID** | **kotlin.Int** | The unique ID of the Supplier. |  [optional]
-**objPhoneSms** | [**PhoneMinusResponseCompound**](PhoneMinusResponseCompound.md) |  |  [optional]
+**objEmailstatic** | [**EmailstaticMinusResponseCompound**](EmailstaticMinusResponseCompound.md) |  |  [optional]
+**objPhonestatic** | [**PhonestaticMinusResponseCompound**](PhonestaticMinusResponseCompound.md) |  |  [optional]
 
 
 
