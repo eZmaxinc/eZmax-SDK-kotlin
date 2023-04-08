@@ -101,10 +101,16 @@ data class EzsigntemplatedocumentMinusRequest (
     /**
      * Indicates the format of the template.
      *
-     * Values: Pdf
+     * Values: Pdf,Doc,Docx,Xls,Xlsx,Ppt,Pptx
      */
     enum class EEzsigntemplatedocumentFormat(val value: kotlin.String) {
-        @Json(name = "Pdf") Pdf("Pdf");
+        @Json(name = "Pdf") Pdf("Pdf"),
+        @Json(name = "Doc") Doc("Doc"),
+        @Json(name = "Docx") Docx("Docx"),
+        @Json(name = "Xls") Xls("Xls"),
+        @Json(name = "Xlsx") Xlsx("Xlsx"),
+        @Json(name = "Ppt") Ppt("Ppt"),
+        @Json(name = "Pptx") Pptx("Pptx");
     }
     /**
      * If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsigntemplateformfieldgroups and assign them to the specified **fkiEzsigntemplatesignerID**

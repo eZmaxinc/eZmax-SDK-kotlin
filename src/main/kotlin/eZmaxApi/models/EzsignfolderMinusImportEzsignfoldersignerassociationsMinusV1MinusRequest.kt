@@ -28,7 +28,7 @@ import com.squareup.moshi.Json
 data class EzsignfolderMinusImportEzsignfoldersignerassociationsMinusV1MinusRequest (
 
     @Json(name = "a_fkiEzsignfoldersignerassociationID")
-    val aFkiEzsignfoldersignerassociationID: kotlin.collections.List<kotlin.Int>
+    val aFkiEzsignfoldersignerassociationID: kotlin.collections.Set<kotlin.Int>
 
 )
 

@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**ezsignsignatureCreateObjectV2**](ObjectEzsignsignatureApi.md#ezsignsignatureCreateObjectV2) | **POST** /2/object/ezsignsignature | Create a new Ezsignsignature
 [**ezsignsignatureDeleteObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureDeleteObjectV1) | **DELETE** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Delete an existing Ezsignsignature
 [**ezsignsignatureEditObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureEditObjectV1) | **PUT** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Edit an existing Ezsignsignature
-[**ezsignsignatureGetObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureGetObjectV1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
+[**ezsignsignatureGetEzsignsignaturesAutomaticV1**](ObjectEzsignsignatureApi.md#ezsignsignatureGetEzsignsignaturesAutomaticV1) | **GET** /1/object/ezsignsignature/getEzsignsignaturesAutomatic | Retrieve all automatic Ezsignsignatures
 [**ezsignsignatureGetObjectV2**](ObjectEzsignsignatureApi.md#ezsignsignatureGetObjectV2) | **GET** /2/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
 [**ezsignsignatureSignV1**](ObjectEzsignsignatureApi.md#ezsignsignatureSignV1) | **POST** /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign | Sign the Ezsignsignature
 
@@ -215,13 +215,13 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ezsignsignatureGetObjectV1"></a>
-# **ezsignsignatureGetObjectV1**
-> EzsignsignatureMinusGetObjectMinusV1MinusResponse ezsignsignatureGetObjectV1(pkiEzsignsignatureID)
+<a name="ezsignsignatureGetEzsignsignaturesAutomaticV1"></a>
+# **ezsignsignatureGetEzsignsignaturesAutomaticV1**
+> EzsignsignatureMinusGetEzsignsignaturesAutomaticMinusV1MinusResponse ezsignsignatureGetEzsignsignaturesAutomaticV1()
 
-Retrieve an existing Ezsignsignature
+Retrieve all automatic Ezsignsignatures
 
-
+Return all the Ezsignsignatures that can be signed by the current user
 
 ### Example
 ```kotlin
@@ -230,28 +230,24 @@ Retrieve an existing Ezsignsignature
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsignsignatureApi()
-val pkiEzsignsignatureID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : EzsignsignatureMinusGetObjectMinusV1MinusResponse = apiInstance.ezsignsignatureGetObjectV1(pkiEzsignsignatureID)
+    val result : EzsignsignatureMinusGetEzsignsignaturesAutomaticMinusV1MinusResponse = apiInstance.ezsignsignatureGetEzsignsignaturesAutomaticV1()
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling ObjectEzsignsignatureApi#ezsignsignatureGetObjectV1")
+    println("4xx response calling ObjectEzsignsignatureApi#ezsignsignatureGetEzsignsignaturesAutomaticV1")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling ObjectEzsignsignatureApi#ezsignsignatureGetObjectV1")
+    println("5xx response calling ObjectEzsignsignatureApi#ezsignsignatureGetEzsignsignaturesAutomaticV1")
     e.printStackTrace()
 }
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsignsignatureID** | **kotlin.Int**|  |
+This endpoint does not need any parameter.
 
 ### Return type
 
-[**EzsignsignatureMinusGetObjectMinusV1MinusResponse**](EzsignsignatureMinusGetObjectMinusV1MinusResponse.md)
+[**EzsignsignatureMinusGetEzsignsignaturesAutomaticMinusV1MinusResponse**](EzsignsignatureMinusGetEzsignsignaturesAutomaticMinusV1MinusResponse.md)
 
 ### Authorization
 

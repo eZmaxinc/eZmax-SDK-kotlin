@@ -6,7 +6,6 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ezmaxinvoicingGetAutocompleteV1**](ObjectEzmaxinvoicingApi.md#ezmaxinvoicingGetAutocompleteV1) | **GET** /1/object/ezmaxinvoicing/getAutocomplete/{sSelector} | Retrieve Ezmaxinvoicings and IDs
 [**ezmaxinvoicingGetAutocompleteV2**](ObjectEzmaxinvoicingApi.md#ezmaxinvoicingGetAutocompleteV2) | **GET** /2/object/ezmaxinvoicing/getAutocomplete/{sSelector} | Retrieve Ezmaxinvoicings and IDs
-[**ezmaxinvoicingGetObjectV1**](ObjectEzmaxinvoicingApi.md#ezmaxinvoicingGetObjectV1) | **GET** /1/object/ezmaxinvoicing/{pkiEzmaxinvoicingID} | Retrieve an existing Ezmaxinvoicing
 [**ezmaxinvoicingGetObjectV2**](ObjectEzmaxinvoicingApi.md#ezmaxinvoicingGetObjectV2) | **GET** /2/object/ezmaxinvoicing/{pkiEzmaxinvoicingID} | Retrieve an existing Ezmaxinvoicing
 [**ezmaxinvoicingGetProvisionalV1**](ObjectEzmaxinvoicingApi.md#ezmaxinvoicingGetProvisionalV1) | **GET** /1/object/ezmaxinvoicing/getProvisional | Retrieve provisional Ezmaxinvoicing
 
@@ -110,56 +109,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzmaxinvoicingMinusGetAutocompleteMinusV2MinusResponse**](EzmaxinvoicingMinusGetAutocompleteMinusV2MinusResponse.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="ezmaxinvoicingGetObjectV1"></a>
-# **ezmaxinvoicingGetObjectV1**
-> EzmaxinvoicingMinusGetObjectMinusV1MinusResponse ezmaxinvoicingGetObjectV1(pkiEzmaxinvoicingID)
-
-Retrieve an existing Ezmaxinvoicing
-
-
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectEzmaxinvoicingApi()
-val pkiEzmaxinvoicingID : kotlin.Int = 56 // kotlin.Int | 
-try {
-    val result : EzmaxinvoicingMinusGetObjectMinusV1MinusResponse = apiInstance.ezmaxinvoicingGetObjectV1(pkiEzmaxinvoicingID)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectEzmaxinvoicingApi#ezmaxinvoicingGetObjectV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectEzmaxinvoicingApi#ezmaxinvoicingGetObjectV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzmaxinvoicingID** | **kotlin.Int**|  |
-
-### Return type
-
-[**EzmaxinvoicingMinusGetObjectMinusV1MinusResponse**](EzmaxinvoicingMinusGetObjectMinusV1MinusResponse.md)
 
 ### Authorization
 

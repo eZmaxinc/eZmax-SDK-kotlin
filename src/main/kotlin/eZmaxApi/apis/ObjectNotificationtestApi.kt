@@ -112,6 +112,7 @@ class ObjectNotificationtestApi(basePath: kotlin.String = defaultBasePath, clien
             path = "/1/object/notificationtest/{pkiNotificationtestID}/getElements".replace("{"+"pkiNotificationtestID"+"}", encodeURIComponent(pkiNotificationtestID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }

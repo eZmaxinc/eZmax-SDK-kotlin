@@ -8,10 +8,8 @@ Method | HTTP request | Description
 [**ezsigntemplatepackageDeleteObjectV1**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageDeleteObjectV1) | **DELETE** /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID} | Delete an existing Ezsigntemplatepackage
 [**ezsigntemplatepackageEditEzsigntemplatepackagesignersV1**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageEditEzsigntemplatepackagesignersV1) | **PUT** /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}/editEzsigntemplatepackagesigners | Edit multiple Ezsigntemplatepackagesigners
 [**ezsigntemplatepackageEditObjectV1**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageEditObjectV1) | **PUT** /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID} | Edit an existing Ezsigntemplatepackage
-[**ezsigntemplatepackageGetAutocompleteV1**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageGetAutocompleteV1) | **GET** /1/object/ezsigntemplatepackage/getAutocomplete/{sSelector} | Retrieve Ezsigntemplatepackages and IDs
 [**ezsigntemplatepackageGetAutocompleteV2**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageGetAutocompleteV2) | **GET** /2/object/ezsigntemplatepackage/getAutocomplete/{sSelector} | Retrieve Ezsigntemplatepackages and IDs
 [**ezsigntemplatepackageGetListV1**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageGetListV1) | **GET** /1/object/ezsigntemplatepackage/getList | Retrieve Ezsigntemplatepackage list
-[**ezsigntemplatepackageGetObjectV1**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageGetObjectV1) | **GET** /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID} | Retrieve an existing Ezsigntemplatepackage
 [**ezsigntemplatepackageGetObjectV2**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageGetObjectV2) | **GET** /2/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID} | Retrieve an existing Ezsigntemplatepackage
 
 
@@ -219,62 +217,6 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ezsigntemplatepackageGetAutocompleteV1"></a>
-# **ezsigntemplatepackageGetAutocompleteV1**
-> CommonMinusGetAutocompleteDisabledMinusV1MinusResponse ezsigntemplatepackageGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
-
-Retrieve Ezsigntemplatepackages and IDs
-
-Get the list of Ezsigntemplatepackage to be used in a dropdown or autocomplete control.
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectEzsigntemplatepackageApi()
-val sSelector : kotlin.String = sSelector_example // kotlin.String | The type of Ezsigntemplatepackages to return
-val eFilterActive : kotlin.String = eFilterActive_example // kotlin.String | Specify which results we want to display.
-val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter the returned results
-val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
-try {
-    val result : CommonMinusGetAutocompleteDisabledMinusV1MinusResponse = apiInstance.ezsigntemplatepackageGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectEzsigntemplatepackageApi#ezsigntemplatepackageGetAutocompleteV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectEzsigntemplatepackageApi#ezsigntemplatepackageGetAutocompleteV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sSelector** | **kotlin.String**| The type of Ezsigntemplatepackages to return | [enum: All, AllMultipleCopiesDisabled]
- **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
- **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional]
- **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
-
-### Return type
-
-[**CommonMinusGetAutocompleteDisabledMinusV1MinusResponse**](CommonMinusGetAutocompleteDisabledMinusV1MinusResponse.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
 <a name="ezsigntemplatepackageGetAutocompleteV2"></a>
 # **ezsigntemplatepackageGetAutocompleteV2**
 > EzsigntemplatepackageMinusGetAutocompleteMinusV2MinusResponse ezsigntemplatepackageGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
@@ -376,56 +318,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsigntemplatepackageMinusGetListMinusV1MinusResponse**](EzsigntemplatepackageMinusGetListMinusV1MinusResponse.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="ezsigntemplatepackageGetObjectV1"></a>
-# **ezsigntemplatepackageGetObjectV1**
-> EzsigntemplatepackageMinusGetObjectMinusV1MinusResponse ezsigntemplatepackageGetObjectV1(pkiEzsigntemplatepackageID)
-
-Retrieve an existing Ezsigntemplatepackage
-
-
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectEzsigntemplatepackageApi()
-val pkiEzsigntemplatepackageID : kotlin.Int = 56 // kotlin.Int | 
-try {
-    val result : EzsigntemplatepackageMinusGetObjectMinusV1MinusResponse = apiInstance.ezsigntemplatepackageGetObjectV1(pkiEzsigntemplatepackageID)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectEzsigntemplatepackageApi#ezsigntemplatepackageGetObjectV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectEzsigntemplatepackageApi#ezsigntemplatepackageGetObjectV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsigntemplatepackageID** | **kotlin.Int**|  |
-
-### Return type
-
-[**EzsigntemplatepackageMinusGetObjectMinusV1MinusResponse**](EzsigntemplatepackageMinusGetObjectMinusV1MinusResponse.md)
 
 ### Authorization
 

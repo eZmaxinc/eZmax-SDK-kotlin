@@ -130,6 +130,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
             path = "/1/object/ezsignfoldersignerassociation",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -201,6 +202,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
             path = "/2/object/ezsignfoldersignerassociation",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -271,6 +273,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
             path = "/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}".replace("{"+"pkiEzsignfoldersignerassociationID"+"}", encodeURIComponent(pkiEzsignfoldersignerassociationID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -345,6 +348,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
             path = "/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}".replace("{"+"pkiEzsignfoldersignerassociationID"+"}", encodeURIComponent(pkiEzsignfoldersignerassociationID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -419,6 +423,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
             path = "/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/forceDisconnect".replace("{"+"pkiEzsignfoldersignerassociationID"+"}", encodeURIComponent(pkiEzsignfoldersignerassociationID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -489,6 +494,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
             path = "/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getInPersonLoginUrl".replace("{"+"pkiEzsignfoldersignerassociationID"+"}", encodeURIComponent(pkiEzsignfoldersignerassociationID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -564,6 +570,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
             path = "/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}".replace("{"+"pkiEzsignfoldersignerassociationID"+"}", encodeURIComponent(pkiEzsignfoldersignerassociationID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -634,6 +641,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
             path = "/2/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}".replace("{"+"pkiEzsignfoldersignerassociationID"+"}", encodeURIComponent(pkiEzsignfoldersignerassociationID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -708,6 +716,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
             path = "/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}".replace("{"+"pkiEzsignfoldersignerassociationID"+"}", encodeURIComponent(pkiEzsignfoldersignerassociationID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }

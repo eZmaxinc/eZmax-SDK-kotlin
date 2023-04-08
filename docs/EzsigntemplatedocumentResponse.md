@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **sEzsigntemplatedocumentName** | **kotlin.String** | The name of the Ezsigntemplatedocument. | 
 **iEzsigntemplatedocumentPagetotal** | **kotlin.Int** | The number of pages in the Ezsigntemplatedocument. | 
 **iEzsigntemplatedocumentSignaturetotal** | **kotlin.Int** | The number of total signatures in the Ezsigntemplate. | 
+**bEzsigntemplatedocumentHassignedsignatures** | **kotlin.Boolean** | If the Ezsigntemplatedocument contains signed signatures (From internal or external sources) | 
 
 
 

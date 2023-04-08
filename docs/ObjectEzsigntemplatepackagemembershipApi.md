@@ -6,7 +6,6 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ezsigntemplatepackagemembershipCreateObjectV1**](ObjectEzsigntemplatepackagemembershipApi.md#ezsigntemplatepackagemembershipCreateObjectV1) | **POST** /1/object/ezsigntemplatepackagemembership | Create a new Ezsigntemplatepackagemembership
 [**ezsigntemplatepackagemembershipDeleteObjectV1**](ObjectEzsigntemplatepackagemembershipApi.md#ezsigntemplatepackagemembershipDeleteObjectV1) | **DELETE** /1/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID} | Delete an existing Ezsigntemplatepackagemembership
-[**ezsigntemplatepackagemembershipGetObjectV1**](ObjectEzsigntemplatepackagemembershipApi.md#ezsigntemplatepackagemembershipGetObjectV1) | **GET** /1/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID} | Retrieve an existing Ezsigntemplatepackagemembership
 [**ezsigntemplatepackagemembershipGetObjectV2**](ObjectEzsigntemplatepackagemembershipApi.md#ezsigntemplatepackagemembershipGetObjectV2) | **GET** /2/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID} | Retrieve an existing Ezsigntemplatepackagemembership
 
 
@@ -97,56 +96,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsigntemplatepackagemembershipMinusDeleteObjectMinusV1MinusResponse**](EzsigntemplatepackagemembershipMinusDeleteObjectMinusV1MinusResponse.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="ezsigntemplatepackagemembershipGetObjectV1"></a>
-# **ezsigntemplatepackagemembershipGetObjectV1**
-> EzsigntemplatepackagemembershipMinusGetObjectMinusV1MinusResponse ezsigntemplatepackagemembershipGetObjectV1(pkiEzsigntemplatepackagemembershipID)
-
-Retrieve an existing Ezsigntemplatepackagemembership
-
-
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectEzsigntemplatepackagemembershipApi()
-val pkiEzsigntemplatepackagemembershipID : kotlin.Int = 56 // kotlin.Int | 
-try {
-    val result : EzsigntemplatepackagemembershipMinusGetObjectMinusV1MinusResponse = apiInstance.ezsigntemplatepackagemembershipGetObjectV1(pkiEzsigntemplatepackagemembershipID)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectEzsigntemplatepackagemembershipApi#ezsigntemplatepackagemembershipGetObjectV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectEzsigntemplatepackagemembershipApi#ezsigntemplatepackagemembershipGetObjectV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsigntemplatepackagemembershipID** | **kotlin.Int**|  |
-
-### Return type
-
-[**EzsigntemplatepackagemembershipMinusGetObjectMinusV1MinusResponse**](EzsigntemplatepackagemembershipMinusGetObjectMinusV1MinusResponse.md)
 
 ### Authorization
 

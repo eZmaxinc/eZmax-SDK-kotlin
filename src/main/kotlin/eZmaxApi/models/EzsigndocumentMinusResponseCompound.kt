@@ -37,7 +37,9 @@ import com.squareup.moshi.Json
  * @param sEzsigndocumentMD5initial MD5 Hash of the initial PDF Document before signatures were applied to it.
  * @param sEzsigndocumentMD5signed MD5 Hash of the final PDF Document after all signatures were applied to it.
  * @param bEzsigndocumentEzsignform If the Ezsigndocument contains an Ezsignform or not
+ * @param bEzsigndocumentHassignedsignatures If the Ezsigndocument contains signed signatures (From internal or external sources)
  * @param objAudit 
+ * @param sEzsigndocumentExternalid This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
  * @param iEzsigndocumentStepformtotal The total number of steps in the form filling phase
  * @param iEzsigndocumentStepformcurrent The current step in the form filling phase
  * @param iEzsigndocumentStepsignaturetotal The total number of steps in the signature filling phase
@@ -104,8 +106,16 @@ data class EzsigndocumentMinusResponseCompound (
     @Json(name = "bEzsigndocumentEzsignform")
     val bEzsigndocumentEzsignform: kotlin.Boolean,
 
+    /* If the Ezsigndocument contains signed signatures (From internal or external sources) */
+    @Json(name = "bEzsigndocumentHassignedsignatures")
+    val bEzsigndocumentHassignedsignatures: kotlin.Boolean,
+
     @Json(name = "objAudit")
     val objAudit: CommonMinusAudit,
+
+    /* This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format.  */
+    @Json(name = "sEzsigndocumentExternalid")
+    val sEzsigndocumentExternalid: kotlin.String,
 
     /* The total number of steps in the form filling phase */
     @Json(name = "iEzsigndocumentStepformtotal")

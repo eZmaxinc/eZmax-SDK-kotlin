@@ -23,7 +23,6 @@ import eZmaxApi.models.CommonMinusResponseMinusError
 import eZmaxApi.models.EzsignbulksendsignermappingMinusCreateObjectMinusV1MinusRequest
 import eZmaxApi.models.EzsignbulksendsignermappingMinusCreateObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsignbulksendsignermappingMinusDeleteObjectMinusV1MinusResponse
-import eZmaxApi.models.EzsignbulksendsignermappingMinusGetObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsignbulksendsignermappingMinusGetObjectMinusV2MinusResponse
 
 import com.squareup.moshi.Json
@@ -117,6 +116,7 @@ class ObjectEzsignbulksendsignermappingApi(basePath: kotlin.String = defaultBase
             path = "/1/object/ezsignbulksendsignermapping",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -187,81 +187,7 @@ class ObjectEzsignbulksendsignermappingApi(basePath: kotlin.String = defaultBase
             path = "/1/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}".replace("{"+"pkiEzsignbulksendsignermappingID"+"}", encodeURIComponent(pkiEzsignbulksendsignermappingID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
-            body = localVariableBody
-        )
-    }
-
-    /**
-     * Retrieve an existing Ezsignbulksendsignermapping
-     * 
-     * @param pkiEzsignbulksendsignermappingID 
-     * @return EzsignbulksendsignermappingMinusGetObjectMinusV1MinusResponse
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    @Deprecated(message = "This operation is deprecated.")
-    fun ezsignbulksendsignermappingGetObjectV1(pkiEzsignbulksendsignermappingID: kotlin.Int) : EzsignbulksendsignermappingMinusGetObjectMinusV1MinusResponse {
-        @Suppress("DEPRECATION")
-        val localVarResponse = ezsignbulksendsignermappingGetObjectV1WithHttpInfo(pkiEzsignbulksendsignermappingID = pkiEzsignbulksendsignermappingID)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignbulksendsignermappingMinusGetObjectMinusV1MinusResponse
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * Retrieve an existing Ezsignbulksendsignermapping
-     * 
-     * @param pkiEzsignbulksendsignermappingID 
-     * @return ApiResponse<EzsignbulksendsignermappingMinusGetObjectMinusV1MinusResponse?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    @Deprecated(message = "This operation is deprecated.")
-    fun ezsignbulksendsignermappingGetObjectV1WithHttpInfo(pkiEzsignbulksendsignermappingID: kotlin.Int) : ApiResponse<EzsignbulksendsignermappingMinusGetObjectMinusV1MinusResponse?> {
-        @Suppress("DEPRECATION")
-        val localVariableConfig = ezsignbulksendsignermappingGetObjectV1RequestConfig(pkiEzsignbulksendsignermappingID = pkiEzsignbulksendsignermappingID)
-
-        return request<Unit, EzsignbulksendsignermappingMinusGetObjectMinusV1MinusResponse>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation ezsignbulksendsignermappingGetObjectV1
-     *
-     * @param pkiEzsignbulksendsignermappingID 
-     * @return RequestConfig
-     */
-    @Deprecated(message = "This operation is deprecated.")
-    fun ezsignbulksendsignermappingGetObjectV1RequestConfig(pkiEzsignbulksendsignermappingID: kotlin.Int) : RequestConfig<Unit> {
-        val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.GET,
-            path = "/1/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}".replace("{"+"pkiEzsignbulksendsignermappingID"+"}", encodeURIComponent(pkiEzsignbulksendsignermappingID.toString())),
-            query = localVariableQuery,
-            headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -332,6 +258,7 @@ class ObjectEzsignbulksendsignermappingApi(basePath: kotlin.String = defaultBase
             path = "/2/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}".replace("{"+"pkiEzsignbulksendsignermappingID"+"}", encodeURIComponent(pkiEzsignbulksendsignermappingID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }

@@ -22,7 +22,6 @@ import okhttp3.HttpUrl
 import eZmaxApi.models.CommonMinusGetAutocompleteMinusV1MinusResponse
 import eZmaxApi.models.CommonMinusResponseMinusError
 import eZmaxApi.models.EzmaxinvoicingMinusGetAutocompleteMinusV2MinusResponse
-import eZmaxApi.models.EzmaxinvoicingMinusGetObjectMinusV1MinusResponse
 import eZmaxApi.models.EzmaxinvoicingMinusGetObjectMinusV2MinusResponse
 import eZmaxApi.models.EzmaxinvoicingMinusGetProvisionalMinusV1MinusResponse
 import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
@@ -156,6 +155,7 @@ class ObjectEzmaxinvoicingApi(basePath: kotlin.String = defaultBasePath, client:
             path = "/1/object/ezmaxinvoicing/getAutocomplete/{sSelector}".replace("{"+"sSelector"+"}", encodeURIComponent(sSelector.value.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -260,81 +260,7 @@ class ObjectEzmaxinvoicingApi(basePath: kotlin.String = defaultBasePath, client:
             path = "/2/object/ezmaxinvoicing/getAutocomplete/{sSelector}".replace("{"+"sSelector"+"}", encodeURIComponent(sSelector.value.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
-            body = localVariableBody
-        )
-    }
-
-    /**
-     * Retrieve an existing Ezmaxinvoicing
-     * 
-     * @param pkiEzmaxinvoicingID 
-     * @return EzmaxinvoicingMinusGetObjectMinusV1MinusResponse
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    @Deprecated(message = "This operation is deprecated.")
-    fun ezmaxinvoicingGetObjectV1(pkiEzmaxinvoicingID: kotlin.Int) : EzmaxinvoicingMinusGetObjectMinusV1MinusResponse {
-        @Suppress("DEPRECATION")
-        val localVarResponse = ezmaxinvoicingGetObjectV1WithHttpInfo(pkiEzmaxinvoicingID = pkiEzmaxinvoicingID)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzmaxinvoicingMinusGetObjectMinusV1MinusResponse
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * Retrieve an existing Ezmaxinvoicing
-     * 
-     * @param pkiEzmaxinvoicingID 
-     * @return ApiResponse<EzmaxinvoicingMinusGetObjectMinusV1MinusResponse?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    @Deprecated(message = "This operation is deprecated.")
-    fun ezmaxinvoicingGetObjectV1WithHttpInfo(pkiEzmaxinvoicingID: kotlin.Int) : ApiResponse<EzmaxinvoicingMinusGetObjectMinusV1MinusResponse?> {
-        @Suppress("DEPRECATION")
-        val localVariableConfig = ezmaxinvoicingGetObjectV1RequestConfig(pkiEzmaxinvoicingID = pkiEzmaxinvoicingID)
-
-        return request<Unit, EzmaxinvoicingMinusGetObjectMinusV1MinusResponse>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation ezmaxinvoicingGetObjectV1
-     *
-     * @param pkiEzmaxinvoicingID 
-     * @return RequestConfig
-     */
-    @Deprecated(message = "This operation is deprecated.")
-    fun ezmaxinvoicingGetObjectV1RequestConfig(pkiEzmaxinvoicingID: kotlin.Int) : RequestConfig<Unit> {
-        val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.GET,
-            path = "/1/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}".replace("{"+"pkiEzmaxinvoicingID"+"}", encodeURIComponent(pkiEzmaxinvoicingID.toString())),
-            query = localVariableQuery,
-            headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -405,6 +331,7 @@ class ObjectEzmaxinvoicingApi(basePath: kotlin.String = defaultBasePath, client:
             path = "/2/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}".replace("{"+"pkiEzmaxinvoicingID"+"}", encodeURIComponent(pkiEzmaxinvoicingID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -472,6 +399,7 @@ class ObjectEzmaxinvoicingApi(basePath: kotlin.String = defaultBasePath, client:
             path = "/1/object/ezmaxinvoicing/getProvisional",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }

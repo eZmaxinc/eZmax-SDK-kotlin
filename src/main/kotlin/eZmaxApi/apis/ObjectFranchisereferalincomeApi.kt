@@ -120,6 +120,7 @@ class ObjectFranchisereferalincomeApi(basePath: kotlin.String = defaultBasePath,
             path = "/1/object/franchisereferalincome",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -191,6 +192,7 @@ class ObjectFranchisereferalincomeApi(basePath: kotlin.String = defaultBasePath,
             path = "/2/object/franchisereferalincome",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }

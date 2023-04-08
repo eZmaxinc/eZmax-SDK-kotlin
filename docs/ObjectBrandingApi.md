@@ -6,10 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**brandingCreateObjectV1**](ObjectBrandingApi.md#brandingCreateObjectV1) | **POST** /1/object/branding | Create a new Branding
 [**brandingEditObjectV1**](ObjectBrandingApi.md#brandingEditObjectV1) | **PUT** /1/object/branding/{pkiBrandingID} | Edit an existing Branding
-[**brandingGetAutocompleteV1**](ObjectBrandingApi.md#brandingGetAutocompleteV1) | **GET** /1/object/branding/getAutocomplete/{sSelector} | Retrieve Brandings and IDs
 [**brandingGetAutocompleteV2**](ObjectBrandingApi.md#brandingGetAutocompleteV2) | **GET** /2/object/branding/getAutocomplete/{sSelector} | Retrieve Brandings and IDs
 [**brandingGetListV1**](ObjectBrandingApi.md#brandingGetListV1) | **GET** /1/object/branding/getList | Retrieve Branding list
-[**brandingGetObjectV1**](ObjectBrandingApi.md#brandingGetObjectV1) | **GET** /1/object/branding/{pkiBrandingID} | Retrieve an existing Branding
 [**brandingGetObjectV2**](ObjectBrandingApi.md#brandingGetObjectV2) | **GET** /2/object/branding/{pkiBrandingID} | Retrieve an existing Branding
 
 
@@ -115,62 +113,6 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="brandingGetAutocompleteV1"></a>
-# **brandingGetAutocompleteV1**
-> CommonMinusGetAutocompleteMinusV1MinusResponse brandingGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
-
-Retrieve Brandings and IDs
-
-Get the list of Branding to be used in a dropdown or autocomplete control.
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectBrandingApi()
-val sSelector : kotlin.String = sSelector_example // kotlin.String | The type of Brandings to return
-val eFilterActive : kotlin.String = eFilterActive_example // kotlin.String | Specify which results we want to display.
-val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter the returned results
-val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
-try {
-    val result : CommonMinusGetAutocompleteMinusV1MinusResponse = apiInstance.brandingGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectBrandingApi#brandingGetAutocompleteV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectBrandingApi#brandingGetAutocompleteV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sSelector** | **kotlin.String**| The type of Brandings to return | [enum: All]
- **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
- **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional]
- **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
-
-### Return type
-
-[**CommonMinusGetAutocompleteMinusV1MinusResponse**](CommonMinusGetAutocompleteMinusV1MinusResponse.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
 <a name="brandingGetAutocompleteV2"></a>
 # **brandingGetAutocompleteV2**
 > BrandingMinusGetAutocompleteMinusV2MinusResponse brandingGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
@@ -272,56 +214,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**BrandingMinusGetListMinusV1MinusResponse**](BrandingMinusGetListMinusV1MinusResponse.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="brandingGetObjectV1"></a>
-# **brandingGetObjectV1**
-> BrandingMinusGetObjectMinusV1MinusResponse brandingGetObjectV1(pkiBrandingID)
-
-Retrieve an existing Branding
-
-
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectBrandingApi()
-val pkiBrandingID : kotlin.Int = 56 // kotlin.Int | 
-try {
-    val result : BrandingMinusGetObjectMinusV1MinusResponse = apiInstance.brandingGetObjectV1(pkiBrandingID)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectBrandingApi#brandingGetObjectV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectBrandingApi#brandingGetObjectV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiBrandingID** | **kotlin.Int**|  |
-
-### Return type
-
-[**BrandingMinusGetObjectMinusV1MinusResponse**](BrandingMinusGetObjectMinusV1MinusResponse.md)
 
 ### Authorization
 

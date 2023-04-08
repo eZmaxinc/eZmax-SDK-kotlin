@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.FieldMinusEPaymenttermType
 
 import com.squareup.moshi.Json
 
@@ -23,6 +24,8 @@ import com.squareup.moshi.Json
  *
  * @param pkiPaymenttermID The unique ID of the Paymentterm
  * @param sPaymenttermCode The code of the Paymentterm
+ * @param ePaymenttermType 
+ * @param iPaymenttermDay The day of the Paymentterm
  * @param sPaymenttermDescriptionX The description of the Paymentterm in the language of the requester
  * @param bPaymenttermIsactive Whether the Paymentterm is active or not
  */
@@ -37,6 +40,13 @@ data class PaymenttermMinusListElement (
     /* The code of the Paymentterm */
     @Json(name = "sPaymenttermCode")
     val sPaymenttermCode: kotlin.String,
+
+    @Json(name = "ePaymenttermType")
+    val ePaymenttermType: FieldMinusEPaymenttermType,
+
+    /* The day of the Paymentterm */
+    @Json(name = "iPaymenttermDay")
+    val iPaymenttermDay: kotlin.Int,
 
     /* The description of the Paymentterm in the language of the requester */
     @Json(name = "sPaymenttermDescriptionX")

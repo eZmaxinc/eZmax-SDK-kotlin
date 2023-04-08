@@ -109,6 +109,7 @@ class ModuleEzsignApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
             path = "/1/module/ezsign/suggestSigners",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -184,6 +185,7 @@ class ModuleEzsignApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
             path = "/1/module/ezsign/suggestTemplates",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }

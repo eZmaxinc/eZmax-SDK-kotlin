@@ -19,9 +19,17 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonMinusGetAutocompleteMinusV1MinusResponse
+import eZmaxApi.models.CommonMinusResponseMinusError
 import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
+import eZmaxApi.models.UsergroupMinusCreateObjectMinusV1MinusRequest
+import eZmaxApi.models.UsergroupMinusCreateObjectMinusV1MinusResponse
+import eZmaxApi.models.UsergroupMinusDeleteObjectMinusV1MinusResponse
+import eZmaxApi.models.UsergroupMinusEditObjectMinusV1MinusRequest
+import eZmaxApi.models.UsergroupMinusEditObjectMinusV1MinusResponse
 import eZmaxApi.models.UsergroupMinusGetAutocompleteMinusV2MinusResponse
+import eZmaxApi.models.UsergroupMinusGetListMinusV1MinusResponse
+import eZmaxApi.models.UsergroupMinusGetMembersMinusV1MinusResponse
+import eZmaxApi.models.UsergroupMinusGetObjectMinusV2MinusResponse
 
 import com.squareup.moshi.Json
 
@@ -48,29 +56,10 @@ class ObjectUsergroupApi(basePath: kotlin.String = defaultBasePath, client: OkHt
     }
 
     /**
-     * enum for parameter sSelector
-     */
-     enum class SSelector_usergroupGetAutocompleteV1(val value: kotlin.String) {
-         @Json(name = "All") All("All")
-     }
-
-    /**
-     * enum for parameter eFilterActive
-     */
-     enum class EFilterActive_usergroupGetAutocompleteV1(val value: kotlin.String) {
-         @Json(name = "All") All("All"),
-         @Json(name = "Active") Active("Active"),
-         @Json(name = "Inactive") Inactive("Inactive")
-     }
-
-    /**
-     * Retrieve Usergroups and IDs
-     * Get the list of Usergroup to be used in a dropdown or autocomplete control.
-     * @param sSelector The type of Usergroups to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
-     * @param sQuery Allow to filter the returned results (optional)
-     * @param acceptLanguage  (optional)
-     * @return CommonMinusGetAutocompleteMinusV1MinusResponse
+     * Create a new Usergroup
+     * The endpoint allows to create one or many elements at once.
+     * @param usergroupMinusCreateObjectMinusV1MinusRequest 
+     * @return UsergroupMinusCreateObjectMinusV1MinusResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -79,13 +68,11 @@ class ObjectUsergroupApi(basePath: kotlin.String = defaultBasePath, client: OkHt
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    @Deprecated(message = "This operation is deprecated.")
-    fun usergroupGetAutocompleteV1(sSelector: SSelector_usergroupGetAutocompleteV1, eFilterActive: EFilterActive_usergroupGetAutocompleteV1? = EFilterActive_usergroupGetAutocompleteV1.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null) : CommonMinusGetAutocompleteMinusV1MinusResponse {
-        @Suppress("DEPRECATION")
-        val localVarResponse = usergroupGetAutocompleteV1WithHttpInfo(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
+    fun usergroupCreateObjectV1(usergroupMinusCreateObjectMinusV1MinusRequest: UsergroupMinusCreateObjectMinusV1MinusRequest) : UsergroupMinusCreateObjectMinusV1MinusResponse {
+        val localVarResponse = usergroupCreateObjectV1WithHttpInfo(usergroupMinusCreateObjectMinusV1MinusRequest = usergroupMinusCreateObjectMinusV1MinusRequest)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonMinusGetAutocompleteMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as UsergroupMinusCreateObjectMinusV1MinusResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -100,58 +87,188 @@ class ObjectUsergroupApi(basePath: kotlin.String = defaultBasePath, client: OkHt
     }
 
     /**
-     * Retrieve Usergroups and IDs
-     * Get the list of Usergroup to be used in a dropdown or autocomplete control.
-     * @param sSelector The type of Usergroups to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
-     * @param sQuery Allow to filter the returned results (optional)
-     * @param acceptLanguage  (optional)
-     * @return ApiResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?>
+     * Create a new Usergroup
+     * The endpoint allows to create one or many elements at once.
+     * @param usergroupMinusCreateObjectMinusV1MinusRequest 
+     * @return ApiResponse<UsergroupMinusCreateObjectMinusV1MinusResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    @Deprecated(message = "This operation is deprecated.")
-    fun usergroupGetAutocompleteV1WithHttpInfo(sSelector: SSelector_usergroupGetAutocompleteV1, eFilterActive: EFilterActive_usergroupGetAutocompleteV1?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : ApiResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?> {
-        @Suppress("DEPRECATION")
-        val localVariableConfig = usergroupGetAutocompleteV1RequestConfig(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
+    fun usergroupCreateObjectV1WithHttpInfo(usergroupMinusCreateObjectMinusV1MinusRequest: UsergroupMinusCreateObjectMinusV1MinusRequest) : ApiResponse<UsergroupMinusCreateObjectMinusV1MinusResponse?> {
+        val localVariableConfig = usergroupCreateObjectV1RequestConfig(usergroupMinusCreateObjectMinusV1MinusRequest = usergroupMinusCreateObjectMinusV1MinusRequest)
 
-        return request<Unit, CommonMinusGetAutocompleteMinusV1MinusResponse>(
+        return request<UsergroupMinusCreateObjectMinusV1MinusRequest, UsergroupMinusCreateObjectMinusV1MinusResponse>(
             localVariableConfig
         )
     }
 
     /**
-     * To obtain the request config of the operation usergroupGetAutocompleteV1
+     * To obtain the request config of the operation usergroupCreateObjectV1
      *
-     * @param sSelector The type of Usergroups to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
-     * @param sQuery Allow to filter the returned results (optional)
-     * @param acceptLanguage  (optional)
+     * @param usergroupMinusCreateObjectMinusV1MinusRequest 
      * @return RequestConfig
      */
-    @Deprecated(message = "This operation is deprecated.")
-    fun usergroupGetAutocompleteV1RequestConfig(sSelector: SSelector_usergroupGetAutocompleteV1, eFilterActive: EFilterActive_usergroupGetAutocompleteV1?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : RequestConfig<Unit> {
-        val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
-            .apply {
-                if (eFilterActive != null) {
-                    put("eFilterActive", listOf(eFilterActive.toString()))
-                }
-                if (sQuery != null) {
-                    put("sQuery", listOf(sQuery.toString()))
-                }
-            }
+    fun usergroupCreateObjectV1RequestConfig(usergroupMinusCreateObjectMinusV1MinusRequest: UsergroupMinusCreateObjectMinusV1MinusRequest) : RequestConfig<UsergroupMinusCreateObjectMinusV1MinusRequest> {
+        val localVariableBody = usergroupMinusCreateObjectMinusV1MinusRequest
+        val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
+        localVariableHeaders["Content-Type"] = "application/json"
         localVariableHeaders["Accept"] = "application/json"
 
         return RequestConfig(
-            method = RequestMethod.GET,
-            path = "/1/object/usergroup/getAutocomplete/{sSelector}".replace("{"+"sSelector"+"}", encodeURIComponent(sSelector.value.toString())),
+            method = RequestMethod.POST,
+            path = "/1/object/usergroup",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Delete an existing Usergroup
+     * 
+     * @param pkiUsergroupID The unique ID of the Usergroup
+     * @return UsergroupMinusDeleteObjectMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun usergroupDeleteObjectV1(pkiUsergroupID: kotlin.Int) : UsergroupMinusDeleteObjectMinusV1MinusResponse {
+        val localVarResponse = usergroupDeleteObjectV1WithHttpInfo(pkiUsergroupID = pkiUsergroupID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as UsergroupMinusDeleteObjectMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Delete an existing Usergroup
+     * 
+     * @param pkiUsergroupID The unique ID of the Usergroup
+     * @return ApiResponse<UsergroupMinusDeleteObjectMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun usergroupDeleteObjectV1WithHttpInfo(pkiUsergroupID: kotlin.Int) : ApiResponse<UsergroupMinusDeleteObjectMinusV1MinusResponse?> {
+        val localVariableConfig = usergroupDeleteObjectV1RequestConfig(pkiUsergroupID = pkiUsergroupID)
+
+        return request<Unit, UsergroupMinusDeleteObjectMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation usergroupDeleteObjectV1
+     *
+     * @param pkiUsergroupID The unique ID of the Usergroup
+     * @return RequestConfig
+     */
+    fun usergroupDeleteObjectV1RequestConfig(pkiUsergroupID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.DELETE,
+            path = "/1/object/usergroup/{pkiUsergroupID}".replace("{"+"pkiUsergroupID"+"}", encodeURIComponent(pkiUsergroupID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Edit an existing Usergroup
+     * 
+     * @param pkiUsergroupID The unique ID of the Usergroup
+     * @param usergroupMinusEditObjectMinusV1MinusRequest 
+     * @return UsergroupMinusEditObjectMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun usergroupEditObjectV1(pkiUsergroupID: kotlin.Int, usergroupMinusEditObjectMinusV1MinusRequest: UsergroupMinusEditObjectMinusV1MinusRequest) : UsergroupMinusEditObjectMinusV1MinusResponse {
+        val localVarResponse = usergroupEditObjectV1WithHttpInfo(pkiUsergroupID = pkiUsergroupID, usergroupMinusEditObjectMinusV1MinusRequest = usergroupMinusEditObjectMinusV1MinusRequest)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as UsergroupMinusEditObjectMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Edit an existing Usergroup
+     * 
+     * @param pkiUsergroupID The unique ID of the Usergroup
+     * @param usergroupMinusEditObjectMinusV1MinusRequest 
+     * @return ApiResponse<UsergroupMinusEditObjectMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun usergroupEditObjectV1WithHttpInfo(pkiUsergroupID: kotlin.Int, usergroupMinusEditObjectMinusV1MinusRequest: UsergroupMinusEditObjectMinusV1MinusRequest) : ApiResponse<UsergroupMinusEditObjectMinusV1MinusResponse?> {
+        val localVariableConfig = usergroupEditObjectV1RequestConfig(pkiUsergroupID = pkiUsergroupID, usergroupMinusEditObjectMinusV1MinusRequest = usergroupMinusEditObjectMinusV1MinusRequest)
+
+        return request<UsergroupMinusEditObjectMinusV1MinusRequest, UsergroupMinusEditObjectMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation usergroupEditObjectV1
+     *
+     * @param pkiUsergroupID The unique ID of the Usergroup
+     * @param usergroupMinusEditObjectMinusV1MinusRequest 
+     * @return RequestConfig
+     */
+    fun usergroupEditObjectV1RequestConfig(pkiUsergroupID: kotlin.Int, usergroupMinusEditObjectMinusV1MinusRequest: UsergroupMinusEditObjectMinusV1MinusRequest) : RequestConfig<UsergroupMinusEditObjectMinusV1MinusRequest> {
+        val localVariableBody = usergroupMinusEditObjectMinusV1MinusRequest
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.PUT,
+            path = "/1/object/usergroup/{pkiUsergroupID}".replace("{"+"pkiUsergroupID"+"}", encodeURIComponent(pkiUsergroupID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -256,6 +373,257 @@ class ObjectUsergroupApi(basePath: kotlin.String = defaultBasePath, client: OkHt
             path = "/2/object/usergroup/getAutocomplete/{sSelector}".replace("{"+"sSelector"+"}", encodeURIComponent(sSelector.value.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * enum for parameter eOrderBy
+     */
+     enum class EOrderBy_usergroupGetListV1(val value: kotlin.String) {
+         @Json(name = "pkiUsergroupID_ASC") pkiUsergroupID_ASC("pkiUsergroupID_ASC"),
+         @Json(name = "pkiUsergroupID_DESC") pkiUsergroupID_DESC("pkiUsergroupID_DESC"),
+         @Json(name = "sUsergroupNameX_ASC") sUsergroupNameX_ASC("sUsergroupNameX_ASC"),
+         @Json(name = "sUsergroupNameX_DESC") sUsergroupNameX_DESC("sUsergroupNameX_DESC")
+     }
+
+    /**
+     * Retrieve Usergroup list
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return UsergroupMinusGetListMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun usergroupGetListV1(eOrderBy: EOrderBy_usergroupGetListV1? = null, iRowMax: kotlin.Int? = null, iRowOffset: kotlin.Int? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null, sFilter: kotlin.String? = null) : UsergroupMinusGetListMinusV1MinusResponse {
+        val localVarResponse = usergroupGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as UsergroupMinusGetListMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve Usergroup list
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return ApiResponse<UsergroupMinusGetListMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun usergroupGetListV1WithHttpInfo(eOrderBy: EOrderBy_usergroupGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : ApiResponse<UsergroupMinusGetListMinusV1MinusResponse?> {
+        val localVariableConfig = usergroupGetListV1RequestConfig(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
+
+        return request<Unit, UsergroupMinusGetListMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation usergroupGetListV1
+     *
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return RequestConfig
+     */
+    fun usergroupGetListV1RequestConfig(eOrderBy: EOrderBy_usergroupGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (eOrderBy != null) {
+                    put("eOrderBy", listOf(eOrderBy.toString()))
+                }
+                if (iRowMax != null) {
+                    put("iRowMax", listOf(iRowMax.toString()))
+                }
+                if (iRowOffset != null) {
+                    put("iRowOffset", listOf(iRowOffset.toString()))
+                }
+                if (sFilter != null) {
+                    put("sFilter", listOf(sFilter.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/usergroup/getList",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Retrieve an existing Usergroup&#39;s members
+     * 
+     * @param pkiUsergroupID The unique ID of the Usergroup
+     * @return UsergroupMinusGetMembersMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun usergroupGetMembersV1(pkiUsergroupID: kotlin.Int) : UsergroupMinusGetMembersMinusV1MinusResponse {
+        val localVarResponse = usergroupGetMembersV1WithHttpInfo(pkiUsergroupID = pkiUsergroupID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as UsergroupMinusGetMembersMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve an existing Usergroup&#39;s members
+     * 
+     * @param pkiUsergroupID The unique ID of the Usergroup
+     * @return ApiResponse<UsergroupMinusGetMembersMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun usergroupGetMembersV1WithHttpInfo(pkiUsergroupID: kotlin.Int) : ApiResponse<UsergroupMinusGetMembersMinusV1MinusResponse?> {
+        val localVariableConfig = usergroupGetMembersV1RequestConfig(pkiUsergroupID = pkiUsergroupID)
+
+        return request<Unit, UsergroupMinusGetMembersMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation usergroupGetMembersV1
+     *
+     * @param pkiUsergroupID The unique ID of the Usergroup
+     * @return RequestConfig
+     */
+    fun usergroupGetMembersV1RequestConfig(pkiUsergroupID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/usergroup/{pkiUsergroupID}/getMembers".replace("{"+"pkiUsergroupID"+"}", encodeURIComponent(pkiUsergroupID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Retrieve an existing Usergroup
+     * 
+     * @param pkiUsergroupID The unique ID of the Usergroup
+     * @return UsergroupMinusGetObjectMinusV2MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun usergroupGetObjectV2(pkiUsergroupID: kotlin.Int) : UsergroupMinusGetObjectMinusV2MinusResponse {
+        val localVarResponse = usergroupGetObjectV2WithHttpInfo(pkiUsergroupID = pkiUsergroupID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as UsergroupMinusGetObjectMinusV2MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve an existing Usergroup
+     * 
+     * @param pkiUsergroupID The unique ID of the Usergroup
+     * @return ApiResponse<UsergroupMinusGetObjectMinusV2MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun usergroupGetObjectV2WithHttpInfo(pkiUsergroupID: kotlin.Int) : ApiResponse<UsergroupMinusGetObjectMinusV2MinusResponse?> {
+        val localVariableConfig = usergroupGetObjectV2RequestConfig(pkiUsergroupID = pkiUsergroupID)
+
+        return request<Unit, UsergroupMinusGetObjectMinusV2MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation usergroupGetObjectV2
+     *
+     * @param pkiUsergroupID The unique ID of the Usergroup
+     * @return RequestConfig
+     */
+    fun usergroupGetObjectV2RequestConfig(pkiUsergroupID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/2/object/usergroup/{pkiUsergroupID}".replace("{"+"pkiUsergroupID"+"}", encodeURIComponent(pkiUsergroupID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }

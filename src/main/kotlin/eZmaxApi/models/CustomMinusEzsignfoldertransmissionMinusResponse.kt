@@ -24,6 +24,7 @@ import com.squareup.moshi.Json
  * An Ezsignfolder Object in the context of an Ezsignbulksendtransmission
  *
  * @param pkiEzsignfolderID The unique ID of the Ezsignfolder
+ * @param sEzsignfolderDescription The description of the Ezsignfolder
  * @param eEzsignfolderStep 
  * @param iEzsignfolderSignaturetotal The number of total signatures that were requested in the Ezsignfolder
  * @param iEzsignfolderSignaturesigned The number of signatures that were signed in the Ezsignfolder.
@@ -36,6 +37,10 @@ data class CustomMinusEzsignfoldertransmissionMinusResponse (
     /* The unique ID of the Ezsignfolder */
     @Json(name = "pkiEzsignfolderID")
     val pkiEzsignfolderID: kotlin.Int,
+
+    /* The description of the Ezsignfolder */
+    @Json(name = "sEzsignfolderDescription")
+    val sEzsignfolderDescription: kotlin.String,
 
     @Json(name = "eEzsignfolderStep")
     val eEzsignfolderStep: FieldMinusEEzsignfolderStep,

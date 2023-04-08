@@ -19,8 +19,15 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
+import eZmaxApi.models.BillingentityinternalMinusCreateObjectMinusV1MinusRequest
+import eZmaxApi.models.BillingentityinternalMinusCreateObjectMinusV1MinusResponse
+import eZmaxApi.models.BillingentityinternalMinusDeleteObjectMinusV1MinusResponse
+import eZmaxApi.models.BillingentityinternalMinusEditObjectMinusV1MinusRequest
+import eZmaxApi.models.BillingentityinternalMinusEditObjectMinusV1MinusResponse
 import eZmaxApi.models.BillingentityinternalMinusGetAutocompleteMinusV2MinusResponse
-import eZmaxApi.models.CommonMinusGetAutocompleteMinusV1MinusResponse
+import eZmaxApi.models.BillingentityinternalMinusGetListMinusV1MinusResponse
+import eZmaxApi.models.BillingentityinternalMinusGetObjectMinusV2MinusResponse
+import eZmaxApi.models.CommonMinusResponseMinusError
 import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
 
 import com.squareup.moshi.Json
@@ -48,29 +55,10 @@ class ObjectBillingentityinternalApi(basePath: kotlin.String = defaultBasePath, 
     }
 
     /**
-     * enum for parameter sSelector
-     */
-     enum class SSelector_billingentityinternalGetAutocompleteV1(val value: kotlin.String) {
-         @Json(name = "All") All("All")
-     }
-
-    /**
-     * enum for parameter eFilterActive
-     */
-     enum class EFilterActive_billingentityinternalGetAutocompleteV1(val value: kotlin.String) {
-         @Json(name = "All") All("All"),
-         @Json(name = "Active") Active("Active"),
-         @Json(name = "Inactive") Inactive("Inactive")
-     }
-
-    /**
-     * Retrieve Billingentityinternals and IDs
-     * Get the list of Billingentityinternal to be used in a dropdown or autocomplete control.
-     * @param sSelector The type of Billingentityinternals to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
-     * @param sQuery Allow to filter the returned results (optional)
-     * @param acceptLanguage  (optional)
-     * @return CommonMinusGetAutocompleteMinusV1MinusResponse
+     * Create a new Billingentityinternal
+     * The endpoint allows to create one or many elements at once.
+     * @param billingentityinternalMinusCreateObjectMinusV1MinusRequest 
+     * @return BillingentityinternalMinusCreateObjectMinusV1MinusResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -79,13 +67,11 @@ class ObjectBillingentityinternalApi(basePath: kotlin.String = defaultBasePath, 
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    @Deprecated(message = "This operation is deprecated.")
-    fun billingentityinternalGetAutocompleteV1(sSelector: SSelector_billingentityinternalGetAutocompleteV1, eFilterActive: EFilterActive_billingentityinternalGetAutocompleteV1? = EFilterActive_billingentityinternalGetAutocompleteV1.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null) : CommonMinusGetAutocompleteMinusV1MinusResponse {
-        @Suppress("DEPRECATION")
-        val localVarResponse = billingentityinternalGetAutocompleteV1WithHttpInfo(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
+    fun billingentityinternalCreateObjectV1(billingentityinternalMinusCreateObjectMinusV1MinusRequest: BillingentityinternalMinusCreateObjectMinusV1MinusRequest) : BillingentityinternalMinusCreateObjectMinusV1MinusResponse {
+        val localVarResponse = billingentityinternalCreateObjectV1WithHttpInfo(billingentityinternalMinusCreateObjectMinusV1MinusRequest = billingentityinternalMinusCreateObjectMinusV1MinusRequest)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonMinusGetAutocompleteMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as BillingentityinternalMinusCreateObjectMinusV1MinusResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -100,58 +86,188 @@ class ObjectBillingentityinternalApi(basePath: kotlin.String = defaultBasePath, 
     }
 
     /**
-     * Retrieve Billingentityinternals and IDs
-     * Get the list of Billingentityinternal to be used in a dropdown or autocomplete control.
-     * @param sSelector The type of Billingentityinternals to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
-     * @param sQuery Allow to filter the returned results (optional)
-     * @param acceptLanguage  (optional)
-     * @return ApiResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?>
+     * Create a new Billingentityinternal
+     * The endpoint allows to create one or many elements at once.
+     * @param billingentityinternalMinusCreateObjectMinusV1MinusRequest 
+     * @return ApiResponse<BillingentityinternalMinusCreateObjectMinusV1MinusResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    @Deprecated(message = "This operation is deprecated.")
-    fun billingentityinternalGetAutocompleteV1WithHttpInfo(sSelector: SSelector_billingentityinternalGetAutocompleteV1, eFilterActive: EFilterActive_billingentityinternalGetAutocompleteV1?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : ApiResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?> {
-        @Suppress("DEPRECATION")
-        val localVariableConfig = billingentityinternalGetAutocompleteV1RequestConfig(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
+    fun billingentityinternalCreateObjectV1WithHttpInfo(billingentityinternalMinusCreateObjectMinusV1MinusRequest: BillingentityinternalMinusCreateObjectMinusV1MinusRequest) : ApiResponse<BillingentityinternalMinusCreateObjectMinusV1MinusResponse?> {
+        val localVariableConfig = billingentityinternalCreateObjectV1RequestConfig(billingentityinternalMinusCreateObjectMinusV1MinusRequest = billingentityinternalMinusCreateObjectMinusV1MinusRequest)
 
-        return request<Unit, CommonMinusGetAutocompleteMinusV1MinusResponse>(
+        return request<BillingentityinternalMinusCreateObjectMinusV1MinusRequest, BillingentityinternalMinusCreateObjectMinusV1MinusResponse>(
             localVariableConfig
         )
     }
 
     /**
-     * To obtain the request config of the operation billingentityinternalGetAutocompleteV1
+     * To obtain the request config of the operation billingentityinternalCreateObjectV1
      *
-     * @param sSelector The type of Billingentityinternals to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
-     * @param sQuery Allow to filter the returned results (optional)
-     * @param acceptLanguage  (optional)
+     * @param billingentityinternalMinusCreateObjectMinusV1MinusRequest 
      * @return RequestConfig
      */
-    @Deprecated(message = "This operation is deprecated.")
-    fun billingentityinternalGetAutocompleteV1RequestConfig(sSelector: SSelector_billingentityinternalGetAutocompleteV1, eFilterActive: EFilterActive_billingentityinternalGetAutocompleteV1?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : RequestConfig<Unit> {
-        val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
-            .apply {
-                if (eFilterActive != null) {
-                    put("eFilterActive", listOf(eFilterActive.toString()))
-                }
-                if (sQuery != null) {
-                    put("sQuery", listOf(sQuery.toString()))
-                }
-            }
+    fun billingentityinternalCreateObjectV1RequestConfig(billingentityinternalMinusCreateObjectMinusV1MinusRequest: BillingentityinternalMinusCreateObjectMinusV1MinusRequest) : RequestConfig<BillingentityinternalMinusCreateObjectMinusV1MinusRequest> {
+        val localVariableBody = billingentityinternalMinusCreateObjectMinusV1MinusRequest
+        val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
+        localVariableHeaders["Content-Type"] = "application/json"
         localVariableHeaders["Accept"] = "application/json"
 
         return RequestConfig(
-            method = RequestMethod.GET,
-            path = "/1/object/billingentityinternal/getAutocomplete/{sSelector}".replace("{"+"sSelector"+"}", encodeURIComponent(sSelector.value.toString())),
+            method = RequestMethod.POST,
+            path = "/1/object/billingentityinternal",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Delete an existing Billingentityinternal
+     * 
+     * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal
+     * @return BillingentityinternalMinusDeleteObjectMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun billingentityinternalDeleteObjectV1(pkiBillingentityinternalID: kotlin.Int) : BillingentityinternalMinusDeleteObjectMinusV1MinusResponse {
+        val localVarResponse = billingentityinternalDeleteObjectV1WithHttpInfo(pkiBillingentityinternalID = pkiBillingentityinternalID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as BillingentityinternalMinusDeleteObjectMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Delete an existing Billingentityinternal
+     * 
+     * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal
+     * @return ApiResponse<BillingentityinternalMinusDeleteObjectMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun billingentityinternalDeleteObjectV1WithHttpInfo(pkiBillingentityinternalID: kotlin.Int) : ApiResponse<BillingentityinternalMinusDeleteObjectMinusV1MinusResponse?> {
+        val localVariableConfig = billingentityinternalDeleteObjectV1RequestConfig(pkiBillingentityinternalID = pkiBillingentityinternalID)
+
+        return request<Unit, BillingentityinternalMinusDeleteObjectMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation billingentityinternalDeleteObjectV1
+     *
+     * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal
+     * @return RequestConfig
+     */
+    fun billingentityinternalDeleteObjectV1RequestConfig(pkiBillingentityinternalID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.DELETE,
+            path = "/1/object/billingentityinternal/{pkiBillingentityinternalID}".replace("{"+"pkiBillingentityinternalID"+"}", encodeURIComponent(pkiBillingentityinternalID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Edit an existing Billingentityinternal
+     * 
+     * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal
+     * @param billingentityinternalMinusEditObjectMinusV1MinusRequest 
+     * @return BillingentityinternalMinusEditObjectMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun billingentityinternalEditObjectV1(pkiBillingentityinternalID: kotlin.Int, billingentityinternalMinusEditObjectMinusV1MinusRequest: BillingentityinternalMinusEditObjectMinusV1MinusRequest) : BillingentityinternalMinusEditObjectMinusV1MinusResponse {
+        val localVarResponse = billingentityinternalEditObjectV1WithHttpInfo(pkiBillingentityinternalID = pkiBillingentityinternalID, billingentityinternalMinusEditObjectMinusV1MinusRequest = billingentityinternalMinusEditObjectMinusV1MinusRequest)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as BillingentityinternalMinusEditObjectMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Edit an existing Billingentityinternal
+     * 
+     * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal
+     * @param billingentityinternalMinusEditObjectMinusV1MinusRequest 
+     * @return ApiResponse<BillingentityinternalMinusEditObjectMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun billingentityinternalEditObjectV1WithHttpInfo(pkiBillingentityinternalID: kotlin.Int, billingentityinternalMinusEditObjectMinusV1MinusRequest: BillingentityinternalMinusEditObjectMinusV1MinusRequest) : ApiResponse<BillingentityinternalMinusEditObjectMinusV1MinusResponse?> {
+        val localVariableConfig = billingentityinternalEditObjectV1RequestConfig(pkiBillingentityinternalID = pkiBillingentityinternalID, billingentityinternalMinusEditObjectMinusV1MinusRequest = billingentityinternalMinusEditObjectMinusV1MinusRequest)
+
+        return request<BillingentityinternalMinusEditObjectMinusV1MinusRequest, BillingentityinternalMinusEditObjectMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation billingentityinternalEditObjectV1
+     *
+     * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal
+     * @param billingentityinternalMinusEditObjectMinusV1MinusRequest 
+     * @return RequestConfig
+     */
+    fun billingentityinternalEditObjectV1RequestConfig(pkiBillingentityinternalID: kotlin.Int, billingentityinternalMinusEditObjectMinusV1MinusRequest: BillingentityinternalMinusEditObjectMinusV1MinusRequest) : RequestConfig<BillingentityinternalMinusEditObjectMinusV1MinusRequest> {
+        val localVariableBody = billingentityinternalMinusEditObjectMinusV1MinusRequest
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.PUT,
+            path = "/1/object/billingentityinternal/{pkiBillingentityinternalID}".replace("{"+"pkiBillingentityinternalID"+"}", encodeURIComponent(pkiBillingentityinternalID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -256,6 +372,186 @@ class ObjectBillingentityinternalApi(basePath: kotlin.String = defaultBasePath, 
             path = "/2/object/billingentityinternal/getAutocomplete/{sSelector}".replace("{"+"sSelector"+"}", encodeURIComponent(sSelector.value.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * enum for parameter eOrderBy
+     */
+     enum class EOrderBy_billingentityinternalGetListV1(val value: kotlin.String) {
+         @Json(name = "pkiBillingentityinternalID_ASC") pkiBillingentityinternalID_ASC("pkiBillingentityinternalID_ASC"),
+         @Json(name = "pkiBillingentityinternalID_DESC") pkiBillingentityinternalID_DESC("pkiBillingentityinternalID_DESC"),
+         @Json(name = "sBillingentityinternalDescriptionX_ASC") sBillingentityinternalDescriptionX_ASC("sBillingentityinternalDescriptionX_ASC"),
+         @Json(name = "sBillingentityinternalDescriptionX_DESC") sBillingentityinternalDescriptionX_DESC("sBillingentityinternalDescriptionX_DESC")
+     }
+
+    /**
+     * Retrieve Billingentityinternal list
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return BillingentityinternalMinusGetListMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun billingentityinternalGetListV1(eOrderBy: EOrderBy_billingentityinternalGetListV1? = null, iRowMax: kotlin.Int? = null, iRowOffset: kotlin.Int? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null, sFilter: kotlin.String? = null) : BillingentityinternalMinusGetListMinusV1MinusResponse {
+        val localVarResponse = billingentityinternalGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as BillingentityinternalMinusGetListMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve Billingentityinternal list
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return ApiResponse<BillingentityinternalMinusGetListMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun billingentityinternalGetListV1WithHttpInfo(eOrderBy: EOrderBy_billingentityinternalGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : ApiResponse<BillingentityinternalMinusGetListMinusV1MinusResponse?> {
+        val localVariableConfig = billingentityinternalGetListV1RequestConfig(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
+
+        return request<Unit, BillingentityinternalMinusGetListMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation billingentityinternalGetListV1
+     *
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return RequestConfig
+     */
+    fun billingentityinternalGetListV1RequestConfig(eOrderBy: EOrderBy_billingentityinternalGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (eOrderBy != null) {
+                    put("eOrderBy", listOf(eOrderBy.toString()))
+                }
+                if (iRowMax != null) {
+                    put("iRowMax", listOf(iRowMax.toString()))
+                }
+                if (iRowOffset != null) {
+                    put("iRowOffset", listOf(iRowOffset.toString()))
+                }
+                if (sFilter != null) {
+                    put("sFilter", listOf(sFilter.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/billingentityinternal/getList",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Retrieve an existing Billingentityinternal
+     * 
+     * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal
+     * @return BillingentityinternalMinusGetObjectMinusV2MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun billingentityinternalGetObjectV2(pkiBillingentityinternalID: kotlin.Int) : BillingentityinternalMinusGetObjectMinusV2MinusResponse {
+        val localVarResponse = billingentityinternalGetObjectV2WithHttpInfo(pkiBillingentityinternalID = pkiBillingentityinternalID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as BillingentityinternalMinusGetObjectMinusV2MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve an existing Billingentityinternal
+     * 
+     * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal
+     * @return ApiResponse<BillingentityinternalMinusGetObjectMinusV2MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun billingentityinternalGetObjectV2WithHttpInfo(pkiBillingentityinternalID: kotlin.Int) : ApiResponse<BillingentityinternalMinusGetObjectMinusV2MinusResponse?> {
+        val localVariableConfig = billingentityinternalGetObjectV2RequestConfig(pkiBillingentityinternalID = pkiBillingentityinternalID)
+
+        return request<Unit, BillingentityinternalMinusGetObjectMinusV2MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation billingentityinternalGetObjectV2
+     *
+     * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal
+     * @return RequestConfig
+     */
+    fun billingentityinternalGetObjectV2RequestConfig(pkiBillingentityinternalID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/2/object/billingentityinternal/{pkiBillingentityinternalID}".replace("{"+"pkiBillingentityinternalID"+"}", encodeURIComponent(pkiBillingentityinternalID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }

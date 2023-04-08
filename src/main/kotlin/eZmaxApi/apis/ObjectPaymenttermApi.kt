@@ -121,6 +121,7 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ok
             path = "/1/object/paymentterm",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -191,6 +192,7 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ok
             path = "/1/object/paymentterm/{pkiPaymenttermID}".replace("{"+"pkiPaymenttermID"+"}", encodeURIComponent(pkiPaymenttermID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -265,6 +267,7 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ok
             path = "/1/object/paymentterm/{pkiPaymenttermID}".replace("{"+"pkiPaymenttermID"+"}", encodeURIComponent(pkiPaymenttermID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -369,6 +372,7 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ok
             path = "/2/object/paymentterm/getAutocomplete/{sSelector}".replace("{"+"sSelector"+"}", encodeURIComponent(sSelector.value.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -381,6 +385,10 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ok
          @Json(name = "pkiPaymenttermID_DESC") pkiPaymenttermID_DESC("pkiPaymenttermID_DESC"),
          @Json(name = "sPaymenttermCode_ASC") sPaymenttermCode_ASC("sPaymenttermCode_ASC"),
          @Json(name = "sPaymenttermCode_DESC") sPaymenttermCode_DESC("sPaymenttermCode_DESC"),
+         @Json(name = "ePaymenttermType_ASC") ePaymenttermType_ASC("ePaymenttermType_ASC"),
+         @Json(name = "ePaymenttermType_DESC") ePaymenttermType_DESC("ePaymenttermType_DESC"),
+         @Json(name = "iPaymenttermDay_ASC") iPaymenttermDay_ASC("iPaymenttermDay_ASC"),
+         @Json(name = "iPaymenttermDay_DESC") iPaymenttermDay_DESC("iPaymenttermDay_DESC"),
          @Json(name = "sPaymenttermDescriptionX_ASC") sPaymenttermDescriptionX_ASC("sPaymenttermDescriptionX_ASC"),
          @Json(name = "sPaymenttermDescriptionX_DESC") sPaymenttermDescriptionX_DESC("sPaymenttermDescriptionX_DESC"),
          @Json(name = "bPaymenttermIsactive_ASC") bPaymenttermIsactive_ASC("bPaymenttermIsactive_ASC"),
@@ -480,6 +488,7 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ok
             path = "/1/object/paymentterm/getList",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -550,6 +559,7 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ok
             path = "/2/object/paymentterm/{pkiPaymenttermID}".replace("{"+"pkiPaymenttermID"+"}", encodeURIComponent(pkiPaymenttermID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }

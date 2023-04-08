@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.CommonMinusAudit
 import eZmaxApi.models.EzsigntemplatedocumentMinusResponse
 import eZmaxApi.models.EzsigntemplatesignerMinusResponseCompound
 
@@ -30,6 +31,7 @@ import com.squareup.moshi.Json
  * @param sEzsigntemplateDescription The description of the Ezsigntemplate
  * @param bEzsigntemplateAdminonly Whether the Ezsigntemplate can be accessed by admin users only (eUserType=Normal)
  * @param sEzsignfoldertypeNameX The name of the Ezsignfoldertype in the language of the requester
+ * @param objAudit 
  * @param aObjEzsigntemplatesigner 
  * @param fkiEzsigntemplatedocumentID The unique ID of the Ezsigntemplatedocument
  * @param objEzsigntemplatedocument 
@@ -65,6 +67,9 @@ data class EzsigntemplateMinusGetObjectMinusV1MinusResponseMinusMPayload (
     /* The name of the Ezsignfoldertype in the language of the requester */
     @Json(name = "sEzsignfoldertypeNameX")
     val sEzsignfoldertypeNameX: kotlin.String,
+
+    @Json(name = "objAudit")
+    val objAudit: CommonMinusAudit,
 
     @Json(name = "a_objEzsigntemplatesigner")
     val aObjEzsigntemplatesigner: kotlin.collections.List<EzsigntemplatesignerMinusResponseCompound>,

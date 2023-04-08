@@ -5,8 +5,8 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ezsignbulksendtransmissionGetCsvErrorsV1**](ObjectEzsignbulksendtransmissionApi.md#ezsignbulksendtransmissionGetCsvErrorsV1) | **GET** /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getCsvErrors | Retrieve an existing Ezsignbulksendtransmission&#39;s Csv containing errors
+[**ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1**](ObjectEzsignbulksendtransmissionApi.md#ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1) | **GET** /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getEzsignsignaturesAutomatic | Retrieve an existing Ezsignbulksendtransmission&#39;s automatic Ezsignsignatures
 [**ezsignbulksendtransmissionGetFormsDataV1**](ObjectEzsignbulksendtransmissionApi.md#ezsignbulksendtransmissionGetFormsDataV1) | **GET** /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getFormsData | Retrieve an existing Ezsignbulksendtransmission&#39;s forms data
-[**ezsignbulksendtransmissionGetObjectV1**](ObjectEzsignbulksendtransmissionApi.md#ezsignbulksendtransmissionGetObjectV1) | **GET** /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID} | Retrieve an existing Ezsignbulksendtransmission
 [**ezsignbulksendtransmissionGetObjectV2**](ObjectEzsignbulksendtransmissionApi.md#ezsignbulksendtransmissionGetObjectV2) | **GET** /2/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID} | Retrieve an existing Ezsignbulksendtransmission
 
 
@@ -60,6 +60,56 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+<a name="ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1"></a>
+# **ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1**
+> EzsignbulksendtransmissionMinusGetEzsignsignaturesAutomaticMinusV1MinusResponse ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1(pkiEzsignbulksendtransmissionID)
+
+Retrieve an existing Ezsignbulksendtransmission&#39;s automatic Ezsignsignatures
+
+Return the Ezsignsignatures that can be signed by the current user at the current step in the process
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsignbulksendtransmissionApi()
+val pkiEzsignbulksendtransmissionID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : EzsignbulksendtransmissionMinusGetEzsignsignaturesAutomaticMinusV1MinusResponse = apiInstance.ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1(pkiEzsignbulksendtransmissionID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsignbulksendtransmissionApi#ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsignbulksendtransmissionApi#ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignbulksendtransmissionID** | **kotlin.Int**|  |
+
+### Return type
+
+[**EzsignbulksendtransmissionMinusGetEzsignsignaturesAutomaticMinusV1MinusResponse**](EzsignbulksendtransmissionMinusGetEzsignsignaturesAutomaticMinusV1MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
 <a name="ezsignbulksendtransmissionGetFormsDataV1"></a>
 # **ezsignbulksendtransmissionGetFormsDataV1**
 > EzsignbulksendtransmissionMinusGetFormsDataMinusV1MinusResponse ezsignbulksendtransmissionGetFormsDataV1(pkiEzsignbulksendtransmissionID)
@@ -97,56 +147,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignbulksendtransmissionMinusGetFormsDataMinusV1MinusResponse**](EzsignbulksendtransmissionMinusGetFormsDataMinusV1MinusResponse.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="ezsignbulksendtransmissionGetObjectV1"></a>
-# **ezsignbulksendtransmissionGetObjectV1**
-> EzsignbulksendtransmissionMinusGetObjectMinusV1MinusResponse ezsignbulksendtransmissionGetObjectV1(pkiEzsignbulksendtransmissionID)
-
-Retrieve an existing Ezsignbulksendtransmission
-
-
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectEzsignbulksendtransmissionApi()
-val pkiEzsignbulksendtransmissionID : kotlin.Int = 56 // kotlin.Int | 
-try {
-    val result : EzsignbulksendtransmissionMinusGetObjectMinusV1MinusResponse = apiInstance.ezsignbulksendtransmissionGetObjectV1(pkiEzsignbulksendtransmissionID)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectEzsignbulksendtransmissionApi#ezsignbulksendtransmissionGetObjectV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectEzsignbulksendtransmissionApi#ezsignbulksendtransmissionGetObjectV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsignbulksendtransmissionID** | **kotlin.Int**|  |
-
-### Return type
-
-[**EzsignbulksendtransmissionMinusGetObjectMinusV1MinusResponse**](EzsignbulksendtransmissionMinusGetObjectMinusV1MinusResponse.md)
 
 ### Authorization
 

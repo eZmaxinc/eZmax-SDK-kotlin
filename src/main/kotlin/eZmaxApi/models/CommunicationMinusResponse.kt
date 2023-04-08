@@ -17,9 +17,11 @@ package eZmaxApi.models
 
 import eZmaxApi.models.CommonMinusAudit
 import eZmaxApi.models.ComputedMinusECommunicationDirection
-import eZmaxApi.models.CustomMinusContactNameMinusResponse
+import eZmaxApi.models.DescriptionstaticMinusResponse
+import eZmaxApi.models.EmailstaticMinusResponse
 import eZmaxApi.models.FieldMinusECommunicationImportance
 import eZmaxApi.models.FieldMinusECommunicationType
+import eZmaxApi.models.PhonestaticMinusResponse
 
 import com.squareup.moshi.Json
 
@@ -32,8 +34,11 @@ import com.squareup.moshi.Json
  * @param sCommunicationSubject The subject of the Communication
  * @param eCommunicationDirection 
  * @param iCommunicationrecipientCount The count of Communicationrecipient
- * @param objContactFrom 
  * @param objAudit 
+ * @param sCommunicationBodyurl The url of the body used as body in the Communication
+ * @param objDescriptionstaticSender 
+ * @param objEmailstaticSender 
+ * @param objPhonestaticSender 
  */
 
 
@@ -60,11 +65,21 @@ data class CommunicationMinusResponse (
     @Json(name = "iCommunicationrecipientCount")
     val iCommunicationrecipientCount: kotlin.Int,
 
-    @Json(name = "objContactFrom")
-    val objContactFrom: CustomMinusContactNameMinusResponse,
-
     @Json(name = "objAudit")
-    val objAudit: CommonMinusAudit
+    val objAudit: CommonMinusAudit,
+
+    /* The url of the body used as body in the Communication */
+    @Json(name = "sCommunicationBodyurl")
+    val sCommunicationBodyurl: kotlin.String? = null,
+
+    @Json(name = "objDescriptionstaticSender")
+    val objDescriptionstaticSender: DescriptionstaticMinusResponse? = null,
+
+    @Json(name = "objEmailstaticSender")
+    val objEmailstaticSender: EmailstaticMinusResponse? = null,
+
+    @Json(name = "objPhonestaticSender")
+    val objPhonestaticSender: PhonestaticMinusResponse? = null
 
 )
 

@@ -112,6 +112,7 @@ class ObjectVersionhistoryApi(basePath: kotlin.String = defaultBasePath, client:
             path = "/2/object/versionhistory/{pkiVersionhistoryID}".replace("{"+"pkiVersionhistoryID"+"}", encodeURIComponent(pkiVersionhistoryID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }

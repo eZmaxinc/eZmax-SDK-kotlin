@@ -27,7 +27,7 @@ import eZmaxApi.models.EzsignsignatureMinusCreateObjectMinusV2MinusResponse
 import eZmaxApi.models.EzsignsignatureMinusDeleteObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsignsignatureMinusEditObjectMinusV1MinusRequest
 import eZmaxApi.models.EzsignsignatureMinusEditObjectMinusV1MinusResponse
-import eZmaxApi.models.EzsignsignatureMinusGetObjectMinusV1MinusResponse
+import eZmaxApi.models.EzsignsignatureMinusGetEzsignsignaturesAutomaticMinusV1MinusResponse
 import eZmaxApi.models.EzsignsignatureMinusGetObjectMinusV2MinusResponse
 import eZmaxApi.models.EzsignsignatureMinusSignMinusV1MinusRequest
 import eZmaxApi.models.EzsignsignatureMinusSignMinusV1MinusResponse
@@ -128,6 +128,7 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client
             path = "/1/object/ezsignsignature",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -199,6 +200,7 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client
             path = "/2/object/ezsignsignature",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -269,6 +271,7 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client
             path = "/1/object/ezsignsignature/{pkiEzsignsignatureID}".replace("{"+"pkiEzsignsignatureID"+"}", encodeURIComponent(pkiEzsignsignatureID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -343,15 +346,15 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client
             path = "/1/object/ezsignsignature/{pkiEzsignsignatureID}".replace("{"+"pkiEzsignsignatureID"+"}", encodeURIComponent(pkiEzsignsignatureID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
 
     /**
-     * Retrieve an existing Ezsignsignature
-     * 
-     * @param pkiEzsignsignatureID 
-     * @return EzsignsignatureMinusGetObjectMinusV1MinusResponse
+     * Retrieve all automatic Ezsignsignatures
+     * Return all the Ezsignsignatures that can be signed by the current user
+     * @return EzsignsignatureMinusGetEzsignsignaturesAutomaticMinusV1MinusResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -360,13 +363,11 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    @Deprecated(message = "This operation is deprecated.")
-    fun ezsignsignatureGetObjectV1(pkiEzsignsignatureID: kotlin.Int) : EzsignsignatureMinusGetObjectMinusV1MinusResponse {
-        @Suppress("DEPRECATION")
-        val localVarResponse = ezsignsignatureGetObjectV1WithHttpInfo(pkiEzsignsignatureID = pkiEzsignsignatureID)
+    fun ezsignsignatureGetEzsignsignaturesAutomaticV1() : EzsignsignatureMinusGetEzsignsignaturesAutomaticMinusV1MinusResponse {
+        val localVarResponse = ezsignsignatureGetEzsignsignaturesAutomaticV1WithHttpInfo()
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignsignatureMinusGetObjectMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignsignatureMinusGetEzsignsignaturesAutomaticMinusV1MinusResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -381,33 +382,28 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client
     }
 
     /**
-     * Retrieve an existing Ezsignsignature
-     * 
-     * @param pkiEzsignsignatureID 
-     * @return ApiResponse<EzsignsignatureMinusGetObjectMinusV1MinusResponse?>
+     * Retrieve all automatic Ezsignsignatures
+     * Return all the Ezsignsignatures that can be signed by the current user
+     * @return ApiResponse<EzsignsignatureMinusGetEzsignsignaturesAutomaticMinusV1MinusResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    @Deprecated(message = "This operation is deprecated.")
-    fun ezsignsignatureGetObjectV1WithHttpInfo(pkiEzsignsignatureID: kotlin.Int) : ApiResponse<EzsignsignatureMinusGetObjectMinusV1MinusResponse?> {
-        @Suppress("DEPRECATION")
-        val localVariableConfig = ezsignsignatureGetObjectV1RequestConfig(pkiEzsignsignatureID = pkiEzsignsignatureID)
+    fun ezsignsignatureGetEzsignsignaturesAutomaticV1WithHttpInfo() : ApiResponse<EzsignsignatureMinusGetEzsignsignaturesAutomaticMinusV1MinusResponse?> {
+        val localVariableConfig = ezsignsignatureGetEzsignsignaturesAutomaticV1RequestConfig()
 
-        return request<Unit, EzsignsignatureMinusGetObjectMinusV1MinusResponse>(
+        return request<Unit, EzsignsignatureMinusGetEzsignsignaturesAutomaticMinusV1MinusResponse>(
             localVariableConfig
         )
     }
 
     /**
-     * To obtain the request config of the operation ezsignsignatureGetObjectV1
+     * To obtain the request config of the operation ezsignsignatureGetEzsignsignaturesAutomaticV1
      *
-     * @param pkiEzsignsignatureID 
      * @return RequestConfig
      */
-    @Deprecated(message = "This operation is deprecated.")
-    fun ezsignsignatureGetObjectV1RequestConfig(pkiEzsignsignatureID: kotlin.Int) : RequestConfig<Unit> {
+    fun ezsignsignatureGetEzsignsignaturesAutomaticV1RequestConfig() : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
@@ -415,9 +411,10 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/1/object/ezsignsignature/{pkiEzsignsignatureID}".replace("{"+"pkiEzsignsignatureID"+"}", encodeURIComponent(pkiEzsignsignatureID.toString())),
+            path = "/1/object/ezsignsignature/getEzsignsignaturesAutomatic",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -488,6 +485,7 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client
             path = "/2/object/ezsignsignature/{pkiEzsignsignatureID}".replace("{"+"pkiEzsignsignatureID"+"}", encodeURIComponent(pkiEzsignsignatureID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -562,6 +560,7 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client
             path = "/1/object/ezsignsignature/{pkiEzsignsignatureID}/sign".replace("{"+"pkiEzsignsignatureID"+"}", encodeURIComponent(pkiEzsignsignatureID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }

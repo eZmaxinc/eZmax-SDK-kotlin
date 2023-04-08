@@ -29,7 +29,7 @@ eEzsigntemplatedocumentSource | Base64, Url, Ezsigndocument
 ## Enum: eEzsigntemplatedocumentFormat
 Name | Value
 ---- | -----
-eEzsigntemplatedocumentFormat | Pdf
+eEzsigntemplatedocumentFormat | Pdf, Doc, Docx, Xls, Xlsx, Ppt, Pptx
 
 
 <a name="EEzsigntemplatedocumentForm"></a>

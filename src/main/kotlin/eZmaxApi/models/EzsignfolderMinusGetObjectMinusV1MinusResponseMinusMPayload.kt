@@ -38,6 +38,7 @@ import com.squareup.moshi.Json
  * @param eEzsignfolderStep 
  * @param tEzsignfolderMessage A custom text message that will be added to the email sent.
  * @param objAudit 
+ * @param sEzsignfolderExternalid This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
  * @param dtEzsignfolderDelayedsenddate The date and time at which the Ezsignfolder will be sent in the future.
  * @param dtEzsignfolderDuedate The maximum date and time at which the Ezsignfolder can be signed.
  * @param dtEzsignfolderSentdate The date and time at which the Ezsignfolder was sent the last time.
@@ -101,6 +102,10 @@ data class EzsignfolderMinusGetObjectMinusV1MinusResponseMinusMPayload (
 
     @Json(name = "objAudit")
     val objAudit: CommonMinusAudit,
+
+    /* This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format.  */
+    @Json(name = "sEzsignfolderExternalid")
+    val sEzsignfolderExternalid: kotlin.String,
 
     /* The date and time at which the Ezsignfolder will be sent in the future. */
     @Json(name = "dtEzsignfolderDelayedsenddate")

@@ -155,6 +155,7 @@ class ObjectPeriodApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
             path = "/1/object/period/getAutocomplete/{sSelector}".replace("{"+"sSelector"+"}", encodeURIComponent(sSelector.value.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -262,6 +263,7 @@ class ObjectPeriodApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
             path = "/2/object/period/getAutocomplete/{sSelector}".replace("{"+"sSelector"+"}", encodeURIComponent(sSelector.value.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }

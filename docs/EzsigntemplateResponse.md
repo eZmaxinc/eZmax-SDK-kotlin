@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **sEzsigntemplateDescription** | **kotlin.String** | The description of the Ezsigntemplate | 
 **bEzsigntemplateAdminonly** | **kotlin.Boolean** | Whether the Ezsigntemplate can be accessed by admin users only (eUserType&#x3D;Normal) | 
 **sEzsignfoldertypeNameX** | **kotlin.String** | The name of the Ezsignfoldertype in the language of the requester | 
+**objAudit** | [**CommonMinusAudit**](CommonMinusAudit.md) |  | 
 **fkiEzsigntemplatedocumentID** | **kotlin.Int** | The unique ID of the Ezsigntemplatedocument |  [optional]
 
 

@@ -35,6 +35,7 @@ import com.squareup.moshi.Json
  * @param bEzsigndocumentForcerepair Try to repair the document or flatten it if it cannot be used for electronic signature. 
  * @param sEzsigndocumentPassword If the source document is password protected, the password to open/modify it.
  * @param eEzsigndocumentForm If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**
+ * @param sEzsigndocumentExternalid This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
  */
 
 
@@ -94,7 +95,11 @@ data class EzsigndocumentMinusRequest (
 
     /* If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID** */
     @Json(name = "eEzsigndocumentForm")
-    val eEzsigndocumentForm: EzsigndocumentMinusRequest.EEzsigndocumentForm? = null
+    val eEzsigndocumentForm: EzsigndocumentMinusRequest.EEzsigndocumentForm? = null,
+
+    /* This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format.  */
+    @Json(name = "sEzsigndocumentExternalid")
+    val sEzsigndocumentExternalid: kotlin.String? = null
 
 ) {
 
@@ -111,10 +116,16 @@ data class EzsigndocumentMinusRequest (
     /**
      * Indicates the format of the document.
      *
-     * Values: Pdf
+     * Values: Pdf,Doc,Docx,Xls,Xlsx,Ppt,Pptx
      */
     enum class EEzsigndocumentFormat(val value: kotlin.String) {
-        @Json(name = "Pdf") Pdf("Pdf");
+        @Json(name = "Pdf") Pdf("Pdf"),
+        @Json(name = "Doc") Doc("Doc"),
+        @Json(name = "Docx") Docx("Docx"),
+        @Json(name = "Xls") Xls("Xls"),
+        @Json(name = "Xlsx") Xlsx("Xlsx"),
+        @Json(name = "Ppt") Ppt("Ppt"),
+        @Json(name = "Pptx") Pptx("Pptx");
     }
     /**
      * If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**

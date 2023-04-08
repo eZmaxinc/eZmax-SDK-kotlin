@@ -17,7 +17,9 @@ Name | Type | Description | Notes
 **sEzsigndocumentMD5initial** | **kotlin.String** | MD5 Hash of the initial PDF Document before signatures were applied to it. | 
 **sEzsigndocumentMD5signed** | **kotlin.String** | MD5 Hash of the final PDF Document after all signatures were applied to it. | 
 **bEzsigndocumentEzsignform** | **kotlin.Boolean** | If the Ezsigndocument contains an Ezsignform or not | 
+**bEzsigndocumentHassignedsignatures** | **kotlin.Boolean** | If the Ezsigndocument contains signed signatures (From internal or external sources) | 
 **objAudit** | [**CommonMinusAudit**](CommonMinusAudit.md) |  | 
+**sEzsigndocumentExternalid** | **kotlin.String** | This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format.  | 
 **iEzsigndocumentStepformtotal** | **kotlin.Int** | The total number of steps in the form filling phase | 
 **iEzsigndocumentStepformcurrent** | **kotlin.Int** | The current step in the form filling phase | 
 **iEzsigndocumentStepsignaturetotal** | **kotlin.Int** | The total number of steps in the signature filling phase | 

@@ -25,7 +25,6 @@ import eZmaxApi.models.EzsigntemplatesignerMinusCreateObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsigntemplatesignerMinusDeleteObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsigntemplatesignerMinusEditObjectMinusV1MinusRequest
 import eZmaxApi.models.EzsigntemplatesignerMinusEditObjectMinusV1MinusResponse
-import eZmaxApi.models.EzsigntemplatesignerMinusGetObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsigntemplatesignerMinusGetObjectMinusV2MinusResponse
 
 import com.squareup.moshi.Json
@@ -119,6 +118,7 @@ class ObjectEzsigntemplatesignerApi(basePath: kotlin.String = defaultBasePath, c
             path = "/1/object/ezsigntemplatesigner",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -189,6 +189,7 @@ class ObjectEzsigntemplatesignerApi(basePath: kotlin.String = defaultBasePath, c
             path = "/1/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID}".replace("{"+"pkiEzsigntemplatesignerID"+"}", encodeURIComponent(pkiEzsigntemplatesignerID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -263,81 +264,7 @@ class ObjectEzsigntemplatesignerApi(basePath: kotlin.String = defaultBasePath, c
             path = "/1/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID}".replace("{"+"pkiEzsigntemplatesignerID"+"}", encodeURIComponent(pkiEzsigntemplatesignerID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
-            body = localVariableBody
-        )
-    }
-
-    /**
-     * Retrieve an existing Ezsigntemplatesigner
-     * 
-     * @param pkiEzsigntemplatesignerID 
-     * @return EzsigntemplatesignerMinusGetObjectMinusV1MinusResponse
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    @Deprecated(message = "This operation is deprecated.")
-    fun ezsigntemplatesignerGetObjectV1(pkiEzsigntemplatesignerID: kotlin.Int) : EzsigntemplatesignerMinusGetObjectMinusV1MinusResponse {
-        @Suppress("DEPRECATION")
-        val localVarResponse = ezsigntemplatesignerGetObjectV1WithHttpInfo(pkiEzsigntemplatesignerID = pkiEzsigntemplatesignerID)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigntemplatesignerMinusGetObjectMinusV1MinusResponse
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * Retrieve an existing Ezsigntemplatesigner
-     * 
-     * @param pkiEzsigntemplatesignerID 
-     * @return ApiResponse<EzsigntemplatesignerMinusGetObjectMinusV1MinusResponse?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    @Deprecated(message = "This operation is deprecated.")
-    fun ezsigntemplatesignerGetObjectV1WithHttpInfo(pkiEzsigntemplatesignerID: kotlin.Int) : ApiResponse<EzsigntemplatesignerMinusGetObjectMinusV1MinusResponse?> {
-        @Suppress("DEPRECATION")
-        val localVariableConfig = ezsigntemplatesignerGetObjectV1RequestConfig(pkiEzsigntemplatesignerID = pkiEzsigntemplatesignerID)
-
-        return request<Unit, EzsigntemplatesignerMinusGetObjectMinusV1MinusResponse>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation ezsigntemplatesignerGetObjectV1
-     *
-     * @param pkiEzsigntemplatesignerID 
-     * @return RequestConfig
-     */
-    @Deprecated(message = "This operation is deprecated.")
-    fun ezsigntemplatesignerGetObjectV1RequestConfig(pkiEzsigntemplatesignerID: kotlin.Int) : RequestConfig<Unit> {
-        val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.GET,
-            path = "/1/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID}".replace("{"+"pkiEzsigntemplatesignerID"+"}", encodeURIComponent(pkiEzsigntemplatesignerID.toString())),
-            query = localVariableQuery,
-            headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -408,6 +335,7 @@ class ObjectEzsigntemplatesignerApi(basePath: kotlin.String = defaultBasePath, c
             path = "/2/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID}".replace("{"+"pkiEzsigntemplatesignerID"+"}", encodeURIComponent(pkiEzsigntemplatesignerID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }

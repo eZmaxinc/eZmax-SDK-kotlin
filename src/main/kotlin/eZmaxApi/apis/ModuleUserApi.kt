@@ -113,6 +113,7 @@ class ModuleUserApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
             path = "/1/module/user/createezsignuser",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }

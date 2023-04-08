@@ -118,6 +118,7 @@ class ObjectNotificationsectionApi(basePath: kotlin.String = defaultBasePath, cl
             path = "/1/object/notificationsection/{pkiNotificationsectionID}/getNotificationtests".replace("{"+"pkiNotificationsectionID"+"}", encodeURIComponent(pkiNotificationsectionID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }

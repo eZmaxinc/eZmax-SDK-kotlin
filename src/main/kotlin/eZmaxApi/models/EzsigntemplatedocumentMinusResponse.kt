@@ -26,6 +26,7 @@ import com.squareup.moshi.Json
  * @param sEzsigntemplatedocumentName The name of the Ezsigntemplatedocument.
  * @param iEzsigntemplatedocumentPagetotal The number of pages in the Ezsigntemplatedocument.
  * @param iEzsigntemplatedocumentSignaturetotal The number of total signatures in the Ezsigntemplate.
+ * @param bEzsigntemplatedocumentHassignedsignatures If the Ezsigntemplatedocument contains signed signatures (From internal or external sources)
  */
 
 
@@ -49,7 +50,11 @@ data class EzsigntemplatedocumentMinusResponse (
 
     /* The number of total signatures in the Ezsigntemplate. */
     @Json(name = "iEzsigntemplatedocumentSignaturetotal")
-    val iEzsigntemplatedocumentSignaturetotal: kotlin.Int
+    val iEzsigntemplatedocumentSignaturetotal: kotlin.Int,
+
+    /* If the Ezsigntemplatedocument contains signed signatures (From internal or external sources) */
+    @Json(name = "bEzsigntemplatedocumentHassignedsignatures")
+    val bEzsigntemplatedocumentHassignedsignatures: kotlin.Boolean
 
 )
 

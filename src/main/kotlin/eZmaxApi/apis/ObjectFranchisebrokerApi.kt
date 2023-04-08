@@ -153,6 +153,7 @@ class ObjectFranchisebrokerApi(basePath: kotlin.String = defaultBasePath, client
             path = "/1/object/franchisebroker/getAutocomplete/{sSelector}".replace("{"+"sSelector"+"}", encodeURIComponent(sSelector.value.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -257,6 +258,7 @@ class ObjectFranchisebrokerApi(basePath: kotlin.String = defaultBasePath, client
             path = "/2/object/franchisebroker/getAutocomplete/{sSelector}".replace("{"+"sSelector"+"}", encodeURIComponent(sSelector.value.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }

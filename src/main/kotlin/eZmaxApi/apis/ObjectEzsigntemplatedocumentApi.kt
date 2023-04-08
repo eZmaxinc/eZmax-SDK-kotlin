@@ -29,10 +29,10 @@ import eZmaxApi.models.EzsigntemplatedocumentMinusEditEzsigntemplatesignaturesMi
 import eZmaxApi.models.EzsigntemplatedocumentMinusEditEzsigntemplatesignaturesMinusV1MinusResponse
 import eZmaxApi.models.EzsigntemplatedocumentMinusEditObjectMinusV1MinusRequest
 import eZmaxApi.models.EzsigntemplatedocumentMinusEditObjectMinusV1MinusResponse
+import eZmaxApi.models.EzsigntemplatedocumentMinusFlattenMinusV1MinusResponse
 import eZmaxApi.models.EzsigntemplatedocumentMinusGetEzsigntemplatedocumentpagesMinusV1MinusResponse
 import eZmaxApi.models.EzsigntemplatedocumentMinusGetEzsigntemplateformfieldgroupsMinusV1MinusResponse
 import eZmaxApi.models.EzsigntemplatedocumentMinusGetEzsigntemplatesignaturesMinusV1MinusResponse
-import eZmaxApi.models.EzsigntemplatedocumentMinusGetObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsigntemplatedocumentMinusGetObjectMinusV2MinusResponse
 import eZmaxApi.models.EzsigntemplatedocumentMinusGetWordsPositionsMinusV1MinusRequest
 import eZmaxApi.models.EzsigntemplatedocumentMinusGetWordsPositionsMinusV1MinusResponse
@@ -130,6 +130,7 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
             path = "/1/object/ezsigntemplatedocument",
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -204,6 +205,7 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
             path = "/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplateformfieldgroups".replace("{"+"pkiEzsigntemplatedocumentID"+"}", encodeURIComponent(pkiEzsigntemplatedocumentID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -278,6 +280,7 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
             path = "/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplatesignatures".replace("{"+"pkiEzsigntemplatedocumentID"+"}", encodeURIComponent(pkiEzsigntemplatedocumentID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -352,6 +355,82 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
             path = "/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}".replace("{"+"pkiEzsigntemplatedocumentID"+"}", encodeURIComponent(pkiEzsigntemplatedocumentID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Flatten
+     * Flatten an Ezsigntemplatedocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
+     * @param pkiEzsigntemplatedocumentID 
+     * @param body 
+     * @return EzsigntemplatedocumentMinusFlattenMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsigntemplatedocumentFlattenV1(pkiEzsigntemplatedocumentID: kotlin.Int, body: kotlin.Any) : EzsigntemplatedocumentMinusFlattenMinusV1MinusResponse {
+        val localVarResponse = ezsigntemplatedocumentFlattenV1WithHttpInfo(pkiEzsigntemplatedocumentID = pkiEzsigntemplatedocumentID, body = body)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigntemplatedocumentMinusFlattenMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Flatten
+     * Flatten an Ezsigntemplatedocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
+     * @param pkiEzsigntemplatedocumentID 
+     * @param body 
+     * @return ApiResponse<EzsigntemplatedocumentMinusFlattenMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsigntemplatedocumentFlattenV1WithHttpInfo(pkiEzsigntemplatedocumentID: kotlin.Int, body: kotlin.Any) : ApiResponse<EzsigntemplatedocumentMinusFlattenMinusV1MinusResponse?> {
+        val localVariableConfig = ezsigntemplatedocumentFlattenV1RequestConfig(pkiEzsigntemplatedocumentID = pkiEzsigntemplatedocumentID, body = body)
+
+        return request<kotlin.Any, EzsigntemplatedocumentMinusFlattenMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsigntemplatedocumentFlattenV1
+     *
+     * @param pkiEzsigntemplatedocumentID 
+     * @param body 
+     * @return RequestConfig
+     */
+    fun ezsigntemplatedocumentFlattenV1RequestConfig(pkiEzsigntemplatedocumentID: kotlin.Int, body: kotlin.Any) : RequestConfig<kotlin.Any> {
+        val localVariableBody = body
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/flatten".replace("{"+"pkiEzsigntemplatedocumentID"+"}", encodeURIComponent(pkiEzsigntemplatedocumentID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -422,6 +501,7 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
             path = "/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplatedocumentpages".replace("{"+"pkiEzsigntemplatedocumentID"+"}", encodeURIComponent(pkiEzsigntemplatedocumentID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -492,6 +572,7 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
             path = "/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplateformfieldgroups".replace("{"+"pkiEzsigntemplatedocumentID"+"}", encodeURIComponent(pkiEzsigntemplatedocumentID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -562,81 +643,7 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
             path = "/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplatesignatures".replace("{"+"pkiEzsigntemplatedocumentID"+"}", encodeURIComponent(pkiEzsigntemplatedocumentID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
-            body = localVariableBody
-        )
-    }
-
-    /**
-     * Retrieve an existing Ezsigntemplatedocument
-     * 
-     * @param pkiEzsigntemplatedocumentID 
-     * @return EzsigntemplatedocumentMinusGetObjectMinusV1MinusResponse
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    @Deprecated(message = "This operation is deprecated.")
-    fun ezsigntemplatedocumentGetObjectV1(pkiEzsigntemplatedocumentID: kotlin.Int) : EzsigntemplatedocumentMinusGetObjectMinusV1MinusResponse {
-        @Suppress("DEPRECATION")
-        val localVarResponse = ezsigntemplatedocumentGetObjectV1WithHttpInfo(pkiEzsigntemplatedocumentID = pkiEzsigntemplatedocumentID)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigntemplatedocumentMinusGetObjectMinusV1MinusResponse
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * Retrieve an existing Ezsigntemplatedocument
-     * 
-     * @param pkiEzsigntemplatedocumentID 
-     * @return ApiResponse<EzsigntemplatedocumentMinusGetObjectMinusV1MinusResponse?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    @Deprecated(message = "This operation is deprecated.")
-    fun ezsigntemplatedocumentGetObjectV1WithHttpInfo(pkiEzsigntemplatedocumentID: kotlin.Int) : ApiResponse<EzsigntemplatedocumentMinusGetObjectMinusV1MinusResponse?> {
-        @Suppress("DEPRECATION")
-        val localVariableConfig = ezsigntemplatedocumentGetObjectV1RequestConfig(pkiEzsigntemplatedocumentID = pkiEzsigntemplatedocumentID)
-
-        return request<Unit, EzsigntemplatedocumentMinusGetObjectMinusV1MinusResponse>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation ezsigntemplatedocumentGetObjectV1
-     *
-     * @param pkiEzsigntemplatedocumentID 
-     * @return RequestConfig
-     */
-    @Deprecated(message = "This operation is deprecated.")
-    fun ezsigntemplatedocumentGetObjectV1RequestConfig(pkiEzsigntemplatedocumentID: kotlin.Int) : RequestConfig<Unit> {
-        val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.GET,
-            path = "/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}".replace("{"+"pkiEzsigntemplatedocumentID"+"}", encodeURIComponent(pkiEzsigntemplatedocumentID.toString())),
-            query = localVariableQuery,
-            headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -707,6 +714,7 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
             path = "/2/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}".replace("{"+"pkiEzsigntemplatedocumentID"+"}", encodeURIComponent(pkiEzsigntemplatedocumentID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -781,6 +789,7 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
             path = "/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getWordsPositions".replace("{"+"pkiEzsigntemplatedocumentID"+"}", encodeURIComponent(pkiEzsigntemplatedocumentID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
@@ -855,6 +864,7 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
             path = "/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}".replace("{"+"pkiEzsigntemplatedocumentID"+"}", encodeURIComponent(pkiEzsigntemplatedocumentID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
+            requiresAuthentication = true,
             body = localVariableBody
         )
     }
