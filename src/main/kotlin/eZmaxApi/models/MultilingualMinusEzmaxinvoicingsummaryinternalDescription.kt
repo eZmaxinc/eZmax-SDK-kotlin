@@ -21,18 +21,18 @@ import com.squareup.moshi.Json
 /**
  * Description of the Ezmaxinvoicingsummaryinternal
  *
- * @param sEzmaxinvoicingsummaryinternalDescription1 The Ezmaxinvoicingsummaryinternal description in french
- * @param sEzmaxinvoicingsummaryinternalDescription2 The Ezmaxinvoicingsummaryinternal description in english
+ * @param sEzmaxinvoicingsummaryinternalDescription1 The Ezmaxinvoicingsummaryinternal description in French
+ * @param sEzmaxinvoicingsummaryinternalDescription2 The Ezmaxinvoicingsummaryinternal description in English
  */
 
 
 data class MultilingualMinusEzmaxinvoicingsummaryinternalDescription (
 
-    /* The Ezmaxinvoicingsummaryinternal description in french */
+    /* The Ezmaxinvoicingsummaryinternal description in French */
     @Json(name = "sEzmaxinvoicingsummaryinternalDescription1")
     val sEzmaxinvoicingsummaryinternalDescription1: kotlin.String? = null,
 
-    /* The Ezmaxinvoicingsummaryinternal description in english */
+    /* The Ezmaxinvoicingsummaryinternal description in English */
     @Json(name = "sEzmaxinvoicingsummaryinternalDescription2")
     val sEzmaxinvoicingsummaryinternalDescription2: kotlin.String? = null
 
