@@ -5,7 +5,6 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**variableexpenseCreateObjectV1**](ObjectVariableexpenseApi.md#variableexpenseCreateObjectV1) | **POST** /1/object/variableexpense | Create a new Variableexpense
-[**variableexpenseDeleteObjectV1**](ObjectVariableexpenseApi.md#variableexpenseDeleteObjectV1) | **DELETE** /1/object/variableexpense/{pkiVariableexpenseID} | Delete an existing Variableexpense
 [**variableexpenseEditObjectV1**](ObjectVariableexpenseApi.md#variableexpenseEditObjectV1) | **PUT** /1/object/variableexpense/{pkiVariableexpenseID} | Edit an existing Variableexpense
 [**variableexpenseGetAutocompleteV2**](ObjectVariableexpenseApi.md#variableexpenseGetAutocompleteV2) | **GET** /2/object/variableexpense/getAutocomplete/{sSelector} | Retrieve Variableexpenses and IDs
 [**variableexpenseGetListV1**](ObjectVariableexpenseApi.md#variableexpenseGetListV1) | **GET** /1/object/variableexpense/getList | Retrieve Variableexpense list
@@ -60,56 +59,6 @@ Configure Authorization:
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="variableexpenseDeleteObjectV1"></a>
-# **variableexpenseDeleteObjectV1**
-> VariableexpenseMinusDeleteObjectMinusV1MinusResponse variableexpenseDeleteObjectV1(pkiVariableexpenseID)
-
-Delete an existing Variableexpense
-
-
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectVariableexpenseApi()
-val pkiVariableexpenseID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Variableexpense
-try {
-    val result : VariableexpenseMinusDeleteObjectMinusV1MinusResponse = apiInstance.variableexpenseDeleteObjectV1(pkiVariableexpenseID)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectVariableexpenseApi#variableexpenseDeleteObjectV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectVariableexpenseApi#variableexpenseDeleteObjectV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiVariableexpenseID** | **kotlin.Int**| The unique ID of the Variableexpense |
-
-### Return type
-
-[**VariableexpenseMinusDeleteObjectMinusV1MinusResponse**](VariableexpenseMinusDeleteObjectMinusV1MinusResponse.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="variableexpenseEditObjectV1"></a>

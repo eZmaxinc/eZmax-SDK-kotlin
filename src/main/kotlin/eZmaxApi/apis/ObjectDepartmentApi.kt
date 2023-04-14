@@ -19,9 +19,7 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonMinusResponseMinusError
 import eZmaxApi.models.DepartmentMinusGetAutocompleteMinusV2MinusResponse
-import eZmaxApi.models.DepartmentMinusGetMembersMinusV1MinusResponse
 import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
 
 import com.squareup.moshi.Json
@@ -149,77 +147,6 @@ class ObjectDepartmentApi(basePath: kotlin.String = defaultBasePath, client: OkH
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/2/object/department/getAutocomplete/{sSelector}".replace("{"+"sSelector"+"}", encodeURIComponent(sSelector.value.toString())),
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            requiresAuthentication = true,
-            body = localVariableBody
-        )
-    }
-
-    /**
-     * Retrieve an existing Department&#39;s members
-     * 
-     * @param pkiDepartmentID 
-     * @return DepartmentMinusGetMembersMinusV1MinusResponse
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun departmentGetMembersV1(pkiDepartmentID: kotlin.Int) : DepartmentMinusGetMembersMinusV1MinusResponse {
-        val localVarResponse = departmentGetMembersV1WithHttpInfo(pkiDepartmentID = pkiDepartmentID)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as DepartmentMinusGetMembersMinusV1MinusResponse
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * Retrieve an existing Department&#39;s members
-     * 
-     * @param pkiDepartmentID 
-     * @return ApiResponse<DepartmentMinusGetMembersMinusV1MinusResponse?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    fun departmentGetMembersV1WithHttpInfo(pkiDepartmentID: kotlin.Int) : ApiResponse<DepartmentMinusGetMembersMinusV1MinusResponse?> {
-        val localVariableConfig = departmentGetMembersV1RequestConfig(pkiDepartmentID = pkiDepartmentID)
-
-        return request<Unit, DepartmentMinusGetMembersMinusV1MinusResponse>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation departmentGetMembersV1
-     *
-     * @param pkiDepartmentID 
-     * @return RequestConfig
-     */
-    fun departmentGetMembersV1RequestConfig(pkiDepartmentID: kotlin.Int) : RequestConfig<Unit> {
-        val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.GET,
-            path = "/1/object/department/{pkiDepartmentID}/getMembers".replace("{"+"pkiDepartmentID"+"}", encodeURIComponent(pkiDepartmentID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

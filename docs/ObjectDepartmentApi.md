@@ -5,7 +5,6 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**departmentGetAutocompleteV2**](ObjectDepartmentApi.md#departmentGetAutocompleteV2) | **GET** /2/object/department/getAutocomplete/{sSelector} | Retrieve Departments and IDs
-[**departmentGetMembersV1**](ObjectDepartmentApi.md#departmentGetMembersV1) | **GET** /1/object/department/{pkiDepartmentID}/getMembers | Retrieve an existing Department&#39;s members
 
 
 <a name="departmentGetAutocompleteV2"></a>
@@ -51,56 +50,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DepartmentMinusGetAutocompleteMinusV2MinusResponse**](DepartmentMinusGetAutocompleteMinusV2MinusResponse.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="departmentGetMembersV1"></a>
-# **departmentGetMembersV1**
-> DepartmentMinusGetMembersMinusV1MinusResponse departmentGetMembersV1(pkiDepartmentID)
-
-Retrieve an existing Department&#39;s members
-
-
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectDepartmentApi()
-val pkiDepartmentID : kotlin.Int = 56 // kotlin.Int | 
-try {
-    val result : DepartmentMinusGetMembersMinusV1MinusResponse = apiInstance.departmentGetMembersV1(pkiDepartmentID)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectDepartmentApi#departmentGetMembersV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectDepartmentApi#departmentGetMembersV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiDepartmentID** | **kotlin.Int**|  |
-
-### Return type
-
-[**DepartmentMinusGetMembersMinusV1MinusResponse**](DepartmentMinusGetMembersMinusV1MinusResponse.md)
 
 ### Authorization
 

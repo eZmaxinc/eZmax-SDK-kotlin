@@ -5,7 +5,6 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**billingentityinternalCreateObjectV1**](ObjectBillingentityinternalApi.md#billingentityinternalCreateObjectV1) | **POST** /1/object/billingentityinternal | Create a new Billingentityinternal
-[**billingentityinternalDeleteObjectV1**](ObjectBillingentityinternalApi.md#billingentityinternalDeleteObjectV1) | **DELETE** /1/object/billingentityinternal/{pkiBillingentityinternalID} | Delete an existing Billingentityinternal
 [**billingentityinternalEditObjectV1**](ObjectBillingentityinternalApi.md#billingentityinternalEditObjectV1) | **PUT** /1/object/billingentityinternal/{pkiBillingentityinternalID} | Edit an existing Billingentityinternal
 [**billingentityinternalGetAutocompleteV2**](ObjectBillingentityinternalApi.md#billingentityinternalGetAutocompleteV2) | **GET** /2/object/billingentityinternal/getAutocomplete/{sSelector} | Retrieve Billingentityinternals and IDs
 [**billingentityinternalGetListV1**](ObjectBillingentityinternalApi.md#billingentityinternalGetListV1) | **GET** /1/object/billingentityinternal/getList | Retrieve Billingentityinternal list
@@ -60,56 +59,6 @@ Configure Authorization:
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="billingentityinternalDeleteObjectV1"></a>
-# **billingentityinternalDeleteObjectV1**
-> BillingentityinternalMinusDeleteObjectMinusV1MinusResponse billingentityinternalDeleteObjectV1(pkiBillingentityinternalID)
-
-Delete an existing Billingentityinternal
-
-
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectBillingentityinternalApi()
-val pkiBillingentityinternalID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Billingentityinternal
-try {
-    val result : BillingentityinternalMinusDeleteObjectMinusV1MinusResponse = apiInstance.billingentityinternalDeleteObjectV1(pkiBillingentityinternalID)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectBillingentityinternalApi#billingentityinternalDeleteObjectV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectBillingentityinternalApi#billingentityinternalDeleteObjectV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiBillingentityinternalID** | **kotlin.Int**| The unique ID of the Billingentityinternal |
-
-### Return type
-
-[**BillingentityinternalMinusDeleteObjectMinusV1MinusResponse**](BillingentityinternalMinusDeleteObjectMinusV1MinusResponse.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="billingentityinternalEditObjectV1"></a>

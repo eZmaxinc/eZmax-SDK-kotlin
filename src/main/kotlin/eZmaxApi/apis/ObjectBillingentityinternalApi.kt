@@ -21,7 +21,6 @@ import okhttp3.HttpUrl
 
 import eZmaxApi.models.BillingentityinternalMinusCreateObjectMinusV1MinusRequest
 import eZmaxApi.models.BillingentityinternalMinusCreateObjectMinusV1MinusResponse
-import eZmaxApi.models.BillingentityinternalMinusDeleteObjectMinusV1MinusResponse
 import eZmaxApi.models.BillingentityinternalMinusEditObjectMinusV1MinusRequest
 import eZmaxApi.models.BillingentityinternalMinusEditObjectMinusV1MinusResponse
 import eZmaxApi.models.BillingentityinternalMinusGetAutocompleteMinusV2MinusResponse
@@ -119,77 +118,6 @@ class ObjectBillingentityinternalApi(basePath: kotlin.String = defaultBasePath, 
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/billingentityinternal",
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            requiresAuthentication = true,
-            body = localVariableBody
-        )
-    }
-
-    /**
-     * Delete an existing Billingentityinternal
-     * 
-     * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal
-     * @return BillingentityinternalMinusDeleteObjectMinusV1MinusResponse
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun billingentityinternalDeleteObjectV1(pkiBillingentityinternalID: kotlin.Int) : BillingentityinternalMinusDeleteObjectMinusV1MinusResponse {
-        val localVarResponse = billingentityinternalDeleteObjectV1WithHttpInfo(pkiBillingentityinternalID = pkiBillingentityinternalID)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as BillingentityinternalMinusDeleteObjectMinusV1MinusResponse
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * Delete an existing Billingentityinternal
-     * 
-     * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal
-     * @return ApiResponse<BillingentityinternalMinusDeleteObjectMinusV1MinusResponse?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    fun billingentityinternalDeleteObjectV1WithHttpInfo(pkiBillingentityinternalID: kotlin.Int) : ApiResponse<BillingentityinternalMinusDeleteObjectMinusV1MinusResponse?> {
-        val localVariableConfig = billingentityinternalDeleteObjectV1RequestConfig(pkiBillingentityinternalID = pkiBillingentityinternalID)
-
-        return request<Unit, BillingentityinternalMinusDeleteObjectMinusV1MinusResponse>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation billingentityinternalDeleteObjectV1
-     *
-     * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal
-     * @return RequestConfig
-     */
-    fun billingentityinternalDeleteObjectV1RequestConfig(pkiBillingentityinternalID: kotlin.Int) : RequestConfig<Unit> {
-        val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.DELETE,
-            path = "/1/object/billingentityinternal/{pkiBillingentityinternalID}".replace("{"+"pkiBillingentityinternalID"+"}", encodeURIComponent(pkiBillingentityinternalID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

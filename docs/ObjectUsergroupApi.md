@@ -5,11 +5,9 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**usergroupCreateObjectV1**](ObjectUsergroupApi.md#usergroupCreateObjectV1) | **POST** /1/object/usergroup | Create a new Usergroup
-[**usergroupDeleteObjectV1**](ObjectUsergroupApi.md#usergroupDeleteObjectV1) | **DELETE** /1/object/usergroup/{pkiUsergroupID} | Delete an existing Usergroup
 [**usergroupEditObjectV1**](ObjectUsergroupApi.md#usergroupEditObjectV1) | **PUT** /1/object/usergroup/{pkiUsergroupID} | Edit an existing Usergroup
 [**usergroupGetAutocompleteV2**](ObjectUsergroupApi.md#usergroupGetAutocompleteV2) | **GET** /2/object/usergroup/getAutocomplete/{sSelector} | Retrieve Usergroups and IDs
 [**usergroupGetListV1**](ObjectUsergroupApi.md#usergroupGetListV1) | **GET** /1/object/usergroup/getList | Retrieve Usergroup list
-[**usergroupGetMembersV1**](ObjectUsergroupApi.md#usergroupGetMembersV1) | **GET** /1/object/usergroup/{pkiUsergroupID}/getMembers | Retrieve an existing Usergroup&#39;s members
 [**usergroupGetObjectV2**](ObjectUsergroupApi.md#usergroupGetObjectV2) | **GET** /2/object/usergroup/{pkiUsergroupID} | Retrieve an existing Usergroup
 
 
@@ -61,56 +59,6 @@ Configure Authorization:
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="usergroupDeleteObjectV1"></a>
-# **usergroupDeleteObjectV1**
-> UsergroupMinusDeleteObjectMinusV1MinusResponse usergroupDeleteObjectV1(pkiUsergroupID)
-
-Delete an existing Usergroup
-
-
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectUsergroupApi()
-val pkiUsergroupID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Usergroup
-try {
-    val result : UsergroupMinusDeleteObjectMinusV1MinusResponse = apiInstance.usergroupDeleteObjectV1(pkiUsergroupID)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectUsergroupApi#usergroupDeleteObjectV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectUsergroupApi#usergroupDeleteObjectV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiUsergroupID** | **kotlin.Int**| The unique ID of the Usergroup |
-
-### Return type
-
-[**UsergroupMinusDeleteObjectMinusV1MinusResponse**](UsergroupMinusDeleteObjectMinusV1MinusResponse.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="usergroupEditObjectV1"></a>
@@ -266,54 +214,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**UsergroupMinusGetListMinusV1MinusResponse**](UsergroupMinusGetListMinusV1MinusResponse.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="usergroupGetMembersV1"></a>
-# **usergroupGetMembersV1**
-> UsergroupMinusGetMembersMinusV1MinusResponse usergroupGetMembersV1(pkiUsergroupID)
-
-Retrieve an existing Usergroup&#39;s members
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectUsergroupApi()
-val pkiUsergroupID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Usergroup
-try {
-    val result : UsergroupMinusGetMembersMinusV1MinusResponse = apiInstance.usergroupGetMembersV1(pkiUsergroupID)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectUsergroupApi#usergroupGetMembersV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectUsergroupApi#usergroupGetMembersV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiUsergroupID** | **kotlin.Int**| The unique ID of the Usergroup |
-
-### Return type
-
-[**UsergroupMinusGetMembersMinusV1MinusResponse**](UsergroupMinusGetMembersMinusV1MinusResponse.md)
 
 ### Authorization
 

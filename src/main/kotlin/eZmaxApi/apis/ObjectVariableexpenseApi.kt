@@ -23,7 +23,6 @@ import eZmaxApi.models.CommonMinusResponseMinusError
 import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
 import eZmaxApi.models.VariableexpenseMinusCreateObjectMinusV1MinusRequest
 import eZmaxApi.models.VariableexpenseMinusCreateObjectMinusV1MinusResponse
-import eZmaxApi.models.VariableexpenseMinusDeleteObjectMinusV1MinusResponse
 import eZmaxApi.models.VariableexpenseMinusEditObjectMinusV1MinusRequest
 import eZmaxApi.models.VariableexpenseMinusEditObjectMinusV1MinusResponse
 import eZmaxApi.models.VariableexpenseMinusGetAutocompleteMinusV2MinusResponse
@@ -119,77 +118,6 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/variableexpense",
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            requiresAuthentication = true,
-            body = localVariableBody
-        )
-    }
-
-    /**
-     * Delete an existing Variableexpense
-     * 
-     * @param pkiVariableexpenseID The unique ID of the Variableexpense
-     * @return VariableexpenseMinusDeleteObjectMinusV1MinusResponse
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun variableexpenseDeleteObjectV1(pkiVariableexpenseID: kotlin.Int) : VariableexpenseMinusDeleteObjectMinusV1MinusResponse {
-        val localVarResponse = variableexpenseDeleteObjectV1WithHttpInfo(pkiVariableexpenseID = pkiVariableexpenseID)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as VariableexpenseMinusDeleteObjectMinusV1MinusResponse
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * Delete an existing Variableexpense
-     * 
-     * @param pkiVariableexpenseID The unique ID of the Variableexpense
-     * @return ApiResponse<VariableexpenseMinusDeleteObjectMinusV1MinusResponse?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    fun variableexpenseDeleteObjectV1WithHttpInfo(pkiVariableexpenseID: kotlin.Int) : ApiResponse<VariableexpenseMinusDeleteObjectMinusV1MinusResponse?> {
-        val localVariableConfig = variableexpenseDeleteObjectV1RequestConfig(pkiVariableexpenseID = pkiVariableexpenseID)
-
-        return request<Unit, VariableexpenseMinusDeleteObjectMinusV1MinusResponse>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation variableexpenseDeleteObjectV1
-     *
-     * @param pkiVariableexpenseID The unique ID of the Variableexpense
-     * @return RequestConfig
-     */
-    fun variableexpenseDeleteObjectV1RequestConfig(pkiVariableexpenseID: kotlin.Int) : RequestConfig<Unit> {
-        val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.DELETE,
-            path = "/1/object/variableexpense/{pkiVariableexpenseID}".replace("{"+"pkiVariableexpenseID"+"}", encodeURIComponent(pkiVariableexpenseID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,
