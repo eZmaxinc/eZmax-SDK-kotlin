@@ -20,6 +20,7 @@ import eZmaxApi.models.FieldMinusEEzsigntemplateformfieldgroupTooltipposition
 import eZmaxApi.models.FieldMinusEEzsigntemplateformfieldgroupType
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * A Ezsigntemplateformfieldgroup Object

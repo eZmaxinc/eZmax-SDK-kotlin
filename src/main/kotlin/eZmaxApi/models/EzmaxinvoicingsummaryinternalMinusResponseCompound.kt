@@ -19,6 +19,7 @@ import eZmaxApi.models.EzmaxinvoicingsummaryinternaldetailMinusResponseCompound
 import eZmaxApi.models.MultilingualMinusEzmaxinvoicingsummaryinternalDescription
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * A Ezmaxinvoicingsummaryinternal Object

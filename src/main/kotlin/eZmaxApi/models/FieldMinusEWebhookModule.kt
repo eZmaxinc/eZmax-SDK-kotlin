@@ -17,6 +17,7 @@ package eZmaxApi.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * The module for the Webhook
@@ -24,6 +25,7 @@ import com.squareup.moshi.Json
  * Values: Ezsign,Management
  */
 
+@JsonClass(generateAdapter = false)
 enum class FieldMinusEWebhookModule(val value: kotlin.String) {
 
     @Json(name = "Ezsign")
@@ -33,7 +35,7 @@ enum class FieldMinusEWebhookModule(val value: kotlin.String) {
     Management("Management");
 
     /**
-     * Override toString() to avoid using the enum variable name as the value, and instead use
+     * Override [toString()] to avoid using the enum variable name as the value, and instead use
      * the actual value defined in the API spec file.
      *
      * This solves a problem when the variable name and its value are different, and ensures that

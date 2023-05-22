@@ -21,6 +21,7 @@ import eZmaxApi.models.FieldMinusEEzsignannotationType
 import eZmaxApi.models.TextstylestaticMinusResponseCompound
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * A Ezsignannotation Object

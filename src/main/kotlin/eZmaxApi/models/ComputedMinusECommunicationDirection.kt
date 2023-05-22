@@ -17,6 +17,7 @@ package eZmaxApi.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * The direction of the Communication
@@ -24,6 +25,7 @@ import com.squareup.moshi.Json
  * Values: Outbound,Inbound
  */
 
+@JsonClass(generateAdapter = false)
 enum class ComputedMinusECommunicationDirection(val value: kotlin.String) {
 
     @Json(name = "Outbound")
@@ -33,7 +35,7 @@ enum class ComputedMinusECommunicationDirection(val value: kotlin.String) {
     Inbound("Inbound");
 
     /**
-     * Override toString() to avoid using the enum variable name as the value, and instead use
+     * Override [toString()] to avoid using the enum variable name as the value, and instead use
      * the actual value defined in the API spec file.
      *
      * This solves a problem when the variable name and its value are different, and ensures that

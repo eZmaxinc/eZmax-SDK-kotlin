@@ -20,6 +20,7 @@ import eZmaxApi.models.CommonMinusResponseMinusObjDebugPayload
 import eZmaxApi.models.VersionhistoryMinusGetObjectMinusV2MinusResponseMinusMPayload
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Response for GET /2/object/versionhistory/{pkiVersionhistoryID}

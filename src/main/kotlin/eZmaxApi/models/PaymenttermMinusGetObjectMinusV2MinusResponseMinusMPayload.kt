@@ -18,6 +18,7 @@ package eZmaxApi.models
 import eZmaxApi.models.PaymenttermMinusResponseCompound
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Payload for GET /2/object/paymentterm/{pkiPaymenttermID}

@@ -685,8 +685,8 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
      * Retrieve Ezsignbulksend list
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional)
-     * @param iRowOffset  (optional)
+     * @param iRowMax  (optional, default to 10000)
+     * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
      * @return EzsignbulksendMinusGetListMinusV1MinusResponse
@@ -698,7 +698,7 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignbulksendGetListV1(eOrderBy: EOrderBy_ezsignbulksendGetListV1? = null, iRowMax: kotlin.Int? = null, iRowOffset: kotlin.Int? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null, sFilter: kotlin.String? = null) : EzsignbulksendMinusGetListMinusV1MinusResponse {
+    fun ezsignbulksendGetListV1(eOrderBy: EOrderBy_ezsignbulksendGetListV1? = null, iRowMax: kotlin.Int? = 10000, iRowOffset: kotlin.Int? = 0, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null, sFilter: kotlin.String? = null) : EzsignbulksendMinusGetListMinusV1MinusResponse {
         val localVarResponse = ezsignbulksendGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
 
         return when (localVarResponse.responseType) {
@@ -720,8 +720,8 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
      * Retrieve Ezsignbulksend list
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional)
-     * @param iRowOffset  (optional)
+     * @param iRowMax  (optional, default to 10000)
+     * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
      * @return ApiResponse<EzsignbulksendMinusGetListMinusV1MinusResponse?>
@@ -742,8 +742,8 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
      * To obtain the request config of the operation ezsignbulksendGetListV1
      *
      * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional)
-     * @param iRowOffset  (optional)
+     * @param iRowMax  (optional, default to 10000)
+     * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
      * @return RequestConfig

@@ -18,6 +18,7 @@ package eZmaxApi.models
 import eZmaxApi.models.EzsigndocumentMinusRequestPatch
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Request for PATCH /1/object/ezsigndocument/{pkiEzsigndocumentID}

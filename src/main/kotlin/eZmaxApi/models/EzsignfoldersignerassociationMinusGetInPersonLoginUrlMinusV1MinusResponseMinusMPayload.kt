@@ -17,6 +17,7 @@ package eZmaxApi.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Payload for GET /1/object/ezsignfoldersignerassociation/getInPersonLoginUrl

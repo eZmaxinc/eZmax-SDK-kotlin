@@ -18,6 +18,7 @@ package eZmaxApi.models
 import eZmaxApi.models.FieldMinusEEzsignsignatureType
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * An Ezsignsignature Object in the context of an EzsignsignaturesAutomatic path

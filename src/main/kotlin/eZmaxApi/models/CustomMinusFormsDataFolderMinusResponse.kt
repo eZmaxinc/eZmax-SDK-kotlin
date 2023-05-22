@@ -18,6 +18,7 @@ package eZmaxApi.models
 import eZmaxApi.models.CustomMinusFormDataDocumentMinusResponse
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * A forms Data Folder Object

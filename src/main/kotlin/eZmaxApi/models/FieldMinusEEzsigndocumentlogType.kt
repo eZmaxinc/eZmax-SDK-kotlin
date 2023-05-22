@@ -17,6 +17,7 @@ package eZmaxApi.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * The Ezsigndocumentlog Type.
@@ -24,6 +25,7 @@ import com.squareup.moshi.Json
  * Values: Clone,Login,Sendcode,Badcode,Goodcode,Authentication,Createpage,Download,Send,Sign,Upload,View,Completion,Changelimitdate,Unsign,ImportFromInstanet,SendEmail,FormCompletion,SignatureAttachmentAdd,SignatureAttachmentValidation,SignatureAttachmentRefused,SignatureAttachmentDeleted,DeclinedToSign,DelayedSendEmail
  */
 
+@JsonClass(generateAdapter = false)
 enum class FieldMinusEEzsigndocumentlogType(val value: kotlin.String) {
 
     @Json(name = "Clone")
@@ -99,7 +101,7 @@ enum class FieldMinusEEzsigndocumentlogType(val value: kotlin.String) {
     DelayedSendEmail("DelayedSendEmail");
 
     /**
-     * Override toString() to avoid using the enum variable name as the value, and instead use
+     * Override [toString()] to avoid using the enum variable name as the value, and instead use
      * the actual value defined in the API spec file.
      *
      * This solves a problem when the variable name and its value are different, and ensures that

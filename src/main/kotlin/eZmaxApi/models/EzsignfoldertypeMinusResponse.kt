@@ -21,6 +21,7 @@ import eZmaxApi.models.FieldMinusEEzsignfoldertypeSendreminderfrequency
 import eZmaxApi.models.MultilingualMinusEzsignfoldertypeName
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * A Ezsignfoldertype Object

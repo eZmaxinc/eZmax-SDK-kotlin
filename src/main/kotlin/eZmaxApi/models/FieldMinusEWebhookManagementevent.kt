@@ -17,6 +17,7 @@ package eZmaxApi.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * This Management Event. This property will be set only if the Module is \"Management\".
@@ -24,13 +25,14 @@ import com.squareup.moshi.Json
  * Values: UserCreated
  */
 
+@JsonClass(generateAdapter = false)
 enum class FieldMinusEWebhookManagementevent(val value: kotlin.String) {
 
     @Json(name = "UserCreated")
     UserCreated("UserCreated");
 
     /**
-     * Override toString() to avoid using the enum variable name as the value, and instead use
+     * Override [toString()] to avoid using the enum variable name as the value, and instead use
      * the actual value defined in the API spec file.
      *
      * This solves a problem when the variable name and its value are different, and ensures that

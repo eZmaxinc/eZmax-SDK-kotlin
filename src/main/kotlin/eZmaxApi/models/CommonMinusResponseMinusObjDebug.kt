@@ -18,6 +18,7 @@ package eZmaxApi.models
 import eZmaxApi.models.CommonMinusResponseMinusObjSQLQuery
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * This is a generic debug object that is returned by all API requests

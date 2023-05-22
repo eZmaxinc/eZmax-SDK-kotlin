@@ -19,6 +19,7 @@ import eZmaxApi.models.CustomMinusEzsignfolderEzsignsignaturesAutomaticMinusResp
 import eZmaxApi.models.FieldMinusEEzsignsignatureType
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Payload for GET /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getEzsignsignaturesAutomatic

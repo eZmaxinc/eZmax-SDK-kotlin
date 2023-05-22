@@ -20,6 +20,7 @@ import eZmaxApi.models.CommonMinusResponseMinusObjDebugPayloadGetList
 import eZmaxApi.models.UsergroupMinusGetListMinusV1MinusResponseMinusMPayload
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Response for GET /1/object/usergroup/getList

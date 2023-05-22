@@ -19,6 +19,7 @@ import eZmaxApi.models.EzsignfoldersignerassociationMinusRequest
 import eZmaxApi.models.EzsignfoldersignerassociationMinusRequestCompound
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Request for POST /1/object/ezsignfoldersignerassociation

@@ -20,6 +20,7 @@ import eZmaxApi.models.CommunicationexternalrecipientMinusResponseCompound
 import eZmaxApi.models.CommunicationrecipientMinusResponseCompound
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * 

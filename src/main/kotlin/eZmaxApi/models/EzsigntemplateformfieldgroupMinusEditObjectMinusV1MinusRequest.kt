@@ -18,6 +18,7 @@ package eZmaxApi.models
 import eZmaxApi.models.EzsigntemplateformfieldgroupMinusRequestCompound
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Request for PUT /1/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID}

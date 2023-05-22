@@ -18,6 +18,7 @@ package eZmaxApi.models
 import eZmaxApi.models.TaxassignmentMinusAutocompleteElementMinusResponse
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Payload for POST /2/object/taxassignment/getAutocomplete

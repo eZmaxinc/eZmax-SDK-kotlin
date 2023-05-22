@@ -17,6 +17,7 @@ package eZmaxApi.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * The location of the tooltip relative to the Ezsignsignature's location.
@@ -24,6 +25,7 @@ import com.squareup.moshi.Json
  * Values: TopLeft,TopCenter,TopRight,MiddleLeft,MiddleRight,BottomLeft,BottomCenter,BottomRight
  */
 
+@JsonClass(generateAdapter = false)
 enum class FieldMinusEEzsignsignatureTooltipposition(val value: kotlin.String) {
 
     @Json(name = "TopLeft")
@@ -51,7 +53,7 @@ enum class FieldMinusEEzsignsignatureTooltipposition(val value: kotlin.String) {
     BottomRight("BottomRight");
 
     /**
-     * Override toString() to avoid using the enum variable name as the value, and instead use
+     * Override [toString()] to avoid using the enum variable name as the value, and instead use
      * the actual value defined in the API spec file.
      *
      * This solves a problem when the variable name and its value are different, and ensures that

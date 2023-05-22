@@ -17,6 +17,7 @@ package eZmaxApi.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * The Verticalalignment of the Ezsignannotation.  This can only be set if eEzsignannotationType is **Text**
@@ -24,6 +25,7 @@ import com.squareup.moshi.Json
  * Values: Bottom,Middle,Top
  */
 
+@JsonClass(generateAdapter = false)
 enum class EnumMinusVerticalalignment(val value: kotlin.String) {
 
     @Json(name = "Bottom")
@@ -36,7 +38,7 @@ enum class EnumMinusVerticalalignment(val value: kotlin.String) {
     Top("Top");
 
     /**
-     * Override toString() to avoid using the enum variable name as the value, and instead use
+     * Override [toString()] to avoid using the enum variable name as the value, and instead use
      * the actual value defined in the API spec file.
      *
      * This solves a problem when the variable name and its value are different, and ensures that

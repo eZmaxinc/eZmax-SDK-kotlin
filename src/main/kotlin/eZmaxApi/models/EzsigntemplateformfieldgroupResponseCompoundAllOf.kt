@@ -20,6 +20,7 @@ import eZmaxApi.models.EzsigntemplateformfieldMinusResponseCompound
 import eZmaxApi.models.EzsigntemplateformfieldgroupsignerMinusResponseCompound
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * 

@@ -19,6 +19,7 @@ import eZmaxApi.models.CustomMinusEzsignfoldertransmissionSignerMinusResponse
 import eZmaxApi.models.FieldMinusEEzsignfolderStep
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * An Ezsignfolder Object in the context of an Ezsignbulksendtransmission

@@ -19,6 +19,7 @@ import eZmaxApi.models.EzsignsignatureMinusRequest
 import eZmaxApi.models.EzsignsignatureMinusRequestCompound
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Request for POST /1/object/ezsignsignature

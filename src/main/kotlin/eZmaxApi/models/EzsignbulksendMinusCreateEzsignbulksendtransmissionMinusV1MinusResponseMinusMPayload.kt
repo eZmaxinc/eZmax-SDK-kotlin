@@ -18,6 +18,7 @@ package eZmaxApi.models
 import eZmaxApi.models.EzsignbulksendtransmissionMinusResponse
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Payload for POST /1/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission

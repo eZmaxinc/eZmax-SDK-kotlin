@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **iEzsignsignaturestatusSigned** | **kotlin.Int** | The number of signature or form fields the Ezsignsigner has already processed at the current step | 
 
 
-<a name="EEzsignsignaturestatusSteptype"></a>
+<a id="EEzsignsignaturestatusSteptype"></a>
 ## Enum: eEzsignsignaturestatusSteptype
 Name | Value
 ---- | -----

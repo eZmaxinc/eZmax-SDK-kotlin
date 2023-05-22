@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**franchisebrokerGetAutocompleteV2**](ObjectFranchisebrokerApi.md#franchisebrokerGetAutocompleteV2) | **GET** /2/object/franchisebroker/getAutocomplete/{sSelector} | Retrieve Franchisebrokers and IDs
 
 
-<a name="franchisebrokerGetAutocompleteV1"></a>
+<a id="franchisebrokerGetAutocompleteV1"></a>
 # **franchisebrokerGetAutocompleteV1**
 > CommonMinusGetAutocompleteMinusV1MinusResponse franchisebrokerGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
 
@@ -64,7 +64,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="franchisebrokerGetAutocompleteV2"></a>
+<a id="franchisebrokerGetAutocompleteV2"></a>
 # **franchisebrokerGetAutocompleteV2**
 > FranchisebrokerMinusGetAutocompleteMinusV2MinusResponse franchisebrokerGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 

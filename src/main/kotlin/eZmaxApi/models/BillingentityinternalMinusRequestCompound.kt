@@ -18,6 +18,7 @@ package eZmaxApi.models
 import eZmaxApi.models.MultilingualMinusBillingentityinternalDescription
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * A Billingentityinternal Object and children

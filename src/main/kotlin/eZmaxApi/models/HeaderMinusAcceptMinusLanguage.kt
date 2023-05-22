@@ -17,6 +17,7 @@ package eZmaxApi.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * The language of the returned content.  1. **\\*** (or header not defined) Default language 2. **en** English 2. **fr** French  
@@ -24,6 +25,7 @@ import com.squareup.moshi.Json
  * Values: Star,en,fr
  */
 
+@JsonClass(generateAdapter = false)
 enum class HeaderMinusAcceptMinusLanguage(val value: kotlin.String) {
 
     @Json(name = "*")
@@ -36,7 +38,7 @@ enum class HeaderMinusAcceptMinusLanguage(val value: kotlin.String) {
     fr("fr");
 
     /**
-     * Override toString() to avoid using the enum variable name as the value, and instead use
+     * Override [toString()] to avoid using the enum variable name as the value, and instead use
      * the actual value defined in the API spec file.
      *
      * This solves a problem when the variable name and its value are different, and ensures that

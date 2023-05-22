@@ -19,6 +19,7 @@ import eZmaxApi.models.FieldMinusEBrandingLogo
 import eZmaxApi.models.MultilingualMinusBrandingDescription
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * A Branding Object

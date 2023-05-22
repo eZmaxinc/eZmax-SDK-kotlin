@@ -17,23 +17,31 @@ package eZmaxApi.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * This Ezsign Event. This property will be set only if the Module is \"Ezsign\"
  *
- * Values: DocumentCompleted,FolderCompleted
+ * Values: DocumentCompleted,EzsignsignerAcceptclause,EzsignsignerConnect,FolderCompleted
  */
 
+@JsonClass(generateAdapter = false)
 enum class FieldMinusEWebhookEzsignevent(val value: kotlin.String) {
 
     @Json(name = "DocumentCompleted")
     DocumentCompleted("DocumentCompleted"),
 
+    @Json(name = "EzsignsignerAcceptclause")
+    EzsignsignerAcceptclause("EzsignsignerAcceptclause"),
+
+    @Json(name = "EzsignsignerConnect")
+    EzsignsignerConnect("EzsignsignerConnect"),
+
     @Json(name = "FolderCompleted")
     FolderCompleted("FolderCompleted");
 
     /**
-     * Override toString() to avoid using the enum variable name as the value, and instead use
+     * Override [toString()] to avoid using the enum variable name as the value, and instead use
      * the actual value defined in the API spec file.
      *
      * This solves a problem when the variable name and its value are different, and ensures that

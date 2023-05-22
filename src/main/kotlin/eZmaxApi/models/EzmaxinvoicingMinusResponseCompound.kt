@@ -28,6 +28,7 @@ import eZmaxApi.models.EzmaxinvoicinguserMinusResponseCompound
 import eZmaxApi.models.FieldMinusEEzmaxinvoicingPaymenttype
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * A Ezmaxinvoicing Object

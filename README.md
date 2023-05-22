@@ -38,7 +38,7 @@ This runs all tests and packages the library.
 * Some Kotlin and Java types are fully qualified to avoid conflicts with types defined in OpenAPI definitions.
 * Implementation of ApiClient is intended to reduce method counts, specifically to benefit Android targets.
 
-<a name="documentation-for-api-endpoints"></a>
+<a id="documentation-for-api-endpoints"></a>
 ## Documentation for API Endpoints
 
 All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/rest*
@@ -47,6 +47,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *GlobalCustomerApi* | [**globalCustomerGetEndpointV1**](docs/GlobalCustomerApi.md#globalcustomergetendpointv1) | **GET** /1/customer/{pksCustomerCode}/endpoint | Get customer endpoint
 *GlobalEzmaxclientApi* | [**globalEzmaxclientVersionV1**](docs/GlobalEzmaxclientApi.md#globalezmaxclientversionv1) | **GET** /1/ezmaxclient/{pksEzmaxclientOs}/version | Retrieve the latest version of the Ezmaxclient
+*GlobalEzmaxcustomerApi* | [**globalEzmaxcustomerGetConfigurationV1**](docs/GlobalEzmaxcustomerApi.md#globalezmaxcustomergetconfigurationv1) | **GET** /1/ezmaxcustomer/{pksEzmaxcustomerCode}/getConfiguration | Get ezmaxcustomer configuration
 *ModuleEzsignApi* | [**ezsignSuggestSignersV1**](docs/ModuleEzsignApi.md#ezsignsuggestsignersv1) | **GET** /1/module/ezsign/suggestSigners | Suggest signers
 *ModuleEzsignApi* | [**ezsignSuggestTemplatesV1**](docs/ModuleEzsignApi.md#ezsignsuggesttemplatesv1) | **GET** /1/module/ezsign/suggestTemplates | Suggest templates
 *ModuleUserApi* | [**userCreateEzsignuserV1**](docs/ModuleUserApi.md#usercreateezsignuserv1) | **POST** /1/module/user/createezsignuser | Create a new User of type Ezsignuser
@@ -64,6 +65,7 @@ Class | Method | HTTP request | Description
 *ObjectBrandingApi* | [**brandingGetAutocompleteV2**](docs/ObjectBrandingApi.md#brandinggetautocompletev2) | **GET** /2/object/branding/getAutocomplete/{sSelector} | Retrieve Brandings and IDs
 *ObjectBrandingApi* | [**brandingGetListV1**](docs/ObjectBrandingApi.md#brandinggetlistv1) | **GET** /1/object/branding/getList | Retrieve Branding list
 *ObjectBrandingApi* | [**brandingGetObjectV2**](docs/ObjectBrandingApi.md#brandinggetobjectv2) | **GET** /2/object/branding/{pkiBrandingID} | Retrieve an existing Branding
+*ObjectClonehistoryApi* | [**clonehistoryGetListV1**](docs/ObjectClonehistoryApi.md#clonehistorygetlistv1) | **GET** /1/object/clonehistory/getList | Retrieve Clonehistory list
 *ObjectCommunicationApi* | [**communicationGetObjectV2**](docs/ObjectCommunicationApi.md#communicationgetobjectv2) | **GET** /2/object/communication/{pkiCommunicationID} | Retrieve an existing Communication
 *ObjectDepartmentApi* | [**departmentGetAutocompleteV2**](docs/ObjectDepartmentApi.md#departmentgetautocompletev2) | **GET** /2/object/department/getAutocomplete/{sSelector} | Retrieve Departments and IDs
 *ObjectEzmaxinvoicingApi* | [**ezmaxinvoicingGetAutocompleteV1**](docs/ObjectEzmaxinvoicingApi.md#ezmaxinvoicinggetautocompletev1) | **GET** /1/object/ezmaxinvoicing/getAutocomplete/{sSelector} | Retrieve Ezmaxinvoicings and IDs
@@ -102,6 +104,7 @@ Class | Method | HTTP request | Description
 *ObjectEzsigndocumentApi* | [**ezsigndocumentEndPrematurelyV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentendprematurelyv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/endPrematurely | End prematurely
 *ObjectEzsigndocumentApi* | [**ezsigndocumentFlattenV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentflattenv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/flatten | Flatten
 *ObjectEzsigndocumentApi* | [**ezsigndocumentGetActionableElementsV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentgetactionableelementsv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements | Retrieve actionable elements for the Ezsigndocument
+*ObjectEzsigndocumentApi* | [**ezsigndocumentGetCompletedElementsV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentgetcompletedelementsv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getCompletedElements | Retrieve completed elements for the Ezsigndocument
 *ObjectEzsigndocumentApi* | [**ezsigndocumentGetDownloadUrlV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentgetdownloadurlv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getDownloadUrl/{eDocumentType} | Retrieve a URL to download documents.
 *ObjectEzsigndocumentApi* | [**ezsigndocumentGetEzsignannotationsV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentgetezsignannotationsv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignannotations | Retrieve an existing Ezsigndocument's Ezsignannotations
 *ObjectEzsigndocumentApi* | [**ezsigndocumentGetEzsignformfieldgroupsV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentgetezsignformfieldgroupsv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignformfieldgroups | Retrieve an existing Ezsigndocument's Ezsignformfieldgroups
@@ -231,6 +234,7 @@ Class | Method | HTTP request | Description
 *ObjectPeriodApi* | [**periodGetAutocompleteV1**](docs/ObjectPeriodApi.md#periodgetautocompletev1) | **GET** /1/object/period/getAutocomplete/{sSelector} | Retrieve Periods and IDs
 *ObjectPeriodApi* | [**periodGetAutocompleteV2**](docs/ObjectPeriodApi.md#periodgetautocompletev2) | **GET** /2/object/period/getAutocomplete/{sSelector} | Retrieve Periods and IDs
 *ObjectSecretquestionApi* | [**secretquestionGetAutocompleteV2**](docs/ObjectSecretquestionApi.md#secretquestiongetautocompletev2) | **GET** /2/object/secretquestion/getAutocomplete/{sSelector} | Retrieve Secretquestions and IDs
+*ObjectSessionhistoryApi* | [**sessionhistoryGetListV1**](docs/ObjectSessionhistoryApi.md#sessionhistorygetlistv1) | **GET** /1/object/sessionhistory/getList | Retrieve Sessionhistory list
 *ObjectTaxassignmentApi* | [**taxassignmentGetAutocompleteV2**](docs/ObjectTaxassignmentApi.md#taxassignmentgetautocompletev2) | **GET** /2/object/taxassignment/getAutocomplete/{sSelector} | Retrieve Taxassignments and IDs
 *ObjectTimezoneApi* | [**timezoneGetAutocompleteV2**](docs/ObjectTimezoneApi.md#timezonegetautocompletev2) | **GET** /2/object/timezone/getAutocomplete/{sSelector} | Retrieve Timezones and IDs
 *ObjectUserApi* | [**userGetAutocompleteV2**](docs/ObjectUserApi.md#usergetautocompletev2) | **GET** /2/object/user/getAutocomplete/{sSelector} | Retrieve Users and IDs
@@ -239,6 +243,10 @@ Class | Method | HTTP request | Description
 *ObjectUsergroupApi* | [**usergroupGetAutocompleteV2**](docs/ObjectUsergroupApi.md#usergroupgetautocompletev2) | **GET** /2/object/usergroup/getAutocomplete/{sSelector} | Retrieve Usergroups and IDs
 *ObjectUsergroupApi* | [**usergroupGetListV1**](docs/ObjectUsergroupApi.md#usergroupgetlistv1) | **GET** /1/object/usergroup/getList | Retrieve Usergroup list
 *ObjectUsergroupApi* | [**usergroupGetObjectV2**](docs/ObjectUsergroupApi.md#usergroupgetobjectv2) | **GET** /2/object/usergroup/{pkiUsergroupID} | Retrieve an existing Usergroup
+*ObjectUserstagedApi* | [**userstagedDeleteObjectV1**](docs/ObjectUserstagedApi.md#userstageddeleteobjectv1) | **DELETE** /1/object/userstaged/{pkiUserstagedID} | Delete an existing Userstaged
+*ObjectUserstagedApi* | [**userstagedGetListV1**](docs/ObjectUserstagedApi.md#userstagedgetlistv1) | **GET** /1/object/userstaged/getList | Retrieve Userstaged list
+*ObjectUserstagedApi* | [**userstagedGetObjectV2**](docs/ObjectUserstagedApi.md#userstagedgetobjectv2) | **GET** /2/object/userstaged/{pkiUserstagedID} | Retrieve an existing Userstaged
+*ObjectUserstagedApi* | [**userstagedMapV1**](docs/ObjectUserstagedApi.md#userstagedmapv1) | **POST** /1/object/userstaged/{pkiUserstagedID}/map | Map the Userstaged to an existing user
 *ObjectVariableexpenseApi* | [**variableexpenseCreateObjectV1**](docs/ObjectVariableexpenseApi.md#variableexpensecreateobjectv1) | **POST** /1/object/variableexpense | Create a new Variableexpense
 *ObjectVariableexpenseApi* | [**variableexpenseEditObjectV1**](docs/ObjectVariableexpenseApi.md#variableexpenseeditobjectv1) | **PUT** /1/object/variableexpense/{pkiVariableexpenseID} | Edit an existing Variableexpense
 *ObjectVariableexpenseApi* | [**variableexpenseGetAutocompleteV2**](docs/ObjectVariableexpenseApi.md#variableexpensegetautocompletev2) | **GET** /2/object/variableexpense/getAutocomplete/{sSelector} | Retrieve Variableexpenses and IDs
@@ -254,7 +262,7 @@ Class | Method | HTTP request | Description
 *ObjectWebhookApi* | [**webhookTestV1**](docs/ObjectWebhookApi.md#webhooktestv1) | **POST** /1/object/webhook/{pkiWebhookID}/test | Test the Webhook by calling the Url
 
 
-<a name="documentation-for-models"></a>
+<a id="documentation-for-models"></a>
 ## Documentation for Models
 
  - [eZmaxApi.models.ActivesessionGetCurrentV1ResponseAllOf](docs/ActivesessionGetCurrentV1ResponseAllOf.md)
@@ -331,6 +339,11 @@ Class | Method | HTTP request | Description
  - [eZmaxApi.models.BrandingMinusResponse](docs/BrandingMinusResponse.md)
  - [eZmaxApi.models.BrandingMinusResponseCompound](docs/BrandingMinusResponseCompound.md)
  - [eZmaxApi.models.BrandingResponseCompoundAllOf](docs/BrandingResponseCompoundAllOf.md)
+ - [eZmaxApi.models.ClonehistoryGetListV1ResponseAllOf](docs/ClonehistoryGetListV1ResponseAllOf.md)
+ - [eZmaxApi.models.ClonehistoryGetListV1ResponseMPayloadAllOf](docs/ClonehistoryGetListV1ResponseMPayloadAllOf.md)
+ - [eZmaxApi.models.ClonehistoryMinusGetListMinusV1MinusResponse](docs/ClonehistoryMinusGetListMinusV1MinusResponse.md)
+ - [eZmaxApi.models.ClonehistoryMinusGetListMinusV1MinusResponseMinusMPayload](docs/ClonehistoryMinusGetListMinusV1MinusResponseMinusMPayload.md)
+ - [eZmaxApi.models.ClonehistoryMinusListElement](docs/ClonehistoryMinusListElement.md)
  - [eZmaxApi.models.CommonGetAutocompleteV1ResponseAllOf](docs/CommonGetAutocompleteV1ResponseAllOf.md)
  - [eZmaxApi.models.CommonMinusAudit](docs/CommonMinusAudit.md)
  - [eZmaxApi.models.CommonMinusAuditdetail](docs/CommonMinusAuditdetail.md)
@@ -376,6 +389,7 @@ Class | Method | HTTP request | Description
  - [eZmaxApi.models.CustomMinusAutocompleteElementMinusResponse](docs/CustomMinusAutocompleteElementMinusResponse.md)
  - [eZmaxApi.models.CustomMinusCommunicationListElementMinusResponse](docs/CustomMinusCommunicationListElementMinusResponse.md)
  - [eZmaxApi.models.CustomMinusContactNameMinusResponse](docs/CustomMinusContactNameMinusResponse.md)
+ - [eZmaxApi.models.CustomMinusCreditcardtransactionMinusResponse](docs/CustomMinusCreditcardtransactionMinusResponse.md)
  - [eZmaxApi.models.CustomMinusDropdownElementMinusRequest](docs/CustomMinusDropdownElementMinusRequest.md)
  - [eZmaxApi.models.CustomMinusDropdownElementMinusRequestCompound](docs/CustomMinusDropdownElementMinusRequestCompound.md)
  - [eZmaxApi.models.CustomMinusDropdownElementMinusResponse](docs/CustomMinusDropdownElementMinusResponse.md)
@@ -547,6 +561,7 @@ Class | Method | HTTP request | Description
  - [eZmaxApi.models.EzsigndocumentEditEzsignformfieldgroupsV1ResponseAllOf](docs/EzsigndocumentEditEzsignformfieldgroupsV1ResponseAllOf.md)
  - [eZmaxApi.models.EzsigndocumentEditEzsignsignaturesV1ResponseAllOf](docs/EzsigndocumentEditEzsignsignaturesV1ResponseAllOf.md)
  - [eZmaxApi.models.EzsigndocumentGetActionableElementsV1ResponseAllOf](docs/EzsigndocumentGetActionableElementsV1ResponseAllOf.md)
+ - [eZmaxApi.models.EzsigndocumentGetCompletedElementsV1ResponseAllOf](docs/EzsigndocumentGetCompletedElementsV1ResponseAllOf.md)
  - [eZmaxApi.models.EzsigndocumentGetDownloadUrlV1ResponseAllOf](docs/EzsigndocumentGetDownloadUrlV1ResponseAllOf.md)
  - [eZmaxApi.models.EzsigndocumentGetEzsignannotationsV1ResponseAllOf](docs/EzsigndocumentGetEzsignannotationsV1ResponseAllOf.md)
  - [eZmaxApi.models.EzsigndocumentGetEzsignformfieldgroupsV1ResponseAllOf](docs/EzsigndocumentGetEzsignformfieldgroupsV1ResponseAllOf.md)
@@ -579,6 +594,8 @@ Class | Method | HTTP request | Description
  - [eZmaxApi.models.EzsigndocumentMinusFlattenMinusV1MinusResponse](docs/EzsigndocumentMinusFlattenMinusV1MinusResponse.md)
  - [eZmaxApi.models.EzsigndocumentMinusGetActionableElementsMinusV1MinusResponse](docs/EzsigndocumentMinusGetActionableElementsMinusV1MinusResponse.md)
  - [eZmaxApi.models.EzsigndocumentMinusGetActionableElementsMinusV1MinusResponseMinusMPayload](docs/EzsigndocumentMinusGetActionableElementsMinusV1MinusResponseMinusMPayload.md)
+ - [eZmaxApi.models.EzsigndocumentMinusGetCompletedElementsMinusV1MinusResponse](docs/EzsigndocumentMinusGetCompletedElementsMinusV1MinusResponse.md)
+ - [eZmaxApi.models.EzsigndocumentMinusGetCompletedElementsMinusV1MinusResponseMinusMPayload](docs/EzsigndocumentMinusGetCompletedElementsMinusV1MinusResponseMinusMPayload.md)
  - [eZmaxApi.models.EzsigndocumentMinusGetDownloadUrlMinusV1MinusResponse](docs/EzsigndocumentMinusGetDownloadUrlMinusV1MinusResponse.md)
  - [eZmaxApi.models.EzsigndocumentMinusGetDownloadUrlMinusV1MinusResponseMinusMPayload](docs/EzsigndocumentMinusGetDownloadUrlMinusV1MinusResponseMinusMPayload.md)
  - [eZmaxApi.models.EzsigndocumentMinusGetEzsignannotationsMinusV1MinusResponse](docs/EzsigndocumentMinusGetEzsignannotationsMinusV1MinusResponse.md)
@@ -1003,6 +1020,7 @@ Class | Method | HTTP request | Description
  - [eZmaxApi.models.EzsigntsarequirementMinusAutocompleteElementMinusResponse](docs/EzsigntsarequirementMinusAutocompleteElementMinusResponse.md)
  - [eZmaxApi.models.EzsigntsarequirementMinusGetAutocompleteMinusV2MinusResponse](docs/EzsigntsarequirementMinusGetAutocompleteMinusV2MinusResponse.md)
  - [eZmaxApi.models.EzsigntsarequirementMinusGetAutocompleteMinusV2MinusResponseMinusMPayload](docs/EzsigntsarequirementMinusGetAutocompleteMinusV2MinusResponseMinusMPayload.md)
+ - [eZmaxApi.models.FieldMinusEActivesessionOrigin](docs/FieldMinusEActivesessionOrigin.md)
  - [eZmaxApi.models.FieldMinusEActivesessionUsertype](docs/FieldMinusEActivesessionUsertype.md)
  - [eZmaxApi.models.FieldMinusEActivesessionWeekdaystart](docs/FieldMinusEActivesessionWeekdaystart.md)
  - [eZmaxApi.models.FieldMinusEBrandingLogo](docs/FieldMinusEBrandingLogo.md)
@@ -1041,6 +1059,7 @@ Class | Method | HTTP request | Description
  - [eZmaxApi.models.FieldMinusENotificationpreferenceStatus](docs/FieldMinusENotificationpreferenceStatus.md)
  - [eZmaxApi.models.FieldMinusEPaymenttermType](docs/FieldMinusEPaymenttermType.md)
  - [eZmaxApi.models.FieldMinusEPhoneType](docs/FieldMinusEPhoneType.md)
+ - [eZmaxApi.models.FieldMinusESessionhistoryEndby](docs/FieldMinusESessionhistoryEndby.md)
  - [eZmaxApi.models.FieldMinusEUserEzsignsendreminderfrequency](docs/FieldMinusEUserEzsignsendreminderfrequency.md)
  - [eZmaxApi.models.FieldMinusEUserType](docs/FieldMinusEUserType.md)
  - [eZmaxApi.models.FieldMinusEVariableexpenseTaxable](docs/FieldMinusEVariableexpenseTaxable.md)
@@ -1075,6 +1094,7 @@ Class | Method | HTTP request | Description
  - [eZmaxApi.models.FranchisereferalincomeRequestCompoundAllOf](docs/FranchisereferalincomeRequestCompoundAllOf.md)
  - [eZmaxApi.models.GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse](docs/GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse.md)
  - [eZmaxApi.models.GlobalMinusEzmaxclientMinusVersionMinusV1MinusResponse](docs/GlobalMinusEzmaxclientMinusVersionMinusV1MinusResponse.md)
+ - [eZmaxApi.models.GlobalMinusEzmaxcustomerMinusGetConfigurationMinusV1MinusResponse](docs/GlobalMinusEzmaxcustomerMinusGetConfigurationMinusV1MinusResponse.md)
  - [eZmaxApi.models.HeaderMinusAcceptMinusLanguage](docs/HeaderMinusAcceptMinusLanguage.md)
  - [eZmaxApi.models.MultilingualMinusApikeyDescription](docs/MultilingualMinusApikeyDescription.md)
  - [eZmaxApi.models.MultilingualMinusBillingentityinternalDescription](docs/MultilingualMinusBillingentityinternalDescription.md)
@@ -1129,6 +1149,11 @@ Class | Method | HTTP request | Description
  - [eZmaxApi.models.SecretquestionMinusAutocompleteElementMinusResponse](docs/SecretquestionMinusAutocompleteElementMinusResponse.md)
  - [eZmaxApi.models.SecretquestionMinusGetAutocompleteMinusV2MinusResponse](docs/SecretquestionMinusGetAutocompleteMinusV2MinusResponse.md)
  - [eZmaxApi.models.SecretquestionMinusGetAutocompleteMinusV2MinusResponseMinusMPayload](docs/SecretquestionMinusGetAutocompleteMinusV2MinusResponseMinusMPayload.md)
+ - [eZmaxApi.models.SessionhistoryGetListV1ResponseAllOf](docs/SessionhistoryGetListV1ResponseAllOf.md)
+ - [eZmaxApi.models.SessionhistoryGetListV1ResponseMPayloadAllOf](docs/SessionhistoryGetListV1ResponseMPayloadAllOf.md)
+ - [eZmaxApi.models.SessionhistoryMinusGetListMinusV1MinusResponse](docs/SessionhistoryMinusGetListMinusV1MinusResponse.md)
+ - [eZmaxApi.models.SessionhistoryMinusGetListMinusV1MinusResponseMinusMPayload](docs/SessionhistoryMinusGetListMinusV1MinusResponseMinusMPayload.md)
+ - [eZmaxApi.models.SessionhistoryMinusListElement](docs/SessionhistoryMinusListElement.md)
  - [eZmaxApi.models.TaxassignmentGetAutocompleteV2ResponseAllOf](docs/TaxassignmentGetAutocompleteV2ResponseAllOf.md)
  - [eZmaxApi.models.TaxassignmentMinusAutocompleteElementMinusResponse](docs/TaxassignmentMinusAutocompleteElementMinusResponse.md)
  - [eZmaxApi.models.TaxassignmentMinusGetAutocompleteMinusV2MinusResponse](docs/TaxassignmentMinusGetAutocompleteMinusV2MinusResponse.md)
@@ -1171,6 +1196,19 @@ Class | Method | HTTP request | Description
  - [eZmaxApi.models.UsergroupMinusRequestCompound](docs/UsergroupMinusRequestCompound.md)
  - [eZmaxApi.models.UsergroupMinusResponse](docs/UsergroupMinusResponse.md)
  - [eZmaxApi.models.UsergroupMinusResponseCompound](docs/UsergroupMinusResponseCompound.md)
+ - [eZmaxApi.models.UserstagedGetListV1ResponseAllOf](docs/UserstagedGetListV1ResponseAllOf.md)
+ - [eZmaxApi.models.UserstagedGetListV1ResponseMPayloadAllOf](docs/UserstagedGetListV1ResponseMPayloadAllOf.md)
+ - [eZmaxApi.models.UserstagedGetObjectV2ResponseAllOf](docs/UserstagedGetObjectV2ResponseAllOf.md)
+ - [eZmaxApi.models.UserstagedMinusDeleteObjectMinusV1MinusResponse](docs/UserstagedMinusDeleteObjectMinusV1MinusResponse.md)
+ - [eZmaxApi.models.UserstagedMinusGetListMinusV1MinusResponse](docs/UserstagedMinusGetListMinusV1MinusResponse.md)
+ - [eZmaxApi.models.UserstagedMinusGetListMinusV1MinusResponseMinusMPayload](docs/UserstagedMinusGetListMinusV1MinusResponseMinusMPayload.md)
+ - [eZmaxApi.models.UserstagedMinusGetObjectMinusV2MinusResponse](docs/UserstagedMinusGetObjectMinusV2MinusResponse.md)
+ - [eZmaxApi.models.UserstagedMinusGetObjectMinusV2MinusResponseMinusMPayload](docs/UserstagedMinusGetObjectMinusV2MinusResponseMinusMPayload.md)
+ - [eZmaxApi.models.UserstagedMinusListElement](docs/UserstagedMinusListElement.md)
+ - [eZmaxApi.models.UserstagedMinusMapMinusV1MinusRequest](docs/UserstagedMinusMapMinusV1MinusRequest.md)
+ - [eZmaxApi.models.UserstagedMinusMapMinusV1MinusResponse](docs/UserstagedMinusMapMinusV1MinusResponse.md)
+ - [eZmaxApi.models.UserstagedMinusResponse](docs/UserstagedMinusResponse.md)
+ - [eZmaxApi.models.UserstagedMinusResponseCompound](docs/UserstagedMinusResponseCompound.md)
  - [eZmaxApi.models.VariableexpenseCreateObjectV1ResponseAllOf](docs/VariableexpenseCreateObjectV1ResponseAllOf.md)
  - [eZmaxApi.models.VariableexpenseGetAutocompleteV2ResponseAllOf](docs/VariableexpenseGetAutocompleteV2ResponseAllOf.md)
  - [eZmaxApi.models.VariableexpenseGetListV1ResponseAllOf](docs/VariableexpenseGetListV1ResponseAllOf.md)
@@ -1200,6 +1238,7 @@ Class | Method | HTTP request | Description
  - [eZmaxApi.models.VersionhistoryMinusResponseCompound](docs/VersionhistoryMinusResponseCompound.md)
  - [eZmaxApi.models.WebhookCreateObjectV1ResponseAllOf](docs/WebhookCreateObjectV1ResponseAllOf.md)
  - [eZmaxApi.models.WebhookEzsignDocumentCompletedAllOf](docs/WebhookEzsignDocumentCompletedAllOf.md)
+ - [eZmaxApi.models.WebhookEzsignEzsignsignerAcceptclauseAllOf](docs/WebhookEzsignEzsignsignerAcceptclauseAllOf.md)
  - [eZmaxApi.models.WebhookEzsignFolderCompletedAllOf](docs/WebhookEzsignFolderCompletedAllOf.md)
  - [eZmaxApi.models.WebhookGetHistoryV1ResponseAllOf](docs/WebhookGetHistoryV1ResponseAllOf.md)
  - [eZmaxApi.models.WebhookGetHistoryV1ResponseMPayloadAllOf](docs/WebhookGetHistoryV1ResponseMPayloadAllOf.md)
@@ -1213,6 +1252,8 @@ Class | Method | HTTP request | Description
  - [eZmaxApi.models.WebhookMinusEditObjectMinusV1MinusRequest](docs/WebhookMinusEditObjectMinusV1MinusRequest.md)
  - [eZmaxApi.models.WebhookMinusEditObjectMinusV1MinusResponse](docs/WebhookMinusEditObjectMinusV1MinusResponse.md)
  - [eZmaxApi.models.WebhookMinusEzsignMinusDocumentCompleted](docs/WebhookMinusEzsignMinusDocumentCompleted.md)
+ - [eZmaxApi.models.WebhookMinusEzsignMinusEzsignsignerAcceptclause](docs/WebhookMinusEzsignMinusEzsignsignerAcceptclause.md)
+ - [eZmaxApi.models.WebhookMinusEzsignMinusEzsignsignerConnect](docs/WebhookMinusEzsignMinusEzsignsignerConnect.md)
  - [eZmaxApi.models.WebhookMinusEzsignMinusFolderCompleted](docs/WebhookMinusEzsignMinusFolderCompleted.md)
  - [eZmaxApi.models.WebhookMinusGetHistoryMinusV1MinusResponse](docs/WebhookMinusGetHistoryMinusV1MinusResponse.md)
  - [eZmaxApi.models.WebhookMinusGetHistoryMinusV1MinusResponseMinusMPayload](docs/WebhookMinusGetHistoryMinusV1MinusResponseMinusMPayload.md)
@@ -1233,10 +1274,12 @@ Class | Method | HTTP request | Description
  - [eZmaxApi.models.WebsiteMinusRequestCompound](docs/WebsiteMinusRequestCompound.md)
 
 
-<a name="documentation-for-authorization"></a>
+<a id="documentation-for-authorization"></a>
 ## Documentation for Authorization
 
-<a name="Authorization"></a>
+
+Authentication schemes defined for the API:
+<a id="Authorization"></a>
 ### Authorization
 
 - **Type**: API key

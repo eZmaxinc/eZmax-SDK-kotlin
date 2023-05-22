@@ -19,6 +19,7 @@ import eZmaxApi.models.CustomMinusUserMinusResponse
 import eZmaxApi.models.EzsignfoldersignerassociationMinusResponseCompound
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Payload for GET /1/module/ezsign/suggestSigners

@@ -19,6 +19,7 @@ import eZmaxApi.models.CommonMinusAudit
 import eZmaxApi.models.CustomMinusEzsignfoldertransmissionMinusResponse
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * An Ezsignbulksendtransmission Object and children to create a complete structure

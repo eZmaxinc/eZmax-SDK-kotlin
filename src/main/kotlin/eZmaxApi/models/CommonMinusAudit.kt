@@ -18,6 +18,7 @@ package eZmaxApi.models
 import eZmaxApi.models.CommonMinusAuditdetail
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Gives informations about the user that created the object and the last user to have modified it.  If the object was never modified after creation, objAuditdetailModified won't be returned. 

@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**globalEzmaxclientVersionV1**](GlobalEzmaxclientApi.md#globalEzmaxclientVersionV1) | **GET** /1/ezmaxclient/{pksEzmaxclientOs}/version | Retrieve the latest version of the Ezmaxclient
 
 
-<a name="globalEzmaxclientVersionV1"></a>
+<a id="globalEzmaxclientVersionV1"></a>
 # **globalEzmaxclientVersionV1**
 > GlobalMinusEzmaxclientMinusVersionMinusV1MinusResponse globalEzmaxclientVersionV1(pksEzmaxclientOs)
 

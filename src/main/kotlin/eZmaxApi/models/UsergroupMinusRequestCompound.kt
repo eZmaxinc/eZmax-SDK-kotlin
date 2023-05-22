@@ -18,6 +18,7 @@ package eZmaxApi.models
 import eZmaxApi.models.MultilingualMinusUsergroupName
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * A Usergroup Object and children

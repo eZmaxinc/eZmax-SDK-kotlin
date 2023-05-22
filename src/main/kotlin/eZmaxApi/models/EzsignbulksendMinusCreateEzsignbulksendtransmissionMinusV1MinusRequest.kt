@@ -18,6 +18,7 @@ package eZmaxApi.models
 import eZmaxApi.models.FieldMinusEEzsignfolderSendreminderfrequency
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Request for POST /1/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission

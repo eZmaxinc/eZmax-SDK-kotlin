@@ -24,6 +24,7 @@ import eZmaxApi.models.FieldMinusECommunicationType
 import eZmaxApi.models.PhonestaticMinusResponse
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * A Communication Object

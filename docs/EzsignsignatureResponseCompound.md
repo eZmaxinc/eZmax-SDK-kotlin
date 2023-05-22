@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **iEzsignsignatureY** | **kotlin.Int** | The Y coordinate (Vertical) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate. | 
 **iEzsignsignatureStep** | **kotlin.Int** | The step when the Ezsignsigner will be invited to sign | 
 **eEzsignsignatureType** | [**FieldMinusEEzsignsignatureType**](FieldMinusEEzsignsignatureType.md) |  | 
+**objContactName** | [**CustomMinusContactNameMinusResponse**](CustomMinusContactNameMinusResponse.md) |  | 
 **tEzsignsignatureTooltip** | **kotlin.String** | A tooltip that will be presented to Ezsignsigner about the Ezsignsignature |  [optional]
 **eEzsignsignatureTooltipposition** | [**FieldMinusEEzsignsignatureTooltipposition**](FieldMinusEEzsignsignatureTooltipposition.md) |  |  [optional]
 **eEzsignsignatureFont** | [**FieldMinusEEzsignsignatureFont**](FieldMinusEEzsignsignatureFont.md) |  |  [optional]
@@ -20,8 +21,10 @@ Name | Type | Description | Notes
 **eEzsignsignatureAttachmentnamesource** | [**FieldMinusEEzsignsignatureAttachmentnamesource**](FieldMinusEEzsignsignatureAttachmentnamesource.md) |  |  [optional]
 **bEzsignsignatureRequired** | **kotlin.Boolean** | Whether the Ezsignsignature is required or not. This field is relevant only with Ezsignsignature with eEzsignsignatureType &#x3D; Attachments. |  [optional]
 **fkiEzsignfoldersignerassociationIDValidation** | **kotlin.Int** | The unique ID of the Ezsignfoldersignerassociation |  [optional]
+**dtEzsignsignatureDate** | **kotlin.String** | The date the Ezsignsignature was signed |  [optional]
 **bEzsignsignatureCustomdate** | **kotlin.Boolean** | Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**) |  [optional]
 **aObjEzsignsignaturecustomdate** | [**kotlin.collections.List&lt;EzsignsignaturecustomdateMinusResponseCompound&gt;**](EzsignsignaturecustomdateMinusResponseCompound.md) | An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all. |  [optional]
+**objCreditcardtransaction** | [**CustomMinusCreditcardtransactionMinusResponse**](CustomMinusCreditcardtransactionMinusResponse.md) |  |  [optional]
 
 
 

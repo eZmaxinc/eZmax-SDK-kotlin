@@ -17,6 +17,7 @@ package eZmaxApi.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * The type of Communicationexternalrecipient
@@ -24,6 +25,7 @@ import com.squareup.moshi.Json
  * Values: To,Cc,Bcc
  */
 
+@JsonClass(generateAdapter = false)
 enum class FieldMinusECommunicationexternalrecipientType(val value: kotlin.String) {
 
     @Json(name = "To")
@@ -36,7 +38,7 @@ enum class FieldMinusECommunicationexternalrecipientType(val value: kotlin.Strin
     Bcc("Bcc");
 
     /**
-     * Override toString() to avoid using the enum variable name as the value, and instead use
+     * Override [toString()] to avoid using the enum variable name as the value, and instead use
      * the actual value defined in the API spec file.
      *
      * This solves a problem when the variable name and its value are different, and ensures that

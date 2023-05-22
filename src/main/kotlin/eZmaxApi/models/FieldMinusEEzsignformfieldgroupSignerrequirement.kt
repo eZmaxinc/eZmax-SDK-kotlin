@@ -17,6 +17,7 @@ package eZmaxApi.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * The Signer requirement of the Ezsignformfieldgroup. **All** means anyone can fill it, **One** means a specific person must fill it.
@@ -24,6 +25,7 @@ import com.squareup.moshi.Json
  * Values: All,One
  */
 
+@JsonClass(generateAdapter = false)
 enum class FieldMinusEEzsignformfieldgroupSignerrequirement(val value: kotlin.String) {
 
     @Json(name = "All")
@@ -33,7 +35,7 @@ enum class FieldMinusEEzsignformfieldgroupSignerrequirement(val value: kotlin.St
     One("One");
 
     /**
-     * Override toString() to avoid using the enum variable name as the value, and instead use
+     * Override [toString()] to avoid using the enum variable name as the value, and instead use
      * the actual value defined in the API spec file.
      *
      * This solves a problem when the variable name and its value are different, and ensures that

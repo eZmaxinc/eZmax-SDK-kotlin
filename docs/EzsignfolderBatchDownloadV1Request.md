@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **aEDocumentType** | [**inline**](#kotlin.collections.List&lt;AEDocumentType&gt;) | The type of document to retrieve.  1. **Signed** Is the final document once all signatures were applied. 2. **Proofdocument** Is the evidence report. 3. **Proof** Is the complete evidence archive including all of the above and more. | 
 
 
-<a name="kotlin.collections.List<AEDocumentType>"></a>
+<a id="kotlin.collections.List<AEDocumentType>"></a>
 ## Enum: a_eDocumentType
 Name | Value
 ---- | -----

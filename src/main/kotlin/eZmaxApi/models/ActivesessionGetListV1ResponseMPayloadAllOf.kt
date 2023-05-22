@@ -18,6 +18,7 @@ package eZmaxApi.models
 import eZmaxApi.models.ActivesessionMinusListElement
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * 

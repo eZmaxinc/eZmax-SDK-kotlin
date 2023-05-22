@@ -68,7 +68,9 @@ class GlobalCustomerApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun globalCustomerGetEndpointV1(pksCustomerCode: kotlin.String, sInfrastructureproductCode: SInfrastructureproductCode_globalCustomerGetEndpointV1? = null) : GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse {
+        @Suppress("DEPRECATION")
         val localVarResponse = globalCustomerGetEndpointV1WithHttpInfo(pksCustomerCode = pksCustomerCode, sInfrastructureproductCode = sInfrastructureproductCode)
 
         return when (localVarResponse.responseType) {
@@ -97,7 +99,9 @@ class GlobalCustomerApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun globalCustomerGetEndpointV1WithHttpInfo(pksCustomerCode: kotlin.String, sInfrastructureproductCode: SInfrastructureproductCode_globalCustomerGetEndpointV1?) : ApiResponse<GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse?> {
+        @Suppress("DEPRECATION")
         val localVariableConfig = globalCustomerGetEndpointV1RequestConfig(pksCustomerCode = pksCustomerCode, sInfrastructureproductCode = sInfrastructureproductCode)
 
         return request<Unit, GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse>(
@@ -112,6 +116,7 @@ class GlobalCustomerApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      * @param sInfrastructureproductCode The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)
      * @return RequestConfig
      */
+    @Deprecated(message = "This operation is deprecated.")
     fun globalCustomerGetEndpointV1RequestConfig(pksCustomerCode: kotlin.String, sInfrastructureproductCode: SInfrastructureproductCode_globalCustomerGetEndpointV1?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()

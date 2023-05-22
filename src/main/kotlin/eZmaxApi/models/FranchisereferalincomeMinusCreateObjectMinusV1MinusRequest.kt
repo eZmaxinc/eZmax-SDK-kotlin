@@ -19,6 +19,7 @@ import eZmaxApi.models.FranchisereferalincomeMinusRequest
 import eZmaxApi.models.FranchisereferalincomeMinusRequestCompound
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Request for POST /1/object/franchisereferalincome

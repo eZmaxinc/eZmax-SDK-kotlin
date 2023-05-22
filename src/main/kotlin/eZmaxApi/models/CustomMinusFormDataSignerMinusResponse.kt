@@ -18,6 +18,7 @@ package eZmaxApi.models
 import eZmaxApi.models.CustomMinusFormDataEzsignformfieldgroupMinusResponse
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * A form Data Signer Object

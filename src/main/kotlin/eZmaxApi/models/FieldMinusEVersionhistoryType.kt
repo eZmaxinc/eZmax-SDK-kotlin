@@ -17,6 +17,7 @@ package eZmaxApi.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * The type of Versionhistory.
@@ -24,6 +25,7 @@ import com.squareup.moshi.Json
  * Values: AgentBroker,NewFeature,Correction,Modification,ImportantMessage
  */
 
+@JsonClass(generateAdapter = false)
 enum class FieldMinusEVersionhistoryType(val value: kotlin.String) {
 
     @Json(name = "AgentBroker")
@@ -42,7 +44,7 @@ enum class FieldMinusEVersionhistoryType(val value: kotlin.String) {
     ImportantMessage("ImportantMessage");
 
     /**
-     * Override toString() to avoid using the enum variable name as the value, and instead use
+     * Override [toString()] to avoid using the enum variable name as the value, and instead use
      * the actual value defined in the API spec file.
      *
      * This solves a problem when the variable name and its value are different, and ensures that

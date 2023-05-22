@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**departmentGetAutocompleteV2**](ObjectDepartmentApi.md#departmentGetAutocompleteV2) | **GET** /2/object/department/getAutocomplete/{sSelector} | Retrieve Departments and IDs
 
 
-<a name="departmentGetAutocompleteV2"></a>
+<a id="departmentGetAutocompleteV2"></a>
 # **departmentGetAutocompleteV2**
 > DepartmentMinusGetAutocompleteMinusV2MinusResponse departmentGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **sEzsignsignerSecretanswer** | **kotlin.String** | The predefined answer to the secret question the Ezsignsigner will need to provide to successfully authenticate. |  [optional]
 
 
-<a name="EEzsignsignerLogintype"></a>
+<a id="EEzsignsignerLogintype"></a>
 ## Enum: eEzsignsignerLogintype
 Name | Value
 ---- | -----

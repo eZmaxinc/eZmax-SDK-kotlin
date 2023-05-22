@@ -17,6 +17,7 @@ package eZmaxApi.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * The Type of User for the Activesession
@@ -24,6 +25,7 @@ import com.squareup.moshi.Json
  * Values: AgentBroker,Assistant,EzsignSigner,EzsignUser,Normal
  */
 
+@JsonClass(generateAdapter = false)
 enum class FieldMinusEActivesessionUsertype(val value: kotlin.String) {
 
     @Json(name = "AgentBroker")
@@ -42,7 +44,7 @@ enum class FieldMinusEActivesessionUsertype(val value: kotlin.String) {
     Normal("Normal");
 
     /**
-     * Override toString() to avoid using the enum variable name as the value, and instead use
+     * Override [toString()] to avoid using the enum variable name as the value, and instead use
      * the actual value defined in the API spec file.
      *
      * This solves a problem when the variable name and its value are different, and ensures that

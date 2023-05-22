@@ -11,7 +11,7 @@ Method | HTTP request | Description
 [**usergroupGetObjectV2**](ObjectUsergroupApi.md#usergroupGetObjectV2) | **GET** /2/object/usergroup/{pkiUsergroupID} | Retrieve an existing Usergroup
 
 
-<a name="usergroupCreateObjectV1"></a>
+<a id="usergroupCreateObjectV1"></a>
 # **usergroupCreateObjectV1**
 > UsergroupMinusCreateObjectMinusV1MinusResponse usergroupCreateObjectV1(usergroupMinusCreateObjectMinusV1MinusRequest)
 
@@ -61,7 +61,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="usergroupEditObjectV1"></a>
+<a id="usergroupEditObjectV1"></a>
 # **usergroupEditObjectV1**
 > UsergroupMinusEditObjectMinusV1MinusResponse usergroupEditObjectV1(pkiUsergroupID, usergroupMinusEditObjectMinusV1MinusRequest)
 
@@ -113,7 +113,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="usergroupGetAutocompleteV2"></a>
+<a id="usergroupGetAutocompleteV2"></a>
 # **usergroupGetAutocompleteV2**
 > UsergroupMinusGetAutocompleteMinusV2MinusResponse usergroupGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 
@@ -169,7 +169,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="usergroupGetListV1"></a>
+<a id="usergroupGetListV1"></a>
 # **usergroupGetListV1**
 > UsergroupMinusGetListMinusV1MinusResponse usergroupGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
@@ -205,9 +205,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiUsergroupID_ASC, pkiUsergroupID_DESC, sUsergroupNameX_ASC, sUsergroupNameX_DESC]
- **iRowMax** | **kotlin.Int**|  | [optional]
- **iRowOffset** | **kotlin.Int**|  | [optional]
+ **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiUsergroupID_ASC, pkiUsergroupID_DESC, sUsergroupNameX_ASC, sUsergroupNameX_DESC, iCountUser_ASC, iCountUser_DESC]
+ **iRowMax** | **kotlin.Int**|  | [optional] [default to 10000]
+ **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0]
  **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
  **sFilter** | **kotlin.String**|  | [optional]
 
@@ -227,7 +227,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="usergroupGetObjectV2"></a>
+<a id="usergroupGetObjectV2"></a>
 # **usergroupGetObjectV2**
 > UsergroupMinusGetObjectMinusV2MinusResponse usergroupGetObjectV2(pkiUsergroupID)
 

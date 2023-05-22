@@ -19,6 +19,7 @@ import eZmaxApi.models.EzsignformfieldgroupMinusResponseCompound
 import eZmaxApi.models.EzsignsignatureMinusResponseCompound
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements

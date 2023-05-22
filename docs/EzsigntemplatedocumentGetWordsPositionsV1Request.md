@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **aSWord** | **kotlin.collections.List&lt;kotlin.String&gt;** | Array of words to find in the document |  [optional]
 
 
-<a name="EGet"></a>
+<a id="EGet"></a>
 ## Enum: eGet
 Name | Value
 ---- | -----

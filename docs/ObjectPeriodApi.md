@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**periodGetAutocompleteV2**](ObjectPeriodApi.md#periodGetAutocompleteV2) | **GET** /2/object/period/getAutocomplete/{sSelector} | Retrieve Periods and IDs
 
 
-<a name="periodGetAutocompleteV1"></a>
+<a id="periodGetAutocompleteV1"></a>
 # **periodGetAutocompleteV1**
 > CommonMinusGetAutocompleteMinusV1MinusResponse periodGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
 
@@ -64,7 +64,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="periodGetAutocompleteV2"></a>
+<a id="periodGetAutocompleteV2"></a>
 # **periodGetAutocompleteV2**
 > PeriodMinusGetAutocompleteMinusV2MinusResponse periodGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 

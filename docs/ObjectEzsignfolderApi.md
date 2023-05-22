@@ -31,7 +31,7 @@ Method | HTTP request | Description
 [**ezsignfolderUnsendV1**](ObjectEzsignfolderApi.md#ezsignfolderUnsendV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/unsend | Unsend the Ezsignfolder
 
 
-<a name="ezsignfolderArchiveV1"></a>
+<a id="ezsignfolderArchiveV1"></a>
 # **ezsignfolderArchiveV1**
 > EzsignfolderMinusArchiveMinusV1MinusResponse ezsignfolderArchiveV1(pkiEzsignfolderID, body)
 
@@ -83,7 +83,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ezsignfolderBatchDownloadV1"></a>
+<a id="ezsignfolderBatchDownloadV1"></a>
 # **ezsignfolderBatchDownloadV1**
 > java.io.File ezsignfolderBatchDownloadV1(pkiEzsignfolderID, ezsignfolderMinusBatchDownloadMinusV1MinusRequest)
 
@@ -133,7 +133,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ezsignfolderCreateObjectV1"></a>
+<a id="ezsignfolderCreateObjectV1"></a>
 # **ezsignfolderCreateObjectV1**
 > EzsignfolderMinusCreateObjectMinusV1MinusResponse ezsignfolderCreateObjectV1(ezsignfolderMinusCreateObjectMinusV1MinusRequest)
 
@@ -183,7 +183,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ezsignfolderCreateObjectV2"></a>
+<a id="ezsignfolderCreateObjectV2"></a>
 # **ezsignfolderCreateObjectV2**
 > EzsignfolderMinusCreateObjectMinusV2MinusResponse ezsignfolderCreateObjectV2(ezsignfolderMinusCreateObjectMinusV2MinusRequest)
 
@@ -233,7 +233,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ezsignfolderDeleteObjectV1"></a>
+<a id="ezsignfolderDeleteObjectV1"></a>
 # **ezsignfolderDeleteObjectV1**
 > EzsignfolderMinusDeleteObjectMinusV1MinusResponse ezsignfolderDeleteObjectV1(pkiEzsignfolderID)
 
@@ -281,7 +281,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsignfolderDisposeEzsignfoldersV1"></a>
+<a id="ezsignfolderDisposeEzsignfoldersV1"></a>
 # **ezsignfolderDisposeEzsignfoldersV1**
 > EzsignfolderMinusDisposeEzsignfoldersMinusV1MinusResponse ezsignfolderDisposeEzsignfoldersV1(ezsignfolderMinusDisposeEzsignfoldersMinusV1MinusRequest)
 
@@ -331,7 +331,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ezsignfolderDisposeV1"></a>
+<a id="ezsignfolderDisposeV1"></a>
 # **ezsignfolderDisposeV1**
 > EzsignfolderMinusDisposeMinusV1MinusResponse ezsignfolderDisposeV1(pkiEzsignfolderID, body)
 
@@ -383,7 +383,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ezsignfolderEditObjectV1"></a>
+<a id="ezsignfolderEditObjectV1"></a>
 # **ezsignfolderEditObjectV1**
 > EzsignfolderMinusEditObjectMinusV1MinusResponse ezsignfolderEditObjectV1(pkiEzsignfolderID, ezsignfolderMinusEditObjectMinusV1MinusRequest)
 
@@ -435,7 +435,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ezsignfolderGetActionableElementsV1"></a>
+<a id="ezsignfolderGetActionableElementsV1"></a>
 # **ezsignfolderGetActionableElementsV1**
 > EzsignfolderMinusGetActionableElementsMinusV1MinusResponse ezsignfolderGetActionableElementsV1(pkiEzsignfolderID)
 
@@ -485,7 +485,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsignfolderGetCommunicationCountV1"></a>
+<a id="ezsignfolderGetCommunicationCountV1"></a>
 # **ezsignfolderGetCommunicationCountV1**
 > EzsignfolderMinusGetCommunicationCountMinusV1MinusResponse ezsignfolderGetCommunicationCountV1(pkiEzsignfolderID)
 
@@ -535,7 +535,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsignfolderGetCommunicationListV1"></a>
+<a id="ezsignfolderGetCommunicationListV1"></a>
 # **ezsignfolderGetCommunicationListV1**
 > EzsignfolderMinusGetCommunicationListMinusV1MinusResponse ezsignfolderGetCommunicationListV1(pkiEzsignfolderID)
 
@@ -585,7 +585,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsignfolderGetEzsigndocumentsV1"></a>
+<a id="ezsignfolderGetEzsigndocumentsV1"></a>
 # **ezsignfolderGetEzsigndocumentsV1**
 > EzsignfolderMinusGetEzsigndocumentsMinusV1MinusResponse ezsignfolderGetEzsigndocumentsV1(pkiEzsignfolderID)
 
@@ -635,7 +635,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsignfolderGetEzsignfoldersignerassociationsV1"></a>
+<a id="ezsignfolderGetEzsignfoldersignerassociationsV1"></a>
 # **ezsignfolderGetEzsignfoldersignerassociationsV1**
 > EzsignfolderMinusGetEzsignfoldersignerassociationsMinusV1MinusResponse ezsignfolderGetEzsignfoldersignerassociationsV1(pkiEzsignfolderID)
 
@@ -685,7 +685,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsignfolderGetEzsignsignaturesAutomaticV1"></a>
+<a id="ezsignfolderGetEzsignsignaturesAutomaticV1"></a>
 # **ezsignfolderGetEzsignsignaturesAutomaticV1**
 > EzsignfolderMinusGetEzsignsignaturesAutomaticMinusV1MinusResponse ezsignfolderGetEzsignsignaturesAutomaticV1(pkiEzsignfolderID)
 
@@ -735,7 +735,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsignfolderGetFormsDataV1"></a>
+<a id="ezsignfolderGetFormsDataV1"></a>
 # **ezsignfolderGetFormsDataV1**
 > EzsignfolderMinusGetFormsDataMinusV1MinusResponse ezsignfolderGetFormsDataV1(pkiEzsignfolderID)
 
@@ -785,7 +785,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsignfolderGetListV1"></a>
+<a id="ezsignfolderGetListV1"></a>
 # **ezsignfolderGetListV1**
 > EzsignfolderMinusGetListMinusV1MinusResponse ezsignfolderGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
@@ -821,9 +821,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiEzsignfolderID_ASC, pkiEzsignfolderID_DESC, sEzsignfolderDescription_ASC, sEzsignfolderDescription_DESC, dtCreatedDate_ASC, dtCreatedDate_DESC, fkiEzsignfoldertypeID_ASC, fkiEzsignfoldertypeID_DESC, sEzsignfoldertypeNameX_ASC, sEzsignfoldertypeNameX_DESC, eEzsignfolderStep_ASC, eEzsignfolderStep_DESC, dtEzsignfolderSentdate_ASC, dtEzsignfolderSentdate_DESC, dtDueDate_ASC, dtDueDate_DESC, iTotalDocument_ASC, iTotalDocument_DESC, iTotalDocumentEdm_ASC, iTotalDocumentEdm_DESC, iTotalSignature_ASC, iTotalSignature_DESC, iTotalSignatureSigned_ASC, iTotalSignatureSigned_DESC]
- **iRowMax** | **kotlin.Int**|  | [optional]
- **iRowOffset** | **kotlin.Int**|  | [optional]
+ **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiEzsignfolderID_ASC, pkiEzsignfolderID_DESC, sEzsignfolderDescription_ASC, sEzsignfolderDescription_DESC, dtCreatedDate_ASC, dtCreatedDate_DESC, fkiEzsignfoldertypeID_ASC, fkiEzsignfoldertypeID_DESC, sEzsignfoldertypeNameX_ASC, sEzsignfoldertypeNameX_DESC, eEzsignfolderStep_ASC, eEzsignfolderStep_DESC, dtEzsignfolderSentdate_ASC, dtEzsignfolderSentdate_DESC, dtEzsignfolderDuedate_ASC, dtEzsignfolderDuedate_DESC, iEzsigndocument_ASC, iEzsigndocument_DESC, iEzsigndocumentEdm_ASC, iEzsigndocumentEdm_DESC, iEzsignsignature_ASC, iEzsignsignature_DESC, iEzsignsignatureSigned_ASC, iEzsignsignatureSigned_DESC]
+ **iRowMax** | **kotlin.Int**|  | [optional] [default to 10000]
+ **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0]
  **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
  **sFilter** | **kotlin.String**|  | [optional]
 
@@ -843,7 +843,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsignfolderGetObjectV1"></a>
+<a id="ezsignfolderGetObjectV1"></a>
 # **ezsignfolderGetObjectV1**
 > EzsignfolderMinusGetObjectMinusV1MinusResponse ezsignfolderGetObjectV1(pkiEzsignfolderID)
 
@@ -891,7 +891,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsignfolderGetObjectV2"></a>
+<a id="ezsignfolderGetObjectV2"></a>
 # **ezsignfolderGetObjectV2**
 > EzsignfolderMinusGetObjectMinusV2MinusResponse ezsignfolderGetObjectV2(pkiEzsignfolderID)
 
@@ -941,7 +941,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsignfolderImportEzsignfoldersignerassociationsV1"></a>
+<a id="ezsignfolderImportEzsignfoldersignerassociationsV1"></a>
 # **ezsignfolderImportEzsignfoldersignerassociationsV1**
 > EzsignfolderMinusImportEzsignfoldersignerassociationsMinusV1MinusResponse ezsignfolderImportEzsignfoldersignerassociationsV1(pkiEzsignfolderID, ezsignfolderMinusImportEzsignfoldersignerassociationsMinusV1MinusRequest)
 
@@ -993,7 +993,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ezsignfolderImportEzsigntemplatepackageV1"></a>
+<a id="ezsignfolderImportEzsigntemplatepackageV1"></a>
 # **ezsignfolderImportEzsigntemplatepackageV1**
 > EzsignfolderMinusImportEzsigntemplatepackageMinusV1MinusResponse ezsignfolderImportEzsigntemplatepackageV1(pkiEzsignfolderID, ezsignfolderMinusImportEzsigntemplatepackageMinusV1MinusRequest)
 
@@ -1045,7 +1045,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ezsignfolderReorderV1"></a>
+<a id="ezsignfolderReorderV1"></a>
 # **ezsignfolderReorderV1**
 > EzsignfolderMinusReorderMinusV1MinusResponse ezsignfolderReorderV1(pkiEzsignfolderID, ezsignfolderMinusReorderMinusV1MinusRequest)
 
@@ -1095,7 +1095,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ezsignfolderSendV1"></a>
+<a id="ezsignfolderSendV1"></a>
 # **ezsignfolderSendV1**
 > EzsignfolderMinusSendMinusV1MinusResponse ezsignfolderSendV1(pkiEzsignfolderID, ezsignfolderMinusSendMinusV1MinusRequest)
 
@@ -1147,7 +1147,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ezsignfolderSendV2"></a>
+<a id="ezsignfolderSendV2"></a>
 # **ezsignfolderSendV2**
 > EzsignfolderMinusSendMinusV2MinusResponse ezsignfolderSendV2(pkiEzsignfolderID, ezsignfolderMinusSendMinusV2MinusRequest)
 
@@ -1199,7 +1199,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ezsignfolderSendV3"></a>
+<a id="ezsignfolderSendV3"></a>
 # **ezsignfolderSendV3**
 > EzsignfolderMinusSendMinusV3MinusResponse ezsignfolderSendV3(pkiEzsignfolderID, ezsignfolderMinusSendMinusV3MinusRequest)
 
@@ -1251,7 +1251,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ezsignfolderUnsendV1"></a>
+<a id="ezsignfolderUnsendV1"></a>
 # **ezsignfolderUnsendV1**
 > EzsignfolderMinusUnsendMinusV1MinusResponse ezsignfolderUnsendV1(pkiEzsignfolderID, body)
 

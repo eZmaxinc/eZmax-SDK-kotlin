@@ -11,7 +11,7 @@ Method | HTTP request | Description
 [**billingentityinternalGetObjectV2**](ObjectBillingentityinternalApi.md#billingentityinternalGetObjectV2) | **GET** /2/object/billingentityinternal/{pkiBillingentityinternalID} | Retrieve an existing Billingentityinternal
 
 
-<a name="billingentityinternalCreateObjectV1"></a>
+<a id="billingentityinternalCreateObjectV1"></a>
 # **billingentityinternalCreateObjectV1**
 > BillingentityinternalMinusCreateObjectMinusV1MinusResponse billingentityinternalCreateObjectV1(billingentityinternalMinusCreateObjectMinusV1MinusRequest)
 
@@ -61,7 +61,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="billingentityinternalEditObjectV1"></a>
+<a id="billingentityinternalEditObjectV1"></a>
 # **billingentityinternalEditObjectV1**
 > BillingentityinternalMinusEditObjectMinusV1MinusResponse billingentityinternalEditObjectV1(pkiBillingentityinternalID, billingentityinternalMinusEditObjectMinusV1MinusRequest)
 
@@ -113,7 +113,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="billingentityinternalGetAutocompleteV2"></a>
+<a id="billingentityinternalGetAutocompleteV2"></a>
 # **billingentityinternalGetAutocompleteV2**
 > BillingentityinternalMinusGetAutocompleteMinusV2MinusResponse billingentityinternalGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 
@@ -169,7 +169,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="billingentityinternalGetListV1"></a>
+<a id="billingentityinternalGetListV1"></a>
 # **billingentityinternalGetListV1**
 > BillingentityinternalMinusGetListMinusV1MinusResponse billingentityinternalGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
@@ -206,8 +206,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiBillingentityinternalID_ASC, pkiBillingentityinternalID_DESC, sBillingentityinternalDescriptionX_ASC, sBillingentityinternalDescriptionX_DESC]
- **iRowMax** | **kotlin.Int**|  | [optional]
- **iRowOffset** | **kotlin.Int**|  | [optional]
+ **iRowMax** | **kotlin.Int**|  | [optional] [default to 10000]
+ **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0]
  **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
  **sFilter** | **kotlin.String**|  | [optional]
 
@@ -227,7 +227,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="billingentityinternalGetObjectV2"></a>
+<a id="billingentityinternalGetObjectV2"></a>
 # **billingentityinternalGetObjectV2**
 > BillingentityinternalMinusGetObjectMinusV2MinusResponse billingentityinternalGetObjectV2(pkiBillingentityinternalID)
 

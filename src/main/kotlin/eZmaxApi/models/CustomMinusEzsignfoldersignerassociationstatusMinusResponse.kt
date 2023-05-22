@@ -18,6 +18,7 @@ package eZmaxApi.models
 import eZmaxApi.models.CustomMinusEzsignsignaturestatusMinusResponse
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * A Ezsignfoldersignerassociationstatus Object and children to create a complete structure

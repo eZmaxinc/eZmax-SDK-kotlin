@@ -19,6 +19,7 @@ import eZmaxApi.models.EzsignfoldersignerassociationMinusResponseCompoundMinusUs
 import eZmaxApi.models.EzsignsignerMinusResponseCompound
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * A Ezsignfoldersignerassociation Object with actionable elements

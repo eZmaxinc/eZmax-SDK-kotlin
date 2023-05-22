@@ -17,6 +17,7 @@ package eZmaxApi.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * The signature step of the Ezsigndocument.
@@ -24,6 +25,7 @@ import com.squareup.moshi.Json
  * Values: Unsent,Unsigned,PartiallySigned,DeclinedToSign,PrematurelyEnded,Completed,Disposed
  */
 
+@JsonClass(generateAdapter = false)
 enum class FieldMinusEEzsigndocumentStep(val value: kotlin.String) {
 
     @Json(name = "Unsent")
@@ -48,7 +50,7 @@ enum class FieldMinusEEzsigndocumentStep(val value: kotlin.String) {
     Disposed("Disposed");
 
     /**
-     * Override toString() to avoid using the enum variable name as the value, and instead use
+     * Override [toString()] to avoid using the enum variable name as the value, and instead use
      * the actual value defined in the API spec file.
      *
      * This solves a problem when the variable name and its value are different, and ensures that

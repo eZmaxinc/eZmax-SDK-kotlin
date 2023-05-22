@@ -18,6 +18,7 @@ package eZmaxApi.models
 import eZmaxApi.models.MultilingualMinusNotificationtestName
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * A Notificationtest Object

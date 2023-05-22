@@ -18,6 +18,7 @@ package eZmaxApi.models
 import eZmaxApi.models.FieldMinusEEzsigndocumentlogType
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * An Ezsigndocumentlog Object and children to create a complete structure

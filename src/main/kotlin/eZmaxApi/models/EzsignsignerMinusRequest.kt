@@ -17,6 +17,7 @@ package eZmaxApi.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * An Ezsignsigner Object
@@ -59,6 +60,7 @@ data class EzsignsignerMinusRequest (
      *
      * Values: Password,PasswordPhone,PasswordQuestion,InPersonPhone,InPerson
      */
+    @JsonClass(generateAdapter = false)
     enum class EEzsignsignerLogintype(val value: kotlin.String) {
         @Json(name = "Password") Password("Password"),
         @Json(name = "PasswordPhone") PasswordPhone("PasswordPhone"),

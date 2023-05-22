@@ -75,6 +75,11 @@ docs/BrandingRequestCompound.md
 docs/BrandingResponse.md
 docs/BrandingResponseCompound.md
 docs/BrandingResponseCompoundAllOf.md
+docs/ClonehistoryGetListV1Response.md
+docs/ClonehistoryGetListV1ResponseAllOf.md
+docs/ClonehistoryGetListV1ResponseMPayload.md
+docs/ClonehistoryGetListV1ResponseMPayloadAllOf.md
+docs/ClonehistoryListElement.md
 docs/CommonAudit.md
 docs/CommonAuditdetail.md
 docs/CommonGetAutocompleteV1Response.md
@@ -117,6 +122,7 @@ docs/ContactinformationsRequestCompoundAllOf.md
 docs/CustomAutocompleteElementResponse.md
 docs/CustomCommunicationListElementResponse.md
 docs/CustomContactNameResponse.md
+docs/CustomCreditcardtransactionResponse.md
 docs/CustomDropdownElementRequest.md
 docs/CustomDropdownElementRequestCompound.md
 docs/CustomDropdownElementResponse.md
@@ -312,6 +318,9 @@ docs/EzsigndocumentFlattenV1Response.md
 docs/EzsigndocumentGetActionableElementsV1Response.md
 docs/EzsigndocumentGetActionableElementsV1ResponseAllOf.md
 docs/EzsigndocumentGetActionableElementsV1ResponseMPayload.md
+docs/EzsigndocumentGetCompletedElementsV1Response.md
+docs/EzsigndocumentGetCompletedElementsV1ResponseAllOf.md
+docs/EzsigndocumentGetCompletedElementsV1ResponseMPayload.md
 docs/EzsigndocumentGetDownloadUrlV1Response.md
 docs/EzsigndocumentGetDownloadUrlV1ResponseAllOf.md
 docs/EzsigndocumentGetDownloadUrlV1ResponseMPayload.md
@@ -747,6 +756,7 @@ docs/EzsigntsarequirementAutocompleteElementResponse.md
 docs/EzsigntsarequirementGetAutocompleteV2Response.md
 docs/EzsigntsarequirementGetAutocompleteV2ResponseAllOf.md
 docs/EzsigntsarequirementGetAutocompleteV2ResponseMPayload.md
+docs/FieldEActivesessionOrigin.md
 docs/FieldEActivesessionUsertype.md
 docs/FieldEActivesessionWeekdaystart.md
 docs/FieldEBrandingLogo.md
@@ -785,6 +795,7 @@ docs/FieldEEzsigntemplatesignatureType.md
 docs/FieldENotificationpreferenceStatus.md
 docs/FieldEPaymenttermType.md
 docs/FieldEPhoneType.md
+docs/FieldESessionhistoryEndby.md
 docs/FieldEUserEzsignsendreminderfrequency.md
 docs/FieldEUserType.md
 docs/FieldEVariableexpenseTaxable.md
@@ -821,6 +832,8 @@ docs/GlobalCustomerApi.md
 docs/GlobalCustomerGetEndpointV1Response.md
 docs/GlobalEzmaxclientApi.md
 docs/GlobalEzmaxclientVersionV1Response.md
+docs/GlobalEzmaxcustomerApi.md
+docs/GlobalEzmaxcustomerGetConfigurationV1Response.md
 docs/HeaderAcceptLanguage.md
 docs/ModuleEzsignApi.md
 docs/ModuleUserApi.md
@@ -848,6 +861,7 @@ docs/ObjectApikeyApi.md
 docs/ObjectBillingentityexternalApi.md
 docs/ObjectBillingentityinternalApi.md
 docs/ObjectBrandingApi.md
+docs/ObjectClonehistoryApi.md
 docs/ObjectCommunicationApi.md
 docs/ObjectDepartmentApi.md
 docs/ObjectEzmaxinvoicingApi.md
@@ -881,10 +895,12 @@ docs/ObjectNotificationtestApi.md
 docs/ObjectPaymenttermApi.md
 docs/ObjectPeriodApi.md
 docs/ObjectSecretquestionApi.md
+docs/ObjectSessionhistoryApi.md
 docs/ObjectTaxassignmentApi.md
 docs/ObjectTimezoneApi.md
 docs/ObjectUserApi.md
 docs/ObjectUsergroupApi.md
+docs/ObjectUserstagedApi.md
 docs/ObjectVariableexpenseApi.md
 docs/ObjectVersionhistoryApi.md
 docs/ObjectWebhookApi.md
@@ -922,6 +938,11 @@ docs/SecretquestionAutocompleteElementResponse.md
 docs/SecretquestionGetAutocompleteV2Response.md
 docs/SecretquestionGetAutocompleteV2ResponseAllOf.md
 docs/SecretquestionGetAutocompleteV2ResponseMPayload.md
+docs/SessionhistoryGetListV1Response.md
+docs/SessionhistoryGetListV1ResponseAllOf.md
+docs/SessionhistoryGetListV1ResponseMPayload.md
+docs/SessionhistoryGetListV1ResponseMPayloadAllOf.md
+docs/SessionhistoryListElement.md
 docs/TaxassignmentAutocompleteElementResponse.md
 docs/TaxassignmentGetAutocompleteV2Response.md
 docs/TaxassignmentGetAutocompleteV2ResponseAllOf.md
@@ -964,6 +985,19 @@ docs/UsergroupRequest.md
 docs/UsergroupRequestCompound.md
 docs/UsergroupResponse.md
 docs/UsergroupResponseCompound.md
+docs/UserstagedDeleteObjectV1Response.md
+docs/UserstagedGetListV1Response.md
+docs/UserstagedGetListV1ResponseAllOf.md
+docs/UserstagedGetListV1ResponseMPayload.md
+docs/UserstagedGetListV1ResponseMPayloadAllOf.md
+docs/UserstagedGetObjectV2Response.md
+docs/UserstagedGetObjectV2ResponseAllOf.md
+docs/UserstagedGetObjectV2ResponseMPayload.md
+docs/UserstagedListElement.md
+docs/UserstagedMapV1Request.md
+docs/UserstagedMapV1Response.md
+docs/UserstagedResponse.md
+docs/UserstagedResponseCompound.md
 docs/VariableexpenseAutocompleteElementResponse.md
 docs/VariableexpenseCreateObjectV1Request.md
 docs/VariableexpenseCreateObjectV1Response.md
@@ -1000,6 +1034,9 @@ docs/WebhookEditObjectV1Request.md
 docs/WebhookEditObjectV1Response.md
 docs/WebhookEzsignDocumentCompleted.md
 docs/WebhookEzsignDocumentCompletedAllOf.md
+docs/WebhookEzsignEzsignsignerAcceptclause.md
+docs/WebhookEzsignEzsignsignerAcceptclauseAllOf.md
+docs/WebhookEzsignEzsignsignerConnect.md
 docs/WebhookEzsignFolderCompleted.md
 docs/WebhookEzsignFolderCompletedAllOf.md
 docs/WebhookGetHistoryV1Response.md
@@ -1031,6 +1068,7 @@ gradlew.bat
 settings.gradle
 src/main/kotlin/eZmaxApi/apis/GlobalCustomerApi.kt
 src/main/kotlin/eZmaxApi/apis/GlobalEzmaxclientApi.kt
+src/main/kotlin/eZmaxApi/apis/GlobalEzmaxcustomerApi.kt
 src/main/kotlin/eZmaxApi/apis/ModuleEzsignApi.kt
 src/main/kotlin/eZmaxApi/apis/ModuleUserApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectActivesessionApi.kt
@@ -1038,6 +1076,7 @@ src/main/kotlin/eZmaxApi/apis/ObjectApikeyApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectBillingentityexternalApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectBillingentityinternalApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectBrandingApi.kt
+src/main/kotlin/eZmaxApi/apis/ObjectClonehistoryApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectCommunicationApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectDepartmentApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectEzmaxinvoicingApi.kt
@@ -1071,10 +1110,12 @@ src/main/kotlin/eZmaxApi/apis/ObjectNotificationtestApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectPaymenttermApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectPeriodApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectSecretquestionApi.kt
+src/main/kotlin/eZmaxApi/apis/ObjectSessionhistoryApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectTaxassignmentApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectTimezoneApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectUserApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectUsergroupApi.kt
+src/main/kotlin/eZmaxApi/apis/ObjectUserstagedApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectVariableexpenseApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectVersionhistoryApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectWebhookApi.kt
@@ -1169,6 +1210,11 @@ src/main/kotlin/eZmaxApi/models/BrandingMinusRequestCompound.kt
 src/main/kotlin/eZmaxApi/models/BrandingMinusResponse.kt
 src/main/kotlin/eZmaxApi/models/BrandingMinusResponseCompound.kt
 src/main/kotlin/eZmaxApi/models/BrandingResponseCompoundAllOf.kt
+src/main/kotlin/eZmaxApi/models/ClonehistoryGetListV1ResponseAllOf.kt
+src/main/kotlin/eZmaxApi/models/ClonehistoryGetListV1ResponseMPayloadAllOf.kt
+src/main/kotlin/eZmaxApi/models/ClonehistoryMinusGetListMinusV1MinusResponse.kt
+src/main/kotlin/eZmaxApi/models/ClonehistoryMinusGetListMinusV1MinusResponseMinusMPayload.kt
+src/main/kotlin/eZmaxApi/models/ClonehistoryMinusListElement.kt
 src/main/kotlin/eZmaxApi/models/CommonGetAutocompleteV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/CommonMinusAudit.kt
 src/main/kotlin/eZmaxApi/models/CommonMinusAuditdetail.kt
@@ -1214,6 +1260,7 @@ src/main/kotlin/eZmaxApi/models/CustomEzsignfoldersignerassociationActionableEle
 src/main/kotlin/eZmaxApi/models/CustomMinusAutocompleteElementMinusResponse.kt
 src/main/kotlin/eZmaxApi/models/CustomMinusCommunicationListElementMinusResponse.kt
 src/main/kotlin/eZmaxApi/models/CustomMinusContactNameMinusResponse.kt
+src/main/kotlin/eZmaxApi/models/CustomMinusCreditcardtransactionMinusResponse.kt
 src/main/kotlin/eZmaxApi/models/CustomMinusDropdownElementMinusRequest.kt
 src/main/kotlin/eZmaxApi/models/CustomMinusDropdownElementMinusRequestCompound.kt
 src/main/kotlin/eZmaxApi/models/CustomMinusDropdownElementMinusResponse.kt
@@ -1385,6 +1432,7 @@ src/main/kotlin/eZmaxApi/models/EzsigndocumentCreateObjectV2ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentEditEzsignformfieldgroupsV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentEditEzsignsignaturesV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentGetActionableElementsV1ResponseAllOf.kt
+src/main/kotlin/eZmaxApi/models/EzsigndocumentGetCompletedElementsV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentGetDownloadUrlV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentGetEzsignannotationsV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentGetEzsignformfieldgroupsV1ResponseAllOf.kt
@@ -1417,6 +1465,8 @@ src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusEndPrematurelyMinusV1MinusRes
 src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusFlattenMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusGetActionableElementsMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusGetActionableElementsMinusV1MinusResponseMinusMPayload.kt
+src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusGetCompletedElementsMinusV1MinusResponse.kt
+src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusGetCompletedElementsMinusV1MinusResponseMinusMPayload.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusGetDownloadUrlMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusGetDownloadUrlMinusV1MinusResponseMinusMPayload.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentMinusGetEzsignannotationsMinusV1MinusResponse.kt
@@ -1841,6 +1891,7 @@ src/main/kotlin/eZmaxApi/models/EzsigntsarequirementGetAutocompleteV2ResponseAll
 src/main/kotlin/eZmaxApi/models/EzsigntsarequirementMinusAutocompleteElementMinusResponse.kt
 src/main/kotlin/eZmaxApi/models/EzsigntsarequirementMinusGetAutocompleteMinusV2MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/EzsigntsarequirementMinusGetAutocompleteMinusV2MinusResponseMinusMPayload.kt
+src/main/kotlin/eZmaxApi/models/FieldMinusEActivesessionOrigin.kt
 src/main/kotlin/eZmaxApi/models/FieldMinusEActivesessionUsertype.kt
 src/main/kotlin/eZmaxApi/models/FieldMinusEActivesessionWeekdaystart.kt
 src/main/kotlin/eZmaxApi/models/FieldMinusEBrandingLogo.kt
@@ -1879,6 +1930,7 @@ src/main/kotlin/eZmaxApi/models/FieldMinusEEzsigntemplatesignatureType.kt
 src/main/kotlin/eZmaxApi/models/FieldMinusENotificationpreferenceStatus.kt
 src/main/kotlin/eZmaxApi/models/FieldMinusEPaymenttermType.kt
 src/main/kotlin/eZmaxApi/models/FieldMinusEPhoneType.kt
+src/main/kotlin/eZmaxApi/models/FieldMinusESessionhistoryEndby.kt
 src/main/kotlin/eZmaxApi/models/FieldMinusEUserEzsignsendreminderfrequency.kt
 src/main/kotlin/eZmaxApi/models/FieldMinusEUserType.kt
 src/main/kotlin/eZmaxApi/models/FieldMinusEVariableexpenseTaxable.kt
@@ -1913,6 +1965,7 @@ src/main/kotlin/eZmaxApi/models/FranchisereferalincomeMinusRequestCompound.kt
 src/main/kotlin/eZmaxApi/models/FranchisereferalincomeRequestCompoundAllOf.kt
 src/main/kotlin/eZmaxApi/models/GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/GlobalMinusEzmaxclientMinusVersionMinusV1MinusResponse.kt
+src/main/kotlin/eZmaxApi/models/GlobalMinusEzmaxcustomerMinusGetConfigurationMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/HeaderMinusAcceptMinusLanguage.kt
 src/main/kotlin/eZmaxApi/models/MultilingualMinusApikeyDescription.kt
 src/main/kotlin/eZmaxApi/models/MultilingualMinusBillingentityinternalDescription.kt
@@ -1967,6 +2020,11 @@ src/main/kotlin/eZmaxApi/models/SecretquestionGetAutocompleteV2ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/SecretquestionMinusAutocompleteElementMinusResponse.kt
 src/main/kotlin/eZmaxApi/models/SecretquestionMinusGetAutocompleteMinusV2MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/SecretquestionMinusGetAutocompleteMinusV2MinusResponseMinusMPayload.kt
+src/main/kotlin/eZmaxApi/models/SessionhistoryGetListV1ResponseAllOf.kt
+src/main/kotlin/eZmaxApi/models/SessionhistoryGetListV1ResponseMPayloadAllOf.kt
+src/main/kotlin/eZmaxApi/models/SessionhistoryMinusGetListMinusV1MinusResponse.kt
+src/main/kotlin/eZmaxApi/models/SessionhistoryMinusGetListMinusV1MinusResponseMinusMPayload.kt
+src/main/kotlin/eZmaxApi/models/SessionhistoryMinusListElement.kt
 src/main/kotlin/eZmaxApi/models/TaxassignmentGetAutocompleteV2ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/TaxassignmentMinusAutocompleteElementMinusResponse.kt
 src/main/kotlin/eZmaxApi/models/TaxassignmentMinusGetAutocompleteMinusV2MinusResponse.kt
@@ -2009,6 +2067,19 @@ src/main/kotlin/eZmaxApi/models/UsergroupMinusRequest.kt
 src/main/kotlin/eZmaxApi/models/UsergroupMinusRequestCompound.kt
 src/main/kotlin/eZmaxApi/models/UsergroupMinusResponse.kt
 src/main/kotlin/eZmaxApi/models/UsergroupMinusResponseCompound.kt
+src/main/kotlin/eZmaxApi/models/UserstagedGetListV1ResponseAllOf.kt
+src/main/kotlin/eZmaxApi/models/UserstagedGetListV1ResponseMPayloadAllOf.kt
+src/main/kotlin/eZmaxApi/models/UserstagedGetObjectV2ResponseAllOf.kt
+src/main/kotlin/eZmaxApi/models/UserstagedMinusDeleteObjectMinusV1MinusResponse.kt
+src/main/kotlin/eZmaxApi/models/UserstagedMinusGetListMinusV1MinusResponse.kt
+src/main/kotlin/eZmaxApi/models/UserstagedMinusGetListMinusV1MinusResponseMinusMPayload.kt
+src/main/kotlin/eZmaxApi/models/UserstagedMinusGetObjectMinusV2MinusResponse.kt
+src/main/kotlin/eZmaxApi/models/UserstagedMinusGetObjectMinusV2MinusResponseMinusMPayload.kt
+src/main/kotlin/eZmaxApi/models/UserstagedMinusListElement.kt
+src/main/kotlin/eZmaxApi/models/UserstagedMinusMapMinusV1MinusRequest.kt
+src/main/kotlin/eZmaxApi/models/UserstagedMinusMapMinusV1MinusResponse.kt
+src/main/kotlin/eZmaxApi/models/UserstagedMinusResponse.kt
+src/main/kotlin/eZmaxApi/models/UserstagedMinusResponseCompound.kt
 src/main/kotlin/eZmaxApi/models/VariableexpenseCreateObjectV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/VariableexpenseGetAutocompleteV2ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/VariableexpenseGetListV1ResponseAllOf.kt
@@ -2038,6 +2109,7 @@ src/main/kotlin/eZmaxApi/models/VersionhistoryMinusResponse.kt
 src/main/kotlin/eZmaxApi/models/VersionhistoryMinusResponseCompound.kt
 src/main/kotlin/eZmaxApi/models/WebhookCreateObjectV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/WebhookEzsignDocumentCompletedAllOf.kt
+src/main/kotlin/eZmaxApi/models/WebhookEzsignEzsignsignerAcceptclauseAllOf.kt
 src/main/kotlin/eZmaxApi/models/WebhookEzsignFolderCompletedAllOf.kt
 src/main/kotlin/eZmaxApi/models/WebhookGetHistoryV1ResponseAllOf.kt
 src/main/kotlin/eZmaxApi/models/WebhookGetHistoryV1ResponseMPayloadAllOf.kt
@@ -2051,6 +2123,8 @@ src/main/kotlin/eZmaxApi/models/WebhookMinusDeleteObjectMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/WebhookMinusEditObjectMinusV1MinusRequest.kt
 src/main/kotlin/eZmaxApi/models/WebhookMinusEditObjectMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/WebhookMinusEzsignMinusDocumentCompleted.kt
+src/main/kotlin/eZmaxApi/models/WebhookMinusEzsignMinusEzsignsignerAcceptclause.kt
+src/main/kotlin/eZmaxApi/models/WebhookMinusEzsignMinusEzsignsignerConnect.kt
 src/main/kotlin/eZmaxApi/models/WebhookMinusEzsignMinusFolderCompleted.kt
 src/main/kotlin/eZmaxApi/models/WebhookMinusGetHistoryMinusV1MinusResponse.kt
 src/main/kotlin/eZmaxApi/models/WebhookMinusGetHistoryMinusV1MinusResponseMinusMPayload.kt

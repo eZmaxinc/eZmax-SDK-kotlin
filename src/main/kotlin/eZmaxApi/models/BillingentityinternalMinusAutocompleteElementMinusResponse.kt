@@ -17,25 +17,26 @@ package eZmaxApi.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * A Billingentityinternal AutocompleteElement Response
  *
- * @param sBillingentityinternalDescriptionX The description of the Billingentityinternal in the language of the requester
  * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal.
+ * @param sBillingentityinternalDescriptionX The description of the Billingentityinternal in the language of the requester
  * @param bBillingentityinternalIsactive Whether the Billingentityinternal is active or not
  */
 
 
 data class BillingentityinternalMinusAutocompleteElementMinusResponse (
 
-    /* The description of the Billingentityinternal in the language of the requester */
-    @Json(name = "sBillingentityinternalDescriptionX")
-    val sBillingentityinternalDescriptionX: kotlin.String,
-
     /* The unique ID of the Billingentityinternal. */
     @Json(name = "pkiBillingentityinternalID")
     val pkiBillingentityinternalID: kotlin.Int,
+
+    /* The description of the Billingentityinternal in the language of the requester */
+    @Json(name = "sBillingentityinternalDescriptionX")
+    val sBillingentityinternalDescriptionX: kotlin.String,
 
     /* Whether the Billingentityinternal is active or not */
     @Json(name = "bBillingentityinternalIsactive")

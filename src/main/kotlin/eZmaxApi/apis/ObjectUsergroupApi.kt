@@ -312,15 +312,17 @@ class ObjectUsergroupApi(basePath: kotlin.String = defaultBasePath, client: OkHt
          @Json(name = "pkiUsergroupID_ASC") pkiUsergroupID_ASC("pkiUsergroupID_ASC"),
          @Json(name = "pkiUsergroupID_DESC") pkiUsergroupID_DESC("pkiUsergroupID_DESC"),
          @Json(name = "sUsergroupNameX_ASC") sUsergroupNameX_ASC("sUsergroupNameX_ASC"),
-         @Json(name = "sUsergroupNameX_DESC") sUsergroupNameX_DESC("sUsergroupNameX_DESC")
+         @Json(name = "sUsergroupNameX_DESC") sUsergroupNameX_DESC("sUsergroupNameX_DESC"),
+         @Json(name = "iCountUser_ASC") iCountUser_ASC("iCountUser_ASC"),
+         @Json(name = "iCountUser_DESC") iCountUser_DESC("iCountUser_DESC")
      }
 
     /**
      * Retrieve Usergroup list
      * 
      * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional)
-     * @param iRowOffset  (optional)
+     * @param iRowMax  (optional, default to 10000)
+     * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
      * @return UsergroupMinusGetListMinusV1MinusResponse
@@ -332,7 +334,7 @@ class ObjectUsergroupApi(basePath: kotlin.String = defaultBasePath, client: OkHt
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun usergroupGetListV1(eOrderBy: EOrderBy_usergroupGetListV1? = null, iRowMax: kotlin.Int? = null, iRowOffset: kotlin.Int? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null, sFilter: kotlin.String? = null) : UsergroupMinusGetListMinusV1MinusResponse {
+    fun usergroupGetListV1(eOrderBy: EOrderBy_usergroupGetListV1? = null, iRowMax: kotlin.Int? = 10000, iRowOffset: kotlin.Int? = 0, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null, sFilter: kotlin.String? = null) : UsergroupMinusGetListMinusV1MinusResponse {
         val localVarResponse = usergroupGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
 
         return when (localVarResponse.responseType) {
@@ -354,8 +356,8 @@ class ObjectUsergroupApi(basePath: kotlin.String = defaultBasePath, client: OkHt
      * Retrieve Usergroup list
      * 
      * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional)
-     * @param iRowOffset  (optional)
+     * @param iRowMax  (optional, default to 10000)
+     * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
      * @return ApiResponse<UsergroupMinusGetListMinusV1MinusResponse?>
@@ -376,8 +378,8 @@ class ObjectUsergroupApi(basePath: kotlin.String = defaultBasePath, client: OkHt
      * To obtain the request config of the operation usergroupGetListV1
      *
      * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional)
-     * @param iRowOffset  (optional)
+     * @param iRowMax  (optional, default to 10000)
+     * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
      * @return RequestConfig

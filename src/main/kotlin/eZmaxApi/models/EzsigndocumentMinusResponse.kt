@@ -19,6 +19,7 @@ import eZmaxApi.models.CommonMinusAudit
 import eZmaxApi.models.FieldMinusEEzsigndocumentStep
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * An Ezsigndocument Object

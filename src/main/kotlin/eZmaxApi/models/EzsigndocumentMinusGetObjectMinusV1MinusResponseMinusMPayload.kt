@@ -20,6 +20,7 @@ import eZmaxApi.models.CustomMinusEzsignfoldersignerassociationstatusMinusRespon
 import eZmaxApi.models.FieldMinusEEzsigndocumentStep
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}

@@ -21,6 +21,7 @@ import eZmaxApi.models.PhoneMinusRequestCompound
 import eZmaxApi.models.WebsiteMinusRequestCompound
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * 

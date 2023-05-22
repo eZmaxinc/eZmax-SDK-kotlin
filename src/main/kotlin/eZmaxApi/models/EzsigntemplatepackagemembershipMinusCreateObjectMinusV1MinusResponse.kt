@@ -20,6 +20,7 @@ import eZmaxApi.models.CommonMinusResponseMinusObjDebugPayload
 import eZmaxApi.models.EzsigntemplatepackagemembershipMinusCreateObjectMinusV1MinusResponseMinusMPayload
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Response for POST /1/object/ezsigntemplatepackagemembership

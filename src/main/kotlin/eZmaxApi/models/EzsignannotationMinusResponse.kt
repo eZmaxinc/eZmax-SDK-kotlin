@@ -20,6 +20,7 @@ import eZmaxApi.models.EnumMinusVerticalalignment
 import eZmaxApi.models.FieldMinusEEzsignannotationType
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * A Ezsignannotation Object

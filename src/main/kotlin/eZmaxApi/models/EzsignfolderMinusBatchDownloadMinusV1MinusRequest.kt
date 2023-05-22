@@ -17,6 +17,7 @@ package eZmaxApi.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Request for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/batchDownload
@@ -42,6 +43,7 @@ data class EzsignfolderMinusBatchDownloadMinusV1MinusRequest (
      *
      * Values: Signed,Proof,Proofdocument
      */
+    @JsonClass(generateAdapter = false)
     enum class AEDocumentType(val value: kotlin.String) {
         @Json(name = "Signed") Signed("Signed"),
         @Json(name = "Proof") Proof("Proof"),

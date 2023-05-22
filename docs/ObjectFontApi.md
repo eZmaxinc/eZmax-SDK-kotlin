@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**fontGetAutocompleteV2**](ObjectFontApi.md#fontGetAutocompleteV2) | **GET** /2/object/font/getAutocomplete/{sSelector} | Retrieve Fonts and IDs
 
 
-<a name="fontGetAutocompleteV2"></a>
+<a id="fontGetAutocompleteV2"></a>
 # **fontGetAutocompleteV2**
 > FontMinusGetAutocompleteMinusV2MinusResponse fontGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 

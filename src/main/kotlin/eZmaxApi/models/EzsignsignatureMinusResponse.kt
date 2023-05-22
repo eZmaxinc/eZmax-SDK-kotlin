@@ -15,12 +15,14 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.CustomMinusContactNameMinusResponse
 import eZmaxApi.models.FieldMinusEEzsignsignatureAttachmentnamesource
 import eZmaxApi.models.FieldMinusEEzsignsignatureFont
 import eZmaxApi.models.FieldMinusEEzsignsignatureTooltipposition
 import eZmaxApi.models.FieldMinusEEzsignsignatureType
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * An Ezsignsignature Object
@@ -33,6 +35,7 @@ import com.squareup.moshi.Json
  * @param iEzsignsignatureY The Y coordinate (Vertical) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.
  * @param iEzsignsignatureStep The step when the Ezsignsigner will be invited to sign
  * @param eEzsignsignatureType 
+ * @param objContactName 
  * @param tEzsignsignatureTooltip A tooltip that will be presented to Ezsignsigner about the Ezsignsignature
  * @param eEzsignsignatureTooltipposition 
  * @param eEzsignsignatureFont 
@@ -41,6 +44,7 @@ import com.squareup.moshi.Json
  * @param eEzsignsignatureAttachmentnamesource 
  * @param bEzsignsignatureRequired Whether the Ezsignsignature is required or not. This field is relevant only with Ezsignsignature with eEzsignsignatureType = Attachments.
  * @param fkiEzsignfoldersignerassociationIDValidation The unique ID of the Ezsignfoldersignerassociation
+ * @param dtEzsignsignatureDate The date the Ezsignsignature was signed
  */
 
 
@@ -77,6 +81,9 @@ data class EzsignsignatureMinusResponse (
     @Json(name = "eEzsignsignatureType")
     val eEzsignsignatureType: FieldMinusEEzsignsignatureType,
 
+    @Json(name = "objContactName")
+    val objContactName: CustomMinusContactNameMinusResponse,
+
     /* A tooltip that will be presented to Ezsignsigner about the Ezsignsignature */
     @Json(name = "tEzsignsignatureTooltip")
     val tEzsignsignatureTooltip: kotlin.String? = null,
@@ -104,7 +111,11 @@ data class EzsignsignatureMinusResponse (
 
     /* The unique ID of the Ezsignfoldersignerassociation */
     @Json(name = "fkiEzsignfoldersignerassociationIDValidation")
-    val fkiEzsignfoldersignerassociationIDValidation: kotlin.Int? = null
+    val fkiEzsignfoldersignerassociationIDValidation: kotlin.Int? = null,
+
+    /* The date the Ezsignsignature was signed */
+    @Json(name = "dtEzsignsignatureDate")
+    val dtEzsignsignatureDate: kotlin.String? = null
 
 )
 

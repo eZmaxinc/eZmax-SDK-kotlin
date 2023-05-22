@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**secretquestionGetAutocompleteV2**](ObjectSecretquestionApi.md#secretquestionGetAutocompleteV2) | **GET** /2/object/secretquestion/getAutocomplete/{sSelector} | Retrieve Secretquestions and IDs
 
 
-<a name="secretquestionGetAutocompleteV2"></a>
+<a id="secretquestionGetAutocompleteV2"></a>
 # **secretquestionGetAutocompleteV2**
 > SecretquestionMinusGetAutocompleteMinusV2MinusResponse secretquestionGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 

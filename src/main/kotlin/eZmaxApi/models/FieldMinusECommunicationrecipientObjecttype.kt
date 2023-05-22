@@ -17,6 +17,7 @@ package eZmaxApi.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * The object type for the Communicationrecipient
@@ -24,6 +25,7 @@ import com.squareup.moshi.Json
  * Values: Agent,Agentincorporation,Assistant,Broker,Contact,Customer,Employee,Externalbroker,Ezcomagent,Ezcomcompany,Ezsignsigner,Franchiseoffice,Notary,Rewardmember,Supplier,User
  */
 
+@JsonClass(generateAdapter = false)
 enum class FieldMinusECommunicationrecipientObjecttype(val value: kotlin.String) {
 
     @Json(name = "Agent")
@@ -75,7 +77,7 @@ enum class FieldMinusECommunicationrecipientObjecttype(val value: kotlin.String)
     User("User");
 
     /**
-     * Override toString() to avoid using the enum variable name as the value, and instead use
+     * Override [toString()] to avoid using the enum variable name as the value, and instead use
      * the actual value defined in the API spec file.
      *
      * This solves a problem when the variable name and its value are different, and ensures that

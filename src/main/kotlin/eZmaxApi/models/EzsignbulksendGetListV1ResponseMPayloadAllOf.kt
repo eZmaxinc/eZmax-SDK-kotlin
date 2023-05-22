@@ -18,6 +18,7 @@ package eZmaxApi.models
 import eZmaxApi.models.EzsignbulksendMinusListElement
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * 

@@ -17,6 +17,7 @@ package eZmaxApi.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * The display status for the Notificationtest.
@@ -24,6 +25,7 @@ import com.squareup.moshi.Json
  * Values: Show,Hide,Pin
  */
 
+@JsonClass(generateAdapter = false)
 enum class FieldMinusENotificationpreferenceStatus(val value: kotlin.String) {
 
     @Json(name = "Show")
@@ -36,7 +38,7 @@ enum class FieldMinusENotificationpreferenceStatus(val value: kotlin.String) {
     Pin("Pin");
 
     /**
-     * Override toString() to avoid using the enum variable name as the value, and instead use
+     * Override [toString()] to avoid using the enum variable name as the value, and instead use
      * the actual value defined in the API spec file.
      *
      * This solves a problem when the variable name and its value are different, and ensures that

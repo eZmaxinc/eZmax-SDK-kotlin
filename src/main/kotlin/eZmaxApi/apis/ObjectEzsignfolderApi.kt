@@ -1188,24 +1188,24 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: O
          @Json(name = "eEzsignfolderStep_DESC") eEzsignfolderStep_DESC("eEzsignfolderStep_DESC"),
          @Json(name = "dtEzsignfolderSentdate_ASC") dtEzsignfolderSentdate_ASC("dtEzsignfolderSentdate_ASC"),
          @Json(name = "dtEzsignfolderSentdate_DESC") dtEzsignfolderSentdate_DESC("dtEzsignfolderSentdate_DESC"),
-         @Json(name = "dtDueDate_ASC") dtDueDate_ASC("dtDueDate_ASC"),
-         @Json(name = "dtDueDate_DESC") dtDueDate_DESC("dtDueDate_DESC"),
-         @Json(name = "iTotalDocument_ASC") iTotalDocument_ASC("iTotalDocument_ASC"),
-         @Json(name = "iTotalDocument_DESC") iTotalDocument_DESC("iTotalDocument_DESC"),
-         @Json(name = "iTotalDocumentEdm_ASC") iTotalDocumentEdm_ASC("iTotalDocumentEdm_ASC"),
-         @Json(name = "iTotalDocumentEdm_DESC") iTotalDocumentEdm_DESC("iTotalDocumentEdm_DESC"),
-         @Json(name = "iTotalSignature_ASC") iTotalSignature_ASC("iTotalSignature_ASC"),
-         @Json(name = "iTotalSignature_DESC") iTotalSignature_DESC("iTotalSignature_DESC"),
-         @Json(name = "iTotalSignatureSigned_ASC") iTotalSignatureSigned_ASC("iTotalSignatureSigned_ASC"),
-         @Json(name = "iTotalSignatureSigned_DESC") iTotalSignatureSigned_DESC("iTotalSignatureSigned_DESC")
+         @Json(name = "dtEzsignfolderDuedate_ASC") dtEzsignfolderDuedate_ASC("dtEzsignfolderDuedate_ASC"),
+         @Json(name = "dtEzsignfolderDuedate_DESC") dtEzsignfolderDuedate_DESC("dtEzsignfolderDuedate_DESC"),
+         @Json(name = "iEzsigndocument_ASC") iEzsigndocument_ASC("iEzsigndocument_ASC"),
+         @Json(name = "iEzsigndocument_DESC") iEzsigndocument_DESC("iEzsigndocument_DESC"),
+         @Json(name = "iEzsigndocumentEdm_ASC") iEzsigndocumentEdm_ASC("iEzsigndocumentEdm_ASC"),
+         @Json(name = "iEzsigndocumentEdm_DESC") iEzsigndocumentEdm_DESC("iEzsigndocumentEdm_DESC"),
+         @Json(name = "iEzsignsignature_ASC") iEzsignsignature_ASC("iEzsignsignature_ASC"),
+         @Json(name = "iEzsignsignature_DESC") iEzsignsignature_DESC("iEzsignsignature_DESC"),
+         @Json(name = "iEzsignsignatureSigned_ASC") iEzsignsignatureSigned_ASC("iEzsignsignatureSigned_ASC"),
+         @Json(name = "iEzsignsignatureSigned_DESC") iEzsignsignatureSigned_DESC("iEzsignsignatureSigned_DESC")
      }
 
     /**
      * Retrieve Ezsignfolder list
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional)
-     * @param iRowOffset  (optional)
+     * @param iRowMax  (optional, default to 10000)
+     * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
      * @return EzsignfolderMinusGetListMinusV1MinusResponse
@@ -1217,7 +1217,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: O
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignfolderGetListV1(eOrderBy: EOrderBy_ezsignfolderGetListV1? = null, iRowMax: kotlin.Int? = null, iRowOffset: kotlin.Int? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null, sFilter: kotlin.String? = null) : EzsignfolderMinusGetListMinusV1MinusResponse {
+    fun ezsignfolderGetListV1(eOrderBy: EOrderBy_ezsignfolderGetListV1? = null, iRowMax: kotlin.Int? = 10000, iRowOffset: kotlin.Int? = 0, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null, sFilter: kotlin.String? = null) : EzsignfolderMinusGetListMinusV1MinusResponse {
         val localVarResponse = ezsignfolderGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
 
         return when (localVarResponse.responseType) {
@@ -1239,8 +1239,8 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: O
      * Retrieve Ezsignfolder list
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional)
-     * @param iRowOffset  (optional)
+     * @param iRowMax  (optional, default to 10000)
+     * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
      * @return ApiResponse<EzsignfolderMinusGetListMinusV1MinusResponse?>
@@ -1261,8 +1261,8 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: O
      * To obtain the request config of the operation ezsignfolderGetListV1
      *
      * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional)
-     * @param iRowOffset  (optional)
+     * @param iRowMax  (optional, default to 10000)
+     * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
      * @return RequestConfig

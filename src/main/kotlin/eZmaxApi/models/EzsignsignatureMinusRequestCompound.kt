@@ -22,6 +22,7 @@ import eZmaxApi.models.FieldMinusEEzsignsignatureTooltipposition
 import eZmaxApi.models.FieldMinusEEzsignsignatureType
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * An Ezsignsignature Object and children to create a complete structure

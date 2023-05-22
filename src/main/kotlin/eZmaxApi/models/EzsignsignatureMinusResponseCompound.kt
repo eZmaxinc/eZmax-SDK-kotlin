@@ -15,6 +15,8 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.CustomMinusContactNameMinusResponse
+import eZmaxApi.models.CustomMinusCreditcardtransactionMinusResponse
 import eZmaxApi.models.EzsignsignaturecustomdateMinusResponseCompound
 import eZmaxApi.models.FieldMinusEEzsignsignatureAttachmentnamesource
 import eZmaxApi.models.FieldMinusEEzsignsignatureFont
@@ -22,6 +24,7 @@ import eZmaxApi.models.FieldMinusEEzsignsignatureTooltipposition
 import eZmaxApi.models.FieldMinusEEzsignsignatureType
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * An Ezsignsignature Object and children to create a complete structure
@@ -34,6 +37,7 @@ import com.squareup.moshi.Json
  * @param iEzsignsignatureY The Y coordinate (Vertical) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.
  * @param iEzsignsignatureStep The step when the Ezsignsigner will be invited to sign
  * @param eEzsignsignatureType 
+ * @param objContactName 
  * @param tEzsignsignatureTooltip A tooltip that will be presented to Ezsignsigner about the Ezsignsignature
  * @param eEzsignsignatureTooltipposition 
  * @param eEzsignsignatureFont 
@@ -42,8 +46,10 @@ import com.squareup.moshi.Json
  * @param eEzsignsignatureAttachmentnamesource 
  * @param bEzsignsignatureRequired Whether the Ezsignsignature is required or not. This field is relevant only with Ezsignsignature with eEzsignsignatureType = Attachments.
  * @param fkiEzsignfoldersignerassociationIDValidation The unique ID of the Ezsignfoldersignerassociation
+ * @param dtEzsignsignatureDate The date the Ezsignsignature was signed
  * @param bEzsignsignatureCustomdate Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)
  * @param aObjEzsignsignaturecustomdate An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all.
+ * @param objCreditcardtransaction 
  */
 
 
@@ -80,6 +86,9 @@ data class EzsignsignatureMinusResponseCompound (
     @Json(name = "eEzsignsignatureType")
     val eEzsignsignatureType: FieldMinusEEzsignsignatureType,
 
+    @Json(name = "objContactName")
+    val objContactName: CustomMinusContactNameMinusResponse,
+
     /* A tooltip that will be presented to Ezsignsigner about the Ezsignsignature */
     @Json(name = "tEzsignsignatureTooltip")
     val tEzsignsignatureTooltip: kotlin.String? = null,
@@ -109,13 +118,20 @@ data class EzsignsignatureMinusResponseCompound (
     @Json(name = "fkiEzsignfoldersignerassociationIDValidation")
     val fkiEzsignfoldersignerassociationIDValidation: kotlin.Int? = null,
 
+    /* The date the Ezsignsignature was signed */
+    @Json(name = "dtEzsignsignatureDate")
+    val dtEzsignsignatureDate: kotlin.String? = null,
+
     /* Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**) */
     @Json(name = "bEzsignsignatureCustomdate")
     val bEzsignsignatureCustomdate: kotlin.Boolean? = null,
 
     /* An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all. */
     @Json(name = "a_objEzsignsignaturecustomdate")
-    val aObjEzsignsignaturecustomdate: kotlin.collections.List<EzsignsignaturecustomdateMinusResponseCompound>? = null
+    val aObjEzsignsignaturecustomdate: kotlin.collections.List<EzsignsignaturecustomdateMinusResponseCompound>? = null,
+
+    @Json(name = "objCreditcardtransaction")
+    val objCreditcardtransaction: CustomMinusCreditcardtransactionMinusResponse? = null
 
 )
 

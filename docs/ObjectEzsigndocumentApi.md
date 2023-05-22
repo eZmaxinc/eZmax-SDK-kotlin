@@ -14,6 +14,7 @@ Method | HTTP request | Description
 [**ezsigndocumentEndPrematurelyV1**](ObjectEzsigndocumentApi.md#ezsigndocumentEndPrematurelyV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/endPrematurely | End prematurely
 [**ezsigndocumentFlattenV1**](ObjectEzsigndocumentApi.md#ezsigndocumentFlattenV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/flatten | Flatten
 [**ezsigndocumentGetActionableElementsV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetActionableElementsV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements | Retrieve actionable elements for the Ezsigndocument
+[**ezsigndocumentGetCompletedElementsV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetCompletedElementsV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getCompletedElements | Retrieve completed elements for the Ezsigndocument
 [**ezsigndocumentGetDownloadUrlV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetDownloadUrlV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getDownloadUrl/{eDocumentType} | Retrieve a URL to download documents.
 [**ezsigndocumentGetEzsignannotationsV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetEzsignannotationsV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignannotations | Retrieve an existing Ezsigndocument&#39;s Ezsignannotations
 [**ezsigndocumentGetEzsignformfieldgroupsV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetEzsignformfieldgroupsV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignformfieldgroups | Retrieve an existing Ezsigndocument&#39;s Ezsignformfieldgroups
@@ -29,7 +30,7 @@ Method | HTTP request | Description
 [**ezsigndocumentUnsendV1**](ObjectEzsigndocumentApi.md#ezsigndocumentUnsendV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/unsend | Unsend the Ezsigndocument
 
 
-<a name="ezsigndocumentApplyEzsigntemplateV1"></a>
+<a id="ezsigndocumentApplyEzsigntemplateV1"></a>
 # **ezsigndocumentApplyEzsigntemplateV1**
 > EzsigndocumentMinusApplyEzsigntemplateMinusV1MinusResponse ezsigndocumentApplyEzsigntemplateV1(pkiEzsigndocumentID, ezsigndocumentMinusApplyEzsigntemplateMinusV1MinusRequest)
 
@@ -81,7 +82,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ezsigndocumentApplyEzsigntemplateV2"></a>
+<a id="ezsigndocumentApplyEzsigntemplateV2"></a>
 # **ezsigndocumentApplyEzsigntemplateV2**
 > EzsigndocumentMinusApplyEzsigntemplateMinusV2MinusResponse ezsigndocumentApplyEzsigntemplateV2(pkiEzsigndocumentID, ezsigndocumentMinusApplyEzsigntemplateMinusV2MinusRequest)
 
@@ -133,7 +134,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ezsigndocumentCreateObjectV1"></a>
+<a id="ezsigndocumentCreateObjectV1"></a>
 # **ezsigndocumentCreateObjectV1**
 > EzsigndocumentMinusCreateObjectMinusV1MinusResponse ezsigndocumentCreateObjectV1(ezsigndocumentMinusCreateObjectMinusV1MinusRequest)
 
@@ -183,7 +184,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ezsigndocumentCreateObjectV2"></a>
+<a id="ezsigndocumentCreateObjectV2"></a>
 # **ezsigndocumentCreateObjectV2**
 > EzsigndocumentMinusCreateObjectMinusV2MinusResponse ezsigndocumentCreateObjectV2(ezsigndocumentMinusCreateObjectMinusV2MinusRequest)
 
@@ -233,7 +234,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ezsigndocumentDeleteObjectV1"></a>
+<a id="ezsigndocumentDeleteObjectV1"></a>
 # **ezsigndocumentDeleteObjectV1**
 > EzsigndocumentMinusDeleteObjectMinusV1MinusResponse ezsigndocumentDeleteObjectV1(pkiEzsigndocumentID)
 
@@ -283,7 +284,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsigndocumentEditEzsignformfieldgroupsV1"></a>
+<a id="ezsigndocumentEditEzsignformfieldgroupsV1"></a>
 # **ezsigndocumentEditEzsignformfieldgroupsV1**
 > EzsigndocumentMinusEditEzsignformfieldgroupsMinusV1MinusResponse ezsigndocumentEditEzsignformfieldgroupsV1(pkiEzsigndocumentID, ezsigndocumentMinusEditEzsignformfieldgroupsMinusV1MinusRequest)
 
@@ -335,7 +336,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ezsigndocumentEditEzsignsignaturesV1"></a>
+<a id="ezsigndocumentEditEzsignsignaturesV1"></a>
 # **ezsigndocumentEditEzsignsignaturesV1**
 > EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusResponse ezsigndocumentEditEzsignsignaturesV1(pkiEzsigndocumentID, ezsigndocumentMinusEditEzsignsignaturesMinusV1MinusRequest)
 
@@ -387,7 +388,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ezsigndocumentEndPrematurelyV1"></a>
+<a id="ezsigndocumentEndPrematurelyV1"></a>
 # **ezsigndocumentEndPrematurelyV1**
 > EzsigndocumentMinusEndPrematurelyMinusV1MinusResponse ezsigndocumentEndPrematurelyV1(pkiEzsigndocumentID, body)
 
@@ -439,7 +440,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ezsigndocumentFlattenV1"></a>
+<a id="ezsigndocumentFlattenV1"></a>
 # **ezsigndocumentFlattenV1**
 > EzsigndocumentMinusFlattenMinusV1MinusResponse ezsigndocumentFlattenV1(pkiEzsigndocumentID, body)
 
@@ -491,7 +492,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ezsigndocumentGetActionableElementsV1"></a>
+<a id="ezsigndocumentGetActionableElementsV1"></a>
 # **ezsigndocumentGetActionableElementsV1**
 > EzsigndocumentMinusGetActionableElementsMinusV1MinusResponse ezsigndocumentGetActionableElementsV1(pkiEzsigndocumentID)
 
@@ -541,7 +542,57 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsigndocumentGetDownloadUrlV1"></a>
+<a id="ezsigndocumentGetCompletedElementsV1"></a>
+# **ezsigndocumentGetCompletedElementsV1**
+> EzsigndocumentMinusGetCompletedElementsMinusV1MinusResponse ezsigndocumentGetCompletedElementsV1(pkiEzsigndocumentID)
+
+Retrieve completed elements for the Ezsigndocument
+
+Return the completed Ezsignsignatures, Ezsignformfieldgroups and Ezsignannotations at the current step in the process
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsigndocumentApi()
+val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : EzsigndocumentMinusGetCompletedElementsMinusV1MinusResponse = apiInstance.ezsigndocumentGetCompletedElementsV1(pkiEzsigndocumentID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsigndocumentApi#ezsigndocumentGetCompletedElementsV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsigndocumentApi#ezsigndocumentGetCompletedElementsV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigndocumentID** | **kotlin.Int**|  |
+
+### Return type
+
+[**EzsigndocumentMinusGetCompletedElementsMinusV1MinusResponse**](EzsigndocumentMinusGetCompletedElementsMinusV1MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="ezsigndocumentGetDownloadUrlV1"></a>
 # **ezsigndocumentGetDownloadUrlV1**
 > EzsigndocumentMinusGetDownloadUrlMinusV1MinusResponse ezsigndocumentGetDownloadUrlV1(pkiEzsigndocumentID, eDocumentType)
 
@@ -593,7 +644,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsigndocumentGetEzsignannotationsV1"></a>
+<a id="ezsigndocumentGetEzsignannotationsV1"></a>
 # **ezsigndocumentGetEzsignannotationsV1**
 > EzsigndocumentMinusGetEzsignannotationsMinusV1MinusResponse ezsigndocumentGetEzsignannotationsV1(pkiEzsigndocumentID)
 
@@ -643,7 +694,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsigndocumentGetEzsignformfieldgroupsV1"></a>
+<a id="ezsigndocumentGetEzsignformfieldgroupsV1"></a>
 # **ezsigndocumentGetEzsignformfieldgroupsV1**
 > EzsigndocumentMinusGetEzsignformfieldgroupsMinusV1MinusResponse ezsigndocumentGetEzsignformfieldgroupsV1(pkiEzsigndocumentID)
 
@@ -693,7 +744,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsigndocumentGetEzsignpagesV1"></a>
+<a id="ezsigndocumentGetEzsignpagesV1"></a>
 # **ezsigndocumentGetEzsignpagesV1**
 > EzsigndocumentMinusGetEzsignpagesMinusV1MinusResponse ezsigndocumentGetEzsignpagesV1(pkiEzsigndocumentID)
 
@@ -743,7 +794,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsigndocumentGetEzsignsignaturesAutomaticV1"></a>
+<a id="ezsigndocumentGetEzsignsignaturesAutomaticV1"></a>
 # **ezsigndocumentGetEzsignsignaturesAutomaticV1**
 > EzsigndocumentMinusGetEzsignsignaturesAutomaticMinusV1MinusResponse ezsigndocumentGetEzsignsignaturesAutomaticV1(pkiEzsigndocumentID)
 
@@ -793,7 +844,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsigndocumentGetEzsignsignaturesV1"></a>
+<a id="ezsigndocumentGetEzsignsignaturesV1"></a>
 # **ezsigndocumentGetEzsignsignaturesV1**
 > EzsigndocumentMinusGetEzsignsignaturesMinusV1MinusResponse ezsigndocumentGetEzsignsignaturesV1(pkiEzsigndocumentID)
 
@@ -843,7 +894,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsigndocumentGetFormDataV1"></a>
+<a id="ezsigndocumentGetFormDataV1"></a>
 # **ezsigndocumentGetFormDataV1**
 > EzsigndocumentMinusGetFormDataMinusV1MinusResponse ezsigndocumentGetFormDataV1(pkiEzsigndocumentID)
 
@@ -893,7 +944,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsigndocumentGetObjectV1"></a>
+<a id="ezsigndocumentGetObjectV1"></a>
 # **ezsigndocumentGetObjectV1**
 > EzsigndocumentMinusGetObjectMinusV1MinusResponse ezsigndocumentGetObjectV1(pkiEzsigndocumentID)
 
@@ -941,7 +992,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsigndocumentGetObjectV2"></a>
+<a id="ezsigndocumentGetObjectV2"></a>
 # **ezsigndocumentGetObjectV2**
 > EzsigndocumentMinusGetObjectMinusV2MinusResponse ezsigndocumentGetObjectV2(pkiEzsigndocumentID)
 
@@ -991,7 +1042,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsigndocumentGetTemporaryProofV1"></a>
+<a id="ezsigndocumentGetTemporaryProofV1"></a>
 # **ezsigndocumentGetTemporaryProofV1**
 > EzsigndocumentMinusGetTemporaryProofMinusV1MinusResponse ezsigndocumentGetTemporaryProofV1(pkiEzsigndocumentID)
 
@@ -1041,7 +1092,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsigndocumentGetWordsPositionsV1"></a>
+<a id="ezsigndocumentGetWordsPositionsV1"></a>
 # **ezsigndocumentGetWordsPositionsV1**
 > EzsigndocumentMinusGetWordsPositionsMinusV1MinusResponse ezsigndocumentGetWordsPositionsV1(pkiEzsigndocumentID, ezsigndocumentMinusGetWordsPositionsMinusV1MinusRequest)
 
@@ -1093,7 +1144,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ezsigndocumentPatchObjectV1"></a>
+<a id="ezsigndocumentPatchObjectV1"></a>
 # **ezsigndocumentPatchObjectV1**
 > EzsigndocumentMinusPatchObjectMinusV1MinusResponse ezsigndocumentPatchObjectV1(pkiEzsigndocumentID, ezsigndocumentMinusPatchObjectMinusV1MinusRequest)
 
@@ -1145,7 +1196,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ezsigndocumentUnsendV1"></a>
+<a id="ezsigndocumentUnsendV1"></a>
 # **ezsigndocumentUnsendV1**
 > EzsigndocumentMinusUnsendMinusV1MinusResponse ezsigndocumentUnsendV1(pkiEzsigndocumentID, body)
 

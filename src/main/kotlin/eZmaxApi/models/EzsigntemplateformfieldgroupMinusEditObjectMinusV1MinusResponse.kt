@@ -19,6 +19,7 @@ import eZmaxApi.models.CommonMinusResponseMinusObjDebug
 import eZmaxApi.models.CommonMinusResponseMinusObjDebugPayload
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Response for PUT /1/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID}

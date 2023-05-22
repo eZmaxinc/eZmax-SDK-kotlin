@@ -17,6 +17,7 @@ package eZmaxApi.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * The importance of the Communication
@@ -24,6 +25,7 @@ import com.squareup.moshi.Json
  * Values: High,Normal,Low
  */
 
+@JsonClass(generateAdapter = false)
 enum class FieldMinusECommunicationImportance(val value: kotlin.String) {
 
     @Json(name = "High")
@@ -36,7 +38,7 @@ enum class FieldMinusECommunicationImportance(val value: kotlin.String) {
     Low("Low");
 
     /**
-     * Override toString() to avoid using the enum variable name as the value, and instead use
+     * Override [toString()] to avoid using the enum variable name as the value, and instead use
      * the actual value defined in the API spec file.
      *
      * This solves a problem when the variable name and its value are different, and ensures that

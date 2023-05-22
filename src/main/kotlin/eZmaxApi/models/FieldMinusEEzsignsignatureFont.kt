@@ -17,6 +17,7 @@ package eZmaxApi.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * The font of the signature. This can only be set if eEzsignsignatureType is **Name** or **Initials**
@@ -24,6 +25,7 @@ import com.squareup.moshi.Json
  * Values: Normal,Cursive
  */
 
+@JsonClass(generateAdapter = false)
 enum class FieldMinusEEzsignsignatureFont(val value: kotlin.String) {
 
     @Json(name = "Normal")
@@ -33,7 +35,7 @@ enum class FieldMinusEEzsignsignatureFont(val value: kotlin.String) {
     Cursive("Cursive");
 
     /**
-     * Override toString() to avoid using the enum variable name as the value, and instead use
+     * Override [toString()] to avoid using the enum variable name as the value, and instead use
      * the actual value defined in the API spec file.
      *
      * This solves a problem when the variable name and its value are different, and ensures that

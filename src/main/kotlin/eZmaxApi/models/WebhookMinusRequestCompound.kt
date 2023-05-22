@@ -20,6 +20,7 @@ import eZmaxApi.models.FieldMinusEWebhookManagementevent
 import eZmaxApi.models.FieldMinusEWebhookModule
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * A Webhook Object and children

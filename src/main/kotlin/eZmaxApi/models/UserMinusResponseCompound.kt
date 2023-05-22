@@ -19,6 +19,7 @@ import eZmaxApi.models.CommonMinusAudit
 import eZmaxApi.models.FieldMinusEUserType
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * A User Object and children to create a complete structure

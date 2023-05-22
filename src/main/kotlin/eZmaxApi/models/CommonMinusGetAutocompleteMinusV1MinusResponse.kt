@@ -20,6 +20,7 @@ import eZmaxApi.models.CommonMinusResponseMinusObjDebugPayload
 import eZmaxApi.models.CustomMinusAutocompleteElementMinusResponse
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Response for GET /1/object/xxx/getAutocomplete

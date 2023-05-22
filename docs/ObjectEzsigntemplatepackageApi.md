@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**ezsigntemplatepackageGetObjectV2**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageGetObjectV2) | **GET** /2/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID} | Retrieve an existing Ezsigntemplatepackage
 
 
-<a name="ezsigntemplatepackageCreateObjectV1"></a>
+<a id="ezsigntemplatepackageCreateObjectV1"></a>
 # **ezsigntemplatepackageCreateObjectV1**
 > EzsigntemplatepackageMinusCreateObjectMinusV1MinusResponse ezsigntemplatepackageCreateObjectV1(ezsigntemplatepackageMinusCreateObjectMinusV1MinusRequest)
 
@@ -63,7 +63,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ezsigntemplatepackageDeleteObjectV1"></a>
+<a id="ezsigntemplatepackageDeleteObjectV1"></a>
 # **ezsigntemplatepackageDeleteObjectV1**
 > EzsigntemplatepackageMinusDeleteObjectMinusV1MinusResponse ezsigntemplatepackageDeleteObjectV1(pkiEzsigntemplatepackageID)
 
@@ -113,7 +113,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsigntemplatepackageEditEzsigntemplatepackagesignersV1"></a>
+<a id="ezsigntemplatepackageEditEzsigntemplatepackagesignersV1"></a>
 # **ezsigntemplatepackageEditEzsigntemplatepackagesignersV1**
 > EzsigntemplatepackageMinusEditEzsigntemplatepackagesignersMinusV1MinusResponse ezsigntemplatepackageEditEzsigntemplatepackagesignersV1(pkiEzsigntemplatepackageID, ezsigntemplatepackageMinusEditEzsigntemplatepackagesignersMinusV1MinusRequest)
 
@@ -165,7 +165,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ezsigntemplatepackageEditObjectV1"></a>
+<a id="ezsigntemplatepackageEditObjectV1"></a>
 # **ezsigntemplatepackageEditObjectV1**
 > EzsigntemplatepackageMinusEditObjectMinusV1MinusResponse ezsigntemplatepackageEditObjectV1(pkiEzsigntemplatepackageID, ezsigntemplatepackageMinusEditObjectMinusV1MinusRequest)
 
@@ -217,7 +217,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ezsigntemplatepackageGetAutocompleteV2"></a>
+<a id="ezsigntemplatepackageGetAutocompleteV2"></a>
 # **ezsigntemplatepackageGetAutocompleteV2**
 > EzsigntemplatepackageMinusGetAutocompleteMinusV2MinusResponse ezsigntemplatepackageGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 
@@ -273,7 +273,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsigntemplatepackageGetListV1"></a>
+<a id="ezsigntemplatepackageGetListV1"></a>
 # **ezsigntemplatepackageGetListV1**
 > EzsigntemplatepackageMinusGetListMinusV1MinusResponse ezsigntemplatepackageGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
@@ -310,8 +310,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiEzsigntemplatepackageID_ASC, pkiEzsigntemplatepackageID_DESC, fkiTeamID_ASC, fkiTeamID_DESC, fkiEzsignfoldertypeID_ASC, fkiEzsignfoldertypeID_DESC, fkiLanguageID_ASC, fkiLanguageID_DESC, eEzsigntemplatepackageType_ASC, eEzsigntemplatepackageType_DESC, sEzsigntemplatepackageTypedescriptionX_ASC, sEzsigntemplatepackageTypedescriptionX_DESC, sEzsigntemplatepackageDescription_ASC, sEzsigntemplatepackageDescription_DESC, bEzsigntemplatepackageNeedvalidation_ASC, bEzsigntemplatepackageNeedvalidation_DESC, iEzsigntemplatepackagemembership_ASC, iEzsigntemplatepackagemembership_DESC, bEzsigntemplatepackageIsactive_ASC, bEzsigntemplatepackageIsactive_DESC]
- **iRowMax** | **kotlin.Int**|  | [optional]
- **iRowOffset** | **kotlin.Int**|  | [optional]
+ **iRowMax** | **kotlin.Int**|  | [optional] [default to 10000]
+ **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0]
  **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
  **sFilter** | **kotlin.String**|  | [optional]
 
@@ -331,7 +331,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsigntemplatepackageGetObjectV2"></a>
+<a id="ezsigntemplatepackageGetObjectV2"></a>
 # **ezsigntemplatepackageGetObjectV2**
 > EzsigntemplatepackageMinusGetObjectMinusV2MinusResponse ezsigntemplatepackageGetObjectV2(pkiEzsigntemplatepackageID)
 

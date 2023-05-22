@@ -325,8 +325,8 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
      * Retrieve Variableexpense list
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eVariableexpenseTaxable | Yes&lt;br&gt;No&lt;br&gt;Included |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional)
-     * @param iRowOffset  (optional)
+     * @param iRowMax  (optional, default to 10000)
+     * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
      * @return VariableexpenseMinusGetListMinusV1MinusResponse
@@ -338,7 +338,7 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun variableexpenseGetListV1(eOrderBy: EOrderBy_variableexpenseGetListV1? = null, iRowMax: kotlin.Int? = null, iRowOffset: kotlin.Int? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null, sFilter: kotlin.String? = null) : VariableexpenseMinusGetListMinusV1MinusResponse {
+    fun variableexpenseGetListV1(eOrderBy: EOrderBy_variableexpenseGetListV1? = null, iRowMax: kotlin.Int? = 10000, iRowOffset: kotlin.Int? = 0, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null, sFilter: kotlin.String? = null) : VariableexpenseMinusGetListMinusV1MinusResponse {
         val localVarResponse = variableexpenseGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
 
         return when (localVarResponse.responseType) {
@@ -360,8 +360,8 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
      * Retrieve Variableexpense list
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eVariableexpenseTaxable | Yes&lt;br&gt;No&lt;br&gt;Included |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional)
-     * @param iRowOffset  (optional)
+     * @param iRowMax  (optional, default to 10000)
+     * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
      * @return ApiResponse<VariableexpenseMinusGetListMinusV1MinusResponse?>
@@ -382,8 +382,8 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
      * To obtain the request config of the operation variableexpenseGetListV1
      *
      * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional)
-     * @param iRowOffset  (optional)
+     * @param iRowMax  (optional, default to 10000)
+     * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
      * @return RequestConfig

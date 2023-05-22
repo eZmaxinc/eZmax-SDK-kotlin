@@ -20,6 +20,7 @@ import eZmaxApi.models.FieldMinusEVersionhistoryUsertype
 import eZmaxApi.models.MultilingualMinusVersionhistoryDetail
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * A Versionhistory Object

@@ -17,6 +17,7 @@ package eZmaxApi.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Request for POST /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getWordsPositions
@@ -48,6 +49,7 @@ data class EzsigntemplatedocumentMinusGetWordsPositionsMinusV1MinusRequest (
      *
      * Values: All,Words
      */
+    @JsonClass(generateAdapter = false)
     enum class EGet(val value: kotlin.String) {
         @Json(name = "All") All("All"),
         @Json(name = "Words") Words("Words");

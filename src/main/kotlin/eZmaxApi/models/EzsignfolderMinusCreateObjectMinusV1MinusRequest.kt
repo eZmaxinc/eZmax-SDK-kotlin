@@ -19,6 +19,7 @@ import eZmaxApi.models.EzsignfolderMinusRequest
 import eZmaxApi.models.EzsignfolderMinusRequestCompound
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Request for POST /1/object/ezsignfolder

@@ -18,6 +18,7 @@ package eZmaxApi.models
 import eZmaxApi.models.EzsignfolderMinusListElement
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Payload for GET /1/object/ezsignfolder/getList

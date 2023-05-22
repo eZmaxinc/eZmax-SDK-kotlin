@@ -20,6 +20,7 @@ import eZmaxApi.models.CommonMinusResponseMinusObjDebugPayload
 import eZmaxApi.models.CustomMinusWordPositionWordMinusResponse
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Response for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions

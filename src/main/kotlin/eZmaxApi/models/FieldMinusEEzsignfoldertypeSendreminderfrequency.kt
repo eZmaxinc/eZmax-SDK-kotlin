@@ -17,6 +17,7 @@ package eZmaxApi.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Frequency at which reminders will be sent to signers that haven't signed the documents
@@ -24,6 +25,7 @@ import com.squareup.moshi.Json
  * Values: None,Daily,Weekly
  */
 
+@JsonClass(generateAdapter = false)
 enum class FieldMinusEEzsignfoldertypeSendreminderfrequency(val value: kotlin.String) {
 
     @Json(name = "None")
@@ -36,7 +38,7 @@ enum class FieldMinusEEzsignfoldertypeSendreminderfrequency(val value: kotlin.St
     Weekly("Weekly");
 
     /**
-     * Override toString() to avoid using the enum variable name as the value, and instead use
+     * Override [toString()] to avoid using the enum variable name as the value, and instead use
      * the actual value defined in the API spec file.
      *
      * This solves a problem when the variable name and its value are different, and ensures that

@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**ezsigntemplatesignerGetObjectV2**](ObjectEzsigntemplatesignerApi.md#ezsigntemplatesignerGetObjectV2) | **GET** /2/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID} | Retrieve an existing Ezsigntemplatesigner
 
 
-<a name="ezsigntemplatesignerCreateObjectV1"></a>
+<a id="ezsigntemplatesignerCreateObjectV1"></a>
 # **ezsigntemplatesignerCreateObjectV1**
 > EzsigntemplatesignerMinusCreateObjectMinusV1MinusResponse ezsigntemplatesignerCreateObjectV1(ezsigntemplatesignerMinusCreateObjectMinusV1MinusRequest)
 
@@ -60,7 +60,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ezsigntemplatesignerDeleteObjectV1"></a>
+<a id="ezsigntemplatesignerDeleteObjectV1"></a>
 # **ezsigntemplatesignerDeleteObjectV1**
 > EzsigntemplatesignerMinusDeleteObjectMinusV1MinusResponse ezsigntemplatesignerDeleteObjectV1(pkiEzsigntemplatesignerID)
 
@@ -110,7 +110,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsigntemplatesignerEditObjectV1"></a>
+<a id="ezsigntemplatesignerEditObjectV1"></a>
 # **ezsigntemplatesignerEditObjectV1**
 > EzsigntemplatesignerMinusEditObjectMinusV1MinusResponse ezsigntemplatesignerEditObjectV1(pkiEzsigntemplatesignerID, ezsigntemplatesignerMinusEditObjectMinusV1MinusRequest)
 
@@ -162,7 +162,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ezsigntemplatesignerGetObjectV2"></a>
+<a id="ezsigntemplatesignerGetObjectV2"></a>
 # **ezsigntemplatesignerGetObjectV2**
 > EzsigntemplatesignerMinusGetObjectMinusV2MinusResponse ezsigntemplatesignerGetObjectV2(pkiEzsigntemplatesignerID)
 

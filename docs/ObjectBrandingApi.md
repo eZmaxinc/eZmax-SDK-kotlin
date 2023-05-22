@@ -11,7 +11,7 @@ Method | HTTP request | Description
 [**brandingGetObjectV2**](ObjectBrandingApi.md#brandingGetObjectV2) | **GET** /2/object/branding/{pkiBrandingID} | Retrieve an existing Branding
 
 
-<a name="brandingCreateObjectV1"></a>
+<a id="brandingCreateObjectV1"></a>
 # **brandingCreateObjectV1**
 > BrandingMinusCreateObjectMinusV1MinusResponse brandingCreateObjectV1(brandingMinusCreateObjectMinusV1MinusRequest)
 
@@ -61,7 +61,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="brandingEditObjectV1"></a>
+<a id="brandingEditObjectV1"></a>
 # **brandingEditObjectV1**
 > BrandingMinusEditObjectMinusV1MinusResponse brandingEditObjectV1(pkiBrandingID, brandingMinusEditObjectMinusV1MinusRequest)
 
@@ -113,7 +113,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="brandingGetAutocompleteV2"></a>
+<a id="brandingGetAutocompleteV2"></a>
 # **brandingGetAutocompleteV2**
 > BrandingMinusGetAutocompleteMinusV2MinusResponse brandingGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 
@@ -169,7 +169,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="brandingGetListV1"></a>
+<a id="brandingGetListV1"></a>
 # **brandingGetListV1**
 > BrandingMinusGetListMinusV1MinusResponse brandingGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
@@ -206,8 +206,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiBrandingID_ASC, pkiBrandingID_DESC, sBrandingDescriptionX_ASC, sBrandingDescriptionX_DESC, iBrandingColortext_ASC, iBrandingColortext_DESC, iBrandingColortextlinkbox_ASC, iBrandingColortextlinkbox_DESC, iBrandingColortextbutton_ASC, iBrandingColortextbutton_DESC, iBrandingColorbackground_ASC, iBrandingColorbackground_DESC, iBrandingColorbackgroundbutton_ASC, iBrandingColorbackgroundbutton_DESC, iBrandingColorbackgroundsmallbox_ASC, iBrandingColorbackgroundsmallbox_DESC, bBrandingIsactive_ASC, bBrandingIsactive_DESC]
- **iRowMax** | **kotlin.Int**|  | [optional]
- **iRowOffset** | **kotlin.Int**|  | [optional]
+ **iRowMax** | **kotlin.Int**|  | [optional] [default to 10000]
+ **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0]
  **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
  **sFilter** | **kotlin.String**|  | [optional]
 
@@ -227,7 +227,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="brandingGetObjectV2"></a>
+<a id="brandingGetObjectV2"></a>
 # **brandingGetObjectV2**
 > BrandingMinusGetObjectMinusV2MinusResponse brandingGetObjectV2(pkiBrandingID)
 

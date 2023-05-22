@@ -37,6 +37,7 @@ import eZmaxApi.models.EzsigndocumentMinusEditEzsignsignaturesMinusV1MinusRespon
 import eZmaxApi.models.EzsigndocumentMinusEndPrematurelyMinusV1MinusResponse
 import eZmaxApi.models.EzsigndocumentMinusFlattenMinusV1MinusResponse
 import eZmaxApi.models.EzsigndocumentMinusGetActionableElementsMinusV1MinusResponse
+import eZmaxApi.models.EzsigndocumentMinusGetCompletedElementsMinusV1MinusResponse
 import eZmaxApi.models.EzsigndocumentMinusGetDownloadUrlMinusV1MinusResponse
 import eZmaxApi.models.EzsigndocumentMinusGetEzsignannotationsMinusV1MinusResponse
 import eZmaxApi.models.EzsigndocumentMinusGetEzsignformfieldgroupsMinusV1MinusResponse
@@ -816,6 +817,77 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements".replace("{"+"pkiEzsigndocumentID"+"}", encodeURIComponent(pkiEzsigndocumentID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Retrieve completed elements for the Ezsigndocument
+     * Return the completed Ezsignsignatures, Ezsignformfieldgroups and Ezsignannotations at the current step in the process
+     * @param pkiEzsigndocumentID 
+     * @return EzsigndocumentMinusGetCompletedElementsMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsigndocumentGetCompletedElementsV1(pkiEzsigndocumentID: kotlin.Int) : EzsigndocumentMinusGetCompletedElementsMinusV1MinusResponse {
+        val localVarResponse = ezsigndocumentGetCompletedElementsV1WithHttpInfo(pkiEzsigndocumentID = pkiEzsigndocumentID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigndocumentMinusGetCompletedElementsMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve completed elements for the Ezsigndocument
+     * Return the completed Ezsignsignatures, Ezsignformfieldgroups and Ezsignannotations at the current step in the process
+     * @param pkiEzsigndocumentID 
+     * @return ApiResponse<EzsigndocumentMinusGetCompletedElementsMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsigndocumentGetCompletedElementsV1WithHttpInfo(pkiEzsigndocumentID: kotlin.Int) : ApiResponse<EzsigndocumentMinusGetCompletedElementsMinusV1MinusResponse?> {
+        val localVariableConfig = ezsigndocumentGetCompletedElementsV1RequestConfig(pkiEzsigndocumentID = pkiEzsigndocumentID)
+
+        return request<Unit, EzsigndocumentMinusGetCompletedElementsMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsigndocumentGetCompletedElementsV1
+     *
+     * @param pkiEzsigndocumentID 
+     * @return RequestConfig
+     */
+    fun ezsigndocumentGetCompletedElementsV1RequestConfig(pkiEzsigndocumentID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/getCompletedElements".replace("{"+"pkiEzsigndocumentID"+"}", encodeURIComponent(pkiEzsigndocumentID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

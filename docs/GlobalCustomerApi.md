@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**globalCustomerGetEndpointV1**](GlobalCustomerApi.md#globalCustomerGetEndpointV1) | **GET** /1/customer/{pksCustomerCode}/endpoint | Get customer endpoint
 
 
-<a name="globalCustomerGetEndpointV1"></a>
+<a id="globalCustomerGetEndpointV1"></a>
 # **globalCustomerGetEndpointV1**
 > GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse globalCustomerGetEndpointV1(pksCustomerCode, sInfrastructureproductCode)
 

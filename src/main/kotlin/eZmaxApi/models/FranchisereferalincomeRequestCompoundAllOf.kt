@@ -19,6 +19,7 @@ import eZmaxApi.models.AddressMinusRequest
 import eZmaxApi.models.ContactMinusRequestCompound
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * 

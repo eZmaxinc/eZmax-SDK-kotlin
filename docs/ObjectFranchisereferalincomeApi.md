@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**franchisereferalincomeCreateObjectV2**](ObjectFranchisereferalincomeApi.md#franchisereferalincomeCreateObjectV2) | **POST** /2/object/franchisereferalincome | Create a new Franchisereferalincome
 
 
-<a name="franchisereferalincomeCreateObjectV1"></a>
+<a id="franchisereferalincomeCreateObjectV1"></a>
 # **franchisereferalincomeCreateObjectV1**
 > FranchisereferalincomeMinusCreateObjectMinusV1MinusResponse franchisereferalincomeCreateObjectV1(franchisereferalincomeMinusCreateObjectMinusV1MinusRequest)
 
@@ -58,7 +58,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="franchisereferalincomeCreateObjectV2"></a>
+<a id="franchisereferalincomeCreateObjectV2"></a>
 # **franchisereferalincomeCreateObjectV2**
 > FranchisereferalincomeMinusCreateObjectMinusV2MinusResponse franchisereferalincomeCreateObjectV2(franchisereferalincomeMinusCreateObjectMinusV2MinusRequest)
 

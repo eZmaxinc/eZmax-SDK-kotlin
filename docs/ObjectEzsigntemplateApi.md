@@ -14,7 +14,7 @@ Method | HTTP request | Description
 [**ezsigntemplateGetObjectV2**](ObjectEzsigntemplateApi.md#ezsigntemplateGetObjectV2) | **GET** /2/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate
 
 
-<a name="ezsigntemplateCopyV1"></a>
+<a id="ezsigntemplateCopyV1"></a>
 # **ezsigntemplateCopyV1**
 > EzsigntemplateMinusCopyMinusV1MinusResponse ezsigntemplateCopyV1(pkiEzsigntemplateID, ezsigntemplateMinusCopyMinusV1MinusRequest)
 
@@ -66,7 +66,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ezsigntemplateCreateObjectV1"></a>
+<a id="ezsigntemplateCreateObjectV1"></a>
 # **ezsigntemplateCreateObjectV1**
 > EzsigntemplateMinusCreateObjectMinusV1MinusResponse ezsigntemplateCreateObjectV1(ezsigntemplateMinusCreateObjectMinusV1MinusRequest)
 
@@ -116,7 +116,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ezsigntemplateDeleteObjectV1"></a>
+<a id="ezsigntemplateDeleteObjectV1"></a>
 # **ezsigntemplateDeleteObjectV1**
 > EzsigntemplateMinusDeleteObjectMinusV1MinusResponse ezsigntemplateDeleteObjectV1(pkiEzsigntemplateID)
 
@@ -166,7 +166,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsigntemplateEditObjectV1"></a>
+<a id="ezsigntemplateEditObjectV1"></a>
 # **ezsigntemplateEditObjectV1**
 > EzsigntemplateMinusEditObjectMinusV1MinusResponse ezsigntemplateEditObjectV1(pkiEzsigntemplateID, ezsigntemplateMinusEditObjectMinusV1MinusRequest)
 
@@ -218,7 +218,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ezsigntemplateGetAutocompleteV2"></a>
+<a id="ezsigntemplateGetAutocompleteV2"></a>
 # **ezsigntemplateGetAutocompleteV2**
 > EzsigntemplateMinusGetAutocompleteMinusV2MinusResponse ezsigntemplateGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 
@@ -274,7 +274,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsigntemplateGetListV1"></a>
+<a id="ezsigntemplateGetListV1"></a>
 # **ezsigntemplateGetListV1**
 > EzsigntemplateMinusGetListMinusV1MinusResponse ezsigntemplateGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
@@ -311,8 +311,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiEzsigntemplateID_ASC, pkiEzsigntemplateID_DESC, fkiTeamID_ASC, fkiTeamID_DESC, fkiEzsignfoldertypeID_ASC, fkiEzsignfoldertypeID_DESC, fkiUserIDOwner_ASC, fkiUserIDOwner_DESC, fkiLanguageID_ASC, fkiLanguageID_DESC, eEzsigntemplateType_ASC, eEzsigntemplateType_DESC, sEzsigntemplateTypedescriptionX_ASC, sEzsigntemplateTypedescriptionX_DESC, sEzsigntemplatedocumentDescription_ASC, sEzsigntemplatedocumentDescription_DESC, iEzsigntemplatedocumentPagetotal_ASC, iEzsigntemplatedocumentPagetotal_DESC, iEzsigntemplateSignaturetotal_ASC, iEzsigntemplateSignaturetotal_DESC]
- **iRowMax** | **kotlin.Int**|  | [optional]
- **iRowOffset** | **kotlin.Int**|  | [optional]
+ **iRowMax** | **kotlin.Int**|  | [optional] [default to 10000]
+ **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0]
  **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
  **sFilter** | **kotlin.String**|  | [optional]
 
@@ -332,7 +332,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsigntemplateGetObjectV1"></a>
+<a id="ezsigntemplateGetObjectV1"></a>
 # **ezsigntemplateGetObjectV1**
 > EzsigntemplateMinusGetObjectMinusV1MinusResponse ezsigntemplateGetObjectV1(pkiEzsigntemplateID)
 
@@ -382,7 +382,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsigntemplateGetObjectV2"></a>
+<a id="ezsigntemplateGetObjectV2"></a>
 # **ezsigntemplateGetObjectV2**
 > EzsigntemplateMinusGetObjectMinusV2MinusResponse ezsigntemplateGetObjectV2(pkiEzsigntemplateID)
 

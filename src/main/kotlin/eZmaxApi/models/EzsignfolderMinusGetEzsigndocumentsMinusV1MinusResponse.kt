@@ -20,6 +20,7 @@ import eZmaxApi.models.CommonMinusResponseMinusObjDebugPayload
 import eZmaxApi.models.EzsignfolderMinusGetEzsigndocumentsMinusV1MinusResponseMinusMPayload
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Response for GET /1/object/ezsignfolder/{pkiEzsignfolder}/getEzsigndocuments

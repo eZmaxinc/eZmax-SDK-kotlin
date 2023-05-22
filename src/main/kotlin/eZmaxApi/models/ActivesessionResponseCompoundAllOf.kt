@@ -19,6 +19,7 @@ import eZmaxApi.models.ActivesessionMinusResponseCompoundMinusApikey
 import eZmaxApi.models.ActivesessionMinusResponseCompoundMinusUser
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * 

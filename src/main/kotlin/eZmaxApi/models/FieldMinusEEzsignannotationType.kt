@@ -17,6 +17,7 @@ package eZmaxApi.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * The type of the Ezsignannotation.  1. **StrikethroughBlock** is a box with hatching. 2. **StrikethroughLine** is a red line to cross words. 3. **Text** is a simple Text.
@@ -24,6 +25,7 @@ import com.squareup.moshi.Json
  * Values: StrikethroughBlock,StrikethroughLine,Text
  */
 
+@JsonClass(generateAdapter = false)
 enum class FieldMinusEEzsignannotationType(val value: kotlin.String) {
 
     @Json(name = "StrikethroughBlock")
@@ -36,7 +38,7 @@ enum class FieldMinusEEzsignannotationType(val value: kotlin.String) {
     Text("Text");
 
     /**
-     * Override toString() to avoid using the enum variable name as the value, and instead use
+     * Override [toString()] to avoid using the enum variable name as the value, and instead use
      * the actual value defined in the API spec file.
      *
      * This solves a problem when the variable name and its value are different, and ensures that

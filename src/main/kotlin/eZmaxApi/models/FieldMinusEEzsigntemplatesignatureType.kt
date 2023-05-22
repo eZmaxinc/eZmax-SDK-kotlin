@@ -17,6 +17,7 @@ package eZmaxApi.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * The type of signature.  1. **Acknowledgement** is for an acknowledgment of receipt. 2. **City** is to request the city where the document is signed. 3. **Handwritten** is for a handwritten kind of signature where users needs to \"draw\" their signature on screen. 4. **Initials** is a simple \"click to add initials\" block. 5. **Name** is a simple \"Click to sign\" block. This is the most common block of signature. 6. **Attachments** is to ask for files as attachment that may be validate in another step.    
@@ -24,6 +25,7 @@ import com.squareup.moshi.Json
  * Values: Acknowledgement,City,Handwritten,Initials,Name,Attachments
  */
 
+@JsonClass(generateAdapter = false)
 enum class FieldMinusEEzsigntemplatesignatureType(val value: kotlin.String) {
 
     @Json(name = "Acknowledgement")
@@ -45,7 +47,7 @@ enum class FieldMinusEEzsigntemplatesignatureType(val value: kotlin.String) {
     Attachments("Attachments");
 
     /**
-     * Override toString() to avoid using the enum variable name as the value, and instead use
+     * Override [toString()] to avoid using the enum variable name as the value, and instead use
      * the actual value defined in the API spec file.
      *
      * This solves a problem when the variable name and its value are different, and ensures that

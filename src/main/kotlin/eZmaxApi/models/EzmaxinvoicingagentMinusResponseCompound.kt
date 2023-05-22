@@ -20,6 +20,7 @@ import eZmaxApi.models.FieldMinusEEzmaxinvoicingagentVariationezmax
 import eZmaxApi.models.FieldMinusEEzmaxinvoicingagentVariationezsign
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * A Ezmaxinvoicingagent Object

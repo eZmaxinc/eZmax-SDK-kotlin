@@ -17,6 +17,7 @@ package eZmaxApi.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * A Ezsignsignaturestatus Object and children to create a complete structure
@@ -53,6 +54,7 @@ data class CustomMinusEzsignsignaturestatusMinusResponse (
      *
      * Values: Form,Signature
      */
+    @JsonClass(generateAdapter = false)
     enum class EEzsignsignaturestatusSteptype(val value: kotlin.String) {
         @Json(name = "Form") Form("Form"),
         @Json(name = "Signature") Signature("Signature");

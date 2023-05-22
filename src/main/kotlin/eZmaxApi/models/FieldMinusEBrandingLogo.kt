@@ -17,6 +17,7 @@ package eZmaxApi.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * The logo for the Branding. Select the value 'Default' if you want to use the default logo and delete the custom one if you used one
@@ -24,6 +25,7 @@ import com.squareup.moshi.Json
  * Values: Default,JPEG,PNG
  */
 
+@JsonClass(generateAdapter = false)
 enum class FieldMinusEBrandingLogo(val value: kotlin.String) {
 
     @Json(name = "Default")
@@ -36,7 +38,7 @@ enum class FieldMinusEBrandingLogo(val value: kotlin.String) {
     PNG("PNG");
 
     /**
-     * Override toString() to avoid using the enum variable name as the value, and instead use
+     * Override [toString()] to avoid using the enum variable name as the value, and instead use
      * the actual value defined in the API spec file.
      *
      * This solves a problem when the variable name and its value are different, and ensures that

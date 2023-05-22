@@ -19,6 +19,7 @@ import eZmaxApi.models.AttemptMinusResponseCompound
 import eZmaxApi.models.CustomMinusWebhookMinusResponse
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * This is the base Webhook object

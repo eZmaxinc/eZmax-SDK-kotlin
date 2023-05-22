@@ -19,6 +19,7 @@ import eZmaxApi.models.EzsigntemplateMinusResponseCompound
 import eZmaxApi.models.EzsigntemplatepackageMinusResponseCompound
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * 

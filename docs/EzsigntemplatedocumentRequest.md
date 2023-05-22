@@ -18,21 +18,21 @@ Name | Type | Description | Notes
 **sEzsigntemplatedocumentPassword** | **kotlin.String** | If the source template is password protected, the password to open/modify it. |  [optional]
 
 
-<a name="EEzsigntemplatedocumentSource"></a>
+<a id="EEzsigntemplatedocumentSource"></a>
 ## Enum: eEzsigntemplatedocumentSource
 Name | Value
 ---- | -----
 eEzsigntemplatedocumentSource | Base64, Url, Ezsigndocument
 
 
-<a name="EEzsigntemplatedocumentFormat"></a>
+<a id="EEzsigntemplatedocumentFormat"></a>
 ## Enum: eEzsigntemplatedocumentFormat
 Name | Value
 ---- | -----
 eEzsigntemplatedocumentFormat | Pdf, Doc, Docx, Xls, Xlsx, Ppt, Pptx
 
 
-<a name="EEzsigntemplatedocumentForm"></a>
+<a id="EEzsigntemplatedocumentForm"></a>
 ## Enum: eEzsigntemplatedocumentForm
 Name | Value
 ---- | -----

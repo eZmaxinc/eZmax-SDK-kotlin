@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**ezsignSuggestTemplatesV1**](ModuleEzsignApi.md#ezsignSuggestTemplatesV1) | **GET** /1/module/ezsign/suggestTemplates | Suggest templates
 
 
-<a name="ezsignSuggestSignersV1"></a>
+<a id="ezsignSuggestSignersV1"></a>
 # **ezsignSuggestSignersV1**
 > EzsignMinusSuggestSignersMinusV1MinusResponse ezsignSuggestSignersV1()
 
@@ -54,7 +54,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsignSuggestTemplatesV1"></a>
+<a id="ezsignSuggestTemplatesV1"></a>
 # **ezsignSuggestTemplatesV1**
 > EzsignMinusSuggestTemplatesMinusV1MinusResponse ezsignSuggestTemplatesV1(fkiEzsignfoldertypeID)
 

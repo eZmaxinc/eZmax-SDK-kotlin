@@ -20,6 +20,7 @@ import eZmaxApi.models.FieldMinusEPaymenttermType
 import eZmaxApi.models.MultilingualMinusPaymenttermDescription
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * A Paymentterm Object

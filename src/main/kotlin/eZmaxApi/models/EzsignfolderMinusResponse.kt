@@ -20,6 +20,7 @@ import eZmaxApi.models.FieldMinusEEzsignfolderSendreminderfrequency
 import eZmaxApi.models.FieldMinusEEzsignfolderStep
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * An Ezsignfolder Object

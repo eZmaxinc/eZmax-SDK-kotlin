@@ -21,21 +21,21 @@ Name | Type | Description | Notes
 **sEzsigndocumentExternalid** | **kotlin.String** | This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format.  |  [optional]
 
 
-<a name="EEzsigndocumentSource"></a>
+<a id="EEzsigndocumentSource"></a>
 ## Enum: eEzsigndocumentSource
 Name | Value
 ---- | -----
 eEzsigndocumentSource | Base64, Ezsigntemplate, Url
 
 
-<a name="EEzsigndocumentFormat"></a>
+<a id="EEzsigndocumentFormat"></a>
 ## Enum: eEzsigndocumentFormat
 Name | Value
 ---- | -----
 eEzsigndocumentFormat | Pdf, Doc, Docx, Xls, Xlsx, Ppt, Pptx
 
 
-<a name="EEzsigndocumentForm"></a>
+<a id="EEzsigndocumentForm"></a>
 ## Enum: eEzsigndocumentForm
 Name | Value
 ---- | -----

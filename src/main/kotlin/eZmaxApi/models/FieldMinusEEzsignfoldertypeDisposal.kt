@@ -17,6 +17,7 @@ package eZmaxApi.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * The type of disposal
@@ -24,6 +25,7 @@ import com.squareup.moshi.Json
  * Values: No,Manual,Automatic
  */
 
+@JsonClass(generateAdapter = false)
 enum class FieldMinusEEzsignfoldertypeDisposal(val value: kotlin.String) {
 
     @Json(name = "No")
@@ -36,7 +38,7 @@ enum class FieldMinusEEzsignfoldertypeDisposal(val value: kotlin.String) {
     Automatic("Automatic");
 
     /**
-     * Override toString() to avoid using the enum variable name as the value, and instead use
+     * Override [toString()] to avoid using the enum variable name as the value, and instead use
      * the actual value defined in the API spec file.
      *
      * This solves a problem when the variable name and its value are different, and ensures that

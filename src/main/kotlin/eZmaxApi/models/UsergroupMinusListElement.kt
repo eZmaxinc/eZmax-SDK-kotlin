@@ -17,12 +17,14 @@ package eZmaxApi.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * A Usergroup List Element
  *
  * @param pkiUsergroupID The unique ID of the Usergroup
  * @param sUsergroupNameX The Name of the Usergroup in the language of the requester
+ * @param iCountUser Numer of user in group
  */
 
 
@@ -34,7 +36,11 @@ data class UsergroupMinusListElement (
 
     /* The Name of the Usergroup in the language of the requester */
     @Json(name = "sUsergroupNameX")
-    val sUsergroupNameX: kotlin.String
+    val sUsergroupNameX: kotlin.String,
+
+    /* Numer of user in group */
+    @Json(name = "iCountUser")
+    val iCountUser: kotlin.Int
 
 )
 

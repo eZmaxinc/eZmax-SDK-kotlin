@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**ezsignfoldertypeGetObjectV2**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeGetObjectV2) | **GET** /2/object/ezsignfoldertype/{pkiEzsignfoldertypeID} | Retrieve an existing Ezsignfoldertype
 
 
-<a name="ezsignfoldertypeCreateObjectV1"></a>
+<a id="ezsignfoldertypeCreateObjectV1"></a>
 # **ezsignfoldertypeCreateObjectV1**
 > EzsignfoldertypeMinusCreateObjectMinusV1MinusResponse ezsignfoldertypeCreateObjectV1(ezsignfoldertypeMinusCreateObjectMinusV1MinusRequest)
 
@@ -62,7 +62,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ezsignfoldertypeEditObjectV1"></a>
+<a id="ezsignfoldertypeEditObjectV1"></a>
 # **ezsignfoldertypeEditObjectV1**
 > EzsignfoldertypeMinusEditObjectMinusV1MinusResponse ezsignfoldertypeEditObjectV1(pkiEzsignfoldertypeID, ezsignfoldertypeMinusEditObjectMinusV1MinusRequest)
 
@@ -114,7 +114,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ezsignfoldertypeGetAutocompleteV1"></a>
+<a id="ezsignfoldertypeGetAutocompleteV1"></a>
 # **ezsignfoldertypeGetAutocompleteV1**
 > CommonMinusGetAutocompleteMinusV1MinusResponse ezsignfoldertypeGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
 
@@ -170,7 +170,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsignfoldertypeGetAutocompleteV2"></a>
+<a id="ezsignfoldertypeGetAutocompleteV2"></a>
 # **ezsignfoldertypeGetAutocompleteV2**
 > EzsignfoldertypeMinusGetAutocompleteMinusV2MinusResponse ezsignfoldertypeGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 
@@ -226,7 +226,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsignfoldertypeGetListV1"></a>
+<a id="ezsignfoldertypeGetListV1"></a>
 # **ezsignfoldertypeGetListV1**
 > EzsignfoldertypeMinusGetListMinusV1MinusResponse ezsignfoldertypeGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
@@ -263,8 +263,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiEzsignfoldertypeID_ASC, pkiEzsignfoldertypeID_DESC, eEzsignfoldertypePrivacylevel_ASC, eEzsignfoldertypePrivacylevel_DESC, sEzsignfoldertypeNameX_ASC, sEzsignfoldertypeNameX_DESC, bEzsignfoldertypeIsactive_ASC, bEzsignfoldertypeIsactive_DESC]
- **iRowMax** | **kotlin.Int**|  | [optional]
- **iRowOffset** | **kotlin.Int**|  | [optional]
+ **iRowMax** | **kotlin.Int**|  | [optional] [default to 10000]
+ **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0]
  **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
  **sFilter** | **kotlin.String**|  | [optional]
 
@@ -284,7 +284,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsignfoldertypeGetObjectV2"></a>
+<a id="ezsignfoldertypeGetObjectV2"></a>
 # **ezsignfoldertypeGetObjectV2**
 > EzsignfoldertypeMinusGetObjectMinusV2MinusResponse ezsignfoldertypeGetObjectV2(pkiEzsignfoldertypeID)
 

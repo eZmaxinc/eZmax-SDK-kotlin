@@ -15,15 +15,18 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.FieldMinusEActivesessionOrigin
 import eZmaxApi.models.FieldMinusEActivesessionUsertype
 import eZmaxApi.models.FieldMinusEActivesessionWeekdaystart
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * An Activesession Object
  *
  * @param eActivesessionUsertype 
+ * @param eActivesessionOrigin 
  * @param eActivesessionWeekdaystart 
  * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
  * @param sCompanyNameX The Name of the Company in the language of the requester
@@ -39,6 +42,9 @@ data class ActivesessionMinusResponse (
 
     @Json(name = "eActivesessionUsertype")
     val eActivesessionUsertype: FieldMinusEActivesessionUsertype,
+
+    @Json(name = "eActivesessionOrigin")
+    val eActivesessionOrigin: FieldMinusEActivesessionOrigin,
 
     @Json(name = "eActivesessionWeekdaystart")
     val eActivesessionWeekdaystart: FieldMinusEActivesessionWeekdaystart,

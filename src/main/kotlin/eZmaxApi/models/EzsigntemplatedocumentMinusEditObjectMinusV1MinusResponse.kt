@@ -20,6 +20,7 @@ import eZmaxApi.models.CommonMinusResponseMinusObjDebugPayload
 import eZmaxApi.models.CommonMinusResponseMinusWarning
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Response for PUT /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}

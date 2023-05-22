@@ -26,6 +26,7 @@ import eZmaxApi.models.EzmaxinvoicingsummaryinternalMinusResponseCompound
 import eZmaxApi.models.EzmaxinvoicinguserMinusResponseCompound
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * 

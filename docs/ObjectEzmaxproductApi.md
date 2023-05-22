@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**ezmaxproductGetAutocompleteV2**](ObjectEzmaxproductApi.md#ezmaxproductGetAutocompleteV2) | **GET** /2/object/ezmaxproduct/getAutocomplete/{sSelector} | Retrieve Ezmaxproducts and IDs
 
 
-<a name="ezmaxproductGetAutocompleteV2"></a>
+<a id="ezmaxproductGetAutocompleteV2"></a>
 # **ezmaxproductGetAutocompleteV2**
 > EzmaxproductMinusGetAutocompleteMinusV2MinusResponse ezmaxproductGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 

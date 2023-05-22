@@ -18,6 +18,7 @@ package eZmaxApi.models
 import eZmaxApi.models.CommonMinusResponseMinusFilter
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * This is a debug object containing debugging information on the actual function

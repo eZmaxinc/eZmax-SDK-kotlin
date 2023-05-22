@@ -17,6 +17,7 @@ package eZmaxApi.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * An Ezsigndocument Object
@@ -108,6 +109,7 @@ data class EzsigndocumentMinusRequest (
      *
      * Values: Base64,Ezsigntemplate,Url
      */
+    @JsonClass(generateAdapter = false)
     enum class EEzsigndocumentSource(val value: kotlin.String) {
         @Json(name = "Base64") Base64("Base64"),
         @Json(name = "Ezsigntemplate") Ezsigntemplate("Ezsigntemplate"),
@@ -118,6 +120,7 @@ data class EzsigndocumentMinusRequest (
      *
      * Values: Pdf,Doc,Docx,Xls,Xlsx,Ppt,Pptx
      */
+    @JsonClass(generateAdapter = false)
     enum class EEzsigndocumentFormat(val value: kotlin.String) {
         @Json(name = "Pdf") Pdf("Pdf"),
         @Json(name = "Doc") Doc("Doc"),
@@ -132,6 +135,7 @@ data class EzsigndocumentMinusRequest (
      *
      * Values: Keep,Convert
      */
+    @JsonClass(generateAdapter = false)
     enum class EEzsigndocumentForm(val value: kotlin.String) {
         @Json(name = "Keep") Keep("Keep"),
         @Json(name = "Convert") Convert("Convert");

@@ -18,6 +18,7 @@ package eZmaxApi.models
 import eZmaxApi.models.VariableexpenseMinusAutocompleteElementMinusResponse
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Payload for POST /2/object/variableexpense/getAutocomplete

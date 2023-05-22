@@ -15,15 +15,18 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.CustomMinusCreditcardtransactionMinusResponse
 import eZmaxApi.models.EzsignsignaturecustomdateMinusResponseCompound
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * 
  *
  * @param bEzsignsignatureCustomdate Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)
  * @param aObjEzsignsignaturecustomdate An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all.
+ * @param objCreditcardtransaction 
  */
 
 
@@ -35,7 +38,10 @@ data class EzsignsignatureResponseCompoundAllOf (
 
     /* An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all. */
     @Json(name = "a_objEzsignsignaturecustomdate")
-    val aObjEzsignsignaturecustomdate: kotlin.collections.List<EzsignsignaturecustomdateMinusResponseCompound>? = null
+    val aObjEzsignsignaturecustomdate: kotlin.collections.List<EzsignsignaturecustomdateMinusResponseCompound>? = null,
+
+    @Json(name = "objCreditcardtransaction")
+    val objCreditcardtransaction: CustomMinusCreditcardtransactionMinusResponse? = null
 
 )
 

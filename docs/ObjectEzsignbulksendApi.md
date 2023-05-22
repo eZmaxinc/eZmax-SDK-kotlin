@@ -17,7 +17,7 @@ Method | HTTP request | Description
 [**ezsignbulksendReorderV1**](ObjectEzsignbulksendApi.md#ezsignbulksendReorderV1) | **POST** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/reorder | Reorder Ezsignbulksenddocumentmappings in the Ezsignbulksend
 
 
-<a name="ezsignbulksendCreateEzsignbulksendtransmissionV1"></a>
+<a id="ezsignbulksendCreateEzsignbulksendtransmissionV1"></a>
 # **ezsignbulksendCreateEzsignbulksendtransmissionV1**
 > EzsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusResponse ezsignbulksendCreateEzsignbulksendtransmissionV1(pkiEzsignbulksendID, ezsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusRequest)
 
@@ -67,7 +67,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ezsignbulksendCreateObjectV1"></a>
+<a id="ezsignbulksendCreateObjectV1"></a>
 # **ezsignbulksendCreateObjectV1**
 > EzsignbulksendMinusCreateObjectMinusV1MinusResponse ezsignbulksendCreateObjectV1(ezsignbulksendMinusCreateObjectMinusV1MinusRequest)
 
@@ -117,7 +117,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ezsignbulksendDeleteObjectV1"></a>
+<a id="ezsignbulksendDeleteObjectV1"></a>
 # **ezsignbulksendDeleteObjectV1**
 > EzsignbulksendMinusDeleteObjectMinusV1MinusResponse ezsignbulksendDeleteObjectV1(pkiEzsignbulksendID)
 
@@ -167,7 +167,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsignbulksendEditObjectV1"></a>
+<a id="ezsignbulksendEditObjectV1"></a>
 # **ezsignbulksendEditObjectV1**
 > EzsignbulksendMinusEditObjectMinusV1MinusResponse ezsignbulksendEditObjectV1(pkiEzsignbulksendID, ezsignbulksendMinusEditObjectMinusV1MinusRequest)
 
@@ -219,7 +219,7 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ezsignbulksendGetCsvTemplateV1"></a>
+<a id="ezsignbulksendGetCsvTemplateV1"></a>
 # **ezsignbulksendGetCsvTemplateV1**
 > kotlin.String ezsignbulksendGetCsvTemplateV1(pkiEzsignbulksendID, eCsvSeparator)
 
@@ -271,7 +271,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsignbulksendGetEzsignbulksendtransmissionsV1"></a>
+<a id="ezsignbulksendGetEzsignbulksendtransmissionsV1"></a>
 # **ezsignbulksendGetEzsignbulksendtransmissionsV1**
 > EzsignbulksendMinusGetEzsignbulksendtransmissionsMinusV1MinusResponse ezsignbulksendGetEzsignbulksendtransmissionsV1(pkiEzsignbulksendID)
 
@@ -321,7 +321,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsignbulksendGetEzsignsignaturesAutomaticV1"></a>
+<a id="ezsignbulksendGetEzsignsignaturesAutomaticV1"></a>
 # **ezsignbulksendGetEzsignsignaturesAutomaticV1**
 > EzsignbulksendMinusGetEzsignsignaturesAutomaticMinusV1MinusResponse ezsignbulksendGetEzsignsignaturesAutomaticV1(pkiEzsignbulksendID)
 
@@ -371,7 +371,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsignbulksendGetFormsDataV1"></a>
+<a id="ezsignbulksendGetFormsDataV1"></a>
 # **ezsignbulksendGetFormsDataV1**
 > EzsignbulksendMinusGetFormsDataMinusV1MinusResponse ezsignbulksendGetFormsDataV1(pkiEzsignbulksendID)
 
@@ -421,7 +421,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsignbulksendGetListV1"></a>
+<a id="ezsignbulksendGetListV1"></a>
 # **ezsignbulksendGetListV1**
 > EzsignbulksendMinusGetListMinusV1MinusResponse ezsignbulksendGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
@@ -458,8 +458,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiEzsignbulksendID_ASC, pkiEzsignbulksendID_DESC, fkiEzsignfoldertypeID_ASC, fkiEzsignfoldertypeID_DESC, sEzsignbulksendDescription_ASC, sEzsignbulksendDescription_DESC, sEzsignfoldertypeNameX_ASC, sEzsignfoldertypeNameX_DESC, eEzsignfoldertypePrivacylevel_ASC, eEzsignfoldertypePrivacylevel_DESC, bEzsignbulksendNeedvalidation_ASC, bEzsignbulksendNeedvalidation_DESC, iEzsignbulksendtransmission_ASC, iEzsignbulksendtransmission_DESC, iEzsignfolder_ASC, iEzsignfolder_DESC, iEzsigndocument_ASC, iEzsigndocument_DESC, iEzsignsignature_ASC, iEzsignsignature_DESC, iEzsignsignatureSigned_ASC, iEzsignsignatureSigned_DESC, bEzsignbulksendIsactive_ASC, bEzsignbulksendIsactive_DESC]
- **iRowMax** | **kotlin.Int**|  | [optional]
- **iRowOffset** | **kotlin.Int**|  | [optional]
+ **iRowMax** | **kotlin.Int**|  | [optional] [default to 10000]
+ **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0]
  **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
  **sFilter** | **kotlin.String**|  | [optional]
 
@@ -479,7 +479,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsignbulksendGetObjectV2"></a>
+<a id="ezsignbulksendGetObjectV2"></a>
 # **ezsignbulksendGetObjectV2**
 > EzsignbulksendMinusGetObjectMinusV2MinusResponse ezsignbulksendGetObjectV2(pkiEzsignbulksendID)
 
@@ -529,7 +529,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsignbulksendReorderV1"></a>
+<a id="ezsignbulksendReorderV1"></a>
 # **ezsignbulksendReorderV1**
 > EzsignbulksendMinusReorderMinusV1MinusResponse ezsignbulksendReorderV1(pkiEzsignbulksendID, ezsignbulksendMinusReorderMinusV1MinusRequest)
 

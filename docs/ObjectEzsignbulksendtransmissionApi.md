@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**ezsignbulksendtransmissionGetObjectV2**](ObjectEzsignbulksendtransmissionApi.md#ezsignbulksendtransmissionGetObjectV2) | **GET** /2/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID} | Retrieve an existing Ezsignbulksendtransmission
 
 
-<a name="ezsignbulksendtransmissionGetCsvErrorsV1"></a>
+<a id="ezsignbulksendtransmissionGetCsvErrorsV1"></a>
 # **ezsignbulksendtransmissionGetCsvErrorsV1**
 > kotlin.String ezsignbulksendtransmissionGetCsvErrorsV1(pkiEzsignbulksendtransmissionID)
 
@@ -60,7 +60,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1"></a>
+<a id="ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1"></a>
 # **ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1**
 > EzsignbulksendtransmissionMinusGetEzsignsignaturesAutomaticMinusV1MinusResponse ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1(pkiEzsignbulksendtransmissionID)
 
@@ -110,7 +110,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsignbulksendtransmissionGetFormsDataV1"></a>
+<a id="ezsignbulksendtransmissionGetFormsDataV1"></a>
 # **ezsignbulksendtransmissionGetFormsDataV1**
 > EzsignbulksendtransmissionMinusGetFormsDataMinusV1MinusResponse ezsignbulksendtransmissionGetFormsDataV1(pkiEzsignbulksendtransmissionID)
 
@@ -160,7 +160,7 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ezsignbulksendtransmissionGetObjectV2"></a>
+<a id="ezsignbulksendtransmissionGetObjectV2"></a>
 # **ezsignbulksendtransmissionGetObjectV2**
 > EzsignbulksendtransmissionMinusGetObjectMinusV2MinusResponse ezsignbulksendtransmissionGetObjectV2(pkiEzsignbulksendtransmissionID)
 

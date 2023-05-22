@@ -19,6 +19,7 @@ import eZmaxApi.models.FieldMinusENotificationpreferenceStatus
 import eZmaxApi.models.MultilingualMinusNotificationtestName
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * A Notificationtest Object in the context of getNotificationtests

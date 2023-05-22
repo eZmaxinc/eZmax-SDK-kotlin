@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **eActivesessionUsertype** | [**FieldMinusEActivesessionUsertype**](FieldMinusEActivesessionUsertype.md) |  | 
+**eActivesessionOrigin** | [**FieldMinusEActivesessionOrigin**](FieldMinusEActivesessionOrigin.md) |  | 
 **eActivesessionWeekdaystart** | [**FieldMinusEActivesessionWeekdaystart**](FieldMinusEActivesessionWeekdaystart.md) |  | 
 **fkiLanguageID** | **kotlin.Int** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| | 
 **sCompanyNameX** | **kotlin.String** | The Name of the Company in the language of the requester | 

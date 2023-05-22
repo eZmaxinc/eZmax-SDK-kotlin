@@ -18,6 +18,7 @@ package eZmaxApi.models
 import eZmaxApi.models.PeriodMinusAutocompleteElementMinusResponse
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Payload for POST /2/object/period/getAutocomplete

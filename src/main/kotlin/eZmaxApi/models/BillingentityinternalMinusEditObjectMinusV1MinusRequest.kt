@@ -18,6 +18,7 @@ package eZmaxApi.models
 import eZmaxApi.models.BillingentityinternalMinusRequestCompound
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Request for PUT /1/object/billingentityinternal/{pkiBillingentityinternalID}

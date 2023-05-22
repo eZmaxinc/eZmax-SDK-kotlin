@@ -17,6 +17,7 @@ package eZmaxApi.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * The type of phone number.  **Local** refers to a north American phone number. You would then need to specify sPhoneRegion, sPhoneExchange, sPhoneNumber. **International** would be used for numbers outside of north america. You would then need to specify sPhoneInternational
@@ -24,6 +25,7 @@ import com.squareup.moshi.Json
  * Values: Local,International
  */
 
+@JsonClass(generateAdapter = false)
 enum class FieldMinusEPhoneType(val value: kotlin.String) {
 
     @Json(name = "Local")
@@ -33,7 +35,7 @@ enum class FieldMinusEPhoneType(val value: kotlin.String) {
     International("International");
 
     /**
-     * Override toString() to avoid using the enum variable name as the value, and instead use
+     * Override [toString()] to avoid using the enum variable name as the value, and instead use
      * the actual value defined in the API spec file.
      *
      * This solves a problem when the variable name and its value are different, and ensures that

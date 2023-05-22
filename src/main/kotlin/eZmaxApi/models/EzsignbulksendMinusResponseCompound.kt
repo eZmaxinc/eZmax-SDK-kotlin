@@ -21,6 +21,7 @@ import eZmaxApi.models.EzsignbulksendsignermappingMinusResponse
 import eZmaxApi.models.FieldMinusEEzsignfoldertypePrivacylevel
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * An Ezsignbulksend Object and children to create a complete structure

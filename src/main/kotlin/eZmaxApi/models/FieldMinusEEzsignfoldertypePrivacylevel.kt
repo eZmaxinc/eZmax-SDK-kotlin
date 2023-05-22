@@ -17,6 +17,7 @@ package eZmaxApi.models
 
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * The Privacy level of the Ezsignfolder type.  * **User** is for personal folders use and cannot be shared * **Usergroup** is for shared folders and complex permission can be configured to control access
@@ -24,6 +25,7 @@ import com.squareup.moshi.Json
  * Values: User,Usergroup
  */
 
+@JsonClass(generateAdapter = false)
 enum class FieldMinusEEzsignfoldertypePrivacylevel(val value: kotlin.String) {
 
     @Json(name = "User")
@@ -33,7 +35,7 @@ enum class FieldMinusEEzsignfoldertypePrivacylevel(val value: kotlin.String) {
     Usergroup("Usergroup");
 
     /**
-     * Override toString() to avoid using the enum variable name as the value, and instead use
+     * Override [toString()] to avoid using the enum variable name as the value, and instead use
      * the actual value defined in the API spec file.
      *
      * This solves a problem when the variable name and its value are different, and ensures that

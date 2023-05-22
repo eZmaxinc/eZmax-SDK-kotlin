@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**userGetAutocompleteV2**](ObjectUserApi.md#userGetAutocompleteV2) | **GET** /2/object/user/getAutocomplete/{sSelector} | Retrieve Users and IDs
 
 
-<a name="userGetAutocompleteV2"></a>
+<a id="userGetAutocompleteV2"></a>
 # **userGetAutocompleteV2**
 > UserMinusGetAutocompleteMinusV2MinusResponse userGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 
@@ -42,7 +42,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sSelector** | **kotlin.String**| The type of Users to return | [enum: All, AgentBrokerEmployeeEzsignUserNormal, ClonableUsers, Normal, NormalEzsignSigner]
+ **sSelector** | **kotlin.String**| The type of Users to return | [enum: All, AgentBrokerEmployeeEzsignUserNormal, AgentBrokerEmployeeNormalBuiltIn, ClonableUsers, EzsignuserBuiltIn, Normal, NormalEzsignSigner]
  **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
  **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional]
  **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]

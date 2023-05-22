@@ -19,6 +19,7 @@ import eZmaxApi.models.EzsigntemplateMinusResponseCompound
 import eZmaxApi.models.EzsigntemplatepackagesignermembershipMinusResponseCompound
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * A Ezsigntemplatepackagemembership Object

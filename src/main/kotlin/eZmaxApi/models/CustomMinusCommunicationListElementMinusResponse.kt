@@ -20,6 +20,7 @@ import eZmaxApi.models.FieldMinusECommunicationImportance
 import eZmaxApi.models.FieldMinusECommunicationType
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * A Communication List Element

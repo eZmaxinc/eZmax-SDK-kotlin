@@ -18,6 +18,7 @@ package eZmaxApi.models
 import eZmaxApi.models.EzsigntemplateMinusResponseCompound
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Payload for GET /2/object/ezsigntemplate/{pkiEzsigntemplateID}
