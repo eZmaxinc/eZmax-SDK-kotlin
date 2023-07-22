@@ -24,8 +24,10 @@ import com.squareup.moshi.JsonClass
 /**
  * An Apikey Object
  *
- * @param objApikeyDescription 
  * @param pkiApikeyID The unique ID of the Apikey
+ * @param fkiUserID The unique ID of the User
+ * @param objApikeyDescription 
+ * @param bApikeyIsactive Whether the apikey is active or not
  * @param objAudit 
  * @param sComputedToken The secret token for the API key.  This will be returned only on creation.
  */
@@ -33,12 +35,20 @@ import com.squareup.moshi.JsonClass
 
 data class ApikeyMinusResponse (
 
-    @Json(name = "objApikeyDescription")
-    val objApikeyDescription: MultilingualMinusApikeyDescription,
-
     /* The unique ID of the Apikey */
     @Json(name = "pkiApikeyID")
     val pkiApikeyID: kotlin.Int,
+
+    /* The unique ID of the User */
+    @Json(name = "fkiUserID")
+    val fkiUserID: kotlin.Int,
+
+    @Json(name = "objApikeyDescription")
+    val objApikeyDescription: MultilingualMinusApikeyDescription,
+
+    /* Whether the apikey is active or not */
+    @Json(name = "bApikeyIsactive")
+    val bApikeyIsactive: kotlin.Boolean,
 
     @Json(name = "objAudit")
     val objAudit: CommonMinusAudit,

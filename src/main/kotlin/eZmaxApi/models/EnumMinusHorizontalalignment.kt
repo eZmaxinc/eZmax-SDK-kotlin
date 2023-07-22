@@ -20,7 +20,7 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * The Horizontalalignment of the Ezsignannotation.  This can only be set if eEzsignannotationType is **Text**
+ * The Horizontal alignment
  *
  * Values: Center,Left,Right
  */

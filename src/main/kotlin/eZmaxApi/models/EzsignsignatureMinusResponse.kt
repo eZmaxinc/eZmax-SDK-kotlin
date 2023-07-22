@@ -16,10 +16,12 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.CustomMinusContactNameMinusResponse
+import eZmaxApi.models.EnumMinusTextvalidation
 import eZmaxApi.models.FieldMinusEEzsignsignatureAttachmentnamesource
 import eZmaxApi.models.FieldMinusEEzsignsignatureFont
 import eZmaxApi.models.FieldMinusEEzsignsignatureTooltipposition
 import eZmaxApi.models.FieldMinusEEzsignsignatureType
+import eZmaxApi.models.SignatureMinusResponseCompound
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -36,6 +38,8 @@ import com.squareup.moshi.JsonClass
  * @param iEzsignsignatureStep The step when the Ezsignsigner will be invited to sign
  * @param eEzsignsignatureType 
  * @param objContactName 
+ * @param iEzsignsignatureHeight The height of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have an height of 2 inches, you would use \"200\" for the iEzsignsignatureHeight.
+ * @param iEzsignsignatureWidth The width of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have a width of 2 inches, you would use \"200\" for the iEzsignsignatureWidth.
  * @param tEzsignsignatureTooltip A tooltip that will be presented to Ezsignsigner about the Ezsignsignature
  * @param eEzsignsignatureTooltipposition 
  * @param eEzsignsignatureFont 
@@ -45,6 +49,11 @@ import com.squareup.moshi.JsonClass
  * @param bEzsignsignatureRequired Whether the Ezsignsignature is required or not. This field is relevant only with Ezsignsignature with eEzsignsignatureType = Attachments.
  * @param fkiEzsignfoldersignerassociationIDValidation The unique ID of the Ezsignfoldersignerassociation
  * @param dtEzsignsignatureDate The date the Ezsignsignature was signed
+ * @param iEzsignsignatureattachmentCount The count of Ezsignsignatureattachment
+ * @param sEzsignsignatureDescription The value entered while signing Ezsignsignature of eEzsignsignatureType **City**, **FieldText** and **FieldTextarea**
+ * @param eEzsignsignatureTextvalidation 
+ * @param sEzsignsignatureRegexp A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom**
+ * @param objSignature 
  */
 
 
@@ -84,6 +93,14 @@ data class EzsignsignatureMinusResponse (
     @Json(name = "objContactName")
     val objContactName: CustomMinusContactNameMinusResponse,
 
+    /* The height of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have an height of 2 inches, you would use \"200\" for the iEzsignsignatureHeight. */
+    @Json(name = "iEzsignsignatureHeight")
+    val iEzsignsignatureHeight: kotlin.Int? = null,
+
+    /* The width of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have a width of 2 inches, you would use \"200\" for the iEzsignsignatureWidth. */
+    @Json(name = "iEzsignsignatureWidth")
+    val iEzsignsignatureWidth: kotlin.Int? = null,
+
     /* A tooltip that will be presented to Ezsignsigner about the Ezsignsignature */
     @Json(name = "tEzsignsignatureTooltip")
     val tEzsignsignatureTooltip: kotlin.String? = null,
@@ -115,7 +132,25 @@ data class EzsignsignatureMinusResponse (
 
     /* The date the Ezsignsignature was signed */
     @Json(name = "dtEzsignsignatureDate")
-    val dtEzsignsignatureDate: kotlin.String? = null
+    val dtEzsignsignatureDate: kotlin.String? = null,
+
+    /* The count of Ezsignsignatureattachment */
+    @Json(name = "iEzsignsignatureattachmentCount")
+    val iEzsignsignatureattachmentCount: kotlin.Int? = null,
+
+    /* The value entered while signing Ezsignsignature of eEzsignsignatureType **City**, **FieldText** and **FieldTextarea** */
+    @Json(name = "sEzsignsignatureDescription")
+    val sEzsignsignatureDescription: kotlin.String? = null,
+
+    @Json(name = "eEzsignsignatureTextvalidation")
+    val eEzsignsignatureTextvalidation: EnumMinusTextvalidation? = null,
+
+    /* A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom** */
+    @Json(name = "sEzsignsignatureRegexp")
+    val sEzsignsignatureRegexp: kotlin.String? = null,
+
+    @Json(name = "objSignature")
+    val objSignature: SignatureMinusResponseCompound? = null
 
 )
 

@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **sCommunicationSubject** | **kotlin.String** | The subject of the Communication | 
 **eCommunicationDirection** | [**ComputedMinusECommunicationDirection**](ComputedMinusECommunicationDirection.md) |  | 
 **iCommunicationrecipientCount** | **kotlin.Int** | The count of Communicationrecipient | 
+**bCommunicationPrivate** | **kotlin.Boolean** | Whether the Communication is private or not | 
 **objAudit** | [**CommonMinusAudit**](CommonMinusAudit.md) |  | 
 **sCommunicationBodyurl** | **kotlin.String** | The url of the body used as body in the Communication |  [optional]
 **objDescriptionstaticSender** | [**DescriptionstaticMinusResponse**](DescriptionstaticMinusResponse.md) |  |  [optional]

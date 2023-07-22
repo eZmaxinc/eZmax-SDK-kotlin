@@ -26,8 +26,8 @@ import com.squareup.moshi.JsonClass
  * @param pkiUserID The unique ID of the User
  * @param fkiTimezoneID The unique ID of the Timezone
  * @param sAvatarUrl The url of the picture used as avatar
- * @param sUserFirstname The First name of the user
- * @param sUserLastname The Last name of the user
+ * @param sUserFirstname The first name of the user
+ * @param sUserLastname The last name of the user
  * @param sEmailAddress The email address.
  * @param eUserEzsignsendreminderfrequency 
  * @param iUserInterfacecolor The int32 representation of the interface color. For example, RGB color #39435B would be 3752795
@@ -50,11 +50,11 @@ data class ActivesessionMinusResponseCompoundMinusUser (
     @Json(name = "sAvatarUrl")
     val sAvatarUrl: kotlin.String,
 
-    /* The First name of the user */
+    /* The first name of the user */
     @Json(name = "sUserFirstname")
     val sUserFirstname: kotlin.String,
 
-    /* The Last name of the user */
+    /* The last name of the user */
     @Json(name = "sUserLastname")
     val sUserLastname: kotlin.String,
 

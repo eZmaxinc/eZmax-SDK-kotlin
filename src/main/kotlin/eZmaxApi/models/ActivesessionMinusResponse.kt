@@ -35,6 +35,7 @@ import com.squareup.moshi.JsonClass
  * @param bActivesessionIssuperadmin Whether the active session is superadmin or not
  * @param pksCustomerCode The customer code assigned to your account
  * @param fkiSystemconfigurationtypeID The unique ID of the Systemconfigurationtype
+ * @param fkiSignatureID The unique ID of the Signature
  */
 
 
@@ -75,7 +76,11 @@ data class ActivesessionMinusResponse (
 
     /* The unique ID of the Systemconfigurationtype */
     @Json(name = "fkiSystemconfigurationtypeID")
-    val fkiSystemconfigurationtypeID: kotlin.Int? = null
+    val fkiSystemconfigurationtypeID: kotlin.Int? = null,
+
+    /* The unique ID of the Signature */
+    @Json(name = "fkiSignatureID")
+    val fkiSignatureID: kotlin.Int? = null
 
 )
 

@@ -40,6 +40,7 @@ import com.squareup.moshi.JsonClass
  * @param objUserReal 
  * @param aEModuleInternalname An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key.
  * @param fkiSystemconfigurationtypeID The unique ID of the Systemconfigurationtype
+ * @param fkiSignatureID The unique ID of the Signature
  * @param objUserCloned 
  * @param objApikey 
  */
@@ -94,6 +95,10 @@ data class ActivesessionMinusResponseCompound (
     /* The unique ID of the Systemconfigurationtype */
     @Json(name = "fkiSystemconfigurationtypeID")
     val fkiSystemconfigurationtypeID: kotlin.Int? = null,
+
+    /* The unique ID of the Signature */
+    @Json(name = "fkiSignatureID")
+    val fkiSignatureID: kotlin.Int? = null,
 
     @Json(name = "objUserCloned")
     val objUserCloned: ActivesessionMinusResponseCompoundMinusUser? = null,

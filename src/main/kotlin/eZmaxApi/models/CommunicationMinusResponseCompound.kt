@@ -38,6 +38,7 @@ import com.squareup.moshi.JsonClass
  * @param sCommunicationSubject The subject of the Communication
  * @param eCommunicationDirection 
  * @param iCommunicationrecipientCount The count of Communicationrecipient
+ * @param bCommunicationPrivate Whether the Communication is private or not
  * @param objAudit 
  * @param aObjCommunicationattachment 
  * @param aObjCommunicationrecipient 
@@ -71,6 +72,10 @@ data class CommunicationMinusResponseCompound (
     /* The count of Communicationrecipient */
     @Json(name = "iCommunicationrecipientCount")
     val iCommunicationrecipientCount: kotlin.Int,
+
+    /* Whether the Communication is private or not */
+    @Json(name = "bCommunicationPrivate")
+    val bCommunicationPrivate: kotlin.Boolean,
 
     @Json(name = "objAudit")
     val objAudit: CommonMinusAudit,

@@ -35,6 +35,9 @@ import com.squareup.moshi.JsonClass
  * @param iBrandingColorbackgroundbutton The color of the background of the button. This is a RGB color converted into integer
  * @param iBrandingColorbackgroundsmallbox The color of the background of the small box. This is a RGB color converted into integer
  * @param bBrandingIsactive Whether the Branding is active or not
+ * @param fkiEmailID The unique ID of the Email
+ * @param sBrandingName The name of the Branding  This value will only be set if you wish to overwrite the default name. If you want to keep the default name, leave this property empty
+ * @param sEmailAddress The email address.
  * @param sBrandingLogourl The url of the picture used as logo in the Branding
  */
 
@@ -82,6 +85,18 @@ data class BrandingMinusResponseCompound (
     /* Whether the Branding is active or not */
     @Json(name = "bBrandingIsactive")
     val bBrandingIsactive: kotlin.Boolean,
+
+    /* The unique ID of the Email */
+    @Json(name = "fkiEmailID")
+    val fkiEmailID: kotlin.Int? = null,
+
+    /* The name of the Branding  This value will only be set if you wish to overwrite the default name. If you want to keep the default name, leave this property empty */
+    @Json(name = "sBrandingName")
+    val sBrandingName: kotlin.String? = null,
+
+    /* The email address. */
+    @Json(name = "sEmailAddress")
+    val sEmailAddress: kotlin.String? = null,
 
     /* The url of the picture used as logo in the Branding */
     @Json(name = "sBrandingLogourl")

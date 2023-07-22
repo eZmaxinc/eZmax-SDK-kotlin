@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.EnumMinusTextvalidation
 import eZmaxApi.models.FieldMinusEEzsignformfieldgroupSignerrequirement
 import eZmaxApi.models.FieldMinusEEzsignformfieldgroupTooltipposition
 import eZmaxApi.models.FieldMinusEEzsignformfieldgroupType
@@ -40,6 +41,7 @@ import com.squareup.moshi.JsonClass
  * @param sEzsignformfieldgroupRegexp A regular expression to indicate what values are acceptable for the Ezsignformfieldgroup.  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**
  * @param tEzsignformfieldgroupTooltip A tooltip that will be presented to Ezsignsigner about the Ezsignformfieldgroup
  * @param eEzsignformfieldgroupTooltipposition 
+ * @param eEzsignformfieldgroupTextvalidation 
  */
 
 
@@ -100,7 +102,10 @@ data class EzsignformfieldgroupMinusRequest (
     val tEzsignformfieldgroupTooltip: kotlin.String? = null,
 
     @Json(name = "eEzsignformfieldgroupTooltipposition")
-    val eEzsignformfieldgroupTooltipposition: FieldMinusEEzsignformfieldgroupTooltipposition? = null
+    val eEzsignformfieldgroupTooltipposition: FieldMinusEEzsignformfieldgroupTooltipposition? = null,
+
+    @Json(name = "eEzsignformfieldgroupTextvalidation")
+    val eEzsignformfieldgroupTextvalidation: EnumMinusTextvalidation? = null
 
 )
 

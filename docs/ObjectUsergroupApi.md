@@ -6,9 +6,13 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**usergroupCreateObjectV1**](ObjectUsergroupApi.md#usergroupCreateObjectV1) | **POST** /1/object/usergroup | Create a new Usergroup
 [**usergroupEditObjectV1**](ObjectUsergroupApi.md#usergroupEditObjectV1) | **PUT** /1/object/usergroup/{pkiUsergroupID} | Edit an existing Usergroup
+[**usergroupEditPermissionsV1**](ObjectUsergroupApi.md#usergroupEditPermissionsV1) | **PUT** /1/object/usergroup/{pkiUsergroupID}/editPermissions | Edit multiple Permissions
+[**usergroupEditUsergroupmembershipsV1**](ObjectUsergroupApi.md#usergroupEditUsergroupmembershipsV1) | **PUT** /1/object/usergroup/{pkiUsergroupID}/editUsergroupmemberships | Edit multiple Usergroupmemberships
 [**usergroupGetAutocompleteV2**](ObjectUsergroupApi.md#usergroupGetAutocompleteV2) | **GET** /2/object/usergroup/getAutocomplete/{sSelector} | Retrieve Usergroups and IDs
 [**usergroupGetListV1**](ObjectUsergroupApi.md#usergroupGetListV1) | **GET** /1/object/usergroup/getList | Retrieve Usergroup list
 [**usergroupGetObjectV2**](ObjectUsergroupApi.md#usergroupGetObjectV2) | **GET** /2/object/usergroup/{pkiUsergroupID} | Retrieve an existing Usergroup
+[**usergroupGetPermissionsV1**](ObjectUsergroupApi.md#usergroupGetPermissionsV1) | **GET** /1/object/usergroup/{pkiUsergroupID}/getPermissions | Retrieve an existing Usergroup&#39;s Permissions
+[**usergroupGetUsergroupmembershipsV1**](ObjectUsergroupApi.md#usergroupGetUsergroupmembershipsV1) | **GET** /1/object/usergroup/{pkiUsergroupID}/getUsergroupmemberships | Retrieve an existing Usergroup&#39;s Usergroupmemberships
 
 
 <a id="usergroupCreateObjectV1"></a>
@@ -76,7 +80,7 @@ Edit an existing Usergroup
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectUsergroupApi()
-val pkiUsergroupID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Usergroup
+val pkiUsergroupID : kotlin.Int = 56 // kotlin.Int | 
 val usergroupMinusEditObjectMinusV1MinusRequest : UsergroupMinusEditObjectMinusV1MinusRequest =  // UsergroupMinusEditObjectMinusV1MinusRequest | 
 try {
     val result : UsergroupMinusEditObjectMinusV1MinusResponse = apiInstance.usergroupEditObjectV1(pkiUsergroupID, usergroupMinusEditObjectMinusV1MinusRequest)
@@ -94,12 +98,116 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiUsergroupID** | **kotlin.Int**| The unique ID of the Usergroup |
+ **pkiUsergroupID** | **kotlin.Int**|  |
  **usergroupMinusEditObjectMinusV1MinusRequest** | [**UsergroupMinusEditObjectMinusV1MinusRequest**](UsergroupMinusEditObjectMinusV1MinusRequest.md)|  |
 
 ### Return type
 
 [**UsergroupMinusEditObjectMinusV1MinusResponse**](UsergroupMinusEditObjectMinusV1MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a id="usergroupEditPermissionsV1"></a>
+# **usergroupEditPermissionsV1**
+> UsergroupMinusEditPermissionsMinusV1MinusResponse usergroupEditPermissionsV1(pkiUsergroupID, usergroupMinusEditPermissionsMinusV1MinusRequest)
+
+Edit multiple Permissions
+
+Using this endpoint, you can edit multiple Permissions at the same time.
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectUsergroupApi()
+val pkiUsergroupID : kotlin.Int = 56 // kotlin.Int | 
+val usergroupMinusEditPermissionsMinusV1MinusRequest : UsergroupMinusEditPermissionsMinusV1MinusRequest =  // UsergroupMinusEditPermissionsMinusV1MinusRequest | 
+try {
+    val result : UsergroupMinusEditPermissionsMinusV1MinusResponse = apiInstance.usergroupEditPermissionsV1(pkiUsergroupID, usergroupMinusEditPermissionsMinusV1MinusRequest)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectUsergroupApi#usergroupEditPermissionsV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectUsergroupApi#usergroupEditPermissionsV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiUsergroupID** | **kotlin.Int**|  |
+ **usergroupMinusEditPermissionsMinusV1MinusRequest** | [**UsergroupMinusEditPermissionsMinusV1MinusRequest**](UsergroupMinusEditPermissionsMinusV1MinusRequest.md)|  |
+
+### Return type
+
+[**UsergroupMinusEditPermissionsMinusV1MinusResponse**](UsergroupMinusEditPermissionsMinusV1MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a id="usergroupEditUsergroupmembershipsV1"></a>
+# **usergroupEditUsergroupmembershipsV1**
+> UsergroupMinusEditUsergroupmembershipsMinusV1MinusResponse usergroupEditUsergroupmembershipsV1(pkiUsergroupID, usergroupMinusEditUsergroupmembershipsMinusV1MinusRequest)
+
+Edit multiple Usergroupmemberships
+
+Using this endpoint, you can edit multiple Usergroupmemberships at the same time.
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectUsergroupApi()
+val pkiUsergroupID : kotlin.Int = 56 // kotlin.Int | 
+val usergroupMinusEditUsergroupmembershipsMinusV1MinusRequest : UsergroupMinusEditUsergroupmembershipsMinusV1MinusRequest =  // UsergroupMinusEditUsergroupmembershipsMinusV1MinusRequest | 
+try {
+    val result : UsergroupMinusEditUsergroupmembershipsMinusV1MinusResponse = apiInstance.usergroupEditUsergroupmembershipsV1(pkiUsergroupID, usergroupMinusEditUsergroupmembershipsMinusV1MinusRequest)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectUsergroupApi#usergroupEditUsergroupmembershipsV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectUsergroupApi#usergroupEditUsergroupmembershipsV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiUsergroupID** | **kotlin.Int**|  |
+ **usergroupMinusEditUsergroupmembershipsMinusV1MinusRequest** | [**UsergroupMinusEditUsergroupmembershipsMinusV1MinusRequest**](UsergroupMinusEditUsergroupmembershipsMinusV1MinusRequest.md)|  |
+
+### Return type
+
+[**UsergroupMinusEditUsergroupmembershipsMinusV1MinusResponse**](UsergroupMinusEditUsergroupmembershipsMinusV1MinusResponse.md)
 
 ### Authorization
 
@@ -242,7 +350,7 @@ Retrieve an existing Usergroup
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectUsergroupApi()
-val pkiUsergroupID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Usergroup
+val pkiUsergroupID : kotlin.Int = 56 // kotlin.Int | 
 try {
     val result : UsergroupMinusGetObjectMinusV2MinusResponse = apiInstance.usergroupGetObjectV2(pkiUsergroupID)
     println(result)
@@ -259,11 +367,107 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiUsergroupID** | **kotlin.Int**| The unique ID of the Usergroup |
+ **pkiUsergroupID** | **kotlin.Int**|  |
 
 ### Return type
 
 [**UsergroupMinusGetObjectMinusV2MinusResponse**](UsergroupMinusGetObjectMinusV2MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="usergroupGetPermissionsV1"></a>
+# **usergroupGetPermissionsV1**
+> UsergroupMinusGetPermissionsMinusV1MinusResponse usergroupGetPermissionsV1(pkiUsergroupID)
+
+Retrieve an existing Usergroup&#39;s Permissions
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectUsergroupApi()
+val pkiUsergroupID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : UsergroupMinusGetPermissionsMinusV1MinusResponse = apiInstance.usergroupGetPermissionsV1(pkiUsergroupID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectUsergroupApi#usergroupGetPermissionsV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectUsergroupApi#usergroupGetPermissionsV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiUsergroupID** | **kotlin.Int**|  |
+
+### Return type
+
+[**UsergroupMinusGetPermissionsMinusV1MinusResponse**](UsergroupMinusGetPermissionsMinusV1MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="usergroupGetUsergroupmembershipsV1"></a>
+# **usergroupGetUsergroupmembershipsV1**
+> UsergroupMinusGetUsergroupmembershipsMinusV1MinusResponse usergroupGetUsergroupmembershipsV1(pkiUsergroupID)
+
+Retrieve an existing Usergroup&#39;s Usergroupmemberships
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectUsergroupApi()
+val pkiUsergroupID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : UsergroupMinusGetUsergroupmembershipsMinusV1MinusResponse = apiInstance.usergroupGetUsergroupmembershipsV1(pkiUsergroupID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectUsergroupApi#usergroupGetUsergroupmembershipsV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectUsergroupApi#usergroupGetUsergroupmembershipsV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiUsergroupID** | **kotlin.Int**|  |
+
+### Return type
+
+[**UsergroupMinusGetUsergroupmembershipsMinusV1MinusResponse**](UsergroupMinusGetUsergroupmembershipsMinusV1MinusResponse.md)
 
 ### Authorization
 

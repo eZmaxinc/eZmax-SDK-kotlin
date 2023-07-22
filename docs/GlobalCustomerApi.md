@@ -49,10 +49,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
+No authorization required
 
 ### HTTP request headers
 

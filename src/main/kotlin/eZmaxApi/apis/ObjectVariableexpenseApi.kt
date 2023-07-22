@@ -128,7 +128,7 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
     /**
      * Edit an existing Variableexpense
      * 
-     * @param pkiVariableexpenseID The unique ID of the Variableexpense
+     * @param pkiVariableexpenseID 
      * @param variableexpenseMinusEditObjectMinusV1MinusRequest 
      * @return VariableexpenseMinusEditObjectMinusV1MinusResponse
      * @throws IllegalStateException If the request is not correctly configured
@@ -160,7 +160,7 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
     /**
      * Edit an existing Variableexpense
      * 
-     * @param pkiVariableexpenseID The unique ID of the Variableexpense
+     * @param pkiVariableexpenseID 
      * @param variableexpenseMinusEditObjectMinusV1MinusRequest 
      * @return ApiResponse<VariableexpenseMinusEditObjectMinusV1MinusResponse?>
      * @throws IllegalStateException If the request is not correctly configured
@@ -179,7 +179,7 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
     /**
      * To obtain the request config of the operation variableexpenseEditObjectV1
      *
-     * @param pkiVariableexpenseID The unique ID of the Variableexpense
+     * @param pkiVariableexpenseID 
      * @param variableexpenseMinusEditObjectMinusV1MinusRequest 
      * @return RequestConfig
      */
@@ -422,7 +422,7 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
     /**
      * Retrieve an existing Variableexpense
      * 
-     * @param pkiVariableexpenseID The unique ID of the Variableexpense
+     * @param pkiVariableexpenseID 
      * @return VariableexpenseMinusGetObjectMinusV2MinusResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -453,7 +453,7 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
     /**
      * Retrieve an existing Variableexpense
      * 
-     * @param pkiVariableexpenseID The unique ID of the Variableexpense
+     * @param pkiVariableexpenseID 
      * @return ApiResponse<VariableexpenseMinusGetObjectMinusV2MinusResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -471,7 +471,7 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
     /**
      * To obtain the request config of the operation variableexpenseGetObjectV2
      *
-     * @param pkiVariableexpenseID The unique ID of the Variableexpense
+     * @param pkiVariableexpenseID 
      * @return RequestConfig
      */
     fun variableexpenseGetObjectV2RequestConfig(pkiVariableexpenseID: kotlin.Int) : RequestConfig<Unit> {

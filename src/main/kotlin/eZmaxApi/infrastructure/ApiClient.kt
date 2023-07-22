@@ -153,6 +153,20 @@ open class ApiClient(val baseUrl: String, val client: OkHttpClient = defaultClie
                 }
             }
         }
+        if (requestConfig.headers[Authorization].isNullOrEmpty()) {
+            accessToken?.let { accessToken ->
+                requestConfig.headers[Authorization] = "Bearer $accessToken"
+            }
+        }
+        if (requestConfig.query["sAuthorization"].isNullOrEmpty()) {
+            if (apiKey["sAuthorization"] != null) {
+                if (apiKeyPrefix["sAuthorization"] != null) {
+                    requestConfig.query["sAuthorization"] = apiKeyPrefix["sAuthorization"]!! + " " + apiKey["sAuthorization"]!!
+                } else {
+                    requestConfig.query["sAuthorization"] = apiKey["sAuthorization"]!!
+                }
+            }
+        }
     }
 
     protected inline fun <reified I, reified T: Any?> request(requestConfig: RequestConfig<I>): ApiResponse<T?> {

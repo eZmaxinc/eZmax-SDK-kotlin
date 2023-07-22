@@ -24,7 +24,7 @@ import com.squareup.moshi.JsonClass
  *
  * @param pkiUsergroupID The unique ID of the Usergroup
  * @param sUsergroupNameX The Name of the Usergroup in the language of the requester
- * @param iCountUser Numer of user in group
+ * @param iCountUser Number of users in group
  */
 
 
@@ -38,7 +38,7 @@ data class UsergroupMinusListElement (
     @Json(name = "sUsergroupNameX")
     val sUsergroupNameX: kotlin.String,
 
-    /* Numer of user in group */
+    /* Number of users in group */
     @Json(name = "iCountUser")
     val iCountUser: kotlin.Int
 

@@ -76,7 +76,7 @@ Edit an existing Variableexpense
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectVariableexpenseApi()
-val pkiVariableexpenseID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Variableexpense
+val pkiVariableexpenseID : kotlin.Int = 56 // kotlin.Int | 
 val variableexpenseMinusEditObjectMinusV1MinusRequest : VariableexpenseMinusEditObjectMinusV1MinusRequest =  // VariableexpenseMinusEditObjectMinusV1MinusRequest | 
 try {
     val result : VariableexpenseMinusEditObjectMinusV1MinusResponse = apiInstance.variableexpenseEditObjectV1(pkiVariableexpenseID, variableexpenseMinusEditObjectMinusV1MinusRequest)
@@ -94,7 +94,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiVariableexpenseID** | **kotlin.Int**| The unique ID of the Variableexpense |
+ **pkiVariableexpenseID** | **kotlin.Int**|  |
  **variableexpenseMinusEditObjectMinusV1MinusRequest** | [**VariableexpenseMinusEditObjectMinusV1MinusRequest**](VariableexpenseMinusEditObjectMinusV1MinusRequest.md)|  |
 
 ### Return type
@@ -242,7 +242,7 @@ Retrieve an existing Variableexpense
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectVariableexpenseApi()
-val pkiVariableexpenseID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Variableexpense
+val pkiVariableexpenseID : kotlin.Int = 56 // kotlin.Int | 
 try {
     val result : VariableexpenseMinusGetObjectMinusV2MinusResponse = apiInstance.variableexpenseGetObjectV2(pkiVariableexpenseID)
     println(result)
@@ -259,7 +259,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiVariableexpenseID** | **kotlin.Int**| The unique ID of the Variableexpense |
+ **pkiVariableexpenseID** | **kotlin.Int**|  |
 
 ### Return type
 

@@ -22,7 +22,7 @@ import com.squareup.moshi.JsonClass
 /**
  * A Timezone AutocompleteElement Response
  *
- * @param sTimezoneName The description of the Timezone in the language of the requester
+ * @param sTimezoneName The description of the Timezone
  * @param pkiTimezoneID The unique ID of the Timezone
  * @param bTimezoneIsactive Whether the Timezone is active or not
  */
@@ -30,7 +30,7 @@ import com.squareup.moshi.JsonClass
 
 data class TimezoneMinusAutocompleteElementMinusResponse (
 
-    /* The description of the Timezone in the language of the requester */
+    /* The description of the Timezone */
     @Json(name = "sTimezoneName")
     val sTimezoneName: kotlin.String,
 

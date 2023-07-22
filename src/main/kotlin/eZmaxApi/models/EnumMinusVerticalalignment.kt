@@ -20,7 +20,7 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * The Verticalalignment of the Ezsignannotation.  This can only be set if eEzsignannotationType is **Text**
+ * The Vertical alignment
  *
  * Values: Bottom,Middle,Top
  */

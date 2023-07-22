@@ -19,8 +19,20 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
+import eZmaxApi.models.CommonMinusResponseMinusError
 import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
+import eZmaxApi.models.UserMinusCreateObjectMinusV1MinusRequest
+import eZmaxApi.models.UserMinusCreateObjectMinusV1MinusResponse
+import eZmaxApi.models.UserMinusEditObjectMinusV1MinusRequest
+import eZmaxApi.models.UserMinusEditObjectMinusV1MinusResponse
+import eZmaxApi.models.UserMinusEditPermissionsMinusV1MinusRequest
+import eZmaxApi.models.UserMinusEditPermissionsMinusV1MinusResponse
 import eZmaxApi.models.UserMinusGetAutocompleteMinusV2MinusResponse
+import eZmaxApi.models.UserMinusGetEffectivePermissionsMinusV1MinusResponse
+import eZmaxApi.models.UserMinusGetListMinusV1MinusResponse
+import eZmaxApi.models.UserMinusGetObjectMinusV2MinusResponse
+import eZmaxApi.models.UserMinusGetPermissionsMinusV1MinusResponse
+import eZmaxApi.models.UserMinusGetSubnetsMinusV1MinusResponse
 
 import com.squareup.moshi.Json
 
@@ -44,6 +56,228 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
         val defaultBasePath: String by lazy {
             System.getProperties().getProperty(ApiClient.baseUrlKey, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
+    }
+
+    /**
+     * Create a new User
+     * The endpoint allows to create one or many elements at once.
+     * @param userMinusCreateObjectMinusV1MinusRequest 
+     * @return UserMinusCreateObjectMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun userCreateObjectV1(userMinusCreateObjectMinusV1MinusRequest: UserMinusCreateObjectMinusV1MinusRequest) : UserMinusCreateObjectMinusV1MinusResponse {
+        val localVarResponse = userCreateObjectV1WithHttpInfo(userMinusCreateObjectMinusV1MinusRequest = userMinusCreateObjectMinusV1MinusRequest)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as UserMinusCreateObjectMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Create a new User
+     * The endpoint allows to create one or many elements at once.
+     * @param userMinusCreateObjectMinusV1MinusRequest 
+     * @return ApiResponse<UserMinusCreateObjectMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun userCreateObjectV1WithHttpInfo(userMinusCreateObjectMinusV1MinusRequest: UserMinusCreateObjectMinusV1MinusRequest) : ApiResponse<UserMinusCreateObjectMinusV1MinusResponse?> {
+        val localVariableConfig = userCreateObjectV1RequestConfig(userMinusCreateObjectMinusV1MinusRequest = userMinusCreateObjectMinusV1MinusRequest)
+
+        return request<UserMinusCreateObjectMinusV1MinusRequest, UserMinusCreateObjectMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation userCreateObjectV1
+     *
+     * @param userMinusCreateObjectMinusV1MinusRequest 
+     * @return RequestConfig
+     */
+    fun userCreateObjectV1RequestConfig(userMinusCreateObjectMinusV1MinusRequest: UserMinusCreateObjectMinusV1MinusRequest) : RequestConfig<UserMinusCreateObjectMinusV1MinusRequest> {
+        val localVariableBody = userMinusCreateObjectMinusV1MinusRequest
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/user",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Edit an existing User
+     * 
+     * @param pkiUserID The unique ID of the User
+     * @param userMinusEditObjectMinusV1MinusRequest 
+     * @return UserMinusEditObjectMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun userEditObjectV1(pkiUserID: kotlin.Int, userMinusEditObjectMinusV1MinusRequest: UserMinusEditObjectMinusV1MinusRequest) : UserMinusEditObjectMinusV1MinusResponse {
+        val localVarResponse = userEditObjectV1WithHttpInfo(pkiUserID = pkiUserID, userMinusEditObjectMinusV1MinusRequest = userMinusEditObjectMinusV1MinusRequest)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as UserMinusEditObjectMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Edit an existing User
+     * 
+     * @param pkiUserID The unique ID of the User
+     * @param userMinusEditObjectMinusV1MinusRequest 
+     * @return ApiResponse<UserMinusEditObjectMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun userEditObjectV1WithHttpInfo(pkiUserID: kotlin.Int, userMinusEditObjectMinusV1MinusRequest: UserMinusEditObjectMinusV1MinusRequest) : ApiResponse<UserMinusEditObjectMinusV1MinusResponse?> {
+        val localVariableConfig = userEditObjectV1RequestConfig(pkiUserID = pkiUserID, userMinusEditObjectMinusV1MinusRequest = userMinusEditObjectMinusV1MinusRequest)
+
+        return request<UserMinusEditObjectMinusV1MinusRequest, UserMinusEditObjectMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation userEditObjectV1
+     *
+     * @param pkiUserID The unique ID of the User
+     * @param userMinusEditObjectMinusV1MinusRequest 
+     * @return RequestConfig
+     */
+    fun userEditObjectV1RequestConfig(pkiUserID: kotlin.Int, userMinusEditObjectMinusV1MinusRequest: UserMinusEditObjectMinusV1MinusRequest) : RequestConfig<UserMinusEditObjectMinusV1MinusRequest> {
+        val localVariableBody = userMinusEditObjectMinusV1MinusRequest
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.PUT,
+            path = "/1/object/user/{pkiUserID}".replace("{"+"pkiUserID"+"}", encodeURIComponent(pkiUserID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Edit multiple Permissions
+     * Using this endpoint, you can edit multiple Permissions at the same time.
+     * @param pkiUserID 
+     * @param userMinusEditPermissionsMinusV1MinusRequest 
+     * @return UserMinusEditPermissionsMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun userEditPermissionsV1(pkiUserID: kotlin.Int, userMinusEditPermissionsMinusV1MinusRequest: UserMinusEditPermissionsMinusV1MinusRequest) : UserMinusEditPermissionsMinusV1MinusResponse {
+        val localVarResponse = userEditPermissionsV1WithHttpInfo(pkiUserID = pkiUserID, userMinusEditPermissionsMinusV1MinusRequest = userMinusEditPermissionsMinusV1MinusRequest)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as UserMinusEditPermissionsMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Edit multiple Permissions
+     * Using this endpoint, you can edit multiple Permissions at the same time.
+     * @param pkiUserID 
+     * @param userMinusEditPermissionsMinusV1MinusRequest 
+     * @return ApiResponse<UserMinusEditPermissionsMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun userEditPermissionsV1WithHttpInfo(pkiUserID: kotlin.Int, userMinusEditPermissionsMinusV1MinusRequest: UserMinusEditPermissionsMinusV1MinusRequest) : ApiResponse<UserMinusEditPermissionsMinusV1MinusResponse?> {
+        val localVariableConfig = userEditPermissionsV1RequestConfig(pkiUserID = pkiUserID, userMinusEditPermissionsMinusV1MinusRequest = userMinusEditPermissionsMinusV1MinusRequest)
+
+        return request<UserMinusEditPermissionsMinusV1MinusRequest, UserMinusEditPermissionsMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation userEditPermissionsV1
+     *
+     * @param pkiUserID 
+     * @param userMinusEditPermissionsMinusV1MinusRequest 
+     * @return RequestConfig
+     */
+    fun userEditPermissionsV1RequestConfig(pkiUserID: kotlin.Int, userMinusEditPermissionsMinusV1MinusRequest: UserMinusEditPermissionsMinusV1MinusRequest) : RequestConfig<UserMinusEditPermissionsMinusV1MinusRequest> {
+        val localVariableBody = userMinusEditPermissionsMinusV1MinusRequest
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.PUT,
+            path = "/1/object/user/{pkiUserID}/editPermissions".replace("{"+"pkiUserID"+"}", encodeURIComponent(pkiUserID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
     }
 
     /**
@@ -150,6 +384,414 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/2/object/user/getAutocomplete/{sSelector}".replace("{"+"sSelector"+"}", encodeURIComponent(sSelector.value.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Retrieve an existing User&#39;s Effective Permissions
+     * Effective Permissions refers to the combination of Permissions held by a User and the Permissions associated with the Usergroups they belong to.
+     * @param pkiUserID 
+     * @return UserMinusGetEffectivePermissionsMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun userGetEffectivePermissionsV1(pkiUserID: kotlin.Int) : UserMinusGetEffectivePermissionsMinusV1MinusResponse {
+        val localVarResponse = userGetEffectivePermissionsV1WithHttpInfo(pkiUserID = pkiUserID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as UserMinusGetEffectivePermissionsMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve an existing User&#39;s Effective Permissions
+     * Effective Permissions refers to the combination of Permissions held by a User and the Permissions associated with the Usergroups they belong to.
+     * @param pkiUserID 
+     * @return ApiResponse<UserMinusGetEffectivePermissionsMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun userGetEffectivePermissionsV1WithHttpInfo(pkiUserID: kotlin.Int) : ApiResponse<UserMinusGetEffectivePermissionsMinusV1MinusResponse?> {
+        val localVariableConfig = userGetEffectivePermissionsV1RequestConfig(pkiUserID = pkiUserID)
+
+        return request<Unit, UserMinusGetEffectivePermissionsMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation userGetEffectivePermissionsV1
+     *
+     * @param pkiUserID 
+     * @return RequestConfig
+     */
+    fun userGetEffectivePermissionsV1RequestConfig(pkiUserID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/user/{pkiUserID}/getEffectivePermissions".replace("{"+"pkiUserID"+"}", encodeURIComponent(pkiUserID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * enum for parameter eOrderBy
+     */
+     enum class EOrderBy_userGetListV1(val value: kotlin.String) {
+         @Json(name = "pkiUserID_ASC") pkiUserID_ASC("pkiUserID_ASC"),
+         @Json(name = "pkiUserID_DESC") pkiUserID_DESC("pkiUserID_DESC"),
+         @Json(name = "sUserFirstname_ASC") sUserFirstname_ASC("sUserFirstname_ASC"),
+         @Json(name = "sUserFirstname_DESC") sUserFirstname_DESC("sUserFirstname_DESC"),
+         @Json(name = "sUserLastname_ASC") sUserLastname_ASC("sUserLastname_ASC"),
+         @Json(name = "sUserLastname_DESC") sUserLastname_DESC("sUserLastname_DESC"),
+         @Json(name = "sUserLoginname_ASC") sUserLoginname_ASC("sUserLoginname_ASC"),
+         @Json(name = "sUserLoginname_DESC") sUserLoginname_DESC("sUserLoginname_DESC"),
+         @Json(name = "bUserIsactive_ASC") bUserIsactive_ASC("bUserIsactive_ASC"),
+         @Json(name = "bUserIsactive_DESC") bUserIsactive_DESC("bUserIsactive_DESC"),
+         @Json(name = "eUserType_ASC") eUserType_ASC("eUserType_ASC"),
+         @Json(name = "eUserType_DESC") eUserType_DESC("eUserType_DESC"),
+         @Json(name = "eUserOrigin_ASC") eUserOrigin_ASC("eUserOrigin_ASC"),
+         @Json(name = "eUserOrigin_DESC") eUserOrigin_DESC("eUserOrigin_DESC"),
+         @Json(name = "eUserEzsignaccess_ASC") eUserEzsignaccess_ASC("eUserEzsignaccess_ASC"),
+         @Json(name = "eUserEzsignaccess_DESC") eUserEzsignaccess_DESC("eUserEzsignaccess_DESC"),
+         @Json(name = "dtUserEzsignprepaidexpiration_ASC") dtUserEzsignprepaidexpiration_ASC("dtUserEzsignprepaidexpiration_ASC"),
+         @Json(name = "dtUserEzsignprepaidexpiration_DESC") dtUserEzsignprepaidexpiration_DESC("dtUserEzsignprepaidexpiration_DESC"),
+         @Json(name = "sEmailAddress_ASC") sEmailAddress_ASC("sEmailAddress_ASC"),
+         @Json(name = "sEmailAddress_DESC") sEmailAddress_DESC("sEmailAddress_DESC")
+     }
+
+    /**
+     * Retrieve User list
+     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eUserType | AgentBroker&lt;br&gt;Assistant&lt;br&gt;Employee&lt;br&gt;EzsignUser&lt;br&gt;Normal | | eUserOrigin | BuiltIn&lt;br&gt;External | | eUserEzsignaccess | No&lt;br&gt;PaidByOffice&lt;br&gt;PerDocument&lt;br&gt;Prepaid |
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional, default to 10000)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return UserMinusGetListMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun userGetListV1(eOrderBy: EOrderBy_userGetListV1? = null, iRowMax: kotlin.Int? = 10000, iRowOffset: kotlin.Int? = 0, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null, sFilter: kotlin.String? = null) : UserMinusGetListMinusV1MinusResponse {
+        val localVarResponse = userGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as UserMinusGetListMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve User list
+     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eUserType | AgentBroker&lt;br&gt;Assistant&lt;br&gt;Employee&lt;br&gt;EzsignUser&lt;br&gt;Normal | | eUserOrigin | BuiltIn&lt;br&gt;External | | eUserEzsignaccess | No&lt;br&gt;PaidByOffice&lt;br&gt;PerDocument&lt;br&gt;Prepaid |
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional, default to 10000)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return ApiResponse<UserMinusGetListMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun userGetListV1WithHttpInfo(eOrderBy: EOrderBy_userGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : ApiResponse<UserMinusGetListMinusV1MinusResponse?> {
+        val localVariableConfig = userGetListV1RequestConfig(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
+
+        return request<Unit, UserMinusGetListMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation userGetListV1
+     *
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional, default to 10000)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return RequestConfig
+     */
+    fun userGetListV1RequestConfig(eOrderBy: EOrderBy_userGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (eOrderBy != null) {
+                    put("eOrderBy", listOf(eOrderBy.toString()))
+                }
+                if (iRowMax != null) {
+                    put("iRowMax", listOf(iRowMax.toString()))
+                }
+                if (iRowOffset != null) {
+                    put("iRowOffset", listOf(iRowOffset.toString()))
+                }
+                if (sFilter != null) {
+                    put("sFilter", listOf(sFilter.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/user/getList",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Retrieve an existing User
+     * 
+     * @param pkiUserID The unique ID of the User
+     * @return UserMinusGetObjectMinusV2MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun userGetObjectV2(pkiUserID: kotlin.Int) : UserMinusGetObjectMinusV2MinusResponse {
+        val localVarResponse = userGetObjectV2WithHttpInfo(pkiUserID = pkiUserID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as UserMinusGetObjectMinusV2MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve an existing User
+     * 
+     * @param pkiUserID The unique ID of the User
+     * @return ApiResponse<UserMinusGetObjectMinusV2MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun userGetObjectV2WithHttpInfo(pkiUserID: kotlin.Int) : ApiResponse<UserMinusGetObjectMinusV2MinusResponse?> {
+        val localVariableConfig = userGetObjectV2RequestConfig(pkiUserID = pkiUserID)
+
+        return request<Unit, UserMinusGetObjectMinusV2MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation userGetObjectV2
+     *
+     * @param pkiUserID The unique ID of the User
+     * @return RequestConfig
+     */
+    fun userGetObjectV2RequestConfig(pkiUserID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/2/object/user/{pkiUserID}".replace("{"+"pkiUserID"+"}", encodeURIComponent(pkiUserID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Retrieve an existing User&#39;s Permissions
+     * 
+     * @param pkiUserID 
+     * @return UserMinusGetPermissionsMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun userGetPermissionsV1(pkiUserID: kotlin.Int) : UserMinusGetPermissionsMinusV1MinusResponse {
+        val localVarResponse = userGetPermissionsV1WithHttpInfo(pkiUserID = pkiUserID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as UserMinusGetPermissionsMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve an existing User&#39;s Permissions
+     * 
+     * @param pkiUserID 
+     * @return ApiResponse<UserMinusGetPermissionsMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun userGetPermissionsV1WithHttpInfo(pkiUserID: kotlin.Int) : ApiResponse<UserMinusGetPermissionsMinusV1MinusResponse?> {
+        val localVariableConfig = userGetPermissionsV1RequestConfig(pkiUserID = pkiUserID)
+
+        return request<Unit, UserMinusGetPermissionsMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation userGetPermissionsV1
+     *
+     * @param pkiUserID 
+     * @return RequestConfig
+     */
+    fun userGetPermissionsV1RequestConfig(pkiUserID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/user/{pkiUserID}/getPermissions".replace("{"+"pkiUserID"+"}", encodeURIComponent(pkiUserID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Retrieve an existing User&#39;s Subnets
+     * 
+     * @param pkiUserID 
+     * @return UserMinusGetSubnetsMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun userGetSubnetsV1(pkiUserID: kotlin.Int) : UserMinusGetSubnetsMinusV1MinusResponse {
+        val localVarResponse = userGetSubnetsV1WithHttpInfo(pkiUserID = pkiUserID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as UserMinusGetSubnetsMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve an existing User&#39;s Subnets
+     * 
+     * @param pkiUserID 
+     * @return ApiResponse<UserMinusGetSubnetsMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun userGetSubnetsV1WithHttpInfo(pkiUserID: kotlin.Int) : ApiResponse<UserMinusGetSubnetsMinusV1MinusResponse?> {
+        val localVariableConfig = userGetSubnetsV1RequestConfig(pkiUserID = pkiUserID)
+
+        return request<Unit, UserMinusGetSubnetsMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation userGetSubnetsV1
+     *
+     * @param pkiUserID 
+     * @return RequestConfig
+     */
+    fun userGetSubnetsV1RequestConfig(pkiUserID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/user/{pkiUserID}/getSubnets".replace("{"+"pkiUserID"+"}", encodeURIComponent(pkiUserID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

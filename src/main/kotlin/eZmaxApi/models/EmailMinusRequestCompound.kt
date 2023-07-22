@@ -24,6 +24,7 @@ import com.squareup.moshi.JsonClass
  *
  * @param fkiEmailtypeID The unique ID of the Emailtype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home|
  * @param sEmailAddress The email address.
+ * @param pkiEmailID The unique ID of the Email
  */
 
 
@@ -35,7 +36,11 @@ data class EmailMinusRequestCompound (
 
     /* The email address. */
     @Json(name = "sEmailAddress")
-    val sEmailAddress: kotlin.String
+    val sEmailAddress: kotlin.String,
+
+    /* The unique ID of the Email */
+    @Json(name = "pkiEmailID")
+    val pkiEmailID: kotlin.Int? = null
 
 )
 

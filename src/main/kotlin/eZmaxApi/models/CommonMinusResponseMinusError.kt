@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.FieldMinusEErrorCode
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -22,20 +23,19 @@ import com.squareup.moshi.JsonClass
 /**
  * Generic Error Message
  *
- * @param sErrorMessage More detail about the error
- * @param eErrorCode The error code. See documentation for valid values
+ * @param sErrorMessage The message giving details about the error
+ * @param eErrorCode 
  */
 
 
 data class CommonMinusResponseMinusError (
 
-    /* More detail about the error */
+    /* The message giving details about the error */
     @Json(name = "sErrorMessage")
     val sErrorMessage: kotlin.String,
 
-    /* The error code. See documentation for valid values */
     @Json(name = "eErrorCode")
-    val eErrorCode: kotlin.String
+    val eErrorCode: FieldMinusEErrorCode
 
 )
 

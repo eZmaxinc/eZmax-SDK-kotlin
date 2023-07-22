@@ -113,7 +113,7 @@ class GlobalEzmaxclientApi(basePath: kotlin.String = defaultBasePath, client: Ok
             path = "/1/ezmaxclient/{pksEzmaxclientOs}/version".replace("{"+"pksEzmaxclientOs"+"}", encodeURIComponent(pksEzmaxclientOs.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
-            requiresAuthentication = true,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }

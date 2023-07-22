@@ -22,14 +22,17 @@ import com.squareup.moshi.JsonClass
 /**
  * This Management Event. This property will be set only if the Module is \"Management\".
  *
- * Values: UserCreated
+ * Values: UserCreated,UserstagedCreated
  */
 
 @JsonClass(generateAdapter = false)
 enum class FieldMinusEWebhookManagementevent(val value: kotlin.String) {
 
     @Json(name = "UserCreated")
-    UserCreated("UserCreated");
+    UserCreated("UserCreated"),
+
+    @Json(name = "UserstagedCreated")
+    UserstagedCreated("UserstagedCreated");
 
     /**
      * Override [toString()] to avoid using the enum variable name as the value, and instead use

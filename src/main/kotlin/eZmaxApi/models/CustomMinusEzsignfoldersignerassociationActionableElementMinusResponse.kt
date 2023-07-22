@@ -17,6 +17,8 @@ package eZmaxApi.models
 
 import eZmaxApi.models.EzsignfoldersignerassociationMinusResponseCompoundMinusUser
 import eZmaxApi.models.EzsignsignerMinusResponseCompound
+import eZmaxApi.models.EzsignsignergroupMinusResponseCompound
+import eZmaxApi.models.UsergroupMinusResponseCompound
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -30,7 +32,9 @@ import com.squareup.moshi.JsonClass
  * @param bEzsignfoldersignerassociationReceivecopy If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document.
  * @param tEzsignfoldersignerassociationMessage A custom text message that will be added to the email sent.
  * @param bEzsignfoldersignerassociationHasactionableelementsCurrent Indicates if the Ezsignfoldersignerassociation has actionable elements in the current step
+ * @param objEzsignsignergroup 
  * @param objUser 
+ * @param objUsergroup 
  * @param objEzsignsigner 
  * @param bEzsignfoldersignerassociationHasactionableelementsFuture Indicates if the Ezsignfoldersignerassociation has actionable elements in a future step
  */
@@ -62,8 +66,14 @@ data class CustomMinusEzsignfoldersignerassociationActionableElementMinusRespons
     @Json(name = "bEzsignfoldersignerassociationHasactionableelementsCurrent")
     val bEzsignfoldersignerassociationHasactionableelementsCurrent: kotlin.Boolean,
 
+    @Json(name = "objEzsignsignergroup")
+    val objEzsignsignergroup: EzsignsignergroupMinusResponseCompound? = null,
+
     @Json(name = "objUser")
     val objUser: EzsignfoldersignerassociationMinusResponseCompoundMinusUser? = null,
+
+    @Json(name = "objUsergroup")
+    val objUsergroup: UsergroupMinusResponseCompound? = null,
 
     @Json(name = "objEzsignsigner")
     val objEzsignsigner: EzsignsignerMinusResponseCompound? = null,

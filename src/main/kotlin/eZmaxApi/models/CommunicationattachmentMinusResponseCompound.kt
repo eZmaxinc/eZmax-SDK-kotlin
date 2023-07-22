@@ -27,6 +27,7 @@ import com.squareup.moshi.JsonClass
  * @param fkiAttachmentID The unique ID of the Attachment.
  * @param fkiInvoiceID The unique ID of the Invoice.
  * @param fkiSalarypreparationID The unique ID of the Salarypreparation.
+ * @param sDownloadUrl The Url to the requested document.  Url will expire after 3 hours.
  */
 
 
@@ -50,7 +51,11 @@ data class CommunicationattachmentMinusResponseCompound (
 
     /* The unique ID of the Salarypreparation. */
     @Json(name = "fkiSalarypreparationID")
-    val fkiSalarypreparationID: kotlin.Int? = null
+    val fkiSalarypreparationID: kotlin.Int? = null,
+
+    /* The Url to the requested document.  Url will expire after 3 hours. */
+    @Json(name = "sDownloadUrl")
+    val sDownloadUrl: kotlin.String? = null
 
 )
 

@@ -76,7 +76,7 @@ Edit an existing Billingentityinternal
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectBillingentityinternalApi()
-val pkiBillingentityinternalID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Billingentityinternal
+val pkiBillingentityinternalID : kotlin.Int = 56 // kotlin.Int | 
 val billingentityinternalMinusEditObjectMinusV1MinusRequest : BillingentityinternalMinusEditObjectMinusV1MinusRequest =  // BillingentityinternalMinusEditObjectMinusV1MinusRequest | 
 try {
     val result : BillingentityinternalMinusEditObjectMinusV1MinusResponse = apiInstance.billingentityinternalEditObjectV1(pkiBillingentityinternalID, billingentityinternalMinusEditObjectMinusV1MinusRequest)
@@ -94,7 +94,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiBillingentityinternalID** | **kotlin.Int**| The unique ID of the Billingentityinternal |
+ **pkiBillingentityinternalID** | **kotlin.Int**|  |
  **billingentityinternalMinusEditObjectMinusV1MinusRequest** | [**BillingentityinternalMinusEditObjectMinusV1MinusRequest**](BillingentityinternalMinusEditObjectMinusV1MinusRequest.md)|  |
 
 ### Return type
@@ -242,7 +242,7 @@ Retrieve an existing Billingentityinternal
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectBillingentityinternalApi()
-val pkiBillingentityinternalID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Billingentityinternal
+val pkiBillingentityinternalID : kotlin.Int = 56 // kotlin.Int | 
 try {
     val result : BillingentityinternalMinusGetObjectMinusV2MinusResponse = apiInstance.billingentityinternalGetObjectV2(pkiBillingentityinternalID)
     println(result)
@@ -259,7 +259,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiBillingentityinternalID** | **kotlin.Int**| The unique ID of the Billingentityinternal |
+ **pkiBillingentityinternalID** | **kotlin.Int**|  |
 
 ### Return type
 

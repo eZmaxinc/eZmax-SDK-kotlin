@@ -26,12 +26,12 @@ import com.squareup.moshi.JsonClass
  * @param fkiUserIDCloning The unique ID of the User
  * @param fkiUserIDCloned The unique ID of the User
  * @param dtClonehistoryFirsthit The firsthit of the Clonehistory
- * @param sUserLoginnameCloning The Login name of the User.
- * @param sUserFirstnameCloning The First name of the user
- * @param sUserLastnameCloning The Last name of the user
- * @param sUserLoginnameCloned The Login name of the User.
- * @param sUserFirstnameCloned The First name of the user
- * @param sUserLastnameCloned The Last name of the user
+ * @param sUserLoginnameCloning The login name of the User.
+ * @param sUserFirstnameCloning The first name of the user
+ * @param sUserLastnameCloning The last name of the user
+ * @param sUserLoginnameCloned The login name of the User.
+ * @param sUserFirstnameCloned The first name of the user
+ * @param sUserLastnameCloned The last name of the user
  * @param dtClonehistoryLasthit The lasthit of the Clonehistory
  */
 
@@ -54,27 +54,27 @@ data class ClonehistoryMinusListElement (
     @Json(name = "dtClonehistoryFirsthit")
     val dtClonehistoryFirsthit: kotlin.String,
 
-    /* The Login name of the User. */
+    /* The login name of the User. */
     @Json(name = "sUserLoginnameCloning")
     val sUserLoginnameCloning: kotlin.String,
 
-    /* The First name of the user */
+    /* The first name of the user */
     @Json(name = "sUserFirstnameCloning")
     val sUserFirstnameCloning: kotlin.String,
 
-    /* The Last name of the user */
+    /* The last name of the user */
     @Json(name = "sUserLastnameCloning")
     val sUserLastnameCloning: kotlin.String,
 
-    /* The Login name of the User. */
+    /* The login name of the User. */
     @Json(name = "sUserLoginnameCloned")
     val sUserLoginnameCloned: kotlin.String,
 
-    /* The First name of the user */
+    /* The first name of the user */
     @Json(name = "sUserFirstnameCloned")
     val sUserFirstnameCloned: kotlin.String,
 
-    /* The Last name of the user */
+    /* The last name of the user */
     @Json(name = "sUserLastnameCloned")
     val sUserLastnameCloned: kotlin.String,
 

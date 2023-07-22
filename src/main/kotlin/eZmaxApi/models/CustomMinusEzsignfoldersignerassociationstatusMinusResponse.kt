@@ -24,9 +24,9 @@ import com.squareup.moshi.JsonClass
  * A Ezsignfoldersignerassociationstatus Object and children to create a complete structure
  *
  * @param fkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation
+ * @param aObjEzsignsignaturestatus 
  * @param sEzsignfoldersignerassociationstatusLastname The last name of the Ezsignsigner
  * @param sEzsignfoldersignerassociationstatusFirstname The first name of the Ezsignsigner
- * @param aObjEzsignsignaturestatus 
  */
 
 
@@ -36,16 +36,16 @@ data class CustomMinusEzsignfoldersignerassociationstatusMinusResponse (
     @Json(name = "fkiEzsignfoldersignerassociationID")
     val fkiEzsignfoldersignerassociationID: kotlin.Int,
 
+    @Json(name = "a_objEzsignsignaturestatus")
+    val aObjEzsignsignaturestatus: kotlin.collections.List<CustomMinusEzsignsignaturestatusMinusResponse>,
+
     /* The last name of the Ezsignsigner */
     @Json(name = "sEzsignfoldersignerassociationstatusLastname")
-    val sEzsignfoldersignerassociationstatusLastname: kotlin.String,
+    val sEzsignfoldersignerassociationstatusLastname: kotlin.String? = null,
 
     /* The first name of the Ezsignsigner */
     @Json(name = "sEzsignfoldersignerassociationstatusFirstname")
-    val sEzsignfoldersignerassociationstatusFirstname: kotlin.String,
-
-    @Json(name = "a_objEzsignsignaturestatus")
-    val aObjEzsignsignaturestatus: kotlin.collections.List<CustomMinusEzsignsignaturestatusMinusResponse>
+    val sEzsignfoldersignerassociationstatusFirstname: kotlin.String? = null
 
 )
 

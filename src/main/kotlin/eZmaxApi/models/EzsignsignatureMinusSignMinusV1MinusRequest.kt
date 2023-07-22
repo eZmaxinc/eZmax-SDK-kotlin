@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.CommonMinusFile
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -24,6 +25,10 @@ import com.squareup.moshi.JsonClass
  *
  * @param bIsAutomatic Indicates if the Ezsignsignature was part of an automatic process or not.  This can only be true if eEzsignsignatureType is **Acknowledgement**, **City**, **Handwritten**, **Initials**, **Name** or **Stamp**. 
  * @param sValue The value required for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **City**, **FieldText** or **FieldTextarea**
+ * @param eAttachmentsConfirmationDecision Whether the attachment are accepted or refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**
+ * @param sAttachmentsRefusalReason The reason of refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**
+ * @param sSvg The SVG of the handwritten signature.  This can only be set if eEzsignsignatureType is **Handwritten** and **bIsAutomatic** is false
+ * @param aObjFile 
  */
 
 
@@ -35,7 +40,34 @@ data class EzsignsignatureMinusSignMinusV1MinusRequest (
 
     /* The value required for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **City**, **FieldText** or **FieldTextarea** */
     @Json(name = "sValue")
-    val sValue: kotlin.String? = null
+    val sValue: kotlin.String? = null,
 
-)
+    /* Whether the attachment are accepted or refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation** */
+    @Json(name = "eAttachmentsConfirmationDecision")
+    val eAttachmentsConfirmationDecision: EzsignsignatureMinusSignMinusV1MinusRequest.EAttachmentsConfirmationDecision? = null,
+
+    /* The reason of refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation** */
+    @Json(name = "sAttachmentsRefusalReason")
+    val sAttachmentsRefusalReason: kotlin.String? = null,
+
+    /* The SVG of the handwritten signature.  This can only be set if eEzsignsignatureType is **Handwritten** and **bIsAutomatic** is false */
+    @Json(name = "sSvg")
+    val sSvg: kotlin.String? = null,
+
+    @Json(name = "a_objFile")
+    val aObjFile: kotlin.collections.List<CommonMinusFile>? = null
+
+) {
+
+    /**
+     * Whether the attachment are accepted or refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**
+     *
+     * Values: Accepted,Refused
+     */
+    @JsonClass(generateAdapter = false)
+    enum class EAttachmentsConfirmationDecision(val value: kotlin.String) {
+        @Json(name = "Accepted") Accepted("Accepted"),
+        @Json(name = "Refused") Refused("Refused");
+    }
+}
 

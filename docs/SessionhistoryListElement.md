@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **fkiComputerID** | **kotlin.Int** | The unique ID of the Computer |  [optional]
 **fkiUserID** | **kotlin.Int** | The unique ID of the User |  [optional]
 **sComputerDescription** | **kotlin.String** | The description of the Computer |  [optional]
-**sUserLoginname** | **kotlin.String** | The Login name of the User. |  [optional]
+**sUserLoginname** | **kotlin.String** | The login name of the User. |  [optional]
 
 
 

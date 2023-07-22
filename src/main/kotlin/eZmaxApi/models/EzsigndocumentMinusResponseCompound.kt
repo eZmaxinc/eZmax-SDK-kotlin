@@ -25,22 +25,15 @@ import com.squareup.moshi.JsonClass
 /**
  * An Ezsigndocument Object and children to create a complete structure
  *
+ * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument
  * @param fkiEzsignfolderID The unique ID of the Ezsignfolder
  * @param dtEzsigndocumentDuedate The maximum date and time at which the Ezsigndocument can be signed.
- * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
  * @param sEzsigndocumentName The name of the document that will be presented to Ezsignfoldersignerassociations
- * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument
  * @param eEzsigndocumentStep 
  * @param iEzsigndocumentOrder The order in which the Ezsigndocument will be presented to the signatory in the Ezsignfolder.
  * @param iEzsigndocumentPagetotal The number of pages in the Ezsigndocument.
  * @param iEzsigndocumentSignaturesigned The number of signatures that were signed in the document.
  * @param iEzsigndocumentSignaturetotal The number of total signatures that were requested in the Ezsigndocument.
- * @param sEzsigndocumentMD5initial MD5 Hash of the initial PDF Document before signatures were applied to it.
- * @param sEzsigndocumentMD5signed MD5 Hash of the final PDF Document after all signatures were applied to it.
- * @param bEzsigndocumentEzsignform If the Ezsigndocument contains an Ezsignform or not
- * @param bEzsigndocumentHassignedsignatures If the Ezsigndocument contains signed signatures (From internal or external sources)
- * @param objAudit 
- * @param sEzsigndocumentExternalid This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
  * @param iEzsigndocumentStepformtotal The total number of steps in the form filling phase
  * @param iEzsigndocumentStepformcurrent The current step in the form filling phase
  * @param iEzsigndocumentStepsignaturetotal The total number of steps in the signature filling phase
@@ -48,13 +41,24 @@ import com.squareup.moshi.JsonClass
  * @param aObjEzsignfoldersignerassociationstatus 
  * @param fkiEzsignfoldersignerassociationIDDeclinedtosign The unique ID of the Ezsignfoldersignerassociation
  * @param dtEzsignformCompleted The date and time at which the Ezsignform has been completed.
+ * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
  * @param dtEzsigndocumentFirstsend The date and time when the Ezsigndocument was first sent.
  * @param dtEzsigndocumentLastsend The date and time when the Ezsigndocument was sent the last time.
+ * @param sEzsigndocumentMD5initial MD5 Hash of the initial PDF Document before signatures were applied to it.
  * @param tEzsigndocumentDeclinedtosignreason A custom text message that will contain the refusal message if the Ezsigndocument is declined to sign
+ * @param sEzsigndocumentMD5signed MD5 Hash of the final PDF Document after all signatures were applied to it.
+ * @param bEzsigndocumentEzsignform If the Ezsigndocument contains an Ezsignform or not
+ * @param bEzsigndocumentHassignedsignatures If the Ezsigndocument contains signed signatures (From internal or external sources)
+ * @param objAudit 
+ * @param sEzsigndocumentExternalid This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
  */
 
 
 data class EzsigndocumentMinusResponseCompound (
+
+    /* The unique ID of the Ezsigndocument */
+    @Json(name = "pkiEzsigndocumentID")
+    val pkiEzsigndocumentID: kotlin.Int,
 
     /* The unique ID of the Ezsignfolder */
     @Json(name = "fkiEzsignfolderID")
@@ -64,17 +68,9 @@ data class EzsigndocumentMinusResponseCompound (
     @Json(name = "dtEzsigndocumentDuedate")
     val dtEzsigndocumentDuedate: kotlin.String,
 
-    /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| */
-    @Json(name = "fkiLanguageID")
-    val fkiLanguageID: kotlin.Int,
-
     /* The name of the document that will be presented to Ezsignfoldersignerassociations */
     @Json(name = "sEzsigndocumentName")
     val sEzsigndocumentName: kotlin.String,
-
-    /* The unique ID of the Ezsigndocument */
-    @Json(name = "pkiEzsigndocumentID")
-    val pkiEzsigndocumentID: kotlin.Int,
 
     @Json(name = "eEzsigndocumentStep")
     val eEzsigndocumentStep: FieldMinusEEzsigndocumentStep,
@@ -94,29 +90,6 @@ data class EzsigndocumentMinusResponseCompound (
     /* The number of total signatures that were requested in the Ezsigndocument. */
     @Json(name = "iEzsigndocumentSignaturetotal")
     val iEzsigndocumentSignaturetotal: kotlin.Int,
-
-    /* MD5 Hash of the initial PDF Document before signatures were applied to it. */
-    @Json(name = "sEzsigndocumentMD5initial")
-    val sEzsigndocumentMD5initial: kotlin.String,
-
-    /* MD5 Hash of the final PDF Document after all signatures were applied to it. */
-    @Json(name = "sEzsigndocumentMD5signed")
-    val sEzsigndocumentMD5signed: kotlin.String,
-
-    /* If the Ezsigndocument contains an Ezsignform or not */
-    @Json(name = "bEzsigndocumentEzsignform")
-    val bEzsigndocumentEzsignform: kotlin.Boolean,
-
-    /* If the Ezsigndocument contains signed signatures (From internal or external sources) */
-    @Json(name = "bEzsigndocumentHassignedsignatures")
-    val bEzsigndocumentHassignedsignatures: kotlin.Boolean,
-
-    @Json(name = "objAudit")
-    val objAudit: CommonMinusAudit,
-
-    /* This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format.  */
-    @Json(name = "sEzsigndocumentExternalid")
-    val sEzsigndocumentExternalid: kotlin.String,
 
     /* The total number of steps in the form filling phase */
     @Json(name = "iEzsigndocumentStepformtotal")
@@ -145,6 +118,10 @@ data class EzsigndocumentMinusResponseCompound (
     @Json(name = "dtEzsignformCompleted")
     val dtEzsignformCompleted: kotlin.String? = null,
 
+    /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| */
+    @Json(name = "fkiLanguageID")
+    val fkiLanguageID: kotlin.Int? = null,
+
     /* The date and time when the Ezsigndocument was first sent. */
     @Json(name = "dtEzsigndocumentFirstsend")
     val dtEzsigndocumentFirstsend: kotlin.String? = null,
@@ -153,9 +130,32 @@ data class EzsigndocumentMinusResponseCompound (
     @Json(name = "dtEzsigndocumentLastsend")
     val dtEzsigndocumentLastsend: kotlin.String? = null,
 
+    /* MD5 Hash of the initial PDF Document before signatures were applied to it. */
+    @Json(name = "sEzsigndocumentMD5initial")
+    val sEzsigndocumentMD5initial: kotlin.String? = null,
+
     /* A custom text message that will contain the refusal message if the Ezsigndocument is declined to sign */
     @Json(name = "tEzsigndocumentDeclinedtosignreason")
-    val tEzsigndocumentDeclinedtosignreason: kotlin.String? = null
+    val tEzsigndocumentDeclinedtosignreason: kotlin.String? = null,
+
+    /* MD5 Hash of the final PDF Document after all signatures were applied to it. */
+    @Json(name = "sEzsigndocumentMD5signed")
+    val sEzsigndocumentMD5signed: kotlin.String? = null,
+
+    /* If the Ezsigndocument contains an Ezsignform or not */
+    @Json(name = "bEzsigndocumentEzsignform")
+    val bEzsigndocumentEzsignform: kotlin.Boolean? = null,
+
+    /* If the Ezsigndocument contains signed signatures (From internal or external sources) */
+    @Json(name = "bEzsigndocumentHassignedsignatures")
+    val bEzsigndocumentHassignedsignatures: kotlin.Boolean? = null,
+
+    @Json(name = "objAudit")
+    val objAudit: CommonMinusAudit? = null,
+
+    /* This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format.  */
+    @Json(name = "sEzsigndocumentExternalid")
+    val sEzsigndocumentExternalid: kotlin.String? = null
 
 )
 

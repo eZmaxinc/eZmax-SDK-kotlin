@@ -32,7 +32,7 @@ import com.squareup.moshi.JsonClass
  * @param fkiComputerID The unique ID of the Computer
  * @param fkiUserID The unique ID of the User
  * @param sComputerDescription The description of the Computer
- * @param sUserLoginname The Login name of the User.
+ * @param sUserLoginname The login name of the User.
  */
 
 
@@ -73,7 +73,7 @@ data class SessionhistoryMinusListElement (
     @Json(name = "sComputerDescription")
     val sComputerDescription: kotlin.String? = null,
 
-    /* The Login name of the User. */
+    /* The login name of the User. */
     @Json(name = "sUserLoginname")
     val sUserLoginname: kotlin.String? = null
 

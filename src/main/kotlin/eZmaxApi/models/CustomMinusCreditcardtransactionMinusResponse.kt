@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.FieldMinusECreditcardtypeCodename
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -22,18 +23,14 @@ import com.squareup.moshi.JsonClass
 /**
  * A custom Creditcardtransaction Object
  *
- * @param sCreditcardtypeCodename The codename of the Creditcardtype
  * @param dCreditcardtransactionAmount The amount of the Creditcardtransaction
  * @param sCreditcardtransactionPartiallydecryptednumber The partially decrypted credit card number used in the Creditcardtransaction
  * @param sCreditcardtransactionReferencenumber The reference number on the creditcard service for the Creditcardtransaction
+ * @param eCreditcardtypeCodename 
  */
 
 
 data class CustomMinusCreditcardtransactionMinusResponse (
-
-    /* The codename of the Creditcardtype */
-    @Json(name = "sCreditcardtypeCodename")
-    val sCreditcardtypeCodename: kotlin.String,
 
     /* The amount of the Creditcardtransaction */
     @Json(name = "dCreditcardtransactionAmount")
@@ -45,7 +42,10 @@ data class CustomMinusCreditcardtransactionMinusResponse (
 
     /* The reference number on the creditcard service for the Creditcardtransaction */
     @Json(name = "sCreditcardtransactionReferencenumber")
-    val sCreditcardtransactionReferencenumber: kotlin.String
+    val sCreditcardtransactionReferencenumber: kotlin.String,
+
+    @Json(name = "eCreditcardtypeCodename")
+    val eCreditcardtypeCodename: FieldMinusECreditcardtypeCodename? = null
 
 )
 

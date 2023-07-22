@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**ezsignsignatureCreateObjectV2**](ObjectEzsignsignatureApi.md#ezsignsignatureCreateObjectV2) | **POST** /2/object/ezsignsignature | Create a new Ezsignsignature
 [**ezsignsignatureDeleteObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureDeleteObjectV1) | **DELETE** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Delete an existing Ezsignsignature
 [**ezsignsignatureEditObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureEditObjectV1) | **PUT** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Edit an existing Ezsignsignature
+[**ezsignsignatureGetEzsignsignatureattachmentV1**](ObjectEzsignsignatureApi.md#ezsignsignatureGetEzsignsignatureattachmentV1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID}/getEzsignsignatureattachment | Retrieve an existing Ezsignsignature&#39;s Ezsignsignatureattachments
 [**ezsignsignatureGetEzsignsignaturesAutomaticV1**](ObjectEzsignsignatureApi.md#ezsignsignatureGetEzsignsignaturesAutomaticV1) | **GET** /1/object/ezsignsignature/getEzsignsignaturesAutomatic | Retrieve all automatic Ezsignsignatures
 [**ezsignsignatureGetObjectV2**](ObjectEzsignsignatureApi.md#ezsignsignatureGetObjectV2) | **GET** /2/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
 [**ezsignsignatureSignV1**](ObjectEzsignsignatureApi.md#ezsignsignatureSignV1) | **POST** /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign | Sign the Ezsignsignature
@@ -213,6 +214,54 @@ Configure Authorization:
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a id="ezsignsignatureGetEzsignsignatureattachmentV1"></a>
+# **ezsignsignatureGetEzsignsignatureattachmentV1**
+> EzsignsignatureMinusGetEzsignsignatureattachmentMinusV1MinusResponse ezsignsignatureGetEzsignsignatureattachmentV1(pkiEzsignsignatureID)
+
+Retrieve an existing Ezsignsignature&#39;s Ezsignsignatureattachments
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsignsignatureApi()
+val pkiEzsignsignatureID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : EzsignsignatureMinusGetEzsignsignatureattachmentMinusV1MinusResponse = apiInstance.ezsignsignatureGetEzsignsignatureattachmentV1(pkiEzsignsignatureID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsignsignatureApi#ezsignsignatureGetEzsignsignatureattachmentV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsignsignatureApi#ezsignsignatureGetEzsignsignatureattachmentV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignsignatureID** | **kotlin.Int**|  |
+
+### Return type
+
+[**EzsignsignatureMinusGetEzsignsignatureattachmentMinusV1MinusResponse**](EzsignsignatureMinusGetEzsignsignatureattachmentMinusV1MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a id="ezsignsignatureGetEzsignsignaturesAutomaticV1"></a>

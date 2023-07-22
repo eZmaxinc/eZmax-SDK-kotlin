@@ -133,7 +133,7 @@ class GlobalCustomerApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
             path = "/1/customer/{pksCustomerCode}/endpoint".replace("{"+"pksCustomerCode"+"}", encodeURIComponent(pksCustomerCode.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
-            requiresAuthentication = true,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }

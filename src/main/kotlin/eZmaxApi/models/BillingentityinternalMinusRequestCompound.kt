@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.BillingentityinternalproductMinusRequestCompound
 import eZmaxApi.models.MultilingualMinusBillingentityinternalDescription
 
 import com.squareup.moshi.Json
@@ -24,6 +25,7 @@ import com.squareup.moshi.JsonClass
  * A Billingentityinternal Object and children
  *
  * @param objBillingentityinternalDescription 
+ * @param aObjBillingentityinternalproduct 
  * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal.
  */
 
@@ -32,6 +34,9 @@ data class BillingentityinternalMinusRequestCompound (
 
     @Json(name = "objBillingentityinternalDescription")
     val objBillingentityinternalDescription: MultilingualMinusBillingentityinternalDescription,
+
+    @Json(name = "a_objBillingentityinternalproduct")
+    val aObjBillingentityinternalproduct: kotlin.collections.List<BillingentityinternalproductMinusRequestCompound>,
 
     /* The unique ID of the Billingentityinternal. */
     @Json(name = "pkiBillingentityinternalID")

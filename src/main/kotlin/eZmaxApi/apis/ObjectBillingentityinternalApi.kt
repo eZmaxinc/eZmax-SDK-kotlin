@@ -128,7 +128,7 @@ class ObjectBillingentityinternalApi(basePath: kotlin.String = defaultBasePath, 
     /**
      * Edit an existing Billingentityinternal
      * 
-     * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal
+     * @param pkiBillingentityinternalID 
      * @param billingentityinternalMinusEditObjectMinusV1MinusRequest 
      * @return BillingentityinternalMinusEditObjectMinusV1MinusResponse
      * @throws IllegalStateException If the request is not correctly configured
@@ -160,7 +160,7 @@ class ObjectBillingentityinternalApi(basePath: kotlin.String = defaultBasePath, 
     /**
      * Edit an existing Billingentityinternal
      * 
-     * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal
+     * @param pkiBillingentityinternalID 
      * @param billingentityinternalMinusEditObjectMinusV1MinusRequest 
      * @return ApiResponse<BillingentityinternalMinusEditObjectMinusV1MinusResponse?>
      * @throws IllegalStateException If the request is not correctly configured
@@ -179,7 +179,7 @@ class ObjectBillingentityinternalApi(basePath: kotlin.String = defaultBasePath, 
     /**
      * To obtain the request config of the operation billingentityinternalEditObjectV1
      *
-     * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal
+     * @param pkiBillingentityinternalID 
      * @param billingentityinternalMinusEditObjectMinusV1MinusRequest 
      * @return RequestConfig
      */
@@ -416,7 +416,7 @@ class ObjectBillingentityinternalApi(basePath: kotlin.String = defaultBasePath, 
     /**
      * Retrieve an existing Billingentityinternal
      * 
-     * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal
+     * @param pkiBillingentityinternalID 
      * @return BillingentityinternalMinusGetObjectMinusV2MinusResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -447,7 +447,7 @@ class ObjectBillingentityinternalApi(basePath: kotlin.String = defaultBasePath, 
     /**
      * Retrieve an existing Billingentityinternal
      * 
-     * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal
+     * @param pkiBillingentityinternalID 
      * @return ApiResponse<BillingentityinternalMinusGetObjectMinusV2MinusResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -465,7 +465,7 @@ class ObjectBillingentityinternalApi(basePath: kotlin.String = defaultBasePath, 
     /**
      * To obtain the request config of the operation billingentityinternalGetObjectV2
      *
-     * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal
+     * @param pkiBillingentityinternalID 
      * @return RequestConfig
      */
     fun billingentityinternalGetObjectV2RequestConfig(pkiBillingentityinternalID: kotlin.Int) : RequestConfig<Unit> {

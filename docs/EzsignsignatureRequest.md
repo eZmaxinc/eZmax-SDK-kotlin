@@ -12,6 +12,8 @@ Name | Type | Description | Notes
 **eEzsignsignatureType** | [**FieldMinusEEzsignsignatureType**](FieldMinusEEzsignsignatureType.md) |  | 
 **fkiEzsigndocumentID** | **kotlin.Int** | The unique ID of the Ezsigndocument | 
 **pkiEzsignsignatureID** | **kotlin.Int** | The unique ID of the Ezsignsignature |  [optional]
+**iEzsignsignatureWidth** | **kotlin.Int** | The width of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have a width of 2 inches, you would use \&quot;200\&quot; for the iEzsignsignatureWidth. |  [optional]
+**iEzsignsignatureHeight** | **kotlin.Int** | The height of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have an height of 2 inches, you would use \&quot;200\&quot; for the iEzsignsignatureHeight. |  [optional]
 **tEzsignsignatureTooltip** | **kotlin.String** | A tooltip that will be presented to Ezsignsigner about the Ezsignsignature |  [optional]
 **eEzsignsignatureTooltipposition** | [**FieldMinusEEzsignsignatureTooltipposition**](FieldMinusEEzsignsignatureTooltipposition.md) |  |  [optional]
 **eEzsignsignatureFont** | [**FieldMinusEEzsignsignatureFont**](FieldMinusEEzsignsignatureFont.md) |  |  [optional]
@@ -20,6 +22,8 @@ Name | Type | Description | Notes
 **eEzsignsignatureAttachmentnamesource** | [**FieldMinusEEzsignsignatureAttachmentnamesource**](FieldMinusEEzsignsignatureAttachmentnamesource.md) |  |  [optional]
 **sEzsignsignatureAttachmentdescription** | **kotlin.String** | The description attached to the attachment name added in Ezsignsignature of eEzsignsignatureType Attachments |  [optional]
 **iEzsignsignatureValidationstep** | **kotlin.Int** | The step when the Ezsignsigner will be invited to validate the Ezsignsignature of eEzsignsignatureType Attachments |  [optional]
+**eEzsignsignatureTextvalidation** | [**EnumMinusTextvalidation**](EnumMinusTextvalidation.md) |  |  [optional]
+**sEzsignsignatureRegexp** | **kotlin.String** | A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom** |  [optional]
 
 
 

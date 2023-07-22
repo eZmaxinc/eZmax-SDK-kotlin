@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.FieldMinusEErrorCode
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -22,21 +23,20 @@ import com.squareup.moshi.JsonClass
 /**
  * Generic Error Message
  *
- * @param sErrorMessage More detail about the error
- * @param eErrorCode The error code. See documentation for valid values
+ * @param sErrorMessage The message giving details about the error
+ * @param eErrorCode 
  * @param sTemporaryFileUrl The Temporary File Url of the document that was uploaded. That url can be reused instead of uploading the file again.
  */
 
 
 data class CommonMinusResponseMinusErrorMinusSTemporaryFileUrl (
 
-    /* More detail about the error */
+    /* The message giving details about the error */
     @Json(name = "sErrorMessage")
     val sErrorMessage: kotlin.String,
 
-    /* The error code. See documentation for valid values */
     @Json(name = "eErrorCode")
-    val eErrorCode: kotlin.String,
+    val eErrorCode: FieldMinusEErrorCode,
 
     /* The Temporary File Url of the document that was uploaded. That url can be reused instead of uploading the file again. */
     @Json(name = "sTemporaryFileUrl")

@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **sEzsignformfieldgroupRegexp** | **kotlin.String** | A regular expression to indicate what values are acceptable for the Ezsignformfieldgroup.  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea** |  [optional]
 **tEzsignformfieldgroupTooltip** | **kotlin.String** | A tooltip that will be presented to Ezsignsigner about the Ezsignformfieldgroup |  [optional]
 **eEzsignformfieldgroupTooltipposition** | [**FieldMinusEEzsignformfieldgroupTooltipposition**](FieldMinusEEzsignformfieldgroupTooltipposition.md) |  |  [optional]
+**eEzsignformfieldgroupTextvalidation** | [**EnumMinusTextvalidation**](EnumMinusTextvalidation.md) |  |  [optional]
 
 
 

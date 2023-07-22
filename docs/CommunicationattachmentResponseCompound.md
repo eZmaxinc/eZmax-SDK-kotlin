@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **fkiAttachmentID** | **kotlin.Int** | The unique ID of the Attachment. |  [optional]
 **fkiInvoiceID** | **kotlin.Int** | The unique ID of the Invoice. |  [optional]
 **fkiSalarypreparationID** | **kotlin.Int** | The unique ID of the Salarypreparation. |  [optional]
+**sDownloadUrl** | **kotlin.String** | The Url to the requested document.  Url will expire after 3 hours. |  [optional]
 
 
 

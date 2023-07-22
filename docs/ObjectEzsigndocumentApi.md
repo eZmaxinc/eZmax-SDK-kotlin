@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**ezsigndocumentApplyEzsigntemplateV2**](ObjectEzsigndocumentApi.md#ezsigndocumentApplyEzsigntemplateV2) | **POST** /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate | Apply an Ezsigntemplate to the Ezsigndocument.
 [**ezsigndocumentCreateObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentCreateObjectV1) | **POST** /1/object/ezsigndocument | Create a new Ezsigndocument
 [**ezsigndocumentCreateObjectV2**](ObjectEzsigndocumentApi.md#ezsigndocumentCreateObjectV2) | **POST** /2/object/ezsigndocument | Create a new Ezsigndocument
+[**ezsigndocumentDeclineToSignV1**](ObjectEzsigndocumentApi.md#ezsigndocumentDeclineToSignV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/declineToSign | Decline to sign
 [**ezsigndocumentDeleteObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentDeleteObjectV1) | **DELETE** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Delete an existing Ezsigndocument
 [**ezsigndocumentEditEzsignformfieldgroupsV1**](ObjectEzsigndocumentApi.md#ezsigndocumentEditEzsignformfieldgroupsV1) | **PUT** /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignformfieldgroups | Edit multiple Ezsignformfieldgroups
 [**ezsigndocumentEditEzsignsignaturesV1**](ObjectEzsigndocumentApi.md#ezsigndocumentEditEzsignsignaturesV1) | **PUT** /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures | Edit multiple Ezsignsignatures
@@ -27,6 +28,7 @@ Method | HTTP request | Description
 [**ezsigndocumentGetTemporaryProofV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetTemporaryProofV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof | Retrieve the temporary proof
 [**ezsigndocumentGetWordsPositionsV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetWordsPositionsV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions | Retrieve positions X,Y of given words from a Ezsigndocument
 [**ezsigndocumentPatchObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentPatchObjectV1) | **PATCH** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Patch an existing Ezsigndocument
+[**ezsigndocumentSubmitEzsignformV1**](ObjectEzsigndocumentApi.md#ezsigndocumentSubmitEzsignformV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/submitEzsignform | Submit the Ezsignform
 [**ezsigndocumentUnsendV1**](ObjectEzsigndocumentApi.md#ezsigndocumentUnsendV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/unsend | Unsend the Ezsigndocument
 
 
@@ -221,6 +223,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsigndocumentMinusCreateObjectMinusV2MinusResponse**](EzsigndocumentMinusCreateObjectMinusV2MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a id="ezsigndocumentDeclineToSignV1"></a>
+# **ezsigndocumentDeclineToSignV1**
+> EzsigndocumentMinusDeclineToSignMinusV1MinusResponse ezsigndocumentDeclineToSignV1(pkiEzsigndocumentID, ezsigndocumentMinusDeclineToSignMinusV1MinusRequest)
+
+Decline to sign
+
+Decline to sign
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsigndocumentApi()
+val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | 
+val ezsigndocumentMinusDeclineToSignMinusV1MinusRequest : EzsigndocumentMinusDeclineToSignMinusV1MinusRequest =  // EzsigndocumentMinusDeclineToSignMinusV1MinusRequest | 
+try {
+    val result : EzsigndocumentMinusDeclineToSignMinusV1MinusResponse = apiInstance.ezsigndocumentDeclineToSignV1(pkiEzsigndocumentID, ezsigndocumentMinusDeclineToSignMinusV1MinusRequest)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsigndocumentApi#ezsigndocumentDeclineToSignV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsigndocumentApi#ezsigndocumentDeclineToSignV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigndocumentID** | **kotlin.Int**|  |
+ **ezsigndocumentMinusDeclineToSignMinusV1MinusRequest** | [**EzsigndocumentMinusDeclineToSignMinusV1MinusRequest**](EzsigndocumentMinusDeclineToSignMinusV1MinusRequest.md)|  |
+
+### Return type
+
+[**EzsigndocumentMinusDeclineToSignMinusV1MinusResponse**](EzsigndocumentMinusDeclineToSignMinusV1MinusResponse.md)
 
 ### Authorization
 
@@ -1183,6 +1237,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsigndocumentMinusPatchObjectMinusV1MinusResponse**](EzsigndocumentMinusPatchObjectMinusV1MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a id="ezsigndocumentSubmitEzsignformV1"></a>
+# **ezsigndocumentSubmitEzsignformV1**
+> EzsigndocumentMinusSubmitEzsignformMinusV1MinusResponse ezsigndocumentSubmitEzsignformV1(pkiEzsigndocumentID, ezsigndocumentMinusSubmitEzsignformMinusV1MinusRequest)
+
+Submit the Ezsignform
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsigndocumentApi()
+val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | 
+val ezsigndocumentMinusSubmitEzsignformMinusV1MinusRequest : EzsigndocumentMinusSubmitEzsignformMinusV1MinusRequest =  // EzsigndocumentMinusSubmitEzsignformMinusV1MinusRequest | 
+try {
+    val result : EzsigndocumentMinusSubmitEzsignformMinusV1MinusResponse = apiInstance.ezsigndocumentSubmitEzsignformV1(pkiEzsigndocumentID, ezsigndocumentMinusSubmitEzsignformMinusV1MinusRequest)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsigndocumentApi#ezsigndocumentSubmitEzsignformV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsigndocumentApi#ezsigndocumentSubmitEzsignformV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigndocumentID** | **kotlin.Int**|  |
+ **ezsigndocumentMinusSubmitEzsignformMinusV1MinusRequest** | [**EzsigndocumentMinusSubmitEzsignformMinusV1MinusRequest**](EzsigndocumentMinusSubmitEzsignformMinusV1MinusRequest.md)|  |
+
+### Return type
+
+[**EzsigndocumentMinusSubmitEzsignformMinusV1MinusResponse**](EzsigndocumentMinusSubmitEzsignformMinusV1MinusResponse.md)
 
 ### Authorization
 

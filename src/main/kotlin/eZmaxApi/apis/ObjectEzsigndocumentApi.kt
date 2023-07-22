@@ -20,6 +20,7 @@ import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommonMinusResponseMinusError
+import eZmaxApi.models.CommonMinusResponseMinusErrorMinusEzsignformValidation
 import eZmaxApi.models.CommonMinusResponseMinusErrorMinusSTemporaryFileUrl
 import eZmaxApi.models.EzsigndocumentMinusApplyEzsigntemplateMinusV1MinusRequest
 import eZmaxApi.models.EzsigndocumentMinusApplyEzsigntemplateMinusV1MinusResponse
@@ -29,6 +30,8 @@ import eZmaxApi.models.EzsigndocumentMinusCreateObjectMinusV1MinusRequest
 import eZmaxApi.models.EzsigndocumentMinusCreateObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsigndocumentMinusCreateObjectMinusV2MinusRequest
 import eZmaxApi.models.EzsigndocumentMinusCreateObjectMinusV2MinusResponse
+import eZmaxApi.models.EzsigndocumentMinusDeclineToSignMinusV1MinusRequest
+import eZmaxApi.models.EzsigndocumentMinusDeclineToSignMinusV1MinusResponse
 import eZmaxApi.models.EzsigndocumentMinusDeleteObjectMinusV1MinusResponse
 import eZmaxApi.models.EzsigndocumentMinusEditEzsignformfieldgroupsMinusV1MinusRequest
 import eZmaxApi.models.EzsigndocumentMinusEditEzsignformfieldgroupsMinusV1MinusResponse
@@ -52,6 +55,8 @@ import eZmaxApi.models.EzsigndocumentMinusGetWordsPositionsMinusV1MinusRequest
 import eZmaxApi.models.EzsigndocumentMinusGetWordsPositionsMinusV1MinusResponse
 import eZmaxApi.models.EzsigndocumentMinusPatchObjectMinusV1MinusRequest
 import eZmaxApi.models.EzsigndocumentMinusPatchObjectMinusV1MinusResponse
+import eZmaxApi.models.EzsigndocumentMinusSubmitEzsignformMinusV1MinusRequest
+import eZmaxApi.models.EzsigndocumentMinusSubmitEzsignformMinusV1MinusResponse
 import eZmaxApi.models.EzsigndocumentMinusUnsendMinusV1MinusResponse
 
 import com.squareup.moshi.Json
@@ -375,6 +380,81 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/2/object/ezsigndocument",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Decline to sign
+     * Decline to sign
+     * @param pkiEzsigndocumentID 
+     * @param ezsigndocumentMinusDeclineToSignMinusV1MinusRequest 
+     * @return EzsigndocumentMinusDeclineToSignMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsigndocumentDeclineToSignV1(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentMinusDeclineToSignMinusV1MinusRequest: EzsigndocumentMinusDeclineToSignMinusV1MinusRequest) : EzsigndocumentMinusDeclineToSignMinusV1MinusResponse {
+        val localVarResponse = ezsigndocumentDeclineToSignV1WithHttpInfo(pkiEzsigndocumentID = pkiEzsigndocumentID, ezsigndocumentMinusDeclineToSignMinusV1MinusRequest = ezsigndocumentMinusDeclineToSignMinusV1MinusRequest)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigndocumentMinusDeclineToSignMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Decline to sign
+     * Decline to sign
+     * @param pkiEzsigndocumentID 
+     * @param ezsigndocumentMinusDeclineToSignMinusV1MinusRequest 
+     * @return ApiResponse<EzsigndocumentMinusDeclineToSignMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsigndocumentDeclineToSignV1WithHttpInfo(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentMinusDeclineToSignMinusV1MinusRequest: EzsigndocumentMinusDeclineToSignMinusV1MinusRequest) : ApiResponse<EzsigndocumentMinusDeclineToSignMinusV1MinusResponse?> {
+        val localVariableConfig = ezsigndocumentDeclineToSignV1RequestConfig(pkiEzsigndocumentID = pkiEzsigndocumentID, ezsigndocumentMinusDeclineToSignMinusV1MinusRequest = ezsigndocumentMinusDeclineToSignMinusV1MinusRequest)
+
+        return request<EzsigndocumentMinusDeclineToSignMinusV1MinusRequest, EzsigndocumentMinusDeclineToSignMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsigndocumentDeclineToSignV1
+     *
+     * @param pkiEzsigndocumentID 
+     * @param ezsigndocumentMinusDeclineToSignMinusV1MinusRequest 
+     * @return RequestConfig
+     */
+    fun ezsigndocumentDeclineToSignV1RequestConfig(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentMinusDeclineToSignMinusV1MinusRequest: EzsigndocumentMinusDeclineToSignMinusV1MinusRequest) : RequestConfig<EzsigndocumentMinusDeclineToSignMinusV1MinusRequest> {
+        val localVariableBody = ezsigndocumentMinusDeclineToSignMinusV1MinusRequest
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/declineToSign".replace("{"+"pkiEzsigndocumentID"+"}", encodeURIComponent(pkiEzsigndocumentID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,
@@ -1766,6 +1846,81 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
         return RequestConfig(
             method = RequestMethod.PATCH,
             path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}".replace("{"+"pkiEzsigndocumentID"+"}", encodeURIComponent(pkiEzsigndocumentID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Submit the Ezsignform
+     * 
+     * @param pkiEzsigndocumentID 
+     * @param ezsigndocumentMinusSubmitEzsignformMinusV1MinusRequest 
+     * @return EzsigndocumentMinusSubmitEzsignformMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsigndocumentSubmitEzsignformV1(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentMinusSubmitEzsignformMinusV1MinusRequest: EzsigndocumentMinusSubmitEzsignformMinusV1MinusRequest) : EzsigndocumentMinusSubmitEzsignformMinusV1MinusResponse {
+        val localVarResponse = ezsigndocumentSubmitEzsignformV1WithHttpInfo(pkiEzsigndocumentID = pkiEzsigndocumentID, ezsigndocumentMinusSubmitEzsignformMinusV1MinusRequest = ezsigndocumentMinusSubmitEzsignformMinusV1MinusRequest)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigndocumentMinusSubmitEzsignformMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Submit the Ezsignform
+     * 
+     * @param pkiEzsigndocumentID 
+     * @param ezsigndocumentMinusSubmitEzsignformMinusV1MinusRequest 
+     * @return ApiResponse<EzsigndocumentMinusSubmitEzsignformMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsigndocumentSubmitEzsignformV1WithHttpInfo(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentMinusSubmitEzsignformMinusV1MinusRequest: EzsigndocumentMinusSubmitEzsignformMinusV1MinusRequest) : ApiResponse<EzsigndocumentMinusSubmitEzsignformMinusV1MinusResponse?> {
+        val localVariableConfig = ezsigndocumentSubmitEzsignformV1RequestConfig(pkiEzsigndocumentID = pkiEzsigndocumentID, ezsigndocumentMinusSubmitEzsignformMinusV1MinusRequest = ezsigndocumentMinusSubmitEzsignformMinusV1MinusRequest)
+
+        return request<EzsigndocumentMinusSubmitEzsignformMinusV1MinusRequest, EzsigndocumentMinusSubmitEzsignformMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsigndocumentSubmitEzsignformV1
+     *
+     * @param pkiEzsigndocumentID 
+     * @param ezsigndocumentMinusSubmitEzsignformMinusV1MinusRequest 
+     * @return RequestConfig
+     */
+    fun ezsigndocumentSubmitEzsignformV1RequestConfig(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentMinusSubmitEzsignformMinusV1MinusRequest: EzsigndocumentMinusSubmitEzsignformMinusV1MinusRequest) : RequestConfig<EzsigndocumentMinusSubmitEzsignformMinusV1MinusRequest> {
+        val localVariableBody = ezsigndocumentMinusSubmitEzsignformMinusV1MinusRequest
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/submitEzsignform".replace("{"+"pkiEzsigndocumentID"+"}", encodeURIComponent(pkiEzsigndocumentID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

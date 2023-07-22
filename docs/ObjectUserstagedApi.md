@@ -4,11 +4,64 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**userstagedCreateUserV1**](ObjectUserstagedApi.md#userstagedCreateUserV1) | **POST** /1/object/userstaged/{pkiUserstagedID}/createUser | Create a User from a Userstaged and then map it
 [**userstagedDeleteObjectV1**](ObjectUserstagedApi.md#userstagedDeleteObjectV1) | **DELETE** /1/object/userstaged/{pkiUserstagedID} | Delete an existing Userstaged
 [**userstagedGetListV1**](ObjectUserstagedApi.md#userstagedGetListV1) | **GET** /1/object/userstaged/getList | Retrieve Userstaged list
 [**userstagedGetObjectV2**](ObjectUserstagedApi.md#userstagedGetObjectV2) | **GET** /2/object/userstaged/{pkiUserstagedID} | Retrieve an existing Userstaged
 [**userstagedMapV1**](ObjectUserstagedApi.md#userstagedMapV1) | **POST** /1/object/userstaged/{pkiUserstagedID}/map | Map the Userstaged to an existing user
 
+
+<a id="userstagedCreateUserV1"></a>
+# **userstagedCreateUserV1**
+> UserstagedMinusCreateUserMinusV1MinusResponse userstagedCreateUserV1(pkiUserstagedID, body)
+
+Create a User from a Userstaged and then map it
+
+Default values will be used while creating the User. If you need to change those values, you should use the route to edit a User.
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectUserstagedApi()
+val pkiUserstagedID : kotlin.Int = 56 // kotlin.Int | 
+val body : kotlin.Any = Object // kotlin.Any | 
+try {
+    val result : UserstagedMinusCreateUserMinusV1MinusResponse = apiInstance.userstagedCreateUserV1(pkiUserstagedID, body)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectUserstagedApi#userstagedCreateUserV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectUserstagedApi#userstagedCreateUserV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiUserstagedID** | **kotlin.Int**|  |
+ **body** | **kotlin.Any**|  |
+
+### Return type
+
+[**UserstagedMinusCreateUserMinusV1MinusResponse**](UserstagedMinusCreateUserMinusV1MinusResponse.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 <a id="userstagedDeleteObjectV1"></a>
 # **userstagedDeleteObjectV1**
@@ -25,7 +78,7 @@ Delete an existing Userstaged
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectUserstagedApi()
-val pkiUserstagedID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Userstaged
+val pkiUserstagedID : kotlin.Int = 56 // kotlin.Int | 
 try {
     val result : UserstagedMinusDeleteObjectMinusV1MinusResponse = apiInstance.userstagedDeleteObjectV1(pkiUserstagedID)
     println(result)
@@ -42,7 +95,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiUserstagedID** | **kotlin.Int**| The unique ID of the Userstaged |
+ **pkiUserstagedID** | **kotlin.Int**|  |
 
 ### Return type
 
@@ -133,7 +186,7 @@ Retrieve an existing Userstaged
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectUserstagedApi()
-val pkiUserstagedID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Userstaged
+val pkiUserstagedID : kotlin.Int = 56 // kotlin.Int | 
 try {
     val result : UserstagedMinusGetObjectMinusV2MinusResponse = apiInstance.userstagedGetObjectV2(pkiUserstagedID)
     println(result)
@@ -150,7 +203,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiUserstagedID** | **kotlin.Int**| The unique ID of the Userstaged |
+ **pkiUserstagedID** | **kotlin.Int**|  |
 
 ### Return type
 
@@ -183,7 +236,7 @@ Map the Userstaged to an existing user
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectUserstagedApi()
-val pkiUserstagedID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Userstaged
+val pkiUserstagedID : kotlin.Int = 56 // kotlin.Int | 
 val userstagedMinusMapMinusV1MinusRequest : UserstagedMinusMapMinusV1MinusRequest =  // UserstagedMinusMapMinusV1MinusRequest | 
 try {
     val result : UserstagedMinusMapMinusV1MinusResponse = apiInstance.userstagedMapV1(pkiUserstagedID, userstagedMinusMapMinusV1MinusRequest)
@@ -201,7 +254,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiUserstagedID** | **kotlin.Int**| The unique ID of the Userstaged |
+ **pkiUserstagedID** | **kotlin.Int**|  |
  **userstagedMinusMapMinusV1MinusRequest** | [**UserstagedMinusMapMinusV1MinusRequest**](UserstagedMinusMapMinusV1MinusRequest.md)|  |
 
 ### Return type

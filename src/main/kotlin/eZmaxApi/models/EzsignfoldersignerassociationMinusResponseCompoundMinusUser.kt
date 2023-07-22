@@ -24,8 +24,8 @@ import com.squareup.moshi.JsonClass
  *
  * @param pkiUserID The unique ID of the User
  * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
- * @param sUserFirstname The First name of the user
- * @param sUserLastname The Last name of the user
+ * @param sUserFirstname The first name of the user
+ * @param sUserLastname The last name of the user
  * @param sEmailAddress The email address.
  */
 
@@ -40,11 +40,11 @@ data class EzsignfoldersignerassociationMinusResponseCompoundMinusUser (
     @Json(name = "fkiLanguageID")
     val fkiLanguageID: kotlin.Int,
 
-    /* The First name of the user */
+    /* The first name of the user */
     @Json(name = "sUserFirstname")
     val sUserFirstname: kotlin.String,
 
-    /* The Last name of the user */
+    /* The last name of the user */
     @Json(name = "sUserLastname")
     val sUserLastname: kotlin.String,
 

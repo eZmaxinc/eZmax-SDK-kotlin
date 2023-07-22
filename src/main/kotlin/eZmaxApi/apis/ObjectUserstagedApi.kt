@@ -21,6 +21,7 @@ import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommonMinusResponseMinusError
 import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
+import eZmaxApi.models.UserstagedMinusCreateUserMinusV1MinusResponse
 import eZmaxApi.models.UserstagedMinusDeleteObjectMinusV1MinusResponse
 import eZmaxApi.models.UserstagedMinusGetListMinusV1MinusResponse
 import eZmaxApi.models.UserstagedMinusGetObjectMinusV2MinusResponse
@@ -52,9 +53,84 @@ class ObjectUserstagedApi(basePath: kotlin.String = defaultBasePath, client: OkH
     }
 
     /**
+     * Create a User from a Userstaged and then map it
+     * Default values will be used while creating the User. If you need to change those values, you should use the route to edit a User.
+     * @param pkiUserstagedID 
+     * @param body 
+     * @return UserstagedMinusCreateUserMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun userstagedCreateUserV1(pkiUserstagedID: kotlin.Int, body: kotlin.Any) : UserstagedMinusCreateUserMinusV1MinusResponse {
+        val localVarResponse = userstagedCreateUserV1WithHttpInfo(pkiUserstagedID = pkiUserstagedID, body = body)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as UserstagedMinusCreateUserMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Create a User from a Userstaged and then map it
+     * Default values will be used while creating the User. If you need to change those values, you should use the route to edit a User.
+     * @param pkiUserstagedID 
+     * @param body 
+     * @return ApiResponse<UserstagedMinusCreateUserMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun userstagedCreateUserV1WithHttpInfo(pkiUserstagedID: kotlin.Int, body: kotlin.Any) : ApiResponse<UserstagedMinusCreateUserMinusV1MinusResponse?> {
+        val localVariableConfig = userstagedCreateUserV1RequestConfig(pkiUserstagedID = pkiUserstagedID, body = body)
+
+        return request<kotlin.Any, UserstagedMinusCreateUserMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation userstagedCreateUserV1
+     *
+     * @param pkiUserstagedID 
+     * @param body 
+     * @return RequestConfig
+     */
+    fun userstagedCreateUserV1RequestConfig(pkiUserstagedID: kotlin.Int, body: kotlin.Any) : RequestConfig<kotlin.Any> {
+        val localVariableBody = body
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/userstaged/{pkiUserstagedID}/createUser".replace("{"+"pkiUserstagedID"+"}", encodeURIComponent(pkiUserstagedID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
      * Delete an existing Userstaged
      * 
-     * @param pkiUserstagedID The unique ID of the Userstaged
+     * @param pkiUserstagedID 
      * @return UserstagedMinusDeleteObjectMinusV1MinusResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -85,7 +161,7 @@ class ObjectUserstagedApi(basePath: kotlin.String = defaultBasePath, client: OkH
     /**
      * Delete an existing Userstaged
      * 
-     * @param pkiUserstagedID The unique ID of the Userstaged
+     * @param pkiUserstagedID 
      * @return ApiResponse<UserstagedMinusDeleteObjectMinusV1MinusResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -103,7 +179,7 @@ class ObjectUserstagedApi(basePath: kotlin.String = defaultBasePath, client: OkH
     /**
      * To obtain the request config of the operation userstagedDeleteObjectV1
      *
-     * @param pkiUserstagedID The unique ID of the Userstaged
+     * @param pkiUserstagedID 
      * @return RequestConfig
      */
     fun userstagedDeleteObjectV1RequestConfig(pkiUserstagedID: kotlin.Int) : RequestConfig<Unit> {
@@ -239,7 +315,7 @@ class ObjectUserstagedApi(basePath: kotlin.String = defaultBasePath, client: OkH
     /**
      * Retrieve an existing Userstaged
      * 
-     * @param pkiUserstagedID The unique ID of the Userstaged
+     * @param pkiUserstagedID 
      * @return UserstagedMinusGetObjectMinusV2MinusResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -270,7 +346,7 @@ class ObjectUserstagedApi(basePath: kotlin.String = defaultBasePath, client: OkH
     /**
      * Retrieve an existing Userstaged
      * 
-     * @param pkiUserstagedID The unique ID of the Userstaged
+     * @param pkiUserstagedID 
      * @return ApiResponse<UserstagedMinusGetObjectMinusV2MinusResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -288,7 +364,7 @@ class ObjectUserstagedApi(basePath: kotlin.String = defaultBasePath, client: OkH
     /**
      * To obtain the request config of the operation userstagedGetObjectV2
      *
-     * @param pkiUserstagedID The unique ID of the Userstaged
+     * @param pkiUserstagedID 
      * @return RequestConfig
      */
     fun userstagedGetObjectV2RequestConfig(pkiUserstagedID: kotlin.Int) : RequestConfig<Unit> {
@@ -310,7 +386,7 @@ class ObjectUserstagedApi(basePath: kotlin.String = defaultBasePath, client: OkH
     /**
      * Map the Userstaged to an existing user
      * 
-     * @param pkiUserstagedID The unique ID of the Userstaged
+     * @param pkiUserstagedID 
      * @param userstagedMinusMapMinusV1MinusRequest 
      * @return UserstagedMinusMapMinusV1MinusResponse
      * @throws IllegalStateException If the request is not correctly configured
@@ -342,7 +418,7 @@ class ObjectUserstagedApi(basePath: kotlin.String = defaultBasePath, client: OkH
     /**
      * Map the Userstaged to an existing user
      * 
-     * @param pkiUserstagedID The unique ID of the Userstaged
+     * @param pkiUserstagedID 
      * @param userstagedMinusMapMinusV1MinusRequest 
      * @return ApiResponse<UserstagedMinusMapMinusV1MinusResponse?>
      * @throws IllegalStateException If the request is not correctly configured
@@ -361,7 +437,7 @@ class ObjectUserstagedApi(basePath: kotlin.String = defaultBasePath, client: OkH
     /**
      * To obtain the request config of the operation userstagedMapV1
      *
-     * @param pkiUserstagedID The unique ID of the Userstaged
+     * @param pkiUserstagedID 
      * @param userstagedMinusMapMinusV1MinusRequest 
      * @return RequestConfig
      */

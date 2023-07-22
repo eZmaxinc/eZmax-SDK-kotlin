@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **objUserReal** | [**ActivesessionMinusResponseCompoundMinusUser**](ActivesessionMinusResponseCompoundMinusUser.md) |  | 
 **aEModuleInternalname** | **kotlin.collections.List&lt;kotlin.String&gt;** | An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key. | 
 **fkiSystemconfigurationtypeID** | **kotlin.Int** | The unique ID of the Systemconfigurationtype |  [optional]
+**fkiSignatureID** | **kotlin.Int** | The unique ID of the Signature |  [optional]
 **objUserCloned** | [**ActivesessionMinusResponseCompoundMinusUser**](ActivesessionMinusResponseCompoundMinusUser.md) |  |  [optional]
 **objApikey** | [**ActivesessionMinusResponseCompoundMinusApikey**](ActivesessionMinusResponseCompoundMinusApikey.md) |  |  [optional]
 

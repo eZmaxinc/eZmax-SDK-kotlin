@@ -23,8 +23,8 @@ import com.squareup.moshi.JsonClass
  * A User Object
  *
  * @param pkiUserID The unique ID of the User
- * @param sUserLastname The Last name of the user
- * @param sUserFirstname The First name of the user
+ * @param sUserLastname The last name of the user
+ * @param sUserFirstname The first name of the user
  * @param sEmailAddress The email address.
  */
 
@@ -35,11 +35,11 @@ data class CustomMinusUserMinusResponse (
     @Json(name = "pkiUserID")
     val pkiUserID: kotlin.Int,
 
-    /* The Last name of the user */
+    /* The last name of the user */
     @Json(name = "sUserLastname")
     val sUserLastname: kotlin.String,
 
-    /* The First name of the user */
+    /* The first name of the user */
     @Json(name = "sUserFirstname")
     val sUserFirstname: kotlin.String,
 

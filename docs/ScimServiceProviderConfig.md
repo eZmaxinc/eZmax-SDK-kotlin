@@ -1,0 +1,17 @@
+
+# ScimMinusServiceProviderConfig
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**authenticationSchemes** | [**kotlin.collections.List&lt;ScimMinusAuthenticationScheme&gt;**](ScimMinusAuthenticationScheme.md) | A multi-valued complex type that specifies supported authentication scheme properties. | 
+**bulk** | [**ScimServiceProviderConfigBulk**](ScimServiceProviderConfigBulk.md) |  | 
+**changePassword** | [**ScimServiceProviderConfigChangePassword**](ScimServiceProviderConfigChangePassword.md) |  | 
+**documentationUri** | **kotlin.String** | An HTTP-addressable URL pointing to the service provider&#39;s human-consumable help documentation | 
+**etag** | [**ScimServiceProviderConfigEtag**](ScimServiceProviderConfigEtag.md) |  | 
+**filter** | [**ScimServiceProviderConfigFilter**](ScimServiceProviderConfigFilter.md) |  | 
+**patch** | [**ScimServiceProviderConfigPatch**](ScimServiceProviderConfigPatch.md) |  | 
+**sort** | [**ScimServiceProviderConfigSort**](ScimServiceProviderConfigSort.md) |  | 
+
+
+

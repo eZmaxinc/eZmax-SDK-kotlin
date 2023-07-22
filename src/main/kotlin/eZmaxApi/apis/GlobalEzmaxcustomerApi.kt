@@ -112,7 +112,7 @@ class GlobalEzmaxcustomerApi(basePath: kotlin.String = defaultBasePath, client: 
             path = "/1/ezmaxcustomer/{pksEzmaxcustomerCode}/getConfiguration".replace("{"+"pksEzmaxcustomerCode"+"}", encodeURIComponent(pksEzmaxcustomerCode.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
-            requiresAuthentication = true,
+            requiresAuthentication = false,
             body = localVariableBody
         )
     }

@@ -35,6 +35,8 @@ import com.squareup.moshi.JsonClass
  * @param bBrandingIsactive Whether the Branding is active or not
  * @param pkiBrandingID The unique ID of the Branding
  * @param sBrandingBase64 The Base64 encoded binary content of the branding logo. This need to match image type selected in eBrandingLogo if you supply an image. If you select 'Default', the logo will be deleted and the default one will be used.
+ * @param sBrandingName The name of the Branding  This value will only be set if you wish to overwrite the default name. If you want to keep the default name, leave this property empty
+ * @param sEmailAddress The email address.
  */
 
 
@@ -80,7 +82,15 @@ data class BrandingMinusRequestCompound (
 
     /* The Base64 encoded binary content of the branding logo. This need to match image type selected in eBrandingLogo if you supply an image. If you select 'Default', the logo will be deleted and the default one will be used. */
     @Json(name = "sBrandingBase64")
-    val sBrandingBase64: kotlin.ByteArray? = null
+    val sBrandingBase64: kotlin.ByteArray? = null,
+
+    /* The name of the Branding  This value will only be set if you wish to overwrite the default name. If you want to keep the default name, leave this property empty */
+    @Json(name = "sBrandingName")
+    val sBrandingName: kotlin.String? = null,
+
+    /* The email address. */
+    @Json(name = "sEmailAddress")
+    val sEmailAddress: kotlin.String? = null
 
 )
 

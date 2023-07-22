@@ -20,9 +20,9 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * The type of signature.  1. **Acknowledgement** is for an acknowledgment of receipt. 2. **City** is to request the city where the document is signed. 2. **Handwritten** is for a handwritten kind of signature where users needs to \"draw\" their signature on screen. 3. **Initials** is a simple \"click to add initials\" block. 4. **Name** is a simple \"Click to sign\" block. This is the most common block of signature. 5. **Attachments** is to ask for files as attachment that may be validate in another step.
+ * The type of signature.  1. **Acknowledgement** is for an acknowledgment of receipt. 2. **City** is to request the city where the document is signed. 3. **Handwritten** is for a handwritten kind of signature where users needs to \"draw\" their signature on screen. 4. **Initials** is a simple \"click to add initials\" block. 5. **Name** is a simple \"Click to sign\" block. This is the most common block of signature. 6. **Attachments** is to ask for files as attachment that may be validate in another step.  7. **FieldText** is to ask for a short text. 8. **Fieldtextarea** is to ask for a text
  *
- * Values: Acknowledgement,City,Handwritten,Initials,Name,Attachments
+ * Values: Acknowledgement,City,Handwritten,Initials,Name,Attachments,AttachmentsConfirmation,FieldText,FieldTextarea
  */
 
 @JsonClass(generateAdapter = false)
@@ -44,7 +44,16 @@ enum class FieldMinusEEzsignsignatureType(val value: kotlin.String) {
     Name("Name"),
 
     @Json(name = "Attachments")
-    Attachments("Attachments");
+    Attachments("Attachments"),
+
+    @Json(name = "AttachmentsConfirmation")
+    AttachmentsConfirmation("AttachmentsConfirmation"),
+
+    @Json(name = "FieldText")
+    FieldText("FieldText"),
+
+    @Json(name = "FieldTextarea")
+    FieldTextarea("FieldTextarea");
 
     /**
      * Override [toString()] to avoid using the enum variable name as the value, and instead use

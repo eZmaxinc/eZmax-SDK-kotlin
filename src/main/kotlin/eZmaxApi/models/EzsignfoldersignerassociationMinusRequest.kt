@@ -25,6 +25,8 @@ import com.squareup.moshi.JsonClass
  * @param fkiEzsignfolderID The unique ID of the Ezsignfolder
  * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation
  * @param fkiUserID The unique ID of the User
+ * @param fkiUsergroupID The unique ID of the Usergroup
+ * @param fkiEzsignsignergroupID The unique ID of the Ezsignsignergroup
  * @param bEzsignfoldersignerassociationReceivecopy If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document.
  * @param tEzsignfoldersignerassociationMessage A custom text message that will be added to the email sent.
  */
@@ -43,6 +45,14 @@ data class EzsignfoldersignerassociationMinusRequest (
     /* The unique ID of the User */
     @Json(name = "fkiUserID")
     val fkiUserID: kotlin.Int? = null,
+
+    /* The unique ID of the Usergroup */
+    @Json(name = "fkiUsergroupID")
+    val fkiUsergroupID: kotlin.Int? = null,
+
+    /* The unique ID of the Ezsignsignergroup */
+    @Json(name = "fkiEzsignsignergroupID")
+    val fkiEzsignsignergroupID: kotlin.Int? = null,
 
     /* If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document. */
     @Json(name = "bEzsignfoldersignerassociationReceivecopy")

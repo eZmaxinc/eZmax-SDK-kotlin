@@ -24,6 +24,7 @@ import com.squareup.moshi.JsonClass
  *
  * @param pkiUserstagedID The unique ID of the Userstaged
  * @param fkiEmailID The unique ID of the Email
+ * @param sEmailAddress The email address.
  * @param sUserstagedFirstname The firstname of the Userstaged
  * @param sUserstagedLastname The lastname of the Userstaged
  * @param sUserstagedExternalid The externalid of the Userstaged
@@ -39,6 +40,10 @@ data class UserstagedMinusResponseCompound (
     /* The unique ID of the Email */
     @Json(name = "fkiEmailID")
     val fkiEmailID: kotlin.Int,
+
+    /* The email address. */
+    @Json(name = "sEmailAddress")
+    val sEmailAddress: kotlin.String,
 
     /* The firstname of the Userstaged */
     @Json(name = "sUserstagedFirstname")

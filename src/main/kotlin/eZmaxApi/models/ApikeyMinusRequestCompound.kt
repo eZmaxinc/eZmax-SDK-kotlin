@@ -26,6 +26,7 @@ import com.squareup.moshi.JsonClass
  * @param fkiUserID The unique ID of the User
  * @param objApikeyDescription 
  * @param pkiApikeyID The unique ID of the Apikey
+ * @param bApikeyIsactive Whether the apikey is active or not
  */
 
 
@@ -40,7 +41,11 @@ data class ApikeyMinusRequestCompound (
 
     /* The unique ID of the Apikey */
     @Json(name = "pkiApikeyID")
-    val pkiApikeyID: kotlin.Int? = null
+    val pkiApikeyID: kotlin.Int? = null,
+
+    /* Whether the apikey is active or not */
+    @Json(name = "bApikeyIsactive")
+    val bApikeyIsactive: kotlin.Boolean? = null
 
 )
 
