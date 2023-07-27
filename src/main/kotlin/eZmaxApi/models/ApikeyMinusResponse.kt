@@ -16,6 +16,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.CommonMinusAudit
+import eZmaxApi.models.CustomMinusContactNameMinusResponse
 import eZmaxApi.models.MultilingualMinusApikeyDescription
 
 import com.squareup.moshi.Json
@@ -27,9 +28,12 @@ import com.squareup.moshi.JsonClass
  * @param pkiApikeyID The unique ID of the Apikey
  * @param fkiUserID The unique ID of the User
  * @param objApikeyDescription 
+ * @param objContactName 
  * @param bApikeyIsactive Whether the apikey is active or not
  * @param objAudit 
- * @param sComputedToken The secret token for the API key.  This will be returned only on creation.
+ * @param sApikeyApikey The Apikey for the API key.  This will be hidden if we are not creating or regenerating the Apikey.
+ * @param sApikeySecret The Secret for the API key.  This will be hidden if we are not creating or regenerating the Apikey.
+ * @param bApikeyIssigned Whether the apikey is signed or not
  */
 
 
@@ -46,6 +50,9 @@ data class ApikeyMinusResponse (
     @Json(name = "objApikeyDescription")
     val objApikeyDescription: MultilingualMinusApikeyDescription,
 
+    @Json(name = "objContactName")
+    val objContactName: CustomMinusContactNameMinusResponse,
+
     /* Whether the apikey is active or not */
     @Json(name = "bApikeyIsactive")
     val bApikeyIsactive: kotlin.Boolean,
@@ -53,9 +60,17 @@ data class ApikeyMinusResponse (
     @Json(name = "objAudit")
     val objAudit: CommonMinusAudit,
 
-    /* The secret token for the API key.  This will be returned only on creation. */
-    @Json(name = "sComputedToken")
-    val sComputedToken: kotlin.String? = null
+    /* The Apikey for the API key.  This will be hidden if we are not creating or regenerating the Apikey. */
+    @Json(name = "sApikeyApikey")
+    val sApikeyApikey: kotlin.String? = null,
+
+    /* The Secret for the API key.  This will be hidden if we are not creating or regenerating the Apikey. */
+    @Json(name = "sApikeySecret")
+    val sApikeySecret: kotlin.String? = null,
+
+    /* Whether the apikey is signed or not */
+    @Json(name = "bApikeyIssigned")
+    val bApikeyIssigned: kotlin.Boolean? = null
 
 )
 

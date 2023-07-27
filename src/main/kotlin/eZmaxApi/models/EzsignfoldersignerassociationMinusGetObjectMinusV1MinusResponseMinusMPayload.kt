@@ -18,7 +18,6 @@ package eZmaxApi.models
 import eZmaxApi.models.EzsignfoldersignerassociationMinusResponseCompoundMinusUser
 import eZmaxApi.models.EzsignsignerMinusResponseCompound
 import eZmaxApi.models.EzsignsignergroupMinusResponseCompound
-import eZmaxApi.models.UsergroupMinusResponseCompound
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -33,7 +32,6 @@ import com.squareup.moshi.JsonClass
  * @param tEzsignfoldersignerassociationMessage A custom text message that will be added to the email sent.
  * @param objEzsignsignergroup 
  * @param objUser 
- * @param objUsergroup 
  * @param objEzsignsigner 
  */
 
@@ -65,9 +63,6 @@ data class EzsignfoldersignerassociationMinusGetObjectMinusV1MinusResponseMinusM
 
     @Json(name = "objUser")
     val objUser: EzsignfoldersignerassociationMinusResponseCompoundMinusUser? = null,
-
-    @Json(name = "objUsergroup")
-    val objUsergroup: UsergroupMinusResponseCompound? = null,
 
     @Json(name = "objEzsignsigner")
     val objEzsignsigner: EzsignsignerMinusResponseCompound? = null

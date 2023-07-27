@@ -27,6 +27,7 @@ import com.squareup.moshi.JsonClass
  * @param aObjEzsignsignaturestatus 
  * @param sEzsignfoldersignerassociationstatusLastname The last name of the Ezsignsigner
  * @param sEzsignfoldersignerassociationstatusFirstname The first name of the Ezsignsigner
+ * @param sEzsignfoldersignerassociationstatusDescriptionX The description of the Ezsignsigner
  */
 
 
@@ -41,11 +42,17 @@ data class CustomMinusEzsignfoldersignerassociationstatusMinusResponse (
 
     /* The last name of the Ezsignsigner */
     @Json(name = "sEzsignfoldersignerassociationstatusLastname")
+    @Deprecated(message = "This property is deprecated.")
     val sEzsignfoldersignerassociationstatusLastname: kotlin.String? = null,
 
     /* The first name of the Ezsignsigner */
     @Json(name = "sEzsignfoldersignerassociationstatusFirstname")
-    val sEzsignfoldersignerassociationstatusFirstname: kotlin.String? = null
+    @Deprecated(message = "This property is deprecated.")
+    val sEzsignfoldersignerassociationstatusFirstname: kotlin.String? = null,
+
+    /* The description of the Ezsignsigner */
+    @Json(name = "sEzsignfoldersignerassociationstatusDescriptionX")
+    val sEzsignfoldersignerassociationstatusDescriptionX: kotlin.String? = null
 
 )
 

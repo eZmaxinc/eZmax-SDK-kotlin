@@ -18,7 +18,6 @@ package eZmaxApi.models
 import eZmaxApi.models.EzsignfoldersignerassociationMinusResponseCompoundMinusUser
 import eZmaxApi.models.EzsignsignerMinusResponseCompound
 import eZmaxApi.models.EzsignsignergroupMinusResponseCompound
-import eZmaxApi.models.UsergroupMinusResponseCompound
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -34,7 +33,6 @@ import com.squareup.moshi.JsonClass
  * @param bEzsignfoldersignerassociationHasactionableelementsCurrent Indicates if the Ezsignfoldersignerassociation has actionable elements in the current step
  * @param objEzsignsignergroup 
  * @param objUser 
- * @param objUsergroup 
  * @param objEzsignsigner 
  * @param bEzsignfoldersignerassociationHasactionableelementsFuture Indicates if the Ezsignfoldersignerassociation has actionable elements in a future step
  */
@@ -71,9 +69,6 @@ data class CustomMinusEzsignfoldersignerassociationActionableElementMinusRespons
 
     @Json(name = "objUser")
     val objUser: EzsignfoldersignerassociationMinusResponseCompoundMinusUser? = null,
-
-    @Json(name = "objUsergroup")
-    val objUsergroup: UsergroupMinusResponseCompound? = null,
 
     @Json(name = "objEzsignsigner")
     val objEzsignsigner: EzsignsignerMinusResponseCompound? = null,

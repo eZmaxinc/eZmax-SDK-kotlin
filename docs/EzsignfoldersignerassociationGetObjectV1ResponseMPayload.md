@@ -11,7 +11,6 @@ Name | Type | Description | Notes
 **tEzsignfoldersignerassociationMessage** | **kotlin.String** | A custom text message that will be added to the email sent. | 
 **objEzsignsignergroup** | [**EzsignsignergroupMinusResponseCompound**](EzsignsignergroupMinusResponseCompound.md) |  |  [optional]
 **objUser** | [**EzsignfoldersignerassociationMinusResponseCompoundMinusUser**](EzsignfoldersignerassociationMinusResponseCompoundMinusUser.md) |  |  [optional]
-**objUsergroup** | [**UsergroupMinusResponseCompound**](UsergroupMinusResponseCompound.md) |  |  [optional]
 **objEzsignsigner** | [**EzsignsignerMinusResponseCompound**](EzsignsignerMinusResponseCompound.md) |  |  [optional]
 
 

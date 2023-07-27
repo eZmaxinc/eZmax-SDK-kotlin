@@ -12,7 +12,6 @@ Name | Type | Description | Notes
 **bEzsignfoldersignerassociationHasactionableelementsCurrent** | **kotlin.Boolean** | Indicates if the Ezsignfoldersignerassociation has actionable elements in the current step | 
 **objEzsignsignergroup** | [**EzsignsignergroupMinusResponseCompound**](EzsignsignergroupMinusResponseCompound.md) |  |  [optional]
 **objUser** | [**EzsignfoldersignerassociationMinusResponseCompoundMinusUser**](EzsignfoldersignerassociationMinusResponseCompoundMinusUser.md) |  |  [optional]
-**objUsergroup** | [**UsergroupMinusResponseCompound**](UsergroupMinusResponseCompound.md) |  |  [optional]
 **objEzsignsigner** | [**EzsignsignerMinusResponseCompound**](EzsignsignerMinusResponseCompound.md) |  |  [optional]
 **bEzsignfoldersignerassociationHasactionableelementsFuture** | **kotlin.Boolean** | Indicates if the Ezsignfoldersignerassociation has actionable elements in a future step |  [optional]
 

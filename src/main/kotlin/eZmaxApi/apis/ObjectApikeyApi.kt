@@ -25,10 +25,15 @@ import eZmaxApi.models.ApikeyMinusEditObjectMinusV1MinusRequest
 import eZmaxApi.models.ApikeyMinusEditObjectMinusV1MinusResponse
 import eZmaxApi.models.ApikeyMinusEditPermissionsMinusV1MinusRequest
 import eZmaxApi.models.ApikeyMinusEditPermissionsMinusV1MinusResponse
+import eZmaxApi.models.ApikeyMinusGetCorsMinusV1MinusResponse
+import eZmaxApi.models.ApikeyMinusGetListMinusV1MinusResponse
 import eZmaxApi.models.ApikeyMinusGetObjectMinusV2MinusResponse
 import eZmaxApi.models.ApikeyMinusGetPermissionsMinusV1MinusResponse
 import eZmaxApi.models.ApikeyMinusGetSubnetsMinusV1MinusResponse
+import eZmaxApi.models.ApikeyMinusRegenerateMinusV1MinusRequest
+import eZmaxApi.models.ApikeyMinusRegenerateMinusV1MinusResponse
 import eZmaxApi.models.CommonMinusResponseMinusError
+import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
 
 import com.squareup.moshi.Json
 
@@ -277,6 +282,193 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
     }
 
     /**
+     * Retrieve an existing Apikey&#39;s cors
+     * 
+     * @param pkiApikeyID 
+     * @return ApikeyMinusGetCorsMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun apikeyGetCorsV1(pkiApikeyID: kotlin.Int) : ApikeyMinusGetCorsMinusV1MinusResponse {
+        val localVarResponse = apikeyGetCorsV1WithHttpInfo(pkiApikeyID = pkiApikeyID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ApikeyMinusGetCorsMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve an existing Apikey&#39;s cors
+     * 
+     * @param pkiApikeyID 
+     * @return ApiResponse<ApikeyMinusGetCorsMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun apikeyGetCorsV1WithHttpInfo(pkiApikeyID: kotlin.Int) : ApiResponse<ApikeyMinusGetCorsMinusV1MinusResponse?> {
+        val localVariableConfig = apikeyGetCorsV1RequestConfig(pkiApikeyID = pkiApikeyID)
+
+        return request<Unit, ApikeyMinusGetCorsMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation apikeyGetCorsV1
+     *
+     * @param pkiApikeyID 
+     * @return RequestConfig
+     */
+    fun apikeyGetCorsV1RequestConfig(pkiApikeyID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/apikey/{pkiApikeyID}/getCors".replace("{"+"pkiApikeyID"+"}", encodeURIComponent(pkiApikeyID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * enum for parameter eOrderBy
+     */
+     enum class EOrderBy_apikeyGetListV1(val value: kotlin.String) {
+         @Json(name = "pkiApikeyID_ASC") pkiApikeyID_ASC("pkiApikeyID_ASC"),
+         @Json(name = "pkiApikeyID_DESC") pkiApikeyID_DESC("pkiApikeyID_DESC"),
+         @Json(name = "sApikeyDescriptionX_ASC") sApikeyDescriptionX_ASC("sApikeyDescriptionX_ASC"),
+         @Json(name = "sApikeyDescriptionX_DESC") sApikeyDescriptionX_DESC("sApikeyDescriptionX_DESC"),
+         @Json(name = "bApikeyIssigned_ASC") bApikeyIssigned_ASC("bApikeyIssigned_ASC"),
+         @Json(name = "bApikeyIssigned_DESC") bApikeyIssigned_DESC("bApikeyIssigned_DESC"),
+         @Json(name = "bApikeyIsactive_ASC") bApikeyIsactive_ASC("bApikeyIsactive_ASC"),
+         @Json(name = "bApikeyIsactive_DESC") bApikeyIsactive_DESC("bApikeyIsactive_DESC"),
+         @Json(name = "sUserFirstname_ASC") sUserFirstname_ASC("sUserFirstname_ASC"),
+         @Json(name = "sUserFirstname_DESC") sUserFirstname_DESC("sUserFirstname_DESC"),
+         @Json(name = "sUserLastname_ASC") sUserLastname_ASC("sUserLastname_ASC"),
+         @Json(name = "sUserLastname_DESC") sUserLastname_DESC("sUserLastname_DESC")
+     }
+
+    /**
+     * Retrieve Apikey list
+     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---|
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional, default to 10000)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return ApikeyMinusGetListMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun apikeyGetListV1(eOrderBy: EOrderBy_apikeyGetListV1? = null, iRowMax: kotlin.Int? = 10000, iRowOffset: kotlin.Int? = 0, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null, sFilter: kotlin.String? = null) : ApikeyMinusGetListMinusV1MinusResponse {
+        val localVarResponse = apikeyGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ApikeyMinusGetListMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve Apikey list
+     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---|
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional, default to 10000)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return ApiResponse<ApikeyMinusGetListMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun apikeyGetListV1WithHttpInfo(eOrderBy: EOrderBy_apikeyGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : ApiResponse<ApikeyMinusGetListMinusV1MinusResponse?> {
+        val localVariableConfig = apikeyGetListV1RequestConfig(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
+
+        return request<Unit, ApikeyMinusGetListMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation apikeyGetListV1
+     *
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional, default to 10000)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return RequestConfig
+     */
+    fun apikeyGetListV1RequestConfig(eOrderBy: EOrderBy_apikeyGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (eOrderBy != null) {
+                    put("eOrderBy", listOf(eOrderBy.toString()))
+                }
+                if (iRowMax != null) {
+                    put("iRowMax", listOf(iRowMax.toString()))
+                }
+                if (iRowOffset != null) {
+                    put("iRowOffset", listOf(iRowOffset.toString()))
+                }
+                if (sFilter != null) {
+                    put("sFilter", listOf(sFilter.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/apikey/getList",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
      * Retrieve an existing Apikey
      * 
      * @param pkiApikeyID The unique ID of the Apikey
@@ -482,6 +674,81 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/apikey/{pkiApikeyID}/getSubnets".replace("{"+"pkiApikeyID"+"}", encodeURIComponent(pkiApikeyID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Regenerate the Apikey
+     * 
+     * @param pkiApikeyID 
+     * @param apikeyMinusRegenerateMinusV1MinusRequest 
+     * @return ApikeyMinusRegenerateMinusV1MinusResponse
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun apikeyRegenerateV1(pkiApikeyID: kotlin.Int, apikeyMinusRegenerateMinusV1MinusRequest: ApikeyMinusRegenerateMinusV1MinusRequest) : ApikeyMinusRegenerateMinusV1MinusResponse {
+        val localVarResponse = apikeyRegenerateV1WithHttpInfo(pkiApikeyID = pkiApikeyID, apikeyMinusRegenerateMinusV1MinusRequest = apikeyMinusRegenerateMinusV1MinusRequest)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ApikeyMinusRegenerateMinusV1MinusResponse
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Regenerate the Apikey
+     * 
+     * @param pkiApikeyID 
+     * @param apikeyMinusRegenerateMinusV1MinusRequest 
+     * @return ApiResponse<ApikeyMinusRegenerateMinusV1MinusResponse?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun apikeyRegenerateV1WithHttpInfo(pkiApikeyID: kotlin.Int, apikeyMinusRegenerateMinusV1MinusRequest: ApikeyMinusRegenerateMinusV1MinusRequest) : ApiResponse<ApikeyMinusRegenerateMinusV1MinusResponse?> {
+        val localVariableConfig = apikeyRegenerateV1RequestConfig(pkiApikeyID = pkiApikeyID, apikeyMinusRegenerateMinusV1MinusRequest = apikeyMinusRegenerateMinusV1MinusRequest)
+
+        return request<ApikeyMinusRegenerateMinusV1MinusRequest, ApikeyMinusRegenerateMinusV1MinusResponse>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation apikeyRegenerateV1
+     *
+     * @param pkiApikeyID 
+     * @param apikeyMinusRegenerateMinusV1MinusRequest 
+     * @return RequestConfig
+     */
+    fun apikeyRegenerateV1RequestConfig(pkiApikeyID: kotlin.Int, apikeyMinusRegenerateMinusV1MinusRequest: ApikeyMinusRegenerateMinusV1MinusRequest) : RequestConfig<ApikeyMinusRegenerateMinusV1MinusRequest> {
+        val localVariableBody = apikeyMinusRegenerateMinusV1MinusRequest
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/apikey/{pkiApikeyID}/regenerate".replace("{"+"pkiApikeyID"+"}", encodeURIComponent(pkiApikeyID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,
