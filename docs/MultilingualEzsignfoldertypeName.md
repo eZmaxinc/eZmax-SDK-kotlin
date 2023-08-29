@@ -1,5 +1,5 @@
 
-# MultilingualMinusEzsignfoldertypeName
+# MultilingualEzsignfoldertypeName
 
 ## Properties
 Name | Type | Description | Notes

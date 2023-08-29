@@ -1,5 +1,5 @@
 
-# EzsignbulksendsignermappingMinusResponse
+# EzsignbulksendsignermappingResponse
 
 ## Properties
 Name | Type | Description | Notes

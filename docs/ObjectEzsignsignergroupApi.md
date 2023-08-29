@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a id="ezsignsignergroupCreateObjectV1"></a>
 # **ezsignsignergroupCreateObjectV1**
-> EzsignsignergroupMinusCreateObjectMinusV1MinusResponse ezsignsignergroupCreateObjectV1(ezsignsignergroupMinusCreateObjectMinusV1MinusRequest)
+> EzsignsignergroupCreateObjectV1Response ezsignsignergroupCreateObjectV1(ezsignsignergroupCreateObjectV1Request)
 
 Create a new Ezsignsignergroup
 
@@ -27,9 +27,9 @@ The endpoint allows to create one or many elements at once.
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsignsignergroupApi()
-val ezsignsignergroupMinusCreateObjectMinusV1MinusRequest : EzsignsignergroupMinusCreateObjectMinusV1MinusRequest =  // EzsignsignergroupMinusCreateObjectMinusV1MinusRequest | 
+val ezsignsignergroupCreateObjectV1Request : EzsignsignergroupCreateObjectV1Request =  // EzsignsignergroupCreateObjectV1Request | 
 try {
-    val result : EzsignsignergroupMinusCreateObjectMinusV1MinusResponse = apiInstance.ezsignsignergroupCreateObjectV1(ezsignsignergroupMinusCreateObjectMinusV1MinusRequest)
+    val result : EzsignsignergroupCreateObjectV1Response = apiInstance.ezsignsignergroupCreateObjectV1(ezsignsignergroupCreateObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignsignergroupApi#ezsignsignergroupCreateObjectV1")
@@ -44,11 +44,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ezsignsignergroupMinusCreateObjectMinusV1MinusRequest** | [**EzsignsignergroupMinusCreateObjectMinusV1MinusRequest**](EzsignsignergroupMinusCreateObjectMinusV1MinusRequest.md)|  |
+ **ezsignsignergroupCreateObjectV1Request** | [**EzsignsignergroupCreateObjectV1Request**](EzsignsignergroupCreateObjectV1Request.md)|  |
 
 ### Return type
 
-[**EzsignsignergroupMinusCreateObjectMinusV1MinusResponse**](EzsignsignergroupMinusCreateObjectMinusV1MinusResponse.md)
+[**EzsignsignergroupCreateObjectV1Response**](EzsignsignergroupCreateObjectV1Response.md)
 
 ### Authorization
 
@@ -64,7 +64,7 @@ Configure Authorization:
 
 <a id="ezsignsignergroupDeleteObjectV1"></a>
 # **ezsignsignergroupDeleteObjectV1**
-> EzsignsignergroupMinusDeleteObjectMinusV1MinusResponse ezsignsignergroupDeleteObjectV1(pkiEzsignsignergroupID)
+> EzsignsignergroupDeleteObjectV1Response ezsignsignergroupDeleteObjectV1(pkiEzsignsignergroupID)
 
 Delete an existing Ezsignsignergroup
 
@@ -79,7 +79,7 @@ Delete an existing Ezsignsignergroup
 val apiInstance = ObjectEzsignsignergroupApi()
 val pkiEzsignsignergroupID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsignsignergroup
 try {
-    val result : EzsignsignergroupMinusDeleteObjectMinusV1MinusResponse = apiInstance.ezsignsignergroupDeleteObjectV1(pkiEzsignsignergroupID)
+    val result : EzsignsignergroupDeleteObjectV1Response = apiInstance.ezsignsignergroupDeleteObjectV1(pkiEzsignsignergroupID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignsignergroupApi#ezsignsignergroupDeleteObjectV1")
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignsignergroupMinusDeleteObjectMinusV1MinusResponse**](EzsignsignergroupMinusDeleteObjectMinusV1MinusResponse.md)
+[**EzsignsignergroupDeleteObjectV1Response**](EzsignsignergroupDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -114,7 +114,7 @@ Configure Authorization:
 
 <a id="ezsignsignergroupEditEzsignsignergroupmembershipsV1"></a>
 # **ezsignsignergroupEditEzsignsignergroupmembershipsV1**
-> EzsignsignergroupMinusEditEzsignsignergroupmembershipsMinusV1MinusResponse ezsignsignergroupEditEzsignsignergroupmembershipsV1(pkiEzsignsignergroupID, ezsignsignergroupMinusEditEzsignsignergroupmembershipsMinusV1MinusRequest)
+> EzsignsignergroupEditEzsignsignergroupmembershipsV1Response ezsignsignergroupEditEzsignsignergroupmembershipsV1(pkiEzsignsignergroupID, ezsignsignergroupEditEzsignsignergroupmembershipsV1Request)
 
 Edit multiple Ezsignsignergroupmemberships
 
@@ -128,9 +128,9 @@ Using this endpoint, you can edit multiple Ezsignsignergroupmemberships at the s
 
 val apiInstance = ObjectEzsignsignergroupApi()
 val pkiEzsignsignergroupID : kotlin.Int = 56 // kotlin.Int | 
-val ezsignsignergroupMinusEditEzsignsignergroupmembershipsMinusV1MinusRequest : EzsignsignergroupMinusEditEzsignsignergroupmembershipsMinusV1MinusRequest =  // EzsignsignergroupMinusEditEzsignsignergroupmembershipsMinusV1MinusRequest | 
+val ezsignsignergroupEditEzsignsignergroupmembershipsV1Request : EzsignsignergroupEditEzsignsignergroupmembershipsV1Request =  // EzsignsignergroupEditEzsignsignergroupmembershipsV1Request | 
 try {
-    val result : EzsignsignergroupMinusEditEzsignsignergroupmembershipsMinusV1MinusResponse = apiInstance.ezsignsignergroupEditEzsignsignergroupmembershipsV1(pkiEzsignsignergroupID, ezsignsignergroupMinusEditEzsignsignergroupmembershipsMinusV1MinusRequest)
+    val result : EzsignsignergroupEditEzsignsignergroupmembershipsV1Response = apiInstance.ezsignsignergroupEditEzsignsignergroupmembershipsV1(pkiEzsignsignergroupID, ezsignsignergroupEditEzsignsignergroupmembershipsV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignsignergroupApi#ezsignsignergroupEditEzsignsignergroupmembershipsV1")
@@ -146,11 +146,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiEzsignsignergroupID** | **kotlin.Int**|  |
- **ezsignsignergroupMinusEditEzsignsignergroupmembershipsMinusV1MinusRequest** | [**EzsignsignergroupMinusEditEzsignsignergroupmembershipsMinusV1MinusRequest**](EzsignsignergroupMinusEditEzsignsignergroupmembershipsMinusV1MinusRequest.md)|  |
+ **ezsignsignergroupEditEzsignsignergroupmembershipsV1Request** | [**EzsignsignergroupEditEzsignsignergroupmembershipsV1Request**](EzsignsignergroupEditEzsignsignergroupmembershipsV1Request.md)|  |
 
 ### Return type
 
-[**EzsignsignergroupMinusEditEzsignsignergroupmembershipsMinusV1MinusResponse**](EzsignsignergroupMinusEditEzsignsignergroupmembershipsMinusV1MinusResponse.md)
+[**EzsignsignergroupEditEzsignsignergroupmembershipsV1Response**](EzsignsignergroupEditEzsignsignergroupmembershipsV1Response.md)
 
 ### Authorization
 
@@ -166,7 +166,7 @@ Configure Authorization:
 
 <a id="ezsignsignergroupEditObjectV1"></a>
 # **ezsignsignergroupEditObjectV1**
-> EzsignsignergroupMinusEditObjectMinusV1MinusResponse ezsignsignergroupEditObjectV1(pkiEzsignsignergroupID, ezsignsignergroupMinusEditObjectMinusV1MinusRequest)
+> EzsignsignergroupEditObjectV1Response ezsignsignergroupEditObjectV1(pkiEzsignsignergroupID, ezsignsignergroupEditObjectV1Request)
 
 Edit an existing Ezsignsignergroup
 
@@ -180,9 +180,9 @@ Edit an existing Ezsignsignergroup
 
 val apiInstance = ObjectEzsignsignergroupApi()
 val pkiEzsignsignergroupID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsignsignergroup
-val ezsignsignergroupMinusEditObjectMinusV1MinusRequest : EzsignsignergroupMinusEditObjectMinusV1MinusRequest =  // EzsignsignergroupMinusEditObjectMinusV1MinusRequest | 
+val ezsignsignergroupEditObjectV1Request : EzsignsignergroupEditObjectV1Request =  // EzsignsignergroupEditObjectV1Request | 
 try {
-    val result : EzsignsignergroupMinusEditObjectMinusV1MinusResponse = apiInstance.ezsignsignergroupEditObjectV1(pkiEzsignsignergroupID, ezsignsignergroupMinusEditObjectMinusV1MinusRequest)
+    val result : EzsignsignergroupEditObjectV1Response = apiInstance.ezsignsignergroupEditObjectV1(pkiEzsignsignergroupID, ezsignsignergroupEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignsignergroupApi#ezsignsignergroupEditObjectV1")
@@ -198,11 +198,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiEzsignsignergroupID** | **kotlin.Int**| The unique ID of the Ezsignsignergroup |
- **ezsignsignergroupMinusEditObjectMinusV1MinusRequest** | [**EzsignsignergroupMinusEditObjectMinusV1MinusRequest**](EzsignsignergroupMinusEditObjectMinusV1MinusRequest.md)|  |
+ **ezsignsignergroupEditObjectV1Request** | [**EzsignsignergroupEditObjectV1Request**](EzsignsignergroupEditObjectV1Request.md)|  |
 
 ### Return type
 
-[**EzsignsignergroupMinusEditObjectMinusV1MinusResponse**](EzsignsignergroupMinusEditObjectMinusV1MinusResponse.md)
+[**EzsignsignergroupEditObjectV1Response**](EzsignsignergroupEditObjectV1Response.md)
 
 ### Authorization
 
@@ -218,7 +218,7 @@ Configure Authorization:
 
 <a id="ezsignsignergroupGetEzsignsignergroupmembershipsV1"></a>
 # **ezsignsignergroupGetEzsignsignergroupmembershipsV1**
-> EzsignsignergroupMinusGetEzsignsignergroupmembershipsMinusV1MinusResponse ezsignsignergroupGetEzsignsignergroupmembershipsV1(pkiEzsignsignergroupID)
+> EzsignsignergroupGetEzsignsignergroupmembershipsV1Response ezsignsignergroupGetEzsignsignergroupmembershipsV1(pkiEzsignsignergroupID)
 
 Retrieve an existing Ezsignsignergroup&#39;s Ezsignsignergroupmemberships
 
@@ -231,7 +231,7 @@ Retrieve an existing Ezsignsignergroup&#39;s Ezsignsignergroupmemberships
 val apiInstance = ObjectEzsignsignergroupApi()
 val pkiEzsignsignergroupID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : EzsignsignergroupMinusGetEzsignsignergroupmembershipsMinusV1MinusResponse = apiInstance.ezsignsignergroupGetEzsignsignergroupmembershipsV1(pkiEzsignsignergroupID)
+    val result : EzsignsignergroupGetEzsignsignergroupmembershipsV1Response = apiInstance.ezsignsignergroupGetEzsignsignergroupmembershipsV1(pkiEzsignsignergroupID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignsignergroupApi#ezsignsignergroupGetEzsignsignergroupmembershipsV1")
@@ -250,7 +250,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignsignergroupMinusGetEzsignsignergroupmembershipsMinusV1MinusResponse**](EzsignsignergroupMinusGetEzsignsignergroupmembershipsMinusV1MinusResponse.md)
+[**EzsignsignergroupGetEzsignsignergroupmembershipsV1Response**](EzsignsignergroupGetEzsignsignergroupmembershipsV1Response.md)
 
 ### Authorization
 
@@ -266,7 +266,7 @@ Configure Authorization:
 
 <a id="ezsignsignergroupGetObjectV2"></a>
 # **ezsignsignergroupGetObjectV2**
-> EzsignsignergroupMinusGetObjectMinusV2MinusResponse ezsignsignergroupGetObjectV2(pkiEzsignsignergroupID)
+> EzsignsignergroupGetObjectV2Response ezsignsignergroupGetObjectV2(pkiEzsignsignergroupID)
 
 Retrieve an existing Ezsignsignergroup
 
@@ -281,7 +281,7 @@ Retrieve an existing Ezsignsignergroup
 val apiInstance = ObjectEzsignsignergroupApi()
 val pkiEzsignsignergroupID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsignsignergroup
 try {
-    val result : EzsignsignergroupMinusGetObjectMinusV2MinusResponse = apiInstance.ezsignsignergroupGetObjectV2(pkiEzsignsignergroupID)
+    val result : EzsignsignergroupGetObjectV2Response = apiInstance.ezsignsignergroupGetObjectV2(pkiEzsignsignergroupID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignsignergroupApi#ezsignsignergroupGetObjectV2")
@@ -300,7 +300,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignsignergroupMinusGetObjectMinusV2MinusResponse**](EzsignsignergroupMinusGetObjectMinusV2MinusResponse.md)
+[**EzsignsignergroupGetObjectV2Response**](EzsignsignergroupGetObjectV2Response.md)
 
 ### Authorization
 

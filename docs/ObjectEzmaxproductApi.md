@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a id="ezmaxproductGetAutocompleteV2"></a>
 # **ezmaxproductGetAutocompleteV2**
-> EzmaxproductMinusGetAutocompleteMinusV2MinusResponse ezmaxproductGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+> EzmaxproductGetAutocompleteV2Response ezmaxproductGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 
 Retrieve Ezmaxproducts and IDs
 
@@ -25,9 +25,9 @@ val apiInstance = ObjectEzmaxproductApi()
 val sSelector : kotlin.String = sSelector_example // kotlin.String | The type of Ezmaxproducts to return
 val eFilterActive : kotlin.String = eFilterActive_example // kotlin.String | Specify which results we want to display.
 val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter the returned results
-val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
+val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
 try {
-    val result : EzmaxproductMinusGetAutocompleteMinusV2MinusResponse = apiInstance.ezmaxproductGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+    val result : EzmaxproductGetAutocompleteV2Response = apiInstance.ezmaxproductGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzmaxproductApi#ezmaxproductGetAutocompleteV2")
@@ -42,14 +42,14 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sSelector** | **kotlin.String**| The type of Ezmaxproducts to return | [enum: All]
+ **sSelector** | **kotlin.String**| The type of Ezmaxproducts to return | [enum: All, Entitydefault, Entityother]
  **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
  **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional]
- **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
 
 ### Return type
 
-[**EzmaxproductMinusGetAutocompleteMinusV2MinusResponse**](EzmaxproductMinusGetAutocompleteMinusV2MinusResponse.md)
+[**EzmaxproductGetAutocompleteV2Response**](EzmaxproductGetAutocompleteV2Response.md)
 
 ### Authorization
 

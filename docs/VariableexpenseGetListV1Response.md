@@ -1,12 +1,12 @@
 
-# VariableexpenseMinusGetListMinusV1MinusResponse
+# VariableexpenseGetListV1Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**VariableexpenseMinusGetListMinusV1MinusResponseMinusMPayload**](VariableexpenseMinusGetListMinusV1MinusResponseMinusMPayload.md) |  | 
-**objDebugPayload** | [**CommonMinusResponseMinusObjDebugPayloadGetList**](CommonMinusResponseMinusObjDebugPayloadGetList.md) |  |  [optional]
-**objDebug** | [**CommonMinusResponseMinusObjDebug**](CommonMinusResponseMinusObjDebug.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayloadGetList**](CommonResponseObjDebugPayloadGetList.md) |  | 
+**mPayload** | [**VariableexpenseGetListV1ResponseMPayload**](VariableexpenseGetListV1ResponseMPayload.md) |  | 
+**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 
 
 

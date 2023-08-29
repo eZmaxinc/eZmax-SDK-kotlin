@@ -1,5 +1,5 @@
 
-# MultilingualMinusApikeyDescription
+# MultilingualApikeyDescription
 
 ## Properties
 Name | Type | Description | Notes

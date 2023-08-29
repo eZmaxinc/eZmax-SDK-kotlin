@@ -19,9 +19,9 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonMinusResponseMinusError
-import eZmaxApi.models.FieldMinusPksEzmaxclientOs
-import eZmaxApi.models.GlobalMinusEzmaxclientMinusVersionMinusV1MinusResponse
+import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.FieldPksEzmaxclientOs
+import eZmaxApi.models.GlobalEzmaxclientVersionV1Response
 
 import com.squareup.moshi.Json
 
@@ -51,7 +51,7 @@ class GlobalEzmaxclientApi(basePath: kotlin.String = defaultBasePath, client: Ok
      * Retrieve the latest version of the Ezmaxclient
      * Retrieve the latest version of the Ezmaxclient that is available on the store.
      * @param pksEzmaxclientOs 
-     * @return GlobalMinusEzmaxclientMinusVersionMinusV1MinusResponse
+     * @return GlobalEzmaxclientVersionV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -60,11 +60,11 @@ class GlobalEzmaxclientApi(basePath: kotlin.String = defaultBasePath, client: Ok
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun globalEzmaxclientVersionV1(pksEzmaxclientOs: FieldMinusPksEzmaxclientOs) : GlobalMinusEzmaxclientMinusVersionMinusV1MinusResponse {
+    fun globalEzmaxclientVersionV1(pksEzmaxclientOs: FieldPksEzmaxclientOs) : GlobalEzmaxclientVersionV1Response {
         val localVarResponse = globalEzmaxclientVersionV1WithHttpInfo(pksEzmaxclientOs = pksEzmaxclientOs)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as GlobalMinusEzmaxclientMinusVersionMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as GlobalEzmaxclientVersionV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -82,16 +82,16 @@ class GlobalEzmaxclientApi(basePath: kotlin.String = defaultBasePath, client: Ok
      * Retrieve the latest version of the Ezmaxclient
      * Retrieve the latest version of the Ezmaxclient that is available on the store.
      * @param pksEzmaxclientOs 
-     * @return ApiResponse<GlobalMinusEzmaxclientMinusVersionMinusV1MinusResponse?>
+     * @return ApiResponse<GlobalEzmaxclientVersionV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun globalEzmaxclientVersionV1WithHttpInfo(pksEzmaxclientOs: FieldMinusPksEzmaxclientOs) : ApiResponse<GlobalMinusEzmaxclientMinusVersionMinusV1MinusResponse?> {
+    fun globalEzmaxclientVersionV1WithHttpInfo(pksEzmaxclientOs: FieldPksEzmaxclientOs) : ApiResponse<GlobalEzmaxclientVersionV1Response?> {
         val localVariableConfig = globalEzmaxclientVersionV1RequestConfig(pksEzmaxclientOs = pksEzmaxclientOs)
 
-        return request<Unit, GlobalMinusEzmaxclientMinusVersionMinusV1MinusResponse>(
+        return request<Unit, GlobalEzmaxclientVersionV1Response>(
             localVariableConfig
         )
     }
@@ -102,7 +102,7 @@ class GlobalEzmaxclientApi(basePath: kotlin.String = defaultBasePath, client: Ok
      * @param pksEzmaxclientOs 
      * @return RequestConfig
      */
-    fun globalEzmaxclientVersionV1RequestConfig(pksEzmaxclientOs: FieldMinusPksEzmaxclientOs) : RequestConfig<Unit> {
+    fun globalEzmaxclientVersionV1RequestConfig(pksEzmaxclientOs: FieldPksEzmaxclientOs) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()

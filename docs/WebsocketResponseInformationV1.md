@@ -1,11 +1,11 @@
 
-# WebsocketMinusResponseMinusInformationMinusV1
+# WebsocketResponseInformationV1
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **eWebsocketMessagetype** | [**inline**](#EWebsocketMessagetype) | The Type of message | 
-**mPayload** | [**WebsocketMinusResponseMinusInformationMinusV1MinusMPayload**](WebsocketMinusResponseMinusInformationMinusV1MinusMPayload.md) |  | 
+**mPayload** | [**WebsocketResponseInformationV1MPayload**](WebsocketResponseInformationV1MPayload.md) |  | 
 
 
 <a id="EWebsocketMessagetype"></a>

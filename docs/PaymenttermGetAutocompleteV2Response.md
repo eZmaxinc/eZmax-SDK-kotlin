@@ -1,12 +1,12 @@
 
-# PaymenttermMinusGetAutocompleteMinusV2MinusResponse
+# PaymenttermGetAutocompleteV2Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**PaymenttermMinusGetAutocompleteMinusV2MinusResponseMinusMPayload**](PaymenttermMinusGetAutocompleteMinusV2MinusResponseMinusMPayload.md) |  | 
-**objDebugPayload** | [**CommonMinusResponseMinusObjDebugPayload**](CommonMinusResponseMinusObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonMinusResponseMinusObjDebug**](CommonMinusResponseMinusObjDebug.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
+**mPayload** | [**PaymenttermGetAutocompleteV2ResponseMPayload**](PaymenttermGetAutocompleteV2ResponseMPayload.md) |  | 
+**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 
 
 

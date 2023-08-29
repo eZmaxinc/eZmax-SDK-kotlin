@@ -1,5 +1,5 @@
 
-# CommonMinusFile
+# CommonFile
 
 ## Properties
 Name | Type | Description | Notes

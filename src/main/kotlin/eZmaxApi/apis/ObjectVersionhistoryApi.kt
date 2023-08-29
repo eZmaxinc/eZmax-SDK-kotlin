@@ -19,8 +19,8 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonMinusResponseMinusError
-import eZmaxApi.models.VersionhistoryMinusGetObjectMinusV2MinusResponse
+import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.VersionhistoryGetObjectV2Response
 
 import com.squareup.moshi.Json
 
@@ -50,7 +50,7 @@ class ObjectVersionhistoryApi(basePath: kotlin.String = defaultBasePath, client:
      * Retrieve an existing Versionhistory
      * 
      * @param pkiVersionhistoryID 
-     * @return VersionhistoryMinusGetObjectMinusV2MinusResponse
+     * @return VersionhistoryGetObjectV2Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -59,11 +59,11 @@ class ObjectVersionhistoryApi(basePath: kotlin.String = defaultBasePath, client:
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun versionhistoryGetObjectV2(pkiVersionhistoryID: kotlin.Int) : VersionhistoryMinusGetObjectMinusV2MinusResponse {
+    fun versionhistoryGetObjectV2(pkiVersionhistoryID: kotlin.Int) : VersionhistoryGetObjectV2Response {
         val localVarResponse = versionhistoryGetObjectV2WithHttpInfo(pkiVersionhistoryID = pkiVersionhistoryID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as VersionhistoryMinusGetObjectMinusV2MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as VersionhistoryGetObjectV2Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -81,16 +81,16 @@ class ObjectVersionhistoryApi(basePath: kotlin.String = defaultBasePath, client:
      * Retrieve an existing Versionhistory
      * 
      * @param pkiVersionhistoryID 
-     * @return ApiResponse<VersionhistoryMinusGetObjectMinusV2MinusResponse?>
+     * @return ApiResponse<VersionhistoryGetObjectV2Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun versionhistoryGetObjectV2WithHttpInfo(pkiVersionhistoryID: kotlin.Int) : ApiResponse<VersionhistoryMinusGetObjectMinusV2MinusResponse?> {
+    fun versionhistoryGetObjectV2WithHttpInfo(pkiVersionhistoryID: kotlin.Int) : ApiResponse<VersionhistoryGetObjectV2Response?> {
         val localVariableConfig = versionhistoryGetObjectV2RequestConfig(pkiVersionhistoryID = pkiVersionhistoryID)
 
-        return request<Unit, VersionhistoryMinusGetObjectMinusV2MinusResponse>(
+        return request<Unit, VersionhistoryGetObjectV2Response>(
             localVariableConfig
         )
     }

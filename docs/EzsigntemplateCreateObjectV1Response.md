@@ -1,12 +1,12 @@
 
-# EzsigntemplateMinusCreateObjectMinusV1MinusResponse
+# EzsigntemplateCreateObjectV1Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**EzsigntemplateMinusCreateObjectMinusV1MinusResponseMinusMPayload**](EzsigntemplateMinusCreateObjectMinusV1MinusResponseMinusMPayload.md) |  | 
-**objDebugPayload** | [**CommonMinusResponseMinusObjDebugPayload**](CommonMinusResponseMinusObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonMinusResponseMinusObjDebug**](CommonMinusResponseMinusObjDebug.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
+**mPayload** | [**EzsigntemplateCreateObjectV1ResponseMPayload**](EzsigntemplateCreateObjectV1ResponseMPayload.md) |  | 
+**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 
 
 

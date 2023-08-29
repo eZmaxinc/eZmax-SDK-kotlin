@@ -1,13 +1,13 @@
 
-# CommunicationrecipientMinusResponse
+# CommunicationrecipientResponse
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiCommunicationrecipientID** | **kotlin.Int** | The unique ID of the Communicationrecipient. | 
-**eCommunicationrecipientType** | [**FieldMinusECommunicationrecipientType**](FieldMinusECommunicationrecipientType.md) |  | 
-**objDescriptionstatic** | [**DescriptionstaticMinusResponseCompound**](DescriptionstaticMinusResponseCompound.md) |  | 
-**eCommunicationrecipientObjecttype** | [**FieldMinusECommunicationrecipientObjecttype**](FieldMinusECommunicationrecipientObjecttype.md) |  |  [optional]
+**eCommunicationrecipientType** | [**FieldECommunicationrecipientType**](FieldECommunicationrecipientType.md) |  | 
+**objDescriptionstatic** | [**DescriptionstaticResponseCompound**](DescriptionstaticResponseCompound.md) |  | 
+**eCommunicationrecipientObjecttype** | [**FieldECommunicationrecipientObjecttype**](FieldECommunicationrecipientObjecttype.md) |  |  [optional]
 **fkiAgentID** | **kotlin.Int** | The unique ID of the Agent. |  [optional]
 **fkiBrokerID** | **kotlin.Int** | The unique ID of the Broker. |  [optional]
 **fkiContactID** | **kotlin.Int** | The unique ID of the Contact |  [optional]
@@ -23,8 +23,8 @@ Name | Type | Description | Notes
 **fkiNotaryID** | **kotlin.Int** | The unique ID of the Notary. |  [optional]
 **fkiRewardmemberID** | **kotlin.Int** | The unique ID of the Rewardmember. |  [optional]
 **fkiSupplierID** | **kotlin.Int** | The unique ID of the Supplier. |  [optional]
-**objEmailstatic** | [**EmailstaticMinusResponseCompound**](EmailstaticMinusResponseCompound.md) |  |  [optional]
-**objPhonestatic** | [**PhonestaticMinusResponseCompound**](PhonestaticMinusResponseCompound.md) |  |  [optional]
+**objEmailstatic** | [**EmailstaticResponseCompound**](EmailstaticResponseCompound.md) |  |  [optional]
+**objPhonestatic** | [**PhonestaticResponseCompound**](PhonestaticResponseCompound.md) |  |  [optional]
 
 
 

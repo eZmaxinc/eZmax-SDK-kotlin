@@ -1,5 +1,5 @@
 
-# EnumMinusFontweight
+# EnumFontweight
 
 ## Enum
 

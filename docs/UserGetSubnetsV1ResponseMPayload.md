@@ -1,10 +1,10 @@
 
-# UserMinusGetSubnetsMinusV1MinusResponseMinusMPayload
+# UserGetSubnetsV1ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjSubnet** | [**kotlin.collections.List&lt;SubnetMinusResponseCompound&gt;**](SubnetMinusResponseCompound.md) |  | 
+**aObjSubnet** | [**kotlin.collections.List&lt;SubnetResponseCompound&gt;**](SubnetResponseCompound.md) |  | 
 
 
 

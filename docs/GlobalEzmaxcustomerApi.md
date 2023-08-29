@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a id="globalEzmaxcustomerGetConfigurationV1"></a>
 # **globalEzmaxcustomerGetConfigurationV1**
-> GlobalMinusEzmaxcustomerMinusGetConfigurationMinusV1MinusResponse globalEzmaxcustomerGetConfigurationV1(pksEzmaxcustomerCode)
+> GlobalEzmaxcustomerGetConfigurationV1Response globalEzmaxcustomerGetConfigurationV1(pksEzmaxcustomerCode)
 
 Get ezmaxcustomer configuration
 
@@ -24,7 +24,7 @@ Retrieve the ezmaxcustomer&#39;s specific configuration. This will help locate t
 val apiInstance = GlobalEzmaxcustomerApi()
 val pksEzmaxcustomerCode : kotlin.String = pksEzmaxcustomerCode_example // kotlin.String | 
 try {
-    val result : GlobalMinusEzmaxcustomerMinusGetConfigurationMinusV1MinusResponse = apiInstance.globalEzmaxcustomerGetConfigurationV1(pksEzmaxcustomerCode)
+    val result : GlobalEzmaxcustomerGetConfigurationV1Response = apiInstance.globalEzmaxcustomerGetConfigurationV1(pksEzmaxcustomerCode)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling GlobalEzmaxcustomerApi#globalEzmaxcustomerGetConfigurationV1")
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GlobalMinusEzmaxcustomerMinusGetConfigurationMinusV1MinusResponse**](GlobalMinusEzmaxcustomerMinusGetConfigurationMinusV1MinusResponse.md)
+[**GlobalEzmaxcustomerGetConfigurationV1Response**](GlobalEzmaxcustomerGetConfigurationV1Response.md)
 
 ### Authorization
 

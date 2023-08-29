@@ -1,5 +1,5 @@
 
-# VariableexpenseMinusCreateObjectMinusV1MinusResponseMinusMPayload
+# VariableexpenseCreateObjectV1ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes

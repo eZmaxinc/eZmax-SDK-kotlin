@@ -1,10 +1,10 @@
 
-# CommonMinusReportcolumn
+# CommonReportcolumn
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objReportcellstyleDefault** | [**CommonMinusReportcellstyle**](CommonMinusReportcellstyle.md) |  | 
+**objReportcellstyleDefault** | [**CommonReportcellstyle**](CommonReportcellstyle.md) |  | 
 **iReportcolumnWidth** | **kotlin.Int** | The Reportcolumn width in pixels | 
 
 

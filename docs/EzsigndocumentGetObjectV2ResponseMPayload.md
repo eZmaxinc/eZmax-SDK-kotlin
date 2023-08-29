@@ -1,10 +1,10 @@
 
-# EzsigndocumentMinusGetObjectMinusV2MinusResponseMinusMPayload
+# EzsigndocumentGetObjectV2ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objEzsigndocument** | [**EzsigndocumentMinusResponseCompound**](EzsigndocumentMinusResponseCompound.md) |  | 
+**objEzsigndocument** | [**EzsigndocumentResponseCompound**](EzsigndocumentResponseCompound.md) |  | 
 
 
 

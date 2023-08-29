@@ -1,16 +1,16 @@
 
-# EzsignfoldertypeMinusResponseCompound
+# EzsignfoldertypeResponseCompound
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiEzsignfoldertypeID** | **kotlin.Int** | The unique ID of the Ezsignfoldertype. | 
-**objEzsignfoldertypeName** | [**MultilingualMinusEzsignfoldertypeName**](MultilingualMinusEzsignfoldertypeName.md) |  | 
+**objEzsignfoldertypeName** | [**MultilingualEzsignfoldertypeName**](MultilingualEzsignfoldertypeName.md) |  | 
 **fkiBrandingID** | **kotlin.Int** | The unique ID of the Branding | 
 **sBrandingDescriptionX** | **kotlin.String** | The Description of the Branding in the language of the requester | 
-**eEzsignfoldertypePrivacylevel** | [**FieldMinusEEzsignfoldertypePrivacylevel**](FieldMinusEEzsignfoldertypePrivacylevel.md) |  | 
+**eEzsignfoldertypePrivacylevel** | [**FieldEEzsignfoldertypePrivacylevel**](FieldEEzsignfoldertypePrivacylevel.md) |  | 
 **iEzsignfoldertypeArchivaldays** | **kotlin.Int** | The number of days before the archival of Ezsignfolders created using this Ezsignfoldertype | 
-**eEzsignfoldertypeDisposal** | [**FieldMinusEEzsignfoldertypeDisposal**](FieldMinusEEzsignfoldertypeDisposal.md) |  | 
+**eEzsignfoldertypeDisposal** | [**FieldEEzsignfoldertypeDisposal**](FieldEEzsignfoldertypeDisposal.md) |  | 
 **iEzsignfoldertypeDeadlinedays** | **kotlin.Int** | The number of days to get all Ezsignsignatures | 
 **bEzsignfoldertypeSendattatchmentsigner** | **kotlin.Boolean** | Whether we send the Ezsigndocument and the proof as attachment in the email | 
 **bEzsignfoldertypeSendsignedtodocumentowner** | **kotlin.Boolean** | Whether we send the signed Ezsigndocument to the Ezsigndocument&#39;s owner | 
@@ -32,7 +32,7 @@ Name | Type | Description | Notes
 **sEmailAddressSummary** | **kotlin.String** | The email address. |  [optional]
 **sUsergroupNameX** | **kotlin.String** | The Name of the Usergroup in the language of the requester |  [optional]
 **sUsergroupNameXRestricted** | **kotlin.String** | The Name of the Usergroup in the language of the requester |  [optional]
-**eEzsignfoldertypeSendreminderfrequency** | [**FieldMinusEEzsignfoldertypeSendreminderfrequency**](FieldMinusEEzsignfoldertypeSendreminderfrequency.md) |  |  [optional]
+**eEzsignfoldertypeSendreminderfrequency** | [**FieldEEzsignfoldertypeSendreminderfrequency**](FieldEEzsignfoldertypeSendreminderfrequency.md) |  |  [optional]
 **iEzsignfoldertypeDisposaldays** | **kotlin.Int** | The number of days after the archival before the disposal of the Ezsignfolder |  [optional]
 **bEzsignfoldertypeSendsignedtofullgroup** | **kotlin.Boolean** | Whether we send the signed Ezsigndocument to the Usergroup that has acces to all Ezsignfolders |  [optional]
 **bEzsignfoldertypeSendsignedtolimitedgroup** | **kotlin.Boolean** | Whether we send the signed Ezsigndocument to the Usergroup that has acces to only their own Ezsignfolders |  [optional]

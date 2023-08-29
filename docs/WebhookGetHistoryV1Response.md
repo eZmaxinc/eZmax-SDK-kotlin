@@ -1,12 +1,12 @@
 
-# WebhookMinusGetHistoryMinusV1MinusResponse
+# WebhookGetHistoryV1Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**WebhookMinusGetHistoryMinusV1MinusResponseMinusMPayload**](WebhookMinusGetHistoryMinusV1MinusResponseMinusMPayload.md) |  | 
-**objDebugPayload** | [**CommonMinusResponseMinusObjDebugPayload**](CommonMinusResponseMinusObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonMinusResponseMinusObjDebug**](CommonMinusResponseMinusObjDebug.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
+**mPayload** | [**WebhookGetHistoryV1ResponseMPayload**](WebhookGetHistoryV1ResponseMPayload.md) |  | 
+**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 
 
 

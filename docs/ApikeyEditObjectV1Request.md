@@ -1,10 +1,10 @@
 
-# ApikeyMinusEditObjectMinusV1MinusRequest
+# ApikeyEditObjectV1Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objApikey** | [**ApikeyMinusRequestCompound**](ApikeyMinusRequestCompound.md) |  | 
+**objApikey** | [**ApikeyRequestCompound**](ApikeyRequestCompound.md) |  | 
 
 
 

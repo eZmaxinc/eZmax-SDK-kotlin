@@ -1,5 +1,5 @@
 
-# FieldMinusEActivesessionWeekdaystart
+# FieldEActivesessionWeekdaystart
 
 ## Enum
 

@@ -1,5 +1,5 @@
 
-# EzsigntemplatepackagemembershipMinusResponseCompound
+# EzsigntemplatepackagemembershipResponseCompound
 
 ## Properties
 Name | Type | Description | Notes
@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **fkiEzsigntemplatepackageID** | **kotlin.Int** | The unique ID of the Ezsigntemplatepackage | 
 **fkiEzsigntemplateID** | **kotlin.Int** | The unique ID of the Ezsigntemplate | 
 **iEzsigntemplatepackagemembershipOrder** | **kotlin.Int** | The order in which the Ezsigntemplate will be imported when using an Ezsigntemplatepackage. | 
-**objEzsigntemplate** | [**EzsigntemplateMinusResponseCompound**](EzsigntemplateMinusResponseCompound.md) |  | 
-**aObjEzsigntemplatepackagesignermembership** | [**kotlin.collections.List&lt;EzsigntemplatepackagesignermembershipMinusResponseCompound&gt;**](EzsigntemplatepackagesignermembershipMinusResponseCompound.md) |  | 
+**objEzsigntemplate** | [**EzsigntemplateResponseCompound**](EzsigntemplateResponseCompound.md) |  | 
+**aObjEzsigntemplatepackagesignermembership** | [**kotlin.collections.List&lt;EzsigntemplatepackagesignermembershipResponseCompound&gt;**](EzsigntemplatepackagesignermembershipResponseCompound.md) |  | 
 
 
 

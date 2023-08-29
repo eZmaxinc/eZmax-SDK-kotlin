@@ -1,5 +1,5 @@
 
-# FieldMinusESessionhistoryEndby
+# FieldESessionhistoryEndby
 
 ## Enum
 
@@ -29,6 +29,8 @@
     * `BadUserType` (value: `"BadUserType"`)
 
     * `BadIP` (value: `"BadIP"`)
+
+    * `ForcedLogoff` (value: `"ForcedLogoff"`)
 
 
 

@@ -1,5 +1,5 @@
 
-# EzsigntemplatepackageMinusResponseCompound
+# EzsigntemplatepackageResponseCompound
 
 ## Properties
 Name | Type | Description | Notes
@@ -13,8 +13,8 @@ Name | Type | Description | Notes
 **bEzsigntemplatepackageNeedvalidation** | **kotlin.Boolean** | Whether the Ezsignbulksend was automatically modified and needs a manual validation | 
 **bEzsigntemplatepackageIsactive** | **kotlin.Boolean** | Whether the Ezsigntemplatepackage is active or not | 
 **sEzsignfoldertypeNameX** | **kotlin.String** | The name of the Ezsignfoldertype in the language of the requester | 
-**aObjEzsigntemplatepackagesigner** | [**kotlin.collections.List&lt;EzsigntemplatepackagesignerMinusResponseCompound&gt;**](EzsigntemplatepackagesignerMinusResponseCompound.md) |  | 
-**aObjEzsigntemplatepackagemembership** | [**kotlin.collections.List&lt;EzsigntemplatepackagemembershipMinusResponseCompound&gt;**](EzsigntemplatepackagemembershipMinusResponseCompound.md) |  | 
+**aObjEzsigntemplatepackagesigner** | [**kotlin.collections.List&lt;EzsigntemplatepackagesignerResponseCompound&gt;**](EzsigntemplatepackagesignerResponseCompound.md) |  | 
+**aObjEzsigntemplatepackagemembership** | [**kotlin.collections.List&lt;EzsigntemplatepackagemembershipResponseCompound&gt;**](EzsigntemplatepackagemembershipResponseCompound.md) |  | 
 
 
 

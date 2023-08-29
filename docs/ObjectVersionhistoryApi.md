@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a id="versionhistoryGetObjectV2"></a>
 # **versionhistoryGetObjectV2**
-> VersionhistoryMinusGetObjectMinusV2MinusResponse versionhistoryGetObjectV2(pkiVersionhistoryID)
+> VersionhistoryGetObjectV2Response versionhistoryGetObjectV2(pkiVersionhistoryID)
 
 Retrieve an existing Versionhistory
 
@@ -24,7 +24,7 @@ Retrieve an existing Versionhistory
 val apiInstance = ObjectVersionhistoryApi()
 val pkiVersionhistoryID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : VersionhistoryMinusGetObjectMinusV2MinusResponse = apiInstance.versionhistoryGetObjectV2(pkiVersionhistoryID)
+    val result : VersionhistoryGetObjectV2Response = apiInstance.versionhistoryGetObjectV2(pkiVersionhistoryID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectVersionhistoryApi#versionhistoryGetObjectV2")
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VersionhistoryMinusGetObjectMinusV2MinusResponse**](VersionhistoryMinusGetObjectMinusV2MinusResponse.md)
+[**VersionhistoryGetObjectV2Response**](VersionhistoryGetObjectV2Response.md)
 
 ### Authorization
 

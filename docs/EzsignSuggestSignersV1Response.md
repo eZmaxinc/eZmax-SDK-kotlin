@@ -1,12 +1,12 @@
 
-# EzsignMinusSuggestSignersMinusV1MinusResponse
+# EzsignSuggestSignersV1Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**EzsignMinusSuggestSignersMinusV1MinusResponseMinusMPayload**](EzsignMinusSuggestSignersMinusV1MinusResponseMinusMPayload.md) |  | 
-**objDebugPayload** | [**CommonMinusResponseMinusObjDebugPayload**](CommonMinusResponseMinusObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonMinusResponseMinusObjDebug**](CommonMinusResponseMinusObjDebug.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
+**mPayload** | [**EzsignSuggestSignersV1ResponseMPayload**](EzsignSuggestSignersV1ResponseMPayload.md) |  | 
+**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 
 
 

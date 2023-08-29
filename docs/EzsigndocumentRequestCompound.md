@@ -1,5 +1,5 @@
 
-# EzsigndocumentMinusRequestCompound
+# EzsigndocumentRequestCompound
 
 ## Properties
 Name | Type | Description | Notes

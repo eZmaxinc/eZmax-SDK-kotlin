@@ -1,12 +1,12 @@
 
-# EzsigntemplatedocumentMinusEditEzsigntemplateformfieldgroupsMinusV1MinusResponse
+# EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**EzsigntemplatedocumentMinusEditEzsigntemplateformfieldgroupsMinusV1MinusResponseMinusMPayload**](EzsigntemplatedocumentMinusEditEzsigntemplateformfieldgroupsMinusV1MinusResponseMinusMPayload.md) |  | 
-**objDebugPayload** | [**CommonMinusResponseMinusObjDebugPayload**](CommonMinusResponseMinusObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonMinusResponseMinusObjDebug**](CommonMinusResponseMinusObjDebug.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
+**mPayload** | [**EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1ResponseMPayload**](EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1ResponseMPayload.md) |  | 
+**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 
 
 

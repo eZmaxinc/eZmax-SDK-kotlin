@@ -1,5 +1,5 @@
 
-# EzmaxinvoicingagentMinusResponse
+# EzmaxinvoicingagentResponse
 
 ## Properties
 Name | Type | Description | Notes
@@ -17,9 +17,9 @@ Name | Type | Description | Notes
 **iEzmaxinvoicingagentEzsigndocument** | **kotlin.Int** | The number of ezsign documents | 
 **bEzmaxinvoicingagentEzsignaccount** | **kotlin.Boolean** | Whether the agent has an eZsign account | 
 **bEzmaxinvoicingagentBillableezmax** | **kotlin.Boolean** | Whether it is billable for eZmax | 
-**eEzmaxinvoicingagentVariationezmax** | [**FieldMinusEEzmaxinvoicingagentVariationezmax**](FieldMinusEEzmaxinvoicingagentVariationezmax.md) |  | 
+**eEzmaxinvoicingagentVariationezmax** | [**FieldEEzmaxinvoicingagentVariationezmax**](FieldEEzmaxinvoicingagentVariationezmax.md) |  | 
 **bEzmaxinvoicingagentBillableezsign** | **kotlin.Boolean** | Whether it is billable for eZsign | 
-**eEzmaxinvoicingagentVariationezsign** | [**FieldMinusEEzmaxinvoicingagentVariationezsign**](FieldMinusEEzmaxinvoicingagentVariationezsign.md) |  | 
+**eEzmaxinvoicingagentVariationezsign** | [**FieldEEzmaxinvoicingagentVariationezsign**](FieldEEzmaxinvoicingagentVariationezsign.md) |  | 
 **pkiEzmaxinvoicingagentID** | **kotlin.Int** | The unique ID of the Ezmaxinvoicingagent |  [optional]
 **fkiEzmaxinvoicingID** | **kotlin.Int** | The unique ID of the Ezmaxinvoicing |  [optional]
 **fkiAgentID** | **kotlin.Int** | The unique ID of the Agent. |  [optional]

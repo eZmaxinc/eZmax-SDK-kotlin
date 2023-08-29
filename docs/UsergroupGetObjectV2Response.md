@@ -1,12 +1,12 @@
 
-# UsergroupMinusGetObjectMinusV2MinusResponse
+# UsergroupGetObjectV2Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**UsergroupMinusGetObjectMinusV2MinusResponseMinusMPayload**](UsergroupMinusGetObjectMinusV2MinusResponseMinusMPayload.md) |  | 
-**objDebugPayload** | [**CommonMinusResponseMinusObjDebugPayload**](CommonMinusResponseMinusObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonMinusResponseMinusObjDebug**](CommonMinusResponseMinusObjDebug.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
+**mPayload** | [**UsergroupGetObjectV2ResponseMPayload**](UsergroupGetObjectV2ResponseMPayload.md) |  | 
+**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 
 
 

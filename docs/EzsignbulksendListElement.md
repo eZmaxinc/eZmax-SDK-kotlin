@@ -1,5 +1,5 @@
 
-# EzsignbulksendMinusListElement
+# EzsignbulksendListElement
 
 ## Properties
 Name | Type | Description | Notes

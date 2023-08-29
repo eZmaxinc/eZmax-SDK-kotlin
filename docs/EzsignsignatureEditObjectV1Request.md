@@ -1,10 +1,10 @@
 
-# EzsignsignatureMinusEditObjectMinusV1MinusRequest
+# EzsignsignatureEditObjectV1Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objEzsignsignature** | [**EzsignsignatureMinusRequestCompound**](EzsignsignatureMinusRequestCompound.md) |  | 
+**objEzsignsignature** | [**EzsignsignatureRequestCompound**](EzsignsignatureRequestCompound.md) |  | 
 
 
 

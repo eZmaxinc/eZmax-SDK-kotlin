@@ -1,10 +1,10 @@
 
-# CommunicationMinusGetObjectMinusV2MinusResponseMinusMPayload
+# CommunicationGetObjectV2ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objCommunication** | [**CommunicationMinusResponseCompound**](CommunicationMinusResponseCompound.md) |  | 
+**objCommunication** | [**CommunicationResponseCompound**](CommunicationResponseCompound.md) |  | 
 
 
 

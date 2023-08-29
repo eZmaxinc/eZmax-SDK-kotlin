@@ -1,11 +1,11 @@
 
-# EzsigndocumentMinusCreateObjectMinusV1MinusRequest
+# EzsigndocumentCreateObjectV1Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objEzsigndocument** | [**EzsigndocumentMinusRequest**](EzsigndocumentMinusRequest.md) |  |  [optional]
-**objEzsigndocumentCompound** | [**EzsigndocumentMinusRequestCompound**](EzsigndocumentMinusRequestCompound.md) |  |  [optional]
+**objEzsigndocument** | [**EzsigndocumentRequest**](EzsigndocumentRequest.md) |  |  [optional]
+**objEzsigndocumentCompound** | [**EzsigndocumentRequestCompound**](EzsigndocumentRequestCompound.md) |  |  [optional]
 
 
 

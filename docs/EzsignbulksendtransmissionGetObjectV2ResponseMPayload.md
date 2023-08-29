@@ -1,10 +1,10 @@
 
-# EzsignbulksendtransmissionMinusGetObjectMinusV2MinusResponseMinusMPayload
+# EzsignbulksendtransmissionGetObjectV2ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objEzsignbulksendtransmission** | [**EzsignbulksendtransmissionMinusResponseCompound**](EzsignbulksendtransmissionMinusResponseCompound.md) |  | 
+**objEzsignbulksendtransmission** | [**EzsignbulksendtransmissionResponseCompound**](EzsignbulksendtransmissionResponseCompound.md) |  | 
 
 
 

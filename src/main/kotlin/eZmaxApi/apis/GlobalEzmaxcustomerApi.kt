@@ -19,8 +19,8 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonMinusResponseMinusError
-import eZmaxApi.models.GlobalMinusEzmaxcustomerMinusGetConfigurationMinusV1MinusResponse
+import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.GlobalEzmaxcustomerGetConfigurationV1Response
 
 import com.squareup.moshi.Json
 
@@ -50,7 +50,7 @@ class GlobalEzmaxcustomerApi(basePath: kotlin.String = defaultBasePath, client: 
      * Get ezmaxcustomer configuration
      * Retrieve the ezmaxcustomer&#39;s specific configuration. This will help locate the proper region (ie: sInfrastructureregionCode) and the proper environment (ie: sInfrastructureenvironmenttypeDescription) where the customer&#39;s data is stored.
      * @param pksEzmaxcustomerCode 
-     * @return GlobalMinusEzmaxcustomerMinusGetConfigurationMinusV1MinusResponse
+     * @return GlobalEzmaxcustomerGetConfigurationV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -59,11 +59,11 @@ class GlobalEzmaxcustomerApi(basePath: kotlin.String = defaultBasePath, client: 
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun globalEzmaxcustomerGetConfigurationV1(pksEzmaxcustomerCode: kotlin.String) : GlobalMinusEzmaxcustomerMinusGetConfigurationMinusV1MinusResponse {
+    fun globalEzmaxcustomerGetConfigurationV1(pksEzmaxcustomerCode: kotlin.String) : GlobalEzmaxcustomerGetConfigurationV1Response {
         val localVarResponse = globalEzmaxcustomerGetConfigurationV1WithHttpInfo(pksEzmaxcustomerCode = pksEzmaxcustomerCode)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as GlobalMinusEzmaxcustomerMinusGetConfigurationMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as GlobalEzmaxcustomerGetConfigurationV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -81,16 +81,16 @@ class GlobalEzmaxcustomerApi(basePath: kotlin.String = defaultBasePath, client: 
      * Get ezmaxcustomer configuration
      * Retrieve the ezmaxcustomer&#39;s specific configuration. This will help locate the proper region (ie: sInfrastructureregionCode) and the proper environment (ie: sInfrastructureenvironmenttypeDescription) where the customer&#39;s data is stored.
      * @param pksEzmaxcustomerCode 
-     * @return ApiResponse<GlobalMinusEzmaxcustomerMinusGetConfigurationMinusV1MinusResponse?>
+     * @return ApiResponse<GlobalEzmaxcustomerGetConfigurationV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun globalEzmaxcustomerGetConfigurationV1WithHttpInfo(pksEzmaxcustomerCode: kotlin.String) : ApiResponse<GlobalMinusEzmaxcustomerMinusGetConfigurationMinusV1MinusResponse?> {
+    fun globalEzmaxcustomerGetConfigurationV1WithHttpInfo(pksEzmaxcustomerCode: kotlin.String) : ApiResponse<GlobalEzmaxcustomerGetConfigurationV1Response?> {
         val localVariableConfig = globalEzmaxcustomerGetConfigurationV1RequestConfig(pksEzmaxcustomerCode = pksEzmaxcustomerCode)
 
-        return request<Unit, GlobalMinusEzmaxcustomerMinusGetConfigurationMinusV1MinusResponse>(
+        return request<Unit, GlobalEzmaxcustomerGetConfigurationV1Response>(
             localVariableConfig
         )
     }

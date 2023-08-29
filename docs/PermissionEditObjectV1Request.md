@@ -1,10 +1,10 @@
 
-# PermissionMinusEditObjectMinusV1MinusRequest
+# PermissionEditObjectV1Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objPermission** | [**PermissionMinusRequestCompound**](PermissionMinusRequestCompound.md) |  | 
+**objPermission** | [**PermissionRequestCompound**](PermissionRequestCompound.md) |  | 
 
 
 

@@ -1,10 +1,10 @@
 
-# VariableexpenseMinusEditObjectMinusV1MinusRequest
+# VariableexpenseEditObjectV1Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objVariableexpense** | [**VariableexpenseMinusRequestCompound**](VariableexpenseMinusRequestCompound.md) |  | 
+**objVariableexpense** | [**VariableexpenseRequestCompound**](VariableexpenseRequestCompound.md) |  | 
 
 
 

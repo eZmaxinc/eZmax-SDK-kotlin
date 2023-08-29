@@ -1,5 +1,5 @@
 
-# BrandingMinusListElement
+# BrandingListElement
 
 ## Properties
 Name | Type | Description | Notes

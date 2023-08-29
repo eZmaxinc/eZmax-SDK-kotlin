@@ -1,5 +1,5 @@
 
-# CorsMinusRequest
+# CorsRequest
 
 ## Properties
 Name | Type | Description | Notes

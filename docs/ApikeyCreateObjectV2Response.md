@@ -1,12 +1,12 @@
 
-# ApikeyMinusCreateObjectMinusV2MinusResponse
+# ApikeyCreateObjectV2Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**ApikeyMinusCreateObjectMinusV2MinusResponseMinusMPayload**](ApikeyMinusCreateObjectMinusV2MinusResponseMinusMPayload.md) |  | 
-**objDebugPayload** | [**CommonMinusResponseMinusObjDebugPayload**](CommonMinusResponseMinusObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonMinusResponseMinusObjDebug**](CommonMinusResponseMinusObjDebug.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
+**mPayload** | [**ApikeyCreateObjectV2ResponseMPayload**](ApikeyCreateObjectV2ResponseMPayload.md) |  | 
+**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 
 
 

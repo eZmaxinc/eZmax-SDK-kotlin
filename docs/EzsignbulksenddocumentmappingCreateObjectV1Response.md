@@ -1,12 +1,12 @@
 
-# EzsignbulksenddocumentmappingMinusCreateObjectMinusV1MinusResponse
+# EzsignbulksenddocumentmappingCreateObjectV1Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**EzsignbulksenddocumentmappingMinusCreateObjectMinusV1MinusResponseMinusMPayload**](EzsignbulksenddocumentmappingMinusCreateObjectMinusV1MinusResponseMinusMPayload.md) |  | 
-**objDebugPayload** | [**CommonMinusResponseMinusObjDebugPayload**](CommonMinusResponseMinusObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonMinusResponseMinusObjDebug**](CommonMinusResponseMinusObjDebug.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
+**mPayload** | [**EzsignbulksenddocumentmappingCreateObjectV1ResponseMPayload**](EzsignbulksenddocumentmappingCreateObjectV1ResponseMPayload.md) |  | 
+**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 
 
 

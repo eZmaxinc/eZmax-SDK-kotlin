@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 <a id="ezsigntemplatedocumentCreateObjectV1"></a>
 # **ezsigntemplatedocumentCreateObjectV1**
-> EzsigntemplatedocumentMinusCreateObjectMinusV1MinusResponse ezsigntemplatedocumentCreateObjectV1(ezsigntemplatedocumentMinusCreateObjectMinusV1MinusRequest)
+> EzsigntemplatedocumentCreateObjectV1Response ezsigntemplatedocumentCreateObjectV1(ezsigntemplatedocumentCreateObjectV1Request)
 
 Create a new Ezsigntemplatedocument
 
@@ -32,9 +32,9 @@ The endpoint allows to create one or many elements at once.
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsigntemplatedocumentApi()
-val ezsigntemplatedocumentMinusCreateObjectMinusV1MinusRequest : EzsigntemplatedocumentMinusCreateObjectMinusV1MinusRequest =  // EzsigntemplatedocumentMinusCreateObjectMinusV1MinusRequest | 
+val ezsigntemplatedocumentCreateObjectV1Request : EzsigntemplatedocumentCreateObjectV1Request =  // EzsigntemplatedocumentCreateObjectV1Request | 
 try {
-    val result : EzsigntemplatedocumentMinusCreateObjectMinusV1MinusResponse = apiInstance.ezsigntemplatedocumentCreateObjectV1(ezsigntemplatedocumentMinusCreateObjectMinusV1MinusRequest)
+    val result : EzsigntemplatedocumentCreateObjectV1Response = apiInstance.ezsigntemplatedocumentCreateObjectV1(ezsigntemplatedocumentCreateObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplatedocumentApi#ezsigntemplatedocumentCreateObjectV1")
@@ -49,11 +49,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ezsigntemplatedocumentMinusCreateObjectMinusV1MinusRequest** | [**EzsigntemplatedocumentMinusCreateObjectMinusV1MinusRequest**](EzsigntemplatedocumentMinusCreateObjectMinusV1MinusRequest.md)|  |
+ **ezsigntemplatedocumentCreateObjectV1Request** | [**EzsigntemplatedocumentCreateObjectV1Request**](EzsigntemplatedocumentCreateObjectV1Request.md)|  |
 
 ### Return type
 
-[**EzsigntemplatedocumentMinusCreateObjectMinusV1MinusResponse**](EzsigntemplatedocumentMinusCreateObjectMinusV1MinusResponse.md)
+[**EzsigntemplatedocumentCreateObjectV1Response**](EzsigntemplatedocumentCreateObjectV1Response.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ Configure Authorization:
 
 <a id="ezsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1"></a>
 # **ezsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1**
-> EzsigntemplatedocumentMinusEditEzsigntemplateformfieldgroupsMinusV1MinusResponse ezsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentMinusEditEzsigntemplateformfieldgroupsMinusV1MinusRequest)
+> EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Response ezsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request)
 
 Edit multiple Ezsigntemplateformfieldgroups
 
@@ -83,9 +83,9 @@ Using this endpoint, you can edit multiple Ezsigntemplateformfieldgroups at the 
 
 val apiInstance = ObjectEzsigntemplatedocumentApi()
 val pkiEzsigntemplatedocumentID : kotlin.Int = 56 // kotlin.Int | 
-val ezsigntemplatedocumentMinusEditEzsigntemplateformfieldgroupsMinusV1MinusRequest : EzsigntemplatedocumentMinusEditEzsigntemplateformfieldgroupsMinusV1MinusRequest =  // EzsigntemplatedocumentMinusEditEzsigntemplateformfieldgroupsMinusV1MinusRequest | 
+val ezsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request : EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request =  // EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request | 
 try {
-    val result : EzsigntemplatedocumentMinusEditEzsigntemplateformfieldgroupsMinusV1MinusResponse = apiInstance.ezsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentMinusEditEzsigntemplateformfieldgroupsMinusV1MinusRequest)
+    val result : EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Response = apiInstance.ezsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplatedocumentApi#ezsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1")
@@ -101,11 +101,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiEzsigntemplatedocumentID** | **kotlin.Int**|  |
- **ezsigntemplatedocumentMinusEditEzsigntemplateformfieldgroupsMinusV1MinusRequest** | [**EzsigntemplatedocumentMinusEditEzsigntemplateformfieldgroupsMinusV1MinusRequest**](EzsigntemplatedocumentMinusEditEzsigntemplateformfieldgroupsMinusV1MinusRequest.md)|  |
+ **ezsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request** | [**EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request**](EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request.md)|  |
 
 ### Return type
 
-[**EzsigntemplatedocumentMinusEditEzsigntemplateformfieldgroupsMinusV1MinusResponse**](EzsigntemplatedocumentMinusEditEzsigntemplateformfieldgroupsMinusV1MinusResponse.md)
+[**EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Response**](EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Response.md)
 
 ### Authorization
 
@@ -121,7 +121,7 @@ Configure Authorization:
 
 <a id="ezsigntemplatedocumentEditEzsigntemplatesignaturesV1"></a>
 # **ezsigntemplatedocumentEditEzsigntemplatesignaturesV1**
-> EzsigntemplatedocumentMinusEditEzsigntemplatesignaturesMinusV1MinusResponse ezsigntemplatedocumentEditEzsigntemplatesignaturesV1(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentMinusEditEzsigntemplatesignaturesMinusV1MinusRequest)
+> EzsigntemplatedocumentEditEzsigntemplatesignaturesV1Response ezsigntemplatedocumentEditEzsigntemplatesignaturesV1(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentEditEzsigntemplatesignaturesV1Request)
 
 Edit multiple Ezsigntemplatesignatures
 
@@ -135,9 +135,9 @@ Using this endpoint, you can edit multiple Ezsigntemplatesignatures at the same 
 
 val apiInstance = ObjectEzsigntemplatedocumentApi()
 val pkiEzsigntemplatedocumentID : kotlin.Int = 56 // kotlin.Int | 
-val ezsigntemplatedocumentMinusEditEzsigntemplatesignaturesMinusV1MinusRequest : EzsigntemplatedocumentMinusEditEzsigntemplatesignaturesMinusV1MinusRequest =  // EzsigntemplatedocumentMinusEditEzsigntemplatesignaturesMinusV1MinusRequest | 
+val ezsigntemplatedocumentEditEzsigntemplatesignaturesV1Request : EzsigntemplatedocumentEditEzsigntemplatesignaturesV1Request =  // EzsigntemplatedocumentEditEzsigntemplatesignaturesV1Request | 
 try {
-    val result : EzsigntemplatedocumentMinusEditEzsigntemplatesignaturesMinusV1MinusResponse = apiInstance.ezsigntemplatedocumentEditEzsigntemplatesignaturesV1(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentMinusEditEzsigntemplatesignaturesMinusV1MinusRequest)
+    val result : EzsigntemplatedocumentEditEzsigntemplatesignaturesV1Response = apiInstance.ezsigntemplatedocumentEditEzsigntemplatesignaturesV1(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentEditEzsigntemplatesignaturesV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplatedocumentApi#ezsigntemplatedocumentEditEzsigntemplatesignaturesV1")
@@ -153,11 +153,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiEzsigntemplatedocumentID** | **kotlin.Int**|  |
- **ezsigntemplatedocumentMinusEditEzsigntemplatesignaturesMinusV1MinusRequest** | [**EzsigntemplatedocumentMinusEditEzsigntemplatesignaturesMinusV1MinusRequest**](EzsigntemplatedocumentMinusEditEzsigntemplatesignaturesMinusV1MinusRequest.md)|  |
+ **ezsigntemplatedocumentEditEzsigntemplatesignaturesV1Request** | [**EzsigntemplatedocumentEditEzsigntemplatesignaturesV1Request**](EzsigntemplatedocumentEditEzsigntemplatesignaturesV1Request.md)|  |
 
 ### Return type
 
-[**EzsigntemplatedocumentMinusEditEzsigntemplatesignaturesMinusV1MinusResponse**](EzsigntemplatedocumentMinusEditEzsigntemplatesignaturesMinusV1MinusResponse.md)
+[**EzsigntemplatedocumentEditEzsigntemplatesignaturesV1Response**](EzsigntemplatedocumentEditEzsigntemplatesignaturesV1Response.md)
 
 ### Authorization
 
@@ -173,7 +173,7 @@ Configure Authorization:
 
 <a id="ezsigntemplatedocumentEditObjectV1"></a>
 # **ezsigntemplatedocumentEditObjectV1**
-> EzsigntemplatedocumentMinusEditObjectMinusV1MinusResponse ezsigntemplatedocumentEditObjectV1(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentMinusEditObjectMinusV1MinusRequest)
+> EzsigntemplatedocumentEditObjectV1Response ezsigntemplatedocumentEditObjectV1(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentEditObjectV1Request)
 
 Edit an existing Ezsigntemplatedocument
 
@@ -187,9 +187,9 @@ Edit an existing Ezsigntemplatedocument
 
 val apiInstance = ObjectEzsigntemplatedocumentApi()
 val pkiEzsigntemplatedocumentID : kotlin.Int = 56 // kotlin.Int | 
-val ezsigntemplatedocumentMinusEditObjectMinusV1MinusRequest : EzsigntemplatedocumentMinusEditObjectMinusV1MinusRequest =  // EzsigntemplatedocumentMinusEditObjectMinusV1MinusRequest | 
+val ezsigntemplatedocumentEditObjectV1Request : EzsigntemplatedocumentEditObjectV1Request =  // EzsigntemplatedocumentEditObjectV1Request | 
 try {
-    val result : EzsigntemplatedocumentMinusEditObjectMinusV1MinusResponse = apiInstance.ezsigntemplatedocumentEditObjectV1(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentMinusEditObjectMinusV1MinusRequest)
+    val result : EzsigntemplatedocumentEditObjectV1Response = apiInstance.ezsigntemplatedocumentEditObjectV1(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplatedocumentApi#ezsigntemplatedocumentEditObjectV1")
@@ -205,11 +205,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiEzsigntemplatedocumentID** | **kotlin.Int**|  |
- **ezsigntemplatedocumentMinusEditObjectMinusV1MinusRequest** | [**EzsigntemplatedocumentMinusEditObjectMinusV1MinusRequest**](EzsigntemplatedocumentMinusEditObjectMinusV1MinusRequest.md)|  |
+ **ezsigntemplatedocumentEditObjectV1Request** | [**EzsigntemplatedocumentEditObjectV1Request**](EzsigntemplatedocumentEditObjectV1Request.md)|  |
 
 ### Return type
 
-[**EzsigntemplatedocumentMinusEditObjectMinusV1MinusResponse**](EzsigntemplatedocumentMinusEditObjectMinusV1MinusResponse.md)
+[**EzsigntemplatedocumentEditObjectV1Response**](EzsigntemplatedocumentEditObjectV1Response.md)
 
 ### Authorization
 
@@ -225,7 +225,7 @@ Configure Authorization:
 
 <a id="ezsigntemplatedocumentFlattenV1"></a>
 # **ezsigntemplatedocumentFlattenV1**
-> EzsigntemplatedocumentMinusFlattenMinusV1MinusResponse ezsigntemplatedocumentFlattenV1(pkiEzsigntemplatedocumentID, body)
+> EzsigntemplatedocumentFlattenV1Response ezsigntemplatedocumentFlattenV1(pkiEzsigntemplatedocumentID, body)
 
 Flatten
 
@@ -241,7 +241,7 @@ val apiInstance = ObjectEzsigntemplatedocumentApi()
 val pkiEzsigntemplatedocumentID : kotlin.Int = 56 // kotlin.Int | 
 val body : kotlin.Any = Object // kotlin.Any | 
 try {
-    val result : EzsigntemplatedocumentMinusFlattenMinusV1MinusResponse = apiInstance.ezsigntemplatedocumentFlattenV1(pkiEzsigntemplatedocumentID, body)
+    val result : EzsigntemplatedocumentFlattenV1Response = apiInstance.ezsigntemplatedocumentFlattenV1(pkiEzsigntemplatedocumentID, body)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplatedocumentApi#ezsigntemplatedocumentFlattenV1")
@@ -261,7 +261,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsigntemplatedocumentMinusFlattenMinusV1MinusResponse**](EzsigntemplatedocumentMinusFlattenMinusV1MinusResponse.md)
+[**EzsigntemplatedocumentFlattenV1Response**](EzsigntemplatedocumentFlattenV1Response.md)
 
 ### Authorization
 
@@ -277,7 +277,7 @@ Configure Authorization:
 
 <a id="ezsigntemplatedocumentGetEzsigntemplatedocumentpagesV1"></a>
 # **ezsigntemplatedocumentGetEzsigntemplatedocumentpagesV1**
-> EzsigntemplatedocumentMinusGetEzsigntemplatedocumentpagesMinusV1MinusResponse ezsigntemplatedocumentGetEzsigntemplatedocumentpagesV1(pkiEzsigntemplatedocumentID)
+> EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1Response ezsigntemplatedocumentGetEzsigntemplatedocumentpagesV1(pkiEzsigntemplatedocumentID)
 
 Retrieve an existing Ezsigntemplatedocument&#39;s Ezsigntemplatedocumentpages
 
@@ -292,7 +292,7 @@ Retrieve an existing Ezsigntemplatedocument&#39;s Ezsigntemplatedocumentpages
 val apiInstance = ObjectEzsigntemplatedocumentApi()
 val pkiEzsigntemplatedocumentID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : EzsigntemplatedocumentMinusGetEzsigntemplatedocumentpagesMinusV1MinusResponse = apiInstance.ezsigntemplatedocumentGetEzsigntemplatedocumentpagesV1(pkiEzsigntemplatedocumentID)
+    val result : EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1Response = apiInstance.ezsigntemplatedocumentGetEzsigntemplatedocumentpagesV1(pkiEzsigntemplatedocumentID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplatedocumentApi#ezsigntemplatedocumentGetEzsigntemplatedocumentpagesV1")
@@ -311,7 +311,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsigntemplatedocumentMinusGetEzsigntemplatedocumentpagesMinusV1MinusResponse**](EzsigntemplatedocumentMinusGetEzsigntemplatedocumentpagesMinusV1MinusResponse.md)
+[**EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1Response**](EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1Response.md)
 
 ### Authorization
 
@@ -327,7 +327,7 @@ Configure Authorization:
 
 <a id="ezsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1"></a>
 # **ezsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1**
-> EzsigntemplatedocumentMinusGetEzsigntemplateformfieldgroupsMinusV1MinusResponse ezsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1(pkiEzsigntemplatedocumentID)
+> EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response ezsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1(pkiEzsigntemplatedocumentID)
 
 Retrieve an existing Ezsigntemplatedocument&#39;s Ezsigntemplateformfieldgroups
 
@@ -342,7 +342,7 @@ Retrieve an existing Ezsigntemplatedocument&#39;s Ezsigntemplateformfieldgroups
 val apiInstance = ObjectEzsigntemplatedocumentApi()
 val pkiEzsigntemplatedocumentID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : EzsigntemplatedocumentMinusGetEzsigntemplateformfieldgroupsMinusV1MinusResponse = apiInstance.ezsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1(pkiEzsigntemplatedocumentID)
+    val result : EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response = apiInstance.ezsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1(pkiEzsigntemplatedocumentID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplatedocumentApi#ezsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1")
@@ -361,7 +361,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsigntemplatedocumentMinusGetEzsigntemplateformfieldgroupsMinusV1MinusResponse**](EzsigntemplatedocumentMinusGetEzsigntemplateformfieldgroupsMinusV1MinusResponse.md)
+[**EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response**](EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response.md)
 
 ### Authorization
 
@@ -377,7 +377,7 @@ Configure Authorization:
 
 <a id="ezsigntemplatedocumentGetEzsigntemplatesignaturesV1"></a>
 # **ezsigntemplatedocumentGetEzsigntemplatesignaturesV1**
-> EzsigntemplatedocumentMinusGetEzsigntemplatesignaturesMinusV1MinusResponse ezsigntemplatedocumentGetEzsigntemplatesignaturesV1(pkiEzsigntemplatedocumentID)
+> EzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response ezsigntemplatedocumentGetEzsigntemplatesignaturesV1(pkiEzsigntemplatedocumentID)
 
 Retrieve an existing Ezsigntemplatedocument&#39;s Ezsigntemplatesignatures
 
@@ -392,7 +392,7 @@ Retrieve an existing Ezsigntemplatedocument&#39;s Ezsigntemplatesignatures
 val apiInstance = ObjectEzsigntemplatedocumentApi()
 val pkiEzsigntemplatedocumentID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : EzsigntemplatedocumentMinusGetEzsigntemplatesignaturesMinusV1MinusResponse = apiInstance.ezsigntemplatedocumentGetEzsigntemplatesignaturesV1(pkiEzsigntemplatedocumentID)
+    val result : EzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response = apiInstance.ezsigntemplatedocumentGetEzsigntemplatesignaturesV1(pkiEzsigntemplatedocumentID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplatedocumentApi#ezsigntemplatedocumentGetEzsigntemplatesignaturesV1")
@@ -411,7 +411,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsigntemplatedocumentMinusGetEzsigntemplatesignaturesMinusV1MinusResponse**](EzsigntemplatedocumentMinusGetEzsigntemplatesignaturesMinusV1MinusResponse.md)
+[**EzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response**](EzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response.md)
 
 ### Authorization
 
@@ -427,7 +427,7 @@ Configure Authorization:
 
 <a id="ezsigntemplatedocumentGetObjectV2"></a>
 # **ezsigntemplatedocumentGetObjectV2**
-> EzsigntemplatedocumentMinusGetObjectMinusV2MinusResponse ezsigntemplatedocumentGetObjectV2(pkiEzsigntemplatedocumentID)
+> EzsigntemplatedocumentGetObjectV2Response ezsigntemplatedocumentGetObjectV2(pkiEzsigntemplatedocumentID)
 
 Retrieve an existing Ezsigntemplatedocument
 
@@ -442,7 +442,7 @@ Retrieve an existing Ezsigntemplatedocument
 val apiInstance = ObjectEzsigntemplatedocumentApi()
 val pkiEzsigntemplatedocumentID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : EzsigntemplatedocumentMinusGetObjectMinusV2MinusResponse = apiInstance.ezsigntemplatedocumentGetObjectV2(pkiEzsigntemplatedocumentID)
+    val result : EzsigntemplatedocumentGetObjectV2Response = apiInstance.ezsigntemplatedocumentGetObjectV2(pkiEzsigntemplatedocumentID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplatedocumentApi#ezsigntemplatedocumentGetObjectV2")
@@ -461,7 +461,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsigntemplatedocumentMinusGetObjectMinusV2MinusResponse**](EzsigntemplatedocumentMinusGetObjectMinusV2MinusResponse.md)
+[**EzsigntemplatedocumentGetObjectV2Response**](EzsigntemplatedocumentGetObjectV2Response.md)
 
 ### Authorization
 
@@ -477,7 +477,7 @@ Configure Authorization:
 
 <a id="ezsigntemplatedocumentGetWordsPositionsV1"></a>
 # **ezsigntemplatedocumentGetWordsPositionsV1**
-> EzsigntemplatedocumentMinusGetWordsPositionsMinusV1MinusResponse ezsigntemplatedocumentGetWordsPositionsV1(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentMinusGetWordsPositionsMinusV1MinusRequest)
+> EzsigntemplatedocumentGetWordsPositionsV1Response ezsigntemplatedocumentGetWordsPositionsV1(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentGetWordsPositionsV1Request)
 
 Retrieve positions X,Y of given words from a Ezsigntemplatedocument
 
@@ -491,9 +491,9 @@ Retrieve positions X,Y of given words from a Ezsigntemplatedocument
 
 val apiInstance = ObjectEzsigntemplatedocumentApi()
 val pkiEzsigntemplatedocumentID : kotlin.Int = 56 // kotlin.Int | 
-val ezsigntemplatedocumentMinusGetWordsPositionsMinusV1MinusRequest : EzsigntemplatedocumentMinusGetWordsPositionsMinusV1MinusRequest =  // EzsigntemplatedocumentMinusGetWordsPositionsMinusV1MinusRequest | 
+val ezsigntemplatedocumentGetWordsPositionsV1Request : EzsigntemplatedocumentGetWordsPositionsV1Request =  // EzsigntemplatedocumentGetWordsPositionsV1Request | 
 try {
-    val result : EzsigntemplatedocumentMinusGetWordsPositionsMinusV1MinusResponse = apiInstance.ezsigntemplatedocumentGetWordsPositionsV1(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentMinusGetWordsPositionsMinusV1MinusRequest)
+    val result : EzsigntemplatedocumentGetWordsPositionsV1Response = apiInstance.ezsigntemplatedocumentGetWordsPositionsV1(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentGetWordsPositionsV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplatedocumentApi#ezsigntemplatedocumentGetWordsPositionsV1")
@@ -509,11 +509,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiEzsigntemplatedocumentID** | **kotlin.Int**|  |
- **ezsigntemplatedocumentMinusGetWordsPositionsMinusV1MinusRequest** | [**EzsigntemplatedocumentMinusGetWordsPositionsMinusV1MinusRequest**](EzsigntemplatedocumentMinusGetWordsPositionsMinusV1MinusRequest.md)|  |
+ **ezsigntemplatedocumentGetWordsPositionsV1Request** | [**EzsigntemplatedocumentGetWordsPositionsV1Request**](EzsigntemplatedocumentGetWordsPositionsV1Request.md)|  |
 
 ### Return type
 
-[**EzsigntemplatedocumentMinusGetWordsPositionsMinusV1MinusResponse**](EzsigntemplatedocumentMinusGetWordsPositionsMinusV1MinusResponse.md)
+[**EzsigntemplatedocumentGetWordsPositionsV1Response**](EzsigntemplatedocumentGetWordsPositionsV1Response.md)
 
 ### Authorization
 
@@ -529,7 +529,7 @@ Configure Authorization:
 
 <a id="ezsigntemplatedocumentPatchObjectV1"></a>
 # **ezsigntemplatedocumentPatchObjectV1**
-> EzsigntemplatedocumentMinusPatchObjectMinusV1MinusResponse ezsigntemplatedocumentPatchObjectV1(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentMinusPatchObjectMinusV1MinusRequest)
+> EzsigntemplatedocumentPatchObjectV1Response ezsigntemplatedocumentPatchObjectV1(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentPatchObjectV1Request)
 
 Patch an existing Ezsigntemplatedocument
 
@@ -543,9 +543,9 @@ Patch an existing Ezsigntemplatedocument
 
 val apiInstance = ObjectEzsigntemplatedocumentApi()
 val pkiEzsigntemplatedocumentID : kotlin.Int = 56 // kotlin.Int | 
-val ezsigntemplatedocumentMinusPatchObjectMinusV1MinusRequest : EzsigntemplatedocumentMinusPatchObjectMinusV1MinusRequest =  // EzsigntemplatedocumentMinusPatchObjectMinusV1MinusRequest | 
+val ezsigntemplatedocumentPatchObjectV1Request : EzsigntemplatedocumentPatchObjectV1Request =  // EzsigntemplatedocumentPatchObjectV1Request | 
 try {
-    val result : EzsigntemplatedocumentMinusPatchObjectMinusV1MinusResponse = apiInstance.ezsigntemplatedocumentPatchObjectV1(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentMinusPatchObjectMinusV1MinusRequest)
+    val result : EzsigntemplatedocumentPatchObjectV1Response = apiInstance.ezsigntemplatedocumentPatchObjectV1(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentPatchObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplatedocumentApi#ezsigntemplatedocumentPatchObjectV1")
@@ -561,11 +561,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiEzsigntemplatedocumentID** | **kotlin.Int**|  |
- **ezsigntemplatedocumentMinusPatchObjectMinusV1MinusRequest** | [**EzsigntemplatedocumentMinusPatchObjectMinusV1MinusRequest**](EzsigntemplatedocumentMinusPatchObjectMinusV1MinusRequest.md)|  |
+ **ezsigntemplatedocumentPatchObjectV1Request** | [**EzsigntemplatedocumentPatchObjectV1Request**](EzsigntemplatedocumentPatchObjectV1Request.md)|  |
 
 ### Return type
 
-[**EzsigntemplatedocumentMinusPatchObjectMinusV1MinusResponse**](EzsigntemplatedocumentMinusPatchObjectMinusV1MinusResponse.md)
+[**EzsigntemplatedocumentPatchObjectV1Response**](EzsigntemplatedocumentPatchObjectV1Response.md)
 
 ### Authorization
 

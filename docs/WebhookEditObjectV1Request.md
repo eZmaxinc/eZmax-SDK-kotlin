@@ -1,10 +1,10 @@
 
-# WebhookMinusEditObjectMinusV1MinusRequest
+# WebhookEditObjectV1Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objWebhook** | [**WebhookMinusRequestCompound**](WebhookMinusRequestCompound.md) |  | 
+**objWebhook** | [**WebhookRequestCompound**](WebhookRequestCompound.md) |  | 
 
 
 

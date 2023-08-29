@@ -1,12 +1,12 @@
 
-# EzsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusResponse
+# EzsignbulksendCreateEzsignbulksendtransmissionV1Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**EzsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusResponseMinusMPayload**](EzsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusResponseMinusMPayload.md) |  | 
-**objDebugPayload** | [**CommonMinusResponseMinusObjDebugPayload**](CommonMinusResponseMinusObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonMinusResponseMinusObjDebug**](CommonMinusResponseMinusObjDebug.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
+**mPayload** | [**EzsignbulksendCreateEzsignbulksendtransmissionV1ResponseMPayload**](EzsignbulksendCreateEzsignbulksendtransmissionV1ResponseMPayload.md) |  | 
+**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 
 
 

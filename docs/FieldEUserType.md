@@ -1,5 +1,5 @@
 
-# FieldMinusEUserType
+# FieldEUserType
 
 ## Enum
 

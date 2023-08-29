@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a id="subnetCreateObjectV1"></a>
 # **subnetCreateObjectV1**
-> SubnetMinusCreateObjectMinusV1MinusResponse subnetCreateObjectV1(subnetMinusCreateObjectMinusV1MinusRequest)
+> SubnetCreateObjectV1Response subnetCreateObjectV1(subnetCreateObjectV1Request)
 
 Create a new Subnet
 
@@ -25,9 +25,9 @@ The endpoint allows to create one or many elements at once.
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectSubnetApi()
-val subnetMinusCreateObjectMinusV1MinusRequest : SubnetMinusCreateObjectMinusV1MinusRequest =  // SubnetMinusCreateObjectMinusV1MinusRequest | 
+val subnetCreateObjectV1Request : SubnetCreateObjectV1Request =  // SubnetCreateObjectV1Request | 
 try {
-    val result : SubnetMinusCreateObjectMinusV1MinusResponse = apiInstance.subnetCreateObjectV1(subnetMinusCreateObjectMinusV1MinusRequest)
+    val result : SubnetCreateObjectV1Response = apiInstance.subnetCreateObjectV1(subnetCreateObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectSubnetApi#subnetCreateObjectV1")
@@ -42,11 +42,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **subnetMinusCreateObjectMinusV1MinusRequest** | [**SubnetMinusCreateObjectMinusV1MinusRequest**](SubnetMinusCreateObjectMinusV1MinusRequest.md)|  |
+ **subnetCreateObjectV1Request** | [**SubnetCreateObjectV1Request**](SubnetCreateObjectV1Request.md)|  |
 
 ### Return type
 
-[**SubnetMinusCreateObjectMinusV1MinusResponse**](SubnetMinusCreateObjectMinusV1MinusResponse.md)
+[**SubnetCreateObjectV1Response**](SubnetCreateObjectV1Response.md)
 
 ### Authorization
 
@@ -62,7 +62,7 @@ Configure Authorization:
 
 <a id="subnetDeleteObjectV1"></a>
 # **subnetDeleteObjectV1**
-> SubnetMinusDeleteObjectMinusV1MinusResponse subnetDeleteObjectV1(pkiSubnetID)
+> SubnetDeleteObjectV1Response subnetDeleteObjectV1(pkiSubnetID)
 
 Delete an existing Subnet
 
@@ -77,7 +77,7 @@ Delete an existing Subnet
 val apiInstance = ObjectSubnetApi()
 val pkiSubnetID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Subnet
 try {
-    val result : SubnetMinusDeleteObjectMinusV1MinusResponse = apiInstance.subnetDeleteObjectV1(pkiSubnetID)
+    val result : SubnetDeleteObjectV1Response = apiInstance.subnetDeleteObjectV1(pkiSubnetID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectSubnetApi#subnetDeleteObjectV1")
@@ -96,7 +96,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SubnetMinusDeleteObjectMinusV1MinusResponse**](SubnetMinusDeleteObjectMinusV1MinusResponse.md)
+[**SubnetDeleteObjectV1Response**](SubnetDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -112,7 +112,7 @@ Configure Authorization:
 
 <a id="subnetEditObjectV1"></a>
 # **subnetEditObjectV1**
-> SubnetMinusEditObjectMinusV1MinusResponse subnetEditObjectV1(pkiSubnetID, subnetMinusEditObjectMinusV1MinusRequest)
+> SubnetEditObjectV1Response subnetEditObjectV1(pkiSubnetID, subnetEditObjectV1Request)
 
 Edit an existing Subnet
 
@@ -126,9 +126,9 @@ Edit an existing Subnet
 
 val apiInstance = ObjectSubnetApi()
 val pkiSubnetID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Subnet
-val subnetMinusEditObjectMinusV1MinusRequest : SubnetMinusEditObjectMinusV1MinusRequest =  // SubnetMinusEditObjectMinusV1MinusRequest | 
+val subnetEditObjectV1Request : SubnetEditObjectV1Request =  // SubnetEditObjectV1Request | 
 try {
-    val result : SubnetMinusEditObjectMinusV1MinusResponse = apiInstance.subnetEditObjectV1(pkiSubnetID, subnetMinusEditObjectMinusV1MinusRequest)
+    val result : SubnetEditObjectV1Response = apiInstance.subnetEditObjectV1(pkiSubnetID, subnetEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectSubnetApi#subnetEditObjectV1")
@@ -144,11 +144,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiSubnetID** | **kotlin.Int**| The unique ID of the Subnet |
- **subnetMinusEditObjectMinusV1MinusRequest** | [**SubnetMinusEditObjectMinusV1MinusRequest**](SubnetMinusEditObjectMinusV1MinusRequest.md)|  |
+ **subnetEditObjectV1Request** | [**SubnetEditObjectV1Request**](SubnetEditObjectV1Request.md)|  |
 
 ### Return type
 
-[**SubnetMinusEditObjectMinusV1MinusResponse**](SubnetMinusEditObjectMinusV1MinusResponse.md)
+[**SubnetEditObjectV1Response**](SubnetEditObjectV1Response.md)
 
 ### Authorization
 
@@ -164,7 +164,7 @@ Configure Authorization:
 
 <a id="subnetGetObjectV2"></a>
 # **subnetGetObjectV2**
-> SubnetMinusGetObjectMinusV2MinusResponse subnetGetObjectV2(pkiSubnetID)
+> SubnetGetObjectV2Response subnetGetObjectV2(pkiSubnetID)
 
 Retrieve an existing Subnet
 
@@ -179,7 +179,7 @@ Retrieve an existing Subnet
 val apiInstance = ObjectSubnetApi()
 val pkiSubnetID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Subnet
 try {
-    val result : SubnetMinusGetObjectMinusV2MinusResponse = apiInstance.subnetGetObjectV2(pkiSubnetID)
+    val result : SubnetGetObjectV2Response = apiInstance.subnetGetObjectV2(pkiSubnetID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectSubnetApi#subnetGetObjectV2")
@@ -198,7 +198,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SubnetMinusGetObjectMinusV2MinusResponse**](SubnetMinusGetObjectMinusV2MinusResponse.md)
+[**SubnetGetObjectV2Response**](SubnetGetObjectV2Response.md)
 
 ### Authorization
 

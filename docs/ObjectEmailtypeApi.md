@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a id="emailtypeGetAutocompleteV2"></a>
 # **emailtypeGetAutocompleteV2**
-> EmailtypeMinusGetAutocompleteMinusV2MinusResponse emailtypeGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+> EmailtypeGetAutocompleteV2Response emailtypeGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 
 Retrieve Emailtypes and IDs
 
@@ -25,9 +25,9 @@ val apiInstance = ObjectEmailtypeApi()
 val sSelector : kotlin.String = sSelector_example // kotlin.String | The type of Emailtypes to return
 val eFilterActive : kotlin.String = eFilterActive_example // kotlin.String | Specify which results we want to display.
 val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter the returned results
-val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
+val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
 try {
-    val result : EmailtypeMinusGetAutocompleteMinusV2MinusResponse = apiInstance.emailtypeGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+    val result : EmailtypeGetAutocompleteV2Response = apiInstance.emailtypeGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEmailtypeApi#emailtypeGetAutocompleteV2")
@@ -45,11 +45,11 @@ Name | Type | Description  | Notes
  **sSelector** | **kotlin.String**| The type of Emailtypes to return | [enum: All]
  **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
  **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional]
- **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
 
 ### Return type
 
-[**EmailtypeMinusGetAutocompleteMinusV2MinusResponse**](EmailtypeMinusGetAutocompleteMinusV2MinusResponse.md)
+[**EmailtypeGetAutocompleteV2Response**](EmailtypeGetAutocompleteV2Response.md)
 
 ### Authorization
 

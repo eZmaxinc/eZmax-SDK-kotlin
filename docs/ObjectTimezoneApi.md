@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a id="timezoneGetAutocompleteV2"></a>
 # **timezoneGetAutocompleteV2**
-> TimezoneMinusGetAutocompleteMinusV2MinusResponse timezoneGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+> TimezoneGetAutocompleteV2Response timezoneGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 
 Retrieve Timezones and IDs
 
@@ -25,9 +25,9 @@ val apiInstance = ObjectTimezoneApi()
 val sSelector : kotlin.String = sSelector_example // kotlin.String | The type of Timezones to return
 val eFilterActive : kotlin.String = eFilterActive_example // kotlin.String | Specify which results we want to display.
 val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter the returned results
-val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
+val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
 try {
-    val result : TimezoneMinusGetAutocompleteMinusV2MinusResponse = apiInstance.timezoneGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+    val result : TimezoneGetAutocompleteV2Response = apiInstance.timezoneGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectTimezoneApi#timezoneGetAutocompleteV2")
@@ -45,11 +45,11 @@ Name | Type | Description  | Notes
  **sSelector** | **kotlin.String**| The type of Timezones to return | [enum: All, Active]
  **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
  **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional]
- **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
 
 ### Return type
 
-[**TimezoneMinusGetAutocompleteMinusV2MinusResponse**](TimezoneMinusGetAutocompleteMinusV2MinusResponse.md)
+[**TimezoneGetAutocompleteV2Response**](TimezoneGetAutocompleteV2Response.md)
 
 ### Authorization
 

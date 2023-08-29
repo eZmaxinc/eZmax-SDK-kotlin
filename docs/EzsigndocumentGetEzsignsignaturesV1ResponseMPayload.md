@@ -1,10 +1,10 @@
 
-# EzsigndocumentMinusGetEzsignsignaturesMinusV1MinusResponseMinusMPayload
+# EzsigndocumentGetEzsignsignaturesV1ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjEzsignsignature** | [**kotlin.collections.List&lt;EzsignsignatureMinusResponseCompound&gt;**](EzsignsignatureMinusResponseCompound.md) |  | 
+**aObjEzsignsignature** | [**kotlin.collections.List&lt;EzsignsignatureResponseCompound&gt;**](EzsignsignatureResponseCompound.md) |  | 
 
 
 

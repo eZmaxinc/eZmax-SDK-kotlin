@@ -1,5 +1,5 @@
 
-# TimezoneMinusAutocompleteElementMinusResponse
+# TimezoneAutocompleteElementResponse
 
 ## Properties
 Name | Type | Description | Notes

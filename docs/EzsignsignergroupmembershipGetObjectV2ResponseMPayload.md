@@ -1,10 +1,10 @@
 
-# EzsignsignergroupmembershipMinusGetObjectMinusV2MinusResponseMinusMPayload
+# EzsignsignergroupmembershipGetObjectV2ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objEzsignsignergroupmembership** | [**EzsignsignergroupmembershipMinusResponseCompound**](EzsignsignergroupmembershipMinusResponseCompound.md) |  | 
+**objEzsignsignergroupmembership** | [**EzsignsignergroupmembershipResponseCompound**](EzsignsignergroupmembershipResponseCompound.md) |  | 
 
 
 

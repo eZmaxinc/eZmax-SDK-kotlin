@@ -1,12 +1,12 @@
 
-# UserstagedMinusGetListMinusV1MinusResponse
+# UserstagedGetListV1Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**UserstagedMinusGetListMinusV1MinusResponseMinusMPayload**](UserstagedMinusGetListMinusV1MinusResponseMinusMPayload.md) |  | 
-**objDebugPayload** | [**CommonMinusResponseMinusObjDebugPayloadGetList**](CommonMinusResponseMinusObjDebugPayloadGetList.md) |  |  [optional]
-**objDebug** | [**CommonMinusResponseMinusObjDebug**](CommonMinusResponseMinusObjDebug.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayloadGetList**](CommonResponseObjDebugPayloadGetList.md) |  | 
+**mPayload** | [**UserstagedGetListV1ResponseMPayload**](UserstagedGetListV1ResponseMPayload.md) |  | 
+**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 
 
 

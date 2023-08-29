@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a id="taxassignmentGetAutocompleteV2"></a>
 # **taxassignmentGetAutocompleteV2**
-> TaxassignmentMinusGetAutocompleteMinusV2MinusResponse taxassignmentGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+> TaxassignmentGetAutocompleteV2Response taxassignmentGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 
 Retrieve Taxassignments and IDs
 
@@ -25,9 +25,9 @@ val apiInstance = ObjectTaxassignmentApi()
 val sSelector : kotlin.String = sSelector_example // kotlin.String | The type of Taxassignments to return
 val eFilterActive : kotlin.String = eFilterActive_example // kotlin.String | Specify which results we want to display.
 val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter the returned results
-val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
+val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
 try {
-    val result : TaxassignmentMinusGetAutocompleteMinusV2MinusResponse = apiInstance.taxassignmentGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+    val result : TaxassignmentGetAutocompleteV2Response = apiInstance.taxassignmentGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectTaxassignmentApi#taxassignmentGetAutocompleteV2")
@@ -45,11 +45,11 @@ Name | Type | Description  | Notes
  **sSelector** | **kotlin.String**| The type of Taxassignments to return | [enum: All, AllButNonrecoverable]
  **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
  **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional]
- **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
 
 ### Return type
 
-[**TaxassignmentMinusGetAutocompleteMinusV2MinusResponse**](TaxassignmentMinusGetAutocompleteMinusV2MinusResponse.md)
+[**TaxassignmentGetAutocompleteV2Response**](TaxassignmentGetAutocompleteV2Response.md)
 
 ### Authorization
 

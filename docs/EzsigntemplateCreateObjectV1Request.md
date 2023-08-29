@@ -1,10 +1,10 @@
 
-# EzsigntemplateMinusCreateObjectMinusV1MinusRequest
+# EzsigntemplateCreateObjectV1Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjEzsigntemplate** | [**kotlin.collections.List&lt;EzsigntemplateMinusRequestCompound&gt;**](EzsigntemplateMinusRequestCompound.md) |  | 
+**aObjEzsigntemplate** | [**kotlin.collections.List&lt;EzsigntemplateRequestCompound&gt;**](EzsigntemplateRequestCompound.md) |  | 
 
 
 

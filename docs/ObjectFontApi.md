@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a id="fontGetAutocompleteV2"></a>
 # **fontGetAutocompleteV2**
-> FontMinusGetAutocompleteMinusV2MinusResponse fontGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+> FontGetAutocompleteV2Response fontGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 
 Retrieve Fonts and IDs
 
@@ -25,9 +25,9 @@ val apiInstance = ObjectFontApi()
 val sSelector : kotlin.String = sSelector_example // kotlin.String | The type of Fonts to return
 val eFilterActive : kotlin.String = eFilterActive_example // kotlin.String | Specify which results we want to display.
 val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter the returned results
-val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
+val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
 try {
-    val result : FontMinusGetAutocompleteMinusV2MinusResponse = apiInstance.fontGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+    val result : FontGetAutocompleteV2Response = apiInstance.fontGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectFontApi#fontGetAutocompleteV2")
@@ -45,11 +45,11 @@ Name | Type | Description  | Notes
  **sSelector** | **kotlin.String**| The type of Fonts to return | [enum: All]
  **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
  **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional]
- **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
 
 ### Return type
 
-[**FontMinusGetAutocompleteMinusV2MinusResponse**](FontMinusGetAutocompleteMinusV2MinusResponse.md)
+[**FontGetAutocompleteV2Response**](FontGetAutocompleteV2Response.md)
 
 ### Authorization
 

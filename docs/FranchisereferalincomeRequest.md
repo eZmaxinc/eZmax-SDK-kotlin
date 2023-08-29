@@ -1,5 +1,5 @@
 
-# FranchisereferalincomeMinusRequest
+# FranchisereferalincomeRequest
 
 ## Properties
 Name | Type | Description | Notes

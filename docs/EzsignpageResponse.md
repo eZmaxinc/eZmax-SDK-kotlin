@@ -1,5 +1,5 @@
 
-# EzsignpageMinusResponse
+# EzsignpageResponse
 
 ## Properties
 Name | Type | Description | Notes

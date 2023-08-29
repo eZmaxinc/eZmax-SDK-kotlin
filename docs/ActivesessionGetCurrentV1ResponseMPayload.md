@@ -1,12 +1,12 @@
 
-# ActivesessionMinusGetCurrentMinusV1MinusResponseMinusMPayload
+# ActivesessionGetCurrentV1ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**eActivesessionUsertype** | [**FieldMinusEActivesessionUsertype**](FieldMinusEActivesessionUsertype.md) |  | 
-**eActivesessionOrigin** | [**FieldMinusEActivesessionOrigin**](FieldMinusEActivesessionOrigin.md) |  | 
-**eActivesessionWeekdaystart** | [**FieldMinusEActivesessionWeekdaystart**](FieldMinusEActivesessionWeekdaystart.md) |  | 
+**eActivesessionUsertype** | [**FieldEActivesessionUsertype**](FieldEActivesessionUsertype.md) |  | 
+**eActivesessionOrigin** | [**FieldEActivesessionOrigin**](FieldEActivesessionOrigin.md) |  | 
+**eActivesessionWeekdaystart** | [**FieldEActivesessionWeekdaystart**](FieldEActivesessionWeekdaystart.md) |  | 
 **fkiLanguageID** | **kotlin.Int** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| | 
 **sCompanyNameX** | **kotlin.String** | The Name of the Company in the language of the requester | 
 **sDepartmentNameX** | **kotlin.String** | The Name of the Department in the language of the requester | 
@@ -14,12 +14,12 @@ Name | Type | Description | Notes
 **bActivesessionIssuperadmin** | **kotlin.Boolean** | Whether the active session is superadmin or not | 
 **pksCustomerCode** | **kotlin.String** | The customer code assigned to your account | 
 **aPkiPermissionID** | **kotlin.collections.List&lt;kotlin.Int&gt;** | An array of permissions granted to the user or api key | 
-**objUserReal** | [**ActivesessionMinusResponseCompoundMinusUser**](ActivesessionMinusResponseCompoundMinusUser.md) |  | 
+**objUserReal** | [**ActivesessionResponseCompoundUser**](ActivesessionResponseCompoundUser.md) |  | 
 **aEModuleInternalname** | **kotlin.collections.List&lt;kotlin.String&gt;** | An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key. | 
 **fkiSystemconfigurationtypeID** | **kotlin.Int** | The unique ID of the Systemconfigurationtype |  [optional]
 **fkiSignatureID** | **kotlin.Int** | The unique ID of the Signature |  [optional]
-**objUserCloned** | [**ActivesessionMinusResponseCompoundMinusUser**](ActivesessionMinusResponseCompoundMinusUser.md) |  |  [optional]
-**objApikey** | [**ActivesessionMinusResponseCompoundMinusApikey**](ActivesessionMinusResponseCompoundMinusApikey.md) |  |  [optional]
+**objUserCloned** | [**ActivesessionResponseCompoundUser**](ActivesessionResponseCompoundUser.md) |  |  [optional]
+**objApikey** | [**ActivesessionResponseCompoundApikey**](ActivesessionResponseCompoundApikey.md) |  |  [optional]
 
 
 

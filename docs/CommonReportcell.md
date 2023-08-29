@@ -1,5 +1,5 @@
 
-# CommonMinusReportcell
+# CommonReportcell
 
 ## Properties
 Name | Type | Description | Notes

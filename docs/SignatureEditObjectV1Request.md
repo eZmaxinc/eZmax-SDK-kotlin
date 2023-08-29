@@ -1,10 +1,10 @@
 
-# SignatureMinusEditObjectMinusV1MinusRequest
+# SignatureEditObjectV1Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objSignature** | [**SignatureMinusRequestCompound**](SignatureMinusRequestCompound.md) |  | 
+**objSignature** | [**SignatureRequestCompound**](SignatureRequestCompound.md) |  | 
 
 
 

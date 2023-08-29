@@ -19,8 +19,8 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonMinusGetReportMinusV1MinusResponse
-import eZmaxApi.models.CommonMinusResponseMinusError
+import eZmaxApi.models.CommonGetReportV1Response
+import eZmaxApi.models.CommonResponseError
 
 import com.squareup.moshi.Json
 
@@ -50,7 +50,7 @@ class ModuleReportApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      * Retrieve report from cache
      * Retrieve a report that was previously generated and cached
      * @param sReportgroupCacheID 
-     * @return CommonMinusGetReportMinusV1MinusResponse
+     * @return CommonGetReportV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -59,11 +59,11 @@ class ModuleReportApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun reportGetReportFromCacheV1(sReportgroupCacheID: kotlin.String) : CommonMinusGetReportMinusV1MinusResponse {
+    fun reportGetReportFromCacheV1(sReportgroupCacheID: kotlin.String) : CommonGetReportV1Response {
         val localVarResponse = reportGetReportFromCacheV1WithHttpInfo(sReportgroupCacheID = sReportgroupCacheID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonMinusGetReportMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonGetReportV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -81,16 +81,16 @@ class ModuleReportApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      * Retrieve report from cache
      * Retrieve a report that was previously generated and cached
      * @param sReportgroupCacheID 
-     * @return ApiResponse<CommonMinusGetReportMinusV1MinusResponse?>
+     * @return ApiResponse<CommonGetReportV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun reportGetReportFromCacheV1WithHttpInfo(sReportgroupCacheID: kotlin.String) : ApiResponse<CommonMinusGetReportMinusV1MinusResponse?> {
+    fun reportGetReportFromCacheV1WithHttpInfo(sReportgroupCacheID: kotlin.String) : ApiResponse<CommonGetReportV1Response?> {
         val localVariableConfig = reportGetReportFromCacheV1RequestConfig(sReportgroupCacheID = sReportgroupCacheID)
 
-        return request<Unit, CommonMinusGetReportMinusV1MinusResponse>(
+        return request<Unit, CommonGetReportV1Response>(
             localVariableConfig
         )
     }

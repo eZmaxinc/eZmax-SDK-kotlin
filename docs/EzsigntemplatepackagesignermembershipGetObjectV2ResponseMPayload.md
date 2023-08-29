@@ -1,10 +1,10 @@
 
-# EzsigntemplatepackagesignermembershipMinusGetObjectMinusV2MinusResponseMinusMPayload
+# EzsigntemplatepackagesignermembershipGetObjectV2ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objEzsigntemplatepackagesignermembership** | [**EzsigntemplatepackagesignermembershipMinusResponseCompound**](EzsigntemplatepackagesignermembershipMinusResponseCompound.md) |  | 
+**objEzsigntemplatepackagesignermembership** | [**EzsigntemplatepackagesignermembershipResponseCompound**](EzsigntemplatepackagesignermembershipResponseCompound.md) |  | 
 
 
 

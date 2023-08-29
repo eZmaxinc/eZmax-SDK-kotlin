@@ -1,10 +1,10 @@
 
-# UsergroupMinusRequestCompound
+# UsergroupRequestCompound
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objUsergroupName** | [**MultilingualMinusUsergroupName**](MultilingualMinusUsergroupName.md) |  | 
+**objUsergroupName** | [**MultilingualUsergroupName**](MultilingualUsergroupName.md) |  | 
 **pkiUsergroupID** | **kotlin.Int** | The unique ID of the Usergroup |  [optional]
 
 

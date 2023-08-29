@@ -19,13 +19,13 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonMinusResponseMinusError
-import eZmaxApi.models.CorsMinusCreateObjectMinusV1MinusRequest
-import eZmaxApi.models.CorsMinusCreateObjectMinusV1MinusResponse
-import eZmaxApi.models.CorsMinusDeleteObjectMinusV1MinusResponse
-import eZmaxApi.models.CorsMinusEditObjectMinusV1MinusRequest
-import eZmaxApi.models.CorsMinusEditObjectMinusV1MinusResponse
-import eZmaxApi.models.CorsMinusGetObjectMinusV2MinusResponse
+import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.CorsCreateObjectV1Request
+import eZmaxApi.models.CorsCreateObjectV1Response
+import eZmaxApi.models.CorsDeleteObjectV1Response
+import eZmaxApi.models.CorsEditObjectV1Request
+import eZmaxApi.models.CorsEditObjectV1Response
+import eZmaxApi.models.CorsGetObjectV2Response
 
 import com.squareup.moshi.Json
 
@@ -54,8 +54,8 @@ class ObjectCorsApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
     /**
      * Create a new Cors
      * The endpoint allows to create one or many elements at once.
-     * @param corsMinusCreateObjectMinusV1MinusRequest 
-     * @return CorsMinusCreateObjectMinusV1MinusResponse
+     * @param corsCreateObjectV1Request 
+     * @return CorsCreateObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -64,11 +64,11 @@ class ObjectCorsApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun corsCreateObjectV1(corsMinusCreateObjectMinusV1MinusRequest: CorsMinusCreateObjectMinusV1MinusRequest) : CorsMinusCreateObjectMinusV1MinusResponse {
-        val localVarResponse = corsCreateObjectV1WithHttpInfo(corsMinusCreateObjectMinusV1MinusRequest = corsMinusCreateObjectMinusV1MinusRequest)
+    fun corsCreateObjectV1(corsCreateObjectV1Request: CorsCreateObjectV1Request) : CorsCreateObjectV1Response {
+        val localVarResponse = corsCreateObjectV1WithHttpInfo(corsCreateObjectV1Request = corsCreateObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CorsMinusCreateObjectMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CorsCreateObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -85,17 +85,17 @@ class ObjectCorsApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
     /**
      * Create a new Cors
      * The endpoint allows to create one or many elements at once.
-     * @param corsMinusCreateObjectMinusV1MinusRequest 
-     * @return ApiResponse<CorsMinusCreateObjectMinusV1MinusResponse?>
+     * @param corsCreateObjectV1Request 
+     * @return ApiResponse<CorsCreateObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun corsCreateObjectV1WithHttpInfo(corsMinusCreateObjectMinusV1MinusRequest: CorsMinusCreateObjectMinusV1MinusRequest) : ApiResponse<CorsMinusCreateObjectMinusV1MinusResponse?> {
-        val localVariableConfig = corsCreateObjectV1RequestConfig(corsMinusCreateObjectMinusV1MinusRequest = corsMinusCreateObjectMinusV1MinusRequest)
+    fun corsCreateObjectV1WithHttpInfo(corsCreateObjectV1Request: CorsCreateObjectV1Request) : ApiResponse<CorsCreateObjectV1Response?> {
+        val localVariableConfig = corsCreateObjectV1RequestConfig(corsCreateObjectV1Request = corsCreateObjectV1Request)
 
-        return request<CorsMinusCreateObjectMinusV1MinusRequest, CorsMinusCreateObjectMinusV1MinusResponse>(
+        return request<CorsCreateObjectV1Request, CorsCreateObjectV1Response>(
             localVariableConfig
         )
     }
@@ -103,11 +103,11 @@ class ObjectCorsApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
     /**
      * To obtain the request config of the operation corsCreateObjectV1
      *
-     * @param corsMinusCreateObjectMinusV1MinusRequest 
+     * @param corsCreateObjectV1Request 
      * @return RequestConfig
      */
-    fun corsCreateObjectV1RequestConfig(corsMinusCreateObjectMinusV1MinusRequest: CorsMinusCreateObjectMinusV1MinusRequest) : RequestConfig<CorsMinusCreateObjectMinusV1MinusRequest> {
-        val localVariableBody = corsMinusCreateObjectMinusV1MinusRequest
+    fun corsCreateObjectV1RequestConfig(corsCreateObjectV1Request: CorsCreateObjectV1Request) : RequestConfig<CorsCreateObjectV1Request> {
+        val localVariableBody = corsCreateObjectV1Request
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Content-Type"] = "application/json"
@@ -127,7 +127,7 @@ class ObjectCorsApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
      * Delete an existing Cors
      * 
      * @param pkiCorsID The unique ID of the Cors
-     * @return CorsMinusDeleteObjectMinusV1MinusResponse
+     * @return CorsDeleteObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -136,11 +136,11 @@ class ObjectCorsApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun corsDeleteObjectV1(pkiCorsID: kotlin.Int) : CorsMinusDeleteObjectMinusV1MinusResponse {
+    fun corsDeleteObjectV1(pkiCorsID: kotlin.Int) : CorsDeleteObjectV1Response {
         val localVarResponse = corsDeleteObjectV1WithHttpInfo(pkiCorsID = pkiCorsID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CorsMinusDeleteObjectMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CorsDeleteObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -158,16 +158,16 @@ class ObjectCorsApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
      * Delete an existing Cors
      * 
      * @param pkiCorsID The unique ID of the Cors
-     * @return ApiResponse<CorsMinusDeleteObjectMinusV1MinusResponse?>
+     * @return ApiResponse<CorsDeleteObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun corsDeleteObjectV1WithHttpInfo(pkiCorsID: kotlin.Int) : ApiResponse<CorsMinusDeleteObjectMinusV1MinusResponse?> {
+    fun corsDeleteObjectV1WithHttpInfo(pkiCorsID: kotlin.Int) : ApiResponse<CorsDeleteObjectV1Response?> {
         val localVariableConfig = corsDeleteObjectV1RequestConfig(pkiCorsID = pkiCorsID)
 
-        return request<Unit, CorsMinusDeleteObjectMinusV1MinusResponse>(
+        return request<Unit, CorsDeleteObjectV1Response>(
             localVariableConfig
         )
     }
@@ -198,8 +198,8 @@ class ObjectCorsApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
      * Edit an existing Cors
      * 
      * @param pkiCorsID The unique ID of the Cors
-     * @param corsMinusEditObjectMinusV1MinusRequest 
-     * @return CorsMinusEditObjectMinusV1MinusResponse
+     * @param corsEditObjectV1Request 
+     * @return CorsEditObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -208,11 +208,11 @@ class ObjectCorsApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun corsEditObjectV1(pkiCorsID: kotlin.Int, corsMinusEditObjectMinusV1MinusRequest: CorsMinusEditObjectMinusV1MinusRequest) : CorsMinusEditObjectMinusV1MinusResponse {
-        val localVarResponse = corsEditObjectV1WithHttpInfo(pkiCorsID = pkiCorsID, corsMinusEditObjectMinusV1MinusRequest = corsMinusEditObjectMinusV1MinusRequest)
+    fun corsEditObjectV1(pkiCorsID: kotlin.Int, corsEditObjectV1Request: CorsEditObjectV1Request) : CorsEditObjectV1Response {
+        val localVarResponse = corsEditObjectV1WithHttpInfo(pkiCorsID = pkiCorsID, corsEditObjectV1Request = corsEditObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CorsMinusEditObjectMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CorsEditObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -230,17 +230,17 @@ class ObjectCorsApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
      * Edit an existing Cors
      * 
      * @param pkiCorsID The unique ID of the Cors
-     * @param corsMinusEditObjectMinusV1MinusRequest 
-     * @return ApiResponse<CorsMinusEditObjectMinusV1MinusResponse?>
+     * @param corsEditObjectV1Request 
+     * @return ApiResponse<CorsEditObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun corsEditObjectV1WithHttpInfo(pkiCorsID: kotlin.Int, corsMinusEditObjectMinusV1MinusRequest: CorsMinusEditObjectMinusV1MinusRequest) : ApiResponse<CorsMinusEditObjectMinusV1MinusResponse?> {
-        val localVariableConfig = corsEditObjectV1RequestConfig(pkiCorsID = pkiCorsID, corsMinusEditObjectMinusV1MinusRequest = corsMinusEditObjectMinusV1MinusRequest)
+    fun corsEditObjectV1WithHttpInfo(pkiCorsID: kotlin.Int, corsEditObjectV1Request: CorsEditObjectV1Request) : ApiResponse<CorsEditObjectV1Response?> {
+        val localVariableConfig = corsEditObjectV1RequestConfig(pkiCorsID = pkiCorsID, corsEditObjectV1Request = corsEditObjectV1Request)
 
-        return request<CorsMinusEditObjectMinusV1MinusRequest, CorsMinusEditObjectMinusV1MinusResponse>(
+        return request<CorsEditObjectV1Request, CorsEditObjectV1Response>(
             localVariableConfig
         )
     }
@@ -249,11 +249,11 @@ class ObjectCorsApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
      * To obtain the request config of the operation corsEditObjectV1
      *
      * @param pkiCorsID The unique ID of the Cors
-     * @param corsMinusEditObjectMinusV1MinusRequest 
+     * @param corsEditObjectV1Request 
      * @return RequestConfig
      */
-    fun corsEditObjectV1RequestConfig(pkiCorsID: kotlin.Int, corsMinusEditObjectMinusV1MinusRequest: CorsMinusEditObjectMinusV1MinusRequest) : RequestConfig<CorsMinusEditObjectMinusV1MinusRequest> {
-        val localVariableBody = corsMinusEditObjectMinusV1MinusRequest
+    fun corsEditObjectV1RequestConfig(pkiCorsID: kotlin.Int, corsEditObjectV1Request: CorsEditObjectV1Request) : RequestConfig<CorsEditObjectV1Request> {
+        val localVariableBody = corsEditObjectV1Request
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Content-Type"] = "application/json"
@@ -273,7 +273,7 @@ class ObjectCorsApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
      * Retrieve an existing Cors
      * 
      * @param pkiCorsID The unique ID of the Cors
-     * @return CorsMinusGetObjectMinusV2MinusResponse
+     * @return CorsGetObjectV2Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -282,11 +282,11 @@ class ObjectCorsApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun corsGetObjectV2(pkiCorsID: kotlin.Int) : CorsMinusGetObjectMinusV2MinusResponse {
+    fun corsGetObjectV2(pkiCorsID: kotlin.Int) : CorsGetObjectV2Response {
         val localVarResponse = corsGetObjectV2WithHttpInfo(pkiCorsID = pkiCorsID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CorsMinusGetObjectMinusV2MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CorsGetObjectV2Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -304,16 +304,16 @@ class ObjectCorsApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
      * Retrieve an existing Cors
      * 
      * @param pkiCorsID The unique ID of the Cors
-     * @return ApiResponse<CorsMinusGetObjectMinusV2MinusResponse?>
+     * @return ApiResponse<CorsGetObjectV2Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun corsGetObjectV2WithHttpInfo(pkiCorsID: kotlin.Int) : ApiResponse<CorsMinusGetObjectMinusV2MinusResponse?> {
+    fun corsGetObjectV2WithHttpInfo(pkiCorsID: kotlin.Int) : ApiResponse<CorsGetObjectV2Response?> {
         val localVariableConfig = corsGetObjectV2RequestConfig(pkiCorsID = pkiCorsID)
 
-        return request<Unit, CorsMinusGetObjectMinusV2MinusResponse>(
+        return request<Unit, CorsGetObjectV2Response>(
             localVariableConfig
         )
     }

@@ -1,10 +1,10 @@
 
-# EzsignfolderMinusGetObjectMinusV2MinusResponseMinusMPayload
+# EzsignfolderGetObjectV2ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objEzsignfolder** | [**EzsignfolderMinusResponseCompound**](EzsignfolderMinusResponseCompound.md) |  | 
+**objEzsignfolder** | [**EzsignfolderResponseCompound**](EzsignfolderResponseCompound.md) |  | 
 
 
 

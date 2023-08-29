@@ -1,5 +1,5 @@
 
-# ContactMinusRequestCompound
+# ContactRequestCompound
 
 ## Properties
 Name | Type | Description | Notes
@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **sContactFirstname** | **kotlin.String** | The First name of the contact | 
 **sContactLastname** | **kotlin.String** | The Last name of the contact | 
 **sContactCompany** | **kotlin.String** | The Company name of the contact | 
-**objContactinformations** | [**ContactinformationsMinusRequestCompound**](ContactinformationsMinusRequestCompound.md) |  | 
+**objContactinformations** | [**ContactinformationsRequestCompound**](ContactinformationsRequestCompound.md) |  | 
 **dtContactBirthdate** | **kotlin.String** | The Birth Date of the contact |  [optional]
 
 

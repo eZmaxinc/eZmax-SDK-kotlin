@@ -1,5 +1,5 @@
 
-# UserMinusCreateEzsignuserMinusV1MinusRequest
+# UserCreateEzsignuserV1Request
 
 ## Properties
 Name | Type | Description | Notes

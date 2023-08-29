@@ -1,5 +1,5 @@
 
-# ScimMinusUserList
+# ScimUserList
 
 ## Properties
 Name | Type | Description | Notes
@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **itemsPerPage** | **kotlin.Int** |  |  [optional]
 **startIndex** | **kotlin.Int** |  |  [optional]
 **schemas** | **kotlin.collections.List&lt;kotlin.String&gt;** |  |  [optional]
-**resources** | [**kotlin.collections.List&lt;ScimMinusUser&gt;**](ScimMinusUser.md) |  |  [optional]
+**resources** | [**kotlin.collections.List&lt;ScimUser&gt;**](ScimUser.md) |  |  [optional]
 
 
 

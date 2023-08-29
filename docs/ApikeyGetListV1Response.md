@@ -1,12 +1,12 @@
 
-# ApikeyMinusGetListMinusV1MinusResponse
+# ApikeyGetListV1Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**ApikeyMinusGetListMinusV1MinusResponseMinusMPayload**](ApikeyMinusGetListMinusV1MinusResponseMinusMPayload.md) |  | 
-**objDebugPayload** | [**CommonMinusResponseMinusObjDebugPayloadGetList**](CommonMinusResponseMinusObjDebugPayloadGetList.md) |  |  [optional]
-**objDebug** | [**CommonMinusResponseMinusObjDebug**](CommonMinusResponseMinusObjDebug.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayloadGetList**](CommonResponseObjDebugPayloadGetList.md) |  | 
+**mPayload** | [**ApikeyGetListV1ResponseMPayload**](ApikeyGetListV1ResponseMPayload.md) |  | 
+**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 
 
 

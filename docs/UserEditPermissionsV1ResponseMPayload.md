@@ -1,5 +1,5 @@
 
-# UserMinusEditPermissionsMinusV1MinusResponseMinusMPayload
+# UserEditPermissionsV1ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes

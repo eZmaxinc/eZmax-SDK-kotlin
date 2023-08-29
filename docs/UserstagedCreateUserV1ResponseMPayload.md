@@ -1,5 +1,5 @@
 
-# UserstagedMinusCreateUserMinusV1MinusResponseMinusMPayload
+# UserstagedCreateUserV1ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes

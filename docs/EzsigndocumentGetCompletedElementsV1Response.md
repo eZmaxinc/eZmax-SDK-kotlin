@@ -1,12 +1,12 @@
 
-# EzsigndocumentMinusGetCompletedElementsMinusV1MinusResponse
+# EzsigndocumentGetCompletedElementsV1Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**EzsigndocumentMinusGetCompletedElementsMinusV1MinusResponseMinusMPayload**](EzsigndocumentMinusGetCompletedElementsMinusV1MinusResponseMinusMPayload.md) |  | 
-**objDebugPayload** | [**CommonMinusResponseMinusObjDebugPayload**](CommonMinusResponseMinusObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonMinusResponseMinusObjDebug**](CommonMinusResponseMinusObjDebug.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
+**mPayload** | [**EzsigndocumentGetCompletedElementsV1ResponseMPayload**](EzsigndocumentGetCompletedElementsV1ResponseMPayload.md) |  | 
+**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 
 
 

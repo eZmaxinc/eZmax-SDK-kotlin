@@ -1,10 +1,10 @@
 
-# BrandingMinusGetAutocompleteMinusV2MinusResponseMinusMPayload
+# BrandingGetAutocompleteV2ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjBranding** | [**kotlin.collections.List&lt;BrandingMinusAutocompleteElementMinusResponse&gt;**](BrandingMinusAutocompleteElementMinusResponse.md) | An array of Branding object containing the description, ID and active status about the element. | 
+**aObjBranding** | [**kotlin.collections.List&lt;BrandingAutocompleteElementResponse&gt;**](BrandingAutocompleteElementResponse.md) | An array of Branding object containing the description, ID and active status about the element. | 
 
 
 

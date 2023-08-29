@@ -1,5 +1,5 @@
 
-# SecretquestionMinusAutocompleteElementMinusResponse
+# SecretquestionAutocompleteElementResponse
 
 ## Properties
 Name | Type | Description | Notes

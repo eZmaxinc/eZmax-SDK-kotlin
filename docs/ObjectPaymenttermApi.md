@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a id="paymenttermCreateObjectV1"></a>
 # **paymenttermCreateObjectV1**
-> PaymenttermMinusCreateObjectMinusV1MinusResponse paymenttermCreateObjectV1(paymenttermMinusCreateObjectMinusV1MinusRequest)
+> PaymenttermCreateObjectV1Response paymenttermCreateObjectV1(paymenttermCreateObjectV1Request)
 
 Create a new Paymentterm
 
@@ -26,9 +26,9 @@ The endpoint allows to create one or many elements at once.
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectPaymenttermApi()
-val paymenttermMinusCreateObjectMinusV1MinusRequest : PaymenttermMinusCreateObjectMinusV1MinusRequest =  // PaymenttermMinusCreateObjectMinusV1MinusRequest | 
+val paymenttermCreateObjectV1Request : PaymenttermCreateObjectV1Request =  // PaymenttermCreateObjectV1Request | 
 try {
-    val result : PaymenttermMinusCreateObjectMinusV1MinusResponse = apiInstance.paymenttermCreateObjectV1(paymenttermMinusCreateObjectMinusV1MinusRequest)
+    val result : PaymenttermCreateObjectV1Response = apiInstance.paymenttermCreateObjectV1(paymenttermCreateObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectPaymenttermApi#paymenttermCreateObjectV1")
@@ -43,11 +43,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **paymenttermMinusCreateObjectMinusV1MinusRequest** | [**PaymenttermMinusCreateObjectMinusV1MinusRequest**](PaymenttermMinusCreateObjectMinusV1MinusRequest.md)|  |
+ **paymenttermCreateObjectV1Request** | [**PaymenttermCreateObjectV1Request**](PaymenttermCreateObjectV1Request.md)|  |
 
 ### Return type
 
-[**PaymenttermMinusCreateObjectMinusV1MinusResponse**](PaymenttermMinusCreateObjectMinusV1MinusResponse.md)
+[**PaymenttermCreateObjectV1Response**](PaymenttermCreateObjectV1Response.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Configure Authorization:
 
 <a id="paymenttermEditObjectV1"></a>
 # **paymenttermEditObjectV1**
-> PaymenttermMinusEditObjectMinusV1MinusResponse paymenttermEditObjectV1(pkiPaymenttermID, paymenttermMinusEditObjectMinusV1MinusRequest)
+> PaymenttermEditObjectV1Response paymenttermEditObjectV1(pkiPaymenttermID, paymenttermEditObjectV1Request)
 
 Edit an existing Paymentterm
 
@@ -77,9 +77,9 @@ Edit an existing Paymentterm
 
 val apiInstance = ObjectPaymenttermApi()
 val pkiPaymenttermID : kotlin.Int = 56 // kotlin.Int | 
-val paymenttermMinusEditObjectMinusV1MinusRequest : PaymenttermMinusEditObjectMinusV1MinusRequest =  // PaymenttermMinusEditObjectMinusV1MinusRequest | 
+val paymenttermEditObjectV1Request : PaymenttermEditObjectV1Request =  // PaymenttermEditObjectV1Request | 
 try {
-    val result : PaymenttermMinusEditObjectMinusV1MinusResponse = apiInstance.paymenttermEditObjectV1(pkiPaymenttermID, paymenttermMinusEditObjectMinusV1MinusRequest)
+    val result : PaymenttermEditObjectV1Response = apiInstance.paymenttermEditObjectV1(pkiPaymenttermID, paymenttermEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectPaymenttermApi#paymenttermEditObjectV1")
@@ -95,11 +95,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiPaymenttermID** | **kotlin.Int**|  |
- **paymenttermMinusEditObjectMinusV1MinusRequest** | [**PaymenttermMinusEditObjectMinusV1MinusRequest**](PaymenttermMinusEditObjectMinusV1MinusRequest.md)|  |
+ **paymenttermEditObjectV1Request** | [**PaymenttermEditObjectV1Request**](PaymenttermEditObjectV1Request.md)|  |
 
 ### Return type
 
-[**PaymenttermMinusEditObjectMinusV1MinusResponse**](PaymenttermMinusEditObjectMinusV1MinusResponse.md)
+[**PaymenttermEditObjectV1Response**](PaymenttermEditObjectV1Response.md)
 
 ### Authorization
 
@@ -115,7 +115,7 @@ Configure Authorization:
 
 <a id="paymenttermGetAutocompleteV2"></a>
 # **paymenttermGetAutocompleteV2**
-> PaymenttermMinusGetAutocompleteMinusV2MinusResponse paymenttermGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+> PaymenttermGetAutocompleteV2Response paymenttermGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 
 Retrieve Paymentterms and IDs
 
@@ -131,9 +131,9 @@ val apiInstance = ObjectPaymenttermApi()
 val sSelector : kotlin.String = sSelector_example // kotlin.String | The type of Paymentterms to return
 val eFilterActive : kotlin.String = eFilterActive_example // kotlin.String | Specify which results we want to display.
 val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter the returned results
-val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
+val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
 try {
-    val result : PaymenttermMinusGetAutocompleteMinusV2MinusResponse = apiInstance.paymenttermGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+    val result : PaymenttermGetAutocompleteV2Response = apiInstance.paymenttermGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectPaymenttermApi#paymenttermGetAutocompleteV2")
@@ -151,11 +151,11 @@ Name | Type | Description  | Notes
  **sSelector** | **kotlin.String**| The type of Paymentterms to return | [enum: All]
  **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
  **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional]
- **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
 
 ### Return type
 
-[**PaymenttermMinusGetAutocompleteMinusV2MinusResponse**](PaymenttermMinusGetAutocompleteMinusV2MinusResponse.md)
+[**PaymenttermGetAutocompleteV2Response**](PaymenttermGetAutocompleteV2Response.md)
 
 ### Authorization
 
@@ -171,7 +171,7 @@ Configure Authorization:
 
 <a id="paymenttermGetListV1"></a>
 # **paymenttermGetListV1**
-> PaymenttermMinusGetListMinusV1MinusResponse paymenttermGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+> PaymenttermGetListV1Response paymenttermGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
 Retrieve Paymentterm list
 
@@ -185,10 +185,10 @@ val apiInstance = ObjectPaymenttermApi()
 val eOrderBy : kotlin.String = eOrderBy_example // kotlin.String | Specify how you want the results to be sorted
 val iRowMax : kotlin.Int = 56 // kotlin.Int | 
 val iRowOffset : kotlin.Int = 56 // kotlin.Int | 
-val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
+val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
 val sFilter : kotlin.String = sFilter_example // kotlin.String | 
 try {
-    val result : PaymenttermMinusGetListMinusV1MinusResponse = apiInstance.paymenttermGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+    val result : PaymenttermGetListV1Response = apiInstance.paymenttermGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectPaymenttermApi#paymenttermGetListV1")
@@ -206,12 +206,12 @@ Name | Type | Description  | Notes
  **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiPaymenttermID_ASC, pkiPaymenttermID_DESC, sPaymenttermCode_ASC, sPaymenttermCode_DESC, ePaymenttermType_ASC, ePaymenttermType_DESC, iPaymenttermDay_ASC, iPaymenttermDay_DESC, sPaymenttermDescriptionX_ASC, sPaymenttermDescriptionX_DESC, bPaymenttermIsactive_ASC, bPaymenttermIsactive_DESC]
  **iRowMax** | **kotlin.Int**|  | [optional] [default to 10000]
  **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0]
- **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
  **sFilter** | **kotlin.String**|  | [optional]
 
 ### Return type
 
-[**PaymenttermMinusGetListMinusV1MinusResponse**](PaymenttermMinusGetListMinusV1MinusResponse.md)
+[**PaymenttermGetListV1Response**](PaymenttermGetListV1Response.md)
 
 ### Authorization
 
@@ -227,7 +227,7 @@ Configure Authorization:
 
 <a id="paymenttermGetObjectV2"></a>
 # **paymenttermGetObjectV2**
-> PaymenttermMinusGetObjectMinusV2MinusResponse paymenttermGetObjectV2(pkiPaymenttermID)
+> PaymenttermGetObjectV2Response paymenttermGetObjectV2(pkiPaymenttermID)
 
 Retrieve an existing Paymentterm
 
@@ -242,7 +242,7 @@ Retrieve an existing Paymentterm
 val apiInstance = ObjectPaymenttermApi()
 val pkiPaymenttermID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : PaymenttermMinusGetObjectMinusV2MinusResponse = apiInstance.paymenttermGetObjectV2(pkiPaymenttermID)
+    val result : PaymenttermGetObjectV2Response = apiInstance.paymenttermGetObjectV2(pkiPaymenttermID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectPaymenttermApi#paymenttermGetObjectV2")
@@ -261,7 +261,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PaymenttermMinusGetObjectMinusV2MinusResponse**](PaymenttermMinusGetObjectMinusV2MinusResponse.md)
+[**PaymenttermGetObjectV2Response**](PaymenttermGetObjectV2Response.md)
 
 ### Authorization
 

@@ -1,10 +1,10 @@
 
-# SubnetMinusGetObjectMinusV2MinusResponseMinusMPayload
+# SubnetGetObjectV2ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objSubnet** | [**SubnetMinusResponseCompound**](SubnetMinusResponseCompound.md) |  | 
+**objSubnet** | [**SubnetResponseCompound**](SubnetResponseCompound.md) |  | 
 
 
 

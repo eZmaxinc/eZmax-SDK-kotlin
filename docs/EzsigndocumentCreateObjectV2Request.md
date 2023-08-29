@@ -1,10 +1,10 @@
 
-# EzsigndocumentMinusCreateObjectMinusV2MinusRequest
+# EzsigndocumentCreateObjectV2Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjEzsigndocument** | [**kotlin.collections.List&lt;EzsigndocumentMinusRequestCompound&gt;**](EzsigndocumentMinusRequestCompound.md) |  | 
+**aObjEzsigndocument** | [**kotlin.collections.List&lt;EzsigndocumentRequestCompound&gt;**](EzsigndocumentRequestCompound.md) |  | 
 
 
 

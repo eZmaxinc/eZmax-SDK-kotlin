@@ -1,11 +1,11 @@
 
-# CommonMinusAudit
+# CommonAudit
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objAuditdetailCreated** | [**CommonMinusAuditdetail**](CommonMinusAuditdetail.md) |  | 
-**objAuditdetailModified** | [**CommonMinusAuditdetail**](CommonMinusAuditdetail.md) |  |  [optional]
+**objAuditdetailCreated** | [**CommonAuditdetail**](CommonAuditdetail.md) |  | 
+**objAuditdetailModified** | [**CommonAuditdetail**](CommonAuditdetail.md) |  |  [optional]
 
 
 

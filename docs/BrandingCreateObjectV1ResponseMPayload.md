@@ -1,5 +1,5 @@
 
-# BrandingMinusCreateObjectMinusV1MinusResponseMinusMPayload
+# BrandingCreateObjectV1ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes

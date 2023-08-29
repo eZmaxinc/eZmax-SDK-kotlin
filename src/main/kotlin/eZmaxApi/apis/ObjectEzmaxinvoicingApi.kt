@@ -19,12 +19,12 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonMinusGetAutocompleteMinusV1MinusResponse
-import eZmaxApi.models.CommonMinusResponseMinusError
-import eZmaxApi.models.EzmaxinvoicingMinusGetAutocompleteMinusV2MinusResponse
-import eZmaxApi.models.EzmaxinvoicingMinusGetObjectMinusV2MinusResponse
-import eZmaxApi.models.EzmaxinvoicingMinusGetProvisionalMinusV1MinusResponse
-import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
+import eZmaxApi.models.CommonGetAutocompleteV1Response
+import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.EzmaxinvoicingGetAutocompleteV2Response
+import eZmaxApi.models.EzmaxinvoicingGetObjectV2Response
+import eZmaxApi.models.EzmaxinvoicingGetProvisionalV1Response
+import eZmaxApi.models.HeaderAcceptLanguage
 
 import com.squareup.moshi.Json
 
@@ -53,14 +53,14 @@ class ObjectEzmaxinvoicingApi(basePath: kotlin.String = defaultBasePath, client:
     /**
      * enum for parameter sSelector
      */
-     enum class SSelector_ezmaxinvoicingGetAutocompleteV1(val value: kotlin.String) {
+     enum class SSelectorEzmaxinvoicingGetAutocompleteV1(val value: kotlin.String) {
          @Json(name = "All") All("All")
      }
 
     /**
      * enum for parameter eFilterActive
      */
-     enum class EFilterActive_ezmaxinvoicingGetAutocompleteV1(val value: kotlin.String) {
+     enum class EFilterActiveEzmaxinvoicingGetAutocompleteV1(val value: kotlin.String) {
          @Json(name = "All") All("All"),
          @Json(name = "Active") Active("Active"),
          @Json(name = "Inactive") Inactive("Inactive")
@@ -73,7 +73,7 @@ class ObjectEzmaxinvoicingApi(basePath: kotlin.String = defaultBasePath, client:
      * @param eFilterActive Specify which results we want to display. Active is the default value. (optional)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return CommonMinusGetAutocompleteMinusV1MinusResponse
+     * @return CommonGetAutocompleteV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -83,12 +83,12 @@ class ObjectEzmaxinvoicingApi(basePath: kotlin.String = defaultBasePath, client:
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     @Deprecated(message = "This operation is deprecated.")
-    fun ezmaxinvoicingGetAutocompleteV1(sSelector: SSelector_ezmaxinvoicingGetAutocompleteV1, eFilterActive: EFilterActive_ezmaxinvoicingGetAutocompleteV1? = null, sQuery: kotlin.String? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null) : CommonMinusGetAutocompleteMinusV1MinusResponse {
+    fun ezmaxinvoicingGetAutocompleteV1(sSelector: SSelectorEzmaxinvoicingGetAutocompleteV1, eFilterActive: EFilterActiveEzmaxinvoicingGetAutocompleteV1? = null, sQuery: kotlin.String? = null, acceptLanguage: HeaderAcceptLanguage? = null) : CommonGetAutocompleteV1Response {
         @Suppress("DEPRECATION")
         val localVarResponse = ezmaxinvoicingGetAutocompleteV1WithHttpInfo(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonMinusGetAutocompleteMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonGetAutocompleteV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -109,18 +109,18 @@ class ObjectEzmaxinvoicingApi(basePath: kotlin.String = defaultBasePath, client:
      * @param eFilterActive Specify which results we want to display. Active is the default value. (optional)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return ApiResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?>
+     * @return ApiResponse<CommonGetAutocompleteV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
     @Deprecated(message = "This operation is deprecated.")
-    fun ezmaxinvoicingGetAutocompleteV1WithHttpInfo(sSelector: SSelector_ezmaxinvoicingGetAutocompleteV1, eFilterActive: EFilterActive_ezmaxinvoicingGetAutocompleteV1?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : ApiResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?> {
+    fun ezmaxinvoicingGetAutocompleteV1WithHttpInfo(sSelector: SSelectorEzmaxinvoicingGetAutocompleteV1, eFilterActive: EFilterActiveEzmaxinvoicingGetAutocompleteV1?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : ApiResponse<CommonGetAutocompleteV1Response?> {
         @Suppress("DEPRECATION")
         val localVariableConfig = ezmaxinvoicingGetAutocompleteV1RequestConfig(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
-        return request<Unit, CommonMinusGetAutocompleteMinusV1MinusResponse>(
+        return request<Unit, CommonGetAutocompleteV1Response>(
             localVariableConfig
         )
     }
@@ -135,12 +135,12 @@ class ObjectEzmaxinvoicingApi(basePath: kotlin.String = defaultBasePath, client:
      * @return RequestConfig
      */
     @Deprecated(message = "This operation is deprecated.")
-    fun ezmaxinvoicingGetAutocompleteV1RequestConfig(sSelector: SSelector_ezmaxinvoicingGetAutocompleteV1, eFilterActive: EFilterActive_ezmaxinvoicingGetAutocompleteV1?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : RequestConfig<Unit> {
+    fun ezmaxinvoicingGetAutocompleteV1RequestConfig(sSelector: SSelectorEzmaxinvoicingGetAutocompleteV1, eFilterActive: EFilterActiveEzmaxinvoicingGetAutocompleteV1?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
                 if (eFilterActive != null) {
-                    put("eFilterActive", listOf(eFilterActive.toString()))
+                    put("eFilterActive", listOf(eFilterActive.value))
                 }
                 if (sQuery != null) {
                     put("sQuery", listOf(sQuery.toString()))
@@ -163,14 +163,14 @@ class ObjectEzmaxinvoicingApi(basePath: kotlin.String = defaultBasePath, client:
     /**
      * enum for parameter sSelector
      */
-     enum class SSelector_ezmaxinvoicingGetAutocompleteV2(val value: kotlin.String) {
+     enum class SSelectorEzmaxinvoicingGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "All") All("All")
      }
 
     /**
      * enum for parameter eFilterActive
      */
-     enum class EFilterActive_ezmaxinvoicingGetAutocompleteV2(val value: kotlin.String) {
+     enum class EFilterActiveEzmaxinvoicingGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "All") All("All"),
          @Json(name = "Active") Active("Active"),
          @Json(name = "Inactive") Inactive("Inactive")
@@ -183,7 +183,7 @@ class ObjectEzmaxinvoicingApi(basePath: kotlin.String = defaultBasePath, client:
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return EzmaxinvoicingMinusGetAutocompleteMinusV2MinusResponse
+     * @return EzmaxinvoicingGetAutocompleteV2Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -192,11 +192,11 @@ class ObjectEzmaxinvoicingApi(basePath: kotlin.String = defaultBasePath, client:
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezmaxinvoicingGetAutocompleteV2(sSelector: SSelector_ezmaxinvoicingGetAutocompleteV2, eFilterActive: EFilterActive_ezmaxinvoicingGetAutocompleteV2? = EFilterActive_ezmaxinvoicingGetAutocompleteV2.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null) : EzmaxinvoicingMinusGetAutocompleteMinusV2MinusResponse {
+    fun ezmaxinvoicingGetAutocompleteV2(sSelector: SSelectorEzmaxinvoicingGetAutocompleteV2, eFilterActive: EFilterActiveEzmaxinvoicingGetAutocompleteV2? = EFilterActiveEzmaxinvoicingGetAutocompleteV2.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderAcceptLanguage? = null) : EzmaxinvoicingGetAutocompleteV2Response {
         val localVarResponse = ezmaxinvoicingGetAutocompleteV2WithHttpInfo(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzmaxinvoicingMinusGetAutocompleteMinusV2MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzmaxinvoicingGetAutocompleteV2Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -217,16 +217,16 @@ class ObjectEzmaxinvoicingApi(basePath: kotlin.String = defaultBasePath, client:
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return ApiResponse<EzmaxinvoicingMinusGetAutocompleteMinusV2MinusResponse?>
+     * @return ApiResponse<EzmaxinvoicingGetAutocompleteV2Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezmaxinvoicingGetAutocompleteV2WithHttpInfo(sSelector: SSelector_ezmaxinvoicingGetAutocompleteV2, eFilterActive: EFilterActive_ezmaxinvoicingGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : ApiResponse<EzmaxinvoicingMinusGetAutocompleteMinusV2MinusResponse?> {
+    fun ezmaxinvoicingGetAutocompleteV2WithHttpInfo(sSelector: SSelectorEzmaxinvoicingGetAutocompleteV2, eFilterActive: EFilterActiveEzmaxinvoicingGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : ApiResponse<EzmaxinvoicingGetAutocompleteV2Response?> {
         val localVariableConfig = ezmaxinvoicingGetAutocompleteV2RequestConfig(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
-        return request<Unit, EzmaxinvoicingMinusGetAutocompleteMinusV2MinusResponse>(
+        return request<Unit, EzmaxinvoicingGetAutocompleteV2Response>(
             localVariableConfig
         )
     }
@@ -240,12 +240,12 @@ class ObjectEzmaxinvoicingApi(basePath: kotlin.String = defaultBasePath, client:
      * @param acceptLanguage  (optional)
      * @return RequestConfig
      */
-    fun ezmaxinvoicingGetAutocompleteV2RequestConfig(sSelector: SSelector_ezmaxinvoicingGetAutocompleteV2, eFilterActive: EFilterActive_ezmaxinvoicingGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : RequestConfig<Unit> {
+    fun ezmaxinvoicingGetAutocompleteV2RequestConfig(sSelector: SSelectorEzmaxinvoicingGetAutocompleteV2, eFilterActive: EFilterActiveEzmaxinvoicingGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
                 if (eFilterActive != null) {
-                    put("eFilterActive", listOf(eFilterActive.toString()))
+                    put("eFilterActive", listOf(eFilterActive.value))
                 }
                 if (sQuery != null) {
                     put("sQuery", listOf(sQuery.toString()))
@@ -269,7 +269,7 @@ class ObjectEzmaxinvoicingApi(basePath: kotlin.String = defaultBasePath, client:
      * Retrieve an existing Ezmaxinvoicing
      * 
      * @param pkiEzmaxinvoicingID 
-     * @return EzmaxinvoicingMinusGetObjectMinusV2MinusResponse
+     * @return EzmaxinvoicingGetObjectV2Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -278,11 +278,11 @@ class ObjectEzmaxinvoicingApi(basePath: kotlin.String = defaultBasePath, client:
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezmaxinvoicingGetObjectV2(pkiEzmaxinvoicingID: kotlin.Int) : EzmaxinvoicingMinusGetObjectMinusV2MinusResponse {
+    fun ezmaxinvoicingGetObjectV2(pkiEzmaxinvoicingID: kotlin.Int) : EzmaxinvoicingGetObjectV2Response {
         val localVarResponse = ezmaxinvoicingGetObjectV2WithHttpInfo(pkiEzmaxinvoicingID = pkiEzmaxinvoicingID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzmaxinvoicingMinusGetObjectMinusV2MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzmaxinvoicingGetObjectV2Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -300,16 +300,16 @@ class ObjectEzmaxinvoicingApi(basePath: kotlin.String = defaultBasePath, client:
      * Retrieve an existing Ezmaxinvoicing
      * 
      * @param pkiEzmaxinvoicingID 
-     * @return ApiResponse<EzmaxinvoicingMinusGetObjectMinusV2MinusResponse?>
+     * @return ApiResponse<EzmaxinvoicingGetObjectV2Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezmaxinvoicingGetObjectV2WithHttpInfo(pkiEzmaxinvoicingID: kotlin.Int) : ApiResponse<EzmaxinvoicingMinusGetObjectMinusV2MinusResponse?> {
+    fun ezmaxinvoicingGetObjectV2WithHttpInfo(pkiEzmaxinvoicingID: kotlin.Int) : ApiResponse<EzmaxinvoicingGetObjectV2Response?> {
         val localVariableConfig = ezmaxinvoicingGetObjectV2RequestConfig(pkiEzmaxinvoicingID = pkiEzmaxinvoicingID)
 
-        return request<Unit, EzmaxinvoicingMinusGetObjectMinusV2MinusResponse>(
+        return request<Unit, EzmaxinvoicingGetObjectV2Response>(
             localVariableConfig
         )
     }
@@ -339,7 +339,7 @@ class ObjectEzmaxinvoicingApi(basePath: kotlin.String = defaultBasePath, client:
     /**
      * Retrieve provisional Ezmaxinvoicing
      * 
-     * @return EzmaxinvoicingMinusGetProvisionalMinusV1MinusResponse
+     * @return EzmaxinvoicingGetProvisionalV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -348,11 +348,11 @@ class ObjectEzmaxinvoicingApi(basePath: kotlin.String = defaultBasePath, client:
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezmaxinvoicingGetProvisionalV1() : EzmaxinvoicingMinusGetProvisionalMinusV1MinusResponse {
+    fun ezmaxinvoicingGetProvisionalV1() : EzmaxinvoicingGetProvisionalV1Response {
         val localVarResponse = ezmaxinvoicingGetProvisionalV1WithHttpInfo()
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzmaxinvoicingMinusGetProvisionalMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzmaxinvoicingGetProvisionalV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -369,16 +369,16 @@ class ObjectEzmaxinvoicingApi(basePath: kotlin.String = defaultBasePath, client:
     /**
      * Retrieve provisional Ezmaxinvoicing
      * 
-     * @return ApiResponse<EzmaxinvoicingMinusGetProvisionalMinusV1MinusResponse?>
+     * @return ApiResponse<EzmaxinvoicingGetProvisionalV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezmaxinvoicingGetProvisionalV1WithHttpInfo() : ApiResponse<EzmaxinvoicingMinusGetProvisionalMinusV1MinusResponse?> {
+    fun ezmaxinvoicingGetProvisionalV1WithHttpInfo() : ApiResponse<EzmaxinvoicingGetProvisionalV1Response?> {
         val localVariableConfig = ezmaxinvoicingGetProvisionalV1RequestConfig()
 
-        return request<Unit, EzmaxinvoicingMinusGetProvisionalMinusV1MinusResponse>(
+        return request<Unit, EzmaxinvoicingGetProvisionalV1Response>(
             localVariableConfig
         )
     }

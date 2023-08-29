@@ -1,10 +1,10 @@
 
-# BillingentityinternalMinusGetObjectMinusV2MinusResponseMinusMPayload
+# BillingentityinternalGetObjectV2ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objBillingentityinternal** | [**BillingentityinternalMinusResponseCompound**](BillingentityinternalMinusResponseCompound.md) |  | 
+**objBillingentityinternal** | [**BillingentityinternalResponseCompound**](BillingentityinternalResponseCompound.md) |  | 
 
 
 

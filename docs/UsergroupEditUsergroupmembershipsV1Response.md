@@ -1,12 +1,12 @@
 
-# UsergroupMinusEditUsergroupmembershipsMinusV1MinusResponse
+# UsergroupEditUsergroupmembershipsV1Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**UsergroupMinusEditUsergroupmembershipsMinusV1MinusResponseMinusMPayload**](UsergroupMinusEditUsergroupmembershipsMinusV1MinusResponseMinusMPayload.md) |  | 
-**objDebugPayload** | [**CommonMinusResponseMinusObjDebugPayload**](CommonMinusResponseMinusObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonMinusResponseMinusObjDebug**](CommonMinusResponseMinusObjDebug.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
+**mPayload** | [**UsergroupEditUsergroupmembershipsV1ResponseMPayload**](UsergroupEditUsergroupmembershipsV1ResponseMPayload.md) |  | 
+**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 
 
 

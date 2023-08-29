@@ -19,8 +19,8 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonMinusResponseMinusError
-import eZmaxApi.models.NotificationsectionMinusGetNotificationtestsMinusV1MinusResponse
+import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.NotificationsectionGetNotificationtestsV1Response
 
 import com.squareup.moshi.Json
 
@@ -51,7 +51,7 @@ class ObjectNotificationsectionApi(basePath: kotlin.String = defaultBasePath, cl
      * 
      * @param pkiNotificationsectionID 
      * @param bShowHidden Whether or not to return the hidden Notificationtests
-     * @return NotificationsectionMinusGetNotificationtestsMinusV1MinusResponse
+     * @return NotificationsectionGetNotificationtestsV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -60,11 +60,11 @@ class ObjectNotificationsectionApi(basePath: kotlin.String = defaultBasePath, cl
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun notificationsectionGetNotificationtestsV1(pkiNotificationsectionID: kotlin.Int, bShowHidden: kotlin.Boolean) : NotificationsectionMinusGetNotificationtestsMinusV1MinusResponse {
+    fun notificationsectionGetNotificationtestsV1(pkiNotificationsectionID: kotlin.Int, bShowHidden: kotlin.Boolean) : NotificationsectionGetNotificationtestsV1Response {
         val localVarResponse = notificationsectionGetNotificationtestsV1WithHttpInfo(pkiNotificationsectionID = pkiNotificationsectionID, bShowHidden = bShowHidden)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as NotificationsectionMinusGetNotificationtestsMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as NotificationsectionGetNotificationtestsV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -83,16 +83,16 @@ class ObjectNotificationsectionApi(basePath: kotlin.String = defaultBasePath, cl
      * 
      * @param pkiNotificationsectionID 
      * @param bShowHidden Whether or not to return the hidden Notificationtests
-     * @return ApiResponse<NotificationsectionMinusGetNotificationtestsMinusV1MinusResponse?>
+     * @return ApiResponse<NotificationsectionGetNotificationtestsV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun notificationsectionGetNotificationtestsV1WithHttpInfo(pkiNotificationsectionID: kotlin.Int, bShowHidden: kotlin.Boolean) : ApiResponse<NotificationsectionMinusGetNotificationtestsMinusV1MinusResponse?> {
+    fun notificationsectionGetNotificationtestsV1WithHttpInfo(pkiNotificationsectionID: kotlin.Int, bShowHidden: kotlin.Boolean) : ApiResponse<NotificationsectionGetNotificationtestsV1Response?> {
         val localVariableConfig = notificationsectionGetNotificationtestsV1RequestConfig(pkiNotificationsectionID = pkiNotificationsectionID, bShowHidden = bShowHidden)
 
-        return request<Unit, NotificationsectionMinusGetNotificationtestsMinusV1MinusResponse>(
+        return request<Unit, NotificationsectionGetNotificationtestsV1Response>(
             localVariableConfig
         )
     }

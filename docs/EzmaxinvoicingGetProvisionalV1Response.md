@@ -1,12 +1,12 @@
 
-# EzmaxinvoicingMinusGetProvisionalMinusV1MinusResponse
+# EzmaxinvoicingGetProvisionalV1Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**EzmaxinvoicingMinusGetProvisionalMinusV1MinusResponseMinusMPayload**](EzmaxinvoicingMinusGetProvisionalMinusV1MinusResponseMinusMPayload.md) |  | 
-**objDebugPayload** | [**CommonMinusResponseMinusObjDebugPayload**](CommonMinusResponseMinusObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonMinusResponseMinusObjDebug**](CommonMinusResponseMinusObjDebug.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
+**mPayload** | [**EzmaxinvoicingGetProvisionalV1ResponseMPayload**](EzmaxinvoicingGetProvisionalV1ResponseMPayload.md) |  | 
+**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 
 
 

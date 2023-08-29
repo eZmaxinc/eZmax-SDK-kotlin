@@ -1,5 +1,5 @@
 
-# UserstagedMinusResponseCompound
+# UserstagedResponseCompound
 
 ## Properties
 Name | Type | Description | Notes

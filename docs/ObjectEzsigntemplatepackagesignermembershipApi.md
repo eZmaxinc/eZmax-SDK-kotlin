@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a id="ezsigntemplatepackagesignermembershipCreateObjectV1"></a>
 # **ezsigntemplatepackagesignermembershipCreateObjectV1**
-> EzsigntemplatepackagesignermembershipMinusCreateObjectMinusV1MinusResponse ezsigntemplatepackagesignermembershipCreateObjectV1(ezsigntemplatepackagesignermembershipMinusCreateObjectMinusV1MinusRequest)
+> EzsigntemplatepackagesignermembershipCreateObjectV1Response ezsigntemplatepackagesignermembershipCreateObjectV1(ezsigntemplatepackagesignermembershipCreateObjectV1Request)
 
 Create a new Ezsigntemplatepackagesignermembership
 
@@ -24,9 +24,9 @@ The endpoint allows to create one or many elements at once.
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsigntemplatepackagesignermembershipApi()
-val ezsigntemplatepackagesignermembershipMinusCreateObjectMinusV1MinusRequest : EzsigntemplatepackagesignermembershipMinusCreateObjectMinusV1MinusRequest =  // EzsigntemplatepackagesignermembershipMinusCreateObjectMinusV1MinusRequest | 
+val ezsigntemplatepackagesignermembershipCreateObjectV1Request : EzsigntemplatepackagesignermembershipCreateObjectV1Request =  // EzsigntemplatepackagesignermembershipCreateObjectV1Request | 
 try {
-    val result : EzsigntemplatepackagesignermembershipMinusCreateObjectMinusV1MinusResponse = apiInstance.ezsigntemplatepackagesignermembershipCreateObjectV1(ezsigntemplatepackagesignermembershipMinusCreateObjectMinusV1MinusRequest)
+    val result : EzsigntemplatepackagesignermembershipCreateObjectV1Response = apiInstance.ezsigntemplatepackagesignermembershipCreateObjectV1(ezsigntemplatepackagesignermembershipCreateObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplatepackagesignermembershipApi#ezsigntemplatepackagesignermembershipCreateObjectV1")
@@ -41,11 +41,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ezsigntemplatepackagesignermembershipMinusCreateObjectMinusV1MinusRequest** | [**EzsigntemplatepackagesignermembershipMinusCreateObjectMinusV1MinusRequest**](EzsigntemplatepackagesignermembershipMinusCreateObjectMinusV1MinusRequest.md)|  |
+ **ezsigntemplatepackagesignermembershipCreateObjectV1Request** | [**EzsigntemplatepackagesignermembershipCreateObjectV1Request**](EzsigntemplatepackagesignermembershipCreateObjectV1Request.md)|  |
 
 ### Return type
 
-[**EzsigntemplatepackagesignermembershipMinusCreateObjectMinusV1MinusResponse**](EzsigntemplatepackagesignermembershipMinusCreateObjectMinusV1MinusResponse.md)
+[**EzsigntemplatepackagesignermembershipCreateObjectV1Response**](EzsigntemplatepackagesignermembershipCreateObjectV1Response.md)
 
 ### Authorization
 
@@ -61,7 +61,7 @@ Configure Authorization:
 
 <a id="ezsigntemplatepackagesignermembershipDeleteObjectV1"></a>
 # **ezsigntemplatepackagesignermembershipDeleteObjectV1**
-> EzsigntemplatepackagesignermembershipMinusDeleteObjectMinusV1MinusResponse ezsigntemplatepackagesignermembershipDeleteObjectV1(pkiEzsigntemplatepackagesignermembershipID)
+> EzsigntemplatepackagesignermembershipDeleteObjectV1Response ezsigntemplatepackagesignermembershipDeleteObjectV1(pkiEzsigntemplatepackagesignermembershipID)
 
 Delete an existing Ezsigntemplatepackagesignermembership
 
@@ -76,7 +76,7 @@ Delete an existing Ezsigntemplatepackagesignermembership
 val apiInstance = ObjectEzsigntemplatepackagesignermembershipApi()
 val pkiEzsigntemplatepackagesignermembershipID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : EzsigntemplatepackagesignermembershipMinusDeleteObjectMinusV1MinusResponse = apiInstance.ezsigntemplatepackagesignermembershipDeleteObjectV1(pkiEzsigntemplatepackagesignermembershipID)
+    val result : EzsigntemplatepackagesignermembershipDeleteObjectV1Response = apiInstance.ezsigntemplatepackagesignermembershipDeleteObjectV1(pkiEzsigntemplatepackagesignermembershipID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplatepackagesignermembershipApi#ezsigntemplatepackagesignermembershipDeleteObjectV1")
@@ -95,7 +95,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsigntemplatepackagesignermembershipMinusDeleteObjectMinusV1MinusResponse**](EzsigntemplatepackagesignermembershipMinusDeleteObjectMinusV1MinusResponse.md)
+[**EzsigntemplatepackagesignermembershipDeleteObjectV1Response**](EzsigntemplatepackagesignermembershipDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -111,7 +111,7 @@ Configure Authorization:
 
 <a id="ezsigntemplatepackagesignermembershipGetObjectV2"></a>
 # **ezsigntemplatepackagesignermembershipGetObjectV2**
-> EzsigntemplatepackagesignermembershipMinusGetObjectMinusV2MinusResponse ezsigntemplatepackagesignermembershipGetObjectV2(pkiEzsigntemplatepackagesignermembershipID)
+> EzsigntemplatepackagesignermembershipGetObjectV2Response ezsigntemplatepackagesignermembershipGetObjectV2(pkiEzsigntemplatepackagesignermembershipID)
 
 Retrieve an existing Ezsigntemplatepackagesignermembership
 
@@ -126,7 +126,7 @@ Retrieve an existing Ezsigntemplatepackagesignermembership
 val apiInstance = ObjectEzsigntemplatepackagesignermembershipApi()
 val pkiEzsigntemplatepackagesignermembershipID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : EzsigntemplatepackagesignermembershipMinusGetObjectMinusV2MinusResponse = apiInstance.ezsigntemplatepackagesignermembershipGetObjectV2(pkiEzsigntemplatepackagesignermembershipID)
+    val result : EzsigntemplatepackagesignermembershipGetObjectV2Response = apiInstance.ezsigntemplatepackagesignermembershipGetObjectV2(pkiEzsigntemplatepackagesignermembershipID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplatepackagesignermembershipApi#ezsigntemplatepackagesignermembershipGetObjectV2")
@@ -145,7 +145,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsigntemplatepackagesignermembershipMinusGetObjectMinusV2MinusResponse**](EzsigntemplatepackagesignermembershipMinusGetObjectMinusV2MinusResponse.md)
+[**EzsigntemplatepackagesignermembershipGetObjectV2Response**](EzsigntemplatepackagesignermembershipGetObjectV2Response.md)
 
 ### Authorization
 

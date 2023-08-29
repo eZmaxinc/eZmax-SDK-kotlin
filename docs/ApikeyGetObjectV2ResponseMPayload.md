@@ -1,10 +1,10 @@
 
-# ApikeyMinusGetObjectMinusV2MinusResponseMinusMPayload
+# ApikeyGetObjectV2ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objApikey** | [**ApikeyMinusResponseCompound**](ApikeyMinusResponseCompound.md) |  | 
+**objApikey** | [**ApikeyResponseCompound**](ApikeyResponseCompound.md) |  | 
 
 
 

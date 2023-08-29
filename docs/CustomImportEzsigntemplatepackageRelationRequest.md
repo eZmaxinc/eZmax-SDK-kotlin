@@ -1,5 +1,5 @@
 
-# CustomMinusImportEzsigntemplatepackageRelationMinusRequest
+# CustomImportEzsigntemplatepackageRelationRequest
 
 ## Properties
 Name | Type | Description | Notes

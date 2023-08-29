@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a id="notificationtestGetElementsV1"></a>
 # **notificationtestGetElementsV1**
-> NotificationtestMinusGetElementsMinusV1MinusResponse notificationtestGetElementsV1(pkiNotificationtestID)
+> NotificationtestGetElementsV1Response notificationtestGetElementsV1(pkiNotificationtestID)
 
 Retrieve an existing Notificationtest&#39;s Elements
 
@@ -24,7 +24,7 @@ Retrieve an existing Notificationtest&#39;s Elements
 val apiInstance = ObjectNotificationtestApi()
 val pkiNotificationtestID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : NotificationtestMinusGetElementsMinusV1MinusResponse = apiInstance.notificationtestGetElementsV1(pkiNotificationtestID)
+    val result : NotificationtestGetElementsV1Response = apiInstance.notificationtestGetElementsV1(pkiNotificationtestID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectNotificationtestApi#notificationtestGetElementsV1")
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**NotificationtestMinusGetElementsMinusV1MinusResponse**](NotificationtestMinusGetElementsMinusV1MinusResponse.md)
+[**NotificationtestGetElementsV1Response**](NotificationtestGetElementsV1Response.md)
 
 ### Authorization
 

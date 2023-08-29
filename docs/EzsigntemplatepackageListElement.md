@@ -1,5 +1,5 @@
 
-# EzsigntemplatepackageMinusListElement
+# EzsigntemplatepackageListElement
 
 ## Properties
 Name | Type | Description | Notes

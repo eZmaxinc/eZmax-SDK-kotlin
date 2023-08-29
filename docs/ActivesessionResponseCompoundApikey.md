@@ -1,5 +1,5 @@
 
-# ActivesessionMinusResponseCompoundMinusApikey
+# ActivesessionResponseCompoundApikey
 
 ## Properties
 Name | Type | Description | Notes

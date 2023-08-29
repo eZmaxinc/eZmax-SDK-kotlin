@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a id="franchisereferalincomeCreateObjectV1"></a>
 # **franchisereferalincomeCreateObjectV1**
-> FranchisereferalincomeMinusCreateObjectMinusV1MinusResponse franchisereferalincomeCreateObjectV1(franchisereferalincomeMinusCreateObjectMinusV1MinusRequest)
+> FranchisereferalincomeCreateObjectV1Response franchisereferalincomeCreateObjectV1(franchisereferalincomeCreateObjectV1Request)
 
 Create a new Franchisereferalincome
 
@@ -23,9 +23,9 @@ The endpoint allows to create one or many elements at once.  The array can conta
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectFranchisereferalincomeApi()
-val franchisereferalincomeMinusCreateObjectMinusV1MinusRequest : kotlin.collections.List<FranchisereferalincomeMinusCreateObjectMinusV1MinusRequest> =  // kotlin.collections.List<FranchisereferalincomeMinusCreateObjectMinusV1MinusRequest> | 
+val franchisereferalincomeCreateObjectV1Request : kotlin.collections.List<FranchisereferalincomeCreateObjectV1Request> =  // kotlin.collections.List<FranchisereferalincomeCreateObjectV1Request> | 
 try {
-    val result : FranchisereferalincomeMinusCreateObjectMinusV1MinusResponse = apiInstance.franchisereferalincomeCreateObjectV1(franchisereferalincomeMinusCreateObjectMinusV1MinusRequest)
+    val result : FranchisereferalincomeCreateObjectV1Response = apiInstance.franchisereferalincomeCreateObjectV1(franchisereferalincomeCreateObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectFranchisereferalincomeApi#franchisereferalincomeCreateObjectV1")
@@ -40,11 +40,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **franchisereferalincomeMinusCreateObjectMinusV1MinusRequest** | [**kotlin.collections.List&lt;FranchisereferalincomeMinusCreateObjectMinusV1MinusRequest&gt;**](FranchisereferalincomeMinusCreateObjectMinusV1MinusRequest.md)|  |
+ **franchisereferalincomeCreateObjectV1Request** | [**kotlin.collections.List&lt;FranchisereferalincomeCreateObjectV1Request&gt;**](FranchisereferalincomeCreateObjectV1Request.md)|  |
 
 ### Return type
 
-[**FranchisereferalincomeMinusCreateObjectMinusV1MinusResponse**](FranchisereferalincomeMinusCreateObjectMinusV1MinusResponse.md)
+[**FranchisereferalincomeCreateObjectV1Response**](FranchisereferalincomeCreateObjectV1Response.md)
 
 ### Authorization
 
@@ -60,7 +60,7 @@ Configure Authorization:
 
 <a id="franchisereferalincomeCreateObjectV2"></a>
 # **franchisereferalincomeCreateObjectV2**
-> FranchisereferalincomeMinusCreateObjectMinusV2MinusResponse franchisereferalincomeCreateObjectV2(franchisereferalincomeMinusCreateObjectMinusV2MinusRequest)
+> FranchisereferalincomeCreateObjectV2Response franchisereferalincomeCreateObjectV2(franchisereferalincomeCreateObjectV2Request)
 
 Create a new Franchisereferalincome
 
@@ -73,9 +73,9 @@ The endpoint allows to create one or many elements at once.
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectFranchisereferalincomeApi()
-val franchisereferalincomeMinusCreateObjectMinusV2MinusRequest : FranchisereferalincomeMinusCreateObjectMinusV2MinusRequest =  // FranchisereferalincomeMinusCreateObjectMinusV2MinusRequest | 
+val franchisereferalincomeCreateObjectV2Request : FranchisereferalincomeCreateObjectV2Request =  // FranchisereferalincomeCreateObjectV2Request | 
 try {
-    val result : FranchisereferalincomeMinusCreateObjectMinusV2MinusResponse = apiInstance.franchisereferalincomeCreateObjectV2(franchisereferalincomeMinusCreateObjectMinusV2MinusRequest)
+    val result : FranchisereferalincomeCreateObjectV2Response = apiInstance.franchisereferalincomeCreateObjectV2(franchisereferalincomeCreateObjectV2Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectFranchisereferalincomeApi#franchisereferalincomeCreateObjectV2")
@@ -90,11 +90,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **franchisereferalincomeMinusCreateObjectMinusV2MinusRequest** | [**FranchisereferalincomeMinusCreateObjectMinusV2MinusRequest**](FranchisereferalincomeMinusCreateObjectMinusV2MinusRequest.md)|  |
+ **franchisereferalincomeCreateObjectV2Request** | [**FranchisereferalincomeCreateObjectV2Request**](FranchisereferalincomeCreateObjectV2Request.md)|  |
 
 ### Return type
 
-[**FranchisereferalincomeMinusCreateObjectMinusV2MinusResponse**](FranchisereferalincomeMinusCreateObjectMinusV2MinusResponse.md)
+[**FranchisereferalincomeCreateObjectV2Response**](FranchisereferalincomeCreateObjectV2Response.md)
 
 ### Authorization
 

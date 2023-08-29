@@ -1,10 +1,10 @@
 
-# SubnetMinusEditObjectMinusV1MinusRequest
+# SubnetEditObjectV1Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objSubnet** | [**SubnetMinusRequestCompound**](SubnetMinusRequestCompound.md) |  | 
+**objSubnet** | [**SubnetRequestCompound**](SubnetRequestCompound.md) |  | 
 
 
 

@@ -1,5 +1,5 @@
 
-# EzsigntemplateMinusResponseCompound
+# EzsigntemplateResponseCompound
 
 ## Properties
 Name | Type | Description | Notes
@@ -11,10 +11,10 @@ Name | Type | Description | Notes
 **sEzsigntemplateDescription** | **kotlin.String** | The description of the Ezsigntemplate | 
 **bEzsigntemplateAdminonly** | **kotlin.Boolean** | Whether the Ezsigntemplate can be accessed by admin users only (eUserType&#x3D;Normal) | 
 **sEzsignfoldertypeNameX** | **kotlin.String** | The name of the Ezsignfoldertype in the language of the requester | 
-**objAudit** | [**CommonMinusAudit**](CommonMinusAudit.md) |  | 
-**aObjEzsigntemplatesigner** | [**kotlin.collections.List&lt;EzsigntemplatesignerMinusResponseCompound&gt;**](EzsigntemplatesignerMinusResponseCompound.md) |  | 
+**objAudit** | [**CommonAudit**](CommonAudit.md) |  | 
+**aObjEzsigntemplatesigner** | [**kotlin.collections.List&lt;EzsigntemplatesignerResponseCompound&gt;**](EzsigntemplatesignerResponseCompound.md) |  | 
 **fkiEzsigntemplatedocumentID** | **kotlin.Int** | The unique ID of the Ezsigntemplatedocument |  [optional]
-**objEzsigntemplatedocument** | [**EzsigntemplatedocumentMinusResponse**](EzsigntemplatedocumentMinusResponse.md) |  |  [optional]
+**objEzsigntemplatedocument** | [**EzsigntemplatedocumentResponse**](EzsigntemplatedocumentResponse.md) |  |  [optional]
 
 
 

@@ -1,12 +1,12 @@
 
-# FranchisereferalincomeMinusCreateObjectMinusV2MinusResponse
+# FranchisereferalincomeCreateObjectV2Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**FranchisereferalincomeMinusCreateObjectMinusV2MinusResponseMinusMPayload**](FranchisereferalincomeMinusCreateObjectMinusV2MinusResponseMinusMPayload.md) |  | 
-**objDebugPayload** | [**CommonMinusResponseMinusObjDebugPayload**](CommonMinusResponseMinusObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonMinusResponseMinusObjDebug**](CommonMinusResponseMinusObjDebug.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
+**mPayload** | [**FranchisereferalincomeCreateObjectV2ResponseMPayload**](FranchisereferalincomeCreateObjectV2ResponseMPayload.md) |  | 
+**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 
 
 

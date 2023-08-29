@@ -1,12 +1,12 @@
 
-# EzmaxinvoicingMinusGetObjectMinusV2MinusResponse
+# EzmaxinvoicingGetObjectV2Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**EzmaxinvoicingMinusGetObjectMinusV2MinusResponseMinusMPayload**](EzmaxinvoicingMinusGetObjectMinusV2MinusResponseMinusMPayload.md) |  | 
-**objDebugPayload** | [**CommonMinusResponseMinusObjDebugPayload**](CommonMinusResponseMinusObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonMinusResponseMinusObjDebug**](CommonMinusResponseMinusObjDebug.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
+**mPayload** | [**EzmaxinvoicingGetObjectV2ResponseMPayload**](EzmaxinvoicingGetObjectV2ResponseMPayload.md) |  | 
+**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 
 
 

@@ -1,5 +1,5 @@
 
-# ContactinformationsMinusRequest
+# ContactinformationsRequest
 
 ## Properties
 Name | Type | Description | Notes

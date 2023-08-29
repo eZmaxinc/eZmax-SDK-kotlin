@@ -1,5 +1,5 @@
 
-# EzsignfoldersignerassociationMinusRequestPatch
+# EzsignfoldersignerassociationRequestPatch
 
 ## Properties
 Name | Type | Description | Notes

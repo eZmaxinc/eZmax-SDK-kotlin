@@ -1,10 +1,10 @@
 
-# UsergroupMinusEditObjectMinusV1MinusRequest
+# UsergroupEditObjectV1Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objUsergroup** | [**UsergroupMinusRequestCompound**](UsergroupMinusRequestCompound.md) |  | 
+**objUsergroup** | [**UsergroupRequestCompound**](UsergroupRequestCompound.md) |  | 
 
 
 

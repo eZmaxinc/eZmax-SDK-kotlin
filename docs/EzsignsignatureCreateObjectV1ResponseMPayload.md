@@ -1,5 +1,5 @@
 
-# EzsignsignatureMinusCreateObjectMinusV1MinusResponseMinusMPayload
+# EzsignsignatureCreateObjectV1ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,10 +1,10 @@
 
-# BrandingMinusGetObjectMinusV2MinusResponseMinusMPayload
+# BrandingGetObjectV2ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objBranding** | [**BrandingMinusResponseCompound**](BrandingMinusResponseCompound.md) |  | 
+**objBranding** | [**BrandingResponseCompound**](BrandingResponseCompound.md) |  | 
 
 
 

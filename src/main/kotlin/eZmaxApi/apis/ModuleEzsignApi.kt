@@ -19,8 +19,8 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.EzsignMinusSuggestSignersMinusV1MinusResponse
-import eZmaxApi.models.EzsignMinusSuggestTemplatesMinusV1MinusResponse
+import eZmaxApi.models.EzsignSuggestSignersV1Response
+import eZmaxApi.models.EzsignSuggestTemplatesV1Response
 
 import com.squareup.moshi.Json
 
@@ -49,7 +49,7 @@ class ModuleEzsignApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
     /**
      * Suggest signers
      * Retrieve previously used Ezsignsigners and all users from the system
-     * @return EzsignMinusSuggestSignersMinusV1MinusResponse
+     * @return EzsignSuggestSignersV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -58,11 +58,11 @@ class ModuleEzsignApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignSuggestSignersV1() : EzsignMinusSuggestSignersMinusV1MinusResponse {
+    fun ezsignSuggestSignersV1() : EzsignSuggestSignersV1Response {
         val localVarResponse = ezsignSuggestSignersV1WithHttpInfo()
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignMinusSuggestSignersMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignSuggestSignersV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -79,16 +79,16 @@ class ModuleEzsignApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
     /**
      * Suggest signers
      * Retrieve previously used Ezsignsigners and all users from the system
-     * @return ApiResponse<EzsignMinusSuggestSignersMinusV1MinusResponse?>
+     * @return ApiResponse<EzsignSuggestSignersV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignSuggestSignersV1WithHttpInfo() : ApiResponse<EzsignMinusSuggestSignersMinusV1MinusResponse?> {
+    fun ezsignSuggestSignersV1WithHttpInfo() : ApiResponse<EzsignSuggestSignersV1Response?> {
         val localVariableConfig = ezsignSuggestSignersV1RequestConfig()
 
-        return request<Unit, EzsignMinusSuggestSignersMinusV1MinusResponse>(
+        return request<Unit, EzsignSuggestSignersV1Response>(
             localVariableConfig
         )
     }
@@ -118,7 +118,7 @@ class ModuleEzsignApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      * Suggest templates
      * Retrieve Ezsigntemplates and Ezsigntemplatepackages that can be imported in a Ezsignfolder
      * @param fkiEzsignfoldertypeID  (optional)
-     * @return EzsignMinusSuggestTemplatesMinusV1MinusResponse
+     * @return EzsignSuggestTemplatesV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -127,11 +127,11 @@ class ModuleEzsignApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignSuggestTemplatesV1(fkiEzsignfoldertypeID: kotlin.Int? = null) : EzsignMinusSuggestTemplatesMinusV1MinusResponse {
+    fun ezsignSuggestTemplatesV1(fkiEzsignfoldertypeID: kotlin.Int? = null) : EzsignSuggestTemplatesV1Response {
         val localVarResponse = ezsignSuggestTemplatesV1WithHttpInfo(fkiEzsignfoldertypeID = fkiEzsignfoldertypeID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignMinusSuggestTemplatesMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignSuggestTemplatesV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -149,16 +149,16 @@ class ModuleEzsignApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      * Suggest templates
      * Retrieve Ezsigntemplates and Ezsigntemplatepackages that can be imported in a Ezsignfolder
      * @param fkiEzsignfoldertypeID  (optional)
-     * @return ApiResponse<EzsignMinusSuggestTemplatesMinusV1MinusResponse?>
+     * @return ApiResponse<EzsignSuggestTemplatesV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignSuggestTemplatesV1WithHttpInfo(fkiEzsignfoldertypeID: kotlin.Int?) : ApiResponse<EzsignMinusSuggestTemplatesMinusV1MinusResponse?> {
+    fun ezsignSuggestTemplatesV1WithHttpInfo(fkiEzsignfoldertypeID: kotlin.Int?) : ApiResponse<EzsignSuggestTemplatesV1Response?> {
         val localVariableConfig = ezsignSuggestTemplatesV1RequestConfig(fkiEzsignfoldertypeID = fkiEzsignfoldertypeID)
 
-        return request<Unit, EzsignMinusSuggestTemplatesMinusV1MinusResponse>(
+        return request<Unit, EzsignSuggestTemplatesV1Response>(
             localVariableConfig
         )
     }

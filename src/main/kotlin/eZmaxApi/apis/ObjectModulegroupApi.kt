@@ -19,7 +19,7 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.ModulegroupMinusGetAllMinusV1MinusResponse
+import eZmaxApi.models.ModulegroupGetAllV1Response
 
 import com.squareup.moshi.Json
 
@@ -48,7 +48,7 @@ class ObjectModulegroupApi(basePath: kotlin.String = defaultBasePath, client: Ok
     /**
      * enum for parameter eContext
      */
-     enum class EContext_modulegroupGetAllV1(val value: kotlin.String) {
+     enum class EContextModulegroupGetAllV1(val value: kotlin.String) {
          @Json(name = "Api") Api("Api"),
          @Json(name = "User") User("User")
      }
@@ -57,7 +57,7 @@ class ObjectModulegroupApi(basePath: kotlin.String = defaultBasePath, client: Ok
      * Retrieve all Modulegroups
      * 
      * @param eContext The context of the Modulegroup
-     * @return ModulegroupMinusGetAllMinusV1MinusResponse
+     * @return ModulegroupGetAllV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -66,11 +66,11 @@ class ObjectModulegroupApi(basePath: kotlin.String = defaultBasePath, client: Ok
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun modulegroupGetAllV1(eContext: EContext_modulegroupGetAllV1) : ModulegroupMinusGetAllMinusV1MinusResponse {
+    fun modulegroupGetAllV1(eContext: EContextModulegroupGetAllV1) : ModulegroupGetAllV1Response {
         val localVarResponse = modulegroupGetAllV1WithHttpInfo(eContext = eContext)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as ModulegroupMinusGetAllMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ModulegroupGetAllV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -88,16 +88,16 @@ class ObjectModulegroupApi(basePath: kotlin.String = defaultBasePath, client: Ok
      * Retrieve all Modulegroups
      * 
      * @param eContext The context of the Modulegroup
-     * @return ApiResponse<ModulegroupMinusGetAllMinusV1MinusResponse?>
+     * @return ApiResponse<ModulegroupGetAllV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun modulegroupGetAllV1WithHttpInfo(eContext: EContext_modulegroupGetAllV1) : ApiResponse<ModulegroupMinusGetAllMinusV1MinusResponse?> {
+    fun modulegroupGetAllV1WithHttpInfo(eContext: EContextModulegroupGetAllV1) : ApiResponse<ModulegroupGetAllV1Response?> {
         val localVariableConfig = modulegroupGetAllV1RequestConfig(eContext = eContext)
 
-        return request<Unit, ModulegroupMinusGetAllMinusV1MinusResponse>(
+        return request<Unit, ModulegroupGetAllV1Response>(
             localVariableConfig
         )
     }
@@ -108,7 +108,7 @@ class ObjectModulegroupApi(basePath: kotlin.String = defaultBasePath, client: Ok
      * @param eContext The context of the Modulegroup
      * @return RequestConfig
      */
-    fun modulegroupGetAllV1RequestConfig(eContext: EContext_modulegroupGetAllV1) : RequestConfig<Unit> {
+    fun modulegroupGetAllV1RequestConfig(eContext: EContextModulegroupGetAllV1) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()

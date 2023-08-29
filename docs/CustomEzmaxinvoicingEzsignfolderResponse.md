@@ -1,5 +1,5 @@
 
-# CustomMinusEzmaxinvoicingEzsignfolderMinusResponse
+# CustomEzmaxinvoicingEzsignfolderResponse
 
 ## Properties
 Name | Type | Description | Notes

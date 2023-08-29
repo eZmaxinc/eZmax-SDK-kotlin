@@ -1,12 +1,12 @@
 
-# EzsigndocumentMinusGetFormDataMinusV1MinusResponse
+# EzsigndocumentGetFormDataV1Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**EzsigndocumentMinusGetFormDataMinusV1MinusResponseMinusMPayload**](EzsigndocumentMinusGetFormDataMinusV1MinusResponseMinusMPayload.md) |  | 
-**objDebugPayload** | [**CommonMinusResponseMinusObjDebugPayload**](CommonMinusResponseMinusObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonMinusResponseMinusObjDebug**](CommonMinusResponseMinusObjDebug.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
+**mPayload** | [**EzsigndocumentGetFormDataV1ResponseMPayload**](EzsigndocumentGetFormDataV1ResponseMPayload.md) |  | 
+**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 
 
 

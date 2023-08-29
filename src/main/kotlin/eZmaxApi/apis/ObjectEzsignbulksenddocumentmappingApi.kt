@@ -19,11 +19,11 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonMinusResponseMinusError
-import eZmaxApi.models.EzsignbulksenddocumentmappingMinusCreateObjectMinusV1MinusRequest
-import eZmaxApi.models.EzsignbulksenddocumentmappingMinusCreateObjectMinusV1MinusResponse
-import eZmaxApi.models.EzsignbulksenddocumentmappingMinusDeleteObjectMinusV1MinusResponse
-import eZmaxApi.models.EzsignbulksenddocumentmappingMinusGetObjectMinusV2MinusResponse
+import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.EzsignbulksenddocumentmappingCreateObjectV1Request
+import eZmaxApi.models.EzsignbulksenddocumentmappingCreateObjectV1Response
+import eZmaxApi.models.EzsignbulksenddocumentmappingDeleteObjectV1Response
+import eZmaxApi.models.EzsignbulksenddocumentmappingGetObjectV2Response
 
 import com.squareup.moshi.Json
 
@@ -52,8 +52,8 @@ class ObjectEzsignbulksenddocumentmappingApi(basePath: kotlin.String = defaultBa
     /**
      * Create a new Ezsignbulksenddocumentmapping
      * The endpoint allows to create one or many elements at once.
-     * @param ezsignbulksenddocumentmappingMinusCreateObjectMinusV1MinusRequest 
-     * @return EzsignbulksenddocumentmappingMinusCreateObjectMinusV1MinusResponse
+     * @param ezsignbulksenddocumentmappingCreateObjectV1Request 
+     * @return EzsignbulksenddocumentmappingCreateObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -62,11 +62,11 @@ class ObjectEzsignbulksenddocumentmappingApi(basePath: kotlin.String = defaultBa
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignbulksenddocumentmappingCreateObjectV1(ezsignbulksenddocumentmappingMinusCreateObjectMinusV1MinusRequest: EzsignbulksenddocumentmappingMinusCreateObjectMinusV1MinusRequest) : EzsignbulksenddocumentmappingMinusCreateObjectMinusV1MinusResponse {
-        val localVarResponse = ezsignbulksenddocumentmappingCreateObjectV1WithHttpInfo(ezsignbulksenddocumentmappingMinusCreateObjectMinusV1MinusRequest = ezsignbulksenddocumentmappingMinusCreateObjectMinusV1MinusRequest)
+    fun ezsignbulksenddocumentmappingCreateObjectV1(ezsignbulksenddocumentmappingCreateObjectV1Request: EzsignbulksenddocumentmappingCreateObjectV1Request) : EzsignbulksenddocumentmappingCreateObjectV1Response {
+        val localVarResponse = ezsignbulksenddocumentmappingCreateObjectV1WithHttpInfo(ezsignbulksenddocumentmappingCreateObjectV1Request = ezsignbulksenddocumentmappingCreateObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignbulksenddocumentmappingMinusCreateObjectMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignbulksenddocumentmappingCreateObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -83,17 +83,17 @@ class ObjectEzsignbulksenddocumentmappingApi(basePath: kotlin.String = defaultBa
     /**
      * Create a new Ezsignbulksenddocumentmapping
      * The endpoint allows to create one or many elements at once.
-     * @param ezsignbulksenddocumentmappingMinusCreateObjectMinusV1MinusRequest 
-     * @return ApiResponse<EzsignbulksenddocumentmappingMinusCreateObjectMinusV1MinusResponse?>
+     * @param ezsignbulksenddocumentmappingCreateObjectV1Request 
+     * @return ApiResponse<EzsignbulksenddocumentmappingCreateObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignbulksenddocumentmappingCreateObjectV1WithHttpInfo(ezsignbulksenddocumentmappingMinusCreateObjectMinusV1MinusRequest: EzsignbulksenddocumentmappingMinusCreateObjectMinusV1MinusRequest) : ApiResponse<EzsignbulksenddocumentmappingMinusCreateObjectMinusV1MinusResponse?> {
-        val localVariableConfig = ezsignbulksenddocumentmappingCreateObjectV1RequestConfig(ezsignbulksenddocumentmappingMinusCreateObjectMinusV1MinusRequest = ezsignbulksenddocumentmappingMinusCreateObjectMinusV1MinusRequest)
+    fun ezsignbulksenddocumentmappingCreateObjectV1WithHttpInfo(ezsignbulksenddocumentmappingCreateObjectV1Request: EzsignbulksenddocumentmappingCreateObjectV1Request) : ApiResponse<EzsignbulksenddocumentmappingCreateObjectV1Response?> {
+        val localVariableConfig = ezsignbulksenddocumentmappingCreateObjectV1RequestConfig(ezsignbulksenddocumentmappingCreateObjectV1Request = ezsignbulksenddocumentmappingCreateObjectV1Request)
 
-        return request<EzsignbulksenddocumentmappingMinusCreateObjectMinusV1MinusRequest, EzsignbulksenddocumentmappingMinusCreateObjectMinusV1MinusResponse>(
+        return request<EzsignbulksenddocumentmappingCreateObjectV1Request, EzsignbulksenddocumentmappingCreateObjectV1Response>(
             localVariableConfig
         )
     }
@@ -101,11 +101,11 @@ class ObjectEzsignbulksenddocumentmappingApi(basePath: kotlin.String = defaultBa
     /**
      * To obtain the request config of the operation ezsignbulksenddocumentmappingCreateObjectV1
      *
-     * @param ezsignbulksenddocumentmappingMinusCreateObjectMinusV1MinusRequest 
+     * @param ezsignbulksenddocumentmappingCreateObjectV1Request 
      * @return RequestConfig
      */
-    fun ezsignbulksenddocumentmappingCreateObjectV1RequestConfig(ezsignbulksenddocumentmappingMinusCreateObjectMinusV1MinusRequest: EzsignbulksenddocumentmappingMinusCreateObjectMinusV1MinusRequest) : RequestConfig<EzsignbulksenddocumentmappingMinusCreateObjectMinusV1MinusRequest> {
-        val localVariableBody = ezsignbulksenddocumentmappingMinusCreateObjectMinusV1MinusRequest
+    fun ezsignbulksenddocumentmappingCreateObjectV1RequestConfig(ezsignbulksenddocumentmappingCreateObjectV1Request: EzsignbulksenddocumentmappingCreateObjectV1Request) : RequestConfig<EzsignbulksenddocumentmappingCreateObjectV1Request> {
+        val localVariableBody = ezsignbulksenddocumentmappingCreateObjectV1Request
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Content-Type"] = "application/json"
@@ -125,7 +125,7 @@ class ObjectEzsignbulksenddocumentmappingApi(basePath: kotlin.String = defaultBa
      * Delete an existing Ezsignbulksenddocumentmapping
      * 
      * @param pkiEzsignbulksenddocumentmappingID 
-     * @return EzsignbulksenddocumentmappingMinusDeleteObjectMinusV1MinusResponse
+     * @return EzsignbulksenddocumentmappingDeleteObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -134,11 +134,11 @@ class ObjectEzsignbulksenddocumentmappingApi(basePath: kotlin.String = defaultBa
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignbulksenddocumentmappingDeleteObjectV1(pkiEzsignbulksenddocumentmappingID: kotlin.Int) : EzsignbulksenddocumentmappingMinusDeleteObjectMinusV1MinusResponse {
+    fun ezsignbulksenddocumentmappingDeleteObjectV1(pkiEzsignbulksenddocumentmappingID: kotlin.Int) : EzsignbulksenddocumentmappingDeleteObjectV1Response {
         val localVarResponse = ezsignbulksenddocumentmappingDeleteObjectV1WithHttpInfo(pkiEzsignbulksenddocumentmappingID = pkiEzsignbulksenddocumentmappingID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignbulksenddocumentmappingMinusDeleteObjectMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignbulksenddocumentmappingDeleteObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -156,16 +156,16 @@ class ObjectEzsignbulksenddocumentmappingApi(basePath: kotlin.String = defaultBa
      * Delete an existing Ezsignbulksenddocumentmapping
      * 
      * @param pkiEzsignbulksenddocumentmappingID 
-     * @return ApiResponse<EzsignbulksenddocumentmappingMinusDeleteObjectMinusV1MinusResponse?>
+     * @return ApiResponse<EzsignbulksenddocumentmappingDeleteObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignbulksenddocumentmappingDeleteObjectV1WithHttpInfo(pkiEzsignbulksenddocumentmappingID: kotlin.Int) : ApiResponse<EzsignbulksenddocumentmappingMinusDeleteObjectMinusV1MinusResponse?> {
+    fun ezsignbulksenddocumentmappingDeleteObjectV1WithHttpInfo(pkiEzsignbulksenddocumentmappingID: kotlin.Int) : ApiResponse<EzsignbulksenddocumentmappingDeleteObjectV1Response?> {
         val localVariableConfig = ezsignbulksenddocumentmappingDeleteObjectV1RequestConfig(pkiEzsignbulksenddocumentmappingID = pkiEzsignbulksenddocumentmappingID)
 
-        return request<Unit, EzsignbulksenddocumentmappingMinusDeleteObjectMinusV1MinusResponse>(
+        return request<Unit, EzsignbulksenddocumentmappingDeleteObjectV1Response>(
             localVariableConfig
         )
     }
@@ -196,7 +196,7 @@ class ObjectEzsignbulksenddocumentmappingApi(basePath: kotlin.String = defaultBa
      * Retrieve an existing Ezsignbulksenddocumentmapping
      * 
      * @param pkiEzsignbulksenddocumentmappingID 
-     * @return EzsignbulksenddocumentmappingMinusGetObjectMinusV2MinusResponse
+     * @return EzsignbulksenddocumentmappingGetObjectV2Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -205,11 +205,11 @@ class ObjectEzsignbulksenddocumentmappingApi(basePath: kotlin.String = defaultBa
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignbulksenddocumentmappingGetObjectV2(pkiEzsignbulksenddocumentmappingID: kotlin.Int) : EzsignbulksenddocumentmappingMinusGetObjectMinusV2MinusResponse {
+    fun ezsignbulksenddocumentmappingGetObjectV2(pkiEzsignbulksenddocumentmappingID: kotlin.Int) : EzsignbulksenddocumentmappingGetObjectV2Response {
         val localVarResponse = ezsignbulksenddocumentmappingGetObjectV2WithHttpInfo(pkiEzsignbulksenddocumentmappingID = pkiEzsignbulksenddocumentmappingID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignbulksenddocumentmappingMinusGetObjectMinusV2MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignbulksenddocumentmappingGetObjectV2Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -227,16 +227,16 @@ class ObjectEzsignbulksenddocumentmappingApi(basePath: kotlin.String = defaultBa
      * Retrieve an existing Ezsignbulksenddocumentmapping
      * 
      * @param pkiEzsignbulksenddocumentmappingID 
-     * @return ApiResponse<EzsignbulksenddocumentmappingMinusGetObjectMinusV2MinusResponse?>
+     * @return ApiResponse<EzsignbulksenddocumentmappingGetObjectV2Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignbulksenddocumentmappingGetObjectV2WithHttpInfo(pkiEzsignbulksenddocumentmappingID: kotlin.Int) : ApiResponse<EzsignbulksenddocumentmappingMinusGetObjectMinusV2MinusResponse?> {
+    fun ezsignbulksenddocumentmappingGetObjectV2WithHttpInfo(pkiEzsignbulksenddocumentmappingID: kotlin.Int) : ApiResponse<EzsignbulksenddocumentmappingGetObjectV2Response?> {
         val localVariableConfig = ezsignbulksenddocumentmappingGetObjectV2RequestConfig(pkiEzsignbulksenddocumentmappingID = pkiEzsignbulksenddocumentmappingID)
 
-        return request<Unit, EzsignbulksenddocumentmappingMinusGetObjectMinusV2MinusResponse>(
+        return request<Unit, EzsignbulksenddocumentmappingGetObjectV2Response>(
             localVariableConfig
         )
     }

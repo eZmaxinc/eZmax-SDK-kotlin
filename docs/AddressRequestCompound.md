@@ -1,5 +1,5 @@
 
-# AddressMinusRequestCompound
+# AddressRequestCompound
 
 ## Properties
 Name | Type | Description | Notes

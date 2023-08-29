@@ -1,5 +1,5 @@
 
-# EzsignfoldersignerassociationMinusGetInPersonLoginUrlMinusV1MinusResponseMinusMPayload
+# EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes

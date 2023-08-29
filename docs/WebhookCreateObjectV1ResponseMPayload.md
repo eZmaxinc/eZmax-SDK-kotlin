@@ -1,5 +1,5 @@
 
-# WebhookMinusCreateObjectMinusV1MinusResponseMinusMPayload
+# WebhookCreateObjectV1ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes

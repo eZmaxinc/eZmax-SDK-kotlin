@@ -1,5 +1,5 @@
 
-# MultilingualMinusEzsignsignergroupDescription
+# MultilingualEzsignsignergroupDescription
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,10 +1,10 @@
 
-# EzsigntemplateformfieldgroupMinusGetObjectMinusV2MinusResponseMinusMPayload
+# EzsigntemplateformfieldgroupGetObjectV2ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objEzsigntemplateformfieldgroup** | [**EzsigntemplateformfieldgroupMinusResponseCompound**](EzsigntemplateformfieldgroupMinusResponseCompound.md) |  | 
+**objEzsigntemplateformfieldgroup** | [**EzsigntemplateformfieldgroupResponseCompound**](EzsigntemplateformfieldgroupResponseCompound.md) |  | 
 
 
 

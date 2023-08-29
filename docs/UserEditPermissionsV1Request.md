@@ -1,10 +1,10 @@
 
-# UserMinusEditPermissionsMinusV1MinusRequest
+# UserEditPermissionsV1Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjPermission** | [**kotlin.collections.List&lt;PermissionMinusRequestCompound&gt;**](PermissionMinusRequestCompound.md) |  | 
+**aObjPermission** | [**kotlin.collections.List&lt;PermissionRequestCompound&gt;**](PermissionRequestCompound.md) |  | 
 
 
 

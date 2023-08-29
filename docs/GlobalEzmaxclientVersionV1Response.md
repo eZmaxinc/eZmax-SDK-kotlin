@@ -1,5 +1,5 @@
 
-# GlobalMinusEzmaxclientMinusVersionMinusV1MinusResponse
+# GlobalEzmaxclientVersionV1Response
 
 ## Properties
 Name | Type | Description | Notes

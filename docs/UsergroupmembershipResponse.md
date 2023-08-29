@@ -1,5 +1,5 @@
 
-# UsergroupmembershipMinusResponse
+# UsergroupmembershipResponse
 
 ## Properties
 Name | Type | Description | Notes

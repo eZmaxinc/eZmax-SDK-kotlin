@@ -1,5 +1,5 @@
 
-# MultilingualMinusVersionhistoryDetail
+# MultilingualVersionhistoryDetail
 
 ## Properties
 Name | Type | Description | Notes

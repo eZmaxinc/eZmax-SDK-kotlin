@@ -1,10 +1,10 @@
 
-# UserMinusEditObjectMinusV1MinusRequest
+# UserEditObjectV1Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objUser** | [**UserMinusRequestCompound**](UserMinusRequestCompound.md) |  | 
+**objUser** | [**UserRequestCompound**](UserRequestCompound.md) |  | 
 
 
 

@@ -1,5 +1,5 @@
 
-# EzsigntemplateMinusCopyMinusV1MinusResponseMinusMPayload
+# EzsigntemplateCopyV1ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes

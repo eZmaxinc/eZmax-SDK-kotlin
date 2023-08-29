@@ -1,12 +1,12 @@
 
-# EzsigntemplatedocumentMinusGetEzsigntemplatesignaturesMinusV1MinusResponse
+# EzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**EzsigntemplatedocumentMinusGetEzsigntemplatesignaturesMinusV1MinusResponseMinusMPayload**](EzsigntemplatedocumentMinusGetEzsigntemplatesignaturesMinusV1MinusResponseMinusMPayload.md) |  | 
-**objDebugPayload** | [**CommonMinusResponseMinusObjDebugPayload**](CommonMinusResponseMinusObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonMinusResponseMinusObjDebug**](CommonMinusResponseMinusObjDebug.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
+**mPayload** | [**EzsigntemplatedocumentGetEzsigntemplatesignaturesV1ResponseMPayload**](EzsigntemplatedocumentGetEzsigntemplatesignaturesV1ResponseMPayload.md) |  | 
+**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 
 
 

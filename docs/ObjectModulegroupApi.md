@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a id="modulegroupGetAllV1"></a>
 # **modulegroupGetAllV1**
-> ModulegroupMinusGetAllMinusV1MinusResponse modulegroupGetAllV1(eContext)
+> ModulegroupGetAllV1Response modulegroupGetAllV1(eContext)
 
 Retrieve all Modulegroups
 
@@ -22,7 +22,7 @@ Retrieve all Modulegroups
 val apiInstance = ObjectModulegroupApi()
 val eContext : kotlin.String = eContext_example // kotlin.String | The context of the Modulegroup
 try {
-    val result : ModulegroupMinusGetAllMinusV1MinusResponse = apiInstance.modulegroupGetAllV1(eContext)
+    val result : ModulegroupGetAllV1Response = apiInstance.modulegroupGetAllV1(eContext)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectModulegroupApi#modulegroupGetAllV1")
@@ -41,7 +41,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ModulegroupMinusGetAllMinusV1MinusResponse**](ModulegroupMinusGetAllMinusV1MinusResponse.md)
+[**ModulegroupGetAllV1Response**](ModulegroupGetAllV1Response.md)
 
 ### Authorization
 

@@ -1,5 +1,5 @@
 
-# WebsocketMinusResponseMinusInformationMinusV1MinusMPayload
+# WebsocketResponseInformationV1MPayload
 
 ## Properties
 Name | Type | Description | Notes

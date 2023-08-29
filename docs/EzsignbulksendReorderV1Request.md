@@ -1,5 +1,5 @@
 
-# EzsignbulksendMinusReorderMinusV1MinusRequest
+# EzsignbulksendReorderV1Request
 
 ## Properties
 Name | Type | Description | Notes

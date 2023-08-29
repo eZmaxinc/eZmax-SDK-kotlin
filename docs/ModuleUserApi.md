@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a id="userCreateEzsignuserV1"></a>
 # **userCreateEzsignuserV1**
-> UserMinusCreateEzsignuserMinusV1MinusResponse userCreateEzsignuserV1(userMinusCreateEzsignuserMinusV1MinusRequest)
+> UserCreateEzsignuserV1Response userCreateEzsignuserV1(userCreateEzsignuserV1Request)
 
 Create a new User of type Ezsignuser
 
@@ -22,9 +22,9 @@ The endpoint allows to initiate the creation or a user of type Ezsignuser.  The 
 //import eZmaxApi.models.*
 
 val apiInstance = ModuleUserApi()
-val userMinusCreateEzsignuserMinusV1MinusRequest : kotlin.collections.List<UserMinusCreateEzsignuserMinusV1MinusRequest> =  // kotlin.collections.List<UserMinusCreateEzsignuserMinusV1MinusRequest> | 
+val userCreateEzsignuserV1Request : kotlin.collections.List<UserCreateEzsignuserV1Request> =  // kotlin.collections.List<UserCreateEzsignuserV1Request> | 
 try {
-    val result : UserMinusCreateEzsignuserMinusV1MinusResponse = apiInstance.userCreateEzsignuserV1(userMinusCreateEzsignuserMinusV1MinusRequest)
+    val result : UserCreateEzsignuserV1Response = apiInstance.userCreateEzsignuserV1(userCreateEzsignuserV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ModuleUserApi#userCreateEzsignuserV1")
@@ -39,11 +39,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userMinusCreateEzsignuserMinusV1MinusRequest** | [**kotlin.collections.List&lt;UserMinusCreateEzsignuserMinusV1MinusRequest&gt;**](UserMinusCreateEzsignuserMinusV1MinusRequest.md)|  |
+ **userCreateEzsignuserV1Request** | [**kotlin.collections.List&lt;UserCreateEzsignuserV1Request&gt;**](UserCreateEzsignuserV1Request.md)|  |
 
 ### Return type
 
-[**UserMinusCreateEzsignuserMinusV1MinusResponse**](UserMinusCreateEzsignuserMinusV1MinusResponse.md)
+[**UserCreateEzsignuserV1Response**](UserCreateEzsignuserV1Response.md)
 
 ### Authorization
 

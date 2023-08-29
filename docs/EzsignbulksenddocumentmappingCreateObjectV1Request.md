@@ -1,10 +1,10 @@
 
-# EzsignbulksenddocumentmappingMinusCreateObjectMinusV1MinusRequest
+# EzsignbulksenddocumentmappingCreateObjectV1Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjEzsignbulksenddocumentmapping** | [**kotlin.collections.List&lt;EzsignbulksenddocumentmappingMinusRequestCompound&gt;**](EzsignbulksenddocumentmappingMinusRequestCompound.md) |  | 
+**aObjEzsignbulksenddocumentmapping** | [**kotlin.collections.List&lt;EzsignbulksenddocumentmappingRequestCompound&gt;**](EzsignbulksenddocumentmappingRequestCompound.md) |  | 
 
 
 

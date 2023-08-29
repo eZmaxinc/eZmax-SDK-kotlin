@@ -1,5 +1,5 @@
 
-# UserMinusCreateObjectMinusV1MinusResponseMinusMPayload
+# UserCreateObjectV1ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,5 +1,5 @@
 
-# WebsiteMinusRequest
+# WebsiteRequest
 
 ## Properties
 Name | Type | Description | Notes

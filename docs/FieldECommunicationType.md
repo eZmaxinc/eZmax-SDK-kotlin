@@ -1,5 +1,5 @@
 
-# FieldMinusECommunicationType
+# FieldECommunicationType
 
 ## Enum
 

@@ -1,5 +1,5 @@
 
-# EzsigntemplateMinusRequest
+# EzsigntemplateRequest
 
 ## Properties
 Name | Type | Description | Notes

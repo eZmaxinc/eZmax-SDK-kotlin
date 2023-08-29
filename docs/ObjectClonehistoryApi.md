@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a id="clonehistoryGetListV1"></a>
 # **clonehistoryGetListV1**
-> ClonehistoryMinusGetListMinusV1MinusResponse clonehistoryGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+> ClonehistoryGetListV1Response clonehistoryGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
 Retrieve Clonehistory list
 
@@ -25,10 +25,10 @@ val apiInstance = ObjectClonehistoryApi()
 val eOrderBy : kotlin.String = eOrderBy_example // kotlin.String | Specify how you want the results to be sorted
 val iRowMax : kotlin.Int = 56 // kotlin.Int | 
 val iRowOffset : kotlin.Int = 56 // kotlin.Int | 
-val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
+val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
 val sFilter : kotlin.String = sFilter_example // kotlin.String | 
 try {
-    val result : ClonehistoryMinusGetListMinusV1MinusResponse = apiInstance.clonehistoryGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+    val result : ClonehistoryGetListV1Response = apiInstance.clonehistoryGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectClonehistoryApi#clonehistoryGetListV1")
@@ -46,12 +46,12 @@ Name | Type | Description  | Notes
  **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiClonehistoryID_ASC, pkiClonehistoryID_DESC, fkiUserIDCloning_ASC, fkiUserIDCloning_DESC, fkiUserIDCloned_ASC, fkiUserIDCloned_DESC, dtClonehistoryFirsthit_ASC, dtClonehistoryFirsthit_DESC, dtClonehistoryLasthit_ASC, dtClonehistoryLasthit_DESC, sUserLoginnameCloning_ASC, sUserLoginnameCloning_DESC, sUserFirstnameCloning_ASC, sUserFirstnameCloning_DESC, sUserLastnameCloning_ASC, sUserLastnameCloning_DESC, sUserLoginnameCloned_ASC, sUserLoginnameCloned_DESC, sUserFirstnameCloned_ASC, sUserFirstnameCloned_DESC, sUserLastnameCloned_ASC, sUserLastnameCloned_DESC]
  **iRowMax** | **kotlin.Int**|  | [optional] [default to 10000]
  **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0]
- **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
  **sFilter** | **kotlin.String**|  | [optional]
 
 ### Return type
 
-[**ClonehistoryMinusGetListMinusV1MinusResponse**](ClonehistoryMinusGetListMinusV1MinusResponse.md)
+[**ClonehistoryGetListV1Response**](ClonehistoryGetListV1Response.md)
 
 ### Authorization
 

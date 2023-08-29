@@ -1,11 +1,11 @@
 
-# EzsignsignatureMinusGetEzsignsignaturesAutomaticMinusV1MinusResponseMinusMPayload
+# EzsignsignatureGetEzsignsignaturesAutomaticV1ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aEEzsignsignatureType** | [**kotlin.collections.Set&lt;FieldMinusEEzsignsignatureType&gt;**](FieldMinusEEzsignsignatureType.md) | All eEzsignsignatureType contained in the response | 
-**aObjEzsignfolder** | [**kotlin.collections.List&lt;CustomMinusEzsignfolderEzsignsignaturesAutomaticMinusResponse&gt;**](CustomMinusEzsignfolderEzsignsignaturesAutomaticMinusResponse.md) |  | 
+**aEEzsignsignatureType** | [**kotlin.collections.Set&lt;FieldEEzsignsignatureType&gt;**](FieldEEzsignsignatureType.md) | All eEzsignsignatureType contained in the response | 
+**aObjEzsignfolder** | [**kotlin.collections.List&lt;CustomEzsignfolderEzsignsignaturesAutomaticResponse&gt;**](CustomEzsignfolderEzsignsignaturesAutomaticResponse.md) |  | 
 
 
 

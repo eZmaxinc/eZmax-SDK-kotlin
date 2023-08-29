@@ -1,5 +1,5 @@
 
-# CustomMinusEzmaxpricingMinusResponse
+# CustomEzmaxpricingResponse
 
 ## Properties
 Name | Type | Description | Notes

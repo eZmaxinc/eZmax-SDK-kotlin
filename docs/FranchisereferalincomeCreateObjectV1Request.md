@@ -1,11 +1,11 @@
 
-# FranchisereferalincomeMinusCreateObjectMinusV1MinusRequest
+# FranchisereferalincomeCreateObjectV1Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objFranchisereferalincome** | [**FranchisereferalincomeMinusRequest**](FranchisereferalincomeMinusRequest.md) |  |  [optional]
-**objFranchisereferalincomeCompound** | [**FranchisereferalincomeMinusRequestCompound**](FranchisereferalincomeMinusRequestCompound.md) |  |  [optional]
+**objFranchisereferalincome** | [**FranchisereferalincomeRequest**](FranchisereferalincomeRequest.md) |  |  [optional]
+**objFranchisereferalincomeCompound** | [**FranchisereferalincomeRequestCompound**](FranchisereferalincomeRequestCompound.md) |  |  [optional]
 
 
 

@@ -1,5 +1,5 @@
 
-# EzsigntemplateformfieldgroupsignerMinusRequestCompound
+# EzsigntemplateformfieldgroupsignerRequestCompound
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,5 +1,5 @@
 
-# BrandingMinusAutocompleteElementMinusResponse
+# BrandingAutocompleteElementResponse
 
 ## Properties
 Name | Type | Description | Notes

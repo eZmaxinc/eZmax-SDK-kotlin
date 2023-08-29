@@ -1,5 +1,5 @@
 
-# MultilingualMinusEzmaxinvoicingsummaryinternalDescription
+# MultilingualEzmaxinvoicingsummaryinternalDescription
 
 ## Properties
 Name | Type | Description | Notes

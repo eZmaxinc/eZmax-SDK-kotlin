@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a id="reportGetReportFromCacheV1"></a>
 # **reportGetReportFromCacheV1**
-> CommonMinusGetReportMinusV1MinusResponse reportGetReportFromCacheV1(sReportgroupCacheID)
+> CommonGetReportV1Response reportGetReportFromCacheV1(sReportgroupCacheID)
 
 Retrieve report from cache
 
@@ -24,7 +24,7 @@ Retrieve a report that was previously generated and cached
 val apiInstance = ModuleReportApi()
 val sReportgroupCacheID : kotlin.String = sReportgroupCacheID_example // kotlin.String | 
 try {
-    val result : CommonMinusGetReportMinusV1MinusResponse = apiInstance.reportGetReportFromCacheV1(sReportgroupCacheID)
+    val result : CommonGetReportV1Response = apiInstance.reportGetReportFromCacheV1(sReportgroupCacheID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ModuleReportApi#reportGetReportFromCacheV1")
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommonMinusGetReportMinusV1MinusResponse**](CommonMinusGetReportMinusV1MinusResponse.md)
+[**CommonGetReportV1Response**](CommonGetReportV1Response.md)
 
 ### Authorization
 

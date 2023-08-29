@@ -1,5 +1,5 @@
 
-# EzsignbulksendMinusRequest
+# EzsignbulksendRequest
 
 ## Properties
 Name | Type | Description | Notes

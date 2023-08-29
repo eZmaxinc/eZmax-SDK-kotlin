@@ -1,10 +1,10 @@
 
-# BillingentityinternalMinusEditObjectMinusV1MinusRequest
+# BillingentityinternalEditObjectV1Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objBillingentityinternal** | [**BillingentityinternalMinusRequestCompound**](BillingentityinternalMinusRequestCompound.md) |  | 
+**objBillingentityinternal** | [**BillingentityinternalRequestCompound**](BillingentityinternalRequestCompound.md) |  | 
 
 
 

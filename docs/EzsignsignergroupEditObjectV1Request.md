@@ -1,10 +1,10 @@
 
-# EzsignsignergroupMinusEditObjectMinusV1MinusRequest
+# EzsignsignergroupEditObjectV1Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objBranding** | [**EzsignsignergroupMinusRequestCompound**](EzsignsignergroupMinusRequestCompound.md) |  |  [optional]
+**objEzsignsignergroup** | [**EzsignsignergroupRequestCompound**](EzsignsignergroupRequestCompound.md) |  | 
 
 
 

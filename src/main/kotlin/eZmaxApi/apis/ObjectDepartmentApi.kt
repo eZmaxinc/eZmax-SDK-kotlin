@@ -19,8 +19,8 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.DepartmentMinusGetAutocompleteMinusV2MinusResponse
-import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
+import eZmaxApi.models.DepartmentGetAutocompleteV2Response
+import eZmaxApi.models.HeaderAcceptLanguage
 
 import com.squareup.moshi.Json
 
@@ -49,7 +49,7 @@ class ObjectDepartmentApi(basePath: kotlin.String = defaultBasePath, client: OkH
     /**
      * enum for parameter sSelector
      */
-     enum class SSelector_departmentGetAutocompleteV2(val value: kotlin.String) {
+     enum class SSelectorDepartmentGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "All") All("All"),
          @Json(name = "AllButDepartmentZero") AllButDepartmentZero("AllButDepartmentZero"),
          @Json(name = "Company") Company("Company"),
@@ -59,7 +59,7 @@ class ObjectDepartmentApi(basePath: kotlin.String = defaultBasePath, client: OkH
     /**
      * enum for parameter eFilterActive
      */
-     enum class EFilterActive_departmentGetAutocompleteV2(val value: kotlin.String) {
+     enum class EFilterActiveDepartmentGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "All") All("All"),
          @Json(name = "Active") Active("Active"),
          @Json(name = "Inactive") Inactive("Inactive")
@@ -72,7 +72,7 @@ class ObjectDepartmentApi(basePath: kotlin.String = defaultBasePath, client: OkH
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return DepartmentMinusGetAutocompleteMinusV2MinusResponse
+     * @return DepartmentGetAutocompleteV2Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -81,11 +81,11 @@ class ObjectDepartmentApi(basePath: kotlin.String = defaultBasePath, client: OkH
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun departmentGetAutocompleteV2(sSelector: SSelector_departmentGetAutocompleteV2, eFilterActive: EFilterActive_departmentGetAutocompleteV2? = EFilterActive_departmentGetAutocompleteV2.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null) : DepartmentMinusGetAutocompleteMinusV2MinusResponse {
+    fun departmentGetAutocompleteV2(sSelector: SSelectorDepartmentGetAutocompleteV2, eFilterActive: EFilterActiveDepartmentGetAutocompleteV2? = EFilterActiveDepartmentGetAutocompleteV2.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderAcceptLanguage? = null) : DepartmentGetAutocompleteV2Response {
         val localVarResponse = departmentGetAutocompleteV2WithHttpInfo(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as DepartmentMinusGetAutocompleteMinusV2MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as DepartmentGetAutocompleteV2Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -106,16 +106,16 @@ class ObjectDepartmentApi(basePath: kotlin.String = defaultBasePath, client: OkH
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return ApiResponse<DepartmentMinusGetAutocompleteMinusV2MinusResponse?>
+     * @return ApiResponse<DepartmentGetAutocompleteV2Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun departmentGetAutocompleteV2WithHttpInfo(sSelector: SSelector_departmentGetAutocompleteV2, eFilterActive: EFilterActive_departmentGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : ApiResponse<DepartmentMinusGetAutocompleteMinusV2MinusResponse?> {
+    fun departmentGetAutocompleteV2WithHttpInfo(sSelector: SSelectorDepartmentGetAutocompleteV2, eFilterActive: EFilterActiveDepartmentGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : ApiResponse<DepartmentGetAutocompleteV2Response?> {
         val localVariableConfig = departmentGetAutocompleteV2RequestConfig(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
-        return request<Unit, DepartmentMinusGetAutocompleteMinusV2MinusResponse>(
+        return request<Unit, DepartmentGetAutocompleteV2Response>(
             localVariableConfig
         )
     }
@@ -129,12 +129,12 @@ class ObjectDepartmentApi(basePath: kotlin.String = defaultBasePath, client: OkH
      * @param acceptLanguage  (optional)
      * @return RequestConfig
      */
-    fun departmentGetAutocompleteV2RequestConfig(sSelector: SSelector_departmentGetAutocompleteV2, eFilterActive: EFilterActive_departmentGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : RequestConfig<Unit> {
+    fun departmentGetAutocompleteV2RequestConfig(sSelector: SSelectorDepartmentGetAutocompleteV2, eFilterActive: EFilterActiveDepartmentGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
                 if (eFilterActive != null) {
-                    put("eFilterActive", listOf(eFilterActive.toString()))
+                    put("eFilterActive", listOf(eFilterActive.value))
                 }
                 if (sQuery != null) {
                     put("sQuery", listOf(sQuery.toString()))

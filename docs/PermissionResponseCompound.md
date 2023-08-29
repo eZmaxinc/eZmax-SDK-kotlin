@@ -1,5 +1,5 @@
 
-# PermissionMinusResponseCompound
+# PermissionResponseCompound
 
 ## Properties
 Name | Type | Description | Notes

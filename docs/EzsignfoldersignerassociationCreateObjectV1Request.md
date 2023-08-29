@@ -1,11 +1,11 @@
 
-# EzsignfoldersignerassociationMinusCreateObjectMinusV1MinusRequest
+# EzsignfoldersignerassociationCreateObjectV1Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objEzsignfoldersignerassociation** | [**EzsignfoldersignerassociationMinusRequest**](EzsignfoldersignerassociationMinusRequest.md) |  |  [optional]
-**objEzsignfoldersignerassociationCompound** | [**EzsignfoldersignerassociationMinusRequestCompound**](EzsignfoldersignerassociationMinusRequestCompound.md) |  |  [optional]
+**objEzsignfoldersignerassociation** | [**EzsignfoldersignerassociationRequest**](EzsignfoldersignerassociationRequest.md) |  |  [optional]
+**objEzsignfoldersignerassociationCompound** | [**EzsignfoldersignerassociationRequestCompound**](EzsignfoldersignerassociationRequestCompound.md) |  |  [optional]
 
 
 

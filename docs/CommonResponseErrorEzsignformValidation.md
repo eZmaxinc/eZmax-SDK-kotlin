@@ -1,12 +1,12 @@
 
-# CommonMinusResponseMinusErrorMinusEzsignformValidation
+# CommonResponseErrorEzsignformValidation
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjEzsignformfielderror** | [**kotlin.collections.List&lt;CustomMinusEzsignformfielderrorMinusResponse&gt;**](CustomMinusEzsignformfielderrorMinusResponse.md) |  | 
+**aObjEzsignformfielderror** | [**kotlin.collections.List&lt;CustomEzsignformfielderrorResponse&gt;**](CustomEzsignformfielderrorResponse.md) |  | 
 **sErrorMessage** | **kotlin.String** | The message giving details about the error | 
-**eErrorCode** | [**FieldMinusEErrorCode**](FieldMinusEErrorCode.md) |  | 
+**eErrorCode** | [**FieldEErrorCode**](FieldEErrorCode.md) |  | 
 
 
 

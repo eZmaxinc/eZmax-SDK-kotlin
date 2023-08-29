@@ -1,10 +1,10 @@
 
-# PaymenttermMinusCreateObjectMinusV1MinusRequest
+# PaymenttermCreateObjectV1Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjPaymentterm** | [**kotlin.collections.List&lt;PaymenttermMinusRequestCompound&gt;**](PaymenttermMinusRequestCompound.md) |  | 
+**aObjPaymentterm** | [**kotlin.collections.List&lt;PaymenttermRequestCompound&gt;**](PaymenttermRequestCompound.md) |  | 
 
 
 

@@ -1,5 +1,5 @@
 
-# ModulesectionMinusResponse
+# ModulesectionResponse
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,5 +1,5 @@
 
-# PermissionMinusResponse
+# PermissionResponse
 
 ## Properties
 Name | Type | Description | Notes

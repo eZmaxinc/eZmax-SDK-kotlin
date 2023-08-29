@@ -1,10 +1,10 @@
 
-# EzsigntemplatepackageMinusAutocompleteElementMinusResponse
+# EzsigntemplatepackageAutocompleteElementResponse
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**eEzsignfoldertypePrivacylevel** | [**FieldMinusEEzsignfoldertypePrivacylevel**](FieldMinusEEzsignfoldertypePrivacylevel.md) |  | 
+**eEzsignfoldertypePrivacylevel** | [**FieldEEzsignfoldertypePrivacylevel**](FieldEEzsignfoldertypePrivacylevel.md) |  | 
 **sEzsigntemplatepackageDescription** | **kotlin.String** | The description of the Ezsigntemplatepackage | 
 **pkiEzsigntemplatepackageID** | **kotlin.Int** | The unique ID of the Ezsigntemplatepackage | 
 **bEzsigntemplatepackageIsactive** | **kotlin.Boolean** | Whether the Ezsigntemplatepackage is active or not | 

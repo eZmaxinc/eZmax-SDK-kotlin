@@ -1,5 +1,5 @@
 
-# EzsigntemplatedocumentMinusGetWordsPositionsMinusV1MinusRequest
+# EzsigntemplatedocumentGetWordsPositionsV1Request
 
 ## Properties
 Name | Type | Description | Notes

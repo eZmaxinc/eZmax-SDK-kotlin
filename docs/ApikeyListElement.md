@@ -1,5 +1,5 @@
 
-# ApikeyMinusListElement
+# ApikeyListElement
 
 ## Properties
 Name | Type | Description | Notes

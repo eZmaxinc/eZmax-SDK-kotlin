@@ -1,5 +1,5 @@
 
-# EzsignfolderMinusSendMinusV3MinusRequest
+# EzsignfolderSendV3Request
 
 ## Properties
 Name | Type | Description | Notes

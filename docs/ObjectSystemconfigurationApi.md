@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a id="systemconfigurationEditObjectV1"></a>
 # **systemconfigurationEditObjectV1**
-> SystemconfigurationMinusEditObjectMinusV1MinusResponse systemconfigurationEditObjectV1(pkiSystemconfigurationID, systemconfigurationMinusEditObjectMinusV1MinusRequest)
+> SystemconfigurationEditObjectV1Response systemconfigurationEditObjectV1(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request)
 
 Edit an existing Systemconfiguration
 
@@ -24,9 +24,9 @@ Edit an existing Systemconfiguration
 
 val apiInstance = ObjectSystemconfigurationApi()
 val pkiSystemconfigurationID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Systemconfiguration
-val systemconfigurationMinusEditObjectMinusV1MinusRequest : SystemconfigurationMinusEditObjectMinusV1MinusRequest =  // SystemconfigurationMinusEditObjectMinusV1MinusRequest | 
+val systemconfigurationEditObjectV1Request : SystemconfigurationEditObjectV1Request =  // SystemconfigurationEditObjectV1Request | 
 try {
-    val result : SystemconfigurationMinusEditObjectMinusV1MinusResponse = apiInstance.systemconfigurationEditObjectV1(pkiSystemconfigurationID, systemconfigurationMinusEditObjectMinusV1MinusRequest)
+    val result : SystemconfigurationEditObjectV1Response = apiInstance.systemconfigurationEditObjectV1(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectSystemconfigurationApi#systemconfigurationEditObjectV1")
@@ -42,11 +42,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiSystemconfigurationID** | **kotlin.Int**| The unique ID of the Systemconfiguration |
- **systemconfigurationMinusEditObjectMinusV1MinusRequest** | [**SystemconfigurationMinusEditObjectMinusV1MinusRequest**](SystemconfigurationMinusEditObjectMinusV1MinusRequest.md)|  |
+ **systemconfigurationEditObjectV1Request** | [**SystemconfigurationEditObjectV1Request**](SystemconfigurationEditObjectV1Request.md)|  |
 
 ### Return type
 
-[**SystemconfigurationMinusEditObjectMinusV1MinusResponse**](SystemconfigurationMinusEditObjectMinusV1MinusResponse.md)
+[**SystemconfigurationEditObjectV1Response**](SystemconfigurationEditObjectV1Response.md)
 
 ### Authorization
 
@@ -62,7 +62,7 @@ Configure Authorization:
 
 <a id="systemconfigurationGetObjectV2"></a>
 # **systemconfigurationGetObjectV2**
-> SystemconfigurationMinusGetObjectMinusV2MinusResponse systemconfigurationGetObjectV2(pkiSystemconfigurationID)
+> SystemconfigurationGetObjectV2Response systemconfigurationGetObjectV2(pkiSystemconfigurationID)
 
 Retrieve an existing Systemconfiguration
 
@@ -77,7 +77,7 @@ Retrieve an existing Systemconfiguration
 val apiInstance = ObjectSystemconfigurationApi()
 val pkiSystemconfigurationID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Systemconfiguration
 try {
-    val result : SystemconfigurationMinusGetObjectMinusV2MinusResponse = apiInstance.systemconfigurationGetObjectV2(pkiSystemconfigurationID)
+    val result : SystemconfigurationGetObjectV2Response = apiInstance.systemconfigurationGetObjectV2(pkiSystemconfigurationID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectSystemconfigurationApi#systemconfigurationGetObjectV2")
@@ -96,7 +96,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SystemconfigurationMinusGetObjectMinusV2MinusResponse**](SystemconfigurationMinusGetObjectMinusV2MinusResponse.md)
+[**SystemconfigurationGetObjectV2Response**](SystemconfigurationGetObjectV2Response.md)
 
 ### Authorization
 

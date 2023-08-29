@@ -1,10 +1,10 @@
 
-# UserMinusCreateObjectMinusV1MinusRequest
+# UserCreateObjectV1Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjUser** | [**kotlin.collections.List&lt;UserMinusRequestCompound&gt;**](UserMinusRequestCompound.md) |  | 
+**aObjUser** | [**kotlin.collections.List&lt;UserRequestCompound&gt;**](UserRequestCompound.md) |  | 
 
 
 

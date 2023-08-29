@@ -1,10 +1,10 @@
 
-# EzsignbulksendMinusGetObjectMinusV2MinusResponseMinusMPayload
+# EzsignbulksendGetObjectV2ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objEzsignbulksend** | [**EzsignbulksendMinusResponseCompound**](EzsignbulksendMinusResponseCompound.md) |  | 
+**objEzsignbulksend** | [**EzsignbulksendResponseCompound**](EzsignbulksendResponseCompound.md) |  | 
 
 
 

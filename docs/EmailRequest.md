@@ -1,5 +1,5 @@
 
-# EmailMinusRequest
+# EmailRequest
 
 ## Properties
 Name | Type | Description | Notes

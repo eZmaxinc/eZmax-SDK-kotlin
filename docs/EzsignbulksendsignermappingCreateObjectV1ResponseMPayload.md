@@ -1,5 +1,5 @@
 
-# EzsignbulksendsignermappingMinusCreateObjectMinusV1MinusResponseMinusMPayload
+# EzsignbulksendsignermappingCreateObjectV1ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes

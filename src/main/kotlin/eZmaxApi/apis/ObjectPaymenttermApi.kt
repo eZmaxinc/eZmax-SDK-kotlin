@@ -19,15 +19,15 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonMinusResponseMinusError
-import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
-import eZmaxApi.models.PaymenttermMinusCreateObjectMinusV1MinusRequest
-import eZmaxApi.models.PaymenttermMinusCreateObjectMinusV1MinusResponse
-import eZmaxApi.models.PaymenttermMinusEditObjectMinusV1MinusRequest
-import eZmaxApi.models.PaymenttermMinusEditObjectMinusV1MinusResponse
-import eZmaxApi.models.PaymenttermMinusGetAutocompleteMinusV2MinusResponse
-import eZmaxApi.models.PaymenttermMinusGetListMinusV1MinusResponse
-import eZmaxApi.models.PaymenttermMinusGetObjectMinusV2MinusResponse
+import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.HeaderAcceptLanguage
+import eZmaxApi.models.PaymenttermCreateObjectV1Request
+import eZmaxApi.models.PaymenttermCreateObjectV1Response
+import eZmaxApi.models.PaymenttermEditObjectV1Request
+import eZmaxApi.models.PaymenttermEditObjectV1Response
+import eZmaxApi.models.PaymenttermGetAutocompleteV2Response
+import eZmaxApi.models.PaymenttermGetListV1Response
+import eZmaxApi.models.PaymenttermGetObjectV2Response
 
 import com.squareup.moshi.Json
 
@@ -56,8 +56,8 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ok
     /**
      * Create a new Paymentterm
      * The endpoint allows to create one or many elements at once.
-     * @param paymenttermMinusCreateObjectMinusV1MinusRequest 
-     * @return PaymenttermMinusCreateObjectMinusV1MinusResponse
+     * @param paymenttermCreateObjectV1Request 
+     * @return PaymenttermCreateObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -66,11 +66,11 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ok
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun paymenttermCreateObjectV1(paymenttermMinusCreateObjectMinusV1MinusRequest: PaymenttermMinusCreateObjectMinusV1MinusRequest) : PaymenttermMinusCreateObjectMinusV1MinusResponse {
-        val localVarResponse = paymenttermCreateObjectV1WithHttpInfo(paymenttermMinusCreateObjectMinusV1MinusRequest = paymenttermMinusCreateObjectMinusV1MinusRequest)
+    fun paymenttermCreateObjectV1(paymenttermCreateObjectV1Request: PaymenttermCreateObjectV1Request) : PaymenttermCreateObjectV1Response {
+        val localVarResponse = paymenttermCreateObjectV1WithHttpInfo(paymenttermCreateObjectV1Request = paymenttermCreateObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as PaymenttermMinusCreateObjectMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as PaymenttermCreateObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -87,17 +87,17 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ok
     /**
      * Create a new Paymentterm
      * The endpoint allows to create one or many elements at once.
-     * @param paymenttermMinusCreateObjectMinusV1MinusRequest 
-     * @return ApiResponse<PaymenttermMinusCreateObjectMinusV1MinusResponse?>
+     * @param paymenttermCreateObjectV1Request 
+     * @return ApiResponse<PaymenttermCreateObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun paymenttermCreateObjectV1WithHttpInfo(paymenttermMinusCreateObjectMinusV1MinusRequest: PaymenttermMinusCreateObjectMinusV1MinusRequest) : ApiResponse<PaymenttermMinusCreateObjectMinusV1MinusResponse?> {
-        val localVariableConfig = paymenttermCreateObjectV1RequestConfig(paymenttermMinusCreateObjectMinusV1MinusRequest = paymenttermMinusCreateObjectMinusV1MinusRequest)
+    fun paymenttermCreateObjectV1WithHttpInfo(paymenttermCreateObjectV1Request: PaymenttermCreateObjectV1Request) : ApiResponse<PaymenttermCreateObjectV1Response?> {
+        val localVariableConfig = paymenttermCreateObjectV1RequestConfig(paymenttermCreateObjectV1Request = paymenttermCreateObjectV1Request)
 
-        return request<PaymenttermMinusCreateObjectMinusV1MinusRequest, PaymenttermMinusCreateObjectMinusV1MinusResponse>(
+        return request<PaymenttermCreateObjectV1Request, PaymenttermCreateObjectV1Response>(
             localVariableConfig
         )
     }
@@ -105,11 +105,11 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ok
     /**
      * To obtain the request config of the operation paymenttermCreateObjectV1
      *
-     * @param paymenttermMinusCreateObjectMinusV1MinusRequest 
+     * @param paymenttermCreateObjectV1Request 
      * @return RequestConfig
      */
-    fun paymenttermCreateObjectV1RequestConfig(paymenttermMinusCreateObjectMinusV1MinusRequest: PaymenttermMinusCreateObjectMinusV1MinusRequest) : RequestConfig<PaymenttermMinusCreateObjectMinusV1MinusRequest> {
-        val localVariableBody = paymenttermMinusCreateObjectMinusV1MinusRequest
+    fun paymenttermCreateObjectV1RequestConfig(paymenttermCreateObjectV1Request: PaymenttermCreateObjectV1Request) : RequestConfig<PaymenttermCreateObjectV1Request> {
+        val localVariableBody = paymenttermCreateObjectV1Request
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Content-Type"] = "application/json"
@@ -129,8 +129,8 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ok
      * Edit an existing Paymentterm
      * 
      * @param pkiPaymenttermID 
-     * @param paymenttermMinusEditObjectMinusV1MinusRequest 
-     * @return PaymenttermMinusEditObjectMinusV1MinusResponse
+     * @param paymenttermEditObjectV1Request 
+     * @return PaymenttermEditObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -139,11 +139,11 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ok
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun paymenttermEditObjectV1(pkiPaymenttermID: kotlin.Int, paymenttermMinusEditObjectMinusV1MinusRequest: PaymenttermMinusEditObjectMinusV1MinusRequest) : PaymenttermMinusEditObjectMinusV1MinusResponse {
-        val localVarResponse = paymenttermEditObjectV1WithHttpInfo(pkiPaymenttermID = pkiPaymenttermID, paymenttermMinusEditObjectMinusV1MinusRequest = paymenttermMinusEditObjectMinusV1MinusRequest)
+    fun paymenttermEditObjectV1(pkiPaymenttermID: kotlin.Int, paymenttermEditObjectV1Request: PaymenttermEditObjectV1Request) : PaymenttermEditObjectV1Response {
+        val localVarResponse = paymenttermEditObjectV1WithHttpInfo(pkiPaymenttermID = pkiPaymenttermID, paymenttermEditObjectV1Request = paymenttermEditObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as PaymenttermMinusEditObjectMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as PaymenttermEditObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -161,17 +161,17 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ok
      * Edit an existing Paymentterm
      * 
      * @param pkiPaymenttermID 
-     * @param paymenttermMinusEditObjectMinusV1MinusRequest 
-     * @return ApiResponse<PaymenttermMinusEditObjectMinusV1MinusResponse?>
+     * @param paymenttermEditObjectV1Request 
+     * @return ApiResponse<PaymenttermEditObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun paymenttermEditObjectV1WithHttpInfo(pkiPaymenttermID: kotlin.Int, paymenttermMinusEditObjectMinusV1MinusRequest: PaymenttermMinusEditObjectMinusV1MinusRequest) : ApiResponse<PaymenttermMinusEditObjectMinusV1MinusResponse?> {
-        val localVariableConfig = paymenttermEditObjectV1RequestConfig(pkiPaymenttermID = pkiPaymenttermID, paymenttermMinusEditObjectMinusV1MinusRequest = paymenttermMinusEditObjectMinusV1MinusRequest)
+    fun paymenttermEditObjectV1WithHttpInfo(pkiPaymenttermID: kotlin.Int, paymenttermEditObjectV1Request: PaymenttermEditObjectV1Request) : ApiResponse<PaymenttermEditObjectV1Response?> {
+        val localVariableConfig = paymenttermEditObjectV1RequestConfig(pkiPaymenttermID = pkiPaymenttermID, paymenttermEditObjectV1Request = paymenttermEditObjectV1Request)
 
-        return request<PaymenttermMinusEditObjectMinusV1MinusRequest, PaymenttermMinusEditObjectMinusV1MinusResponse>(
+        return request<PaymenttermEditObjectV1Request, PaymenttermEditObjectV1Response>(
             localVariableConfig
         )
     }
@@ -180,11 +180,11 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ok
      * To obtain the request config of the operation paymenttermEditObjectV1
      *
      * @param pkiPaymenttermID 
-     * @param paymenttermMinusEditObjectMinusV1MinusRequest 
+     * @param paymenttermEditObjectV1Request 
      * @return RequestConfig
      */
-    fun paymenttermEditObjectV1RequestConfig(pkiPaymenttermID: kotlin.Int, paymenttermMinusEditObjectMinusV1MinusRequest: PaymenttermMinusEditObjectMinusV1MinusRequest) : RequestConfig<PaymenttermMinusEditObjectMinusV1MinusRequest> {
-        val localVariableBody = paymenttermMinusEditObjectMinusV1MinusRequest
+    fun paymenttermEditObjectV1RequestConfig(pkiPaymenttermID: kotlin.Int, paymenttermEditObjectV1Request: PaymenttermEditObjectV1Request) : RequestConfig<PaymenttermEditObjectV1Request> {
+        val localVariableBody = paymenttermEditObjectV1Request
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Content-Type"] = "application/json"
@@ -203,14 +203,14 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ok
     /**
      * enum for parameter sSelector
      */
-     enum class SSelector_paymenttermGetAutocompleteV2(val value: kotlin.String) {
+     enum class SSelectorPaymenttermGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "All") All("All")
      }
 
     /**
      * enum for parameter eFilterActive
      */
-     enum class EFilterActive_paymenttermGetAutocompleteV2(val value: kotlin.String) {
+     enum class EFilterActivePaymenttermGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "All") All("All"),
          @Json(name = "Active") Active("Active"),
          @Json(name = "Inactive") Inactive("Inactive")
@@ -223,7 +223,7 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ok
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return PaymenttermMinusGetAutocompleteMinusV2MinusResponse
+     * @return PaymenttermGetAutocompleteV2Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -232,11 +232,11 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ok
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun paymenttermGetAutocompleteV2(sSelector: SSelector_paymenttermGetAutocompleteV2, eFilterActive: EFilterActive_paymenttermGetAutocompleteV2? = EFilterActive_paymenttermGetAutocompleteV2.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null) : PaymenttermMinusGetAutocompleteMinusV2MinusResponse {
+    fun paymenttermGetAutocompleteV2(sSelector: SSelectorPaymenttermGetAutocompleteV2, eFilterActive: EFilterActivePaymenttermGetAutocompleteV2? = EFilterActivePaymenttermGetAutocompleteV2.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderAcceptLanguage? = null) : PaymenttermGetAutocompleteV2Response {
         val localVarResponse = paymenttermGetAutocompleteV2WithHttpInfo(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as PaymenttermMinusGetAutocompleteMinusV2MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as PaymenttermGetAutocompleteV2Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -257,16 +257,16 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ok
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return ApiResponse<PaymenttermMinusGetAutocompleteMinusV2MinusResponse?>
+     * @return ApiResponse<PaymenttermGetAutocompleteV2Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun paymenttermGetAutocompleteV2WithHttpInfo(sSelector: SSelector_paymenttermGetAutocompleteV2, eFilterActive: EFilterActive_paymenttermGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : ApiResponse<PaymenttermMinusGetAutocompleteMinusV2MinusResponse?> {
+    fun paymenttermGetAutocompleteV2WithHttpInfo(sSelector: SSelectorPaymenttermGetAutocompleteV2, eFilterActive: EFilterActivePaymenttermGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : ApiResponse<PaymenttermGetAutocompleteV2Response?> {
         val localVariableConfig = paymenttermGetAutocompleteV2RequestConfig(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
-        return request<Unit, PaymenttermMinusGetAutocompleteMinusV2MinusResponse>(
+        return request<Unit, PaymenttermGetAutocompleteV2Response>(
             localVariableConfig
         )
     }
@@ -280,12 +280,12 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ok
      * @param acceptLanguage  (optional)
      * @return RequestConfig
      */
-    fun paymenttermGetAutocompleteV2RequestConfig(sSelector: SSelector_paymenttermGetAutocompleteV2, eFilterActive: EFilterActive_paymenttermGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : RequestConfig<Unit> {
+    fun paymenttermGetAutocompleteV2RequestConfig(sSelector: SSelectorPaymenttermGetAutocompleteV2, eFilterActive: EFilterActivePaymenttermGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
                 if (eFilterActive != null) {
-                    put("eFilterActive", listOf(eFilterActive.toString()))
+                    put("eFilterActive", listOf(eFilterActive.value))
                 }
                 if (sQuery != null) {
                     put("sQuery", listOf(sQuery.toString()))
@@ -308,7 +308,7 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ok
     /**
      * enum for parameter eOrderBy
      */
-     enum class EOrderBy_paymenttermGetListV1(val value: kotlin.String) {
+     enum class EOrderByPaymenttermGetListV1(val value: kotlin.String) {
          @Json(name = "pkiPaymenttermID_ASC") pkiPaymenttermID_ASC("pkiPaymenttermID_ASC"),
          @Json(name = "pkiPaymenttermID_DESC") pkiPaymenttermID_DESC("pkiPaymenttermID_DESC"),
          @Json(name = "sPaymenttermCode_ASC") sPaymenttermCode_ASC("sPaymenttermCode_ASC"),
@@ -331,7 +331,7 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ok
      * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
-     * @return PaymenttermMinusGetListMinusV1MinusResponse
+     * @return PaymenttermGetListV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -340,11 +340,11 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ok
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun paymenttermGetListV1(eOrderBy: EOrderBy_paymenttermGetListV1? = null, iRowMax: kotlin.Int? = 10000, iRowOffset: kotlin.Int? = 0, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null, sFilter: kotlin.String? = null) : PaymenttermMinusGetListMinusV1MinusResponse {
+    fun paymenttermGetListV1(eOrderBy: EOrderByPaymenttermGetListV1? = null, iRowMax: kotlin.Int? = 10000, iRowOffset: kotlin.Int? = 0, acceptLanguage: HeaderAcceptLanguage? = null, sFilter: kotlin.String? = null) : PaymenttermGetListV1Response {
         val localVarResponse = paymenttermGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as PaymenttermMinusGetListMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as PaymenttermGetListV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -366,16 +366,16 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ok
      * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
-     * @return ApiResponse<PaymenttermMinusGetListMinusV1MinusResponse?>
+     * @return ApiResponse<PaymenttermGetListV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun paymenttermGetListV1WithHttpInfo(eOrderBy: EOrderBy_paymenttermGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : ApiResponse<PaymenttermMinusGetListMinusV1MinusResponse?> {
+    fun paymenttermGetListV1WithHttpInfo(eOrderBy: EOrderByPaymenttermGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : ApiResponse<PaymenttermGetListV1Response?> {
         val localVariableConfig = paymenttermGetListV1RequestConfig(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
 
-        return request<Unit, PaymenttermMinusGetListMinusV1MinusResponse>(
+        return request<Unit, PaymenttermGetListV1Response>(
             localVariableConfig
         )
     }
@@ -390,12 +390,12 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ok
      * @param sFilter  (optional)
      * @return RequestConfig
      */
-    fun paymenttermGetListV1RequestConfig(eOrderBy: EOrderBy_paymenttermGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
+    fun paymenttermGetListV1RequestConfig(eOrderBy: EOrderByPaymenttermGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
                 if (eOrderBy != null) {
-                    put("eOrderBy", listOf(eOrderBy.toString()))
+                    put("eOrderBy", listOf(eOrderBy.value))
                 }
                 if (iRowMax != null) {
                     put("iRowMax", listOf(iRowMax.toString()))
@@ -425,7 +425,7 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ok
      * Retrieve an existing Paymentterm
      * 
      * @param pkiPaymenttermID 
-     * @return PaymenttermMinusGetObjectMinusV2MinusResponse
+     * @return PaymenttermGetObjectV2Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -434,11 +434,11 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ok
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun paymenttermGetObjectV2(pkiPaymenttermID: kotlin.Int) : PaymenttermMinusGetObjectMinusV2MinusResponse {
+    fun paymenttermGetObjectV2(pkiPaymenttermID: kotlin.Int) : PaymenttermGetObjectV2Response {
         val localVarResponse = paymenttermGetObjectV2WithHttpInfo(pkiPaymenttermID = pkiPaymenttermID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as PaymenttermMinusGetObjectMinusV2MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as PaymenttermGetObjectV2Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -456,16 +456,16 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ok
      * Retrieve an existing Paymentterm
      * 
      * @param pkiPaymenttermID 
-     * @return ApiResponse<PaymenttermMinusGetObjectMinusV2MinusResponse?>
+     * @return ApiResponse<PaymenttermGetObjectV2Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun paymenttermGetObjectV2WithHttpInfo(pkiPaymenttermID: kotlin.Int) : ApiResponse<PaymenttermMinusGetObjectMinusV2MinusResponse?> {
+    fun paymenttermGetObjectV2WithHttpInfo(pkiPaymenttermID: kotlin.Int) : ApiResponse<PaymenttermGetObjectV2Response?> {
         val localVariableConfig = paymenttermGetObjectV2RequestConfig(pkiPaymenttermID = pkiPaymenttermID)
 
-        return request<Unit, PaymenttermMinusGetObjectMinusV2MinusResponse>(
+        return request<Unit, PaymenttermGetObjectV2Response>(
             localVariableConfig
         )
     }

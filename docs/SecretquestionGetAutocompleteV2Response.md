@@ -1,12 +1,12 @@
 
-# SecretquestionMinusGetAutocompleteMinusV2MinusResponse
+# SecretquestionGetAutocompleteV2Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**SecretquestionMinusGetAutocompleteMinusV2MinusResponseMinusMPayload**](SecretquestionMinusGetAutocompleteMinusV2MinusResponseMinusMPayload.md) |  | 
-**objDebugPayload** | [**CommonMinusResponseMinusObjDebugPayload**](CommonMinusResponseMinusObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonMinusResponseMinusObjDebug**](CommonMinusResponseMinusObjDebug.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
+**mPayload** | [**SecretquestionGetAutocompleteV2ResponseMPayload**](SecretquestionGetAutocompleteV2ResponseMPayload.md) |  | 
+**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 
 
 

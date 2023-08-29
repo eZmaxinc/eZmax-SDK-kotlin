@@ -1,12 +1,12 @@
 
-# ActivesessionMinusResponse
+# ActivesessionResponse
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**eActivesessionUsertype** | [**FieldMinusEActivesessionUsertype**](FieldMinusEActivesessionUsertype.md) |  | 
-**eActivesessionOrigin** | [**FieldMinusEActivesessionOrigin**](FieldMinusEActivesessionOrigin.md) |  | 
-**eActivesessionWeekdaystart** | [**FieldMinusEActivesessionWeekdaystart**](FieldMinusEActivesessionWeekdaystart.md) |  | 
+**eActivesessionUsertype** | [**FieldEActivesessionUsertype**](FieldEActivesessionUsertype.md) |  | 
+**eActivesessionOrigin** | [**FieldEActivesessionOrigin**](FieldEActivesessionOrigin.md) |  | 
+**eActivesessionWeekdaystart** | [**FieldEActivesessionWeekdaystart**](FieldEActivesessionWeekdaystart.md) |  | 
 **fkiLanguageID** | **kotlin.Int** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| | 
 **sCompanyNameX** | **kotlin.String** | The Name of the Company in the language of the requester | 
 **sDepartmentNameX** | **kotlin.String** | The Name of the Department in the language of the requester | 

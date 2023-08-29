@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a id="signatureCreateObjectV1"></a>
 # **signatureCreateObjectV1**
-> SignatureMinusCreateObjectMinusV1MinusResponse signatureCreateObjectV1(signatureMinusCreateObjectMinusV1MinusRequest)
+> SignatureCreateObjectV1Response signatureCreateObjectV1(signatureCreateObjectV1Request)
 
 Create a new Signature
 
@@ -25,9 +25,9 @@ The endpoint allows to create one or many elements at once.
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectSignatureApi()
-val signatureMinusCreateObjectMinusV1MinusRequest : SignatureMinusCreateObjectMinusV1MinusRequest =  // SignatureMinusCreateObjectMinusV1MinusRequest | 
+val signatureCreateObjectV1Request : SignatureCreateObjectV1Request =  // SignatureCreateObjectV1Request | 
 try {
-    val result : SignatureMinusCreateObjectMinusV1MinusResponse = apiInstance.signatureCreateObjectV1(signatureMinusCreateObjectMinusV1MinusRequest)
+    val result : SignatureCreateObjectV1Response = apiInstance.signatureCreateObjectV1(signatureCreateObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectSignatureApi#signatureCreateObjectV1")
@@ -42,11 +42,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **signatureMinusCreateObjectMinusV1MinusRequest** | [**SignatureMinusCreateObjectMinusV1MinusRequest**](SignatureMinusCreateObjectMinusV1MinusRequest.md)|  |
+ **signatureCreateObjectV1Request** | [**SignatureCreateObjectV1Request**](SignatureCreateObjectV1Request.md)|  |
 
 ### Return type
 
-[**SignatureMinusCreateObjectMinusV1MinusResponse**](SignatureMinusCreateObjectMinusV1MinusResponse.md)
+[**SignatureCreateObjectV1Response**](SignatureCreateObjectV1Response.md)
 
 ### Authorization
 
@@ -62,7 +62,7 @@ Configure Authorization:
 
 <a id="signatureDeleteObjectV1"></a>
 # **signatureDeleteObjectV1**
-> SignatureMinusDeleteObjectMinusV1MinusResponse signatureDeleteObjectV1(pkiSignatureID)
+> SignatureDeleteObjectV1Response signatureDeleteObjectV1(pkiSignatureID)
 
 Delete an existing Signature
 
@@ -77,7 +77,7 @@ Delete an existing Signature
 val apiInstance = ObjectSignatureApi()
 val pkiSignatureID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Signature
 try {
-    val result : SignatureMinusDeleteObjectMinusV1MinusResponse = apiInstance.signatureDeleteObjectV1(pkiSignatureID)
+    val result : SignatureDeleteObjectV1Response = apiInstance.signatureDeleteObjectV1(pkiSignatureID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectSignatureApi#signatureDeleteObjectV1")
@@ -96,7 +96,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SignatureMinusDeleteObjectMinusV1MinusResponse**](SignatureMinusDeleteObjectMinusV1MinusResponse.md)
+[**SignatureDeleteObjectV1Response**](SignatureDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -112,7 +112,7 @@ Configure Authorization:
 
 <a id="signatureEditObjectV1"></a>
 # **signatureEditObjectV1**
-> SignatureMinusEditObjectMinusV1MinusResponse signatureEditObjectV1(pkiSignatureID, signatureMinusEditObjectMinusV1MinusRequest)
+> SignatureEditObjectV1Response signatureEditObjectV1(pkiSignatureID, signatureEditObjectV1Request)
 
 Edit an existing Signature
 
@@ -126,9 +126,9 @@ Edit an existing Signature
 
 val apiInstance = ObjectSignatureApi()
 val pkiSignatureID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Signature
-val signatureMinusEditObjectMinusV1MinusRequest : SignatureMinusEditObjectMinusV1MinusRequest =  // SignatureMinusEditObjectMinusV1MinusRequest | 
+val signatureEditObjectV1Request : SignatureEditObjectV1Request =  // SignatureEditObjectV1Request | 
 try {
-    val result : SignatureMinusEditObjectMinusV1MinusResponse = apiInstance.signatureEditObjectV1(pkiSignatureID, signatureMinusEditObjectMinusV1MinusRequest)
+    val result : SignatureEditObjectV1Response = apiInstance.signatureEditObjectV1(pkiSignatureID, signatureEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectSignatureApi#signatureEditObjectV1")
@@ -144,11 +144,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiSignatureID** | **kotlin.Int**| The unique ID of the Signature |
- **signatureMinusEditObjectMinusV1MinusRequest** | [**SignatureMinusEditObjectMinusV1MinusRequest**](SignatureMinusEditObjectMinusV1MinusRequest.md)|  |
+ **signatureEditObjectV1Request** | [**SignatureEditObjectV1Request**](SignatureEditObjectV1Request.md)|  |
 
 ### Return type
 
-[**SignatureMinusEditObjectMinusV1MinusResponse**](SignatureMinusEditObjectMinusV1MinusResponse.md)
+[**SignatureEditObjectV1Response**](SignatureEditObjectV1Response.md)
 
 ### Authorization
 
@@ -164,7 +164,7 @@ Configure Authorization:
 
 <a id="signatureGetObjectV2"></a>
 # **signatureGetObjectV2**
-> SignatureMinusGetObjectMinusV2MinusResponse signatureGetObjectV2(pkiSignatureID)
+> SignatureGetObjectV2Response signatureGetObjectV2(pkiSignatureID)
 
 Retrieve an existing Signature
 
@@ -179,7 +179,7 @@ Retrieve an existing Signature
 val apiInstance = ObjectSignatureApi()
 val pkiSignatureID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Signature
 try {
-    val result : SignatureMinusGetObjectMinusV2MinusResponse = apiInstance.signatureGetObjectV2(pkiSignatureID)
+    val result : SignatureGetObjectV2Response = apiInstance.signatureGetObjectV2(pkiSignatureID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectSignatureApi#signatureGetObjectV2")
@@ -198,7 +198,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SignatureMinusGetObjectMinusV2MinusResponse**](SignatureMinusGetObjectMinusV2MinusResponse.md)
+[**SignatureGetObjectV2Response**](SignatureGetObjectV2Response.md)
 
 ### Authorization
 

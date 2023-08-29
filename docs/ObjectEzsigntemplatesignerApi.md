@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a id="ezsigntemplatesignerCreateObjectV1"></a>
 # **ezsigntemplatesignerCreateObjectV1**
-> EzsigntemplatesignerMinusCreateObjectMinusV1MinusResponse ezsigntemplatesignerCreateObjectV1(ezsigntemplatesignerMinusCreateObjectMinusV1MinusRequest)
+> EzsigntemplatesignerCreateObjectV1Response ezsigntemplatesignerCreateObjectV1(ezsigntemplatesignerCreateObjectV1Request)
 
 Create a new Ezsigntemplatesigner
 
@@ -25,9 +25,9 @@ The endpoint allows to create one or many elements at once.
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsigntemplatesignerApi()
-val ezsigntemplatesignerMinusCreateObjectMinusV1MinusRequest : EzsigntemplatesignerMinusCreateObjectMinusV1MinusRequest =  // EzsigntemplatesignerMinusCreateObjectMinusV1MinusRequest | 
+val ezsigntemplatesignerCreateObjectV1Request : EzsigntemplatesignerCreateObjectV1Request =  // EzsigntemplatesignerCreateObjectV1Request | 
 try {
-    val result : EzsigntemplatesignerMinusCreateObjectMinusV1MinusResponse = apiInstance.ezsigntemplatesignerCreateObjectV1(ezsigntemplatesignerMinusCreateObjectMinusV1MinusRequest)
+    val result : EzsigntemplatesignerCreateObjectV1Response = apiInstance.ezsigntemplatesignerCreateObjectV1(ezsigntemplatesignerCreateObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplatesignerApi#ezsigntemplatesignerCreateObjectV1")
@@ -42,11 +42,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ezsigntemplatesignerMinusCreateObjectMinusV1MinusRequest** | [**EzsigntemplatesignerMinusCreateObjectMinusV1MinusRequest**](EzsigntemplatesignerMinusCreateObjectMinusV1MinusRequest.md)|  |
+ **ezsigntemplatesignerCreateObjectV1Request** | [**EzsigntemplatesignerCreateObjectV1Request**](EzsigntemplatesignerCreateObjectV1Request.md)|  |
 
 ### Return type
 
-[**EzsigntemplatesignerMinusCreateObjectMinusV1MinusResponse**](EzsigntemplatesignerMinusCreateObjectMinusV1MinusResponse.md)
+[**EzsigntemplatesignerCreateObjectV1Response**](EzsigntemplatesignerCreateObjectV1Response.md)
 
 ### Authorization
 
@@ -62,7 +62,7 @@ Configure Authorization:
 
 <a id="ezsigntemplatesignerDeleteObjectV1"></a>
 # **ezsigntemplatesignerDeleteObjectV1**
-> EzsigntemplatesignerMinusDeleteObjectMinusV1MinusResponse ezsigntemplatesignerDeleteObjectV1(pkiEzsigntemplatesignerID)
+> EzsigntemplatesignerDeleteObjectV1Response ezsigntemplatesignerDeleteObjectV1(pkiEzsigntemplatesignerID)
 
 Delete an existing Ezsigntemplatesigner
 
@@ -77,7 +77,7 @@ Delete an existing Ezsigntemplatesigner
 val apiInstance = ObjectEzsigntemplatesignerApi()
 val pkiEzsigntemplatesignerID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : EzsigntemplatesignerMinusDeleteObjectMinusV1MinusResponse = apiInstance.ezsigntemplatesignerDeleteObjectV1(pkiEzsigntemplatesignerID)
+    val result : EzsigntemplatesignerDeleteObjectV1Response = apiInstance.ezsigntemplatesignerDeleteObjectV1(pkiEzsigntemplatesignerID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplatesignerApi#ezsigntemplatesignerDeleteObjectV1")
@@ -96,7 +96,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsigntemplatesignerMinusDeleteObjectMinusV1MinusResponse**](EzsigntemplatesignerMinusDeleteObjectMinusV1MinusResponse.md)
+[**EzsigntemplatesignerDeleteObjectV1Response**](EzsigntemplatesignerDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -112,7 +112,7 @@ Configure Authorization:
 
 <a id="ezsigntemplatesignerEditObjectV1"></a>
 # **ezsigntemplatesignerEditObjectV1**
-> EzsigntemplatesignerMinusEditObjectMinusV1MinusResponse ezsigntemplatesignerEditObjectV1(pkiEzsigntemplatesignerID, ezsigntemplatesignerMinusEditObjectMinusV1MinusRequest)
+> EzsigntemplatesignerEditObjectV1Response ezsigntemplatesignerEditObjectV1(pkiEzsigntemplatesignerID, ezsigntemplatesignerEditObjectV1Request)
 
 Edit an existing Ezsigntemplatesigner
 
@@ -126,9 +126,9 @@ Edit an existing Ezsigntemplatesigner
 
 val apiInstance = ObjectEzsigntemplatesignerApi()
 val pkiEzsigntemplatesignerID : kotlin.Int = 56 // kotlin.Int | 
-val ezsigntemplatesignerMinusEditObjectMinusV1MinusRequest : EzsigntemplatesignerMinusEditObjectMinusV1MinusRequest =  // EzsigntemplatesignerMinusEditObjectMinusV1MinusRequest | 
+val ezsigntemplatesignerEditObjectV1Request : EzsigntemplatesignerEditObjectV1Request =  // EzsigntemplatesignerEditObjectV1Request | 
 try {
-    val result : EzsigntemplatesignerMinusEditObjectMinusV1MinusResponse = apiInstance.ezsigntemplatesignerEditObjectV1(pkiEzsigntemplatesignerID, ezsigntemplatesignerMinusEditObjectMinusV1MinusRequest)
+    val result : EzsigntemplatesignerEditObjectV1Response = apiInstance.ezsigntemplatesignerEditObjectV1(pkiEzsigntemplatesignerID, ezsigntemplatesignerEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplatesignerApi#ezsigntemplatesignerEditObjectV1")
@@ -144,11 +144,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiEzsigntemplatesignerID** | **kotlin.Int**|  |
- **ezsigntemplatesignerMinusEditObjectMinusV1MinusRequest** | [**EzsigntemplatesignerMinusEditObjectMinusV1MinusRequest**](EzsigntemplatesignerMinusEditObjectMinusV1MinusRequest.md)|  |
+ **ezsigntemplatesignerEditObjectV1Request** | [**EzsigntemplatesignerEditObjectV1Request**](EzsigntemplatesignerEditObjectV1Request.md)|  |
 
 ### Return type
 
-[**EzsigntemplatesignerMinusEditObjectMinusV1MinusResponse**](EzsigntemplatesignerMinusEditObjectMinusV1MinusResponse.md)
+[**EzsigntemplatesignerEditObjectV1Response**](EzsigntemplatesignerEditObjectV1Response.md)
 
 ### Authorization
 
@@ -164,7 +164,7 @@ Configure Authorization:
 
 <a id="ezsigntemplatesignerGetObjectV2"></a>
 # **ezsigntemplatesignerGetObjectV2**
-> EzsigntemplatesignerMinusGetObjectMinusV2MinusResponse ezsigntemplatesignerGetObjectV2(pkiEzsigntemplatesignerID)
+> EzsigntemplatesignerGetObjectV2Response ezsigntemplatesignerGetObjectV2(pkiEzsigntemplatesignerID)
 
 Retrieve an existing Ezsigntemplatesigner
 
@@ -179,7 +179,7 @@ Retrieve an existing Ezsigntemplatesigner
 val apiInstance = ObjectEzsigntemplatesignerApi()
 val pkiEzsigntemplatesignerID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : EzsigntemplatesignerMinusGetObjectMinusV2MinusResponse = apiInstance.ezsigntemplatesignerGetObjectV2(pkiEzsigntemplatesignerID)
+    val result : EzsigntemplatesignerGetObjectV2Response = apiInstance.ezsigntemplatesignerGetObjectV2(pkiEzsigntemplatesignerID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplatesignerApi#ezsigntemplatesignerGetObjectV2")
@@ -198,7 +198,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsigntemplatesignerMinusGetObjectMinusV2MinusResponse**](EzsigntemplatesignerMinusGetObjectMinusV2MinusResponse.md)
+[**EzsigntemplatesignerGetObjectV2Response**](EzsigntemplatesignerGetObjectV2Response.md)
 
 ### Authorization
 

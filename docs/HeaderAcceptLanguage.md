@@ -1,5 +1,5 @@
 
-# HeaderMinusAcceptMinusLanguage
+# HeaderAcceptLanguage
 
 ## Enum
 

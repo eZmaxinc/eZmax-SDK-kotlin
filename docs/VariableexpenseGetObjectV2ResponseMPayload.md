@@ -1,10 +1,10 @@
 
-# VariableexpenseMinusGetObjectMinusV2MinusResponseMinusMPayload
+# VariableexpenseGetObjectV2ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objVariableexpense** | [**VariableexpenseMinusResponseCompound**](VariableexpenseMinusResponseCompound.md) |  | 
+**objVariableexpense** | [**VariableexpenseResponseCompound**](VariableexpenseResponseCompound.md) |  | 
 
 
 

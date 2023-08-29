@@ -1,10 +1,10 @@
 
-# CorsMinusGetObjectMinusV2MinusResponseMinusMPayload
+# CorsGetObjectV2ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objCors** | [**CorsMinusResponseCompound**](CorsMinusResponseCompound.md) |  | 
+**objCors** | [**CorsResponseCompound**](CorsResponseCompound.md) |  | 
 
 
 

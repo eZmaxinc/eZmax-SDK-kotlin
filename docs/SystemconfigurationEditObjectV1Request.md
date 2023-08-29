@@ -1,10 +1,10 @@
 
-# SystemconfigurationMinusEditObjectMinusV1MinusRequest
+# SystemconfigurationEditObjectV1Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objSystemconfiguration** | [**SystemconfigurationMinusRequestCompound**](SystemconfigurationMinusRequestCompound.md) |  | 
+**objSystemconfiguration** | [**SystemconfigurationRequestCompound**](SystemconfigurationRequestCompound.md) |  | 
 
 
 

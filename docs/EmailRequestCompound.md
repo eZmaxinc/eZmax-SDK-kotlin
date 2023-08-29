@@ -1,5 +1,5 @@
 
-# EmailMinusRequestCompound
+# EmailRequestCompound
 
 ## Properties
 Name | Type | Description | Notes

@@ -19,8 +19,8 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonMinusResponseMinusError
-import eZmaxApi.models.NotificationtestMinusGetElementsMinusV1MinusResponse
+import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.NotificationtestGetElementsV1Response
 
 import com.squareup.moshi.Json
 
@@ -50,7 +50,7 @@ class ObjectNotificationtestApi(basePath: kotlin.String = defaultBasePath, clien
      * Retrieve an existing Notificationtest&#39;s Elements
      * 
      * @param pkiNotificationtestID 
-     * @return NotificationtestMinusGetElementsMinusV1MinusResponse
+     * @return NotificationtestGetElementsV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -59,11 +59,11 @@ class ObjectNotificationtestApi(basePath: kotlin.String = defaultBasePath, clien
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun notificationtestGetElementsV1(pkiNotificationtestID: kotlin.Int) : NotificationtestMinusGetElementsMinusV1MinusResponse {
+    fun notificationtestGetElementsV1(pkiNotificationtestID: kotlin.Int) : NotificationtestGetElementsV1Response {
         val localVarResponse = notificationtestGetElementsV1WithHttpInfo(pkiNotificationtestID = pkiNotificationtestID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as NotificationtestMinusGetElementsMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as NotificationtestGetElementsV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -81,16 +81,16 @@ class ObjectNotificationtestApi(basePath: kotlin.String = defaultBasePath, clien
      * Retrieve an existing Notificationtest&#39;s Elements
      * 
      * @param pkiNotificationtestID 
-     * @return ApiResponse<NotificationtestMinusGetElementsMinusV1MinusResponse?>
+     * @return ApiResponse<NotificationtestGetElementsV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun notificationtestGetElementsV1WithHttpInfo(pkiNotificationtestID: kotlin.Int) : ApiResponse<NotificationtestMinusGetElementsMinusV1MinusResponse?> {
+    fun notificationtestGetElementsV1WithHttpInfo(pkiNotificationtestID: kotlin.Int) : ApiResponse<NotificationtestGetElementsV1Response?> {
         val localVariableConfig = notificationtestGetElementsV1RequestConfig(pkiNotificationtestID = pkiNotificationtestID)
 
-        return request<Unit, NotificationtestMinusGetElementsMinusV1MinusResponse>(
+        return request<Unit, NotificationtestGetElementsV1Response>(
             localVariableConfig
         )
     }

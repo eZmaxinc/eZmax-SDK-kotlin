@@ -1,5 +1,5 @@
 
-# SignatureMinusResponse
+# SignatureResponse
 
 ## Properties
 Name | Type | Description | Notes

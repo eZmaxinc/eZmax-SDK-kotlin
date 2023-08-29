@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 <a id="webhookCreateObjectV1"></a>
 # **webhookCreateObjectV1**
-> WebhookMinusCreateObjectMinusV1MinusResponse webhookCreateObjectV1(webhookMinusCreateObjectMinusV1MinusRequest)
+> WebhookCreateObjectV1Response webhookCreateObjectV1(webhookCreateObjectV1Request)
 
 Create a new Webhook
 
@@ -28,9 +28,9 @@ The endpoint allows to create one or many elements at once.
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectWebhookApi()
-val webhookMinusCreateObjectMinusV1MinusRequest : WebhookMinusCreateObjectMinusV1MinusRequest =  // WebhookMinusCreateObjectMinusV1MinusRequest | 
+val webhookCreateObjectV1Request : WebhookCreateObjectV1Request =  // WebhookCreateObjectV1Request | 
 try {
-    val result : WebhookMinusCreateObjectMinusV1MinusResponse = apiInstance.webhookCreateObjectV1(webhookMinusCreateObjectMinusV1MinusRequest)
+    val result : WebhookCreateObjectV1Response = apiInstance.webhookCreateObjectV1(webhookCreateObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectWebhookApi#webhookCreateObjectV1")
@@ -45,11 +45,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **webhookMinusCreateObjectMinusV1MinusRequest** | [**WebhookMinusCreateObjectMinusV1MinusRequest**](WebhookMinusCreateObjectMinusV1MinusRequest.md)|  |
+ **webhookCreateObjectV1Request** | [**WebhookCreateObjectV1Request**](WebhookCreateObjectV1Request.md)|  |
 
 ### Return type
 
-[**WebhookMinusCreateObjectMinusV1MinusResponse**](WebhookMinusCreateObjectMinusV1MinusResponse.md)
+[**WebhookCreateObjectV1Response**](WebhookCreateObjectV1Response.md)
 
 ### Authorization
 
@@ -65,7 +65,7 @@ Configure Authorization:
 
 <a id="webhookDeleteObjectV1"></a>
 # **webhookDeleteObjectV1**
-> WebhookMinusDeleteObjectMinusV1MinusResponse webhookDeleteObjectV1(pkiWebhookID)
+> WebhookDeleteObjectV1Response webhookDeleteObjectV1(pkiWebhookID)
 
 Delete an existing Webhook
 
@@ -80,7 +80,7 @@ Delete an existing Webhook
 val apiInstance = ObjectWebhookApi()
 val pkiWebhookID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : WebhookMinusDeleteObjectMinusV1MinusResponse = apiInstance.webhookDeleteObjectV1(pkiWebhookID)
+    val result : WebhookDeleteObjectV1Response = apiInstance.webhookDeleteObjectV1(pkiWebhookID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectWebhookApi#webhookDeleteObjectV1")
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**WebhookMinusDeleteObjectMinusV1MinusResponse**](WebhookMinusDeleteObjectMinusV1MinusResponse.md)
+[**WebhookDeleteObjectV1Response**](WebhookDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -115,7 +115,7 @@ Configure Authorization:
 
 <a id="webhookEditObjectV1"></a>
 # **webhookEditObjectV1**
-> WebhookMinusEditObjectMinusV1MinusResponse webhookEditObjectV1(pkiWebhookID, webhookMinusEditObjectMinusV1MinusRequest)
+> WebhookEditObjectV1Response webhookEditObjectV1(pkiWebhookID, webhookEditObjectV1Request)
 
 Edit an existing Webhook
 
@@ -129,9 +129,9 @@ Edit an existing Webhook
 
 val apiInstance = ObjectWebhookApi()
 val pkiWebhookID : kotlin.Int = 56 // kotlin.Int | 
-val webhookMinusEditObjectMinusV1MinusRequest : WebhookMinusEditObjectMinusV1MinusRequest =  // WebhookMinusEditObjectMinusV1MinusRequest | 
+val webhookEditObjectV1Request : WebhookEditObjectV1Request =  // WebhookEditObjectV1Request | 
 try {
-    val result : WebhookMinusEditObjectMinusV1MinusResponse = apiInstance.webhookEditObjectV1(pkiWebhookID, webhookMinusEditObjectMinusV1MinusRequest)
+    val result : WebhookEditObjectV1Response = apiInstance.webhookEditObjectV1(pkiWebhookID, webhookEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectWebhookApi#webhookEditObjectV1")
@@ -147,11 +147,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiWebhookID** | **kotlin.Int**|  |
- **webhookMinusEditObjectMinusV1MinusRequest** | [**WebhookMinusEditObjectMinusV1MinusRequest**](WebhookMinusEditObjectMinusV1MinusRequest.md)|  |
+ **webhookEditObjectV1Request** | [**WebhookEditObjectV1Request**](WebhookEditObjectV1Request.md)|  |
 
 ### Return type
 
-[**WebhookMinusEditObjectMinusV1MinusResponse**](WebhookMinusEditObjectMinusV1MinusResponse.md)
+[**WebhookEditObjectV1Response**](WebhookEditObjectV1Response.md)
 
 ### Authorization
 
@@ -167,7 +167,7 @@ Configure Authorization:
 
 <a id="webhookGetHistoryV1"></a>
 # **webhookGetHistoryV1**
-> WebhookMinusGetHistoryMinusV1MinusResponse webhookGetHistoryV1(pkiWebhookID, eWebhookHistoryinterval)
+> WebhookGetHistoryV1Response webhookGetHistoryV1(pkiWebhookID, eWebhookHistoryinterval)
 
 Retrieve the logs for recent Webhook calls
 
@@ -183,7 +183,7 @@ val apiInstance = ObjectWebhookApi()
 val pkiWebhookID : kotlin.Int = 56 // kotlin.Int | 
 val eWebhookHistoryinterval : kotlin.String = eWebhookHistoryinterval_example // kotlin.String | The number of days to return
 try {
-    val result : WebhookMinusGetHistoryMinusV1MinusResponse = apiInstance.webhookGetHistoryV1(pkiWebhookID, eWebhookHistoryinterval)
+    val result : WebhookGetHistoryV1Response = apiInstance.webhookGetHistoryV1(pkiWebhookID, eWebhookHistoryinterval)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectWebhookApi#webhookGetHistoryV1")
@@ -203,7 +203,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**WebhookMinusGetHistoryMinusV1MinusResponse**](WebhookMinusGetHistoryMinusV1MinusResponse.md)
+[**WebhookGetHistoryV1Response**](WebhookGetHistoryV1Response.md)
 
 ### Authorization
 
@@ -219,7 +219,7 @@ Configure Authorization:
 
 <a id="webhookGetListV1"></a>
 # **webhookGetListV1**
-> WebhookMinusGetListMinusV1MinusResponse webhookGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+> WebhookGetListV1Response webhookGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
 Retrieve Webhook list
 
@@ -235,10 +235,10 @@ val apiInstance = ObjectWebhookApi()
 val eOrderBy : kotlin.String = eOrderBy_example // kotlin.String | Specify how you want the results to be sorted
 val iRowMax : kotlin.Int = 56 // kotlin.Int | 
 val iRowOffset : kotlin.Int = 56 // kotlin.Int | 
-val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
+val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
 val sFilter : kotlin.String = sFilter_example // kotlin.String | 
 try {
-    val result : WebhookMinusGetListMinusV1MinusResponse = apiInstance.webhookGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+    val result : WebhookGetListV1Response = apiInstance.webhookGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectWebhookApi#webhookGetListV1")
@@ -256,12 +256,12 @@ Name | Type | Description  | Notes
  **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiWebhookID_ASC, pkiWebhookID_DESC, sWebhookDescription_ASC, sWebhookDescription_DESC, eWebhookEzsignevent_ASC, eWebhookEzsignevent_DESC, eWebhookManagementevent_ASC, eWebhookManagementevent_DESC, eWebhookModule_ASC, eWebhookModule_DESC, sWebhookEmailfailed_ASC, sWebhookEmailfailed_DESC, sWebhookEvent_ASC, sWebhookEvent_DESC, sWebhookUrl_ASC, sWebhookUrl_DESC, bWebhookIsactive_ASC, bWebhookIsactive_DESC]
  **iRowMax** | **kotlin.Int**|  | [optional] [default to 10000]
  **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0]
- **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
  **sFilter** | **kotlin.String**|  | [optional]
 
 ### Return type
 
-[**WebhookMinusGetListMinusV1MinusResponse**](WebhookMinusGetListMinusV1MinusResponse.md)
+[**WebhookGetListV1Response**](WebhookGetListV1Response.md)
 
 ### Authorization
 
@@ -277,7 +277,7 @@ Configure Authorization:
 
 <a id="webhookGetObjectV2"></a>
 # **webhookGetObjectV2**
-> WebhookMinusGetObjectMinusV2MinusResponse webhookGetObjectV2(pkiWebhookID)
+> WebhookGetObjectV2Response webhookGetObjectV2(pkiWebhookID)
 
 Retrieve an existing Webhook
 
@@ -292,7 +292,7 @@ Retrieve an existing Webhook
 val apiInstance = ObjectWebhookApi()
 val pkiWebhookID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : WebhookMinusGetObjectMinusV2MinusResponse = apiInstance.webhookGetObjectV2(pkiWebhookID)
+    val result : WebhookGetObjectV2Response = apiInstance.webhookGetObjectV2(pkiWebhookID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectWebhookApi#webhookGetObjectV2")
@@ -311,7 +311,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**WebhookMinusGetObjectMinusV2MinusResponse**](WebhookMinusGetObjectMinusV2MinusResponse.md)
+[**WebhookGetObjectV2Response**](WebhookGetObjectV2Response.md)
 
 ### Authorization
 
@@ -327,7 +327,7 @@ Configure Authorization:
 
 <a id="webhookTestV1"></a>
 # **webhookTestV1**
-> WebhookMinusTestMinusV1MinusResponse webhookTestV1(pkiWebhookID, body)
+> WebhookTestV1Response webhookTestV1(pkiWebhookID, body)
 
 Test the Webhook by calling the Url
 
@@ -343,7 +343,7 @@ val apiInstance = ObjectWebhookApi()
 val pkiWebhookID : kotlin.Int = 56 // kotlin.Int | 
 val body : kotlin.Any = Object // kotlin.Any | 
 try {
-    val result : WebhookMinusTestMinusV1MinusResponse = apiInstance.webhookTestV1(pkiWebhookID, body)
+    val result : WebhookTestV1Response = apiInstance.webhookTestV1(pkiWebhookID, body)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectWebhookApi#webhookTestV1")
@@ -363,7 +363,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**WebhookMinusTestMinusV1MinusResponse**](WebhookMinusTestMinusV1MinusResponse.md)
+[**WebhookTestV1Response**](WebhookTestV1Response.md)
 
 ### Authorization
 

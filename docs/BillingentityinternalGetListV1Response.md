@@ -1,12 +1,12 @@
 
-# BillingentityinternalMinusGetListMinusV1MinusResponse
+# BillingentityinternalGetListV1Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**BillingentityinternalMinusGetListMinusV1MinusResponseMinusMPayload**](BillingentityinternalMinusGetListMinusV1MinusResponseMinusMPayload.md) |  | 
-**objDebugPayload** | [**CommonMinusResponseMinusObjDebugPayloadGetList**](CommonMinusResponseMinusObjDebugPayloadGetList.md) |  |  [optional]
-**objDebug** | [**CommonMinusResponseMinusObjDebug**](CommonMinusResponseMinusObjDebug.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayloadGetList**](CommonResponseObjDebugPayloadGetList.md) |  | 
+**mPayload** | [**BillingentityinternalGetListV1ResponseMPayload**](BillingentityinternalGetListV1ResponseMPayload.md) |  | 
+**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 
 
 

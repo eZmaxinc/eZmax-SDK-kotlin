@@ -1,5 +1,5 @@
 
-# FieldMinusEUserEzsignsendreminderfrequency
+# FieldEUserEzsignsendreminderfrequency
 
 ## Enum
 

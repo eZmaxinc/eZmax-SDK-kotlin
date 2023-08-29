@@ -1,5 +1,5 @@
 
-# WebsiteMinusRequestCompound
+# WebsiteRequestCompound
 
 ## Properties
 Name | Type | Description | Notes

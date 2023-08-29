@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a id="permissionCreateObjectV1"></a>
 # **permissionCreateObjectV1**
-> PermissionMinusCreateObjectMinusV1MinusResponse permissionCreateObjectV1(permissionMinusCreateObjectMinusV1MinusRequest)
+> PermissionCreateObjectV1Response permissionCreateObjectV1(permissionCreateObjectV1Request)
 
 Create a new Permission
 
@@ -25,9 +25,9 @@ The endpoint allows to create one or many elements at once.
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectPermissionApi()
-val permissionMinusCreateObjectMinusV1MinusRequest : PermissionMinusCreateObjectMinusV1MinusRequest =  // PermissionMinusCreateObjectMinusV1MinusRequest | 
+val permissionCreateObjectV1Request : PermissionCreateObjectV1Request =  // PermissionCreateObjectV1Request | 
 try {
-    val result : PermissionMinusCreateObjectMinusV1MinusResponse = apiInstance.permissionCreateObjectV1(permissionMinusCreateObjectMinusV1MinusRequest)
+    val result : PermissionCreateObjectV1Response = apiInstance.permissionCreateObjectV1(permissionCreateObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectPermissionApi#permissionCreateObjectV1")
@@ -42,11 +42,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **permissionMinusCreateObjectMinusV1MinusRequest** | [**PermissionMinusCreateObjectMinusV1MinusRequest**](PermissionMinusCreateObjectMinusV1MinusRequest.md)|  |
+ **permissionCreateObjectV1Request** | [**PermissionCreateObjectV1Request**](PermissionCreateObjectV1Request.md)|  |
 
 ### Return type
 
-[**PermissionMinusCreateObjectMinusV1MinusResponse**](PermissionMinusCreateObjectMinusV1MinusResponse.md)
+[**PermissionCreateObjectV1Response**](PermissionCreateObjectV1Response.md)
 
 ### Authorization
 
@@ -62,7 +62,7 @@ Configure Authorization:
 
 <a id="permissionDeleteObjectV1"></a>
 # **permissionDeleteObjectV1**
-> PermissionMinusDeleteObjectMinusV1MinusResponse permissionDeleteObjectV1(pkiPermissionID)
+> PermissionDeleteObjectV1Response permissionDeleteObjectV1(pkiPermissionID)
 
 Delete an existing Permission
 
@@ -77,7 +77,7 @@ Delete an existing Permission
 val apiInstance = ObjectPermissionApi()
 val pkiPermissionID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Permission
 try {
-    val result : PermissionMinusDeleteObjectMinusV1MinusResponse = apiInstance.permissionDeleteObjectV1(pkiPermissionID)
+    val result : PermissionDeleteObjectV1Response = apiInstance.permissionDeleteObjectV1(pkiPermissionID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectPermissionApi#permissionDeleteObjectV1")
@@ -96,7 +96,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PermissionMinusDeleteObjectMinusV1MinusResponse**](PermissionMinusDeleteObjectMinusV1MinusResponse.md)
+[**PermissionDeleteObjectV1Response**](PermissionDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -112,7 +112,7 @@ Configure Authorization:
 
 <a id="permissionEditObjectV1"></a>
 # **permissionEditObjectV1**
-> PermissionMinusEditObjectMinusV1MinusResponse permissionEditObjectV1(pkiPermissionID, permissionMinusEditObjectMinusV1MinusRequest)
+> PermissionEditObjectV1Response permissionEditObjectV1(pkiPermissionID, permissionEditObjectV1Request)
 
 Edit an existing Permission
 
@@ -126,9 +126,9 @@ Edit an existing Permission
 
 val apiInstance = ObjectPermissionApi()
 val pkiPermissionID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Permission
-val permissionMinusEditObjectMinusV1MinusRequest : PermissionMinusEditObjectMinusV1MinusRequest =  // PermissionMinusEditObjectMinusV1MinusRequest | 
+val permissionEditObjectV1Request : PermissionEditObjectV1Request =  // PermissionEditObjectV1Request | 
 try {
-    val result : PermissionMinusEditObjectMinusV1MinusResponse = apiInstance.permissionEditObjectV1(pkiPermissionID, permissionMinusEditObjectMinusV1MinusRequest)
+    val result : PermissionEditObjectV1Response = apiInstance.permissionEditObjectV1(pkiPermissionID, permissionEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectPermissionApi#permissionEditObjectV1")
@@ -144,11 +144,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiPermissionID** | **kotlin.Int**| The unique ID of the Permission |
- **permissionMinusEditObjectMinusV1MinusRequest** | [**PermissionMinusEditObjectMinusV1MinusRequest**](PermissionMinusEditObjectMinusV1MinusRequest.md)|  |
+ **permissionEditObjectV1Request** | [**PermissionEditObjectV1Request**](PermissionEditObjectV1Request.md)|  |
 
 ### Return type
 
-[**PermissionMinusEditObjectMinusV1MinusResponse**](PermissionMinusEditObjectMinusV1MinusResponse.md)
+[**PermissionEditObjectV1Response**](PermissionEditObjectV1Response.md)
 
 ### Authorization
 
@@ -164,7 +164,7 @@ Configure Authorization:
 
 <a id="permissionGetObjectV2"></a>
 # **permissionGetObjectV2**
-> PermissionMinusGetObjectMinusV2MinusResponse permissionGetObjectV2(pkiPermissionID)
+> PermissionGetObjectV2Response permissionGetObjectV2(pkiPermissionID)
 
 Retrieve an existing Permission
 
@@ -179,7 +179,7 @@ Retrieve an existing Permission
 val apiInstance = ObjectPermissionApi()
 val pkiPermissionID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Permission
 try {
-    val result : PermissionMinusGetObjectMinusV2MinusResponse = apiInstance.permissionGetObjectV2(pkiPermissionID)
+    val result : PermissionGetObjectV2Response = apiInstance.permissionGetObjectV2(pkiPermissionID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectPermissionApi#permissionGetObjectV2")
@@ -198,7 +198,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PermissionMinusGetObjectMinusV2MinusResponse**](PermissionMinusGetObjectMinusV2MinusResponse.md)
+[**PermissionGetObjectV2Response**](PermissionGetObjectV2Response.md)
 
 ### Authorization
 

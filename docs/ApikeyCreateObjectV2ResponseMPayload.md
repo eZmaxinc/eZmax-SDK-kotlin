@@ -1,10 +1,10 @@
 
-# ApikeyMinusCreateObjectMinusV2MinusResponseMinusMPayload
+# ApikeyCreateObjectV2ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjApikey** | [**kotlin.collections.List&lt;ApikeyMinusResponseCompound&gt;**](ApikeyMinusResponseCompound.md) |  | 
+**aObjApikey** | [**kotlin.collections.List&lt;ApikeyResponseCompound&gt;**](ApikeyResponseCompound.md) |  | 
 
 
 

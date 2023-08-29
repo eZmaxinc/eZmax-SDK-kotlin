@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a id="brandingCreateObjectV1"></a>
 # **brandingCreateObjectV1**
-> BrandingMinusCreateObjectMinusV1MinusResponse brandingCreateObjectV1(brandingMinusCreateObjectMinusV1MinusRequest)
+> BrandingCreateObjectV1Response brandingCreateObjectV1(brandingCreateObjectV1Request)
 
 Create a new Branding
 
@@ -26,9 +26,9 @@ The endpoint allows to create one or many elements at once.
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectBrandingApi()
-val brandingMinusCreateObjectMinusV1MinusRequest : BrandingMinusCreateObjectMinusV1MinusRequest =  // BrandingMinusCreateObjectMinusV1MinusRequest | 
+val brandingCreateObjectV1Request : BrandingCreateObjectV1Request =  // BrandingCreateObjectV1Request | 
 try {
-    val result : BrandingMinusCreateObjectMinusV1MinusResponse = apiInstance.brandingCreateObjectV1(brandingMinusCreateObjectMinusV1MinusRequest)
+    val result : BrandingCreateObjectV1Response = apiInstance.brandingCreateObjectV1(brandingCreateObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectBrandingApi#brandingCreateObjectV1")
@@ -43,11 +43,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **brandingMinusCreateObjectMinusV1MinusRequest** | [**BrandingMinusCreateObjectMinusV1MinusRequest**](BrandingMinusCreateObjectMinusV1MinusRequest.md)|  |
+ **brandingCreateObjectV1Request** | [**BrandingCreateObjectV1Request**](BrandingCreateObjectV1Request.md)|  |
 
 ### Return type
 
-[**BrandingMinusCreateObjectMinusV1MinusResponse**](BrandingMinusCreateObjectMinusV1MinusResponse.md)
+[**BrandingCreateObjectV1Response**](BrandingCreateObjectV1Response.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Configure Authorization:
 
 <a id="brandingEditObjectV1"></a>
 # **brandingEditObjectV1**
-> BrandingMinusEditObjectMinusV1MinusResponse brandingEditObjectV1(pkiBrandingID, brandingMinusEditObjectMinusV1MinusRequest)
+> BrandingEditObjectV1Response brandingEditObjectV1(pkiBrandingID, brandingEditObjectV1Request)
 
 Edit an existing Branding
 
@@ -77,9 +77,9 @@ Edit an existing Branding
 
 val apiInstance = ObjectBrandingApi()
 val pkiBrandingID : kotlin.Int = 56 // kotlin.Int | 
-val brandingMinusEditObjectMinusV1MinusRequest : BrandingMinusEditObjectMinusV1MinusRequest =  // BrandingMinusEditObjectMinusV1MinusRequest | 
+val brandingEditObjectV1Request : BrandingEditObjectV1Request =  // BrandingEditObjectV1Request | 
 try {
-    val result : BrandingMinusEditObjectMinusV1MinusResponse = apiInstance.brandingEditObjectV1(pkiBrandingID, brandingMinusEditObjectMinusV1MinusRequest)
+    val result : BrandingEditObjectV1Response = apiInstance.brandingEditObjectV1(pkiBrandingID, brandingEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectBrandingApi#brandingEditObjectV1")
@@ -95,11 +95,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiBrandingID** | **kotlin.Int**|  |
- **brandingMinusEditObjectMinusV1MinusRequest** | [**BrandingMinusEditObjectMinusV1MinusRequest**](BrandingMinusEditObjectMinusV1MinusRequest.md)|  |
+ **brandingEditObjectV1Request** | [**BrandingEditObjectV1Request**](BrandingEditObjectV1Request.md)|  |
 
 ### Return type
 
-[**BrandingMinusEditObjectMinusV1MinusResponse**](BrandingMinusEditObjectMinusV1MinusResponse.md)
+[**BrandingEditObjectV1Response**](BrandingEditObjectV1Response.md)
 
 ### Authorization
 
@@ -115,7 +115,7 @@ Configure Authorization:
 
 <a id="brandingGetAutocompleteV2"></a>
 # **brandingGetAutocompleteV2**
-> BrandingMinusGetAutocompleteMinusV2MinusResponse brandingGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+> BrandingGetAutocompleteV2Response brandingGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 
 Retrieve Brandings and IDs
 
@@ -131,9 +131,9 @@ val apiInstance = ObjectBrandingApi()
 val sSelector : kotlin.String = sSelector_example // kotlin.String | The type of Brandings to return
 val eFilterActive : kotlin.String = eFilterActive_example // kotlin.String | Specify which results we want to display.
 val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter the returned results
-val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
+val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
 try {
-    val result : BrandingMinusGetAutocompleteMinusV2MinusResponse = apiInstance.brandingGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+    val result : BrandingGetAutocompleteV2Response = apiInstance.brandingGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectBrandingApi#brandingGetAutocompleteV2")
@@ -151,11 +151,11 @@ Name | Type | Description  | Notes
  **sSelector** | **kotlin.String**| The type of Brandings to return | [enum: All]
  **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
  **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional]
- **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
 
 ### Return type
 
-[**BrandingMinusGetAutocompleteMinusV2MinusResponse**](BrandingMinusGetAutocompleteMinusV2MinusResponse.md)
+[**BrandingGetAutocompleteV2Response**](BrandingGetAutocompleteV2Response.md)
 
 ### Authorization
 
@@ -171,7 +171,7 @@ Configure Authorization:
 
 <a id="brandingGetListV1"></a>
 # **brandingGetListV1**
-> BrandingMinusGetListMinusV1MinusResponse brandingGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+> BrandingGetListV1Response brandingGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
 Retrieve Branding list
 
@@ -187,10 +187,10 @@ val apiInstance = ObjectBrandingApi()
 val eOrderBy : kotlin.String = eOrderBy_example // kotlin.String | Specify how you want the results to be sorted
 val iRowMax : kotlin.Int = 56 // kotlin.Int | 
 val iRowOffset : kotlin.Int = 56 // kotlin.Int | 
-val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
+val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
 val sFilter : kotlin.String = sFilter_example // kotlin.String | 
 try {
-    val result : BrandingMinusGetListMinusV1MinusResponse = apiInstance.brandingGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+    val result : BrandingGetListV1Response = apiInstance.brandingGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectBrandingApi#brandingGetListV1")
@@ -208,12 +208,12 @@ Name | Type | Description  | Notes
  **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiBrandingID_ASC, pkiBrandingID_DESC, sBrandingDescriptionX_ASC, sBrandingDescriptionX_DESC, iBrandingColortext_ASC, iBrandingColortext_DESC, iBrandingColortextlinkbox_ASC, iBrandingColortextlinkbox_DESC, iBrandingColortextbutton_ASC, iBrandingColortextbutton_DESC, iBrandingColorbackground_ASC, iBrandingColorbackground_DESC, iBrandingColorbackgroundbutton_ASC, iBrandingColorbackgroundbutton_DESC, iBrandingColorbackgroundsmallbox_ASC, iBrandingColorbackgroundsmallbox_DESC, bBrandingIsactive_ASC, bBrandingIsactive_DESC]
  **iRowMax** | **kotlin.Int**|  | [optional] [default to 10000]
  **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0]
- **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
  **sFilter** | **kotlin.String**|  | [optional]
 
 ### Return type
 
-[**BrandingMinusGetListMinusV1MinusResponse**](BrandingMinusGetListMinusV1MinusResponse.md)
+[**BrandingGetListV1Response**](BrandingGetListV1Response.md)
 
 ### Authorization
 
@@ -229,7 +229,7 @@ Configure Authorization:
 
 <a id="brandingGetObjectV2"></a>
 # **brandingGetObjectV2**
-> BrandingMinusGetObjectMinusV2MinusResponse brandingGetObjectV2(pkiBrandingID)
+> BrandingGetObjectV2Response brandingGetObjectV2(pkiBrandingID)
 
 Retrieve an existing Branding
 
@@ -244,7 +244,7 @@ Retrieve an existing Branding
 val apiInstance = ObjectBrandingApi()
 val pkiBrandingID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : BrandingMinusGetObjectMinusV2MinusResponse = apiInstance.brandingGetObjectV2(pkiBrandingID)
+    val result : BrandingGetObjectV2Response = apiInstance.brandingGetObjectV2(pkiBrandingID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectBrandingApi#brandingGetObjectV2")
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BrandingMinusGetObjectMinusV2MinusResponse**](BrandingMinusGetObjectMinusV2MinusResponse.md)
+[**BrandingGetObjectV2Response**](BrandingGetObjectV2Response.md)
 
 ### Authorization
 

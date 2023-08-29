@@ -1,5 +1,5 @@
 
-# EzsignsignergroupmembershipMinusCreateObjectMinusV1MinusResponseMinusMPayload
+# EzsignsignergroupmembershipCreateObjectV1ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes

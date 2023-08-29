@@ -1,10 +1,10 @@
 
-# EzsignbulksendtransmissionMinusGetFormsDataMinusV1MinusResponseMinusMPayload
+# EzsignbulksendtransmissionGetFormsDataV1ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjFormsDataFolder** | [**kotlin.collections.List&lt;CustomMinusFormsDataFolderMinusResponse&gt;**](CustomMinusFormsDataFolderMinusResponse.md) |  | 
+**aObjFormsDataFolder** | [**kotlin.collections.List&lt;CustomFormsDataFolderResponse&gt;**](CustomFormsDataFolderResponse.md) |  | 
 
 
 

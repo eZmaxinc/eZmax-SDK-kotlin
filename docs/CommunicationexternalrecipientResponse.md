@@ -1,14 +1,14 @@
 
-# CommunicationexternalrecipientMinusResponse
+# CommunicationexternalrecipientResponse
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiCommunicationexternalrecipientID** | **kotlin.Int** | The unique ID of the Communicationexternalrecipient | 
-**eCommunicationexternalrecipientType** | [**FieldMinusECommunicationexternalrecipientType**](FieldMinusECommunicationexternalrecipientType.md) |  | 
-**objDescriptionstatic** | [**DescriptionstaticMinusResponseCompound**](DescriptionstaticMinusResponseCompound.md) |  | 
-**objEmailstatic** | [**EmailstaticMinusResponseCompound**](EmailstaticMinusResponseCompound.md) |  |  [optional]
-**objPhonestatic** | [**PhonestaticMinusResponseCompound**](PhonestaticMinusResponseCompound.md) |  |  [optional]
+**eCommunicationexternalrecipientType** | [**FieldECommunicationexternalrecipientType**](FieldECommunicationexternalrecipientType.md) |  | 
+**objDescriptionstatic** | [**DescriptionstaticResponseCompound**](DescriptionstaticResponseCompound.md) |  | 
+**objEmailstatic** | [**EmailstaticResponseCompound**](EmailstaticResponseCompound.md) |  |  [optional]
+**objPhonestatic** | [**PhonestaticResponseCompound**](PhonestaticResponseCompound.md) |  |  [optional]
 
 
 

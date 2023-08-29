@@ -19,8 +19,8 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.EzmaxproductMinusGetAutocompleteMinusV2MinusResponse
-import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
+import eZmaxApi.models.EzmaxproductGetAutocompleteV2Response
+import eZmaxApi.models.HeaderAcceptLanguage
 
 import com.squareup.moshi.Json
 
@@ -49,14 +49,16 @@ class ObjectEzmaxproductApi(basePath: kotlin.String = defaultBasePath, client: O
     /**
      * enum for parameter sSelector
      */
-     enum class SSelector_ezmaxproductGetAutocompleteV2(val value: kotlin.String) {
-         @Json(name = "All") All("All")
+     enum class SSelectorEzmaxproductGetAutocompleteV2(val value: kotlin.String) {
+         @Json(name = "All") All("All"),
+         @Json(name = "Entitydefault") Entitydefault("Entitydefault"),
+         @Json(name = "Entityother") Entityother("Entityother")
      }
 
     /**
      * enum for parameter eFilterActive
      */
-     enum class EFilterActive_ezmaxproductGetAutocompleteV2(val value: kotlin.String) {
+     enum class EFilterActiveEzmaxproductGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "All") All("All"),
          @Json(name = "Active") Active("Active"),
          @Json(name = "Inactive") Inactive("Inactive")
@@ -69,7 +71,7 @@ class ObjectEzmaxproductApi(basePath: kotlin.String = defaultBasePath, client: O
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return EzmaxproductMinusGetAutocompleteMinusV2MinusResponse
+     * @return EzmaxproductGetAutocompleteV2Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -78,11 +80,11 @@ class ObjectEzmaxproductApi(basePath: kotlin.String = defaultBasePath, client: O
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezmaxproductGetAutocompleteV2(sSelector: SSelector_ezmaxproductGetAutocompleteV2, eFilterActive: EFilterActive_ezmaxproductGetAutocompleteV2? = EFilterActive_ezmaxproductGetAutocompleteV2.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null) : EzmaxproductMinusGetAutocompleteMinusV2MinusResponse {
+    fun ezmaxproductGetAutocompleteV2(sSelector: SSelectorEzmaxproductGetAutocompleteV2, eFilterActive: EFilterActiveEzmaxproductGetAutocompleteV2? = EFilterActiveEzmaxproductGetAutocompleteV2.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderAcceptLanguage? = null) : EzmaxproductGetAutocompleteV2Response {
         val localVarResponse = ezmaxproductGetAutocompleteV2WithHttpInfo(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzmaxproductMinusGetAutocompleteMinusV2MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzmaxproductGetAutocompleteV2Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -103,16 +105,16 @@ class ObjectEzmaxproductApi(basePath: kotlin.String = defaultBasePath, client: O
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return ApiResponse<EzmaxproductMinusGetAutocompleteMinusV2MinusResponse?>
+     * @return ApiResponse<EzmaxproductGetAutocompleteV2Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezmaxproductGetAutocompleteV2WithHttpInfo(sSelector: SSelector_ezmaxproductGetAutocompleteV2, eFilterActive: EFilterActive_ezmaxproductGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : ApiResponse<EzmaxproductMinusGetAutocompleteMinusV2MinusResponse?> {
+    fun ezmaxproductGetAutocompleteV2WithHttpInfo(sSelector: SSelectorEzmaxproductGetAutocompleteV2, eFilterActive: EFilterActiveEzmaxproductGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : ApiResponse<EzmaxproductGetAutocompleteV2Response?> {
         val localVariableConfig = ezmaxproductGetAutocompleteV2RequestConfig(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
-        return request<Unit, EzmaxproductMinusGetAutocompleteMinusV2MinusResponse>(
+        return request<Unit, EzmaxproductGetAutocompleteV2Response>(
             localVariableConfig
         )
     }
@@ -126,12 +128,12 @@ class ObjectEzmaxproductApi(basePath: kotlin.String = defaultBasePath, client: O
      * @param acceptLanguage  (optional)
      * @return RequestConfig
      */
-    fun ezmaxproductGetAutocompleteV2RequestConfig(sSelector: SSelector_ezmaxproductGetAutocompleteV2, eFilterActive: EFilterActive_ezmaxproductGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : RequestConfig<Unit> {
+    fun ezmaxproductGetAutocompleteV2RequestConfig(sSelector: SSelectorEzmaxproductGetAutocompleteV2, eFilterActive: EFilterActiveEzmaxproductGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
                 if (eFilterActive != null) {
-                    put("eFilterActive", listOf(eFilterActive.toString()))
+                    put("eFilterActive", listOf(eFilterActive.value))
                 }
                 if (sQuery != null) {
                     put("sQuery", listOf(sQuery.toString()))

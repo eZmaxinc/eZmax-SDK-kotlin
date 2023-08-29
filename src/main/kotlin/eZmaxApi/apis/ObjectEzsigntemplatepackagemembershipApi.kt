@@ -19,11 +19,11 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonMinusResponseMinusError
-import eZmaxApi.models.EzsigntemplatepackagemembershipMinusCreateObjectMinusV1MinusRequest
-import eZmaxApi.models.EzsigntemplatepackagemembershipMinusCreateObjectMinusV1MinusResponse
-import eZmaxApi.models.EzsigntemplatepackagemembershipMinusDeleteObjectMinusV1MinusResponse
-import eZmaxApi.models.EzsigntemplatepackagemembershipMinusGetObjectMinusV2MinusResponse
+import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.EzsigntemplatepackagemembershipCreateObjectV1Request
+import eZmaxApi.models.EzsigntemplatepackagemembershipCreateObjectV1Response
+import eZmaxApi.models.EzsigntemplatepackagemembershipDeleteObjectV1Response
+import eZmaxApi.models.EzsigntemplatepackagemembershipGetObjectV2Response
 
 import com.squareup.moshi.Json
 
@@ -52,8 +52,8 @@ class ObjectEzsigntemplatepackagemembershipApi(basePath: kotlin.String = default
     /**
      * Create a new Ezsigntemplatepackagemembership
      * The endpoint allows to create one or many elements at once.
-     * @param ezsigntemplatepackagemembershipMinusCreateObjectMinusV1MinusRequest 
-     * @return EzsigntemplatepackagemembershipMinusCreateObjectMinusV1MinusResponse
+     * @param ezsigntemplatepackagemembershipCreateObjectV1Request 
+     * @return EzsigntemplatepackagemembershipCreateObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -62,11 +62,11 @@ class ObjectEzsigntemplatepackagemembershipApi(basePath: kotlin.String = default
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsigntemplatepackagemembershipCreateObjectV1(ezsigntemplatepackagemembershipMinusCreateObjectMinusV1MinusRequest: EzsigntemplatepackagemembershipMinusCreateObjectMinusV1MinusRequest) : EzsigntemplatepackagemembershipMinusCreateObjectMinusV1MinusResponse {
-        val localVarResponse = ezsigntemplatepackagemembershipCreateObjectV1WithHttpInfo(ezsigntemplatepackagemembershipMinusCreateObjectMinusV1MinusRequest = ezsigntemplatepackagemembershipMinusCreateObjectMinusV1MinusRequest)
+    fun ezsigntemplatepackagemembershipCreateObjectV1(ezsigntemplatepackagemembershipCreateObjectV1Request: EzsigntemplatepackagemembershipCreateObjectV1Request) : EzsigntemplatepackagemembershipCreateObjectV1Response {
+        val localVarResponse = ezsigntemplatepackagemembershipCreateObjectV1WithHttpInfo(ezsigntemplatepackagemembershipCreateObjectV1Request = ezsigntemplatepackagemembershipCreateObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigntemplatepackagemembershipMinusCreateObjectMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigntemplatepackagemembershipCreateObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -83,17 +83,17 @@ class ObjectEzsigntemplatepackagemembershipApi(basePath: kotlin.String = default
     /**
      * Create a new Ezsigntemplatepackagemembership
      * The endpoint allows to create one or many elements at once.
-     * @param ezsigntemplatepackagemembershipMinusCreateObjectMinusV1MinusRequest 
-     * @return ApiResponse<EzsigntemplatepackagemembershipMinusCreateObjectMinusV1MinusResponse?>
+     * @param ezsigntemplatepackagemembershipCreateObjectV1Request 
+     * @return ApiResponse<EzsigntemplatepackagemembershipCreateObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsigntemplatepackagemembershipCreateObjectV1WithHttpInfo(ezsigntemplatepackagemembershipMinusCreateObjectMinusV1MinusRequest: EzsigntemplatepackagemembershipMinusCreateObjectMinusV1MinusRequest) : ApiResponse<EzsigntemplatepackagemembershipMinusCreateObjectMinusV1MinusResponse?> {
-        val localVariableConfig = ezsigntemplatepackagemembershipCreateObjectV1RequestConfig(ezsigntemplatepackagemembershipMinusCreateObjectMinusV1MinusRequest = ezsigntemplatepackagemembershipMinusCreateObjectMinusV1MinusRequest)
+    fun ezsigntemplatepackagemembershipCreateObjectV1WithHttpInfo(ezsigntemplatepackagemembershipCreateObjectV1Request: EzsigntemplatepackagemembershipCreateObjectV1Request) : ApiResponse<EzsigntemplatepackagemembershipCreateObjectV1Response?> {
+        val localVariableConfig = ezsigntemplatepackagemembershipCreateObjectV1RequestConfig(ezsigntemplatepackagemembershipCreateObjectV1Request = ezsigntemplatepackagemembershipCreateObjectV1Request)
 
-        return request<EzsigntemplatepackagemembershipMinusCreateObjectMinusV1MinusRequest, EzsigntemplatepackagemembershipMinusCreateObjectMinusV1MinusResponse>(
+        return request<EzsigntemplatepackagemembershipCreateObjectV1Request, EzsigntemplatepackagemembershipCreateObjectV1Response>(
             localVariableConfig
         )
     }
@@ -101,11 +101,11 @@ class ObjectEzsigntemplatepackagemembershipApi(basePath: kotlin.String = default
     /**
      * To obtain the request config of the operation ezsigntemplatepackagemembershipCreateObjectV1
      *
-     * @param ezsigntemplatepackagemembershipMinusCreateObjectMinusV1MinusRequest 
+     * @param ezsigntemplatepackagemembershipCreateObjectV1Request 
      * @return RequestConfig
      */
-    fun ezsigntemplatepackagemembershipCreateObjectV1RequestConfig(ezsigntemplatepackagemembershipMinusCreateObjectMinusV1MinusRequest: EzsigntemplatepackagemembershipMinusCreateObjectMinusV1MinusRequest) : RequestConfig<EzsigntemplatepackagemembershipMinusCreateObjectMinusV1MinusRequest> {
-        val localVariableBody = ezsigntemplatepackagemembershipMinusCreateObjectMinusV1MinusRequest
+    fun ezsigntemplatepackagemembershipCreateObjectV1RequestConfig(ezsigntemplatepackagemembershipCreateObjectV1Request: EzsigntemplatepackagemembershipCreateObjectV1Request) : RequestConfig<EzsigntemplatepackagemembershipCreateObjectV1Request> {
+        val localVariableBody = ezsigntemplatepackagemembershipCreateObjectV1Request
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Content-Type"] = "application/json"
@@ -125,7 +125,7 @@ class ObjectEzsigntemplatepackagemembershipApi(basePath: kotlin.String = default
      * Delete an existing Ezsigntemplatepackagemembership
      * 
      * @param pkiEzsigntemplatepackagemembershipID 
-     * @return EzsigntemplatepackagemembershipMinusDeleteObjectMinusV1MinusResponse
+     * @return EzsigntemplatepackagemembershipDeleteObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -134,11 +134,11 @@ class ObjectEzsigntemplatepackagemembershipApi(basePath: kotlin.String = default
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsigntemplatepackagemembershipDeleteObjectV1(pkiEzsigntemplatepackagemembershipID: kotlin.Int) : EzsigntemplatepackagemembershipMinusDeleteObjectMinusV1MinusResponse {
+    fun ezsigntemplatepackagemembershipDeleteObjectV1(pkiEzsigntemplatepackagemembershipID: kotlin.Int) : EzsigntemplatepackagemembershipDeleteObjectV1Response {
         val localVarResponse = ezsigntemplatepackagemembershipDeleteObjectV1WithHttpInfo(pkiEzsigntemplatepackagemembershipID = pkiEzsigntemplatepackagemembershipID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigntemplatepackagemembershipMinusDeleteObjectMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigntemplatepackagemembershipDeleteObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -156,16 +156,16 @@ class ObjectEzsigntemplatepackagemembershipApi(basePath: kotlin.String = default
      * Delete an existing Ezsigntemplatepackagemembership
      * 
      * @param pkiEzsigntemplatepackagemembershipID 
-     * @return ApiResponse<EzsigntemplatepackagemembershipMinusDeleteObjectMinusV1MinusResponse?>
+     * @return ApiResponse<EzsigntemplatepackagemembershipDeleteObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsigntemplatepackagemembershipDeleteObjectV1WithHttpInfo(pkiEzsigntemplatepackagemembershipID: kotlin.Int) : ApiResponse<EzsigntemplatepackagemembershipMinusDeleteObjectMinusV1MinusResponse?> {
+    fun ezsigntemplatepackagemembershipDeleteObjectV1WithHttpInfo(pkiEzsigntemplatepackagemembershipID: kotlin.Int) : ApiResponse<EzsigntemplatepackagemembershipDeleteObjectV1Response?> {
         val localVariableConfig = ezsigntemplatepackagemembershipDeleteObjectV1RequestConfig(pkiEzsigntemplatepackagemembershipID = pkiEzsigntemplatepackagemembershipID)
 
-        return request<Unit, EzsigntemplatepackagemembershipMinusDeleteObjectMinusV1MinusResponse>(
+        return request<Unit, EzsigntemplatepackagemembershipDeleteObjectV1Response>(
             localVariableConfig
         )
     }
@@ -196,7 +196,7 @@ class ObjectEzsigntemplatepackagemembershipApi(basePath: kotlin.String = default
      * Retrieve an existing Ezsigntemplatepackagemembership
      * 
      * @param pkiEzsigntemplatepackagemembershipID 
-     * @return EzsigntemplatepackagemembershipMinusGetObjectMinusV2MinusResponse
+     * @return EzsigntemplatepackagemembershipGetObjectV2Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -205,11 +205,11 @@ class ObjectEzsigntemplatepackagemembershipApi(basePath: kotlin.String = default
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsigntemplatepackagemembershipGetObjectV2(pkiEzsigntemplatepackagemembershipID: kotlin.Int) : EzsigntemplatepackagemembershipMinusGetObjectMinusV2MinusResponse {
+    fun ezsigntemplatepackagemembershipGetObjectV2(pkiEzsigntemplatepackagemembershipID: kotlin.Int) : EzsigntemplatepackagemembershipGetObjectV2Response {
         val localVarResponse = ezsigntemplatepackagemembershipGetObjectV2WithHttpInfo(pkiEzsigntemplatepackagemembershipID = pkiEzsigntemplatepackagemembershipID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigntemplatepackagemembershipMinusGetObjectMinusV2MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigntemplatepackagemembershipGetObjectV2Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -227,16 +227,16 @@ class ObjectEzsigntemplatepackagemembershipApi(basePath: kotlin.String = default
      * Retrieve an existing Ezsigntemplatepackagemembership
      * 
      * @param pkiEzsigntemplatepackagemembershipID 
-     * @return ApiResponse<EzsigntemplatepackagemembershipMinusGetObjectMinusV2MinusResponse?>
+     * @return ApiResponse<EzsigntemplatepackagemembershipGetObjectV2Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsigntemplatepackagemembershipGetObjectV2WithHttpInfo(pkiEzsigntemplatepackagemembershipID: kotlin.Int) : ApiResponse<EzsigntemplatepackagemembershipMinusGetObjectMinusV2MinusResponse?> {
+    fun ezsigntemplatepackagemembershipGetObjectV2WithHttpInfo(pkiEzsigntemplatepackagemembershipID: kotlin.Int) : ApiResponse<EzsigntemplatepackagemembershipGetObjectV2Response?> {
         val localVariableConfig = ezsigntemplatepackagemembershipGetObjectV2RequestConfig(pkiEzsigntemplatepackagemembershipID = pkiEzsigntemplatepackagemembershipID)
 
-        return request<Unit, EzsigntemplatepackagemembershipMinusGetObjectMinusV2MinusResponse>(
+        return request<Unit, EzsigntemplatepackagemembershipGetObjectV2Response>(
             localVariableConfig
         )
     }

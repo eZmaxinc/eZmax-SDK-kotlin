@@ -1,5 +1,5 @@
 
-# EzmaxinvoicingsummaryglobalMinusResponseCompound
+# EzmaxinvoicingsummaryglobalResponseCompound
 
 ## Properties
 Name | Type | Description | Notes
@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 **dEzmaxinvoicingsummaryglobalRepresentative** | **kotlin.String** | The amount of commission for the representative |  [optional]
 **dEzmaxinvoicingsummaryglobalPartner** | **kotlin.String** | The amount of commission for the partner |  [optional]
 **dEzmaxinvoicingsummaryglobalNet** | **kotlin.String** | The net amount of the Ezmaxinvoicingsummaryglobal |  [optional]
-**aObjEzmaxinvoicingcommission** | [**kotlin.collections.List&lt;EzmaxinvoicingcommissionMinusResponseCompound&gt;**](EzmaxinvoicingcommissionMinusResponseCompound.md) |  |  [optional]
+**aObjEzmaxinvoicingcommission** | [**kotlin.collections.List&lt;EzmaxinvoicingcommissionResponseCompound&gt;**](EzmaxinvoicingcommissionResponseCompound.md) |  |  [optional]
 
 
 

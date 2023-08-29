@@ -1,5 +1,5 @@
 
-# EzsignfolderMinusReorderMinusV1MinusRequest
+# EzsignfolderReorderV1Request
 
 ## Properties
 Name | Type | Description | Notes

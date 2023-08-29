@@ -1,5 +1,5 @@
 
-# CustomMinusAutocompleteElementMinusResponse
+# CustomAutocompleteElementResponse
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,10 +1,10 @@
 
-# WebhookMinusCreateObjectMinusV1MinusRequest
+# WebhookCreateObjectV1Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjWebhook** | [**kotlin.collections.List&lt;WebhookMinusRequestCompound&gt;**](WebhookMinusRequestCompound.md) |  | 
+**aObjWebhook** | [**kotlin.collections.List&lt;WebhookRequestCompound&gt;**](WebhookRequestCompound.md) |  | 
 
 
 

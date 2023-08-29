@@ -1,10 +1,10 @@
 
-# SignatureMinusGetObjectMinusV2MinusResponseMinusMPayload
+# SignatureGetObjectV2ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objSignature** | [**SignatureMinusResponseCompound**](SignatureMinusResponseCompound.md) |  | 
+**objSignature** | [**SignatureResponseCompound**](SignatureResponseCompound.md) |  | 
 
 
 

@@ -1,5 +1,5 @@
 
-# DepartmentMinusAutocompleteElementMinusResponse
+# DepartmentAutocompleteElementResponse
 
 ## Properties
 Name | Type | Description | Notes

@@ -19,10 +19,10 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonMinusResponseMinusError
-import eZmaxApi.models.SystemconfigurationMinusEditObjectMinusV1MinusRequest
-import eZmaxApi.models.SystemconfigurationMinusEditObjectMinusV1MinusResponse
-import eZmaxApi.models.SystemconfigurationMinusGetObjectMinusV2MinusResponse
+import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.SystemconfigurationEditObjectV1Request
+import eZmaxApi.models.SystemconfigurationEditObjectV1Response
+import eZmaxApi.models.SystemconfigurationGetObjectV2Response
 
 import com.squareup.moshi.Json
 
@@ -52,8 +52,8 @@ class ObjectSystemconfigurationApi(basePath: kotlin.String = defaultBasePath, cl
      * Edit an existing Systemconfiguration
      * 
      * @param pkiSystemconfigurationID The unique ID of the Systemconfiguration
-     * @param systemconfigurationMinusEditObjectMinusV1MinusRequest 
-     * @return SystemconfigurationMinusEditObjectMinusV1MinusResponse
+     * @param systemconfigurationEditObjectV1Request 
+     * @return SystemconfigurationEditObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -62,11 +62,11 @@ class ObjectSystemconfigurationApi(basePath: kotlin.String = defaultBasePath, cl
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun systemconfigurationEditObjectV1(pkiSystemconfigurationID: kotlin.Int, systemconfigurationMinusEditObjectMinusV1MinusRequest: SystemconfigurationMinusEditObjectMinusV1MinusRequest) : SystemconfigurationMinusEditObjectMinusV1MinusResponse {
-        val localVarResponse = systemconfigurationEditObjectV1WithHttpInfo(pkiSystemconfigurationID = pkiSystemconfigurationID, systemconfigurationMinusEditObjectMinusV1MinusRequest = systemconfigurationMinusEditObjectMinusV1MinusRequest)
+    fun systemconfigurationEditObjectV1(pkiSystemconfigurationID: kotlin.Int, systemconfigurationEditObjectV1Request: SystemconfigurationEditObjectV1Request) : SystemconfigurationEditObjectV1Response {
+        val localVarResponse = systemconfigurationEditObjectV1WithHttpInfo(pkiSystemconfigurationID = pkiSystemconfigurationID, systemconfigurationEditObjectV1Request = systemconfigurationEditObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as SystemconfigurationMinusEditObjectMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as SystemconfigurationEditObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -84,17 +84,17 @@ class ObjectSystemconfigurationApi(basePath: kotlin.String = defaultBasePath, cl
      * Edit an existing Systemconfiguration
      * 
      * @param pkiSystemconfigurationID The unique ID of the Systemconfiguration
-     * @param systemconfigurationMinusEditObjectMinusV1MinusRequest 
-     * @return ApiResponse<SystemconfigurationMinusEditObjectMinusV1MinusResponse?>
+     * @param systemconfigurationEditObjectV1Request 
+     * @return ApiResponse<SystemconfigurationEditObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun systemconfigurationEditObjectV1WithHttpInfo(pkiSystemconfigurationID: kotlin.Int, systemconfigurationMinusEditObjectMinusV1MinusRequest: SystemconfigurationMinusEditObjectMinusV1MinusRequest) : ApiResponse<SystemconfigurationMinusEditObjectMinusV1MinusResponse?> {
-        val localVariableConfig = systemconfigurationEditObjectV1RequestConfig(pkiSystemconfigurationID = pkiSystemconfigurationID, systemconfigurationMinusEditObjectMinusV1MinusRequest = systemconfigurationMinusEditObjectMinusV1MinusRequest)
+    fun systemconfigurationEditObjectV1WithHttpInfo(pkiSystemconfigurationID: kotlin.Int, systemconfigurationEditObjectV1Request: SystemconfigurationEditObjectV1Request) : ApiResponse<SystemconfigurationEditObjectV1Response?> {
+        val localVariableConfig = systemconfigurationEditObjectV1RequestConfig(pkiSystemconfigurationID = pkiSystemconfigurationID, systemconfigurationEditObjectV1Request = systemconfigurationEditObjectV1Request)
 
-        return request<SystemconfigurationMinusEditObjectMinusV1MinusRequest, SystemconfigurationMinusEditObjectMinusV1MinusResponse>(
+        return request<SystemconfigurationEditObjectV1Request, SystemconfigurationEditObjectV1Response>(
             localVariableConfig
         )
     }
@@ -103,11 +103,11 @@ class ObjectSystemconfigurationApi(basePath: kotlin.String = defaultBasePath, cl
      * To obtain the request config of the operation systemconfigurationEditObjectV1
      *
      * @param pkiSystemconfigurationID The unique ID of the Systemconfiguration
-     * @param systemconfigurationMinusEditObjectMinusV1MinusRequest 
+     * @param systemconfigurationEditObjectV1Request 
      * @return RequestConfig
      */
-    fun systemconfigurationEditObjectV1RequestConfig(pkiSystemconfigurationID: kotlin.Int, systemconfigurationMinusEditObjectMinusV1MinusRequest: SystemconfigurationMinusEditObjectMinusV1MinusRequest) : RequestConfig<SystemconfigurationMinusEditObjectMinusV1MinusRequest> {
-        val localVariableBody = systemconfigurationMinusEditObjectMinusV1MinusRequest
+    fun systemconfigurationEditObjectV1RequestConfig(pkiSystemconfigurationID: kotlin.Int, systemconfigurationEditObjectV1Request: SystemconfigurationEditObjectV1Request) : RequestConfig<SystemconfigurationEditObjectV1Request> {
+        val localVariableBody = systemconfigurationEditObjectV1Request
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Content-Type"] = "application/json"
@@ -127,7 +127,7 @@ class ObjectSystemconfigurationApi(basePath: kotlin.String = defaultBasePath, cl
      * Retrieve an existing Systemconfiguration
      * 
      * @param pkiSystemconfigurationID The unique ID of the Systemconfiguration
-     * @return SystemconfigurationMinusGetObjectMinusV2MinusResponse
+     * @return SystemconfigurationGetObjectV2Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -136,11 +136,11 @@ class ObjectSystemconfigurationApi(basePath: kotlin.String = defaultBasePath, cl
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun systemconfigurationGetObjectV2(pkiSystemconfigurationID: kotlin.Int) : SystemconfigurationMinusGetObjectMinusV2MinusResponse {
+    fun systemconfigurationGetObjectV2(pkiSystemconfigurationID: kotlin.Int) : SystemconfigurationGetObjectV2Response {
         val localVarResponse = systemconfigurationGetObjectV2WithHttpInfo(pkiSystemconfigurationID = pkiSystemconfigurationID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as SystemconfigurationMinusGetObjectMinusV2MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as SystemconfigurationGetObjectV2Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -158,16 +158,16 @@ class ObjectSystemconfigurationApi(basePath: kotlin.String = defaultBasePath, cl
      * Retrieve an existing Systemconfiguration
      * 
      * @param pkiSystemconfigurationID The unique ID of the Systemconfiguration
-     * @return ApiResponse<SystemconfigurationMinusGetObjectMinusV2MinusResponse?>
+     * @return ApiResponse<SystemconfigurationGetObjectV2Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun systemconfigurationGetObjectV2WithHttpInfo(pkiSystemconfigurationID: kotlin.Int) : ApiResponse<SystemconfigurationMinusGetObjectMinusV2MinusResponse?> {
+    fun systemconfigurationGetObjectV2WithHttpInfo(pkiSystemconfigurationID: kotlin.Int) : ApiResponse<SystemconfigurationGetObjectV2Response?> {
         val localVariableConfig = systemconfigurationGetObjectV2RequestConfig(pkiSystemconfigurationID = pkiSystemconfigurationID)
 
-        return request<Unit, SystemconfigurationMinusGetObjectMinusV2MinusResponse>(
+        return request<Unit, SystemconfigurationGetObjectV2Response>(
             localVariableConfig
         )
     }

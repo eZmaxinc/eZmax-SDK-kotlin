@@ -1,5 +1,5 @@
 
-# BillingentityinternalMinusAutocompleteElementMinusResponse
+# BillingentityinternalAutocompleteElementResponse
 
 ## Properties
 Name | Type | Description | Notes

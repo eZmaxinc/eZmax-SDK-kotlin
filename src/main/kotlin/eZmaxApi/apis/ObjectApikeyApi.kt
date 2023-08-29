@@ -19,21 +19,21 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.ApikeyMinusCreateObjectMinusV2MinusRequest
-import eZmaxApi.models.ApikeyMinusCreateObjectMinusV2MinusResponse
-import eZmaxApi.models.ApikeyMinusEditObjectMinusV1MinusRequest
-import eZmaxApi.models.ApikeyMinusEditObjectMinusV1MinusResponse
-import eZmaxApi.models.ApikeyMinusEditPermissionsMinusV1MinusRequest
-import eZmaxApi.models.ApikeyMinusEditPermissionsMinusV1MinusResponse
-import eZmaxApi.models.ApikeyMinusGetCorsMinusV1MinusResponse
-import eZmaxApi.models.ApikeyMinusGetListMinusV1MinusResponse
-import eZmaxApi.models.ApikeyMinusGetObjectMinusV2MinusResponse
-import eZmaxApi.models.ApikeyMinusGetPermissionsMinusV1MinusResponse
-import eZmaxApi.models.ApikeyMinusGetSubnetsMinusV1MinusResponse
-import eZmaxApi.models.ApikeyMinusRegenerateMinusV1MinusRequest
-import eZmaxApi.models.ApikeyMinusRegenerateMinusV1MinusResponse
-import eZmaxApi.models.CommonMinusResponseMinusError
-import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
+import eZmaxApi.models.ApikeyCreateObjectV2Request
+import eZmaxApi.models.ApikeyCreateObjectV2Response
+import eZmaxApi.models.ApikeyEditObjectV1Request
+import eZmaxApi.models.ApikeyEditObjectV1Response
+import eZmaxApi.models.ApikeyEditPermissionsV1Request
+import eZmaxApi.models.ApikeyEditPermissionsV1Response
+import eZmaxApi.models.ApikeyGetCorsV1Response
+import eZmaxApi.models.ApikeyGetListV1Response
+import eZmaxApi.models.ApikeyGetObjectV2Response
+import eZmaxApi.models.ApikeyGetPermissionsV1Response
+import eZmaxApi.models.ApikeyGetSubnetsV1Response
+import eZmaxApi.models.ApikeyRegenerateV1Request
+import eZmaxApi.models.ApikeyRegenerateV1Response
+import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.HeaderAcceptLanguage
 
 import com.squareup.moshi.Json
 
@@ -62,8 +62,8 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
     /**
      * Create a new Apikey
      * The endpoint allows to create one or many elements at once.
-     * @param apikeyMinusCreateObjectMinusV2MinusRequest 
-     * @return ApikeyMinusCreateObjectMinusV2MinusResponse
+     * @param apikeyCreateObjectV2Request 
+     * @return ApikeyCreateObjectV2Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -72,11 +72,11 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun apikeyCreateObjectV2(apikeyMinusCreateObjectMinusV2MinusRequest: ApikeyMinusCreateObjectMinusV2MinusRequest) : ApikeyMinusCreateObjectMinusV2MinusResponse {
-        val localVarResponse = apikeyCreateObjectV2WithHttpInfo(apikeyMinusCreateObjectMinusV2MinusRequest = apikeyMinusCreateObjectMinusV2MinusRequest)
+    fun apikeyCreateObjectV2(apikeyCreateObjectV2Request: ApikeyCreateObjectV2Request) : ApikeyCreateObjectV2Response {
+        val localVarResponse = apikeyCreateObjectV2WithHttpInfo(apikeyCreateObjectV2Request = apikeyCreateObjectV2Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as ApikeyMinusCreateObjectMinusV2MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ApikeyCreateObjectV2Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -93,17 +93,17 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
     /**
      * Create a new Apikey
      * The endpoint allows to create one or many elements at once.
-     * @param apikeyMinusCreateObjectMinusV2MinusRequest 
-     * @return ApiResponse<ApikeyMinusCreateObjectMinusV2MinusResponse?>
+     * @param apikeyCreateObjectV2Request 
+     * @return ApiResponse<ApikeyCreateObjectV2Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun apikeyCreateObjectV2WithHttpInfo(apikeyMinusCreateObjectMinusV2MinusRequest: ApikeyMinusCreateObjectMinusV2MinusRequest) : ApiResponse<ApikeyMinusCreateObjectMinusV2MinusResponse?> {
-        val localVariableConfig = apikeyCreateObjectV2RequestConfig(apikeyMinusCreateObjectMinusV2MinusRequest = apikeyMinusCreateObjectMinusV2MinusRequest)
+    fun apikeyCreateObjectV2WithHttpInfo(apikeyCreateObjectV2Request: ApikeyCreateObjectV2Request) : ApiResponse<ApikeyCreateObjectV2Response?> {
+        val localVariableConfig = apikeyCreateObjectV2RequestConfig(apikeyCreateObjectV2Request = apikeyCreateObjectV2Request)
 
-        return request<ApikeyMinusCreateObjectMinusV2MinusRequest, ApikeyMinusCreateObjectMinusV2MinusResponse>(
+        return request<ApikeyCreateObjectV2Request, ApikeyCreateObjectV2Response>(
             localVariableConfig
         )
     }
@@ -111,11 +111,11 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
     /**
      * To obtain the request config of the operation apikeyCreateObjectV2
      *
-     * @param apikeyMinusCreateObjectMinusV2MinusRequest 
+     * @param apikeyCreateObjectV2Request 
      * @return RequestConfig
      */
-    fun apikeyCreateObjectV2RequestConfig(apikeyMinusCreateObjectMinusV2MinusRequest: ApikeyMinusCreateObjectMinusV2MinusRequest) : RequestConfig<ApikeyMinusCreateObjectMinusV2MinusRequest> {
-        val localVariableBody = apikeyMinusCreateObjectMinusV2MinusRequest
+    fun apikeyCreateObjectV2RequestConfig(apikeyCreateObjectV2Request: ApikeyCreateObjectV2Request) : RequestConfig<ApikeyCreateObjectV2Request> {
+        val localVariableBody = apikeyCreateObjectV2Request
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Content-Type"] = "application/json"
@@ -135,8 +135,8 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      * Edit an existing Apikey
      * 
      * @param pkiApikeyID The unique ID of the Apikey
-     * @param apikeyMinusEditObjectMinusV1MinusRequest 
-     * @return ApikeyMinusEditObjectMinusV1MinusResponse
+     * @param apikeyEditObjectV1Request 
+     * @return ApikeyEditObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -145,11 +145,11 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun apikeyEditObjectV1(pkiApikeyID: kotlin.Int, apikeyMinusEditObjectMinusV1MinusRequest: ApikeyMinusEditObjectMinusV1MinusRequest) : ApikeyMinusEditObjectMinusV1MinusResponse {
-        val localVarResponse = apikeyEditObjectV1WithHttpInfo(pkiApikeyID = pkiApikeyID, apikeyMinusEditObjectMinusV1MinusRequest = apikeyMinusEditObjectMinusV1MinusRequest)
+    fun apikeyEditObjectV1(pkiApikeyID: kotlin.Int, apikeyEditObjectV1Request: ApikeyEditObjectV1Request) : ApikeyEditObjectV1Response {
+        val localVarResponse = apikeyEditObjectV1WithHttpInfo(pkiApikeyID = pkiApikeyID, apikeyEditObjectV1Request = apikeyEditObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as ApikeyMinusEditObjectMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ApikeyEditObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -167,17 +167,17 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      * Edit an existing Apikey
      * 
      * @param pkiApikeyID The unique ID of the Apikey
-     * @param apikeyMinusEditObjectMinusV1MinusRequest 
-     * @return ApiResponse<ApikeyMinusEditObjectMinusV1MinusResponse?>
+     * @param apikeyEditObjectV1Request 
+     * @return ApiResponse<ApikeyEditObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun apikeyEditObjectV1WithHttpInfo(pkiApikeyID: kotlin.Int, apikeyMinusEditObjectMinusV1MinusRequest: ApikeyMinusEditObjectMinusV1MinusRequest) : ApiResponse<ApikeyMinusEditObjectMinusV1MinusResponse?> {
-        val localVariableConfig = apikeyEditObjectV1RequestConfig(pkiApikeyID = pkiApikeyID, apikeyMinusEditObjectMinusV1MinusRequest = apikeyMinusEditObjectMinusV1MinusRequest)
+    fun apikeyEditObjectV1WithHttpInfo(pkiApikeyID: kotlin.Int, apikeyEditObjectV1Request: ApikeyEditObjectV1Request) : ApiResponse<ApikeyEditObjectV1Response?> {
+        val localVariableConfig = apikeyEditObjectV1RequestConfig(pkiApikeyID = pkiApikeyID, apikeyEditObjectV1Request = apikeyEditObjectV1Request)
 
-        return request<ApikeyMinusEditObjectMinusV1MinusRequest, ApikeyMinusEditObjectMinusV1MinusResponse>(
+        return request<ApikeyEditObjectV1Request, ApikeyEditObjectV1Response>(
             localVariableConfig
         )
     }
@@ -186,11 +186,11 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      * To obtain the request config of the operation apikeyEditObjectV1
      *
      * @param pkiApikeyID The unique ID of the Apikey
-     * @param apikeyMinusEditObjectMinusV1MinusRequest 
+     * @param apikeyEditObjectV1Request 
      * @return RequestConfig
      */
-    fun apikeyEditObjectV1RequestConfig(pkiApikeyID: kotlin.Int, apikeyMinusEditObjectMinusV1MinusRequest: ApikeyMinusEditObjectMinusV1MinusRequest) : RequestConfig<ApikeyMinusEditObjectMinusV1MinusRequest> {
-        val localVariableBody = apikeyMinusEditObjectMinusV1MinusRequest
+    fun apikeyEditObjectV1RequestConfig(pkiApikeyID: kotlin.Int, apikeyEditObjectV1Request: ApikeyEditObjectV1Request) : RequestConfig<ApikeyEditObjectV1Request> {
+        val localVariableBody = apikeyEditObjectV1Request
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Content-Type"] = "application/json"
@@ -210,8 +210,8 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      * Edit multiple Permissions
      * Using this endpoint, you can edit multiple Permissions at the same time.
      * @param pkiApikeyID 
-     * @param apikeyMinusEditPermissionsMinusV1MinusRequest 
-     * @return ApikeyMinusEditPermissionsMinusV1MinusResponse
+     * @param apikeyEditPermissionsV1Request 
+     * @return ApikeyEditPermissionsV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -220,11 +220,11 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun apikeyEditPermissionsV1(pkiApikeyID: kotlin.Int, apikeyMinusEditPermissionsMinusV1MinusRequest: ApikeyMinusEditPermissionsMinusV1MinusRequest) : ApikeyMinusEditPermissionsMinusV1MinusResponse {
-        val localVarResponse = apikeyEditPermissionsV1WithHttpInfo(pkiApikeyID = pkiApikeyID, apikeyMinusEditPermissionsMinusV1MinusRequest = apikeyMinusEditPermissionsMinusV1MinusRequest)
+    fun apikeyEditPermissionsV1(pkiApikeyID: kotlin.Int, apikeyEditPermissionsV1Request: ApikeyEditPermissionsV1Request) : ApikeyEditPermissionsV1Response {
+        val localVarResponse = apikeyEditPermissionsV1WithHttpInfo(pkiApikeyID = pkiApikeyID, apikeyEditPermissionsV1Request = apikeyEditPermissionsV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as ApikeyMinusEditPermissionsMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ApikeyEditPermissionsV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -242,17 +242,17 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      * Edit multiple Permissions
      * Using this endpoint, you can edit multiple Permissions at the same time.
      * @param pkiApikeyID 
-     * @param apikeyMinusEditPermissionsMinusV1MinusRequest 
-     * @return ApiResponse<ApikeyMinusEditPermissionsMinusV1MinusResponse?>
+     * @param apikeyEditPermissionsV1Request 
+     * @return ApiResponse<ApikeyEditPermissionsV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun apikeyEditPermissionsV1WithHttpInfo(pkiApikeyID: kotlin.Int, apikeyMinusEditPermissionsMinusV1MinusRequest: ApikeyMinusEditPermissionsMinusV1MinusRequest) : ApiResponse<ApikeyMinusEditPermissionsMinusV1MinusResponse?> {
-        val localVariableConfig = apikeyEditPermissionsV1RequestConfig(pkiApikeyID = pkiApikeyID, apikeyMinusEditPermissionsMinusV1MinusRequest = apikeyMinusEditPermissionsMinusV1MinusRequest)
+    fun apikeyEditPermissionsV1WithHttpInfo(pkiApikeyID: kotlin.Int, apikeyEditPermissionsV1Request: ApikeyEditPermissionsV1Request) : ApiResponse<ApikeyEditPermissionsV1Response?> {
+        val localVariableConfig = apikeyEditPermissionsV1RequestConfig(pkiApikeyID = pkiApikeyID, apikeyEditPermissionsV1Request = apikeyEditPermissionsV1Request)
 
-        return request<ApikeyMinusEditPermissionsMinusV1MinusRequest, ApikeyMinusEditPermissionsMinusV1MinusResponse>(
+        return request<ApikeyEditPermissionsV1Request, ApikeyEditPermissionsV1Response>(
             localVariableConfig
         )
     }
@@ -261,11 +261,11 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      * To obtain the request config of the operation apikeyEditPermissionsV1
      *
      * @param pkiApikeyID 
-     * @param apikeyMinusEditPermissionsMinusV1MinusRequest 
+     * @param apikeyEditPermissionsV1Request 
      * @return RequestConfig
      */
-    fun apikeyEditPermissionsV1RequestConfig(pkiApikeyID: kotlin.Int, apikeyMinusEditPermissionsMinusV1MinusRequest: ApikeyMinusEditPermissionsMinusV1MinusRequest) : RequestConfig<ApikeyMinusEditPermissionsMinusV1MinusRequest> {
-        val localVariableBody = apikeyMinusEditPermissionsMinusV1MinusRequest
+    fun apikeyEditPermissionsV1RequestConfig(pkiApikeyID: kotlin.Int, apikeyEditPermissionsV1Request: ApikeyEditPermissionsV1Request) : RequestConfig<ApikeyEditPermissionsV1Request> {
+        val localVariableBody = apikeyEditPermissionsV1Request
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Content-Type"] = "application/json"
@@ -285,7 +285,7 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      * Retrieve an existing Apikey&#39;s cors
      * 
      * @param pkiApikeyID 
-     * @return ApikeyMinusGetCorsMinusV1MinusResponse
+     * @return ApikeyGetCorsV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -294,11 +294,11 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun apikeyGetCorsV1(pkiApikeyID: kotlin.Int) : ApikeyMinusGetCorsMinusV1MinusResponse {
+    fun apikeyGetCorsV1(pkiApikeyID: kotlin.Int) : ApikeyGetCorsV1Response {
         val localVarResponse = apikeyGetCorsV1WithHttpInfo(pkiApikeyID = pkiApikeyID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as ApikeyMinusGetCorsMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ApikeyGetCorsV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -316,16 +316,16 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      * Retrieve an existing Apikey&#39;s cors
      * 
      * @param pkiApikeyID 
-     * @return ApiResponse<ApikeyMinusGetCorsMinusV1MinusResponse?>
+     * @return ApiResponse<ApikeyGetCorsV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun apikeyGetCorsV1WithHttpInfo(pkiApikeyID: kotlin.Int) : ApiResponse<ApikeyMinusGetCorsMinusV1MinusResponse?> {
+    fun apikeyGetCorsV1WithHttpInfo(pkiApikeyID: kotlin.Int) : ApiResponse<ApikeyGetCorsV1Response?> {
         val localVariableConfig = apikeyGetCorsV1RequestConfig(pkiApikeyID = pkiApikeyID)
 
-        return request<Unit, ApikeyMinusGetCorsMinusV1MinusResponse>(
+        return request<Unit, ApikeyGetCorsV1Response>(
             localVariableConfig
         )
     }
@@ -355,7 +355,7 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
     /**
      * enum for parameter eOrderBy
      */
-     enum class EOrderBy_apikeyGetListV1(val value: kotlin.String) {
+     enum class EOrderByApikeyGetListV1(val value: kotlin.String) {
          @Json(name = "pkiApikeyID_ASC") pkiApikeyID_ASC("pkiApikeyID_ASC"),
          @Json(name = "pkiApikeyID_DESC") pkiApikeyID_DESC("pkiApikeyID_DESC"),
          @Json(name = "sApikeyDescriptionX_ASC") sApikeyDescriptionX_ASC("sApikeyDescriptionX_ASC"),
@@ -378,7 +378,7 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
-     * @return ApikeyMinusGetListMinusV1MinusResponse
+     * @return ApikeyGetListV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -387,11 +387,11 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun apikeyGetListV1(eOrderBy: EOrderBy_apikeyGetListV1? = null, iRowMax: kotlin.Int? = 10000, iRowOffset: kotlin.Int? = 0, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null, sFilter: kotlin.String? = null) : ApikeyMinusGetListMinusV1MinusResponse {
+    fun apikeyGetListV1(eOrderBy: EOrderByApikeyGetListV1? = null, iRowMax: kotlin.Int? = 10000, iRowOffset: kotlin.Int? = 0, acceptLanguage: HeaderAcceptLanguage? = null, sFilter: kotlin.String? = null) : ApikeyGetListV1Response {
         val localVarResponse = apikeyGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as ApikeyMinusGetListMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ApikeyGetListV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -413,16 +413,16 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
-     * @return ApiResponse<ApikeyMinusGetListMinusV1MinusResponse?>
+     * @return ApiResponse<ApikeyGetListV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun apikeyGetListV1WithHttpInfo(eOrderBy: EOrderBy_apikeyGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : ApiResponse<ApikeyMinusGetListMinusV1MinusResponse?> {
+    fun apikeyGetListV1WithHttpInfo(eOrderBy: EOrderByApikeyGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : ApiResponse<ApikeyGetListV1Response?> {
         val localVariableConfig = apikeyGetListV1RequestConfig(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
 
-        return request<Unit, ApikeyMinusGetListMinusV1MinusResponse>(
+        return request<Unit, ApikeyGetListV1Response>(
             localVariableConfig
         )
     }
@@ -437,12 +437,12 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      * @param sFilter  (optional)
      * @return RequestConfig
      */
-    fun apikeyGetListV1RequestConfig(eOrderBy: EOrderBy_apikeyGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
+    fun apikeyGetListV1RequestConfig(eOrderBy: EOrderByApikeyGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
                 if (eOrderBy != null) {
-                    put("eOrderBy", listOf(eOrderBy.toString()))
+                    put("eOrderBy", listOf(eOrderBy.value))
                 }
                 if (iRowMax != null) {
                     put("iRowMax", listOf(iRowMax.toString()))
@@ -472,7 +472,7 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      * Retrieve an existing Apikey
      * 
      * @param pkiApikeyID The unique ID of the Apikey
-     * @return ApikeyMinusGetObjectMinusV2MinusResponse
+     * @return ApikeyGetObjectV2Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -481,11 +481,11 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun apikeyGetObjectV2(pkiApikeyID: kotlin.Int) : ApikeyMinusGetObjectMinusV2MinusResponse {
+    fun apikeyGetObjectV2(pkiApikeyID: kotlin.Int) : ApikeyGetObjectV2Response {
         val localVarResponse = apikeyGetObjectV2WithHttpInfo(pkiApikeyID = pkiApikeyID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as ApikeyMinusGetObjectMinusV2MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ApikeyGetObjectV2Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -503,16 +503,16 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      * Retrieve an existing Apikey
      * 
      * @param pkiApikeyID The unique ID of the Apikey
-     * @return ApiResponse<ApikeyMinusGetObjectMinusV2MinusResponse?>
+     * @return ApiResponse<ApikeyGetObjectV2Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun apikeyGetObjectV2WithHttpInfo(pkiApikeyID: kotlin.Int) : ApiResponse<ApikeyMinusGetObjectMinusV2MinusResponse?> {
+    fun apikeyGetObjectV2WithHttpInfo(pkiApikeyID: kotlin.Int) : ApiResponse<ApikeyGetObjectV2Response?> {
         val localVariableConfig = apikeyGetObjectV2RequestConfig(pkiApikeyID = pkiApikeyID)
 
-        return request<Unit, ApikeyMinusGetObjectMinusV2MinusResponse>(
+        return request<Unit, ApikeyGetObjectV2Response>(
             localVariableConfig
         )
     }
@@ -543,7 +543,7 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      * Retrieve an existing Apikey&#39;s Permissions
      * 
      * @param pkiApikeyID 
-     * @return ApikeyMinusGetPermissionsMinusV1MinusResponse
+     * @return ApikeyGetPermissionsV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -552,11 +552,11 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun apikeyGetPermissionsV1(pkiApikeyID: kotlin.Int) : ApikeyMinusGetPermissionsMinusV1MinusResponse {
+    fun apikeyGetPermissionsV1(pkiApikeyID: kotlin.Int) : ApikeyGetPermissionsV1Response {
         val localVarResponse = apikeyGetPermissionsV1WithHttpInfo(pkiApikeyID = pkiApikeyID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as ApikeyMinusGetPermissionsMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ApikeyGetPermissionsV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -574,16 +574,16 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      * Retrieve an existing Apikey&#39;s Permissions
      * 
      * @param pkiApikeyID 
-     * @return ApiResponse<ApikeyMinusGetPermissionsMinusV1MinusResponse?>
+     * @return ApiResponse<ApikeyGetPermissionsV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun apikeyGetPermissionsV1WithHttpInfo(pkiApikeyID: kotlin.Int) : ApiResponse<ApikeyMinusGetPermissionsMinusV1MinusResponse?> {
+    fun apikeyGetPermissionsV1WithHttpInfo(pkiApikeyID: kotlin.Int) : ApiResponse<ApikeyGetPermissionsV1Response?> {
         val localVariableConfig = apikeyGetPermissionsV1RequestConfig(pkiApikeyID = pkiApikeyID)
 
-        return request<Unit, ApikeyMinusGetPermissionsMinusV1MinusResponse>(
+        return request<Unit, ApikeyGetPermissionsV1Response>(
             localVariableConfig
         )
     }
@@ -614,7 +614,7 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      * Retrieve an existing Apikey&#39;s subnets
      * 
      * @param pkiApikeyID 
-     * @return ApikeyMinusGetSubnetsMinusV1MinusResponse
+     * @return ApikeyGetSubnetsV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -623,11 +623,11 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun apikeyGetSubnetsV1(pkiApikeyID: kotlin.Int) : ApikeyMinusGetSubnetsMinusV1MinusResponse {
+    fun apikeyGetSubnetsV1(pkiApikeyID: kotlin.Int) : ApikeyGetSubnetsV1Response {
         val localVarResponse = apikeyGetSubnetsV1WithHttpInfo(pkiApikeyID = pkiApikeyID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as ApikeyMinusGetSubnetsMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ApikeyGetSubnetsV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -645,16 +645,16 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      * Retrieve an existing Apikey&#39;s subnets
      * 
      * @param pkiApikeyID 
-     * @return ApiResponse<ApikeyMinusGetSubnetsMinusV1MinusResponse?>
+     * @return ApiResponse<ApikeyGetSubnetsV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun apikeyGetSubnetsV1WithHttpInfo(pkiApikeyID: kotlin.Int) : ApiResponse<ApikeyMinusGetSubnetsMinusV1MinusResponse?> {
+    fun apikeyGetSubnetsV1WithHttpInfo(pkiApikeyID: kotlin.Int) : ApiResponse<ApikeyGetSubnetsV1Response?> {
         val localVariableConfig = apikeyGetSubnetsV1RequestConfig(pkiApikeyID = pkiApikeyID)
 
-        return request<Unit, ApikeyMinusGetSubnetsMinusV1MinusResponse>(
+        return request<Unit, ApikeyGetSubnetsV1Response>(
             localVariableConfig
         )
     }
@@ -685,8 +685,8 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      * Regenerate the Apikey
      * 
      * @param pkiApikeyID 
-     * @param apikeyMinusRegenerateMinusV1MinusRequest 
-     * @return ApikeyMinusRegenerateMinusV1MinusResponse
+     * @param apikeyRegenerateV1Request 
+     * @return ApikeyRegenerateV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -695,11 +695,11 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun apikeyRegenerateV1(pkiApikeyID: kotlin.Int, apikeyMinusRegenerateMinusV1MinusRequest: ApikeyMinusRegenerateMinusV1MinusRequest) : ApikeyMinusRegenerateMinusV1MinusResponse {
-        val localVarResponse = apikeyRegenerateV1WithHttpInfo(pkiApikeyID = pkiApikeyID, apikeyMinusRegenerateMinusV1MinusRequest = apikeyMinusRegenerateMinusV1MinusRequest)
+    fun apikeyRegenerateV1(pkiApikeyID: kotlin.Int, apikeyRegenerateV1Request: ApikeyRegenerateV1Request) : ApikeyRegenerateV1Response {
+        val localVarResponse = apikeyRegenerateV1WithHttpInfo(pkiApikeyID = pkiApikeyID, apikeyRegenerateV1Request = apikeyRegenerateV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as ApikeyMinusRegenerateMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ApikeyRegenerateV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -717,17 +717,17 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      * Regenerate the Apikey
      * 
      * @param pkiApikeyID 
-     * @param apikeyMinusRegenerateMinusV1MinusRequest 
-     * @return ApiResponse<ApikeyMinusRegenerateMinusV1MinusResponse?>
+     * @param apikeyRegenerateV1Request 
+     * @return ApiResponse<ApikeyRegenerateV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun apikeyRegenerateV1WithHttpInfo(pkiApikeyID: kotlin.Int, apikeyMinusRegenerateMinusV1MinusRequest: ApikeyMinusRegenerateMinusV1MinusRequest) : ApiResponse<ApikeyMinusRegenerateMinusV1MinusResponse?> {
-        val localVariableConfig = apikeyRegenerateV1RequestConfig(pkiApikeyID = pkiApikeyID, apikeyMinusRegenerateMinusV1MinusRequest = apikeyMinusRegenerateMinusV1MinusRequest)
+    fun apikeyRegenerateV1WithHttpInfo(pkiApikeyID: kotlin.Int, apikeyRegenerateV1Request: ApikeyRegenerateV1Request) : ApiResponse<ApikeyRegenerateV1Response?> {
+        val localVariableConfig = apikeyRegenerateV1RequestConfig(pkiApikeyID = pkiApikeyID, apikeyRegenerateV1Request = apikeyRegenerateV1Request)
 
-        return request<ApikeyMinusRegenerateMinusV1MinusRequest, ApikeyMinusRegenerateMinusV1MinusResponse>(
+        return request<ApikeyRegenerateV1Request, ApikeyRegenerateV1Response>(
             localVariableConfig
         )
     }
@@ -736,11 +736,11 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      * To obtain the request config of the operation apikeyRegenerateV1
      *
      * @param pkiApikeyID 
-     * @param apikeyMinusRegenerateMinusV1MinusRequest 
+     * @param apikeyRegenerateV1Request 
      * @return RequestConfig
      */
-    fun apikeyRegenerateV1RequestConfig(pkiApikeyID: kotlin.Int, apikeyMinusRegenerateMinusV1MinusRequest: ApikeyMinusRegenerateMinusV1MinusRequest) : RequestConfig<ApikeyMinusRegenerateMinusV1MinusRequest> {
-        val localVariableBody = apikeyMinusRegenerateMinusV1MinusRequest
+    fun apikeyRegenerateV1RequestConfig(pkiApikeyID: kotlin.Int, apikeyRegenerateV1Request: ApikeyRegenerateV1Request) : RequestConfig<ApikeyRegenerateV1Request> {
+        val localVariableBody = apikeyRegenerateV1Request
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Content-Type"] = "application/json"

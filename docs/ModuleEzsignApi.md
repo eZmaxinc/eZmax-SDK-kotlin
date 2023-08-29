@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a id="ezsignSuggestSignersV1"></a>
 # **ezsignSuggestSignersV1**
-> EzsignMinusSuggestSignersMinusV1MinusResponse ezsignSuggestSignersV1()
+> EzsignSuggestSignersV1Response ezsignSuggestSignersV1()
 
 Suggest signers
 
@@ -24,7 +24,7 @@ Retrieve previously used Ezsignsigners and all users from the system
 
 val apiInstance = ModuleEzsignApi()
 try {
-    val result : EzsignMinusSuggestSignersMinusV1MinusResponse = apiInstance.ezsignSuggestSignersV1()
+    val result : EzsignSuggestSignersV1Response = apiInstance.ezsignSuggestSignersV1()
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ModuleEzsignApi#ezsignSuggestSignersV1")
@@ -40,7 +40,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**EzsignMinusSuggestSignersMinusV1MinusResponse**](EzsignMinusSuggestSignersMinusV1MinusResponse.md)
+[**EzsignSuggestSignersV1Response**](EzsignSuggestSignersV1Response.md)
 
 ### Authorization
 
@@ -56,7 +56,7 @@ Configure Authorization:
 
 <a id="ezsignSuggestTemplatesV1"></a>
 # **ezsignSuggestTemplatesV1**
-> EzsignMinusSuggestTemplatesMinusV1MinusResponse ezsignSuggestTemplatesV1(fkiEzsignfoldertypeID)
+> EzsignSuggestTemplatesV1Response ezsignSuggestTemplatesV1(fkiEzsignfoldertypeID)
 
 Suggest templates
 
@@ -71,7 +71,7 @@ Retrieve Ezsigntemplates and Ezsigntemplatepackages that can be imported in a Ez
 val apiInstance = ModuleEzsignApi()
 val fkiEzsignfoldertypeID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : EzsignMinusSuggestTemplatesMinusV1MinusResponse = apiInstance.ezsignSuggestTemplatesV1(fkiEzsignfoldertypeID)
+    val result : EzsignSuggestTemplatesV1Response = apiInstance.ezsignSuggestTemplatesV1(fkiEzsignfoldertypeID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ModuleEzsignApi#ezsignSuggestTemplatesV1")
@@ -90,7 +90,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignMinusSuggestTemplatesMinusV1MinusResponse**](EzsignMinusSuggestTemplatesMinusV1MinusResponse.md)
+[**EzsignSuggestTemplatesV1Response**](EzsignSuggestTemplatesV1Response.md)
 
 ### Authorization
 

@@ -1,5 +1,5 @@
 
-# BillingentityinternalMinusCreateObjectMinusV1MinusResponseMinusMPayload
+# BillingentityinternalCreateObjectV1ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes

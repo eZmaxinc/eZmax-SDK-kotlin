@@ -1,5 +1,5 @@
 
-# UsergroupMinusEditUsergroupmembershipsMinusV1MinusResponseMinusMPayload
+# UsergroupEditUsergroupmembershipsV1ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes

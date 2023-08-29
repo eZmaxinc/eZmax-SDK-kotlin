@@ -1,12 +1,12 @@
 
-# ActivesessionMinusGetCurrentMinusV1MinusResponse
+# ActivesessionGetCurrentV1Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**ActivesessionMinusGetCurrentMinusV1MinusResponseMinusMPayload**](ActivesessionMinusGetCurrentMinusV1MinusResponseMinusMPayload.md) |  | 
-**objDebugPayload** | [**CommonMinusResponseMinusObjDebugPayload**](CommonMinusResponseMinusObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonMinusResponseMinusObjDebug**](CommonMinusResponseMinusObjDebug.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
+**mPayload** | [**ActivesessionGetCurrentV1ResponseMPayload**](ActivesessionGetCurrentV1ResponseMPayload.md) |  | 
+**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 
 
 

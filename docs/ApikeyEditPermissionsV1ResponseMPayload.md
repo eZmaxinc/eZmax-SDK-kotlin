@@ -1,5 +1,5 @@
 
-# ApikeyMinusEditPermissionsMinusV1MinusResponseMinusMPayload
+# ApikeyEditPermissionsV1ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,5 +1,5 @@
 
-# ScimMinusEmail
+# ScimEmail
 
 ## Properties
 Name | Type | Description | Notes

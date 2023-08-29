@@ -1,5 +1,5 @@
 
-# PhonestaticMinusResponseCompound
+# PhonestaticResponseCompound
 
 ## Properties
 Name | Type | Description | Notes

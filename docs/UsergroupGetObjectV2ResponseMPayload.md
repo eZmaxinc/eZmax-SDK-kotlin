@@ -1,10 +1,10 @@
 
-# UsergroupMinusGetObjectMinusV2MinusResponseMinusMPayload
+# UsergroupGetObjectV2ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objUsergroup** | [**UsergroupMinusResponseCompound**](UsergroupMinusResponseCompound.md) |  | 
+**objUsergroup** | [**UsergroupResponseCompound**](UsergroupResponseCompound.md) |  | 
 
 
 

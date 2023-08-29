@@ -1,5 +1,5 @@
 
-# NotificationtestMinusGetElementsMinusV1MinusResponseMinusMPayload
+# NotificationtestGetElementsV1ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes

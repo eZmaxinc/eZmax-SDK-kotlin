@@ -1,5 +1,5 @@
 
-# BillingentityinternalMinusListElement
+# BillingentityinternalListElement
 
 ## Properties
 Name | Type | Description | Notes

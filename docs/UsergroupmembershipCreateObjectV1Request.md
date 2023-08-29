@@ -1,10 +1,10 @@
 
-# UsergroupmembershipMinusCreateObjectMinusV1MinusRequest
+# UsergroupmembershipCreateObjectV1Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjUsergroupmembership** | [**kotlin.collections.List&lt;UsergroupmembershipMinusRequestCompound&gt;**](UsergroupmembershipMinusRequestCompound.md) |  | 
+**aObjUsergroupmembership** | [**kotlin.collections.List&lt;UsergroupmembershipRequestCompound&gt;**](UsergroupmembershipRequestCompound.md) |  | 
 
 
 

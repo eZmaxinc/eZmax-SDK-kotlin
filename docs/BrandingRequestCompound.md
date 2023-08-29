@@ -1,11 +1,11 @@
 
-# BrandingMinusRequestCompound
+# BrandingRequestCompound
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objBrandingDescription** | [**MultilingualMinusBrandingDescription**](MultilingualMinusBrandingDescription.md) |  | 
-**eBrandingLogo** | [**FieldMinusEBrandingLogo**](FieldMinusEBrandingLogo.md) |  | 
+**objBrandingDescription** | [**MultilingualBrandingDescription**](MultilingualBrandingDescription.md) |  | 
+**eBrandingLogo** | [**FieldEBrandingLogo**](FieldEBrandingLogo.md) |  | 
 **iBrandingColortext** | **kotlin.Int** | The color of the text. This is a RGB color converted into integer | 
 **iBrandingColortextlinkbox** | **kotlin.Int** | The color of the text in the link box. This is a RGB color converted into integer | 
 **iBrandingColortextbutton** | **kotlin.Int** | The color of the text in the button. This is a RGB color converted into integer | 

@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a id="billingentityinternalCreateObjectV1"></a>
 # **billingentityinternalCreateObjectV1**
-> BillingentityinternalMinusCreateObjectMinusV1MinusResponse billingentityinternalCreateObjectV1(billingentityinternalMinusCreateObjectMinusV1MinusRequest)
+> BillingentityinternalCreateObjectV1Response billingentityinternalCreateObjectV1(billingentityinternalCreateObjectV1Request)
 
 Create a new Billingentityinternal
 
@@ -26,9 +26,9 @@ The endpoint allows to create one or many elements at once.
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectBillingentityinternalApi()
-val billingentityinternalMinusCreateObjectMinusV1MinusRequest : BillingentityinternalMinusCreateObjectMinusV1MinusRequest =  // BillingentityinternalMinusCreateObjectMinusV1MinusRequest | 
+val billingentityinternalCreateObjectV1Request : BillingentityinternalCreateObjectV1Request =  // BillingentityinternalCreateObjectV1Request | 
 try {
-    val result : BillingentityinternalMinusCreateObjectMinusV1MinusResponse = apiInstance.billingentityinternalCreateObjectV1(billingentityinternalMinusCreateObjectMinusV1MinusRequest)
+    val result : BillingentityinternalCreateObjectV1Response = apiInstance.billingentityinternalCreateObjectV1(billingentityinternalCreateObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectBillingentityinternalApi#billingentityinternalCreateObjectV1")
@@ -43,11 +43,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **billingentityinternalMinusCreateObjectMinusV1MinusRequest** | [**BillingentityinternalMinusCreateObjectMinusV1MinusRequest**](BillingentityinternalMinusCreateObjectMinusV1MinusRequest.md)|  |
+ **billingentityinternalCreateObjectV1Request** | [**BillingentityinternalCreateObjectV1Request**](BillingentityinternalCreateObjectV1Request.md)|  |
 
 ### Return type
 
-[**BillingentityinternalMinusCreateObjectMinusV1MinusResponse**](BillingentityinternalMinusCreateObjectMinusV1MinusResponse.md)
+[**BillingentityinternalCreateObjectV1Response**](BillingentityinternalCreateObjectV1Response.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Configure Authorization:
 
 <a id="billingentityinternalEditObjectV1"></a>
 # **billingentityinternalEditObjectV1**
-> BillingentityinternalMinusEditObjectMinusV1MinusResponse billingentityinternalEditObjectV1(pkiBillingentityinternalID, billingentityinternalMinusEditObjectMinusV1MinusRequest)
+> BillingentityinternalEditObjectV1Response billingentityinternalEditObjectV1(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request)
 
 Edit an existing Billingentityinternal
 
@@ -77,9 +77,9 @@ Edit an existing Billingentityinternal
 
 val apiInstance = ObjectBillingentityinternalApi()
 val pkiBillingentityinternalID : kotlin.Int = 56 // kotlin.Int | 
-val billingentityinternalMinusEditObjectMinusV1MinusRequest : BillingentityinternalMinusEditObjectMinusV1MinusRequest =  // BillingentityinternalMinusEditObjectMinusV1MinusRequest | 
+val billingentityinternalEditObjectV1Request : BillingentityinternalEditObjectV1Request =  // BillingentityinternalEditObjectV1Request | 
 try {
-    val result : BillingentityinternalMinusEditObjectMinusV1MinusResponse = apiInstance.billingentityinternalEditObjectV1(pkiBillingentityinternalID, billingentityinternalMinusEditObjectMinusV1MinusRequest)
+    val result : BillingentityinternalEditObjectV1Response = apiInstance.billingentityinternalEditObjectV1(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectBillingentityinternalApi#billingentityinternalEditObjectV1")
@@ -95,11 +95,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiBillingentityinternalID** | **kotlin.Int**|  |
- **billingentityinternalMinusEditObjectMinusV1MinusRequest** | [**BillingentityinternalMinusEditObjectMinusV1MinusRequest**](BillingentityinternalMinusEditObjectMinusV1MinusRequest.md)|  |
+ **billingentityinternalEditObjectV1Request** | [**BillingentityinternalEditObjectV1Request**](BillingentityinternalEditObjectV1Request.md)|  |
 
 ### Return type
 
-[**BillingentityinternalMinusEditObjectMinusV1MinusResponse**](BillingentityinternalMinusEditObjectMinusV1MinusResponse.md)
+[**BillingentityinternalEditObjectV1Response**](BillingentityinternalEditObjectV1Response.md)
 
 ### Authorization
 
@@ -115,7 +115,7 @@ Configure Authorization:
 
 <a id="billingentityinternalGetAutocompleteV2"></a>
 # **billingentityinternalGetAutocompleteV2**
-> BillingentityinternalMinusGetAutocompleteMinusV2MinusResponse billingentityinternalGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+> BillingentityinternalGetAutocompleteV2Response billingentityinternalGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 
 Retrieve Billingentityinternals and IDs
 
@@ -131,9 +131,9 @@ val apiInstance = ObjectBillingentityinternalApi()
 val sSelector : kotlin.String = sSelector_example // kotlin.String | The type of Billingentityinternals to return
 val eFilterActive : kotlin.String = eFilterActive_example // kotlin.String | Specify which results we want to display.
 val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter the returned results
-val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
+val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
 try {
-    val result : BillingentityinternalMinusGetAutocompleteMinusV2MinusResponse = apiInstance.billingentityinternalGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+    val result : BillingentityinternalGetAutocompleteV2Response = apiInstance.billingentityinternalGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectBillingentityinternalApi#billingentityinternalGetAutocompleteV2")
@@ -151,11 +151,11 @@ Name | Type | Description  | Notes
  **sSelector** | **kotlin.String**| The type of Billingentityinternals to return | [enum: All]
  **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
  **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional]
- **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
 
 ### Return type
 
-[**BillingentityinternalMinusGetAutocompleteMinusV2MinusResponse**](BillingentityinternalMinusGetAutocompleteMinusV2MinusResponse.md)
+[**BillingentityinternalGetAutocompleteV2Response**](BillingentityinternalGetAutocompleteV2Response.md)
 
 ### Authorization
 
@@ -171,7 +171,7 @@ Configure Authorization:
 
 <a id="billingentityinternalGetListV1"></a>
 # **billingentityinternalGetListV1**
-> BillingentityinternalMinusGetListMinusV1MinusResponse billingentityinternalGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+> BillingentityinternalGetListV1Response billingentityinternalGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
 Retrieve Billingentityinternal list
 
@@ -187,10 +187,10 @@ val apiInstance = ObjectBillingentityinternalApi()
 val eOrderBy : kotlin.String = eOrderBy_example // kotlin.String | Specify how you want the results to be sorted
 val iRowMax : kotlin.Int = 56 // kotlin.Int | 
 val iRowOffset : kotlin.Int = 56 // kotlin.Int | 
-val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
+val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
 val sFilter : kotlin.String = sFilter_example // kotlin.String | 
 try {
-    val result : BillingentityinternalMinusGetListMinusV1MinusResponse = apiInstance.billingentityinternalGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+    val result : BillingentityinternalGetListV1Response = apiInstance.billingentityinternalGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectBillingentityinternalApi#billingentityinternalGetListV1")
@@ -208,12 +208,12 @@ Name | Type | Description  | Notes
  **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiBillingentityinternalID_ASC, pkiBillingentityinternalID_DESC, sBillingentityinternalDescriptionX_ASC, sBillingentityinternalDescriptionX_DESC]
  **iRowMax** | **kotlin.Int**|  | [optional] [default to 10000]
  **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0]
- **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
  **sFilter** | **kotlin.String**|  | [optional]
 
 ### Return type
 
-[**BillingentityinternalMinusGetListMinusV1MinusResponse**](BillingentityinternalMinusGetListMinusV1MinusResponse.md)
+[**BillingentityinternalGetListV1Response**](BillingentityinternalGetListV1Response.md)
 
 ### Authorization
 
@@ -229,7 +229,7 @@ Configure Authorization:
 
 <a id="billingentityinternalGetObjectV2"></a>
 # **billingentityinternalGetObjectV2**
-> BillingentityinternalMinusGetObjectMinusV2MinusResponse billingentityinternalGetObjectV2(pkiBillingentityinternalID)
+> BillingentityinternalGetObjectV2Response billingentityinternalGetObjectV2(pkiBillingentityinternalID)
 
 Retrieve an existing Billingentityinternal
 
@@ -244,7 +244,7 @@ Retrieve an existing Billingentityinternal
 val apiInstance = ObjectBillingentityinternalApi()
 val pkiBillingentityinternalID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : BillingentityinternalMinusGetObjectMinusV2MinusResponse = apiInstance.billingentityinternalGetObjectV2(pkiBillingentityinternalID)
+    val result : BillingentityinternalGetObjectV2Response = apiInstance.billingentityinternalGetObjectV2(pkiBillingentityinternalID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectBillingentityinternalApi#billingentityinternalGetObjectV2")
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BillingentityinternalMinusGetObjectMinusV2MinusResponse**](BillingentityinternalMinusGetObjectMinusV2MinusResponse.md)
+[**BillingentityinternalGetObjectV2Response**](BillingentityinternalGetObjectV2Response.md)
 
 ### Authorization
 

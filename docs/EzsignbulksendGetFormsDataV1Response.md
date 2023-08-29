@@ -1,12 +1,12 @@
 
-# EzsignbulksendMinusGetFormsDataMinusV1MinusResponse
+# EzsignbulksendGetFormsDataV1Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**EzsignbulksendMinusGetFormsDataMinusV1MinusResponseMinusMPayload**](EzsignbulksendMinusGetFormsDataMinusV1MinusResponseMinusMPayload.md) |  | 
-**objDebugPayload** | [**CommonMinusResponseMinusObjDebugPayload**](CommonMinusResponseMinusObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonMinusResponseMinusObjDebug**](CommonMinusResponseMinusObjDebug.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
+**mPayload** | [**EzsignbulksendGetFormsDataV1ResponseMPayload**](EzsignbulksendGetFormsDataV1ResponseMPayload.md) |  | 
+**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 
 
 

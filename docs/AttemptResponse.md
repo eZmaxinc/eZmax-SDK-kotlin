@@ -1,5 +1,5 @@
 
-# AttemptMinusResponse
+# AttemptResponse
 
 ## Properties
 Name | Type | Description | Notes

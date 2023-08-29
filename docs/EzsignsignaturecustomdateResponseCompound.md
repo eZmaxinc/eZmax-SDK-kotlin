@@ -1,5 +1,5 @@
 
-# EzsignsignaturecustomdateMinusResponseCompound
+# EzsignsignaturecustomdateResponseCompound
 
 ## Properties
 Name | Type | Description | Notes

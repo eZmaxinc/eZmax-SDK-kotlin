@@ -1,10 +1,10 @@
 
-# EzsigntemplatedocumentMinusGetEzsigntemplatedocumentpagesMinusV1MinusResponseMinusMPayload
+# EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjEzsigntemplatedocumentpage** | [**kotlin.collections.List&lt;EzsigntemplatedocumentpageMinusResponseCompound&gt;**](EzsigntemplatedocumentpageMinusResponseCompound.md) |  | 
+**aObjEzsigntemplatedocumentpage** | [**kotlin.collections.List&lt;EzsigntemplatedocumentpageResponseCompound&gt;**](EzsigntemplatedocumentpageResponseCompound.md) |  | 
 
 
 

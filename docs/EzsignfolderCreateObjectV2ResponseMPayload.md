@@ -1,5 +1,5 @@
 
-# EzsignfolderMinusCreateObjectMinusV2MinusResponseMinusMPayload
+# EzsignfolderCreateObjectV2ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes

@@ -19,8 +19,8 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.ScimMinusUser
-import eZmaxApi.models.ScimMinusUserList
+import eZmaxApi.models.ScimUser
+import eZmaxApi.models.ScimUserList
 
 import com.squareup.moshi.Json
 
@@ -49,8 +49,8 @@ class ScimUsersApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * Create a new User
      * 
-     * @param scimMinusUser 
-     * @return ScimMinusUser
+     * @param scimUser 
+     * @return ScimUser
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -59,11 +59,11 @@ class ScimUsersApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun usersCreateObjectScimV2(scimMinusUser: ScimMinusUser) : ScimMinusUser {
-        val localVarResponse = usersCreateObjectScimV2WithHttpInfo(scimMinusUser = scimMinusUser)
+    fun usersCreateObjectScimV2(scimUser: ScimUser) : ScimUser {
+        val localVarResponse = usersCreateObjectScimV2WithHttpInfo(scimUser = scimUser)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as ScimMinusUser
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ScimUser
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -80,17 +80,17 @@ class ScimUsersApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * Create a new User
      * 
-     * @param scimMinusUser 
-     * @return ApiResponse<ScimMinusUser?>
+     * @param scimUser 
+     * @return ApiResponse<ScimUser?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun usersCreateObjectScimV2WithHttpInfo(scimMinusUser: ScimMinusUser) : ApiResponse<ScimMinusUser?> {
-        val localVariableConfig = usersCreateObjectScimV2RequestConfig(scimMinusUser = scimMinusUser)
+    fun usersCreateObjectScimV2WithHttpInfo(scimUser: ScimUser) : ApiResponse<ScimUser?> {
+        val localVariableConfig = usersCreateObjectScimV2RequestConfig(scimUser = scimUser)
 
-        return request<ScimMinusUser, ScimMinusUser>(
+        return request<ScimUser, ScimUser>(
             localVariableConfig
         )
     }
@@ -98,11 +98,11 @@ class ScimUsersApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     /**
      * To obtain the request config of the operation usersCreateObjectScimV2
      *
-     * @param scimMinusUser 
+     * @param scimUser 
      * @return RequestConfig
      */
-    fun usersCreateObjectScimV2RequestConfig(scimMinusUser: ScimMinusUser) : RequestConfig<ScimMinusUser> {
-        val localVariableBody = scimMinusUser
+    fun usersCreateObjectScimV2RequestConfig(scimUser: ScimUser) : RequestConfig<ScimUser> {
+        val localVariableBody = scimUser
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Content-Type"] = "application/json"
@@ -190,8 +190,8 @@ class ScimUsersApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      * Edit an existing User
      * 
      * @param userId 
-     * @param scimMinusUser 
-     * @return ScimMinusUser
+     * @param scimUser 
+     * @return ScimUser
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -200,11 +200,11 @@ class ScimUsersApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun usersEditObjectScimV2(userId: kotlin.String, scimMinusUser: ScimMinusUser) : ScimMinusUser {
-        val localVarResponse = usersEditObjectScimV2WithHttpInfo(userId = userId, scimMinusUser = scimMinusUser)
+    fun usersEditObjectScimV2(userId: kotlin.String, scimUser: ScimUser) : ScimUser {
+        val localVarResponse = usersEditObjectScimV2WithHttpInfo(userId = userId, scimUser = scimUser)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as ScimMinusUser
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ScimUser
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -222,17 +222,17 @@ class ScimUsersApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      * Edit an existing User
      * 
      * @param userId 
-     * @param scimMinusUser 
-     * @return ApiResponse<ScimMinusUser?>
+     * @param scimUser 
+     * @return ApiResponse<ScimUser?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun usersEditObjectScimV2WithHttpInfo(userId: kotlin.String, scimMinusUser: ScimMinusUser) : ApiResponse<ScimMinusUser?> {
-        val localVariableConfig = usersEditObjectScimV2RequestConfig(userId = userId, scimMinusUser = scimMinusUser)
+    fun usersEditObjectScimV2WithHttpInfo(userId: kotlin.String, scimUser: ScimUser) : ApiResponse<ScimUser?> {
+        val localVariableConfig = usersEditObjectScimV2RequestConfig(userId = userId, scimUser = scimUser)
 
-        return request<ScimMinusUser, ScimMinusUser>(
+        return request<ScimUser, ScimUser>(
             localVariableConfig
         )
     }
@@ -241,11 +241,11 @@ class ScimUsersApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      * To obtain the request config of the operation usersEditObjectScimV2
      *
      * @param userId 
-     * @param scimMinusUser 
+     * @param scimUser 
      * @return RequestConfig
      */
-    fun usersEditObjectScimV2RequestConfig(userId: kotlin.String, scimMinusUser: ScimMinusUser) : RequestConfig<ScimMinusUser> {
-        val localVariableBody = scimMinusUser
+    fun usersEditObjectScimV2RequestConfig(userId: kotlin.String, scimUser: ScimUser) : RequestConfig<ScimUser> {
+        val localVariableBody = scimUser
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Content-Type"] = "application/json"
@@ -265,7 +265,7 @@ class ScimUsersApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      * Retrieve User list
      * 
      * @param filter Filter expression for searching users (optional)
-     * @return ScimMinusUserList
+     * @return ScimUserList
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -274,11 +274,11 @@ class ScimUsersApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun usersGetListScimV2(filter: kotlin.String? = null) : ScimMinusUserList {
+    fun usersGetListScimV2(filter: kotlin.String? = null) : ScimUserList {
         val localVarResponse = usersGetListScimV2WithHttpInfo(filter = filter)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as ScimMinusUserList
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ScimUserList
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -296,16 +296,16 @@ class ScimUsersApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      * Retrieve User list
      * 
      * @param filter Filter expression for searching users (optional)
-     * @return ApiResponse<ScimMinusUserList?>
+     * @return ApiResponse<ScimUserList?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun usersGetListScimV2WithHttpInfo(filter: kotlin.String?) : ApiResponse<ScimMinusUserList?> {
+    fun usersGetListScimV2WithHttpInfo(filter: kotlin.String?) : ApiResponse<ScimUserList?> {
         val localVariableConfig = usersGetListScimV2RequestConfig(filter = filter)
 
-        return request<Unit, ScimMinusUserList>(
+        return request<Unit, ScimUserList>(
             localVariableConfig
         )
     }
@@ -341,7 +341,7 @@ class ScimUsersApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      * Retrieve an existing User
      * 
      * @param userId 
-     * @return ScimMinusUser
+     * @return ScimUser
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -350,11 +350,11 @@ class ScimUsersApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun usersGetObjectScimV2(userId: kotlin.String) : ScimMinusUser {
+    fun usersGetObjectScimV2(userId: kotlin.String) : ScimUser {
         val localVarResponse = usersGetObjectScimV2WithHttpInfo(userId = userId)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as ScimMinusUser
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ScimUser
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -372,16 +372,16 @@ class ScimUsersApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      * Retrieve an existing User
      * 
      * @param userId 
-     * @return ApiResponse<ScimMinusUser?>
+     * @return ApiResponse<ScimUser?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun usersGetObjectScimV2WithHttpInfo(userId: kotlin.String) : ApiResponse<ScimMinusUser?> {
+    fun usersGetObjectScimV2WithHttpInfo(userId: kotlin.String) : ApiResponse<ScimUser?> {
         val localVariableConfig = usersGetObjectScimV2RequestConfig(userId = userId)
 
-        return request<Unit, ScimMinusUser>(
+        return request<Unit, ScimUser>(
             localVariableConfig
         )
     }

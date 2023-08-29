@@ -1,5 +1,5 @@
 
-# PhonetypeMinusAutocompleteElementMinusResponse
+# PhonetypeAutocompleteElementResponse
 
 ## Properties
 Name | Type | Description | Notes

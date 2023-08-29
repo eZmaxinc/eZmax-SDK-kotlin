@@ -1,10 +1,10 @@
 
-# PaymenttermMinusEditObjectMinusV1MinusRequest
+# PaymenttermEditObjectV1Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objPaymentterm** | [**PaymenttermMinusRequestCompound**](PaymenttermMinusRequestCompound.md) |  | 
+**objPaymentterm** | [**PaymenttermRequestCompound**](PaymenttermRequestCompound.md) |  | 
 
 
 

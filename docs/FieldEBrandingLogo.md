@@ -1,5 +1,5 @@
 
-# FieldMinusEBrandingLogo
+# FieldEBrandingLogo
 
 ## Enum
 

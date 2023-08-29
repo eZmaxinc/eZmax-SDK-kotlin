@@ -1,10 +1,10 @@
 
-# EzsignformfieldgroupMinusEditObjectMinusV1MinusRequest
+# EzsignformfieldgroupEditObjectV1Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objEzsignformfieldgroup** | [**EzsignformfieldgroupMinusRequestCompound**](EzsignformfieldgroupMinusRequestCompound.md) |  | 
+**objEzsignformfieldgroup** | [**EzsignformfieldgroupRequestCompound**](EzsignformfieldgroupRequestCompound.md) |  | 
 
 
 

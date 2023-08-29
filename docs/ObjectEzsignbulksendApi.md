@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 <a id="ezsignbulksendCreateEzsignbulksendtransmissionV1"></a>
 # **ezsignbulksendCreateEzsignbulksendtransmissionV1**
-> EzsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusResponse ezsignbulksendCreateEzsignbulksendtransmissionV1(pkiEzsignbulksendID, ezsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusRequest)
+> EzsignbulksendCreateEzsignbulksendtransmissionV1Response ezsignbulksendCreateEzsignbulksendtransmissionV1(pkiEzsignbulksendID, ezsignbulksendCreateEzsignbulksendtransmissionV1Request)
 
 Create a new Ezsignbulksendtransmission in the Ezsignbulksend
 
@@ -31,9 +31,9 @@ Create a new Ezsignbulksendtransmission in the Ezsignbulksend
 
 val apiInstance = ObjectEzsignbulksendApi()
 val pkiEzsignbulksendID : kotlin.Int = 56 // kotlin.Int | 
-val ezsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusRequest : EzsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusRequest =  // EzsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusRequest | 
+val ezsignbulksendCreateEzsignbulksendtransmissionV1Request : EzsignbulksendCreateEzsignbulksendtransmissionV1Request =  // EzsignbulksendCreateEzsignbulksendtransmissionV1Request | 
 try {
-    val result : EzsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusResponse = apiInstance.ezsignbulksendCreateEzsignbulksendtransmissionV1(pkiEzsignbulksendID, ezsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusRequest)
+    val result : EzsignbulksendCreateEzsignbulksendtransmissionV1Response = apiInstance.ezsignbulksendCreateEzsignbulksendtransmissionV1(pkiEzsignbulksendID, ezsignbulksendCreateEzsignbulksendtransmissionV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignbulksendApi#ezsignbulksendCreateEzsignbulksendtransmissionV1")
@@ -49,11 +49,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiEzsignbulksendID** | **kotlin.Int**|  |
- **ezsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusRequest** | [**EzsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusRequest**](EzsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusRequest.md)|  |
+ **ezsignbulksendCreateEzsignbulksendtransmissionV1Request** | [**EzsignbulksendCreateEzsignbulksendtransmissionV1Request**](EzsignbulksendCreateEzsignbulksendtransmissionV1Request.md)|  |
 
 ### Return type
 
-[**EzsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusResponse**](EzsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusResponse.md)
+[**EzsignbulksendCreateEzsignbulksendtransmissionV1Response**](EzsignbulksendCreateEzsignbulksendtransmissionV1Response.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ Configure Authorization:
 
 <a id="ezsignbulksendCreateObjectV1"></a>
 # **ezsignbulksendCreateObjectV1**
-> EzsignbulksendMinusCreateObjectMinusV1MinusResponse ezsignbulksendCreateObjectV1(ezsignbulksendMinusCreateObjectMinusV1MinusRequest)
+> EzsignbulksendCreateObjectV1Response ezsignbulksendCreateObjectV1(ezsignbulksendCreateObjectV1Request)
 
 Create a new Ezsignbulksend
 
@@ -82,9 +82,9 @@ The endpoint allows to create one or many elements at once.
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsignbulksendApi()
-val ezsignbulksendMinusCreateObjectMinusV1MinusRequest : EzsignbulksendMinusCreateObjectMinusV1MinusRequest =  // EzsignbulksendMinusCreateObjectMinusV1MinusRequest | 
+val ezsignbulksendCreateObjectV1Request : EzsignbulksendCreateObjectV1Request =  // EzsignbulksendCreateObjectV1Request | 
 try {
-    val result : EzsignbulksendMinusCreateObjectMinusV1MinusResponse = apiInstance.ezsignbulksendCreateObjectV1(ezsignbulksendMinusCreateObjectMinusV1MinusRequest)
+    val result : EzsignbulksendCreateObjectV1Response = apiInstance.ezsignbulksendCreateObjectV1(ezsignbulksendCreateObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignbulksendApi#ezsignbulksendCreateObjectV1")
@@ -99,11 +99,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ezsignbulksendMinusCreateObjectMinusV1MinusRequest** | [**EzsignbulksendMinusCreateObjectMinusV1MinusRequest**](EzsignbulksendMinusCreateObjectMinusV1MinusRequest.md)|  |
+ **ezsignbulksendCreateObjectV1Request** | [**EzsignbulksendCreateObjectV1Request**](EzsignbulksendCreateObjectV1Request.md)|  |
 
 ### Return type
 
-[**EzsignbulksendMinusCreateObjectMinusV1MinusResponse**](EzsignbulksendMinusCreateObjectMinusV1MinusResponse.md)
+[**EzsignbulksendCreateObjectV1Response**](EzsignbulksendCreateObjectV1Response.md)
 
 ### Authorization
 
@@ -119,7 +119,7 @@ Configure Authorization:
 
 <a id="ezsignbulksendDeleteObjectV1"></a>
 # **ezsignbulksendDeleteObjectV1**
-> EzsignbulksendMinusDeleteObjectMinusV1MinusResponse ezsignbulksendDeleteObjectV1(pkiEzsignbulksendID)
+> EzsignbulksendDeleteObjectV1Response ezsignbulksendDeleteObjectV1(pkiEzsignbulksendID)
 
 Delete an existing Ezsignbulksend
 
@@ -134,7 +134,7 @@ Delete an existing Ezsignbulksend
 val apiInstance = ObjectEzsignbulksendApi()
 val pkiEzsignbulksendID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : EzsignbulksendMinusDeleteObjectMinusV1MinusResponse = apiInstance.ezsignbulksendDeleteObjectV1(pkiEzsignbulksendID)
+    val result : EzsignbulksendDeleteObjectV1Response = apiInstance.ezsignbulksendDeleteObjectV1(pkiEzsignbulksendID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignbulksendApi#ezsignbulksendDeleteObjectV1")
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignbulksendMinusDeleteObjectMinusV1MinusResponse**](EzsignbulksendMinusDeleteObjectMinusV1MinusResponse.md)
+[**EzsignbulksendDeleteObjectV1Response**](EzsignbulksendDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -169,7 +169,7 @@ Configure Authorization:
 
 <a id="ezsignbulksendEditObjectV1"></a>
 # **ezsignbulksendEditObjectV1**
-> EzsignbulksendMinusEditObjectMinusV1MinusResponse ezsignbulksendEditObjectV1(pkiEzsignbulksendID, ezsignbulksendMinusEditObjectMinusV1MinusRequest)
+> EzsignbulksendEditObjectV1Response ezsignbulksendEditObjectV1(pkiEzsignbulksendID, ezsignbulksendEditObjectV1Request)
 
 Edit an existing Ezsignbulksend
 
@@ -183,9 +183,9 @@ Edit an existing Ezsignbulksend
 
 val apiInstance = ObjectEzsignbulksendApi()
 val pkiEzsignbulksendID : kotlin.Int = 56 // kotlin.Int | 
-val ezsignbulksendMinusEditObjectMinusV1MinusRequest : EzsignbulksendMinusEditObjectMinusV1MinusRequest =  // EzsignbulksendMinusEditObjectMinusV1MinusRequest | 
+val ezsignbulksendEditObjectV1Request : EzsignbulksendEditObjectV1Request =  // EzsignbulksendEditObjectV1Request | 
 try {
-    val result : EzsignbulksendMinusEditObjectMinusV1MinusResponse = apiInstance.ezsignbulksendEditObjectV1(pkiEzsignbulksendID, ezsignbulksendMinusEditObjectMinusV1MinusRequest)
+    val result : EzsignbulksendEditObjectV1Response = apiInstance.ezsignbulksendEditObjectV1(pkiEzsignbulksendID, ezsignbulksendEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignbulksendApi#ezsignbulksendEditObjectV1")
@@ -201,11 +201,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiEzsignbulksendID** | **kotlin.Int**|  |
- **ezsignbulksendMinusEditObjectMinusV1MinusRequest** | [**EzsignbulksendMinusEditObjectMinusV1MinusRequest**](EzsignbulksendMinusEditObjectMinusV1MinusRequest.md)|  |
+ **ezsignbulksendEditObjectV1Request** | [**EzsignbulksendEditObjectV1Request**](EzsignbulksendEditObjectV1Request.md)|  |
 
 ### Return type
 
-[**EzsignbulksendMinusEditObjectMinusV1MinusResponse**](EzsignbulksendMinusEditObjectMinusV1MinusResponse.md)
+[**EzsignbulksendEditObjectV1Response**](EzsignbulksendEditObjectV1Response.md)
 
 ### Authorization
 
@@ -273,7 +273,7 @@ Configure Authorization:
 
 <a id="ezsignbulksendGetEzsignbulksendtransmissionsV1"></a>
 # **ezsignbulksendGetEzsignbulksendtransmissionsV1**
-> EzsignbulksendMinusGetEzsignbulksendtransmissionsMinusV1MinusResponse ezsignbulksendGetEzsignbulksendtransmissionsV1(pkiEzsignbulksendID)
+> EzsignbulksendGetEzsignbulksendtransmissionsV1Response ezsignbulksendGetEzsignbulksendtransmissionsV1(pkiEzsignbulksendID)
 
 Retrieve an existing Ezsignbulksend&#39;s Ezsignbulksendtransmissions
 
@@ -288,7 +288,7 @@ Retrieve an existing Ezsignbulksend&#39;s Ezsignbulksendtransmissions
 val apiInstance = ObjectEzsignbulksendApi()
 val pkiEzsignbulksendID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : EzsignbulksendMinusGetEzsignbulksendtransmissionsMinusV1MinusResponse = apiInstance.ezsignbulksendGetEzsignbulksendtransmissionsV1(pkiEzsignbulksendID)
+    val result : EzsignbulksendGetEzsignbulksendtransmissionsV1Response = apiInstance.ezsignbulksendGetEzsignbulksendtransmissionsV1(pkiEzsignbulksendID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignbulksendApi#ezsignbulksendGetEzsignbulksendtransmissionsV1")
@@ -307,7 +307,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignbulksendMinusGetEzsignbulksendtransmissionsMinusV1MinusResponse**](EzsignbulksendMinusGetEzsignbulksendtransmissionsMinusV1MinusResponse.md)
+[**EzsignbulksendGetEzsignbulksendtransmissionsV1Response**](EzsignbulksendGetEzsignbulksendtransmissionsV1Response.md)
 
 ### Authorization
 
@@ -323,7 +323,7 @@ Configure Authorization:
 
 <a id="ezsignbulksendGetEzsignsignaturesAutomaticV1"></a>
 # **ezsignbulksendGetEzsignsignaturesAutomaticV1**
-> EzsignbulksendMinusGetEzsignsignaturesAutomaticMinusV1MinusResponse ezsignbulksendGetEzsignsignaturesAutomaticV1(pkiEzsignbulksendID)
+> EzsignbulksendGetEzsignsignaturesAutomaticV1Response ezsignbulksendGetEzsignsignaturesAutomaticV1(pkiEzsignbulksendID)
 
 Retrieve an existing Ezsignbulksend&#39;s automatic Ezsignsignatures
 
@@ -338,7 +338,7 @@ Return the Ezsignsignatures that can be signed by the current user at the curren
 val apiInstance = ObjectEzsignbulksendApi()
 val pkiEzsignbulksendID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : EzsignbulksendMinusGetEzsignsignaturesAutomaticMinusV1MinusResponse = apiInstance.ezsignbulksendGetEzsignsignaturesAutomaticV1(pkiEzsignbulksendID)
+    val result : EzsignbulksendGetEzsignsignaturesAutomaticV1Response = apiInstance.ezsignbulksendGetEzsignsignaturesAutomaticV1(pkiEzsignbulksendID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignbulksendApi#ezsignbulksendGetEzsignsignaturesAutomaticV1")
@@ -357,7 +357,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignbulksendMinusGetEzsignsignaturesAutomaticMinusV1MinusResponse**](EzsignbulksendMinusGetEzsignsignaturesAutomaticMinusV1MinusResponse.md)
+[**EzsignbulksendGetEzsignsignaturesAutomaticV1Response**](EzsignbulksendGetEzsignsignaturesAutomaticV1Response.md)
 
 ### Authorization
 
@@ -373,7 +373,7 @@ Configure Authorization:
 
 <a id="ezsignbulksendGetFormsDataV1"></a>
 # **ezsignbulksendGetFormsDataV1**
-> EzsignbulksendMinusGetFormsDataMinusV1MinusResponse ezsignbulksendGetFormsDataV1(pkiEzsignbulksendID)
+> EzsignbulksendGetFormsDataV1Response ezsignbulksendGetFormsDataV1(pkiEzsignbulksendID)
 
 Retrieve an existing Ezsignbulksend&#39;s forms data
 
@@ -388,7 +388,7 @@ Retrieve an existing Ezsignbulksend&#39;s forms data
 val apiInstance = ObjectEzsignbulksendApi()
 val pkiEzsignbulksendID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : EzsignbulksendMinusGetFormsDataMinusV1MinusResponse = apiInstance.ezsignbulksendGetFormsDataV1(pkiEzsignbulksendID)
+    val result : EzsignbulksendGetFormsDataV1Response = apiInstance.ezsignbulksendGetFormsDataV1(pkiEzsignbulksendID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignbulksendApi#ezsignbulksendGetFormsDataV1")
@@ -407,7 +407,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignbulksendMinusGetFormsDataMinusV1MinusResponse**](EzsignbulksendMinusGetFormsDataMinusV1MinusResponse.md)
+[**EzsignbulksendGetFormsDataV1Response**](EzsignbulksendGetFormsDataV1Response.md)
 
 ### Authorization
 
@@ -423,7 +423,7 @@ Configure Authorization:
 
 <a id="ezsignbulksendGetListV1"></a>
 # **ezsignbulksendGetListV1**
-> EzsignbulksendMinusGetListMinusV1MinusResponse ezsignbulksendGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+> EzsignbulksendGetListV1Response ezsignbulksendGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
 Retrieve Ezsignbulksend list
 
@@ -439,10 +439,10 @@ val apiInstance = ObjectEzsignbulksendApi()
 val eOrderBy : kotlin.String = eOrderBy_example // kotlin.String | Specify how you want the results to be sorted
 val iRowMax : kotlin.Int = 56 // kotlin.Int | 
 val iRowOffset : kotlin.Int = 56 // kotlin.Int | 
-val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
+val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
 val sFilter : kotlin.String = sFilter_example // kotlin.String | 
 try {
-    val result : EzsignbulksendMinusGetListMinusV1MinusResponse = apiInstance.ezsignbulksendGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+    val result : EzsignbulksendGetListV1Response = apiInstance.ezsignbulksendGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignbulksendApi#ezsignbulksendGetListV1")
@@ -460,12 +460,12 @@ Name | Type | Description  | Notes
  **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiEzsignbulksendID_ASC, pkiEzsignbulksendID_DESC, fkiEzsignfoldertypeID_ASC, fkiEzsignfoldertypeID_DESC, sEzsignbulksendDescription_ASC, sEzsignbulksendDescription_DESC, sEzsignfoldertypeNameX_ASC, sEzsignfoldertypeNameX_DESC, eEzsignfoldertypePrivacylevel_ASC, eEzsignfoldertypePrivacylevel_DESC, bEzsignbulksendNeedvalidation_ASC, bEzsignbulksendNeedvalidation_DESC, iEzsignbulksendtransmission_ASC, iEzsignbulksendtransmission_DESC, iEzsignfolder_ASC, iEzsignfolder_DESC, iEzsigndocument_ASC, iEzsigndocument_DESC, iEzsignsignature_ASC, iEzsignsignature_DESC, iEzsignsignatureSigned_ASC, iEzsignsignatureSigned_DESC, bEzsignbulksendIsactive_ASC, bEzsignbulksendIsactive_DESC]
  **iRowMax** | **kotlin.Int**|  | [optional] [default to 10000]
  **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0]
- **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
  **sFilter** | **kotlin.String**|  | [optional]
 
 ### Return type
 
-[**EzsignbulksendMinusGetListMinusV1MinusResponse**](EzsignbulksendMinusGetListMinusV1MinusResponse.md)
+[**EzsignbulksendGetListV1Response**](EzsignbulksendGetListV1Response.md)
 
 ### Authorization
 
@@ -481,7 +481,7 @@ Configure Authorization:
 
 <a id="ezsignbulksendGetObjectV2"></a>
 # **ezsignbulksendGetObjectV2**
-> EzsignbulksendMinusGetObjectMinusV2MinusResponse ezsignbulksendGetObjectV2(pkiEzsignbulksendID)
+> EzsignbulksendGetObjectV2Response ezsignbulksendGetObjectV2(pkiEzsignbulksendID)
 
 Retrieve an existing Ezsignbulksend
 
@@ -496,7 +496,7 @@ Retrieve an existing Ezsignbulksend
 val apiInstance = ObjectEzsignbulksendApi()
 val pkiEzsignbulksendID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : EzsignbulksendMinusGetObjectMinusV2MinusResponse = apiInstance.ezsignbulksendGetObjectV2(pkiEzsignbulksendID)
+    val result : EzsignbulksendGetObjectV2Response = apiInstance.ezsignbulksendGetObjectV2(pkiEzsignbulksendID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignbulksendApi#ezsignbulksendGetObjectV2")
@@ -515,7 +515,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignbulksendMinusGetObjectMinusV2MinusResponse**](EzsignbulksendMinusGetObjectMinusV2MinusResponse.md)
+[**EzsignbulksendGetObjectV2Response**](EzsignbulksendGetObjectV2Response.md)
 
 ### Authorization
 
@@ -531,7 +531,7 @@ Configure Authorization:
 
 <a id="ezsignbulksendReorderV1"></a>
 # **ezsignbulksendReorderV1**
-> EzsignbulksendMinusReorderMinusV1MinusResponse ezsignbulksendReorderV1(pkiEzsignbulksendID, ezsignbulksendMinusReorderMinusV1MinusRequest)
+> EzsignbulksendReorderV1Response ezsignbulksendReorderV1(pkiEzsignbulksendID, ezsignbulksendReorderV1Request)
 
 Reorder Ezsignbulksenddocumentmappings in the Ezsignbulksend
 
@@ -543,9 +543,9 @@ Reorder Ezsignbulksenddocumentmappings in the Ezsignbulksend
 
 val apiInstance = ObjectEzsignbulksendApi()
 val pkiEzsignbulksendID : kotlin.Int = 56 // kotlin.Int | 
-val ezsignbulksendMinusReorderMinusV1MinusRequest : EzsignbulksendMinusReorderMinusV1MinusRequest =  // EzsignbulksendMinusReorderMinusV1MinusRequest | 
+val ezsignbulksendReorderV1Request : EzsignbulksendReorderV1Request =  // EzsignbulksendReorderV1Request | 
 try {
-    val result : EzsignbulksendMinusReorderMinusV1MinusResponse = apiInstance.ezsignbulksendReorderV1(pkiEzsignbulksendID, ezsignbulksendMinusReorderMinusV1MinusRequest)
+    val result : EzsignbulksendReorderV1Response = apiInstance.ezsignbulksendReorderV1(pkiEzsignbulksendID, ezsignbulksendReorderV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignbulksendApi#ezsignbulksendReorderV1")
@@ -561,11 +561,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiEzsignbulksendID** | **kotlin.Int**|  |
- **ezsignbulksendMinusReorderMinusV1MinusRequest** | [**EzsignbulksendMinusReorderMinusV1MinusRequest**](EzsignbulksendMinusReorderMinusV1MinusRequest.md)|  |
+ **ezsignbulksendReorderV1Request** | [**EzsignbulksendReorderV1Request**](EzsignbulksendReorderV1Request.md)|  |
 
 ### Return type
 
-[**EzsignbulksendMinusReorderMinusV1MinusResponse**](EzsignbulksendMinusReorderMinusV1MinusResponse.md)
+[**EzsignbulksendReorderV1Response**](EzsignbulksendReorderV1Response.md)
 
 ### Authorization
 

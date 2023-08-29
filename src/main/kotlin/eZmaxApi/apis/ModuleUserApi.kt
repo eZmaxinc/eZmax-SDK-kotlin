@@ -19,8 +19,8 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.UserMinusCreateEzsignuserMinusV1MinusRequest
-import eZmaxApi.models.UserMinusCreateEzsignuserMinusV1MinusResponse
+import eZmaxApi.models.UserCreateEzsignuserV1Request
+import eZmaxApi.models.UserCreateEzsignuserV1Response
 
 import com.squareup.moshi.Json
 
@@ -49,8 +49,8 @@ class ModuleUserApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
     /**
      * Create a new User of type Ezsignuser
      * The endpoint allows to initiate the creation or a user of type Ezsignuser.  The user will be created only once the email verification process will be completed
-     * @param userMinusCreateEzsignuserMinusV1MinusRequest 
-     * @return UserMinusCreateEzsignuserMinusV1MinusResponse
+     * @param userCreateEzsignuserV1Request 
+     * @return UserCreateEzsignuserV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -59,11 +59,11 @@ class ModuleUserApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun userCreateEzsignuserV1(userMinusCreateEzsignuserMinusV1MinusRequest: kotlin.collections.List<UserMinusCreateEzsignuserMinusV1MinusRequest>) : UserMinusCreateEzsignuserMinusV1MinusResponse {
-        val localVarResponse = userCreateEzsignuserV1WithHttpInfo(userMinusCreateEzsignuserMinusV1MinusRequest = userMinusCreateEzsignuserMinusV1MinusRequest)
+    fun userCreateEzsignuserV1(userCreateEzsignuserV1Request: kotlin.collections.List<UserCreateEzsignuserV1Request>) : UserCreateEzsignuserV1Response {
+        val localVarResponse = userCreateEzsignuserV1WithHttpInfo(userCreateEzsignuserV1Request = userCreateEzsignuserV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as UserMinusCreateEzsignuserMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as UserCreateEzsignuserV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -80,17 +80,17 @@ class ModuleUserApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
     /**
      * Create a new User of type Ezsignuser
      * The endpoint allows to initiate the creation or a user of type Ezsignuser.  The user will be created only once the email verification process will be completed
-     * @param userMinusCreateEzsignuserMinusV1MinusRequest 
-     * @return ApiResponse<UserMinusCreateEzsignuserMinusV1MinusResponse?>
+     * @param userCreateEzsignuserV1Request 
+     * @return ApiResponse<UserCreateEzsignuserV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun userCreateEzsignuserV1WithHttpInfo(userMinusCreateEzsignuserMinusV1MinusRequest: kotlin.collections.List<UserMinusCreateEzsignuserMinusV1MinusRequest>) : ApiResponse<UserMinusCreateEzsignuserMinusV1MinusResponse?> {
-        val localVariableConfig = userCreateEzsignuserV1RequestConfig(userMinusCreateEzsignuserMinusV1MinusRequest = userMinusCreateEzsignuserMinusV1MinusRequest)
+    fun userCreateEzsignuserV1WithHttpInfo(userCreateEzsignuserV1Request: kotlin.collections.List<UserCreateEzsignuserV1Request>) : ApiResponse<UserCreateEzsignuserV1Response?> {
+        val localVariableConfig = userCreateEzsignuserV1RequestConfig(userCreateEzsignuserV1Request = userCreateEzsignuserV1Request)
 
-        return request<kotlin.collections.List<UserMinusCreateEzsignuserMinusV1MinusRequest>, UserMinusCreateEzsignuserMinusV1MinusResponse>(
+        return request<kotlin.collections.List<UserCreateEzsignuserV1Request>, UserCreateEzsignuserV1Response>(
             localVariableConfig
         )
     }
@@ -98,11 +98,11 @@ class ModuleUserApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
     /**
      * To obtain the request config of the operation userCreateEzsignuserV1
      *
-     * @param userMinusCreateEzsignuserMinusV1MinusRequest 
+     * @param userCreateEzsignuserV1Request 
      * @return RequestConfig
      */
-    fun userCreateEzsignuserV1RequestConfig(userMinusCreateEzsignuserMinusV1MinusRequest: kotlin.collections.List<UserMinusCreateEzsignuserMinusV1MinusRequest>) : RequestConfig<kotlin.collections.List<UserMinusCreateEzsignuserMinusV1MinusRequest>> {
-        val localVariableBody = userMinusCreateEzsignuserMinusV1MinusRequest
+    fun userCreateEzsignuserV1RequestConfig(userCreateEzsignuserV1Request: kotlin.collections.List<UserCreateEzsignuserV1Request>) : RequestConfig<kotlin.collections.List<UserCreateEzsignuserV1Request>> {
+        val localVariableBody = userCreateEzsignuserV1Request
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Content-Type"] = "application/json"

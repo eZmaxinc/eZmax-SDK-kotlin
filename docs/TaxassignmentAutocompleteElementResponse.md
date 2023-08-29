@@ -1,5 +1,5 @@
 
-# TaxassignmentMinusAutocompleteElementMinusResponse
+# TaxassignmentAutocompleteElementResponse
 
 ## Properties
 Name | Type | Description | Notes

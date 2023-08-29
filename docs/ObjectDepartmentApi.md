@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a id="departmentGetAutocompleteV2"></a>
 # **departmentGetAutocompleteV2**
-> DepartmentMinusGetAutocompleteMinusV2MinusResponse departmentGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+> DepartmentGetAutocompleteV2Response departmentGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 
 Retrieve Departments and IDs
 
@@ -25,9 +25,9 @@ val apiInstance = ObjectDepartmentApi()
 val sSelector : kotlin.String = sSelector_example // kotlin.String | The type of Departments to return
 val eFilterActive : kotlin.String = eFilterActive_example // kotlin.String | Specify which results we want to display.
 val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter the returned results
-val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
+val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
 try {
-    val result : DepartmentMinusGetAutocompleteMinusV2MinusResponse = apiInstance.departmentGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+    val result : DepartmentGetAutocompleteV2Response = apiInstance.departmentGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectDepartmentApi#departmentGetAutocompleteV2")
@@ -45,11 +45,11 @@ Name | Type | Description  | Notes
  **sSelector** | **kotlin.String**| The type of Departments to return | [enum: All, AllButDepartmentZero, Company, CompanyButDepartmentZero]
  **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
  **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional]
- **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
 
 ### Return type
 
-[**DepartmentMinusGetAutocompleteMinusV2MinusResponse**](DepartmentMinusGetAutocompleteMinusV2MinusResponse.md)
+[**DepartmentGetAutocompleteV2Response**](DepartmentGetAutocompleteV2Response.md)
 
 ### Authorization
 

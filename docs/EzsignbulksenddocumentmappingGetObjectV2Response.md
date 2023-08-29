@@ -1,12 +1,12 @@
 
-# EzsignbulksenddocumentmappingMinusGetObjectMinusV2MinusResponse
+# EzsignbulksenddocumentmappingGetObjectV2Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**EzsignbulksenddocumentmappingMinusGetObjectMinusV2MinusResponseMinusMPayload**](EzsignbulksenddocumentmappingMinusGetObjectMinusV2MinusResponseMinusMPayload.md) |  | 
-**objDebugPayload** | [**CommonMinusResponseMinusObjDebugPayload**](CommonMinusResponseMinusObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonMinusResponseMinusObjDebug**](CommonMinusResponseMinusObjDebug.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
+**mPayload** | [**EzsignbulksenddocumentmappingGetObjectV2ResponseMPayload**](EzsignbulksenddocumentmappingGetObjectV2ResponseMPayload.md) |  | 
+**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 
 
 

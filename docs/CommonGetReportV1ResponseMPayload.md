@@ -1,10 +1,10 @@
 
-# CommonMinusGetReportMinusV1MinusResponseMinusMPayload
+# CommonGetReportV1ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objReportgroup** | [**CommonMinusReportgroup**](CommonMinusReportgroup.md) |  | 
+**objReportgroup** | [**CommonReportgroup**](CommonReportgroup.md) |  | 
 
 
 

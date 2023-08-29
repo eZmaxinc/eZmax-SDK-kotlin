@@ -1,10 +1,10 @@
 
-# UsergroupmembershipMinusEditObjectMinusV1MinusRequest
+# UsergroupmembershipEditObjectV1Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objUsergroupmembership** | [**UsergroupmembershipMinusRequestCompound**](UsergroupmembershipMinusRequestCompound.md) |  | 
+**objUsergroupmembership** | [**UsergroupmembershipRequestCompound**](UsergroupmembershipRequestCompound.md) |  | 
 
 
 

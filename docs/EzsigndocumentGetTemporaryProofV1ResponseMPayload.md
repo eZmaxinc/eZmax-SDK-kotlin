@@ -1,10 +1,10 @@
 
-# EzsigndocumentMinusGetTemporaryProofMinusV1MinusResponseMinusMPayload
+# EzsigndocumentGetTemporaryProofV1ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjEzsigndocumentlog** | [**kotlin.collections.List&lt;EzsigndocumentlogMinusResponseCompound&gt;**](EzsigndocumentlogMinusResponseCompound.md) |  | 
+**aObjEzsigndocumentlog** | [**kotlin.collections.List&lt;EzsigndocumentlogResponseCompound&gt;**](EzsigndocumentlogResponseCompound.md) |  | 
 
 
 

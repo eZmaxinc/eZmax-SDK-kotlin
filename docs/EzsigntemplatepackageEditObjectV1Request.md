@@ -1,10 +1,10 @@
 
-# EzsigntemplatepackageMinusEditObjectMinusV1MinusRequest
+# EzsigntemplatepackageEditObjectV1Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objEzsigntemplatepackage** | [**EzsigntemplatepackageMinusRequestCompound**](EzsigntemplatepackageMinusRequestCompound.md) |  | 
+**objEzsigntemplatepackage** | [**EzsigntemplatepackageRequestCompound**](EzsigntemplatepackageRequestCompound.md) |  | 
 
 
 

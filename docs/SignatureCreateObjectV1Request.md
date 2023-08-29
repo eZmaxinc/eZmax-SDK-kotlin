@@ -1,10 +1,10 @@
 
-# SignatureMinusCreateObjectMinusV1MinusRequest
+# SignatureCreateObjectV1Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjSignature** | [**kotlin.collections.List&lt;SignatureMinusRequestCompound&gt;**](SignatureMinusRequestCompound.md) |  | 
+**aObjSignature** | [**kotlin.collections.List&lt;SignatureRequestCompound&gt;**](SignatureRequestCompound.md) |  | 
 
 
 

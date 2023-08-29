@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a id="periodGetAutocompleteV1"></a>
 # **periodGetAutocompleteV1**
-> CommonMinusGetAutocompleteMinusV1MinusResponse periodGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
+> CommonGetAutocompleteV1Response periodGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
 
 Retrieve Periods and IDs
 
@@ -26,9 +26,9 @@ val apiInstance = ObjectPeriodApi()
 val sSelector : kotlin.String = sSelector_example // kotlin.String | The types of Periods to return
 val eFilterActive : kotlin.String = eFilterActive_example // kotlin.String | Specify which results we want to display.
 val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter the returned results
-val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
+val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
 try {
-    val result : CommonMinusGetAutocompleteMinusV1MinusResponse = apiInstance.periodGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
+    val result : CommonGetAutocompleteV1Response = apiInstance.periodGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectPeriodApi#periodGetAutocompleteV1")
@@ -46,11 +46,11 @@ Name | Type | Description  | Notes
  **sSelector** | **kotlin.String**| The types of Periods to return | [enum: ActiveNormal, ActiveNormalAndEndOfYear, AllNormal, AllNormalAndEndOfYear]
  **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
  **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional]
- **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
 
 ### Return type
 
-[**CommonMinusGetAutocompleteMinusV1MinusResponse**](CommonMinusGetAutocompleteMinusV1MinusResponse.md)
+[**CommonGetAutocompleteV1Response**](CommonGetAutocompleteV1Response.md)
 
 ### Authorization
 
@@ -66,7 +66,7 @@ Configure Authorization:
 
 <a id="periodGetAutocompleteV2"></a>
 # **periodGetAutocompleteV2**
-> PeriodMinusGetAutocompleteMinusV2MinusResponse periodGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+> PeriodGetAutocompleteV2Response periodGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 
 Retrieve Periods and IDs
 
@@ -82,9 +82,9 @@ val apiInstance = ObjectPeriodApi()
 val sSelector : kotlin.String = sSelector_example // kotlin.String | The type of Periods to return
 val eFilterActive : kotlin.String = eFilterActive_example // kotlin.String | Specify which results we want to display.
 val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter the returned results
-val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
+val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
 try {
-    val result : PeriodMinusGetAutocompleteMinusV2MinusResponse = apiInstance.periodGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+    val result : PeriodGetAutocompleteV2Response = apiInstance.periodGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectPeriodApi#periodGetAutocompleteV2")
@@ -102,11 +102,11 @@ Name | Type | Description  | Notes
  **sSelector** | **kotlin.String**| The type of Periods to return | [enum: ActiveNormal, ActiveNormalAndEndOfYear, AllNormal, AllNormalAndEndOfYear]
  **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
  **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional]
- **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
 
 ### Return type
 
-[**PeriodMinusGetAutocompleteMinusV2MinusResponse**](PeriodMinusGetAutocompleteMinusV2MinusResponse.md)
+[**PeriodGetAutocompleteV2Response**](PeriodGetAutocompleteV2Response.md)
 
 ### Authorization
 

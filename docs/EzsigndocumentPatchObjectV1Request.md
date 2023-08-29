@@ -1,10 +1,10 @@
 
-# EzsigndocumentMinusPatchObjectMinusV1MinusRequest
+# EzsigndocumentPatchObjectV1Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objEzsigndocument** | [**EzsigndocumentMinusRequestPatch**](EzsigndocumentMinusRequestPatch.md) |  | 
+**objEzsigndocument** | [**EzsigndocumentRequestPatch**](EzsigndocumentRequestPatch.md) |  | 
 
 
 

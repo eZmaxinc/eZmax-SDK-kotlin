@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a id="ezmaxinvoicingGetAutocompleteV1"></a>
 # **ezmaxinvoicingGetAutocompleteV1**
-> CommonMinusGetAutocompleteMinusV1MinusResponse ezmaxinvoicingGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
+> CommonGetAutocompleteV1Response ezmaxinvoicingGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
 
 Retrieve Ezmaxinvoicings and IDs
 
@@ -28,9 +28,9 @@ val apiInstance = ObjectEzmaxinvoicingApi()
 val sSelector : kotlin.String = sSelector_example // kotlin.String | The type of Ezmaxinvoicings to return
 val eFilterActive : kotlin.String = eFilterActive_example // kotlin.String | Specify which results we want to display. Active is the default value.
 val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter the returned results
-val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
+val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
 try {
-    val result : CommonMinusGetAutocompleteMinusV1MinusResponse = apiInstance.ezmaxinvoicingGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
+    val result : CommonGetAutocompleteV1Response = apiInstance.ezmaxinvoicingGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzmaxinvoicingApi#ezmaxinvoicingGetAutocompleteV1")
@@ -48,11 +48,11 @@ Name | Type | Description  | Notes
  **sSelector** | **kotlin.String**| The type of Ezmaxinvoicings to return | [enum: All]
  **eFilterActive** | **kotlin.String**| Specify which results we want to display. Active is the default value. | [optional] [enum: All, Active, Inactive]
  **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional]
- **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
 
 ### Return type
 
-[**CommonMinusGetAutocompleteMinusV1MinusResponse**](CommonMinusGetAutocompleteMinusV1MinusResponse.md)
+[**CommonGetAutocompleteV1Response**](CommonGetAutocompleteV1Response.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Configure Authorization:
 
 <a id="ezmaxinvoicingGetAutocompleteV2"></a>
 # **ezmaxinvoicingGetAutocompleteV2**
-> EzmaxinvoicingMinusGetAutocompleteMinusV2MinusResponse ezmaxinvoicingGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+> EzmaxinvoicingGetAutocompleteV2Response ezmaxinvoicingGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 
 Retrieve Ezmaxinvoicings and IDs
 
@@ -84,9 +84,9 @@ val apiInstance = ObjectEzmaxinvoicingApi()
 val sSelector : kotlin.String = sSelector_example // kotlin.String | The type of Ezmaxinvoicings to return
 val eFilterActive : kotlin.String = eFilterActive_example // kotlin.String | Specify which results we want to display.
 val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter the returned results
-val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
+val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
 try {
-    val result : EzmaxinvoicingMinusGetAutocompleteMinusV2MinusResponse = apiInstance.ezmaxinvoicingGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+    val result : EzmaxinvoicingGetAutocompleteV2Response = apiInstance.ezmaxinvoicingGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzmaxinvoicingApi#ezmaxinvoicingGetAutocompleteV2")
@@ -104,11 +104,11 @@ Name | Type | Description  | Notes
  **sSelector** | **kotlin.String**| The type of Ezmaxinvoicings to return | [enum: All]
  **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
  **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional]
- **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
 
 ### Return type
 
-[**EzmaxinvoicingMinusGetAutocompleteMinusV2MinusResponse**](EzmaxinvoicingMinusGetAutocompleteMinusV2MinusResponse.md)
+[**EzmaxinvoicingGetAutocompleteV2Response**](EzmaxinvoicingGetAutocompleteV2Response.md)
 
 ### Authorization
 
@@ -124,7 +124,7 @@ Configure Authorization:
 
 <a id="ezmaxinvoicingGetObjectV2"></a>
 # **ezmaxinvoicingGetObjectV2**
-> EzmaxinvoicingMinusGetObjectMinusV2MinusResponse ezmaxinvoicingGetObjectV2(pkiEzmaxinvoicingID)
+> EzmaxinvoicingGetObjectV2Response ezmaxinvoicingGetObjectV2(pkiEzmaxinvoicingID)
 
 Retrieve an existing Ezmaxinvoicing
 
@@ -139,7 +139,7 @@ Retrieve an existing Ezmaxinvoicing
 val apiInstance = ObjectEzmaxinvoicingApi()
 val pkiEzmaxinvoicingID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : EzmaxinvoicingMinusGetObjectMinusV2MinusResponse = apiInstance.ezmaxinvoicingGetObjectV2(pkiEzmaxinvoicingID)
+    val result : EzmaxinvoicingGetObjectV2Response = apiInstance.ezmaxinvoicingGetObjectV2(pkiEzmaxinvoicingID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzmaxinvoicingApi#ezmaxinvoicingGetObjectV2")
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzmaxinvoicingMinusGetObjectMinusV2MinusResponse**](EzmaxinvoicingMinusGetObjectMinusV2MinusResponse.md)
+[**EzmaxinvoicingGetObjectV2Response**](EzmaxinvoicingGetObjectV2Response.md)
 
 ### Authorization
 
@@ -174,7 +174,7 @@ Configure Authorization:
 
 <a id="ezmaxinvoicingGetProvisionalV1"></a>
 # **ezmaxinvoicingGetProvisionalV1**
-> EzmaxinvoicingMinusGetProvisionalMinusV1MinusResponse ezmaxinvoicingGetProvisionalV1()
+> EzmaxinvoicingGetProvisionalV1Response ezmaxinvoicingGetProvisionalV1()
 
 Retrieve provisional Ezmaxinvoicing
 
@@ -188,7 +188,7 @@ Retrieve provisional Ezmaxinvoicing
 
 val apiInstance = ObjectEzmaxinvoicingApi()
 try {
-    val result : EzmaxinvoicingMinusGetProvisionalMinusV1MinusResponse = apiInstance.ezmaxinvoicingGetProvisionalV1()
+    val result : EzmaxinvoicingGetProvisionalV1Response = apiInstance.ezmaxinvoicingGetProvisionalV1()
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzmaxinvoicingApi#ezmaxinvoicingGetProvisionalV1")
@@ -204,7 +204,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**EzmaxinvoicingMinusGetProvisionalMinusV1MinusResponse**](EzmaxinvoicingMinusGetProvisionalMinusV1MinusResponse.md)
+[**EzmaxinvoicingGetProvisionalV1Response**](EzmaxinvoicingGetProvisionalV1Response.md)
 
 ### Authorization
 

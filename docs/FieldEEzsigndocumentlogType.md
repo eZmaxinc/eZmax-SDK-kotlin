@@ -1,5 +1,5 @@
 
-# FieldMinusEEzsigndocumentlogType
+# FieldEEzsigndocumentlogType
 
 ## Enum
 

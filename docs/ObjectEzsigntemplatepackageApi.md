@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 <a id="ezsigntemplatepackageCreateObjectV1"></a>
 # **ezsigntemplatepackageCreateObjectV1**
-> EzsigntemplatepackageMinusCreateObjectMinusV1MinusResponse ezsigntemplatepackageCreateObjectV1(ezsigntemplatepackageMinusCreateObjectMinusV1MinusRequest)
+> EzsigntemplatepackageCreateObjectV1Response ezsigntemplatepackageCreateObjectV1(ezsigntemplatepackageCreateObjectV1Request)
 
 Create a new Ezsigntemplatepackage
 
@@ -28,9 +28,9 @@ The endpoint allows to create one or many elements at once.
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsigntemplatepackageApi()
-val ezsigntemplatepackageMinusCreateObjectMinusV1MinusRequest : EzsigntemplatepackageMinusCreateObjectMinusV1MinusRequest =  // EzsigntemplatepackageMinusCreateObjectMinusV1MinusRequest | 
+val ezsigntemplatepackageCreateObjectV1Request : EzsigntemplatepackageCreateObjectV1Request =  // EzsigntemplatepackageCreateObjectV1Request | 
 try {
-    val result : EzsigntemplatepackageMinusCreateObjectMinusV1MinusResponse = apiInstance.ezsigntemplatepackageCreateObjectV1(ezsigntemplatepackageMinusCreateObjectMinusV1MinusRequest)
+    val result : EzsigntemplatepackageCreateObjectV1Response = apiInstance.ezsigntemplatepackageCreateObjectV1(ezsigntemplatepackageCreateObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplatepackageApi#ezsigntemplatepackageCreateObjectV1")
@@ -45,11 +45,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ezsigntemplatepackageMinusCreateObjectMinusV1MinusRequest** | [**EzsigntemplatepackageMinusCreateObjectMinusV1MinusRequest**](EzsigntemplatepackageMinusCreateObjectMinusV1MinusRequest.md)|  |
+ **ezsigntemplatepackageCreateObjectV1Request** | [**EzsigntemplatepackageCreateObjectV1Request**](EzsigntemplatepackageCreateObjectV1Request.md)|  |
 
 ### Return type
 
-[**EzsigntemplatepackageMinusCreateObjectMinusV1MinusResponse**](EzsigntemplatepackageMinusCreateObjectMinusV1MinusResponse.md)
+[**EzsigntemplatepackageCreateObjectV1Response**](EzsigntemplatepackageCreateObjectV1Response.md)
 
 ### Authorization
 
@@ -65,7 +65,7 @@ Configure Authorization:
 
 <a id="ezsigntemplatepackageDeleteObjectV1"></a>
 # **ezsigntemplatepackageDeleteObjectV1**
-> EzsigntemplatepackageMinusDeleteObjectMinusV1MinusResponse ezsigntemplatepackageDeleteObjectV1(pkiEzsigntemplatepackageID)
+> EzsigntemplatepackageDeleteObjectV1Response ezsigntemplatepackageDeleteObjectV1(pkiEzsigntemplatepackageID)
 
 Delete an existing Ezsigntemplatepackage
 
@@ -80,7 +80,7 @@ Delete an existing Ezsigntemplatepackage
 val apiInstance = ObjectEzsigntemplatepackageApi()
 val pkiEzsigntemplatepackageID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : EzsigntemplatepackageMinusDeleteObjectMinusV1MinusResponse = apiInstance.ezsigntemplatepackageDeleteObjectV1(pkiEzsigntemplatepackageID)
+    val result : EzsigntemplatepackageDeleteObjectV1Response = apiInstance.ezsigntemplatepackageDeleteObjectV1(pkiEzsigntemplatepackageID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplatepackageApi#ezsigntemplatepackageDeleteObjectV1")
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsigntemplatepackageMinusDeleteObjectMinusV1MinusResponse**](EzsigntemplatepackageMinusDeleteObjectMinusV1MinusResponse.md)
+[**EzsigntemplatepackageDeleteObjectV1Response**](EzsigntemplatepackageDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -115,7 +115,7 @@ Configure Authorization:
 
 <a id="ezsigntemplatepackageEditEzsigntemplatepackagesignersV1"></a>
 # **ezsigntemplatepackageEditEzsigntemplatepackagesignersV1**
-> EzsigntemplatepackageMinusEditEzsigntemplatepackagesignersMinusV1MinusResponse ezsigntemplatepackageEditEzsigntemplatepackagesignersV1(pkiEzsigntemplatepackageID, ezsigntemplatepackageMinusEditEzsigntemplatepackagesignersMinusV1MinusRequest)
+> EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response ezsigntemplatepackageEditEzsigntemplatepackagesignersV1(pkiEzsigntemplatepackageID, ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request)
 
 Edit multiple Ezsigntemplatepackagesigners
 
@@ -129,9 +129,9 @@ Using this endpoint, you can edit multiple Ezsigntemplatepackagesigners at the s
 
 val apiInstance = ObjectEzsigntemplatepackageApi()
 val pkiEzsigntemplatepackageID : kotlin.Int = 56 // kotlin.Int | 
-val ezsigntemplatepackageMinusEditEzsigntemplatepackagesignersMinusV1MinusRequest : EzsigntemplatepackageMinusEditEzsigntemplatepackagesignersMinusV1MinusRequest =  // EzsigntemplatepackageMinusEditEzsigntemplatepackagesignersMinusV1MinusRequest | 
+val ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request : EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Request =  // EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Request | 
 try {
-    val result : EzsigntemplatepackageMinusEditEzsigntemplatepackagesignersMinusV1MinusResponse = apiInstance.ezsigntemplatepackageEditEzsigntemplatepackagesignersV1(pkiEzsigntemplatepackageID, ezsigntemplatepackageMinusEditEzsigntemplatepackagesignersMinusV1MinusRequest)
+    val result : EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response = apiInstance.ezsigntemplatepackageEditEzsigntemplatepackagesignersV1(pkiEzsigntemplatepackageID, ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplatepackageApi#ezsigntemplatepackageEditEzsigntemplatepackagesignersV1")
@@ -147,11 +147,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiEzsigntemplatepackageID** | **kotlin.Int**|  |
- **ezsigntemplatepackageMinusEditEzsigntemplatepackagesignersMinusV1MinusRequest** | [**EzsigntemplatepackageMinusEditEzsigntemplatepackagesignersMinusV1MinusRequest**](EzsigntemplatepackageMinusEditEzsigntemplatepackagesignersMinusV1MinusRequest.md)|  |
+ **ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request** | [**EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Request**](EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Request.md)|  |
 
 ### Return type
 
-[**EzsigntemplatepackageMinusEditEzsigntemplatepackagesignersMinusV1MinusResponse**](EzsigntemplatepackageMinusEditEzsigntemplatepackagesignersMinusV1MinusResponse.md)
+[**EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response**](EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response.md)
 
 ### Authorization
 
@@ -167,7 +167,7 @@ Configure Authorization:
 
 <a id="ezsigntemplatepackageEditObjectV1"></a>
 # **ezsigntemplatepackageEditObjectV1**
-> EzsigntemplatepackageMinusEditObjectMinusV1MinusResponse ezsigntemplatepackageEditObjectV1(pkiEzsigntemplatepackageID, ezsigntemplatepackageMinusEditObjectMinusV1MinusRequest)
+> EzsigntemplatepackageEditObjectV1Response ezsigntemplatepackageEditObjectV1(pkiEzsigntemplatepackageID, ezsigntemplatepackageEditObjectV1Request)
 
 Edit an existing Ezsigntemplatepackage
 
@@ -181,9 +181,9 @@ Edit an existing Ezsigntemplatepackage
 
 val apiInstance = ObjectEzsigntemplatepackageApi()
 val pkiEzsigntemplatepackageID : kotlin.Int = 56 // kotlin.Int | 
-val ezsigntemplatepackageMinusEditObjectMinusV1MinusRequest : EzsigntemplatepackageMinusEditObjectMinusV1MinusRequest =  // EzsigntemplatepackageMinusEditObjectMinusV1MinusRequest | 
+val ezsigntemplatepackageEditObjectV1Request : EzsigntemplatepackageEditObjectV1Request =  // EzsigntemplatepackageEditObjectV1Request | 
 try {
-    val result : EzsigntemplatepackageMinusEditObjectMinusV1MinusResponse = apiInstance.ezsigntemplatepackageEditObjectV1(pkiEzsigntemplatepackageID, ezsigntemplatepackageMinusEditObjectMinusV1MinusRequest)
+    val result : EzsigntemplatepackageEditObjectV1Response = apiInstance.ezsigntemplatepackageEditObjectV1(pkiEzsigntemplatepackageID, ezsigntemplatepackageEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplatepackageApi#ezsigntemplatepackageEditObjectV1")
@@ -199,11 +199,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiEzsigntemplatepackageID** | **kotlin.Int**|  |
- **ezsigntemplatepackageMinusEditObjectMinusV1MinusRequest** | [**EzsigntemplatepackageMinusEditObjectMinusV1MinusRequest**](EzsigntemplatepackageMinusEditObjectMinusV1MinusRequest.md)|  |
+ **ezsigntemplatepackageEditObjectV1Request** | [**EzsigntemplatepackageEditObjectV1Request**](EzsigntemplatepackageEditObjectV1Request.md)|  |
 
 ### Return type
 
-[**EzsigntemplatepackageMinusEditObjectMinusV1MinusResponse**](EzsigntemplatepackageMinusEditObjectMinusV1MinusResponse.md)
+[**EzsigntemplatepackageEditObjectV1Response**](EzsigntemplatepackageEditObjectV1Response.md)
 
 ### Authorization
 
@@ -219,7 +219,7 @@ Configure Authorization:
 
 <a id="ezsigntemplatepackageGetAutocompleteV2"></a>
 # **ezsigntemplatepackageGetAutocompleteV2**
-> EzsigntemplatepackageMinusGetAutocompleteMinusV2MinusResponse ezsigntemplatepackageGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+> EzsigntemplatepackageGetAutocompleteV2Response ezsigntemplatepackageGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 
 Retrieve Ezsigntemplatepackages and IDs
 
@@ -235,9 +235,9 @@ val apiInstance = ObjectEzsigntemplatepackageApi()
 val sSelector : kotlin.String = sSelector_example // kotlin.String | The type of Ezsigntemplatepackages to return
 val eFilterActive : kotlin.String = eFilterActive_example // kotlin.String | Specify which results we want to display.
 val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter the returned results
-val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
+val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
 try {
-    val result : EzsigntemplatepackageMinusGetAutocompleteMinusV2MinusResponse = apiInstance.ezsigntemplatepackageGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+    val result : EzsigntemplatepackageGetAutocompleteV2Response = apiInstance.ezsigntemplatepackageGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplatepackageApi#ezsigntemplatepackageGetAutocompleteV2")
@@ -255,11 +255,11 @@ Name | Type | Description  | Notes
  **sSelector** | **kotlin.String**| The type of Ezsigntemplatepackages to return | [enum: All, AllMultipleCopiesDisabled]
  **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
  **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional]
- **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
 
 ### Return type
 
-[**EzsigntemplatepackageMinusGetAutocompleteMinusV2MinusResponse**](EzsigntemplatepackageMinusGetAutocompleteMinusV2MinusResponse.md)
+[**EzsigntemplatepackageGetAutocompleteV2Response**](EzsigntemplatepackageGetAutocompleteV2Response.md)
 
 ### Authorization
 
@@ -275,7 +275,7 @@ Configure Authorization:
 
 <a id="ezsigntemplatepackageGetListV1"></a>
 # **ezsigntemplatepackageGetListV1**
-> EzsigntemplatepackageMinusGetListMinusV1MinusResponse ezsigntemplatepackageGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+> EzsigntemplatepackageGetListV1Response ezsigntemplatepackageGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
 Retrieve Ezsigntemplatepackage list
 
@@ -291,10 +291,10 @@ val apiInstance = ObjectEzsigntemplatepackageApi()
 val eOrderBy : kotlin.String = eOrderBy_example // kotlin.String | Specify how you want the results to be sorted
 val iRowMax : kotlin.Int = 56 // kotlin.Int | 
 val iRowOffset : kotlin.Int = 56 // kotlin.Int | 
-val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
+val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
 val sFilter : kotlin.String = sFilter_example // kotlin.String | 
 try {
-    val result : EzsigntemplatepackageMinusGetListMinusV1MinusResponse = apiInstance.ezsigntemplatepackageGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+    val result : EzsigntemplatepackageGetListV1Response = apiInstance.ezsigntemplatepackageGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplatepackageApi#ezsigntemplatepackageGetListV1")
@@ -312,12 +312,12 @@ Name | Type | Description  | Notes
  **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiEzsigntemplatepackageID_ASC, pkiEzsigntemplatepackageID_DESC, fkiTeamID_ASC, fkiTeamID_DESC, fkiEzsignfoldertypeID_ASC, fkiEzsignfoldertypeID_DESC, fkiLanguageID_ASC, fkiLanguageID_DESC, eEzsigntemplatepackageType_ASC, eEzsigntemplatepackageType_DESC, sEzsigntemplatepackageTypedescriptionX_ASC, sEzsigntemplatepackageTypedescriptionX_DESC, sEzsigntemplatepackageDescription_ASC, sEzsigntemplatepackageDescription_DESC, bEzsigntemplatepackageNeedvalidation_ASC, bEzsigntemplatepackageNeedvalidation_DESC, iEzsigntemplatepackagemembership_ASC, iEzsigntemplatepackagemembership_DESC, bEzsigntemplatepackageIsactive_ASC, bEzsigntemplatepackageIsactive_DESC]
  **iRowMax** | **kotlin.Int**|  | [optional] [default to 10000]
  **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0]
- **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
  **sFilter** | **kotlin.String**|  | [optional]
 
 ### Return type
 
-[**EzsigntemplatepackageMinusGetListMinusV1MinusResponse**](EzsigntemplatepackageMinusGetListMinusV1MinusResponse.md)
+[**EzsigntemplatepackageGetListV1Response**](EzsigntemplatepackageGetListV1Response.md)
 
 ### Authorization
 
@@ -333,7 +333,7 @@ Configure Authorization:
 
 <a id="ezsigntemplatepackageGetObjectV2"></a>
 # **ezsigntemplatepackageGetObjectV2**
-> EzsigntemplatepackageMinusGetObjectMinusV2MinusResponse ezsigntemplatepackageGetObjectV2(pkiEzsigntemplatepackageID)
+> EzsigntemplatepackageGetObjectV2Response ezsigntemplatepackageGetObjectV2(pkiEzsigntemplatepackageID)
 
 Retrieve an existing Ezsigntemplatepackage
 
@@ -348,7 +348,7 @@ Retrieve an existing Ezsigntemplatepackage
 val apiInstance = ObjectEzsigntemplatepackageApi()
 val pkiEzsigntemplatepackageID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : EzsigntemplatepackageMinusGetObjectMinusV2MinusResponse = apiInstance.ezsigntemplatepackageGetObjectV2(pkiEzsigntemplatepackageID)
+    val result : EzsigntemplatepackageGetObjectV2Response = apiInstance.ezsigntemplatepackageGetObjectV2(pkiEzsigntemplatepackageID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplatepackageApi#ezsigntemplatepackageGetObjectV2")
@@ -367,7 +367,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsigntemplatepackageMinusGetObjectMinusV2MinusResponse**](EzsigntemplatepackageMinusGetObjectMinusV2MinusResponse.md)
+[**EzsigntemplatepackageGetObjectV2Response**](EzsigntemplatepackageGetObjectV2Response.md)
 
 ### Authorization
 

@@ -1,10 +1,10 @@
 
-# VersionhistoryMinusGetObjectMinusV2MinusResponseMinusMPayload
+# VersionhistoryGetObjectV2ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objVersionhistory** | [**VersionhistoryMinusResponseCompound**](VersionhistoryMinusResponseCompound.md) |  | 
+**objVersionhistory** | [**VersionhistoryResponseCompound**](VersionhistoryResponseCompound.md) |  | 
 
 
 

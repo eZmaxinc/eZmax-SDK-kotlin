@@ -19,8 +19,8 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
-import eZmaxApi.models.PhonetypeMinusGetAutocompleteMinusV2MinusResponse
+import eZmaxApi.models.HeaderAcceptLanguage
+import eZmaxApi.models.PhonetypeGetAutocompleteV2Response
 
 import com.squareup.moshi.Json
 
@@ -49,14 +49,14 @@ class ObjectPhonetypeApi(basePath: kotlin.String = defaultBasePath, client: OkHt
     /**
      * enum for parameter sSelector
      */
-     enum class SSelector_phonetypeGetAutocompleteV2(val value: kotlin.String) {
+     enum class SSelectorPhonetypeGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "All") All("All")
      }
 
     /**
      * enum for parameter eFilterActive
      */
-     enum class EFilterActive_phonetypeGetAutocompleteV2(val value: kotlin.String) {
+     enum class EFilterActivePhonetypeGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "All") All("All"),
          @Json(name = "Active") Active("Active"),
          @Json(name = "Inactive") Inactive("Inactive")
@@ -69,7 +69,7 @@ class ObjectPhonetypeApi(basePath: kotlin.String = defaultBasePath, client: OkHt
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return PhonetypeMinusGetAutocompleteMinusV2MinusResponse
+     * @return PhonetypeGetAutocompleteV2Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -78,11 +78,11 @@ class ObjectPhonetypeApi(basePath: kotlin.String = defaultBasePath, client: OkHt
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun phonetypeGetAutocompleteV2(sSelector: SSelector_phonetypeGetAutocompleteV2, eFilterActive: EFilterActive_phonetypeGetAutocompleteV2? = EFilterActive_phonetypeGetAutocompleteV2.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null) : PhonetypeMinusGetAutocompleteMinusV2MinusResponse {
+    fun phonetypeGetAutocompleteV2(sSelector: SSelectorPhonetypeGetAutocompleteV2, eFilterActive: EFilterActivePhonetypeGetAutocompleteV2? = EFilterActivePhonetypeGetAutocompleteV2.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderAcceptLanguage? = null) : PhonetypeGetAutocompleteV2Response {
         val localVarResponse = phonetypeGetAutocompleteV2WithHttpInfo(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as PhonetypeMinusGetAutocompleteMinusV2MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as PhonetypeGetAutocompleteV2Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -103,16 +103,16 @@ class ObjectPhonetypeApi(basePath: kotlin.String = defaultBasePath, client: OkHt
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return ApiResponse<PhonetypeMinusGetAutocompleteMinusV2MinusResponse?>
+     * @return ApiResponse<PhonetypeGetAutocompleteV2Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun phonetypeGetAutocompleteV2WithHttpInfo(sSelector: SSelector_phonetypeGetAutocompleteV2, eFilterActive: EFilterActive_phonetypeGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : ApiResponse<PhonetypeMinusGetAutocompleteMinusV2MinusResponse?> {
+    fun phonetypeGetAutocompleteV2WithHttpInfo(sSelector: SSelectorPhonetypeGetAutocompleteV2, eFilterActive: EFilterActivePhonetypeGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : ApiResponse<PhonetypeGetAutocompleteV2Response?> {
         val localVariableConfig = phonetypeGetAutocompleteV2RequestConfig(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
-        return request<Unit, PhonetypeMinusGetAutocompleteMinusV2MinusResponse>(
+        return request<Unit, PhonetypeGetAutocompleteV2Response>(
             localVariableConfig
         )
     }
@@ -126,12 +126,12 @@ class ObjectPhonetypeApi(basePath: kotlin.String = defaultBasePath, client: OkHt
      * @param acceptLanguage  (optional)
      * @return RequestConfig
      */
-    fun phonetypeGetAutocompleteV2RequestConfig(sSelector: SSelector_phonetypeGetAutocompleteV2, eFilterActive: EFilterActive_phonetypeGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : RequestConfig<Unit> {
+    fun phonetypeGetAutocompleteV2RequestConfig(sSelector: SSelectorPhonetypeGetAutocompleteV2, eFilterActive: EFilterActivePhonetypeGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
                 if (eFilterActive != null) {
-                    put("eFilterActive", listOf(eFilterActive.toString()))
+                    put("eFilterActive", listOf(eFilterActive.value))
                 }
                 if (sQuery != null) {
                     put("sQuery", listOf(sQuery.toString()))

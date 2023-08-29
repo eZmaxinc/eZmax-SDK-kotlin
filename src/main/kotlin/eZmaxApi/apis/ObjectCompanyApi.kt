@@ -19,8 +19,8 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CompanyMinusGetAutocompleteMinusV2MinusResponse
-import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
+import eZmaxApi.models.CompanyGetAutocompleteV2Response
+import eZmaxApi.models.HeaderAcceptLanguage
 
 import com.squareup.moshi.Json
 
@@ -49,14 +49,14 @@ class ObjectCompanyApi(basePath: kotlin.String = defaultBasePath, client: OkHttp
     /**
      * enum for parameter sSelector
      */
-     enum class SSelector_companyGetAutocompleteV2(val value: kotlin.String) {
+     enum class SSelectorCompanyGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "All") All("All")
      }
 
     /**
      * enum for parameter eFilterActive
      */
-     enum class EFilterActive_companyGetAutocompleteV2(val value: kotlin.String) {
+     enum class EFilterActiveCompanyGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "All") All("All"),
          @Json(name = "Active") Active("Active"),
          @Json(name = "Inactive") Inactive("Inactive")
@@ -69,7 +69,7 @@ class ObjectCompanyApi(basePath: kotlin.String = defaultBasePath, client: OkHttp
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return CompanyMinusGetAutocompleteMinusV2MinusResponse
+     * @return CompanyGetAutocompleteV2Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -78,11 +78,11 @@ class ObjectCompanyApi(basePath: kotlin.String = defaultBasePath, client: OkHttp
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun companyGetAutocompleteV2(sSelector: SSelector_companyGetAutocompleteV2, eFilterActive: EFilterActive_companyGetAutocompleteV2? = EFilterActive_companyGetAutocompleteV2.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null) : CompanyMinusGetAutocompleteMinusV2MinusResponse {
+    fun companyGetAutocompleteV2(sSelector: SSelectorCompanyGetAutocompleteV2, eFilterActive: EFilterActiveCompanyGetAutocompleteV2? = EFilterActiveCompanyGetAutocompleteV2.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderAcceptLanguage? = null) : CompanyGetAutocompleteV2Response {
         val localVarResponse = companyGetAutocompleteV2WithHttpInfo(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CompanyMinusGetAutocompleteMinusV2MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CompanyGetAutocompleteV2Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -103,16 +103,16 @@ class ObjectCompanyApi(basePath: kotlin.String = defaultBasePath, client: OkHttp
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return ApiResponse<CompanyMinusGetAutocompleteMinusV2MinusResponse?>
+     * @return ApiResponse<CompanyGetAutocompleteV2Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun companyGetAutocompleteV2WithHttpInfo(sSelector: SSelector_companyGetAutocompleteV2, eFilterActive: EFilterActive_companyGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : ApiResponse<CompanyMinusGetAutocompleteMinusV2MinusResponse?> {
+    fun companyGetAutocompleteV2WithHttpInfo(sSelector: SSelectorCompanyGetAutocompleteV2, eFilterActive: EFilterActiveCompanyGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : ApiResponse<CompanyGetAutocompleteV2Response?> {
         val localVariableConfig = companyGetAutocompleteV2RequestConfig(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
-        return request<Unit, CompanyMinusGetAutocompleteMinusV2MinusResponse>(
+        return request<Unit, CompanyGetAutocompleteV2Response>(
             localVariableConfig
         )
     }
@@ -126,12 +126,12 @@ class ObjectCompanyApi(basePath: kotlin.String = defaultBasePath, client: OkHttp
      * @param acceptLanguage  (optional)
      * @return RequestConfig
      */
-    fun companyGetAutocompleteV2RequestConfig(sSelector: SSelector_companyGetAutocompleteV2, eFilterActive: EFilterActive_companyGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : RequestConfig<Unit> {
+    fun companyGetAutocompleteV2RequestConfig(sSelector: SSelectorCompanyGetAutocompleteV2, eFilterActive: EFilterActiveCompanyGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
                 if (eFilterActive != null) {
-                    put("eFilterActive", listOf(eFilterActive.toString()))
+                    put("eFilterActive", listOf(eFilterActive.value))
                 }
                 if (sQuery != null) {
                     put("sQuery", listOf(sQuery.toString()))

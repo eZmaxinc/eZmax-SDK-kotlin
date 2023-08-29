@@ -1,5 +1,5 @@
 
-# EzsignfolderMinusDisposeEzsignfoldersMinusV1MinusRequest
+# EzsignfolderDisposeEzsignfoldersV1Request
 
 ## Properties
 Name | Type | Description | Notes

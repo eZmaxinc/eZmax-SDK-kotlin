@@ -1,5 +1,5 @@
 
-# VariableexpenseMinusAutocompleteElementMinusResponse
+# VariableexpenseAutocompleteElementResponse
 
 ## Properties
 Name | Type | Description | Notes

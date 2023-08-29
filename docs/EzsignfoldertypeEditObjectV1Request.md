@@ -1,10 +1,10 @@
 
-# EzsignfoldertypeMinusEditObjectMinusV1MinusRequest
+# EzsignfoldertypeEditObjectV1Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objEzsignfoldertype** | [**EzsignfoldertypeMinusRequestCompound**](EzsignfoldertypeMinusRequestCompound.md) |  | 
+**objEzsignfoldertype** | [**EzsignfoldertypeRequestCompound**](EzsignfoldertypeRequestCompound.md) |  | 
 
 
 

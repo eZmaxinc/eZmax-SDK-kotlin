@@ -1,10 +1,10 @@
 
-# CorsMinusEditObjectMinusV1MinusRequest
+# CorsEditObjectV1Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objCors** | [**CorsMinusRequestCompound**](CorsMinusRequestCompound.md) |  | 
+**objCors** | [**CorsRequestCompound**](CorsRequestCompound.md) |  | 
 
 
 

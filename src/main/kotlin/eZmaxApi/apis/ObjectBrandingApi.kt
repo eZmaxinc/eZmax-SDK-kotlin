@@ -19,15 +19,15 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.BrandingMinusCreateObjectMinusV1MinusRequest
-import eZmaxApi.models.BrandingMinusCreateObjectMinusV1MinusResponse
-import eZmaxApi.models.BrandingMinusEditObjectMinusV1MinusRequest
-import eZmaxApi.models.BrandingMinusEditObjectMinusV1MinusResponse
-import eZmaxApi.models.BrandingMinusGetAutocompleteMinusV2MinusResponse
-import eZmaxApi.models.BrandingMinusGetListMinusV1MinusResponse
-import eZmaxApi.models.BrandingMinusGetObjectMinusV2MinusResponse
-import eZmaxApi.models.CommonMinusResponseMinusError
-import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
+import eZmaxApi.models.BrandingCreateObjectV1Request
+import eZmaxApi.models.BrandingCreateObjectV1Response
+import eZmaxApi.models.BrandingEditObjectV1Request
+import eZmaxApi.models.BrandingEditObjectV1Response
+import eZmaxApi.models.BrandingGetAutocompleteV2Response
+import eZmaxApi.models.BrandingGetListV1Response
+import eZmaxApi.models.BrandingGetObjectV2Response
+import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.HeaderAcceptLanguage
 
 import com.squareup.moshi.Json
 
@@ -56,8 +56,8 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
     /**
      * Create a new Branding
      * The endpoint allows to create one or many elements at once.
-     * @param brandingMinusCreateObjectMinusV1MinusRequest 
-     * @return BrandingMinusCreateObjectMinusV1MinusResponse
+     * @param brandingCreateObjectV1Request 
+     * @return BrandingCreateObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -66,11 +66,11 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun brandingCreateObjectV1(brandingMinusCreateObjectMinusV1MinusRequest: BrandingMinusCreateObjectMinusV1MinusRequest) : BrandingMinusCreateObjectMinusV1MinusResponse {
-        val localVarResponse = brandingCreateObjectV1WithHttpInfo(brandingMinusCreateObjectMinusV1MinusRequest = brandingMinusCreateObjectMinusV1MinusRequest)
+    fun brandingCreateObjectV1(brandingCreateObjectV1Request: BrandingCreateObjectV1Request) : BrandingCreateObjectV1Response {
+        val localVarResponse = brandingCreateObjectV1WithHttpInfo(brandingCreateObjectV1Request = brandingCreateObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as BrandingMinusCreateObjectMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as BrandingCreateObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -87,17 +87,17 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
     /**
      * Create a new Branding
      * The endpoint allows to create one or many elements at once.
-     * @param brandingMinusCreateObjectMinusV1MinusRequest 
-     * @return ApiResponse<BrandingMinusCreateObjectMinusV1MinusResponse?>
+     * @param brandingCreateObjectV1Request 
+     * @return ApiResponse<BrandingCreateObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun brandingCreateObjectV1WithHttpInfo(brandingMinusCreateObjectMinusV1MinusRequest: BrandingMinusCreateObjectMinusV1MinusRequest) : ApiResponse<BrandingMinusCreateObjectMinusV1MinusResponse?> {
-        val localVariableConfig = brandingCreateObjectV1RequestConfig(brandingMinusCreateObjectMinusV1MinusRequest = brandingMinusCreateObjectMinusV1MinusRequest)
+    fun brandingCreateObjectV1WithHttpInfo(brandingCreateObjectV1Request: BrandingCreateObjectV1Request) : ApiResponse<BrandingCreateObjectV1Response?> {
+        val localVariableConfig = brandingCreateObjectV1RequestConfig(brandingCreateObjectV1Request = brandingCreateObjectV1Request)
 
-        return request<BrandingMinusCreateObjectMinusV1MinusRequest, BrandingMinusCreateObjectMinusV1MinusResponse>(
+        return request<BrandingCreateObjectV1Request, BrandingCreateObjectV1Response>(
             localVariableConfig
         )
     }
@@ -105,11 +105,11 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
     /**
      * To obtain the request config of the operation brandingCreateObjectV1
      *
-     * @param brandingMinusCreateObjectMinusV1MinusRequest 
+     * @param brandingCreateObjectV1Request 
      * @return RequestConfig
      */
-    fun brandingCreateObjectV1RequestConfig(brandingMinusCreateObjectMinusV1MinusRequest: BrandingMinusCreateObjectMinusV1MinusRequest) : RequestConfig<BrandingMinusCreateObjectMinusV1MinusRequest> {
-        val localVariableBody = brandingMinusCreateObjectMinusV1MinusRequest
+    fun brandingCreateObjectV1RequestConfig(brandingCreateObjectV1Request: BrandingCreateObjectV1Request) : RequestConfig<BrandingCreateObjectV1Request> {
+        val localVariableBody = brandingCreateObjectV1Request
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Content-Type"] = "application/json"
@@ -129,8 +129,8 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      * Edit an existing Branding
      * 
      * @param pkiBrandingID 
-     * @param brandingMinusEditObjectMinusV1MinusRequest 
-     * @return BrandingMinusEditObjectMinusV1MinusResponse
+     * @param brandingEditObjectV1Request 
+     * @return BrandingEditObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -139,11 +139,11 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun brandingEditObjectV1(pkiBrandingID: kotlin.Int, brandingMinusEditObjectMinusV1MinusRequest: BrandingMinusEditObjectMinusV1MinusRequest) : BrandingMinusEditObjectMinusV1MinusResponse {
-        val localVarResponse = brandingEditObjectV1WithHttpInfo(pkiBrandingID = pkiBrandingID, brandingMinusEditObjectMinusV1MinusRequest = brandingMinusEditObjectMinusV1MinusRequest)
+    fun brandingEditObjectV1(pkiBrandingID: kotlin.Int, brandingEditObjectV1Request: BrandingEditObjectV1Request) : BrandingEditObjectV1Response {
+        val localVarResponse = brandingEditObjectV1WithHttpInfo(pkiBrandingID = pkiBrandingID, brandingEditObjectV1Request = brandingEditObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as BrandingMinusEditObjectMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as BrandingEditObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -161,17 +161,17 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      * Edit an existing Branding
      * 
      * @param pkiBrandingID 
-     * @param brandingMinusEditObjectMinusV1MinusRequest 
-     * @return ApiResponse<BrandingMinusEditObjectMinusV1MinusResponse?>
+     * @param brandingEditObjectV1Request 
+     * @return ApiResponse<BrandingEditObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun brandingEditObjectV1WithHttpInfo(pkiBrandingID: kotlin.Int, brandingMinusEditObjectMinusV1MinusRequest: BrandingMinusEditObjectMinusV1MinusRequest) : ApiResponse<BrandingMinusEditObjectMinusV1MinusResponse?> {
-        val localVariableConfig = brandingEditObjectV1RequestConfig(pkiBrandingID = pkiBrandingID, brandingMinusEditObjectMinusV1MinusRequest = brandingMinusEditObjectMinusV1MinusRequest)
+    fun brandingEditObjectV1WithHttpInfo(pkiBrandingID: kotlin.Int, brandingEditObjectV1Request: BrandingEditObjectV1Request) : ApiResponse<BrandingEditObjectV1Response?> {
+        val localVariableConfig = brandingEditObjectV1RequestConfig(pkiBrandingID = pkiBrandingID, brandingEditObjectV1Request = brandingEditObjectV1Request)
 
-        return request<BrandingMinusEditObjectMinusV1MinusRequest, BrandingMinusEditObjectMinusV1MinusResponse>(
+        return request<BrandingEditObjectV1Request, BrandingEditObjectV1Response>(
             localVariableConfig
         )
     }
@@ -180,11 +180,11 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      * To obtain the request config of the operation brandingEditObjectV1
      *
      * @param pkiBrandingID 
-     * @param brandingMinusEditObjectMinusV1MinusRequest 
+     * @param brandingEditObjectV1Request 
      * @return RequestConfig
      */
-    fun brandingEditObjectV1RequestConfig(pkiBrandingID: kotlin.Int, brandingMinusEditObjectMinusV1MinusRequest: BrandingMinusEditObjectMinusV1MinusRequest) : RequestConfig<BrandingMinusEditObjectMinusV1MinusRequest> {
-        val localVariableBody = brandingMinusEditObjectMinusV1MinusRequest
+    fun brandingEditObjectV1RequestConfig(pkiBrandingID: kotlin.Int, brandingEditObjectV1Request: BrandingEditObjectV1Request) : RequestConfig<BrandingEditObjectV1Request> {
+        val localVariableBody = brandingEditObjectV1Request
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Content-Type"] = "application/json"
@@ -203,14 +203,14 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
     /**
      * enum for parameter sSelector
      */
-     enum class SSelector_brandingGetAutocompleteV2(val value: kotlin.String) {
+     enum class SSelectorBrandingGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "All") All("All")
      }
 
     /**
      * enum for parameter eFilterActive
      */
-     enum class EFilterActive_brandingGetAutocompleteV2(val value: kotlin.String) {
+     enum class EFilterActiveBrandingGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "All") All("All"),
          @Json(name = "Active") Active("Active"),
          @Json(name = "Inactive") Inactive("Inactive")
@@ -223,7 +223,7 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return BrandingMinusGetAutocompleteMinusV2MinusResponse
+     * @return BrandingGetAutocompleteV2Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -232,11 +232,11 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun brandingGetAutocompleteV2(sSelector: SSelector_brandingGetAutocompleteV2, eFilterActive: EFilterActive_brandingGetAutocompleteV2? = EFilterActive_brandingGetAutocompleteV2.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null) : BrandingMinusGetAutocompleteMinusV2MinusResponse {
+    fun brandingGetAutocompleteV2(sSelector: SSelectorBrandingGetAutocompleteV2, eFilterActive: EFilterActiveBrandingGetAutocompleteV2? = EFilterActiveBrandingGetAutocompleteV2.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderAcceptLanguage? = null) : BrandingGetAutocompleteV2Response {
         val localVarResponse = brandingGetAutocompleteV2WithHttpInfo(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as BrandingMinusGetAutocompleteMinusV2MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as BrandingGetAutocompleteV2Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -257,16 +257,16 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return ApiResponse<BrandingMinusGetAutocompleteMinusV2MinusResponse?>
+     * @return ApiResponse<BrandingGetAutocompleteV2Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun brandingGetAutocompleteV2WithHttpInfo(sSelector: SSelector_brandingGetAutocompleteV2, eFilterActive: EFilterActive_brandingGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : ApiResponse<BrandingMinusGetAutocompleteMinusV2MinusResponse?> {
+    fun brandingGetAutocompleteV2WithHttpInfo(sSelector: SSelectorBrandingGetAutocompleteV2, eFilterActive: EFilterActiveBrandingGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : ApiResponse<BrandingGetAutocompleteV2Response?> {
         val localVariableConfig = brandingGetAutocompleteV2RequestConfig(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
-        return request<Unit, BrandingMinusGetAutocompleteMinusV2MinusResponse>(
+        return request<Unit, BrandingGetAutocompleteV2Response>(
             localVariableConfig
         )
     }
@@ -280,12 +280,12 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      * @param acceptLanguage  (optional)
      * @return RequestConfig
      */
-    fun brandingGetAutocompleteV2RequestConfig(sSelector: SSelector_brandingGetAutocompleteV2, eFilterActive: EFilterActive_brandingGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : RequestConfig<Unit> {
+    fun brandingGetAutocompleteV2RequestConfig(sSelector: SSelectorBrandingGetAutocompleteV2, eFilterActive: EFilterActiveBrandingGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
                 if (eFilterActive != null) {
-                    put("eFilterActive", listOf(eFilterActive.toString()))
+                    put("eFilterActive", listOf(eFilterActive.value))
                 }
                 if (sQuery != null) {
                     put("sQuery", listOf(sQuery.toString()))
@@ -308,7 +308,7 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
     /**
      * enum for parameter eOrderBy
      */
-     enum class EOrderBy_brandingGetListV1(val value: kotlin.String) {
+     enum class EOrderByBrandingGetListV1(val value: kotlin.String) {
          @Json(name = "pkiBrandingID_ASC") pkiBrandingID_ASC("pkiBrandingID_ASC"),
          @Json(name = "pkiBrandingID_DESC") pkiBrandingID_DESC("pkiBrandingID_DESC"),
          @Json(name = "sBrandingDescriptionX_ASC") sBrandingDescriptionX_ASC("sBrandingDescriptionX_ASC"),
@@ -337,7 +337,7 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
-     * @return BrandingMinusGetListMinusV1MinusResponse
+     * @return BrandingGetListV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -346,11 +346,11 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun brandingGetListV1(eOrderBy: EOrderBy_brandingGetListV1? = null, iRowMax: kotlin.Int? = 10000, iRowOffset: kotlin.Int? = 0, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null, sFilter: kotlin.String? = null) : BrandingMinusGetListMinusV1MinusResponse {
+    fun brandingGetListV1(eOrderBy: EOrderByBrandingGetListV1? = null, iRowMax: kotlin.Int? = 10000, iRowOffset: kotlin.Int? = 0, acceptLanguage: HeaderAcceptLanguage? = null, sFilter: kotlin.String? = null) : BrandingGetListV1Response {
         val localVarResponse = brandingGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as BrandingMinusGetListMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as BrandingGetListV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -372,16 +372,16 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
-     * @return ApiResponse<BrandingMinusGetListMinusV1MinusResponse?>
+     * @return ApiResponse<BrandingGetListV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun brandingGetListV1WithHttpInfo(eOrderBy: EOrderBy_brandingGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : ApiResponse<BrandingMinusGetListMinusV1MinusResponse?> {
+    fun brandingGetListV1WithHttpInfo(eOrderBy: EOrderByBrandingGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : ApiResponse<BrandingGetListV1Response?> {
         val localVariableConfig = brandingGetListV1RequestConfig(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
 
-        return request<Unit, BrandingMinusGetListMinusV1MinusResponse>(
+        return request<Unit, BrandingGetListV1Response>(
             localVariableConfig
         )
     }
@@ -396,12 +396,12 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      * @param sFilter  (optional)
      * @return RequestConfig
      */
-    fun brandingGetListV1RequestConfig(eOrderBy: EOrderBy_brandingGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
+    fun brandingGetListV1RequestConfig(eOrderBy: EOrderByBrandingGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
                 if (eOrderBy != null) {
-                    put("eOrderBy", listOf(eOrderBy.toString()))
+                    put("eOrderBy", listOf(eOrderBy.value))
                 }
                 if (iRowMax != null) {
                     put("iRowMax", listOf(iRowMax.toString()))
@@ -431,7 +431,7 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      * Retrieve an existing Branding
      * 
      * @param pkiBrandingID 
-     * @return BrandingMinusGetObjectMinusV2MinusResponse
+     * @return BrandingGetObjectV2Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -440,11 +440,11 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun brandingGetObjectV2(pkiBrandingID: kotlin.Int) : BrandingMinusGetObjectMinusV2MinusResponse {
+    fun brandingGetObjectV2(pkiBrandingID: kotlin.Int) : BrandingGetObjectV2Response {
         val localVarResponse = brandingGetObjectV2WithHttpInfo(pkiBrandingID = pkiBrandingID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as BrandingMinusGetObjectMinusV2MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as BrandingGetObjectV2Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -462,16 +462,16 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      * Retrieve an existing Branding
      * 
      * @param pkiBrandingID 
-     * @return ApiResponse<BrandingMinusGetObjectMinusV2MinusResponse?>
+     * @return ApiResponse<BrandingGetObjectV2Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun brandingGetObjectV2WithHttpInfo(pkiBrandingID: kotlin.Int) : ApiResponse<BrandingMinusGetObjectMinusV2MinusResponse?> {
+    fun brandingGetObjectV2WithHttpInfo(pkiBrandingID: kotlin.Int) : ApiResponse<BrandingGetObjectV2Response?> {
         val localVariableConfig = brandingGetObjectV2RequestConfig(pkiBrandingID = pkiBrandingID)
 
-        return request<Unit, BrandingMinusGetObjectMinusV2MinusResponse>(
+        return request<Unit, BrandingGetObjectV2Response>(
             localVariableConfig
         )
     }

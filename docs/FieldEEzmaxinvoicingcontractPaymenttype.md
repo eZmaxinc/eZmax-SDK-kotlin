@@ -1,5 +1,5 @@
 
-# FieldMinusEEzmaxinvoicingcontractPaymenttype
+# FieldEEzmaxinvoicingcontractPaymenttype
 
 ## Enum
 

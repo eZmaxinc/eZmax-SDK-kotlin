@@ -1,5 +1,5 @@
 
-# FranchisereferalincomeMinusCreateObjectMinusV1MinusResponseMinusMPayload
+# FranchisereferalincomeCreateObjectV1ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,5 +1,5 @@
 
-# EzsigntemplatepackagesignermembershipMinusRequest
+# EzsigntemplatepackagesignermembershipRequest
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,5 +1,5 @@
 
-# GlobalMinusEzmaxcustomerMinusGetConfigurationMinusV1MinusResponse
+# GlobalEzmaxcustomerGetConfigurationV1Response
 
 ## Properties
 Name | Type | Description | Notes

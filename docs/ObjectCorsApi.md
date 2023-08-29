@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a id="corsCreateObjectV1"></a>
 # **corsCreateObjectV1**
-> CorsMinusCreateObjectMinusV1MinusResponse corsCreateObjectV1(corsMinusCreateObjectMinusV1MinusRequest)
+> CorsCreateObjectV1Response corsCreateObjectV1(corsCreateObjectV1Request)
 
 Create a new Cors
 
@@ -25,9 +25,9 @@ The endpoint allows to create one or many elements at once.
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectCorsApi()
-val corsMinusCreateObjectMinusV1MinusRequest : CorsMinusCreateObjectMinusV1MinusRequest =  // CorsMinusCreateObjectMinusV1MinusRequest | 
+val corsCreateObjectV1Request : CorsCreateObjectV1Request =  // CorsCreateObjectV1Request | 
 try {
-    val result : CorsMinusCreateObjectMinusV1MinusResponse = apiInstance.corsCreateObjectV1(corsMinusCreateObjectMinusV1MinusRequest)
+    val result : CorsCreateObjectV1Response = apiInstance.corsCreateObjectV1(corsCreateObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectCorsApi#corsCreateObjectV1")
@@ -42,11 +42,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **corsMinusCreateObjectMinusV1MinusRequest** | [**CorsMinusCreateObjectMinusV1MinusRequest**](CorsMinusCreateObjectMinusV1MinusRequest.md)|  |
+ **corsCreateObjectV1Request** | [**CorsCreateObjectV1Request**](CorsCreateObjectV1Request.md)|  |
 
 ### Return type
 
-[**CorsMinusCreateObjectMinusV1MinusResponse**](CorsMinusCreateObjectMinusV1MinusResponse.md)
+[**CorsCreateObjectV1Response**](CorsCreateObjectV1Response.md)
 
 ### Authorization
 
@@ -62,7 +62,7 @@ Configure Authorization:
 
 <a id="corsDeleteObjectV1"></a>
 # **corsDeleteObjectV1**
-> CorsMinusDeleteObjectMinusV1MinusResponse corsDeleteObjectV1(pkiCorsID)
+> CorsDeleteObjectV1Response corsDeleteObjectV1(pkiCorsID)
 
 Delete an existing Cors
 
@@ -77,7 +77,7 @@ Delete an existing Cors
 val apiInstance = ObjectCorsApi()
 val pkiCorsID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Cors
 try {
-    val result : CorsMinusDeleteObjectMinusV1MinusResponse = apiInstance.corsDeleteObjectV1(pkiCorsID)
+    val result : CorsDeleteObjectV1Response = apiInstance.corsDeleteObjectV1(pkiCorsID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectCorsApi#corsDeleteObjectV1")
@@ -96,7 +96,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CorsMinusDeleteObjectMinusV1MinusResponse**](CorsMinusDeleteObjectMinusV1MinusResponse.md)
+[**CorsDeleteObjectV1Response**](CorsDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -112,7 +112,7 @@ Configure Authorization:
 
 <a id="corsEditObjectV1"></a>
 # **corsEditObjectV1**
-> CorsMinusEditObjectMinusV1MinusResponse corsEditObjectV1(pkiCorsID, corsMinusEditObjectMinusV1MinusRequest)
+> CorsEditObjectV1Response corsEditObjectV1(pkiCorsID, corsEditObjectV1Request)
 
 Edit an existing Cors
 
@@ -126,9 +126,9 @@ Edit an existing Cors
 
 val apiInstance = ObjectCorsApi()
 val pkiCorsID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Cors
-val corsMinusEditObjectMinusV1MinusRequest : CorsMinusEditObjectMinusV1MinusRequest =  // CorsMinusEditObjectMinusV1MinusRequest | 
+val corsEditObjectV1Request : CorsEditObjectV1Request =  // CorsEditObjectV1Request | 
 try {
-    val result : CorsMinusEditObjectMinusV1MinusResponse = apiInstance.corsEditObjectV1(pkiCorsID, corsMinusEditObjectMinusV1MinusRequest)
+    val result : CorsEditObjectV1Response = apiInstance.corsEditObjectV1(pkiCorsID, corsEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectCorsApi#corsEditObjectV1")
@@ -144,11 +144,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiCorsID** | **kotlin.Int**| The unique ID of the Cors |
- **corsMinusEditObjectMinusV1MinusRequest** | [**CorsMinusEditObjectMinusV1MinusRequest**](CorsMinusEditObjectMinusV1MinusRequest.md)|  |
+ **corsEditObjectV1Request** | [**CorsEditObjectV1Request**](CorsEditObjectV1Request.md)|  |
 
 ### Return type
 
-[**CorsMinusEditObjectMinusV1MinusResponse**](CorsMinusEditObjectMinusV1MinusResponse.md)
+[**CorsEditObjectV1Response**](CorsEditObjectV1Response.md)
 
 ### Authorization
 
@@ -164,7 +164,7 @@ Configure Authorization:
 
 <a id="corsGetObjectV2"></a>
 # **corsGetObjectV2**
-> CorsMinusGetObjectMinusV2MinusResponse corsGetObjectV2(pkiCorsID)
+> CorsGetObjectV2Response corsGetObjectV2(pkiCorsID)
 
 Retrieve an existing Cors
 
@@ -179,7 +179,7 @@ Retrieve an existing Cors
 val apiInstance = ObjectCorsApi()
 val pkiCorsID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Cors
 try {
-    val result : CorsMinusGetObjectMinusV2MinusResponse = apiInstance.corsGetObjectV2(pkiCorsID)
+    val result : CorsGetObjectV2Response = apiInstance.corsGetObjectV2(pkiCorsID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectCorsApi#corsGetObjectV2")
@@ -198,7 +198,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CorsMinusGetObjectMinusV2MinusResponse**](CorsMinusGetObjectMinusV2MinusResponse.md)
+[**CorsGetObjectV2Response**](CorsGetObjectV2Response.md)
 
 ### Authorization
 

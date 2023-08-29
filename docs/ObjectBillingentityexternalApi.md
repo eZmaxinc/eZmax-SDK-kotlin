@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a id="billingentityexternalGetAutocompleteV2"></a>
 # **billingentityexternalGetAutocompleteV2**
-> BillingentityexternalMinusGetAutocompleteMinusV2MinusResponse billingentityexternalGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+> BillingentityexternalGetAutocompleteV2Response billingentityexternalGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 
 Retrieve Billingentityexternals and IDs
 
@@ -25,9 +25,9 @@ val apiInstance = ObjectBillingentityexternalApi()
 val sSelector : kotlin.String = sSelector_example // kotlin.String | The type of Billingentityexternals to return
 val eFilterActive : kotlin.String = eFilterActive_example // kotlin.String | Specify which results we want to display.
 val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter the returned results
-val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
+val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
 try {
-    val result : BillingentityexternalMinusGetAutocompleteMinusV2MinusResponse = apiInstance.billingentityexternalGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+    val result : BillingentityexternalGetAutocompleteV2Response = apiInstance.billingentityexternalGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectBillingentityexternalApi#billingentityexternalGetAutocompleteV2")
@@ -45,11 +45,11 @@ Name | Type | Description  | Notes
  **sSelector** | **kotlin.String**| The type of Billingentityexternals to return | [enum: All]
  **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
  **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional]
- **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
 
 ### Return type
 
-[**BillingentityexternalMinusGetAutocompleteMinusV2MinusResponse**](BillingentityexternalMinusGetAutocompleteMinusV2MinusResponse.md)
+[**BillingentityexternalGetAutocompleteV2Response**](BillingentityexternalGetAutocompleteV2Response.md)
 
 ### Authorization
 

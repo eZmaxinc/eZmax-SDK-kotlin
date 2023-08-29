@@ -1,5 +1,5 @@
 
-# FranchisebrokerMinusAutocompleteElementMinusResponse
+# FranchisebrokerAutocompleteElementResponse
 
 ## Properties
 Name | Type | Description | Notes

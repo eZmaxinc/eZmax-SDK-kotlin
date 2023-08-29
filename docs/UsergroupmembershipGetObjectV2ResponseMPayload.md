@@ -1,10 +1,10 @@
 
-# UsergroupmembershipMinusGetObjectMinusV2MinusResponseMinusMPayload
+# UsergroupmembershipGetObjectV2ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objUsergroupmembership** | [**UsergroupmembershipMinusResponseCompound**](UsergroupmembershipMinusResponseCompound.md) |  | 
+**objUsergroupmembership** | [**UsergroupmembershipResponseCompound**](UsergroupmembershipResponseCompound.md) |  | 
 
 
 

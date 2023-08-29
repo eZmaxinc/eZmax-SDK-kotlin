@@ -1,5 +1,5 @@
 
-# CorsMinusCreateObjectMinusV1MinusResponseMinusMPayload
+# CorsCreateObjectV1ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes

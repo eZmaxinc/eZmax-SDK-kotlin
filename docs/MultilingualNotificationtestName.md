@@ -1,5 +1,5 @@
 
-# MultilingualMinusNotificationtestName
+# MultilingualNotificationtestName
 
 ## Properties
 Name | Type | Description | Notes

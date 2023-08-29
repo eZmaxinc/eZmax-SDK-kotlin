@@ -1,5 +1,5 @@
 
-# AttemptMinusResponseCompound
+# AttemptResponseCompound
 
 ## Properties
 Name | Type | Description | Notes

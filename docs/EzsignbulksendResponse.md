@@ -1,5 +1,5 @@
 
-# EzsignbulksendMinusResponse
+# EzsignbulksendResponse
 
 ## Properties
 Name | Type | Description | Notes
@@ -8,13 +8,13 @@ Name | Type | Description | Notes
 **fkiEzsignfoldertypeID** | **kotlin.Int** | The unique ID of the Ezsignfoldertype. | 
 **fkiLanguageID** | **kotlin.Int** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| | 
 **sLanguageNameX** | **kotlin.String** | The Name of the Language in the language of the requester | 
-**eEzsignfoldertypePrivacylevel** | [**FieldMinusEEzsignfoldertypePrivacylevel**](FieldMinusEEzsignfoldertypePrivacylevel.md) |  | 
+**eEzsignfoldertypePrivacylevel** | [**FieldEEzsignfoldertypePrivacylevel**](FieldEEzsignfoldertypePrivacylevel.md) |  | 
 **sEzsignfoldertypeNameX** | **kotlin.String** | The name of the Ezsignfoldertype in the language of the requester | 
 **sEzsignbulksendDescription** | **kotlin.String** | The description of the Ezsignbulksend | 
 **tEzsignbulksendNote** | **kotlin.String** | Note about the Ezsignbulksend | 
 **bEzsignbulksendNeedvalidation** | **kotlin.Boolean** | Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation | 
 **bEzsignbulksendIsactive** | **kotlin.Boolean** | Whether the Ezsignbulksend is active or not | 
-**objAudit** | [**CommonMinusAudit**](CommonMinusAudit.md) |  | 
+**objAudit** | [**CommonAudit**](CommonAudit.md) |  | 
 
 
 

@@ -1,5 +1,5 @@
 
-# ScimMinusAuthenticationScheme
+# ScimAuthenticationScheme
 
 ## Properties
 Name | Type | Description | Notes

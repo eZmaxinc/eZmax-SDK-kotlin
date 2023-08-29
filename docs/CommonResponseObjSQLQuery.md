@@ -1,5 +1,5 @@
 
-# CommonMinusResponseMinusObjSQLQuery
+# CommonResponseObjSQLQuery
 
 ## Properties
 Name | Type | Description | Notes

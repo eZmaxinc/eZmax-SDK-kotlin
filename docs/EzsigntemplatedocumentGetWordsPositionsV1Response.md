@@ -1,12 +1,12 @@
 
-# EzsigntemplatedocumentMinusGetWordsPositionsMinusV1MinusResponse
+# EzsigntemplatedocumentGetWordsPositionsV1Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**kotlin.collections.List&lt;CustomMinusWordPositionWordMinusResponse&gt;**](CustomMinusWordPositionWordMinusResponse.md) | Payload for POST /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getWordsPositions | 
-**objDebugPayload** | [**CommonMinusResponseMinusObjDebugPayload**](CommonMinusResponseMinusObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonMinusResponseMinusObjDebug**](CommonMinusResponseMinusObjDebug.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
+**mPayload** | [**kotlin.collections.List&lt;CustomWordPositionWordResponse&gt;**](CustomWordPositionWordResponse.md) | Payload for POST /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getWordsPositions | 
+**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 
 
 

@@ -1,5 +1,5 @@
 
-# GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse
+# GlobalCustomerGetEndpointV1Response
 
 ## Properties
 Name | Type | Description | Notes

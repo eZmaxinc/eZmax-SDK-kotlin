@@ -1,5 +1,5 @@
 
-# UsergroupmembershipMinusRequest
+# UsergroupmembershipRequest
 
 ## Properties
 Name | Type | Description | Notes

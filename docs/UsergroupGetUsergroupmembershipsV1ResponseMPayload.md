@@ -1,10 +1,10 @@
 
-# UsergroupMinusGetUsergroupmembershipsMinusV1MinusResponseMinusMPayload
+# UsergroupGetUsergroupmembershipsV1ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjUsergroupmembership** | [**kotlin.collections.List&lt;UsergroupmembershipMinusResponseCompound&gt;**](UsergroupmembershipMinusResponseCompound.md) |  | 
+**aObjUsergroupmembership** | [**kotlin.collections.List&lt;UsergroupmembershipResponseCompound&gt;**](UsergroupmembershipResponseCompound.md) |  | 
 
 
 

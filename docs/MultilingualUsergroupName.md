@@ -1,5 +1,5 @@
 
-# MultilingualMinusUsergroupName
+# MultilingualUsergroupName
 
 ## Properties
 Name | Type | Description | Notes

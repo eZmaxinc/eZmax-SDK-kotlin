@@ -19,15 +19,15 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonMinusResponseMinusError
-import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
-import eZmaxApi.models.VariableexpenseMinusCreateObjectMinusV1MinusRequest
-import eZmaxApi.models.VariableexpenseMinusCreateObjectMinusV1MinusResponse
-import eZmaxApi.models.VariableexpenseMinusEditObjectMinusV1MinusRequest
-import eZmaxApi.models.VariableexpenseMinusEditObjectMinusV1MinusResponse
-import eZmaxApi.models.VariableexpenseMinusGetAutocompleteMinusV2MinusResponse
-import eZmaxApi.models.VariableexpenseMinusGetListMinusV1MinusResponse
-import eZmaxApi.models.VariableexpenseMinusGetObjectMinusV2MinusResponse
+import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.HeaderAcceptLanguage
+import eZmaxApi.models.VariableexpenseCreateObjectV1Request
+import eZmaxApi.models.VariableexpenseCreateObjectV1Response
+import eZmaxApi.models.VariableexpenseEditObjectV1Request
+import eZmaxApi.models.VariableexpenseEditObjectV1Response
+import eZmaxApi.models.VariableexpenseGetAutocompleteV2Response
+import eZmaxApi.models.VariableexpenseGetListV1Response
+import eZmaxApi.models.VariableexpenseGetObjectV2Response
 
 import com.squareup.moshi.Json
 
@@ -56,8 +56,8 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
     /**
      * Create a new Variableexpense
      * The endpoint allows to create one or many elements at once.
-     * @param variableexpenseMinusCreateObjectMinusV1MinusRequest 
-     * @return VariableexpenseMinusCreateObjectMinusV1MinusResponse
+     * @param variableexpenseCreateObjectV1Request 
+     * @return VariableexpenseCreateObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -66,11 +66,11 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun variableexpenseCreateObjectV1(variableexpenseMinusCreateObjectMinusV1MinusRequest: VariableexpenseMinusCreateObjectMinusV1MinusRequest) : VariableexpenseMinusCreateObjectMinusV1MinusResponse {
-        val localVarResponse = variableexpenseCreateObjectV1WithHttpInfo(variableexpenseMinusCreateObjectMinusV1MinusRequest = variableexpenseMinusCreateObjectMinusV1MinusRequest)
+    fun variableexpenseCreateObjectV1(variableexpenseCreateObjectV1Request: VariableexpenseCreateObjectV1Request) : VariableexpenseCreateObjectV1Response {
+        val localVarResponse = variableexpenseCreateObjectV1WithHttpInfo(variableexpenseCreateObjectV1Request = variableexpenseCreateObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as VariableexpenseMinusCreateObjectMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as VariableexpenseCreateObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -87,17 +87,17 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
     /**
      * Create a new Variableexpense
      * The endpoint allows to create one or many elements at once.
-     * @param variableexpenseMinusCreateObjectMinusV1MinusRequest 
-     * @return ApiResponse<VariableexpenseMinusCreateObjectMinusV1MinusResponse?>
+     * @param variableexpenseCreateObjectV1Request 
+     * @return ApiResponse<VariableexpenseCreateObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun variableexpenseCreateObjectV1WithHttpInfo(variableexpenseMinusCreateObjectMinusV1MinusRequest: VariableexpenseMinusCreateObjectMinusV1MinusRequest) : ApiResponse<VariableexpenseMinusCreateObjectMinusV1MinusResponse?> {
-        val localVariableConfig = variableexpenseCreateObjectV1RequestConfig(variableexpenseMinusCreateObjectMinusV1MinusRequest = variableexpenseMinusCreateObjectMinusV1MinusRequest)
+    fun variableexpenseCreateObjectV1WithHttpInfo(variableexpenseCreateObjectV1Request: VariableexpenseCreateObjectV1Request) : ApiResponse<VariableexpenseCreateObjectV1Response?> {
+        val localVariableConfig = variableexpenseCreateObjectV1RequestConfig(variableexpenseCreateObjectV1Request = variableexpenseCreateObjectV1Request)
 
-        return request<VariableexpenseMinusCreateObjectMinusV1MinusRequest, VariableexpenseMinusCreateObjectMinusV1MinusResponse>(
+        return request<VariableexpenseCreateObjectV1Request, VariableexpenseCreateObjectV1Response>(
             localVariableConfig
         )
     }
@@ -105,11 +105,11 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
     /**
      * To obtain the request config of the operation variableexpenseCreateObjectV1
      *
-     * @param variableexpenseMinusCreateObjectMinusV1MinusRequest 
+     * @param variableexpenseCreateObjectV1Request 
      * @return RequestConfig
      */
-    fun variableexpenseCreateObjectV1RequestConfig(variableexpenseMinusCreateObjectMinusV1MinusRequest: VariableexpenseMinusCreateObjectMinusV1MinusRequest) : RequestConfig<VariableexpenseMinusCreateObjectMinusV1MinusRequest> {
-        val localVariableBody = variableexpenseMinusCreateObjectMinusV1MinusRequest
+    fun variableexpenseCreateObjectV1RequestConfig(variableexpenseCreateObjectV1Request: VariableexpenseCreateObjectV1Request) : RequestConfig<VariableexpenseCreateObjectV1Request> {
+        val localVariableBody = variableexpenseCreateObjectV1Request
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Content-Type"] = "application/json"
@@ -129,8 +129,8 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
      * Edit an existing Variableexpense
      * 
      * @param pkiVariableexpenseID 
-     * @param variableexpenseMinusEditObjectMinusV1MinusRequest 
-     * @return VariableexpenseMinusEditObjectMinusV1MinusResponse
+     * @param variableexpenseEditObjectV1Request 
+     * @return VariableexpenseEditObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -139,11 +139,11 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun variableexpenseEditObjectV1(pkiVariableexpenseID: kotlin.Int, variableexpenseMinusEditObjectMinusV1MinusRequest: VariableexpenseMinusEditObjectMinusV1MinusRequest) : VariableexpenseMinusEditObjectMinusV1MinusResponse {
-        val localVarResponse = variableexpenseEditObjectV1WithHttpInfo(pkiVariableexpenseID = pkiVariableexpenseID, variableexpenseMinusEditObjectMinusV1MinusRequest = variableexpenseMinusEditObjectMinusV1MinusRequest)
+    fun variableexpenseEditObjectV1(pkiVariableexpenseID: kotlin.Int, variableexpenseEditObjectV1Request: VariableexpenseEditObjectV1Request) : VariableexpenseEditObjectV1Response {
+        val localVarResponse = variableexpenseEditObjectV1WithHttpInfo(pkiVariableexpenseID = pkiVariableexpenseID, variableexpenseEditObjectV1Request = variableexpenseEditObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as VariableexpenseMinusEditObjectMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as VariableexpenseEditObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -161,17 +161,17 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
      * Edit an existing Variableexpense
      * 
      * @param pkiVariableexpenseID 
-     * @param variableexpenseMinusEditObjectMinusV1MinusRequest 
-     * @return ApiResponse<VariableexpenseMinusEditObjectMinusV1MinusResponse?>
+     * @param variableexpenseEditObjectV1Request 
+     * @return ApiResponse<VariableexpenseEditObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun variableexpenseEditObjectV1WithHttpInfo(pkiVariableexpenseID: kotlin.Int, variableexpenseMinusEditObjectMinusV1MinusRequest: VariableexpenseMinusEditObjectMinusV1MinusRequest) : ApiResponse<VariableexpenseMinusEditObjectMinusV1MinusResponse?> {
-        val localVariableConfig = variableexpenseEditObjectV1RequestConfig(pkiVariableexpenseID = pkiVariableexpenseID, variableexpenseMinusEditObjectMinusV1MinusRequest = variableexpenseMinusEditObjectMinusV1MinusRequest)
+    fun variableexpenseEditObjectV1WithHttpInfo(pkiVariableexpenseID: kotlin.Int, variableexpenseEditObjectV1Request: VariableexpenseEditObjectV1Request) : ApiResponse<VariableexpenseEditObjectV1Response?> {
+        val localVariableConfig = variableexpenseEditObjectV1RequestConfig(pkiVariableexpenseID = pkiVariableexpenseID, variableexpenseEditObjectV1Request = variableexpenseEditObjectV1Request)
 
-        return request<VariableexpenseMinusEditObjectMinusV1MinusRequest, VariableexpenseMinusEditObjectMinusV1MinusResponse>(
+        return request<VariableexpenseEditObjectV1Request, VariableexpenseEditObjectV1Response>(
             localVariableConfig
         )
     }
@@ -180,11 +180,11 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
      * To obtain the request config of the operation variableexpenseEditObjectV1
      *
      * @param pkiVariableexpenseID 
-     * @param variableexpenseMinusEditObjectMinusV1MinusRequest 
+     * @param variableexpenseEditObjectV1Request 
      * @return RequestConfig
      */
-    fun variableexpenseEditObjectV1RequestConfig(pkiVariableexpenseID: kotlin.Int, variableexpenseMinusEditObjectMinusV1MinusRequest: VariableexpenseMinusEditObjectMinusV1MinusRequest) : RequestConfig<VariableexpenseMinusEditObjectMinusV1MinusRequest> {
-        val localVariableBody = variableexpenseMinusEditObjectMinusV1MinusRequest
+    fun variableexpenseEditObjectV1RequestConfig(pkiVariableexpenseID: kotlin.Int, variableexpenseEditObjectV1Request: VariableexpenseEditObjectV1Request) : RequestConfig<VariableexpenseEditObjectV1Request> {
+        val localVariableBody = variableexpenseEditObjectV1Request
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Content-Type"] = "application/json"
@@ -203,14 +203,14 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
     /**
      * enum for parameter sSelector
      */
-     enum class SSelector_variableexpenseGetAutocompleteV2(val value: kotlin.String) {
+     enum class SSelectorVariableexpenseGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "All") All("All")
      }
 
     /**
      * enum for parameter eFilterActive
      */
-     enum class EFilterActive_variableexpenseGetAutocompleteV2(val value: kotlin.String) {
+     enum class EFilterActiveVariableexpenseGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "All") All("All"),
          @Json(name = "Active") Active("Active"),
          @Json(name = "Inactive") Inactive("Inactive")
@@ -223,7 +223,7 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return VariableexpenseMinusGetAutocompleteMinusV2MinusResponse
+     * @return VariableexpenseGetAutocompleteV2Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -232,11 +232,11 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun variableexpenseGetAutocompleteV2(sSelector: SSelector_variableexpenseGetAutocompleteV2, eFilterActive: EFilterActive_variableexpenseGetAutocompleteV2? = EFilterActive_variableexpenseGetAutocompleteV2.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null) : VariableexpenseMinusGetAutocompleteMinusV2MinusResponse {
+    fun variableexpenseGetAutocompleteV2(sSelector: SSelectorVariableexpenseGetAutocompleteV2, eFilterActive: EFilterActiveVariableexpenseGetAutocompleteV2? = EFilterActiveVariableexpenseGetAutocompleteV2.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderAcceptLanguage? = null) : VariableexpenseGetAutocompleteV2Response {
         val localVarResponse = variableexpenseGetAutocompleteV2WithHttpInfo(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as VariableexpenseMinusGetAutocompleteMinusV2MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as VariableexpenseGetAutocompleteV2Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -257,16 +257,16 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return ApiResponse<VariableexpenseMinusGetAutocompleteMinusV2MinusResponse?>
+     * @return ApiResponse<VariableexpenseGetAutocompleteV2Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun variableexpenseGetAutocompleteV2WithHttpInfo(sSelector: SSelector_variableexpenseGetAutocompleteV2, eFilterActive: EFilterActive_variableexpenseGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : ApiResponse<VariableexpenseMinusGetAutocompleteMinusV2MinusResponse?> {
+    fun variableexpenseGetAutocompleteV2WithHttpInfo(sSelector: SSelectorVariableexpenseGetAutocompleteV2, eFilterActive: EFilterActiveVariableexpenseGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : ApiResponse<VariableexpenseGetAutocompleteV2Response?> {
         val localVariableConfig = variableexpenseGetAutocompleteV2RequestConfig(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
-        return request<Unit, VariableexpenseMinusGetAutocompleteMinusV2MinusResponse>(
+        return request<Unit, VariableexpenseGetAutocompleteV2Response>(
             localVariableConfig
         )
     }
@@ -280,12 +280,12 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
      * @param acceptLanguage  (optional)
      * @return RequestConfig
      */
-    fun variableexpenseGetAutocompleteV2RequestConfig(sSelector: SSelector_variableexpenseGetAutocompleteV2, eFilterActive: EFilterActive_variableexpenseGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : RequestConfig<Unit> {
+    fun variableexpenseGetAutocompleteV2RequestConfig(sSelector: SSelectorVariableexpenseGetAutocompleteV2, eFilterActive: EFilterActiveVariableexpenseGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
                 if (eFilterActive != null) {
-                    put("eFilterActive", listOf(eFilterActive.toString()))
+                    put("eFilterActive", listOf(eFilterActive.value))
                 }
                 if (sQuery != null) {
                     put("sQuery", listOf(sQuery.toString()))
@@ -308,7 +308,7 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
     /**
      * enum for parameter eOrderBy
      */
-     enum class EOrderBy_variableexpenseGetListV1(val value: kotlin.String) {
+     enum class EOrderByVariableexpenseGetListV1(val value: kotlin.String) {
          @Json(name = "pkiVariableexpenseID_ASC") pkiVariableexpenseID_ASC("pkiVariableexpenseID_ASC"),
          @Json(name = "pkiVariableexpenseID_DESC") pkiVariableexpenseID_DESC("pkiVariableexpenseID_DESC"),
          @Json(name = "sVariableexpenseCode_ASC") sVariableexpenseCode_ASC("sVariableexpenseCode_ASC"),
@@ -329,7 +329,7 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
      * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
-     * @return VariableexpenseMinusGetListMinusV1MinusResponse
+     * @return VariableexpenseGetListV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -338,11 +338,11 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun variableexpenseGetListV1(eOrderBy: EOrderBy_variableexpenseGetListV1? = null, iRowMax: kotlin.Int? = 10000, iRowOffset: kotlin.Int? = 0, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null, sFilter: kotlin.String? = null) : VariableexpenseMinusGetListMinusV1MinusResponse {
+    fun variableexpenseGetListV1(eOrderBy: EOrderByVariableexpenseGetListV1? = null, iRowMax: kotlin.Int? = 10000, iRowOffset: kotlin.Int? = 0, acceptLanguage: HeaderAcceptLanguage? = null, sFilter: kotlin.String? = null) : VariableexpenseGetListV1Response {
         val localVarResponse = variableexpenseGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as VariableexpenseMinusGetListMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as VariableexpenseGetListV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -364,16 +364,16 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
      * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
-     * @return ApiResponse<VariableexpenseMinusGetListMinusV1MinusResponse?>
+     * @return ApiResponse<VariableexpenseGetListV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun variableexpenseGetListV1WithHttpInfo(eOrderBy: EOrderBy_variableexpenseGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : ApiResponse<VariableexpenseMinusGetListMinusV1MinusResponse?> {
+    fun variableexpenseGetListV1WithHttpInfo(eOrderBy: EOrderByVariableexpenseGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : ApiResponse<VariableexpenseGetListV1Response?> {
         val localVariableConfig = variableexpenseGetListV1RequestConfig(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
 
-        return request<Unit, VariableexpenseMinusGetListMinusV1MinusResponse>(
+        return request<Unit, VariableexpenseGetListV1Response>(
             localVariableConfig
         )
     }
@@ -388,12 +388,12 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
      * @param sFilter  (optional)
      * @return RequestConfig
      */
-    fun variableexpenseGetListV1RequestConfig(eOrderBy: EOrderBy_variableexpenseGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
+    fun variableexpenseGetListV1RequestConfig(eOrderBy: EOrderByVariableexpenseGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
                 if (eOrderBy != null) {
-                    put("eOrderBy", listOf(eOrderBy.toString()))
+                    put("eOrderBy", listOf(eOrderBy.value))
                 }
                 if (iRowMax != null) {
                     put("iRowMax", listOf(iRowMax.toString()))
@@ -423,7 +423,7 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
      * Retrieve an existing Variableexpense
      * 
      * @param pkiVariableexpenseID 
-     * @return VariableexpenseMinusGetObjectMinusV2MinusResponse
+     * @return VariableexpenseGetObjectV2Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -432,11 +432,11 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun variableexpenseGetObjectV2(pkiVariableexpenseID: kotlin.Int) : VariableexpenseMinusGetObjectMinusV2MinusResponse {
+    fun variableexpenseGetObjectV2(pkiVariableexpenseID: kotlin.Int) : VariableexpenseGetObjectV2Response {
         val localVarResponse = variableexpenseGetObjectV2WithHttpInfo(pkiVariableexpenseID = pkiVariableexpenseID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as VariableexpenseMinusGetObjectMinusV2MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as VariableexpenseGetObjectV2Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -454,16 +454,16 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
      * Retrieve an existing Variableexpense
      * 
      * @param pkiVariableexpenseID 
-     * @return ApiResponse<VariableexpenseMinusGetObjectMinusV2MinusResponse?>
+     * @return ApiResponse<VariableexpenseGetObjectV2Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun variableexpenseGetObjectV2WithHttpInfo(pkiVariableexpenseID: kotlin.Int) : ApiResponse<VariableexpenseMinusGetObjectMinusV2MinusResponse?> {
+    fun variableexpenseGetObjectV2WithHttpInfo(pkiVariableexpenseID: kotlin.Int) : ApiResponse<VariableexpenseGetObjectV2Response?> {
         val localVariableConfig = variableexpenseGetObjectV2RequestConfig(pkiVariableexpenseID = pkiVariableexpenseID)
 
-        return request<Unit, VariableexpenseMinusGetObjectMinusV2MinusResponse>(
+        return request<Unit, VariableexpenseGetObjectV2Response>(
             localVariableConfig
         )
     }

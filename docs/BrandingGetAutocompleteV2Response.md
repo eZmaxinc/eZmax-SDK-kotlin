@@ -1,12 +1,12 @@
 
-# BrandingMinusGetAutocompleteMinusV2MinusResponse
+# BrandingGetAutocompleteV2Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**BrandingMinusGetAutocompleteMinusV2MinusResponseMinusMPayload**](BrandingMinusGetAutocompleteMinusV2MinusResponseMinusMPayload.md) |  | 
-**objDebugPayload** | [**CommonMinusResponseMinusObjDebugPayload**](CommonMinusResponseMinusObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonMinusResponseMinusObjDebug**](CommonMinusResponseMinusObjDebug.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
+**mPayload** | [**BrandingGetAutocompleteV2ResponseMPayload**](BrandingGetAutocompleteV2ResponseMPayload.md) |  | 
+**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 
 
 

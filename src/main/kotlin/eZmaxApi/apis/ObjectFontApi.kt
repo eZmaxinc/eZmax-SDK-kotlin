@@ -19,8 +19,8 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.FontMinusGetAutocompleteMinusV2MinusResponse
-import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
+import eZmaxApi.models.FontGetAutocompleteV2Response
+import eZmaxApi.models.HeaderAcceptLanguage
 
 import com.squareup.moshi.Json
 
@@ -49,14 +49,14 @@ class ObjectFontApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
     /**
      * enum for parameter sSelector
      */
-     enum class SSelector_fontGetAutocompleteV2(val value: kotlin.String) {
+     enum class SSelectorFontGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "All") All("All")
      }
 
     /**
      * enum for parameter eFilterActive
      */
-     enum class EFilterActive_fontGetAutocompleteV2(val value: kotlin.String) {
+     enum class EFilterActiveFontGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "All") All("All"),
          @Json(name = "Active") Active("Active"),
          @Json(name = "Inactive") Inactive("Inactive")
@@ -69,7 +69,7 @@ class ObjectFontApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return FontMinusGetAutocompleteMinusV2MinusResponse
+     * @return FontGetAutocompleteV2Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -78,11 +78,11 @@ class ObjectFontApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun fontGetAutocompleteV2(sSelector: SSelector_fontGetAutocompleteV2, eFilterActive: EFilterActive_fontGetAutocompleteV2? = EFilterActive_fontGetAutocompleteV2.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null) : FontMinusGetAutocompleteMinusV2MinusResponse {
+    fun fontGetAutocompleteV2(sSelector: SSelectorFontGetAutocompleteV2, eFilterActive: EFilterActiveFontGetAutocompleteV2? = EFilterActiveFontGetAutocompleteV2.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderAcceptLanguage? = null) : FontGetAutocompleteV2Response {
         val localVarResponse = fontGetAutocompleteV2WithHttpInfo(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as FontMinusGetAutocompleteMinusV2MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as FontGetAutocompleteV2Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -103,16 +103,16 @@ class ObjectFontApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return ApiResponse<FontMinusGetAutocompleteMinusV2MinusResponse?>
+     * @return ApiResponse<FontGetAutocompleteV2Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun fontGetAutocompleteV2WithHttpInfo(sSelector: SSelector_fontGetAutocompleteV2, eFilterActive: EFilterActive_fontGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : ApiResponse<FontMinusGetAutocompleteMinusV2MinusResponse?> {
+    fun fontGetAutocompleteV2WithHttpInfo(sSelector: SSelectorFontGetAutocompleteV2, eFilterActive: EFilterActiveFontGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : ApiResponse<FontGetAutocompleteV2Response?> {
         val localVariableConfig = fontGetAutocompleteV2RequestConfig(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
-        return request<Unit, FontMinusGetAutocompleteMinusV2MinusResponse>(
+        return request<Unit, FontGetAutocompleteV2Response>(
             localVariableConfig
         )
     }
@@ -126,12 +126,12 @@ class ObjectFontApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
      * @param acceptLanguage  (optional)
      * @return RequestConfig
      */
-    fun fontGetAutocompleteV2RequestConfig(sSelector: SSelector_fontGetAutocompleteV2, eFilterActive: EFilterActive_fontGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : RequestConfig<Unit> {
+    fun fontGetAutocompleteV2RequestConfig(sSelector: SSelectorFontGetAutocompleteV2, eFilterActive: EFilterActiveFontGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
                 if (eFilterActive != null) {
-                    put("eFilterActive", listOf(eFilterActive.toString()))
+                    put("eFilterActive", listOf(eFilterActive.value))
                 }
                 if (sQuery != null) {
                     put("sQuery", listOf(sQuery.toString()))

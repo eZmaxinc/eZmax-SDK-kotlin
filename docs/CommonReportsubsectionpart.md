@@ -1,11 +1,11 @@
 
-# CommonMinusReportsubsectionpart
+# CommonReportsubsectionpart
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **eReportsubsectionpartType** | [**inline**](#EReportsubsectionpartType) | The type of the Reportsubsectionpart | 
-**aObjReportrow** | [**kotlin.collections.List&lt;CommonMinusReportrow&gt;**](CommonMinusReportrow.md) |  | 
+**aObjReportrow** | [**kotlin.collections.List&lt;CommonReportrow&gt;**](CommonReportrow.md) |  | 
 
 
 <a id="EReportsubsectionpartType"></a>

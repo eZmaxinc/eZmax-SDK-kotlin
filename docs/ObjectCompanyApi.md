@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a id="companyGetAutocompleteV2"></a>
 # **companyGetAutocompleteV2**
-> CompanyMinusGetAutocompleteMinusV2MinusResponse companyGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+> CompanyGetAutocompleteV2Response companyGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 
 Retrieve Companys and IDs
 
@@ -25,9 +25,9 @@ val apiInstance = ObjectCompanyApi()
 val sSelector : kotlin.String = sSelector_example // kotlin.String | The type of Companys to return
 val eFilterActive : kotlin.String = eFilterActive_example // kotlin.String | Specify which results we want to display.
 val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter the returned results
-val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
+val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
 try {
-    val result : CompanyMinusGetAutocompleteMinusV2MinusResponse = apiInstance.companyGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+    val result : CompanyGetAutocompleteV2Response = apiInstance.companyGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectCompanyApi#companyGetAutocompleteV2")
@@ -45,11 +45,11 @@ Name | Type | Description  | Notes
  **sSelector** | **kotlin.String**| The type of Companys to return | [enum: All]
  **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
  **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional]
- **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
 
 ### Return type
 
-[**CompanyMinusGetAutocompleteMinusV2MinusResponse**](CompanyMinusGetAutocompleteMinusV2MinusResponse.md)
+[**CompanyGetAutocompleteV2Response**](CompanyGetAutocompleteV2Response.md)
 
 ### Authorization
 

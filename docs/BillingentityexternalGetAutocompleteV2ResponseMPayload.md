@@ -1,10 +1,10 @@
 
-# BillingentityexternalMinusGetAutocompleteMinusV2MinusResponseMinusMPayload
+# BillingentityexternalGetAutocompleteV2ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjBillingentityexternal** | [**kotlin.collections.List&lt;BillingentityexternalMinusAutocompleteElementMinusResponse&gt;**](BillingentityexternalMinusAutocompleteElementMinusResponse.md) | An array of Billingentityexternal autocomplete element response. |  [optional]
+**aObjBillingentityexternal** | [**kotlin.collections.List&lt;BillingentityexternalAutocompleteElementResponse&gt;**](BillingentityexternalAutocompleteElementResponse.md) | An array of Billingentityexternal autocomplete element response. |  [optional]
 
 
 

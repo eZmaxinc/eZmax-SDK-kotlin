@@ -1,5 +1,5 @@
 
-# CustomMinusEzsignsignaturestatusMinusResponse
+# CustomEzsignsignaturestatusResponse
 
 ## Properties
 Name | Type | Description | Notes

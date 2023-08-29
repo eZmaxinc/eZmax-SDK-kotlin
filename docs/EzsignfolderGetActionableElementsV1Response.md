@@ -1,12 +1,12 @@
 
-# EzsignfolderMinusGetActionableElementsMinusV1MinusResponse
+# EzsignfolderGetActionableElementsV1Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**EzsignfolderMinusGetActionableElementsMinusV1MinusResponseMinusMPayload**](EzsignfolderMinusGetActionableElementsMinusV1MinusResponseMinusMPayload.md) |  | 
-**objDebugPayload** | [**CommonMinusResponseMinusObjDebugPayload**](CommonMinusResponseMinusObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonMinusResponseMinusObjDebug**](CommonMinusResponseMinusObjDebug.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
+**mPayload** | [**EzsignfolderGetActionableElementsV1ResponseMPayload**](EzsignfolderGetActionableElementsV1ResponseMPayload.md) |  | 
+**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 
 
 

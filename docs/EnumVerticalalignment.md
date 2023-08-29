@@ -1,5 +1,5 @@
 
-# EnumMinusVerticalalignment
+# EnumVerticalalignment
 
 ## Enum
 

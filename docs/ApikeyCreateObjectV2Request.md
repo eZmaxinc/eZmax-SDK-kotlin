@@ -1,10 +1,10 @@
 
-# ApikeyMinusCreateObjectMinusV2MinusRequest
+# ApikeyCreateObjectV2Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjApikey** | [**kotlin.collections.List&lt;ApikeyMinusRequestCompound&gt;**](ApikeyMinusRequestCompound.md) |  | 
+**aObjApikey** | [**kotlin.collections.List&lt;ApikeyRequestCompound&gt;**](ApikeyRequestCompound.md) |  | 
 
 
 

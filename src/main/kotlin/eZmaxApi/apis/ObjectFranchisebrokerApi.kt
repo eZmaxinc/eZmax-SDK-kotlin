@@ -19,9 +19,9 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonMinusGetAutocompleteMinusV1MinusResponse
-import eZmaxApi.models.FranchisebrokerMinusGetAutocompleteMinusV2MinusResponse
-import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
+import eZmaxApi.models.CommonGetAutocompleteV1Response
+import eZmaxApi.models.FranchisebrokerGetAutocompleteV2Response
+import eZmaxApi.models.HeaderAcceptLanguage
 
 import com.squareup.moshi.Json
 
@@ -50,7 +50,7 @@ class ObjectFranchisebrokerApi(basePath: kotlin.String = defaultBasePath, client
     /**
      * enum for parameter sSelector
      */
-     enum class SSelector_franchisebrokerGetAutocompleteV1(val value: kotlin.String) {
+     enum class SSelectorFranchisebrokerGetAutocompleteV1(val value: kotlin.String) {
          @Json(name = "Active") Active("Active"),
          @Json(name = "All") All("All")
      }
@@ -58,7 +58,7 @@ class ObjectFranchisebrokerApi(basePath: kotlin.String = defaultBasePath, client
     /**
      * enum for parameter eFilterActive
      */
-     enum class EFilterActive_franchisebrokerGetAutocompleteV1(val value: kotlin.String) {
+     enum class EFilterActiveFranchisebrokerGetAutocompleteV1(val value: kotlin.String) {
          @Json(name = "All") All("All"),
          @Json(name = "Active") Active("Active"),
          @Json(name = "Inactive") Inactive("Inactive")
@@ -71,7 +71,7 @@ class ObjectFranchisebrokerApi(basePath: kotlin.String = defaultBasePath, client
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return CommonMinusGetAutocompleteMinusV1MinusResponse
+     * @return CommonGetAutocompleteV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -81,12 +81,12 @@ class ObjectFranchisebrokerApi(basePath: kotlin.String = defaultBasePath, client
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     @Deprecated(message = "This operation is deprecated.")
-    fun franchisebrokerGetAutocompleteV1(sSelector: SSelector_franchisebrokerGetAutocompleteV1, eFilterActive: EFilterActive_franchisebrokerGetAutocompleteV1? = EFilterActive_franchisebrokerGetAutocompleteV1.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null) : CommonMinusGetAutocompleteMinusV1MinusResponse {
+    fun franchisebrokerGetAutocompleteV1(sSelector: SSelectorFranchisebrokerGetAutocompleteV1, eFilterActive: EFilterActiveFranchisebrokerGetAutocompleteV1? = EFilterActiveFranchisebrokerGetAutocompleteV1.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderAcceptLanguage? = null) : CommonGetAutocompleteV1Response {
         @Suppress("DEPRECATION")
         val localVarResponse = franchisebrokerGetAutocompleteV1WithHttpInfo(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonMinusGetAutocompleteMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonGetAutocompleteV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -107,18 +107,18 @@ class ObjectFranchisebrokerApi(basePath: kotlin.String = defaultBasePath, client
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return ApiResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?>
+     * @return ApiResponse<CommonGetAutocompleteV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
     @Deprecated(message = "This operation is deprecated.")
-    fun franchisebrokerGetAutocompleteV1WithHttpInfo(sSelector: SSelector_franchisebrokerGetAutocompleteV1, eFilterActive: EFilterActive_franchisebrokerGetAutocompleteV1?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : ApiResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?> {
+    fun franchisebrokerGetAutocompleteV1WithHttpInfo(sSelector: SSelectorFranchisebrokerGetAutocompleteV1, eFilterActive: EFilterActiveFranchisebrokerGetAutocompleteV1?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : ApiResponse<CommonGetAutocompleteV1Response?> {
         @Suppress("DEPRECATION")
         val localVariableConfig = franchisebrokerGetAutocompleteV1RequestConfig(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
-        return request<Unit, CommonMinusGetAutocompleteMinusV1MinusResponse>(
+        return request<Unit, CommonGetAutocompleteV1Response>(
             localVariableConfig
         )
     }
@@ -133,12 +133,12 @@ class ObjectFranchisebrokerApi(basePath: kotlin.String = defaultBasePath, client
      * @return RequestConfig
      */
     @Deprecated(message = "This operation is deprecated.")
-    fun franchisebrokerGetAutocompleteV1RequestConfig(sSelector: SSelector_franchisebrokerGetAutocompleteV1, eFilterActive: EFilterActive_franchisebrokerGetAutocompleteV1?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : RequestConfig<Unit> {
+    fun franchisebrokerGetAutocompleteV1RequestConfig(sSelector: SSelectorFranchisebrokerGetAutocompleteV1, eFilterActive: EFilterActiveFranchisebrokerGetAutocompleteV1?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
                 if (eFilterActive != null) {
-                    put("eFilterActive", listOf(eFilterActive.toString()))
+                    put("eFilterActive", listOf(eFilterActive.value))
                 }
                 if (sQuery != null) {
                     put("sQuery", listOf(sQuery.toString()))
@@ -161,14 +161,14 @@ class ObjectFranchisebrokerApi(basePath: kotlin.String = defaultBasePath, client
     /**
      * enum for parameter sSelector
      */
-     enum class SSelector_franchisebrokerGetAutocompleteV2(val value: kotlin.String) {
+     enum class SSelectorFranchisebrokerGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "All") All("All")
      }
 
     /**
      * enum for parameter eFilterActive
      */
-     enum class EFilterActive_franchisebrokerGetAutocompleteV2(val value: kotlin.String) {
+     enum class EFilterActiveFranchisebrokerGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "All") All("All"),
          @Json(name = "Active") Active("Active"),
          @Json(name = "Inactive") Inactive("Inactive")
@@ -181,7 +181,7 @@ class ObjectFranchisebrokerApi(basePath: kotlin.String = defaultBasePath, client
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return FranchisebrokerMinusGetAutocompleteMinusV2MinusResponse
+     * @return FranchisebrokerGetAutocompleteV2Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -190,11 +190,11 @@ class ObjectFranchisebrokerApi(basePath: kotlin.String = defaultBasePath, client
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun franchisebrokerGetAutocompleteV2(sSelector: SSelector_franchisebrokerGetAutocompleteV2, eFilterActive: EFilterActive_franchisebrokerGetAutocompleteV2? = EFilterActive_franchisebrokerGetAutocompleteV2.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null) : FranchisebrokerMinusGetAutocompleteMinusV2MinusResponse {
+    fun franchisebrokerGetAutocompleteV2(sSelector: SSelectorFranchisebrokerGetAutocompleteV2, eFilterActive: EFilterActiveFranchisebrokerGetAutocompleteV2? = EFilterActiveFranchisebrokerGetAutocompleteV2.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderAcceptLanguage? = null) : FranchisebrokerGetAutocompleteV2Response {
         val localVarResponse = franchisebrokerGetAutocompleteV2WithHttpInfo(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as FranchisebrokerMinusGetAutocompleteMinusV2MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as FranchisebrokerGetAutocompleteV2Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -215,16 +215,16 @@ class ObjectFranchisebrokerApi(basePath: kotlin.String = defaultBasePath, client
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return ApiResponse<FranchisebrokerMinusGetAutocompleteMinusV2MinusResponse?>
+     * @return ApiResponse<FranchisebrokerGetAutocompleteV2Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun franchisebrokerGetAutocompleteV2WithHttpInfo(sSelector: SSelector_franchisebrokerGetAutocompleteV2, eFilterActive: EFilterActive_franchisebrokerGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : ApiResponse<FranchisebrokerMinusGetAutocompleteMinusV2MinusResponse?> {
+    fun franchisebrokerGetAutocompleteV2WithHttpInfo(sSelector: SSelectorFranchisebrokerGetAutocompleteV2, eFilterActive: EFilterActiveFranchisebrokerGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : ApiResponse<FranchisebrokerGetAutocompleteV2Response?> {
         val localVariableConfig = franchisebrokerGetAutocompleteV2RequestConfig(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
-        return request<Unit, FranchisebrokerMinusGetAutocompleteMinusV2MinusResponse>(
+        return request<Unit, FranchisebrokerGetAutocompleteV2Response>(
             localVariableConfig
         )
     }
@@ -238,12 +238,12 @@ class ObjectFranchisebrokerApi(basePath: kotlin.String = defaultBasePath, client
      * @param acceptLanguage  (optional)
      * @return RequestConfig
      */
-    fun franchisebrokerGetAutocompleteV2RequestConfig(sSelector: SSelector_franchisebrokerGetAutocompleteV2, eFilterActive: EFilterActive_franchisebrokerGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : RequestConfig<Unit> {
+    fun franchisebrokerGetAutocompleteV2RequestConfig(sSelector: SSelectorFranchisebrokerGetAutocompleteV2, eFilterActive: EFilterActiveFranchisebrokerGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
                 if (eFilterActive != null) {
-                    put("eFilterActive", listOf(eFilterActive.toString()))
+                    put("eFilterActive", listOf(eFilterActive.value))
                 }
                 if (sQuery != null) {
                     put("sQuery", listOf(sQuery.toString()))

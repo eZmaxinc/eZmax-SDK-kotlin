@@ -1,5 +1,5 @@
 
-# EzsignsignatureMinusSignMinusV1MinusRequest
+# EzsignsignatureSignV1Request
 
 ## Properties
 Name | Type | Description | Notes
@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **eAttachmentsConfirmationDecision** | [**inline**](#EAttachmentsConfirmationDecision) | Whether the attachment are accepted or refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation** |  [optional]
 **sAttachmentsRefusalReason** | **kotlin.String** | The reason of refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation** |  [optional]
 **sSvg** | **kotlin.String** | The SVG of the handwritten signature.  This can only be set if eEzsignsignatureType is **Handwritten** and **bIsAutomatic** is false |  [optional]
-**aObjFile** | [**kotlin.collections.List&lt;CommonMinusFile&gt;**](CommonMinusFile.md) |  |  [optional]
+**aObjFile** | [**kotlin.collections.List&lt;CommonFile&gt;**](CommonFile.md) |  |  [optional]
 
 
 <a id="EAttachmentsConfirmationDecision"></a>

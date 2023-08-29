@@ -1,5 +1,5 @@
 
-# MultilingualMinusPaymenttermDescription
+# MultilingualPaymenttermDescription
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,12 +1,12 @@
 
-# EzsigndocumentMinusGetActionableElementsMinusV1MinusResponse
+# EzsigndocumentGetActionableElementsV1Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**EzsigndocumentMinusGetActionableElementsMinusV1MinusResponseMinusMPayload**](EzsigndocumentMinusGetActionableElementsMinusV1MinusResponseMinusMPayload.md) |  | 
-**objDebugPayload** | [**CommonMinusResponseMinusObjDebugPayload**](CommonMinusResponseMinusObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonMinusResponseMinusObjDebug**](CommonMinusResponseMinusObjDebug.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
+**mPayload** | [**EzsigndocumentGetActionableElementsV1ResponseMPayload**](EzsigndocumentGetActionableElementsV1ResponseMPayload.md) |  | 
+**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 
 
 

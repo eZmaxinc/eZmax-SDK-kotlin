@@ -1,5 +1,5 @@
 
-# CustomMinusWordPositionOccurenceMinusResponse
+# CustomWordPositionOccurenceResponse
 
 ## Properties
 Name | Type | Description | Notes

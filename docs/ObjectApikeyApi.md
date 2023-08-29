@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 <a id="apikeyCreateObjectV2"></a>
 # **apikeyCreateObjectV2**
-> ApikeyMinusCreateObjectMinusV2MinusResponse apikeyCreateObjectV2(apikeyMinusCreateObjectMinusV2MinusRequest)
+> ApikeyCreateObjectV2Response apikeyCreateObjectV2(apikeyCreateObjectV2Request)
 
 Create a new Apikey
 
@@ -30,9 +30,9 @@ The endpoint allows to create one or many elements at once.
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectApikeyApi()
-val apikeyMinusCreateObjectMinusV2MinusRequest : ApikeyMinusCreateObjectMinusV2MinusRequest =  // ApikeyMinusCreateObjectMinusV2MinusRequest | 
+val apikeyCreateObjectV2Request : ApikeyCreateObjectV2Request =  // ApikeyCreateObjectV2Request | 
 try {
-    val result : ApikeyMinusCreateObjectMinusV2MinusResponse = apiInstance.apikeyCreateObjectV2(apikeyMinusCreateObjectMinusV2MinusRequest)
+    val result : ApikeyCreateObjectV2Response = apiInstance.apikeyCreateObjectV2(apikeyCreateObjectV2Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectApikeyApi#apikeyCreateObjectV2")
@@ -47,11 +47,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apikeyMinusCreateObjectMinusV2MinusRequest** | [**ApikeyMinusCreateObjectMinusV2MinusRequest**](ApikeyMinusCreateObjectMinusV2MinusRequest.md)|  |
+ **apikeyCreateObjectV2Request** | [**ApikeyCreateObjectV2Request**](ApikeyCreateObjectV2Request.md)|  |
 
 ### Return type
 
-[**ApikeyMinusCreateObjectMinusV2MinusResponse**](ApikeyMinusCreateObjectMinusV2MinusResponse.md)
+[**ApikeyCreateObjectV2Response**](ApikeyCreateObjectV2Response.md)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ Configure Authorization:
 
 <a id="apikeyEditObjectV1"></a>
 # **apikeyEditObjectV1**
-> ApikeyMinusEditObjectMinusV1MinusResponse apikeyEditObjectV1(pkiApikeyID, apikeyMinusEditObjectMinusV1MinusRequest)
+> ApikeyEditObjectV1Response apikeyEditObjectV1(pkiApikeyID, apikeyEditObjectV1Request)
 
 Edit an existing Apikey
 
@@ -81,9 +81,9 @@ Edit an existing Apikey
 
 val apiInstance = ObjectApikeyApi()
 val pkiApikeyID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Apikey
-val apikeyMinusEditObjectMinusV1MinusRequest : ApikeyMinusEditObjectMinusV1MinusRequest =  // ApikeyMinusEditObjectMinusV1MinusRequest | 
+val apikeyEditObjectV1Request : ApikeyEditObjectV1Request =  // ApikeyEditObjectV1Request | 
 try {
-    val result : ApikeyMinusEditObjectMinusV1MinusResponse = apiInstance.apikeyEditObjectV1(pkiApikeyID, apikeyMinusEditObjectMinusV1MinusRequest)
+    val result : ApikeyEditObjectV1Response = apiInstance.apikeyEditObjectV1(pkiApikeyID, apikeyEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectApikeyApi#apikeyEditObjectV1")
@@ -99,11 +99,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiApikeyID** | **kotlin.Int**| The unique ID of the Apikey |
- **apikeyMinusEditObjectMinusV1MinusRequest** | [**ApikeyMinusEditObjectMinusV1MinusRequest**](ApikeyMinusEditObjectMinusV1MinusRequest.md)|  |
+ **apikeyEditObjectV1Request** | [**ApikeyEditObjectV1Request**](ApikeyEditObjectV1Request.md)|  |
 
 ### Return type
 
-[**ApikeyMinusEditObjectMinusV1MinusResponse**](ApikeyMinusEditObjectMinusV1MinusResponse.md)
+[**ApikeyEditObjectV1Response**](ApikeyEditObjectV1Response.md)
 
 ### Authorization
 
@@ -119,7 +119,7 @@ Configure Authorization:
 
 <a id="apikeyEditPermissionsV1"></a>
 # **apikeyEditPermissionsV1**
-> ApikeyMinusEditPermissionsMinusV1MinusResponse apikeyEditPermissionsV1(pkiApikeyID, apikeyMinusEditPermissionsMinusV1MinusRequest)
+> ApikeyEditPermissionsV1Response apikeyEditPermissionsV1(pkiApikeyID, apikeyEditPermissionsV1Request)
 
 Edit multiple Permissions
 
@@ -133,9 +133,9 @@ Using this endpoint, you can edit multiple Permissions at the same time.
 
 val apiInstance = ObjectApikeyApi()
 val pkiApikeyID : kotlin.Int = 56 // kotlin.Int | 
-val apikeyMinusEditPermissionsMinusV1MinusRequest : ApikeyMinusEditPermissionsMinusV1MinusRequest =  // ApikeyMinusEditPermissionsMinusV1MinusRequest | 
+val apikeyEditPermissionsV1Request : ApikeyEditPermissionsV1Request =  // ApikeyEditPermissionsV1Request | 
 try {
-    val result : ApikeyMinusEditPermissionsMinusV1MinusResponse = apiInstance.apikeyEditPermissionsV1(pkiApikeyID, apikeyMinusEditPermissionsMinusV1MinusRequest)
+    val result : ApikeyEditPermissionsV1Response = apiInstance.apikeyEditPermissionsV1(pkiApikeyID, apikeyEditPermissionsV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectApikeyApi#apikeyEditPermissionsV1")
@@ -151,11 +151,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiApikeyID** | **kotlin.Int**|  |
- **apikeyMinusEditPermissionsMinusV1MinusRequest** | [**ApikeyMinusEditPermissionsMinusV1MinusRequest**](ApikeyMinusEditPermissionsMinusV1MinusRequest.md)|  |
+ **apikeyEditPermissionsV1Request** | [**ApikeyEditPermissionsV1Request**](ApikeyEditPermissionsV1Request.md)|  |
 
 ### Return type
 
-[**ApikeyMinusEditPermissionsMinusV1MinusResponse**](ApikeyMinusEditPermissionsMinusV1MinusResponse.md)
+[**ApikeyEditPermissionsV1Response**](ApikeyEditPermissionsV1Response.md)
 
 ### Authorization
 
@@ -171,7 +171,7 @@ Configure Authorization:
 
 <a id="apikeyGetCorsV1"></a>
 # **apikeyGetCorsV1**
-> ApikeyMinusGetCorsMinusV1MinusResponse apikeyGetCorsV1(pkiApikeyID)
+> ApikeyGetCorsV1Response apikeyGetCorsV1(pkiApikeyID)
 
 Retrieve an existing Apikey&#39;s cors
 
@@ -184,7 +184,7 @@ Retrieve an existing Apikey&#39;s cors
 val apiInstance = ObjectApikeyApi()
 val pkiApikeyID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : ApikeyMinusGetCorsMinusV1MinusResponse = apiInstance.apikeyGetCorsV1(pkiApikeyID)
+    val result : ApikeyGetCorsV1Response = apiInstance.apikeyGetCorsV1(pkiApikeyID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectApikeyApi#apikeyGetCorsV1")
@@ -203,7 +203,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ApikeyMinusGetCorsMinusV1MinusResponse**](ApikeyMinusGetCorsMinusV1MinusResponse.md)
+[**ApikeyGetCorsV1Response**](ApikeyGetCorsV1Response.md)
 
 ### Authorization
 
@@ -219,7 +219,7 @@ Configure Authorization:
 
 <a id="apikeyGetListV1"></a>
 # **apikeyGetListV1**
-> ApikeyMinusGetListMinusV1MinusResponse apikeyGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+> ApikeyGetListV1Response apikeyGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
 Retrieve Apikey list
 
@@ -235,10 +235,10 @@ val apiInstance = ObjectApikeyApi()
 val eOrderBy : kotlin.String = eOrderBy_example // kotlin.String | Specify how you want the results to be sorted
 val iRowMax : kotlin.Int = 56 // kotlin.Int | 
 val iRowOffset : kotlin.Int = 56 // kotlin.Int | 
-val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
+val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
 val sFilter : kotlin.String = sFilter_example // kotlin.String | 
 try {
-    val result : ApikeyMinusGetListMinusV1MinusResponse = apiInstance.apikeyGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+    val result : ApikeyGetListV1Response = apiInstance.apikeyGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectApikeyApi#apikeyGetListV1")
@@ -256,12 +256,12 @@ Name | Type | Description  | Notes
  **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiApikeyID_ASC, pkiApikeyID_DESC, sApikeyDescriptionX_ASC, sApikeyDescriptionX_DESC, bApikeyIssigned_ASC, bApikeyIssigned_DESC, bApikeyIsactive_ASC, bApikeyIsactive_DESC, sUserFirstname_ASC, sUserFirstname_DESC, sUserLastname_ASC, sUserLastname_DESC]
  **iRowMax** | **kotlin.Int**|  | [optional] [default to 10000]
  **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0]
- **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
  **sFilter** | **kotlin.String**|  | [optional]
 
 ### Return type
 
-[**ApikeyMinusGetListMinusV1MinusResponse**](ApikeyMinusGetListMinusV1MinusResponse.md)
+[**ApikeyGetListV1Response**](ApikeyGetListV1Response.md)
 
 ### Authorization
 
@@ -277,7 +277,7 @@ Configure Authorization:
 
 <a id="apikeyGetObjectV2"></a>
 # **apikeyGetObjectV2**
-> ApikeyMinusGetObjectMinusV2MinusResponse apikeyGetObjectV2(pkiApikeyID)
+> ApikeyGetObjectV2Response apikeyGetObjectV2(pkiApikeyID)
 
 Retrieve an existing Apikey
 
@@ -292,7 +292,7 @@ Retrieve an existing Apikey
 val apiInstance = ObjectApikeyApi()
 val pkiApikeyID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Apikey
 try {
-    val result : ApikeyMinusGetObjectMinusV2MinusResponse = apiInstance.apikeyGetObjectV2(pkiApikeyID)
+    val result : ApikeyGetObjectV2Response = apiInstance.apikeyGetObjectV2(pkiApikeyID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectApikeyApi#apikeyGetObjectV2")
@@ -311,7 +311,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ApikeyMinusGetObjectMinusV2MinusResponse**](ApikeyMinusGetObjectMinusV2MinusResponse.md)
+[**ApikeyGetObjectV2Response**](ApikeyGetObjectV2Response.md)
 
 ### Authorization
 
@@ -327,7 +327,7 @@ Configure Authorization:
 
 <a id="apikeyGetPermissionsV1"></a>
 # **apikeyGetPermissionsV1**
-> ApikeyMinusGetPermissionsMinusV1MinusResponse apikeyGetPermissionsV1(pkiApikeyID)
+> ApikeyGetPermissionsV1Response apikeyGetPermissionsV1(pkiApikeyID)
 
 Retrieve an existing Apikey&#39;s Permissions
 
@@ -340,7 +340,7 @@ Retrieve an existing Apikey&#39;s Permissions
 val apiInstance = ObjectApikeyApi()
 val pkiApikeyID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : ApikeyMinusGetPermissionsMinusV1MinusResponse = apiInstance.apikeyGetPermissionsV1(pkiApikeyID)
+    val result : ApikeyGetPermissionsV1Response = apiInstance.apikeyGetPermissionsV1(pkiApikeyID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectApikeyApi#apikeyGetPermissionsV1")
@@ -359,7 +359,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ApikeyMinusGetPermissionsMinusV1MinusResponse**](ApikeyMinusGetPermissionsMinusV1MinusResponse.md)
+[**ApikeyGetPermissionsV1Response**](ApikeyGetPermissionsV1Response.md)
 
 ### Authorization
 
@@ -375,7 +375,7 @@ Configure Authorization:
 
 <a id="apikeyGetSubnetsV1"></a>
 # **apikeyGetSubnetsV1**
-> ApikeyMinusGetSubnetsMinusV1MinusResponse apikeyGetSubnetsV1(pkiApikeyID)
+> ApikeyGetSubnetsV1Response apikeyGetSubnetsV1(pkiApikeyID)
 
 Retrieve an existing Apikey&#39;s subnets
 
@@ -388,7 +388,7 @@ Retrieve an existing Apikey&#39;s subnets
 val apiInstance = ObjectApikeyApi()
 val pkiApikeyID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : ApikeyMinusGetSubnetsMinusV1MinusResponse = apiInstance.apikeyGetSubnetsV1(pkiApikeyID)
+    val result : ApikeyGetSubnetsV1Response = apiInstance.apikeyGetSubnetsV1(pkiApikeyID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectApikeyApi#apikeyGetSubnetsV1")
@@ -407,7 +407,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ApikeyMinusGetSubnetsMinusV1MinusResponse**](ApikeyMinusGetSubnetsMinusV1MinusResponse.md)
+[**ApikeyGetSubnetsV1Response**](ApikeyGetSubnetsV1Response.md)
 
 ### Authorization
 
@@ -423,7 +423,7 @@ Configure Authorization:
 
 <a id="apikeyRegenerateV1"></a>
 # **apikeyRegenerateV1**
-> ApikeyMinusRegenerateMinusV1MinusResponse apikeyRegenerateV1(pkiApikeyID, apikeyMinusRegenerateMinusV1MinusRequest)
+> ApikeyRegenerateV1Response apikeyRegenerateV1(pkiApikeyID, apikeyRegenerateV1Request)
 
 Regenerate the Apikey
 
@@ -437,9 +437,9 @@ Regenerate the Apikey
 
 val apiInstance = ObjectApikeyApi()
 val pkiApikeyID : kotlin.Int = 56 // kotlin.Int | 
-val apikeyMinusRegenerateMinusV1MinusRequest : ApikeyMinusRegenerateMinusV1MinusRequest =  // ApikeyMinusRegenerateMinusV1MinusRequest | 
+val apikeyRegenerateV1Request : ApikeyRegenerateV1Request =  // ApikeyRegenerateV1Request | 
 try {
-    val result : ApikeyMinusRegenerateMinusV1MinusResponse = apiInstance.apikeyRegenerateV1(pkiApikeyID, apikeyMinusRegenerateMinusV1MinusRequest)
+    val result : ApikeyRegenerateV1Response = apiInstance.apikeyRegenerateV1(pkiApikeyID, apikeyRegenerateV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectApikeyApi#apikeyRegenerateV1")
@@ -455,11 +455,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiApikeyID** | **kotlin.Int**|  |
- **apikeyMinusRegenerateMinusV1MinusRequest** | [**ApikeyMinusRegenerateMinusV1MinusRequest**](ApikeyMinusRegenerateMinusV1MinusRequest.md)|  |
+ **apikeyRegenerateV1Request** | [**ApikeyRegenerateV1Request**](ApikeyRegenerateV1Request.md)|  |
 
 ### Return type
 
-[**ApikeyMinusRegenerateMinusV1MinusResponse**](ApikeyMinusRegenerateMinusV1MinusResponse.md)
+[**ApikeyRegenerateV1Response**](ApikeyRegenerateV1Response.md)
 
 ### Authorization
 

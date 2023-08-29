@@ -1,16 +1,16 @@
 
-# PaymenttermMinusResponseCompound
+# PaymenttermResponseCompound
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiPaymenttermID** | **kotlin.Int** | The unique ID of the Paymentterm | 
 **sPaymenttermCode** | **kotlin.String** | The code of the Paymentterm | 
-**ePaymenttermType** | [**FieldMinusEPaymenttermType**](FieldMinusEPaymenttermType.md) |  | 
+**ePaymenttermType** | [**FieldEPaymenttermType**](FieldEPaymenttermType.md) |  | 
 **iPaymenttermDay** | **kotlin.Int** | The day of the Paymentterm | 
-**objPaymenttermDescription** | [**MultilingualMinusPaymenttermDescription**](MultilingualMinusPaymenttermDescription.md) |  | 
+**objPaymenttermDescription** | [**MultilingualPaymenttermDescription**](MultilingualPaymenttermDescription.md) |  | 
 **bPaymenttermIsactive** | **kotlin.Boolean** | Whether the Paymentterm is active or not | 
-**objAudit** | [**CommonMinusAudit**](CommonMinusAudit.md) |  | 
+**objAudit** | [**CommonAudit**](CommonAudit.md) |  | 
 
 
 

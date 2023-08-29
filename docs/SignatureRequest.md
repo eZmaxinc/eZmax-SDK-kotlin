@@ -1,5 +1,5 @@
 
-# SignatureMinusRequest
+# SignatureRequest
 
 ## Properties
 Name | Type | Description | Notes

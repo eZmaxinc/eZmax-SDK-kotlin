@@ -1,5 +1,5 @@
 
-# EzsigndocumentMinusEditEzsignformfieldgroupsMinusV1MinusResponseMinusMPayload
+# EzsigndocumentEditEzsignformfieldgroupsV1ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes

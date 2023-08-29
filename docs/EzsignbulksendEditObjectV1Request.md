@@ -1,10 +1,10 @@
 
-# EzsignbulksendMinusEditObjectMinusV1MinusRequest
+# EzsignbulksendEditObjectV1Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objEzsignbulksend** | [**EzsignbulksendMinusRequestCompound**](EzsignbulksendMinusRequestCompound.md) |  | 
+**objEzsignbulksend** | [**EzsignbulksendRequestCompound**](EzsignbulksendRequestCompound.md) |  | 
 
 
 

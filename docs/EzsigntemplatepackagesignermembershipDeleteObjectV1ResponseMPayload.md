@@ -1,5 +1,5 @@
 
-# EzsigntemplatepackagesignermembershipMinusDeleteObjectMinusV1MinusResponseMinusMPayload
+# EzsigntemplatepackagesignermembershipDeleteObjectV1ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes

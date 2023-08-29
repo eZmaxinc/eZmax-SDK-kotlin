@@ -19,9 +19,9 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonMinusResponseMinusError
-import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
-import eZmaxApi.models.SessionhistoryMinusGetListMinusV1MinusResponse
+import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.HeaderAcceptLanguage
+import eZmaxApi.models.SessionhistoryGetListV1Response
 
 import com.squareup.moshi.Json
 
@@ -50,7 +50,7 @@ class ObjectSessionhistoryApi(basePath: kotlin.String = defaultBasePath, client:
     /**
      * enum for parameter eOrderBy
      */
-     enum class EOrderBy_sessionhistoryGetListV1(val value: kotlin.String) {
+     enum class EOrderBySessionhistoryGetListV1(val value: kotlin.String) {
          @Json(name = "pkiSessionhistoryID_ASC") pkiSessionhistoryID_ASC("pkiSessionhistoryID_ASC"),
          @Json(name = "pkiSessionhistoryID_DESC") pkiSessionhistoryID_DESC("pkiSessionhistoryID_DESC"),
          @Json(name = "fkiComputerID_ASC") fkiComputerID_ASC("fkiComputerID_ASC"),
@@ -81,7 +81,7 @@ class ObjectSessionhistoryApi(basePath: kotlin.String = defaultBasePath, client:
      * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
-     * @return SessionhistoryMinusGetListMinusV1MinusResponse
+     * @return SessionhistoryGetListV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -90,11 +90,11 @@ class ObjectSessionhistoryApi(basePath: kotlin.String = defaultBasePath, client:
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun sessionhistoryGetListV1(eOrderBy: EOrderBy_sessionhistoryGetListV1? = null, iRowMax: kotlin.Int? = 10000, iRowOffset: kotlin.Int? = 0, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null, sFilter: kotlin.String? = null) : SessionhistoryMinusGetListMinusV1MinusResponse {
+    fun sessionhistoryGetListV1(eOrderBy: EOrderBySessionhistoryGetListV1? = null, iRowMax: kotlin.Int? = 10000, iRowOffset: kotlin.Int? = 0, acceptLanguage: HeaderAcceptLanguage? = null, sFilter: kotlin.String? = null) : SessionhistoryGetListV1Response {
         val localVarResponse = sessionhistoryGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as SessionhistoryMinusGetListMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as SessionhistoryGetListV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -116,16 +116,16 @@ class ObjectSessionhistoryApi(basePath: kotlin.String = defaultBasePath, client:
      * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
-     * @return ApiResponse<SessionhistoryMinusGetListMinusV1MinusResponse?>
+     * @return ApiResponse<SessionhistoryGetListV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun sessionhistoryGetListV1WithHttpInfo(eOrderBy: EOrderBy_sessionhistoryGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : ApiResponse<SessionhistoryMinusGetListMinusV1MinusResponse?> {
+    fun sessionhistoryGetListV1WithHttpInfo(eOrderBy: EOrderBySessionhistoryGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : ApiResponse<SessionhistoryGetListV1Response?> {
         val localVariableConfig = sessionhistoryGetListV1RequestConfig(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
 
-        return request<Unit, SessionhistoryMinusGetListMinusV1MinusResponse>(
+        return request<Unit, SessionhistoryGetListV1Response>(
             localVariableConfig
         )
     }
@@ -140,12 +140,12 @@ class ObjectSessionhistoryApi(basePath: kotlin.String = defaultBasePath, client:
      * @param sFilter  (optional)
      * @return RequestConfig
      */
-    fun sessionhistoryGetListV1RequestConfig(eOrderBy: EOrderBy_sessionhistoryGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
+    fun sessionhistoryGetListV1RequestConfig(eOrderBy: EOrderBySessionhistoryGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
                 if (eOrderBy != null) {
-                    put("eOrderBy", listOf(eOrderBy.toString()))
+                    put("eOrderBy", listOf(eOrderBy.value))
                 }
                 if (iRowMax != null) {
                     put("iRowMax", listOf(iRowMax.toString()))

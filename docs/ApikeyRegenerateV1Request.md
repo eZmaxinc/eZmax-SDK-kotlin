@@ -1,5 +1,5 @@
 
-# ApikeyMinusRegenerateMinusV1MinusRequest
+# ApikeyRegenerateV1Request
 
 ## Properties
 Name | Type | Description | Notes

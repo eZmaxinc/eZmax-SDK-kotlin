@@ -1,5 +1,5 @@
 
-# FieldMinusEEzsigntemplatesignatureType
+# FieldEEzsigntemplatesignatureType
 
 ## Enum
 
@@ -15,6 +15,10 @@
     * `Name` (value: `"Name"`)
 
     * `Attachments` (value: `"Attachments"`)
+
+    * `FieldText` (value: `"FieldText"`)
+
+    * `FieldTextarea` (value: `"FieldTextarea"`)
 
 
 

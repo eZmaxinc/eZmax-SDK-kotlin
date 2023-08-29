@@ -1,5 +1,5 @@
 
-# ModuleMinusResponseCompound
+# ModuleResponseCompound
 
 ## Properties
 Name | Type | Description | Notes
@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **sModuleNameX** | **kotlin.String** | The Name of the Module in the language of the requester | 
 **bModuleRegistered** | **kotlin.Boolean** | Whether the Module is registered or not | 
 **bModuleRegisteredapi** | **kotlin.Boolean** | Whether the Module is registered or not for api use | 
-**aObjModulesection** | [**kotlin.collections.List&lt;ModulesectionMinusResponseCompound&gt;**](ModulesectionMinusResponseCompound.md) |  | 
+**aObjModulesection** | [**kotlin.collections.List&lt;ModulesectionResponseCompound&gt;**](ModulesectionResponseCompound.md) |  | 
 
 
 

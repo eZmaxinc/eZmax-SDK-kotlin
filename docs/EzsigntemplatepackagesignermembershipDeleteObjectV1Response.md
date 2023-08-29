@@ -1,12 +1,12 @@
 
-# EzsigntemplatepackagesignermembershipMinusDeleteObjectMinusV1MinusResponse
+# EzsigntemplatepackagesignermembershipDeleteObjectV1Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**EzsigntemplatepackagesignermembershipMinusDeleteObjectMinusV1MinusResponseMinusMPayload**](EzsigntemplatepackagesignermembershipMinusDeleteObjectMinusV1MinusResponseMinusMPayload.md) |  | 
-**objDebugPayload** | [**CommonMinusResponseMinusObjDebugPayload**](CommonMinusResponseMinusObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonMinusResponseMinusObjDebug**](CommonMinusResponseMinusObjDebug.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
+**mPayload** | [**EzsigntemplatepackagesignermembershipDeleteObjectV1ResponseMPayload**](EzsigntemplatepackagesignermembershipDeleteObjectV1ResponseMPayload.md) |  | 
+**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 
 
 

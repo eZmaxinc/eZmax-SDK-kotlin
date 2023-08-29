@@ -1,12 +1,12 @@
 
-# EzsignfolderMinusImportEzsigntemplatepackageMinusV1MinusResponse
+# EzsignfolderImportEzsigntemplatepackageV1Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**EzsignfolderMinusImportEzsigntemplatepackageMinusV1MinusResponseMinusMPayload**](EzsignfolderMinusImportEzsigntemplatepackageMinusV1MinusResponseMinusMPayload.md) |  | 
-**objDebugPayload** | [**CommonMinusResponseMinusObjDebugPayload**](CommonMinusResponseMinusObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonMinusResponseMinusObjDebug**](CommonMinusResponseMinusObjDebug.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
+**mPayload** | [**EzsignfolderImportEzsigntemplatepackageV1ResponseMPayload**](EzsignfolderImportEzsigntemplatepackageV1ResponseMPayload.md) |  | 
+**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 
 
 

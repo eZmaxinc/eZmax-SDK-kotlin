@@ -1,5 +1,5 @@
 
-# EnumMinusHorizontalalignment
+# EnumHorizontalalignment
 
 ## Enum
 

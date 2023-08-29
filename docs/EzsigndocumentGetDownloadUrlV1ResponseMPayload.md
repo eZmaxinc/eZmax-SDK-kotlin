@@ -1,5 +1,5 @@
 
-# EzsigndocumentMinusGetDownloadUrlMinusV1MinusResponseMinusMPayload
+# EzsigndocumentGetDownloadUrlV1ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes

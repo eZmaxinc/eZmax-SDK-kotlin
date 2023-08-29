@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a id="ezsignpageConsultV1"></a>
 # **ezsignpageConsultV1**
-> EzsignpageMinusConsultMinusV1MinusResponse ezsignpageConsultV1(pkiEzsignpageID, body)
+> EzsignpageConsultV1Response ezsignpageConsultV1(pkiEzsignpageID, body)
 
 Consult an Ezsignpage
 
@@ -23,7 +23,7 @@ val apiInstance = ObjectEzsignpageApi()
 val pkiEzsignpageID : kotlin.Int = 56 // kotlin.Int | 
 val body : kotlin.Any = Object // kotlin.Any | 
 try {
-    val result : EzsignpageMinusConsultMinusV1MinusResponse = apiInstance.ezsignpageConsultV1(pkiEzsignpageID, body)
+    val result : EzsignpageConsultV1Response = apiInstance.ezsignpageConsultV1(pkiEzsignpageID, body)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignpageApi#ezsignpageConsultV1")
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignpageMinusConsultMinusV1MinusResponse**](EzsignpageMinusConsultMinusV1MinusResponse.md)
+[**EzsignpageConsultV1Response**](EzsignpageConsultV1Response.md)
 
 ### Authorization
 

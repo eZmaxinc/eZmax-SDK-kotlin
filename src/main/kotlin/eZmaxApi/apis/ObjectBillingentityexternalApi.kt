@@ -19,8 +19,8 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.BillingentityexternalMinusGetAutocompleteMinusV2MinusResponse
-import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
+import eZmaxApi.models.BillingentityexternalGetAutocompleteV2Response
+import eZmaxApi.models.HeaderAcceptLanguage
 
 import com.squareup.moshi.Json
 
@@ -49,14 +49,14 @@ class ObjectBillingentityexternalApi(basePath: kotlin.String = defaultBasePath, 
     /**
      * enum for parameter sSelector
      */
-     enum class SSelector_billingentityexternalGetAutocompleteV2(val value: kotlin.String) {
+     enum class SSelectorBillingentityexternalGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "All") All("All")
      }
 
     /**
      * enum for parameter eFilterActive
      */
-     enum class EFilterActive_billingentityexternalGetAutocompleteV2(val value: kotlin.String) {
+     enum class EFilterActiveBillingentityexternalGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "All") All("All"),
          @Json(name = "Active") Active("Active"),
          @Json(name = "Inactive") Inactive("Inactive")
@@ -69,7 +69,7 @@ class ObjectBillingentityexternalApi(basePath: kotlin.String = defaultBasePath, 
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return BillingentityexternalMinusGetAutocompleteMinusV2MinusResponse
+     * @return BillingentityexternalGetAutocompleteV2Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -78,11 +78,11 @@ class ObjectBillingentityexternalApi(basePath: kotlin.String = defaultBasePath, 
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun billingentityexternalGetAutocompleteV2(sSelector: SSelector_billingentityexternalGetAutocompleteV2, eFilterActive: EFilterActive_billingentityexternalGetAutocompleteV2? = EFilterActive_billingentityexternalGetAutocompleteV2.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null) : BillingentityexternalMinusGetAutocompleteMinusV2MinusResponse {
+    fun billingentityexternalGetAutocompleteV2(sSelector: SSelectorBillingentityexternalGetAutocompleteV2, eFilterActive: EFilterActiveBillingentityexternalGetAutocompleteV2? = EFilterActiveBillingentityexternalGetAutocompleteV2.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderAcceptLanguage? = null) : BillingentityexternalGetAutocompleteV2Response {
         val localVarResponse = billingentityexternalGetAutocompleteV2WithHttpInfo(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as BillingentityexternalMinusGetAutocompleteMinusV2MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as BillingentityexternalGetAutocompleteV2Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -103,16 +103,16 @@ class ObjectBillingentityexternalApi(basePath: kotlin.String = defaultBasePath, 
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return ApiResponse<BillingentityexternalMinusGetAutocompleteMinusV2MinusResponse?>
+     * @return ApiResponse<BillingentityexternalGetAutocompleteV2Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun billingentityexternalGetAutocompleteV2WithHttpInfo(sSelector: SSelector_billingentityexternalGetAutocompleteV2, eFilterActive: EFilterActive_billingentityexternalGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : ApiResponse<BillingentityexternalMinusGetAutocompleteMinusV2MinusResponse?> {
+    fun billingentityexternalGetAutocompleteV2WithHttpInfo(sSelector: SSelectorBillingentityexternalGetAutocompleteV2, eFilterActive: EFilterActiveBillingentityexternalGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : ApiResponse<BillingentityexternalGetAutocompleteV2Response?> {
         val localVariableConfig = billingentityexternalGetAutocompleteV2RequestConfig(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
-        return request<Unit, BillingentityexternalMinusGetAutocompleteMinusV2MinusResponse>(
+        return request<Unit, BillingentityexternalGetAutocompleteV2Response>(
             localVariableConfig
         )
     }
@@ -126,12 +126,12 @@ class ObjectBillingentityexternalApi(basePath: kotlin.String = defaultBasePath, 
      * @param acceptLanguage  (optional)
      * @return RequestConfig
      */
-    fun billingentityexternalGetAutocompleteV2RequestConfig(sSelector: SSelector_billingentityexternalGetAutocompleteV2, eFilterActive: EFilterActive_billingentityexternalGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : RequestConfig<Unit> {
+    fun billingentityexternalGetAutocompleteV2RequestConfig(sSelector: SSelectorBillingentityexternalGetAutocompleteV2, eFilterActive: EFilterActiveBillingentityexternalGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
                 if (eFilterActive != null) {
-                    put("eFilterActive", listOf(eFilterActive.toString()))
+                    put("eFilterActive", listOf(eFilterActive.value))
                 }
                 if (sQuery != null) {
                     put("sQuery", listOf(sQuery.toString()))

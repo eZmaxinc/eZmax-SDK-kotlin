@@ -1,10 +1,10 @@
 
-# EzsigntemplatepackagesignermembershipMinusCreateObjectMinusV1MinusRequest
+# EzsigntemplatepackagesignermembershipCreateObjectV1Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjEzsigntemplatepackagesignermembership** | [**kotlin.collections.List&lt;EzsigntemplatepackagesignermembershipMinusRequestCompound&gt;**](EzsigntemplatepackagesignermembershipMinusRequestCompound.md) |  | 
+**aObjEzsigntemplatepackagesignermembership** | [**kotlin.collections.List&lt;EzsigntemplatepackagesignermembershipRequestCompound&gt;**](EzsigntemplatepackagesignermembershipRequestCompound.md) |  | 
 
 
 

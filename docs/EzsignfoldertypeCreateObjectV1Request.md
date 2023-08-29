@@ -1,10 +1,10 @@
 
-# EzsignfoldertypeMinusCreateObjectMinusV1MinusRequest
+# EzsignfoldertypeCreateObjectV1Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjEzsignfoldertype** | [**kotlin.collections.List&lt;EzsignfoldertypeMinusRequestCompound&gt;**](EzsignfoldertypeMinusRequestCompound.md) |  | 
+**aObjEzsignfoldertype** | [**kotlin.collections.List&lt;EzsignfoldertypeRequestCompound&gt;**](EzsignfoldertypeRequestCompound.md) |  | 
 
 
 

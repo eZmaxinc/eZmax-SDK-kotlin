@@ -1,5 +1,5 @@
 
-# PhonestaticMinusResponse
+# PhonestaticResponse
 
 ## Properties
 Name | Type | Description | Notes

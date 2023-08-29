@@ -1,5 +1,5 @@
 
-# ActivesessionMinusListElement
+# ActivesessionListElement
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,5 +1,5 @@
 
-# UsergroupMinusAutocompleteElementMinusResponse
+# UsergroupAutocompleteElementResponse
 
 ## Properties
 Name | Type | Description | Notes

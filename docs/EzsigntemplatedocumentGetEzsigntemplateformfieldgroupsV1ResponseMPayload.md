@@ -1,10 +1,10 @@
 
-# EzsigntemplatedocumentMinusGetEzsigntemplateformfieldgroupsMinusV1MinusResponseMinusMPayload
+# EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjEzsigntemplateformfieldgroup** | [**kotlin.collections.List&lt;EzsigntemplateformfieldgroupMinusResponseCompound&gt;**](EzsigntemplateformfieldgroupMinusResponseCompound.md) |  | 
+**aObjEzsigntemplateformfieldgroup** | [**kotlin.collections.List&lt;EzsigntemplateformfieldgroupResponseCompound&gt;**](EzsigntemplateformfieldgroupResponseCompound.md) |  | 
 
 
 

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a id="globalCustomerGetEndpointV1"></a>
 # **globalCustomerGetEndpointV1**
-> GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse globalCustomerGetEndpointV1(pksCustomerCode, sInfrastructureproductCode)
+> GlobalCustomerGetEndpointV1Response globalCustomerGetEndpointV1(pksCustomerCode, sInfrastructureproductCode)
 
 Get customer endpoint
 
@@ -25,7 +25,7 @@ val apiInstance = GlobalCustomerApi()
 val pksCustomerCode : kotlin.String = pksCustomerCode_example // kotlin.String | 
 val sInfrastructureproductCode : kotlin.String = sInfrastructureproductCode_example // kotlin.String | The infrastructure product Code  If undefined, \"appcluster01\" is assumed
 try {
-    val result : GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse = apiInstance.globalCustomerGetEndpointV1(pksCustomerCode, sInfrastructureproductCode)
+    val result : GlobalCustomerGetEndpointV1Response = apiInstance.globalCustomerGetEndpointV1(pksCustomerCode, sInfrastructureproductCode)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling GlobalCustomerApi#globalCustomerGetEndpointV1")
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse**](GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse.md)
+[**GlobalCustomerGetEndpointV1Response**](GlobalCustomerGetEndpointV1Response.md)
 
 ### Authorization
 

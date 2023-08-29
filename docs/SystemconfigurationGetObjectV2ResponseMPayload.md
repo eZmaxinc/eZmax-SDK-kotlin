@@ -1,10 +1,10 @@
 
-# SystemconfigurationMinusGetObjectMinusV2MinusResponseMinusMPayload
+# SystemconfigurationGetObjectV2ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objSystemconfiguration** | [**SystemconfigurationMinusResponseCompound**](SystemconfigurationMinusResponseCompound.md) |  | 
+**objSystemconfiguration** | [**SystemconfigurationResponseCompound**](SystemconfigurationResponseCompound.md) |  | 
 
 
 

@@ -19,9 +19,9 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonMinusGetAutocompleteMinusV1MinusResponse
-import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
-import eZmaxApi.models.PeriodMinusGetAutocompleteMinusV2MinusResponse
+import eZmaxApi.models.CommonGetAutocompleteV1Response
+import eZmaxApi.models.HeaderAcceptLanguage
+import eZmaxApi.models.PeriodGetAutocompleteV2Response
 
 import com.squareup.moshi.Json
 
@@ -50,7 +50,7 @@ class ObjectPeriodApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
     /**
      * enum for parameter sSelector
      */
-     enum class SSelector_periodGetAutocompleteV1(val value: kotlin.String) {
+     enum class SSelectorPeriodGetAutocompleteV1(val value: kotlin.String) {
          @Json(name = "ActiveNormal") ActiveNormal("ActiveNormal"),
          @Json(name = "ActiveNormalAndEndOfYear") ActiveNormalAndEndOfYear("ActiveNormalAndEndOfYear"),
          @Json(name = "AllNormal") AllNormal("AllNormal"),
@@ -60,7 +60,7 @@ class ObjectPeriodApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
     /**
      * enum for parameter eFilterActive
      */
-     enum class EFilterActive_periodGetAutocompleteV1(val value: kotlin.String) {
+     enum class EFilterActivePeriodGetAutocompleteV1(val value: kotlin.String) {
          @Json(name = "All") All("All"),
          @Json(name = "Active") Active("Active"),
          @Json(name = "Inactive") Inactive("Inactive")
@@ -73,7 +73,7 @@ class ObjectPeriodApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return CommonMinusGetAutocompleteMinusV1MinusResponse
+     * @return CommonGetAutocompleteV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -83,12 +83,12 @@ class ObjectPeriodApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     @Deprecated(message = "This operation is deprecated.")
-    fun periodGetAutocompleteV1(sSelector: SSelector_periodGetAutocompleteV1, eFilterActive: EFilterActive_periodGetAutocompleteV1? = EFilterActive_periodGetAutocompleteV1.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null) : CommonMinusGetAutocompleteMinusV1MinusResponse {
+    fun periodGetAutocompleteV1(sSelector: SSelectorPeriodGetAutocompleteV1, eFilterActive: EFilterActivePeriodGetAutocompleteV1? = EFilterActivePeriodGetAutocompleteV1.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderAcceptLanguage? = null) : CommonGetAutocompleteV1Response {
         @Suppress("DEPRECATION")
         val localVarResponse = periodGetAutocompleteV1WithHttpInfo(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonMinusGetAutocompleteMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonGetAutocompleteV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -109,18 +109,18 @@ class ObjectPeriodApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return ApiResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?>
+     * @return ApiResponse<CommonGetAutocompleteV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
     @Deprecated(message = "This operation is deprecated.")
-    fun periodGetAutocompleteV1WithHttpInfo(sSelector: SSelector_periodGetAutocompleteV1, eFilterActive: EFilterActive_periodGetAutocompleteV1?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : ApiResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?> {
+    fun periodGetAutocompleteV1WithHttpInfo(sSelector: SSelectorPeriodGetAutocompleteV1, eFilterActive: EFilterActivePeriodGetAutocompleteV1?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : ApiResponse<CommonGetAutocompleteV1Response?> {
         @Suppress("DEPRECATION")
         val localVariableConfig = periodGetAutocompleteV1RequestConfig(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
-        return request<Unit, CommonMinusGetAutocompleteMinusV1MinusResponse>(
+        return request<Unit, CommonGetAutocompleteV1Response>(
             localVariableConfig
         )
     }
@@ -135,12 +135,12 @@ class ObjectPeriodApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      * @return RequestConfig
      */
     @Deprecated(message = "This operation is deprecated.")
-    fun periodGetAutocompleteV1RequestConfig(sSelector: SSelector_periodGetAutocompleteV1, eFilterActive: EFilterActive_periodGetAutocompleteV1?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : RequestConfig<Unit> {
+    fun periodGetAutocompleteV1RequestConfig(sSelector: SSelectorPeriodGetAutocompleteV1, eFilterActive: EFilterActivePeriodGetAutocompleteV1?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
                 if (eFilterActive != null) {
-                    put("eFilterActive", listOf(eFilterActive.toString()))
+                    put("eFilterActive", listOf(eFilterActive.value))
                 }
                 if (sQuery != null) {
                     put("sQuery", listOf(sQuery.toString()))
@@ -163,7 +163,7 @@ class ObjectPeriodApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
     /**
      * enum for parameter sSelector
      */
-     enum class SSelector_periodGetAutocompleteV2(val value: kotlin.String) {
+     enum class SSelectorPeriodGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "ActiveNormal") ActiveNormal("ActiveNormal"),
          @Json(name = "ActiveNormalAndEndOfYear") ActiveNormalAndEndOfYear("ActiveNormalAndEndOfYear"),
          @Json(name = "AllNormal") AllNormal("AllNormal"),
@@ -173,7 +173,7 @@ class ObjectPeriodApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
     /**
      * enum for parameter eFilterActive
      */
-     enum class EFilterActive_periodGetAutocompleteV2(val value: kotlin.String) {
+     enum class EFilterActivePeriodGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "All") All("All"),
          @Json(name = "Active") Active("Active"),
          @Json(name = "Inactive") Inactive("Inactive")
@@ -186,7 +186,7 @@ class ObjectPeriodApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return PeriodMinusGetAutocompleteMinusV2MinusResponse
+     * @return PeriodGetAutocompleteV2Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -195,11 +195,11 @@ class ObjectPeriodApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun periodGetAutocompleteV2(sSelector: SSelector_periodGetAutocompleteV2, eFilterActive: EFilterActive_periodGetAutocompleteV2? = EFilterActive_periodGetAutocompleteV2.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null) : PeriodMinusGetAutocompleteMinusV2MinusResponse {
+    fun periodGetAutocompleteV2(sSelector: SSelectorPeriodGetAutocompleteV2, eFilterActive: EFilterActivePeriodGetAutocompleteV2? = EFilterActivePeriodGetAutocompleteV2.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderAcceptLanguage? = null) : PeriodGetAutocompleteV2Response {
         val localVarResponse = periodGetAutocompleteV2WithHttpInfo(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as PeriodMinusGetAutocompleteMinusV2MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as PeriodGetAutocompleteV2Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -220,16 +220,16 @@ class ObjectPeriodApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return ApiResponse<PeriodMinusGetAutocompleteMinusV2MinusResponse?>
+     * @return ApiResponse<PeriodGetAutocompleteV2Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun periodGetAutocompleteV2WithHttpInfo(sSelector: SSelector_periodGetAutocompleteV2, eFilterActive: EFilterActive_periodGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : ApiResponse<PeriodMinusGetAutocompleteMinusV2MinusResponse?> {
+    fun periodGetAutocompleteV2WithHttpInfo(sSelector: SSelectorPeriodGetAutocompleteV2, eFilterActive: EFilterActivePeriodGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : ApiResponse<PeriodGetAutocompleteV2Response?> {
         val localVariableConfig = periodGetAutocompleteV2RequestConfig(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
-        return request<Unit, PeriodMinusGetAutocompleteMinusV2MinusResponse>(
+        return request<Unit, PeriodGetAutocompleteV2Response>(
             localVariableConfig
         )
     }
@@ -243,12 +243,12 @@ class ObjectPeriodApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      * @param acceptLanguage  (optional)
      * @return RequestConfig
      */
-    fun periodGetAutocompleteV2RequestConfig(sSelector: SSelector_periodGetAutocompleteV2, eFilterActive: EFilterActive_periodGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : RequestConfig<Unit> {
+    fun periodGetAutocompleteV2RequestConfig(sSelector: SSelectorPeriodGetAutocompleteV2, eFilterActive: EFilterActivePeriodGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
                 if (eFilterActive != null) {
-                    put("eFilterActive", listOf(eFilterActive.toString()))
+                    put("eFilterActive", listOf(eFilterActive.value))
                 }
                 if (sQuery != null) {
                     put("sQuery", listOf(sQuery.toString()))

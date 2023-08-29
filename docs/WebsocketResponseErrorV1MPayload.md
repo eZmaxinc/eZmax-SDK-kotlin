@@ -1,11 +1,11 @@
 
-# WebsocketMinusResponseMinusErrorMinusV1MinusMPayload
+# WebsocketResponseErrorV1MPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **sErrorMessage** | **kotlin.String** | The message giving details about the error | 
-**eErrorCode** | [**FieldMinusEErrorCode**](FieldMinusEErrorCode.md) |  | 
+**eErrorCode** | [**FieldEErrorCode**](FieldEErrorCode.md) |  | 
 
 
 

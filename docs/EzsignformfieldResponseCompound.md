@@ -1,5 +1,5 @@
 
-# EzsignformfieldMinusResponseCompound
+# EzsignformfieldResponseCompound
 
 ## Properties
 Name | Type | Description | Notes

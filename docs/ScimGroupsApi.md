@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a id="groupsCreateObjectScimV2"></a>
 # **groupsCreateObjectScimV2**
-> ScimMinusGroup groupsCreateObjectScimV2(scimMinusGroup)
+> ScimGroup groupsCreateObjectScimV2(scimGroup)
 
 Create a new Usergroup
 
@@ -24,9 +24,9 @@ Create a new Usergroup
 //import eZmaxApi.models.*
 
 val apiInstance = ScimGroupsApi()
-val scimMinusGroup : ScimMinusGroup =  // ScimMinusGroup | 
+val scimGroup : ScimGroup =  // ScimGroup | 
 try {
-    val result : ScimMinusGroup = apiInstance.groupsCreateObjectScimV2(scimMinusGroup)
+    val result : ScimGroup = apiInstance.groupsCreateObjectScimV2(scimGroup)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ScimGroupsApi#groupsCreateObjectScimV2")
@@ -41,11 +41,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **scimMinusGroup** | [**ScimMinusGroup**](ScimMinusGroup.md)|  |
+ **scimGroup** | [**ScimGroup**](ScimGroup.md)|  |
 
 ### Return type
 
-[**ScimMinusGroup**](ScimMinusGroup.md)
+[**ScimGroup**](ScimGroup.md)
 
 ### Authorization
 
@@ -106,7 +106,7 @@ Configure Bearer:
 
 <a id="groupsEditObjectScimV2"></a>
 # **groupsEditObjectScimV2**
-> ScimMinusGroup groupsEditObjectScimV2(groupId, scimMinusGroup)
+> ScimGroup groupsEditObjectScimV2(groupId, scimGroup)
 
 Edit an existing Usergroup
 
@@ -118,9 +118,9 @@ Edit an existing Usergroup
 
 val apiInstance = ScimGroupsApi()
 val groupId : kotlin.String = groupId_example // kotlin.String | 
-val scimMinusGroup : ScimMinusGroup =  // ScimMinusGroup | 
+val scimGroup : ScimGroup =  // ScimGroup | 
 try {
-    val result : ScimMinusGroup = apiInstance.groupsEditObjectScimV2(groupId, scimMinusGroup)
+    val result : ScimGroup = apiInstance.groupsEditObjectScimV2(groupId, scimGroup)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ScimGroupsApi#groupsEditObjectScimV2")
@@ -136,11 +136,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **kotlin.String**|  |
- **scimMinusGroup** | [**ScimMinusGroup**](ScimMinusGroup.md)|  |
+ **scimGroup** | [**ScimGroup**](ScimGroup.md)|  |
 
 ### Return type
 
-[**ScimMinusGroup**](ScimMinusGroup.md)
+[**ScimGroup**](ScimGroup.md)
 
 ### Authorization
 
@@ -155,7 +155,7 @@ Configure Bearer:
 
 <a id="groupsGetListScimV2"></a>
 # **groupsGetListScimV2**
-> ScimMinusGroup groupsGetListScimV2(filter)
+> ScimGroup groupsGetListScimV2(filter)
 
 Retrieve Usergroup list
 
@@ -168,7 +168,7 @@ Retrieve Usergroup list
 val apiInstance = ScimGroupsApi()
 val filter : kotlin.String = filter_example // kotlin.String | Filter expression for searching groups
 try {
-    val result : ScimMinusGroup = apiInstance.groupsGetListScimV2(filter)
+    val result : ScimGroup = apiInstance.groupsGetListScimV2(filter)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ScimGroupsApi#groupsGetListScimV2")
@@ -187,7 +187,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ScimMinusGroup**](ScimMinusGroup.md)
+[**ScimGroup**](ScimGroup.md)
 
 ### Authorization
 
@@ -202,7 +202,7 @@ Configure Bearer:
 
 <a id="groupsGetObjectScimV2"></a>
 # **groupsGetObjectScimV2**
-> ScimMinusGroup groupsGetObjectScimV2(groupId)
+> ScimGroup groupsGetObjectScimV2(groupId)
 
 Retrieve an existing Usergroup
 
@@ -215,7 +215,7 @@ Retrieve an existing Usergroup
 val apiInstance = ScimGroupsApi()
 val groupId : kotlin.String = groupId_example // kotlin.String | 
 try {
-    val result : ScimMinusGroup = apiInstance.groupsGetObjectScimV2(groupId)
+    val result : ScimGroup = apiInstance.groupsGetObjectScimV2(groupId)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ScimGroupsApi#groupsGetObjectScimV2")
@@ -234,7 +234,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ScimMinusGroup**](ScimMinusGroup.md)
+[**ScimGroup**](ScimGroup.md)
 
 ### Authorization
 

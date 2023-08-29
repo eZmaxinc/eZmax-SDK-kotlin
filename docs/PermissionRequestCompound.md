@@ -1,5 +1,5 @@
 
-# PermissionMinusRequestCompound
+# PermissionRequestCompound
 
 ## Properties
 Name | Type | Description | Notes

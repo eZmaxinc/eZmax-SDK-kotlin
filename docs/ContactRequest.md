@@ -1,5 +1,5 @@
 
-# ContactMinusRequest
+# ContactRequest
 
 ## Properties
 Name | Type | Description | Notes

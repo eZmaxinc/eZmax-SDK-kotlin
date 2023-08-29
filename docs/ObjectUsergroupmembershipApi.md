@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a id="usergroupmembershipCreateObjectV1"></a>
 # **usergroupmembershipCreateObjectV1**
-> UsergroupmembershipMinusCreateObjectMinusV1MinusResponse usergroupmembershipCreateObjectV1(usergroupmembershipMinusCreateObjectMinusV1MinusRequest)
+> UsergroupmembershipCreateObjectV1Response usergroupmembershipCreateObjectV1(usergroupmembershipCreateObjectV1Request)
 
 Create a new Usergroupmembership
 
@@ -25,9 +25,9 @@ The endpoint allows to create one or many elements at once.
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectUsergroupmembershipApi()
-val usergroupmembershipMinusCreateObjectMinusV1MinusRequest : UsergroupmembershipMinusCreateObjectMinusV1MinusRequest =  // UsergroupmembershipMinusCreateObjectMinusV1MinusRequest | 
+val usergroupmembershipCreateObjectV1Request : UsergroupmembershipCreateObjectV1Request =  // UsergroupmembershipCreateObjectV1Request | 
 try {
-    val result : UsergroupmembershipMinusCreateObjectMinusV1MinusResponse = apiInstance.usergroupmembershipCreateObjectV1(usergroupmembershipMinusCreateObjectMinusV1MinusRequest)
+    val result : UsergroupmembershipCreateObjectV1Response = apiInstance.usergroupmembershipCreateObjectV1(usergroupmembershipCreateObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectUsergroupmembershipApi#usergroupmembershipCreateObjectV1")
@@ -42,11 +42,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **usergroupmembershipMinusCreateObjectMinusV1MinusRequest** | [**UsergroupmembershipMinusCreateObjectMinusV1MinusRequest**](UsergroupmembershipMinusCreateObjectMinusV1MinusRequest.md)|  |
+ **usergroupmembershipCreateObjectV1Request** | [**UsergroupmembershipCreateObjectV1Request**](UsergroupmembershipCreateObjectV1Request.md)|  |
 
 ### Return type
 
-[**UsergroupmembershipMinusCreateObjectMinusV1MinusResponse**](UsergroupmembershipMinusCreateObjectMinusV1MinusResponse.md)
+[**UsergroupmembershipCreateObjectV1Response**](UsergroupmembershipCreateObjectV1Response.md)
 
 ### Authorization
 
@@ -62,7 +62,7 @@ Configure Authorization:
 
 <a id="usergroupmembershipDeleteObjectV1"></a>
 # **usergroupmembershipDeleteObjectV1**
-> UsergroupmembershipMinusDeleteObjectMinusV1MinusResponse usergroupmembershipDeleteObjectV1(pkiUsergroupmembershipID)
+> UsergroupmembershipDeleteObjectV1Response usergroupmembershipDeleteObjectV1(pkiUsergroupmembershipID)
 
 Delete an existing Usergroupmembership
 
@@ -77,7 +77,7 @@ Delete an existing Usergroupmembership
 val apiInstance = ObjectUsergroupmembershipApi()
 val pkiUsergroupmembershipID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : UsergroupmembershipMinusDeleteObjectMinusV1MinusResponse = apiInstance.usergroupmembershipDeleteObjectV1(pkiUsergroupmembershipID)
+    val result : UsergroupmembershipDeleteObjectV1Response = apiInstance.usergroupmembershipDeleteObjectV1(pkiUsergroupmembershipID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectUsergroupmembershipApi#usergroupmembershipDeleteObjectV1")
@@ -96,7 +96,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UsergroupmembershipMinusDeleteObjectMinusV1MinusResponse**](UsergroupmembershipMinusDeleteObjectMinusV1MinusResponse.md)
+[**UsergroupmembershipDeleteObjectV1Response**](UsergroupmembershipDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -112,7 +112,7 @@ Configure Authorization:
 
 <a id="usergroupmembershipEditObjectV1"></a>
 # **usergroupmembershipEditObjectV1**
-> UsergroupmembershipMinusEditObjectMinusV1MinusResponse usergroupmembershipEditObjectV1(pkiUsergroupmembershipID, usergroupmembershipMinusEditObjectMinusV1MinusRequest)
+> UsergroupmembershipEditObjectV1Response usergroupmembershipEditObjectV1(pkiUsergroupmembershipID, usergroupmembershipEditObjectV1Request)
 
 Edit an existing Usergroupmembership
 
@@ -126,9 +126,9 @@ Edit an existing Usergroupmembership
 
 val apiInstance = ObjectUsergroupmembershipApi()
 val pkiUsergroupmembershipID : kotlin.Int = 56 // kotlin.Int | 
-val usergroupmembershipMinusEditObjectMinusV1MinusRequest : UsergroupmembershipMinusEditObjectMinusV1MinusRequest =  // UsergroupmembershipMinusEditObjectMinusV1MinusRequest | 
+val usergroupmembershipEditObjectV1Request : UsergroupmembershipEditObjectV1Request =  // UsergroupmembershipEditObjectV1Request | 
 try {
-    val result : UsergroupmembershipMinusEditObjectMinusV1MinusResponse = apiInstance.usergroupmembershipEditObjectV1(pkiUsergroupmembershipID, usergroupmembershipMinusEditObjectMinusV1MinusRequest)
+    val result : UsergroupmembershipEditObjectV1Response = apiInstance.usergroupmembershipEditObjectV1(pkiUsergroupmembershipID, usergroupmembershipEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectUsergroupmembershipApi#usergroupmembershipEditObjectV1")
@@ -144,11 +144,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiUsergroupmembershipID** | **kotlin.Int**|  |
- **usergroupmembershipMinusEditObjectMinusV1MinusRequest** | [**UsergroupmembershipMinusEditObjectMinusV1MinusRequest**](UsergroupmembershipMinusEditObjectMinusV1MinusRequest.md)|  |
+ **usergroupmembershipEditObjectV1Request** | [**UsergroupmembershipEditObjectV1Request**](UsergroupmembershipEditObjectV1Request.md)|  |
 
 ### Return type
 
-[**UsergroupmembershipMinusEditObjectMinusV1MinusResponse**](UsergroupmembershipMinusEditObjectMinusV1MinusResponse.md)
+[**UsergroupmembershipEditObjectV1Response**](UsergroupmembershipEditObjectV1Response.md)
 
 ### Authorization
 
@@ -164,7 +164,7 @@ Configure Authorization:
 
 <a id="usergroupmembershipGetObjectV2"></a>
 # **usergroupmembershipGetObjectV2**
-> UsergroupmembershipMinusGetObjectMinusV2MinusResponse usergroupmembershipGetObjectV2(pkiUsergroupmembershipID)
+> UsergroupmembershipGetObjectV2Response usergroupmembershipGetObjectV2(pkiUsergroupmembershipID)
 
 Retrieve an existing Usergroupmembership
 
@@ -179,7 +179,7 @@ Retrieve an existing Usergroupmembership
 val apiInstance = ObjectUsergroupmembershipApi()
 val pkiUsergroupmembershipID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : UsergroupmembershipMinusGetObjectMinusV2MinusResponse = apiInstance.usergroupmembershipGetObjectV2(pkiUsergroupmembershipID)
+    val result : UsergroupmembershipGetObjectV2Response = apiInstance.usergroupmembershipGetObjectV2(pkiUsergroupmembershipID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectUsergroupmembershipApi#usergroupmembershipGetObjectV2")
@@ -198,7 +198,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UsergroupmembershipMinusGetObjectMinusV2MinusResponse**](UsergroupmembershipMinusGetObjectMinusV2MinusResponse.md)
+[**UsergroupmembershipGetObjectV2Response**](UsergroupmembershipGetObjectV2Response.md)
 
 ### Authorization
 

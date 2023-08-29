@@ -1,5 +1,5 @@
 
-# CommonMinusResponseMinusRedirectMinusSSecretquestionTextX
+# CommonResponseRedirectSSecretquestionTextX
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,10 +1,10 @@
 
-# PaymenttermMinusGetObjectMinusV2MinusResponseMinusMPayload
+# PaymenttermGetObjectV2ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objPaymentterm** | [**PaymenttermMinusResponseCompound**](PaymenttermMinusResponseCompound.md) |  | 
+**objPaymentterm** | [**PaymenttermResponseCompound**](PaymenttermResponseCompound.md) |  | 
 
 
 

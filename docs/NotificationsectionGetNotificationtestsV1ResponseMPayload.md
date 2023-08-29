@@ -1,10 +1,10 @@
 
-# NotificationsectionMinusGetNotificationtestsMinusV1MinusResponseMinusMPayload
+# NotificationsectionGetNotificationtestsV1ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjNotificationsubsection** | [**kotlin.collections.List&lt;CustomMinusNotificationsubsectiongetnotificationtestsMinusResponse&gt;**](CustomMinusNotificationsubsectiongetnotificationtestsMinusResponse.md) |  | 
+**aObjNotificationsubsection** | [**kotlin.collections.List&lt;CustomNotificationsubsectiongetnotificationtestsResponse&gt;**](CustomNotificationsubsectiongetnotificationtestsResponse.md) |  | 
 
 
 

@@ -1,5 +1,5 @@
 
-# MultilingualMinusSubnetDescription
+# MultilingualSubnetDescription
 
 ## Properties
 Name | Type | Description | Notes

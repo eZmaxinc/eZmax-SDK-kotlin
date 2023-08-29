@@ -1,5 +1,5 @@
 
-# BillingentityinternalproductMinusRequest
+# BillingentityinternalproductRequest
 
 ## Properties
 Name | Type | Description | Notes

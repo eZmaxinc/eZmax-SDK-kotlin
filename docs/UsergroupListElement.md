@@ -1,5 +1,5 @@
 
-# UsergroupMinusListElement
+# UsergroupListElement
 
 ## Properties
 Name | Type | Description | Notes

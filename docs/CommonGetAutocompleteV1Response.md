@@ -1,12 +1,12 @@
 
-# CommonMinusGetAutocompleteMinusV1MinusResponse
+# CommonGetAutocompleteV1Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**kotlin.collections.List&lt;CustomMinusAutocompleteElementMinusResponse&gt;**](CustomMinusAutocompleteElementMinusResponse.md) | Generic Autocomplete Response | 
-**objDebugPayload** | [**CommonMinusResponseMinusObjDebugPayload**](CommonMinusResponseMinusObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonMinusResponseMinusObjDebug**](CommonMinusResponseMinusObjDebug.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
+**mPayload** | [**kotlin.collections.List&lt;CustomAutocompleteElementResponse&gt;**](CustomAutocompleteElementResponse.md) | Generic Autocomplete Response | 
+**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 
 
 

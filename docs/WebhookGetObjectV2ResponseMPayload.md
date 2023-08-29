@@ -1,10 +1,10 @@
 
-# WebhookMinusGetObjectMinusV2MinusResponseMinusMPayload
+# WebhookGetObjectV2ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objWebhook** | [**WebhookMinusResponseCompound**](WebhookMinusResponseCompound.md) |  | 
+**objWebhook** | [**WebhookResponseCompound**](WebhookResponseCompound.md) |  | 
 
 
 

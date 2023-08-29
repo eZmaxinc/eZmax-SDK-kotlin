@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a id="ezsignbulksenddocumentmappingCreateObjectV1"></a>
 # **ezsignbulksenddocumentmappingCreateObjectV1**
-> EzsignbulksenddocumentmappingMinusCreateObjectMinusV1MinusResponse ezsignbulksenddocumentmappingCreateObjectV1(ezsignbulksenddocumentmappingMinusCreateObjectMinusV1MinusRequest)
+> EzsignbulksenddocumentmappingCreateObjectV1Response ezsignbulksenddocumentmappingCreateObjectV1(ezsignbulksenddocumentmappingCreateObjectV1Request)
 
 Create a new Ezsignbulksenddocumentmapping
 
@@ -24,9 +24,9 @@ The endpoint allows to create one or many elements at once.
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsignbulksenddocumentmappingApi()
-val ezsignbulksenddocumentmappingMinusCreateObjectMinusV1MinusRequest : EzsignbulksenddocumentmappingMinusCreateObjectMinusV1MinusRequest =  // EzsignbulksenddocumentmappingMinusCreateObjectMinusV1MinusRequest | 
+val ezsignbulksenddocumentmappingCreateObjectV1Request : EzsignbulksenddocumentmappingCreateObjectV1Request =  // EzsignbulksenddocumentmappingCreateObjectV1Request | 
 try {
-    val result : EzsignbulksenddocumentmappingMinusCreateObjectMinusV1MinusResponse = apiInstance.ezsignbulksenddocumentmappingCreateObjectV1(ezsignbulksenddocumentmappingMinusCreateObjectMinusV1MinusRequest)
+    val result : EzsignbulksenddocumentmappingCreateObjectV1Response = apiInstance.ezsignbulksenddocumentmappingCreateObjectV1(ezsignbulksenddocumentmappingCreateObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignbulksenddocumentmappingApi#ezsignbulksenddocumentmappingCreateObjectV1")
@@ -41,11 +41,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ezsignbulksenddocumentmappingMinusCreateObjectMinusV1MinusRequest** | [**EzsignbulksenddocumentmappingMinusCreateObjectMinusV1MinusRequest**](EzsignbulksenddocumentmappingMinusCreateObjectMinusV1MinusRequest.md)|  |
+ **ezsignbulksenddocumentmappingCreateObjectV1Request** | [**EzsignbulksenddocumentmappingCreateObjectV1Request**](EzsignbulksenddocumentmappingCreateObjectV1Request.md)|  |
 
 ### Return type
 
-[**EzsignbulksenddocumentmappingMinusCreateObjectMinusV1MinusResponse**](EzsignbulksenddocumentmappingMinusCreateObjectMinusV1MinusResponse.md)
+[**EzsignbulksenddocumentmappingCreateObjectV1Response**](EzsignbulksenddocumentmappingCreateObjectV1Response.md)
 
 ### Authorization
 
@@ -61,7 +61,7 @@ Configure Authorization:
 
 <a id="ezsignbulksenddocumentmappingDeleteObjectV1"></a>
 # **ezsignbulksenddocumentmappingDeleteObjectV1**
-> EzsignbulksenddocumentmappingMinusDeleteObjectMinusV1MinusResponse ezsignbulksenddocumentmappingDeleteObjectV1(pkiEzsignbulksenddocumentmappingID)
+> EzsignbulksenddocumentmappingDeleteObjectV1Response ezsignbulksenddocumentmappingDeleteObjectV1(pkiEzsignbulksenddocumentmappingID)
 
 Delete an existing Ezsignbulksenddocumentmapping
 
@@ -76,7 +76,7 @@ Delete an existing Ezsignbulksenddocumentmapping
 val apiInstance = ObjectEzsignbulksenddocumentmappingApi()
 val pkiEzsignbulksenddocumentmappingID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : EzsignbulksenddocumentmappingMinusDeleteObjectMinusV1MinusResponse = apiInstance.ezsignbulksenddocumentmappingDeleteObjectV1(pkiEzsignbulksenddocumentmappingID)
+    val result : EzsignbulksenddocumentmappingDeleteObjectV1Response = apiInstance.ezsignbulksenddocumentmappingDeleteObjectV1(pkiEzsignbulksenddocumentmappingID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignbulksenddocumentmappingApi#ezsignbulksenddocumentmappingDeleteObjectV1")
@@ -95,7 +95,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignbulksenddocumentmappingMinusDeleteObjectMinusV1MinusResponse**](EzsignbulksenddocumentmappingMinusDeleteObjectMinusV1MinusResponse.md)
+[**EzsignbulksenddocumentmappingDeleteObjectV1Response**](EzsignbulksenddocumentmappingDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -111,7 +111,7 @@ Configure Authorization:
 
 <a id="ezsignbulksenddocumentmappingGetObjectV2"></a>
 # **ezsignbulksenddocumentmappingGetObjectV2**
-> EzsignbulksenddocumentmappingMinusGetObjectMinusV2MinusResponse ezsignbulksenddocumentmappingGetObjectV2(pkiEzsignbulksenddocumentmappingID)
+> EzsignbulksenddocumentmappingGetObjectV2Response ezsignbulksenddocumentmappingGetObjectV2(pkiEzsignbulksenddocumentmappingID)
 
 Retrieve an existing Ezsignbulksenddocumentmapping
 
@@ -126,7 +126,7 @@ Retrieve an existing Ezsignbulksenddocumentmapping
 val apiInstance = ObjectEzsignbulksenddocumentmappingApi()
 val pkiEzsignbulksenddocumentmappingID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : EzsignbulksenddocumentmappingMinusGetObjectMinusV2MinusResponse = apiInstance.ezsignbulksenddocumentmappingGetObjectV2(pkiEzsignbulksenddocumentmappingID)
+    val result : EzsignbulksenddocumentmappingGetObjectV2Response = apiInstance.ezsignbulksenddocumentmappingGetObjectV2(pkiEzsignbulksenddocumentmappingID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignbulksenddocumentmappingApi#ezsignbulksenddocumentmappingGetObjectV2")
@@ -145,7 +145,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignbulksenddocumentmappingMinusGetObjectMinusV2MinusResponse**](EzsignbulksenddocumentmappingMinusGetObjectMinusV2MinusResponse.md)
+[**EzsignbulksenddocumentmappingGetObjectV2Response**](EzsignbulksenddocumentmappingGetObjectV2Response.md)
 
 ### Authorization
 

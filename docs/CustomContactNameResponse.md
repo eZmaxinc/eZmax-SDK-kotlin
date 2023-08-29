@@ -1,5 +1,5 @@
 
-# CustomMinusContactNameMinusResponse
+# CustomContactNameResponse
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,10 +1,10 @@
 
-# EzsignfoldersignerassociationMinusGetObjectMinusV2MinusResponseMinusMPayload
+# EzsignfoldersignerassociationGetObjectV2ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objEzsignfoldersignerassociation** | [**EzsignfoldersignerassociationMinusResponseCompound**](EzsignfoldersignerassociationMinusResponseCompound.md) |  | 
+**objEzsignfoldersignerassociation** | [**EzsignfoldersignerassociationResponseCompound**](EzsignfoldersignerassociationResponseCompound.md) |  | 
 
 
 

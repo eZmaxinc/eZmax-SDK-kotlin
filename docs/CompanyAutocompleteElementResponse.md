@@ -1,5 +1,5 @@
 
-# CompanyMinusAutocompleteElementMinusResponse
+# CompanyAutocompleteElementResponse
 
 ## Properties
 Name | Type | Description | Notes

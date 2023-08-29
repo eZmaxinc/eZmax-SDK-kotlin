@@ -19,7 +19,7 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.ScimMinusGroup
+import eZmaxApi.models.ScimGroup
 
 import com.squareup.moshi.Json
 
@@ -48,8 +48,8 @@ class ScimGroupsApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
     /**
      * Create a new Usergroup
      * 
-     * @param scimMinusGroup 
-     * @return ScimMinusGroup
+     * @param scimGroup 
+     * @return ScimGroup
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -58,11 +58,11 @@ class ScimGroupsApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun groupsCreateObjectScimV2(scimMinusGroup: ScimMinusGroup) : ScimMinusGroup {
-        val localVarResponse = groupsCreateObjectScimV2WithHttpInfo(scimMinusGroup = scimMinusGroup)
+    fun groupsCreateObjectScimV2(scimGroup: ScimGroup) : ScimGroup {
+        val localVarResponse = groupsCreateObjectScimV2WithHttpInfo(scimGroup = scimGroup)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as ScimMinusGroup
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ScimGroup
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -79,17 +79,17 @@ class ScimGroupsApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
     /**
      * Create a new Usergroup
      * 
-     * @param scimMinusGroup 
-     * @return ApiResponse<ScimMinusGroup?>
+     * @param scimGroup 
+     * @return ApiResponse<ScimGroup?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun groupsCreateObjectScimV2WithHttpInfo(scimMinusGroup: ScimMinusGroup) : ApiResponse<ScimMinusGroup?> {
-        val localVariableConfig = groupsCreateObjectScimV2RequestConfig(scimMinusGroup = scimMinusGroup)
+    fun groupsCreateObjectScimV2WithHttpInfo(scimGroup: ScimGroup) : ApiResponse<ScimGroup?> {
+        val localVariableConfig = groupsCreateObjectScimV2RequestConfig(scimGroup = scimGroup)
 
-        return request<ScimMinusGroup, ScimMinusGroup>(
+        return request<ScimGroup, ScimGroup>(
             localVariableConfig
         )
     }
@@ -97,11 +97,11 @@ class ScimGroupsApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
     /**
      * To obtain the request config of the operation groupsCreateObjectScimV2
      *
-     * @param scimMinusGroup 
+     * @param scimGroup 
      * @return RequestConfig
      */
-    fun groupsCreateObjectScimV2RequestConfig(scimMinusGroup: ScimMinusGroup) : RequestConfig<ScimMinusGroup> {
-        val localVariableBody = scimMinusGroup
+    fun groupsCreateObjectScimV2RequestConfig(scimGroup: ScimGroup) : RequestConfig<ScimGroup> {
+        val localVariableBody = scimGroup
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Content-Type"] = "application/json"
@@ -189,8 +189,8 @@ class ScimGroupsApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
      * Edit an existing Usergroup
      * 
      * @param groupId 
-     * @param scimMinusGroup 
-     * @return ScimMinusGroup
+     * @param scimGroup 
+     * @return ScimGroup
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -199,11 +199,11 @@ class ScimGroupsApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun groupsEditObjectScimV2(groupId: kotlin.String, scimMinusGroup: ScimMinusGroup) : ScimMinusGroup {
-        val localVarResponse = groupsEditObjectScimV2WithHttpInfo(groupId = groupId, scimMinusGroup = scimMinusGroup)
+    fun groupsEditObjectScimV2(groupId: kotlin.String, scimGroup: ScimGroup) : ScimGroup {
+        val localVarResponse = groupsEditObjectScimV2WithHttpInfo(groupId = groupId, scimGroup = scimGroup)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as ScimMinusGroup
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ScimGroup
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -221,17 +221,17 @@ class ScimGroupsApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
      * Edit an existing Usergroup
      * 
      * @param groupId 
-     * @param scimMinusGroup 
-     * @return ApiResponse<ScimMinusGroup?>
+     * @param scimGroup 
+     * @return ApiResponse<ScimGroup?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun groupsEditObjectScimV2WithHttpInfo(groupId: kotlin.String, scimMinusGroup: ScimMinusGroup) : ApiResponse<ScimMinusGroup?> {
-        val localVariableConfig = groupsEditObjectScimV2RequestConfig(groupId = groupId, scimMinusGroup = scimMinusGroup)
+    fun groupsEditObjectScimV2WithHttpInfo(groupId: kotlin.String, scimGroup: ScimGroup) : ApiResponse<ScimGroup?> {
+        val localVariableConfig = groupsEditObjectScimV2RequestConfig(groupId = groupId, scimGroup = scimGroup)
 
-        return request<ScimMinusGroup, ScimMinusGroup>(
+        return request<ScimGroup, ScimGroup>(
             localVariableConfig
         )
     }
@@ -240,11 +240,11 @@ class ScimGroupsApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
      * To obtain the request config of the operation groupsEditObjectScimV2
      *
      * @param groupId 
-     * @param scimMinusGroup 
+     * @param scimGroup 
      * @return RequestConfig
      */
-    fun groupsEditObjectScimV2RequestConfig(groupId: kotlin.String, scimMinusGroup: ScimMinusGroup) : RequestConfig<ScimMinusGroup> {
-        val localVariableBody = scimMinusGroup
+    fun groupsEditObjectScimV2RequestConfig(groupId: kotlin.String, scimGroup: ScimGroup) : RequestConfig<ScimGroup> {
+        val localVariableBody = scimGroup
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Content-Type"] = "application/json"
@@ -264,7 +264,7 @@ class ScimGroupsApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
      * Retrieve Usergroup list
      * 
      * @param filter Filter expression for searching groups (optional)
-     * @return ScimMinusGroup
+     * @return ScimGroup
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -273,11 +273,11 @@ class ScimGroupsApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun groupsGetListScimV2(filter: kotlin.String? = null) : ScimMinusGroup {
+    fun groupsGetListScimV2(filter: kotlin.String? = null) : ScimGroup {
         val localVarResponse = groupsGetListScimV2WithHttpInfo(filter = filter)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as ScimMinusGroup
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ScimGroup
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -295,16 +295,16 @@ class ScimGroupsApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
      * Retrieve Usergroup list
      * 
      * @param filter Filter expression for searching groups (optional)
-     * @return ApiResponse<ScimMinusGroup?>
+     * @return ApiResponse<ScimGroup?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun groupsGetListScimV2WithHttpInfo(filter: kotlin.String?) : ApiResponse<ScimMinusGroup?> {
+    fun groupsGetListScimV2WithHttpInfo(filter: kotlin.String?) : ApiResponse<ScimGroup?> {
         val localVariableConfig = groupsGetListScimV2RequestConfig(filter = filter)
 
-        return request<Unit, ScimMinusGroup>(
+        return request<Unit, ScimGroup>(
             localVariableConfig
         )
     }
@@ -340,7 +340,7 @@ class ScimGroupsApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
      * Retrieve an existing Usergroup
      * 
      * @param groupId 
-     * @return ScimMinusGroup
+     * @return ScimGroup
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -349,11 +349,11 @@ class ScimGroupsApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun groupsGetObjectScimV2(groupId: kotlin.String) : ScimMinusGroup {
+    fun groupsGetObjectScimV2(groupId: kotlin.String) : ScimGroup {
         val localVarResponse = groupsGetObjectScimV2WithHttpInfo(groupId = groupId)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as ScimMinusGroup
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ScimGroup
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -371,16 +371,16 @@ class ScimGroupsApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
      * Retrieve an existing Usergroup
      * 
      * @param groupId 
-     * @return ApiResponse<ScimMinusGroup?>
+     * @return ApiResponse<ScimGroup?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun groupsGetObjectScimV2WithHttpInfo(groupId: kotlin.String) : ApiResponse<ScimMinusGroup?> {
+    fun groupsGetObjectScimV2WithHttpInfo(groupId: kotlin.String) : ApiResponse<ScimGroup?> {
         val localVariableConfig = groupsGetObjectScimV2RequestConfig(groupId = groupId)
 
-        return request<Unit, ScimMinusGroup>(
+        return request<Unit, ScimGroup>(
             localVariableConfig
         )
     }

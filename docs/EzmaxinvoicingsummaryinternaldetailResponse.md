@@ -1,5 +1,5 @@
 
-# EzmaxinvoicingsummaryinternaldetailMinusResponse
+# EzmaxinvoicingsummaryinternaldetailResponse
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,5 +1,5 @@
 
-# EzsignbulksendtransmissionMinusResponseCompound
+# EzsignbulksendtransmissionResponseCompound
 
 ## Properties
 Name | Type | Description | Notes
@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **fkiEzsignbulksendID** | **kotlin.Int** | The unique ID of the Ezsignbulksend | 
 **sEzsignbulksendtransmissionDescription** | **kotlin.String** | The description of the Ezsignbulksendtransmission | 
 **iEzsignbulksendtransmissionErrors** | **kotlin.Int** | The number of errors during the Ezsignbulksendtransmission | 
-**objAudit** | [**CommonMinusAudit**](CommonMinusAudit.md) |  | 
-**aObjEzsignfoldertransmission** | [**kotlin.collections.List&lt;CustomMinusEzsignfoldertransmissionMinusResponse&gt;**](CustomMinusEzsignfoldertransmissionMinusResponse.md) |  | 
+**objAudit** | [**CommonAudit**](CommonAudit.md) |  | 
+**aObjEzsignfoldertransmission** | [**kotlin.collections.List&lt;CustomEzsignfoldertransmissionResponse&gt;**](CustomEzsignfoldertransmissionResponse.md) |  | 
 
 
 

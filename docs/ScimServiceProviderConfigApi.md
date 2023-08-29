@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a id="serviceProviderConfigGetObjectScimV2"></a>
 # **serviceProviderConfigGetObjectScimV2**
-> ScimMinusServiceProviderConfig serviceProviderConfigGetObjectScimV2()
+> ScimServiceProviderConfig serviceProviderConfigGetObjectScimV2()
 
 Get Service Provider Configuration
 
@@ -21,7 +21,7 @@ Get Service Provider Configuration
 
 val apiInstance = ScimServiceProviderConfigApi()
 try {
-    val result : ScimMinusServiceProviderConfig = apiInstance.serviceProviderConfigGetObjectScimV2()
+    val result : ScimServiceProviderConfig = apiInstance.serviceProviderConfigGetObjectScimV2()
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ScimServiceProviderConfigApi#serviceProviderConfigGetObjectScimV2")
@@ -37,7 +37,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ScimMinusServiceProviderConfig**](ScimMinusServiceProviderConfig.md)
+[**ScimServiceProviderConfig**](ScimServiceProviderConfig.md)
 
 ### Authorization
 

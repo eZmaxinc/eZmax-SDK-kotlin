@@ -1,10 +1,10 @@
 
-# PermissionMinusGetObjectMinusV2MinusResponseMinusMPayload
+# PermissionGetObjectV2ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objPermission** | [**PermissionMinusResponseCompound**](PermissionMinusResponseCompound.md) |  | 
+**objPermission** | [**PermissionResponseCompound**](PermissionResponseCompound.md) |  | 
 
 
 

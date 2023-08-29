@@ -1,12 +1,12 @@
 
-# FranchisebrokerMinusGetAutocompleteMinusV2MinusResponse
+# FranchisebrokerGetAutocompleteV2Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**FranchisebrokerMinusGetAutocompleteMinusV2MinusResponseMinusMPayload**](FranchisebrokerMinusGetAutocompleteMinusV2MinusResponseMinusMPayload.md) |  | 
-**objDebugPayload** | [**CommonMinusResponseMinusObjDebugPayload**](CommonMinusResponseMinusObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonMinusResponseMinusObjDebug**](CommonMinusResponseMinusObjDebug.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
+**mPayload** | [**FranchisebrokerGetAutocompleteV2ResponseMPayload**](FranchisebrokerGetAutocompleteV2ResponseMPayload.md) |  | 
+**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 
 
 

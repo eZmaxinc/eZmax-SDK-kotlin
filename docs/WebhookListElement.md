@@ -1,5 +1,5 @@
 
-# WebhookMinusListElement
+# WebhookListElement
 
 ## Properties
 Name | Type | Description | Notes
@@ -9,10 +9,10 @@ Name | Type | Description | Notes
 **sWebhookUrl** | **kotlin.String** | The URL of the Webhook callback | 
 **sWebhookEvent** | **kotlin.String** | The concatenated string to describe the Webhook event | 
 **sWebhookEmailfailed** | **kotlin.String** | The email that will receive the Webhook in case all attempts fail | 
-**eWebhookModule** | [**FieldMinusEWebhookModule**](FieldMinusEWebhookModule.md) |  | 
+**eWebhookModule** | [**FieldEWebhookModule**](FieldEWebhookModule.md) |  | 
 **bWebhookIsactive** | **kotlin.Boolean** | Whether the Webhook is active or not | 
-**eWebhookEzsignevent** | [**FieldMinusEWebhookEzsignevent**](FieldMinusEWebhookEzsignevent.md) |  |  [optional]
-**eWebhookManagementevent** | [**FieldMinusEWebhookManagementevent**](FieldMinusEWebhookManagementevent.md) |  |  [optional]
+**eWebhookEzsignevent** | [**FieldEWebhookEzsignevent**](FieldEWebhookEzsignevent.md) |  |  [optional]
+**eWebhookManagementevent** | [**FieldEWebhookManagementevent**](FieldEWebhookManagementevent.md) |  |  [optional]
 
 
 

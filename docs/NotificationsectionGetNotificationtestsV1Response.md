@@ -1,12 +1,12 @@
 
-# NotificationsectionMinusGetNotificationtestsMinusV1MinusResponse
+# NotificationsectionGetNotificationtestsV1Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**NotificationsectionMinusGetNotificationtestsMinusV1MinusResponseMinusMPayload**](NotificationsectionMinusGetNotificationtestsMinusV1MinusResponseMinusMPayload.md) |  | 
-**objDebugPayload** | [**CommonMinusResponseMinusObjDebugPayload**](CommonMinusResponseMinusObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonMinusResponseMinusObjDebug**](CommonMinusResponseMinusObjDebug.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
+**mPayload** | [**NotificationsectionGetNotificationtestsV1ResponseMPayload**](NotificationsectionGetNotificationtestsV1ResponseMPayload.md) |  | 
+**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 
 
 

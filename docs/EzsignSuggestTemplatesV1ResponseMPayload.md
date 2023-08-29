@@ -1,11 +1,11 @@
 
-# EzsignMinusSuggestTemplatesMinusV1MinusResponseMinusMPayload
+# EzsignSuggestTemplatesV1ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjEzsigntemplate** | [**kotlin.collections.List&lt;EzsigntemplateMinusResponseCompound&gt;**](EzsigntemplateMinusResponseCompound.md) |  | 
-**aObjEzsigntemplatepackage** | [**kotlin.collections.List&lt;EzsigntemplatepackageMinusResponseCompound&gt;**](EzsigntemplatepackageMinusResponseCompound.md) |  | 
+**aObjEzsigntemplate** | [**kotlin.collections.List&lt;EzsigntemplateResponseCompound&gt;**](EzsigntemplateResponseCompound.md) |  | 
+**aObjEzsigntemplatepackage** | [**kotlin.collections.List&lt;EzsigntemplatepackageResponseCompound&gt;**](EzsigntemplatepackageResponseCompound.md) |  | 
 
 
 

@@ -1,5 +1,5 @@
 
-# CustomMinusDropdownElementMinusRequestCompound
+# CustomDropdownElementRequestCompound
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,10 +1,10 @@
 
-# EzsignfolderMinusGetEzsignfoldersignerassociationsMinusV1MinusResponseMinusMPayload
+# EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjEzsignfoldersignerassociation** | [**kotlin.collections.List&lt;CustomMinusEzsignfoldersignerassociationActionableElementMinusResponse&gt;**](CustomMinusEzsignfoldersignerassociationActionableElementMinusResponse.md) |  | 
+**aObjEzsignfoldersignerassociation** | [**kotlin.collections.List&lt;CustomEzsignfoldersignerassociationActionableElementResponse&gt;**](CustomEzsignfoldersignerassociationActionableElementResponse.md) |  | 
 
 
 

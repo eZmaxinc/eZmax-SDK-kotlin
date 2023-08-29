@@ -1,5 +1,5 @@
 
-# FieldMinusEEzsignfoldertypeSendreminderfrequency
+# FieldEEzsignfoldertypeSendreminderfrequency
 
 ## Enum
 

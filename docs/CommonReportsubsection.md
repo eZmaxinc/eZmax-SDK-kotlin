@@ -1,12 +1,12 @@
 
-# CommonMinusReportsubsection
+# CommonReportsubsection
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objReportsubsectionpartHeader** | [**CommonMinusReportsubsectionpart**](CommonMinusReportsubsectionpart.md) |  | 
-**objReportsubsectionpartBody** | [**CommonMinusReportsubsectionpart**](CommonMinusReportsubsectionpart.md) |  | 
-**objReportsubsectionpartFooter** | [**CommonMinusReportsubsectionpart**](CommonMinusReportsubsectionpart.md) |  | 
+**objReportsubsectionpartHeader** | [**CommonReportsubsectionpart**](CommonReportsubsectionpart.md) |  | 
+**objReportsubsectionpartBody** | [**CommonReportsubsectionpart**](CommonReportsubsectionpart.md) |  | 
+**objReportsubsectionpartFooter** | [**CommonReportsubsectionpart**](CommonReportsubsectionpart.md) |  | 
 
 
 

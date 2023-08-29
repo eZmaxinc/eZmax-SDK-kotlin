@@ -1,5 +1,5 @@
 
-# EmailtypeMinusAutocompleteElementMinusResponse
+# EmailtypeAutocompleteElementResponse
 
 ## Properties
 Name | Type | Description | Notes

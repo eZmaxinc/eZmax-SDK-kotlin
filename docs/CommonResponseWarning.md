@@ -1,5 +1,5 @@
 
-# CommonMinusResponseMinusWarning
+# CommonResponseWarning
 
 ## Properties
 Name | Type | Description | Notes

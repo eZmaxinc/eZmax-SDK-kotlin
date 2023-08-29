@@ -1,5 +1,5 @@
 
-# WebsocketMinusRequestServerMinusGetWebsocketIDMinusV1
+# WebsocketRequestServerGetWebsocketIDV1
 
 ## Properties
 Name | Type | Description | Notes

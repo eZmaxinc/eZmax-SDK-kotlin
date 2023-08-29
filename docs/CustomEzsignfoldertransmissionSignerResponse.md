@@ -1,5 +1,5 @@
 
-# CustomMinusEzsignfoldertransmissionSignerMinusResponse
+# CustomEzsignfoldertransmissionSignerResponse
 
 ## Properties
 Name | Type | Description | Notes

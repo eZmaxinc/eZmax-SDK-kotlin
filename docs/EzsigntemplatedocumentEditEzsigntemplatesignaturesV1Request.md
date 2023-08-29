@@ -1,10 +1,10 @@
 
-# EzsigntemplatedocumentMinusEditEzsigntemplatesignaturesMinusV1MinusRequest
+# EzsigntemplatedocumentEditEzsigntemplatesignaturesV1Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjEzsigntemplatesignature** | [**kotlin.collections.List&lt;EzsigntemplatesignatureMinusRequestCompound&gt;**](EzsigntemplatesignatureMinusRequestCompound.md) |  | 
+**aObjEzsigntemplatesignature** | [**kotlin.collections.List&lt;EzsigntemplatesignatureRequestCompound&gt;**](EzsigntemplatesignatureRequestCompound.md) |  | 
 
 
 

@@ -1,5 +1,5 @@
 
-# FieldMinusEActivesessionUsertype
+# FieldEActivesessionUsertype
 
 ## Enum
 

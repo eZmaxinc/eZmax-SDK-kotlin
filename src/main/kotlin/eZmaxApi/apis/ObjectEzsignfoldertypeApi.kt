@@ -19,16 +19,16 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonMinusGetAutocompleteMinusV1MinusResponse
-import eZmaxApi.models.CommonMinusResponseMinusError
-import eZmaxApi.models.EzsignfoldertypeMinusCreateObjectMinusV1MinusRequest
-import eZmaxApi.models.EzsignfoldertypeMinusCreateObjectMinusV1MinusResponse
-import eZmaxApi.models.EzsignfoldertypeMinusEditObjectMinusV1MinusRequest
-import eZmaxApi.models.EzsignfoldertypeMinusEditObjectMinusV1MinusResponse
-import eZmaxApi.models.EzsignfoldertypeMinusGetAutocompleteMinusV2MinusResponse
-import eZmaxApi.models.EzsignfoldertypeMinusGetListMinusV1MinusResponse
-import eZmaxApi.models.EzsignfoldertypeMinusGetObjectMinusV2MinusResponse
-import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
+import eZmaxApi.models.CommonGetAutocompleteV1Response
+import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.EzsignfoldertypeCreateObjectV1Request
+import eZmaxApi.models.EzsignfoldertypeCreateObjectV1Response
+import eZmaxApi.models.EzsignfoldertypeEditObjectV1Request
+import eZmaxApi.models.EzsignfoldertypeEditObjectV1Response
+import eZmaxApi.models.EzsignfoldertypeGetAutocompleteV2Response
+import eZmaxApi.models.EzsignfoldertypeGetListV1Response
+import eZmaxApi.models.EzsignfoldertypeGetObjectV2Response
+import eZmaxApi.models.HeaderAcceptLanguage
 
 import com.squareup.moshi.Json
 
@@ -57,8 +57,8 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
     /**
      * Create a new Ezsignfoldertype
      * The endpoint allows to create one or many elements at once.
-     * @param ezsignfoldertypeMinusCreateObjectMinusV1MinusRequest 
-     * @return EzsignfoldertypeMinusCreateObjectMinusV1MinusResponse
+     * @param ezsignfoldertypeCreateObjectV1Request 
+     * @return EzsignfoldertypeCreateObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -67,11 +67,11 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignfoldertypeCreateObjectV1(ezsignfoldertypeMinusCreateObjectMinusV1MinusRequest: EzsignfoldertypeMinusCreateObjectMinusV1MinusRequest) : EzsignfoldertypeMinusCreateObjectMinusV1MinusResponse {
-        val localVarResponse = ezsignfoldertypeCreateObjectV1WithHttpInfo(ezsignfoldertypeMinusCreateObjectMinusV1MinusRequest = ezsignfoldertypeMinusCreateObjectMinusV1MinusRequest)
+    fun ezsignfoldertypeCreateObjectV1(ezsignfoldertypeCreateObjectV1Request: EzsignfoldertypeCreateObjectV1Request) : EzsignfoldertypeCreateObjectV1Response {
+        val localVarResponse = ezsignfoldertypeCreateObjectV1WithHttpInfo(ezsignfoldertypeCreateObjectV1Request = ezsignfoldertypeCreateObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfoldertypeMinusCreateObjectMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfoldertypeCreateObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -88,17 +88,17 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
     /**
      * Create a new Ezsignfoldertype
      * The endpoint allows to create one or many elements at once.
-     * @param ezsignfoldertypeMinusCreateObjectMinusV1MinusRequest 
-     * @return ApiResponse<EzsignfoldertypeMinusCreateObjectMinusV1MinusResponse?>
+     * @param ezsignfoldertypeCreateObjectV1Request 
+     * @return ApiResponse<EzsignfoldertypeCreateObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignfoldertypeCreateObjectV1WithHttpInfo(ezsignfoldertypeMinusCreateObjectMinusV1MinusRequest: EzsignfoldertypeMinusCreateObjectMinusV1MinusRequest) : ApiResponse<EzsignfoldertypeMinusCreateObjectMinusV1MinusResponse?> {
-        val localVariableConfig = ezsignfoldertypeCreateObjectV1RequestConfig(ezsignfoldertypeMinusCreateObjectMinusV1MinusRequest = ezsignfoldertypeMinusCreateObjectMinusV1MinusRequest)
+    fun ezsignfoldertypeCreateObjectV1WithHttpInfo(ezsignfoldertypeCreateObjectV1Request: EzsignfoldertypeCreateObjectV1Request) : ApiResponse<EzsignfoldertypeCreateObjectV1Response?> {
+        val localVariableConfig = ezsignfoldertypeCreateObjectV1RequestConfig(ezsignfoldertypeCreateObjectV1Request = ezsignfoldertypeCreateObjectV1Request)
 
-        return request<EzsignfoldertypeMinusCreateObjectMinusV1MinusRequest, EzsignfoldertypeMinusCreateObjectMinusV1MinusResponse>(
+        return request<EzsignfoldertypeCreateObjectV1Request, EzsignfoldertypeCreateObjectV1Response>(
             localVariableConfig
         )
     }
@@ -106,11 +106,11 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
     /**
      * To obtain the request config of the operation ezsignfoldertypeCreateObjectV1
      *
-     * @param ezsignfoldertypeMinusCreateObjectMinusV1MinusRequest 
+     * @param ezsignfoldertypeCreateObjectV1Request 
      * @return RequestConfig
      */
-    fun ezsignfoldertypeCreateObjectV1RequestConfig(ezsignfoldertypeMinusCreateObjectMinusV1MinusRequest: EzsignfoldertypeMinusCreateObjectMinusV1MinusRequest) : RequestConfig<EzsignfoldertypeMinusCreateObjectMinusV1MinusRequest> {
-        val localVariableBody = ezsignfoldertypeMinusCreateObjectMinusV1MinusRequest
+    fun ezsignfoldertypeCreateObjectV1RequestConfig(ezsignfoldertypeCreateObjectV1Request: EzsignfoldertypeCreateObjectV1Request) : RequestConfig<EzsignfoldertypeCreateObjectV1Request> {
+        val localVariableBody = ezsignfoldertypeCreateObjectV1Request
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Content-Type"] = "application/json"
@@ -130,8 +130,8 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
      * Edit an existing Ezsignfoldertype
      * 
      * @param pkiEzsignfoldertypeID 
-     * @param ezsignfoldertypeMinusEditObjectMinusV1MinusRequest 
-     * @return EzsignfoldertypeMinusEditObjectMinusV1MinusResponse
+     * @param ezsignfoldertypeEditObjectV1Request 
+     * @return EzsignfoldertypeEditObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -140,11 +140,11 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignfoldertypeEditObjectV1(pkiEzsignfoldertypeID: kotlin.Int, ezsignfoldertypeMinusEditObjectMinusV1MinusRequest: EzsignfoldertypeMinusEditObjectMinusV1MinusRequest) : EzsignfoldertypeMinusEditObjectMinusV1MinusResponse {
-        val localVarResponse = ezsignfoldertypeEditObjectV1WithHttpInfo(pkiEzsignfoldertypeID = pkiEzsignfoldertypeID, ezsignfoldertypeMinusEditObjectMinusV1MinusRequest = ezsignfoldertypeMinusEditObjectMinusV1MinusRequest)
+    fun ezsignfoldertypeEditObjectV1(pkiEzsignfoldertypeID: kotlin.Int, ezsignfoldertypeEditObjectV1Request: EzsignfoldertypeEditObjectV1Request) : EzsignfoldertypeEditObjectV1Response {
+        val localVarResponse = ezsignfoldertypeEditObjectV1WithHttpInfo(pkiEzsignfoldertypeID = pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV1Request = ezsignfoldertypeEditObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfoldertypeMinusEditObjectMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfoldertypeEditObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -162,17 +162,17 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
      * Edit an existing Ezsignfoldertype
      * 
      * @param pkiEzsignfoldertypeID 
-     * @param ezsignfoldertypeMinusEditObjectMinusV1MinusRequest 
-     * @return ApiResponse<EzsignfoldertypeMinusEditObjectMinusV1MinusResponse?>
+     * @param ezsignfoldertypeEditObjectV1Request 
+     * @return ApiResponse<EzsignfoldertypeEditObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignfoldertypeEditObjectV1WithHttpInfo(pkiEzsignfoldertypeID: kotlin.Int, ezsignfoldertypeMinusEditObjectMinusV1MinusRequest: EzsignfoldertypeMinusEditObjectMinusV1MinusRequest) : ApiResponse<EzsignfoldertypeMinusEditObjectMinusV1MinusResponse?> {
-        val localVariableConfig = ezsignfoldertypeEditObjectV1RequestConfig(pkiEzsignfoldertypeID = pkiEzsignfoldertypeID, ezsignfoldertypeMinusEditObjectMinusV1MinusRequest = ezsignfoldertypeMinusEditObjectMinusV1MinusRequest)
+    fun ezsignfoldertypeEditObjectV1WithHttpInfo(pkiEzsignfoldertypeID: kotlin.Int, ezsignfoldertypeEditObjectV1Request: EzsignfoldertypeEditObjectV1Request) : ApiResponse<EzsignfoldertypeEditObjectV1Response?> {
+        val localVariableConfig = ezsignfoldertypeEditObjectV1RequestConfig(pkiEzsignfoldertypeID = pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV1Request = ezsignfoldertypeEditObjectV1Request)
 
-        return request<EzsignfoldertypeMinusEditObjectMinusV1MinusRequest, EzsignfoldertypeMinusEditObjectMinusV1MinusResponse>(
+        return request<EzsignfoldertypeEditObjectV1Request, EzsignfoldertypeEditObjectV1Response>(
             localVariableConfig
         )
     }
@@ -181,11 +181,11 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
      * To obtain the request config of the operation ezsignfoldertypeEditObjectV1
      *
      * @param pkiEzsignfoldertypeID 
-     * @param ezsignfoldertypeMinusEditObjectMinusV1MinusRequest 
+     * @param ezsignfoldertypeEditObjectV1Request 
      * @return RequestConfig
      */
-    fun ezsignfoldertypeEditObjectV1RequestConfig(pkiEzsignfoldertypeID: kotlin.Int, ezsignfoldertypeMinusEditObjectMinusV1MinusRequest: EzsignfoldertypeMinusEditObjectMinusV1MinusRequest) : RequestConfig<EzsignfoldertypeMinusEditObjectMinusV1MinusRequest> {
-        val localVariableBody = ezsignfoldertypeMinusEditObjectMinusV1MinusRequest
+    fun ezsignfoldertypeEditObjectV1RequestConfig(pkiEzsignfoldertypeID: kotlin.Int, ezsignfoldertypeEditObjectV1Request: EzsignfoldertypeEditObjectV1Request) : RequestConfig<EzsignfoldertypeEditObjectV1Request> {
+        val localVariableBody = ezsignfoldertypeEditObjectV1Request
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Content-Type"] = "application/json"
@@ -204,7 +204,7 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
     /**
      * enum for parameter sSelector
      */
-     enum class SSelector_ezsignfoldertypeGetAutocompleteV1(val value: kotlin.String) {
+     enum class SSelectorEzsignfoldertypeGetAutocompleteV1(val value: kotlin.String) {
          @Json(name = "Active") Active("Active"),
          @Json(name = "All") All("All")
      }
@@ -212,7 +212,7 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
     /**
      * enum for parameter eFilterActive
      */
-     enum class EFilterActive_ezsignfoldertypeGetAutocompleteV1(val value: kotlin.String) {
+     enum class EFilterActiveEzsignfoldertypeGetAutocompleteV1(val value: kotlin.String) {
          @Json(name = "All") All("All"),
          @Json(name = "Active") Active("Active"),
          @Json(name = "Inactive") Inactive("Inactive")
@@ -225,7 +225,7 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return CommonMinusGetAutocompleteMinusV1MinusResponse
+     * @return CommonGetAutocompleteV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -235,12 +235,12 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     @Deprecated(message = "This operation is deprecated.")
-    fun ezsignfoldertypeGetAutocompleteV1(sSelector: SSelector_ezsignfoldertypeGetAutocompleteV1, eFilterActive: EFilterActive_ezsignfoldertypeGetAutocompleteV1? = EFilterActive_ezsignfoldertypeGetAutocompleteV1.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null) : CommonMinusGetAutocompleteMinusV1MinusResponse {
+    fun ezsignfoldertypeGetAutocompleteV1(sSelector: SSelectorEzsignfoldertypeGetAutocompleteV1, eFilterActive: EFilterActiveEzsignfoldertypeGetAutocompleteV1? = EFilterActiveEzsignfoldertypeGetAutocompleteV1.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderAcceptLanguage? = null) : CommonGetAutocompleteV1Response {
         @Suppress("DEPRECATION")
         val localVarResponse = ezsignfoldertypeGetAutocompleteV1WithHttpInfo(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonMinusGetAutocompleteMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonGetAutocompleteV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -261,18 +261,18 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return ApiResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?>
+     * @return ApiResponse<CommonGetAutocompleteV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
     @Deprecated(message = "This operation is deprecated.")
-    fun ezsignfoldertypeGetAutocompleteV1WithHttpInfo(sSelector: SSelector_ezsignfoldertypeGetAutocompleteV1, eFilterActive: EFilterActive_ezsignfoldertypeGetAutocompleteV1?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : ApiResponse<CommonMinusGetAutocompleteMinusV1MinusResponse?> {
+    fun ezsignfoldertypeGetAutocompleteV1WithHttpInfo(sSelector: SSelectorEzsignfoldertypeGetAutocompleteV1, eFilterActive: EFilterActiveEzsignfoldertypeGetAutocompleteV1?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : ApiResponse<CommonGetAutocompleteV1Response?> {
         @Suppress("DEPRECATION")
         val localVariableConfig = ezsignfoldertypeGetAutocompleteV1RequestConfig(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
-        return request<Unit, CommonMinusGetAutocompleteMinusV1MinusResponse>(
+        return request<Unit, CommonGetAutocompleteV1Response>(
             localVariableConfig
         )
     }
@@ -287,12 +287,12 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
      * @return RequestConfig
      */
     @Deprecated(message = "This operation is deprecated.")
-    fun ezsignfoldertypeGetAutocompleteV1RequestConfig(sSelector: SSelector_ezsignfoldertypeGetAutocompleteV1, eFilterActive: EFilterActive_ezsignfoldertypeGetAutocompleteV1?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : RequestConfig<Unit> {
+    fun ezsignfoldertypeGetAutocompleteV1RequestConfig(sSelector: SSelectorEzsignfoldertypeGetAutocompleteV1, eFilterActive: EFilterActiveEzsignfoldertypeGetAutocompleteV1?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
                 if (eFilterActive != null) {
-                    put("eFilterActive", listOf(eFilterActive.toString()))
+                    put("eFilterActive", listOf(eFilterActive.value))
                 }
                 if (sQuery != null) {
                     put("sQuery", listOf(sQuery.toString()))
@@ -315,7 +315,7 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
     /**
      * enum for parameter sSelector
      */
-     enum class SSelector_ezsignfoldertypeGetAutocompleteV2(val value: kotlin.String) {
+     enum class SSelectorEzsignfoldertypeGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "Active") Active("Active"),
          @Json(name = "All") All("All")
      }
@@ -323,7 +323,7 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
     /**
      * enum for parameter eFilterActive
      */
-     enum class EFilterActive_ezsignfoldertypeGetAutocompleteV2(val value: kotlin.String) {
+     enum class EFilterActiveEzsignfoldertypeGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "All") All("All"),
          @Json(name = "Active") Active("Active"),
          @Json(name = "Inactive") Inactive("Inactive")
@@ -336,7 +336,7 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return EzsignfoldertypeMinusGetAutocompleteMinusV2MinusResponse
+     * @return EzsignfoldertypeGetAutocompleteV2Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -345,11 +345,11 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignfoldertypeGetAutocompleteV2(sSelector: SSelector_ezsignfoldertypeGetAutocompleteV2, eFilterActive: EFilterActive_ezsignfoldertypeGetAutocompleteV2? = EFilterActive_ezsignfoldertypeGetAutocompleteV2.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null) : EzsignfoldertypeMinusGetAutocompleteMinusV2MinusResponse {
+    fun ezsignfoldertypeGetAutocompleteV2(sSelector: SSelectorEzsignfoldertypeGetAutocompleteV2, eFilterActive: EFilterActiveEzsignfoldertypeGetAutocompleteV2? = EFilterActiveEzsignfoldertypeGetAutocompleteV2.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderAcceptLanguage? = null) : EzsignfoldertypeGetAutocompleteV2Response {
         val localVarResponse = ezsignfoldertypeGetAutocompleteV2WithHttpInfo(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfoldertypeMinusGetAutocompleteMinusV2MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfoldertypeGetAutocompleteV2Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -370,16 +370,16 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return ApiResponse<EzsignfoldertypeMinusGetAutocompleteMinusV2MinusResponse?>
+     * @return ApiResponse<EzsignfoldertypeGetAutocompleteV2Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignfoldertypeGetAutocompleteV2WithHttpInfo(sSelector: SSelector_ezsignfoldertypeGetAutocompleteV2, eFilterActive: EFilterActive_ezsignfoldertypeGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : ApiResponse<EzsignfoldertypeMinusGetAutocompleteMinusV2MinusResponse?> {
+    fun ezsignfoldertypeGetAutocompleteV2WithHttpInfo(sSelector: SSelectorEzsignfoldertypeGetAutocompleteV2, eFilterActive: EFilterActiveEzsignfoldertypeGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : ApiResponse<EzsignfoldertypeGetAutocompleteV2Response?> {
         val localVariableConfig = ezsignfoldertypeGetAutocompleteV2RequestConfig(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
-        return request<Unit, EzsignfoldertypeMinusGetAutocompleteMinusV2MinusResponse>(
+        return request<Unit, EzsignfoldertypeGetAutocompleteV2Response>(
             localVariableConfig
         )
     }
@@ -393,12 +393,12 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
      * @param acceptLanguage  (optional)
      * @return RequestConfig
      */
-    fun ezsignfoldertypeGetAutocompleteV2RequestConfig(sSelector: SSelector_ezsignfoldertypeGetAutocompleteV2, eFilterActive: EFilterActive_ezsignfoldertypeGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : RequestConfig<Unit> {
+    fun ezsignfoldertypeGetAutocompleteV2RequestConfig(sSelector: SSelectorEzsignfoldertypeGetAutocompleteV2, eFilterActive: EFilterActiveEzsignfoldertypeGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
                 if (eFilterActive != null) {
-                    put("eFilterActive", listOf(eFilterActive.toString()))
+                    put("eFilterActive", listOf(eFilterActive.value))
                 }
                 if (sQuery != null) {
                     put("sQuery", listOf(sQuery.toString()))
@@ -421,7 +421,7 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
     /**
      * enum for parameter eOrderBy
      */
-     enum class EOrderBy_ezsignfoldertypeGetListV1(val value: kotlin.String) {
+     enum class EOrderByEzsignfoldertypeGetListV1(val value: kotlin.String) {
          @Json(name = "pkiEzsignfoldertypeID_ASC") pkiEzsignfoldertypeID_ASC("pkiEzsignfoldertypeID_ASC"),
          @Json(name = "pkiEzsignfoldertypeID_DESC") pkiEzsignfoldertypeID_DESC("pkiEzsignfoldertypeID_DESC"),
          @Json(name = "eEzsignfoldertypePrivacylevel_ASC") eEzsignfoldertypePrivacylevel_ASC("eEzsignfoldertypePrivacylevel_ASC"),
@@ -440,7 +440,7 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
      * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
-     * @return EzsignfoldertypeMinusGetListMinusV1MinusResponse
+     * @return EzsignfoldertypeGetListV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -449,11 +449,11 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignfoldertypeGetListV1(eOrderBy: EOrderBy_ezsignfoldertypeGetListV1? = null, iRowMax: kotlin.Int? = 10000, iRowOffset: kotlin.Int? = 0, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null, sFilter: kotlin.String? = null) : EzsignfoldertypeMinusGetListMinusV1MinusResponse {
+    fun ezsignfoldertypeGetListV1(eOrderBy: EOrderByEzsignfoldertypeGetListV1? = null, iRowMax: kotlin.Int? = 10000, iRowOffset: kotlin.Int? = 0, acceptLanguage: HeaderAcceptLanguage? = null, sFilter: kotlin.String? = null) : EzsignfoldertypeGetListV1Response {
         val localVarResponse = ezsignfoldertypeGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfoldertypeMinusGetListMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfoldertypeGetListV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -475,16 +475,16 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
      * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
-     * @return ApiResponse<EzsignfoldertypeMinusGetListMinusV1MinusResponse?>
+     * @return ApiResponse<EzsignfoldertypeGetListV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignfoldertypeGetListV1WithHttpInfo(eOrderBy: EOrderBy_ezsignfoldertypeGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : ApiResponse<EzsignfoldertypeMinusGetListMinusV1MinusResponse?> {
+    fun ezsignfoldertypeGetListV1WithHttpInfo(eOrderBy: EOrderByEzsignfoldertypeGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : ApiResponse<EzsignfoldertypeGetListV1Response?> {
         val localVariableConfig = ezsignfoldertypeGetListV1RequestConfig(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
 
-        return request<Unit, EzsignfoldertypeMinusGetListMinusV1MinusResponse>(
+        return request<Unit, EzsignfoldertypeGetListV1Response>(
             localVariableConfig
         )
     }
@@ -499,12 +499,12 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
      * @param sFilter  (optional)
      * @return RequestConfig
      */
-    fun ezsignfoldertypeGetListV1RequestConfig(eOrderBy: EOrderBy_ezsignfoldertypeGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
+    fun ezsignfoldertypeGetListV1RequestConfig(eOrderBy: EOrderByEzsignfoldertypeGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
                 if (eOrderBy != null) {
-                    put("eOrderBy", listOf(eOrderBy.toString()))
+                    put("eOrderBy", listOf(eOrderBy.value))
                 }
                 if (iRowMax != null) {
                     put("iRowMax", listOf(iRowMax.toString()))
@@ -534,7 +534,7 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
      * Retrieve an existing Ezsignfoldertype
      * 
      * @param pkiEzsignfoldertypeID 
-     * @return EzsignfoldertypeMinusGetObjectMinusV2MinusResponse
+     * @return EzsignfoldertypeGetObjectV2Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -543,11 +543,11 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignfoldertypeGetObjectV2(pkiEzsignfoldertypeID: kotlin.Int) : EzsignfoldertypeMinusGetObjectMinusV2MinusResponse {
+    fun ezsignfoldertypeGetObjectV2(pkiEzsignfoldertypeID: kotlin.Int) : EzsignfoldertypeGetObjectV2Response {
         val localVarResponse = ezsignfoldertypeGetObjectV2WithHttpInfo(pkiEzsignfoldertypeID = pkiEzsignfoldertypeID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfoldertypeMinusGetObjectMinusV2MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfoldertypeGetObjectV2Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -565,16 +565,16 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
      * Retrieve an existing Ezsignfoldertype
      * 
      * @param pkiEzsignfoldertypeID 
-     * @return ApiResponse<EzsignfoldertypeMinusGetObjectMinusV2MinusResponse?>
+     * @return ApiResponse<EzsignfoldertypeGetObjectV2Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignfoldertypeGetObjectV2WithHttpInfo(pkiEzsignfoldertypeID: kotlin.Int) : ApiResponse<EzsignfoldertypeMinusGetObjectMinusV2MinusResponse?> {
+    fun ezsignfoldertypeGetObjectV2WithHttpInfo(pkiEzsignfoldertypeID: kotlin.Int) : ApiResponse<EzsignfoldertypeGetObjectV2Response?> {
         val localVariableConfig = ezsignfoldertypeGetObjectV2RequestConfig(pkiEzsignfoldertypeID = pkiEzsignfoldertypeID)
 
-        return request<Unit, EzsignfoldertypeMinusGetObjectMinusV2MinusResponse>(
+        return request<Unit, EzsignfoldertypeGetObjectV2Response>(
             localVariableConfig
         )
     }

@@ -1,5 +1,5 @@
 
-# EzsignfolderMinusBatchDownloadMinusV1MinusRequest
+# EzsignfolderBatchDownloadV1Request
 
 ## Properties
 Name | Type | Description | Notes

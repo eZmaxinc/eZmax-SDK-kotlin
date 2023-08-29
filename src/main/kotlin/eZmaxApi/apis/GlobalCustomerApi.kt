@@ -19,8 +19,8 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonMinusResponseMinusError
-import eZmaxApi.models.GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse
+import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.GlobalCustomerGetEndpointV1Response
 
 import com.squareup.moshi.Json
 
@@ -49,7 +49,7 @@ class GlobalCustomerApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
     /**
      * enum for parameter sInfrastructureproductCode
      */
-     enum class SInfrastructureproductCode_globalCustomerGetEndpointV1(val value: kotlin.String) {
+     enum class SInfrastructureproductCodeGlobalCustomerGetEndpointV1(val value: kotlin.String) {
          @Json(name = "appcluster01") appcluster01("appcluster01"),
          @Json(name = "ezsignuser") ezsignuser("ezsignuser")
      }
@@ -59,7 +59,7 @@ class GlobalCustomerApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      * Retrieve the customer&#39;s specific server endpoint where to send requests. This will help locate the proper region (ie: sInfrastructureregionCode) and the proper environment (ie: sInfrastructureenvironmenttypeDescription) where the customer&#39;s data is stored.
      * @param pksCustomerCode 
      * @param sInfrastructureproductCode The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)
-     * @return GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse
+     * @return GlobalCustomerGetEndpointV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -69,12 +69,12 @@ class GlobalCustomerApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     @Deprecated(message = "This operation is deprecated.")
-    fun globalCustomerGetEndpointV1(pksCustomerCode: kotlin.String, sInfrastructureproductCode: SInfrastructureproductCode_globalCustomerGetEndpointV1? = null) : GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse {
+    fun globalCustomerGetEndpointV1(pksCustomerCode: kotlin.String, sInfrastructureproductCode: SInfrastructureproductCodeGlobalCustomerGetEndpointV1? = null) : GlobalCustomerGetEndpointV1Response {
         @Suppress("DEPRECATION")
         val localVarResponse = globalCustomerGetEndpointV1WithHttpInfo(pksCustomerCode = pksCustomerCode, sInfrastructureproductCode = sInfrastructureproductCode)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as GlobalCustomerGetEndpointV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -93,18 +93,18 @@ class GlobalCustomerApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      * Retrieve the customer&#39;s specific server endpoint where to send requests. This will help locate the proper region (ie: sInfrastructureregionCode) and the proper environment (ie: sInfrastructureenvironmenttypeDescription) where the customer&#39;s data is stored.
      * @param pksCustomerCode 
      * @param sInfrastructureproductCode The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)
-     * @return ApiResponse<GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse?>
+     * @return ApiResponse<GlobalCustomerGetEndpointV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
     @Deprecated(message = "This operation is deprecated.")
-    fun globalCustomerGetEndpointV1WithHttpInfo(pksCustomerCode: kotlin.String, sInfrastructureproductCode: SInfrastructureproductCode_globalCustomerGetEndpointV1?) : ApiResponse<GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse?> {
+    fun globalCustomerGetEndpointV1WithHttpInfo(pksCustomerCode: kotlin.String, sInfrastructureproductCode: SInfrastructureproductCodeGlobalCustomerGetEndpointV1?) : ApiResponse<GlobalCustomerGetEndpointV1Response?> {
         @Suppress("DEPRECATION")
         val localVariableConfig = globalCustomerGetEndpointV1RequestConfig(pksCustomerCode = pksCustomerCode, sInfrastructureproductCode = sInfrastructureproductCode)
 
-        return request<Unit, GlobalMinusCustomerMinusGetEndpointMinusV1MinusResponse>(
+        return request<Unit, GlobalCustomerGetEndpointV1Response>(
             localVariableConfig
         )
     }
@@ -117,12 +117,12 @@ class GlobalCustomerApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      * @return RequestConfig
      */
     @Deprecated(message = "This operation is deprecated.")
-    fun globalCustomerGetEndpointV1RequestConfig(pksCustomerCode: kotlin.String, sInfrastructureproductCode: SInfrastructureproductCode_globalCustomerGetEndpointV1?) : RequestConfig<Unit> {
+    fun globalCustomerGetEndpointV1RequestConfig(pksCustomerCode: kotlin.String, sInfrastructureproductCode: SInfrastructureproductCodeGlobalCustomerGetEndpointV1?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
                 if (sInfrastructureproductCode != null) {
-                    put("sInfrastructureproductCode", listOf(sInfrastructureproductCode.toString()))
+                    put("sInfrastructureproductCode", listOf(sInfrastructureproductCode.value))
                 }
             }
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()

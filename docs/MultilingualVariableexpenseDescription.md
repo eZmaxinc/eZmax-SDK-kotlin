@@ -1,5 +1,5 @@
 
-# MultilingualMinusVariableexpenseDescription
+# MultilingualVariableexpenseDescription
 
 ## Properties
 Name | Type | Description | Notes

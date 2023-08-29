@@ -1,5 +1,5 @@
 
-# PermissionMinusRequest
+# PermissionRequest
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,10 +1,10 @@
 
-# EzsignfolderMinusGetFormsDataMinusV1MinusResponseMinusMPayload
+# EzsignfolderGetFormsDataV1ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objFormsDataFolder** | [**CustomMinusFormsDataFolderMinusResponse**](CustomMinusFormsDataFolderMinusResponse.md) |  | 
+**objFormsDataFolder** | [**CustomFormsDataFolderResponse**](CustomFormsDataFolderResponse.md) |  | 
 
 
 

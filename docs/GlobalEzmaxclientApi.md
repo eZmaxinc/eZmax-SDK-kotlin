@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a id="globalEzmaxclientVersionV1"></a>
 # **globalEzmaxclientVersionV1**
-> GlobalMinusEzmaxclientMinusVersionMinusV1MinusResponse globalEzmaxclientVersionV1(pksEzmaxclientOs)
+> GlobalEzmaxclientVersionV1Response globalEzmaxclientVersionV1(pksEzmaxclientOs)
 
 Retrieve the latest version of the Ezmaxclient
 
@@ -22,9 +22,9 @@ Retrieve the latest version of the Ezmaxclient that is available on the store.
 //import eZmaxApi.models.*
 
 val apiInstance = GlobalEzmaxclientApi()
-val pksEzmaxclientOs : FieldMinusPksEzmaxclientOs =  // FieldMinusPksEzmaxclientOs | 
+val pksEzmaxclientOs : FieldPksEzmaxclientOs =  // FieldPksEzmaxclientOs | 
 try {
-    val result : GlobalMinusEzmaxclientMinusVersionMinusV1MinusResponse = apiInstance.globalEzmaxclientVersionV1(pksEzmaxclientOs)
+    val result : GlobalEzmaxclientVersionV1Response = apiInstance.globalEzmaxclientVersionV1(pksEzmaxclientOs)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling GlobalEzmaxclientApi#globalEzmaxclientVersionV1")
@@ -39,11 +39,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pksEzmaxclientOs** | [**FieldMinusPksEzmaxclientOs**](.md)|  | [enum: iOS, macOS, Windows]
+ **pksEzmaxclientOs** | [**FieldPksEzmaxclientOs**](.md)|  | [enum: iOS, macOS, Windows]
 
 ### Return type
 
-[**GlobalMinusEzmaxclientMinusVersionMinusV1MinusResponse**](GlobalMinusEzmaxclientMinusVersionMinusV1MinusResponse.md)
+[**GlobalEzmaxclientVersionV1Response**](GlobalEzmaxclientVersionV1Response.md)
 
 ### Authorization
 

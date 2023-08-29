@@ -1,5 +1,5 @@
 
-# CustomMinusUserMinusResponse
+# CustomUserResponse
 
 ## Properties
 Name | Type | Description | Notes

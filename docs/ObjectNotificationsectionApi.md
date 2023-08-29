@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a id="notificationsectionGetNotificationtestsV1"></a>
 # **notificationsectionGetNotificationtestsV1**
-> NotificationsectionMinusGetNotificationtestsMinusV1MinusResponse notificationsectionGetNotificationtestsV1(pkiNotificationsectionID, bShowHidden)
+> NotificationsectionGetNotificationtestsV1Response notificationsectionGetNotificationtestsV1(pkiNotificationsectionID, bShowHidden)
 
 Retrieve an existing Notificationsection&#39;s Notificationtests
 
@@ -25,7 +25,7 @@ val apiInstance = ObjectNotificationsectionApi()
 val pkiNotificationsectionID : kotlin.Int = 56 // kotlin.Int | 
 val bShowHidden : kotlin.Boolean = true // kotlin.Boolean | Whether or not to return the hidden Notificationtests
 try {
-    val result : NotificationsectionMinusGetNotificationtestsMinusV1MinusResponse = apiInstance.notificationsectionGetNotificationtestsV1(pkiNotificationsectionID, bShowHidden)
+    val result : NotificationsectionGetNotificationtestsV1Response = apiInstance.notificationsectionGetNotificationtestsV1(pkiNotificationsectionID, bShowHidden)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectNotificationsectionApi#notificationsectionGetNotificationtestsV1")
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**NotificationsectionMinusGetNotificationtestsMinusV1MinusResponse**](NotificationsectionMinusGetNotificationtestsMinusV1MinusResponse.md)
+[**NotificationsectionGetNotificationtestsV1Response**](NotificationsectionGetNotificationtestsV1Response.md)
 
 ### Authorization
 

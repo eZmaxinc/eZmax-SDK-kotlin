@@ -1,5 +1,5 @@
 
-# UserstagedMinusMapMinusV1MinusRequest
+# UserstagedMapV1Request
 
 ## Properties
 Name | Type | Description | Notes

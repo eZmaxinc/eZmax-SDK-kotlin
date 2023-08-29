@@ -1,5 +1,5 @@
 
-# FieldMinusEPaymenttermType
+# FieldEPaymenttermType
 
 ## Enum
 

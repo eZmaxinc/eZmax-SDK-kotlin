@@ -1,5 +1,5 @@
 
-# DescriptionstaticMinusResponse
+# DescriptionstaticResponse
 
 ## Properties
 Name | Type | Description | Notes

@@ -19,7 +19,7 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.ScimMinusServiceProviderConfig
+import eZmaxApi.models.ScimServiceProviderConfig
 
 import com.squareup.moshi.Json
 
@@ -48,7 +48,7 @@ class ScimServiceProviderConfigApi(basePath: kotlin.String = defaultBasePath, cl
     /**
      * Get Service Provider Configuration
      * 
-     * @return ScimMinusServiceProviderConfig
+     * @return ScimServiceProviderConfig
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -57,11 +57,11 @@ class ScimServiceProviderConfigApi(basePath: kotlin.String = defaultBasePath, cl
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun serviceProviderConfigGetObjectScimV2() : ScimMinusServiceProviderConfig {
+    fun serviceProviderConfigGetObjectScimV2() : ScimServiceProviderConfig {
         val localVarResponse = serviceProviderConfigGetObjectScimV2WithHttpInfo()
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as ScimMinusServiceProviderConfig
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ScimServiceProviderConfig
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -78,16 +78,16 @@ class ScimServiceProviderConfigApi(basePath: kotlin.String = defaultBasePath, cl
     /**
      * Get Service Provider Configuration
      * 
-     * @return ApiResponse<ScimMinusServiceProviderConfig?>
+     * @return ApiResponse<ScimServiceProviderConfig?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun serviceProviderConfigGetObjectScimV2WithHttpInfo() : ApiResponse<ScimMinusServiceProviderConfig?> {
+    fun serviceProviderConfigGetObjectScimV2WithHttpInfo() : ApiResponse<ScimServiceProviderConfig?> {
         val localVariableConfig = serviceProviderConfigGetObjectScimV2RequestConfig()
 
-        return request<Unit, ScimMinusServiceProviderConfig>(
+        return request<Unit, ScimServiceProviderConfig>(
             localVariableConfig
         )
     }

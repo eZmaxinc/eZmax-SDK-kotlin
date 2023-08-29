@@ -1,5 +1,5 @@
 
-# TextstylestaticMinusResponse
+# TextstylestaticResponse
 
 ## Properties
 Name | Type | Description | Notes

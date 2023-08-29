@@ -1,10 +1,10 @@
 
-# BrandingMinusEditObjectMinusV1MinusRequest
+# BrandingEditObjectV1Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objBranding** | [**BrandingMinusRequestCompound**](BrandingMinusRequestCompound.md) |  | 
+**objBranding** | [**BrandingRequestCompound**](BrandingRequestCompound.md) |  | 
 
 
 

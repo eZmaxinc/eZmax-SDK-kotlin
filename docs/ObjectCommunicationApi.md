@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a id="communicationGetObjectV2"></a>
 # **communicationGetObjectV2**
-> CommunicationMinusGetObjectMinusV2MinusResponse communicationGetObjectV2(pkiCommunicationID)
+> CommunicationGetObjectV2Response communicationGetObjectV2(pkiCommunicationID)
 
 Retrieve an existing Communication
 
@@ -24,7 +24,7 @@ Retrieve an existing Communication
 val apiInstance = ObjectCommunicationApi()
 val pkiCommunicationID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : CommunicationMinusGetObjectMinusV2MinusResponse = apiInstance.communicationGetObjectV2(pkiCommunicationID)
+    val result : CommunicationGetObjectV2Response = apiInstance.communicationGetObjectV2(pkiCommunicationID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectCommunicationApi#communicationGetObjectV2")
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CommunicationMinusGetObjectMinusV2MinusResponse**](CommunicationMinusGetObjectMinusV2MinusResponse.md)
+[**CommunicationGetObjectV2Response**](CommunicationGetObjectV2Response.md)
 
 ### Authorization
 

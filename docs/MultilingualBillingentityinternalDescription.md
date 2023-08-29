@@ -1,5 +1,5 @@
 
-# MultilingualMinusBillingentityinternalDescription
+# MultilingualBillingentityinternalDescription
 
 ## Properties
 Name | Type | Description | Notes

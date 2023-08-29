@@ -19,8 +19,8 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonMinusResponseMinusError
-import eZmaxApi.models.EzsignpageMinusConsultMinusV1MinusResponse
+import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.EzsignpageConsultV1Response
 
 import com.squareup.moshi.Json
 
@@ -51,7 +51,7 @@ class ObjectEzsignpageApi(basePath: kotlin.String = defaultBasePath, client: OkH
      * 
      * @param pkiEzsignpageID 
      * @param body 
-     * @return EzsignpageMinusConsultMinusV1MinusResponse
+     * @return EzsignpageConsultV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -60,11 +60,11 @@ class ObjectEzsignpageApi(basePath: kotlin.String = defaultBasePath, client: OkH
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignpageConsultV1(pkiEzsignpageID: kotlin.Int, body: kotlin.Any) : EzsignpageMinusConsultMinusV1MinusResponse {
+    fun ezsignpageConsultV1(pkiEzsignpageID: kotlin.Int, body: kotlin.Any) : EzsignpageConsultV1Response {
         val localVarResponse = ezsignpageConsultV1WithHttpInfo(pkiEzsignpageID = pkiEzsignpageID, body = body)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignpageMinusConsultMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignpageConsultV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -83,16 +83,16 @@ class ObjectEzsignpageApi(basePath: kotlin.String = defaultBasePath, client: OkH
      * 
      * @param pkiEzsignpageID 
      * @param body 
-     * @return ApiResponse<EzsignpageMinusConsultMinusV1MinusResponse?>
+     * @return ApiResponse<EzsignpageConsultV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignpageConsultV1WithHttpInfo(pkiEzsignpageID: kotlin.Int, body: kotlin.Any) : ApiResponse<EzsignpageMinusConsultMinusV1MinusResponse?> {
+    fun ezsignpageConsultV1WithHttpInfo(pkiEzsignpageID: kotlin.Int, body: kotlin.Any) : ApiResponse<EzsignpageConsultV1Response?> {
         val localVariableConfig = ezsignpageConsultV1RequestConfig(pkiEzsignpageID = pkiEzsignpageID, body = body)
 
-        return request<kotlin.Any, EzsignpageMinusConsultMinusV1MinusResponse>(
+        return request<kotlin.Any, EzsignpageConsultV1Response>(
             localVariableConfig
         )
     }

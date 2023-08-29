@@ -1,12 +1,12 @@
 
-# EzsigndocumentMinusGetEzsignannotationsMinusV1MinusResponse
+# EzsigndocumentGetEzsignannotationsV1Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**EzsigndocumentMinusGetEzsignannotationsMinusV1MinusResponseMinusMPayload**](EzsigndocumentMinusGetEzsignannotationsMinusV1MinusResponseMinusMPayload.md) |  | 
-**objDebugPayload** | [**CommonMinusResponseMinusObjDebugPayload**](CommonMinusResponseMinusObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonMinusResponseMinusObjDebug**](CommonMinusResponseMinusObjDebug.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
+**mPayload** | [**EzsigndocumentGetEzsignannotationsV1ResponseMPayload**](EzsigndocumentGetEzsignannotationsV1ResponseMPayload.md) |  | 
+**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 
 
 

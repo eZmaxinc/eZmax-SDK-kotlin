@@ -1,5 +1,5 @@
 
-# UserstagedMinusListElement
+# UserstagedListElement
 
 ## Properties
 Name | Type | Description | Notes

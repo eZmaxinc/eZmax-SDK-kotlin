@@ -19,8 +19,8 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonMinusResponseMinusError
-import eZmaxApi.models.CommunicationMinusGetObjectMinusV2MinusResponse
+import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.CommunicationGetObjectV2Response
 
 import com.squareup.moshi.Json
 
@@ -50,7 +50,7 @@ class ObjectCommunicationApi(basePath: kotlin.String = defaultBasePath, client: 
      * Retrieve an existing Communication
      * 
      * @param pkiCommunicationID 
-     * @return CommunicationMinusGetObjectMinusV2MinusResponse
+     * @return CommunicationGetObjectV2Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -59,11 +59,11 @@ class ObjectCommunicationApi(basePath: kotlin.String = defaultBasePath, client: 
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun communicationGetObjectV2(pkiCommunicationID: kotlin.Int) : CommunicationMinusGetObjectMinusV2MinusResponse {
+    fun communicationGetObjectV2(pkiCommunicationID: kotlin.Int) : CommunicationGetObjectV2Response {
         val localVarResponse = communicationGetObjectV2WithHttpInfo(pkiCommunicationID = pkiCommunicationID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommunicationMinusGetObjectMinusV2MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommunicationGetObjectV2Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -81,16 +81,16 @@ class ObjectCommunicationApi(basePath: kotlin.String = defaultBasePath, client: 
      * Retrieve an existing Communication
      * 
      * @param pkiCommunicationID 
-     * @return ApiResponse<CommunicationMinusGetObjectMinusV2MinusResponse?>
+     * @return ApiResponse<CommunicationGetObjectV2Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun communicationGetObjectV2WithHttpInfo(pkiCommunicationID: kotlin.Int) : ApiResponse<CommunicationMinusGetObjectMinusV2MinusResponse?> {
+    fun communicationGetObjectV2WithHttpInfo(pkiCommunicationID: kotlin.Int) : ApiResponse<CommunicationGetObjectV2Response?> {
         val localVariableConfig = communicationGetObjectV2RequestConfig(pkiCommunicationID = pkiCommunicationID)
 
-        return request<Unit, CommunicationMinusGetObjectMinusV2MinusResponse>(
+        return request<Unit, CommunicationGetObjectV2Response>(
             localVariableConfig
         )
     }

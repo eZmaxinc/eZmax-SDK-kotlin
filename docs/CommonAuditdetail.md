@@ -1,5 +1,5 @@
 
-# CommonMinusAuditdetail
+# CommonAuditdetail
 
 ## Properties
 Name | Type | Description | Notes

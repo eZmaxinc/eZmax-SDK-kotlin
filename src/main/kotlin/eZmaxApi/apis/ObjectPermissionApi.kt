@@ -19,13 +19,13 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonMinusResponseMinusError
-import eZmaxApi.models.PermissionMinusCreateObjectMinusV1MinusRequest
-import eZmaxApi.models.PermissionMinusCreateObjectMinusV1MinusResponse
-import eZmaxApi.models.PermissionMinusDeleteObjectMinusV1MinusResponse
-import eZmaxApi.models.PermissionMinusEditObjectMinusV1MinusRequest
-import eZmaxApi.models.PermissionMinusEditObjectMinusV1MinusResponse
-import eZmaxApi.models.PermissionMinusGetObjectMinusV2MinusResponse
+import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.PermissionCreateObjectV1Request
+import eZmaxApi.models.PermissionCreateObjectV1Response
+import eZmaxApi.models.PermissionDeleteObjectV1Response
+import eZmaxApi.models.PermissionEditObjectV1Request
+import eZmaxApi.models.PermissionEditObjectV1Response
+import eZmaxApi.models.PermissionGetObjectV2Response
 
 import com.squareup.moshi.Json
 
@@ -54,8 +54,8 @@ class ObjectPermissionApi(basePath: kotlin.String = defaultBasePath, client: OkH
     /**
      * Create a new Permission
      * The endpoint allows to create one or many elements at once.
-     * @param permissionMinusCreateObjectMinusV1MinusRequest 
-     * @return PermissionMinusCreateObjectMinusV1MinusResponse
+     * @param permissionCreateObjectV1Request 
+     * @return PermissionCreateObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -64,11 +64,11 @@ class ObjectPermissionApi(basePath: kotlin.String = defaultBasePath, client: OkH
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun permissionCreateObjectV1(permissionMinusCreateObjectMinusV1MinusRequest: PermissionMinusCreateObjectMinusV1MinusRequest) : PermissionMinusCreateObjectMinusV1MinusResponse {
-        val localVarResponse = permissionCreateObjectV1WithHttpInfo(permissionMinusCreateObjectMinusV1MinusRequest = permissionMinusCreateObjectMinusV1MinusRequest)
+    fun permissionCreateObjectV1(permissionCreateObjectV1Request: PermissionCreateObjectV1Request) : PermissionCreateObjectV1Response {
+        val localVarResponse = permissionCreateObjectV1WithHttpInfo(permissionCreateObjectV1Request = permissionCreateObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as PermissionMinusCreateObjectMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as PermissionCreateObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -85,17 +85,17 @@ class ObjectPermissionApi(basePath: kotlin.String = defaultBasePath, client: OkH
     /**
      * Create a new Permission
      * The endpoint allows to create one or many elements at once.
-     * @param permissionMinusCreateObjectMinusV1MinusRequest 
-     * @return ApiResponse<PermissionMinusCreateObjectMinusV1MinusResponse?>
+     * @param permissionCreateObjectV1Request 
+     * @return ApiResponse<PermissionCreateObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun permissionCreateObjectV1WithHttpInfo(permissionMinusCreateObjectMinusV1MinusRequest: PermissionMinusCreateObjectMinusV1MinusRequest) : ApiResponse<PermissionMinusCreateObjectMinusV1MinusResponse?> {
-        val localVariableConfig = permissionCreateObjectV1RequestConfig(permissionMinusCreateObjectMinusV1MinusRequest = permissionMinusCreateObjectMinusV1MinusRequest)
+    fun permissionCreateObjectV1WithHttpInfo(permissionCreateObjectV1Request: PermissionCreateObjectV1Request) : ApiResponse<PermissionCreateObjectV1Response?> {
+        val localVariableConfig = permissionCreateObjectV1RequestConfig(permissionCreateObjectV1Request = permissionCreateObjectV1Request)
 
-        return request<PermissionMinusCreateObjectMinusV1MinusRequest, PermissionMinusCreateObjectMinusV1MinusResponse>(
+        return request<PermissionCreateObjectV1Request, PermissionCreateObjectV1Response>(
             localVariableConfig
         )
     }
@@ -103,11 +103,11 @@ class ObjectPermissionApi(basePath: kotlin.String = defaultBasePath, client: OkH
     /**
      * To obtain the request config of the operation permissionCreateObjectV1
      *
-     * @param permissionMinusCreateObjectMinusV1MinusRequest 
+     * @param permissionCreateObjectV1Request 
      * @return RequestConfig
      */
-    fun permissionCreateObjectV1RequestConfig(permissionMinusCreateObjectMinusV1MinusRequest: PermissionMinusCreateObjectMinusV1MinusRequest) : RequestConfig<PermissionMinusCreateObjectMinusV1MinusRequest> {
-        val localVariableBody = permissionMinusCreateObjectMinusV1MinusRequest
+    fun permissionCreateObjectV1RequestConfig(permissionCreateObjectV1Request: PermissionCreateObjectV1Request) : RequestConfig<PermissionCreateObjectV1Request> {
+        val localVariableBody = permissionCreateObjectV1Request
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Content-Type"] = "application/json"
@@ -127,7 +127,7 @@ class ObjectPermissionApi(basePath: kotlin.String = defaultBasePath, client: OkH
      * Delete an existing Permission
      * 
      * @param pkiPermissionID The unique ID of the Permission
-     * @return PermissionMinusDeleteObjectMinusV1MinusResponse
+     * @return PermissionDeleteObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -136,11 +136,11 @@ class ObjectPermissionApi(basePath: kotlin.String = defaultBasePath, client: OkH
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun permissionDeleteObjectV1(pkiPermissionID: kotlin.Int) : PermissionMinusDeleteObjectMinusV1MinusResponse {
+    fun permissionDeleteObjectV1(pkiPermissionID: kotlin.Int) : PermissionDeleteObjectV1Response {
         val localVarResponse = permissionDeleteObjectV1WithHttpInfo(pkiPermissionID = pkiPermissionID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as PermissionMinusDeleteObjectMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as PermissionDeleteObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -158,16 +158,16 @@ class ObjectPermissionApi(basePath: kotlin.String = defaultBasePath, client: OkH
      * Delete an existing Permission
      * 
      * @param pkiPermissionID The unique ID of the Permission
-     * @return ApiResponse<PermissionMinusDeleteObjectMinusV1MinusResponse?>
+     * @return ApiResponse<PermissionDeleteObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun permissionDeleteObjectV1WithHttpInfo(pkiPermissionID: kotlin.Int) : ApiResponse<PermissionMinusDeleteObjectMinusV1MinusResponse?> {
+    fun permissionDeleteObjectV1WithHttpInfo(pkiPermissionID: kotlin.Int) : ApiResponse<PermissionDeleteObjectV1Response?> {
         val localVariableConfig = permissionDeleteObjectV1RequestConfig(pkiPermissionID = pkiPermissionID)
 
-        return request<Unit, PermissionMinusDeleteObjectMinusV1MinusResponse>(
+        return request<Unit, PermissionDeleteObjectV1Response>(
             localVariableConfig
         )
     }
@@ -198,8 +198,8 @@ class ObjectPermissionApi(basePath: kotlin.String = defaultBasePath, client: OkH
      * Edit an existing Permission
      * 
      * @param pkiPermissionID The unique ID of the Permission
-     * @param permissionMinusEditObjectMinusV1MinusRequest 
-     * @return PermissionMinusEditObjectMinusV1MinusResponse
+     * @param permissionEditObjectV1Request 
+     * @return PermissionEditObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -208,11 +208,11 @@ class ObjectPermissionApi(basePath: kotlin.String = defaultBasePath, client: OkH
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun permissionEditObjectV1(pkiPermissionID: kotlin.Int, permissionMinusEditObjectMinusV1MinusRequest: PermissionMinusEditObjectMinusV1MinusRequest) : PermissionMinusEditObjectMinusV1MinusResponse {
-        val localVarResponse = permissionEditObjectV1WithHttpInfo(pkiPermissionID = pkiPermissionID, permissionMinusEditObjectMinusV1MinusRequest = permissionMinusEditObjectMinusV1MinusRequest)
+    fun permissionEditObjectV1(pkiPermissionID: kotlin.Int, permissionEditObjectV1Request: PermissionEditObjectV1Request) : PermissionEditObjectV1Response {
+        val localVarResponse = permissionEditObjectV1WithHttpInfo(pkiPermissionID = pkiPermissionID, permissionEditObjectV1Request = permissionEditObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as PermissionMinusEditObjectMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as PermissionEditObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -230,17 +230,17 @@ class ObjectPermissionApi(basePath: kotlin.String = defaultBasePath, client: OkH
      * Edit an existing Permission
      * 
      * @param pkiPermissionID The unique ID of the Permission
-     * @param permissionMinusEditObjectMinusV1MinusRequest 
-     * @return ApiResponse<PermissionMinusEditObjectMinusV1MinusResponse?>
+     * @param permissionEditObjectV1Request 
+     * @return ApiResponse<PermissionEditObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun permissionEditObjectV1WithHttpInfo(pkiPermissionID: kotlin.Int, permissionMinusEditObjectMinusV1MinusRequest: PermissionMinusEditObjectMinusV1MinusRequest) : ApiResponse<PermissionMinusEditObjectMinusV1MinusResponse?> {
-        val localVariableConfig = permissionEditObjectV1RequestConfig(pkiPermissionID = pkiPermissionID, permissionMinusEditObjectMinusV1MinusRequest = permissionMinusEditObjectMinusV1MinusRequest)
+    fun permissionEditObjectV1WithHttpInfo(pkiPermissionID: kotlin.Int, permissionEditObjectV1Request: PermissionEditObjectV1Request) : ApiResponse<PermissionEditObjectV1Response?> {
+        val localVariableConfig = permissionEditObjectV1RequestConfig(pkiPermissionID = pkiPermissionID, permissionEditObjectV1Request = permissionEditObjectV1Request)
 
-        return request<PermissionMinusEditObjectMinusV1MinusRequest, PermissionMinusEditObjectMinusV1MinusResponse>(
+        return request<PermissionEditObjectV1Request, PermissionEditObjectV1Response>(
             localVariableConfig
         )
     }
@@ -249,11 +249,11 @@ class ObjectPermissionApi(basePath: kotlin.String = defaultBasePath, client: OkH
      * To obtain the request config of the operation permissionEditObjectV1
      *
      * @param pkiPermissionID The unique ID of the Permission
-     * @param permissionMinusEditObjectMinusV1MinusRequest 
+     * @param permissionEditObjectV1Request 
      * @return RequestConfig
      */
-    fun permissionEditObjectV1RequestConfig(pkiPermissionID: kotlin.Int, permissionMinusEditObjectMinusV1MinusRequest: PermissionMinusEditObjectMinusV1MinusRequest) : RequestConfig<PermissionMinusEditObjectMinusV1MinusRequest> {
-        val localVariableBody = permissionMinusEditObjectMinusV1MinusRequest
+    fun permissionEditObjectV1RequestConfig(pkiPermissionID: kotlin.Int, permissionEditObjectV1Request: PermissionEditObjectV1Request) : RequestConfig<PermissionEditObjectV1Request> {
+        val localVariableBody = permissionEditObjectV1Request
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Content-Type"] = "application/json"
@@ -273,7 +273,7 @@ class ObjectPermissionApi(basePath: kotlin.String = defaultBasePath, client: OkH
      * Retrieve an existing Permission
      * 
      * @param pkiPermissionID The unique ID of the Permission
-     * @return PermissionMinusGetObjectMinusV2MinusResponse
+     * @return PermissionGetObjectV2Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -282,11 +282,11 @@ class ObjectPermissionApi(basePath: kotlin.String = defaultBasePath, client: OkH
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun permissionGetObjectV2(pkiPermissionID: kotlin.Int) : PermissionMinusGetObjectMinusV2MinusResponse {
+    fun permissionGetObjectV2(pkiPermissionID: kotlin.Int) : PermissionGetObjectV2Response {
         val localVarResponse = permissionGetObjectV2WithHttpInfo(pkiPermissionID = pkiPermissionID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as PermissionMinusGetObjectMinusV2MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as PermissionGetObjectV2Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -304,16 +304,16 @@ class ObjectPermissionApi(basePath: kotlin.String = defaultBasePath, client: OkH
      * Retrieve an existing Permission
      * 
      * @param pkiPermissionID The unique ID of the Permission
-     * @return ApiResponse<PermissionMinusGetObjectMinusV2MinusResponse?>
+     * @return ApiResponse<PermissionGetObjectV2Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun permissionGetObjectV2WithHttpInfo(pkiPermissionID: kotlin.Int) : ApiResponse<PermissionMinusGetObjectMinusV2MinusResponse?> {
+    fun permissionGetObjectV2WithHttpInfo(pkiPermissionID: kotlin.Int) : ApiResponse<PermissionGetObjectV2Response?> {
         val localVariableConfig = permissionGetObjectV2RequestConfig(pkiPermissionID = pkiPermissionID)
 
-        return request<Unit, PermissionMinusGetObjectMinusV2MinusResponse>(
+        return request<Unit, PermissionGetObjectV2Response>(
             localVariableConfig
         )
     }

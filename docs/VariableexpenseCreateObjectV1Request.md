@@ -1,10 +1,10 @@
 
-# VariableexpenseMinusCreateObjectMinusV1MinusRequest
+# VariableexpenseCreateObjectV1Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjVariableexpense** | [**kotlin.collections.List&lt;VariableexpenseMinusRequestCompound&gt;**](VariableexpenseMinusRequestCompound.md) |  | 
+**aObjVariableexpense** | [**kotlin.collections.List&lt;VariableexpenseRequestCompound&gt;**](VariableexpenseRequestCompound.md) |  | 
 
 
 

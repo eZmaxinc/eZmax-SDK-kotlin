@@ -19,8 +19,8 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.EmailtypeMinusGetAutocompleteMinusV2MinusResponse
-import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
+import eZmaxApi.models.EmailtypeGetAutocompleteV2Response
+import eZmaxApi.models.HeaderAcceptLanguage
 
 import com.squareup.moshi.Json
 
@@ -49,14 +49,14 @@ class ObjectEmailtypeApi(basePath: kotlin.String = defaultBasePath, client: OkHt
     /**
      * enum for parameter sSelector
      */
-     enum class SSelector_emailtypeGetAutocompleteV2(val value: kotlin.String) {
+     enum class SSelectorEmailtypeGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "All") All("All")
      }
 
     /**
      * enum for parameter eFilterActive
      */
-     enum class EFilterActive_emailtypeGetAutocompleteV2(val value: kotlin.String) {
+     enum class EFilterActiveEmailtypeGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "All") All("All"),
          @Json(name = "Active") Active("Active"),
          @Json(name = "Inactive") Inactive("Inactive")
@@ -69,7 +69,7 @@ class ObjectEmailtypeApi(basePath: kotlin.String = defaultBasePath, client: OkHt
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return EmailtypeMinusGetAutocompleteMinusV2MinusResponse
+     * @return EmailtypeGetAutocompleteV2Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -78,11 +78,11 @@ class ObjectEmailtypeApi(basePath: kotlin.String = defaultBasePath, client: OkHt
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun emailtypeGetAutocompleteV2(sSelector: SSelector_emailtypeGetAutocompleteV2, eFilterActive: EFilterActive_emailtypeGetAutocompleteV2? = EFilterActive_emailtypeGetAutocompleteV2.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null) : EmailtypeMinusGetAutocompleteMinusV2MinusResponse {
+    fun emailtypeGetAutocompleteV2(sSelector: SSelectorEmailtypeGetAutocompleteV2, eFilterActive: EFilterActiveEmailtypeGetAutocompleteV2? = EFilterActiveEmailtypeGetAutocompleteV2.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderAcceptLanguage? = null) : EmailtypeGetAutocompleteV2Response {
         val localVarResponse = emailtypeGetAutocompleteV2WithHttpInfo(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EmailtypeMinusGetAutocompleteMinusV2MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EmailtypeGetAutocompleteV2Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -103,16 +103,16 @@ class ObjectEmailtypeApi(basePath: kotlin.String = defaultBasePath, client: OkHt
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return ApiResponse<EmailtypeMinusGetAutocompleteMinusV2MinusResponse?>
+     * @return ApiResponse<EmailtypeGetAutocompleteV2Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun emailtypeGetAutocompleteV2WithHttpInfo(sSelector: SSelector_emailtypeGetAutocompleteV2, eFilterActive: EFilterActive_emailtypeGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : ApiResponse<EmailtypeMinusGetAutocompleteMinusV2MinusResponse?> {
+    fun emailtypeGetAutocompleteV2WithHttpInfo(sSelector: SSelectorEmailtypeGetAutocompleteV2, eFilterActive: EFilterActiveEmailtypeGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : ApiResponse<EmailtypeGetAutocompleteV2Response?> {
         val localVariableConfig = emailtypeGetAutocompleteV2RequestConfig(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
-        return request<Unit, EmailtypeMinusGetAutocompleteMinusV2MinusResponse>(
+        return request<Unit, EmailtypeGetAutocompleteV2Response>(
             localVariableConfig
         )
     }
@@ -126,12 +126,12 @@ class ObjectEmailtypeApi(basePath: kotlin.String = defaultBasePath, client: OkHt
      * @param acceptLanguage  (optional)
      * @return RequestConfig
      */
-    fun emailtypeGetAutocompleteV2RequestConfig(sSelector: SSelector_emailtypeGetAutocompleteV2, eFilterActive: EFilterActive_emailtypeGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : RequestConfig<Unit> {
+    fun emailtypeGetAutocompleteV2RequestConfig(sSelector: SSelectorEmailtypeGetAutocompleteV2, eFilterActive: EFilterActiveEmailtypeGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
                 if (eFilterActive != null) {
-                    put("eFilterActive", listOf(eFilterActive.toString()))
+                    put("eFilterActive", listOf(eFilterActive.value))
                 }
                 if (sQuery != null) {
                     put("sQuery", listOf(sQuery.toString()))

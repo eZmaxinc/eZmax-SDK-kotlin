@@ -1,5 +1,5 @@
 
-# EzsignfolderMinusResponse
+# EzsignfolderResponse
 
 ## Properties
 Name | Type | Description | Notes
@@ -14,16 +14,16 @@ Name | Type | Description | Notes
 **sEzsigntsarequirementDescriptionX** | **kotlin.String** | The description of the Ezsigntsarequirement in the language of the requester |  [optional]
 **tEzsignfolderNote** | **kotlin.String** | Note about the Ezsignfolder |  [optional]
 **bEzsignfolderIsdisposable** | **kotlin.Boolean** | If the Ezsigndocument can be disposed |  [optional]
-**eEzsignfolderSendreminderfrequency** | [**FieldMinusEEzsignfolderSendreminderfrequency**](FieldMinusEEzsignfolderSendreminderfrequency.md) |  |  [optional]
+**eEzsignfolderSendreminderfrequency** | [**FieldEEzsignfolderSendreminderfrequency**](FieldEEzsignfolderSendreminderfrequency.md) |  |  [optional]
 **dtEzsignfolderDelayedsenddate** | **kotlin.String** | The date and time at which the Ezsignfolder will be sent in the future. |  [optional]
 **dtEzsignfolderDuedate** | **kotlin.String** | The maximum date and time at which the Ezsignfolder can be signed. |  [optional]
 **dtEzsignfolderSentdate** | **kotlin.String** | The date and time at which the Ezsignfolder was sent the last time. |  [optional]
 **dtEzsignfolderScheduledarchive** | **kotlin.String** | The scheduled date and time at which the Ezsignfolder should be archived. |  [optional]
 **dtEzsignfolderScheduleddispose** | **kotlin.String** | The scheduled date at which the Ezsignfolder should be Disposed. |  [optional]
-**eEzsignfolderStep** | [**FieldMinusEEzsignfolderStep**](FieldMinusEEzsignfolderStep.md) |  |  [optional]
+**eEzsignfolderStep** | [**FieldEEzsignfolderStep**](FieldEEzsignfolderStep.md) |  |  [optional]
 **dtEzsignfolderClose** | **kotlin.String** | The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely. |  [optional]
 **tEzsignfolderMessage** | **kotlin.String** | A custom text message that will be added to the email sent. |  [optional]
-**objAudit** | [**CommonMinusAudit**](CommonMinusAudit.md) |  |  [optional]
+**objAudit** | [**CommonAudit**](CommonAudit.md) |  |  [optional]
 **sEzsignfolderExternalid** | **kotlin.String** | This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format.  |  [optional]
 
 

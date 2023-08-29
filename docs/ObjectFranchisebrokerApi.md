@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a id="franchisebrokerGetAutocompleteV1"></a>
 # **franchisebrokerGetAutocompleteV1**
-> CommonMinusGetAutocompleteMinusV1MinusResponse franchisebrokerGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
+> CommonGetAutocompleteV1Response franchisebrokerGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
 
 Retrieve Franchisebrokers and IDs
 
@@ -26,9 +26,9 @@ val apiInstance = ObjectFranchisebrokerApi()
 val sSelector : kotlin.String = sSelector_example // kotlin.String | The type of Franchisebrokers to return
 val eFilterActive : kotlin.String = eFilterActive_example // kotlin.String | Specify which results we want to display.
 val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter the returned results
-val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
+val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
 try {
-    val result : CommonMinusGetAutocompleteMinusV1MinusResponse = apiInstance.franchisebrokerGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
+    val result : CommonGetAutocompleteV1Response = apiInstance.franchisebrokerGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectFranchisebrokerApi#franchisebrokerGetAutocompleteV1")
@@ -46,11 +46,11 @@ Name | Type | Description  | Notes
  **sSelector** | **kotlin.String**| The type of Franchisebrokers to return | [enum: Active, All]
  **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
  **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional]
- **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
 
 ### Return type
 
-[**CommonMinusGetAutocompleteMinusV1MinusResponse**](CommonMinusGetAutocompleteMinusV1MinusResponse.md)
+[**CommonGetAutocompleteV1Response**](CommonGetAutocompleteV1Response.md)
 
 ### Authorization
 
@@ -66,7 +66,7 @@ Configure Authorization:
 
 <a id="franchisebrokerGetAutocompleteV2"></a>
 # **franchisebrokerGetAutocompleteV2**
-> FranchisebrokerMinusGetAutocompleteMinusV2MinusResponse franchisebrokerGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+> FranchisebrokerGetAutocompleteV2Response franchisebrokerGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 
 Retrieve Franchisebrokers and IDs
 
@@ -82,9 +82,9 @@ val apiInstance = ObjectFranchisebrokerApi()
 val sSelector : kotlin.String = sSelector_example // kotlin.String | The type of Franchisebrokers to return
 val eFilterActive : kotlin.String = eFilterActive_example // kotlin.String | Specify which results we want to display.
 val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter the returned results
-val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
+val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
 try {
-    val result : FranchisebrokerMinusGetAutocompleteMinusV2MinusResponse = apiInstance.franchisebrokerGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+    val result : FranchisebrokerGetAutocompleteV2Response = apiInstance.franchisebrokerGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectFranchisebrokerApi#franchisebrokerGetAutocompleteV2")
@@ -102,11 +102,11 @@ Name | Type | Description  | Notes
  **sSelector** | **kotlin.String**| The type of Franchisebrokers to return | [enum: All]
  **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
  **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional]
- **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
 
 ### Return type
 
-[**FranchisebrokerMinusGetAutocompleteMinusV2MinusResponse**](FranchisebrokerMinusGetAutocompleteMinusV2MinusResponse.md)
+[**FranchisebrokerGetAutocompleteV2Response**](FranchisebrokerGetAutocompleteV2Response.md)
 
 ### Authorization
 

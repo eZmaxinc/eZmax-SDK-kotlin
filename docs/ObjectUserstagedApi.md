@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a id="userstagedCreateUserV1"></a>
 # **userstagedCreateUserV1**
-> UserstagedMinusCreateUserMinusV1MinusResponse userstagedCreateUserV1(pkiUserstagedID, body)
+> UserstagedCreateUserV1Response userstagedCreateUserV1(pkiUserstagedID, body)
 
 Create a User from a Userstaged and then map it
 
@@ -29,7 +29,7 @@ val apiInstance = ObjectUserstagedApi()
 val pkiUserstagedID : kotlin.Int = 56 // kotlin.Int | 
 val body : kotlin.Any = Object // kotlin.Any | 
 try {
-    val result : UserstagedMinusCreateUserMinusV1MinusResponse = apiInstance.userstagedCreateUserV1(pkiUserstagedID, body)
+    val result : UserstagedCreateUserV1Response = apiInstance.userstagedCreateUserV1(pkiUserstagedID, body)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectUserstagedApi#userstagedCreateUserV1")
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UserstagedMinusCreateUserMinusV1MinusResponse**](UserstagedMinusCreateUserMinusV1MinusResponse.md)
+[**UserstagedCreateUserV1Response**](UserstagedCreateUserV1Response.md)
 
 ### Authorization
 
@@ -65,7 +65,7 @@ Configure Authorization:
 
 <a id="userstagedDeleteObjectV1"></a>
 # **userstagedDeleteObjectV1**
-> UserstagedMinusDeleteObjectMinusV1MinusResponse userstagedDeleteObjectV1(pkiUserstagedID)
+> UserstagedDeleteObjectV1Response userstagedDeleteObjectV1(pkiUserstagedID)
 
 Delete an existing Userstaged
 
@@ -80,7 +80,7 @@ Delete an existing Userstaged
 val apiInstance = ObjectUserstagedApi()
 val pkiUserstagedID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : UserstagedMinusDeleteObjectMinusV1MinusResponse = apiInstance.userstagedDeleteObjectV1(pkiUserstagedID)
+    val result : UserstagedDeleteObjectV1Response = apiInstance.userstagedDeleteObjectV1(pkiUserstagedID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectUserstagedApi#userstagedDeleteObjectV1")
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UserstagedMinusDeleteObjectMinusV1MinusResponse**](UserstagedMinusDeleteObjectMinusV1MinusResponse.md)
+[**UserstagedDeleteObjectV1Response**](UserstagedDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -115,7 +115,7 @@ Configure Authorization:
 
 <a id="userstagedGetListV1"></a>
 # **userstagedGetListV1**
-> UserstagedMinusGetListMinusV1MinusResponse userstagedGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+> UserstagedGetListV1Response userstagedGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
 Retrieve Userstaged list
 
@@ -131,10 +131,10 @@ val apiInstance = ObjectUserstagedApi()
 val eOrderBy : kotlin.String = eOrderBy_example // kotlin.String | Specify how you want the results to be sorted
 val iRowMax : kotlin.Int = 56 // kotlin.Int | 
 val iRowOffset : kotlin.Int = 56 // kotlin.Int | 
-val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
+val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
 val sFilter : kotlin.String = sFilter_example // kotlin.String | 
 try {
-    val result : UserstagedMinusGetListMinusV1MinusResponse = apiInstance.userstagedGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+    val result : UserstagedGetListV1Response = apiInstance.userstagedGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectUserstagedApi#userstagedGetListV1")
@@ -152,12 +152,12 @@ Name | Type | Description  | Notes
  **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiUserstagedID_ASC, pkiUserstagedID_DESC, sEmailAddress_ASC, sEmailAddress_DESC, sUserstagedFirstname_ASC, sUserstagedFirstname_DESC, sUserstagedLastname_ASC, sUserstagedLastname_DESC, sUserstagedExternalid_ASC, sUserstagedExternalid_DESC]
  **iRowMax** | **kotlin.Int**|  | [optional] [default to 10000]
  **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0]
- **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
  **sFilter** | **kotlin.String**|  | [optional]
 
 ### Return type
 
-[**UserstagedMinusGetListMinusV1MinusResponse**](UserstagedMinusGetListMinusV1MinusResponse.md)
+[**UserstagedGetListV1Response**](UserstagedGetListV1Response.md)
 
 ### Authorization
 
@@ -173,7 +173,7 @@ Configure Authorization:
 
 <a id="userstagedGetObjectV2"></a>
 # **userstagedGetObjectV2**
-> UserstagedMinusGetObjectMinusV2MinusResponse userstagedGetObjectV2(pkiUserstagedID)
+> UserstagedGetObjectV2Response userstagedGetObjectV2(pkiUserstagedID)
 
 Retrieve an existing Userstaged
 
@@ -188,7 +188,7 @@ Retrieve an existing Userstaged
 val apiInstance = ObjectUserstagedApi()
 val pkiUserstagedID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : UserstagedMinusGetObjectMinusV2MinusResponse = apiInstance.userstagedGetObjectV2(pkiUserstagedID)
+    val result : UserstagedGetObjectV2Response = apiInstance.userstagedGetObjectV2(pkiUserstagedID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectUserstagedApi#userstagedGetObjectV2")
@@ -207,7 +207,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UserstagedMinusGetObjectMinusV2MinusResponse**](UserstagedMinusGetObjectMinusV2MinusResponse.md)
+[**UserstagedGetObjectV2Response**](UserstagedGetObjectV2Response.md)
 
 ### Authorization
 
@@ -223,7 +223,7 @@ Configure Authorization:
 
 <a id="userstagedMapV1"></a>
 # **userstagedMapV1**
-> UserstagedMinusMapMinusV1MinusResponse userstagedMapV1(pkiUserstagedID, userstagedMinusMapMinusV1MinusRequest)
+> UserstagedMapV1Response userstagedMapV1(pkiUserstagedID, userstagedMapV1Request)
 
 Map the Userstaged to an existing user
 
@@ -237,9 +237,9 @@ Map the Userstaged to an existing user
 
 val apiInstance = ObjectUserstagedApi()
 val pkiUserstagedID : kotlin.Int = 56 // kotlin.Int | 
-val userstagedMinusMapMinusV1MinusRequest : UserstagedMinusMapMinusV1MinusRequest =  // UserstagedMinusMapMinusV1MinusRequest | 
+val userstagedMapV1Request : UserstagedMapV1Request =  // UserstagedMapV1Request | 
 try {
-    val result : UserstagedMinusMapMinusV1MinusResponse = apiInstance.userstagedMapV1(pkiUserstagedID, userstagedMinusMapMinusV1MinusRequest)
+    val result : UserstagedMapV1Response = apiInstance.userstagedMapV1(pkiUserstagedID, userstagedMapV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectUserstagedApi#userstagedMapV1")
@@ -255,11 +255,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiUserstagedID** | **kotlin.Int**|  |
- **userstagedMinusMapMinusV1MinusRequest** | [**UserstagedMinusMapMinusV1MinusRequest**](UserstagedMinusMapMinusV1MinusRequest.md)|  |
+ **userstagedMapV1Request** | [**UserstagedMapV1Request**](UserstagedMapV1Request.md)|  |
 
 ### Return type
 
-[**UserstagedMinusMapMinusV1MinusResponse**](UserstagedMinusMapMinusV1MinusResponse.md)
+[**UserstagedMapV1Response**](UserstagedMapV1Response.md)
 
 ### Authorization
 

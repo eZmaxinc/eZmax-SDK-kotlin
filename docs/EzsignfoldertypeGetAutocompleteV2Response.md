@@ -1,12 +1,12 @@
 
-# EzsignfoldertypeMinusGetAutocompleteMinusV2MinusResponse
+# EzsignfoldertypeGetAutocompleteV2Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**EzsignfoldertypeMinusGetAutocompleteMinusV2MinusResponseMinusMPayload**](EzsignfoldertypeMinusGetAutocompleteMinusV2MinusResponseMinusMPayload.md) |  | 
-**objDebugPayload** | [**CommonMinusResponseMinusObjDebugPayload**](CommonMinusResponseMinusObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonMinusResponseMinusObjDebug**](CommonMinusResponseMinusObjDebug.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
+**mPayload** | [**EzsignfoldertypeGetAutocompleteV2ResponseMPayload**](EzsignfoldertypeGetAutocompleteV2ResponseMPayload.md) |  | 
+**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 
 
 

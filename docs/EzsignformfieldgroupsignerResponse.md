@@ -1,5 +1,5 @@
 
-# EzsignformfieldgroupsignerMinusResponse
+# EzsignformfieldgroupsignerResponse
 
 ## Properties
 Name | Type | Description | Notes

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a id="phonetypeGetAutocompleteV2"></a>
 # **phonetypeGetAutocompleteV2**
-> PhonetypeMinusGetAutocompleteMinusV2MinusResponse phonetypeGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+> PhonetypeGetAutocompleteV2Response phonetypeGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 
 Retrieve Phonetypes and IDs
 
@@ -25,9 +25,9 @@ val apiInstance = ObjectPhonetypeApi()
 val sSelector : kotlin.String = sSelector_example // kotlin.String | The type of Phonetypes to return
 val eFilterActive : kotlin.String = eFilterActive_example // kotlin.String | Specify which results we want to display.
 val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter the returned results
-val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
+val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
 try {
-    val result : PhonetypeMinusGetAutocompleteMinusV2MinusResponse = apiInstance.phonetypeGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+    val result : PhonetypeGetAutocompleteV2Response = apiInstance.phonetypeGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectPhonetypeApi#phonetypeGetAutocompleteV2")
@@ -45,11 +45,11 @@ Name | Type | Description  | Notes
  **sSelector** | **kotlin.String**| The type of Phonetypes to return | [enum: All]
  **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
  **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional]
- **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
 
 ### Return type
 
-[**PhonetypeMinusGetAutocompleteMinusV2MinusResponse**](PhonetypeMinusGetAutocompleteMinusV2MinusResponse.md)
+[**PhonetypeGetAutocompleteV2Response**](PhonetypeGetAutocompleteV2Response.md)
 
 ### Authorization
 

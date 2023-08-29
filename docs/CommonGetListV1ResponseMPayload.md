@@ -1,5 +1,5 @@
 
-# CommonMinusGetListMinusV1MinusResponseMinusMPayload
+# CommonGetListV1ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes

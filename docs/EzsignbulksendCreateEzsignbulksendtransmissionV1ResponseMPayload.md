@@ -1,10 +1,10 @@
 
-# EzsignbulksendMinusCreateEzsignbulksendtransmissionMinusV1MinusResponseMinusMPayload
+# EzsignbulksendCreateEzsignbulksendtransmissionV1ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objEzsignbulksendtransmission** | [**EzsignbulksendtransmissionMinusResponse**](EzsignbulksendtransmissionMinusResponse.md) |  | 
+**objEzsignbulksendtransmission** | [**EzsignbulksendtransmissionResponse**](EzsignbulksendtransmissionResponse.md) |  | 
 
 
 

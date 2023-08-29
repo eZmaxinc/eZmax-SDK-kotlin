@@ -7,17 +7,19 @@ Method | HTTP request | Description
 [**userCreateObjectV1**](ObjectUserApi.md#userCreateObjectV1) | **POST** /1/object/user | Create a new User
 [**userEditObjectV1**](ObjectUserApi.md#userEditObjectV1) | **PUT** /1/object/user/{pkiUserID} | Edit an existing User
 [**userEditPermissionsV1**](ObjectUserApi.md#userEditPermissionsV1) | **PUT** /1/object/user/{pkiUserID}/editPermissions | Edit multiple Permissions
+[**userGetApikeysV1**](ObjectUserApi.md#userGetApikeysV1) | **GET** /1/object/user/{pkiUserID}/getApikeys | Retrieve an existing User&#39;s Apikeys
 [**userGetAutocompleteV2**](ObjectUserApi.md#userGetAutocompleteV2) | **GET** /2/object/user/getAutocomplete/{sSelector} | Retrieve Users and IDs
 [**userGetEffectivePermissionsV1**](ObjectUserApi.md#userGetEffectivePermissionsV1) | **GET** /1/object/user/{pkiUserID}/getEffectivePermissions | Retrieve an existing User&#39;s Effective Permissions
 [**userGetListV1**](ObjectUserApi.md#userGetListV1) | **GET** /1/object/user/getList | Retrieve User list
 [**userGetObjectV2**](ObjectUserApi.md#userGetObjectV2) | **GET** /2/object/user/{pkiUserID} | Retrieve an existing User
 [**userGetPermissionsV1**](ObjectUserApi.md#userGetPermissionsV1) | **GET** /1/object/user/{pkiUserID}/getPermissions | Retrieve an existing User&#39;s Permissions
 [**userGetSubnetsV1**](ObjectUserApi.md#userGetSubnetsV1) | **GET** /1/object/user/{pkiUserID}/getSubnets | Retrieve an existing User&#39;s Subnets
+[**userSendPasswordResetV1**](ObjectUserApi.md#userSendPasswordResetV1) | **POST** /1/object/user/{pkiUserID}/sendPasswordReset | Send password reset
 
 
 <a id="userCreateObjectV1"></a>
 # **userCreateObjectV1**
-> UserMinusCreateObjectMinusV1MinusResponse userCreateObjectV1(userMinusCreateObjectMinusV1MinusRequest)
+> UserCreateObjectV1Response userCreateObjectV1(userCreateObjectV1Request)
 
 Create a new User
 
@@ -30,9 +32,9 @@ The endpoint allows to create one or many elements at once.
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectUserApi()
-val userMinusCreateObjectMinusV1MinusRequest : UserMinusCreateObjectMinusV1MinusRequest =  // UserMinusCreateObjectMinusV1MinusRequest | 
+val userCreateObjectV1Request : UserCreateObjectV1Request =  // UserCreateObjectV1Request | 
 try {
-    val result : UserMinusCreateObjectMinusV1MinusResponse = apiInstance.userCreateObjectV1(userMinusCreateObjectMinusV1MinusRequest)
+    val result : UserCreateObjectV1Response = apiInstance.userCreateObjectV1(userCreateObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectUserApi#userCreateObjectV1")
@@ -47,11 +49,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userMinusCreateObjectMinusV1MinusRequest** | [**UserMinusCreateObjectMinusV1MinusRequest**](UserMinusCreateObjectMinusV1MinusRequest.md)|  |
+ **userCreateObjectV1Request** | [**UserCreateObjectV1Request**](UserCreateObjectV1Request.md)|  |
 
 ### Return type
 
-[**UserMinusCreateObjectMinusV1MinusResponse**](UserMinusCreateObjectMinusV1MinusResponse.md)
+[**UserCreateObjectV1Response**](UserCreateObjectV1Response.md)
 
 ### Authorization
 
@@ -67,7 +69,7 @@ Configure Authorization:
 
 <a id="userEditObjectV1"></a>
 # **userEditObjectV1**
-> UserMinusEditObjectMinusV1MinusResponse userEditObjectV1(pkiUserID, userMinusEditObjectMinusV1MinusRequest)
+> UserEditObjectV1Response userEditObjectV1(pkiUserID, userEditObjectV1Request)
 
 Edit an existing User
 
@@ -81,9 +83,9 @@ Edit an existing User
 
 val apiInstance = ObjectUserApi()
 val pkiUserID : kotlin.Int = 56 // kotlin.Int | The unique ID of the User
-val userMinusEditObjectMinusV1MinusRequest : UserMinusEditObjectMinusV1MinusRequest =  // UserMinusEditObjectMinusV1MinusRequest | 
+val userEditObjectV1Request : UserEditObjectV1Request =  // UserEditObjectV1Request | 
 try {
-    val result : UserMinusEditObjectMinusV1MinusResponse = apiInstance.userEditObjectV1(pkiUserID, userMinusEditObjectMinusV1MinusRequest)
+    val result : UserEditObjectV1Response = apiInstance.userEditObjectV1(pkiUserID, userEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectUserApi#userEditObjectV1")
@@ -99,11 +101,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiUserID** | **kotlin.Int**| The unique ID of the User |
- **userMinusEditObjectMinusV1MinusRequest** | [**UserMinusEditObjectMinusV1MinusRequest**](UserMinusEditObjectMinusV1MinusRequest.md)|  |
+ **userEditObjectV1Request** | [**UserEditObjectV1Request**](UserEditObjectV1Request.md)|  |
 
 ### Return type
 
-[**UserMinusEditObjectMinusV1MinusResponse**](UserMinusEditObjectMinusV1MinusResponse.md)
+[**UserEditObjectV1Response**](UserEditObjectV1Response.md)
 
 ### Authorization
 
@@ -119,7 +121,7 @@ Configure Authorization:
 
 <a id="userEditPermissionsV1"></a>
 # **userEditPermissionsV1**
-> UserMinusEditPermissionsMinusV1MinusResponse userEditPermissionsV1(pkiUserID, userMinusEditPermissionsMinusV1MinusRequest)
+> UserEditPermissionsV1Response userEditPermissionsV1(pkiUserID, userEditPermissionsV1Request)
 
 Edit multiple Permissions
 
@@ -133,9 +135,9 @@ Using this endpoint, you can edit multiple Permissions at the same time.
 
 val apiInstance = ObjectUserApi()
 val pkiUserID : kotlin.Int = 56 // kotlin.Int | 
-val userMinusEditPermissionsMinusV1MinusRequest : UserMinusEditPermissionsMinusV1MinusRequest =  // UserMinusEditPermissionsMinusV1MinusRequest | 
+val userEditPermissionsV1Request : UserEditPermissionsV1Request =  // UserEditPermissionsV1Request | 
 try {
-    val result : UserMinusEditPermissionsMinusV1MinusResponse = apiInstance.userEditPermissionsV1(pkiUserID, userMinusEditPermissionsMinusV1MinusRequest)
+    val result : UserEditPermissionsV1Response = apiInstance.userEditPermissionsV1(pkiUserID, userEditPermissionsV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectUserApi#userEditPermissionsV1")
@@ -151,11 +153,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiUserID** | **kotlin.Int**|  |
- **userMinusEditPermissionsMinusV1MinusRequest** | [**UserMinusEditPermissionsMinusV1MinusRequest**](UserMinusEditPermissionsMinusV1MinusRequest.md)|  |
+ **userEditPermissionsV1Request** | [**UserEditPermissionsV1Request**](UserEditPermissionsV1Request.md)|  |
 
 ### Return type
 
-[**UserMinusEditPermissionsMinusV1MinusResponse**](UserMinusEditPermissionsMinusV1MinusResponse.md)
+[**UserEditPermissionsV1Response**](UserEditPermissionsV1Response.md)
 
 ### Authorization
 
@@ -169,9 +171,57 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a id="userGetApikeysV1"></a>
+# **userGetApikeysV1**
+> UserGetApikeysV1Response userGetApikeysV1(pkiUserID)
+
+Retrieve an existing User&#39;s Apikeys
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectUserApi()
+val pkiUserID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : UserGetApikeysV1Response = apiInstance.userGetApikeysV1(pkiUserID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectUserApi#userGetApikeysV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectUserApi#userGetApikeysV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiUserID** | **kotlin.Int**|  |
+
+### Return type
+
+[**UserGetApikeysV1Response**](UserGetApikeysV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
 <a id="userGetAutocompleteV2"></a>
 # **userGetAutocompleteV2**
-> UserMinusGetAutocompleteMinusV2MinusResponse userGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+> UserGetAutocompleteV2Response userGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 
 Retrieve Users and IDs
 
@@ -187,9 +237,9 @@ val apiInstance = ObjectUserApi()
 val sSelector : kotlin.String = sSelector_example // kotlin.String | The type of Users to return
 val eFilterActive : kotlin.String = eFilterActive_example // kotlin.String | Specify which results we want to display.
 val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter the returned results
-val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
+val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
 try {
-    val result : UserMinusGetAutocompleteMinusV2MinusResponse = apiInstance.userGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+    val result : UserGetAutocompleteV2Response = apiInstance.userGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectUserApi#userGetAutocompleteV2")
@@ -204,14 +254,14 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sSelector** | **kotlin.String**| The type of Users to return | [enum: All, AgentBrokerEmployeeEzsignUserNormal, AgentBrokerEmployeeNormalBuiltIn, ClonableUsers, EzsignuserBuiltIn, Normal, NormalEzsignSigner]
+ **sSelector** | **kotlin.String**| The type of Users to return | [enum: All, AgentBrokerEmployeeEzsignUserNormal, AgentBrokerEmployeeNormalBuiltIn, AgentBrokerEzsignuserNormal, ClonableUsers, EzsignuserBuiltIn, Normal, NormalEzsignSigner, UsergroupDelegated]
  **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
  **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional]
- **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
 
 ### Return type
 
-[**UserMinusGetAutocompleteMinusV2MinusResponse**](UserMinusGetAutocompleteMinusV2MinusResponse.md)
+[**UserGetAutocompleteV2Response**](UserGetAutocompleteV2Response.md)
 
 ### Authorization
 
@@ -227,7 +277,7 @@ Configure Authorization:
 
 <a id="userGetEffectivePermissionsV1"></a>
 # **userGetEffectivePermissionsV1**
-> UserMinusGetEffectivePermissionsMinusV1MinusResponse userGetEffectivePermissionsV1(pkiUserID)
+> UserGetEffectivePermissionsV1Response userGetEffectivePermissionsV1(pkiUserID)
 
 Retrieve an existing User&#39;s Effective Permissions
 
@@ -242,7 +292,7 @@ Effective Permissions refers to the combination of Permissions held by a User an
 val apiInstance = ObjectUserApi()
 val pkiUserID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : UserMinusGetEffectivePermissionsMinusV1MinusResponse = apiInstance.userGetEffectivePermissionsV1(pkiUserID)
+    val result : UserGetEffectivePermissionsV1Response = apiInstance.userGetEffectivePermissionsV1(pkiUserID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectUserApi#userGetEffectivePermissionsV1")
@@ -261,7 +311,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UserMinusGetEffectivePermissionsMinusV1MinusResponse**](UserMinusGetEffectivePermissionsMinusV1MinusResponse.md)
+[**UserGetEffectivePermissionsV1Response**](UserGetEffectivePermissionsV1Response.md)
 
 ### Authorization
 
@@ -277,7 +327,7 @@ Configure Authorization:
 
 <a id="userGetListV1"></a>
 # **userGetListV1**
-> UserMinusGetListMinusV1MinusResponse userGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+> UserGetListV1Response userGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
 Retrieve User list
 
@@ -293,10 +343,10 @@ val apiInstance = ObjectUserApi()
 val eOrderBy : kotlin.String = eOrderBy_example // kotlin.String | Specify how you want the results to be sorted
 val iRowMax : kotlin.Int = 56 // kotlin.Int | 
 val iRowOffset : kotlin.Int = 56 // kotlin.Int | 
-val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
+val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
 val sFilter : kotlin.String = sFilter_example // kotlin.String | 
 try {
-    val result : UserMinusGetListMinusV1MinusResponse = apiInstance.userGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+    val result : UserGetListV1Response = apiInstance.userGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectUserApi#userGetListV1")
@@ -314,12 +364,12 @@ Name | Type | Description  | Notes
  **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiUserID_ASC, pkiUserID_DESC, sUserFirstname_ASC, sUserFirstname_DESC, sUserLastname_ASC, sUserLastname_DESC, sUserLoginname_ASC, sUserLoginname_DESC, bUserIsactive_ASC, bUserIsactive_DESC, eUserType_ASC, eUserType_DESC, eUserOrigin_ASC, eUserOrigin_DESC, eUserEzsignaccess_ASC, eUserEzsignaccess_DESC, dtUserEzsignprepaidexpiration_ASC, dtUserEzsignprepaidexpiration_DESC, sEmailAddress_ASC, sEmailAddress_DESC]
  **iRowMax** | **kotlin.Int**|  | [optional] [default to 10000]
  **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0]
- **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
  **sFilter** | **kotlin.String**|  | [optional]
 
 ### Return type
 
-[**UserMinusGetListMinusV1MinusResponse**](UserMinusGetListMinusV1MinusResponse.md)
+[**UserGetListV1Response**](UserGetListV1Response.md)
 
 ### Authorization
 
@@ -335,7 +385,7 @@ Configure Authorization:
 
 <a id="userGetObjectV2"></a>
 # **userGetObjectV2**
-> UserMinusGetObjectMinusV2MinusResponse userGetObjectV2(pkiUserID)
+> UserGetObjectV2Response userGetObjectV2(pkiUserID)
 
 Retrieve an existing User
 
@@ -350,7 +400,7 @@ Retrieve an existing User
 val apiInstance = ObjectUserApi()
 val pkiUserID : kotlin.Int = 56 // kotlin.Int | The unique ID of the User
 try {
-    val result : UserMinusGetObjectMinusV2MinusResponse = apiInstance.userGetObjectV2(pkiUserID)
+    val result : UserGetObjectV2Response = apiInstance.userGetObjectV2(pkiUserID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectUserApi#userGetObjectV2")
@@ -369,7 +419,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UserMinusGetObjectMinusV2MinusResponse**](UserMinusGetObjectMinusV2MinusResponse.md)
+[**UserGetObjectV2Response**](UserGetObjectV2Response.md)
 
 ### Authorization
 
@@ -385,7 +435,7 @@ Configure Authorization:
 
 <a id="userGetPermissionsV1"></a>
 # **userGetPermissionsV1**
-> UserMinusGetPermissionsMinusV1MinusResponse userGetPermissionsV1(pkiUserID)
+> UserGetPermissionsV1Response userGetPermissionsV1(pkiUserID)
 
 Retrieve an existing User&#39;s Permissions
 
@@ -398,7 +448,7 @@ Retrieve an existing User&#39;s Permissions
 val apiInstance = ObjectUserApi()
 val pkiUserID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : UserMinusGetPermissionsMinusV1MinusResponse = apiInstance.userGetPermissionsV1(pkiUserID)
+    val result : UserGetPermissionsV1Response = apiInstance.userGetPermissionsV1(pkiUserID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectUserApi#userGetPermissionsV1")
@@ -417,7 +467,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UserMinusGetPermissionsMinusV1MinusResponse**](UserMinusGetPermissionsMinusV1MinusResponse.md)
+[**UserGetPermissionsV1Response**](UserGetPermissionsV1Response.md)
 
 ### Authorization
 
@@ -433,7 +483,7 @@ Configure Authorization:
 
 <a id="userGetSubnetsV1"></a>
 # **userGetSubnetsV1**
-> UserMinusGetSubnetsMinusV1MinusResponse userGetSubnetsV1(pkiUserID)
+> UserGetSubnetsV1Response userGetSubnetsV1(pkiUserID)
 
 Retrieve an existing User&#39;s Subnets
 
@@ -446,7 +496,7 @@ Retrieve an existing User&#39;s Subnets
 val apiInstance = ObjectUserApi()
 val pkiUserID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : UserMinusGetSubnetsMinusV1MinusResponse = apiInstance.userGetSubnetsV1(pkiUserID)
+    val result : UserGetSubnetsV1Response = apiInstance.userGetSubnetsV1(pkiUserID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectUserApi#userGetSubnetsV1")
@@ -465,7 +515,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UserMinusGetSubnetsMinusV1MinusResponse**](UserMinusGetSubnetsMinusV1MinusResponse.md)
+[**UserGetSubnetsV1Response**](UserGetSubnetsV1Response.md)
 
 ### Authorization
 
@@ -477,5 +527,57 @@ Configure Authorization:
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="userSendPasswordResetV1"></a>
+# **userSendPasswordResetV1**
+> UserSendPasswordResetV1Response userSendPasswordResetV1(pkiUserID, body)
+
+Send password reset
+
+Send the password reset email
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectUserApi()
+val pkiUserID : kotlin.Int = 56 // kotlin.Int | 
+val body : kotlin.Any = Object // kotlin.Any | 
+try {
+    val result : UserSendPasswordResetV1Response = apiInstance.userSendPasswordResetV1(pkiUserID, body)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectUserApi#userSendPasswordResetV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectUserApi#userSendPasswordResetV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiUserID** | **kotlin.Int**|  |
+ **body** | **kotlin.Any**|  |
+
+### Return type
+
+[**UserSendPasswordResetV1Response**](UserSendPasswordResetV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 

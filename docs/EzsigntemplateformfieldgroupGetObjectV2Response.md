@@ -1,12 +1,12 @@
 
-# EzsigntemplateformfieldgroupMinusGetObjectMinusV2MinusResponse
+# EzsigntemplateformfieldgroupGetObjectV2Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**EzsigntemplateformfieldgroupMinusGetObjectMinusV2MinusResponseMinusMPayload**](EzsigntemplateformfieldgroupMinusGetObjectMinusV2MinusResponseMinusMPayload.md) |  | 
-**objDebugPayload** | [**CommonMinusResponseMinusObjDebugPayload**](CommonMinusResponseMinusObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonMinusResponseMinusObjDebug**](CommonMinusResponseMinusObjDebug.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
+**mPayload** | [**EzsigntemplateformfieldgroupGetObjectV2ResponseMPayload**](EzsigntemplateformfieldgroupGetObjectV2ResponseMPayload.md) |  | 
+**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 
 
 

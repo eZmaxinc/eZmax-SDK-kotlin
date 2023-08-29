@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a id="sessionhistoryGetListV1"></a>
 # **sessionhistoryGetListV1**
-> SessionhistoryMinusGetListMinusV1MinusResponse sessionhistoryGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+> SessionhistoryGetListV1Response sessionhistoryGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
 Retrieve Sessionhistory list
 
@@ -23,10 +23,10 @@ val apiInstance = ObjectSessionhistoryApi()
 val eOrderBy : kotlin.String = eOrderBy_example // kotlin.String | Specify how you want the results to be sorted
 val iRowMax : kotlin.Int = 56 // kotlin.Int | 
 val iRowOffset : kotlin.Int = 56 // kotlin.Int | 
-val acceptLanguage : HeaderMinusAcceptMinusLanguage =  // HeaderMinusAcceptMinusLanguage | 
+val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
 val sFilter : kotlin.String = sFilter_example // kotlin.String | 
 try {
-    val result : SessionhistoryMinusGetListMinusV1MinusResponse = apiInstance.sessionhistoryGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+    val result : SessionhistoryGetListV1Response = apiInstance.sessionhistoryGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectSessionhistoryApi#sessionhistoryGetListV1")
@@ -44,12 +44,12 @@ Name | Type | Description  | Notes
  **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiSessionhistoryID_ASC, pkiSessionhistoryID_DESC, fkiComputerID_ASC, fkiComputerID_DESC, fkiUserID_ASC, fkiUserID_DESC, dtSessionhistoryFirsthit_ASC, dtSessionhistoryFirsthit_DESC, dtSessionhistoryLasthit_ASC, dtSessionhistoryLasthit_DESC, eSessionhistoryEndby_ASC, eSessionhistoryEndby_DESC, sComputerDescription_ASC, sComputerDescription_DESC, sSessionhistoryDuration_ASC, sSessionhistoryDuration_DESC, sSessionhistoryIP_ASC, sSessionhistoryIP_DESC, sUserLoginname_ASC, sUserLoginname_DESC]
  **iRowMax** | **kotlin.Int**|  | [optional] [default to 10000]
  **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0]
- **acceptLanguage** | [**HeaderMinusAcceptMinusLanguage**](.md)|  | [optional] [enum: *, en, fr]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
  **sFilter** | **kotlin.String**|  | [optional]
 
 ### Return type
 
-[**SessionhistoryMinusGetListMinusV1MinusResponse**](SessionhistoryMinusGetListMinusV1MinusResponse.md)
+[**SessionhistoryGetListV1Response**](SessionhistoryGetListV1Response.md)
 
 ### Authorization
 

@@ -1,5 +1,5 @@
 
-# PeriodMinusAutocompleteElementMinusResponse
+# PeriodAutocompleteElementResponse
 
 ## Properties
 Name | Type | Description | Notes

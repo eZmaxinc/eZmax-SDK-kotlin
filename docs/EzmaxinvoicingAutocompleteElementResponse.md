@@ -1,5 +1,5 @@
 
-# EzmaxinvoicingMinusAutocompleteElementMinusResponse
+# EzmaxinvoicingAutocompleteElementResponse
 
 ## Properties
 Name | Type | Description | Notes

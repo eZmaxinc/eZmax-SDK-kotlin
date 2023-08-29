@@ -19,10 +19,10 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonMinusResponseMinusError
-import eZmaxApi.models.EzsignbulksendtransmissionMinusGetEzsignsignaturesAutomaticMinusV1MinusResponse
-import eZmaxApi.models.EzsignbulksendtransmissionMinusGetFormsDataMinusV1MinusResponse
-import eZmaxApi.models.EzsignbulksendtransmissionMinusGetObjectMinusV2MinusResponse
+import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response
+import eZmaxApi.models.EzsignbulksendtransmissionGetFormsDataV1Response
+import eZmaxApi.models.EzsignbulksendtransmissionGetObjectV2Response
 
 import com.squareup.moshi.Json
 
@@ -123,7 +123,7 @@ class ObjectEzsignbulksendtransmissionApi(basePath: kotlin.String = defaultBaseP
      * Retrieve an existing Ezsignbulksendtransmission&#39;s automatic Ezsignsignatures
      * Return the Ezsignsignatures that can be signed by the current user at the current step in the process
      * @param pkiEzsignbulksendtransmissionID 
-     * @return EzsignbulksendtransmissionMinusGetEzsignsignaturesAutomaticMinusV1MinusResponse
+     * @return EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -132,11 +132,11 @@ class ObjectEzsignbulksendtransmissionApi(basePath: kotlin.String = defaultBaseP
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1(pkiEzsignbulksendtransmissionID: kotlin.Int) : EzsignbulksendtransmissionMinusGetEzsignsignaturesAutomaticMinusV1MinusResponse {
+    fun ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1(pkiEzsignbulksendtransmissionID: kotlin.Int) : EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response {
         val localVarResponse = ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1WithHttpInfo(pkiEzsignbulksendtransmissionID = pkiEzsignbulksendtransmissionID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignbulksendtransmissionMinusGetEzsignsignaturesAutomaticMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -154,16 +154,16 @@ class ObjectEzsignbulksendtransmissionApi(basePath: kotlin.String = defaultBaseP
      * Retrieve an existing Ezsignbulksendtransmission&#39;s automatic Ezsignsignatures
      * Return the Ezsignsignatures that can be signed by the current user at the current step in the process
      * @param pkiEzsignbulksendtransmissionID 
-     * @return ApiResponse<EzsignbulksendtransmissionMinusGetEzsignsignaturesAutomaticMinusV1MinusResponse?>
+     * @return ApiResponse<EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1WithHttpInfo(pkiEzsignbulksendtransmissionID: kotlin.Int) : ApiResponse<EzsignbulksendtransmissionMinusGetEzsignsignaturesAutomaticMinusV1MinusResponse?> {
+    fun ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1WithHttpInfo(pkiEzsignbulksendtransmissionID: kotlin.Int) : ApiResponse<EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response?> {
         val localVariableConfig = ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1RequestConfig(pkiEzsignbulksendtransmissionID = pkiEzsignbulksendtransmissionID)
 
-        return request<Unit, EzsignbulksendtransmissionMinusGetEzsignsignaturesAutomaticMinusV1MinusResponse>(
+        return request<Unit, EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response>(
             localVariableConfig
         )
     }
@@ -194,7 +194,7 @@ class ObjectEzsignbulksendtransmissionApi(basePath: kotlin.String = defaultBaseP
      * Retrieve an existing Ezsignbulksendtransmission&#39;s forms data
      * 
      * @param pkiEzsignbulksendtransmissionID 
-     * @return EzsignbulksendtransmissionMinusGetFormsDataMinusV1MinusResponse
+     * @return EzsignbulksendtransmissionGetFormsDataV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -203,11 +203,11 @@ class ObjectEzsignbulksendtransmissionApi(basePath: kotlin.String = defaultBaseP
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignbulksendtransmissionGetFormsDataV1(pkiEzsignbulksendtransmissionID: kotlin.Int) : EzsignbulksendtransmissionMinusGetFormsDataMinusV1MinusResponse {
+    fun ezsignbulksendtransmissionGetFormsDataV1(pkiEzsignbulksendtransmissionID: kotlin.Int) : EzsignbulksendtransmissionGetFormsDataV1Response {
         val localVarResponse = ezsignbulksendtransmissionGetFormsDataV1WithHttpInfo(pkiEzsignbulksendtransmissionID = pkiEzsignbulksendtransmissionID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignbulksendtransmissionMinusGetFormsDataMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignbulksendtransmissionGetFormsDataV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -225,16 +225,16 @@ class ObjectEzsignbulksendtransmissionApi(basePath: kotlin.String = defaultBaseP
      * Retrieve an existing Ezsignbulksendtransmission&#39;s forms data
      * 
      * @param pkiEzsignbulksendtransmissionID 
-     * @return ApiResponse<EzsignbulksendtransmissionMinusGetFormsDataMinusV1MinusResponse?>
+     * @return ApiResponse<EzsignbulksendtransmissionGetFormsDataV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignbulksendtransmissionGetFormsDataV1WithHttpInfo(pkiEzsignbulksendtransmissionID: kotlin.Int) : ApiResponse<EzsignbulksendtransmissionMinusGetFormsDataMinusV1MinusResponse?> {
+    fun ezsignbulksendtransmissionGetFormsDataV1WithHttpInfo(pkiEzsignbulksendtransmissionID: kotlin.Int) : ApiResponse<EzsignbulksendtransmissionGetFormsDataV1Response?> {
         val localVariableConfig = ezsignbulksendtransmissionGetFormsDataV1RequestConfig(pkiEzsignbulksendtransmissionID = pkiEzsignbulksendtransmissionID)
 
-        return request<Unit, EzsignbulksendtransmissionMinusGetFormsDataMinusV1MinusResponse>(
+        return request<Unit, EzsignbulksendtransmissionGetFormsDataV1Response>(
             localVariableConfig
         )
     }
@@ -265,7 +265,7 @@ class ObjectEzsignbulksendtransmissionApi(basePath: kotlin.String = defaultBaseP
      * Retrieve an existing Ezsignbulksendtransmission
      * 
      * @param pkiEzsignbulksendtransmissionID 
-     * @return EzsignbulksendtransmissionMinusGetObjectMinusV2MinusResponse
+     * @return EzsignbulksendtransmissionGetObjectV2Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -274,11 +274,11 @@ class ObjectEzsignbulksendtransmissionApi(basePath: kotlin.String = defaultBaseP
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignbulksendtransmissionGetObjectV2(pkiEzsignbulksendtransmissionID: kotlin.Int) : EzsignbulksendtransmissionMinusGetObjectMinusV2MinusResponse {
+    fun ezsignbulksendtransmissionGetObjectV2(pkiEzsignbulksendtransmissionID: kotlin.Int) : EzsignbulksendtransmissionGetObjectV2Response {
         val localVarResponse = ezsignbulksendtransmissionGetObjectV2WithHttpInfo(pkiEzsignbulksendtransmissionID = pkiEzsignbulksendtransmissionID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignbulksendtransmissionMinusGetObjectMinusV2MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignbulksendtransmissionGetObjectV2Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -296,16 +296,16 @@ class ObjectEzsignbulksendtransmissionApi(basePath: kotlin.String = defaultBaseP
      * Retrieve an existing Ezsignbulksendtransmission
      * 
      * @param pkiEzsignbulksendtransmissionID 
-     * @return ApiResponse<EzsignbulksendtransmissionMinusGetObjectMinusV2MinusResponse?>
+     * @return ApiResponse<EzsignbulksendtransmissionGetObjectV2Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignbulksendtransmissionGetObjectV2WithHttpInfo(pkiEzsignbulksendtransmissionID: kotlin.Int) : ApiResponse<EzsignbulksendtransmissionMinusGetObjectMinusV2MinusResponse?> {
+    fun ezsignbulksendtransmissionGetObjectV2WithHttpInfo(pkiEzsignbulksendtransmissionID: kotlin.Int) : ApiResponse<EzsignbulksendtransmissionGetObjectV2Response?> {
         val localVariableConfig = ezsignbulksendtransmissionGetObjectV2RequestConfig(pkiEzsignbulksendtransmissionID = pkiEzsignbulksendtransmissionID)
 
-        return request<Unit, EzsignbulksendtransmissionMinusGetObjectMinusV2MinusResponse>(
+        return request<Unit, EzsignbulksendtransmissionGetObjectV2Response>(
             localVariableConfig
         )
     }

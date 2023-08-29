@@ -1,5 +1,5 @@
 
-# PermissionMinusCreateObjectMinusV1MinusResponseMinusMPayload
+# PermissionCreateObjectV1ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes

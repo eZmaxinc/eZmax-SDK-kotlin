@@ -1,5 +1,5 @@
 
-# FieldMinusECreditcardtypeCodename
+# FieldECreditcardtypeCodename
 
 ## Enum
 

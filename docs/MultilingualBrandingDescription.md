@@ -1,5 +1,5 @@
 
-# MultilingualMinusBrandingDescription
+# MultilingualBrandingDescription
 
 ## Properties
 Name | Type | Description | Notes

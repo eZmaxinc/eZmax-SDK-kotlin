@@ -1,11 +1,11 @@
 
-# EzsignfolderMinusCreateObjectMinusV1MinusRequest
+# EzsignfolderCreateObjectV1Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objEzsignfolder** | [**EzsignfolderMinusRequest**](EzsignfolderMinusRequest.md) |  |  [optional]
-**objEzsignfolderCompound** | [**EzsignfolderMinusRequestCompound**](EzsignfolderMinusRequestCompound.md) |  |  [optional]
+**objEzsignfolder** | [**EzsignfolderRequest**](EzsignfolderRequest.md) |  |  [optional]
+**objEzsignfolderCompound** | [**EzsignfolderRequestCompound**](EzsignfolderRequestCompound.md) |  |  [optional]
 
 
 

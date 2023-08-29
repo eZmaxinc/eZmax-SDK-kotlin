@@ -1,5 +1,5 @@
 
-# EzsignformfieldgroupMinusCreateObjectMinusV1MinusResponseMinusMPayload
+# EzsignformfieldgroupCreateObjectV1ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes

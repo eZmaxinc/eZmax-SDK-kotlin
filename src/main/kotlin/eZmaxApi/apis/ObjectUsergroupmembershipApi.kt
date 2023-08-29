@@ -19,13 +19,13 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonMinusResponseMinusError
-import eZmaxApi.models.UsergroupmembershipMinusCreateObjectMinusV1MinusRequest
-import eZmaxApi.models.UsergroupmembershipMinusCreateObjectMinusV1MinusResponse
-import eZmaxApi.models.UsergroupmembershipMinusDeleteObjectMinusV1MinusResponse
-import eZmaxApi.models.UsergroupmembershipMinusEditObjectMinusV1MinusRequest
-import eZmaxApi.models.UsergroupmembershipMinusEditObjectMinusV1MinusResponse
-import eZmaxApi.models.UsergroupmembershipMinusGetObjectMinusV2MinusResponse
+import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.UsergroupmembershipCreateObjectV1Request
+import eZmaxApi.models.UsergroupmembershipCreateObjectV1Response
+import eZmaxApi.models.UsergroupmembershipDeleteObjectV1Response
+import eZmaxApi.models.UsergroupmembershipEditObjectV1Request
+import eZmaxApi.models.UsergroupmembershipEditObjectV1Response
+import eZmaxApi.models.UsergroupmembershipGetObjectV2Response
 
 import com.squareup.moshi.Json
 
@@ -54,8 +54,8 @@ class ObjectUsergroupmembershipApi(basePath: kotlin.String = defaultBasePath, cl
     /**
      * Create a new Usergroupmembership
      * The endpoint allows to create one or many elements at once.
-     * @param usergroupmembershipMinusCreateObjectMinusV1MinusRequest 
-     * @return UsergroupmembershipMinusCreateObjectMinusV1MinusResponse
+     * @param usergroupmembershipCreateObjectV1Request 
+     * @return UsergroupmembershipCreateObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -64,11 +64,11 @@ class ObjectUsergroupmembershipApi(basePath: kotlin.String = defaultBasePath, cl
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun usergroupmembershipCreateObjectV1(usergroupmembershipMinusCreateObjectMinusV1MinusRequest: UsergroupmembershipMinusCreateObjectMinusV1MinusRequest) : UsergroupmembershipMinusCreateObjectMinusV1MinusResponse {
-        val localVarResponse = usergroupmembershipCreateObjectV1WithHttpInfo(usergroupmembershipMinusCreateObjectMinusV1MinusRequest = usergroupmembershipMinusCreateObjectMinusV1MinusRequest)
+    fun usergroupmembershipCreateObjectV1(usergroupmembershipCreateObjectV1Request: UsergroupmembershipCreateObjectV1Request) : UsergroupmembershipCreateObjectV1Response {
+        val localVarResponse = usergroupmembershipCreateObjectV1WithHttpInfo(usergroupmembershipCreateObjectV1Request = usergroupmembershipCreateObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as UsergroupmembershipMinusCreateObjectMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as UsergroupmembershipCreateObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -85,17 +85,17 @@ class ObjectUsergroupmembershipApi(basePath: kotlin.String = defaultBasePath, cl
     /**
      * Create a new Usergroupmembership
      * The endpoint allows to create one or many elements at once.
-     * @param usergroupmembershipMinusCreateObjectMinusV1MinusRequest 
-     * @return ApiResponse<UsergroupmembershipMinusCreateObjectMinusV1MinusResponse?>
+     * @param usergroupmembershipCreateObjectV1Request 
+     * @return ApiResponse<UsergroupmembershipCreateObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun usergroupmembershipCreateObjectV1WithHttpInfo(usergroupmembershipMinusCreateObjectMinusV1MinusRequest: UsergroupmembershipMinusCreateObjectMinusV1MinusRequest) : ApiResponse<UsergroupmembershipMinusCreateObjectMinusV1MinusResponse?> {
-        val localVariableConfig = usergroupmembershipCreateObjectV1RequestConfig(usergroupmembershipMinusCreateObjectMinusV1MinusRequest = usergroupmembershipMinusCreateObjectMinusV1MinusRequest)
+    fun usergroupmembershipCreateObjectV1WithHttpInfo(usergroupmembershipCreateObjectV1Request: UsergroupmembershipCreateObjectV1Request) : ApiResponse<UsergroupmembershipCreateObjectV1Response?> {
+        val localVariableConfig = usergroupmembershipCreateObjectV1RequestConfig(usergroupmembershipCreateObjectV1Request = usergroupmembershipCreateObjectV1Request)
 
-        return request<UsergroupmembershipMinusCreateObjectMinusV1MinusRequest, UsergroupmembershipMinusCreateObjectMinusV1MinusResponse>(
+        return request<UsergroupmembershipCreateObjectV1Request, UsergroupmembershipCreateObjectV1Response>(
             localVariableConfig
         )
     }
@@ -103,11 +103,11 @@ class ObjectUsergroupmembershipApi(basePath: kotlin.String = defaultBasePath, cl
     /**
      * To obtain the request config of the operation usergroupmembershipCreateObjectV1
      *
-     * @param usergroupmembershipMinusCreateObjectMinusV1MinusRequest 
+     * @param usergroupmembershipCreateObjectV1Request 
      * @return RequestConfig
      */
-    fun usergroupmembershipCreateObjectV1RequestConfig(usergroupmembershipMinusCreateObjectMinusV1MinusRequest: UsergroupmembershipMinusCreateObjectMinusV1MinusRequest) : RequestConfig<UsergroupmembershipMinusCreateObjectMinusV1MinusRequest> {
-        val localVariableBody = usergroupmembershipMinusCreateObjectMinusV1MinusRequest
+    fun usergroupmembershipCreateObjectV1RequestConfig(usergroupmembershipCreateObjectV1Request: UsergroupmembershipCreateObjectV1Request) : RequestConfig<UsergroupmembershipCreateObjectV1Request> {
+        val localVariableBody = usergroupmembershipCreateObjectV1Request
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Content-Type"] = "application/json"
@@ -127,7 +127,7 @@ class ObjectUsergroupmembershipApi(basePath: kotlin.String = defaultBasePath, cl
      * Delete an existing Usergroupmembership
      * 
      * @param pkiUsergroupmembershipID 
-     * @return UsergroupmembershipMinusDeleteObjectMinusV1MinusResponse
+     * @return UsergroupmembershipDeleteObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -136,11 +136,11 @@ class ObjectUsergroupmembershipApi(basePath: kotlin.String = defaultBasePath, cl
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun usergroupmembershipDeleteObjectV1(pkiUsergroupmembershipID: kotlin.Int) : UsergroupmembershipMinusDeleteObjectMinusV1MinusResponse {
+    fun usergroupmembershipDeleteObjectV1(pkiUsergroupmembershipID: kotlin.Int) : UsergroupmembershipDeleteObjectV1Response {
         val localVarResponse = usergroupmembershipDeleteObjectV1WithHttpInfo(pkiUsergroupmembershipID = pkiUsergroupmembershipID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as UsergroupmembershipMinusDeleteObjectMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as UsergroupmembershipDeleteObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -158,16 +158,16 @@ class ObjectUsergroupmembershipApi(basePath: kotlin.String = defaultBasePath, cl
      * Delete an existing Usergroupmembership
      * 
      * @param pkiUsergroupmembershipID 
-     * @return ApiResponse<UsergroupmembershipMinusDeleteObjectMinusV1MinusResponse?>
+     * @return ApiResponse<UsergroupmembershipDeleteObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun usergroupmembershipDeleteObjectV1WithHttpInfo(pkiUsergroupmembershipID: kotlin.Int) : ApiResponse<UsergroupmembershipMinusDeleteObjectMinusV1MinusResponse?> {
+    fun usergroupmembershipDeleteObjectV1WithHttpInfo(pkiUsergroupmembershipID: kotlin.Int) : ApiResponse<UsergroupmembershipDeleteObjectV1Response?> {
         val localVariableConfig = usergroupmembershipDeleteObjectV1RequestConfig(pkiUsergroupmembershipID = pkiUsergroupmembershipID)
 
-        return request<Unit, UsergroupmembershipMinusDeleteObjectMinusV1MinusResponse>(
+        return request<Unit, UsergroupmembershipDeleteObjectV1Response>(
             localVariableConfig
         )
     }
@@ -198,8 +198,8 @@ class ObjectUsergroupmembershipApi(basePath: kotlin.String = defaultBasePath, cl
      * Edit an existing Usergroupmembership
      * 
      * @param pkiUsergroupmembershipID 
-     * @param usergroupmembershipMinusEditObjectMinusV1MinusRequest 
-     * @return UsergroupmembershipMinusEditObjectMinusV1MinusResponse
+     * @param usergroupmembershipEditObjectV1Request 
+     * @return UsergroupmembershipEditObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -208,11 +208,11 @@ class ObjectUsergroupmembershipApi(basePath: kotlin.String = defaultBasePath, cl
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun usergroupmembershipEditObjectV1(pkiUsergroupmembershipID: kotlin.Int, usergroupmembershipMinusEditObjectMinusV1MinusRequest: UsergroupmembershipMinusEditObjectMinusV1MinusRequest) : UsergroupmembershipMinusEditObjectMinusV1MinusResponse {
-        val localVarResponse = usergroupmembershipEditObjectV1WithHttpInfo(pkiUsergroupmembershipID = pkiUsergroupmembershipID, usergroupmembershipMinusEditObjectMinusV1MinusRequest = usergroupmembershipMinusEditObjectMinusV1MinusRequest)
+    fun usergroupmembershipEditObjectV1(pkiUsergroupmembershipID: kotlin.Int, usergroupmembershipEditObjectV1Request: UsergroupmembershipEditObjectV1Request) : UsergroupmembershipEditObjectV1Response {
+        val localVarResponse = usergroupmembershipEditObjectV1WithHttpInfo(pkiUsergroupmembershipID = pkiUsergroupmembershipID, usergroupmembershipEditObjectV1Request = usergroupmembershipEditObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as UsergroupmembershipMinusEditObjectMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as UsergroupmembershipEditObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -230,17 +230,17 @@ class ObjectUsergroupmembershipApi(basePath: kotlin.String = defaultBasePath, cl
      * Edit an existing Usergroupmembership
      * 
      * @param pkiUsergroupmembershipID 
-     * @param usergroupmembershipMinusEditObjectMinusV1MinusRequest 
-     * @return ApiResponse<UsergroupmembershipMinusEditObjectMinusV1MinusResponse?>
+     * @param usergroupmembershipEditObjectV1Request 
+     * @return ApiResponse<UsergroupmembershipEditObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun usergroupmembershipEditObjectV1WithHttpInfo(pkiUsergroupmembershipID: kotlin.Int, usergroupmembershipMinusEditObjectMinusV1MinusRequest: UsergroupmembershipMinusEditObjectMinusV1MinusRequest) : ApiResponse<UsergroupmembershipMinusEditObjectMinusV1MinusResponse?> {
-        val localVariableConfig = usergroupmembershipEditObjectV1RequestConfig(pkiUsergroupmembershipID = pkiUsergroupmembershipID, usergroupmembershipMinusEditObjectMinusV1MinusRequest = usergroupmembershipMinusEditObjectMinusV1MinusRequest)
+    fun usergroupmembershipEditObjectV1WithHttpInfo(pkiUsergroupmembershipID: kotlin.Int, usergroupmembershipEditObjectV1Request: UsergroupmembershipEditObjectV1Request) : ApiResponse<UsergroupmembershipEditObjectV1Response?> {
+        val localVariableConfig = usergroupmembershipEditObjectV1RequestConfig(pkiUsergroupmembershipID = pkiUsergroupmembershipID, usergroupmembershipEditObjectV1Request = usergroupmembershipEditObjectV1Request)
 
-        return request<UsergroupmembershipMinusEditObjectMinusV1MinusRequest, UsergroupmembershipMinusEditObjectMinusV1MinusResponse>(
+        return request<UsergroupmembershipEditObjectV1Request, UsergroupmembershipEditObjectV1Response>(
             localVariableConfig
         )
     }
@@ -249,11 +249,11 @@ class ObjectUsergroupmembershipApi(basePath: kotlin.String = defaultBasePath, cl
      * To obtain the request config of the operation usergroupmembershipEditObjectV1
      *
      * @param pkiUsergroupmembershipID 
-     * @param usergroupmembershipMinusEditObjectMinusV1MinusRequest 
+     * @param usergroupmembershipEditObjectV1Request 
      * @return RequestConfig
      */
-    fun usergroupmembershipEditObjectV1RequestConfig(pkiUsergroupmembershipID: kotlin.Int, usergroupmembershipMinusEditObjectMinusV1MinusRequest: UsergroupmembershipMinusEditObjectMinusV1MinusRequest) : RequestConfig<UsergroupmembershipMinusEditObjectMinusV1MinusRequest> {
-        val localVariableBody = usergroupmembershipMinusEditObjectMinusV1MinusRequest
+    fun usergroupmembershipEditObjectV1RequestConfig(pkiUsergroupmembershipID: kotlin.Int, usergroupmembershipEditObjectV1Request: UsergroupmembershipEditObjectV1Request) : RequestConfig<UsergroupmembershipEditObjectV1Request> {
+        val localVariableBody = usergroupmembershipEditObjectV1Request
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Content-Type"] = "application/json"
@@ -273,7 +273,7 @@ class ObjectUsergroupmembershipApi(basePath: kotlin.String = defaultBasePath, cl
      * Retrieve an existing Usergroupmembership
      * 
      * @param pkiUsergroupmembershipID 
-     * @return UsergroupmembershipMinusGetObjectMinusV2MinusResponse
+     * @return UsergroupmembershipGetObjectV2Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -282,11 +282,11 @@ class ObjectUsergroupmembershipApi(basePath: kotlin.String = defaultBasePath, cl
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun usergroupmembershipGetObjectV2(pkiUsergroupmembershipID: kotlin.Int) : UsergroupmembershipMinusGetObjectMinusV2MinusResponse {
+    fun usergroupmembershipGetObjectV2(pkiUsergroupmembershipID: kotlin.Int) : UsergroupmembershipGetObjectV2Response {
         val localVarResponse = usergroupmembershipGetObjectV2WithHttpInfo(pkiUsergroupmembershipID = pkiUsergroupmembershipID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as UsergroupmembershipMinusGetObjectMinusV2MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as UsergroupmembershipGetObjectV2Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -304,16 +304,16 @@ class ObjectUsergroupmembershipApi(basePath: kotlin.String = defaultBasePath, cl
      * Retrieve an existing Usergroupmembership
      * 
      * @param pkiUsergroupmembershipID 
-     * @return ApiResponse<UsergroupmembershipMinusGetObjectMinusV2MinusResponse?>
+     * @return ApiResponse<UsergroupmembershipGetObjectV2Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun usergroupmembershipGetObjectV2WithHttpInfo(pkiUsergroupmembershipID: kotlin.Int) : ApiResponse<UsergroupmembershipMinusGetObjectMinusV2MinusResponse?> {
+    fun usergroupmembershipGetObjectV2WithHttpInfo(pkiUsergroupmembershipID: kotlin.Int) : ApiResponse<UsergroupmembershipGetObjectV2Response?> {
         val localVariableConfig = usergroupmembershipGetObjectV2RequestConfig(pkiUsergroupmembershipID = pkiUsergroupmembershipID)
 
-        return request<Unit, UsergroupmembershipMinusGetObjectMinusV2MinusResponse>(
+        return request<Unit, UsergroupmembershipGetObjectV2Response>(
             localVariableConfig
         )
     }

@@ -1,5 +1,5 @@
 
-# FieldMinusEEzmaxinvoicingagentVariationezsign
+# FieldEEzmaxinvoicingagentVariationezsign
 
 ## Enum
 

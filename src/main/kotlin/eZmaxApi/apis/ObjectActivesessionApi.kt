@@ -19,11 +19,11 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.ActivesessionMinusGetCurrentMinusV1MinusResponse
-import eZmaxApi.models.ActivesessionMinusGetListMinusV1MinusResponse
-import eZmaxApi.models.CommonMinusResponseMinusError
-import eZmaxApi.models.CommonMinusResponseMinusRedirectMinusSSecretquestionTextX
-import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
+import eZmaxApi.models.ActivesessionGetCurrentV1Response
+import eZmaxApi.models.ActivesessionGetListV1Response
+import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.CommonResponseRedirectSSecretquestionTextX
+import eZmaxApi.models.HeaderAcceptLanguage
 
 import com.squareup.moshi.Json
 
@@ -52,7 +52,7 @@ class ObjectActivesessionApi(basePath: kotlin.String = defaultBasePath, client: 
     /**
      * Get Current Activesession
      * Retrieve the details about the current activesession
-     * @return ActivesessionMinusGetCurrentMinusV1MinusResponse
+     * @return ActivesessionGetCurrentV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -61,11 +61,11 @@ class ObjectActivesessionApi(basePath: kotlin.String = defaultBasePath, client: 
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun activesessionGetCurrentV1() : ActivesessionMinusGetCurrentMinusV1MinusResponse {
+    fun activesessionGetCurrentV1() : ActivesessionGetCurrentV1Response {
         val localVarResponse = activesessionGetCurrentV1WithHttpInfo()
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as ActivesessionMinusGetCurrentMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ActivesessionGetCurrentV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -82,16 +82,16 @@ class ObjectActivesessionApi(basePath: kotlin.String = defaultBasePath, client: 
     /**
      * Get Current Activesession
      * Retrieve the details about the current activesession
-     * @return ApiResponse<ActivesessionMinusGetCurrentMinusV1MinusResponse?>
+     * @return ApiResponse<ActivesessionGetCurrentV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun activesessionGetCurrentV1WithHttpInfo() : ApiResponse<ActivesessionMinusGetCurrentMinusV1MinusResponse?> {
+    fun activesessionGetCurrentV1WithHttpInfo() : ApiResponse<ActivesessionGetCurrentV1Response?> {
         val localVariableConfig = activesessionGetCurrentV1RequestConfig()
 
-        return request<Unit, ActivesessionMinusGetCurrentMinusV1MinusResponse>(
+        return request<Unit, ActivesessionGetCurrentV1Response>(
             localVariableConfig
         )
     }
@@ -120,7 +120,7 @@ class ObjectActivesessionApi(basePath: kotlin.String = defaultBasePath, client: 
     /**
      * enum for parameter eOrderBy
      */
-     enum class EOrderBy_activesessionGetListV1(val value: kotlin.String) {
+     enum class EOrderByActivesessionGetListV1(val value: kotlin.String) {
          @Json(name = "pkiActivesessionID_ASC") pkiActivesessionID_ASC("pkiActivesessionID_ASC"),
          @Json(name = "pkiActivesessionID_DESC") pkiActivesessionID_DESC("pkiActivesessionID_DESC"),
          @Json(name = "fkiUserID_ASC") fkiUserID_ASC("fkiUserID_ASC"),
@@ -155,7 +155,7 @@ class ObjectActivesessionApi(basePath: kotlin.String = defaultBasePath, client: 
      * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
-     * @return ActivesessionMinusGetListMinusV1MinusResponse
+     * @return ActivesessionGetListV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -164,11 +164,11 @@ class ObjectActivesessionApi(basePath: kotlin.String = defaultBasePath, client: 
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun activesessionGetListV1(eOrderBy: EOrderBy_activesessionGetListV1? = null, iRowMax: kotlin.Int? = 10000, iRowOffset: kotlin.Int? = 0, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null, sFilter: kotlin.String? = null) : ActivesessionMinusGetListMinusV1MinusResponse {
+    fun activesessionGetListV1(eOrderBy: EOrderByActivesessionGetListV1? = null, iRowMax: kotlin.Int? = 10000, iRowOffset: kotlin.Int? = 0, acceptLanguage: HeaderAcceptLanguage? = null, sFilter: kotlin.String? = null) : ActivesessionGetListV1Response {
         val localVarResponse = activesessionGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as ActivesessionMinusGetListMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ActivesessionGetListV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -190,16 +190,16 @@ class ObjectActivesessionApi(basePath: kotlin.String = defaultBasePath, client: 
      * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
-     * @return ApiResponse<ActivesessionMinusGetListMinusV1MinusResponse?>
+     * @return ApiResponse<ActivesessionGetListV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun activesessionGetListV1WithHttpInfo(eOrderBy: EOrderBy_activesessionGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : ApiResponse<ActivesessionMinusGetListMinusV1MinusResponse?> {
+    fun activesessionGetListV1WithHttpInfo(eOrderBy: EOrderByActivesessionGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : ApiResponse<ActivesessionGetListV1Response?> {
         val localVariableConfig = activesessionGetListV1RequestConfig(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
 
-        return request<Unit, ActivesessionMinusGetListMinusV1MinusResponse>(
+        return request<Unit, ActivesessionGetListV1Response>(
             localVariableConfig
         )
     }
@@ -214,12 +214,12 @@ class ObjectActivesessionApi(basePath: kotlin.String = defaultBasePath, client: 
      * @param sFilter  (optional)
      * @return RequestConfig
      */
-    fun activesessionGetListV1RequestConfig(eOrderBy: EOrderBy_activesessionGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
+    fun activesessionGetListV1RequestConfig(eOrderBy: EOrderByActivesessionGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
                 if (eOrderBy != null) {
-                    put("eOrderBy", listOf(eOrderBy.toString()))
+                    put("eOrderBy", listOf(eOrderBy.value))
                 }
                 if (iRowMax != null) {
                     put("iRowMax", listOf(iRowMax.toString()))

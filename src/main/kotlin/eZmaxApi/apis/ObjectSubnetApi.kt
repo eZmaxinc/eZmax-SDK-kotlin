@@ -19,13 +19,13 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonMinusResponseMinusError
-import eZmaxApi.models.SubnetMinusCreateObjectMinusV1MinusRequest
-import eZmaxApi.models.SubnetMinusCreateObjectMinusV1MinusResponse
-import eZmaxApi.models.SubnetMinusDeleteObjectMinusV1MinusResponse
-import eZmaxApi.models.SubnetMinusEditObjectMinusV1MinusRequest
-import eZmaxApi.models.SubnetMinusEditObjectMinusV1MinusResponse
-import eZmaxApi.models.SubnetMinusGetObjectMinusV2MinusResponse
+import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.SubnetCreateObjectV1Request
+import eZmaxApi.models.SubnetCreateObjectV1Response
+import eZmaxApi.models.SubnetDeleteObjectV1Response
+import eZmaxApi.models.SubnetEditObjectV1Request
+import eZmaxApi.models.SubnetEditObjectV1Response
+import eZmaxApi.models.SubnetGetObjectV2Response
 
 import com.squareup.moshi.Json
 
@@ -54,8 +54,8 @@ class ObjectSubnetApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
     /**
      * Create a new Subnet
      * The endpoint allows to create one or many elements at once.
-     * @param subnetMinusCreateObjectMinusV1MinusRequest 
-     * @return SubnetMinusCreateObjectMinusV1MinusResponse
+     * @param subnetCreateObjectV1Request 
+     * @return SubnetCreateObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -64,11 +64,11 @@ class ObjectSubnetApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun subnetCreateObjectV1(subnetMinusCreateObjectMinusV1MinusRequest: SubnetMinusCreateObjectMinusV1MinusRequest) : SubnetMinusCreateObjectMinusV1MinusResponse {
-        val localVarResponse = subnetCreateObjectV1WithHttpInfo(subnetMinusCreateObjectMinusV1MinusRequest = subnetMinusCreateObjectMinusV1MinusRequest)
+    fun subnetCreateObjectV1(subnetCreateObjectV1Request: SubnetCreateObjectV1Request) : SubnetCreateObjectV1Response {
+        val localVarResponse = subnetCreateObjectV1WithHttpInfo(subnetCreateObjectV1Request = subnetCreateObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as SubnetMinusCreateObjectMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as SubnetCreateObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -85,17 +85,17 @@ class ObjectSubnetApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
     /**
      * Create a new Subnet
      * The endpoint allows to create one or many elements at once.
-     * @param subnetMinusCreateObjectMinusV1MinusRequest 
-     * @return ApiResponse<SubnetMinusCreateObjectMinusV1MinusResponse?>
+     * @param subnetCreateObjectV1Request 
+     * @return ApiResponse<SubnetCreateObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun subnetCreateObjectV1WithHttpInfo(subnetMinusCreateObjectMinusV1MinusRequest: SubnetMinusCreateObjectMinusV1MinusRequest) : ApiResponse<SubnetMinusCreateObjectMinusV1MinusResponse?> {
-        val localVariableConfig = subnetCreateObjectV1RequestConfig(subnetMinusCreateObjectMinusV1MinusRequest = subnetMinusCreateObjectMinusV1MinusRequest)
+    fun subnetCreateObjectV1WithHttpInfo(subnetCreateObjectV1Request: SubnetCreateObjectV1Request) : ApiResponse<SubnetCreateObjectV1Response?> {
+        val localVariableConfig = subnetCreateObjectV1RequestConfig(subnetCreateObjectV1Request = subnetCreateObjectV1Request)
 
-        return request<SubnetMinusCreateObjectMinusV1MinusRequest, SubnetMinusCreateObjectMinusV1MinusResponse>(
+        return request<SubnetCreateObjectV1Request, SubnetCreateObjectV1Response>(
             localVariableConfig
         )
     }
@@ -103,11 +103,11 @@ class ObjectSubnetApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
     /**
      * To obtain the request config of the operation subnetCreateObjectV1
      *
-     * @param subnetMinusCreateObjectMinusV1MinusRequest 
+     * @param subnetCreateObjectV1Request 
      * @return RequestConfig
      */
-    fun subnetCreateObjectV1RequestConfig(subnetMinusCreateObjectMinusV1MinusRequest: SubnetMinusCreateObjectMinusV1MinusRequest) : RequestConfig<SubnetMinusCreateObjectMinusV1MinusRequest> {
-        val localVariableBody = subnetMinusCreateObjectMinusV1MinusRequest
+    fun subnetCreateObjectV1RequestConfig(subnetCreateObjectV1Request: SubnetCreateObjectV1Request) : RequestConfig<SubnetCreateObjectV1Request> {
+        val localVariableBody = subnetCreateObjectV1Request
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Content-Type"] = "application/json"
@@ -127,7 +127,7 @@ class ObjectSubnetApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      * Delete an existing Subnet
      * 
      * @param pkiSubnetID The unique ID of the Subnet
-     * @return SubnetMinusDeleteObjectMinusV1MinusResponse
+     * @return SubnetDeleteObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -136,11 +136,11 @@ class ObjectSubnetApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun subnetDeleteObjectV1(pkiSubnetID: kotlin.Int) : SubnetMinusDeleteObjectMinusV1MinusResponse {
+    fun subnetDeleteObjectV1(pkiSubnetID: kotlin.Int) : SubnetDeleteObjectV1Response {
         val localVarResponse = subnetDeleteObjectV1WithHttpInfo(pkiSubnetID = pkiSubnetID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as SubnetMinusDeleteObjectMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as SubnetDeleteObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -158,16 +158,16 @@ class ObjectSubnetApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      * Delete an existing Subnet
      * 
      * @param pkiSubnetID The unique ID of the Subnet
-     * @return ApiResponse<SubnetMinusDeleteObjectMinusV1MinusResponse?>
+     * @return ApiResponse<SubnetDeleteObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun subnetDeleteObjectV1WithHttpInfo(pkiSubnetID: kotlin.Int) : ApiResponse<SubnetMinusDeleteObjectMinusV1MinusResponse?> {
+    fun subnetDeleteObjectV1WithHttpInfo(pkiSubnetID: kotlin.Int) : ApiResponse<SubnetDeleteObjectV1Response?> {
         val localVariableConfig = subnetDeleteObjectV1RequestConfig(pkiSubnetID = pkiSubnetID)
 
-        return request<Unit, SubnetMinusDeleteObjectMinusV1MinusResponse>(
+        return request<Unit, SubnetDeleteObjectV1Response>(
             localVariableConfig
         )
     }
@@ -198,8 +198,8 @@ class ObjectSubnetApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      * Edit an existing Subnet
      * 
      * @param pkiSubnetID The unique ID of the Subnet
-     * @param subnetMinusEditObjectMinusV1MinusRequest 
-     * @return SubnetMinusEditObjectMinusV1MinusResponse
+     * @param subnetEditObjectV1Request 
+     * @return SubnetEditObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -208,11 +208,11 @@ class ObjectSubnetApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun subnetEditObjectV1(pkiSubnetID: kotlin.Int, subnetMinusEditObjectMinusV1MinusRequest: SubnetMinusEditObjectMinusV1MinusRequest) : SubnetMinusEditObjectMinusV1MinusResponse {
-        val localVarResponse = subnetEditObjectV1WithHttpInfo(pkiSubnetID = pkiSubnetID, subnetMinusEditObjectMinusV1MinusRequest = subnetMinusEditObjectMinusV1MinusRequest)
+    fun subnetEditObjectV1(pkiSubnetID: kotlin.Int, subnetEditObjectV1Request: SubnetEditObjectV1Request) : SubnetEditObjectV1Response {
+        val localVarResponse = subnetEditObjectV1WithHttpInfo(pkiSubnetID = pkiSubnetID, subnetEditObjectV1Request = subnetEditObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as SubnetMinusEditObjectMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as SubnetEditObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -230,17 +230,17 @@ class ObjectSubnetApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      * Edit an existing Subnet
      * 
      * @param pkiSubnetID The unique ID of the Subnet
-     * @param subnetMinusEditObjectMinusV1MinusRequest 
-     * @return ApiResponse<SubnetMinusEditObjectMinusV1MinusResponse?>
+     * @param subnetEditObjectV1Request 
+     * @return ApiResponse<SubnetEditObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun subnetEditObjectV1WithHttpInfo(pkiSubnetID: kotlin.Int, subnetMinusEditObjectMinusV1MinusRequest: SubnetMinusEditObjectMinusV1MinusRequest) : ApiResponse<SubnetMinusEditObjectMinusV1MinusResponse?> {
-        val localVariableConfig = subnetEditObjectV1RequestConfig(pkiSubnetID = pkiSubnetID, subnetMinusEditObjectMinusV1MinusRequest = subnetMinusEditObjectMinusV1MinusRequest)
+    fun subnetEditObjectV1WithHttpInfo(pkiSubnetID: kotlin.Int, subnetEditObjectV1Request: SubnetEditObjectV1Request) : ApiResponse<SubnetEditObjectV1Response?> {
+        val localVariableConfig = subnetEditObjectV1RequestConfig(pkiSubnetID = pkiSubnetID, subnetEditObjectV1Request = subnetEditObjectV1Request)
 
-        return request<SubnetMinusEditObjectMinusV1MinusRequest, SubnetMinusEditObjectMinusV1MinusResponse>(
+        return request<SubnetEditObjectV1Request, SubnetEditObjectV1Response>(
             localVariableConfig
         )
     }
@@ -249,11 +249,11 @@ class ObjectSubnetApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      * To obtain the request config of the operation subnetEditObjectV1
      *
      * @param pkiSubnetID The unique ID of the Subnet
-     * @param subnetMinusEditObjectMinusV1MinusRequest 
+     * @param subnetEditObjectV1Request 
      * @return RequestConfig
      */
-    fun subnetEditObjectV1RequestConfig(pkiSubnetID: kotlin.Int, subnetMinusEditObjectMinusV1MinusRequest: SubnetMinusEditObjectMinusV1MinusRequest) : RequestConfig<SubnetMinusEditObjectMinusV1MinusRequest> {
-        val localVariableBody = subnetMinusEditObjectMinusV1MinusRequest
+    fun subnetEditObjectV1RequestConfig(pkiSubnetID: kotlin.Int, subnetEditObjectV1Request: SubnetEditObjectV1Request) : RequestConfig<SubnetEditObjectV1Request> {
+        val localVariableBody = subnetEditObjectV1Request
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Content-Type"] = "application/json"
@@ -273,7 +273,7 @@ class ObjectSubnetApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      * Retrieve an existing Subnet
      * 
      * @param pkiSubnetID The unique ID of the Subnet
-     * @return SubnetMinusGetObjectMinusV2MinusResponse
+     * @return SubnetGetObjectV2Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -282,11 +282,11 @@ class ObjectSubnetApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun subnetGetObjectV2(pkiSubnetID: kotlin.Int) : SubnetMinusGetObjectMinusV2MinusResponse {
+    fun subnetGetObjectV2(pkiSubnetID: kotlin.Int) : SubnetGetObjectV2Response {
         val localVarResponse = subnetGetObjectV2WithHttpInfo(pkiSubnetID = pkiSubnetID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as SubnetMinusGetObjectMinusV2MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as SubnetGetObjectV2Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -304,16 +304,16 @@ class ObjectSubnetApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
      * Retrieve an existing Subnet
      * 
      * @param pkiSubnetID The unique ID of the Subnet
-     * @return ApiResponse<SubnetMinusGetObjectMinusV2MinusResponse?>
+     * @return ApiResponse<SubnetGetObjectV2Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun subnetGetObjectV2WithHttpInfo(pkiSubnetID: kotlin.Int) : ApiResponse<SubnetMinusGetObjectMinusV2MinusResponse?> {
+    fun subnetGetObjectV2WithHttpInfo(pkiSubnetID: kotlin.Int) : ApiResponse<SubnetGetObjectV2Response?> {
         val localVariableConfig = subnetGetObjectV2RequestConfig(pkiSubnetID = pkiSubnetID)
 
-        return request<Unit, SubnetMinusGetObjectMinusV2MinusResponse>(
+        return request<Unit, SubnetGetObjectV2Response>(
             localVariableConfig
         )
     }

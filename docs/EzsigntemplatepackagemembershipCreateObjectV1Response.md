@@ -1,12 +1,12 @@
 
-# EzsigntemplatepackagemembershipMinusCreateObjectMinusV1MinusResponse
+# EzsigntemplatepackagemembershipCreateObjectV1Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**EzsigntemplatepackagemembershipMinusCreateObjectMinusV1MinusResponseMinusMPayload**](EzsigntemplatepackagemembershipMinusCreateObjectMinusV1MinusResponseMinusMPayload.md) |  | 
-**objDebugPayload** | [**CommonMinusResponseMinusObjDebugPayload**](CommonMinusResponseMinusObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonMinusResponseMinusObjDebug**](CommonMinusResponseMinusObjDebug.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
+**mPayload** | [**EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload**](EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload.md) |  | 
+**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 
 
 

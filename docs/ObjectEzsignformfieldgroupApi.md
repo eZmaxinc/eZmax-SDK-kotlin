@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a id="ezsignformfieldgroupCreateObjectV1"></a>
 # **ezsignformfieldgroupCreateObjectV1**
-> EzsignformfieldgroupMinusCreateObjectMinusV1MinusResponse ezsignformfieldgroupCreateObjectV1(ezsignformfieldgroupMinusCreateObjectMinusV1MinusRequest)
+> EzsignformfieldgroupCreateObjectV1Response ezsignformfieldgroupCreateObjectV1(ezsignformfieldgroupCreateObjectV1Request)
 
 Create a new Ezsignformfieldgroup
 
@@ -25,9 +25,9 @@ The endpoint allows to create one or many elements at once.
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsignformfieldgroupApi()
-val ezsignformfieldgroupMinusCreateObjectMinusV1MinusRequest : EzsignformfieldgroupMinusCreateObjectMinusV1MinusRequest =  // EzsignformfieldgroupMinusCreateObjectMinusV1MinusRequest | 
+val ezsignformfieldgroupCreateObjectV1Request : EzsignformfieldgroupCreateObjectV1Request =  // EzsignformfieldgroupCreateObjectV1Request | 
 try {
-    val result : EzsignformfieldgroupMinusCreateObjectMinusV1MinusResponse = apiInstance.ezsignformfieldgroupCreateObjectV1(ezsignformfieldgroupMinusCreateObjectMinusV1MinusRequest)
+    val result : EzsignformfieldgroupCreateObjectV1Response = apiInstance.ezsignformfieldgroupCreateObjectV1(ezsignformfieldgroupCreateObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignformfieldgroupApi#ezsignformfieldgroupCreateObjectV1")
@@ -42,11 +42,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ezsignformfieldgroupMinusCreateObjectMinusV1MinusRequest** | [**EzsignformfieldgroupMinusCreateObjectMinusV1MinusRequest**](EzsignformfieldgroupMinusCreateObjectMinusV1MinusRequest.md)|  |
+ **ezsignformfieldgroupCreateObjectV1Request** | [**EzsignformfieldgroupCreateObjectV1Request**](EzsignformfieldgroupCreateObjectV1Request.md)|  |
 
 ### Return type
 
-[**EzsignformfieldgroupMinusCreateObjectMinusV1MinusResponse**](EzsignformfieldgroupMinusCreateObjectMinusV1MinusResponse.md)
+[**EzsignformfieldgroupCreateObjectV1Response**](EzsignformfieldgroupCreateObjectV1Response.md)
 
 ### Authorization
 
@@ -62,7 +62,7 @@ Configure Authorization:
 
 <a id="ezsignformfieldgroupDeleteObjectV1"></a>
 # **ezsignformfieldgroupDeleteObjectV1**
-> EzsignformfieldgroupMinusDeleteObjectMinusV1MinusResponse ezsignformfieldgroupDeleteObjectV1(pkiEzsignformfieldgroupID)
+> EzsignformfieldgroupDeleteObjectV1Response ezsignformfieldgroupDeleteObjectV1(pkiEzsignformfieldgroupID)
 
 Delete an existing Ezsignformfieldgroup
 
@@ -77,7 +77,7 @@ Delete an existing Ezsignformfieldgroup
 val apiInstance = ObjectEzsignformfieldgroupApi()
 val pkiEzsignformfieldgroupID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : EzsignformfieldgroupMinusDeleteObjectMinusV1MinusResponse = apiInstance.ezsignformfieldgroupDeleteObjectV1(pkiEzsignformfieldgroupID)
+    val result : EzsignformfieldgroupDeleteObjectV1Response = apiInstance.ezsignformfieldgroupDeleteObjectV1(pkiEzsignformfieldgroupID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignformfieldgroupApi#ezsignformfieldgroupDeleteObjectV1")
@@ -96,7 +96,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignformfieldgroupMinusDeleteObjectMinusV1MinusResponse**](EzsignformfieldgroupMinusDeleteObjectMinusV1MinusResponse.md)
+[**EzsignformfieldgroupDeleteObjectV1Response**](EzsignformfieldgroupDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -112,7 +112,7 @@ Configure Authorization:
 
 <a id="ezsignformfieldgroupEditObjectV1"></a>
 # **ezsignformfieldgroupEditObjectV1**
-> EzsignformfieldgroupMinusEditObjectMinusV1MinusResponse ezsignformfieldgroupEditObjectV1(pkiEzsignformfieldgroupID, ezsignformfieldgroupMinusEditObjectMinusV1MinusRequest)
+> EzsignformfieldgroupEditObjectV1Response ezsignformfieldgroupEditObjectV1(pkiEzsignformfieldgroupID, ezsignformfieldgroupEditObjectV1Request)
 
 Edit an existing Ezsignformfieldgroup
 
@@ -126,9 +126,9 @@ Edit an existing Ezsignformfieldgroup
 
 val apiInstance = ObjectEzsignformfieldgroupApi()
 val pkiEzsignformfieldgroupID : kotlin.Int = 56 // kotlin.Int | 
-val ezsignformfieldgroupMinusEditObjectMinusV1MinusRequest : EzsignformfieldgroupMinusEditObjectMinusV1MinusRequest =  // EzsignformfieldgroupMinusEditObjectMinusV1MinusRequest | 
+val ezsignformfieldgroupEditObjectV1Request : EzsignformfieldgroupEditObjectV1Request =  // EzsignformfieldgroupEditObjectV1Request | 
 try {
-    val result : EzsignformfieldgroupMinusEditObjectMinusV1MinusResponse = apiInstance.ezsignformfieldgroupEditObjectV1(pkiEzsignformfieldgroupID, ezsignformfieldgroupMinusEditObjectMinusV1MinusRequest)
+    val result : EzsignformfieldgroupEditObjectV1Response = apiInstance.ezsignformfieldgroupEditObjectV1(pkiEzsignformfieldgroupID, ezsignformfieldgroupEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignformfieldgroupApi#ezsignformfieldgroupEditObjectV1")
@@ -144,11 +144,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiEzsignformfieldgroupID** | **kotlin.Int**|  |
- **ezsignformfieldgroupMinusEditObjectMinusV1MinusRequest** | [**EzsignformfieldgroupMinusEditObjectMinusV1MinusRequest**](EzsignformfieldgroupMinusEditObjectMinusV1MinusRequest.md)|  |
+ **ezsignformfieldgroupEditObjectV1Request** | [**EzsignformfieldgroupEditObjectV1Request**](EzsignformfieldgroupEditObjectV1Request.md)|  |
 
 ### Return type
 
-[**EzsignformfieldgroupMinusEditObjectMinusV1MinusResponse**](EzsignformfieldgroupMinusEditObjectMinusV1MinusResponse.md)
+[**EzsignformfieldgroupEditObjectV1Response**](EzsignformfieldgroupEditObjectV1Response.md)
 
 ### Authorization
 
@@ -164,7 +164,7 @@ Configure Authorization:
 
 <a id="ezsignformfieldgroupGetObjectV2"></a>
 # **ezsignformfieldgroupGetObjectV2**
-> EzsignformfieldgroupMinusGetObjectMinusV2MinusResponse ezsignformfieldgroupGetObjectV2(pkiEzsignformfieldgroupID)
+> EzsignformfieldgroupGetObjectV2Response ezsignformfieldgroupGetObjectV2(pkiEzsignformfieldgroupID)
 
 Retrieve an existing Ezsignformfieldgroup
 
@@ -179,7 +179,7 @@ Retrieve an existing Ezsignformfieldgroup
 val apiInstance = ObjectEzsignformfieldgroupApi()
 val pkiEzsignformfieldgroupID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : EzsignformfieldgroupMinusGetObjectMinusV2MinusResponse = apiInstance.ezsignformfieldgroupGetObjectV2(pkiEzsignformfieldgroupID)
+    val result : EzsignformfieldgroupGetObjectV2Response = apiInstance.ezsignformfieldgroupGetObjectV2(pkiEzsignformfieldgroupID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignformfieldgroupApi#ezsignformfieldgroupGetObjectV2")
@@ -198,7 +198,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignformfieldgroupMinusGetObjectMinusV2MinusResponse**](EzsignformfieldgroupMinusGetObjectMinusV2MinusResponse.md)
+[**EzsignformfieldgroupGetObjectV2Response**](EzsignformfieldgroupGetObjectV2Response.md)
 
 ### Authorization
 

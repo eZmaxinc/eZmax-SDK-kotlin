@@ -1,5 +1,5 @@
 
-# CustomMinusWebhooklogMinusResponse
+# CustomWebhooklogResponse
 
 ## Properties
 Name | Type | Description | Notes

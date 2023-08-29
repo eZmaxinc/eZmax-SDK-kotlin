@@ -1,5 +1,5 @@
 
-# EmailstaticMinusResponseCompound
+# EmailstaticResponseCompound
 
 ## Properties
 Name | Type | Description | Notes

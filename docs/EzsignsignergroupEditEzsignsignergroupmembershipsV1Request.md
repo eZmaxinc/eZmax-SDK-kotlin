@@ -1,10 +1,10 @@
 
-# EzsignsignergroupMinusEditEzsignsignergroupmembershipsMinusV1MinusRequest
+# EzsignsignergroupEditEzsignsignergroupmembershipsV1Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjEzsignsignergroupmembership** | [**kotlin.collections.List&lt;EzsignsignergroupmembershipMinusRequestCompound&gt;**](EzsignsignergroupmembershipMinusRequestCompound.md) |  | 
+**aObjEzsignsignergroupmembership** | [**kotlin.collections.List&lt;EzsignsignergroupmembershipRequestCompound&gt;**](EzsignsignergroupmembershipRequestCompound.md) |  | 
 
 
 

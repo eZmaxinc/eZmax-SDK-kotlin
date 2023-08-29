@@ -1,5 +1,5 @@
 
-# UsergroupmembershipMinusCreateObjectMinusV1MinusResponseMinusMPayload
+# UsergroupmembershipCreateObjectV1ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes

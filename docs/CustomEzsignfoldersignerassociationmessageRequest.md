@@ -1,5 +1,5 @@
 
-# CustomMinusEzsignfoldersignerassociationmessageMinusRequest
+# CustomEzsignfoldersignerassociationmessageRequest
 
 ## Properties
 Name | Type | Description | Notes

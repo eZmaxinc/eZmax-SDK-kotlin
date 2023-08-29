@@ -1,12 +1,12 @@
 
-# EzsignsignergroupMinusGetEzsignsignergroupmembershipsMinusV1MinusResponse
+# EzsignsignergroupGetEzsignsignergroupmembershipsV1Response
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**EzsignsignergroupMinusGetEzsignsignergroupmembershipsMinusV1MinusResponseMinusMPayload**](EzsignsignergroupMinusGetEzsignsignergroupmembershipsMinusV1MinusResponseMinusMPayload.md) |  | 
-**objDebugPayload** | [**CommonMinusResponseMinusObjDebugPayload**](CommonMinusResponseMinusObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonMinusResponseMinusObjDebug**](CommonMinusResponseMinusObjDebug.md) |  |  [optional]
+**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
+**mPayload** | [**EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload**](EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload.md) |  | 
+**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 
 
 

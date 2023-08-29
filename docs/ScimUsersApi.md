@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a id="usersCreateObjectScimV2"></a>
 # **usersCreateObjectScimV2**
-> ScimMinusUser usersCreateObjectScimV2(scimMinusUser)
+> ScimUser usersCreateObjectScimV2(scimUser)
 
 Create a new User
 
@@ -24,9 +24,9 @@ Create a new User
 //import eZmaxApi.models.*
 
 val apiInstance = ScimUsersApi()
-val scimMinusUser : ScimMinusUser =  // ScimMinusUser | 
+val scimUser : ScimUser =  // ScimUser | 
 try {
-    val result : ScimMinusUser = apiInstance.usersCreateObjectScimV2(scimMinusUser)
+    val result : ScimUser = apiInstance.usersCreateObjectScimV2(scimUser)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ScimUsersApi#usersCreateObjectScimV2")
@@ -41,11 +41,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **scimMinusUser** | [**ScimMinusUser**](ScimMinusUser.md)|  |
+ **scimUser** | [**ScimUser**](ScimUser.md)|  |
 
 ### Return type
 
-[**ScimMinusUser**](ScimMinusUser.md)
+[**ScimUser**](ScimUser.md)
 
 ### Authorization
 
@@ -106,7 +106,7 @@ Configure Bearer:
 
 <a id="usersEditObjectScimV2"></a>
 # **usersEditObjectScimV2**
-> ScimMinusUser usersEditObjectScimV2(userId, scimMinusUser)
+> ScimUser usersEditObjectScimV2(userId, scimUser)
 
 Edit an existing User
 
@@ -118,9 +118,9 @@ Edit an existing User
 
 val apiInstance = ScimUsersApi()
 val userId : kotlin.String = userId_example // kotlin.String | 
-val scimMinusUser : ScimMinusUser =  // ScimMinusUser | 
+val scimUser : ScimUser =  // ScimUser | 
 try {
-    val result : ScimMinusUser = apiInstance.usersEditObjectScimV2(userId, scimMinusUser)
+    val result : ScimUser = apiInstance.usersEditObjectScimV2(userId, scimUser)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ScimUsersApi#usersEditObjectScimV2")
@@ -136,11 +136,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **kotlin.String**|  |
- **scimMinusUser** | [**ScimMinusUser**](ScimMinusUser.md)|  |
+ **scimUser** | [**ScimUser**](ScimUser.md)|  |
 
 ### Return type
 
-[**ScimMinusUser**](ScimMinusUser.md)
+[**ScimUser**](ScimUser.md)
 
 ### Authorization
 
@@ -155,7 +155,7 @@ Configure Bearer:
 
 <a id="usersGetListScimV2"></a>
 # **usersGetListScimV2**
-> ScimMinusUserList usersGetListScimV2(filter)
+> ScimUserList usersGetListScimV2(filter)
 
 Retrieve User list
 
@@ -168,7 +168,7 @@ Retrieve User list
 val apiInstance = ScimUsersApi()
 val filter : kotlin.String = filter_example // kotlin.String | Filter expression for searching users
 try {
-    val result : ScimMinusUserList = apiInstance.usersGetListScimV2(filter)
+    val result : ScimUserList = apiInstance.usersGetListScimV2(filter)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ScimUsersApi#usersGetListScimV2")
@@ -187,7 +187,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ScimMinusUserList**](ScimMinusUserList.md)
+[**ScimUserList**](ScimUserList.md)
 
 ### Authorization
 
@@ -202,7 +202,7 @@ Configure Bearer:
 
 <a id="usersGetObjectScimV2"></a>
 # **usersGetObjectScimV2**
-> ScimMinusUser usersGetObjectScimV2(userId)
+> ScimUser usersGetObjectScimV2(userId)
 
 Retrieve an existing User
 
@@ -215,7 +215,7 @@ Retrieve an existing User
 val apiInstance = ScimUsersApi()
 val userId : kotlin.String = userId_example // kotlin.String | 
 try {
-    val result : ScimMinusUser = apiInstance.usersGetObjectScimV2(userId)
+    val result : ScimUser = apiInstance.usersGetObjectScimV2(userId)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ScimUsersApi#usersGetObjectScimV2")
@@ -234,7 +234,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ScimMinusUser**](ScimMinusUser.md)
+[**ScimUser**](ScimUser.md)
 
 ### Authorization
 

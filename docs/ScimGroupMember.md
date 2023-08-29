@@ -1,5 +1,5 @@
 
-# ScimMinusGroupMember
+# ScimGroupMember
 
 ## Properties
 Name | Type | Description | Notes

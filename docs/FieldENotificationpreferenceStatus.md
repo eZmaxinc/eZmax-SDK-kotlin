@@ -1,5 +1,5 @@
 
-# FieldMinusENotificationpreferenceStatus
+# FieldENotificationpreferenceStatus
 
 ## Enum
 

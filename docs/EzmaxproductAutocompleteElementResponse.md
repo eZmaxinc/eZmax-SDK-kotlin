@@ -1,5 +1,5 @@
 
-# EzmaxproductMinusAutocompleteElementMinusResponse
+# EzmaxproductAutocompleteElementResponse
 
 ## Properties
 Name | Type | Description | Notes

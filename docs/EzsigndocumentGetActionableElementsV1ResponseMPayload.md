@@ -1,11 +1,11 @@
 
-# EzsigndocumentMinusGetActionableElementsMinusV1MinusResponseMinusMPayload
+# EzsigndocumentGetActionableElementsV1ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjEzsignsignature** | [**kotlin.collections.List&lt;EzsignsignatureMinusResponseCompound&gt;**](EzsignsignatureMinusResponseCompound.md) |  | 
-**aObjEzsignformfieldgroup** | [**kotlin.collections.List&lt;EzsignformfieldgroupMinusResponseCompound&gt;**](EzsignformfieldgroupMinusResponseCompound.md) |  | 
+**aObjEzsignsignature** | [**kotlin.collections.List&lt;EzsignsignatureResponseCompound&gt;**](EzsignsignatureResponseCompound.md) |  | 
+**aObjEzsignformfieldgroup** | [**kotlin.collections.List&lt;EzsignformfieldgroupResponseCompound&gt;**](EzsignformfieldgroupResponseCompound.md) |  | 
 
 
 

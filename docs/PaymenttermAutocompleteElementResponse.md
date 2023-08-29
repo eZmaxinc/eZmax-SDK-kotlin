@@ -1,5 +1,5 @@
 
-# PaymenttermMinusAutocompleteElementMinusResponse
+# PaymenttermAutocompleteElementResponse
 
 ## Properties
 Name | Type | Description | Notes

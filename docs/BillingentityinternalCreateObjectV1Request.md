@@ -1,10 +1,10 @@
 
-# BillingentityinternalMinusCreateObjectMinusV1MinusRequest
+# BillingentityinternalCreateObjectV1Request
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjBillingentityinternal** | [**kotlin.collections.List&lt;BillingentityinternalMinusRequestCompound&gt;**](BillingentityinternalMinusRequestCompound.md) |  | 
+**aObjBillingentityinternal** | [**kotlin.collections.List&lt;BillingentityinternalRequestCompound&gt;**](BillingentityinternalRequestCompound.md) |  | 
 
 
 

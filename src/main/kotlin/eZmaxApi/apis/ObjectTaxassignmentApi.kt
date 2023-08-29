@@ -19,8 +19,8 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
-import eZmaxApi.models.TaxassignmentMinusGetAutocompleteMinusV2MinusResponse
+import eZmaxApi.models.HeaderAcceptLanguage
+import eZmaxApi.models.TaxassignmentGetAutocompleteV2Response
 
 import com.squareup.moshi.Json
 
@@ -49,7 +49,7 @@ class ObjectTaxassignmentApi(basePath: kotlin.String = defaultBasePath, client: 
     /**
      * enum for parameter sSelector
      */
-     enum class SSelector_taxassignmentGetAutocompleteV2(val value: kotlin.String) {
+     enum class SSelectorTaxassignmentGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "All") All("All"),
          @Json(name = "AllButNonrecoverable") AllButNonrecoverable("AllButNonrecoverable")
      }
@@ -57,7 +57,7 @@ class ObjectTaxassignmentApi(basePath: kotlin.String = defaultBasePath, client: 
     /**
      * enum for parameter eFilterActive
      */
-     enum class EFilterActive_taxassignmentGetAutocompleteV2(val value: kotlin.String) {
+     enum class EFilterActiveTaxassignmentGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "All") All("All"),
          @Json(name = "Active") Active("Active"),
          @Json(name = "Inactive") Inactive("Inactive")
@@ -70,7 +70,7 @@ class ObjectTaxassignmentApi(basePath: kotlin.String = defaultBasePath, client: 
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return TaxassignmentMinusGetAutocompleteMinusV2MinusResponse
+     * @return TaxassignmentGetAutocompleteV2Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -79,11 +79,11 @@ class ObjectTaxassignmentApi(basePath: kotlin.String = defaultBasePath, client: 
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun taxassignmentGetAutocompleteV2(sSelector: SSelector_taxassignmentGetAutocompleteV2, eFilterActive: EFilterActive_taxassignmentGetAutocompleteV2? = EFilterActive_taxassignmentGetAutocompleteV2.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null) : TaxassignmentMinusGetAutocompleteMinusV2MinusResponse {
+    fun taxassignmentGetAutocompleteV2(sSelector: SSelectorTaxassignmentGetAutocompleteV2, eFilterActive: EFilterActiveTaxassignmentGetAutocompleteV2? = EFilterActiveTaxassignmentGetAutocompleteV2.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderAcceptLanguage? = null) : TaxassignmentGetAutocompleteV2Response {
         val localVarResponse = taxassignmentGetAutocompleteV2WithHttpInfo(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as TaxassignmentMinusGetAutocompleteMinusV2MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as TaxassignmentGetAutocompleteV2Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -104,16 +104,16 @@ class ObjectTaxassignmentApi(basePath: kotlin.String = defaultBasePath, client: 
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return ApiResponse<TaxassignmentMinusGetAutocompleteMinusV2MinusResponse?>
+     * @return ApiResponse<TaxassignmentGetAutocompleteV2Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun taxassignmentGetAutocompleteV2WithHttpInfo(sSelector: SSelector_taxassignmentGetAutocompleteV2, eFilterActive: EFilterActive_taxassignmentGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : ApiResponse<TaxassignmentMinusGetAutocompleteMinusV2MinusResponse?> {
+    fun taxassignmentGetAutocompleteV2WithHttpInfo(sSelector: SSelectorTaxassignmentGetAutocompleteV2, eFilterActive: EFilterActiveTaxassignmentGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : ApiResponse<TaxassignmentGetAutocompleteV2Response?> {
         val localVariableConfig = taxassignmentGetAutocompleteV2RequestConfig(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
-        return request<Unit, TaxassignmentMinusGetAutocompleteMinusV2MinusResponse>(
+        return request<Unit, TaxassignmentGetAutocompleteV2Response>(
             localVariableConfig
         )
     }
@@ -127,12 +127,12 @@ class ObjectTaxassignmentApi(basePath: kotlin.String = defaultBasePath, client: 
      * @param acceptLanguage  (optional)
      * @return RequestConfig
      */
-    fun taxassignmentGetAutocompleteV2RequestConfig(sSelector: SSelector_taxassignmentGetAutocompleteV2, eFilterActive: EFilterActive_taxassignmentGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderMinusAcceptMinusLanguage?) : RequestConfig<Unit> {
+    fun taxassignmentGetAutocompleteV2RequestConfig(sSelector: SSelectorTaxassignmentGetAutocompleteV2, eFilterActive: EFilterActiveTaxassignmentGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
                 if (eFilterActive != null) {
-                    put("eFilterActive", listOf(eFilterActive.toString()))
+                    put("eFilterActive", listOf(eFilterActive.value))
                 }
                 if (sQuery != null) {
                     put("sQuery", listOf(sQuery.toString()))

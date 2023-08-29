@@ -1,5 +1,5 @@
 
-# EzsigndocumentMinusRequestPatch
+# EzsigndocumentRequestPatch
 
 ## Properties
 Name | Type | Description | Notes

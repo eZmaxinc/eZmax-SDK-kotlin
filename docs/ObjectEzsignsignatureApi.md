@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 <a id="ezsignsignatureCreateObjectV1"></a>
 # **ezsignsignatureCreateObjectV1**
-> EzsignsignatureMinusCreateObjectMinusV1MinusResponse ezsignsignatureCreateObjectV1(ezsignsignatureMinusCreateObjectMinusV1MinusRequest)
+> EzsignsignatureCreateObjectV1Response ezsignsignatureCreateObjectV1(ezsignsignatureCreateObjectV1Request)
 
 Create a new Ezsignsignature
 
@@ -29,9 +29,9 @@ The endpoint allows to create one or many elements at once.  The array can conta
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsignsignatureApi()
-val ezsignsignatureMinusCreateObjectMinusV1MinusRequest : kotlin.collections.List<EzsignsignatureMinusCreateObjectMinusV1MinusRequest> =  // kotlin.collections.List<EzsignsignatureMinusCreateObjectMinusV1MinusRequest> | 
+val ezsignsignatureCreateObjectV1Request : kotlin.collections.List<EzsignsignatureCreateObjectV1Request> =  // kotlin.collections.List<EzsignsignatureCreateObjectV1Request> | 
 try {
-    val result : EzsignsignatureMinusCreateObjectMinusV1MinusResponse = apiInstance.ezsignsignatureCreateObjectV1(ezsignsignatureMinusCreateObjectMinusV1MinusRequest)
+    val result : EzsignsignatureCreateObjectV1Response = apiInstance.ezsignsignatureCreateObjectV1(ezsignsignatureCreateObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignsignatureApi#ezsignsignatureCreateObjectV1")
@@ -46,11 +46,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ezsignsignatureMinusCreateObjectMinusV1MinusRequest** | [**kotlin.collections.List&lt;EzsignsignatureMinusCreateObjectMinusV1MinusRequest&gt;**](EzsignsignatureMinusCreateObjectMinusV1MinusRequest.md)|  |
+ **ezsignsignatureCreateObjectV1Request** | [**kotlin.collections.List&lt;EzsignsignatureCreateObjectV1Request&gt;**](EzsignsignatureCreateObjectV1Request.md)|  |
 
 ### Return type
 
-[**EzsignsignatureMinusCreateObjectMinusV1MinusResponse**](EzsignsignatureMinusCreateObjectMinusV1MinusResponse.md)
+[**EzsignsignatureCreateObjectV1Response**](EzsignsignatureCreateObjectV1Response.md)
 
 ### Authorization
 
@@ -66,7 +66,7 @@ Configure Authorization:
 
 <a id="ezsignsignatureCreateObjectV2"></a>
 # **ezsignsignatureCreateObjectV2**
-> EzsignsignatureMinusCreateObjectMinusV2MinusResponse ezsignsignatureCreateObjectV2(ezsignsignatureMinusCreateObjectMinusV2MinusRequest)
+> EzsignsignatureCreateObjectV2Response ezsignsignatureCreateObjectV2(ezsignsignatureCreateObjectV2Request)
 
 Create a new Ezsignsignature
 
@@ -79,9 +79,9 @@ The endpoint allows to create one or many elements at once.
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsignsignatureApi()
-val ezsignsignatureMinusCreateObjectMinusV2MinusRequest : EzsignsignatureMinusCreateObjectMinusV2MinusRequest =  // EzsignsignatureMinusCreateObjectMinusV2MinusRequest | 
+val ezsignsignatureCreateObjectV2Request : EzsignsignatureCreateObjectV2Request =  // EzsignsignatureCreateObjectV2Request | 
 try {
-    val result : EzsignsignatureMinusCreateObjectMinusV2MinusResponse = apiInstance.ezsignsignatureCreateObjectV2(ezsignsignatureMinusCreateObjectMinusV2MinusRequest)
+    val result : EzsignsignatureCreateObjectV2Response = apiInstance.ezsignsignatureCreateObjectV2(ezsignsignatureCreateObjectV2Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignsignatureApi#ezsignsignatureCreateObjectV2")
@@ -96,11 +96,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ezsignsignatureMinusCreateObjectMinusV2MinusRequest** | [**EzsignsignatureMinusCreateObjectMinusV2MinusRequest**](EzsignsignatureMinusCreateObjectMinusV2MinusRequest.md)|  |
+ **ezsignsignatureCreateObjectV2Request** | [**EzsignsignatureCreateObjectV2Request**](EzsignsignatureCreateObjectV2Request.md)|  |
 
 ### Return type
 
-[**EzsignsignatureMinusCreateObjectMinusV2MinusResponse**](EzsignsignatureMinusCreateObjectMinusV2MinusResponse.md)
+[**EzsignsignatureCreateObjectV2Response**](EzsignsignatureCreateObjectV2Response.md)
 
 ### Authorization
 
@@ -116,7 +116,7 @@ Configure Authorization:
 
 <a id="ezsignsignatureDeleteObjectV1"></a>
 # **ezsignsignatureDeleteObjectV1**
-> EzsignsignatureMinusDeleteObjectMinusV1MinusResponse ezsignsignatureDeleteObjectV1(pkiEzsignsignatureID)
+> EzsignsignatureDeleteObjectV1Response ezsignsignatureDeleteObjectV1(pkiEzsignsignatureID)
 
 Delete an existing Ezsignsignature
 
@@ -131,7 +131,7 @@ Delete an existing Ezsignsignature
 val apiInstance = ObjectEzsignsignatureApi()
 val pkiEzsignsignatureID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : EzsignsignatureMinusDeleteObjectMinusV1MinusResponse = apiInstance.ezsignsignatureDeleteObjectV1(pkiEzsignsignatureID)
+    val result : EzsignsignatureDeleteObjectV1Response = apiInstance.ezsignsignatureDeleteObjectV1(pkiEzsignsignatureID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignsignatureApi#ezsignsignatureDeleteObjectV1")
@@ -150,7 +150,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignsignatureMinusDeleteObjectMinusV1MinusResponse**](EzsignsignatureMinusDeleteObjectMinusV1MinusResponse.md)
+[**EzsignsignatureDeleteObjectV1Response**](EzsignsignatureDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -166,7 +166,7 @@ Configure Authorization:
 
 <a id="ezsignsignatureEditObjectV1"></a>
 # **ezsignsignatureEditObjectV1**
-> EzsignsignatureMinusEditObjectMinusV1MinusResponse ezsignsignatureEditObjectV1(pkiEzsignsignatureID, ezsignsignatureMinusEditObjectMinusV1MinusRequest)
+> EzsignsignatureEditObjectV1Response ezsignsignatureEditObjectV1(pkiEzsignsignatureID, ezsignsignatureEditObjectV1Request)
 
 Edit an existing Ezsignsignature
 
@@ -180,9 +180,9 @@ Edit an existing Ezsignsignature
 
 val apiInstance = ObjectEzsignsignatureApi()
 val pkiEzsignsignatureID : kotlin.Int = 56 // kotlin.Int | 
-val ezsignsignatureMinusEditObjectMinusV1MinusRequest : EzsignsignatureMinusEditObjectMinusV1MinusRequest =  // EzsignsignatureMinusEditObjectMinusV1MinusRequest | 
+val ezsignsignatureEditObjectV1Request : EzsignsignatureEditObjectV1Request =  // EzsignsignatureEditObjectV1Request | 
 try {
-    val result : EzsignsignatureMinusEditObjectMinusV1MinusResponse = apiInstance.ezsignsignatureEditObjectV1(pkiEzsignsignatureID, ezsignsignatureMinusEditObjectMinusV1MinusRequest)
+    val result : EzsignsignatureEditObjectV1Response = apiInstance.ezsignsignatureEditObjectV1(pkiEzsignsignatureID, ezsignsignatureEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignsignatureApi#ezsignsignatureEditObjectV1")
@@ -198,11 +198,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiEzsignsignatureID** | **kotlin.Int**|  |
- **ezsignsignatureMinusEditObjectMinusV1MinusRequest** | [**EzsignsignatureMinusEditObjectMinusV1MinusRequest**](EzsignsignatureMinusEditObjectMinusV1MinusRequest.md)|  |
+ **ezsignsignatureEditObjectV1Request** | [**EzsignsignatureEditObjectV1Request**](EzsignsignatureEditObjectV1Request.md)|  |
 
 ### Return type
 
-[**EzsignsignatureMinusEditObjectMinusV1MinusResponse**](EzsignsignatureMinusEditObjectMinusV1MinusResponse.md)
+[**EzsignsignatureEditObjectV1Response**](EzsignsignatureEditObjectV1Response.md)
 
 ### Authorization
 
@@ -218,7 +218,7 @@ Configure Authorization:
 
 <a id="ezsignsignatureGetEzsignsignatureattachmentV1"></a>
 # **ezsignsignatureGetEzsignsignatureattachmentV1**
-> EzsignsignatureMinusGetEzsignsignatureattachmentMinusV1MinusResponse ezsignsignatureGetEzsignsignatureattachmentV1(pkiEzsignsignatureID)
+> EzsignsignatureGetEzsignsignatureattachmentV1Response ezsignsignatureGetEzsignsignatureattachmentV1(pkiEzsignsignatureID)
 
 Retrieve an existing Ezsignsignature&#39;s Ezsignsignatureattachments
 
@@ -231,7 +231,7 @@ Retrieve an existing Ezsignsignature&#39;s Ezsignsignatureattachments
 val apiInstance = ObjectEzsignsignatureApi()
 val pkiEzsignsignatureID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : EzsignsignatureMinusGetEzsignsignatureattachmentMinusV1MinusResponse = apiInstance.ezsignsignatureGetEzsignsignatureattachmentV1(pkiEzsignsignatureID)
+    val result : EzsignsignatureGetEzsignsignatureattachmentV1Response = apiInstance.ezsignsignatureGetEzsignsignatureattachmentV1(pkiEzsignsignatureID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignsignatureApi#ezsignsignatureGetEzsignsignatureattachmentV1")
@@ -250,7 +250,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignsignatureMinusGetEzsignsignatureattachmentMinusV1MinusResponse**](EzsignsignatureMinusGetEzsignsignatureattachmentMinusV1MinusResponse.md)
+[**EzsignsignatureGetEzsignsignatureattachmentV1Response**](EzsignsignatureGetEzsignsignatureattachmentV1Response.md)
 
 ### Authorization
 
@@ -266,7 +266,7 @@ Configure Authorization:
 
 <a id="ezsignsignatureGetEzsignsignaturesAutomaticV1"></a>
 # **ezsignsignatureGetEzsignsignaturesAutomaticV1**
-> EzsignsignatureMinusGetEzsignsignaturesAutomaticMinusV1MinusResponse ezsignsignatureGetEzsignsignaturesAutomaticV1()
+> EzsignsignatureGetEzsignsignaturesAutomaticV1Response ezsignsignatureGetEzsignsignaturesAutomaticV1()
 
 Retrieve all automatic Ezsignsignatures
 
@@ -280,7 +280,7 @@ Return all the Ezsignsignatures that can be signed by the current user
 
 val apiInstance = ObjectEzsignsignatureApi()
 try {
-    val result : EzsignsignatureMinusGetEzsignsignaturesAutomaticMinusV1MinusResponse = apiInstance.ezsignsignatureGetEzsignsignaturesAutomaticV1()
+    val result : EzsignsignatureGetEzsignsignaturesAutomaticV1Response = apiInstance.ezsignsignatureGetEzsignsignaturesAutomaticV1()
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignsignatureApi#ezsignsignatureGetEzsignsignaturesAutomaticV1")
@@ -296,7 +296,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**EzsignsignatureMinusGetEzsignsignaturesAutomaticMinusV1MinusResponse**](EzsignsignatureMinusGetEzsignsignaturesAutomaticMinusV1MinusResponse.md)
+[**EzsignsignatureGetEzsignsignaturesAutomaticV1Response**](EzsignsignatureGetEzsignsignaturesAutomaticV1Response.md)
 
 ### Authorization
 
@@ -312,7 +312,7 @@ Configure Authorization:
 
 <a id="ezsignsignatureGetObjectV2"></a>
 # **ezsignsignatureGetObjectV2**
-> EzsignsignatureMinusGetObjectMinusV2MinusResponse ezsignsignatureGetObjectV2(pkiEzsignsignatureID)
+> EzsignsignatureGetObjectV2Response ezsignsignatureGetObjectV2(pkiEzsignsignatureID)
 
 Retrieve an existing Ezsignsignature
 
@@ -327,7 +327,7 @@ Retrieve an existing Ezsignsignature
 val apiInstance = ObjectEzsignsignatureApi()
 val pkiEzsignsignatureID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : EzsignsignatureMinusGetObjectMinusV2MinusResponse = apiInstance.ezsignsignatureGetObjectV2(pkiEzsignsignatureID)
+    val result : EzsignsignatureGetObjectV2Response = apiInstance.ezsignsignatureGetObjectV2(pkiEzsignsignatureID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignsignatureApi#ezsignsignatureGetObjectV2")
@@ -346,7 +346,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EzsignsignatureMinusGetObjectMinusV2MinusResponse**](EzsignsignatureMinusGetObjectMinusV2MinusResponse.md)
+[**EzsignsignatureGetObjectV2Response**](EzsignsignatureGetObjectV2Response.md)
 
 ### Authorization
 
@@ -362,7 +362,7 @@ Configure Authorization:
 
 <a id="ezsignsignatureSignV1"></a>
 # **ezsignsignatureSignV1**
-> EzsignsignatureMinusSignMinusV1MinusResponse ezsignsignatureSignV1(pkiEzsignsignatureID, ezsignsignatureMinusSignMinusV1MinusRequest)
+> EzsignsignatureSignV1Response ezsignsignatureSignV1(pkiEzsignsignatureID, ezsignsignatureSignV1Request)
 
 Sign the Ezsignsignature
 
@@ -376,9 +376,9 @@ Sign the Ezsignsignature
 
 val apiInstance = ObjectEzsignsignatureApi()
 val pkiEzsignsignatureID : kotlin.Int = 56 // kotlin.Int | 
-val ezsignsignatureMinusSignMinusV1MinusRequest : EzsignsignatureMinusSignMinusV1MinusRequest =  // EzsignsignatureMinusSignMinusV1MinusRequest | 
+val ezsignsignatureSignV1Request : EzsignsignatureSignV1Request =  // EzsignsignatureSignV1Request | 
 try {
-    val result : EzsignsignatureMinusSignMinusV1MinusResponse = apiInstance.ezsignsignatureSignV1(pkiEzsignsignatureID, ezsignsignatureMinusSignMinusV1MinusRequest)
+    val result : EzsignsignatureSignV1Response = apiInstance.ezsignsignatureSignV1(pkiEzsignsignatureID, ezsignsignatureSignV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignsignatureApi#ezsignsignatureSignV1")
@@ -394,11 +394,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiEzsignsignatureID** | **kotlin.Int**|  |
- **ezsignsignatureMinusSignMinusV1MinusRequest** | [**EzsignsignatureMinusSignMinusV1MinusRequest**](EzsignsignatureMinusSignMinusV1MinusRequest.md)|  |
+ **ezsignsignatureSignV1Request** | [**EzsignsignatureSignV1Request**](EzsignsignatureSignV1Request.md)|  |
 
 ### Return type
 
-[**EzsignsignatureMinusSignMinusV1MinusResponse**](EzsignsignatureMinusSignMinusV1MinusResponse.md)
+[**EzsignsignatureSignV1Response**](EzsignsignatureSignV1Response.md)
 
 ### Authorization
 

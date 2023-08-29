@@ -1,10 +1,10 @@
 
-# UserstagedMinusGetObjectMinusV2MinusResponseMinusMPayload
+# UserstagedGetObjectV2ResponseMPayload
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objUserstaged** | [**UserstagedMinusResponseCompound**](UserstagedMinusResponseCompound.md) |  | 
+**objUserstaged** | [**UserstagedResponseCompound**](UserstagedResponseCompound.md) |  | 
 
 
 

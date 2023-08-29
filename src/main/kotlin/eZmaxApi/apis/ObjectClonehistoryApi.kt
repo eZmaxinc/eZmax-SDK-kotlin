@@ -19,9 +19,9 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.ClonehistoryMinusGetListMinusV1MinusResponse
-import eZmaxApi.models.CommonMinusResponseMinusError
-import eZmaxApi.models.HeaderMinusAcceptMinusLanguage
+import eZmaxApi.models.ClonehistoryGetListV1Response
+import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.HeaderAcceptLanguage
 
 import com.squareup.moshi.Json
 
@@ -50,7 +50,7 @@ class ObjectClonehistoryApi(basePath: kotlin.String = defaultBasePath, client: O
     /**
      * enum for parameter eOrderBy
      */
-     enum class EOrderBy_clonehistoryGetListV1(val value: kotlin.String) {
+     enum class EOrderByClonehistoryGetListV1(val value: kotlin.String) {
          @Json(name = "pkiClonehistoryID_ASC") pkiClonehistoryID_ASC("pkiClonehistoryID_ASC"),
          @Json(name = "pkiClonehistoryID_DESC") pkiClonehistoryID_DESC("pkiClonehistoryID_DESC"),
          @Json(name = "fkiUserIDCloning_ASC") fkiUserIDCloning_ASC("fkiUserIDCloning_ASC"),
@@ -83,7 +83,7 @@ class ObjectClonehistoryApi(basePath: kotlin.String = defaultBasePath, client: O
      * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
-     * @return ClonehistoryMinusGetListMinusV1MinusResponse
+     * @return ClonehistoryGetListV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -92,11 +92,11 @@ class ObjectClonehistoryApi(basePath: kotlin.String = defaultBasePath, client: O
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun clonehistoryGetListV1(eOrderBy: EOrderBy_clonehistoryGetListV1? = null, iRowMax: kotlin.Int? = 10000, iRowOffset: kotlin.Int? = 0, acceptLanguage: HeaderMinusAcceptMinusLanguage? = null, sFilter: kotlin.String? = null) : ClonehistoryMinusGetListMinusV1MinusResponse {
+    fun clonehistoryGetListV1(eOrderBy: EOrderByClonehistoryGetListV1? = null, iRowMax: kotlin.Int? = 10000, iRowOffset: kotlin.Int? = 0, acceptLanguage: HeaderAcceptLanguage? = null, sFilter: kotlin.String? = null) : ClonehistoryGetListV1Response {
         val localVarResponse = clonehistoryGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as ClonehistoryMinusGetListMinusV1MinusResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ClonehistoryGetListV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -118,16 +118,16 @@ class ObjectClonehistoryApi(basePath: kotlin.String = defaultBasePath, client: O
      * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
-     * @return ApiResponse<ClonehistoryMinusGetListMinusV1MinusResponse?>
+     * @return ApiResponse<ClonehistoryGetListV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun clonehistoryGetListV1WithHttpInfo(eOrderBy: EOrderBy_clonehistoryGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : ApiResponse<ClonehistoryMinusGetListMinusV1MinusResponse?> {
+    fun clonehistoryGetListV1WithHttpInfo(eOrderBy: EOrderByClonehistoryGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : ApiResponse<ClonehistoryGetListV1Response?> {
         val localVariableConfig = clonehistoryGetListV1RequestConfig(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
 
-        return request<Unit, ClonehistoryMinusGetListMinusV1MinusResponse>(
+        return request<Unit, ClonehistoryGetListV1Response>(
             localVariableConfig
         )
     }
@@ -142,12 +142,12 @@ class ObjectClonehistoryApi(basePath: kotlin.String = defaultBasePath, client: O
      * @param sFilter  (optional)
      * @return RequestConfig
      */
-    fun clonehistoryGetListV1RequestConfig(eOrderBy: EOrderBy_clonehistoryGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderMinusAcceptMinusLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
+    fun clonehistoryGetListV1RequestConfig(eOrderBy: EOrderByClonehistoryGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
                 if (eOrderBy != null) {
-                    put("eOrderBy", listOf(eOrderBy.toString()))
+                    put("eOrderBy", listOf(eOrderBy.value))
                 }
                 if (iRowMax != null) {
                     put("iRowMax", listOf(iRowMax.toString()))

@@ -1,5 +1,5 @@
 
-# EzsigndocumentMinusDeclineToSignMinusV1MinusRequest
+# EzsigndocumentDeclineToSignV1Request
 
 ## Properties
 Name | Type | Description | Notes

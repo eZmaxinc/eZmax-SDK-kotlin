@@ -1,5 +1,5 @@
 
-# CommunicationattachmentMinusResponseCompound
+# CommunicationattachmentResponseCompound
 
 ## Properties
 Name | Type | Description | Notes
