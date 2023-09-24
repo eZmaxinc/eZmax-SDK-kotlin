@@ -164,6 +164,7 @@ docs/CustomEzsignfoldersignerassociationmineResponse.md
 docs/CustomEzsignfoldersignerassociationstatusResponse.md
 docs/CustomEzsignfoldertransmissionResponse.md
 docs/CustomEzsignfoldertransmissionSignerResponse.md
+docs/CustomEzsignfoldertypeResponse.md
 docs/CustomEzsignformfieldRequest.md
 docs/CustomEzsignformfielderrorResponse.md
 docs/CustomEzsignformfielderrortestResponse.md
@@ -1377,6 +1378,7 @@ src/main/kotlin/eZmaxApi/models/CustomEzsignfoldersignerassociationmineResponse.
 src/main/kotlin/eZmaxApi/models/CustomEzsignfoldersignerassociationstatusResponse.kt
 src/main/kotlin/eZmaxApi/models/CustomEzsignfoldertransmissionResponse.kt
 src/main/kotlin/eZmaxApi/models/CustomEzsignfoldertransmissionSignerResponse.kt
+src/main/kotlin/eZmaxApi/models/CustomEzsignfoldertypeResponse.kt
 src/main/kotlin/eZmaxApi/models/CustomEzsignformfieldRequest.kt
 src/main/kotlin/eZmaxApi/models/CustomEzsignformfielderrorResponse.kt
 src/main/kotlin/eZmaxApi/models/CustomEzsignformfielderrortestResponse.kt

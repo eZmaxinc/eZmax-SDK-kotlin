@@ -1,5 +1,5 @@
 group 'com.ezmax'
-version '1.1.19'
+version '1.2.0'
 
 wrapper {
     gradleVersion = '7.5'

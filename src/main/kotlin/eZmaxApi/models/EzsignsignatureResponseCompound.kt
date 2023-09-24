@@ -56,6 +56,7 @@ import com.squareup.moshi.JsonClass
  * @param iEzsignsignatureMaxlength The maximum length for the value in the Ezsignsignature  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea**
  * @param eEzsignsignatureTextvalidation 
  * @param sEzsignsignatureRegexp A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom**
+ * @param objContactNameDelegation 
  * @param objSignature 
  * @param bEzsignsignatureCustomdate Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)
  * @param aObjEzsignsignaturecustomdate An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all.
@@ -158,6 +159,9 @@ data class EzsignsignatureResponseCompound (
     /* A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom** */
     @Json(name = "sEzsignsignatureRegexp")
     val sEzsignsignatureRegexp: kotlin.String? = null,
+
+    @Json(name = "objContactNameDelegation")
+    val objContactNameDelegation: CustomContactNameResponse? = null,
 
     @Json(name = "objSignature")
     val objSignature: SignatureResponseCompound? = null,

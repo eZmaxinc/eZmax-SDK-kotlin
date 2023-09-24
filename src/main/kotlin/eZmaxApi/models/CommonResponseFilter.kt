@@ -23,6 +23,7 @@ import com.squareup.moshi.JsonClass
  * Definition of Filters for getList
  *
  * @param aAutoType List of filters that can be used in *sFilter* (Automatic types)
+ * @param aAutoTypeHaving List of computed filters that can be used in *sFilter* (Automatic types)
  * @param aEnum List of filters that can be used in *sFilter* (Enum types)
  */
 
@@ -32,6 +33,10 @@ data class CommonResponseFilter (
     /* List of filters that can be used in *sFilter* (Automatic types) */
     @Json(name = "a_AutoType")
     val aAutoType: kotlin.collections.Map<kotlin.String, kotlin.String>? = null,
+
+    /* List of computed filters that can be used in *sFilter* (Automatic types) */
+    @Json(name = "a_AutoTypeHaving")
+    val aAutoTypeHaving: kotlin.collections.Map<kotlin.String, kotlin.String>? = null,
 
     /* List of filters that can be used in *sFilter* (Enum types) */
     @Json(name = "a_Enum")

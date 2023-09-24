@@ -10,6 +10,8 @@ Name | Type | Description | Notes
 **bVersionDeprecated** | **kotlin.Boolean** | Wheter the current route is deprecated or not | 
 **aFilter** | [**CommonResponseFilter**](CommonResponseFilter.md) |  | 
 **aOrderBy** | **kotlin.collections.Map&lt;kotlin.String, kotlin.String&gt;** | List of available values for *eOrderBy* | 
+**iRowMax** | **kotlin.Int** | The maximum numbers of results to be returned | 
+**iRowOffset** | **kotlin.Int** | The starting element from where to start retrieving the results. For example if you started at iRowOffset&#x3D;0 and asked for iRowMax&#x3D;100, to get the next 100 results, you could specify iRowOffset&#x3D;100&amp;iRowMax&#x3D;100, | 
 
 
 

@@ -167,9 +167,9 @@ open class ApiClient(val baseUrl: String, val client: OkHttpClient = defaultClie
         if (requestConfig.query["sAuthorization"].isNullOrEmpty()) {
             if (apiKey["sAuthorization"] != null) {
                 if (apiKeyPrefix["sAuthorization"] != null) {
-                    requestConfig.query["sAuthorization"] = apiKeyPrefix["sAuthorization"]!! + " " + apiKey["sAuthorization"]!!
+                    requestConfig.query["sAuthorization"] = listOf(apiKeyPrefix["sAuthorization"]!! + " " + apiKey["sAuthorization"]!!)
                 } else {
-                    requestConfig.query["sAuthorization"] = apiKey["sAuthorization"]!!
+                    requestConfig.query["sAuthorization"] = listOf(apiKey["sAuthorization"]!!)
                 }
             }
         }

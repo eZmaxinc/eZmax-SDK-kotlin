@@ -51,6 +51,8 @@ import com.squareup.moshi.JsonClass
  * @param sEmailAddressSummary The email address.
  * @param eEzsignfoldertypeSendreminderfrequency 
  * @param iEzsignfoldertypeDisposaldays The number of days after the archival before the disposal of the Ezsignfolder
+ * @param bEzsignfoldertypeDelegate Wheter if delegation of signature is allowed to another user or not
+ * @param bEzsignfoldertypeReassign Wheter if Reassignment of signature is allowed to another signatory or not
  * @param bEzsignfoldertypeSendsignedtofullgroup Whether we send the signed Ezsigndocument to the Usergroup that has acces to all Ezsignfolders
  * @param bEzsignfoldertypeSendsignedtolimitedgroup Whether we send the signed Ezsigndocument to the Usergroup that has acces to only their own Ezsignfolders
  * @param bEzsignfoldertypeSendsummarytofullgroup Whether we send the summary to the Usergroup that has acces to all Ezsignfolders
@@ -155,6 +157,14 @@ data class EzsignfoldertypeRequest (
     /* The number of days after the archival before the disposal of the Ezsignfolder */
     @Json(name = "iEzsignfoldertypeDisposaldays")
     val iEzsignfoldertypeDisposaldays: kotlin.Int? = null,
+
+    /* Wheter if delegation of signature is allowed to another user or not */
+    @Json(name = "bEzsignfoldertypeDelegate")
+    val bEzsignfoldertypeDelegate: kotlin.Boolean? = null,
+
+    /* Wheter if Reassignment of signature is allowed to another signatory or not */
+    @Json(name = "bEzsignfoldertypeReassign")
+    val bEzsignfoldertypeReassign: kotlin.Boolean? = null,
 
     /* Whether we send the signed Ezsigndocument to the Usergroup that has acces to all Ezsignfolders */
     @Json(name = "bEzsignfoldertypeSendsignedtofullgroup")

@@ -84,7 +84,7 @@ class ObjectEzsigntemplateApi(basePath: kotlin.String = defaultBasePath, client:
             }
             ResponseType.ServerError -> {
                 val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
             }
         }
     }
@@ -158,7 +158,7 @@ class ObjectEzsigntemplateApi(basePath: kotlin.String = defaultBasePath, client:
             }
             ResponseType.ServerError -> {
                 val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
             }
         }
     }
@@ -230,7 +230,7 @@ class ObjectEzsigntemplateApi(basePath: kotlin.String = defaultBasePath, client:
             }
             ResponseType.ServerError -> {
                 val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
             }
         }
     }
@@ -302,7 +302,7 @@ class ObjectEzsigntemplateApi(basePath: kotlin.String = defaultBasePath, client:
             }
             ResponseType.ServerError -> {
                 val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
             }
         }
     }
@@ -395,7 +395,7 @@ class ObjectEzsigntemplateApi(basePath: kotlin.String = defaultBasePath, client:
             }
             ResponseType.ServerError -> {
                 val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
             }
         }
     }
@@ -471,14 +471,16 @@ class ObjectEzsigntemplateApi(basePath: kotlin.String = defaultBasePath, client:
          @Json(name = "fkiLanguageID_DESC") fkiLanguageID_DESC("fkiLanguageID_DESC"),
          @Json(name = "eEzsigntemplateType_ASC") eEzsigntemplateType_ASC("eEzsigntemplateType_ASC"),
          @Json(name = "eEzsigntemplateType_DESC") eEzsigntemplateType_DESC("eEzsigntemplateType_DESC"),
-         @Json(name = "sEzsigntemplateTypedescriptionX_ASC") sEzsigntemplateTypedescriptionX_ASC("sEzsigntemplateTypedescriptionX_ASC"),
-         @Json(name = "sEzsigntemplateTypedescriptionX_DESC") sEzsigntemplateTypedescriptionX_DESC("sEzsigntemplateTypedescriptionX_DESC"),
+         @Json(name = "sEzsigntemplateDescription_ASC") sEzsigntemplateDescription_ASC("sEzsigntemplateDescription_ASC"),
+         @Json(name = "sEzsigntemplateDescription_DESC") sEzsigntemplateDescription_DESC("sEzsigntemplateDescription_DESC"),
          @Json(name = "sEzsigntemplatedocumentDescription_ASC") sEzsigntemplatedocumentDescription_ASC("sEzsigntemplatedocumentDescription_ASC"),
          @Json(name = "sEzsigntemplatedocumentDescription_DESC") sEzsigntemplatedocumentDescription_DESC("sEzsigntemplatedocumentDescription_DESC"),
          @Json(name = "iEzsigntemplatedocumentPagetotal_ASC") iEzsigntemplatedocumentPagetotal_ASC("iEzsigntemplatedocumentPagetotal_ASC"),
          @Json(name = "iEzsigntemplatedocumentPagetotal_DESC") iEzsigntemplatedocumentPagetotal_DESC("iEzsigntemplatedocumentPagetotal_DESC"),
          @Json(name = "iEzsigntemplateSignaturetotal_ASC") iEzsigntemplateSignaturetotal_ASC("iEzsigntemplateSignaturetotal_ASC"),
-         @Json(name = "iEzsigntemplateSignaturetotal_DESC") iEzsigntemplateSignaturetotal_DESC("iEzsigntemplateSignaturetotal_DESC")
+         @Json(name = "iEzsigntemplateSignaturetotal_DESC") iEzsigntemplateSignaturetotal_DESC("iEzsigntemplateSignaturetotal_DESC"),
+         @Json(name = "sEzsignfoldertypeNameX_ASC") sEzsignfoldertypeNameX_ASC("sEzsignfoldertypeNameX_ASC"),
+         @Json(name = "sEzsignfoldertypeNameX_DESC") sEzsignfoldertypeNameX_DESC("sEzsignfoldertypeNameX_DESC")
      }
 
     /**
@@ -511,7 +513,7 @@ class ObjectEzsigntemplateApi(basePath: kotlin.String = defaultBasePath, client:
             }
             ResponseType.ServerError -> {
                 val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
             }
         }
     }
@@ -607,7 +609,7 @@ class ObjectEzsigntemplateApi(basePath: kotlin.String = defaultBasePath, client:
             }
             ResponseType.ServerError -> {
                 val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
             }
         }
     }
@@ -681,7 +683,7 @@ class ObjectEzsigntemplateApi(basePath: kotlin.String = defaultBasePath, client:
             }
             ResponseType.ServerError -> {
                 val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
             }
         }
     }

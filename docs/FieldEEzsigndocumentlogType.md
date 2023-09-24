@@ -52,5 +52,9 @@
 
     * `DelayedSendEmail` (value: `"DelayedSendEmail"`)
 
+    * `RegeneratePage` (value: `"RegeneratePage"`)
+
+    * `RegeneratePageForm` (value: `"RegeneratePageForm"`)
+
 
 

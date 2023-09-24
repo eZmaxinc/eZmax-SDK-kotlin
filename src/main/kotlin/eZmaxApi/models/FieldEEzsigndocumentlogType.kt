@@ -22,7 +22,7 @@ import com.squareup.moshi.JsonClass
 /**
  * The Ezsigndocumentlog Type.
  *
- * Values: Clone,Login,Sendcode,Badcode,Goodcode,Authentication,Createpage,Download,Send,Sign,Upload,View,Completion,Changelimitdate,Unsign,ImportFromInstanet,SendEmail,FormCompletion,SignatureAttachmentAdd,SignatureAttachmentValidation,SignatureAttachmentRefused,SignatureAttachmentDeleted,DeclinedToSign,DelayedSendEmail
+ * Values: Clone,Login,Sendcode,Badcode,Goodcode,Authentication,Createpage,Download,Send,Sign,Upload,View,Completion,Changelimitdate,Unsign,ImportFromInstanet,SendEmail,FormCompletion,SignatureAttachmentAdd,SignatureAttachmentValidation,SignatureAttachmentRefused,SignatureAttachmentDeleted,DeclinedToSign,DelayedSendEmail,RegeneratePage,RegeneratePageForm
  */
 
 @JsonClass(generateAdapter = false)
@@ -98,7 +98,13 @@ enum class FieldEEzsigndocumentlogType(val value: kotlin.String) {
     DeclinedToSign("DeclinedToSign"),
 
     @Json(name = "DelayedSendEmail")
-    DelayedSendEmail("DelayedSendEmail");
+    DelayedSendEmail("DelayedSendEmail"),
+
+    @Json(name = "RegeneratePage")
+    RegeneratePage("RegeneratePage"),
+
+    @Json(name = "RegeneratePageForm")
+    RegeneratePageForm("RegeneratePageForm");
 
     /**
      * Override [toString()] to avoid using the enum variable name as the value, and instead use

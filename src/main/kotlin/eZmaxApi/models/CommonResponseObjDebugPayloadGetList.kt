@@ -29,6 +29,8 @@ import com.squareup.moshi.JsonClass
  * @param bVersionDeprecated Wheter the current route is deprecated or not
  * @param aFilter 
  * @param aOrderBy List of available values for *eOrderBy*
+ * @param iRowMax The maximum numbers of results to be returned
+ * @param iRowOffset The starting element from where to start retrieving the results. For example if you started at iRowOffset=0 and asked for iRowMax=100, to get the next 100 results, you could specify iRowOffset=100&iRowMax=100,
  */
 
 
@@ -55,7 +57,15 @@ data class CommonResponseObjDebugPayloadGetList (
 
     /* List of available values for *eOrderBy* */
     @Json(name = "a_OrderBy")
-    val aOrderBy: kotlin.collections.Map<kotlin.String, kotlin.String>
+    val aOrderBy: kotlin.collections.Map<kotlin.String, kotlin.String>,
+
+    /* The maximum numbers of results to be returned */
+    @Json(name = "iRowMax")
+    val iRowMax: kotlin.Int = 10000,
+
+    /* The starting element from where to start retrieving the results. For example if you started at iRowOffset=0 and asked for iRowMax=100, to get the next 100 results, you could specify iRowOffset=100&iRowMax=100, */
+    @Json(name = "iRowOffset")
+    val iRowOffset: kotlin.Int = 0
 
 )
 
