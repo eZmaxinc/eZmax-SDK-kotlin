@@ -34,13 +34,13 @@ import com.squareup.moshi.JsonClass
  * @param eEzsignformfieldgroupSignerrequirement 
  * @param sEzsignformfieldgroupLabel The Label for the Ezsignformfieldgroup
  * @param iEzsignformfieldgroupStep The step when the Ezsignsigner will be invited to fill the form fields
- * @param sEzsignformfieldgroupDefaultvalue The default value for the Ezsignformfieldgroup
  * @param iEzsignformfieldgroupFilledmin The minimum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup
  * @param iEzsignformfieldgroupFilledmax The maximum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup
  * @param bEzsignformfieldgroupReadonly Whether the Ezsignformfieldgroup is read only or not.
  * @param aObjEzsignformfieldgroupsigner 
  * @param aObjEzsignformfield 
  * @param pkiEzsignformfieldgroupID The unique ID of the Ezsignformfieldgroup
+ * @param sEzsignformfieldgroupDefaultvalue The default value for the Ezsignformfieldgroup
  * @param iEzsignformfieldgroupMaxlength The maximum length for the value in the Ezsignformfieldgroup  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**
  * @param bEzsignformfieldgroupEncrypted Whether the Ezsignformfieldgroup is encrypted in the database or not. Encrypted values are not displayed on the Ezsigndocument. This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**
  * @param sEzsignformfieldgroupRegexp A regular expression to indicate what values are acceptable for the Ezsignformfieldgroup.  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**
@@ -71,10 +71,6 @@ data class EzsignformfieldgroupRequestCompound (
     @Json(name = "iEzsignformfieldgroupStep")
     val iEzsignformfieldgroupStep: kotlin.Int,
 
-    /* The default value for the Ezsignformfieldgroup */
-    @Json(name = "sEzsignformfieldgroupDefaultvalue")
-    val sEzsignformfieldgroupDefaultvalue: kotlin.String,
-
     /* The minimum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup */
     @Json(name = "iEzsignformfieldgroupFilledmin")
     val iEzsignformfieldgroupFilledmin: kotlin.Int,
@@ -96,6 +92,10 @@ data class EzsignformfieldgroupRequestCompound (
     /* The unique ID of the Ezsignformfieldgroup */
     @Json(name = "pkiEzsignformfieldgroupID")
     val pkiEzsignformfieldgroupID: kotlin.Int? = null,
+
+    /* The default value for the Ezsignformfieldgroup */
+    @Json(name = "sEzsignformfieldgroupDefaultvalue")
+    val sEzsignformfieldgroupDefaultvalue: kotlin.String? = null,
 
     /* The maximum length for the value in the Ezsignformfieldgroup  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea** */
     @Json(name = "iEzsignformfieldgroupMaxlength")

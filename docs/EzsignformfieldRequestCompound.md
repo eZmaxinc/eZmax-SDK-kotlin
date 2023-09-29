@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **iEzsignformfieldHeight** | **kotlin.Int** | The Height of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22           | | Radio                     | 22           | | Text                      | 22           | | Textarea                  | 22-65535     |  | 
 **pkiEzsignformfieldID** | **kotlin.Int** | The unique ID of the Ezsignformfield |  [optional]
 **sEzsignformfieldValue** | **kotlin.String** | The value for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is Checkbox or Radio |  [optional]
+**bEzsignformfieldAutocomplete** | **kotlin.Boolean** | Whether the Ezsignformfield allows the use of the autocomplete of the browser.  This can only be set if eEzsignformfieldgroupType is **Text** |  [optional]
 **bEzsignformfieldSelected** | **kotlin.Boolean** | Whether the Ezsignformfield is selected or not by default.  This can only be set if eEzsignformfieldgroupType is **Checkbox** or **Radio** |  [optional]
 **sEzsignformfieldEnteredvalue** | **kotlin.String** | This is the value enterred for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is **Dropdown**, **Text** or **Textarea** |  [optional]
 

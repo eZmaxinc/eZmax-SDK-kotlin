@@ -30,6 +30,7 @@ import com.squareup.moshi.JsonClass
  * @param iEzsigntemplateformfieldHeight The Height of the Ezsigntemplateformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsigntemplateformfieldgroupType.  | eEzsigntemplateformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22           | | Radio                     | 22           | | Text                      | 22           | | Textarea                  | 22-65535     | 
  * @param pkiEzsigntemplateformfieldID The unique ID of the Ezsigntemplateformfield
  * @param sEzsigntemplateformfieldValue The value for the Ezsigntemplateformfield
+ * @param bEzsigntemplateformfieldAutocomplete Whether the Ezsigntemplateformfield allows the use of the autocomplete of the browser.  This can only be set if eEzsigntemplateformfieldgroupType is **Text**
  * @param bEzsigntemplateformfieldSelected Whether the Ezsigntemplateformfield is selected or not by default.  This can only be set if eEzsigntemplateformfieldgroupType is **Checkbox** or **Radio**
  */
 
@@ -67,6 +68,10 @@ data class EzsigntemplateformfieldRequest (
     /* The value for the Ezsigntemplateformfield */
     @Json(name = "sEzsigntemplateformfieldValue")
     val sEzsigntemplateformfieldValue: kotlin.String? = null,
+
+    /* Whether the Ezsigntemplateformfield allows the use of the autocomplete of the browser.  This can only be set if eEzsigntemplateformfieldgroupType is **Text** */
+    @Json(name = "bEzsigntemplateformfieldAutocomplete")
+    val bEzsigntemplateformfieldAutocomplete: kotlin.Boolean? = null,
 
     /* Whether the Ezsigntemplateformfield is selected or not by default.  This can only be set if eEzsigntemplateformfieldgroupType is **Checkbox** or **Radio** */
     @Json(name = "bEzsigntemplateformfieldSelected")

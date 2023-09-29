@@ -39,15 +39,15 @@ data class CustomEzsignfoldertypeResponse (
 
     /* The name of the Ezsignfoldertype in the language of the requester */
     @Json(name = "sEzsignfoldertypeNameX")
-    val sEzsignfoldertypeNameX: kotlin.String,
+    val sEzsignfoldertypeNameX: kotlin.String? = null,
 
     /* Whether we include the proof with the signed Ezsigndocument for Ezsignsigners */
     @Json(name = "bEzsignfoldertypeIncludeproofsigner")
-    val bEzsignfoldertypeIncludeproofsigner: kotlin.Boolean,
+    val bEzsignfoldertypeIncludeproofsigner: kotlin.Boolean? = null,
 
     /* Whether we include the proof with the signed Ezsigndocument for users */
     @Json(name = "bEzsignfoldertypeIncludeproofuser")
-    val bEzsignfoldertypeIncludeproofuser: kotlin.Boolean,
+    val bEzsignfoldertypeIncludeproofuser: kotlin.Boolean? = null,
 
     /* Wheter if delegation of signature is allowed to another user or not */
     @Json(name = "bEzsignfoldertypeDelegate")

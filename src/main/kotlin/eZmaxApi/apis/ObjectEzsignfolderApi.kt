@@ -37,7 +37,6 @@ import eZmaxApi.models.EzsignfolderGetCommunicationCountV1Response
 import eZmaxApi.models.EzsignfolderGetCommunicationListV1Response
 import eZmaxApi.models.EzsignfolderGetEzsigndocumentsV1Response
 import eZmaxApi.models.EzsignfolderGetEzsignfoldersignerassociationsV1Response
-import eZmaxApi.models.EzsignfolderGetEzsignfoldersignerassociationsmineV1Response
 import eZmaxApi.models.EzsignfolderGetEzsignsignaturesAutomaticV1Response
 import eZmaxApi.models.EzsignfolderGetFormsDataV1Response
 import eZmaxApi.models.EzsignfolderGetListV1Response
@@ -1022,77 +1021,6 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: O
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations".replace("{"+"pkiEzsignfolderID"+"}", encodeURIComponent(pkiEzsignfolderID.toString())),
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            requiresAuthentication = true,
-            body = localVariableBody
-        )
-    }
-
-    /**
-     * Retrieve your own Ezsignfoldersignerassociations from an existing Ezsignfolder
-     * 
-     * @param pkiEzsignfolderID 
-     * @return EzsignfolderGetEzsignfoldersignerassociationsmineV1Response
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignfolderGetEzsignfoldersignerassociationsmineV1(pkiEzsignfolderID: kotlin.Int) : EzsignfolderGetEzsignfoldersignerassociationsmineV1Response {
-        val localVarResponse = ezsignfolderGetEzsignfoldersignerassociationsmineV1WithHttpInfo(pkiEzsignfolderID = pkiEzsignfolderID)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfolderGetEzsignfoldersignerassociationsmineV1Response
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * Retrieve your own Ezsignfoldersignerassociations from an existing Ezsignfolder
-     * 
-     * @param pkiEzsignfolderID 
-     * @return ApiResponse<EzsignfolderGetEzsignfoldersignerassociationsmineV1Response?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignfolderGetEzsignfoldersignerassociationsmineV1WithHttpInfo(pkiEzsignfolderID: kotlin.Int) : ApiResponse<EzsignfolderGetEzsignfoldersignerassociationsmineV1Response?> {
-        val localVariableConfig = ezsignfolderGetEzsignfoldersignerassociationsmineV1RequestConfig(pkiEzsignfolderID = pkiEzsignfolderID)
-
-        return request<Unit, EzsignfolderGetEzsignfoldersignerassociationsmineV1Response>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation ezsignfolderGetEzsignfoldersignerassociationsmineV1
-     *
-     * @param pkiEzsignfolderID 
-     * @return RequestConfig
-     */
-    fun ezsignfolderGetEzsignfoldersignerassociationsmineV1RequestConfig(pkiEzsignfolderID: kotlin.Int) : RequestConfig<Unit> {
-        val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.GET,
-            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociationsmine".replace("{"+"pkiEzsignfolderID"+"}", encodeURIComponent(pkiEzsignfolderID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,
