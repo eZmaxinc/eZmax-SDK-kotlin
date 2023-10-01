@@ -13,10 +13,10 @@ Name | Type | Description | Notes
 **bActivesessionDebug** | **kotlin.Boolean** | Whether the active session is in debug or not | 
 **bActivesessionIssuperadmin** | **kotlin.Boolean** | Whether the active session is superadmin or not | 
 **pksCustomerCode** | **kotlin.String** | The customer code assigned to your account | 
+**fkiSystemconfigurationtypeID** | **kotlin.Int** | The unique ID of the Systemconfigurationtype | 
 **aPkiPermissionID** | **kotlin.collections.List&lt;kotlin.Int&gt;** | An array of permissions granted to the user or api key | 
 **objUserReal** | [**ActivesessionResponseCompoundUser**](ActivesessionResponseCompoundUser.md) |  | 
 **aEModuleInternalname** | **kotlin.collections.List&lt;kotlin.String&gt;** | An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key. | 
-**fkiSystemconfigurationtypeID** | **kotlin.Int** | The unique ID of the Systemconfigurationtype |  [optional]
 **fkiSignatureID** | **kotlin.Int** | The unique ID of the Signature |  [optional]
 **objUserCloned** | [**ActivesessionResponseCompoundUser**](ActivesessionResponseCompoundUser.md) |  |  [optional]
 **objApikey** | [**ActivesessionResponseCompoundApikey**](ActivesessionResponseCompoundApikey.md) |  |  [optional]

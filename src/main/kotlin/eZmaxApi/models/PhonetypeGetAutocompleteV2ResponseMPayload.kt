@@ -31,7 +31,7 @@ data class PhonetypeGetAutocompleteV2ResponseMPayload (
 
     /* An array of Phonetype autocomplete element response. */
     @Json(name = "a_objPhonetype")
-    val aObjPhonetype: kotlin.collections.List<PhonetypeAutocompleteElementResponse>? = null
+    val aObjPhonetype: kotlin.collections.List<PhonetypeAutocompleteElementResponse>
 
 )
 

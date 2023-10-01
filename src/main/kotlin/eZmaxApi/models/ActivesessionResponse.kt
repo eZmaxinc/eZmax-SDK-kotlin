@@ -76,7 +76,7 @@ data class ActivesessionResponse (
 
     /* The unique ID of the Systemconfigurationtype */
     @Json(name = "fkiSystemconfigurationtypeID")
-    val fkiSystemconfigurationtypeID: kotlin.Int? = null,
+    val fkiSystemconfigurationtypeID: kotlin.Int,
 
     /* The unique ID of the Signature */
     @Json(name = "fkiSignatureID")

@@ -36,10 +36,10 @@ import com.squareup.moshi.JsonClass
  * @param bActivesessionDebug Whether the active session is in debug or not
  * @param bActivesessionIssuperadmin Whether the active session is superadmin or not
  * @param pksCustomerCode The customer code assigned to your account
+ * @param fkiSystemconfigurationtypeID The unique ID of the Systemconfigurationtype
  * @param aPkiPermissionID An array of permissions granted to the user or api key
  * @param objUserReal 
  * @param aEModuleInternalname An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key.
- * @param fkiSystemconfigurationtypeID The unique ID of the Systemconfigurationtype
  * @param fkiSignatureID The unique ID of the Signature
  * @param objUserCloned 
  * @param objApikey 
@@ -81,6 +81,10 @@ data class ActivesessionGetCurrentV1ResponseMPayload (
     @Json(name = "pksCustomerCode")
     val pksCustomerCode: kotlin.String,
 
+    /* The unique ID of the Systemconfigurationtype */
+    @Json(name = "fkiSystemconfigurationtypeID")
+    val fkiSystemconfigurationtypeID: kotlin.Int,
+
     /* An array of permissions granted to the user or api key */
     @Json(name = "a_pkiPermissionID")
     val aPkiPermissionID: kotlin.collections.List<kotlin.Int>,
@@ -91,10 +95,6 @@ data class ActivesessionGetCurrentV1ResponseMPayload (
     /* An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key. */
     @Json(name = "a_eModuleInternalname")
     val aEModuleInternalname: kotlin.collections.List<kotlin.String>,
-
-    /* The unique ID of the Systemconfigurationtype */
-    @Json(name = "fkiSystemconfigurationtypeID")
-    val fkiSystemconfigurationtypeID: kotlin.Int? = null,
 
     /* The unique ID of the Signature */
     @Json(name = "fkiSignatureID")

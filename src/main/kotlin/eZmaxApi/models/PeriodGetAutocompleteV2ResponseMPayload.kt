@@ -31,7 +31,7 @@ data class PeriodGetAutocompleteV2ResponseMPayload (
 
     /* An array of Period autocomplete element response. */
     @Json(name = "a_objPeriod")
-    val aObjPeriod: kotlin.collections.List<PeriodAutocompleteElementResponse>? = null
+    val aObjPeriod: kotlin.collections.List<PeriodAutocompleteElementResponse>
 
 )
 

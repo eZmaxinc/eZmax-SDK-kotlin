@@ -22,7 +22,7 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * 
+ * Generic Error Message
  *
  * @param sErrorMessage The message giving details about the error
  * @param eErrorCode 

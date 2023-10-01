@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **bActivesessionDebug** | **kotlin.Boolean** | Whether the active session is in debug or not | 
 **bActivesessionIssuperadmin** | **kotlin.Boolean** | Whether the active session is superadmin or not | 
 **pksCustomerCode** | **kotlin.String** | The customer code assigned to your account | 
-**fkiSystemconfigurationtypeID** | **kotlin.Int** | The unique ID of the Systemconfigurationtype |  [optional]
+**fkiSystemconfigurationtypeID** | **kotlin.Int** | The unique ID of the Systemconfigurationtype | 
 **fkiSignatureID** | **kotlin.Int** | The unique ID of the Signature |  [optional]
 
 

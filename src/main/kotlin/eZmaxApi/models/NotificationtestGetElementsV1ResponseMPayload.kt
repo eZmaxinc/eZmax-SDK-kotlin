@@ -24,8 +24,8 @@ import com.squareup.moshi.JsonClass
  *
  * @param pkiNotificationtestID The unique ID of the Notificationtest
  * @param sNotificationtestFunction The function name of the Notificationtest
- * @param aObjVariableobject 
  * @param aSVariableobjectProperty 
+ * @param aObjVariableobject 
  */
 
 
@@ -39,11 +39,11 @@ data class NotificationtestGetElementsV1ResponseMPayload (
     @Json(name = "sNotificationtestFunction")
     val sNotificationtestFunction: kotlin.String,
 
-    @Json(name = "a_objVariableobject")
-    val aObjVariableobject: kotlin.collections.List<kotlin.collections.Map<kotlin.String, kotlin.Any>>,
-
     @Json(name = "a_sVariableobjectProperty")
-    val aSVariableobjectProperty: kotlin.collections.List<kotlin.String>? = null
+    val aSVariableobjectProperty: kotlin.collections.List<kotlin.String>,
+
+    @Json(name = "a_objVariableobject")
+    val aObjVariableobject: kotlin.collections.List<kotlin.collections.Map<kotlin.String, kotlin.Any>>
 
 )
 

@@ -60,7 +60,7 @@ data class ModuleResponseCompound (
     val bModuleRegisteredapi: kotlin.Boolean,
 
     @Json(name = "a_objModulesection")
-    val aObjModulesection: kotlin.collections.List<ModulesectionResponseCompound>
+    val aObjModulesection: kotlin.collections.List<ModulesectionResponseCompound>? = null
 
 )
 

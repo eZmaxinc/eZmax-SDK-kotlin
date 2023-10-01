@@ -23,14 +23,17 @@ import com.squareup.moshi.JsonClass
 /**
  * A custom Creditcardtransaction Object
  *
+ * @param eCreditcardtypeCodename 
  * @param dCreditcardtransactionAmount The amount of the Creditcardtransaction
  * @param sCreditcardtransactionPartiallydecryptednumber The partially decrypted credit card number used in the Creditcardtransaction
  * @param sCreditcardtransactionReferencenumber The reference number on the creditcard service for the Creditcardtransaction
- * @param eCreditcardtypeCodename 
  */
 
 
 data class CustomCreditcardtransactionResponse (
+
+    @Json(name = "eCreditcardtypeCodename")
+    val eCreditcardtypeCodename: FieldECreditcardtypeCodename,
 
     /* The amount of the Creditcardtransaction */
     @Json(name = "dCreditcardtransactionAmount")
@@ -42,10 +45,7 @@ data class CustomCreditcardtransactionResponse (
 
     /* The reference number on the creditcard service for the Creditcardtransaction */
     @Json(name = "sCreditcardtransactionReferencenumber")
-    val sCreditcardtransactionReferencenumber: kotlin.String,
-
-    @Json(name = "eCreditcardtypeCodename")
-    val eCreditcardtypeCodename: FieldECreditcardtypeCodename? = null
+    val sCreditcardtransactionReferencenumber: kotlin.String
 
 )
 

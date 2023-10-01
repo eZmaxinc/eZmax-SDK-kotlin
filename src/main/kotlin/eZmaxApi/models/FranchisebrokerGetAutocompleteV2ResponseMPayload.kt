@@ -31,7 +31,7 @@ data class FranchisebrokerGetAutocompleteV2ResponseMPayload (
 
     /* An array of Franchisebroker autocomplete element response. */
     @Json(name = "a_objFranchisebroker")
-    val aObjFranchisebroker: kotlin.collections.List<FranchisebrokerAutocompleteElementResponse>? = null
+    val aObjFranchisebroker: kotlin.collections.List<FranchisebrokerAutocompleteElementResponse>
 
 )
 

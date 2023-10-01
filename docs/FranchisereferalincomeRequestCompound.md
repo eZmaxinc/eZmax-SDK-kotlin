@@ -15,9 +15,9 @@ Name | Type | Description | Notes
 **tFranchisereferalincomeComment** | **kotlin.String** | Comment about the transaction | 
 **fkiFranchiseofficeID** | **kotlin.Int** | The unique ID of the Franchisereoffice | 
 **sFranchisereferalincomeRemoteid** | **kotlin.String** |  | 
-**objAddress** | [**AddressRequest**](AddressRequest.md) |  | 
 **aObjContact** | [**kotlin.collections.List&lt;ContactRequestCompound&gt;**](ContactRequestCompound.md) |  | 
 **pkiFranchisereferalincomeID** | **kotlin.Int** | The unique ID of the Franchisereferalincome |  [optional]
+**objAddress** | [**AddressRequest**](AddressRequest.md) |  |  [optional]
 
 
 

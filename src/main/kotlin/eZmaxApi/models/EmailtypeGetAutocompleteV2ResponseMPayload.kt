@@ -31,7 +31,7 @@ data class EmailtypeGetAutocompleteV2ResponseMPayload (
 
     /* An array of Emailtype autocomplete element response. */
     @Json(name = "a_objEmailtype")
-    val aObjEmailtype: kotlin.collections.List<EmailtypeAutocompleteElementResponse>? = null
+    val aObjEmailtype: kotlin.collections.List<EmailtypeAutocompleteElementResponse>
 
 )
 

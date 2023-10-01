@@ -31,7 +31,7 @@ data class FranchiseofficeGetAutocompleteV2ResponseMPayload (
 
     /* An array of Franchiseoffice autocomplete element response. */
     @Json(name = "a_objFranchiseoffice")
-    val aObjFranchiseoffice: kotlin.collections.List<FranchiseofficeAutocompleteElementResponse>? = null
+    val aObjFranchiseoffice: kotlin.collections.List<FranchiseofficeAutocompleteElementResponse>
 
 )
 

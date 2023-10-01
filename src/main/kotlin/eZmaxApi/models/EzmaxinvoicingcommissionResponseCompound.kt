@@ -27,11 +27,11 @@ import com.squareup.moshi.JsonClass
  * @param dtEzmaxinvoicingcommissionEnd The end date for the Ezmaxinvoicingcommission
  * @param iEzmaxinvoicingcommissionDays This is the number of days during the month on which the Ezmaxinvoigcommission applies
  * @param dEzmaxinvoicingcommissionAmount The amount of Ezmaxinvoicingcommission
- * @param objContactName 
  * @param pkiEzmaxinvoicingcommissionID The unique ID of the Ezmaxinvoicingcommission
  * @param fkiEzmaxinvoicingsummaryglobalID The unique ID of the Ezmaxinvoicingsummaryglobal
  * @param fkiEzmaxpartnerID The unique ID of the Ezmaxpartner
  * @param fkiEzmaxrepresentativeID The unique ID of the Ezmaxrepresentative
+ * @param objContactName 
  */
 
 
@@ -53,9 +53,6 @@ data class EzmaxinvoicingcommissionResponseCompound (
     @Json(name = "dEzmaxinvoicingcommissionAmount")
     val dEzmaxinvoicingcommissionAmount: kotlin.String,
 
-    @Json(name = "objContactName")
-    val objContactName: CustomContactNameResponse,
-
     /* The unique ID of the Ezmaxinvoicingcommission */
     @Json(name = "pkiEzmaxinvoicingcommissionID")
     val pkiEzmaxinvoicingcommissionID: kotlin.Int? = null,
@@ -70,7 +67,10 @@ data class EzmaxinvoicingcommissionResponseCompound (
 
     /* The unique ID of the Ezmaxrepresentative */
     @Json(name = "fkiEzmaxrepresentativeID")
-    val fkiEzmaxrepresentativeID: kotlin.Int? = null
+    val fkiEzmaxrepresentativeID: kotlin.Int? = null,
+
+    @Json(name = "objContactName")
+    val objContactName: CustomContactNameResponse? = null
 
 )
 

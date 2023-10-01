@@ -31,7 +31,7 @@ data class FontGetAutocompleteV2ResponseMPayload (
 
     /* An array of Font autocomplete element response. */
     @Json(name = "a_objFont")
-    val aObjFont: kotlin.collections.List<FontAutocompleteElementResponse>? = null
+    val aObjFont: kotlin.collections.List<FontAutocompleteElementResponse>
 
 )
 
