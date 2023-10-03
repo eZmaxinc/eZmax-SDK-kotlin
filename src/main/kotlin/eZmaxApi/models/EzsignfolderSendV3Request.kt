@@ -22,20 +22,20 @@ import com.squareup.moshi.JsonClass
 /**
  * Request for POST /3/object/ezsignfolder/{pkiEzsignfolderID}/send
  *
- * @param tEzsignfolderMessage A custom text message that will be added to the email sent.
  * @param aFkiEzsignfoldersignerassociationID 
+ * @param tEzsignfolderMessage A custom text message that will be added to the email sent.
  * @param dtEzsignfolderDelayedsenddate The date and time at which the Ezsignfolder will be sent in the future.
  */
 
 
 data class EzsignfolderSendV3Request (
 
-    /* A custom text message that will be added to the email sent. */
-    @Json(name = "tEzsignfolderMessage")
-    val tEzsignfolderMessage: kotlin.String,
-
     @Json(name = "a_fkiEzsignfoldersignerassociationID")
     val aFkiEzsignfoldersignerassociationID: kotlin.collections.List<kotlin.Int>,
+
+    /* A custom text message that will be added to the email sent. */
+    @Json(name = "tEzsignfolderMessage")
+    val tEzsignfolderMessage: kotlin.String? = null,
 
     /* The date and time at which the Ezsignfolder will be sent in the future. */
     @Json(name = "dtEzsignfolderDelayedsenddate")
