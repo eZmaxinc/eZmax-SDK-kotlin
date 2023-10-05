@@ -18,8 +18,10 @@ package eZmaxApi.models
 import eZmaxApi.models.CustomContactNameResponse
 import eZmaxApi.models.CustomCreditcardtransactionResponse
 import eZmaxApi.models.EnumTextvalidation
+import eZmaxApi.models.EzsignelementdependencyResponseCompound
 import eZmaxApi.models.EzsignsignaturecustomdateResponseCompound
 import eZmaxApi.models.FieldEEzsignsignatureAttachmentnamesource
+import eZmaxApi.models.FieldEEzsignsignatureDependencyrequirement
 import eZmaxApi.models.FieldEEzsignsignatureFont
 import eZmaxApi.models.FieldEEzsignsignatureTooltipposition
 import eZmaxApi.models.FieldEEzsignsignatureType
@@ -55,12 +57,14 @@ import com.squareup.moshi.JsonClass
  * @param sEzsignsignatureDescription The value entered while signing Ezsignsignature of eEzsignsignatureType **City**, **FieldText** and **FieldTextarea**
  * @param iEzsignsignatureMaxlength The maximum length for the value in the Ezsignsignature  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea**
  * @param eEzsignsignatureTextvalidation 
+ * @param eEzsignsignatureDependencyrequirement 
  * @param sEzsignsignatureRegexp A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom**
  * @param objContactNameDelegation 
  * @param objSignature 
  * @param bEzsignsignatureCustomdate Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)
  * @param aObjEzsignsignaturecustomdate An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all.
  * @param objCreditcardtransaction 
+ * @param aObjEzsignelementdependency 
  */
 
 
@@ -156,6 +160,9 @@ data class EzsignsignatureResponseCompound (
     @Json(name = "eEzsignsignatureTextvalidation")
     val eEzsignsignatureTextvalidation: EnumTextvalidation? = null,
 
+    @Json(name = "eEzsignsignatureDependencyrequirement")
+    val eEzsignsignatureDependencyrequirement: FieldEEzsignsignatureDependencyrequirement? = null,
+
     /* A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom** */
     @Json(name = "sEzsignsignatureRegexp")
     val sEzsignsignatureRegexp: kotlin.String? = null,
@@ -175,7 +182,10 @@ data class EzsignsignatureResponseCompound (
     val aObjEzsignsignaturecustomdate: kotlin.collections.List<EzsignsignaturecustomdateResponseCompound>? = null,
 
     @Json(name = "objCreditcardtransaction")
-    val objCreditcardtransaction: CustomCreditcardtransactionResponse? = null
+    val objCreditcardtransaction: CustomCreditcardtransactionResponse? = null,
+
+    @Json(name = "a_objEzsignelementdependency")
+    val aObjEzsignelementdependency: kotlin.collections.List<EzsignelementdependencyResponseCompound>? = null
 
 )
 

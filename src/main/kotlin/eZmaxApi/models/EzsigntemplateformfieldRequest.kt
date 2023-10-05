@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.FieldEEzsigntemplateformfieldDependencyrequirement
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -32,6 +33,7 @@ import com.squareup.moshi.JsonClass
  * @param sEzsigntemplateformfieldValue The value for the Ezsigntemplateformfield
  * @param bEzsigntemplateformfieldAutocomplete Whether the Ezsigntemplateformfield allows the use of the autocomplete of the browser.  This can only be set if eEzsigntemplateformfieldgroupType is **Text**
  * @param bEzsigntemplateformfieldSelected Whether the Ezsigntemplateformfield is selected or not by default.  This can only be set if eEzsigntemplateformfieldgroupType is **Checkbox** or **Radio**
+ * @param eEzsigntemplateformfieldDependencyrequirement 
  */
 
 
@@ -75,7 +77,10 @@ data class EzsigntemplateformfieldRequest (
 
     /* Whether the Ezsigntemplateformfield is selected or not by default.  This can only be set if eEzsigntemplateformfieldgroupType is **Checkbox** or **Radio** */
     @Json(name = "bEzsigntemplateformfieldSelected")
-    val bEzsigntemplateformfieldSelected: kotlin.Boolean? = null
+    val bEzsigntemplateformfieldSelected: kotlin.Boolean? = null,
+
+    @Json(name = "eEzsigntemplateformfieldDependencyrequirement")
+    val eEzsigntemplateformfieldDependencyrequirement: FieldEEzsigntemplateformfieldDependencyrequirement? = null
 
 )
 

@@ -16,8 +16,10 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.EnumTextvalidation
+import eZmaxApi.models.EzsigntemplateelementdependencyResponseCompound
 import eZmaxApi.models.EzsigntemplatesignaturecustomdateResponseCompound
 import eZmaxApi.models.FieldEEzsigntemplatesignatureAttachmentnamesource
+import eZmaxApi.models.FieldEEzsigntemplatesignatureDependencyrequirement
 import eZmaxApi.models.FieldEEzsigntemplatesignatureFont
 import eZmaxApi.models.FieldEEzsigntemplatesignatureTooltipposition
 import eZmaxApi.models.FieldEEzsigntemplatesignatureType
@@ -49,8 +51,10 @@ import com.squareup.moshi.JsonClass
  * @param iEzsigntemplatesignatureMaxlength The maximum length for the value in the Ezsigntemplatesignature  This can only be set if eEzsigntemplatesignatureType is **FieldText** or **FieldTextarea**
  * @param sEzsigntemplatesignatureRegexp A regular expression to indicate what values are acceptable for the Ezsigntemplatesignature.  This can only be set if eEzsigntemplatesignatureType is **Text** or **Textarea**
  * @param eEzsigntemplatesignatureTextvalidation 
+ * @param eEzsigntemplatesignatureDependencyrequirement 
  * @param bEzsigntemplatesignatureCustomdate Whether the Ezsigntemplatesignature has a custom date format or not. (Only possible when eEzsigntemplatesignatureType is **Name** or **Handwritten**)
  * @param aObjEzsigntemplatesignaturecustomdate An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsigntemplatesignatureCustomdate is true.  Use an empty array if you don't want to have a date at all.
+ * @param aObjEzsigntemplateelementdependency 
  */
 
 
@@ -135,13 +139,19 @@ data class EzsigntemplatesignatureResponseCompound (
     @Json(name = "eEzsigntemplatesignatureTextvalidation")
     val eEzsigntemplatesignatureTextvalidation: EnumTextvalidation? = null,
 
+    @Json(name = "eEzsigntemplatesignatureDependencyrequirement")
+    val eEzsigntemplatesignatureDependencyrequirement: FieldEEzsigntemplatesignatureDependencyrequirement? = null,
+
     /* Whether the Ezsigntemplatesignature has a custom date format or not. (Only possible when eEzsigntemplatesignatureType is **Name** or **Handwritten**) */
     @Json(name = "bEzsigntemplatesignatureCustomdate")
     val bEzsigntemplatesignatureCustomdate: kotlin.Boolean? = null,
 
     /* An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsigntemplatesignatureCustomdate is true.  Use an empty array if you don't want to have a date at all. */
     @Json(name = "a_objEzsigntemplatesignaturecustomdate")
-    val aObjEzsigntemplatesignaturecustomdate: kotlin.collections.List<EzsigntemplatesignaturecustomdateResponseCompound>? = null
+    val aObjEzsigntemplatesignaturecustomdate: kotlin.collections.List<EzsigntemplatesignaturecustomdateResponseCompound>? = null,
+
+    @Json(name = "a_objEzsigntemplateelementdependency")
+    val aObjEzsigntemplateelementdependency: kotlin.collections.List<EzsigntemplateelementdependencyResponseCompound>? = null
 
 )
 

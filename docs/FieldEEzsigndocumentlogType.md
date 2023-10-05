@@ -56,5 +56,7 @@
 
     * `RegeneratePageForm` (value: `"RegeneratePageForm"`)
 
+    * `Reassign` (value: `"Reassign"`)
+
 
 

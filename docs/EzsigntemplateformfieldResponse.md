@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **sEzsigntemplateformfieldValue** | **kotlin.String** | The value for the Ezsigntemplateformfield |  [optional]
 **bEzsigntemplateformfieldAutocomplete** | **kotlin.Boolean** | Whether the Ezsigntemplateformfield allows the use of the autocomplete of the browser.  This can only be set if eEzsigntemplateformfieldgroupType is **Text** |  [optional]
 **bEzsigntemplateformfieldSelected** | **kotlin.Boolean** | Whether the Ezsigntemplateformfield is selected or not by default.  This can only be set if eEzsigntemplateformfieldgroupType is **Checkbox** or **Radio** |  [optional]
+**eEzsigntemplateformfieldDependencyrequirement** | [**FieldEEzsigntemplateformfieldDependencyrequirement**](FieldEEzsigntemplateformfieldDependencyrequirement.md) |  |  [optional]
 
 
 

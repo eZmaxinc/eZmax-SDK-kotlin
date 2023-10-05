@@ -17,6 +17,7 @@ package eZmaxApi.models
 
 import eZmaxApi.models.EnumTextvalidation
 import eZmaxApi.models.FieldEEzsignsignatureAttachmentnamesource
+import eZmaxApi.models.FieldEEzsignsignatureDependencyrequirement
 import eZmaxApi.models.FieldEEzsignsignatureFont
 import eZmaxApi.models.FieldEEzsignsignatureTooltipposition
 import eZmaxApi.models.FieldEEzsignsignatureType
@@ -48,6 +49,7 @@ import com.squareup.moshi.JsonClass
  * @param iEzsignsignatureMaxlength The maximum length for the value in the Ezsignsignature  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea**
  * @param eEzsignsignatureTextvalidation 
  * @param sEzsignsignatureRegexp A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom**
+ * @param eEzsignsignatureDependencyrequirement 
  */
 
 
@@ -130,7 +132,10 @@ data class EzsignsignatureRequest (
 
     /* A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom** */
     @Json(name = "sEzsignsignatureRegexp")
-    val sEzsignsignatureRegexp: kotlin.String? = null
+    val sEzsignsignatureRegexp: kotlin.String? = null,
+
+    @Json(name = "eEzsignsignatureDependencyrequirement")
+    val eEzsignsignatureDependencyrequirement: FieldEEzsignsignatureDependencyrequirement? = null
 
 )
 

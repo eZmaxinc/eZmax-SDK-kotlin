@@ -16,8 +16,10 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.EnumTextvalidation
+import eZmaxApi.models.EzsignelementdependencyRequestCompound
 import eZmaxApi.models.EzsignsignaturecustomdateRequestCompound
 import eZmaxApi.models.FieldEEzsignsignatureAttachmentnamesource
+import eZmaxApi.models.FieldEEzsignsignatureDependencyrequirement
 import eZmaxApi.models.FieldEEzsignsignatureFont
 import eZmaxApi.models.FieldEEzsignsignatureTooltipposition
 import eZmaxApi.models.FieldEEzsignsignatureType
@@ -49,8 +51,10 @@ import com.squareup.moshi.JsonClass
  * @param iEzsignsignatureMaxlength The maximum length for the value in the Ezsignsignature  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea**
  * @param eEzsignsignatureTextvalidation 
  * @param sEzsignsignatureRegexp A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom**
+ * @param eEzsignsignatureDependencyrequirement 
  * @param bEzsignsignatureCustomdate Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)
  * @param aObjEzsignsignaturecustomdate An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all.
+ * @param aObjEzsignelementdependency 
  */
 
 
@@ -135,13 +139,19 @@ data class EzsignsignatureRequestCompound (
     @Json(name = "sEzsignsignatureRegexp")
     val sEzsignsignatureRegexp: kotlin.String? = null,
 
+    @Json(name = "eEzsignsignatureDependencyrequirement")
+    val eEzsignsignatureDependencyrequirement: FieldEEzsignsignatureDependencyrequirement? = null,
+
     /* Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**) */
     @Json(name = "bEzsignsignatureCustomdate")
     val bEzsignsignatureCustomdate: kotlin.Boolean? = null,
 
     /* An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all. */
     @Json(name = "a_objEzsignsignaturecustomdate")
-    val aObjEzsignsignaturecustomdate: kotlin.collections.List<EzsignsignaturecustomdateRequestCompound>? = null
+    val aObjEzsignsignaturecustomdate: kotlin.collections.List<EzsignsignaturecustomdateRequestCompound>? = null,
+
+    @Json(name = "a_objEzsignelementdependency")
+    val aObjEzsignelementdependency: kotlin.collections.List<EzsignelementdependencyRequestCompound>? = null
 
 )
 
