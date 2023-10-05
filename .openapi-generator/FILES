@@ -786,6 +786,9 @@ docs/GlobalEzmaxclientVersionV1Response.md
 docs/GlobalEzmaxcustomerApi.md
 docs/GlobalEzmaxcustomerGetConfigurationV1Response.md
 docs/HeaderAcceptLanguage.md
+docs/LanguageAutocompleteElementResponse.md
+docs/LanguageGetAutocompleteV2Response.md
+docs/LanguageGetAutocompleteV2ResponseMPayload.md
 docs/ModuleEzsignApi.md
 docs/ModuleReportApi.md
 docs/ModuleResponse.md
@@ -856,6 +859,7 @@ docs/ObjectFontApi.md
 docs/ObjectFranchisebrokerApi.md
 docs/ObjectFranchiseofficeApi.md
 docs/ObjectFranchisereferalincomeApi.md
+docs/ObjectLanguageApi.md
 docs/ObjectModulegroupApi.md
 docs/ObjectNotificationsectionApi.md
 docs/ObjectNotificationtestApi.md
@@ -1186,6 +1190,7 @@ src/main/kotlin/eZmaxApi/apis/ObjectFontApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectFranchisebrokerApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectFranchiseofficeApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectFranchisereferalincomeApi.kt
+src/main/kotlin/eZmaxApi/apis/ObjectLanguageApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectModulegroupApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectNotificationsectionApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectNotificationtestApi.kt
@@ -2010,6 +2015,9 @@ src/main/kotlin/eZmaxApi/models/GlobalCustomerGetEndpointV1Response.kt
 src/main/kotlin/eZmaxApi/models/GlobalEzmaxclientVersionV1Response.kt
 src/main/kotlin/eZmaxApi/models/GlobalEzmaxcustomerGetConfigurationV1Response.kt
 src/main/kotlin/eZmaxApi/models/HeaderAcceptLanguage.kt
+src/main/kotlin/eZmaxApi/models/LanguageAutocompleteElementResponse.kt
+src/main/kotlin/eZmaxApi/models/LanguageGetAutocompleteV2Response.kt
+src/main/kotlin/eZmaxApi/models/LanguageGetAutocompleteV2ResponseMPayload.kt
 src/main/kotlin/eZmaxApi/models/ModuleResponse.kt
 src/main/kotlin/eZmaxApi/models/ModuleResponseCompound.kt
 src/main/kotlin/eZmaxApi/models/ModulegroupGetAllV1Response.kt
