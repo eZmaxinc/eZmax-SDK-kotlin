@@ -14,6 +14,10 @@
 
     * `Goodcode` (value: `"Goodcode"`)
 
+    * `Badresponse` (value: `"Badresponse"`)
+
+    * `Goodresponse` (value: `"Goodresponse"`)
+
     * `Authentication` (value: `"Authentication"`)
 
     * `Createpage` (value: `"Createpage"`)
@@ -51,6 +55,10 @@
     * `DeclinedToSign` (value: `"DeclinedToSign"`)
 
     * `DelayedSendEmail` (value: `"DelayedSendEmail"`)
+
+    * `AnnotationAdded` (value: `"AnnotationAdded"`)
+
+    * `Flatten` (value: `"Flatten"`)
 
     * `RegeneratePage` (value: `"RegeneratePage"`)
 

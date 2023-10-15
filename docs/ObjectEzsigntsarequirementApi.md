@@ -43,7 +43,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sSelector** | **kotlin.String**| The type of Ezsigntsarequirements to return | [enum: User, Usergroup]
+ **sSelector** | **kotlin.String**| The type of Ezsigntsarequirements to return | [enum: All, User, Usergroup]
  **fkiEzsignfoldertypeID** | **kotlin.Int**|  | [optional]
  **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
  **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional]

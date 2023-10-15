@@ -22,7 +22,7 @@ import com.squareup.moshi.JsonClass
 /**
  * The Ezsigndocumentlog Type.
  *
- * Values: Clone,Login,Sendcode,Badcode,Goodcode,Authentication,Createpage,Download,Send,Sign,Upload,View,Completion,Changelimitdate,Unsign,ImportFromInstanet,SendEmail,FormCompletion,SignatureAttachmentAdd,SignatureAttachmentValidation,SignatureAttachmentRefused,SignatureAttachmentDeleted,DeclinedToSign,DelayedSendEmail,RegeneratePage,RegeneratePageForm,Reassign
+ * Values: Clone,Login,Sendcode,Badcode,Goodcode,Badresponse,Goodresponse,Authentication,Createpage,Download,Send,Sign,Upload,View,Completion,Changelimitdate,Unsign,ImportFromInstanet,SendEmail,FormCompletion,SignatureAttachmentAdd,SignatureAttachmentValidation,SignatureAttachmentRefused,SignatureAttachmentDeleted,DeclinedToSign,DelayedSendEmail,AnnotationAdded,Flatten,RegeneratePage,RegeneratePageForm,Reassign
  */
 
 @JsonClass(generateAdapter = false)
@@ -42,6 +42,12 @@ enum class FieldEEzsigndocumentlogType(val value: kotlin.String) {
 
     @Json(name = "Goodcode")
     Goodcode("Goodcode"),
+
+    @Json(name = "Badresponse")
+    Badresponse("Badresponse"),
+
+    @Json(name = "Goodresponse")
+    Goodresponse("Goodresponse"),
 
     @Json(name = "Authentication")
     Authentication("Authentication"),
@@ -99,6 +105,12 @@ enum class FieldEEzsigndocumentlogType(val value: kotlin.String) {
 
     @Json(name = "DelayedSendEmail")
     DelayedSendEmail("DelayedSendEmail"),
+
+    @Json(name = "AnnotationAdded")
+    AnnotationAdded("AnnotationAdded"),
+
+    @Json(name = "Flatten")
+    Flatten("Flatten"),
 
     @Json(name = "RegeneratePage")
     RegeneratePage("RegeneratePage"),

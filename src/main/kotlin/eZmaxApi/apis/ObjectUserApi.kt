@@ -357,14 +357,12 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
      * enum for parameter sSelector
      */
      enum class SSelectorUserGetAutocompleteV2(val value: kotlin.String) {
-         @Json(name = "All") All("All"),
          @Json(name = "AgentBrokerEmployeeEzsignUserNormal") AgentBrokerEmployeeEzsignUserNormal("AgentBrokerEmployeeEzsignUserNormal"),
          @Json(name = "AgentBrokerEmployeeNormalBuiltIn") AgentBrokerEmployeeNormalBuiltIn("AgentBrokerEmployeeNormalBuiltIn"),
          @Json(name = "AgentBrokerEzsignuserNormal") AgentBrokerEzsignuserNormal("AgentBrokerEzsignuserNormal"),
          @Json(name = "ClonableUsers") ClonableUsers("ClonableUsers"),
          @Json(name = "EzsignuserBuiltIn") EzsignuserBuiltIn("EzsignuserBuiltIn"),
          @Json(name = "Normal") Normal("Normal"),
-         @Json(name = "NormalEzsignSigner") NormalEzsignSigner("NormalEzsignSigner"),
          @Json(name = "UsergroupDelegated") UsergroupDelegated("UsergroupDelegated")
      }
 

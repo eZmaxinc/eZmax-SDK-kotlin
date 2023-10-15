@@ -254,7 +254,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sSelector** | **kotlin.String**| The type of Users to return | [enum: All, AgentBrokerEmployeeEzsignUserNormal, AgentBrokerEmployeeNormalBuiltIn, AgentBrokerEzsignuserNormal, ClonableUsers, EzsignuserBuiltIn, Normal, NormalEzsignSigner, UsergroupDelegated]
+ **sSelector** | **kotlin.String**| The type of Users to return | [enum: AgentBrokerEmployeeEzsignUserNormal, AgentBrokerEmployeeNormalBuiltIn, AgentBrokerEzsignuserNormal, ClonableUsers, EzsignuserBuiltIn, Normal, UsergroupDelegated]
  **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
  **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional]
  **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]

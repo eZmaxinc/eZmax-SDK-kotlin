@@ -878,6 +878,7 @@ docs/ObjectUserApi.md
 docs/ObjectUsergroupApi.md
 docs/ObjectUsergroupdelegationApi.md
 docs/ObjectUsergroupmembershipApi.md
+docs/ObjectUserlogintypeApi.md
 docs/ObjectUserstagedApi.md
 docs/ObjectVariableexpenseApi.md
 docs/ObjectVersionhistoryApi.md
@@ -1073,6 +1074,9 @@ docs/UsergroupmembershipRequest.md
 docs/UsergroupmembershipRequestCompound.md
 docs/UsergroupmembershipResponse.md
 docs/UsergroupmembershipResponseCompound.md
+docs/UserlogintypeAutocompleteElementResponse.md
+docs/UserlogintypeGetAutocompleteV2Response.md
+docs/UserlogintypeGetAutocompleteV2ResponseMPayload.md
 docs/UserstagedCreateUserV1Response.md
 docs/UserstagedCreateUserV1ResponseMPayload.md
 docs/UserstagedDeleteObjectV1Response.md
@@ -1209,6 +1213,7 @@ src/main/kotlin/eZmaxApi/apis/ObjectUserApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectUsergroupApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectUsergroupdelegationApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectUsergroupmembershipApi.kt
+src/main/kotlin/eZmaxApi/apis/ObjectUserlogintypeApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectUserstagedApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectVariableexpenseApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectVersionhistoryApi.kt
@@ -2233,6 +2238,9 @@ src/main/kotlin/eZmaxApi/models/UsergroupmembershipRequest.kt
 src/main/kotlin/eZmaxApi/models/UsergroupmembershipRequestCompound.kt
 src/main/kotlin/eZmaxApi/models/UsergroupmembershipResponse.kt
 src/main/kotlin/eZmaxApi/models/UsergroupmembershipResponseCompound.kt
+src/main/kotlin/eZmaxApi/models/UserlogintypeAutocompleteElementResponse.kt
+src/main/kotlin/eZmaxApi/models/UserlogintypeGetAutocompleteV2Response.kt
+src/main/kotlin/eZmaxApi/models/UserlogintypeGetAutocompleteV2ResponseMPayload.kt
 src/main/kotlin/eZmaxApi/models/UserstagedCreateUserV1Response.kt
 src/main/kotlin/eZmaxApi/models/UserstagedCreateUserV1ResponseMPayload.kt
 src/main/kotlin/eZmaxApi/models/UserstagedDeleteObjectV1Response.kt
