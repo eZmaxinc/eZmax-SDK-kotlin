@@ -20,7 +20,7 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * The type for the Communicationrecipient
+ * The type for the Communicationrecipient.  Only used when eCommunicationType is **Email**
  *
  * Values: To,Cc,Bcc
  */

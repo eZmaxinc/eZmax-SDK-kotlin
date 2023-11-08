@@ -319,7 +319,7 @@ class ObjectBillingentityinternalApi(basePath: kotlin.String = defaultBasePath, 
      * Retrieve Billingentityinternal list
      * 
      * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional, default to 10000)
+     * @param iRowMax  (optional)
      * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
@@ -332,7 +332,7 @@ class ObjectBillingentityinternalApi(basePath: kotlin.String = defaultBasePath, 
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun billingentityinternalGetListV1(eOrderBy: EOrderByBillingentityinternalGetListV1? = null, iRowMax: kotlin.Int? = 10000, iRowOffset: kotlin.Int? = 0, acceptLanguage: HeaderAcceptLanguage? = null, sFilter: kotlin.String? = null) : BillingentityinternalGetListV1Response {
+    fun billingentityinternalGetListV1(eOrderBy: EOrderByBillingentityinternalGetListV1? = null, iRowMax: kotlin.Int? = null, iRowOffset: kotlin.Int? = 0, acceptLanguage: HeaderAcceptLanguage? = null, sFilter: kotlin.String? = null) : BillingentityinternalGetListV1Response {
         val localVarResponse = billingentityinternalGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
 
         return when (localVarResponse.responseType) {
@@ -354,7 +354,7 @@ class ObjectBillingentityinternalApi(basePath: kotlin.String = defaultBasePath, 
      * Retrieve Billingentityinternal list
      * 
      * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional, default to 10000)
+     * @param iRowMax  (optional)
      * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
@@ -376,7 +376,7 @@ class ObjectBillingentityinternalApi(basePath: kotlin.String = defaultBasePath, 
      * To obtain the request config of the operation billingentityinternalGetListV1
      *
      * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional, default to 10000)
+     * @param iRowMax  (optional)
      * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)

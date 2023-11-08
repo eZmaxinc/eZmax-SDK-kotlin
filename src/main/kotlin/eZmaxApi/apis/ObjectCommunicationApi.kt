@@ -19,8 +19,8 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonResponseError
-import eZmaxApi.models.CommunicationGetObjectV2Response
+import eZmaxApi.models.CommunicationSendV1Request
+import eZmaxApi.models.CommunicationSendV1Response
 
 import com.squareup.moshi.Json
 
@@ -47,10 +47,10 @@ class ObjectCommunicationApi(basePath: kotlin.String = defaultBasePath, client: 
     }
 
     /**
-     * Retrieve an existing Communication
-     * 
-     * @param pkiCommunicationID 
-     * @return CommunicationGetObjectV2Response
+     * Send a new Communication
+     * The endpoint allows to send one or many elements at once.
+     * @param communicationSendV1Request 
+     * @return CommunicationSendV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -59,11 +59,11 @@ class ObjectCommunicationApi(basePath: kotlin.String = defaultBasePath, client: 
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun communicationGetObjectV2(pkiCommunicationID: kotlin.Int) : CommunicationGetObjectV2Response {
-        val localVarResponse = communicationGetObjectV2WithHttpInfo(pkiCommunicationID = pkiCommunicationID)
+    fun communicationSendV1(communicationSendV1Request: CommunicationSendV1Request) : CommunicationSendV1Response {
+        val localVarResponse = communicationSendV1WithHttpInfo(communicationSendV1Request = communicationSendV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommunicationGetObjectV2Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommunicationSendV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -78,38 +78,39 @@ class ObjectCommunicationApi(basePath: kotlin.String = defaultBasePath, client: 
     }
 
     /**
-     * Retrieve an existing Communication
-     * 
-     * @param pkiCommunicationID 
-     * @return ApiResponse<CommunicationGetObjectV2Response?>
+     * Send a new Communication
+     * The endpoint allows to send one or many elements at once.
+     * @param communicationSendV1Request 
+     * @return ApiResponse<CommunicationSendV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun communicationGetObjectV2WithHttpInfo(pkiCommunicationID: kotlin.Int) : ApiResponse<CommunicationGetObjectV2Response?> {
-        val localVariableConfig = communicationGetObjectV2RequestConfig(pkiCommunicationID = pkiCommunicationID)
+    fun communicationSendV1WithHttpInfo(communicationSendV1Request: CommunicationSendV1Request) : ApiResponse<CommunicationSendV1Response?> {
+        val localVariableConfig = communicationSendV1RequestConfig(communicationSendV1Request = communicationSendV1Request)
 
-        return request<Unit, CommunicationGetObjectV2Response>(
+        return request<CommunicationSendV1Request, CommunicationSendV1Response>(
             localVariableConfig
         )
     }
 
     /**
-     * To obtain the request config of the operation communicationGetObjectV2
+     * To obtain the request config of the operation communicationSendV1
      *
-     * @param pkiCommunicationID 
+     * @param communicationSendV1Request 
      * @return RequestConfig
      */
-    fun communicationGetObjectV2RequestConfig(pkiCommunicationID: kotlin.Int) : RequestConfig<Unit> {
-        val localVariableBody = null
+    fun communicationSendV1RequestConfig(communicationSendV1Request: CommunicationSendV1Request) : RequestConfig<CommunicationSendV1Request> {
+        val localVariableBody = communicationSendV1Request
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
         localVariableHeaders["Accept"] = "application/json"
 
         return RequestConfig(
-            method = RequestMethod.GET,
-            path = "/2/object/communication/{pkiCommunicationID}".replace("{"+"pkiCommunicationID"+"}", encodeURIComponent(pkiCommunicationID.toString())),
+            method = RequestMethod.POST,
+            path = "/1/object/communication/send",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

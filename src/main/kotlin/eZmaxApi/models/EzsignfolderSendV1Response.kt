@@ -22,7 +22,7 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * Response for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/send
+ * Response for GET /1/object/attachment/{pkiAttachmentID}/download
  *
  * @param objDebugPayload 
  * @param objDebug 

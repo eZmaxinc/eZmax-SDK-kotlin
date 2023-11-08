@@ -29,7 +29,7 @@ import com.squareup.moshi.JsonClass
  * @param bVersionDeprecated Wheter the current route is deprecated or not
  * @param aFilter 
  * @param aOrderBy List of available values for *eOrderBy*
- * @param iRowMax The maximum numbers of results to be returned
+ * @param iRowMax The maximum numbers of results to be returned.  When the content-type is **application/json** there is an implicit default of 10 000.  When it's **application/vnd.openxmlformats-officedocument.spreadsheetml.sheet** the is no implicit default so if you do not specify iRowMax, all records will be returned.
  * @param iRowOffset The starting element from where to start retrieving the results. For example if you started at iRowOffset=0 and asked for iRowMax=100, to get the next 100 results, you could specify iRowOffset=100&iRowMax=100,
  */
 
@@ -59,9 +59,9 @@ data class CommonResponseObjDebugPayloadGetList (
     @Json(name = "a_OrderBy")
     val aOrderBy: kotlin.collections.Map<kotlin.String, kotlin.String>,
 
-    /* The maximum numbers of results to be returned */
+    /* The maximum numbers of results to be returned.  When the content-type is **application/json** there is an implicit default of 10 000.  When it's **application/vnd.openxmlformats-officedocument.spreadsheetml.sheet** the is no implicit default so if you do not specify iRowMax, all records will be returned. */
     @Json(name = "iRowMax")
-    val iRowMax: kotlin.Int = 10000,
+    val iRowMax: kotlin.Int,
 
     /* The starting element from where to start retrieving the results. For example if you started at iRowOffset=0 and asked for iRowMax=100, to get the next 100 results, you could specify iRowOffset=100&iRowMax=100, */
     @Json(name = "iRowOffset")

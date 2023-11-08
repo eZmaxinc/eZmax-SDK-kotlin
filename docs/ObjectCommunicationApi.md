@@ -4,16 +4,16 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**communicationGetObjectV2**](ObjectCommunicationApi.md#communicationGetObjectV2) | **GET** /2/object/communication/{pkiCommunicationID} | Retrieve an existing Communication
+[**communicationSendV1**](ObjectCommunicationApi.md#communicationSendV1) | **POST** /1/object/communication/send | Send a new Communication
 
 
-<a id="communicationGetObjectV2"></a>
-# **communicationGetObjectV2**
-> CommunicationGetObjectV2Response communicationGetObjectV2(pkiCommunicationID)
+<a id="communicationSendV1"></a>
+# **communicationSendV1**
+> CommunicationSendV1Response communicationSendV1(communicationSendV1Request)
 
-Retrieve an existing Communication
+Send a new Communication
 
-
+The endpoint allows to send one or many elements at once.
 
 ### Example
 ```kotlin
@@ -22,15 +22,15 @@ Retrieve an existing Communication
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectCommunicationApi()
-val pkiCommunicationID : kotlin.Int = 56 // kotlin.Int | 
+val communicationSendV1Request : CommunicationSendV1Request =  // CommunicationSendV1Request | 
 try {
-    val result : CommunicationGetObjectV2Response = apiInstance.communicationGetObjectV2(pkiCommunicationID)
+    val result : CommunicationSendV1Response = apiInstance.communicationSendV1(communicationSendV1Request)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling ObjectCommunicationApi#communicationGetObjectV2")
+    println("4xx response calling ObjectCommunicationApi#communicationSendV1")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling ObjectCommunicationApi#communicationGetObjectV2")
+    println("5xx response calling ObjectCommunicationApi#communicationSendV1")
     e.printStackTrace()
 }
 ```
@@ -39,11 +39,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiCommunicationID** | **kotlin.Int**|  |
+ **communicationSendV1Request** | [**CommunicationSendV1Request**](CommunicationSendV1Request.md)|  |
 
 ### Return type
 
-[**CommunicationGetObjectV2Response**](CommunicationGetObjectV2Response.md)
+[**CommunicationSendV1Response**](CommunicationSendV1Response.md)
 
 ### Authorization
 
@@ -54,6 +54,6 @@ Configure Authorization:
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 

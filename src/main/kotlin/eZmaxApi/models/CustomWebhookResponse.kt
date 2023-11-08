@@ -30,6 +30,7 @@ import com.squareup.moshi.JsonClass
  * @param eWebhookModule 
  * @param sWebhookUrl The URL of the Webhook callback
  * @param sWebhookEmailfailed The email that will receive the Webhook in case all attempts fail
+ * @param bWebhookIsactive Whether the Webhook is active or not
  * @param bWebhookSkipsslvalidation Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use
  * @param pksCustomerCode The customer code assigned to your account
  * @param bWebhookTest Wheter the webhook received is a manual test or a real event
@@ -37,7 +38,6 @@ import com.squareup.moshi.JsonClass
  * @param sEzsignfoldertypeNameX The name of the Ezsignfoldertype in the language of the requester
  * @param eWebhookEzsignevent 
  * @param eWebhookManagementevent 
- * @param bWebhookIsactive Whether the Webhook is active or not
  */
 
 
@@ -61,6 +61,10 @@ data class CustomWebhookResponse (
     /* The email that will receive the Webhook in case all attempts fail */
     @Json(name = "sWebhookEmailfailed")
     val sWebhookEmailfailed: kotlin.String,
+
+    /* Whether the Webhook is active or not */
+    @Json(name = "bWebhookIsactive")
+    val bWebhookIsactive: kotlin.Boolean,
 
     /* Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use */
     @Json(name = "bWebhookSkipsslvalidation")
@@ -86,11 +90,7 @@ data class CustomWebhookResponse (
     val eWebhookEzsignevent: FieldEWebhookEzsignevent? = null,
 
     @Json(name = "eWebhookManagementevent")
-    val eWebhookManagementevent: FieldEWebhookManagementevent? = null,
-
-    /* Whether the Webhook is active or not */
-    @Json(name = "bWebhookIsactive")
-    val bWebhookIsactive: kotlin.Boolean? = null
+    val eWebhookManagementevent: FieldEWebhookManagementevent? = null
 
 )
 
