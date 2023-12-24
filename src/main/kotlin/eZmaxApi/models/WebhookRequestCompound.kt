@@ -35,6 +35,7 @@ import com.squareup.moshi.JsonClass
  * @param fkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
  * @param eWebhookEzsignevent 
  * @param eWebhookManagementevent 
+ * @param bWebhookIssigned Whether the requests will be signed or not
  */
 
 
@@ -75,7 +76,11 @@ data class WebhookRequestCompound (
     val eWebhookEzsignevent: FieldEWebhookEzsignevent? = null,
 
     @Json(name = "eWebhookManagementevent")
-    val eWebhookManagementevent: FieldEWebhookManagementevent? = null
+    val eWebhookManagementevent: FieldEWebhookManagementevent? = null,
+
+    /* Whether the requests will be signed or not */
+    @Json(name = "bWebhookIssigned")
+    val bWebhookIssigned: kotlin.Boolean? = null
 
 )
 

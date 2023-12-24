@@ -23,6 +23,7 @@ import com.squareup.moshi.JsonClass
  * Response for GET /1/ezmaxclient/{pksEzmaxclientOs}/version
  *
  * @param sEzmaxclientVersion The version on the store
+ * @param sEzmaxclientOslatestversion The latest OS version of the system running the application at the time of release
  */
 
 
@@ -30,7 +31,11 @@ data class GlobalEzmaxclientVersionV1Response (
 
     /* The version on the store */
     @Json(name = "sEzmaxclientVersion")
-    val sEzmaxclientVersion: kotlin.String
+    val sEzmaxclientVersion: kotlin.String,
+
+    /* The latest OS version of the system running the application at the time of release */
+    @Json(name = "sEzmaxclientOslatestversion")
+    val sEzmaxclientOslatestversion: kotlin.String = "11"
 
 )
 

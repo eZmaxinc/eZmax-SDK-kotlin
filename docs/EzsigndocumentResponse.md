@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **iEzsigndocumentPagetotal** | **kotlin.Int** | The number of pages in the Ezsigndocument. | 
 **iEzsigndocumentSignaturesigned** | **kotlin.Int** | The number of signatures that were signed in the document. | 
 **iEzsigndocumentSignaturetotal** | **kotlin.Int** | The number of total signatures that were requested in the Ezsigndocument. | 
+**iEzsigndocumentEzsignsignatureattachmenttotal** | **kotlin.Int** | The number of Ezsigndocumentattachment total | 
 **fkiEzsignfoldersignerassociationIDDeclinedtosign** | **kotlin.Int** | The unique ID of the Ezsignfoldersignerassociation |  [optional]
 **dtEzsignformCompleted** | **kotlin.String** | The date and time at which the Ezsignform has been completed. |  [optional]
 **fkiLanguageID** | **kotlin.Int** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| |  [optional]

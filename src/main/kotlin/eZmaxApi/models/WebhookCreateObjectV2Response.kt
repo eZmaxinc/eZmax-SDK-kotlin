@@ -17,22 +17,27 @@ package eZmaxApi.models
 
 import eZmaxApi.models.CommonResponseObjDebug
 import eZmaxApi.models.CommonResponseObjDebugPayload
+import eZmaxApi.models.WebhookCreateObjectV2ResponseMPayload
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * Response for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/send
+ * Response for POST /2/object/webhook
  *
  * @param objDebugPayload 
+ * @param mPayload 
  * @param objDebug 
  */
 
 
-data class AttachmentDownloadV1Response (
+data class WebhookCreateObjectV2Response (
 
     @Json(name = "objDebugPayload")
     val objDebugPayload: CommonResponseObjDebugPayload,
+
+    @Json(name = "mPayload")
+    val mPayload: WebhookCreateObjectV2ResponseMPayload,
 
     @Json(name = "objDebug")
     val objDebug: CommonResponseObjDebug? = null

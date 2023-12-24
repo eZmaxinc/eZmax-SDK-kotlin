@@ -10,15 +10,17 @@ Name | Type | Description | Notes
 **fkiBrokerID** | **kotlin.Int** | The unique ID of the Broker. |  [optional]
 **fkiUserID** | **kotlin.Int** | The unique ID of the User |  [optional]
 **fkiMailboxsharedID** | **kotlin.Int** | The unique ID of the Mailboxshared |  [optional]
-**sEmailAddress** | **kotlin.String** | The email address. |  [optional]
-**sPhoneE164** | **kotlin.String** | A phone number in E.164 Format |  [optional]
+**fkiPhonelinesharedID** | **kotlin.Int** | The unique ID of the Phonelineshared |  [optional]
+**objEmail** | [**EmailResponseCompound**](EmailResponseCompound.md) |  |  [optional]
+**objPhoneFax** | [**PhoneResponseCompound**](PhoneResponseCompound.md) |  |  [optional]
+**objPhoneSMS** | [**PhoneResponseCompound**](PhoneResponseCompound.md) |  |  [optional]
 
 
 <a id="ECommunicationsenderObjecttype"></a>
 ## Enum: eCommunicationsenderObjecttype
 Name | Value
 ---- | -----
-eCommunicationsenderObjecttype | Agent, Broker, User, Mailboxshared
+eCommunicationsenderObjecttype | Agent, Broker, User, Mailboxshared, Phonelineshared
 
 
 

@@ -24,6 +24,7 @@ import com.squareup.moshi.JsonClass
  * Response for Websocket Information V1
  *
  * @param eWebsocketMessagetype The Type of message
+ * @param sWebsocketChannel The Channel on which to route the websocket message
  * @param mPayload 
  */
 
@@ -33,6 +34,10 @@ data class WebsocketResponseInformationV1 (
     /* The Type of message */
     @Json(name = "eWebsocketMessagetype")
     val eWebsocketMessagetype: WebsocketResponseInformationV1.EWebsocketMessagetype,
+
+    /* The Channel on which to route the websocket message */
+    @Json(name = "sWebsocketChannel")
+    val sWebsocketChannel: kotlin.String,
 
     @Json(name = "mPayload")
     val mPayload: WebsocketResponseInformationV1MPayload

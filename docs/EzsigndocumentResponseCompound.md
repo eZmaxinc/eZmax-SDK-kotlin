@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **iEzsigndocumentPagetotal** | **kotlin.Int** | The number of pages in the Ezsigndocument. | 
 **iEzsigndocumentSignaturesigned** | **kotlin.Int** | The number of signatures that were signed in the document. | 
 **iEzsigndocumentSignaturetotal** | **kotlin.Int** | The number of total signatures that were requested in the Ezsigndocument. | 
+**iEzsigndocumentEzsignsignatureattachmenttotal** | **kotlin.Int** | The number of Ezsigndocumentattachment total | 
 **eEzsigndocumentSteptype** | [**ComputedEEzsigndocumentSteptype**](ComputedEEzsigndocumentSteptype.md) |  | 
 **iEzsigndocumentStepformtotal** | **kotlin.Int** | The total number of steps in the form filling phase | 
 **iEzsigndocumentStepformcurrent** | **kotlin.Int** | The current step in the form filling phase | 

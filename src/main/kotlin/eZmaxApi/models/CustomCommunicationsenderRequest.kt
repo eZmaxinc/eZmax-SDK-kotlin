@@ -25,6 +25,7 @@ import com.squareup.moshi.JsonClass
  * @param fkiAgentID The unique ID of the Agent.
  * @param fkiBrokerID The unique ID of the Broker.
  * @param fkiMailboxsharedID The unique ID of the Mailboxshared
+ * @param fkiPhonelinesharedID The unique ID of the Phonelineshared
  * @param fkiUserID The unique ID of the User
  */
 
@@ -42,6 +43,10 @@ data class CustomCommunicationsenderRequest (
     /* The unique ID of the Mailboxshared */
     @Json(name = "fkiMailboxsharedID")
     val fkiMailboxsharedID: kotlin.Int? = null,
+
+    /* The unique ID of the Phonelineshared */
+    @Json(name = "fkiPhonelinesharedID")
+    val fkiPhonelinesharedID: kotlin.Int? = null,
 
     /* The unique ID of the User */
     @Json(name = "fkiUserID")

@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **ePhoneType** | [**FieldEPhoneType**](FieldEPhoneType.md) |  |  [optional]
 **sPhoneE164** | **kotlin.String** | A phone number in E.164 Format |  [optional]
 **sPhoneExtension** | **kotlin.String** | The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers |  [optional]
+**bPhoneInternational** | **kotlin.Boolean** | Indicate the phone number is an international phone number. |  [optional]
 
 
 

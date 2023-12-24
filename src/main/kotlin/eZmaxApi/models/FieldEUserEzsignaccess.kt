@@ -20,7 +20,7 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * The type or eZsign access the User has
+ * The type of eZsign access the User has
  *
  * Values: No,PaidByOffice,PerDocument,Prepaid
  */

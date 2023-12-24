@@ -33,6 +33,8 @@ import eZmaxApi.models.EzsignfolderDisposeV1Response
 import eZmaxApi.models.EzsignfolderEditObjectV1Request
 import eZmaxApi.models.EzsignfolderEditObjectV1Response
 import eZmaxApi.models.EzsignfolderGetActionableElementsV1Response
+import eZmaxApi.models.EzsignfolderGetAttachmentCountV1Response
+import eZmaxApi.models.EzsignfolderGetAttachmentsV1Response
 import eZmaxApi.models.EzsignfolderGetCommunicationCountV1Response
 import eZmaxApi.models.EzsignfolderGetCommunicationListV1Response
 import eZmaxApi.models.EzsignfolderGetCommunicationrecipientsV1Response
@@ -739,6 +741,148 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: O
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements".replace("{"+"pkiEzsignfolderID"+"}", encodeURIComponent(pkiEzsignfolderID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Retrieve Attachment count
+     * 
+     * @param pkiEzsignfolderID 
+     * @return EzsignfolderGetAttachmentCountV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignfolderGetAttachmentCountV1(pkiEzsignfolderID: kotlin.Int) : EzsignfolderGetAttachmentCountV1Response {
+        val localVarResponse = ezsignfolderGetAttachmentCountV1WithHttpInfo(pkiEzsignfolderID = pkiEzsignfolderID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfolderGetAttachmentCountV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve Attachment count
+     * 
+     * @param pkiEzsignfolderID 
+     * @return ApiResponse<EzsignfolderGetAttachmentCountV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignfolderGetAttachmentCountV1WithHttpInfo(pkiEzsignfolderID: kotlin.Int) : ApiResponse<EzsignfolderGetAttachmentCountV1Response?> {
+        val localVariableConfig = ezsignfolderGetAttachmentCountV1RequestConfig(pkiEzsignfolderID = pkiEzsignfolderID)
+
+        return request<Unit, EzsignfolderGetAttachmentCountV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsignfolderGetAttachmentCountV1
+     *
+     * @param pkiEzsignfolderID 
+     * @return RequestConfig
+     */
+    fun ezsignfolderGetAttachmentCountV1RequestConfig(pkiEzsignfolderID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/getAttachmentCount".replace("{"+"pkiEzsignfolderID"+"}", encodeURIComponent(pkiEzsignfolderID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Retrieve Ezsignfolder&#39;s Attachments
+     * 
+     * @param pkiEzsignfolderID 
+     * @return EzsignfolderGetAttachmentsV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignfolderGetAttachmentsV1(pkiEzsignfolderID: kotlin.Int) : EzsignfolderGetAttachmentsV1Response {
+        val localVarResponse = ezsignfolderGetAttachmentsV1WithHttpInfo(pkiEzsignfolderID = pkiEzsignfolderID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfolderGetAttachmentsV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve Ezsignfolder&#39;s Attachments
+     * 
+     * @param pkiEzsignfolderID 
+     * @return ApiResponse<EzsignfolderGetAttachmentsV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignfolderGetAttachmentsV1WithHttpInfo(pkiEzsignfolderID: kotlin.Int) : ApiResponse<EzsignfolderGetAttachmentsV1Response?> {
+        val localVariableConfig = ezsignfolderGetAttachmentsV1RequestConfig(pkiEzsignfolderID = pkiEzsignfolderID)
+
+        return request<Unit, EzsignfolderGetAttachmentsV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsignfolderGetAttachmentsV1
+     *
+     * @param pkiEzsignfolderID 
+     * @return RequestConfig
+     */
+    fun ezsignfolderGetAttachmentsV1RequestConfig(pkiEzsignfolderID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/getAttachments".replace("{"+"pkiEzsignfolderID"+"}", encodeURIComponent(pkiEzsignfolderID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

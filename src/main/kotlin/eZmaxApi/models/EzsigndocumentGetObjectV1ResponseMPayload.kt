@@ -35,6 +35,7 @@ import com.squareup.moshi.JsonClass
  * @param iEzsigndocumentPagetotal The number of pages in the Ezsigndocument.
  * @param iEzsigndocumentSignaturesigned The number of signatures that were signed in the document.
  * @param iEzsigndocumentSignaturetotal The number of total signatures that were requested in the Ezsigndocument.
+ * @param iEzsigndocumentEzsignsignatureattachmenttotal The number of Ezsigndocumentattachment total
  * @param eEzsigndocumentSteptype 
  * @param iEzsigndocumentStepformtotal The total number of steps in the form filling phase
  * @param iEzsigndocumentStepformcurrent The current step in the form filling phase
@@ -92,6 +93,10 @@ data class EzsigndocumentGetObjectV1ResponseMPayload (
     /* The number of total signatures that were requested in the Ezsigndocument. */
     @Json(name = "iEzsigndocumentSignaturetotal")
     val iEzsigndocumentSignaturetotal: kotlin.Int,
+
+    /* The number of Ezsigndocumentattachment total */
+    @Json(name = "iEzsigndocumentEzsignsignatureattachmenttotal")
+    val iEzsigndocumentEzsignsignatureattachmenttotal: kotlin.Int,
 
     @Json(name = "eEzsigndocumentSteptype")
     val eEzsigndocumentSteptype: ComputedEEzsigndocumentSteptype,

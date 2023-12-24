@@ -32,14 +32,12 @@ import com.squareup.moshi.JsonClass
  * @param iEzsignfoldertypeArchivaldays The number of days before the archival of Ezsignfolders created using this Ezsignfoldertype
  * @param eEzsignfoldertypeDisposal 
  * @param iEzsignfoldertypeDeadlinedays The number of days to get all Ezsignsignatures
- * @param bEzsignfoldertypeSendattatchmentsigner Whether we send the Ezsigndocument and the proof as attachment in the email
  * @param bEzsignfoldertypeSendsignedtodocumentowner Whether we send the signed Ezsigndocument to the Ezsigndocument's owner
  * @param bEzsignfoldertypeSendsignedtofolderowner Whether we send the signed Ezsigndocument to the Ezsignfolder's owner
  * @param bEzsignfoldertypeSendsignedtocolleague Whether we send the signed Ezsigndocument to the colleagues
  * @param bEzsignfoldertypeSendsummarytodocumentowner Whether we send the summary to the Ezsigndocument's owner
  * @param bEzsignfoldertypeSendsummarytofolderowner Whether we send the summary to the Ezsignfolder's owner
  * @param bEzsignfoldertypeSendsummarytocolleague Whether we send the summary to the colleagues
- * @param bEzsignfoldertypeIncludeproofsigner Whether we include the proof with the signed Ezsigndocument for Ezsignsigners
  * @param bEzsignfoldertypeIncludeproofuser Whether we include the proof with the signed Ezsigndocument for users
  * @param bEzsignfoldertypeIsactive Whether the Ezsignfoldertype is active or not
  * @param pkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
@@ -53,10 +51,22 @@ import com.squareup.moshi.JsonClass
  * @param iEzsignfoldertypeDisposaldays The number of days after the archival before the disposal of the Ezsignfolder
  * @param bEzsignfoldertypeDelegate Wheter if delegation of signature is allowed to another user or not
  * @param bEzsignfoldertypeReassign Wheter if Reassignment of signature is allowed to another signatory or not
+ * @param bEzsignfoldertypeSendattatchmentsigner THIS FIELD WILL BE DELETED. Whether we send the Ezsigndocument and the proof as attachment in the email
+ * @param bEzsignfoldertypeSendsignedtoezsignsigner Whether we send an email to Ezsignsigner  when document is completed
+ * @param bEzsignfoldertypeSendsignedtouser Whether we send an email to User who signed when document is completed
+ * @param bEzsignfoldertypeSendattachmentezsignsigner Whether we send the Ezsigndocument in the email to Ezsignsigner
+ * @param bEzsignfoldertypeSendproofezsignsigner Whether we send the proof in the email to Ezsignsigner
+ * @param bEzsignfoldertypeSendattachmentuser Whether we send the Ezsigndocument in the email to User
+ * @param bEzsignfoldertypeSendproofuser Whether we send the proof in the email to User
+ * @param bEzsignfoldertypeSendproofemail Whether we send the proof in the email to external recipient
+ * @param bEzsignfoldertypeAllowdownloadattachmentezsignsigner Whether we allow the Ezsigndocument to be downloaded by an Ezsignsigner
+ * @param bEzsignfoldertypeAllowdownloadproofezsignsigner Whether we allow the proof to be downloaded by an Ezsignsigner
+ * @param bEzsignfoldertypeSendproofreceivealldocument Whether we send the proof to user and Ezsignsigner who receive all documents.
  * @param bEzsignfoldertypeSendsignedtofullgroup Whether we send the signed Ezsigndocument to the Usergroup that has acces to all Ezsignfolders
- * @param bEzsignfoldertypeSendsignedtolimitedgroup Whether we send the signed Ezsigndocument to the Usergroup that has acces to only their own Ezsignfolders
+ * @param bEzsignfoldertypeSendsignedtolimitedgroup THIS FIELD WILL BE DELETED. Whether we send the signed Ezsigndocument to the Usergroup that has acces to only their own Ezsignfolders
  * @param bEzsignfoldertypeSendsummarytofullgroup Whether we send the summary to the Usergroup that has acces to all Ezsignfolders
  * @param bEzsignfoldertypeSendsummarytolimitedgroup Whether we send the summary to the Usergroup that has acces to only their own Ezsignfolders
+ * @param bEzsignfoldertypeIncludeproofsigner THIS FIELD WILL BE DELETED. Whether we include the proof with the signed Ezsigndocument for Ezsignsigners
  * @param aFkiUserIDSigned 
  * @param aFkiUserIDSummary 
  */
@@ -85,10 +95,6 @@ data class EzsignfoldertypeRequestCompound (
     @Json(name = "iEzsignfoldertypeDeadlinedays")
     val iEzsignfoldertypeDeadlinedays: kotlin.Int,
 
-    /* Whether we send the Ezsigndocument and the proof as attachment in the email */
-    @Json(name = "bEzsignfoldertypeSendattatchmentsigner")
-    val bEzsignfoldertypeSendattatchmentsigner: kotlin.Boolean,
-
     /* Whether we send the signed Ezsigndocument to the Ezsigndocument's owner */
     @Json(name = "bEzsignfoldertypeSendsignedtodocumentowner")
     val bEzsignfoldertypeSendsignedtodocumentowner: kotlin.Boolean,
@@ -112,10 +118,6 @@ data class EzsignfoldertypeRequestCompound (
     /* Whether we send the summary to the colleagues */
     @Json(name = "bEzsignfoldertypeSendsummarytocolleague")
     val bEzsignfoldertypeSendsummarytocolleague: kotlin.Boolean,
-
-    /* Whether we include the proof with the signed Ezsigndocument for Ezsignsigners */
-    @Json(name = "bEzsignfoldertypeIncludeproofsigner")
-    val bEzsignfoldertypeIncludeproofsigner: kotlin.Boolean,
 
     /* Whether we include the proof with the signed Ezsigndocument for users */
     @Json(name = "bEzsignfoldertypeIncludeproofuser")
@@ -168,11 +170,55 @@ data class EzsignfoldertypeRequestCompound (
     @Json(name = "bEzsignfoldertypeReassign")
     val bEzsignfoldertypeReassign: kotlin.Boolean? = null,
 
+    /* THIS FIELD WILL BE DELETED. Whether we send the Ezsigndocument and the proof as attachment in the email */
+    @Json(name = "bEzsignfoldertypeSendattatchmentsigner")
+    val bEzsignfoldertypeSendattatchmentsigner: kotlin.Boolean? = null,
+
+    /* Whether we send an email to Ezsignsigner  when document is completed */
+    @Json(name = "bEzsignfoldertypeSendsignedtoezsignsigner")
+    val bEzsignfoldertypeSendsignedtoezsignsigner: kotlin.Boolean? = null,
+
+    /* Whether we send an email to User who signed when document is completed */
+    @Json(name = "bEzsignfoldertypeSendsignedtouser")
+    val bEzsignfoldertypeSendsignedtouser: kotlin.Boolean? = null,
+
+    /* Whether we send the Ezsigndocument in the email to Ezsignsigner */
+    @Json(name = "bEzsignfoldertypeSendattachmentezsignsigner")
+    val bEzsignfoldertypeSendattachmentezsignsigner: kotlin.Boolean? = null,
+
+    /* Whether we send the proof in the email to Ezsignsigner */
+    @Json(name = "bEzsignfoldertypeSendproofezsignsigner")
+    val bEzsignfoldertypeSendproofezsignsigner: kotlin.Boolean? = null,
+
+    /* Whether we send the Ezsigndocument in the email to User */
+    @Json(name = "bEzsignfoldertypeSendattachmentuser")
+    val bEzsignfoldertypeSendattachmentuser: kotlin.Boolean? = null,
+
+    /* Whether we send the proof in the email to User */
+    @Json(name = "bEzsignfoldertypeSendproofuser")
+    val bEzsignfoldertypeSendproofuser: kotlin.Boolean? = null,
+
+    /* Whether we send the proof in the email to external recipient */
+    @Json(name = "bEzsignfoldertypeSendproofemail")
+    val bEzsignfoldertypeSendproofemail: kotlin.Boolean? = null,
+
+    /* Whether we allow the Ezsigndocument to be downloaded by an Ezsignsigner */
+    @Json(name = "bEzsignfoldertypeAllowdownloadattachmentezsignsigner")
+    val bEzsignfoldertypeAllowdownloadattachmentezsignsigner: kotlin.Boolean? = null,
+
+    /* Whether we allow the proof to be downloaded by an Ezsignsigner */
+    @Json(name = "bEzsignfoldertypeAllowdownloadproofezsignsigner")
+    val bEzsignfoldertypeAllowdownloadproofezsignsigner: kotlin.Boolean? = null,
+
+    /* Whether we send the proof to user and Ezsignsigner who receive all documents. */
+    @Json(name = "bEzsignfoldertypeSendproofreceivealldocument")
+    val bEzsignfoldertypeSendproofreceivealldocument: kotlin.Boolean? = null,
+
     /* Whether we send the signed Ezsigndocument to the Usergroup that has acces to all Ezsignfolders */
     @Json(name = "bEzsignfoldertypeSendsignedtofullgroup")
     val bEzsignfoldertypeSendsignedtofullgroup: kotlin.Boolean? = null,
 
-    /* Whether we send the signed Ezsigndocument to the Usergroup that has acces to only their own Ezsignfolders */
+    /* THIS FIELD WILL BE DELETED. Whether we send the signed Ezsigndocument to the Usergroup that has acces to only their own Ezsignfolders */
     @Json(name = "bEzsignfoldertypeSendsignedtolimitedgroup")
     val bEzsignfoldertypeSendsignedtolimitedgroup: kotlin.Boolean? = null,
 
@@ -183,6 +229,10 @@ data class EzsignfoldertypeRequestCompound (
     /* Whether we send the summary to the Usergroup that has acces to only their own Ezsignfolders */
     @Json(name = "bEzsignfoldertypeSendsummarytolimitedgroup")
     val bEzsignfoldertypeSendsummarytolimitedgroup: kotlin.Boolean? = null,
+
+    /* THIS FIELD WILL BE DELETED. Whether we include the proof with the signed Ezsigndocument for Ezsignsigners */
+    @Json(name = "bEzsignfoldertypeIncludeproofsigner")
+    val bEzsignfoldertypeIncludeproofsigner: kotlin.Boolean? = null,
 
     @Json(name = "a_fkiUserIDSigned")
     val aFkiUserIDSigned: kotlin.collections.List<kotlin.Int>? = null,

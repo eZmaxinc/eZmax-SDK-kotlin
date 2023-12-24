@@ -23,19 +23,15 @@ import com.squareup.moshi.JsonClass
 /**
  * A Communicationexternalrecipient Object and children
  *
- * @param sCommunicationexternalrecipientName The name of the Communicationexternalrecipient
  * @param pkiCommunicationexternalrecipientID The unique ID of the Communicationexternalrecipient
  * @param sEmailAddress The email address.
  * @param sPhoneE164 A phone number in E.164 Format
  * @param eCommunicationexternalrecipientType 
+ * @param sCommunicationexternalrecipientName The name of the Communicationexternalrecipient
  */
 
 
 data class CommunicationexternalrecipientRequestCompound (
-
-    /* The name of the Communicationexternalrecipient */
-    @Json(name = "sCommunicationexternalrecipientName")
-    val sCommunicationexternalrecipientName: kotlin.String,
 
     /* The unique ID of the Communicationexternalrecipient */
     @Json(name = "pkiCommunicationexternalrecipientID")
@@ -50,7 +46,11 @@ data class CommunicationexternalrecipientRequestCompound (
     val sPhoneE164: kotlin.String? = null,
 
     @Json(name = "eCommunicationexternalrecipientType")
-    val eCommunicationexternalrecipientType: FieldECommunicationexternalrecipientType? = null
+    val eCommunicationexternalrecipientType: FieldECommunicationexternalrecipientType? = null,
+
+    /* The name of the Communicationexternalrecipient */
+    @Json(name = "sCommunicationexternalrecipientName")
+    val sCommunicationexternalrecipientName: kotlin.String? = null
 
 )
 

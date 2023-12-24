@@ -59,8 +59,8 @@ class ObjectElectronicfundstransferApi(basePath: kotlin.String = defaultBasePath
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun eletronicfundstransferGetCommunicationListV1(pkiElectronicfundstransferID: kotlin.Int) : ElectronicfundstransferGetCommunicationListV1Response {
-        val localVarResponse = eletronicfundstransferGetCommunicationListV1WithHttpInfo(pkiElectronicfundstransferID = pkiElectronicfundstransferID)
+    fun electronicfundstransferGetCommunicationListV1(pkiElectronicfundstransferID: kotlin.Int) : ElectronicfundstransferGetCommunicationListV1Response {
+        val localVarResponse = electronicfundstransferGetCommunicationListV1WithHttpInfo(pkiElectronicfundstransferID = pkiElectronicfundstransferID)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as ElectronicfundstransferGetCommunicationListV1Response
@@ -87,8 +87,8 @@ class ObjectElectronicfundstransferApi(basePath: kotlin.String = defaultBasePath
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun eletronicfundstransferGetCommunicationListV1WithHttpInfo(pkiElectronicfundstransferID: kotlin.Int) : ApiResponse<ElectronicfundstransferGetCommunicationListV1Response?> {
-        val localVariableConfig = eletronicfundstransferGetCommunicationListV1RequestConfig(pkiElectronicfundstransferID = pkiElectronicfundstransferID)
+    fun electronicfundstransferGetCommunicationListV1WithHttpInfo(pkiElectronicfundstransferID: kotlin.Int) : ApiResponse<ElectronicfundstransferGetCommunicationListV1Response?> {
+        val localVariableConfig = electronicfundstransferGetCommunicationListV1RequestConfig(pkiElectronicfundstransferID = pkiElectronicfundstransferID)
 
         return request<Unit, ElectronicfundstransferGetCommunicationListV1Response>(
             localVariableConfig
@@ -96,12 +96,12 @@ class ObjectElectronicfundstransferApi(basePath: kotlin.String = defaultBasePath
     }
 
     /**
-     * To obtain the request config of the operation eletronicfundstransferGetCommunicationListV1
+     * To obtain the request config of the operation electronicfundstransferGetCommunicationListV1
      *
      * @param pkiElectronicfundstransferID 
      * @return RequestConfig
      */
-    fun eletronicfundstransferGetCommunicationListV1RequestConfig(pkiElectronicfundstransferID: kotlin.Int) : RequestConfig<Unit> {
+    fun electronicfundstransferGetCommunicationListV1RequestConfig(pkiElectronicfundstransferID: kotlin.Int) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()

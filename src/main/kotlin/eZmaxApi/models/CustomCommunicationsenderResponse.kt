@@ -16,6 +16,8 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.CustomContactNameResponse
+import eZmaxApi.models.EmailResponseCompound
+import eZmaxApi.models.PhoneResponseCompound
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -29,8 +31,10 @@ import com.squareup.moshi.JsonClass
  * @param fkiBrokerID The unique ID of the Broker.
  * @param fkiUserID The unique ID of the User
  * @param fkiMailboxsharedID The unique ID of the Mailboxshared
- * @param sEmailAddress The email address.
- * @param sPhoneE164 A phone number in E.164 Format
+ * @param fkiPhonelinesharedID The unique ID of the Phonelineshared
+ * @param objEmail 
+ * @param objPhoneFax 
+ * @param objPhoneSMS 
  */
 
 
@@ -58,27 +62,33 @@ data class CustomCommunicationsenderResponse (
     @Json(name = "fkiMailboxsharedID")
     val fkiMailboxsharedID: kotlin.Int? = null,
 
-    /* The email address. */
-    @Json(name = "sEmailAddress")
-    val sEmailAddress: kotlin.String? = null,
+    /* The unique ID of the Phonelineshared */
+    @Json(name = "fkiPhonelinesharedID")
+    val fkiPhonelinesharedID: kotlin.Int? = null,
 
-    /* A phone number in E.164 Format */
-    @Json(name = "sPhoneE164")
-    val sPhoneE164: kotlin.String? = null
+    @Json(name = "objEmail")
+    val objEmail: EmailResponseCompound? = null,
+
+    @Json(name = "objPhoneFax")
+    val objPhoneFax: PhoneResponseCompound? = null,
+
+    @Json(name = "objPhoneSMS")
+    val objPhoneSMS: PhoneResponseCompound? = null
 
 ) {
 
     /**
      * 
      *
-     * Values: Agent,Broker,User,Mailboxshared
+     * Values: Agent,Broker,User,Mailboxshared,Phonelineshared
      */
     @JsonClass(generateAdapter = false)
     enum class ECommunicationsenderObjecttype(val value: kotlin.String) {
         @Json(name = "Agent") Agent("Agent"),
         @Json(name = "Broker") Broker("Broker"),
         @Json(name = "User") User("User"),
-        @Json(name = "Mailboxshared") Mailboxshared("Mailboxshared");
+        @Json(name = "Mailboxshared") Mailboxshared("Mailboxshared"),
+        @Json(name = "Phonelineshared") Phonelineshared("Phonelineshared");
     }
 }
 

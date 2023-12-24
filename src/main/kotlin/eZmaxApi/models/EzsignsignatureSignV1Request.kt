@@ -24,6 +24,7 @@ import com.squareup.moshi.JsonClass
  * Request for POST /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign
  *
  * @param bIsAutomatic Indicates if the Ezsignsignature was part of an automatic process or not.  This can only be true if eEzsignsignatureType is **Acknowledgement**, **City**, **Handwritten**, **Initials**, **Name** or **Stamp**. 
+ * @param fkiEzsignsigningreasonID The unique ID of the Ezsignsigningreason
  * @param sValue The value required for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **City**, **FieldText** or **FieldTextarea**
  * @param eAttachmentsConfirmationDecision Whether the attachment are accepted or refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**
  * @param sAttachmentsRefusalReason The reason of refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**
@@ -37,6 +38,10 @@ data class EzsignsignatureSignV1Request (
     /* Indicates if the Ezsignsignature was part of an automatic process or not.  This can only be true if eEzsignsignatureType is **Acknowledgement**, **City**, **Handwritten**, **Initials**, **Name** or **Stamp**.  */
     @Json(name = "bIsAutomatic")
     val bIsAutomatic: kotlin.Boolean,
+
+    /* The unique ID of the Ezsignsigningreason */
+    @Json(name = "fkiEzsignsigningreasonID")
+    val fkiEzsignsigningreasonID: kotlin.Int? = null,
 
     /* The value required for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **City**, **FieldText** or **FieldTextarea** */
     @Json(name = "sValue")

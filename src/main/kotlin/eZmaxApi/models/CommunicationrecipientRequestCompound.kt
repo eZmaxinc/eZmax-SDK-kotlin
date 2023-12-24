@@ -25,8 +25,8 @@ import com.squareup.moshi.JsonClass
  *
  * @param pkiCommunicationrecipientID The unique ID of the Communicationrecipient.
  * @param fkiAgentID The unique ID of the Agent.
- * @param fkiAgentincorporationID The unique ID of the Agentincorporation.
  * @param fkiBrokerID The unique ID of the Broker.
+ * @param fkiContactID The unique ID of the Contact
  * @param fkiCustomerID The unique ID of the Customer.
  * @param fkiEmployeeID The unique ID of the Employee.
  * @param fkiAssistantID The unique ID of the Assistant.
@@ -35,6 +35,8 @@ import com.squareup.moshi.JsonClass
  * @param fkiNotaryID The unique ID of the Notary.
  * @param fkiSupplierID The unique ID of the Supplier.
  * @param fkiUserID The unique ID of the User
+ * @param fkiMailboxsharedID The unique ID of the Mailboxshared
+ * @param fkiPhonelinesharedID The unique ID of the Phonelineshared
  * @param eCommunicationrecipientType 
  */
 
@@ -49,13 +51,13 @@ data class CommunicationrecipientRequestCompound (
     @Json(name = "fkiAgentID")
     val fkiAgentID: kotlin.Int? = null,
 
-    /* The unique ID of the Agentincorporation. */
-    @Json(name = "fkiAgentincorporationID")
-    val fkiAgentincorporationID: kotlin.Int? = null,
-
     /* The unique ID of the Broker. */
     @Json(name = "fkiBrokerID")
     val fkiBrokerID: kotlin.Int? = null,
+
+    /* The unique ID of the Contact */
+    @Json(name = "fkiContactID")
+    val fkiContactID: kotlin.Int? = null,
 
     /* The unique ID of the Customer. */
     @Json(name = "fkiCustomerID")
@@ -88,6 +90,14 @@ data class CommunicationrecipientRequestCompound (
     /* The unique ID of the User */
     @Json(name = "fkiUserID")
     val fkiUserID: kotlin.Int? = null,
+
+    /* The unique ID of the Mailboxshared */
+    @Json(name = "fkiMailboxsharedID")
+    val fkiMailboxsharedID: kotlin.Int? = null,
+
+    /* The unique ID of the Phonelineshared */
+    @Json(name = "fkiPhonelinesharedID")
+    val fkiPhonelinesharedID: kotlin.Int? = null,
 
     @Json(name = "eCommunicationrecipientType")
     val eCommunicationrecipientType: FieldECommunicationrecipientType? = null

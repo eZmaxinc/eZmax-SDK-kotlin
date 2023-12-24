@@ -4,12 +4,12 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**eletronicfundstransferGetCommunicationListV1**](ObjectElectronicfundstransferApi.md#eletronicfundstransferGetCommunicationListV1) | **GET** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationList | Retrieve Communication list
+[**electronicfundstransferGetCommunicationListV1**](ObjectElectronicfundstransferApi.md#electronicfundstransferGetCommunicationListV1) | **GET** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationList | Retrieve Communication list
 
 
-<a id="eletronicfundstransferGetCommunicationListV1"></a>
-# **eletronicfundstransferGetCommunicationListV1**
-> ElectronicfundstransferGetCommunicationListV1Response eletronicfundstransferGetCommunicationListV1(pkiElectronicfundstransferID)
+<a id="electronicfundstransferGetCommunicationListV1"></a>
+# **electronicfundstransferGetCommunicationListV1**
+> ElectronicfundstransferGetCommunicationListV1Response electronicfundstransferGetCommunicationListV1(pkiElectronicfundstransferID)
 
 Retrieve Communication list
 
@@ -24,13 +24,13 @@ Retrieve Communication list
 val apiInstance = ObjectElectronicfundstransferApi()
 val pkiElectronicfundstransferID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : ElectronicfundstransferGetCommunicationListV1Response = apiInstance.eletronicfundstransferGetCommunicationListV1(pkiElectronicfundstransferID)
+    val result : ElectronicfundstransferGetCommunicationListV1Response = apiInstance.electronicfundstransferGetCommunicationListV1(pkiElectronicfundstransferID)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling ObjectElectronicfundstransferApi#eletronicfundstransferGetCommunicationListV1")
+    println("4xx response calling ObjectElectronicfundstransferApi#electronicfundstransferGetCommunicationListV1")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling ObjectElectronicfundstransferApi#eletronicfundstransferGetCommunicationListV1")
+    println("5xx response calling ObjectElectronicfundstransferApi#electronicfundstransferGetCommunicationListV1")
     e.printStackTrace()
 }
 ```

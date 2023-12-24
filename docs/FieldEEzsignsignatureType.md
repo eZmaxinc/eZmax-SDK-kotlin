@@ -14,6 +14,8 @@
 
     * `Name` (value: `"Name"`)
 
+    * `NameReason` (value: `"NameReason"`)
+
     * `Attachments` (value: `"Attachments"`)
 
     * `AttachmentsConfirmation` (value: `"AttachmentsConfirmation"`)

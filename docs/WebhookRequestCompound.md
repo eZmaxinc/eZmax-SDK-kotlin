@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **fkiEzsignfoldertypeID** | **kotlin.Int** | The unique ID of the Ezsignfoldertype. |  [optional]
 **eWebhookEzsignevent** | [**FieldEWebhookEzsignevent**](FieldEWebhookEzsignevent.md) |  |  [optional]
 **eWebhookManagementevent** | [**FieldEWebhookManagementevent**](FieldEWebhookManagementevent.md) |  |  [optional]
+**bWebhookIssigned** | **kotlin.Boolean** | Whether the requests will be signed or not |  [optional]
 
 
 

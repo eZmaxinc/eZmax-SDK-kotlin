@@ -24,12 +24,16 @@ import eZmaxApi.models.CommonResponseErrorTooManyRequests
 import eZmaxApi.models.HeaderAcceptLanguage
 import eZmaxApi.models.WebhookCreateObjectV1Request
 import eZmaxApi.models.WebhookCreateObjectV1Response
+import eZmaxApi.models.WebhookCreateObjectV2Request
+import eZmaxApi.models.WebhookCreateObjectV2Response
 import eZmaxApi.models.WebhookDeleteObjectV1Response
 import eZmaxApi.models.WebhookEditObjectV1Request
 import eZmaxApi.models.WebhookEditObjectV1Response
 import eZmaxApi.models.WebhookGetHistoryV1Response
 import eZmaxApi.models.WebhookGetListV1Response
 import eZmaxApi.models.WebhookGetObjectV2Response
+import eZmaxApi.models.WebhookRegenerateApikeyV1Request
+import eZmaxApi.models.WebhookRegenerateApikeyV1Response
 import eZmaxApi.models.WebhookTestV1Response
 
 import com.squareup.moshi.Json
@@ -69,7 +73,9 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: OkHttp
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun webhookCreateObjectV1(webhookCreateObjectV1Request: WebhookCreateObjectV1Request) : WebhookCreateObjectV1Response {
+        @Suppress("DEPRECATION")
         val localVarResponse = webhookCreateObjectV1WithHttpInfo(webhookCreateObjectV1Request = webhookCreateObjectV1Request)
 
         return when (localVarResponse.responseType) {
@@ -97,7 +103,9 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: OkHttp
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun webhookCreateObjectV1WithHttpInfo(webhookCreateObjectV1Request: WebhookCreateObjectV1Request) : ApiResponse<WebhookCreateObjectV1Response?> {
+        @Suppress("DEPRECATION")
         val localVariableConfig = webhookCreateObjectV1RequestConfig(webhookCreateObjectV1Request = webhookCreateObjectV1Request)
 
         return request<WebhookCreateObjectV1Request, WebhookCreateObjectV1Response>(
@@ -111,6 +119,7 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: OkHttp
      * @param webhookCreateObjectV1Request 
      * @return RequestConfig
      */
+    @Deprecated(message = "This operation is deprecated.")
     fun webhookCreateObjectV1RequestConfig(webhookCreateObjectV1Request: WebhookCreateObjectV1Request) : RequestConfig<WebhookCreateObjectV1Request> {
         val localVariableBody = webhookCreateObjectV1Request
         val localVariableQuery: MultiValueMap = mutableMapOf()
@@ -121,6 +130,78 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: OkHttp
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/webhook",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Create a new Webhook
+     * The endpoint allows to create one or many elements at once.
+     * @param webhookCreateObjectV2Request 
+     * @return WebhookCreateObjectV2Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun webhookCreateObjectV2(webhookCreateObjectV2Request: WebhookCreateObjectV2Request) : WebhookCreateObjectV2Response {
+        val localVarResponse = webhookCreateObjectV2WithHttpInfo(webhookCreateObjectV2Request = webhookCreateObjectV2Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as WebhookCreateObjectV2Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Create a new Webhook
+     * The endpoint allows to create one or many elements at once.
+     * @param webhookCreateObjectV2Request 
+     * @return ApiResponse<WebhookCreateObjectV2Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun webhookCreateObjectV2WithHttpInfo(webhookCreateObjectV2Request: WebhookCreateObjectV2Request) : ApiResponse<WebhookCreateObjectV2Response?> {
+        val localVariableConfig = webhookCreateObjectV2RequestConfig(webhookCreateObjectV2Request = webhookCreateObjectV2Request)
+
+        return request<WebhookCreateObjectV2Request, WebhookCreateObjectV2Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation webhookCreateObjectV2
+     *
+     * @param webhookCreateObjectV2Request 
+     * @return RequestConfig
+     */
+    fun webhookCreateObjectV2RequestConfig(webhookCreateObjectV2Request: WebhookCreateObjectV2Request) : RequestConfig<WebhookCreateObjectV2Request> {
+        val localVariableBody = webhookCreateObjectV2Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/2/object/webhook",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,
@@ -380,7 +461,9 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: OkHttp
          @Json(name = "sWebhookUrl_ASC") sWebhookUrl_ASC("sWebhookUrl_ASC"),
          @Json(name = "sWebhookUrl_DESC") sWebhookUrl_DESC("sWebhookUrl_DESC"),
          @Json(name = "bWebhookIsactive_ASC") bWebhookIsactive_ASC("bWebhookIsactive_ASC"),
-         @Json(name = "bWebhookIsactive_DESC") bWebhookIsactive_DESC("bWebhookIsactive_DESC")
+         @Json(name = "bWebhookIsactive_DESC") bWebhookIsactive_DESC("bWebhookIsactive_DESC"),
+         @Json(name = "bWebhookIssigned_ASC") bWebhookIssigned_ASC("bWebhookIssigned_ASC"),
+         @Json(name = "bWebhookIssigned_DESC") bWebhookIssigned_DESC("bWebhookIssigned_DESC")
      }
 
     /**
@@ -545,6 +628,81 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: OkHttp
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/2/object/webhook/{pkiWebhookID}".replace("{"+"pkiWebhookID"+"}", encodeURIComponent(pkiWebhookID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Regenerate the Apikey
+     * 
+     * @param pkiWebhookID 
+     * @param webhookRegenerateApikeyV1Request 
+     * @return WebhookRegenerateApikeyV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun webhookRegenerateApikeyV1(pkiWebhookID: kotlin.Int, webhookRegenerateApikeyV1Request: WebhookRegenerateApikeyV1Request) : WebhookRegenerateApikeyV1Response {
+        val localVarResponse = webhookRegenerateApikeyV1WithHttpInfo(pkiWebhookID = pkiWebhookID, webhookRegenerateApikeyV1Request = webhookRegenerateApikeyV1Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as WebhookRegenerateApikeyV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Regenerate the Apikey
+     * 
+     * @param pkiWebhookID 
+     * @param webhookRegenerateApikeyV1Request 
+     * @return ApiResponse<WebhookRegenerateApikeyV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun webhookRegenerateApikeyV1WithHttpInfo(pkiWebhookID: kotlin.Int, webhookRegenerateApikeyV1Request: WebhookRegenerateApikeyV1Request) : ApiResponse<WebhookRegenerateApikeyV1Response?> {
+        val localVariableConfig = webhookRegenerateApikeyV1RequestConfig(pkiWebhookID = pkiWebhookID, webhookRegenerateApikeyV1Request = webhookRegenerateApikeyV1Request)
+
+        return request<WebhookRegenerateApikeyV1Request, WebhookRegenerateApikeyV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation webhookRegenerateApikeyV1
+     *
+     * @param pkiWebhookID 
+     * @param webhookRegenerateApikeyV1Request 
+     * @return RequestConfig
+     */
+    fun webhookRegenerateApikeyV1RequestConfig(pkiWebhookID: kotlin.Int, webhookRegenerateApikeyV1Request: WebhookRegenerateApikeyV1Request) : RequestConfig<WebhookRegenerateApikeyV1Request> {
+        val localVariableBody = webhookRegenerateApikeyV1Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/webhook/{pkiWebhookID}/regenerateApikey".replace("{"+"pkiWebhookID"+"}", encodeURIComponent(pkiWebhookID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

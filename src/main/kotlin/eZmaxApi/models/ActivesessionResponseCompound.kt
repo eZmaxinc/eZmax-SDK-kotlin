@@ -20,6 +20,8 @@ import eZmaxApi.models.ActivesessionResponseCompoundUser
 import eZmaxApi.models.FieldEActivesessionOrigin
 import eZmaxApi.models.FieldEActivesessionUsertype
 import eZmaxApi.models.FieldEActivesessionWeekdaystart
+import eZmaxApi.models.FieldEUserEzsignaccess
+import eZmaxApi.models.FieldEUserEzsignprepaid
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -37,10 +39,13 @@ import com.squareup.moshi.JsonClass
  * @param bActivesessionIssuperadmin Whether the active session is superadmin or not
  * @param pksCustomerCode The customer code assigned to your account
  * @param fkiSystemconfigurationtypeID The unique ID of the Systemconfigurationtype
+ * @param eUserEzsignaccess 
  * @param aPkiPermissionID An array of permissions granted to the user or api key
  * @param objUserReal 
  * @param aEModuleInternalname An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key.
  * @param fkiSignatureID The unique ID of the Signature
+ * @param eUserEzsignprepaid 
+ * @param dtUserEzsignprepaidexpiration The eZsign prepaid expiration date
  * @param objUserCloned 
  * @param objApikey 
  */
@@ -85,6 +90,9 @@ data class ActivesessionResponseCompound (
     @Json(name = "fkiSystemconfigurationtypeID")
     val fkiSystemconfigurationtypeID: kotlin.Int,
 
+    @Json(name = "eUserEzsignaccess")
+    val eUserEzsignaccess: FieldEUserEzsignaccess,
+
     /* An array of permissions granted to the user or api key */
     @Json(name = "a_pkiPermissionID")
     val aPkiPermissionID: kotlin.collections.List<kotlin.Int>,
@@ -99,6 +107,13 @@ data class ActivesessionResponseCompound (
     /* The unique ID of the Signature */
     @Json(name = "fkiSignatureID")
     val fkiSignatureID: kotlin.Int? = null,
+
+    @Json(name = "eUserEzsignprepaid")
+    val eUserEzsignprepaid: FieldEUserEzsignprepaid? = null,
+
+    /* The eZsign prepaid expiration date */
+    @Json(name = "dtUserEzsignprepaidexpiration")
+    val dtUserEzsignprepaidexpiration: kotlin.String? = null,
 
     @Json(name = "objUserCloned")
     val objUserCloned: ActivesessionResponseCompoundUser? = null,

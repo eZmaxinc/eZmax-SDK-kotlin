@@ -22,7 +22,7 @@ import com.squareup.moshi.JsonClass
 /**
  * The Type of Ezsignformfieldgroup
  *
- * Values: Text,Textarea,Dropdown,Radio,Checkbox
+ * Values: Text,Textarea,Dropdown,Radio,Checkbox,Number,Date
  */
 
 @JsonClass(generateAdapter = false)
@@ -41,7 +41,13 @@ enum class FieldEEzsignformfieldgroupType(val value: kotlin.String) {
     Radio("Radio"),
 
     @Json(name = "Checkbox")
-    Checkbox("Checkbox");
+    Checkbox("Checkbox"),
+
+    @Json(name = "Number")
+    Number("Number"),
+
+    @Json(name = "Date")
+    Date("Date");
 
     /**
      * Override [toString()] to avoid using the enum variable name as the value, and instead use

@@ -33,6 +33,7 @@ import com.squareup.moshi.JsonClass
  * @param iEzsigndocumentPagetotal The number of pages in the Ezsigndocument.
  * @param iEzsigndocumentSignaturesigned The number of signatures that were signed in the document.
  * @param iEzsigndocumentSignaturetotal The number of total signatures that were requested in the Ezsigndocument.
+ * @param iEzsigndocumentEzsignsignatureattachmenttotal The number of Ezsigndocumentattachment total
  * @param fkiEzsignfoldersignerassociationIDDeclinedtosign The unique ID of the Ezsignfoldersignerassociation
  * @param dtEzsignformCompleted The date and time at which the Ezsignform has been completed.
  * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
@@ -84,6 +85,10 @@ data class EzsigndocumentResponse (
     /* The number of total signatures that were requested in the Ezsigndocument. */
     @Json(name = "iEzsigndocumentSignaturetotal")
     val iEzsigndocumentSignaturetotal: kotlin.Int,
+
+    /* The number of Ezsigndocumentattachment total */
+    @Json(name = "iEzsigndocumentEzsignsignatureattachmenttotal")
+    val iEzsigndocumentEzsignsignatureattachmenttotal: kotlin.Int,
 
     /* The unique ID of the Ezsignfoldersignerassociation */
     @Json(name = "fkiEzsignfoldersignerassociationIDDeclinedtosign")

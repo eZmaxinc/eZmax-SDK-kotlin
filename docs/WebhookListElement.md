@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **sWebhookEmailfailed** | **kotlin.String** | The email that will receive the Webhook in case all attempts fail | 
 **eWebhookModule** | [**FieldEWebhookModule**](FieldEWebhookModule.md) |  | 
 **bWebhookIsactive** | **kotlin.Boolean** | Whether the Webhook is active or not | 
+**bWebhookIssigned** | **kotlin.Boolean** | Whether the requests will be signed or not | 
 **eWebhookEzsignevent** | [**FieldEWebhookEzsignevent**](FieldEWebhookEzsignevent.md) |  |  [optional]
 **eWebhookManagementevent** | [**FieldEWebhookManagementevent**](FieldEWebhookManagementevent.md) |  |  [optional]
 

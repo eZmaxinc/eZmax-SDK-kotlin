@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **eWebsocketMessagetype** | [**inline**](#EWebsocketMessagetype) | The Type of message | 
+**sWebsocketChannel** | **kotlin.String** | The Channel on which to route the websocket message | 
 **mPayload** | [**WebsocketResponseInformationV1MPayload**](WebsocketResponseInformationV1MPayload.md) |  | 
 
 

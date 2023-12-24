@@ -32,6 +32,7 @@ import com.squareup.moshi.JsonClass
  * @param sWebhookEmailfailed The email that will receive the Webhook in case all attempts fail
  * @param eWebhookModule 
  * @param bWebhookIsactive Whether the Webhook is active or not
+ * @param bWebhookIssigned Whether the requests will be signed or not
  * @param eWebhookEzsignevent 
  * @param eWebhookManagementevent 
  */
@@ -65,6 +66,10 @@ data class WebhookListElement (
     /* Whether the Webhook is active or not */
     @Json(name = "bWebhookIsactive")
     val bWebhookIsactive: kotlin.Boolean,
+
+    /* Whether the requests will be signed or not */
+    @Json(name = "bWebhookIssigned")
+    val bWebhookIssigned: kotlin.Boolean,
 
     @Json(name = "eWebhookEzsignevent")
     val eWebhookEzsignevent: FieldEWebhookEzsignevent? = null,

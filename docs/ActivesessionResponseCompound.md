@@ -14,10 +14,13 @@ Name | Type | Description | Notes
 **bActivesessionIssuperadmin** | **kotlin.Boolean** | Whether the active session is superadmin or not | 
 **pksCustomerCode** | **kotlin.String** | The customer code assigned to your account | 
 **fkiSystemconfigurationtypeID** | **kotlin.Int** | The unique ID of the Systemconfigurationtype | 
+**eUserEzsignaccess** | [**FieldEUserEzsignaccess**](FieldEUserEzsignaccess.md) |  | 
 **aPkiPermissionID** | **kotlin.collections.List&lt;kotlin.Int&gt;** | An array of permissions granted to the user or api key | 
 **objUserReal** | [**ActivesessionResponseCompoundUser**](ActivesessionResponseCompoundUser.md) |  | 
 **aEModuleInternalname** | **kotlin.collections.List&lt;kotlin.String&gt;** | An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key. | 
 **fkiSignatureID** | **kotlin.Int** | The unique ID of the Signature |  [optional]
+**eUserEzsignprepaid** | [**FieldEUserEzsignprepaid**](FieldEUserEzsignprepaid.md) |  |  [optional]
+**dtUserEzsignprepaidexpiration** | **kotlin.String** | The eZsign prepaid expiration date |  [optional]
 **objUserCloned** | [**ActivesessionResponseCompoundUser**](ActivesessionResponseCompoundUser.md) |  |  [optional]
 **objApikey** | [**ActivesessionResponseCompoundApikey**](ActivesessionResponseCompoundApikey.md) |  |  [optional]
 

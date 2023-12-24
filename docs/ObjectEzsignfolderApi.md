@@ -13,6 +13,8 @@ Method | HTTP request | Description
 [**ezsignfolderDisposeV1**](ObjectEzsignfolderApi.md#ezsignfolderDisposeV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/dispose | Dispose the Ezsignfolder
 [**ezsignfolderEditObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderEditObjectV1) | **PUT** /1/object/ezsignfolder/{pkiEzsignfolderID} | Edit an existing Ezsignfolder
 [**ezsignfolderGetActionableElementsV1**](ObjectEzsignfolderApi.md#ezsignfolderGetActionableElementsV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements | Retrieve actionable elements for the Ezsignfolder
+[**ezsignfolderGetAttachmentCountV1**](ObjectEzsignfolderApi.md#ezsignfolderGetAttachmentCountV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getAttachmentCount | Retrieve Attachment count
+[**ezsignfolderGetAttachmentsV1**](ObjectEzsignfolderApi.md#ezsignfolderGetAttachmentsV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getAttachments | Retrieve Ezsignfolder&#39;s Attachments
 [**ezsignfolderGetCommunicationCountV1**](ObjectEzsignfolderApi.md#ezsignfolderGetCommunicationCountV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationCount | Retrieve Communication count
 [**ezsignfolderGetCommunicationListV1**](ObjectEzsignfolderApi.md#ezsignfolderGetCommunicationListV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationList | Retrieve Communication list
 [**ezsignfolderGetCommunicationrecipientsV1**](ObjectEzsignfolderApi.md#ezsignfolderGetCommunicationrecipientsV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationrecipients | Retrieve Ezsignfolder&#39;s Communicationrecipient
@@ -474,6 +476,106 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignfolderGetActionableElementsV1Response**](EzsignfolderGetActionableElementsV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="ezsignfolderGetAttachmentCountV1"></a>
+# **ezsignfolderGetAttachmentCountV1**
+> EzsignfolderGetAttachmentCountV1Response ezsignfolderGetAttachmentCountV1(pkiEzsignfolderID)
+
+Retrieve Attachment count
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsignfolderApi()
+val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : EzsignfolderGetAttachmentCountV1Response = apiInstance.ezsignfolderGetAttachmentCountV1(pkiEzsignfolderID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsignfolderApi#ezsignfolderGetAttachmentCountV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsignfolderApi#ezsignfolderGetAttachmentCountV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **kotlin.Int**|  |
+
+### Return type
+
+[**EzsignfolderGetAttachmentCountV1Response**](EzsignfolderGetAttachmentCountV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="ezsignfolderGetAttachmentsV1"></a>
+# **ezsignfolderGetAttachmentsV1**
+> EzsignfolderGetAttachmentsV1Response ezsignfolderGetAttachmentsV1(pkiEzsignfolderID)
+
+Retrieve Ezsignfolder&#39;s Attachments
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsignfolderApi()
+val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : EzsignfolderGetAttachmentsV1Response = apiInstance.ezsignfolderGetAttachmentsV1(pkiEzsignfolderID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsignfolderApi#ezsignfolderGetAttachmentsV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsignfolderApi#ezsignfolderGetAttachmentsV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfolderID** | **kotlin.Int**|  |
+
+### Return type
+
+[**EzsignfolderGetAttachmentsV1Response**](EzsignfolderGetAttachmentsV1Response.md)
 
 ### Authorization
 

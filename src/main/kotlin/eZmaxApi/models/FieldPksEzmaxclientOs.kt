@@ -22,7 +22,7 @@ import com.squareup.moshi.JsonClass
 /**
  * The OS of the system running the application
  *
- * Values: iOS,macOS,Windows
+ * Values: iOS,iPadOS,macOS,Windows
  */
 
 @JsonClass(generateAdapter = false)
@@ -30,6 +30,9 @@ enum class FieldPksEzmaxclientOs(val value: kotlin.String) {
 
     @Json(name = "iOS")
     iOS("iOS"),
+
+    @Json(name = "iPadOS")
+    iPadOS("iPadOS"),
 
     @Json(name = "macOS")
     macOS("macOS"),

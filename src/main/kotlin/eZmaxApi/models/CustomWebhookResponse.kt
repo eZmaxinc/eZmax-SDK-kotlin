@@ -31,6 +31,7 @@ import com.squareup.moshi.JsonClass
  * @param sWebhookUrl The URL of the Webhook callback
  * @param sWebhookEmailfailed The email that will receive the Webhook in case all attempts fail
  * @param bWebhookIsactive Whether the Webhook is active or not
+ * @param bWebhookIssigned Whether the requests will be signed or not
  * @param bWebhookSkipsslvalidation Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use
  * @param pksCustomerCode The customer code assigned to your account
  * @param bWebhookTest Wheter the webhook received is a manual test or a real event
@@ -38,6 +39,8 @@ import com.squareup.moshi.JsonClass
  * @param sEzsignfoldertypeNameX The name of the Ezsignfoldertype in the language of the requester
  * @param eWebhookEzsignevent 
  * @param eWebhookManagementevent 
+ * @param sWebhookApikey The Apikey for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey.
+ * @param sWebhookSecret The Secret for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey.
  */
 
 
@@ -66,6 +69,10 @@ data class CustomWebhookResponse (
     @Json(name = "bWebhookIsactive")
     val bWebhookIsactive: kotlin.Boolean,
 
+    /* Whether the requests will be signed or not */
+    @Json(name = "bWebhookIssigned")
+    val bWebhookIssigned: kotlin.Boolean,
+
     /* Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use */
     @Json(name = "bWebhookSkipsslvalidation")
     val bWebhookSkipsslvalidation: kotlin.Boolean,
@@ -90,7 +97,15 @@ data class CustomWebhookResponse (
     val eWebhookEzsignevent: FieldEWebhookEzsignevent? = null,
 
     @Json(name = "eWebhookManagementevent")
-    val eWebhookManagementevent: FieldEWebhookManagementevent? = null
+    val eWebhookManagementevent: FieldEWebhookManagementevent? = null,
+
+    /* The Apikey for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey. */
+    @Json(name = "sWebhookApikey")
+    val sWebhookApikey: kotlin.String? = null,
+
+    /* The Secret for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey. */
+    @Json(name = "sWebhookSecret")
+    val sWebhookSecret: kotlin.String? = null
 
 )
 
