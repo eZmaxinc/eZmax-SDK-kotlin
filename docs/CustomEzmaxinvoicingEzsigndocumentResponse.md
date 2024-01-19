@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **sEzsignfolderDescription** | **kotlin.String** | The description of the Ezsignfolder | 
 **sEzsigndocumentName** | **kotlin.String** | The name of the document that will be presented to Ezsignfoldersignerassociations | 
 **bEzsignfolderAllowed** | **kotlin.Boolean** | Whether you have access to the Ezsignfolder or not | 
+**fkiBillingentityinternalID** | **kotlin.Int** | The unique ID of the Billingentityinternal. |  [optional]
 
 
 

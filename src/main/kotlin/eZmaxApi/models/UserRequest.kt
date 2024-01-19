@@ -50,6 +50,7 @@ import com.squareup.moshi.JsonClass
  * @param fkiSecretquestionID The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father's middle name| |15|Your mother's maiden name| |16|Name of your eldest child| |17|Your spouse's middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat's name| |22|Date of Birth (YYYY-MM-DD)| |22|Secret Code| |22|Your reference code|
  * @param sUserSecretresponse The answer to the Secretquestion
  * @param fkiModuleIDForm The unique ID of the Module
+ * @param sUserJobtitle The job title of the user
  * @param bUserValidatebyadministration Whether if the transactions in which the User is implicated must be validated by administrative personnel or not
  * @param bUserValidatebydirector Whether if the transactions in which the User is implicated must be validated by a director or not
  * @param bUserAttachmentautoverified Whether if Attachments uploaded by the User must be validated or not
@@ -144,6 +145,10 @@ data class UserRequest (
     /* The unique ID of the Module */
     @Json(name = "fkiModuleIDForm")
     val fkiModuleIDForm: kotlin.Int? = null,
+
+    /* The job title of the user */
+    @Json(name = "sUserJobtitle")
+    val sUserJobtitle: kotlin.String? = null,
 
     /* Whether if the transactions in which the User is implicated must be validated by administrative personnel or not */
     @Json(name = "bUserValidatebyadministration")

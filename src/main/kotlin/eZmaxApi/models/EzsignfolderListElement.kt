@@ -35,6 +35,7 @@ import com.squareup.moshi.JsonClass
  * @param iEzsigndocumentEdm The total number of Ezsigndocument in the folder that were saved in the edm system
  * @param iEzsignsignature The total number of signature blocks in all Ezsigndocuments in the folder
  * @param iEzsignsignatureSigned The total number of already signed signature blocks in all Ezsigndocuments in the folder
+ * @param dtEzsignfolderDelayedsenddate The date and time at which the Ezsignfolder will be sent in the future.
  * @param dtEzsignfolderSentdate The date and time at which the Ezsignfolder was sent the last time.
  * @param dtEzsignfolderDuedate The maximum date and time at which the Ezsignfolder can be signed.
  */
@@ -83,6 +84,10 @@ data class EzsignfolderListElement (
     /* The total number of already signed signature blocks in all Ezsigndocuments in the folder */
     @Json(name = "iEzsignsignatureSigned")
     val iEzsignsignatureSigned: kotlin.Int,
+
+    /* The date and time at which the Ezsignfolder will be sent in the future. */
+    @Json(name = "dtEzsignfolderDelayedsenddate")
+    val dtEzsignfolderDelayedsenddate: kotlin.String? = null,
 
     /* The date and time at which the Ezsignfolder was sent the last time. */
     @Json(name = "dtEzsignfolderSentdate")

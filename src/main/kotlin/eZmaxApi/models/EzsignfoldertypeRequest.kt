@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.FieldEEzsignfoldertypeCompletion
 import eZmaxApi.models.FieldEEzsignfoldertypeDisposal
 import eZmaxApi.models.FieldEEzsignfoldertypePrivacylevel
 import eZmaxApi.models.FieldEEzsignfoldertypeSendreminderfrequency
@@ -48,9 +49,12 @@ import com.squareup.moshi.JsonClass
  * @param sEmailAddressSigned The email address.
  * @param sEmailAddressSummary The email address.
  * @param eEzsignfoldertypeSendreminderfrequency 
+ * @param eEzsignfoldertypeCompletion 
  * @param iEzsignfoldertypeDisposaldays The number of days after the archival before the disposal of the Ezsignfolder
  * @param bEzsignfoldertypeDelegate Wheter if delegation of signature is allowed to another user or not
  * @param bEzsignfoldertypeReassign Wheter if Reassignment of signature is allowed to another signatory or not
+ * @param bEzsignfoldertypeReassignezsignsigner Wheter if Reassignment of signature is allowed by a signatory to another signatory or not
+ * @param bEzsignfoldertypeReassignuser Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not
  * @param bEzsignfoldertypeSendattatchmentsigner THIS FIELD WILL BE DELETED. Whether we send the Ezsigndocument and the proof as attachment in the email
  * @param bEzsignfoldertypeSendsignedtoezsignsigner Whether we send an email to Ezsignsigner  when document is completed
  * @param bEzsignfoldertypeSendsignedtouser Whether we send an email to User who signed when document is completed
@@ -156,6 +160,9 @@ data class EzsignfoldertypeRequest (
     @Json(name = "eEzsignfoldertypeSendreminderfrequency")
     val eEzsignfoldertypeSendreminderfrequency: FieldEEzsignfoldertypeSendreminderfrequency? = null,
 
+    @Json(name = "eEzsignfoldertypeCompletion")
+    val eEzsignfoldertypeCompletion: FieldEEzsignfoldertypeCompletion? = FieldEEzsignfoldertypeCompletion.PerEzsigndocument,
+
     /* The number of days after the archival before the disposal of the Ezsignfolder */
     @Json(name = "iEzsignfoldertypeDisposaldays")
     val iEzsignfoldertypeDisposaldays: kotlin.Int? = null,
@@ -167,6 +174,14 @@ data class EzsignfoldertypeRequest (
     /* Wheter if Reassignment of signature is allowed to another signatory or not */
     @Json(name = "bEzsignfoldertypeReassign")
     val bEzsignfoldertypeReassign: kotlin.Boolean? = null,
+
+    /* Wheter if Reassignment of signature is allowed by a signatory to another signatory or not */
+    @Json(name = "bEzsignfoldertypeReassignezsignsigner")
+    val bEzsignfoldertypeReassignezsignsigner: kotlin.Boolean? = null,
+
+    /* Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not */
+    @Json(name = "bEzsignfoldertypeReassignuser")
+    val bEzsignfoldertypeReassignuser: kotlin.Boolean? = null,
 
     /* THIS FIELD WILL BE DELETED. Whether we send the Ezsigndocument and the proof as attachment in the email */
     @Json(name = "bEzsignfoldertypeSendattatchmentsigner")

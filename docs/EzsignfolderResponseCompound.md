@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **sEzsignfolderDescription** | **kotlin.String** | The description of the Ezsignfolder | 
 **fkiEzsignfoldertypeID** | **kotlin.Int** | The unique ID of the Ezsignfoldertype. |  [optional]
 **objEzsignfoldertype** | [**CustomEzsignfoldertypeResponse**](CustomEzsignfoldertypeResponse.md) |  |  [optional]
+**eEzsignfolderCompletion** | [**FieldEEzsignfolderCompletion**](FieldEEzsignfolderCompletion.md) |  |  [optional]
 **sEzsignfoldertypeNameX** | **kotlin.String** |  |  [optional]
 **fkiBillingentityinternalID** | **kotlin.Int** | The unique ID of the Billingentityinternal. |  [optional]
 **sBillingentityinternalDescriptionX** | **kotlin.String** | The description of the Billingentityinternal in the language of the requester |  [optional]

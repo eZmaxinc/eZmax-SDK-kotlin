@@ -27,6 +27,7 @@ import com.squareup.moshi.JsonClass
  * @param sEzsignfolderDescription The description of the Ezsignfolder
  * @param sEzsigndocumentName The name of the document that will be presented to Ezsignfoldersignerassociations
  * @param bEzsignfolderAllowed Whether you have access to the Ezsignfolder or not
+ * @param fkiBillingentityinternalID The unique ID of the Billingentityinternal.
  */
 
 
@@ -49,7 +50,11 @@ data class CustomEzmaxinvoicingEzsigndocumentResponse (
 
     /* Whether you have access to the Ezsignfolder or not */
     @Json(name = "bEzsignfolderAllowed")
-    val bEzsignfolderAllowed: kotlin.Boolean
+    val bEzsignfolderAllowed: kotlin.Boolean,
+
+    /* The unique ID of the Billingentityinternal. */
+    @Json(name = "fkiBillingentityinternalID")
+    val fkiBillingentityinternalID: kotlin.Int? = null
 
 )
 

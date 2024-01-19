@@ -28,6 +28,7 @@ import com.squareup.moshi.JsonClass
  * @param bEzsignfolderMfaused Whether the MFA was used or not for the Ezsignfolder
  * @param bEzsignfolderPaymentused Whether there was a signature is of type payment
  * @param bEzsignfolderAllowed Whether you have access to the Ezsignfolder or not
+ * @param fkiBillingentityinternalID The unique ID of the Billingentityinternal.
  */
 
 
@@ -55,7 +56,11 @@ data class CustomEzmaxinvoicingEzsignfolderResponse (
 
     /* Whether you have access to the Ezsignfolder or not */
     @Json(name = "bEzsignfolderAllowed")
-    val bEzsignfolderAllowed: kotlin.Boolean
+    val bEzsignfolderAllowed: kotlin.Boolean,
+
+    /* The unique ID of the Billingentityinternal. */
+    @Json(name = "fkiBillingentityinternalID")
+    val fkiBillingentityinternalID: kotlin.Int? = null
 
 )
 

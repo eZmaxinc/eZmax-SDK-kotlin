@@ -17,6 +17,7 @@ package eZmaxApi.models
 
 import eZmaxApi.models.CommonResponseObjDebug
 import eZmaxApi.models.CommonResponseObjDebugPayload
+import eZmaxApi.models.CommonResponseWarning
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -26,6 +27,7 @@ import com.squareup.moshi.JsonClass
  *
  * @param objDebugPayload 
  * @param objDebug 
+ * @param aObjWarning 
  */
 
 
@@ -35,7 +37,10 @@ data class EzsigndocumentApplyEzsigntemplateV2Response (
     val objDebugPayload: CommonResponseObjDebugPayload,
 
     @Json(name = "objDebug")
-    val objDebug: CommonResponseObjDebug? = null
+    val objDebug: CommonResponseObjDebug? = null,
+
+    @Json(name = "a_objWarning")
+    val aObjWarning: kotlin.collections.List<CommonResponseWarning>? = null
 
 )
 

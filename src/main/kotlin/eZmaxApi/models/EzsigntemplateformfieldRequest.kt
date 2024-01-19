@@ -16,6 +16,8 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.FieldEEzsigntemplateformfieldDependencyrequirement
+import eZmaxApi.models.FieldEEzsigntemplateformfieldPositioning
+import eZmaxApi.models.FieldEEzsigntemplateformfieldPositioningoccurence
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -25,15 +27,20 @@ import com.squareup.moshi.JsonClass
  *
  * @param iEzsigntemplatedocumentpagePagenumber The page number in the Ezsigntemplatedocument
  * @param sEzsigntemplateformfieldLabel The Label for the Ezsigntemplateformfield
- * @param iEzsigntemplateformfieldX The X coordinate (Horizontal) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 2 inches from the left border of the page, you would use \"200\" for the X coordinate.
- * @param iEzsigntemplateformfieldY The Y coordinate (Vertical) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.
  * @param iEzsigntemplateformfieldWidth The Width of the Ezsigntemplateformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsigntemplateformfieldgroupType.  | eEzsigntemplateformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22-65535     | | Radio                     | 22           | | Text                      | 22-65535     | | Textarea                  | 22-65535     |
  * @param iEzsigntemplateformfieldHeight The Height of the Ezsigntemplateformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsigntemplateformfieldgroupType.  | eEzsigntemplateformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22           | | Radio                     | 22           | | Text                      | 22           | | Textarea                  | 22-65535     | 
  * @param pkiEzsigntemplateformfieldID The unique ID of the Ezsigntemplateformfield
+ * @param eEzsigntemplateformfieldPositioning 
  * @param sEzsigntemplateformfieldValue The value for the Ezsigntemplateformfield
+ * @param iEzsigntemplateformfieldX The X coordinate (Horizontal) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 2 inches from the left border of the page, you would use \"200\" for the X coordinate.
+ * @param iEzsigntemplateformfieldY The Y coordinate (Vertical) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.
  * @param bEzsigntemplateformfieldAutocomplete Whether the Ezsigntemplateformfield allows the use of the autocomplete of the browser.  This can only be set if eEzsigntemplateformfieldgroupType is **Text**
  * @param bEzsigntemplateformfieldSelected Whether the Ezsigntemplateformfield is selected or not by default.  This can only be set if eEzsigntemplateformfieldgroupType is **Checkbox** or **Radio**
  * @param eEzsigntemplateformfieldDependencyrequirement 
+ * @param sEzsigntemplateformfieldPositioningpattern The string pattern to search for the positioning. **This is not a regexp**  This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates**
+ * @param iEzsigntemplateformfieldPositioningoffsetx The offset X  This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates**
+ * @param iEzsigntemplateformfieldPositioningoffsety The offset Y  This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates**
+ * @param eEzsigntemplateformfieldPositioningoccurence 
  */
 
 
@@ -47,14 +54,6 @@ data class EzsigntemplateformfieldRequest (
     @Json(name = "sEzsigntemplateformfieldLabel")
     val sEzsigntemplateformfieldLabel: kotlin.String,
 
-    /* The X coordinate (Horizontal) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 2 inches from the left border of the page, you would use \"200\" for the X coordinate. */
-    @Json(name = "iEzsigntemplateformfieldX")
-    val iEzsigntemplateformfieldX: kotlin.Int,
-
-    /* The Y coordinate (Vertical) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 3 inches from the top border of the page, you would use \"300\" for the Y coordinate. */
-    @Json(name = "iEzsigntemplateformfieldY")
-    val iEzsigntemplateformfieldY: kotlin.Int,
-
     /* The Width of the Ezsigntemplateformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsigntemplateformfieldgroupType.  | eEzsigntemplateformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22-65535     | | Radio                     | 22           | | Text                      | 22-65535     | | Textarea                  | 22-65535     | */
     @Json(name = "iEzsigntemplateformfieldWidth")
     val iEzsigntemplateformfieldWidth: kotlin.Int,
@@ -67,9 +66,20 @@ data class EzsigntemplateformfieldRequest (
     @Json(name = "pkiEzsigntemplateformfieldID")
     val pkiEzsigntemplateformfieldID: kotlin.Int? = null,
 
+    @Json(name = "eEzsigntemplateformfieldPositioning")
+    val eEzsigntemplateformfieldPositioning: FieldEEzsigntemplateformfieldPositioning? = FieldEEzsigntemplateformfieldPositioning.PerCoordinates,
+
     /* The value for the Ezsigntemplateformfield */
     @Json(name = "sEzsigntemplateformfieldValue")
     val sEzsigntemplateformfieldValue: kotlin.String? = null,
+
+    /* The X coordinate (Horizontal) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 2 inches from the left border of the page, you would use \"200\" for the X coordinate. */
+    @Json(name = "iEzsigntemplateformfieldX")
+    val iEzsigntemplateformfieldX: kotlin.Int? = null,
+
+    /* The Y coordinate (Vertical) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 3 inches from the top border of the page, you would use \"300\" for the Y coordinate. */
+    @Json(name = "iEzsigntemplateformfieldY")
+    val iEzsigntemplateformfieldY: kotlin.Int? = null,
 
     /* Whether the Ezsigntemplateformfield allows the use of the autocomplete of the browser.  This can only be set if eEzsigntemplateformfieldgroupType is **Text** */
     @Json(name = "bEzsigntemplateformfieldAutocomplete")
@@ -80,7 +90,22 @@ data class EzsigntemplateformfieldRequest (
     val bEzsigntemplateformfieldSelected: kotlin.Boolean? = null,
 
     @Json(name = "eEzsigntemplateformfieldDependencyrequirement")
-    val eEzsigntemplateformfieldDependencyrequirement: FieldEEzsigntemplateformfieldDependencyrequirement? = null
+    val eEzsigntemplateformfieldDependencyrequirement: FieldEEzsigntemplateformfieldDependencyrequirement? = null,
+
+    /* The string pattern to search for the positioning. **This is not a regexp**  This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates** */
+    @Json(name = "sEzsigntemplateformfieldPositioningpattern")
+    val sEzsigntemplateformfieldPositioningpattern: kotlin.String? = null,
+
+    /* The offset X  This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates** */
+    @Json(name = "iEzsigntemplateformfieldPositioningoffsetx")
+    val iEzsigntemplateformfieldPositioningoffsetx: kotlin.Int? = null,
+
+    /* The offset Y  This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates** */
+    @Json(name = "iEzsigntemplateformfieldPositioningoffsety")
+    val iEzsigntemplateformfieldPositioningoffsety: kotlin.Int? = null,
+
+    @Json(name = "eEzsigntemplateformfieldPositioningoccurence")
+    val eEzsigntemplateformfieldPositioningoccurence: FieldEEzsigntemplateformfieldPositioningoccurence? = null
 
 )
 

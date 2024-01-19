@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **bWebhookIsactive** | **kotlin.Boolean** | Whether the Webhook is active or not | 
 **bWebhookIssigned** | **kotlin.Boolean** | Whether the requests will be signed or not | 
 **bWebhookSkipsslvalidation** | **kotlin.Boolean** | Wheter the server&#39;s SSL certificate should be validated or not. Not recommended to skip for production use | 
+**objAudit** | [**CommonAudit**](CommonAudit.md) |  | 
 **fkiEzsignfoldertypeID** | **kotlin.Int** | The unique ID of the Ezsignfoldertype. |  [optional]
 **sEzsignfoldertypeNameX** | **kotlin.String** | The name of the Ezsignfoldertype in the language of the requester |  [optional]
 **eWebhookEzsignevent** | [**FieldEWebhookEzsignevent**](FieldEWebhookEzsignevent.md) |  |  [optional]

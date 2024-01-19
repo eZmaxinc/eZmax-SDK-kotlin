@@ -17,6 +17,7 @@ package eZmaxApi.models
 
 import eZmaxApi.models.CommonAudit
 import eZmaxApi.models.CustomEzsignfoldertypeResponse
+import eZmaxApi.models.FieldEEzsignfolderCompletion
 import eZmaxApi.models.FieldEEzsignfolderSendreminderfrequency
 import eZmaxApi.models.FieldEEzsignfolderStep
 
@@ -30,6 +31,7 @@ import com.squareup.moshi.JsonClass
  * @param sEzsignfolderDescription The description of the Ezsignfolder
  * @param fkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
  * @param objEzsignfoldertype 
+ * @param eEzsignfolderCompletion 
  * @param sEzsignfoldertypeNameX 
  * @param fkiBillingentityinternalID The unique ID of the Billingentityinternal.
  * @param sBillingentityinternalDescriptionX The description of the Billingentityinternal in the language of the requester
@@ -67,6 +69,9 @@ data class EzsignfolderResponse (
 
     @Json(name = "objEzsignfoldertype")
     val objEzsignfoldertype: CustomEzsignfoldertypeResponse? = null,
+
+    @Json(name = "eEzsignfolderCompletion")
+    val eEzsignfolderCompletion: FieldEEzsignfolderCompletion? = FieldEEzsignfolderCompletion.PerEzsigndocument,
 
     @Json(name = "sEzsignfoldertypeNameX")
     @Deprecated(message = "This property is deprecated.")

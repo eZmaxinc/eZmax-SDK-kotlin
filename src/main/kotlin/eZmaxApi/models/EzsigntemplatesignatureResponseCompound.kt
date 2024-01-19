@@ -21,6 +21,8 @@ import eZmaxApi.models.EzsigntemplatesignaturecustomdateResponseCompound
 import eZmaxApi.models.FieldEEzsigntemplatesignatureAttachmentnamesource
 import eZmaxApi.models.FieldEEzsigntemplatesignatureDependencyrequirement
 import eZmaxApi.models.FieldEEzsigntemplatesignatureFont
+import eZmaxApi.models.FieldEEzsigntemplatesignaturePositioning
+import eZmaxApi.models.FieldEEzsigntemplatesignaturePositioningoccurence
 import eZmaxApi.models.FieldEEzsigntemplatesignatureTooltipposition
 import eZmaxApi.models.FieldEEzsigntemplatesignatureType
 
@@ -34,11 +36,12 @@ import com.squareup.moshi.JsonClass
  * @param fkiEzsigntemplatedocumentID The unique ID of the Ezsigntemplatedocument
  * @param fkiEzsigntemplatesignerID The unique ID of the Ezsigntemplatesigner
  * @param iEzsigntemplatedocumentpagePagenumber The page number in the Ezsigntemplatedocument
- * @param iEzsigntemplatesignatureX The X coordinate (Horizontal) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 2 inches from the left border of the page, you would use \"200\" for the X coordinate.
- * @param iEzsigntemplatesignatureY The Y coordinate (Vertical) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.
  * @param iEzsigntemplatesignatureStep The step when the Ezsigntemplatesigner will be invited to sign
  * @param eEzsigntemplatesignatureType 
  * @param fkiEzsigntemplatesignerIDValidation The unique ID of the Ezsigntemplatesigner
+ * @param eEzsigntemplatesignaturePositioning 
+ * @param iEzsigntemplatesignatureX The X coordinate (Horizontal) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 2 inches from the left border of the page, you would use \"200\" for the X coordinate.
+ * @param iEzsigntemplatesignatureY The Y coordinate (Vertical) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.
  * @param iEzsigntemplatesignatureWidth The width of the Ezsigntemplatesignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsigntemplatesignature to have a width of 2 inches, you would use \"200\" for the iEzsigntemplatesignatureWidth.
  * @param iEzsigntemplatesignatureHeight The height of the Ezsigntemplatesignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsigntemplatesignature to have an height of 2 inches, you would use \"200\" for the iEzsigntemplatesignatureHeight.
  * @param tEzsigntemplatesignatureTooltip A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplatesignature
@@ -52,6 +55,10 @@ import com.squareup.moshi.JsonClass
  * @param sEzsigntemplatesignatureRegexp A regular expression to indicate what values are acceptable for the Ezsigntemplatesignature.  This can only be set if eEzsigntemplatesignatureType is **Text** or **Textarea**
  * @param eEzsigntemplatesignatureTextvalidation 
  * @param eEzsigntemplatesignatureDependencyrequirement 
+ * @param sEzsigntemplatesignaturePositioningpattern The string pattern to search for the positioning. **This is not a regexp**  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**
+ * @param iEzsigntemplatesignaturePositioningoffsetx The offset X  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**
+ * @param iEzsigntemplatesignaturePositioningoffsety The offset Y  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**
+ * @param eEzsigntemplatesignaturePositioningoccurence 
  * @param bEzsigntemplatesignatureCustomdate Whether the Ezsigntemplatesignature has a custom date format or not. (Only possible when eEzsigntemplatesignatureType is **Name** or **Handwritten**)
  * @param aObjEzsigntemplatesignaturecustomdate An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsigntemplatesignatureCustomdate is true.  Use an empty array if you don't want to have a date at all.
  * @param aObjEzsigntemplateelementdependency 
@@ -76,14 +83,6 @@ data class EzsigntemplatesignatureResponseCompound (
     @Json(name = "iEzsigntemplatedocumentpagePagenumber")
     val iEzsigntemplatedocumentpagePagenumber: kotlin.Int,
 
-    /* The X coordinate (Horizontal) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 2 inches from the left border of the page, you would use \"200\" for the X coordinate. */
-    @Json(name = "iEzsigntemplatesignatureX")
-    val iEzsigntemplatesignatureX: kotlin.Int,
-
-    /* The Y coordinate (Vertical) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 3 inches from the top border of the page, you would use \"300\" for the Y coordinate. */
-    @Json(name = "iEzsigntemplatesignatureY")
-    val iEzsigntemplatesignatureY: kotlin.Int,
-
     /* The step when the Ezsigntemplatesigner will be invited to sign */
     @Json(name = "iEzsigntemplatesignatureStep")
     val iEzsigntemplatesignatureStep: kotlin.Int,
@@ -94,6 +93,17 @@ data class EzsigntemplatesignatureResponseCompound (
     /* The unique ID of the Ezsigntemplatesigner */
     @Json(name = "fkiEzsigntemplatesignerIDValidation")
     val fkiEzsigntemplatesignerIDValidation: kotlin.Int? = null,
+
+    @Json(name = "eEzsigntemplatesignaturePositioning")
+    val eEzsigntemplatesignaturePositioning: FieldEEzsigntemplatesignaturePositioning? = null,
+
+    /* The X coordinate (Horizontal) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 2 inches from the left border of the page, you would use \"200\" for the X coordinate. */
+    @Json(name = "iEzsigntemplatesignatureX")
+    val iEzsigntemplatesignatureX: kotlin.Int? = null,
+
+    /* The Y coordinate (Vertical) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 3 inches from the top border of the page, you would use \"300\" for the Y coordinate. */
+    @Json(name = "iEzsigntemplatesignatureY")
+    val iEzsigntemplatesignatureY: kotlin.Int? = null,
 
     /* The width of the Ezsigntemplatesignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsigntemplatesignature to have a width of 2 inches, you would use \"200\" for the iEzsigntemplatesignatureWidth. */
     @Json(name = "iEzsigntemplatesignatureWidth")
@@ -141,6 +151,21 @@ data class EzsigntemplatesignatureResponseCompound (
 
     @Json(name = "eEzsigntemplatesignatureDependencyrequirement")
     val eEzsigntemplatesignatureDependencyrequirement: FieldEEzsigntemplatesignatureDependencyrequirement? = null,
+
+    /* The string pattern to search for the positioning. **This is not a regexp**  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates** */
+    @Json(name = "sEzsigntemplatesignaturePositioningpattern")
+    val sEzsigntemplatesignaturePositioningpattern: kotlin.String? = null,
+
+    /* The offset X  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates** */
+    @Json(name = "iEzsigntemplatesignaturePositioningoffsetx")
+    val iEzsigntemplatesignaturePositioningoffsetx: kotlin.Int? = null,
+
+    /* The offset Y  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates** */
+    @Json(name = "iEzsigntemplatesignaturePositioningoffsety")
+    val iEzsigntemplatesignaturePositioningoffsety: kotlin.Int? = null,
+
+    @Json(name = "eEzsigntemplatesignaturePositioningoccurence")
+    val eEzsigntemplatesignaturePositioningoccurence: FieldEEzsigntemplatesignaturePositioningoccurence? = null,
 
     /* Whether the Ezsigntemplatesignature has a custom date format or not. (Only possible when eEzsigntemplatesignatureType is **Name** or **Handwritten**) */
     @Json(name = "bEzsigntemplatesignatureCustomdate")

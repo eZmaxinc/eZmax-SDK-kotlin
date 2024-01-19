@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **eUserEzsignaccess** | [**FieldEUserEzsignaccess**](FieldEUserEzsignaccess.md) |  | 
 **sEmailAddress** | **kotlin.String** | The email address. | 
 **dtUserEzsignprepaidexpiration** | **kotlin.String** | The eZsign prepaid expiration date |  [optional]
+**sUserJobtitle** | **kotlin.String** | The job title of the user |  [optional]
 
 
 

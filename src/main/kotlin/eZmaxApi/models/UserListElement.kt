@@ -35,6 +35,7 @@ import com.squareup.moshi.JsonClass
  * @param eUserEzsignaccess 
  * @param sEmailAddress The email address.
  * @param dtUserEzsignprepaidexpiration The eZsign prepaid expiration date
+ * @param sUserJobtitle The job title of the user
  */
 
 
@@ -75,7 +76,11 @@ data class UserListElement (
 
     /* The eZsign prepaid expiration date */
     @Json(name = "dtUserEzsignprepaidexpiration")
-    val dtUserEzsignprepaidexpiration: kotlin.String? = null
+    val dtUserEzsignprepaidexpiration: kotlin.String? = null,
+
+    /* The job title of the user */
+    @Json(name = "sUserJobtitle")
+    val sUserJobtitle: kotlin.String? = null
 
 )
 

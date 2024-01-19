@@ -22,7 +22,7 @@ import com.squareup.moshi.JsonClass
 /**
  * The signature step of the Ezsigndocument.
  *
- * Values: Unsent,Unsigned,PartiallySigned,DeclinedToSign,PrematurelyEnded,Completed,Disposed
+ * Values: Unsent,Unsigned,PartiallySigned,DeclinedToSign,PrematurelyEnded,PendingCompletion,Completed,Disposed
  */
 
 @JsonClass(generateAdapter = false)
@@ -42,6 +42,9 @@ enum class FieldEEzsigndocumentStep(val value: kotlin.String) {
 
     @Json(name = "PrematurelyEnded")
     PrematurelyEnded("PrematurelyEnded"),
+
+    @Json(name = "PendingCompletion")
+    PendingCompletion("PendingCompletion"),
 
     @Json(name = "Completed")
     Completed("Completed"),

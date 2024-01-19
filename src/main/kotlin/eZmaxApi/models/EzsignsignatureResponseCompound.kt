@@ -46,6 +46,7 @@ import com.squareup.moshi.JsonClass
  * @param sEzsignsigningreasonDescriptionX The description of the Ezsignsigningreason in the language of the requester
  * @param iEzsignsignatureHeight The height of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have an height of 2 inches, you would use \"200\" for the iEzsignsignatureHeight.
  * @param iEzsignsignatureWidth The width of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have a width of 2 inches, you would use \"200\" for the iEzsignsignatureWidth.
+ * @param iEzsignsignatureStepadjusted The step when the Ezsignsigner will be invited to sign
  * @param tEzsignsignatureTooltip A tooltip that will be presented to Ezsignsigner about the Ezsignsignature
  * @param eEzsignsignatureTooltipposition 
  * @param eEzsignsignatureFont 
@@ -121,6 +122,10 @@ data class EzsignsignatureResponseCompound (
     /* The width of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have a width of 2 inches, you would use \"200\" for the iEzsignsignatureWidth. */
     @Json(name = "iEzsignsignatureWidth")
     val iEzsignsignatureWidth: kotlin.Int? = null,
+
+    /* The step when the Ezsignsigner will be invited to sign */
+    @Json(name = "iEzsignsignatureStepadjusted")
+    val iEzsignsignatureStepadjusted: kotlin.Int? = null,
 
     /* A tooltip that will be presented to Ezsignsigner about the Ezsignsignature */
     @Json(name = "tEzsignsignatureTooltip")

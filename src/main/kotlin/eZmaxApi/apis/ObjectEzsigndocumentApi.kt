@@ -26,6 +26,8 @@ import eZmaxApi.models.EzsigndocumentApplyEzsigntemplateV1Request
 import eZmaxApi.models.EzsigndocumentApplyEzsigntemplateV1Response
 import eZmaxApi.models.EzsigndocumentApplyEzsigntemplateV2Request
 import eZmaxApi.models.EzsigndocumentApplyEzsigntemplateV2Response
+import eZmaxApi.models.EzsigndocumentCreateEzsignelementsPositionedByWordV1Request
+import eZmaxApi.models.EzsigndocumentCreateEzsignelementsPositionedByWordV1Response
 import eZmaxApi.models.EzsigndocumentCreateObjectV1Request
 import eZmaxApi.models.EzsigndocumentCreateObjectV1Response
 import eZmaxApi.models.EzsigndocumentCreateObjectV2Request
@@ -44,6 +46,7 @@ import eZmaxApi.models.EzsigndocumentGetAttachmentsV1Response
 import eZmaxApi.models.EzsigndocumentGetCompletedElementsV1Response
 import eZmaxApi.models.EzsigndocumentGetDownloadUrlV1Response
 import eZmaxApi.models.EzsigndocumentGetEzsignannotationsV1Response
+import eZmaxApi.models.EzsigndocumentGetEzsigndiscussionsV1Response
 import eZmaxApi.models.EzsigndocumentGetEzsignformfieldgroupsV1Response
 import eZmaxApi.models.EzsigndocumentGetEzsignpagesV1Response
 import eZmaxApi.models.EzsigndocumentGetEzsignsignaturesAutomaticV1Response
@@ -232,6 +235,81 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate".replace("{"+"pkiEzsigndocumentID"+"}", encodeURIComponent(pkiEzsigndocumentID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Create multiple Ezsignsignatures/Ezsignformfieldgroups
+     * Using this endpoint, you can create multiple Ezsignsignatures/Ezsignformfieldgroups positioned by word at the same time.
+     * @param pkiEzsigndocumentID 
+     * @param ezsigndocumentCreateEzsignelementsPositionedByWordV1Request 
+     * @return EzsigndocumentCreateEzsignelementsPositionedByWordV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsigndocumentCreateEzsignelementsPositionedByWordV1(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentCreateEzsignelementsPositionedByWordV1Request: EzsigndocumentCreateEzsignelementsPositionedByWordV1Request) : EzsigndocumentCreateEzsignelementsPositionedByWordV1Response {
+        val localVarResponse = ezsigndocumentCreateEzsignelementsPositionedByWordV1WithHttpInfo(pkiEzsigndocumentID = pkiEzsigndocumentID, ezsigndocumentCreateEzsignelementsPositionedByWordV1Request = ezsigndocumentCreateEzsignelementsPositionedByWordV1Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigndocumentCreateEzsignelementsPositionedByWordV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Create multiple Ezsignsignatures/Ezsignformfieldgroups
+     * Using this endpoint, you can create multiple Ezsignsignatures/Ezsignformfieldgroups positioned by word at the same time.
+     * @param pkiEzsigndocumentID 
+     * @param ezsigndocumentCreateEzsignelementsPositionedByWordV1Request 
+     * @return ApiResponse<EzsigndocumentCreateEzsignelementsPositionedByWordV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsigndocumentCreateEzsignelementsPositionedByWordV1WithHttpInfo(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentCreateEzsignelementsPositionedByWordV1Request: EzsigndocumentCreateEzsignelementsPositionedByWordV1Request) : ApiResponse<EzsigndocumentCreateEzsignelementsPositionedByWordV1Response?> {
+        val localVariableConfig = ezsigndocumentCreateEzsignelementsPositionedByWordV1RequestConfig(pkiEzsigndocumentID = pkiEzsigndocumentID, ezsigndocumentCreateEzsignelementsPositionedByWordV1Request = ezsigndocumentCreateEzsignelementsPositionedByWordV1Request)
+
+        return request<EzsigndocumentCreateEzsignelementsPositionedByWordV1Request, EzsigndocumentCreateEzsignelementsPositionedByWordV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsigndocumentCreateEzsignelementsPositionedByWordV1
+     *
+     * @param pkiEzsigndocumentID 
+     * @param ezsigndocumentCreateEzsignelementsPositionedByWordV1Request 
+     * @return RequestConfig
+     */
+    fun ezsigndocumentCreateEzsignelementsPositionedByWordV1RequestConfig(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentCreateEzsignelementsPositionedByWordV1Request: EzsigndocumentCreateEzsignelementsPositionedByWordV1Request) : RequestConfig<EzsigndocumentCreateEzsignelementsPositionedByWordV1Request> {
+        val localVariableBody = ezsigndocumentCreateEzsignelementsPositionedByWordV1Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/createEzsignelementsPositionedByWord".replace("{"+"pkiEzsigndocumentID"+"}", encodeURIComponent(pkiEzsigndocumentID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,
@@ -1062,7 +1140,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
      * Retrieve a URL to download documents.
      * This endpoint returns URLs to different files that can be downloaded during the signing process.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
      * @param pkiEzsigndocumentID 
-     * @param eDocumentType The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **SignatureReady** Is the version containing the annotations/form to show the signer. 3. **Signed** Is the final document once all signatures were applied. 4. **Proofdocument** Is the evidence report. 5. **Proof** Is the complete evidence archive including all of the above and more. 
+     * @param eDocumentType The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **SignatureReady** Is the version containing the annotations/form to show the signer. 3. **Signed** Is the final document once all signatures were applied in current document if eEzsignfolderCompletion is PerEzsigndocument.&lt;br&gt;     Is the final document once all signatures were applied in all documents if eEzsignfolderCompletion is PerEzsignfolder. 4. **Proofdocument** Is the evidence report. 5. **Proof** Is the complete evidence archive including all of the above and more. 
      * @return EzsigndocumentGetDownloadUrlV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -1094,7 +1172,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
      * Retrieve a URL to download documents.
      * This endpoint returns URLs to different files that can be downloaded during the signing process.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
      * @param pkiEzsigndocumentID 
-     * @param eDocumentType The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **SignatureReady** Is the version containing the annotations/form to show the signer. 3. **Signed** Is the final document once all signatures were applied. 4. **Proofdocument** Is the evidence report. 5. **Proof** Is the complete evidence archive including all of the above and more. 
+     * @param eDocumentType The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **SignatureReady** Is the version containing the annotations/form to show the signer. 3. **Signed** Is the final document once all signatures were applied in current document if eEzsignfolderCompletion is PerEzsigndocument.&lt;br&gt;     Is the final document once all signatures were applied in all documents if eEzsignfolderCompletion is PerEzsignfolder. 4. **Proofdocument** Is the evidence report. 5. **Proof** Is the complete evidence archive including all of the above and more. 
      * @return ApiResponse<EzsigndocumentGetDownloadUrlV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -1113,7 +1191,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
      * To obtain the request config of the operation ezsigndocumentGetDownloadUrlV1
      *
      * @param pkiEzsigndocumentID 
-     * @param eDocumentType The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **SignatureReady** Is the version containing the annotations/form to show the signer. 3. **Signed** Is the final document once all signatures were applied. 4. **Proofdocument** Is the evidence report. 5. **Proof** Is the complete evidence archive including all of the above and more. 
+     * @param eDocumentType The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **SignatureReady** Is the version containing the annotations/form to show the signer. 3. **Signed** Is the final document once all signatures were applied in current document if eEzsignfolderCompletion is PerEzsigndocument.&lt;br&gt;     Is the final document once all signatures were applied in all documents if eEzsignfolderCompletion is PerEzsignfolder. 4. **Proofdocument** Is the evidence report. 5. **Proof** Is the complete evidence archive including all of the above and more. 
      * @return RequestConfig
      */
     fun ezsigndocumentGetDownloadUrlV1RequestConfig(pkiEzsigndocumentID: kotlin.Int, eDocumentType: EDocumentTypeEzsigndocumentGetDownloadUrlV1) : RequestConfig<Unit> {
@@ -1196,6 +1274,77 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignannotations".replace("{"+"pkiEzsigndocumentID"+"}", encodeURIComponent(pkiEzsigndocumentID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Retrieve an existing Ezsigndocument&#39;s Ezsigndiscussions
+     * 
+     * @param pkiEzsigndocumentID 
+     * @return EzsigndocumentGetEzsigndiscussionsV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsigndocumentGetEzsigndiscussionsV1(pkiEzsigndocumentID: kotlin.Int) : EzsigndocumentGetEzsigndiscussionsV1Response {
+        val localVarResponse = ezsigndocumentGetEzsigndiscussionsV1WithHttpInfo(pkiEzsigndocumentID = pkiEzsigndocumentID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigndocumentGetEzsigndiscussionsV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve an existing Ezsigndocument&#39;s Ezsigndiscussions
+     * 
+     * @param pkiEzsigndocumentID 
+     * @return ApiResponse<EzsigndocumentGetEzsigndiscussionsV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsigndocumentGetEzsigndiscussionsV1WithHttpInfo(pkiEzsigndocumentID: kotlin.Int) : ApiResponse<EzsigndocumentGetEzsigndiscussionsV1Response?> {
+        val localVariableConfig = ezsigndocumentGetEzsigndiscussionsV1RequestConfig(pkiEzsigndocumentID = pkiEzsigndocumentID)
+
+        return request<Unit, EzsigndocumentGetEzsigndiscussionsV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsigndocumentGetEzsigndiscussionsV1
+     *
+     * @param pkiEzsigndocumentID 
+     * @return RequestConfig
+     */
+    fun ezsigndocumentGetEzsigndiscussionsV1RequestConfig(pkiEzsigndocumentID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsigndiscussions".replace("{"+"pkiEzsigndocumentID"+"}", encodeURIComponent(pkiEzsigndocumentID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

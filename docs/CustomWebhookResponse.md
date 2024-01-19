@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **bWebhookIsactive** | **kotlin.Boolean** | Whether the Webhook is active or not | 
 **bWebhookIssigned** | **kotlin.Boolean** | Whether the requests will be signed or not | 
 **bWebhookSkipsslvalidation** | **kotlin.Boolean** | Wheter the server&#39;s SSL certificate should be validated or not. Not recommended to skip for production use | 
+**objAudit** | [**CommonAudit**](CommonAudit.md) |  | 
 **pksCustomerCode** | **kotlin.String** | The customer code assigned to your account | 
 **bWebhookTest** | **kotlin.Boolean** | Wheter the webhook received is a manual test or a real event | 
 **fkiEzsignfoldertypeID** | **kotlin.Int** | The unique ID of the Ezsignfoldertype. |  [optional]

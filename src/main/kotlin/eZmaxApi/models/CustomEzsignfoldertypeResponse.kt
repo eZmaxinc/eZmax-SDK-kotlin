@@ -31,6 +31,8 @@ import com.squareup.moshi.JsonClass
  * @param bEzsignfoldertypeAllowdownloadproofezsignsigner Whether we allow the proof to be downloaded by an Ezsignsigner
  * @param bEzsignfoldertypeDelegate Wheter if delegation of signature is allowed to another user or not
  * @param bEzsignfoldertypeReassign Wheter if Reassignment of signature is allowed to another signatory or not
+ * @param bEzsignfoldertypeReassignezsignsigner Wheter if Reassignment of signature is allowed by a signatory to another signatory or not
+ * @param bEzsignfoldertypeReassignuser Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not
  */
 
 
@@ -70,7 +72,15 @@ data class CustomEzsignfoldertypeResponse (
 
     /* Wheter if Reassignment of signature is allowed to another signatory or not */
     @Json(name = "bEzsignfoldertypeReassign")
-    val bEzsignfoldertypeReassign: kotlin.Boolean? = null
+    val bEzsignfoldertypeReassign: kotlin.Boolean? = null,
+
+    /* Wheter if Reassignment of signature is allowed by a signatory to another signatory or not */
+    @Json(name = "bEzsignfoldertypeReassignezsignsigner")
+    val bEzsignfoldertypeReassignezsignsigner: kotlin.Boolean? = null,
+
+    /* Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not */
+    @Json(name = "bEzsignfoldertypeReassignuser")
+    val bEzsignfoldertypeReassignuser: kotlin.Boolean? = null
 
 )
 

@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.CommonAudit
 import eZmaxApi.models.FieldEWebhookEzsignevent
 import eZmaxApi.models.FieldEWebhookManagementevent
 import eZmaxApi.models.FieldEWebhookModule
@@ -33,6 +34,7 @@ import com.squareup.moshi.JsonClass
  * @param bWebhookIsactive Whether the Webhook is active or not
  * @param bWebhookIssigned Whether the requests will be signed or not
  * @param bWebhookSkipsslvalidation Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use
+ * @param objAudit 
  * @param fkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
  * @param sEzsignfoldertypeNameX The name of the Ezsignfoldertype in the language of the requester
  * @param eWebhookEzsignevent 
@@ -75,6 +77,9 @@ data class WebhookResponseCompound (
     /* Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use */
     @Json(name = "bWebhookSkipsslvalidation")
     val bWebhookSkipsslvalidation: kotlin.Boolean,
+
+    @Json(name = "objAudit")
+    val objAudit: CommonAudit,
 
     /* The unique ID of the Ezsignfoldertype. */
     @Json(name = "fkiEzsignfoldertypeID")
