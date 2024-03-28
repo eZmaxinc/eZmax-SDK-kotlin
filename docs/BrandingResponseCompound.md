@@ -18,7 +18,10 @@ Name | Type | Description | Notes
 **fkiEmailID** | **kotlin.Int** | The unique ID of the Email |  [optional]
 **sBrandingName** | **kotlin.String** | The name of the Branding  This value will only be set if you wish to overwrite the default name. If you want to keep the default name, leave this property empty |  [optional]
 **sEmailAddress** | **kotlin.String** | The email address. |  [optional]
+**eBrandingLogointerface** | [**FieldEBrandingLogointerface**](FieldEBrandingLogointerface.md) |  |  [optional]
+**iBrandingInterfacecolor** | **kotlin.Int** | The color of the interface. This is a RGB color converted into integer |  [optional]
 **sBrandingLogourl** | **kotlin.String** | The url of the picture used as logo in the Branding |  [optional]
+**sBrandingLogointerfaceurl** | **kotlin.String** | The url of the picture used as logo in the Branding |  [optional]
 
 
 

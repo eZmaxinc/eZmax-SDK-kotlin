@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **sWebhookApikey** | **kotlin.String** | The Apikey for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey. |  [optional]
 **sWebhookSecret** | **kotlin.String** | The Secret for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey. |  [optional]
 **sWebhookEvent** | **kotlin.String** | The concatenated string to describe the Webhook event |  [optional]
+**aObjWebhookheader** | [**kotlin.collections.List&lt;WebhookheaderResponseCompound&gt;**](WebhookheaderResponseCompound.md) |  |  [optional]
 
 
 

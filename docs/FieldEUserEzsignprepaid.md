@@ -4,9 +4,11 @@
 ## Enum
 
 
+    * `No` (value: `"No"`)
+
     * `Basic` (value: `"Basic"`)
 
-    * `Unlimited` (value: `"Unlimited"`)
+    * `Standard` (value: `"Standard"`)
 
     * `Pro` (value: `"Pro"`)
 

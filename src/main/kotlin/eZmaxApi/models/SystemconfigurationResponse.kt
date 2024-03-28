@@ -16,6 +16,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.FieldESystemconfigurationEzsign
+import eZmaxApi.models.FieldESystemconfigurationEzsignofficeplan
 import eZmaxApi.models.FieldESystemconfigurationLanguage1
 import eZmaxApi.models.FieldESystemconfigurationLanguage2
 import eZmaxApi.models.FieldESystemconfigurationNewexternaluseraction
@@ -32,9 +33,12 @@ import com.squareup.moshi.JsonClass
  * @param eSystemconfigurationNewexternaluseraction 
  * @param eSystemconfigurationLanguage1 
  * @param eSystemconfigurationLanguage2 
- * @param eSystemconfigurationEzsign 
  * @param bSystemconfigurationEzsignpersonnal Whether if we allow the creation of personal files in eZsign
  * @param bSystemconfigurationSspr Whether if we allow SSPR
+ * @param eSystemconfigurationEzsign 
+ * @param eSystemconfigurationEzsignofficeplan 
+ * @param bSystemconfigurationEzsignpaidbyoffice Whether if Ezsign is paid by the company or not
+ * @param bSystemconfigurationIsdisposalactive Whether is Disposal processus is active or not
  * @param dtSystemconfigurationReadonlyexpirationstart The start date where the system will be in read only
  * @param dtSystemconfigurationReadonlyexpirationend The end date where the system will be in read only
  */
@@ -63,9 +67,6 @@ data class SystemconfigurationResponse (
     @Json(name = "eSystemconfigurationLanguage2")
     val eSystemconfigurationLanguage2: FieldESystemconfigurationLanguage2,
 
-    @Json(name = "eSystemconfigurationEzsign")
-    val eSystemconfigurationEzsign: FieldESystemconfigurationEzsign,
-
     /* Whether if we allow the creation of personal files in eZsign */
     @Json(name = "bSystemconfigurationEzsignpersonnal")
     val bSystemconfigurationEzsignpersonnal: kotlin.Boolean,
@@ -73,6 +74,21 @@ data class SystemconfigurationResponse (
     /* Whether if we allow SSPR */
     @Json(name = "bSystemconfigurationSspr")
     val bSystemconfigurationSspr: kotlin.Boolean,
+
+    @Json(name = "eSystemconfigurationEzsign")
+    @Deprecated(message = "This property is deprecated.")
+    val eSystemconfigurationEzsign: FieldESystemconfigurationEzsign? = null,
+
+    @Json(name = "eSystemconfigurationEzsignofficeplan")
+    val eSystemconfigurationEzsignofficeplan: FieldESystemconfigurationEzsignofficeplan? = null,
+
+    /* Whether if Ezsign is paid by the company or not */
+    @Json(name = "bSystemconfigurationEzsignpaidbyoffice")
+    val bSystemconfigurationEzsignpaidbyoffice: kotlin.Boolean? = null,
+
+    /* Whether is Disposal processus is active or not */
+    @Json(name = "bSystemconfigurationIsdisposalactive")
+    val bSystemconfigurationIsdisposalactive: kotlin.Boolean? = null,
 
     /* The start date where the system will be in read only */
     @Json(name = "dtSystemconfigurationReadonlyexpirationstart")

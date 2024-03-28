@@ -4,17 +4,18 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ezsignfoldertypeCreateObjectV1**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeCreateObjectV1) | **POST** /1/object/ezsignfoldertype | Create a new Ezsignfoldertype
+[**ezsignfoldertypeCreateObjectV2**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeCreateObjectV2) | **POST** /2/object/ezsignfoldertype | Create a new Ezsignfoldertype
 [**ezsignfoldertypeEditObjectV1**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeEditObjectV1) | **PUT** /1/object/ezsignfoldertype/{pkiEzsignfoldertypeID} | Edit an existing Ezsignfoldertype
-[**ezsignfoldertypeGetAutocompleteV1**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeGetAutocompleteV1) | **GET** /1/object/ezsignfoldertype/getAutocomplete/{sSelector} | Retrieve Ezsignfoldertypes and IDs
+[**ezsignfoldertypeEditObjectV2**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeEditObjectV2) | **PUT** /2/object/ezsignfoldertype/{pkiEzsignfoldertypeID} | Edit an existing Ezsignfoldertype
 [**ezsignfoldertypeGetAutocompleteV2**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeGetAutocompleteV2) | **GET** /2/object/ezsignfoldertype/getAutocomplete/{sSelector} | Retrieve Ezsignfoldertypes and IDs
 [**ezsignfoldertypeGetListV1**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeGetListV1) | **GET** /1/object/ezsignfoldertype/getList | Retrieve Ezsignfoldertype list
 [**ezsignfoldertypeGetObjectV2**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeGetObjectV2) | **GET** /2/object/ezsignfoldertype/{pkiEzsignfoldertypeID} | Retrieve an existing Ezsignfoldertype
+[**ezsignfoldertypeGetObjectV3**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeGetObjectV3) | **GET** /3/object/ezsignfoldertype/{pkiEzsignfoldertypeID} | Retrieve an existing Ezsignfoldertype
 
 
-<a id="ezsignfoldertypeCreateObjectV1"></a>
-# **ezsignfoldertypeCreateObjectV1**
-> EzsignfoldertypeCreateObjectV1Response ezsignfoldertypeCreateObjectV1(ezsignfoldertypeCreateObjectV1Request)
+<a id="ezsignfoldertypeCreateObjectV2"></a>
+# **ezsignfoldertypeCreateObjectV2**
+> EzsignfoldertypeCreateObjectV2Response ezsignfoldertypeCreateObjectV2(ezsignfoldertypeCreateObjectV2Request)
 
 Create a new Ezsignfoldertype
 
@@ -27,15 +28,15 @@ The endpoint allows to create one or many elements at once.
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsignfoldertypeApi()
-val ezsignfoldertypeCreateObjectV1Request : EzsignfoldertypeCreateObjectV1Request =  // EzsignfoldertypeCreateObjectV1Request | 
+val ezsignfoldertypeCreateObjectV2Request : EzsignfoldertypeCreateObjectV2Request =  // EzsignfoldertypeCreateObjectV2Request | 
 try {
-    val result : EzsignfoldertypeCreateObjectV1Response = apiInstance.ezsignfoldertypeCreateObjectV1(ezsignfoldertypeCreateObjectV1Request)
+    val result : EzsignfoldertypeCreateObjectV2Response = apiInstance.ezsignfoldertypeCreateObjectV2(ezsignfoldertypeCreateObjectV2Request)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling ObjectEzsignfoldertypeApi#ezsignfoldertypeCreateObjectV1")
+    println("4xx response calling ObjectEzsignfoldertypeApi#ezsignfoldertypeCreateObjectV2")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling ObjectEzsignfoldertypeApi#ezsignfoldertypeCreateObjectV1")
+    println("5xx response calling ObjectEzsignfoldertypeApi#ezsignfoldertypeCreateObjectV2")
     e.printStackTrace()
 }
 ```
@@ -44,11 +45,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ezsignfoldertypeCreateObjectV1Request** | [**EzsignfoldertypeCreateObjectV1Request**](EzsignfoldertypeCreateObjectV1Request.md)|  |
+ **ezsignfoldertypeCreateObjectV2Request** | [**EzsignfoldertypeCreateObjectV2Request**](EzsignfoldertypeCreateObjectV2Request.md)|  |
 
 ### Return type
 
-[**EzsignfoldertypeCreateObjectV1Response**](EzsignfoldertypeCreateObjectV1Response.md)
+[**EzsignfoldertypeCreateObjectV2Response**](EzsignfoldertypeCreateObjectV2Response.md)
 
 ### Authorization
 
@@ -114,13 +115,13 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a id="ezsignfoldertypeGetAutocompleteV1"></a>
-# **ezsignfoldertypeGetAutocompleteV1**
-> CommonGetAutocompleteV1Response ezsignfoldertypeGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
+<a id="ezsignfoldertypeEditObjectV2"></a>
+# **ezsignfoldertypeEditObjectV2**
+> EzsignfoldertypeEditObjectV2Response ezsignfoldertypeEditObjectV2(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV2Request)
 
-Retrieve Ezsignfoldertypes and IDs
+Edit an existing Ezsignfoldertype
 
-Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete control.
+
 
 ### Example
 ```kotlin
@@ -129,18 +130,16 @@ Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete contr
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsignfoldertypeApi()
-val sSelector : kotlin.String = sSelector_example // kotlin.String | The type of Ezsignfoldertypes to return
-val eFilterActive : kotlin.String = eFilterActive_example // kotlin.String | Specify which results we want to display.
-val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter the returned results
-val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
+val pkiEzsignfoldertypeID : kotlin.Int = 56 // kotlin.Int | 
+val ezsignfoldertypeEditObjectV2Request : EzsignfoldertypeEditObjectV2Request =  // EzsignfoldertypeEditObjectV2Request | 
 try {
-    val result : CommonGetAutocompleteV1Response = apiInstance.ezsignfoldertypeGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
+    val result : EzsignfoldertypeEditObjectV2Response = apiInstance.ezsignfoldertypeEditObjectV2(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV2Request)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling ObjectEzsignfoldertypeApi#ezsignfoldertypeGetAutocompleteV1")
+    println("4xx response calling ObjectEzsignfoldertypeApi#ezsignfoldertypeEditObjectV2")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling ObjectEzsignfoldertypeApi#ezsignfoldertypeGetAutocompleteV1")
+    println("5xx response calling ObjectEzsignfoldertypeApi#ezsignfoldertypeEditObjectV2")
     e.printStackTrace()
 }
 ```
@@ -149,14 +148,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sSelector** | **kotlin.String**| The type of Ezsignfoldertypes to return | [enum: Active, All]
- **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
- **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional]
- **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
+ **pkiEzsignfoldertypeID** | **kotlin.Int**|  |
+ **ezsignfoldertypeEditObjectV2Request** | [**EzsignfoldertypeEditObjectV2Request**](EzsignfoldertypeEditObjectV2Request.md)|  |
 
 ### Return type
 
-[**CommonGetAutocompleteV1Response**](CommonGetAutocompleteV1Response.md)
+[**EzsignfoldertypeEditObjectV2Response**](EzsignfoldertypeEditObjectV2Response.md)
 
 ### Authorization
 
@@ -167,7 +164,7 @@ Configure Authorization:
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a id="ezsignfoldertypeGetAutocompleteV2"></a>
@@ -205,7 +202,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sSelector** | **kotlin.String**| The type of Ezsignfoldertypes to return | [enum: Active, All]
+ **sSelector** | **kotlin.String**| The type of Ezsignfoldertypes to return | [enum: Active, All, EzsigntemplateEdit, EzsigntemplateUsergroup]
  **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
  **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional]
  **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
@@ -321,6 +318,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsignfoldertypeGetObjectV2Response**](EzsignfoldertypeGetObjectV2Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="ezsignfoldertypeGetObjectV3"></a>
+# **ezsignfoldertypeGetObjectV3**
+> EzsignfoldertypeGetObjectV3Response ezsignfoldertypeGetObjectV3(pkiEzsignfoldertypeID)
+
+Retrieve an existing Ezsignfoldertype
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsignfoldertypeApi()
+val pkiEzsignfoldertypeID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : EzsignfoldertypeGetObjectV3Response = apiInstance.ezsignfoldertypeGetObjectV3(pkiEzsignfoldertypeID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsignfoldertypeApi#ezsignfoldertypeGetObjectV3")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsignfoldertypeApi#ezsignfoldertypeGetObjectV3")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsignfoldertypeID** | **kotlin.Int**|  |
+
+### Return type
+
+[**EzsignfoldertypeGetObjectV3Response**](EzsignfoldertypeGetObjectV3Response.md)
 
 ### Authorization
 

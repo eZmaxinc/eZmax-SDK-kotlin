@@ -19,6 +19,7 @@ import eZmaxApi.models.CommonAudit
 import eZmaxApi.models.FieldEWebhookEzsignevent
 import eZmaxApi.models.FieldEWebhookManagementevent
 import eZmaxApi.models.FieldEWebhookModule
+import eZmaxApi.models.WebhookheaderResponseCompound
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -43,6 +44,8 @@ import com.squareup.moshi.JsonClass
  * @param eWebhookManagementevent 
  * @param sWebhookApikey The Apikey for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey.
  * @param sWebhookSecret The Secret for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey.
+ * @param sWebhookEvent The concatenated string to describe the Webhook event
+ * @param aObjWebhookheader 
  */
 
 
@@ -110,7 +113,14 @@ data class CustomWebhookResponse (
 
     /* The Secret for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey. */
     @Json(name = "sWebhookSecret")
-    val sWebhookSecret: kotlin.String? = null
+    val sWebhookSecret: kotlin.String? = null,
+
+    /* The concatenated string to describe the Webhook event */
+    @Json(name = "sWebhookEvent")
+    val sWebhookEvent: kotlin.String? = null,
+
+    @Json(name = "a_objWebhookheader")
+    val aObjWebhookheader: kotlin.collections.List<WebhookheaderResponseCompound>? = null
 
 )
 

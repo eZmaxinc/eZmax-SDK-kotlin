@@ -19,8 +19,6 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.FranchisereferalincomeCreateObjectV1Request
-import eZmaxApi.models.FranchisereferalincomeCreateObjectV1Response
 import eZmaxApi.models.FranchisereferalincomeCreateObjectV2Request
 import eZmaxApi.models.FranchisereferalincomeCreateObjectV2Response
 
@@ -46,83 +44,6 @@ class ObjectFranchisereferalincomeApi(basePath: kotlin.String = defaultBasePath,
         val defaultBasePath: String by lazy {
             System.getProperties().getProperty(ApiClient.baseUrlKey, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
-    }
-
-    /**
-     * Create a new Franchisereferalincome
-     * The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
-     * @param franchisereferalincomeCreateObjectV1Request 
-     * @return FranchisereferalincomeCreateObjectV1Response
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    @Deprecated(message = "This operation is deprecated.")
-    fun franchisereferalincomeCreateObjectV1(franchisereferalincomeCreateObjectV1Request: kotlin.collections.List<FranchisereferalincomeCreateObjectV1Request>) : FranchisereferalincomeCreateObjectV1Response {
-        @Suppress("DEPRECATION")
-        val localVarResponse = franchisereferalincomeCreateObjectV1WithHttpInfo(franchisereferalincomeCreateObjectV1Request = franchisereferalincomeCreateObjectV1Request)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as FranchisereferalincomeCreateObjectV1Response
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * Create a new Franchisereferalincome
-     * The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
-     * @param franchisereferalincomeCreateObjectV1Request 
-     * @return ApiResponse<FranchisereferalincomeCreateObjectV1Response?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    @Deprecated(message = "This operation is deprecated.")
-    fun franchisereferalincomeCreateObjectV1WithHttpInfo(franchisereferalincomeCreateObjectV1Request: kotlin.collections.List<FranchisereferalincomeCreateObjectV1Request>) : ApiResponse<FranchisereferalincomeCreateObjectV1Response?> {
-        @Suppress("DEPRECATION")
-        val localVariableConfig = franchisereferalincomeCreateObjectV1RequestConfig(franchisereferalincomeCreateObjectV1Request = franchisereferalincomeCreateObjectV1Request)
-
-        return request<kotlin.collections.List<FranchisereferalincomeCreateObjectV1Request>, FranchisereferalincomeCreateObjectV1Response>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation franchisereferalincomeCreateObjectV1
-     *
-     * @param franchisereferalincomeCreateObjectV1Request 
-     * @return RequestConfig
-     */
-    @Deprecated(message = "This operation is deprecated.")
-    fun franchisereferalincomeCreateObjectV1RequestConfig(franchisereferalincomeCreateObjectV1Request: kotlin.collections.List<FranchisereferalincomeCreateObjectV1Request>) : RequestConfig<kotlin.collections.List<FranchisereferalincomeCreateObjectV1Request>> {
-        val localVariableBody = franchisereferalincomeCreateObjectV1Request
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Content-Type"] = "application/json"
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.POST,
-            path = "/1/object/franchisereferalincome",
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            requiresAuthentication = true,
-            body = localVariableBody
-        )
     }
 
     /**

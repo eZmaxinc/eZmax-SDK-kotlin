@@ -16,6 +16,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.FieldEBrandingLogo
+import eZmaxApi.models.FieldEBrandingLogointerface
 import eZmaxApi.models.MultilingualBrandingDescription
 
 import com.squareup.moshi.Json
@@ -38,7 +39,10 @@ import com.squareup.moshi.JsonClass
  * @param fkiEmailID The unique ID of the Email
  * @param sBrandingName The name of the Branding  This value will only be set if you wish to overwrite the default name. If you want to keep the default name, leave this property empty
  * @param sEmailAddress The email address.
+ * @param eBrandingLogointerface 
+ * @param iBrandingInterfacecolor The color of the interface. This is a RGB color converted into integer
  * @param sBrandingLogourl The url of the picture used as logo in the Branding
+ * @param sBrandingLogointerfaceurl The url of the picture used as logo in the Branding
  */
 
 
@@ -98,9 +102,20 @@ data class BrandingResponseCompound (
     @Json(name = "sEmailAddress")
     val sEmailAddress: kotlin.String? = null,
 
+    @Json(name = "eBrandingLogointerface")
+    val eBrandingLogointerface: FieldEBrandingLogointerface? = FieldEBrandingLogointerface.Default,
+
+    /* The color of the interface. This is a RGB color converted into integer */
+    @Json(name = "iBrandingInterfacecolor")
+    val iBrandingInterfacecolor: kotlin.Int? = null,
+
     /* The url of the picture used as logo in the Branding */
     @Json(name = "sBrandingLogourl")
-    val sBrandingLogourl: kotlin.String? = null
+    val sBrandingLogourl: kotlin.String? = null,
+
+    /* The url of the picture used as logo in the Branding */
+    @Json(name = "sBrandingLogointerfaceurl")
+    val sBrandingLogointerfaceurl: kotlin.String? = null
 
 )
 

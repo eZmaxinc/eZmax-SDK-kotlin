@@ -16,6 +16,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.FieldESystemconfigurationEzsign
+import eZmaxApi.models.FieldESystemconfigurationEzsignofficeplan
 import eZmaxApi.models.FieldESystemconfigurationLanguage1
 import eZmaxApi.models.FieldESystemconfigurationLanguage2
 import eZmaxApi.models.FieldESystemconfigurationNewexternaluseraction
@@ -33,6 +34,8 @@ import com.squareup.moshi.JsonClass
  * @param bSystemconfigurationSspr Whether if we allow SSPR
  * @param pkiSystemconfigurationID The unique ID of the Systemconfiguration
  * @param eSystemconfigurationEzsign 
+ * @param eSystemconfigurationEzsignofficeplan 
+ * @param bSystemconfigurationEzsignpaidbyoffice Whether if Ezsign is paid by the company or not
  * @param dtSystemconfigurationReadonlyexpirationstart The start date where the system will be in read only
  * @param dtSystemconfigurationReadonlyexpirationend The end date where the system will be in read only
  */
@@ -62,7 +65,15 @@ data class SystemconfigurationRequestCompound (
     val pkiSystemconfigurationID: kotlin.Int? = null,
 
     @Json(name = "eSystemconfigurationEzsign")
+    @Deprecated(message = "This property is deprecated.")
     val eSystemconfigurationEzsign: FieldESystemconfigurationEzsign? = null,
+
+    @Json(name = "eSystemconfigurationEzsignofficeplan")
+    val eSystemconfigurationEzsignofficeplan: FieldESystemconfigurationEzsignofficeplan? = null,
+
+    /* Whether if Ezsign is paid by the company or not */
+    @Json(name = "bSystemconfigurationEzsignpaidbyoffice")
+    val bSystemconfigurationEzsignpaidbyoffice: kotlin.Boolean? = null,
 
     /* The start date where the system will be in read only */
     @Json(name = "dtSystemconfigurationReadonlyexpirationstart")

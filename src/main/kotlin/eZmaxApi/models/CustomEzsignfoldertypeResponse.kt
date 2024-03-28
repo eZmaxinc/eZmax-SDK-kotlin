@@ -25,12 +25,10 @@ import com.squareup.moshi.JsonClass
  * @param pkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
  * @param sEzsignfoldertypeNameX The name of the Ezsignfoldertype in the language of the requester
  * @param bEzsignfoldertypeSendproofezsignsigner Whether we send the proof in the email to Ezsignsigner
- * @param bEzsignfoldertypeIncludeproofsigner THIS FIELD WILL BE DELETED. Whether we include the proof with the signed Ezsigndocument for Ezsignsigners
- * @param bEzsignfoldertypeIncludeproofuser Whether we include the proof with the signed Ezsigndocument for users
  * @param bEzsignfoldertypeAllowdownloadattachmentezsignsigner Whether we allow the Ezsigndocument to be downloaded by an Ezsignsigner
  * @param bEzsignfoldertypeAllowdownloadproofezsignsigner Whether we allow the proof to be downloaded by an Ezsignsigner
  * @param bEzsignfoldertypeDelegate Wheter if delegation of signature is allowed to another user or not
- * @param bEzsignfoldertypeReassign Wheter if Reassignment of signature is allowed to another signatory or not
+ * @param bEzsignfoldertypeDiscussion Wheter if creating a new Discussion is allowed or not
  * @param bEzsignfoldertypeReassignezsignsigner Wheter if Reassignment of signature is allowed by a signatory to another signatory or not
  * @param bEzsignfoldertypeReassignuser Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not
  */
@@ -50,14 +48,6 @@ data class CustomEzsignfoldertypeResponse (
     @Json(name = "bEzsignfoldertypeSendproofezsignsigner")
     val bEzsignfoldertypeSendproofezsignsigner: kotlin.Boolean? = null,
 
-    /* THIS FIELD WILL BE DELETED. Whether we include the proof with the signed Ezsigndocument for Ezsignsigners */
-    @Json(name = "bEzsignfoldertypeIncludeproofsigner")
-    val bEzsignfoldertypeIncludeproofsigner: kotlin.Boolean? = null,
-
-    /* Whether we include the proof with the signed Ezsigndocument for users */
-    @Json(name = "bEzsignfoldertypeIncludeproofuser")
-    val bEzsignfoldertypeIncludeproofuser: kotlin.Boolean? = null,
-
     /* Whether we allow the Ezsigndocument to be downloaded by an Ezsignsigner */
     @Json(name = "bEzsignfoldertypeAllowdownloadattachmentezsignsigner")
     val bEzsignfoldertypeAllowdownloadattachmentezsignsigner: kotlin.Boolean? = null,
@@ -70,9 +60,9 @@ data class CustomEzsignfoldertypeResponse (
     @Json(name = "bEzsignfoldertypeDelegate")
     val bEzsignfoldertypeDelegate: kotlin.Boolean? = null,
 
-    /* Wheter if Reassignment of signature is allowed to another signatory or not */
-    @Json(name = "bEzsignfoldertypeReassign")
-    val bEzsignfoldertypeReassign: kotlin.Boolean? = null,
+    /* Wheter if creating a new Discussion is allowed or not */
+    @Json(name = "bEzsignfoldertypeDiscussion")
+    val bEzsignfoldertypeDiscussion: kotlin.Boolean? = null,
 
     /* Wheter if Reassignment of signature is allowed by a signatory to another signatory or not */
     @Json(name = "bEzsignfoldertypeReassignezsignsigner")

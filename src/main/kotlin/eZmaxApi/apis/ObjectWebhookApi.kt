@@ -22,8 +22,6 @@ import okhttp3.HttpUrl
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.CommonResponseErrorTooManyRequests
 import eZmaxApi.models.HeaderAcceptLanguage
-import eZmaxApi.models.WebhookCreateObjectV1Request
-import eZmaxApi.models.WebhookCreateObjectV1Response
 import eZmaxApi.models.WebhookCreateObjectV2Request
 import eZmaxApi.models.WebhookCreateObjectV2Response
 import eZmaxApi.models.WebhookDeleteObjectV1Response
@@ -58,83 +56,6 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: OkHttp
         val defaultBasePath: String by lazy {
             System.getProperties().getProperty(ApiClient.baseUrlKey, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
-    }
-
-    /**
-     * Create a new Webhook
-     * The endpoint allows to create one or many elements at once.
-     * @param webhookCreateObjectV1Request 
-     * @return WebhookCreateObjectV1Response
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    @Deprecated(message = "This operation is deprecated.")
-    fun webhookCreateObjectV1(webhookCreateObjectV1Request: WebhookCreateObjectV1Request) : WebhookCreateObjectV1Response {
-        @Suppress("DEPRECATION")
-        val localVarResponse = webhookCreateObjectV1WithHttpInfo(webhookCreateObjectV1Request = webhookCreateObjectV1Request)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as WebhookCreateObjectV1Response
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * Create a new Webhook
-     * The endpoint allows to create one or many elements at once.
-     * @param webhookCreateObjectV1Request 
-     * @return ApiResponse<WebhookCreateObjectV1Response?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    @Deprecated(message = "This operation is deprecated.")
-    fun webhookCreateObjectV1WithHttpInfo(webhookCreateObjectV1Request: WebhookCreateObjectV1Request) : ApiResponse<WebhookCreateObjectV1Response?> {
-        @Suppress("DEPRECATION")
-        val localVariableConfig = webhookCreateObjectV1RequestConfig(webhookCreateObjectV1Request = webhookCreateObjectV1Request)
-
-        return request<WebhookCreateObjectV1Request, WebhookCreateObjectV1Response>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation webhookCreateObjectV1
-     *
-     * @param webhookCreateObjectV1Request 
-     * @return RequestConfig
-     */
-    @Deprecated(message = "This operation is deprecated.")
-    fun webhookCreateObjectV1RequestConfig(webhookCreateObjectV1Request: WebhookCreateObjectV1Request) : RequestConfig<WebhookCreateObjectV1Request> {
-        val localVariableBody = webhookCreateObjectV1Request
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Content-Type"] = "application/json"
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.POST,
-            path = "/1/object/webhook",
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            requiresAuthentication = true,
-            body = localVariableBody
-        )
     }
 
     /**

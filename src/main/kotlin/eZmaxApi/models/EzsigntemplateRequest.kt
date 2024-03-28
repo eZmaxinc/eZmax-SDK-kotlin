@@ -27,6 +27,7 @@ import com.squareup.moshi.JsonClass
  * @param sEzsigntemplateDescription The description of the Ezsigntemplate
  * @param bEzsigntemplateAdminonly Whether the Ezsigntemplate can be accessed by admin users only (eUserType=Normal)
  * @param pkiEzsigntemplateID The unique ID of the Ezsigntemplate
+ * @param sEzsigntemplateFilenamepattern The filename pattern of the Ezsigntemplate
  */
 
 
@@ -50,7 +51,11 @@ data class EzsigntemplateRequest (
 
     /* The unique ID of the Ezsigntemplate */
     @Json(name = "pkiEzsigntemplateID")
-    val pkiEzsigntemplateID: kotlin.Int? = null
+    val pkiEzsigntemplateID: kotlin.Int? = null,
+
+    /* The filename pattern of the Ezsigntemplate */
+    @Json(name = "sEzsigntemplateFilenamepattern")
+    val sEzsigntemplateFilenamepattern: kotlin.String? = null
 
 )
 

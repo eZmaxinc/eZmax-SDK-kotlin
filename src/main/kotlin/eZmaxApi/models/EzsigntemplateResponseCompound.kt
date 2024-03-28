@@ -18,6 +18,7 @@ package eZmaxApi.models
 import eZmaxApi.models.CommonAudit
 import eZmaxApi.models.EzsigntemplatedocumentResponse
 import eZmaxApi.models.EzsigntemplatesignerResponseCompound
+import eZmaxApi.models.FieldEEzsigntemplateType
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -26,15 +27,18 @@ import com.squareup.moshi.JsonClass
  * A Ezsigntemplate Object
  *
  * @param pkiEzsigntemplateID The unique ID of the Ezsigntemplate
- * @param fkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
  * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
  * @param sLanguageNameX The Name of the Language in the language of the requester
  * @param sEzsigntemplateDescription The description of the Ezsigntemplate
  * @param bEzsigntemplateAdminonly Whether the Ezsigntemplate can be accessed by admin users only (eUserType=Normal)
- * @param sEzsignfoldertypeNameX The name of the Ezsignfoldertype in the language of the requester
  * @param objAudit 
+ * @param bEzsigntemplateEditallowed Whether the Ezsigntemplate if allowed to edit or not
  * @param aObjEzsigntemplatesigner 
  * @param fkiEzsigntemplatedocumentID The unique ID of the Ezsigntemplatedocument
+ * @param fkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
+ * @param sEzsigntemplateFilenamepattern The filename pattern of the Ezsigntemplate
+ * @param sEzsignfoldertypeNameX The name of the Ezsignfoldertype in the language of the requester
+ * @param eEzsigntemplateType 
  * @param objEzsigntemplatedocument 
  */
 
@@ -44,10 +48,6 @@ data class EzsigntemplateResponseCompound (
     /* The unique ID of the Ezsigntemplate */
     @Json(name = "pkiEzsigntemplateID")
     val pkiEzsigntemplateID: kotlin.Int,
-
-    /* The unique ID of the Ezsignfoldertype. */
-    @Json(name = "fkiEzsignfoldertypeID")
-    val fkiEzsignfoldertypeID: kotlin.Int,
 
     /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| */
     @Json(name = "fkiLanguageID")
@@ -65,12 +65,12 @@ data class EzsigntemplateResponseCompound (
     @Json(name = "bEzsigntemplateAdminonly")
     val bEzsigntemplateAdminonly: kotlin.Boolean,
 
-    /* The name of the Ezsignfoldertype in the language of the requester */
-    @Json(name = "sEzsignfoldertypeNameX")
-    val sEzsignfoldertypeNameX: kotlin.String,
-
     @Json(name = "objAudit")
     val objAudit: CommonAudit,
+
+    /* Whether the Ezsigntemplate if allowed to edit or not */
+    @Json(name = "bEzsigntemplateEditallowed")
+    val bEzsigntemplateEditallowed: kotlin.Boolean,
 
     @Json(name = "a_objEzsigntemplatesigner")
     val aObjEzsigntemplatesigner: kotlin.collections.List<EzsigntemplatesignerResponseCompound>,
@@ -78,6 +78,21 @@ data class EzsigntemplateResponseCompound (
     /* The unique ID of the Ezsigntemplatedocument */
     @Json(name = "fkiEzsigntemplatedocumentID")
     val fkiEzsigntemplatedocumentID: kotlin.Int? = null,
+
+    /* The unique ID of the Ezsignfoldertype. */
+    @Json(name = "fkiEzsignfoldertypeID")
+    val fkiEzsignfoldertypeID: kotlin.Int? = null,
+
+    /* The filename pattern of the Ezsigntemplate */
+    @Json(name = "sEzsigntemplateFilenamepattern")
+    val sEzsigntemplateFilenamepattern: kotlin.String? = null,
+
+    /* The name of the Ezsignfoldertype in the language of the requester */
+    @Json(name = "sEzsignfoldertypeNameX")
+    val sEzsignfoldertypeNameX: kotlin.String? = null,
+
+    @Json(name = "eEzsigntemplateType")
+    val eEzsigntemplateType: FieldEEzsigntemplateType? = null,
 
     @Json(name = "objEzsigntemplatedocument")
     val objEzsigntemplatedocument: EzsigntemplatedocumentResponse? = null

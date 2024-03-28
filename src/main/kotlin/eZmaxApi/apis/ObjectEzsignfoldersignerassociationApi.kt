@@ -20,6 +20,8 @@ import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.EzsignfoldersignerassociationCreateEmbeddedUrlV1Request
+import eZmaxApi.models.EzsignfoldersignerassociationCreateEmbeddedUrlV1Response
 import eZmaxApi.models.EzsignfoldersignerassociationCreateObjectV1Request
 import eZmaxApi.models.EzsignfoldersignerassociationCreateObjectV1Response
 import eZmaxApi.models.EzsignfoldersignerassociationCreateObjectV2Request
@@ -56,6 +58,81 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
         val defaultBasePath: String by lazy {
             System.getProperties().getProperty(ApiClient.baseUrlKey, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
+    }
+
+    /**
+     * Creates an Url to allow embedded signing
+     * This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
+     * @param pkiEzsignfoldersignerassociationID 
+     * @param ezsignfoldersignerassociationCreateEmbeddedUrlV1Request 
+     * @return EzsignfoldersignerassociationCreateEmbeddedUrlV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignfoldersignerassociationCreateEmbeddedUrlV1(pkiEzsignfoldersignerassociationID: kotlin.Int, ezsignfoldersignerassociationCreateEmbeddedUrlV1Request: EzsignfoldersignerassociationCreateEmbeddedUrlV1Request) : EzsignfoldersignerassociationCreateEmbeddedUrlV1Response {
+        val localVarResponse = ezsignfoldersignerassociationCreateEmbeddedUrlV1WithHttpInfo(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationCreateEmbeddedUrlV1Request = ezsignfoldersignerassociationCreateEmbeddedUrlV1Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfoldersignerassociationCreateEmbeddedUrlV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Creates an Url to allow embedded signing
+     * This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
+     * @param pkiEzsignfoldersignerassociationID 
+     * @param ezsignfoldersignerassociationCreateEmbeddedUrlV1Request 
+     * @return ApiResponse<EzsignfoldersignerassociationCreateEmbeddedUrlV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignfoldersignerassociationCreateEmbeddedUrlV1WithHttpInfo(pkiEzsignfoldersignerassociationID: kotlin.Int, ezsignfoldersignerassociationCreateEmbeddedUrlV1Request: EzsignfoldersignerassociationCreateEmbeddedUrlV1Request) : ApiResponse<EzsignfoldersignerassociationCreateEmbeddedUrlV1Response?> {
+        val localVariableConfig = ezsignfoldersignerassociationCreateEmbeddedUrlV1RequestConfig(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationCreateEmbeddedUrlV1Request = ezsignfoldersignerassociationCreateEmbeddedUrlV1Request)
+
+        return request<EzsignfoldersignerassociationCreateEmbeddedUrlV1Request, EzsignfoldersignerassociationCreateEmbeddedUrlV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsignfoldersignerassociationCreateEmbeddedUrlV1
+     *
+     * @param pkiEzsignfoldersignerassociationID 
+     * @param ezsignfoldersignerassociationCreateEmbeddedUrlV1Request 
+     * @return RequestConfig
+     */
+    fun ezsignfoldersignerassociationCreateEmbeddedUrlV1RequestConfig(pkiEzsignfoldersignerassociationID: kotlin.Int, ezsignfoldersignerassociationCreateEmbeddedUrlV1Request: EzsignfoldersignerassociationCreateEmbeddedUrlV1Request) : RequestConfig<EzsignfoldersignerassociationCreateEmbeddedUrlV1Request> {
+        val localVariableBody = ezsignfoldersignerassociationCreateEmbeddedUrlV1Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/createEmbeddedUrl".replace("{"+"pkiEzsignfoldersignerassociationID"+"}", encodeURIComponent(pkiEzsignfoldersignerassociationID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
     }
 
     /**

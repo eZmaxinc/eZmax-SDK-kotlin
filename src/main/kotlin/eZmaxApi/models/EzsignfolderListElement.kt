@@ -35,9 +35,13 @@ import com.squareup.moshi.JsonClass
  * @param iEzsigndocumentEdm The total number of Ezsigndocument in the folder that were saved in the edm system
  * @param iEzsignsignature The total number of signature blocks in all Ezsigndocuments in the folder
  * @param iEzsignsignatureSigned The total number of already signed signature blocks in all Ezsigndocuments in the folder
+ * @param iEzsignformfieldgroup The total number of Ezsignformfieldgroup in all Ezsigndocuments in the folder
+ * @param iEzsignformfieldgroupCompleted The total number of completed Ezsignformfieldgroup in all Ezsigndocuments in the folder
+ * @param dEzsignfolderCompletedpercentage Whether the Ezsignform/Ezsignsignatures has dependencies or not
  * @param dtEzsignfolderDelayedsenddate The date and time at which the Ezsignfolder will be sent in the future.
  * @param dtEzsignfolderSentdate The date and time at which the Ezsignfolder was sent the last time.
  * @param dtEzsignfolderDuedate The maximum date and time at which the Ezsignfolder can be signed.
+ * @param bEzsignformHasdependencies Whether the Ezsignform/Ezsignsignatures has dependencies or not
  */
 
 
@@ -85,6 +89,18 @@ data class EzsignfolderListElement (
     @Json(name = "iEzsignsignatureSigned")
     val iEzsignsignatureSigned: kotlin.Int,
 
+    /* The total number of Ezsignformfieldgroup in all Ezsigndocuments in the folder */
+    @Json(name = "iEzsignformfieldgroup")
+    val iEzsignformfieldgroup: kotlin.Int,
+
+    /* The total number of completed Ezsignformfieldgroup in all Ezsigndocuments in the folder */
+    @Json(name = "iEzsignformfieldgroupCompleted")
+    val iEzsignformfieldgroupCompleted: kotlin.Int,
+
+    /* Whether the Ezsignform/Ezsignsignatures has dependencies or not */
+    @Json(name = "dEzsignfolderCompletedpercentage")
+    val dEzsignfolderCompletedpercentage: kotlin.String,
+
     /* The date and time at which the Ezsignfolder will be sent in the future. */
     @Json(name = "dtEzsignfolderDelayedsenddate")
     val dtEzsignfolderDelayedsenddate: kotlin.String? = null,
@@ -95,7 +111,11 @@ data class EzsignfolderListElement (
 
     /* The maximum date and time at which the Ezsignfolder can be signed. */
     @Json(name = "dtEzsignfolderDuedate")
-    val dtEzsignfolderDuedate: kotlin.String? = null
+    val dtEzsignfolderDuedate: kotlin.String? = null,
+
+    /* Whether the Ezsignform/Ezsignsignatures has dependencies or not */
+    @Json(name = "bEzsignformHasdependencies")
+    val bEzsignformHasdependencies: kotlin.Boolean? = null
 
 )
 

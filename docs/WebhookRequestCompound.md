@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **eWebhookEzsignevent** | [**FieldEWebhookEzsignevent**](FieldEWebhookEzsignevent.md) |  |  [optional]
 **eWebhookManagementevent** | [**FieldEWebhookManagementevent**](FieldEWebhookManagementevent.md) |  |  [optional]
 **bWebhookIssigned** | **kotlin.Boolean** | Whether the requests will be signed or not |  [optional]
+**aObjWebhookheader** | [**kotlin.collections.List&lt;WebhookheaderRequestCompound&gt;**](WebhookheaderRequestCompound.md) |  |  [optional]
 
 
 

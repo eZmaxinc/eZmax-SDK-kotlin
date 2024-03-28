@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **eEzsignfoldertypePrivacylevel** | [**FieldEEzsignfoldertypePrivacylevel**](FieldEEzsignfoldertypePrivacylevel.md) |  | 
 **iEzsignfoldertypeArchivaldays** | **kotlin.Int** | The number of days before the archival of Ezsignfolders created using this Ezsignfoldertype | 
 **eEzsignfoldertypeDisposal** | [**FieldEEzsignfoldertypeDisposal**](FieldEEzsignfoldertypeDisposal.md) |  | 
+**eEzsignfoldertypeCompletion** | [**FieldEEzsignfoldertypeCompletion**](FieldEEzsignfoldertypeCompletion.md) |  | 
 **iEzsignfoldertypeDeadlinedays** | **kotlin.Int** | The number of days to get all Ezsignsignatures | 
 **bEzsignfoldertypeSendsignedtodocumentowner** | **kotlin.Boolean** | Whether we send the signed Ezsigndocument to the Ezsigndocument&#39;s owner | 
 **bEzsignfoldertypeSendsignedtofolderowner** | **kotlin.Boolean** | Whether we send the signed Ezsigndocument to the Ezsignfolder&#39;s owner | 
@@ -16,7 +17,6 @@ Name | Type | Description | Notes
 **bEzsignfoldertypeSendsummarytodocumentowner** | **kotlin.Boolean** | Whether we send the summary to the Ezsigndocument&#39;s owner | 
 **bEzsignfoldertypeSendsummarytofolderowner** | **kotlin.Boolean** | Whether we send the summary to the Ezsignfolder&#39;s owner | 
 **bEzsignfoldertypeSendsummarytocolleague** | **kotlin.Boolean** | Whether we send the summary to the colleagues | 
-**bEzsignfoldertypeIncludeproofuser** | **kotlin.Boolean** | Whether we include the proof with the signed Ezsigndocument for users | 
 **bEzsignfoldertypeIsactive** | **kotlin.Boolean** | Whether the Ezsignfoldertype is active or not | 
 **pkiEzsignfoldertypeID** | **kotlin.Int** | The unique ID of the Ezsignfoldertype. |  [optional]
 **fkiBillingentityinternalID** | **kotlin.Int** | The unique ID of the Billingentityinternal. |  [optional]
@@ -26,13 +26,11 @@ Name | Type | Description | Notes
 **sEmailAddressSigned** | **kotlin.String** | The email address. |  [optional]
 **sEmailAddressSummary** | **kotlin.String** | The email address. |  [optional]
 **eEzsignfoldertypeSendreminderfrequency** | [**FieldEEzsignfoldertypeSendreminderfrequency**](FieldEEzsignfoldertypeSendreminderfrequency.md) |  |  [optional]
-**eEzsignfoldertypeCompletion** | [**FieldEEzsignfoldertypeCompletion**](FieldEEzsignfoldertypeCompletion.md) |  |  [optional]
 **iEzsignfoldertypeDisposaldays** | **kotlin.Int** | The number of days after the archival before the disposal of the Ezsignfolder |  [optional]
 **bEzsignfoldertypeDelegate** | **kotlin.Boolean** | Wheter if delegation of signature is allowed to another user or not |  [optional]
-**bEzsignfoldertypeReassign** | **kotlin.Boolean** | Wheter if Reassignment of signature is allowed to another signatory or not |  [optional]
+**bEzsignfoldertypeDiscussion** | **kotlin.Boolean** | Wheter if creating a new Discussion is allowed or not |  [optional]
 **bEzsignfoldertypeReassignezsignsigner** | **kotlin.Boolean** | Wheter if Reassignment of signature is allowed by a signatory to another signatory or not |  [optional]
 **bEzsignfoldertypeReassignuser** | **kotlin.Boolean** | Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not |  [optional]
-**bEzsignfoldertypeSendattatchmentsigner** | **kotlin.Boolean** | THIS FIELD WILL BE DELETED. Whether we send the Ezsigndocument and the proof as attachment in the email |  [optional]
 **bEzsignfoldertypeSendsignedtoezsignsigner** | **kotlin.Boolean** | Whether we send an email to Ezsignsigner  when document is completed |  [optional]
 **bEzsignfoldertypeSendsignedtouser** | **kotlin.Boolean** | Whether we send an email to User who signed when document is completed |  [optional]
 **bEzsignfoldertypeSendattachmentezsignsigner** | **kotlin.Boolean** | Whether we send the Ezsigndocument in the email to Ezsignsigner |  [optional]
@@ -47,7 +45,6 @@ Name | Type | Description | Notes
 **bEzsignfoldertypeSendsignedtolimitedgroup** | **kotlin.Boolean** | THIS FIELD WILL BE DELETED. Whether we send the signed Ezsigndocument to the Usergroup that has acces to only their own Ezsignfolders |  [optional]
 **bEzsignfoldertypeSendsummarytofullgroup** | **kotlin.Boolean** | Whether we send the summary to the Usergroup that has acces to all Ezsignfolders |  [optional]
 **bEzsignfoldertypeSendsummarytolimitedgroup** | **kotlin.Boolean** | Whether we send the summary to the Usergroup that has acces to only their own Ezsignfolders |  [optional]
-**bEzsignfoldertypeIncludeproofsigner** | **kotlin.Boolean** | THIS FIELD WILL BE DELETED. Whether we include the proof with the signed Ezsigndocument for Ezsignsigners |  [optional]
 **aFkiUserIDSigned** | **kotlin.collections.List&lt;kotlin.Int&gt;** |  |  [optional]
 **aFkiUserIDSummary** | **kotlin.collections.List&lt;kotlin.Int&gt;** |  |  [optional]
 

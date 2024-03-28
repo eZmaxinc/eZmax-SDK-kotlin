@@ -18,6 +18,7 @@ package eZmaxApi.models
 import eZmaxApi.models.FieldEWebhookEzsignevent
 import eZmaxApi.models.FieldEWebhookManagementevent
 import eZmaxApi.models.FieldEWebhookModule
+import eZmaxApi.models.WebhookheaderRequestCompound
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -36,6 +37,7 @@ import com.squareup.moshi.JsonClass
  * @param eWebhookEzsignevent 
  * @param eWebhookManagementevent 
  * @param bWebhookIssigned Whether the requests will be signed or not
+ * @param aObjWebhookheader 
  */
 
 
@@ -80,7 +82,10 @@ data class WebhookRequestCompound (
 
     /* Whether the requests will be signed or not */
     @Json(name = "bWebhookIssigned")
-    val bWebhookIssigned: kotlin.Boolean? = null
+    val bWebhookIssigned: kotlin.Boolean? = null,
+
+    @Json(name = "a_objWebhookheader")
+    val aObjWebhookheader: kotlin.collections.List<WebhookheaderRequestCompound>? = null
 
 )
 

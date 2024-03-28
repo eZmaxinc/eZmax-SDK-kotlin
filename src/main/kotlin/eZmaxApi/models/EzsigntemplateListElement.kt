@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.FieldEEzsigntemplateType
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -23,14 +24,15 @@ import com.squareup.moshi.JsonClass
  * A Ezsigntemplate List Element
  *
  * @param pkiEzsigntemplateID The unique ID of the Ezsigntemplate
- * @param fkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
  * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
  * @param sEzsigntemplateDescription The description of the Ezsigntemplate
  * @param bEzsigntemplateIncomplete Indicate the Ezsigntemplate is incomplete and cannot be used
- * @param sEzsignfoldertypeNameX The name of the Ezsignfoldertype in the language of the requester
+ * @param eEzsigntemplateType 
+ * @param fkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
  * @param iEzsigntemplatedocumentPagetotal The number of pages in the Ezsigntemplatedocument.
  * @param iEzsigntemplateSignaturetotal The number of total signatures in the Ezsigntemplate.
  * @param iEzsigntemplateFormfieldtotal The number of total form fields in the Ezsigntemplate.
+ * @param sEzsignfoldertypeNameX The name of the Ezsignfoldertype in the language of the requester
  */
 
 
@@ -39,10 +41,6 @@ data class EzsigntemplateListElement (
     /* The unique ID of the Ezsigntemplate */
     @Json(name = "pkiEzsigntemplateID")
     val pkiEzsigntemplateID: kotlin.Int,
-
-    /* The unique ID of the Ezsignfoldertype. */
-    @Json(name = "fkiEzsignfoldertypeID")
-    val fkiEzsignfoldertypeID: kotlin.Int,
 
     /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| */
     @Json(name = "fkiLanguageID")
@@ -56,9 +54,12 @@ data class EzsigntemplateListElement (
     @Json(name = "bEzsigntemplateIncomplete")
     val bEzsigntemplateIncomplete: kotlin.Boolean,
 
-    /* The name of the Ezsignfoldertype in the language of the requester */
-    @Json(name = "sEzsignfoldertypeNameX")
-    val sEzsignfoldertypeNameX: kotlin.String,
+    @Json(name = "eEzsigntemplateType")
+    val eEzsigntemplateType: FieldEEzsigntemplateType,
+
+    /* The unique ID of the Ezsignfoldertype. */
+    @Json(name = "fkiEzsignfoldertypeID")
+    val fkiEzsignfoldertypeID: kotlin.Int? = null,
 
     /* The number of pages in the Ezsigntemplatedocument. */
     @Json(name = "iEzsigntemplatedocumentPagetotal")
@@ -70,7 +71,11 @@ data class EzsigntemplateListElement (
 
     /* The number of total form fields in the Ezsigntemplate. */
     @Json(name = "iEzsigntemplateFormfieldtotal")
-    val iEzsigntemplateFormfieldtotal: kotlin.Int? = null
+    val iEzsigntemplateFormfieldtotal: kotlin.Int? = null,
+
+    /* The name of the Ezsignfoldertype in the language of the requester */
+    @Json(name = "sEzsignfoldertypeNameX")
+    val sEzsignfoldertypeNameX: kotlin.String? = null
 
 )
 

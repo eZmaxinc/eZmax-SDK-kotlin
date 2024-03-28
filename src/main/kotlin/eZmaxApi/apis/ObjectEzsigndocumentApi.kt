@@ -26,6 +26,8 @@ import eZmaxApi.models.EzsigndocumentApplyEzsigntemplateV1Request
 import eZmaxApi.models.EzsigndocumentApplyEzsigntemplateV1Response
 import eZmaxApi.models.EzsigndocumentApplyEzsigntemplateV2Request
 import eZmaxApi.models.EzsigndocumentApplyEzsigntemplateV2Response
+import eZmaxApi.models.EzsigndocumentApplyEzsigntemplateglobalV1Request
+import eZmaxApi.models.EzsigndocumentApplyEzsigntemplateglobalV1Response
 import eZmaxApi.models.EzsigndocumentCreateEzsignelementsPositionedByWordV1Request
 import eZmaxApi.models.EzsigndocumentCreateEzsignelementsPositionedByWordV1Response
 import eZmaxApi.models.EzsigndocumentCreateObjectV1Request
@@ -235,6 +237,81 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate".replace("{"+"pkiEzsigndocumentID"+"}", encodeURIComponent(pkiEzsigndocumentID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Apply an Ezsigntemplateglobal to the Ezsigndocument.
+     * This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+     * @param pkiEzsigndocumentID 
+     * @param ezsigndocumentApplyEzsigntemplateglobalV1Request 
+     * @return EzsigndocumentApplyEzsigntemplateglobalV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsigndocumentApplyEzsigntemplateglobalV1(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentApplyEzsigntemplateglobalV1Request: EzsigndocumentApplyEzsigntemplateglobalV1Request) : EzsigndocumentApplyEzsigntemplateglobalV1Response {
+        val localVarResponse = ezsigndocumentApplyEzsigntemplateglobalV1WithHttpInfo(pkiEzsigndocumentID = pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateglobalV1Request = ezsigndocumentApplyEzsigntemplateglobalV1Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigndocumentApplyEzsigntemplateglobalV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Apply an Ezsigntemplateglobal to the Ezsigndocument.
+     * This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+     * @param pkiEzsigndocumentID 
+     * @param ezsigndocumentApplyEzsigntemplateglobalV1Request 
+     * @return ApiResponse<EzsigndocumentApplyEzsigntemplateglobalV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsigndocumentApplyEzsigntemplateglobalV1WithHttpInfo(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentApplyEzsigntemplateglobalV1Request: EzsigndocumentApplyEzsigntemplateglobalV1Request) : ApiResponse<EzsigndocumentApplyEzsigntemplateglobalV1Response?> {
+        val localVariableConfig = ezsigndocumentApplyEzsigntemplateglobalV1RequestConfig(pkiEzsigndocumentID = pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateglobalV1Request = ezsigndocumentApplyEzsigntemplateglobalV1Request)
+
+        return request<EzsigndocumentApplyEzsigntemplateglobalV1Request, EzsigndocumentApplyEzsigntemplateglobalV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsigndocumentApplyEzsigntemplateglobalV1
+     *
+     * @param pkiEzsigndocumentID 
+     * @param ezsigndocumentApplyEzsigntemplateglobalV1Request 
+     * @return RequestConfig
+     */
+    fun ezsigndocumentApplyEzsigntemplateglobalV1RequestConfig(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentApplyEzsigntemplateglobalV1Request: EzsigndocumentApplyEzsigntemplateglobalV1Request) : RequestConfig<EzsigndocumentApplyEzsigntemplateglobalV1Request> {
+        val localVariableBody = ezsigndocumentApplyEzsigntemplateglobalV1Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplateglobal".replace("{"+"pkiEzsigndocumentID"+"}", encodeURIComponent(pkiEzsigndocumentID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

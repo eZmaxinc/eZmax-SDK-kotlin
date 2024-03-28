@@ -19,7 +19,6 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonGetAutocompleteV1Response
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.EzmaxinvoicingGetAutocompleteV2Response
 import eZmaxApi.models.EzmaxinvoicingGetObjectV2Response
@@ -48,116 +47,6 @@ class ObjectEzmaxinvoicingApi(basePath: kotlin.String = defaultBasePath, client:
         val defaultBasePath: String by lazy {
             System.getProperties().getProperty(ApiClient.baseUrlKey, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
-    }
-
-    /**
-     * enum for parameter sSelector
-     */
-     enum class SSelectorEzmaxinvoicingGetAutocompleteV1(val value: kotlin.String) {
-         @Json(name = "All") All("All")
-     }
-
-    /**
-     * enum for parameter eFilterActive
-     */
-     enum class EFilterActiveEzmaxinvoicingGetAutocompleteV1(val value: kotlin.String) {
-         @Json(name = "All") All("All"),
-         @Json(name = "Active") Active("Active"),
-         @Json(name = "Inactive") Inactive("Inactive")
-     }
-
-    /**
-     * Retrieve Ezmaxinvoicings and IDs
-     * Get the list of Ezmaxinvoicing to be used in a dropdown or autocomplete control.
-     * @param sSelector The type of Ezmaxinvoicings to return
-     * @param eFilterActive Specify which results we want to display. Active is the default value. (optional)
-     * @param sQuery Allow to filter the returned results (optional)
-     * @param acceptLanguage  (optional)
-     * @return CommonGetAutocompleteV1Response
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    @Deprecated(message = "This operation is deprecated.")
-    fun ezmaxinvoicingGetAutocompleteV1(sSelector: SSelectorEzmaxinvoicingGetAutocompleteV1, eFilterActive: EFilterActiveEzmaxinvoicingGetAutocompleteV1? = null, sQuery: kotlin.String? = null, acceptLanguage: HeaderAcceptLanguage? = null) : CommonGetAutocompleteV1Response {
-        @Suppress("DEPRECATION")
-        val localVarResponse = ezmaxinvoicingGetAutocompleteV1WithHttpInfo(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonGetAutocompleteV1Response
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * Retrieve Ezmaxinvoicings and IDs
-     * Get the list of Ezmaxinvoicing to be used in a dropdown or autocomplete control.
-     * @param sSelector The type of Ezmaxinvoicings to return
-     * @param eFilterActive Specify which results we want to display. Active is the default value. (optional)
-     * @param sQuery Allow to filter the returned results (optional)
-     * @param acceptLanguage  (optional)
-     * @return ApiResponse<CommonGetAutocompleteV1Response?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    @Deprecated(message = "This operation is deprecated.")
-    fun ezmaxinvoicingGetAutocompleteV1WithHttpInfo(sSelector: SSelectorEzmaxinvoicingGetAutocompleteV1, eFilterActive: EFilterActiveEzmaxinvoicingGetAutocompleteV1?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : ApiResponse<CommonGetAutocompleteV1Response?> {
-        @Suppress("DEPRECATION")
-        val localVariableConfig = ezmaxinvoicingGetAutocompleteV1RequestConfig(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
-
-        return request<Unit, CommonGetAutocompleteV1Response>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation ezmaxinvoicingGetAutocompleteV1
-     *
-     * @param sSelector The type of Ezmaxinvoicings to return
-     * @param eFilterActive Specify which results we want to display. Active is the default value. (optional)
-     * @param sQuery Allow to filter the returned results (optional)
-     * @param acceptLanguage  (optional)
-     * @return RequestConfig
-     */
-    @Deprecated(message = "This operation is deprecated.")
-    fun ezmaxinvoicingGetAutocompleteV1RequestConfig(sSelector: SSelectorEzmaxinvoicingGetAutocompleteV1, eFilterActive: EFilterActiveEzmaxinvoicingGetAutocompleteV1?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : RequestConfig<Unit> {
-        val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
-            .apply {
-                if (eFilterActive != null) {
-                    put("eFilterActive", listOf(eFilterActive.value))
-                }
-                if (sQuery != null) {
-                    put("sQuery", listOf(sQuery.toString()))
-                }
-            }
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.GET,
-            path = "/1/object/ezmaxinvoicing/getAutocomplete/{sSelector}".replace("{"+"sSelector"+"}", encodeURIComponent(sSelector.value.toString())),
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            requiresAuthentication = true,
-            body = localVariableBody
-        )
     }
 
     /**

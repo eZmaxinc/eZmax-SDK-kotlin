@@ -31,6 +31,7 @@ import com.squareup.moshi.JsonClass
  * @param bEzsigntemplatepackageNeedvalidation Whether the Ezsignbulksend was automatically modified and needs a manual validation
  * @param bEzsigntemplatepackageIsactive Whether the Ezsigntemplatepackage is active or not
  * @param sEzsignfoldertypeNameX The name of the Ezsignfoldertype in the language of the requester
+ * @param bEzsigntemplatepackageEditallowed Whether the Ezsigntemplatepackage if allowed to edit or not
  */
 
 
@@ -70,7 +71,11 @@ data class EzsigntemplatepackageResponse (
 
     /* The name of the Ezsignfoldertype in the language of the requester */
     @Json(name = "sEzsignfoldertypeNameX")
-    val sEzsignfoldertypeNameX: kotlin.String
+    val sEzsignfoldertypeNameX: kotlin.String,
+
+    /* Whether the Ezsigntemplatepackage if allowed to edit or not */
+    @Json(name = "bEzsigntemplatepackageEditallowed")
+    val bEzsigntemplatepackageEditallowed: kotlin.Boolean
 
 )
 

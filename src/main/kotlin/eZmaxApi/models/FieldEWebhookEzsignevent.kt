@@ -22,7 +22,7 @@ import com.squareup.moshi.JsonClass
 /**
  * This Ezsign Event. This property will be set only if the Module is \"Ezsign\"
  *
- * Values: DocumentCompleted,EzsignsignerAcceptclause,EzsignsignerConnect,FolderCompleted
+ * Values: DocumentCompleted,DocumentFormCompleted,DocumentUnsent,EzsignsignerAcceptclause,EzsignsignerConnect,FolderCompleted,FolderDisposed,FolderSent,FolderUnsent,SignatureSigned
  */
 
 @JsonClass(generateAdapter = false)
@@ -31,6 +31,12 @@ enum class FieldEWebhookEzsignevent(val value: kotlin.String) {
     @Json(name = "DocumentCompleted")
     DocumentCompleted("DocumentCompleted"),
 
+    @Json(name = "DocumentFormCompleted")
+    DocumentFormCompleted("DocumentFormCompleted"),
+
+    @Json(name = "DocumentUnsent")
+    DocumentUnsent("DocumentUnsent"),
+
     @Json(name = "EzsignsignerAcceptclause")
     EzsignsignerAcceptclause("EzsignsignerAcceptclause"),
 
@@ -38,7 +44,19 @@ enum class FieldEWebhookEzsignevent(val value: kotlin.String) {
     EzsignsignerConnect("EzsignsignerConnect"),
 
     @Json(name = "FolderCompleted")
-    FolderCompleted("FolderCompleted");
+    FolderCompleted("FolderCompleted"),
+
+    @Json(name = "FolderDisposed")
+    FolderDisposed("FolderDisposed"),
+
+    @Json(name = "FolderSent")
+    FolderSent("FolderSent"),
+
+    @Json(name = "FolderUnsent")
+    FolderUnsent("FolderUnsent"),
+
+    @Json(name = "SignatureSigned")
+    SignatureSigned("SignatureSigned");
 
     /**
      * Override [toString()] to avoid using the enum variable name as the value, and instead use

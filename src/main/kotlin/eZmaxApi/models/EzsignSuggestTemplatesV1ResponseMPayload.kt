@@ -16,6 +16,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.EzsigntemplateResponseCompound
+import eZmaxApi.models.EzsigntemplateglobalResponseCompound
 import eZmaxApi.models.EzsigntemplatepackageResponseCompound
 
 import com.squareup.moshi.Json
@@ -26,6 +27,7 @@ import com.squareup.moshi.JsonClass
  *
  * @param aObjEzsigntemplate 
  * @param aObjEzsigntemplatepackage 
+ * @param aObjEzsigntemplateglobal 
  */
 
 
@@ -35,7 +37,10 @@ data class EzsignSuggestTemplatesV1ResponseMPayload (
     val aObjEzsigntemplate: kotlin.collections.List<EzsigntemplateResponseCompound>,
 
     @Json(name = "a_objEzsigntemplatepackage")
-    val aObjEzsigntemplatepackage: kotlin.collections.List<EzsigntemplatepackageResponseCompound>
+    val aObjEzsigntemplatepackage: kotlin.collections.List<EzsigntemplatepackageResponseCompound>,
+
+    @Json(name = "a_objEzsigntemplateglobal")
+    val aObjEzsigntemplateglobal: kotlin.collections.List<EzsigntemplateglobalResponseCompound>
 
 )
 

@@ -331,7 +331,7 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
 
     /**
      * Retrieve Branding list
-     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eBrandingLogo | Default&lt;br&gt;JPEG&lt;br&gt;PNG |
+     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eBrandingLogo | Default&lt;br&gt;JPEG&lt;br&gt;PNG | | eBrandingLogointerface | Default&lt;br&gt;JPEG&lt;br&gt;PNG |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
      * @param iRowMax  (optional)
      * @param iRowOffset  (optional, default to 0)
@@ -366,7 +366,7 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
 
     /**
      * Retrieve Branding list
-     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eBrandingLogo | Default&lt;br&gt;JPEG&lt;br&gt;PNG |
+     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eBrandingLogo | Default&lt;br&gt;JPEG&lt;br&gt;PNG | | eBrandingLogointerface | Default&lt;br&gt;JPEG&lt;br&gt;PNG |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
      * @param iRowMax  (optional)
      * @param iRowOffset  (optional, default to 0)

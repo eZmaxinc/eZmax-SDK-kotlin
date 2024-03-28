@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **sEzsigntemplateDescription** | **kotlin.String** | The description of the Ezsigntemplate | 
 **bEzsigntemplateAdminonly** | **kotlin.Boolean** | Whether the Ezsigntemplate can be accessed by admin users only (eUserType&#x3D;Normal) | 
 **pkiEzsigntemplateID** | **kotlin.Int** | The unique ID of the Ezsigntemplate |  [optional]
+**sEzsigntemplateFilenamepattern** | **kotlin.String** | The filename pattern of the Ezsigntemplate |  [optional]
 
 
 

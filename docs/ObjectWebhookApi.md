@@ -4,7 +4,6 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**webhookCreateObjectV1**](ObjectWebhookApi.md#webhookCreateObjectV1) | **POST** /1/object/webhook | Create a new Webhook
 [**webhookCreateObjectV2**](ObjectWebhookApi.md#webhookCreateObjectV2) | **POST** /2/object/webhook | Create a new Webhook
 [**webhookDeleteObjectV1**](ObjectWebhookApi.md#webhookDeleteObjectV1) | **DELETE** /1/object/webhook/{pkiWebhookID} | Delete an existing Webhook
 [**webhookEditObjectV1**](ObjectWebhookApi.md#webhookEditObjectV1) | **PUT** /1/object/webhook/{pkiWebhookID} | Edit an existing Webhook
@@ -14,56 +13,6 @@ Method | HTTP request | Description
 [**webhookRegenerateApikeyV1**](ObjectWebhookApi.md#webhookRegenerateApikeyV1) | **POST** /1/object/webhook/{pkiWebhookID}/regenerateApikey | Regenerate the Apikey
 [**webhookTestV1**](ObjectWebhookApi.md#webhookTestV1) | **POST** /1/object/webhook/{pkiWebhookID}/test | Test the Webhook by calling the Url
 
-
-<a id="webhookCreateObjectV1"></a>
-# **webhookCreateObjectV1**
-> WebhookCreateObjectV1Response webhookCreateObjectV1(webhookCreateObjectV1Request)
-
-Create a new Webhook
-
-The endpoint allows to create one or many elements at once.
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectWebhookApi()
-val webhookCreateObjectV1Request : WebhookCreateObjectV1Request =  // WebhookCreateObjectV1Request | 
-try {
-    val result : WebhookCreateObjectV1Response = apiInstance.webhookCreateObjectV1(webhookCreateObjectV1Request)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectWebhookApi#webhookCreateObjectV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectWebhookApi#webhookCreateObjectV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **webhookCreateObjectV1Request** | [**WebhookCreateObjectV1Request**](WebhookCreateObjectV1Request.md)|  |
-
-### Return type
-
-[**WebhookCreateObjectV1Response**](WebhookCreateObjectV1Response.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
 
 <a id="webhookCreateObjectV2"></a>
 # **webhookCreateObjectV2**

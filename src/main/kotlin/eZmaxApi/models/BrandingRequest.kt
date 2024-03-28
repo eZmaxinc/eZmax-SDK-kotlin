@@ -16,6 +16,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.FieldEBrandingLogo
+import eZmaxApi.models.FieldEBrandingLogointerface
 import eZmaxApi.models.MultilingualBrandingDescription
 
 import com.squareup.moshi.Json
@@ -35,6 +36,9 @@ import com.squareup.moshi.JsonClass
  * @param bBrandingIsactive Whether the Branding is active or not
  * @param pkiBrandingID The unique ID of the Branding
  * @param sBrandingBase64 The Base64 encoded binary content of the branding logo. This need to match image type selected in eBrandingLogo if you supply an image. If you select 'Default', the logo will be deleted and the default one will be used.
+ * @param eBrandingLogointerface 
+ * @param sBrandingLogointerfaceBase64 The Base64 encoded binary content of the branding logo. This need to match image type selected in eBrandingLogointerface if you supply an image. If you select 'Default', the logo will be deleted and the default one will be used.
+ * @param iBrandingInterfacecolor The color of the interface. This is a RGB color converted into integer
  * @param sBrandingName The name of the Branding  This value will only be set if you wish to overwrite the default name. If you want to keep the default name, leave this property empty
  * @param sEmailAddress The email address.
  */
@@ -83,6 +87,17 @@ data class BrandingRequest (
     /* The Base64 encoded binary content of the branding logo. This need to match image type selected in eBrandingLogo if you supply an image. If you select 'Default', the logo will be deleted and the default one will be used. */
     @Json(name = "sBrandingBase64")
     val sBrandingBase64: kotlin.ByteArray? = null,
+
+    @Json(name = "eBrandingLogointerface")
+    val eBrandingLogointerface: FieldEBrandingLogointerface? = FieldEBrandingLogointerface.Default,
+
+    /* The Base64 encoded binary content of the branding logo. This need to match image type selected in eBrandingLogointerface if you supply an image. If you select 'Default', the logo will be deleted and the default one will be used. */
+    @Json(name = "sBrandingLogointerfaceBase64")
+    val sBrandingLogointerfaceBase64: kotlin.ByteArray? = null,
+
+    /* The color of the interface. This is a RGB color converted into integer */
+    @Json(name = "iBrandingInterfacecolor")
+    val iBrandingInterfacecolor: kotlin.Int? = null,
 
     /* The name of the Branding  This value will only be set if you wish to overwrite the default name. If you want to keep the default name, leave this property empty */
     @Json(name = "sBrandingName")

@@ -25,14 +25,14 @@ import com.squareup.moshi.JsonClass
  *
  * @param pkiUserID The unique ID of the User
  * @param fkiTimezoneID The unique ID of the Timezone
- * @param sAvatarUrl The url of the picture used as avatar
  * @param sUserFirstname The first name of the user
  * @param sUserLastname The last name of the user
- * @param sEmailAddress The email address.
  * @param eUserEzsignsendreminderfrequency 
  * @param iUserInterfacecolor The int32 representation of the interface color. For example, RGB color #39435B would be 3752795
  * @param bUserInterfacedark Whether to use a dark mode interface
  * @param iUserListresult The number of rows to return by default in lists
+ * @param sAvatarUrl The url of the picture used as avatar
+ * @param sEmailAddress The email address.
  */
 
 
@@ -46,10 +46,6 @@ data class ActivesessionResponseCompoundUser (
     @Json(name = "fkiTimezoneID")
     val fkiTimezoneID: kotlin.Int,
 
-    /* The url of the picture used as avatar */
-    @Json(name = "sAvatarUrl")
-    val sAvatarUrl: kotlin.String,
-
     /* The first name of the user */
     @Json(name = "sUserFirstname")
     val sUserFirstname: kotlin.String,
@@ -57,10 +53,6 @@ data class ActivesessionResponseCompoundUser (
     /* The last name of the user */
     @Json(name = "sUserLastname")
     val sUserLastname: kotlin.String,
-
-    /* The email address. */
-    @Json(name = "sEmailAddress")
-    val sEmailAddress: kotlin.String,
 
     @Json(name = "eUserEzsignsendreminderfrequency")
     val eUserEzsignsendreminderfrequency: FieldEUserEzsignsendreminderfrequency,
@@ -75,7 +67,15 @@ data class ActivesessionResponseCompoundUser (
 
     /* The number of rows to return by default in lists */
     @Json(name = "iUserListresult")
-    val iUserListresult: kotlin.Int
+    val iUserListresult: kotlin.Int,
+
+    /* The url of the picture used as avatar */
+    @Json(name = "sAvatarUrl")
+    val sAvatarUrl: kotlin.String? = null,
+
+    /* The email address. */
+    @Json(name = "sEmailAddress")
+    val sEmailAddress: kotlin.String? = null
 
 )
 

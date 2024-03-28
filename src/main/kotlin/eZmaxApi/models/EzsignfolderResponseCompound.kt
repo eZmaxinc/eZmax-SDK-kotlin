@@ -28,10 +28,10 @@ import com.squareup.moshi.JsonClass
  * An Ezsignfolder Object and children to create a complete structure
  *
  * @param pkiEzsignfolderID The unique ID of the Ezsignfolder
+ * @param eEzsignfolderCompletion 
  * @param sEzsignfolderDescription The description of the Ezsignfolder
  * @param fkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
  * @param objEzsignfoldertype 
- * @param eEzsignfolderCompletion 
  * @param sEzsignfoldertypeNameX 
  * @param fkiBillingentityinternalID The unique ID of the Billingentityinternal.
  * @param sBillingentityinternalDescriptionX The description of the Billingentityinternal in the language of the requester
@@ -59,6 +59,9 @@ data class EzsignfolderResponseCompound (
     @Json(name = "pkiEzsignfolderID")
     val pkiEzsignfolderID: kotlin.Int,
 
+    @Json(name = "eEzsignfolderCompletion")
+    val eEzsignfolderCompletion: FieldEEzsignfolderCompletion,
+
     /* The description of the Ezsignfolder */
     @Json(name = "sEzsignfolderDescription")
     val sEzsignfolderDescription: kotlin.String,
@@ -69,9 +72,6 @@ data class EzsignfolderResponseCompound (
 
     @Json(name = "objEzsignfoldertype")
     val objEzsignfoldertype: CustomEzsignfoldertypeResponse? = null,
-
-    @Json(name = "eEzsignfolderCompletion")
-    val eEzsignfolderCompletion: FieldEEzsignfolderCompletion? = FieldEEzsignfolderCompletion.PerEzsigndocument,
 
     @Json(name = "sEzsignfoldertypeNameX")
     @Deprecated(message = "This property is deprecated.")

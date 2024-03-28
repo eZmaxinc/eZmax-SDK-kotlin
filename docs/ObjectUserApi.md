@@ -5,6 +5,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**userCreateObjectV1**](ObjectUserApi.md#userCreateObjectV1) | **POST** /1/object/user | Create a new User
+[**userCreateObjectV2**](ObjectUserApi.md#userCreateObjectV2) | **POST** /2/object/user | Create a new User
 [**userEditObjectV1**](ObjectUserApi.md#userEditObjectV1) | **PUT** /1/object/user/{pkiUserID} | Edit an existing User
 [**userEditPermissionsV1**](ObjectUserApi.md#userEditPermissionsV1) | **PUT** /1/object/user/{pkiUserID}/editPermissions | Edit multiple Permissions
 [**userGetApikeysV1**](ObjectUserApi.md#userGetApikeysV1) | **GET** /1/object/user/{pkiUserID}/getApikeys | Retrieve an existing User&#39;s Apikeys
@@ -14,6 +15,8 @@ Method | HTTP request | Description
 [**userGetObjectV2**](ObjectUserApi.md#userGetObjectV2) | **GET** /2/object/user/{pkiUserID} | Retrieve an existing User
 [**userGetPermissionsV1**](ObjectUserApi.md#userGetPermissionsV1) | **GET** /1/object/user/{pkiUserID}/getPermissions | Retrieve an existing User&#39;s Permissions
 [**userGetSubnetsV1**](ObjectUserApi.md#userGetSubnetsV1) | **GET** /1/object/user/{pkiUserID}/getSubnets | Retrieve an existing User&#39;s Subnets
+[**userGetUsergroupexternalsV1**](ObjectUserApi.md#userGetUsergroupexternalsV1) | **GET** /1/object/user/{pkiUserID}/getUsergroupexternals | Get User&#39;s Usergroupexternals
+[**userGetUsergroupsV1**](ObjectUserApi.md#userGetUsergroupsV1) | **GET** /1/object/user/{pkiUserID}/getUsergroups | Get User&#39;s Usergroups
 [**userSendPasswordResetV1**](ObjectUserApi.md#userSendPasswordResetV1) | **POST** /1/object/user/{pkiUserID}/sendPasswordReset | Send password reset
 
 
@@ -54,6 +57,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**UserCreateObjectV1Response**](UserCreateObjectV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a id="userCreateObjectV2"></a>
+# **userCreateObjectV2**
+> UserCreateObjectV2Response userCreateObjectV2(userCreateObjectV2Request)
+
+Create a new User
+
+The endpoint allows to create one or many elements at once.
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectUserApi()
+val userCreateObjectV2Request : UserCreateObjectV2Request =  // UserCreateObjectV2Request | 
+try {
+    val result : UserCreateObjectV2Response = apiInstance.userCreateObjectV2(userCreateObjectV2Request)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectUserApi#userCreateObjectV2")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectUserApi#userCreateObjectV2")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userCreateObjectV2Request** | [**UserCreateObjectV2Request**](UserCreateObjectV2Request.md)|  |
+
+### Return type
+
+[**UserCreateObjectV2Response**](UserCreateObjectV2Response.md)
 
 ### Authorization
 
@@ -516,6 +569,102 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**UserGetSubnetsV1Response**](UserGetSubnetsV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="userGetUsergroupexternalsV1"></a>
+# **userGetUsergroupexternalsV1**
+> UserGetUsergroupexternalsV1Response userGetUsergroupexternalsV1(pkiUserID)
+
+Get User&#39;s Usergroupexternals
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectUserApi()
+val pkiUserID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : UserGetUsergroupexternalsV1Response = apiInstance.userGetUsergroupexternalsV1(pkiUserID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectUserApi#userGetUsergroupexternalsV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectUserApi#userGetUsergroupexternalsV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiUserID** | **kotlin.Int**|  |
+
+### Return type
+
+[**UserGetUsergroupexternalsV1Response**](UserGetUsergroupexternalsV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="userGetUsergroupsV1"></a>
+# **userGetUsergroupsV1**
+> UserGetUsergroupsV1Response userGetUsergroupsV1(pkiUserID)
+
+Get User&#39;s Usergroups
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectUserApi()
+val pkiUserID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : UserGetUsergroupsV1Response = apiInstance.userGetUsergroupsV1(pkiUserID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectUserApi#userGetUsergroupsV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectUserApi#userGetUsergroupsV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiUserID** | **kotlin.Int**|  |
+
+### Return type
+
+[**UserGetUsergroupsV1Response**](UserGetUsergroupsV1Response.md)
 
 ### Authorization
 

@@ -23,6 +23,8 @@ import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.HeaderAcceptLanguage
 import eZmaxApi.models.UserCreateObjectV1Request
 import eZmaxApi.models.UserCreateObjectV1Response
+import eZmaxApi.models.UserCreateObjectV2Request
+import eZmaxApi.models.UserCreateObjectV2Response
 import eZmaxApi.models.UserEditObjectV1Request
 import eZmaxApi.models.UserEditObjectV1Response
 import eZmaxApi.models.UserEditPermissionsV1Request
@@ -34,6 +36,8 @@ import eZmaxApi.models.UserGetListV1Response
 import eZmaxApi.models.UserGetObjectV2Response
 import eZmaxApi.models.UserGetPermissionsV1Response
 import eZmaxApi.models.UserGetSubnetsV1Response
+import eZmaxApi.models.UserGetUsergroupexternalsV1Response
+import eZmaxApi.models.UserGetUsergroupsV1Response
 import eZmaxApi.models.UserSendPasswordResetV1Response
 
 import com.squareup.moshi.Json
@@ -125,6 +129,78 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/user",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Create a new User
+     * The endpoint allows to create one or many elements at once.
+     * @param userCreateObjectV2Request 
+     * @return UserCreateObjectV2Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun userCreateObjectV2(userCreateObjectV2Request: UserCreateObjectV2Request) : UserCreateObjectV2Response {
+        val localVarResponse = userCreateObjectV2WithHttpInfo(userCreateObjectV2Request = userCreateObjectV2Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as UserCreateObjectV2Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Create a new User
+     * The endpoint allows to create one or many elements at once.
+     * @param userCreateObjectV2Request 
+     * @return ApiResponse<UserCreateObjectV2Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun userCreateObjectV2WithHttpInfo(userCreateObjectV2Request: UserCreateObjectV2Request) : ApiResponse<UserCreateObjectV2Response?> {
+        val localVariableConfig = userCreateObjectV2RequestConfig(userCreateObjectV2Request = userCreateObjectV2Request)
+
+        return request<UserCreateObjectV2Request, UserCreateObjectV2Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation userCreateObjectV2
+     *
+     * @param userCreateObjectV2Request 
+     * @return RequestConfig
+     */
+    fun userCreateObjectV2RequestConfig(userCreateObjectV2Request: UserCreateObjectV2Request) : RequestConfig<UserCreateObjectV2Request> {
+        val localVariableBody = userCreateObjectV2Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/2/object/user",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,
@@ -865,6 +941,148 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/user/{pkiUserID}/getSubnets".replace("{"+"pkiUserID"+"}", encodeURIComponent(pkiUserID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Get User&#39;s Usergroupexternals
+     * 
+     * @param pkiUserID 
+     * @return UserGetUsergroupexternalsV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun userGetUsergroupexternalsV1(pkiUserID: kotlin.Int) : UserGetUsergroupexternalsV1Response {
+        val localVarResponse = userGetUsergroupexternalsV1WithHttpInfo(pkiUserID = pkiUserID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as UserGetUsergroupexternalsV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Get User&#39;s Usergroupexternals
+     * 
+     * @param pkiUserID 
+     * @return ApiResponse<UserGetUsergroupexternalsV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun userGetUsergroupexternalsV1WithHttpInfo(pkiUserID: kotlin.Int) : ApiResponse<UserGetUsergroupexternalsV1Response?> {
+        val localVariableConfig = userGetUsergroupexternalsV1RequestConfig(pkiUserID = pkiUserID)
+
+        return request<Unit, UserGetUsergroupexternalsV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation userGetUsergroupexternalsV1
+     *
+     * @param pkiUserID 
+     * @return RequestConfig
+     */
+    fun userGetUsergroupexternalsV1RequestConfig(pkiUserID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/user/{pkiUserID}/getUsergroupexternals".replace("{"+"pkiUserID"+"}", encodeURIComponent(pkiUserID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Get User&#39;s Usergroups
+     * 
+     * @param pkiUserID 
+     * @return UserGetUsergroupsV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun userGetUsergroupsV1(pkiUserID: kotlin.Int) : UserGetUsergroupsV1Response {
+        val localVarResponse = userGetUsergroupsV1WithHttpInfo(pkiUserID = pkiUserID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as UserGetUsergroupsV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Get User&#39;s Usergroups
+     * 
+     * @param pkiUserID 
+     * @return ApiResponse<UserGetUsergroupsV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun userGetUsergroupsV1WithHttpInfo(pkiUserID: kotlin.Int) : ApiResponse<UserGetUsergroupsV1Response?> {
+        val localVariableConfig = userGetUsergroupsV1RequestConfig(pkiUserID = pkiUserID)
+
+        return request<Unit, UserGetUsergroupsV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation userGetUsergroupsV1
+     *
+     * @param pkiUserID 
+     * @return RequestConfig
+     */
+    fun userGetUsergroupsV1RequestConfig(pkiUserID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/user/{pkiUserID}/getUsergroups".replace("{"+"pkiUserID"+"}", encodeURIComponent(pkiUserID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

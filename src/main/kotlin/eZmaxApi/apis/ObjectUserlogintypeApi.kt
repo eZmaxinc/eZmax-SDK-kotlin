@@ -50,7 +50,8 @@ class ObjectUserlogintypeApi(basePath: kotlin.String = defaultBasePath, client: 
      * enum for parameter sSelector
      */
      enum class SSelectorUserlogintypeGetAutocompleteV2(val value: kotlin.String) {
-         @Json(name = "All") All("All")
+         @Json(name = "All") All("All"),
+         @Json(name = "Ezsignfoldertype") Ezsignfoldertype("Ezsignfoldertype")
      }
 
     /**
@@ -66,6 +67,7 @@ class ObjectUserlogintypeApi(basePath: kotlin.String = defaultBasePath, client: 
      * Retrieve Userlogintypes and IDs
      * Get the list of Userlogintype to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Userlogintypes to return
+     * @param fkiEzsignfoldertypeID  (optional)
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
@@ -78,8 +80,8 @@ class ObjectUserlogintypeApi(basePath: kotlin.String = defaultBasePath, client: 
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun userlogintypeGetAutocompleteV2(sSelector: SSelectorUserlogintypeGetAutocompleteV2, eFilterActive: EFilterActiveUserlogintypeGetAutocompleteV2? = EFilterActiveUserlogintypeGetAutocompleteV2.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderAcceptLanguage? = null) : UserlogintypeGetAutocompleteV2Response {
-        val localVarResponse = userlogintypeGetAutocompleteV2WithHttpInfo(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
+    fun userlogintypeGetAutocompleteV2(sSelector: SSelectorUserlogintypeGetAutocompleteV2, fkiEzsignfoldertypeID: kotlin.Int? = null, eFilterActive: EFilterActiveUserlogintypeGetAutocompleteV2? = EFilterActiveUserlogintypeGetAutocompleteV2.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderAcceptLanguage? = null) : UserlogintypeGetAutocompleteV2Response {
+        val localVarResponse = userlogintypeGetAutocompleteV2WithHttpInfo(sSelector = sSelector, fkiEzsignfoldertypeID = fkiEzsignfoldertypeID, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as UserlogintypeGetAutocompleteV2Response
@@ -100,6 +102,7 @@ class ObjectUserlogintypeApi(basePath: kotlin.String = defaultBasePath, client: 
      * Retrieve Userlogintypes and IDs
      * Get the list of Userlogintype to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Userlogintypes to return
+     * @param fkiEzsignfoldertypeID  (optional)
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
@@ -109,8 +112,8 @@ class ObjectUserlogintypeApi(basePath: kotlin.String = defaultBasePath, client: 
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun userlogintypeGetAutocompleteV2WithHttpInfo(sSelector: SSelectorUserlogintypeGetAutocompleteV2, eFilterActive: EFilterActiveUserlogintypeGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : ApiResponse<UserlogintypeGetAutocompleteV2Response?> {
-        val localVariableConfig = userlogintypeGetAutocompleteV2RequestConfig(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
+    fun userlogintypeGetAutocompleteV2WithHttpInfo(sSelector: SSelectorUserlogintypeGetAutocompleteV2, fkiEzsignfoldertypeID: kotlin.Int?, eFilterActive: EFilterActiveUserlogintypeGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : ApiResponse<UserlogintypeGetAutocompleteV2Response?> {
+        val localVariableConfig = userlogintypeGetAutocompleteV2RequestConfig(sSelector = sSelector, fkiEzsignfoldertypeID = fkiEzsignfoldertypeID, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return request<Unit, UserlogintypeGetAutocompleteV2Response>(
             localVariableConfig
@@ -121,15 +124,19 @@ class ObjectUserlogintypeApi(basePath: kotlin.String = defaultBasePath, client: 
      * To obtain the request config of the operation userlogintypeGetAutocompleteV2
      *
      * @param sSelector The type of Userlogintypes to return
+     * @param fkiEzsignfoldertypeID  (optional)
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return RequestConfig
      */
-    fun userlogintypeGetAutocompleteV2RequestConfig(sSelector: SSelectorUserlogintypeGetAutocompleteV2, eFilterActive: EFilterActiveUserlogintypeGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : RequestConfig<Unit> {
+    fun userlogintypeGetAutocompleteV2RequestConfig(sSelector: SSelectorUserlogintypeGetAutocompleteV2, fkiEzsignfoldertypeID: kotlin.Int?, eFilterActive: EFilterActiveUserlogintypeGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
+                if (fkiEzsignfoldertypeID != null) {
+                    put("fkiEzsignfoldertypeID", listOf(fkiEzsignfoldertypeID.toString()))
+                }
                 if (eFilterActive != null) {
                     put("eFilterActive", listOf(eFilterActive.value))
                 }

@@ -11,6 +11,8 @@ Name | Type | Description | Notes
 **bSystemconfigurationSspr** | **kotlin.Boolean** | Whether if we allow SSPR | 
 **pkiSystemconfigurationID** | **kotlin.Int** | The unique ID of the Systemconfiguration |  [optional]
 **eSystemconfigurationEzsign** | [**FieldESystemconfigurationEzsign**](FieldESystemconfigurationEzsign.md) |  |  [optional]
+**eSystemconfigurationEzsignofficeplan** | [**FieldESystemconfigurationEzsignofficeplan**](FieldESystemconfigurationEzsignofficeplan.md) |  |  [optional]
+**bSystemconfigurationEzsignpaidbyoffice** | **kotlin.Boolean** | Whether if Ezsign is paid by the company or not |  [optional]
 **dtSystemconfigurationReadonlyexpirationstart** | **kotlin.String** | The start date where the system will be in read only |  [optional]
 **dtSystemconfigurationReadonlyexpirationend** | **kotlin.String** | The end date where the system will be in read only |  [optional]
 

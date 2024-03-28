@@ -22,17 +22,20 @@ import com.squareup.moshi.JsonClass
 /**
  * Subscription level when a user has a Prepaid subscription.
  *
- * Values: Basic,Unlimited,Pro
+ * Values: No,Basic,Standard,Pro
  */
 
 @JsonClass(generateAdapter = false)
 enum class FieldEUserEzsignprepaid(val value: kotlin.String) {
 
+    @Json(name = "No")
+    No("No"),
+
     @Json(name = "Basic")
     Basic("Basic"),
 
-    @Json(name = "Unlimited")
-    Unlimited("Unlimited"),
+    @Json(name = "Standard")
+    Standard("Standard"),
 
     @Json(name = "Pro")
     Pro("Pro");

@@ -25,6 +25,7 @@ import com.squareup.moshi.JsonClass
  *
  * @param pkiUsergroupID The unique ID of the Usergroup
  * @param objUsergroupName 
+ * @param sUsergroupNameX The Name of the Usergroup in the language of the requester
  */
 
 
@@ -35,7 +36,11 @@ data class UsergroupResponseCompound (
     val pkiUsergroupID: kotlin.Int,
 
     @Json(name = "objUsergroupName")
-    val objUsergroupName: MultilingualUsergroupName
+    val objUsergroupName: MultilingualUsergroupName,
+
+    /* The Name of the Usergroup in the language of the requester */
+    @Json(name = "sUsergroupNameX")
+    val sUsergroupNameX: kotlin.String? = null
 
 )
 

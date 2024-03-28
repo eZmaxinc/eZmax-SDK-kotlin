@@ -32,6 +32,7 @@ import com.squareup.moshi.JsonClass
  * @param eEzsignfoldertypePrivacylevel 
  * @param iEzsignfoldertypeArchivaldays The number of days before the archival of Ezsignfolders created using this Ezsignfoldertype
  * @param eEzsignfoldertypeDisposal 
+ * @param eEzsignfoldertypeCompletion 
  * @param iEzsignfoldertypeDeadlinedays The number of days to get all Ezsignsignatures
  * @param bEzsignfoldertypeSendsignedtodocumentowner Whether we send the signed Ezsigndocument to the Ezsigndocument's owner
  * @param bEzsignfoldertypeSendsignedtofolderowner Whether we send the signed Ezsigndocument to the Ezsignfolder's owner
@@ -39,7 +40,6 @@ import com.squareup.moshi.JsonClass
  * @param bEzsignfoldertypeSendsummarytodocumentowner Whether we send the summary to the Ezsigndocument's owner
  * @param bEzsignfoldertypeSendsummarytofolderowner Whether we send the summary to the Ezsignfolder's owner
  * @param bEzsignfoldertypeSendsummarytocolleague Whether we send the summary to the colleagues
- * @param bEzsignfoldertypeIncludeproofuser Whether we include the proof with the signed Ezsigndocument for users
  * @param bEzsignfoldertypeIsactive Whether the Ezsignfoldertype is active or not
  * @param pkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
  * @param fkiBillingentityinternalID The unique ID of the Billingentityinternal.
@@ -49,13 +49,11 @@ import com.squareup.moshi.JsonClass
  * @param sEmailAddressSigned The email address.
  * @param sEmailAddressSummary The email address.
  * @param eEzsignfoldertypeSendreminderfrequency 
- * @param eEzsignfoldertypeCompletion 
  * @param iEzsignfoldertypeDisposaldays The number of days after the archival before the disposal of the Ezsignfolder
  * @param bEzsignfoldertypeDelegate Wheter if delegation of signature is allowed to another user or not
- * @param bEzsignfoldertypeReassign Wheter if Reassignment of signature is allowed to another signatory or not
+ * @param bEzsignfoldertypeDiscussion Wheter if creating a new Discussion is allowed or not
  * @param bEzsignfoldertypeReassignezsignsigner Wheter if Reassignment of signature is allowed by a signatory to another signatory or not
  * @param bEzsignfoldertypeReassignuser Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not
- * @param bEzsignfoldertypeSendattatchmentsigner THIS FIELD WILL BE DELETED. Whether we send the Ezsigndocument and the proof as attachment in the email
  * @param bEzsignfoldertypeSendsignedtoezsignsigner Whether we send an email to Ezsignsigner  when document is completed
  * @param bEzsignfoldertypeSendsignedtouser Whether we send an email to User who signed when document is completed
  * @param bEzsignfoldertypeSendattachmentezsignsigner Whether we send the Ezsigndocument in the email to Ezsignsigner
@@ -70,7 +68,6 @@ import com.squareup.moshi.JsonClass
  * @param bEzsignfoldertypeSendsignedtolimitedgroup THIS FIELD WILL BE DELETED. Whether we send the signed Ezsigndocument to the Usergroup that has acces to only their own Ezsignfolders
  * @param bEzsignfoldertypeSendsummarytofullgroup Whether we send the summary to the Usergroup that has acces to all Ezsignfolders
  * @param bEzsignfoldertypeSendsummarytolimitedgroup Whether we send the summary to the Usergroup that has acces to only their own Ezsignfolders
- * @param bEzsignfoldertypeIncludeproofsigner THIS FIELD WILL BE DELETED. Whether we include the proof with the signed Ezsigndocument for Ezsignsigners
  * @param aFkiUserIDSigned 
  * @param aFkiUserIDSummary 
  */
@@ -94,6 +91,9 @@ data class EzsignfoldertypeRequestCompound (
 
     @Json(name = "eEzsignfoldertypeDisposal")
     val eEzsignfoldertypeDisposal: FieldEEzsignfoldertypeDisposal,
+
+    @Json(name = "eEzsignfoldertypeCompletion")
+    val eEzsignfoldertypeCompletion: FieldEEzsignfoldertypeCompletion,
 
     /* The number of days to get all Ezsignsignatures */
     @Json(name = "iEzsignfoldertypeDeadlinedays")
@@ -122,10 +122,6 @@ data class EzsignfoldertypeRequestCompound (
     /* Whether we send the summary to the colleagues */
     @Json(name = "bEzsignfoldertypeSendsummarytocolleague")
     val bEzsignfoldertypeSendsummarytocolleague: kotlin.Boolean,
-
-    /* Whether we include the proof with the signed Ezsigndocument for users */
-    @Json(name = "bEzsignfoldertypeIncludeproofuser")
-    val bEzsignfoldertypeIncludeproofuser: kotlin.Boolean,
 
     /* Whether the Ezsignfoldertype is active or not */
     @Json(name = "bEzsignfoldertypeIsactive")
@@ -162,9 +158,6 @@ data class EzsignfoldertypeRequestCompound (
     @Json(name = "eEzsignfoldertypeSendreminderfrequency")
     val eEzsignfoldertypeSendreminderfrequency: FieldEEzsignfoldertypeSendreminderfrequency? = null,
 
-    @Json(name = "eEzsignfoldertypeCompletion")
-    val eEzsignfoldertypeCompletion: FieldEEzsignfoldertypeCompletion? = FieldEEzsignfoldertypeCompletion.PerEzsigndocument,
-
     /* The number of days after the archival before the disposal of the Ezsignfolder */
     @Json(name = "iEzsignfoldertypeDisposaldays")
     val iEzsignfoldertypeDisposaldays: kotlin.Int? = null,
@@ -173,9 +166,9 @@ data class EzsignfoldertypeRequestCompound (
     @Json(name = "bEzsignfoldertypeDelegate")
     val bEzsignfoldertypeDelegate: kotlin.Boolean? = null,
 
-    /* Wheter if Reassignment of signature is allowed to another signatory or not */
-    @Json(name = "bEzsignfoldertypeReassign")
-    val bEzsignfoldertypeReassign: kotlin.Boolean? = null,
+    /* Wheter if creating a new Discussion is allowed or not */
+    @Json(name = "bEzsignfoldertypeDiscussion")
+    val bEzsignfoldertypeDiscussion: kotlin.Boolean? = null,
 
     /* Wheter if Reassignment of signature is allowed by a signatory to another signatory or not */
     @Json(name = "bEzsignfoldertypeReassignezsignsigner")
@@ -184,10 +177,6 @@ data class EzsignfoldertypeRequestCompound (
     /* Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not */
     @Json(name = "bEzsignfoldertypeReassignuser")
     val bEzsignfoldertypeReassignuser: kotlin.Boolean? = null,
-
-    /* THIS FIELD WILL BE DELETED. Whether we send the Ezsigndocument and the proof as attachment in the email */
-    @Json(name = "bEzsignfoldertypeSendattatchmentsigner")
-    val bEzsignfoldertypeSendattatchmentsigner: kotlin.Boolean? = null,
 
     /* Whether we send an email to Ezsignsigner  when document is completed */
     @Json(name = "bEzsignfoldertypeSendsignedtoezsignsigner")
@@ -244,10 +233,6 @@ data class EzsignfoldertypeRequestCompound (
     /* Whether we send the summary to the Usergroup that has acces to only their own Ezsignfolders */
     @Json(name = "bEzsignfoldertypeSendsummarytolimitedgroup")
     val bEzsignfoldertypeSendsummarytolimitedgroup: kotlin.Boolean? = null,
-
-    /* THIS FIELD WILL BE DELETED. Whether we include the proof with the signed Ezsigndocument for Ezsignsigners */
-    @Json(name = "bEzsignfoldertypeIncludeproofsigner")
-    val bEzsignfoldertypeIncludeproofsigner: kotlin.Boolean? = null,
 
     @Json(name = "a_fkiUserIDSigned")
     val aFkiUserIDSigned: kotlin.collections.List<kotlin.Int>? = null,

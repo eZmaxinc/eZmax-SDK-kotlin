@@ -20,6 +20,7 @@ import eZmaxApi.models.ActivesessionResponseCompoundUser
 import eZmaxApi.models.FieldEActivesessionOrigin
 import eZmaxApi.models.FieldEActivesessionUsertype
 import eZmaxApi.models.FieldEActivesessionWeekdaystart
+import eZmaxApi.models.FieldESystemconfigurationEzsignofficeplan
 import eZmaxApi.models.FieldEUserEzsignaccess
 import eZmaxApi.models.FieldEUserEzsignprepaid
 
@@ -44,6 +45,8 @@ import com.squareup.moshi.JsonClass
  * @param objUserReal 
  * @param aEModuleInternalname An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key.
  * @param fkiSignatureID The unique ID of the Signature
+ * @param bSystemconfigurationEzsignpaidbyoffice Whether if Ezsign is paid by the company or not
+ * @param eSystemconfigurationEzsignofficeplan 
  * @param eUserEzsignprepaid 
  * @param dtUserEzsignprepaidexpiration The eZsign prepaid expiration date
  * @param objUserCloned 
@@ -107,6 +110,13 @@ data class ActivesessionGetCurrentV1ResponseMPayload (
     /* The unique ID of the Signature */
     @Json(name = "fkiSignatureID")
     val fkiSignatureID: kotlin.Int? = null,
+
+    /* Whether if Ezsign is paid by the company or not */
+    @Json(name = "bSystemconfigurationEzsignpaidbyoffice")
+    val bSystemconfigurationEzsignpaidbyoffice: kotlin.Boolean? = null,
+
+    @Json(name = "eSystemconfigurationEzsignofficeplan")
+    val eSystemconfigurationEzsignofficeplan: FieldESystemconfigurationEzsignofficeplan? = null,
 
     @Json(name = "eUserEzsignprepaid")
     val eUserEzsignprepaid: FieldEUserEzsignprepaid? = null,

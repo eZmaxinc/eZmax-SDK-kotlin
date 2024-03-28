@@ -6,8 +6,10 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ezsigntemplateCopyV1**](ObjectEzsigntemplateApi.md#ezsigntemplateCopyV1) | **POST** /1/object/ezsigntemplate/{pkiEzsigntemplateID}/copy | Copy the Ezsigntemplate
 [**ezsigntemplateCreateObjectV1**](ObjectEzsigntemplateApi.md#ezsigntemplateCreateObjectV1) | **POST** /1/object/ezsigntemplate | Create a new Ezsigntemplate
+[**ezsigntemplateCreateObjectV2**](ObjectEzsigntemplateApi.md#ezsigntemplateCreateObjectV2) | **POST** /2/object/ezsigntemplate | Create a new Ezsigntemplate
 [**ezsigntemplateDeleteObjectV1**](ObjectEzsigntemplateApi.md#ezsigntemplateDeleteObjectV1) | **DELETE** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Delete an existing Ezsigntemplate
 [**ezsigntemplateEditObjectV1**](ObjectEzsigntemplateApi.md#ezsigntemplateEditObjectV1) | **PUT** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Edit an existing Ezsigntemplate
+[**ezsigntemplateEditObjectV2**](ObjectEzsigntemplateApi.md#ezsigntemplateEditObjectV2) | **PUT** /2/object/ezsigntemplate/{pkiEzsigntemplateID} | Edit an existing Ezsigntemplate
 [**ezsigntemplateGetAutocompleteV2**](ObjectEzsigntemplateApi.md#ezsigntemplateGetAutocompleteV2) | **GET** /2/object/ezsigntemplate/getAutocomplete/{sSelector} | Retrieve Ezsigntemplates and IDs
 [**ezsigntemplateGetListV1**](ObjectEzsigntemplateApi.md#ezsigntemplateGetListV1) | **GET** /1/object/ezsigntemplate/getList | Retrieve Ezsigntemplate list
 [**ezsigntemplateGetObjectV1**](ObjectEzsigntemplateApi.md#ezsigntemplateGetObjectV1) | **GET** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate
@@ -103,6 +105,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EzsigntemplateCreateObjectV1Response**](EzsigntemplateCreateObjectV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a id="ezsigntemplateCreateObjectV2"></a>
+# **ezsigntemplateCreateObjectV2**
+> EzsigntemplateCreateObjectV2Response ezsigntemplateCreateObjectV2(ezsigntemplateCreateObjectV2Request)
+
+Create a new Ezsigntemplate
+
+The endpoint allows to create one or many elements at once.
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsigntemplateApi()
+val ezsigntemplateCreateObjectV2Request : EzsigntemplateCreateObjectV2Request =  // EzsigntemplateCreateObjectV2Request | 
+try {
+    val result : EzsigntemplateCreateObjectV2Response = apiInstance.ezsigntemplateCreateObjectV2(ezsigntemplateCreateObjectV2Request)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsigntemplateApi#ezsigntemplateCreateObjectV2")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsigntemplateApi#ezsigntemplateCreateObjectV2")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ezsigntemplateCreateObjectV2Request** | [**EzsigntemplateCreateObjectV2Request**](EzsigntemplateCreateObjectV2Request.md)|  |
+
+### Return type
+
+[**EzsigntemplateCreateObjectV2Response**](EzsigntemplateCreateObjectV2Response.md)
 
 ### Authorization
 
@@ -218,6 +270,58 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a id="ezsigntemplateEditObjectV2"></a>
+# **ezsigntemplateEditObjectV2**
+> EzsigntemplateEditObjectV2Response ezsigntemplateEditObjectV2(pkiEzsigntemplateID, ezsigntemplateEditObjectV2Request)
+
+Edit an existing Ezsigntemplate
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsigntemplateApi()
+val pkiEzsigntemplateID : kotlin.Int = 56 // kotlin.Int | 
+val ezsigntemplateEditObjectV2Request : EzsigntemplateEditObjectV2Request =  // EzsigntemplateEditObjectV2Request | 
+try {
+    val result : EzsigntemplateEditObjectV2Response = apiInstance.ezsigntemplateEditObjectV2(pkiEzsigntemplateID, ezsigntemplateEditObjectV2Request)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsigntemplateApi#ezsigntemplateEditObjectV2")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsigntemplateApi#ezsigntemplateEditObjectV2")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiEzsigntemplateID** | **kotlin.Int**|  |
+ **ezsigntemplateEditObjectV2Request** | [**EzsigntemplateEditObjectV2Request**](EzsigntemplateEditObjectV2Request.md)|  |
+
+### Return type
+
+[**EzsigntemplateEditObjectV2Response**](EzsigntemplateEditObjectV2Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a id="ezsigntemplateGetAutocompleteV2"></a>
 # **ezsigntemplateGetAutocompleteV2**
 > EzsigntemplateGetAutocompleteV2Response ezsigntemplateGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
@@ -310,7 +414,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiEzsigntemplateID_ASC, pkiEzsigntemplateID_DESC, fkiTeamID_ASC, fkiTeamID_DESC, fkiEzsignfoldertypeID_ASC, fkiEzsignfoldertypeID_DESC, fkiUserIDOwner_ASC, fkiUserIDOwner_DESC, fkiLanguageID_ASC, fkiLanguageID_DESC, eEzsigntemplateType_ASC, eEzsigntemplateType_DESC, sEzsigntemplateDescription_ASC, sEzsigntemplateDescription_DESC, sEzsigntemplatedocumentDescription_ASC, sEzsigntemplatedocumentDescription_DESC, iEzsigntemplatedocumentPagetotal_ASC, iEzsigntemplatedocumentPagetotal_DESC, iEzsigntemplateSignaturetotal_ASC, iEzsigntemplateSignaturetotal_DESC, sEzsignfoldertypeNameX_ASC, sEzsignfoldertypeNameX_DESC]
+ **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiEzsigntemplateID_ASC, pkiEzsigntemplateID_DESC, fkiTeamID_ASC, fkiTeamID_DESC, fkiEzsignfoldertypeID_ASC, fkiEzsignfoldertypeID_DESC, fkiUserIDOwner_ASC, fkiUserIDOwner_DESC, fkiLanguageID_ASC, fkiLanguageID_DESC, eEzsigntemplateType_ASC, eEzsigntemplateType_DESC, sEzsigntemplateDescription_ASC, sEzsigntemplateDescription_DESC, sEzsigntemplatedocumentDescription_ASC, sEzsigntemplatedocumentDescription_DESC, iEzsigntemplatedocumentPagetotal_ASC, iEzsigntemplatedocumentPagetotal_DESC, iEzsigntemplateSignaturetotal_ASC, iEzsigntemplateSignaturetotal_DESC, sEzsignfoldertypeNameX_ASC, sEzsignfoldertypeNameX_DESC, eEzsigntemplateType_ASC, eEzsigntemplateType_DESC]
  **iRowMax** | **kotlin.Int**|  | [optional]
  **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0]
  **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
