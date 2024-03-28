@@ -37,10 +37,10 @@ class EzsignfoldersignerassociationCreateEmbeddedUrlV1RequestTest : ShouldSpec()
             //modelInstance.sIframedomain shouldBe ("TODO")
         }
 
-        // to test the property `bIsiframe` - Whether the url would be in an iFrame or not
-        should("test bIsiframe") {
+        // to test the property `bIsIframe` - Whether the url would be in an iFrame or not
+        should("test bIsIframe") {
             // uncomment below to test the property
-            //modelInstance.bIsiframe shouldBe ("TODO")
+            //modelInstance.bIsIframe shouldBe ("TODO")
         }
 
     }

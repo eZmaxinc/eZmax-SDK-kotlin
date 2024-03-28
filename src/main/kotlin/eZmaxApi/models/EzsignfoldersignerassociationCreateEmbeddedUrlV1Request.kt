@@ -24,7 +24,7 @@ import com.squareup.moshi.JsonClass
  *
  * @param sReturnUrl The return Url to redirect after the signing is completed
  * @param sIframedomain Domain protection for the iFrame
- * @param bIsiframe Whether the url would be in an iFrame or not
+ * @param bIsIframe Whether the url would be in an iFrame or not
  */
 
 
@@ -39,8 +39,8 @@ data class EzsignfoldersignerassociationCreateEmbeddedUrlV1Request (
     val sIframedomain: kotlin.String? = null,
 
     /* Whether the url would be in an iFrame or not */
-    @Json(name = "bIsiframe")
-    val bIsiframe: kotlin.Boolean? = null
+    @Json(name = "bIsIframe")
+    val bIsIframe: kotlin.Boolean? = null
 
 )
 
