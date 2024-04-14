@@ -26,6 +26,7 @@ import com.squareup.moshi.JsonClass
  * @param iVersionMax The maximum version of the function that can be called
  * @param aRequiredPermission An array of permissions required to access this function.  If the value \"0\" is present in the array, anyone can call this function.  You must have one of the permission to access the function. You don't need to have all of them.
  * @param bVersionDeprecated Wheter the current route is deprecated or not
+ * @param dtResponseDate Represent a Date Time. The timezone is the one configured in the User's profile.
  */
 
 
@@ -45,7 +46,11 @@ data class CommonResponseObjDebugPayload (
 
     /* Wheter the current route is deprecated or not */
     @Json(name = "bVersionDeprecated")
-    val bVersionDeprecated: kotlin.Boolean
+    val bVersionDeprecated: kotlin.Boolean,
+
+    /* Represent a Date Time. The timezone is the one configured in the User's profile. */
+    @Json(name = "dtResponseDate")
+    val dtResponseDate: kotlin.String
 
 )
 

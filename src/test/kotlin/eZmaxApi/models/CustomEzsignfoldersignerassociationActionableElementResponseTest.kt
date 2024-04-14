@@ -58,6 +58,12 @@ class CustomEzsignfoldersignerassociationActionableElementResponseTest : ShouldS
             //modelInstance.tEzsignfoldersignerassociationMessage shouldBe ("TODO")
         }
 
+        // to test the property `bEzsignfoldersignerassociationAllowsigninginperson` - If the Ezsignfoldersignerassociation is allowed to sign in person or not
+        should("test bEzsignfoldersignerassociationAllowsigninginperson") {
+            // uncomment below to test the property
+            //modelInstance.bEzsignfoldersignerassociationAllowsigninginperson shouldBe ("TODO")
+        }
+
         // to test the property `bEzsignfoldersignerassociationHasactionableelementsCurrent` - Indicates if the Ezsignfoldersignerassociation has actionable elements in the current step
         should("test bEzsignfoldersignerassociationHasactionableelementsCurrent") {
             // uncomment below to test the property

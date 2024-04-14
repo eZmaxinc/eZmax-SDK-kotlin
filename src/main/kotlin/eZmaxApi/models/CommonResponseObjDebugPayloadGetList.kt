@@ -27,6 +27,7 @@ import com.squareup.moshi.JsonClass
  * @param iVersionMax The maximum version of the function that can be called
  * @param aRequiredPermission An array of permissions required to access this function.  If the value \"0\" is present in the array, anyone can call this function.  You must have one of the permission to access the function. You don't need to have all of them.
  * @param bVersionDeprecated Wheter the current route is deprecated or not
+ * @param dtResponseDate Represent a Date Time. The timezone is the one configured in the User's profile.
  * @param aFilter 
  * @param aOrderBy List of available values for *eOrderBy*
  * @param iRowMax The maximum numbers of results to be returned.  When the content-type is **application/json** there is an implicit default of 10 000.  When it's **application/vnd.openxmlformats-officedocument.spreadsheetml.sheet** the is no implicit default so if you do not specify iRowMax, all records will be returned.
@@ -51,6 +52,10 @@ data class CommonResponseObjDebugPayloadGetList (
     /* Wheter the current route is deprecated or not */
     @Json(name = "bVersionDeprecated")
     val bVersionDeprecated: kotlin.Boolean,
+
+    /* Represent a Date Time. The timezone is the one configured in the User's profile. */
+    @Json(name = "dtResponseDate")
+    val dtResponseDate: kotlin.String,
 
     @Json(name = "a_Filter")
     val aFilter: CommonResponseFilter,

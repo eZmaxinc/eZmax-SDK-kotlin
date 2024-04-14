@@ -50,6 +50,12 @@ class CommonResponseObjDebugPayloadGetListTest : ShouldSpec() {
             //modelInstance.bVersionDeprecated shouldBe ("TODO")
         }
 
+        // to test the property `dtResponseDate` - Represent a Date Time. The timezone is the one configured in the User's profile.
+        should("test dtResponseDate") {
+            // uncomment below to test the property
+            //modelInstance.dtResponseDate shouldBe ("TODO")
+        }
+
         // to test the property `aFilter`
         should("test aFilter") {
             // uncomment below to test the property

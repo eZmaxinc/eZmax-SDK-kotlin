@@ -55,5 +55,11 @@ class EzsignfoldersignerassociationResponseTest : ShouldSpec() {
             //modelInstance.tEzsignfoldersignerassociationMessage shouldBe ("TODO")
         }
 
+        // to test the property `bEzsignfoldersignerassociationAllowsigninginperson` - If the Ezsignfoldersignerassociation is allowed to sign in person or not
+        should("test bEzsignfoldersignerassociationAllowsigninginperson") {
+            // uncomment below to test the property
+            //modelInstance.bEzsignfoldersignerassociationAllowsigninginperson shouldBe ("TODO")
+        }
+
     }
 }

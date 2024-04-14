@@ -30,6 +30,7 @@ import com.squareup.moshi.JsonClass
  * @param bEzsignfoldersignerassociationDelayedsend If this flag is true the signatory is part of a delayed send.
  * @param bEzsignfoldersignerassociationReceivecopy If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document.
  * @param tEzsignfoldersignerassociationMessage A custom text message that will be added to the email sent.
+ * @param bEzsignfoldersignerassociationAllowsigninginperson If the Ezsignfoldersignerassociation is allowed to sign in person or not
  * @param objEzsignsignergroup 
  * @param objUser 
  * @param objEzsignsigner 
@@ -57,6 +58,10 @@ data class EzsignfoldersignerassociationResponseCompound (
     /* A custom text message that will be added to the email sent. */
     @Json(name = "tEzsignfoldersignerassociationMessage")
     val tEzsignfoldersignerassociationMessage: kotlin.String,
+
+    /* If the Ezsignfoldersignerassociation is allowed to sign in person or not */
+    @Json(name = "bEzsignfoldersignerassociationAllowsigninginperson")
+    val bEzsignfoldersignerassociationAllowsigninginperson: kotlin.Boolean,
 
     @Json(name = "objEzsignsignergroup")
     val objEzsignsignergroup: EzsignsignergroupResponseCompound? = null,
