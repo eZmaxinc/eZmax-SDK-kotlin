@@ -42,5 +42,8 @@ data class UsergroupexternalAutocompleteElementResponse (
     @Json(name = "bUsergroupexternalIsactive")
     val bUsergroupexternalIsactive: kotlin.Boolean
 
-)
+) {
+
+
+}
 

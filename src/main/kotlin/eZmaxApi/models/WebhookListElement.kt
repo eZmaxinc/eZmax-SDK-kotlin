@@ -77,5 +77,8 @@ data class WebhookListElement (
     @Json(name = "eWebhookManagementevent")
     val eWebhookManagementevent: FieldEWebhookManagementevent? = null
 
-)
+) {
+
+
+}
 

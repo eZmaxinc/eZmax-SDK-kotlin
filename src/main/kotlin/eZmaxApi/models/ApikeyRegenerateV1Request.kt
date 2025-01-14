@@ -32,5 +32,8 @@ data class ApikeyRegenerateV1Request (
     @Json(name = "bApikeyIssigned")
     val bApikeyIssigned: kotlin.Boolean? = null
 
-)
+) {
+
+
+}
 

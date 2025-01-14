@@ -16,9 +16,10 @@
 package eZmaxApi.apis
 
 import java.io.IOException
-import okhttp3.OkHttpClient
+import okhttp3.Call
 import okhttp3.HttpUrl
 
+import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.CommunicationSendV1Request
 import eZmaxApi.models.CommunicationSendV1Response
 
@@ -38,12 +39,81 @@ import eZmaxApi.infrastructure.ResponseType
 import eZmaxApi.infrastructure.Success
 import eZmaxApi.infrastructure.toMultiValue
 
-class ObjectCommunicationApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = ApiClient.defaultClient) : ApiClient(basePath, client) {
+class ObjectCommunicationApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
             System.getProperties().getProperty(ApiClient.baseUrlKey, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
+    }
+
+    /**
+     * Retrieve the communication body.
+     * This endpoint returns the communication body.
+     * @param pkiCommunicationID 
+     * @return void
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun communicationGetCommunicationBodyV1(pkiCommunicationID: kotlin.Int) : Unit {
+        val localVarResponse = communicationGetCommunicationBodyV1WithHttpInfo(pkiCommunicationID = pkiCommunicationID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> Unit
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve the communication body.
+     * This endpoint returns the communication body.
+     * @param pkiCommunicationID 
+     * @return ApiResponse<Unit?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Throws(IllegalStateException::class, IOException::class)
+    fun communicationGetCommunicationBodyV1WithHttpInfo(pkiCommunicationID: kotlin.Int) : ApiResponse<Unit?> {
+        val localVariableConfig = communicationGetCommunicationBodyV1RequestConfig(pkiCommunicationID = pkiCommunicationID)
+
+        return request<Unit, Unit>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation communicationGetCommunicationBodyV1
+     *
+     * @param pkiCommunicationID 
+     * @return RequestConfig
+     */
+    fun communicationGetCommunicationBodyV1RequestConfig(pkiCommunicationID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/communication/{pkiCommunicationID}/getCommunicationBody".replace("{"+"pkiCommunicationID"+"}", encodeURIComponent(pkiCommunicationID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
     }
 
     /**

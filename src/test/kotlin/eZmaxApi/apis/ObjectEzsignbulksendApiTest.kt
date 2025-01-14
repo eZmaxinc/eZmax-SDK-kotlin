@@ -20,8 +20,8 @@ import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectEzsignbulksendApi
 import eZmaxApi.models.CommonResponseError
-import eZmaxApi.models.EzsignbulksendCreateEzsignbulksendtransmissionV1Request
-import eZmaxApi.models.EzsignbulksendCreateEzsignbulksendtransmissionV1Response
+import eZmaxApi.models.EzsignbulksendCreateEzsignbulksendtransmissionV2Request
+import eZmaxApi.models.EzsignbulksendCreateEzsignbulksendtransmissionV2Response
 import eZmaxApi.models.EzsignbulksendCreateObjectV1Request
 import eZmaxApi.models.EzsignbulksendCreateObjectV1Response
 import eZmaxApi.models.EzsignbulksendDeleteObjectV1Response
@@ -41,12 +41,12 @@ class ObjectEzsignbulksendApiTest : ShouldSpec() {
         // uncomment below to create an instance of ObjectEzsignbulksendApi
         //val apiInstance = ObjectEzsignbulksendApi()
 
-        // to test ezsignbulksendCreateEzsignbulksendtransmissionV1
-        should("test ezsignbulksendCreateEzsignbulksendtransmissionV1") {
-            // uncomment below to test ezsignbulksendCreateEzsignbulksendtransmissionV1
+        // to test ezsignbulksendCreateEzsignbulksendtransmissionV2
+        should("test ezsignbulksendCreateEzsignbulksendtransmissionV2") {
+            // uncomment below to test ezsignbulksendCreateEzsignbulksendtransmissionV2
             //val pkiEzsignbulksendID : kotlin.Int = 56 // kotlin.Int | 
-            //val ezsignbulksendCreateEzsignbulksendtransmissionV1Request : EzsignbulksendCreateEzsignbulksendtransmissionV1Request =  // EzsignbulksendCreateEzsignbulksendtransmissionV1Request | 
-            //val result : EzsignbulksendCreateEzsignbulksendtransmissionV1Response = apiInstance.ezsignbulksendCreateEzsignbulksendtransmissionV1(pkiEzsignbulksendID, ezsignbulksendCreateEzsignbulksendtransmissionV1Request)
+            //val ezsignbulksendCreateEzsignbulksendtransmissionV2Request : EzsignbulksendCreateEzsignbulksendtransmissionV2Request =  // EzsignbulksendCreateEzsignbulksendtransmissionV2Request | 
+            //val result : EzsignbulksendCreateEzsignbulksendtransmissionV2Response = apiInstance.ezsignbulksendCreateEzsignbulksendtransmissionV2(pkiEzsignbulksendID, ezsignbulksendCreateEzsignbulksendtransmissionV2Request)
             //result shouldBe ("TODO")
         }
 

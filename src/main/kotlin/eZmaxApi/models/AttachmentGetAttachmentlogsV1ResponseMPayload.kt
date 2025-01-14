@@ -32,5 +32,8 @@ data class AttachmentGetAttachmentlogsV1ResponseMPayload (
     @Json(name = "a_objAttachmentlog")
     val aObjAttachmentlog: kotlin.collections.List<AttachmentlogResponseCompound>
 
-)
+) {
+
+
+}
 

@@ -82,5 +82,8 @@ data class UserListElement (
     @Json(name = "sUserJobtitle")
     val sUserJobtitle: kotlin.String? = null
 
-)
+) {
+
+
+}
 

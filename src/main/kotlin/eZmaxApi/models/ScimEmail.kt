@@ -36,5 +36,8 @@ data class ScimEmail (
     @Json(name = "primary")
     val primary: kotlin.Boolean? = null
 
-)
+) {
+
+
+}
 

@@ -32,5 +32,8 @@ data class EzsignbulksendGetEzsignbulksendtransmissionsV1ResponseMPayload (
     @Json(name = "a_objEzsignbulksendtransmission")
     val aObjEzsignbulksendtransmission: kotlin.collections.List<EzsignbulksendtransmissionResponseCompound>
 
-)
+) {
+
+
+}
 

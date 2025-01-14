@@ -32,5 +32,8 @@ data class NotificationsectionGetNotificationtestsV1ResponseMPayload (
     @Json(name = "a_objNotificationsubsection")
     val aObjNotificationsubsection: kotlin.collections.List<CustomNotificationsubsectiongetnotificationtestsResponse>
 
-)
+) {
+
+
+}
 

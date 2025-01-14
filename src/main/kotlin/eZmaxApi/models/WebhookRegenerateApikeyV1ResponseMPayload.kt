@@ -32,5 +32,8 @@ data class WebhookRegenerateApikeyV1ResponseMPayload (
     @Json(name = "objWebhook")
     val objWebhook: WebhookResponseCompound
 
-)
+) {
+
+
+}
 

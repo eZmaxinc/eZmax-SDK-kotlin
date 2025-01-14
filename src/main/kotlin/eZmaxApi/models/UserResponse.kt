@@ -216,5 +216,8 @@ data class UserResponse (
     @Json(name = "bUserAttachmentautoverified")
     val bUserAttachmentautoverified: kotlin.Boolean? = null
 
-)
+) {
+
+
+}
 

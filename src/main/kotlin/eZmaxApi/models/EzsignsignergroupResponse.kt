@@ -42,5 +42,8 @@ data class EzsignsignergroupResponse (
     @Json(name = "sEzsignsignergroupDescriptionX")
     val sEzsignsignergroupDescriptionX: kotlin.String? = null
 
-)
+) {
+
+
+}
 

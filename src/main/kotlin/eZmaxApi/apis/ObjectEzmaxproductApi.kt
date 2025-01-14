@@ -16,7 +16,7 @@
 package eZmaxApi.apis
 
 import java.io.IOException
-import okhttp3.OkHttpClient
+import okhttp3.Call
 import okhttp3.HttpUrl
 
 import eZmaxApi.models.EzmaxproductGetAutocompleteV2Response
@@ -38,7 +38,7 @@ import eZmaxApi.infrastructure.ResponseType
 import eZmaxApi.infrastructure.Success
 import eZmaxApi.infrastructure.toMultiValue
 
-class ObjectEzmaxproductApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = ApiClient.defaultClient) : ApiClient(basePath, client) {
+class ObjectEzmaxproductApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
@@ -52,7 +52,16 @@ class ObjectEzmaxproductApi(basePath: kotlin.String = defaultBasePath, client: O
      enum class SSelectorEzmaxproductGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "All") All("All"),
          @Json(name = "Entitydefault") Entitydefault("Entitydefault"),
-         @Json(name = "Entityother") Entityother("Entityother")
+         @Json(name = "Entityother") Entityother("Entityother");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
      }
 
     /**
@@ -61,7 +70,16 @@ class ObjectEzmaxproductApi(basePath: kotlin.String = defaultBasePath, client: O
      enum class EFilterActiveEzmaxproductGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "All") All("All"),
          @Json(name = "Active") Active("Active"),
-         @Json(name = "Inactive") Inactive("Inactive")
+         @Json(name = "Inactive") Inactive("Inactive");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
      }
 
     /**

@@ -37,5 +37,8 @@ data class CommonReportcolumn (
     @Json(name = "iReportcolumnWidth")
     val iReportcolumnWidth: kotlin.Int
 
-)
+) {
+
+
+}
 

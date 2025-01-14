@@ -57,5 +57,8 @@ data class PaymenttermRequestCompound (
     @Json(name = "pkiPaymenttermID")
     val pkiPaymenttermID: kotlin.Int? = null
 
-)
+) {
+
+
+}
 

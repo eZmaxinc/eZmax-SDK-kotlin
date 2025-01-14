@@ -62,5 +62,8 @@ data class CommonAuditdetail (
     @Json(name = "sApikeyDescriptionX")
     val sApikeyDescriptionX: kotlin.String? = null
 
-)
+) {
+
+
+}
 

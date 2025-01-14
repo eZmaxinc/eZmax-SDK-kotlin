@@ -20,18 +20,45 @@ import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectOtherincomeApi
 import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.OtherincomeGetCommunicationCountV1Response
 import eZmaxApi.models.OtherincomeGetCommunicationListV1Response
+import eZmaxApi.models.OtherincomeGetCommunicationrecipientsV1Response
+import eZmaxApi.models.OtherincomeGetCommunicationsendersV1Response
 
 class ObjectOtherincomeApiTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of ObjectOtherincomeApi
         //val apiInstance = ObjectOtherincomeApi()
 
+        // to test otherincomeGetCommunicationCountV1
+        should("test otherincomeGetCommunicationCountV1") {
+            // uncomment below to test otherincomeGetCommunicationCountV1
+            //val pkiOtherincomeID : kotlin.Int = 56 // kotlin.Int | 
+            //val result : OtherincomeGetCommunicationCountV1Response = apiInstance.otherincomeGetCommunicationCountV1(pkiOtherincomeID)
+            //result shouldBe ("TODO")
+        }
+
         // to test otherincomeGetCommunicationListV1
         should("test otherincomeGetCommunicationListV1") {
             // uncomment below to test otherincomeGetCommunicationListV1
             //val pkiOtherincomeID : kotlin.Int = 56 // kotlin.Int | 
             //val result : OtherincomeGetCommunicationListV1Response = apiInstance.otherincomeGetCommunicationListV1(pkiOtherincomeID)
+            //result shouldBe ("TODO")
+        }
+
+        // to test otherincomeGetCommunicationrecipientsV1
+        should("test otherincomeGetCommunicationrecipientsV1") {
+            // uncomment below to test otherincomeGetCommunicationrecipientsV1
+            //val pkiOtherincomeID : kotlin.Int = 56 // kotlin.Int | 
+            //val result : OtherincomeGetCommunicationrecipientsV1Response = apiInstance.otherincomeGetCommunicationrecipientsV1(pkiOtherincomeID)
+            //result shouldBe ("TODO")
+        }
+
+        // to test otherincomeGetCommunicationsendersV1
+        should("test otherincomeGetCommunicationsendersV1") {
+            // uncomment below to test otherincomeGetCommunicationsendersV1
+            //val pkiOtherincomeID : kotlin.Int = 56 // kotlin.Int | 
+            //val result : OtherincomeGetCommunicationsendersV1Response = apiInstance.otherincomeGetCommunicationsendersV1(pkiOtherincomeID)
             //result shouldBe ("TODO")
         }
 

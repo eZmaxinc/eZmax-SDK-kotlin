@@ -52,5 +52,8 @@ data class NotificationsubsectionResponse (
     @Json(name = "sNotificationsectionNameX")
     val sNotificationsectionNameX: kotlin.String? = null
 
-)
+) {
+
+
+}
 

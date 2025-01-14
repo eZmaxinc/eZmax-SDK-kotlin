@@ -48,5 +48,8 @@ data class WebhookEzsignEzsignsignerConnect (
     @Json(name = "objEzsignfolder")
     val objEzsignfolder: EzsignfolderResponse? = null
 
-)
+) {
+
+
+}
 

@@ -32,5 +32,8 @@ data class UserGetSubnetsV1ResponseMPayload (
     @Json(name = "a_objSubnet")
     val aObjSubnet: kotlin.collections.List<SubnetResponseCompound>
 
-)
+) {
+
+
+}
 

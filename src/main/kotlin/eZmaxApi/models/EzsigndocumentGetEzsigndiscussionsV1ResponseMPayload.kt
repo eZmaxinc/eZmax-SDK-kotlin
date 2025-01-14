@@ -32,5 +32,8 @@ data class EzsigndocumentGetEzsigndiscussionsV1ResponseMPayload (
     @Json(name = "a_objEzsigndiscussion")
     val aObjEzsigndiscussion: kotlin.collections.List<EzsigndiscussionResponse>
 
-)
+) {
+
+
+}
 

@@ -32,5 +32,8 @@ data class PermissionEditObjectV1Request (
     @Json(name = "objPermission")
     val objPermission: PermissionRequestCompound
 
-)
+) {
+
+
+}
 

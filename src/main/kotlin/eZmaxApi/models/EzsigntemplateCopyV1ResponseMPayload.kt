@@ -32,5 +32,8 @@ data class EzsigntemplateCopyV1ResponseMPayload (
     @Json(name = "a_pkiEzsigntemplateID")
     val aPkiEzsigntemplateID: kotlin.collections.List<kotlin.Int>
 
-)
+) {
+
+
+}
 

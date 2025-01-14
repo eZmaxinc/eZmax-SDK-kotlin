@@ -122,5 +122,8 @@ data class EzmaxinvoicingsummaryglobalResponse (
     @Json(name = "dEzmaxinvoicingsummaryglobalNet")
     val dEzmaxinvoicingsummaryglobalNet: kotlin.String? = null
 
-)
+) {
+
+
+}
 

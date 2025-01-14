@@ -32,5 +32,8 @@ data class EzsignfoldertypeGetObjectV2ResponseMPayload (
     @Json(name = "objEzsignfoldertype")
     val objEzsignfoldertype: EzsignfoldertypeResponseCompound
 
-)
+) {
+
+
+}
 

@@ -32,5 +32,8 @@ data class CreditcardclientCreateObjectV1Request (
     @Json(name = "a_objCreditcardclient")
     val aObjCreditcardclient: kotlin.collections.List<CreditcardclientRequestCompound>
 
-)
+) {
+
+
+}
 

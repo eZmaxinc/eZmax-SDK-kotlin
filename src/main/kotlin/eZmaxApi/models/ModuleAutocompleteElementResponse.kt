@@ -42,5 +42,8 @@ data class ModuleAutocompleteElementResponse (
     @Json(name = "bModuleIsactive")
     val bModuleIsactive: kotlin.Boolean
 
-)
+) {
+
+
+}
 

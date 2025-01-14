@@ -18,6 +18,7 @@ package eZmaxApi.models
 import eZmaxApi.models.CommonAudit
 import eZmaxApi.models.ComputedEEzsigndocumentSteptype
 import eZmaxApi.models.CustomEzsignfoldersignerassociationstatusResponse
+import eZmaxApi.models.EzsigndocumentdependencyResponse
 import eZmaxApi.models.FieldEEzsigndocumentStep
 
 import com.squareup.moshi.Json
@@ -35,6 +36,7 @@ import com.squareup.moshi.JsonClass
  * @param iEzsigndocumentPagetotal The number of pages in the Ezsigndocument.
  * @param iEzsigndocumentSignaturesigned The number of signatures that were signed in the document.
  * @param iEzsigndocumentSignaturetotal The number of total signatures that were requested in the Ezsigndocument.
+ * @param iEzsigndocumentFormfieldtotal The number of total Ezsignformfield that were requested in the Ezsigndocument.
  * @param iEzsigndocumentEzsignsignatureattachmenttotal The number of Ezsigndocumentattachment total
  * @param iEzsigndocumentEzsigndiscussiontotal The total number of Ezsigndiscussions
  * @param eEzsigndocumentSteptype 
@@ -55,6 +57,7 @@ import com.squareup.moshi.JsonClass
  * @param bEzsigndocumentHassignedsignatures If the Ezsigndocument contains signed signatures (From internal or external sources)
  * @param objAudit 
  * @param sEzsigndocumentExternalid This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
+ * @param aObjEzsigndocumentdependency 
  */
 
 
@@ -94,6 +97,10 @@ data class EzsigndocumentResponseCompound (
     /* The number of total signatures that were requested in the Ezsigndocument. */
     @Json(name = "iEzsigndocumentSignaturetotal")
     val iEzsigndocumentSignaturetotal: kotlin.Int,
+
+    /* The number of total Ezsignformfield that were requested in the Ezsigndocument. */
+    @Json(name = "iEzsigndocumentFormfieldtotal")
+    val iEzsigndocumentFormfieldtotal: kotlin.Int,
 
     /* The number of Ezsigndocumentattachment total */
     @Json(name = "iEzsigndocumentEzsignsignatureattachmenttotal")
@@ -170,7 +177,13 @@ data class EzsigndocumentResponseCompound (
 
     /* This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format.  */
     @Json(name = "sEzsigndocumentExternalid")
-    val sEzsigndocumentExternalid: kotlin.String? = null
+    val sEzsigndocumentExternalid: kotlin.String? = null,
 
-)
+    @Json(name = "a_objEzsigndocumentdependency")
+    val aObjEzsigndocumentdependency: kotlin.collections.List<EzsigndocumentdependencyResponse>? = null
+
+) {
+
+
+}
 

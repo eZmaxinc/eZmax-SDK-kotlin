@@ -42,5 +42,8 @@ data class EzsignsigningreasonRequestCompound (
     @Json(name = "pkiEzsignsigningreasonID")
     val pkiEzsignsigningreasonID: kotlin.Int? = null
 
-)
+) {
+
+
+}
 

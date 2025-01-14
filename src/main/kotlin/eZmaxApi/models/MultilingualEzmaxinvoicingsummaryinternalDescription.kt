@@ -37,5 +37,8 @@ data class MultilingualEzmaxinvoicingsummaryinternalDescription (
     @Json(name = "sEzmaxinvoicingsummaryinternalDescription2")
     val sEzmaxinvoicingsummaryinternalDescription2: kotlin.String? = null
 
-)
+) {
+
+
+}
 

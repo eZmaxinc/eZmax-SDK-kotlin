@@ -32,5 +32,8 @@ data class EzsigntemplateformfieldgroupEditObjectV1Request (
     @Json(name = "objEzsigntemplateformfieldgroup")
     val objEzsigntemplateformfieldgroup: EzsigntemplateformfieldgroupRequestCompound
 
-)
+) {
+
+
+}
 

@@ -47,5 +47,8 @@ data class ContactinformationsRequest (
     @Json(name = "iWebsiteDefault")
     val iWebsiteDefault: kotlin.Int
 
-)
+) {
+
+
+}
 

@@ -35,6 +35,8 @@ import eZmaxApi.models.EzsignfoldersignerassociationGetObjectV1Response
 import eZmaxApi.models.EzsignfoldersignerassociationGetObjectV2Response
 import eZmaxApi.models.EzsignfoldersignerassociationPatchObjectV1Request
 import eZmaxApi.models.EzsignfoldersignerassociationPatchObjectV1Response
+import eZmaxApi.models.EzsignfoldersignerassociationReassignV1Request
+import eZmaxApi.models.EzsignfoldersignerassociationReassignV1Response
 
 class ObjectEzsignfoldersignerassociationApiTest : ShouldSpec() {
     init {
@@ -122,6 +124,15 @@ class ObjectEzsignfoldersignerassociationApiTest : ShouldSpec() {
             //val pkiEzsignfoldersignerassociationID : kotlin.Int = 56 // kotlin.Int | 
             //val ezsignfoldersignerassociationPatchObjectV1Request : EzsignfoldersignerassociationPatchObjectV1Request =  // EzsignfoldersignerassociationPatchObjectV1Request | 
             //val result : EzsignfoldersignerassociationPatchObjectV1Response = apiInstance.ezsignfoldersignerassociationPatchObjectV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationPatchObjectV1Request)
+            //result shouldBe ("TODO")
+        }
+
+        // to test ezsignfoldersignerassociationReassignV1
+        should("test ezsignfoldersignerassociationReassignV1") {
+            // uncomment below to test ezsignfoldersignerassociationReassignV1
+            //val pkiEzsignfoldersignerassociationID : kotlin.Int = 56 // kotlin.Int | 
+            //val ezsignfoldersignerassociationReassignV1Request : EzsignfoldersignerassociationReassignV1Request =  // EzsignfoldersignerassociationReassignV1Request | 
+            //val result : EzsignfoldersignerassociationReassignV1Response = apiInstance.ezsignfoldersignerassociationReassignV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationReassignV1Request)
             //result shouldBe ("TODO")
         }
 

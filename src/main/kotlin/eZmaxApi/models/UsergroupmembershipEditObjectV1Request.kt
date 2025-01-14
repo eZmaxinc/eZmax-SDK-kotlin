@@ -32,5 +32,8 @@ data class UsergroupmembershipEditObjectV1Request (
     @Json(name = "objUsergroupmembership")
     val objUsergroupmembership: UsergroupmembershipRequestCompound
 
-)
+) {
+
+
+}
 

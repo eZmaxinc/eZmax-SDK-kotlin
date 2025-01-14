@@ -67,5 +67,8 @@ data class EzsigndocumentlogResponseCompound (
     @Json(name = "fkiEzsignsignerID")
     val fkiEzsignsignerID: kotlin.Int? = null
 
-)
+) {
+
+
+}
 

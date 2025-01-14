@@ -47,5 +47,8 @@ data class EzsignbulksenddocumentmappingRequest (
     @Json(name = "fkiEzsigntemplateID")
     val fkiEzsigntemplateID: kotlin.Int? = null
 
-)
+) {
+
+
+}
 

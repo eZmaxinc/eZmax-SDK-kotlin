@@ -39,6 +39,7 @@ import com.squareup.moshi.JsonClass
  * @param iEzsigntemplateformfieldgroupMaxlength The maximum length for the value in the Ezsigntemplateformfieldgroup  This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea**
  * @param bEzsigntemplateformfieldgroupEncrypted Whether the Ezsigntemplateformfieldgroup is encrypted in the database or not. Encrypted values are not displayed on the Ezsigndocument. This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea**
  * @param sEzsigntemplateformfieldgroupRegexp A regular expression to indicate what values are acceptable for the Ezsigntemplateformfieldgroup.  This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea**
+ * @param sEzsigntemplateformfieldgroupTextvalidationcustommessage Description of validation rule. Show by signatory.
  * @param eEzsigntemplateformfieldgroupTextvalidation 
  * @param tEzsigntemplateformfieldgroupTooltip A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplateformfieldgroup
  * @param eEzsigntemplateformfieldgroupTooltipposition 
@@ -98,6 +99,10 @@ data class EzsigntemplateformfieldgroupResponse (
     @Json(name = "sEzsigntemplateformfieldgroupRegexp")
     val sEzsigntemplateformfieldgroupRegexp: kotlin.String? = null,
 
+    /* Description of validation rule. Show by signatory. */
+    @Json(name = "sEzsigntemplateformfieldgroupTextvalidationcustommessage")
+    val sEzsigntemplateformfieldgroupTextvalidationcustommessage: kotlin.String? = null,
+
     @Json(name = "eEzsigntemplateformfieldgroupTextvalidation")
     val eEzsigntemplateformfieldgroupTextvalidation: EnumTextvalidation? = null,
 
@@ -108,5 +113,8 @@ data class EzsigntemplateformfieldgroupResponse (
     @Json(name = "eEzsigntemplateformfieldgroupTooltipposition")
     val eEzsigntemplateformfieldgroupTooltipposition: FieldEEzsigntemplateformfieldgroupTooltipposition? = null
 
-)
+) {
+
+
+}
 

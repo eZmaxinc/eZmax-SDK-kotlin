@@ -37,5 +37,8 @@ data class CommonReportrow (
     @Json(name = "iReportrowHeight")
     val iReportrowHeight: kotlin.Int
 
-)
+) {
+
+
+}
 

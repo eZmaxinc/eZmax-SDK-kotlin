@@ -15,9 +15,11 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.EnumHorizontalalignment
 import eZmaxApi.models.FieldEEzsigntemplateformfieldDependencyrequirement
 import eZmaxApi.models.FieldEEzsigntemplateformfieldPositioning
 import eZmaxApi.models.FieldEEzsigntemplateformfieldPositioningoccurence
+import eZmaxApi.models.TextstylestaticResponseCompound
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -28,8 +30,8 @@ import com.squareup.moshi.JsonClass
  * @param pkiEzsigntemplateformfieldID The unique ID of the Ezsigntemplateformfield
  * @param iEzsigntemplatedocumentpagePagenumber The page number in the Ezsigntemplatedocument
  * @param sEzsigntemplateformfieldLabel The Label for the Ezsigntemplateformfield
- * @param iEzsigntemplateformfieldWidth The Width of the Ezsigntemplateformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsigntemplateformfieldgroupType.  | eEzsigntemplateformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22-65535     | | Radio                     | 22           | | Text                      | 22-65535     | | Textarea                  | 22-65535     |
- * @param iEzsigntemplateformfieldHeight The Height of the Ezsigntemplateformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsigntemplateformfieldgroupType.  | eEzsigntemplateformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22           | | Radio                     | 22           | | Text                      | 22           | | Textarea                  | 22-65535     | 
+ * @param iEzsigntemplateformfieldWidth The Width of the Ezsigntemplateformfield in pixels calculated at 100 DPI
+ * @param iEzsigntemplateformfieldHeight The Height of the Ezsigntemplateformfield in pixels calculated at 100 DPI 
  * @param eEzsigntemplateformfieldPositioning 
  * @param sEzsigntemplateformfieldValue The value for the Ezsigntemplateformfield
  * @param iEzsigntemplateformfieldX The X coordinate (Horizontal) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 2 inches from the left border of the page, you would use \"200\" for the X coordinate.
@@ -41,6 +43,8 @@ import com.squareup.moshi.JsonClass
  * @param iEzsigntemplateformfieldPositioningoffsetx The offset X  This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates**
  * @param iEzsigntemplateformfieldPositioningoffsety The offset Y  This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates**
  * @param eEzsigntemplateformfieldPositioningoccurence 
+ * @param eEzsigntemplateformfieldHorizontalalignment 
+ * @param objTextstylestatic 
  */
 
 
@@ -58,11 +62,11 @@ data class EzsigntemplateformfieldResponse (
     @Json(name = "sEzsigntemplateformfieldLabel")
     val sEzsigntemplateformfieldLabel: kotlin.String,
 
-    /* The Width of the Ezsigntemplateformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsigntemplateformfieldgroupType.  | eEzsigntemplateformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22-65535     | | Radio                     | 22           | | Text                      | 22-65535     | | Textarea                  | 22-65535     | */
+    /* The Width of the Ezsigntemplateformfield in pixels calculated at 100 DPI */
     @Json(name = "iEzsigntemplateformfieldWidth")
     val iEzsigntemplateformfieldWidth: kotlin.Int,
 
-    /* The Height of the Ezsigntemplateformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsigntemplateformfieldgroupType.  | eEzsigntemplateformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22           | | Radio                     | 22           | | Text                      | 22           | | Textarea                  | 22-65535     |  */
+    /* The Height of the Ezsigntemplateformfield in pixels calculated at 100 DPI  */
     @Json(name = "iEzsigntemplateformfieldHeight")
     val iEzsigntemplateformfieldHeight: kotlin.Int,
 
@@ -105,7 +109,16 @@ data class EzsigntemplateformfieldResponse (
     val iEzsigntemplateformfieldPositioningoffsety: kotlin.Int? = null,
 
     @Json(name = "eEzsigntemplateformfieldPositioningoccurence")
-    val eEzsigntemplateformfieldPositioningoccurence: FieldEEzsigntemplateformfieldPositioningoccurence? = null
+    val eEzsigntemplateformfieldPositioningoccurence: FieldEEzsigntemplateformfieldPositioningoccurence? = null,
 
-)
+    @Json(name = "eEzsigntemplateformfieldHorizontalalignment")
+    val eEzsigntemplateformfieldHorizontalalignment: EnumHorizontalalignment? = null,
+
+    @Json(name = "objTextstylestatic")
+    val objTextstylestatic: TextstylestaticResponseCompound? = null
+
+) {
+
+
+}
 

@@ -41,5 +41,8 @@ data class ScimGroup (
     @Json(name = "members")
     val members: kotlin.collections.List<ScimGroupMember>? = null
 
-)
+) {
+
+
+}
 

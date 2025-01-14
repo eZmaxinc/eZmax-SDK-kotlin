@@ -2,9 +2,9 @@
 # EzsignfoldersignerassociationGetObjectV2ResponseMPayload
 
 ## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**objEzsignfoldersignerassociation** | [**EzsignfoldersignerassociationResponseCompound**](EzsignfoldersignerassociationResponseCompound.md) |  | 
+| Name | Type | Description | Notes |
+| ------------ | ------------- | ------------- | ------------- |
+| **objEzsignfoldersignerassociation** | [**EzsignfoldersignerassociationResponseCompound**](EzsignfoldersignerassociationResponseCompound.md) |  |  |
 
 
 

@@ -2,9 +2,9 @@
 
 All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/rest*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**sessionhistoryGetListV1**](ObjectSessionhistoryApi.md#sessionhistoryGetListV1) | **GET** /1/object/sessionhistory/getList | Retrieve Sessionhistory list
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**sessionhistoryGetListV1**](ObjectSessionhistoryApi.md#sessionhistoryGetListV1) | **GET** /1/object/sessionhistory/getList | Retrieve Sessionhistory list |
 
 
 <a id="sessionhistoryGetListV1"></a>
@@ -38,14 +38,13 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiSessionhistoryID_ASC, pkiSessionhistoryID_DESC, fkiComputerID_ASC, fkiComputerID_DESC, fkiUserID_ASC, fkiUserID_DESC, dtSessionhistoryFirsthit_ASC, dtSessionhistoryFirsthit_DESC, dtSessionhistoryLasthit_ASC, dtSessionhistoryLasthit_DESC, eSessionhistoryEndby_ASC, eSessionhistoryEndby_DESC, sComputerDescription_ASC, sComputerDescription_DESC, sSessionhistoryDuration_ASC, sSessionhistoryDuration_DESC, sSessionhistoryIP_ASC, sSessionhistoryIP_DESC, sUserLoginname_ASC, sUserLoginname_DESC]
- **iRowMax** | **kotlin.Int**|  | [optional]
- **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0]
- **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
- **sFilter** | **kotlin.String**|  | [optional]
+| **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiSessionhistoryID_ASC, pkiSessionhistoryID_DESC, fkiComputerID_ASC, fkiComputerID_DESC, fkiUserID_ASC, fkiUserID_DESC, dtSessionhistoryFirsthit_ASC, dtSessionhistoryFirsthit_DESC, dtSessionhistoryLasthit_ASC, dtSessionhistoryLasthit_DESC, eSessionhistoryEndby_ASC, eSessionhistoryEndby_DESC, sComputerDescription_ASC, sComputerDescription_DESC, sSessionhistoryDuration_ASC, sSessionhistoryDuration_DESC, sSessionhistoryIP_ASC, sSessionhistoryIP_DESC, sUserLoginname_ASC, sUserLoginname_DESC] |
+| **iRowMax** | **kotlin.Int**|  | [optional] |
+| **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0] |
+| **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sFilter** | **kotlin.String**|  | [optional] |
 
 ### Return type
 

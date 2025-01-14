@@ -151,5 +151,6 @@ data class CustomCommunicationrecipientsrecipientResponse (
         @Json(name = "Supplier") Supplier("Supplier"),
         @Json(name = "User") User("User");
     }
+
 }
 

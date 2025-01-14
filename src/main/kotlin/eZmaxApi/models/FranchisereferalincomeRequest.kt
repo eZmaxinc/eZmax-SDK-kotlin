@@ -87,5 +87,8 @@ data class FranchisereferalincomeRequest (
     @Json(name = "pkiFranchisereferalincomeID")
     val pkiFranchisereferalincomeID: kotlin.Int? = null
 
-)
+) {
+
+
+}
 

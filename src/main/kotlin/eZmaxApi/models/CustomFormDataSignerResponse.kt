@@ -52,5 +52,8 @@ data class CustomFormDataSignerResponse (
     @Json(name = "fkiUserID")
     val fkiUserID: kotlin.Int? = null
 
-)
+) {
+
+
+}
 

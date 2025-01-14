@@ -20,6 +20,7 @@ import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectCreditcardclientApi
 import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.CommonResponseErrorCreditcardValidation
 import eZmaxApi.models.CreditcardclientCreateObjectV1Request
 import eZmaxApi.models.CreditcardclientCreateObjectV1Response
 import eZmaxApi.models.CreditcardclientDeleteObjectV1Response
@@ -28,6 +29,8 @@ import eZmaxApi.models.CreditcardclientEditObjectV1Response
 import eZmaxApi.models.CreditcardclientGetAutocompleteV2Response
 import eZmaxApi.models.CreditcardclientGetListV1Response
 import eZmaxApi.models.CreditcardclientGetObjectV2Response
+import eZmaxApi.models.CreditcardclientPatchObjectV1Request
+import eZmaxApi.models.CreditcardclientPatchObjectV1Response
 import eZmaxApi.models.HeaderAcceptLanguage
 
 class ObjectCreditcardclientApiTest : ShouldSpec() {
@@ -88,6 +91,15 @@ class ObjectCreditcardclientApiTest : ShouldSpec() {
             // uncomment below to test creditcardclientGetObjectV2
             //val pkiCreditcardclientID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Creditcardclient
             //val result : CreditcardclientGetObjectV2Response = apiInstance.creditcardclientGetObjectV2(pkiCreditcardclientID)
+            //result shouldBe ("TODO")
+        }
+
+        // to test creditcardclientPatchObjectV1
+        should("test creditcardclientPatchObjectV1") {
+            // uncomment below to test creditcardclientPatchObjectV1
+            //val pkiCreditcardclientID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Creditcardclient
+            //val creditcardclientPatchObjectV1Request : CreditcardclientPatchObjectV1Request =  // CreditcardclientPatchObjectV1Request | 
+            //val result : CreditcardclientPatchObjectV1Response = apiInstance.creditcardclientPatchObjectV1(pkiCreditcardclientID, creditcardclientPatchObjectV1Request)
             //result shouldBe ("TODO")
         }
 

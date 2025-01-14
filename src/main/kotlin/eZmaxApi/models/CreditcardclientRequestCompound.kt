@@ -23,11 +23,10 @@ import com.squareup.moshi.JsonClass
 /**
  * A Creditcardclient Object and children
  *
- * @param bCreditcardclientrelationIsdefault Whether if it's an relationisdefault
+ * @param bCreditcardclientrelationIsdefault Whether if it's the creditcardclient is the default one
  * @param sCreditcardclientDescription The description of the Creditcardclient
- * @param bCreditcardclientIsactive Whether the creditcardclient is active or not
- * @param bCreditcardclientAllowedagencypayment Whether if it's an allowedagencypayment
- * @param bCreditcardclientAllowedroyallepageprotection Whether if it's an allowedroyallepageprotection
+ * @param bCreditcardclientAllowedcompanypayment Whether if it's an allowedagencypayment
+ * @param bCreditcardclientAllowedezsign Whether if it's an allowedroyallepageprotection
  * @param bCreditcardclientAllowedtranquillit Whether if it's an allowedtranquillit
  * @param objCreditcarddetail 
  * @param sCreditcardclientCVV The creditcard card CVV
@@ -38,7 +37,7 @@ import com.squareup.moshi.JsonClass
 
 data class CreditcardclientRequestCompound (
 
-    /* Whether if it's an relationisdefault */
+    /* Whether if it's the creditcardclient is the default one */
     @Json(name = "bCreditcardclientrelationIsdefault")
     val bCreditcardclientrelationIsdefault: kotlin.Boolean,
 
@@ -46,17 +45,13 @@ data class CreditcardclientRequestCompound (
     @Json(name = "sCreditcardclientDescription")
     val sCreditcardclientDescription: kotlin.String,
 
-    /* Whether the creditcardclient is active or not */
-    @Json(name = "bCreditcardclientIsactive")
-    val bCreditcardclientIsactive: kotlin.Boolean,
-
     /* Whether if it's an allowedagencypayment */
-    @Json(name = "bCreditcardclientAllowedagencypayment")
-    val bCreditcardclientAllowedagencypayment: kotlin.Boolean,
+    @Json(name = "bCreditcardclientAllowedcompanypayment")
+    val bCreditcardclientAllowedcompanypayment: kotlin.Boolean,
 
     /* Whether if it's an allowedroyallepageprotection */
-    @Json(name = "bCreditcardclientAllowedroyallepageprotection")
-    val bCreditcardclientAllowedroyallepageprotection: kotlin.Boolean,
+    @Json(name = "bCreditcardclientAllowedezsign")
+    val bCreditcardclientAllowedezsign: kotlin.Boolean,
 
     /* Whether if it's an allowedtranquillit */
     @Json(name = "bCreditcardclientAllowedtranquillit")
@@ -77,5 +72,8 @@ data class CreditcardclientRequestCompound (
     @Json(name = "fksCreditcardtokenID")
     val fksCreditcardtokenID: kotlin.String? = null
 
-)
+) {
+
+
+}
 

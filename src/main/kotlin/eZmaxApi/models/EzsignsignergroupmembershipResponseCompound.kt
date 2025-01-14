@@ -52,5 +52,8 @@ data class EzsignsignergroupmembershipResponseCompound (
     @Json(name = "fkiUsergroupID")
     val fkiUsergroupID: kotlin.Int? = null
 
-)
+) {
+
+
+}
 

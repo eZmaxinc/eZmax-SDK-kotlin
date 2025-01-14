@@ -32,5 +32,8 @@ data class SignatureCreateObjectV1Request (
     @Json(name = "a_objSignature")
     val aObjSignature: kotlin.collections.List<SignatureRequestCompound>
 
-)
+) {
+
+
+}
 

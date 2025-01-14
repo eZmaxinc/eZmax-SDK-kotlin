@@ -82,5 +82,8 @@ data class EzsignannotationResponse (
     @Json(name = "sEzsignannotationText")
     val sEzsignannotationText: kotlin.String? = null
 
-)
+) {
+
+
+}
 

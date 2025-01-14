@@ -31,6 +31,12 @@ class TextstylestaticResponseTest : ShouldSpec() {
             //modelInstance.fkiFontID shouldBe ("TODO")
         }
 
+        // to test the property `sFontName` - The name of the Font
+        should("test sFontName") {
+            // uncomment below to test the property
+            //modelInstance.sFontName shouldBe ("TODO")
+        }
+
         // to test the property `bTextstylestaticBold` - Whether the Textstylestatic is Bold or not
         should("test bTextstylestaticBold") {
             // uncomment below to test the property

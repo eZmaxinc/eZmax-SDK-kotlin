@@ -37,5 +37,8 @@ data class MultilingualEzsignfoldertypeName (
     @Json(name = "sEzsignfoldertypeName2")
     val sEzsignfoldertypeName2: kotlin.String? = null
 
-)
+) {
+
+
+}
 

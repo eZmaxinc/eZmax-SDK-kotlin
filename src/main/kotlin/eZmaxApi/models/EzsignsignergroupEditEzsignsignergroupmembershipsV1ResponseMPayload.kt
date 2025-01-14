@@ -31,5 +31,8 @@ data class EzsignsignergroupEditEzsignsignergroupmembershipsV1ResponseMPayload (
     @Json(name = "a_pkiEzsignsignergroupmembershipID")
     val aPkiEzsignsignergroupmembershipID: kotlin.collections.List<kotlin.Int>
 
-)
+) {
+
+
+}
 

@@ -42,5 +42,8 @@ data class WebhookheaderRequestCompound (
     @Json(name = "pkiWebhookheaderID")
     val pkiWebhookheaderID: kotlin.Int? = null
 
-)
+) {
+
+
+}
 

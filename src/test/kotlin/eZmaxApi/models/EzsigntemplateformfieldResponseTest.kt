@@ -19,9 +19,11 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.EzsigntemplateformfieldResponse
+import eZmaxApi.models.EnumHorizontalalignment
 import eZmaxApi.models.FieldEEzsigntemplateformfieldDependencyrequirement
 import eZmaxApi.models.FieldEEzsigntemplateformfieldPositioning
 import eZmaxApi.models.FieldEEzsigntemplateformfieldPositioningoccurence
+import eZmaxApi.models.TextstylestaticResponseCompound
 
 class EzsigntemplateformfieldResponseTest : ShouldSpec() {
     init {
@@ -46,13 +48,13 @@ class EzsigntemplateformfieldResponseTest : ShouldSpec() {
             //modelInstance.sEzsigntemplateformfieldLabel shouldBe ("TODO")
         }
 
-        // to test the property `iEzsigntemplateformfieldWidth` - The Width of the Ezsigntemplateformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsigntemplateformfieldgroupType.  | eEzsigntemplateformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22-65535     | | Radio                     | 22           | | Text                      | 22-65535     | | Textarea                  | 22-65535     |
+        // to test the property `iEzsigntemplateformfieldWidth` - The Width of the Ezsigntemplateformfield in pixels calculated at 100 DPI
         should("test iEzsigntemplateformfieldWidth") {
             // uncomment below to test the property
             //modelInstance.iEzsigntemplateformfieldWidth shouldBe ("TODO")
         }
 
-        // to test the property `iEzsigntemplateformfieldHeight` - The Height of the Ezsigntemplateformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsigntemplateformfieldgroupType.  | eEzsigntemplateformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22           | | Radio                     | 22           | | Text                      | 22           | | Textarea                  | 22-65535     | 
+        // to test the property `iEzsigntemplateformfieldHeight` - The Height of the Ezsigntemplateformfield in pixels calculated at 100 DPI 
         should("test iEzsigntemplateformfieldHeight") {
             // uncomment below to test the property
             //modelInstance.iEzsigntemplateformfieldHeight shouldBe ("TODO")
@@ -122,6 +124,18 @@ class EzsigntemplateformfieldResponseTest : ShouldSpec() {
         should("test eEzsigntemplateformfieldPositioningoccurence") {
             // uncomment below to test the property
             //modelInstance.eEzsigntemplateformfieldPositioningoccurence shouldBe ("TODO")
+        }
+
+        // to test the property `eEzsigntemplateformfieldHorizontalalignment`
+        should("test eEzsigntemplateformfieldHorizontalalignment") {
+            // uncomment below to test the property
+            //modelInstance.eEzsigntemplateformfieldHorizontalalignment shouldBe ("TODO")
+        }
+
+        // to test the property `objTextstylestatic`
+        should("test objTextstylestatic") {
+            // uncomment below to test the property
+            //modelInstance.objTextstylestatic shouldBe ("TODO")
         }
 
     }

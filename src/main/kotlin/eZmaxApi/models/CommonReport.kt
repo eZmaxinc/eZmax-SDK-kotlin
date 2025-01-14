@@ -32,5 +32,8 @@ data class CommonReport (
     @Json(name = "a_objReportsection")
     val aObjReportsection: kotlin.collections.List<CommonReportsection>
 
-)
+) {
+
+
+}
 

@@ -32,5 +32,8 @@ data class FranchisereferalincomeCreateObjectV2Request (
     @Json(name = "a_objFranchisereferalincome")
     val aObjFranchisereferalincome: kotlin.collections.List<FranchisereferalincomeRequestCompound>
 
-)
+) {
+
+
+}
 

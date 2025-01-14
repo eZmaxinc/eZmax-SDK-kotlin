@@ -37,5 +37,8 @@ data class MultilingualEzsignsignergroupDescription (
     @Json(name = "sEzsignsignergroupDescription2")
     val sEzsignsignergroupDescription2: kotlin.String? = null
 
-)
+) {
+
+
+}
 

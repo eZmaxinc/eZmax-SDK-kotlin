@@ -32,5 +32,8 @@ data class PaymenttermGetObjectV2ResponseMPayload (
     @Json(name = "objPaymentterm")
     val objPaymentterm: PaymenttermResponseCompound
 
-)
+) {
+
+
+}
 

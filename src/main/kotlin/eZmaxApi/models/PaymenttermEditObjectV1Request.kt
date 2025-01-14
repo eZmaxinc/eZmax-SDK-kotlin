@@ -32,5 +32,8 @@ data class PaymenttermEditObjectV1Request (
     @Json(name = "objPaymentterm")
     val objPaymentterm: PaymenttermRequestCompound
 
-)
+) {
+
+
+}
 

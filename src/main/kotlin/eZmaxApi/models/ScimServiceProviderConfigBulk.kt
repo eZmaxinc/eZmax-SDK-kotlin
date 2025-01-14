@@ -42,5 +42,8 @@ data class ScimServiceProviderConfigBulk (
     @Json(name = "maxPayloadSize")
     val maxPayloadSize: kotlin.Int
 
-)
+) {
+
+
+}
 

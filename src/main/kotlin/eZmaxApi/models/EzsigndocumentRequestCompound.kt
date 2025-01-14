@@ -35,7 +35,7 @@ import com.squareup.moshi.JsonClass
  * @param sEzsigndocumentUrl The url where the document content resides.  This field is Required when eEzsigndocumentSource = Url.
  * @param bEzsigndocumentForcerepair Try to repair the document or flatten it if it cannot be used for electronic signature. 
  * @param sEzsigndocumentPassword If the source document is password protected, the password to open/modify it.
- * @param eEzsigndocumentForm If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**  **Discard** removes the form from the document.
+ * @param eEzsigndocumentForm If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**  **Discard** removes the form from the document.  **Flatten** prints the form values in the document.
  * @param sEzsigndocumentExternalid This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
  */
 
@@ -94,7 +94,7 @@ data class EzsigndocumentRequestCompound (
     @Json(name = "sEzsigndocumentPassword")
     val sEzsigndocumentPassword: kotlin.String? = null,
 
-    /* If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**  **Discard** removes the form from the document. */
+    /* If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**  **Discard** removes the form from the document.  **Flatten** prints the form values in the document. */
     @Json(name = "eEzsigndocumentForm")
     val eEzsigndocumentForm: EzsigndocumentRequestCompound.EEzsigndocumentForm? = null,
 
@@ -131,15 +131,17 @@ data class EzsigndocumentRequestCompound (
         @Json(name = "Pptx") Pptx("Pptx");
     }
     /**
-     * If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**  **Discard** removes the form from the document.
+     * If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**  **Discard** removes the form from the document.  **Flatten** prints the form values in the document.
      *
-     * Values: Keep,Convert,Discard
+     * Values: Keep,Convert,Discard,Flatten
      */
     @JsonClass(generateAdapter = false)
     enum class EEzsigndocumentForm(val value: kotlin.String) {
         @Json(name = "Keep") Keep("Keep"),
         @Json(name = "Convert") Convert("Convert"),
-        @Json(name = "Discard") Discard("Discard");
+        @Json(name = "Discard") Discard("Discard"),
+        @Json(name = "Flatten") Flatten("Flatten");
     }
+
 }
 

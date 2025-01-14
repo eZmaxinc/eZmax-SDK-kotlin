@@ -32,5 +32,8 @@ data class EzsigndocumentDeclineToSignV1Request (
     @Json(name = "sReason")
     val sReason: kotlin.String
 
-)
+) {
+
+
+}
 

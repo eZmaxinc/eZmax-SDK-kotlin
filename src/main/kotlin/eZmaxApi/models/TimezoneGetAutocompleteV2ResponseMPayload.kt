@@ -33,5 +33,8 @@ data class TimezoneGetAutocompleteV2ResponseMPayload (
     @Json(name = "a_objTimezone")
     val aObjTimezone: kotlin.collections.List<TimezoneAutocompleteElementResponse>
 
-)
+) {
+
+
+}
 

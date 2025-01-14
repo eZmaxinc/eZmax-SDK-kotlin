@@ -42,5 +42,8 @@ data class LanguageAutocompleteElementResponse (
     @Json(name = "bLanguageIsactive")
     val bLanguageIsactive: kotlin.Boolean
 
-)
+) {
+
+
+}
 

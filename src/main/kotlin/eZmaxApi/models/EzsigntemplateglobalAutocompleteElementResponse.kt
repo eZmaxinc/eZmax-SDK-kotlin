@@ -42,5 +42,8 @@ data class EzsigntemplateglobalAutocompleteElementResponse (
     @Json(name = "bEzsigntemplateglobalIsactive")
     val bEzsigntemplateglobalIsactive: kotlin.Boolean
 
-)
+) {
+
+
+}
 

@@ -32,5 +32,8 @@ data class CreditcardclientEditObjectV1Request (
     @Json(name = "objCreditcardclient")
     val objCreditcardclient: CreditcardclientRequestCompound
 
-)
+) {
+
+
+}
 

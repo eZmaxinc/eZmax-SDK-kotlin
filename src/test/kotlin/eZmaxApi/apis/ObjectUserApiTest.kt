@@ -25,12 +25,15 @@ import eZmaxApi.models.UserCreateObjectV1Request
 import eZmaxApi.models.UserCreateObjectV1Response
 import eZmaxApi.models.UserCreateObjectV2Request
 import eZmaxApi.models.UserCreateObjectV2Response
+import eZmaxApi.models.UserEditColleaguesV2Request
+import eZmaxApi.models.UserEditColleaguesV2Response
 import eZmaxApi.models.UserEditObjectV1Request
 import eZmaxApi.models.UserEditObjectV1Response
 import eZmaxApi.models.UserEditPermissionsV1Request
 import eZmaxApi.models.UserEditPermissionsV1Response
 import eZmaxApi.models.UserGetApikeysV1Response
 import eZmaxApi.models.UserGetAutocompleteV2Response
+import eZmaxApi.models.UserGetColleaguesV2Response
 import eZmaxApi.models.UserGetEffectivePermissionsV1Response
 import eZmaxApi.models.UserGetListV1Response
 import eZmaxApi.models.UserGetObjectV2Response
@@ -58,6 +61,15 @@ class ObjectUserApiTest : ShouldSpec() {
             // uncomment below to test userCreateObjectV2
             //val userCreateObjectV2Request : UserCreateObjectV2Request =  // UserCreateObjectV2Request | 
             //val result : UserCreateObjectV2Response = apiInstance.userCreateObjectV2(userCreateObjectV2Request)
+            //result shouldBe ("TODO")
+        }
+
+        // to test userEditColleaguesV2
+        should("test userEditColleaguesV2") {
+            // uncomment below to test userEditColleaguesV2
+            //val pkiUserID : kotlin.Int = 56 // kotlin.Int | 
+            //val userEditColleaguesV2Request : UserEditColleaguesV2Request =  // UserEditColleaguesV2Request | 
+            //val result : UserEditColleaguesV2Response = apiInstance.userEditColleaguesV2(pkiUserID, userEditColleaguesV2Request)
             //result shouldBe ("TODO")
         }
 
@@ -95,6 +107,14 @@ class ObjectUserApiTest : ShouldSpec() {
             //val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter the returned results
             //val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
             //val result : UserGetAutocompleteV2Response = apiInstance.userGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+            //result shouldBe ("TODO")
+        }
+
+        // to test userGetColleaguesV2
+        should("test userGetColleaguesV2") {
+            // uncomment below to test userGetColleaguesV2
+            //val pkiUserID : kotlin.Int = 56 // kotlin.Int | 
+            //val result : UserGetColleaguesV2Response = apiInstance.userGetColleaguesV2(pkiUserID)
             //result shouldBe ("TODO")
         }
 

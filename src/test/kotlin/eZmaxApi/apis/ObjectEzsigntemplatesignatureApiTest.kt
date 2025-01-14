@@ -20,23 +20,23 @@ import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectEzsigntemplatesignatureApi
 import eZmaxApi.models.CommonResponseError
-import eZmaxApi.models.EzsigntemplatesignatureCreateObjectV1Request
-import eZmaxApi.models.EzsigntemplatesignatureCreateObjectV1Response
+import eZmaxApi.models.EzsigntemplatesignatureCreateObjectV2Request
+import eZmaxApi.models.EzsigntemplatesignatureCreateObjectV2Response
 import eZmaxApi.models.EzsigntemplatesignatureDeleteObjectV1Response
-import eZmaxApi.models.EzsigntemplatesignatureEditObjectV1Request
-import eZmaxApi.models.EzsigntemplatesignatureEditObjectV1Response
-import eZmaxApi.models.EzsigntemplatesignatureGetObjectV2Response
+import eZmaxApi.models.EzsigntemplatesignatureEditObjectV2Request
+import eZmaxApi.models.EzsigntemplatesignatureEditObjectV2Response
+import eZmaxApi.models.EzsigntemplatesignatureGetObjectV3Response
 
 class ObjectEzsigntemplatesignatureApiTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of ObjectEzsigntemplatesignatureApi
         //val apiInstance = ObjectEzsigntemplatesignatureApi()
 
-        // to test ezsigntemplatesignatureCreateObjectV1
-        should("test ezsigntemplatesignatureCreateObjectV1") {
-            // uncomment below to test ezsigntemplatesignatureCreateObjectV1
-            //val ezsigntemplatesignatureCreateObjectV1Request : EzsigntemplatesignatureCreateObjectV1Request =  // EzsigntemplatesignatureCreateObjectV1Request | 
-            //val result : EzsigntemplatesignatureCreateObjectV1Response = apiInstance.ezsigntemplatesignatureCreateObjectV1(ezsigntemplatesignatureCreateObjectV1Request)
+        // to test ezsigntemplatesignatureCreateObjectV2
+        should("test ezsigntemplatesignatureCreateObjectV2") {
+            // uncomment below to test ezsigntemplatesignatureCreateObjectV2
+            //val ezsigntemplatesignatureCreateObjectV2Request : EzsigntemplatesignatureCreateObjectV2Request =  // EzsigntemplatesignatureCreateObjectV2Request | 
+            //val result : EzsigntemplatesignatureCreateObjectV2Response = apiInstance.ezsigntemplatesignatureCreateObjectV2(ezsigntemplatesignatureCreateObjectV2Request)
             //result shouldBe ("TODO")
         }
 
@@ -48,20 +48,20 @@ class ObjectEzsigntemplatesignatureApiTest : ShouldSpec() {
             //result shouldBe ("TODO")
         }
 
-        // to test ezsigntemplatesignatureEditObjectV1
-        should("test ezsigntemplatesignatureEditObjectV1") {
-            // uncomment below to test ezsigntemplatesignatureEditObjectV1
+        // to test ezsigntemplatesignatureEditObjectV2
+        should("test ezsigntemplatesignatureEditObjectV2") {
+            // uncomment below to test ezsigntemplatesignatureEditObjectV2
             //val pkiEzsigntemplatesignatureID : kotlin.Int = 56 // kotlin.Int | 
-            //val ezsigntemplatesignatureEditObjectV1Request : EzsigntemplatesignatureEditObjectV1Request =  // EzsigntemplatesignatureEditObjectV1Request | 
-            //val result : EzsigntemplatesignatureEditObjectV1Response = apiInstance.ezsigntemplatesignatureEditObjectV1(pkiEzsigntemplatesignatureID, ezsigntemplatesignatureEditObjectV1Request)
+            //val ezsigntemplatesignatureEditObjectV2Request : EzsigntemplatesignatureEditObjectV2Request =  // EzsigntemplatesignatureEditObjectV2Request | 
+            //val result : EzsigntemplatesignatureEditObjectV2Response = apiInstance.ezsigntemplatesignatureEditObjectV2(pkiEzsigntemplatesignatureID, ezsigntemplatesignatureEditObjectV2Request)
             //result shouldBe ("TODO")
         }
 
-        // to test ezsigntemplatesignatureGetObjectV2
-        should("test ezsigntemplatesignatureGetObjectV2") {
-            // uncomment below to test ezsigntemplatesignatureGetObjectV2
+        // to test ezsigntemplatesignatureGetObjectV3
+        should("test ezsigntemplatesignatureGetObjectV3") {
+            // uncomment below to test ezsigntemplatesignatureGetObjectV3
             //val pkiEzsigntemplatesignatureID : kotlin.Int = 56 // kotlin.Int | 
-            //val result : EzsigntemplatesignatureGetObjectV2Response = apiInstance.ezsigntemplatesignatureGetObjectV2(pkiEzsigntemplatesignatureID)
+            //val result : EzsigntemplatesignatureGetObjectV3Response = apiInstance.ezsigntemplatesignatureGetObjectV3(pkiEzsigntemplatesignatureID)
             //result shouldBe ("TODO")
         }
 

@@ -32,5 +32,8 @@ data class ScimServiceProviderConfigPatch (
     @Json(name = "supported")
     val supported: kotlin.Boolean
 
-)
+) {
+
+
+}
 

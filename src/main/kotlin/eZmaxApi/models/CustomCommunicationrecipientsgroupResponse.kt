@@ -37,5 +37,8 @@ data class CustomCommunicationrecipientsgroupResponse (
     @Json(name = "a_objCommunicationrecipientsrecipient")
     val aObjCommunicationrecipientsrecipient: kotlin.collections.List<CustomCommunicationrecipientsrecipientResponse>
 
-)
+) {
+
+
+}
 

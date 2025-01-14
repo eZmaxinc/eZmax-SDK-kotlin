@@ -32,5 +32,8 @@ data class WebhookRegenerateApikeyV1Request (
     @Json(name = "bWebhookIssigned")
     val bWebhookIssigned: kotlin.Boolean? = null
 
-)
+) {
+
+
+}
 

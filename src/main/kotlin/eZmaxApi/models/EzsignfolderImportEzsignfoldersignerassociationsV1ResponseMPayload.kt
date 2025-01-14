@@ -31,5 +31,8 @@ data class EzsignfolderImportEzsignfoldersignerassociationsV1ResponseMPayload (
     @Json(name = "a_pkiEzsignfoldersignerassociationID")
     val aPkiEzsignfoldersignerassociationID: kotlin.collections.List<kotlin.Int>
 
-)
+) {
+
+
+}
 

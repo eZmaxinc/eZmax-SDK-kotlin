@@ -32,5 +32,8 @@ data class ApikeyGetCorsV1ResponseMPayload (
     @Json(name = "a_objCors")
     val aObjCors: kotlin.collections.List<CorsResponseCompound>
 
-)
+) {
+
+
+}
 

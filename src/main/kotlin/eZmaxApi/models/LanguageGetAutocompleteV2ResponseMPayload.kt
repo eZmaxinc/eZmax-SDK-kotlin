@@ -33,5 +33,8 @@ data class LanguageGetAutocompleteV2ResponseMPayload (
     @Json(name = "a_objLanguage")
     val aObjLanguage: kotlin.collections.List<LanguageAutocompleteElementResponse>
 
-)
+) {
+
+
+}
 

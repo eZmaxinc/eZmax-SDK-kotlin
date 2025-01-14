@@ -42,5 +42,8 @@ data class EzsignsigningreasonAutocompleteElementResponse (
     @Json(name = "bEzsignsigningreasonIsactive")
     val bEzsignsigningreasonIsactive: kotlin.Boolean
 
-)
+) {
+
+
+}
 

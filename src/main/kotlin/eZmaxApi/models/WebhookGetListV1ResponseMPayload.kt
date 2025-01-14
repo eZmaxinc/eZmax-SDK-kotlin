@@ -42,5 +42,8 @@ data class WebhookGetListV1ResponseMPayload (
     @Json(name = "a_objWebhook")
     val aObjWebhook: kotlin.collections.List<WebhookListElement>
 
-)
+) {
+
+
+}
 

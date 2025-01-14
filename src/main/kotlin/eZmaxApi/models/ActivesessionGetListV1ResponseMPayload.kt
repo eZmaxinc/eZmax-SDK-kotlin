@@ -42,5 +42,8 @@ data class ActivesessionGetListV1ResponseMPayload (
     @Json(name = "a_objActivesession")
     val aObjActivesession: kotlin.collections.List<ActivesessionListElement>
 
-)
+) {
+
+
+}
 

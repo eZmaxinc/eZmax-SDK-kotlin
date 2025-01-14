@@ -32,5 +32,8 @@ data class PermissionGetObjectV2ResponseMPayload (
     @Json(name = "objPermission")
     val objPermission: PermissionResponseCompound
 
-)
+) {
+
+
+}
 

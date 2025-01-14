@@ -21,10 +21,12 @@ import io.kotlintest.specs.ShouldSpec
 import eZmaxApi.models.EzsignsignatureResponseCompound
 import eZmaxApi.models.CustomContactNameResponse
 import eZmaxApi.models.CustomCreditcardtransactionResponse
+import eZmaxApi.models.CustomTimezoneWithCodeResponse
 import eZmaxApi.models.EnumTextvalidation
 import eZmaxApi.models.EzsignelementdependencyResponseCompound
 import eZmaxApi.models.EzsignsignaturecustomdateResponseCompound
 import eZmaxApi.models.FieldEEzsignsignatureAttachmentnamesource
+import eZmaxApi.models.FieldEEzsignsignatureConsultationtrigger
 import eZmaxApi.models.FieldEEzsignsignatureDependencyrequirement
 import eZmaxApi.models.FieldEEzsignsignatureFont
 import eZmaxApi.models.FieldEEzsignsignatureTooltipposition
@@ -96,6 +98,12 @@ class EzsignsignatureResponseCompoundTest : ShouldSpec() {
             //modelInstance.fkiEzsignsigningreasonID shouldBe ("TODO")
         }
 
+        // to test the property `fkiFontID` - The unique ID of the Font
+        should("test fkiFontID") {
+            // uncomment below to test the property
+            //modelInstance.fkiFontID shouldBe ("TODO")
+        }
+
         // to test the property `sEzsignsigningreasonDescriptionX` - The description of the Ezsignsigningreason in the language of the requester
         should("test sEzsignsigningreasonDescriptionX") {
             // uncomment below to test the property
@@ -156,7 +164,25 @@ class EzsignsignatureResponseCompoundTest : ShouldSpec() {
             //modelInstance.eEzsignsignatureAttachmentnamesource shouldBe ("TODO")
         }
 
-        // to test the property `bEzsignsignatureRequired` - Whether the Ezsignsignature is required or not. This field is relevant only with Ezsignsignature with eEzsignsignatureType = Attachments.
+        // to test the property `eEzsignsignatureConsultationtrigger`
+        should("test eEzsignsignatureConsultationtrigger") {
+            // uncomment below to test the property
+            //modelInstance.eEzsignsignatureConsultationtrigger shouldBe ("TODO")
+        }
+
+        // to test the property `bEzsignsignatureHandwritten` - Whether the Ezsignsignature must be handwritten or not when eEzsignsignatureType = Signature.
+        should("test bEzsignsignatureHandwritten") {
+            // uncomment below to test the property
+            //modelInstance.bEzsignsignatureHandwritten shouldBe ("TODO")
+        }
+
+        // to test the property `bEzsignsignatureReason` - Whether the Ezsignsignature must include a reason or not when eEzsignsignatureType = Signature.
+        should("test bEzsignsignatureReason") {
+            // uncomment below to test the property
+            //modelInstance.bEzsignsignatureReason shouldBe ("TODO")
+        }
+
+        // to test the property `bEzsignsignatureRequired` - Whether the Ezsignsignature is required or not. This field is relevant only with Ezsignsignature with eEzsignsignatureType = Attachments, Text or Textarea.
         should("test bEzsignsignatureRequired") {
             // uncomment below to test the property
             //modelInstance.bEzsignsignatureRequired shouldBe ("TODO")
@@ -198,10 +224,22 @@ class EzsignsignatureResponseCompoundTest : ShouldSpec() {
             //modelInstance.eEzsignsignatureTextvalidation shouldBe ("TODO")
         }
 
+        // to test the property `sEzsignsignatureTextvalidationcustommessage` - Description of validation rule. Show by signatory.
+        should("test sEzsignsignatureTextvalidationcustommessage") {
+            // uncomment below to test the property
+            //modelInstance.sEzsignsignatureTextvalidationcustommessage shouldBe ("TODO")
+        }
+
         // to test the property `eEzsignsignatureDependencyrequirement`
         should("test eEzsignsignatureDependencyrequirement") {
             // uncomment below to test the property
             //modelInstance.eEzsignsignatureDependencyrequirement shouldBe ("TODO")
+        }
+
+        // to test the property `sEzsignsignatureDefaultvalue` - The default value for the Ezsignsignature  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | ------------------------- | ------------ | ------------ | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sCompany} | Company name | eZmax Solutions Inc. | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 |
+        should("test sEzsignsignatureDefaultvalue") {
+            // uncomment below to test the property
+            //modelInstance.sEzsignsignatureDefaultvalue shouldBe ("TODO")
         }
 
         // to test the property `sEzsignsignatureRegexp` - A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom**
@@ -220,6 +258,12 @@ class EzsignsignatureResponseCompoundTest : ShouldSpec() {
         should("test objSignature") {
             // uncomment below to test the property
             //modelInstance.objSignature shouldBe ("TODO")
+        }
+
+        // to test the property `dtEzsignsignatureDateInFolderTimezone` - The date the Ezsignsignature was signed in folder's timezone
+        should("test dtEzsignsignatureDateInFolderTimezone") {
+            // uncomment below to test the property
+            //modelInstance.dtEzsignsignatureDateInFolderTimezone shouldBe ("TODO")
         }
 
         // to test the property `bEzsignsignatureCustomdate` - Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)
@@ -244,6 +288,12 @@ class EzsignsignatureResponseCompoundTest : ShouldSpec() {
         should("test aObjEzsignelementdependency") {
             // uncomment below to test the property
             //modelInstance.aObjEzsignelementdependency shouldBe ("TODO")
+        }
+
+        // to test the property `objTimezone`
+        should("test objTimezone") {
+            // uncomment below to test the property
+            //modelInstance.objTimezone shouldBe ("TODO")
         }
 
     }

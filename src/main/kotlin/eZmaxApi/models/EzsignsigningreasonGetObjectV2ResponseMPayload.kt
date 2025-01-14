@@ -32,5 +32,8 @@ data class EzsignsigningreasonGetObjectV2ResponseMPayload (
     @Json(name = "objEzsignsigningreason")
     val objEzsignsigningreason: EzsignsigningreasonResponseCompound
 
-)
+) {
+
+
+}
 

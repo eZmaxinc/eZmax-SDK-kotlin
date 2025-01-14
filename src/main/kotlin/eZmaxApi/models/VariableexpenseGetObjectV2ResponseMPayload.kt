@@ -32,5 +32,8 @@ data class VariableexpenseGetObjectV2ResponseMPayload (
     @Json(name = "objVariableexpense")
     val objVariableexpense: VariableexpenseResponseCompound
 
-)
+) {
+
+
+}
 

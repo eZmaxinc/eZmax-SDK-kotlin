@@ -47,5 +47,8 @@ data class EzsignfoldertypeAutocompleteElementResponse (
     @Json(name = "bEzsignfoldertypeIsactive")
     val bEzsignfoldertypeIsactive: kotlin.Boolean
 
-)
+) {
+
+
+}
 

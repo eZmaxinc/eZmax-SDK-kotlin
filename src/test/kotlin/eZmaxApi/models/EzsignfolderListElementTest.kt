@@ -105,10 +105,22 @@ class EzsignfolderListElementTest : ShouldSpec() {
             //modelInstance.iEzsignformfieldgroupCompleted shouldBe ("TODO")
         }
 
-        // to test the property `dEzsignfolderCompletedpercentage` - Whether the Ezsignform/Ezsignsignatures has dependencies or not
+        // to test the property `dEzsignfolderCompletedpercentage` - Percentage of Ezsignform/Ezsignsignatures has completed
         should("test dEzsignfolderCompletedpercentage") {
             // uncomment below to test the property
             //modelInstance.dEzsignfolderCompletedpercentage shouldBe ("TODO")
+        }
+
+        // to test the property `dEzsignfolderFormcompletedpercentage` - Percentage of Ezsignform has completed
+        should("test dEzsignfolderFormcompletedpercentage") {
+            // uncomment below to test the property
+            //modelInstance.dEzsignfolderFormcompletedpercentage shouldBe ("TODO")
+        }
+
+        // to test the property `dEzsignfolderSignaturecompletedpercentage` - Percentage of Ezsignsignatures has signed
+        should("test dEzsignfolderSignaturecompletedpercentage") {
+            // uncomment below to test the property
+            //modelInstance.dEzsignfolderSignaturecompletedpercentage shouldBe ("TODO")
         }
 
         // to test the property `dtEzsignfolderDelayedsenddate` - The date and time at which the Ezsignfolder will be sent in the future.
@@ -133,6 +145,12 @@ class EzsignfolderListElementTest : ShouldSpec() {
         should("test bEzsignformHasdependencies") {
             // uncomment below to test the property
             //modelInstance.bEzsignformHasdependencies shouldBe ("TODO")
+        }
+
+        // to test the property `bEzsignfolderSigner` - Whether the Ezsignfolder has an Ezsignsignatures that need to be signed or an Ezsignformfieldgroups that need to be filled by the current user
+        should("test bEzsignfolderSigner") {
+            // uncomment below to test the property
+            //modelInstance.bEzsignfolderSigner shouldBe ("TODO")
         }
 
     }

@@ -72,5 +72,8 @@ data class EzmaxinvoicingcontractResponse (
     @Json(name = "objAudit")
     val objAudit: CommonAudit
 
-)
+) {
+
+
+}
 

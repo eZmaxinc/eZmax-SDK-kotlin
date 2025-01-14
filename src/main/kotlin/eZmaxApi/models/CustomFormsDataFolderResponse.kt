@@ -42,5 +42,8 @@ data class CustomFormsDataFolderResponse (
     @Json(name = "a_objFormDataDocument")
     val aObjFormDataDocument: kotlin.collections.List<CustomFormDataDocumentResponse>
 
-)
+) {
+
+
+}
 

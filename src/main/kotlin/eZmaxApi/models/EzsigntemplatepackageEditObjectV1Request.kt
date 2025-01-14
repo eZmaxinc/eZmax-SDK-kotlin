@@ -32,5 +32,8 @@ data class EzsigntemplatepackageEditObjectV1Request (
     @Json(name = "objEzsigntemplatepackage")
     val objEzsigntemplatepackage: EzsigntemplatepackageRequestCompound
 
-)
+) {
+
+
+}
 

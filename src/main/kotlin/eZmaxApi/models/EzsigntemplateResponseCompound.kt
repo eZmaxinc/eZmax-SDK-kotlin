@@ -36,6 +36,9 @@ import com.squareup.moshi.JsonClass
  * @param aObjEzsigntemplatesigner 
  * @param fkiEzsigntemplatedocumentID The unique ID of the Ezsigntemplatedocument
  * @param fkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
+ * @param fkiEzdoctemplatedocumentID The unique ID of the Ezdoctemplatedocument
+ * @param sEzsigntemplateExternaldescription The external description of the Ezsigntemplate
+ * @param tEzsigntemplateComment The comment of the Ezsigntemplate
  * @param sEzsigntemplateFilenamepattern The filename pattern of the Ezsigntemplate
  * @param sEzsignfoldertypeNameX The name of the Ezsignfoldertype in the language of the requester
  * @param eEzsigntemplateType 
@@ -83,6 +86,18 @@ data class EzsigntemplateResponseCompound (
     @Json(name = "fkiEzsignfoldertypeID")
     val fkiEzsignfoldertypeID: kotlin.Int? = null,
 
+    /* The unique ID of the Ezdoctemplatedocument */
+    @Json(name = "fkiEzdoctemplatedocumentID")
+    val fkiEzdoctemplatedocumentID: kotlin.Int? = null,
+
+    /* The external description of the Ezsigntemplate */
+    @Json(name = "sEzsigntemplateExternaldescription")
+    val sEzsigntemplateExternaldescription: kotlin.String? = null,
+
+    /* The comment of the Ezsigntemplate */
+    @Json(name = "tEzsigntemplateComment")
+    val tEzsigntemplateComment: kotlin.String? = null,
+
     /* The filename pattern of the Ezsigntemplate */
     @Json(name = "sEzsigntemplateFilenamepattern")
     val sEzsigntemplateFilenamepattern: kotlin.String? = null,
@@ -97,5 +112,8 @@ data class EzsigntemplateResponseCompound (
     @Json(name = "objEzsigntemplatedocument")
     val objEzsigntemplatedocument: EzsigntemplatedocumentResponse? = null
 
-)
+) {
+
+
+}
 

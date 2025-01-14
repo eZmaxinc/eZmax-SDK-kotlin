@@ -24,15 +24,14 @@ import com.squareup.moshi.JsonClass
  *
  * @param pkiCreditcardclientID The unique ID of the Creditcardclient
  * @param fkiCreditcarddetailID The unique ID of the Creditcarddetail
- * @param bCreditcardclientrelationIsdefault Whether if it's an relationisdefault
+ * @param fkiCreditcardtypeID The unique ID of the Creditcardtype
+ * @param bCreditcardclientrelationIsdefault Whether if it's the creditcardclient is the default one
  * @param sCreditcardclientDescription The description of the Creditcardclient
- * @param bCreditcardclientIsactive Whether the creditcardclient is active or not
- * @param bCreditcardclientAllowedagencypayment Whether if it's an allowedagencypayment
- * @param bCreditcardclientAllowedroyallepageprotection Whether if it's an allowedroyallepageprotection
+ * @param bCreditcardclientAllowedcompanypayment Whether if it's an allowedagencypayment
  * @param bCreditcardclientAllowedtranquillit Whether if it's an allowedtranquillit
  * @param iCreditcarddetailExpirationmonth The expirationmonth of the Creditcarddetail
  * @param iCreditcarddetailExpirationyear The expirationyear of the Creditcarddetail
- * @param sCreditcarddetailNumbermasked The numbermasked of the Creditcarddetail
+ * @param iCreditcarddetailLastdigits The last digits of the Creditcarddetail
  */
 
 
@@ -46,7 +45,11 @@ data class CreditcardclientListElement (
     @Json(name = "fkiCreditcarddetailID")
     val fkiCreditcarddetailID: kotlin.Int,
 
-    /* Whether if it's an relationisdefault */
+    /* The unique ID of the Creditcardtype */
+    @Json(name = "fkiCreditcardtypeID")
+    val fkiCreditcardtypeID: kotlin.Int,
+
+    /* Whether if it's the creditcardclient is the default one */
     @Json(name = "bCreditcardclientrelationIsdefault")
     val bCreditcardclientrelationIsdefault: kotlin.Boolean,
 
@@ -54,17 +57,9 @@ data class CreditcardclientListElement (
     @Json(name = "sCreditcardclientDescription")
     val sCreditcardclientDescription: kotlin.String,
 
-    /* Whether the creditcardclient is active or not */
-    @Json(name = "bCreditcardclientIsactive")
-    val bCreditcardclientIsactive: kotlin.Boolean,
-
     /* Whether if it's an allowedagencypayment */
-    @Json(name = "bCreditcardclientAllowedagencypayment")
-    val bCreditcardclientAllowedagencypayment: kotlin.Boolean,
-
-    /* Whether if it's an allowedroyallepageprotection */
-    @Json(name = "bCreditcardclientAllowedroyallepageprotection")
-    val bCreditcardclientAllowedroyallepageprotection: kotlin.Boolean,
+    @Json(name = "bCreditcardclientAllowedcompanypayment")
+    val bCreditcardclientAllowedcompanypayment: kotlin.Boolean,
 
     /* Whether if it's an allowedtranquillit */
     @Json(name = "bCreditcardclientAllowedtranquillit")
@@ -78,9 +73,12 @@ data class CreditcardclientListElement (
     @Json(name = "iCreditcarddetailExpirationyear")
     val iCreditcarddetailExpirationyear: kotlin.Int,
 
-    /* The numbermasked of the Creditcarddetail */
-    @Json(name = "sCreditcarddetailNumbermasked")
-    val sCreditcarddetailNumbermasked: kotlin.String
+    /* The last digits of the Creditcarddetail */
+    @Json(name = "iCreditcarddetailLastdigits")
+    val iCreditcarddetailLastdigits: kotlin.Int
 
-)
+) {
+
+
+}
 

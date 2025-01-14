@@ -42,5 +42,8 @@ data class EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload (
     @Json(name = "bEzsignbulksendNeedvalidation")
     val bEzsignbulksendNeedvalidation: kotlin.Boolean
 
-)
+) {
+
+
+}
 

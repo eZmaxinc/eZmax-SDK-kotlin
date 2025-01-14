@@ -2,9 +2,9 @@
 # EzsignsignergroupEditObjectV1Request
 
 ## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**objEzsignsignergroup** | [**EzsignsignergroupRequestCompound**](EzsignsignergroupRequestCompound.md) |  | 
+| Name | Type | Description | Notes |
+| ------------ | ------------- | ------------- | ------------- |
+| **objEzsignsignergroup** | [**EzsignsignergroupRequestCompound**](EzsignsignergroupRequestCompound.md) |  |  |
 
 
 

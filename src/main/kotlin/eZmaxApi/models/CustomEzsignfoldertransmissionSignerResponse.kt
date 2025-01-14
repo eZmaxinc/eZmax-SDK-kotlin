@@ -42,5 +42,8 @@ data class CustomEzsignfoldertransmissionSignerResponse (
     @Json(name = "fkiUserID")
     val fkiUserID: kotlin.Int? = null
 
-)
+) {
+
+
+}
 

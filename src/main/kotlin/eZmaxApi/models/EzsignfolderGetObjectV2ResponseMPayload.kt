@@ -32,5 +32,8 @@ data class EzsignfolderGetObjectV2ResponseMPayload (
     @Json(name = "objEzsignfolder")
     val objEzsignfolder: EzsignfolderResponseCompound
 
-)
+) {
+
+
+}
 

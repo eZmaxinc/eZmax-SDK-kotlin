@@ -57,5 +57,8 @@ data class EzsignfoldersignerassociationResponse (
     @Json(name = "bEzsignfoldersignerassociationAllowsigninginperson")
     val bEzsignfoldersignerassociationAllowsigninginperson: kotlin.Boolean
 
-)
+) {
+
+
+}
 

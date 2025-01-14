@@ -37,5 +37,8 @@ data class DiscussionmessageRequestPatch (
     @Json(name = "tDiscussionmessageContent")
     val tDiscussionmessageContent: kotlin.String? = null
 
-)
+) {
+
+
+}
 

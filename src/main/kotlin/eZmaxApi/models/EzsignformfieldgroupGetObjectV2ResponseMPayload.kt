@@ -32,5 +32,8 @@ data class EzsignformfieldgroupGetObjectV2ResponseMPayload (
     @Json(name = "objEzsignformfieldgroup")
     val objEzsignformfieldgroup: EzsignformfieldgroupResponseCompound
 
-)
+) {
+
+
+}
 

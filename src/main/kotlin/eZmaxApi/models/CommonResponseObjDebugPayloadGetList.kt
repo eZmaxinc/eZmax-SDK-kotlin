@@ -72,5 +72,8 @@ data class CommonResponseObjDebugPayloadGetList (
     @Json(name = "iRowOffset")
     val iRowOffset: kotlin.Int = 0
 
-)
+) {
+
+
+}
 

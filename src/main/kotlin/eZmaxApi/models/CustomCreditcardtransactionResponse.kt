@@ -47,5 +47,8 @@ data class CustomCreditcardtransactionResponse (
     @Json(name = "sCreditcardtransactionReferencenumber")
     val sCreditcardtransactionReferencenumber: kotlin.String
 
-)
+) {
+
+
+}
 

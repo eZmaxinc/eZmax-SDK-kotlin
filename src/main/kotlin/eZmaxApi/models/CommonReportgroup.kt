@@ -37,5 +37,8 @@ data class CommonReportgroup (
     @Json(name = "a_objReportcellstyleCustom")
     val aObjReportcellstyleCustom: kotlin.collections.List<CommonReportcellstyle>
 
-)
+) {
+
+
+}
 

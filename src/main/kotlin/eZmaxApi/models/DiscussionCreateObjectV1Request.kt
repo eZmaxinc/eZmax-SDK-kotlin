@@ -32,5 +32,8 @@ data class DiscussionCreateObjectV1Request (
     @Json(name = "a_objDiscussion")
     val aObjDiscussion: kotlin.collections.List<DiscussionRequestCompound>
 
-)
+) {
+
+
+}
 

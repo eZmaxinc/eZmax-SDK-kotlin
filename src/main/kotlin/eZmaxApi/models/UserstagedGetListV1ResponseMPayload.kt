@@ -42,5 +42,8 @@ data class UserstagedGetListV1ResponseMPayload (
     @Json(name = "a_objUserstaged")
     val aObjUserstaged: kotlin.collections.List<UserstagedListElement>
 
-)
+) {
+
+
+}
 

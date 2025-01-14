@@ -33,5 +33,8 @@ data class CreditcardclientGetAutocompleteV2ResponseMPayload (
     @Json(name = "a_objCreditcardclient")
     val aObjCreditcardclient: kotlin.collections.List<CreditcardclientAutocompleteElementResponse>
 
-)
+) {
+
+
+}
 

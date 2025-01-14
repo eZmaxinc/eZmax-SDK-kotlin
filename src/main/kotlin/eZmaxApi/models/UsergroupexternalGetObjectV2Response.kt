@@ -42,5 +42,8 @@ data class UsergroupexternalGetObjectV2Response (
     @Json(name = "objDebug")
     val objDebug: CommonResponseObjDebug? = null
 
-)
+) {
+
+
+}
 

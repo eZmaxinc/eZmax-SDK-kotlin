@@ -32,5 +32,8 @@ data class InvoiceGetAttachmentsV1ResponseMPayload (
     @Json(name = "a_objAttachmentdocumenttype")
     val aObjAttachmentdocumenttype: kotlin.collections.List<CustomAttachmentdocumenttypeResponse>
 
-)
+) {
+
+
+}
 

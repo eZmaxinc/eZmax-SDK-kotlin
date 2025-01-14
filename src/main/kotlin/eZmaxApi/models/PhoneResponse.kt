@@ -53,5 +53,8 @@ data class PhoneResponse (
     @Json(name = "sPhoneExtension")
     val sPhoneExtension: kotlin.String? = null
 
-)
+) {
+
+
+}
 

@@ -49,5 +49,11 @@ class CustomEzsignsignaturestatusResponseTest : ShouldSpec() {
             //modelInstance.iEzsignsignaturestatusSigned shouldBe ("TODO")
         }
 
+        // to test the property `iEzsignsignaturestatusConditional` - The number of signature or form fields the Ezsignsigner need to sign or fill under current conditions.
+        should("test iEzsignsignaturestatusConditional") {
+            // uncomment below to test the property
+            //modelInstance.iEzsignsignaturestatusConditional shouldBe ("TODO")
+        }
+
     }
 }

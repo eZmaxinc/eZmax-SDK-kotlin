@@ -53,5 +53,6 @@ data class WebsocketResponseErrorV1 (
     enum class EWebsocketMessagetype(val value: kotlin.String) {
         @Json(name = "Response-Error-V1") ResponseMinusErrorMinusV1("Response-Error-V1");
     }
+
 }
 

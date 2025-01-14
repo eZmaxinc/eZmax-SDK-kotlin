@@ -38,5 +38,8 @@ data class CommonWebhook (
     @Json(name = "a_objAttempt")
     val aObjAttempt: kotlin.collections.List<AttemptResponseCompound>
 
-)
+) {
+
+
+}
 

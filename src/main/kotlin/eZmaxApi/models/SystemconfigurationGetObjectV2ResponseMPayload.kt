@@ -32,5 +32,8 @@ data class SystemconfigurationGetObjectV2ResponseMPayload (
     @Json(name = "objSystemconfiguration")
     val objSystemconfiguration: SystemconfigurationResponseCompound
 
-)
+) {
+
+
+}
 

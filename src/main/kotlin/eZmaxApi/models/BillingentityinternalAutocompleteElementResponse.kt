@@ -42,5 +42,8 @@ data class BillingentityinternalAutocompleteElementResponse (
     @Json(name = "bBillingentityinternalIsactive")
     val bBillingentityinternalIsactive: kotlin.Boolean
 
-)
+) {
+
+
+}
 

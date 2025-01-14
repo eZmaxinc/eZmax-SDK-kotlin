@@ -19,6 +19,7 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.EzsigntemplatesignerResponse
+import eZmaxApi.models.FieldEEzsigntemplatesignerMapping
 
 class EzsigntemplatesignerResponseTest : ShouldSpec() {
     init {
@@ -41,6 +42,48 @@ class EzsigntemplatesignerResponseTest : ShouldSpec() {
         should("test sEzsigntemplatesignerDescription") {
             // uncomment below to test the property
             //modelInstance.sEzsigntemplatesignerDescription shouldBe ("TODO")
+        }
+
+        // to test the property `fkiUserID` - The unique ID of the User
+        should("test fkiUserID") {
+            // uncomment below to test the property
+            //modelInstance.fkiUserID shouldBe ("TODO")
+        }
+
+        // to test the property `fkiUsergroupID` - The unique ID of the Usergroup
+        should("test fkiUsergroupID") {
+            // uncomment below to test the property
+            //modelInstance.fkiUsergroupID shouldBe ("TODO")
+        }
+
+        // to test the property `fkiEzdoctemplatedocumentID` - The unique ID of the Ezdoctemplatedocument
+        should("test fkiEzdoctemplatedocumentID") {
+            // uncomment below to test the property
+            //modelInstance.fkiEzdoctemplatedocumentID shouldBe ("TODO")
+        }
+
+        // to test the property `bEzsigntemplatesignerReceivecopy` - If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document.
+        should("test bEzsigntemplatesignerReceivecopy") {
+            // uncomment below to test the property
+            //modelInstance.bEzsigntemplatesignerReceivecopy shouldBe ("TODO")
+        }
+
+        // to test the property `eEzsigntemplatesignerMapping`
+        should("test eEzsigntemplatesignerMapping") {
+            // uncomment below to test the property
+            //modelInstance.eEzsigntemplatesignerMapping shouldBe ("TODO")
+        }
+
+        // to test the property `sUserName` - The description of the User in the language of the requester
+        should("test sUserName") {
+            // uncomment below to test the property
+            //modelInstance.sUserName shouldBe ("TODO")
+        }
+
+        // to test the property `sUsergroupNameX` - The Name of the Usergroup in the language of the requester
+        should("test sUsergroupNameX") {
+            // uncomment below to test the property
+            //modelInstance.sUsergroupNameX shouldBe ("TODO")
         }
 
     }

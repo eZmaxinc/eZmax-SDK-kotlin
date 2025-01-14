@@ -37,5 +37,8 @@ data class BillingentityinternalResponse (
     @Json(name = "objBillingentityinternalDescription")
     val objBillingentityinternalDescription: MultilingualBillingentityinternalDescription
 
-)
+) {
+
+
+}
 

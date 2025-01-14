@@ -205,6 +205,12 @@ class EzsignfoldertypeResponseCompoundTest : ShouldSpec() {
             //modelInstance.iEzsignfoldertypeDisposaldays shouldBe ("TODO")
         }
 
+        // to test the property `bEzsignfoldertypeAutomaticsignature` - Whether we allow the automatic signature by an User
+        should("test bEzsignfoldertypeAutomaticsignature") {
+            // uncomment below to test the property
+            //modelInstance.bEzsignfoldertypeAutomaticsignature shouldBe ("TODO")
+        }
+
         // to test the property `bEzsignfoldertypeDelegate` - Wheter if delegation of signature is allowed to another user or not
         should("test bEzsignfoldertypeDelegate") {
             // uncomment below to test the property
@@ -227,6 +233,12 @@ class EzsignfoldertypeResponseCompoundTest : ShouldSpec() {
         should("test bEzsignfoldertypeReassignuser") {
             // uncomment below to test the property
             //modelInstance.bEzsignfoldertypeReassignuser shouldBe ("TODO")
+        }
+
+        // to test the property `bEzsignfoldertypeReassigngroup` - Wheter if Reassignment of signatures of the groups to which the user belongs is authorized by a user to himself
+        should("test bEzsignfoldertypeReassigngroup") {
+            // uncomment below to test the property
+            //modelInstance.bEzsignfoldertypeReassigngroup shouldBe ("TODO")
         }
 
         // to test the property `bEzsignfoldertypeSendsignedtoezsignsigner` - Whether we send an email to Ezsignsigner  when document is completed

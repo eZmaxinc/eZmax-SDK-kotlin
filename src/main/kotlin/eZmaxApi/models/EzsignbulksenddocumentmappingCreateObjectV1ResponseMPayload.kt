@@ -32,5 +32,8 @@ data class EzsignbulksenddocumentmappingCreateObjectV1ResponseMPayload (
     @Json(name = "a_pkiEzsignbulksenddocumentmappingID")
     val aPkiEzsignbulksenddocumentmappingID: kotlin.collections.List<kotlin.Int>
 
-)
+) {
+
+
+}
 

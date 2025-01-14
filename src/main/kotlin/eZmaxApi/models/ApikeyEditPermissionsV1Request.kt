@@ -32,5 +32,8 @@ data class ApikeyEditPermissionsV1Request (
     @Json(name = "a_objPermission")
     val aObjPermission: kotlin.collections.List<PermissionRequestCompound>
 
-)
+) {
+
+
+}
 

@@ -32,5 +32,8 @@ data class SignatureCreateObjectV1ResponseMPayload (
     @Json(name = "a_pkiSignatureID")
     val aPkiSignatureID: kotlin.collections.List<kotlin.Int>
 
-)
+) {
+
+
+}
 

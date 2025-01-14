@@ -38,5 +38,8 @@ data class EzsignsignatureGetEzsignsignaturesAutomaticV1ResponseMPayload (
     @Json(name = "a_objEzsignfolder")
     val aObjEzsignfolder: kotlin.collections.List<CustomEzsignfolderEzsignsignaturesAutomaticResponse>
 
-)
+) {
+
+
+}
 

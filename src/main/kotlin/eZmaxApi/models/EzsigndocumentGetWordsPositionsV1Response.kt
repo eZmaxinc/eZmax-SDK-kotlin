@@ -43,5 +43,8 @@ data class EzsigndocumentGetWordsPositionsV1Response (
     @Json(name = "objDebug")
     val objDebug: CommonResponseObjDebug? = null
 
-)
+) {
+
+
+}
 

@@ -33,5 +33,8 @@ data class EzsignsigningreasonGetAutocompleteV2ResponseMPayload (
     @Json(name = "a_objEzsignsigningreason")
     val aObjEzsignsigningreason: kotlin.collections.List<EzsignsigningreasonAutocompleteElementResponse>
 
-)
+) {
+
+
+}
 

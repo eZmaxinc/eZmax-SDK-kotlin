@@ -37,5 +37,8 @@ data class EzsignsignatureCreateObjectV1Request (
     @Json(name = "objEzsignsignatureCompound")
     val objEzsignsignatureCompound: EzsignsignatureRequestCompound? = null
 
-)
+) {
+
+
+}
 

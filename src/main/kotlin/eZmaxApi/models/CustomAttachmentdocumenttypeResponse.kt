@@ -37,5 +37,8 @@ data class CustomAttachmentdocumenttypeResponse (
     @Json(name = "a_objAttachment")
     val aObjAttachment: kotlin.collections.List<CustomAttachmentResponse>
 
-)
+) {
+
+
+}
 

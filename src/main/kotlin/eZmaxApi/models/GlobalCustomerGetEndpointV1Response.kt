@@ -32,5 +32,8 @@ data class GlobalCustomerGetEndpointV1Response (
     @Json(name = "sEndpointURL")
     val sEndpointURL: kotlin.String
 
-)
+) {
+
+
+}
 

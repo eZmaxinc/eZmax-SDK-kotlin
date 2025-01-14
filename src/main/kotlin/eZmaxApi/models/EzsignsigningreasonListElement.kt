@@ -42,5 +42,8 @@ data class EzsignsigningreasonListElement (
     @Json(name = "bEzsignsigningreasonIsactive")
     val bEzsignsigningreasonIsactive: kotlin.Boolean
 
-)
+) {
+
+
+}
 

@@ -52,5 +52,8 @@ data class CommonReportsection (
     @Json(name = "iReportsectionWidth")
     val iReportsectionWidth: kotlin.Int
 
-)
+) {
+
+
+}
 

@@ -37,5 +37,8 @@ data class MultilingualSubnetDescription (
     @Json(name = "sSubnetDescription2")
     val sSubnetDescription2: kotlin.String? = null
 
-)
+) {
+
+
+}
 

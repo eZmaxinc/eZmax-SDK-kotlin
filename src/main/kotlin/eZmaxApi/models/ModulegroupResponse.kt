@@ -37,5 +37,8 @@ data class ModulegroupResponse (
     @Json(name = "sModulegroupNameX")
     val sModulegroupNameX: kotlin.String
 
-)
+) {
+
+
+}
 

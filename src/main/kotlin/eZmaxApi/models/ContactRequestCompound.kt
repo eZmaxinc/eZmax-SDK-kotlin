@@ -62,5 +62,8 @@ data class ContactRequestCompound (
     @Json(name = "dtContactBirthdate")
     val dtContactBirthdate: kotlin.String? = null
 
-)
+) {
+
+
+}
 

@@ -19,8 +19,10 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.EzsignformfieldResponseCompound
+import eZmaxApi.models.EnumHorizontalalignment
 import eZmaxApi.models.EzsignelementdependencyResponseCompound
 import eZmaxApi.models.FieldEEzsignformfieldDependencyrequirement
+import eZmaxApi.models.TextstylestaticResponseCompound
 
 class EzsignformfieldResponseCompoundTest : ShouldSpec() {
     init {
@@ -57,13 +59,13 @@ class EzsignformfieldResponseCompoundTest : ShouldSpec() {
             //modelInstance.iEzsignformfieldY shouldBe ("TODO")
         }
 
-        // to test the property `iEzsignformfieldWidth` - The Width of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22-65535     | | Radio                     | 22           | | Text                      | 22-65535     | | Textarea                  | 22-65535     |
+        // to test the property `iEzsignformfieldWidth` - The Width of the Ezsignformfield in pixels calculated at 100 DPI
         should("test iEzsignformfieldWidth") {
             // uncomment below to test the property
             //modelInstance.iEzsignformfieldWidth shouldBe ("TODO")
         }
 
-        // to test the property `iEzsignformfieldHeight` - The Height of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22           | | Radio                     | 22           | | Text                      | 22           | | Textarea                  | 22-65535     | 
+        // to test the property `iEzsignformfieldHeight` - The Height of the Ezsignformfield in pixels calculated at 100 DPI 
         should("test iEzsignformfieldHeight") {
             // uncomment below to test the property
             //modelInstance.iEzsignformfieldHeight shouldBe ("TODO")
@@ -97,6 +99,18 @@ class EzsignformfieldResponseCompoundTest : ShouldSpec() {
         should("test eEzsignformfieldDependencyrequirement") {
             // uncomment below to test the property
             //modelInstance.eEzsignformfieldDependencyrequirement shouldBe ("TODO")
+        }
+
+        // to test the property `eEzsignformfieldHorizontalalignment`
+        should("test eEzsignformfieldHorizontalalignment") {
+            // uncomment below to test the property
+            //modelInstance.eEzsignformfieldHorizontalalignment shouldBe ("TODO")
+        }
+
+        // to test the property `objTextstylestatic`
+        should("test objTextstylestatic") {
+            // uncomment below to test the property
+            //modelInstance.objTextstylestatic shouldBe ("TODO")
         }
 
         // to test the property `aObjEzsignelementdependency`

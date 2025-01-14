@@ -33,5 +33,8 @@ data class UserGetAutocompleteV2ResponseMPayload (
     @Json(name = "a_objUser")
     val aObjUser: kotlin.collections.List<UserAutocompleteElementResponse>
 
-)
+) {
+
+
+}
 

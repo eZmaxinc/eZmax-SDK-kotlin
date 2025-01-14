@@ -32,5 +32,8 @@ data class SignatureEditObjectV1Request (
     @Json(name = "objSignature")
     val objSignature: SignatureRequestCompound
 
-)
+) {
+
+
+}
 

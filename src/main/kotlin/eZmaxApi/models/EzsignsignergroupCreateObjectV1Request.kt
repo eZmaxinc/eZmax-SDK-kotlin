@@ -32,5 +32,8 @@ data class EzsignsignergroupCreateObjectV1Request (
     @Json(name = "a_objEzsignsignergroup")
     val aObjEzsignsignergroup: kotlin.collections.List<EzsignsignergroupRequestCompound>
 
-)
+) {
+
+
+}
 

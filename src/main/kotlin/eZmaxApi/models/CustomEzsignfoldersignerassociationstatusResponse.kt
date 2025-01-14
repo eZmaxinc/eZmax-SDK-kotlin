@@ -54,5 +54,8 @@ data class CustomEzsignfoldersignerassociationstatusResponse (
     @Json(name = "sEzsignfoldersignerassociationstatusDescriptionX")
     val sEzsignfoldersignerassociationstatusDescriptionX: kotlin.String? = null
 
-)
+) {
+
+
+}
 

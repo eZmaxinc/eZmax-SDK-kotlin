@@ -32,5 +32,8 @@ data class EzsigntemplatepackagesignermembershipGetObjectV2ResponseMPayload (
     @Json(name = "objEzsigntemplatepackagesignermembership")
     val objEzsigntemplatepackagesignermembership: EzsigntemplatepackagesignermembershipResponseCompound
 
-)
+) {
+
+
+}
 

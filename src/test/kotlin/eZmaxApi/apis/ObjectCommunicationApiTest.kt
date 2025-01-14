@@ -19,6 +19,7 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectCommunicationApi
+import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.CommunicationSendV1Request
 import eZmaxApi.models.CommunicationSendV1Response
 
@@ -26,6 +27,13 @@ class ObjectCommunicationApiTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of ObjectCommunicationApi
         //val apiInstance = ObjectCommunicationApi()
+
+        // to test communicationGetCommunicationBodyV1
+        should("test communicationGetCommunicationBodyV1") {
+            // uncomment below to test communicationGetCommunicationBodyV1
+            //val pkiCommunicationID : kotlin.Int = 56 // kotlin.Int | 
+            //apiInstance.communicationGetCommunicationBodyV1(pkiCommunicationID)
+        }
 
         // to test communicationSendV1
         should("test communicationSendV1") {

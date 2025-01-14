@@ -25,7 +25,7 @@ class FranchisebrokerAutocompleteElementResponseTest : ShouldSpec() {
         // uncomment below to create an instance of FranchisebrokerAutocompleteElementResponse
         //val modelInstance = FranchisebrokerAutocompleteElementResponse()
 
-        // to test the property `sFranchisebrokerName` - The name of the Franchisebroker in the language of the requester
+        // to test the property `sFranchisebrokerName` - The name of the Franchisebroker
         should("test sFranchisebrokerName") {
             // uncomment below to test the property
             //modelInstance.sFranchisebrokerName shouldBe ("TODO")

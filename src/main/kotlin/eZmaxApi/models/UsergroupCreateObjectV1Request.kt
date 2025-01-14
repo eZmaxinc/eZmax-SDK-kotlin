@@ -32,5 +32,8 @@ data class UsergroupCreateObjectV1Request (
     @Json(name = "a_objUsergroup")
     val aObjUsergroup: kotlin.collections.List<UsergroupRequestCompound>
 
-)
+) {
+
+
+}
 

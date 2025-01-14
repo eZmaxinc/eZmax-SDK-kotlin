@@ -82,5 +82,8 @@ data class EzsignbulksendListElement (
     @Json(name = "bEzsignbulksendIsactive")
     val bEzsignbulksendIsactive: kotlin.Boolean
 
-)
+) {
+
+
+}
 

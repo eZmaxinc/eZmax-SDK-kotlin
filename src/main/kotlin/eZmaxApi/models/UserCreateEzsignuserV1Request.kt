@@ -70,5 +70,8 @@ data class UserCreateEzsignuserV1Request (
     @Json(name = "sPhoneExtension")
     val sPhoneExtension: kotlin.String? = null
 
-)
+) {
+
+
+}
 

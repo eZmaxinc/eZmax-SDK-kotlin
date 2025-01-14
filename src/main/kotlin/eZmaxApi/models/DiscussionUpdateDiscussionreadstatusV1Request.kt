@@ -32,5 +32,8 @@ data class DiscussionUpdateDiscussionreadstatusV1Request (
     @Json(name = "dtDiscussionreadstatusDate")
     val dtDiscussionreadstatusDate: kotlin.String? = null
 
-)
+) {
+
+
+}
 

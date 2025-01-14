@@ -27,6 +27,7 @@ import com.squareup.moshi.JsonClass
  * @param sErrorMessage The message giving details about the error
  * @param eErrorCode 
  * @param aObjEzsignformfielderror 
+ * @param aSErrorMessagedetail More error message detail
  */
 
 
@@ -41,7 +42,14 @@ data class CommonResponseErrorEzsignformValidation (
 
     /*  */
     @Json(name = "a_objEzsignformfielderror")
-    val aObjEzsignformfielderror: kotlin.collections.List<CustomEzsignformfielderrorResponse>
+    val aObjEzsignformfielderror: kotlin.collections.List<CustomEzsignformfielderrorResponse>,
 
-)
+    /* More error message detail */
+    @Json(name = "a_sErrorMessagedetail")
+    val aSErrorMessagedetail: kotlin.collections.List<kotlin.String>? = null
+
+) {
+
+
+}
 

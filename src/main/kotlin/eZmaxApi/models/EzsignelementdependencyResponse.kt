@@ -72,5 +72,8 @@ data class EzsignelementdependencyResponse (
     @Json(name = "sEzsignelementdependencyValue")
     val sEzsignelementdependencyValue: kotlin.String? = null
 
-)
+) {
+
+
+}
 

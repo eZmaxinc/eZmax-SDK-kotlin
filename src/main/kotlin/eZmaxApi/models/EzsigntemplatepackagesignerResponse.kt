@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.FieldEEzsigntemplatepackagesignerMapping
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -25,6 +26,14 @@ import com.squareup.moshi.JsonClass
  * @param pkiEzsigntemplatepackagesignerID The unique ID of the Ezsigntemplatepackagesigner
  * @param fkiEzsigntemplatepackageID The unique ID of the Ezsigntemplatepackage
  * @param sEzsigntemplatepackagesignerDescription The description of the Ezsigntemplatepackagesigner
+ * @param fkiEzdoctemplatedocumentID The unique ID of the Ezdoctemplatedocument
+ * @param fkiUserID The unique ID of the User
+ * @param fkiUsergroupID The unique ID of the Usergroup
+ * @param sEzdoctemplatedocumentNameX The name of the Ezdoctemplatedocument in the language of the requester
+ * @param bEzsigntemplatepackagesignerReceivecopy If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document.
+ * @param eEzsigntemplatepackagesignerMapping 
+ * @param sUserName The description of the User in the language of the requester
+ * @param sUsergroupNameX The Name of the Usergroup in the language of the requester
  */
 
 
@@ -40,7 +49,41 @@ data class EzsigntemplatepackagesignerResponse (
 
     /* The description of the Ezsigntemplatepackagesigner */
     @Json(name = "sEzsigntemplatepackagesignerDescription")
-    val sEzsigntemplatepackagesignerDescription: kotlin.String
+    val sEzsigntemplatepackagesignerDescription: kotlin.String,
 
-)
+    /* The unique ID of the Ezdoctemplatedocument */
+    @Json(name = "fkiEzdoctemplatedocumentID")
+    val fkiEzdoctemplatedocumentID: kotlin.Int? = null,
+
+    /* The unique ID of the User */
+    @Json(name = "fkiUserID")
+    val fkiUserID: kotlin.Int? = null,
+
+    /* The unique ID of the Usergroup */
+    @Json(name = "fkiUsergroupID")
+    val fkiUsergroupID: kotlin.Int? = null,
+
+    /* The name of the Ezdoctemplatedocument in the language of the requester */
+    @Json(name = "sEzdoctemplatedocumentNameX")
+    val sEzdoctemplatedocumentNameX: kotlin.String? = null,
+
+    /* If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document. */
+    @Json(name = "bEzsigntemplatepackagesignerReceivecopy")
+    val bEzsigntemplatepackagesignerReceivecopy: kotlin.Boolean? = null,
+
+    @Json(name = "eEzsigntemplatepackagesignerMapping")
+    val eEzsigntemplatepackagesignerMapping: FieldEEzsigntemplatepackagesignerMapping? = FieldEEzsigntemplatepackagesignerMapping.Manual,
+
+    /* The description of the User in the language of the requester */
+    @Json(name = "sUserName")
+    val sUserName: kotlin.String? = null,
+
+    /* The Name of the Usergroup in the language of the requester */
+    @Json(name = "sUsergroupNameX")
+    val sUsergroupNameX: kotlin.String? = null
+
+) {
+
+
+}
 

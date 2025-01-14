@@ -32,5 +32,8 @@ data class EzsignfoldersignerassociationPatchObjectV1Request (
     @Json(name = "objEzsignfoldersignerassociation")
     val objEzsignfoldersignerassociation: EzsignfoldersignerassociationRequestPatch
 
-)
+) {
+
+
+}
 

@@ -52,5 +52,8 @@ data class AttachmentlogResponse (
     @Json(name = "sAttachmentlogDetail")
     val sAttachmentlogDetail: kotlin.String? = null
 
-)
+) {
+
+
+}
 

@@ -32,5 +32,8 @@ data class UsergroupexternalCreateObjectV1Request (
     @Json(name = "a_objUsergroupexternal")
     val aObjUsergroupexternal: kotlin.collections.List<UsergroupexternalRequestCompound>
 
-)
+) {
+
+
+}
 

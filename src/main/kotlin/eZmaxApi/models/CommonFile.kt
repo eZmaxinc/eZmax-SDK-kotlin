@@ -59,5 +59,6 @@ data class CommonFile (
         @Json(name = "Base64") Base64("Base64"),
         @Json(name = "Url") Url("Url");
     }
+
 }
 

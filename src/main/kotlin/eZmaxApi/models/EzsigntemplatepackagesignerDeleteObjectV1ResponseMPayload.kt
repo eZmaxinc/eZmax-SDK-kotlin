@@ -37,5 +37,8 @@ data class EzsigntemplatepackagesignerDeleteObjectV1ResponseMPayload (
     @Json(name = "bEzsignbulksendNeedvalidation")
     val bEzsignbulksendNeedvalidation: kotlin.Boolean
 
-)
+) {
+
+
+}
 

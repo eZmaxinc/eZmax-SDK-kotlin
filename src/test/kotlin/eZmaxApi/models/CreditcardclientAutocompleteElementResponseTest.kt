@@ -37,11 +37,5 @@ class CreditcardclientAutocompleteElementResponseTest : ShouldSpec() {
             //modelInstance.sCreditcardclientDescription shouldBe ("TODO")
         }
 
-        // to test the property `bCreditcardclientIsactive` - Whether the creditcardclient is active or not
-        should("test bCreditcardclientIsactive") {
-            // uncomment below to test the property
-            //modelInstance.bCreditcardclientIsactive shouldBe ("TODO")
-        }
-
     }
 }

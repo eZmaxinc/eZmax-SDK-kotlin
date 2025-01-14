@@ -32,5 +32,8 @@ data class WebsocketResponseInformationV1MPayload (
     @Json(name = "sInformationMessage")
     val sInformationMessage: kotlin.String
 
-)
+) {
+
+
+}
 

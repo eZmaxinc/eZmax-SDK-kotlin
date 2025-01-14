@@ -16,11 +16,14 @@
 package eZmaxApi.apis
 
 import java.io.IOException
-import okhttp3.OkHttpClient
+import okhttp3.Call
 import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.InscriptiontempGetCommunicationCountV1Response
 import eZmaxApi.models.InscriptiontempGetCommunicationListV1Response
+import eZmaxApi.models.InscriptiontempGetCommunicationrecipientsV1Response
+import eZmaxApi.models.InscriptiontempGetCommunicationsendersV1Response
 
 import com.squareup.moshi.Json
 
@@ -38,12 +41,83 @@ import eZmaxApi.infrastructure.ResponseType
 import eZmaxApi.infrastructure.Success
 import eZmaxApi.infrastructure.toMultiValue
 
-class ObjectInscriptiontempApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = ApiClient.defaultClient) : ApiClient(basePath, client) {
+class ObjectInscriptiontempApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
             System.getProperties().getProperty(ApiClient.baseUrlKey, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
+    }
+
+    /**
+     * Retrieve Communication count
+     * 
+     * @param pkiInscriptiontempID 
+     * @return InscriptiontempGetCommunicationCountV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun inscriptiontempGetCommunicationCountV1(pkiInscriptiontempID: kotlin.Int) : InscriptiontempGetCommunicationCountV1Response {
+        val localVarResponse = inscriptiontempGetCommunicationCountV1WithHttpInfo(pkiInscriptiontempID = pkiInscriptiontempID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as InscriptiontempGetCommunicationCountV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve Communication count
+     * 
+     * @param pkiInscriptiontempID 
+     * @return ApiResponse<InscriptiontempGetCommunicationCountV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun inscriptiontempGetCommunicationCountV1WithHttpInfo(pkiInscriptiontempID: kotlin.Int) : ApiResponse<InscriptiontempGetCommunicationCountV1Response?> {
+        val localVariableConfig = inscriptiontempGetCommunicationCountV1RequestConfig(pkiInscriptiontempID = pkiInscriptiontempID)
+
+        return request<Unit, InscriptiontempGetCommunicationCountV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation inscriptiontempGetCommunicationCountV1
+     *
+     * @param pkiInscriptiontempID 
+     * @return RequestConfig
+     */
+    fun inscriptiontempGetCommunicationCountV1RequestConfig(pkiInscriptiontempID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationCount".replace("{"+"pkiInscriptiontempID"+"}", encodeURIComponent(pkiInscriptiontempID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
     }
 
     /**
@@ -110,6 +184,148 @@ class ObjectInscriptiontempApi(basePath: kotlin.String = defaultBasePath, client
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationList".replace("{"+"pkiInscriptiontempID"+"}", encodeURIComponent(pkiInscriptiontempID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Retrieve Inscriptiontemp&#39;s Communicationrecipient
+     * 
+     * @param pkiInscriptiontempID 
+     * @return InscriptiontempGetCommunicationrecipientsV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun inscriptiontempGetCommunicationrecipientsV1(pkiInscriptiontempID: kotlin.Int) : InscriptiontempGetCommunicationrecipientsV1Response {
+        val localVarResponse = inscriptiontempGetCommunicationrecipientsV1WithHttpInfo(pkiInscriptiontempID = pkiInscriptiontempID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as InscriptiontempGetCommunicationrecipientsV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve Inscriptiontemp&#39;s Communicationrecipient
+     * 
+     * @param pkiInscriptiontempID 
+     * @return ApiResponse<InscriptiontempGetCommunicationrecipientsV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun inscriptiontempGetCommunicationrecipientsV1WithHttpInfo(pkiInscriptiontempID: kotlin.Int) : ApiResponse<InscriptiontempGetCommunicationrecipientsV1Response?> {
+        val localVariableConfig = inscriptiontempGetCommunicationrecipientsV1RequestConfig(pkiInscriptiontempID = pkiInscriptiontempID)
+
+        return request<Unit, InscriptiontempGetCommunicationrecipientsV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation inscriptiontempGetCommunicationrecipientsV1
+     *
+     * @param pkiInscriptiontempID 
+     * @return RequestConfig
+     */
+    fun inscriptiontempGetCommunicationrecipientsV1RequestConfig(pkiInscriptiontempID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationrecipients".replace("{"+"pkiInscriptiontempID"+"}", encodeURIComponent(pkiInscriptiontempID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Retrieve Inscriptiontemp&#39;s Communicationsender
+     * 
+     * @param pkiInscriptiontempID 
+     * @return InscriptiontempGetCommunicationsendersV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun inscriptiontempGetCommunicationsendersV1(pkiInscriptiontempID: kotlin.Int) : InscriptiontempGetCommunicationsendersV1Response {
+        val localVarResponse = inscriptiontempGetCommunicationsendersV1WithHttpInfo(pkiInscriptiontempID = pkiInscriptiontempID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as InscriptiontempGetCommunicationsendersV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve Inscriptiontemp&#39;s Communicationsender
+     * 
+     * @param pkiInscriptiontempID 
+     * @return ApiResponse<InscriptiontempGetCommunicationsendersV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun inscriptiontempGetCommunicationsendersV1WithHttpInfo(pkiInscriptiontempID: kotlin.Int) : ApiResponse<InscriptiontempGetCommunicationsendersV1Response?> {
+        val localVariableConfig = inscriptiontempGetCommunicationsendersV1RequestConfig(pkiInscriptiontempID = pkiInscriptiontempID)
+
+        return request<Unit, InscriptiontempGetCommunicationsendersV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation inscriptiontempGetCommunicationsendersV1
+     *
+     * @param pkiInscriptiontempID 
+     * @return RequestConfig
+     */
+    fun inscriptiontempGetCommunicationsendersV1RequestConfig(pkiInscriptiontempID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationsenders".replace("{"+"pkiInscriptiontempID"+"}", encodeURIComponent(pkiInscriptiontempID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

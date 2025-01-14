@@ -28,6 +28,7 @@ import com.squareup.moshi.JsonClass
  * @param sEzsignfolderDescription The description of the Ezsignfolder
  * @param eEzsignfolderStep 
  * @param iEzsignfolderSignaturetotal The number of total signatures that were requested in the Ezsignfolder
+ * @param iEzsignfolderFormfieldtotal The number of total form fields that were requested in the Ezsignfolder
  * @param iEzsignfolderSignaturesigned The number of signatures that were signed in the Ezsignfolder.
  * @param aObjEzsignfoldertransmissionSigner 
  */
@@ -50,6 +51,10 @@ data class CustomEzsignfoldertransmissionResponse (
     @Json(name = "iEzsignfolderSignaturetotal")
     val iEzsignfolderSignaturetotal: kotlin.Int,
 
+    /* The number of total form fields that were requested in the Ezsignfolder */
+    @Json(name = "iEzsignfolderFormfieldtotal")
+    val iEzsignfolderFormfieldtotal: kotlin.Int,
+
     /* The number of signatures that were signed in the Ezsignfolder. */
     @Json(name = "iEzsignfolderSignaturesigned")
     val iEzsignfolderSignaturesigned: kotlin.Int,
@@ -57,5 +62,8 @@ data class CustomEzsignfoldertransmissionResponse (
     @Json(name = "a_objEzsignfoldertransmissionSigner")
     val aObjEzsignfoldertransmissionSigner: kotlin.collections.List<CustomEzsignfoldertransmissionSignerResponse>
 
-)
+) {
+
+
+}
 

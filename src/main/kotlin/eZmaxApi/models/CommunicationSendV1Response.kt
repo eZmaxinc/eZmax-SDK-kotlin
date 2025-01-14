@@ -17,7 +17,7 @@ package eZmaxApi.models
 
 import eZmaxApi.models.CommonResponseObjDebug
 import eZmaxApi.models.CommonResponseObjDebugPayload
-import eZmaxApi.models.CommunicationCreateObjectV1ResponseMPayload
+import eZmaxApi.models.CommunicationSendV1ResponseMPayload
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -37,10 +37,13 @@ data class CommunicationSendV1Response (
     val objDebugPayload: CommonResponseObjDebugPayload,
 
     @Json(name = "mPayload")
-    val mPayload: CommunicationCreateObjectV1ResponseMPayload,
+    val mPayload: CommunicationSendV1ResponseMPayload,
 
     @Json(name = "objDebug")
     val objDebug: CommonResponseObjDebug? = null
 
-)
+) {
+
+
+}
 

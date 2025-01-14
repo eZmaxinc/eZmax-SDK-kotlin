@@ -127,5 +127,8 @@ data class EzmaxinvoicingagentResponse (
     @Json(name = "fkiBrokerID")
     val fkiBrokerID: kotlin.Int? = null
 
-)
+) {
+
+
+}
 

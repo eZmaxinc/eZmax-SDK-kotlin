@@ -38,14 +38,17 @@ import com.squareup.moshi.JsonClass
  * @param objAudit 
  * @param pksCustomerCode The customer code assigned to your account
  * @param bWebhookTest Wheter the webhook received is a manual test or a real event
+ * @param fkiAuthenticationexternalID The unique ID of the Authenticationexternal
  * @param fkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
  * @param sEzsignfoldertypeNameX The name of the Ezsignfoldertype in the language of the requester
  * @param eWebhookEzsignevent 
  * @param eWebhookManagementevent 
  * @param sWebhookApikey The Apikey for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey.
  * @param sWebhookSecret The Secret for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey.
+ * @param sAuthenticationexternalDescription The description of the Authenticationexternal
  * @param sWebhookEvent The concatenated string to describe the Webhook event
  * @param aObjWebhookheader 
+ * @param eWebhookEmittype Wheter the webhook received is a manual test or a real event
  */
 
 
@@ -91,7 +94,12 @@ data class CustomWebhookResponse (
 
     /* Wheter the webhook received is a manual test or a real event */
     @Json(name = "bWebhookTest")
+    @Deprecated(message = "This property is deprecated.")
     val bWebhookTest: kotlin.Boolean,
+
+    /* The unique ID of the Authenticationexternal */
+    @Json(name = "fkiAuthenticationexternalID")
+    val fkiAuthenticationexternalID: kotlin.Int? = null,
 
     /* The unique ID of the Ezsignfoldertype. */
     @Json(name = "fkiEzsignfoldertypeID")
@@ -115,12 +123,34 @@ data class CustomWebhookResponse (
     @Json(name = "sWebhookSecret")
     val sWebhookSecret: kotlin.String? = null,
 
+    /* The description of the Authenticationexternal */
+    @Json(name = "sAuthenticationexternalDescription")
+    val sAuthenticationexternalDescription: kotlin.String? = null,
+
     /* The concatenated string to describe the Webhook event */
     @Json(name = "sWebhookEvent")
     val sWebhookEvent: kotlin.String? = null,
 
     @Json(name = "a_objWebhookheader")
-    val aObjWebhookheader: kotlin.collections.List<WebhookheaderResponseCompound>? = null
+    val aObjWebhookheader: kotlin.collections.List<WebhookheaderResponseCompound>? = null,
 
-)
+    /* Wheter the webhook received is a manual test or a real event */
+    @Json(name = "eWebhookEmittype")
+    val eWebhookEmittype: CustomWebhookResponse.EWebhookEmittype? = null
+
+) {
+
+    /**
+     * Wheter the webhook received is a manual test or a real event
+     *
+     * Values: Automatic,Manual,Test
+     */
+    @JsonClass(generateAdapter = false)
+    enum class EWebhookEmittype(val value: kotlin.String) {
+        @Json(name = "Automatic") Automatic("Automatic"),
+        @Json(name = "Manual") Manual("Manual"),
+        @Json(name = "Test") Test("Test");
+    }
+
+}
 

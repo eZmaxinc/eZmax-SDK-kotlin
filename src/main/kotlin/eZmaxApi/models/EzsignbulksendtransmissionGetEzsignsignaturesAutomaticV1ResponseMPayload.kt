@@ -38,5 +38,8 @@ data class EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1ResponseMPayl
     @Json(name = "a_objEzsignfolder")
     val aObjEzsignfolder: kotlin.collections.List<CustomEzsignfolderEzsignsignaturesAutomaticResponse>
 
-)
+) {
+
+
+}
 

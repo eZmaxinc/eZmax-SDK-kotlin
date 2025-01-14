@@ -37,5 +37,8 @@ data class MultilingualPaymenttermDescription (
     @Json(name = "sPaymenttermDescription2")
     val sPaymenttermDescription2: kotlin.String? = null
 
-)
+) {
+
+
+}
 

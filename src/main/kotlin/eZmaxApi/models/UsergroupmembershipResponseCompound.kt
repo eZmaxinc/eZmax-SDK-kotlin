@@ -77,5 +77,8 @@ data class UsergroupmembershipResponseCompound (
     @Json(name = "sUsergroupexternalName")
     val sUsergroupexternalName: kotlin.String? = null
 
-)
+) {
+
+
+}
 

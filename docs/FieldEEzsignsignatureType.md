@@ -26,5 +26,7 @@
 
     * `Consultation` (value: `"Consultation"`)
 
+    * `Signature` (value: `"Signature"`)
+
 
 

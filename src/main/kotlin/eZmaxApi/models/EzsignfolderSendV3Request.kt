@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.FieldEEzsignfolderMessageorder
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -24,6 +25,7 @@ import com.squareup.moshi.JsonClass
  *
  * @param aFkiEzsignfoldersignerassociationID 
  * @param tEzsignfolderMessage A custom text message that will be added to the email sent.
+ * @param eEzsignfolderMessageorder 
  * @param dtEzsignfolderDelayedsenddate The date and time at which the Ezsignfolder will be sent in the future.
  */
 
@@ -37,9 +39,15 @@ data class EzsignfolderSendV3Request (
     @Json(name = "tEzsignfolderMessage")
     val tEzsignfolderMessage: kotlin.String? = null,
 
+    @Json(name = "eEzsignfolderMessageorder")
+    val eEzsignfolderMessageorder: FieldEEzsignfolderMessageorder? = FieldEEzsignfolderMessageorder.GlobalFirst,
+
     /* The date and time at which the Ezsignfolder will be sent in the future. */
     @Json(name = "dtEzsignfolderDelayedsenddate")
     val dtEzsignfolderDelayedsenddate: kotlin.String? = null
 
-)
+) {
+
+
+}
 

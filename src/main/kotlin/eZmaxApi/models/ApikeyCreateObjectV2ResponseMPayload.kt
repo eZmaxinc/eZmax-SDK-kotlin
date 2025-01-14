@@ -32,5 +32,8 @@ data class ApikeyCreateObjectV2ResponseMPayload (
     @Json(name = "a_objApikey")
     val aObjApikey: kotlin.collections.List<ApikeyResponseCompound>
 
-)
+) {
+
+
+}
 

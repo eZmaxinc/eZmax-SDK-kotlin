@@ -32,5 +32,8 @@ data class EzsigndocumentGetEzsignpagesV1ResponseMPayload (
     @Json(name = "a_objEzsignpage")
     val aObjEzsignpage: kotlin.collections.List<EzsignpageResponseCompound>
 
-)
+) {
+
+
+}
 

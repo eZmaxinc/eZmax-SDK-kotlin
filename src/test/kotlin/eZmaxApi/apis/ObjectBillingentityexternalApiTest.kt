@@ -19,13 +19,25 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectBillingentityexternalApi
+import eZmaxApi.models.BillingentityexternalGenerateFederationTokenV1Request
+import eZmaxApi.models.BillingentityexternalGenerateFederationTokenV1Response
 import eZmaxApi.models.BillingentityexternalGetAutocompleteV2Response
+import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.HeaderAcceptLanguage
 
 class ObjectBillingentityexternalApiTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of ObjectBillingentityexternalApi
         //val apiInstance = ObjectBillingentityexternalApi()
+
+        // to test billingentityexternalGenerateFederationTokenV1
+        should("test billingentityexternalGenerateFederationTokenV1") {
+            // uncomment below to test billingentityexternalGenerateFederationTokenV1
+            //val pkiBillingentityexternalID : kotlin.Int = 56 // kotlin.Int | 
+            //val billingentityexternalGenerateFederationTokenV1Request : BillingentityexternalGenerateFederationTokenV1Request =  // BillingentityexternalGenerateFederationTokenV1Request | 
+            //val result : BillingentityexternalGenerateFederationTokenV1Response = apiInstance.billingentityexternalGenerateFederationTokenV1(pkiBillingentityexternalID, billingentityexternalGenerateFederationTokenV1Request)
+            //result shouldBe ("TODO")
+        }
 
         // to test billingentityexternalGetAutocompleteV2
         should("test billingentityexternalGetAutocompleteV2") {

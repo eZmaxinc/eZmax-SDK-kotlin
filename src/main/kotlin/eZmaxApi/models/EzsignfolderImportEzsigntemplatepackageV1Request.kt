@@ -42,5 +42,8 @@ data class EzsignfolderImportEzsigntemplatepackageV1Request (
     @Json(name = "a_objImportEzsigntemplatepackageRelation")
     val aObjImportEzsigntemplatepackageRelation: kotlin.collections.List<CustomImportEzsigntemplatepackageRelationRequest>
 
-)
+) {
+
+
+}
 

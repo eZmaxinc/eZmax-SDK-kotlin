@@ -38,5 +38,8 @@ data class CustomWordPositionWordResponse (
     @Json(name = "a_objWordPositionOccurence")
     val aObjWordPositionOccurence: kotlin.collections.List<CustomWordPositionOccurenceResponse>
 
-)
+) {
+
+
+}
 

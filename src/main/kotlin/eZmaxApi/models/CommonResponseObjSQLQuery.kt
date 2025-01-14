@@ -37,5 +37,8 @@ data class CommonResponseObjSQLQuery (
     @Json(name = "fDuration")
     val fDuration: kotlin.Float
 
-)
+) {
+
+
+}
 

@@ -57,10 +57,12 @@ import com.squareup.moshi.JsonClass
  * @param sUsergroupNameXRestricted The Name of the Usergroup in the language of the requester
  * @param eEzsignfoldertypeSendreminderfrequency 
  * @param iEzsignfoldertypeDisposaldays The number of days after the archival before the disposal of the Ezsignfolder
+ * @param bEzsignfoldertypeAutomaticsignature Whether we allow the automatic signature by an User
  * @param bEzsignfoldertypeDelegate Wheter if delegation of signature is allowed to another user or not
  * @param bEzsignfoldertypeDiscussion Wheter if creating a new Discussion is allowed or not
  * @param bEzsignfoldertypeReassignezsignsigner Wheter if Reassignment of signature is allowed by a signatory to another signatory or not
  * @param bEzsignfoldertypeReassignuser Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not
+ * @param bEzsignfoldertypeReassigngroup Wheter if Reassignment of signatures of the groups to which the user belongs is authorized by a user to himself
  * @param bEzsignfoldertypeSendsignedtoezsignsigner Whether we send an email to Ezsignsigner  when document is completed
  * @param bEzsignfoldertypeSendsignedtouser Whether we send an email to User who signed when document is completed
  * @param bEzsignfoldertypeSendattachmentezsignsigner Whether we send the Ezsigndocument in the email to Ezsignsigner
@@ -193,6 +195,10 @@ data class EzsignfoldertypeResponseCompound (
     @Json(name = "iEzsignfoldertypeDisposaldays")
     val iEzsignfoldertypeDisposaldays: kotlin.Int? = null,
 
+    /* Whether we allow the automatic signature by an User */
+    @Json(name = "bEzsignfoldertypeAutomaticsignature")
+    val bEzsignfoldertypeAutomaticsignature: kotlin.Boolean? = null,
+
     /* Wheter if delegation of signature is allowed to another user or not */
     @Json(name = "bEzsignfoldertypeDelegate")
     val bEzsignfoldertypeDelegate: kotlin.Boolean? = null,
@@ -208,6 +214,10 @@ data class EzsignfoldertypeResponseCompound (
     /* Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not */
     @Json(name = "bEzsignfoldertypeReassignuser")
     val bEzsignfoldertypeReassignuser: kotlin.Boolean? = null,
+
+    /* Wheter if Reassignment of signatures of the groups to which the user belongs is authorized by a user to himself */
+    @Json(name = "bEzsignfoldertypeReassigngroup")
+    val bEzsignfoldertypeReassigngroup: kotlin.Boolean? = null,
 
     /* Whether we send an email to Ezsignsigner  when document is completed */
     @Json(name = "bEzsignfoldertypeSendsignedtoezsignsigner")
@@ -271,5 +281,8 @@ data class EzsignfoldertypeResponseCompound (
     @Json(name = "a_fkiUserIDSummary")
     val aFkiUserIDSummary: kotlin.collections.List<kotlin.Int>? = null
 
-)
+) {
+
+
+}
 

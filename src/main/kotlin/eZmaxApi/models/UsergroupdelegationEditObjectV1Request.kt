@@ -32,5 +32,8 @@ data class UsergroupdelegationEditObjectV1Request (
     @Json(name = "objUsergroupdelegation")
     val objUsergroupdelegation: UsergroupdelegationRequestCompound
 
-)
+) {
+
+
+}
 

@@ -92,5 +92,8 @@ data class EzsignbulksendResponseCompound (
     @Json(name = "a_objEzsignbulksendsignermapping")
     val aObjEzsignbulksendsignermapping: kotlin.collections.List<EzsignbulksendsignermappingResponse>
 
-)
+) {
+
+
+}
 

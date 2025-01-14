@@ -16,10 +16,11 @@
 package eZmaxApi.apis
 
 import java.io.IOException
-import okhttp3.OkHttpClient
+import okhttp3.Call
 import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.CommonResponseErrorCreditcardValidation
 import eZmaxApi.models.CreditcardclientCreateObjectV1Request
 import eZmaxApi.models.CreditcardclientCreateObjectV1Response
 import eZmaxApi.models.CreditcardclientDeleteObjectV1Response
@@ -28,6 +29,8 @@ import eZmaxApi.models.CreditcardclientEditObjectV1Response
 import eZmaxApi.models.CreditcardclientGetAutocompleteV2Response
 import eZmaxApi.models.CreditcardclientGetListV1Response
 import eZmaxApi.models.CreditcardclientGetObjectV2Response
+import eZmaxApi.models.CreditcardclientPatchObjectV1Request
+import eZmaxApi.models.CreditcardclientPatchObjectV1Response
 import eZmaxApi.models.HeaderAcceptLanguage
 
 import com.squareup.moshi.Json
@@ -46,7 +49,7 @@ import eZmaxApi.infrastructure.ResponseType
 import eZmaxApi.infrastructure.Success
 import eZmaxApi.infrastructure.toMultiValue
 
-class ObjectCreditcardclientApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = ApiClient.defaultClient) : ApiClient(basePath, client) {
+class ObjectCreditcardclientApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
@@ -276,7 +279,16 @@ class ObjectCreditcardclientApi(basePath: kotlin.String = defaultBasePath, clien
      * enum for parameter sSelector
      */
      enum class SSelectorCreditcardclientGetAutocompleteV2(val value: kotlin.String) {
-         @Json(name = "All") All("All")
+         @Json(name = "All") All("All");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
      }
 
     /**
@@ -285,7 +297,16 @@ class ObjectCreditcardclientApi(basePath: kotlin.String = defaultBasePath, clien
      enum class EFilterActiveCreditcardclientGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "All") All("All"),
          @Json(name = "Active") Active("Active"),
-         @Json(name = "Inactive") Inactive("Inactive")
+         @Json(name = "Inactive") Inactive("Inactive");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
      }
 
     /**
@@ -385,6 +406,8 @@ class ObjectCreditcardclientApi(basePath: kotlin.String = defaultBasePath, clien
          @Json(name = "pkiCreditcardclientID_DESC") pkiCreditcardclientID_DESC("pkiCreditcardclientID_DESC"),
          @Json(name = "fkiCreditcarddetailID_ASC") fkiCreditcarddetailID_ASC("fkiCreditcarddetailID_ASC"),
          @Json(name = "fkiCreditcarddetailID_DESC") fkiCreditcarddetailID_DESC("fkiCreditcarddetailID_DESC"),
+         @Json(name = "fkiCreditcardtypeID_ASC") fkiCreditcardtypeID_ASC("fkiCreditcardtypeID_ASC"),
+         @Json(name = "fkiCreditcardtypeID_DESC") fkiCreditcardtypeID_DESC("fkiCreditcardtypeID_DESC"),
          @Json(name = "bCreditcardclientrelationIsdefault_ASC") bCreditcardclientrelationIsdefault_ASC("bCreditcardclientrelationIsdefault_ASC"),
          @Json(name = "bCreditcardclientrelationIsdefault_DESC") bCreditcardclientrelationIsdefault_DESC("bCreditcardclientrelationIsdefault_DESC"),
          @Json(name = "sCreditcardclientDescription_ASC") sCreditcardclientDescription_ASC("sCreditcardclientDescription_ASC"),
@@ -393,14 +416,21 @@ class ObjectCreditcardclientApi(basePath: kotlin.String = defaultBasePath, clien
          @Json(name = "bCreditcardclientIsactive_DESC") bCreditcardclientIsactive_DESC("bCreditcardclientIsactive_DESC"),
          @Json(name = "bCreditcardclientAllowedagencypayment_ASC") bCreditcardclientAllowedagencypayment_ASC("bCreditcardclientAllowedagencypayment_ASC"),
          @Json(name = "bCreditcardclientAllowedagencypayment_DESC") bCreditcardclientAllowedagencypayment_DESC("bCreditcardclientAllowedagencypayment_DESC"),
-         @Json(name = "bCreditcardclientAllowedroyallepageprotection_ASC") bCreditcardclientAllowedroyallepageprotection_ASC("bCreditcardclientAllowedroyallepageprotection_ASC"),
-         @Json(name = "bCreditcardclientAllowedroyallepageprotection_DESC") bCreditcardclientAllowedroyallepageprotection_DESC("bCreditcardclientAllowedroyallepageprotection_DESC"),
          @Json(name = "bCreditcardclientAllowedtranquillit_ASC") bCreditcardclientAllowedtranquillit_ASC("bCreditcardclientAllowedtranquillit_ASC"),
          @Json(name = "bCreditcardclientAllowedtranquillit_DESC") bCreditcardclientAllowedtranquillit_DESC("bCreditcardclientAllowedtranquillit_DESC"),
          @Json(name = "iCreditcarddetailExpirationmonth_ASC") iCreditcarddetailExpirationmonth_ASC("iCreditcarddetailExpirationmonth_ASC"),
          @Json(name = "iCreditcarddetailExpirationmonth_DESC") iCreditcarddetailExpirationmonth_DESC("iCreditcarddetailExpirationmonth_DESC"),
          @Json(name = "iCreditcarddetailExpirationyear_ASC") iCreditcarddetailExpirationyear_ASC("iCreditcarddetailExpirationyear_ASC"),
-         @Json(name = "iCreditcarddetailExpirationyear_DESC") iCreditcarddetailExpirationyear_DESC("iCreditcarddetailExpirationyear_DESC")
+         @Json(name = "iCreditcarddetailExpirationyear_DESC") iCreditcarddetailExpirationyear_DESC("iCreditcarddetailExpirationyear_DESC");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
      }
 
     /**
@@ -565,6 +595,81 @@ class ObjectCreditcardclientApi(basePath: kotlin.String = defaultBasePath, clien
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/2/object/creditcardclient/{pkiCreditcardclientID}".replace("{"+"pkiCreditcardclientID"+"}", encodeURIComponent(pkiCreditcardclientID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Patch an existing Creditcardclient
+     * 
+     * @param pkiCreditcardclientID The unique ID of the Creditcardclient
+     * @param creditcardclientPatchObjectV1Request 
+     * @return CreditcardclientPatchObjectV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun creditcardclientPatchObjectV1(pkiCreditcardclientID: kotlin.Int, creditcardclientPatchObjectV1Request: CreditcardclientPatchObjectV1Request) : CreditcardclientPatchObjectV1Response {
+        val localVarResponse = creditcardclientPatchObjectV1WithHttpInfo(pkiCreditcardclientID = pkiCreditcardclientID, creditcardclientPatchObjectV1Request = creditcardclientPatchObjectV1Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CreditcardclientPatchObjectV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Patch an existing Creditcardclient
+     * 
+     * @param pkiCreditcardclientID The unique ID of the Creditcardclient
+     * @param creditcardclientPatchObjectV1Request 
+     * @return ApiResponse<CreditcardclientPatchObjectV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun creditcardclientPatchObjectV1WithHttpInfo(pkiCreditcardclientID: kotlin.Int, creditcardclientPatchObjectV1Request: CreditcardclientPatchObjectV1Request) : ApiResponse<CreditcardclientPatchObjectV1Response?> {
+        val localVariableConfig = creditcardclientPatchObjectV1RequestConfig(pkiCreditcardclientID = pkiCreditcardclientID, creditcardclientPatchObjectV1Request = creditcardclientPatchObjectV1Request)
+
+        return request<CreditcardclientPatchObjectV1Request, CreditcardclientPatchObjectV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation creditcardclientPatchObjectV1
+     *
+     * @param pkiCreditcardclientID The unique ID of the Creditcardclient
+     * @param creditcardclientPatchObjectV1Request 
+     * @return RequestConfig
+     */
+    fun creditcardclientPatchObjectV1RequestConfig(pkiCreditcardclientID: kotlin.Int, creditcardclientPatchObjectV1Request: CreditcardclientPatchObjectV1Request) : RequestConfig<CreditcardclientPatchObjectV1Request> {
+        val localVariableBody = creditcardclientPatchObjectV1Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.PATCH,
+            path = "/1/object/creditcardclient/{pkiCreditcardclientID}".replace("{"+"pkiCreditcardclientID"+"}", encodeURIComponent(pkiCreditcardclientID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

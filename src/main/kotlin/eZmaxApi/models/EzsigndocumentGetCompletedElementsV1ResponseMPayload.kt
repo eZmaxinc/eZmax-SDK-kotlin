@@ -37,5 +37,8 @@ data class EzsigndocumentGetCompletedElementsV1ResponseMPayload (
     @Json(name = "a_objEzsignformfieldgroup")
     val aObjEzsignformfieldgroup: kotlin.collections.List<EzsignformfieldgroupResponseCompound>
 
-)
+) {
+
+
+}
 

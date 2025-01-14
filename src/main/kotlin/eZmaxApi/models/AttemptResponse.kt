@@ -42,5 +42,8 @@ data class AttemptResponse (
     @Json(name = "iAttemptDuration")
     val iAttemptDuration: kotlin.Int
 
-)
+) {
+
+
+}
 

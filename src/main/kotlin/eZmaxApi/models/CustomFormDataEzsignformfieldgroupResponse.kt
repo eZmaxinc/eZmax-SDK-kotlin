@@ -37,5 +37,8 @@ data class CustomFormDataEzsignformfieldgroupResponse (
     @Json(name = "a_objEzsignformfield")
     val aObjEzsignformfield: kotlin.collections.List<CustomFormDataEzsignformfieldResponse>
 
-)
+) {
+
+
+}
 

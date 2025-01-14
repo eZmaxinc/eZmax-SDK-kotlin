@@ -62,5 +62,8 @@ data class BillingentityinternalproductResponseCompound (
     @Json(name = "sBillingentityexternalDescription")
     val sBillingentityexternalDescription: kotlin.String
 
-)
+) {
+
+
+}
 

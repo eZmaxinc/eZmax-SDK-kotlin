@@ -42,5 +42,8 @@ data class BillingentityinternalproductRequestCompound (
     @Json(name = "pkiBillingentityinternalproductID")
     val pkiBillingentityinternalproductID: kotlin.Int? = null
 
-)
+) {
+
+
+}
 

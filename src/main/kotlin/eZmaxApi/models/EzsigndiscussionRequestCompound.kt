@@ -57,5 +57,8 @@ data class EzsigndiscussionRequestCompound (
     @Json(name = "pkiEzsigndiscussionID")
     val pkiEzsigndiscussionID: kotlin.Int? = null
 
-)
+) {
+
+
+}
 

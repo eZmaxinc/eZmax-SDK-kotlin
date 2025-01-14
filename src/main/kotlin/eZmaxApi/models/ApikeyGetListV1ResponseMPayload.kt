@@ -42,5 +42,8 @@ data class ApikeyGetListV1ResponseMPayload (
     @Json(name = "a_objApikey")
     val aObjApikey: kotlin.collections.List<ApikeyListElement>
 
-)
+) {
+
+
+}
 

@@ -16,10 +16,13 @@
 package eZmaxApi.apis
 
 import java.io.IOException
-import okhttp3.OkHttpClient
+import okhttp3.Call
 import okhttp3.HttpUrl
 
+import eZmaxApi.models.BillingentityexternalGenerateFederationTokenV1Request
+import eZmaxApi.models.BillingentityexternalGenerateFederationTokenV1Response
 import eZmaxApi.models.BillingentityexternalGetAutocompleteV2Response
+import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.HeaderAcceptLanguage
 
 import com.squareup.moshi.Json
@@ -38,7 +41,7 @@ import eZmaxApi.infrastructure.ResponseType
 import eZmaxApi.infrastructure.Success
 import eZmaxApi.infrastructure.toMultiValue
 
-class ObjectBillingentityexternalApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = ApiClient.defaultClient) : ApiClient(basePath, client) {
+class ObjectBillingentityexternalApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
@@ -47,10 +50,94 @@ class ObjectBillingentityexternalApi(basePath: kotlin.String = defaultBasePath, 
     }
 
     /**
+     * Generate a federation token
+     * 
+     * @param pkiBillingentityexternalID 
+     * @param billingentityexternalGenerateFederationTokenV1Request 
+     * @return BillingentityexternalGenerateFederationTokenV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun billingentityexternalGenerateFederationTokenV1(pkiBillingentityexternalID: kotlin.Int, billingentityexternalGenerateFederationTokenV1Request: BillingentityexternalGenerateFederationTokenV1Request) : BillingentityexternalGenerateFederationTokenV1Response {
+        val localVarResponse = billingentityexternalGenerateFederationTokenV1WithHttpInfo(pkiBillingentityexternalID = pkiBillingentityexternalID, billingentityexternalGenerateFederationTokenV1Request = billingentityexternalGenerateFederationTokenV1Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as BillingentityexternalGenerateFederationTokenV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Generate a federation token
+     * 
+     * @param pkiBillingentityexternalID 
+     * @param billingentityexternalGenerateFederationTokenV1Request 
+     * @return ApiResponse<BillingentityexternalGenerateFederationTokenV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun billingentityexternalGenerateFederationTokenV1WithHttpInfo(pkiBillingentityexternalID: kotlin.Int, billingentityexternalGenerateFederationTokenV1Request: BillingentityexternalGenerateFederationTokenV1Request) : ApiResponse<BillingentityexternalGenerateFederationTokenV1Response?> {
+        val localVariableConfig = billingentityexternalGenerateFederationTokenV1RequestConfig(pkiBillingentityexternalID = pkiBillingentityexternalID, billingentityexternalGenerateFederationTokenV1Request = billingentityexternalGenerateFederationTokenV1Request)
+
+        return request<BillingentityexternalGenerateFederationTokenV1Request, BillingentityexternalGenerateFederationTokenV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation billingentityexternalGenerateFederationTokenV1
+     *
+     * @param pkiBillingentityexternalID 
+     * @param billingentityexternalGenerateFederationTokenV1Request 
+     * @return RequestConfig
+     */
+    fun billingentityexternalGenerateFederationTokenV1RequestConfig(pkiBillingentityexternalID: kotlin.Int, billingentityexternalGenerateFederationTokenV1Request: BillingentityexternalGenerateFederationTokenV1Request) : RequestConfig<BillingentityexternalGenerateFederationTokenV1Request> {
+        val localVariableBody = billingentityexternalGenerateFederationTokenV1Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/billingentityexternal/{pkiBillingentityexternalID}/generateFederationToken".replace("{"+"pkiBillingentityexternalID"+"}", encodeURIComponent(pkiBillingentityexternalID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
      * enum for parameter sSelector
      */
      enum class SSelectorBillingentityexternalGetAutocompleteV2(val value: kotlin.String) {
-         @Json(name = "All") All("All")
+         @Json(name = "All") All("All");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
      }
 
     /**
@@ -59,7 +146,16 @@ class ObjectBillingentityexternalApi(basePath: kotlin.String = defaultBasePath, 
      enum class EFilterActiveBillingentityexternalGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "All") All("All"),
          @Json(name = "Active") Active("Active"),
-         @Json(name = "Inactive") Inactive("Inactive")
+         @Json(name = "Inactive") Inactive("Inactive");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
      }
 
     /**

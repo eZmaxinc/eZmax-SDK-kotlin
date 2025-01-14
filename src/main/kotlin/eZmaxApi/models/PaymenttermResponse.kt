@@ -62,5 +62,8 @@ data class PaymenttermResponse (
     @Json(name = "objAudit")
     val objAudit: CommonAudit
 
-)
+) {
+
+
+}
 

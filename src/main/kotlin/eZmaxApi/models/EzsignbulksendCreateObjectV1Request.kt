@@ -32,5 +32,8 @@ data class EzsignbulksendCreateObjectV1Request (
     @Json(name = "a_objEzsignbulksend")
     val aObjEzsignbulksend: kotlin.collections.List<EzsignbulksendRequestCompound>
 
-)
+) {
+
+
+}
 

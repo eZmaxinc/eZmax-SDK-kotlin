@@ -32,5 +32,8 @@ data class UserCreateObjectV1Request (
     @Json(name = "a_objUser")
     val aObjUser: kotlin.collections.List<UserRequestCompound>
 
-)
+) {
+
+
+}
 

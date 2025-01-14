@@ -32,5 +32,8 @@ data class EzsigntemplatedocumentGetEzsigntemplatesignaturesV1ResponseMPayload (
     @Json(name = "a_objEzsigntemplatesignature")
     val aObjEzsigntemplatesignature: kotlin.collections.List<EzsigntemplatesignatureResponseCompound>
 
-)
+) {
+
+
+}
 

@@ -52,5 +52,8 @@ data class VariableexpenseRequestCompound (
     @Json(name = "pkiVariableexpenseID")
     val pkiVariableexpenseID: kotlin.Int? = null
 
-)
+) {
+
+
+}
 

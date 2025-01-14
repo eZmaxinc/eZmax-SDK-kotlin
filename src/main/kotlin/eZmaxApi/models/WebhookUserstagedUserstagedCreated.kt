@@ -43,5 +43,8 @@ data class WebhookUserstagedUserstagedCreated (
     @Json(name = "objUserstaged")
     val objUserstaged: UserstagedResponseCompound
 
-)
+) {
+
+
+}
 

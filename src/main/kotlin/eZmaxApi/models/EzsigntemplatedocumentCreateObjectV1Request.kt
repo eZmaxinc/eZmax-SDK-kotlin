@@ -32,5 +32,8 @@ data class EzsigntemplatedocumentCreateObjectV1Request (
     @Json(name = "a_objEzsigntemplatedocument")
     val aObjEzsigntemplatedocument: kotlin.collections.List<EzsigntemplatedocumentRequestCompound>
 
-)
+) {
+
+
+}
 

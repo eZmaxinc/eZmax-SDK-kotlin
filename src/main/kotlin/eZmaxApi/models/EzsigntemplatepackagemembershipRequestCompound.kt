@@ -42,5 +42,8 @@ data class EzsigntemplatepackagemembershipRequestCompound (
     @Json(name = "pkiEzsigntemplatepackagemembershipID")
     val pkiEzsigntemplatepackagemembershipID: kotlin.Int? = null
 
-)
+) {
+
+
+}
 

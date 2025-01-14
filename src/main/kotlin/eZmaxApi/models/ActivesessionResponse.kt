@@ -15,7 +15,11 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.FieldEActivesessionEzsign
+import eZmaxApi.models.FieldEActivesessionEzsignaccess
+import eZmaxApi.models.FieldEActivesessionEzsignprepaid
 import eZmaxApi.models.FieldEActivesessionOrigin
+import eZmaxApi.models.FieldEActivesessionRealestateinprogress
 import eZmaxApi.models.FieldEActivesessionUsertype
 import eZmaxApi.models.FieldEActivesessionWeekdaystart
 
@@ -33,8 +37,16 @@ import com.squareup.moshi.JsonClass
  * @param sDepartmentNameX The Name of the Department in the language of the requester
  * @param bActivesessionDebug Whether the active session is in debug or not
  * @param bActivesessionIssuperadmin Whether the active session is superadmin or not
+ * @param eActivesessionEzsignaccess 
  * @param pksCustomerCode The customer code assigned to your account
  * @param fkiSystemconfigurationtypeID The unique ID of the Systemconfigurationtype
+ * @param bActivesessionAttachment Can access attachment when we clone a user
+ * @param bActivesessionCanafe Can access canafe when we clone a user
+ * @param bActivesessionFinancial Can access financial element when we clone a user
+ * @param bActivesessionRealestatecompleted Can access closed realestate folders when we clone a user
+ * @param eActivesessionEzsign 
+ * @param eActivesessionEzsignprepaid 
+ * @param eActivesessionRealestateinprogress 
  * @param fkiSignatureID The unique ID of the Signature
  */
 
@@ -70,6 +82,9 @@ data class ActivesessionResponse (
     @Json(name = "bActivesessionIssuperadmin")
     val bActivesessionIssuperadmin: kotlin.Boolean,
 
+    @Json(name = "eActivesessionEzsignaccess")
+    val eActivesessionEzsignaccess: FieldEActivesessionEzsignaccess,
+
     /* The customer code assigned to your account */
     @Json(name = "pksCustomerCode")
     val pksCustomerCode: kotlin.String,
@@ -78,9 +93,37 @@ data class ActivesessionResponse (
     @Json(name = "fkiSystemconfigurationtypeID")
     val fkiSystemconfigurationtypeID: kotlin.Int,
 
+    /* Can access attachment when we clone a user */
+    @Json(name = "bActivesessionAttachment")
+    val bActivesessionAttachment: kotlin.Boolean? = null,
+
+    /* Can access canafe when we clone a user */
+    @Json(name = "bActivesessionCanafe")
+    val bActivesessionCanafe: kotlin.Boolean? = null,
+
+    /* Can access financial element when we clone a user */
+    @Json(name = "bActivesessionFinancial")
+    val bActivesessionFinancial: kotlin.Boolean? = null,
+
+    /* Can access closed realestate folders when we clone a user */
+    @Json(name = "bActivesessionRealestatecompleted")
+    val bActivesessionRealestatecompleted: kotlin.Boolean? = null,
+
+    @Json(name = "eActivesessionEzsign")
+    val eActivesessionEzsign: FieldEActivesessionEzsign? = null,
+
+    @Json(name = "eActivesessionEzsignprepaid")
+    val eActivesessionEzsignprepaid: FieldEActivesessionEzsignprepaid? = null,
+
+    @Json(name = "eActivesessionRealestateinprogress")
+    val eActivesessionRealestateinprogress: FieldEActivesessionRealestateinprogress? = null,
+
     /* The unique ID of the Signature */
     @Json(name = "fkiSignatureID")
     val fkiSignatureID: kotlin.Int? = null
 
-)
+) {
+
+
+}
 

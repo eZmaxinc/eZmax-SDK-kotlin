@@ -40,5 +40,8 @@ data class CommonReportsubsection (
     @Json(name = "objReportsubsectionpartFooter")
     val objReportsubsectionpartFooter: CommonReportsubsectionpart
 
-)
+) {
+
+
+}
 

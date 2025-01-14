@@ -57,5 +57,8 @@ data class ModuleResponse (
     @Json(name = "bModuleRegisteredapi")
     val bModuleRegisteredapi: kotlin.Boolean
 
-)
+) {
+
+
+}
 

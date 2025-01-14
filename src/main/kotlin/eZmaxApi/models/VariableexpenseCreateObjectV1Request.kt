@@ -32,5 +32,8 @@ data class VariableexpenseCreateObjectV1Request (
     @Json(name = "a_objVariableexpense")
     val aObjVariableexpense: kotlin.collections.List<VariableexpenseRequestCompound>
 
-)
+) {
+
+
+}
 

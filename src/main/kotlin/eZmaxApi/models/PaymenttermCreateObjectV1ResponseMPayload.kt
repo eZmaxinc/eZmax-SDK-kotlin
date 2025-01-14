@@ -32,5 +32,8 @@ data class PaymenttermCreateObjectV1ResponseMPayload (
     @Json(name = "a_pkiPaymenttermID")
     val aPkiPaymenttermID: kotlin.collections.List<kotlin.Int>
 
-)
+) {
+
+
+}
 

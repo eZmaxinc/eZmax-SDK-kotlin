@@ -52,5 +52,8 @@ data class CommonResponseObjDebugPayload (
     @Json(name = "dtResponseDate")
     val dtResponseDate: kotlin.String
 
-)
+) {
+
+
+}
 

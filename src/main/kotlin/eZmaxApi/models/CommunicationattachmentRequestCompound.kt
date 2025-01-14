@@ -47,5 +47,8 @@ data class CommunicationattachmentRequestCompound (
     @Json(name = "fkiSalarypreparationID")
     val fkiSalarypreparationID: kotlin.Int? = null
 
-)
+) {
+
+
+}
 

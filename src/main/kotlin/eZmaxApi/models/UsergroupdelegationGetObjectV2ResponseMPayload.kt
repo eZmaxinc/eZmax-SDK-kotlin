@@ -32,5 +32,8 @@ data class UsergroupdelegationGetObjectV2ResponseMPayload (
     @Json(name = "objUsergroupdelegation")
     val objUsergroupdelegation: UsergroupdelegationResponseCompound
 
-)
+) {
+
+
+}
 

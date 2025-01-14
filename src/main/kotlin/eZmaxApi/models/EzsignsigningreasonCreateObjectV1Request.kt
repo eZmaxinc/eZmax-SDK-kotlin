@@ -32,5 +32,8 @@ data class EzsignsigningreasonCreateObjectV1Request (
     @Json(name = "a_objEzsignsigningreason")
     val aObjEzsignsigningreason: kotlin.collections.List<EzsignsigningreasonRequestCompound>
 
-)
+) {
+
+
+}
 

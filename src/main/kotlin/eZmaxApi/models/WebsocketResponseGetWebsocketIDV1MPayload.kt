@@ -32,5 +32,8 @@ data class WebsocketResponseGetWebsocketIDV1MPayload (
     @Json(name = "sWebsocketID")
     val sWebsocketID: kotlin.String
 
-)
+) {
+
+
+}
 

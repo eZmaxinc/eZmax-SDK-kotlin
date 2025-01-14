@@ -32,5 +32,8 @@ data class UserstagedGetObjectV2ResponseMPayload (
     @Json(name = "objUserstaged")
     val objUserstaged: UserstagedResponseCompound
 
-)
+) {
+
+
+}
 

@@ -17,6 +17,7 @@ package eZmaxApi.models
 
 import eZmaxApi.models.CommonAudit
 import eZmaxApi.models.CustomEzsignfoldertypeResponse
+import eZmaxApi.models.CustomTimezoneWithCodeResponse
 import eZmaxApi.models.FieldEEzsignfolderCompletion
 import eZmaxApi.models.FieldEEzsignfolderSendreminderfrequency
 import eZmaxApi.models.FieldEEzsignfolderStep
@@ -32,6 +33,7 @@ import com.squareup.moshi.JsonClass
  * @param sEzsignfolderDescription The description of the Ezsignfolder
  * @param fkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
  * @param objEzsignfoldertype 
+ * @param fkiTimezoneID The unique ID of the Timezone
  * @param sEzsignfoldertypeNameX 
  * @param fkiBillingentityinternalID The unique ID of the Billingentityinternal.
  * @param sBillingentityinternalDescriptionX The description of the Billingentityinternal in the language of the requester
@@ -40,6 +42,8 @@ import com.squareup.moshi.JsonClass
  * @param tEzsignfolderNote Note about the Ezsignfolder
  * @param bEzsignfolderIsdisposable If the Ezsigndocument can be disposed
  * @param eEzsignfolderSendreminderfrequency 
+ * @param iEzsignfolderSendreminderfirstdays The number of days before the the first reminder sending
+ * @param iEzsignfolderSendreminderotherdays The number of days after the first reminder sending
  * @param dtEzsignfolderDelayedsenddate The date and time at which the Ezsignfolder will be sent in the future.
  * @param dtEzsignfolderDuedate The maximum date and time at which the Ezsignfolder can be signed.
  * @param dtEzsignfolderSentdate The date and time at which the Ezsignfolder was sent the last time.
@@ -50,6 +54,7 @@ import com.squareup.moshi.JsonClass
  * @param tEzsignfolderMessage A custom text message that will be added to the email sent.
  * @param objAudit 
  * @param sEzsignfolderExternalid This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
+ * @param objTimezone 
  */
 
 
@@ -72,6 +77,10 @@ data class EzsignfolderGetObjectV1ResponseMPayload (
 
     @Json(name = "objEzsignfoldertype")
     val objEzsignfoldertype: CustomEzsignfoldertypeResponse? = null,
+
+    /* The unique ID of the Timezone */
+    @Json(name = "fkiTimezoneID")
+    val fkiTimezoneID: kotlin.Int? = null,
 
     @Json(name = "sEzsignfoldertypeNameX")
     @Deprecated(message = "This property is deprecated.")
@@ -102,7 +111,16 @@ data class EzsignfolderGetObjectV1ResponseMPayload (
     val bEzsignfolderIsdisposable: kotlin.Boolean? = null,
 
     @Json(name = "eEzsignfolderSendreminderfrequency")
+    @Deprecated(message = "This property is deprecated.")
     val eEzsignfolderSendreminderfrequency: FieldEEzsignfolderSendreminderfrequency? = null,
+
+    /* The number of days before the the first reminder sending */
+    @Json(name = "iEzsignfolderSendreminderfirstdays")
+    val iEzsignfolderSendreminderfirstdays: kotlin.Int? = null,
+
+    /* The number of days after the first reminder sending */
+    @Json(name = "iEzsignfolderSendreminderotherdays")
+    val iEzsignfolderSendreminderotherdays: kotlin.Int? = null,
 
     /* The date and time at which the Ezsignfolder will be sent in the future. */
     @Json(name = "dtEzsignfolderDelayedsenddate")
@@ -140,7 +158,13 @@ data class EzsignfolderGetObjectV1ResponseMPayload (
 
     /* This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format.  */
     @Json(name = "sEzsignfolderExternalid")
-    val sEzsignfolderExternalid: kotlin.String? = null
+    val sEzsignfolderExternalid: kotlin.String? = null,
 
-)
+    @Json(name = "objTimezone")
+    val objTimezone: CustomTimezoneWithCodeResponse? = null
+
+) {
+
+
+}
 

@@ -32,5 +32,8 @@ data class CorsGetObjectV2ResponseMPayload (
     @Json(name = "objCors")
     val objCors: CorsResponseCompound
 
-)
+) {
+
+
+}
 

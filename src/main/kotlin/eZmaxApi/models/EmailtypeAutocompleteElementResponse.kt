@@ -42,5 +42,8 @@ data class EmailtypeAutocompleteElementResponse (
     @Json(name = "bEmailtypeIsactive")
     val bEmailtypeIsactive: kotlin.Boolean
 
-)
+) {
+
+
+}
 

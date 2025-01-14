@@ -32,5 +32,8 @@ data class BillingentityinternalEditObjectV1Request (
     @Json(name = "objBillingentityinternal")
     val objBillingentityinternal: BillingentityinternalRequestCompound
 
-)
+) {
+
+
+}
 

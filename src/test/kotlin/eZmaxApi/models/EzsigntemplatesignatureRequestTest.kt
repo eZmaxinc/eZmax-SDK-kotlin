@@ -21,6 +21,7 @@ import io.kotlintest.specs.ShouldSpec
 import eZmaxApi.models.EzsigntemplatesignatureRequest
 import eZmaxApi.models.EnumTextvalidation
 import eZmaxApi.models.FieldEEzsigntemplatesignatureAttachmentnamesource
+import eZmaxApi.models.FieldEEzsigntemplatesignatureConsultationtrigger
 import eZmaxApi.models.FieldEEzsigntemplatesignatureDependencyrequirement
 import eZmaxApi.models.FieldEEzsigntemplatesignatureFont
 import eZmaxApi.models.FieldEEzsigntemplatesignaturePositioning
@@ -75,6 +76,18 @@ class EzsigntemplatesignatureRequestTest : ShouldSpec() {
             //modelInstance.fkiEzsigntemplatesignerIDValidation shouldBe ("TODO")
         }
 
+        // to test the property `bEzsigntemplatesignatureHandwritten` - Whether the Ezsigntemplatesignature must be handwritten or not when eEzsigntemplatesignatureType = Signature.
+        should("test bEzsigntemplatesignatureHandwritten") {
+            // uncomment below to test the property
+            //modelInstance.bEzsigntemplatesignatureHandwritten shouldBe ("TODO")
+        }
+
+        // to test the property `bEzsigntemplatesignatureReason` - Whether the Ezsigntemplatesignature must include a reason or not when eEzsigntemplatesignatureType = Signature.
+        should("test bEzsigntemplatesignatureReason") {
+            // uncomment below to test the property
+            //modelInstance.bEzsigntemplatesignatureReason shouldBe ("TODO")
+        }
+
         // to test the property `eEzsigntemplatesignaturePositioning`
         should("test eEzsigntemplatesignaturePositioning") {
             // uncomment below to test the property
@@ -103,6 +116,12 @@ class EzsigntemplatesignatureRequestTest : ShouldSpec() {
         should("test iEzsigntemplatesignatureHeight") {
             // uncomment below to test the property
             //modelInstance.iEzsigntemplatesignatureHeight shouldBe ("TODO")
+        }
+
+        // to test the property `eEzsigntemplatesignatureConsultationtrigger`
+        should("test eEzsigntemplatesignatureConsultationtrigger") {
+            // uncomment below to test the property
+            //modelInstance.eEzsigntemplatesignatureConsultationtrigger shouldBe ("TODO")
         }
 
         // to test the property `tEzsigntemplatesignatureTooltip` - A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplatesignature
@@ -153,6 +172,12 @@ class EzsigntemplatesignatureRequestTest : ShouldSpec() {
             //modelInstance.iEzsigntemplatesignatureMaxlength shouldBe ("TODO")
         }
 
+        // to test the property `sEzsigntemplatesignatureDefaultvalue` - The default value for the Ezsigntemplatesignature  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | ------------------------- | ------------ | ------------ | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sCompany} | Company name | eZmax Solutions Inc. | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 |
+        should("test sEzsigntemplatesignatureDefaultvalue") {
+            // uncomment below to test the property
+            //modelInstance.sEzsigntemplatesignatureDefaultvalue shouldBe ("TODO")
+        }
+
         // to test the property `sEzsigntemplatesignatureRegexp` - A regular expression to indicate what values are acceptable for the Ezsigntemplatesignature.  This can only be set if eEzsigntemplatesignatureType is **Text** or **Textarea**
         should("test sEzsigntemplatesignatureRegexp") {
             // uncomment below to test the property
@@ -163,6 +188,12 @@ class EzsigntemplatesignatureRequestTest : ShouldSpec() {
         should("test eEzsigntemplatesignatureTextvalidation") {
             // uncomment below to test the property
             //modelInstance.eEzsigntemplatesignatureTextvalidation shouldBe ("TODO")
+        }
+
+        // to test the property `sEzsigntemplatesignatureTextvalidationcustommessage` - Description of validation rule. Show by signatory.
+        should("test sEzsigntemplatesignatureTextvalidationcustommessage") {
+            // uncomment below to test the property
+            //modelInstance.sEzsigntemplatesignatureTextvalidationcustommessage shouldBe ("TODO")
         }
 
         // to test the property `eEzsigntemplatesignatureDependencyrequirement`

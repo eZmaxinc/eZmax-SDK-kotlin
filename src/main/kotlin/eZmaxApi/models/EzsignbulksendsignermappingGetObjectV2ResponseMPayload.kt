@@ -32,5 +32,8 @@ data class EzsignbulksendsignermappingGetObjectV2ResponseMPayload (
     @Json(name = "objEzsignbulksendsignermapping")
     val objEzsignbulksendsignermapping: EzsignbulksendsignermappingResponseCompound
 
-)
+) {
+
+
+}
 

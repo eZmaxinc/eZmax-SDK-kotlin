@@ -42,5 +42,8 @@ data class EzsignfolderGetAttachmentCountV1Response (
     @Json(name = "objDebug")
     val objDebug: CommonResponseObjDebug? = null
 
-)
+) {
+
+
+}
 

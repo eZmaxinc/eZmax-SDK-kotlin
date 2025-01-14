@@ -19,11 +19,30 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.SignatureRequestCompound
+import eZmaxApi.models.FieldESignaturePreference
 
 class SignatureRequestCompoundTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of SignatureRequestCompound
         //val modelInstance = SignatureRequestCompound()
+
+        // to test the property `fkiFontID` - The unique ID of the Font
+        should("test fkiFontID") {
+            // uncomment below to test the property
+            //modelInstance.fkiFontID shouldBe ("TODO")
+        }
+
+        // to test the property `eSignaturePreference`
+        should("test eSignaturePreference") {
+            // uncomment below to test the property
+            //modelInstance.eSignaturePreference shouldBe ("TODO")
+        }
+
+        // to test the property `pkiSignatureID` - The unique ID of the Signature
+        should("test pkiSignatureID") {
+            // uncomment below to test the property
+            //modelInstance.pkiSignatureID shouldBe ("TODO")
+        }
 
         // to test the property `tSignatureSvg` - The svg of the Signature
         should("test tSignatureSvg") {
@@ -31,10 +50,10 @@ class SignatureRequestCompoundTest : ShouldSpec() {
             //modelInstance.tSignatureSvg shouldBe ("TODO")
         }
 
-        // to test the property `pkiSignatureID` - The unique ID of the Signature
-        should("test pkiSignatureID") {
+        // to test the property `tSignatureSvginitials` - The svg of the Initials
+        should("test tSignatureSvginitials") {
             // uncomment below to test the property
-            //modelInstance.pkiSignatureID shouldBe ("TODO")
+            //modelInstance.tSignatureSvginitials shouldBe ("TODO")
         }
 
     }

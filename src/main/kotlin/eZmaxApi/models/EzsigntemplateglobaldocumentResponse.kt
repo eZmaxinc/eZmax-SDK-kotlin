@@ -47,5 +47,8 @@ data class EzsigntemplateglobaldocumentResponse (
     @Json(name = "iEzsigntemplateglobaldocumentSignaturetotal")
     val iEzsigntemplateglobaldocumentSignaturetotal: kotlin.Int
 
-)
+) {
+
+
+}
 

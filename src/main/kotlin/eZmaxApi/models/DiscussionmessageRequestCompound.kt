@@ -47,5 +47,8 @@ data class DiscussionmessageRequestCompound (
     @Json(name = "fkiDiscussionmembershipIDActionrequired")
     val fkiDiscussionmembershipIDActionrequired: kotlin.Int? = null
 
-)
+) {
+
+
+}
 

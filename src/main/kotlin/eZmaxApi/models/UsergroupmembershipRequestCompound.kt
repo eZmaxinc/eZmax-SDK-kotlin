@@ -47,5 +47,8 @@ data class UsergroupmembershipRequestCompound (
     @Json(name = "fkiUsergroupexternalID")
     val fkiUsergroupexternalID: kotlin.Int? = null
 
-)
+) {
+
+
+}
 

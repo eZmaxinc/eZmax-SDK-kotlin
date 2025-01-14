@@ -42,5 +42,8 @@ data class EzsignbulksendGetListV1ResponseMPayload (
     @Json(name = "a_objEzsignbulksend")
     val aObjEzsignbulksend: kotlin.collections.List<EzsignbulksendListElement>
 
-)
+) {
+
+
+}
 

@@ -43,5 +43,8 @@ data class CustomEzsignformfieldgroupRequest (
     @Json(name = "sEzsignformfieldgroupLabel")
     val sEzsignformfieldgroupLabel: kotlin.String? = null
 
-)
+) {
+
+
+}
 

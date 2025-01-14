@@ -42,5 +42,8 @@ data class BrandingAutocompleteElementResponse (
     @Json(name = "bBrandingIsactive")
     val bBrandingIsactive: kotlin.Boolean
 
-)
+) {
+
+
+}
 

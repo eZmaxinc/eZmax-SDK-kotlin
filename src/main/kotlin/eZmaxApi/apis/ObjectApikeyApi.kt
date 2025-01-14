@@ -16,7 +16,7 @@
 package eZmaxApi.apis
 
 import java.io.IOException
-import okhttp3.OkHttpClient
+import okhttp3.Call
 import okhttp3.HttpUrl
 
 import eZmaxApi.models.ApikeyCreateObjectV2Request
@@ -25,6 +25,8 @@ import eZmaxApi.models.ApikeyEditObjectV1Request
 import eZmaxApi.models.ApikeyEditObjectV1Response
 import eZmaxApi.models.ApikeyEditPermissionsV1Request
 import eZmaxApi.models.ApikeyEditPermissionsV1Response
+import eZmaxApi.models.ApikeyGenerateDelegatedCredentialsV1Request
+import eZmaxApi.models.ApikeyGenerateDelegatedCredentialsV1Response
 import eZmaxApi.models.ApikeyGetCorsV1Response
 import eZmaxApi.models.ApikeyGetListV1Response
 import eZmaxApi.models.ApikeyGetObjectV2Response
@@ -51,7 +53,7 @@ import eZmaxApi.infrastructure.ResponseType
 import eZmaxApi.infrastructure.Success
 import eZmaxApi.infrastructure.toMultiValue
 
-class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = ApiClient.defaultClient) : ApiClient(basePath, client) {
+class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
@@ -282,6 +284,78 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
     }
 
     /**
+     * Generate a delegated credentials
+     * 
+     * @param apikeyGenerateDelegatedCredentialsV1Request 
+     * @return ApikeyGenerateDelegatedCredentialsV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun apikeyGenerateDelegatedCredentialsV1(apikeyGenerateDelegatedCredentialsV1Request: ApikeyGenerateDelegatedCredentialsV1Request) : ApikeyGenerateDelegatedCredentialsV1Response {
+        val localVarResponse = apikeyGenerateDelegatedCredentialsV1WithHttpInfo(apikeyGenerateDelegatedCredentialsV1Request = apikeyGenerateDelegatedCredentialsV1Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ApikeyGenerateDelegatedCredentialsV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Generate a delegated credentials
+     * 
+     * @param apikeyGenerateDelegatedCredentialsV1Request 
+     * @return ApiResponse<ApikeyGenerateDelegatedCredentialsV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun apikeyGenerateDelegatedCredentialsV1WithHttpInfo(apikeyGenerateDelegatedCredentialsV1Request: ApikeyGenerateDelegatedCredentialsV1Request) : ApiResponse<ApikeyGenerateDelegatedCredentialsV1Response?> {
+        val localVariableConfig = apikeyGenerateDelegatedCredentialsV1RequestConfig(apikeyGenerateDelegatedCredentialsV1Request = apikeyGenerateDelegatedCredentialsV1Request)
+
+        return request<ApikeyGenerateDelegatedCredentialsV1Request, ApikeyGenerateDelegatedCredentialsV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation apikeyGenerateDelegatedCredentialsV1
+     *
+     * @param apikeyGenerateDelegatedCredentialsV1Request 
+     * @return RequestConfig
+     */
+    fun apikeyGenerateDelegatedCredentialsV1RequestConfig(apikeyGenerateDelegatedCredentialsV1Request: ApikeyGenerateDelegatedCredentialsV1Request) : RequestConfig<ApikeyGenerateDelegatedCredentialsV1Request> {
+        val localVariableBody = apikeyGenerateDelegatedCredentialsV1Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/apikey/generateDelegatedCredentials",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
      * Retrieve an existing Apikey&#39;s cors
      * 
      * @param pkiApikeyID 
@@ -367,7 +441,16 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: OkHttpC
          @Json(name = "sUserFirstname_ASC") sUserFirstname_ASC("sUserFirstname_ASC"),
          @Json(name = "sUserFirstname_DESC") sUserFirstname_DESC("sUserFirstname_DESC"),
          @Json(name = "sUserLastname_ASC") sUserLastname_ASC("sUserLastname_ASC"),
-         @Json(name = "sUserLastname_DESC") sUserLastname_DESC("sUserLastname_DESC")
+         @Json(name = "sUserLastname_DESC") sUserLastname_DESC("sUserLastname_DESC");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
      }
 
     /**

@@ -16,11 +16,14 @@
 package eZmaxApi.apis
 
 import java.io.IOException
-import okhttp3.OkHttpClient
+import okhttp3.Call
 import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.ElectronicfundstransferGetCommunicationCountV1Response
 import eZmaxApi.models.ElectronicfundstransferGetCommunicationListV1Response
+import eZmaxApi.models.ElectronicfundstransferGetCommunicationrecipientsV1Response
+import eZmaxApi.models.ElectronicfundstransferGetCommunicationsendersV1Response
 
 import com.squareup.moshi.Json
 
@@ -38,12 +41,83 @@ import eZmaxApi.infrastructure.ResponseType
 import eZmaxApi.infrastructure.Success
 import eZmaxApi.infrastructure.toMultiValue
 
-class ObjectElectronicfundstransferApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = ApiClient.defaultClient) : ApiClient(basePath, client) {
+class ObjectElectronicfundstransferApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
             System.getProperties().getProperty(ApiClient.baseUrlKey, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
+    }
+
+    /**
+     * Retrieve Communication count
+     * 
+     * @param pkiElectronicfundstransferID 
+     * @return ElectronicfundstransferGetCommunicationCountV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun electronicfundstransferGetCommunicationCountV1(pkiElectronicfundstransferID: kotlin.Int) : ElectronicfundstransferGetCommunicationCountV1Response {
+        val localVarResponse = electronicfundstransferGetCommunicationCountV1WithHttpInfo(pkiElectronicfundstransferID = pkiElectronicfundstransferID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ElectronicfundstransferGetCommunicationCountV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve Communication count
+     * 
+     * @param pkiElectronicfundstransferID 
+     * @return ApiResponse<ElectronicfundstransferGetCommunicationCountV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun electronicfundstransferGetCommunicationCountV1WithHttpInfo(pkiElectronicfundstransferID: kotlin.Int) : ApiResponse<ElectronicfundstransferGetCommunicationCountV1Response?> {
+        val localVariableConfig = electronicfundstransferGetCommunicationCountV1RequestConfig(pkiElectronicfundstransferID = pkiElectronicfundstransferID)
+
+        return request<Unit, ElectronicfundstransferGetCommunicationCountV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation electronicfundstransferGetCommunicationCountV1
+     *
+     * @param pkiElectronicfundstransferID 
+     * @return RequestConfig
+     */
+    fun electronicfundstransferGetCommunicationCountV1RequestConfig(pkiElectronicfundstransferID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationCount".replace("{"+"pkiElectronicfundstransferID"+"}", encodeURIComponent(pkiElectronicfundstransferID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
     }
 
     /**
@@ -110,6 +184,148 @@ class ObjectElectronicfundstransferApi(basePath: kotlin.String = defaultBasePath
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationList".replace("{"+"pkiElectronicfundstransferID"+"}", encodeURIComponent(pkiElectronicfundstransferID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Retrieve Electronicfundstransfer&#39;s Communicationrecipient
+     * 
+     * @param pkiElectronicfundstransferID 
+     * @return ElectronicfundstransferGetCommunicationrecipientsV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun electronicfundstransferGetCommunicationrecipientsV1(pkiElectronicfundstransferID: kotlin.Int) : ElectronicfundstransferGetCommunicationrecipientsV1Response {
+        val localVarResponse = electronicfundstransferGetCommunicationrecipientsV1WithHttpInfo(pkiElectronicfundstransferID = pkiElectronicfundstransferID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ElectronicfundstransferGetCommunicationrecipientsV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve Electronicfundstransfer&#39;s Communicationrecipient
+     * 
+     * @param pkiElectronicfundstransferID 
+     * @return ApiResponse<ElectronicfundstransferGetCommunicationrecipientsV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun electronicfundstransferGetCommunicationrecipientsV1WithHttpInfo(pkiElectronicfundstransferID: kotlin.Int) : ApiResponse<ElectronicfundstransferGetCommunicationrecipientsV1Response?> {
+        val localVariableConfig = electronicfundstransferGetCommunicationrecipientsV1RequestConfig(pkiElectronicfundstransferID = pkiElectronicfundstransferID)
+
+        return request<Unit, ElectronicfundstransferGetCommunicationrecipientsV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation electronicfundstransferGetCommunicationrecipientsV1
+     *
+     * @param pkiElectronicfundstransferID 
+     * @return RequestConfig
+     */
+    fun electronicfundstransferGetCommunicationrecipientsV1RequestConfig(pkiElectronicfundstransferID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationrecipients".replace("{"+"pkiElectronicfundstransferID"+"}", encodeURIComponent(pkiElectronicfundstransferID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Retrieve Electronicfundstransfer&#39;s Communicationsender
+     * 
+     * @param pkiElectronicfundstransferID 
+     * @return ElectronicfundstransferGetCommunicationsendersV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun electronicfundstransferGetCommunicationsendersV1(pkiElectronicfundstransferID: kotlin.Int) : ElectronicfundstransferGetCommunicationsendersV1Response {
+        val localVarResponse = electronicfundstransferGetCommunicationsendersV1WithHttpInfo(pkiElectronicfundstransferID = pkiElectronicfundstransferID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ElectronicfundstransferGetCommunicationsendersV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve Electronicfundstransfer&#39;s Communicationsender
+     * 
+     * @param pkiElectronicfundstransferID 
+     * @return ApiResponse<ElectronicfundstransferGetCommunicationsendersV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun electronicfundstransferGetCommunicationsendersV1WithHttpInfo(pkiElectronicfundstransferID: kotlin.Int) : ApiResponse<ElectronicfundstransferGetCommunicationsendersV1Response?> {
+        val localVariableConfig = electronicfundstransferGetCommunicationsendersV1RequestConfig(pkiElectronicfundstransferID = pkiElectronicfundstransferID)
+
+        return request<Unit, ElectronicfundstransferGetCommunicationsendersV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation electronicfundstransferGetCommunicationsendersV1
+     *
+     * @param pkiElectronicfundstransferID 
+     * @return RequestConfig
+     */
+    fun electronicfundstransferGetCommunicationsendersV1RequestConfig(pkiElectronicfundstransferID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationsenders".replace("{"+"pkiElectronicfundstransferID"+"}", encodeURIComponent(pkiElectronicfundstransferID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

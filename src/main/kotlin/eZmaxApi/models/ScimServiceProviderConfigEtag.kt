@@ -32,5 +32,8 @@ data class ScimServiceProviderConfigEtag (
     @Json(name = "supported")
     val supported: kotlin.Boolean
 
-)
+) {
+
+
+}
 

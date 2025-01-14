@@ -57,5 +57,8 @@ data class PermissionRequestCompound (
     @Json(name = "fkiCompanyID")
     val fkiCompanyID: kotlin.Int? = null
 
-)
+) {
+
+
+}
 

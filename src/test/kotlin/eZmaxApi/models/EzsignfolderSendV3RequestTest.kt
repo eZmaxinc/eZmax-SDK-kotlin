@@ -19,6 +19,7 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.EzsignfolderSendV3Request
+import eZmaxApi.models.FieldEEzsignfolderMessageorder
 
 class EzsignfolderSendV3RequestTest : ShouldSpec() {
     init {
@@ -35,6 +36,12 @@ class EzsignfolderSendV3RequestTest : ShouldSpec() {
         should("test tEzsignfolderMessage") {
             // uncomment below to test the property
             //modelInstance.tEzsignfolderMessage shouldBe ("TODO")
+        }
+
+        // to test the property `eEzsignfolderMessageorder`
+        should("test eEzsignfolderMessageorder") {
+            // uncomment below to test the property
+            //modelInstance.eEzsignfolderMessageorder shouldBe ("TODO")
         }
 
         // to test the property `dtEzsignfolderDelayedsenddate` - The date and time at which the Ezsignfolder will be sent in the future.

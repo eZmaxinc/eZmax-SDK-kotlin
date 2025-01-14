@@ -52,5 +52,8 @@ data class NotificationtestResponse (
     @Json(name = "sNotificationtestNameX")
     val sNotificationtestNameX: kotlin.String
 
-)
+) {
+
+
+}
 

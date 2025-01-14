@@ -32,5 +32,8 @@ data class EzsignbulksendtransmissionGetFormsDataV1ResponseMPayload (
     @Json(name = "a_objFormsDataFolder")
     val aObjFormsDataFolder: kotlin.collections.List<CustomFormsDataFolderResponse>
 
-)
+) {
+
+
+}
 

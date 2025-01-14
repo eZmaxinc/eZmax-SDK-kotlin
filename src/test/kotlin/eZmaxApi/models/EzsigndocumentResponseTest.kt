@@ -81,6 +81,12 @@ class EzsigndocumentResponseTest : ShouldSpec() {
             //modelInstance.iEzsigndocumentSignaturetotal shouldBe ("TODO")
         }
 
+        // to test the property `iEzsigndocumentFormfieldtotal` - The number of total Ezsignformfield that were requested in the Ezsigndocument.
+        should("test iEzsigndocumentFormfieldtotal") {
+            // uncomment below to test the property
+            //modelInstance.iEzsigndocumentFormfieldtotal shouldBe ("TODO")
+        }
+
         // to test the property `iEzsigndocumentEzsignsignatureattachmenttotal` - The number of Ezsigndocumentattachment total
         should("test iEzsigndocumentEzsignsignatureattachmenttotal") {
             // uncomment below to test the property

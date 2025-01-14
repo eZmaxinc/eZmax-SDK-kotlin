@@ -32,5 +32,8 @@ data class ApikeyGetPermissionsV1ResponseMPayload (
     @Json(name = "a_objModulegroup")
     val aObjModulegroup: kotlin.collections.List<ModulegroupResponseCompound>
 
-)
+) {
+
+
+}
 

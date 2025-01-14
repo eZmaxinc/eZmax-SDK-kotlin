@@ -34,14 +34,22 @@ import eZmaxApi.models.EzsigndocumentCreateObjectV1Request
 import eZmaxApi.models.EzsigndocumentCreateObjectV1Response
 import eZmaxApi.models.EzsigndocumentCreateObjectV2Request
 import eZmaxApi.models.EzsigndocumentCreateObjectV2Response
+import eZmaxApi.models.EzsigndocumentCreateObjectV3Request
+import eZmaxApi.models.EzsigndocumentCreateObjectV3Response
 import eZmaxApi.models.EzsigndocumentDeclineToSignV1Request
 import eZmaxApi.models.EzsigndocumentDeclineToSignV1Response
 import eZmaxApi.models.EzsigndocumentDeleteObjectV1Response
+import eZmaxApi.models.EzsigndocumentEditEzsignannotationsV1Request
+import eZmaxApi.models.EzsigndocumentEditEzsignannotationsV1Response
 import eZmaxApi.models.EzsigndocumentEditEzsignformfieldgroupsV1Request
 import eZmaxApi.models.EzsigndocumentEditEzsignformfieldgroupsV1Response
 import eZmaxApi.models.EzsigndocumentEditEzsignsignaturesV1Request
 import eZmaxApi.models.EzsigndocumentEditEzsignsignaturesV1Response
+import eZmaxApi.models.EzsigndocumentEditObjectV1Request
+import eZmaxApi.models.EzsigndocumentEditObjectV1Response
 import eZmaxApi.models.EzsigndocumentEndPrematurelyV1Response
+import eZmaxApi.models.EzsigndocumentExtractTextV1Request
+import eZmaxApi.models.EzsigndocumentExtractTextV1Response
 import eZmaxApi.models.EzsigndocumentFlattenV1Response
 import eZmaxApi.models.EzsigndocumentGetActionableElementsV1Response
 import eZmaxApi.models.EzsigndocumentGetAttachmentsV1Response
@@ -122,6 +130,14 @@ class ObjectEzsigndocumentApiTest : ShouldSpec() {
             //result shouldBe ("TODO")
         }
 
+        // to test ezsigndocumentCreateObjectV3
+        should("test ezsigndocumentCreateObjectV3") {
+            // uncomment below to test ezsigndocumentCreateObjectV3
+            //val ezsigndocumentCreateObjectV3Request : EzsigndocumentCreateObjectV3Request =  // EzsigndocumentCreateObjectV3Request | 
+            //val result : EzsigndocumentCreateObjectV3Response = apiInstance.ezsigndocumentCreateObjectV3(ezsigndocumentCreateObjectV3Request)
+            //result shouldBe ("TODO")
+        }
+
         // to test ezsigndocumentDeclineToSignV1
         should("test ezsigndocumentDeclineToSignV1") {
             // uncomment below to test ezsigndocumentDeclineToSignV1
@@ -136,6 +152,15 @@ class ObjectEzsigndocumentApiTest : ShouldSpec() {
             // uncomment below to test ezsigndocumentDeleteObjectV1
             //val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | 
             //val result : EzsigndocumentDeleteObjectV1Response = apiInstance.ezsigndocumentDeleteObjectV1(pkiEzsigndocumentID)
+            //result shouldBe ("TODO")
+        }
+
+        // to test ezsigndocumentEditEzsignannotationsV1
+        should("test ezsigndocumentEditEzsignannotationsV1") {
+            // uncomment below to test ezsigndocumentEditEzsignannotationsV1
+            //val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | 
+            //val ezsigndocumentEditEzsignannotationsV1Request : EzsigndocumentEditEzsignannotationsV1Request =  // EzsigndocumentEditEzsignannotationsV1Request | 
+            //val result : EzsigndocumentEditEzsignannotationsV1Response = apiInstance.ezsigndocumentEditEzsignannotationsV1(pkiEzsigndocumentID, ezsigndocumentEditEzsignannotationsV1Request)
             //result shouldBe ("TODO")
         }
 
@@ -157,12 +182,30 @@ class ObjectEzsigndocumentApiTest : ShouldSpec() {
             //result shouldBe ("TODO")
         }
 
+        // to test ezsigndocumentEditObjectV1
+        should("test ezsigndocumentEditObjectV1") {
+            // uncomment below to test ezsigndocumentEditObjectV1
+            //val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | 
+            //val ezsigndocumentEditObjectV1Request : EzsigndocumentEditObjectV1Request =  // EzsigndocumentEditObjectV1Request | 
+            //val result : EzsigndocumentEditObjectV1Response = apiInstance.ezsigndocumentEditObjectV1(pkiEzsigndocumentID, ezsigndocumentEditObjectV1Request)
+            //result shouldBe ("TODO")
+        }
+
         // to test ezsigndocumentEndPrematurelyV1
         should("test ezsigndocumentEndPrematurelyV1") {
             // uncomment below to test ezsigndocumentEndPrematurelyV1
             //val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | 
             //val body : kotlin.Any = Object // kotlin.Any | 
             //val result : EzsigndocumentEndPrematurelyV1Response = apiInstance.ezsigndocumentEndPrematurelyV1(pkiEzsigndocumentID, body)
+            //result shouldBe ("TODO")
+        }
+
+        // to test ezsigndocumentExtractTextV1
+        should("test ezsigndocumentExtractTextV1") {
+            // uncomment below to test ezsigndocumentExtractTextV1
+            //val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | 
+            //val ezsigndocumentExtractTextV1Request : EzsigndocumentExtractTextV1Request =  // EzsigndocumentExtractTextV1Request | 
+            //val result : EzsigndocumentExtractTextV1Response = apiInstance.ezsigndocumentExtractTextV1(pkiEzsigndocumentID, ezsigndocumentExtractTextV1Request)
             //result shouldBe ("TODO")
         }
 

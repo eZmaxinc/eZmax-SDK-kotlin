@@ -25,6 +25,7 @@ import com.squareup.moshi.JsonClass
  *
  * @param sErrorMessage The message giving details about the error
  * @param eErrorCode 
+ * @param aSErrorMessagedetail More error message detail
  * @param sTemporaryFileUrl The Temporary File Url of the document that was uploaded. That url can be reused instead of uploading the file again.
  */
 
@@ -38,9 +39,16 @@ data class CommonResponseErrorSTemporaryFileUrl (
     @Json(name = "eErrorCode")
     val eErrorCode: FieldEErrorCode,
 
+    /* More error message detail */
+    @Json(name = "a_sErrorMessagedetail")
+    val aSErrorMessagedetail: kotlin.collections.List<kotlin.String>? = null,
+
     /* The Temporary File Url of the document that was uploaded. That url can be reused instead of uploading the file again. */
     @Json(name = "sTemporaryFileUrl")
     val sTemporaryFileUrl: kotlin.String? = null
 
-)
+) {
+
+
+}
 

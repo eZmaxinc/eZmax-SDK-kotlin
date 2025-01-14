@@ -32,5 +32,8 @@ data class UsergroupmembershipCreateObjectV1ResponseMPayload (
     @Json(name = "a_pkiUsergroupmembershipID")
     val aPkiUsergroupmembershipID: kotlin.collections.List<kotlin.Int>
 
-)
+) {
+
+
+}
 

@@ -24,7 +24,6 @@ import com.squareup.moshi.JsonClass
  *
  * @param pkiCreditcardclientID The unique ID of the Creditcardclient
  * @param sCreditcardclientDescription The description of the Creditcardclient
- * @param bCreditcardclientIsactive Whether the creditcardclient is active or not
  */
 
 
@@ -36,11 +35,10 @@ data class CreditcardclientAutocompleteElementResponse (
 
     /* The description of the Creditcardclient */
     @Json(name = "sCreditcardclientDescription")
-    val sCreditcardclientDescription: kotlin.String,
+    val sCreditcardclientDescription: kotlin.String
 
-    /* Whether the creditcardclient is active or not */
-    @Json(name = "bCreditcardclientIsactive")
-    val bCreditcardclientIsactive: kotlin.Boolean
+) {
 
-)
+
+}
 

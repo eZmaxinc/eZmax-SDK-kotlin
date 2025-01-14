@@ -22,6 +22,7 @@ import eZmaxApi.models.EzsigndocumentGetObjectV1ResponseMPayload
 import eZmaxApi.models.CommonAudit
 import eZmaxApi.models.ComputedEEzsigndocumentSteptype
 import eZmaxApi.models.CustomEzsignfoldersignerassociationstatusResponse
+import eZmaxApi.models.EzsigndocumentdependencyResponse
 import eZmaxApi.models.FieldEEzsigndocumentStep
 
 class EzsigndocumentGetObjectV1ResponseMPayloadTest : ShouldSpec() {
@@ -81,6 +82,12 @@ class EzsigndocumentGetObjectV1ResponseMPayloadTest : ShouldSpec() {
         should("test iEzsigndocumentSignaturetotal") {
             // uncomment below to test the property
             //modelInstance.iEzsigndocumentSignaturetotal shouldBe ("TODO")
+        }
+
+        // to test the property `iEzsigndocumentFormfieldtotal` - The number of total Ezsignformfield that were requested in the Ezsigndocument.
+        should("test iEzsigndocumentFormfieldtotal") {
+            // uncomment below to test the property
+            //modelInstance.iEzsigndocumentFormfieldtotal shouldBe ("TODO")
         }
 
         // to test the property `iEzsigndocumentEzsignsignatureattachmenttotal` - The number of Ezsigndocumentattachment total
@@ -201,6 +208,12 @@ class EzsigndocumentGetObjectV1ResponseMPayloadTest : ShouldSpec() {
         should("test sEzsigndocumentExternalid") {
             // uncomment below to test the property
             //modelInstance.sEzsigndocumentExternalid shouldBe ("TODO")
+        }
+
+        // to test the property `aObjEzsigndocumentdependency`
+        should("test aObjEzsigndocumentdependency") {
+            // uncomment below to test the property
+            //modelInstance.aObjEzsigndocumentdependency shouldBe ("TODO")
         }
 
     }

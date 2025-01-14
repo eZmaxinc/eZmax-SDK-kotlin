@@ -35,12 +35,14 @@ import com.squareup.moshi.JsonClass
  * @param bWebhookIssigned Whether the requests will be signed or not
  * @param bWebhookSkipsslvalidation Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use
  * @param objAudit 
+ * @param fkiAuthenticationexternalID The unique ID of the Authenticationexternal
  * @param fkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
  * @param sEzsignfoldertypeNameX The name of the Ezsignfoldertype in the language of the requester
  * @param eWebhookEzsignevent 
  * @param eWebhookManagementevent 
  * @param sWebhookApikey The Apikey for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey.
  * @param sWebhookSecret The Secret for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey.
+ * @param sAuthenticationexternalDescription The description of the Authenticationexternal
  */
 
 
@@ -80,6 +82,10 @@ data class WebhookResponse (
     @Json(name = "objAudit")
     val objAudit: CommonAudit,
 
+    /* The unique ID of the Authenticationexternal */
+    @Json(name = "fkiAuthenticationexternalID")
+    val fkiAuthenticationexternalID: kotlin.Int? = null,
+
     /* The unique ID of the Ezsignfoldertype. */
     @Json(name = "fkiEzsignfoldertypeID")
     val fkiEzsignfoldertypeID: kotlin.Int? = null,
@@ -100,7 +106,14 @@ data class WebhookResponse (
 
     /* The Secret for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey. */
     @Json(name = "sWebhookSecret")
-    val sWebhookSecret: kotlin.String? = null
+    val sWebhookSecret: kotlin.String? = null,
 
-)
+    /* The description of the Authenticationexternal */
+    @Json(name = "sAuthenticationexternalDescription")
+    val sAuthenticationexternalDescription: kotlin.String? = null
+
+) {
+
+
+}
 

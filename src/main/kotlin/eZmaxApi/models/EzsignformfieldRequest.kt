@@ -15,7 +15,9 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.EnumHorizontalalignment
 import eZmaxApi.models.FieldEEzsignformfieldDependencyrequirement
+import eZmaxApi.models.TextstylestaticRequestCompound
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -27,14 +29,16 @@ import com.squareup.moshi.JsonClass
  * @param sEzsignformfieldLabel The Label for the Ezsignformfield
  * @param iEzsignformfieldX The X coordinate (Horizontal) where to put the Ezsignformfield on the Ezsignpage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignformfield 2 inches from the left border of the page, you would use \"200\" for the X coordinate.
  * @param iEzsignformfieldY The Y coordinate (Vertical) where to put the Ezsignformfield on the Ezsignpage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignformfield 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.
- * @param iEzsignformfieldWidth The Width of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22-65535     | | Radio                     | 22           | | Text                      | 22-65535     | | Textarea                  | 22-65535     |
- * @param iEzsignformfieldHeight The Height of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22           | | Radio                     | 22           | | Text                      | 22           | | Textarea                  | 22-65535     | 
+ * @param iEzsignformfieldWidth The Width of the Ezsignformfield in pixels calculated at 100 DPI
+ * @param iEzsignformfieldHeight The Height of the Ezsignformfield in pixels calculated at 100 DPI 
  * @param pkiEzsignformfieldID The unique ID of the Ezsignformfield
  * @param sEzsignformfieldValue The value for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is Checkbox or Radio
  * @param bEzsignformfieldAutocomplete Whether the Ezsignformfield allows the use of the autocomplete of the browser.  This can only be set if eEzsignformfieldgroupType is **Text**
  * @param bEzsignformfieldSelected Whether the Ezsignformfield is selected or not by default.  This can only be set if eEzsignformfieldgroupType is **Checkbox** or **Radio**
  * @param sEzsignformfieldEnteredvalue This is the value enterred for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is **Dropdown**, **Text** or **Textarea**
  * @param eEzsignformfieldDependencyrequirement 
+ * @param eEzsignformfieldHorizontalalignment 
+ * @param objTextstylestatic 
  */
 
 
@@ -56,11 +60,11 @@ data class EzsignformfieldRequest (
     @Json(name = "iEzsignformfieldY")
     val iEzsignformfieldY: kotlin.Int,
 
-    /* The Width of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22-65535     | | Radio                     | 22           | | Text                      | 22-65535     | | Textarea                  | 22-65535     | */
+    /* The Width of the Ezsignformfield in pixels calculated at 100 DPI */
     @Json(name = "iEzsignformfieldWidth")
     val iEzsignformfieldWidth: kotlin.Int,
 
-    /* The Height of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22           | | Radio                     | 22           | | Text                      | 22           | | Textarea                  | 22-65535     |  */
+    /* The Height of the Ezsignformfield in pixels calculated at 100 DPI  */
     @Json(name = "iEzsignformfieldHeight")
     val iEzsignformfieldHeight: kotlin.Int,
 
@@ -85,7 +89,16 @@ data class EzsignformfieldRequest (
     val sEzsignformfieldEnteredvalue: kotlin.String? = null,
 
     @Json(name = "eEzsignformfieldDependencyrequirement")
-    val eEzsignformfieldDependencyrequirement: FieldEEzsignformfieldDependencyrequirement? = null
+    val eEzsignformfieldDependencyrequirement: FieldEEzsignformfieldDependencyrequirement? = null,
 
-)
+    @Json(name = "eEzsignformfieldHorizontalalignment")
+    val eEzsignformfieldHorizontalalignment: EnumHorizontalalignment? = null,
+
+    @Json(name = "objTextstylestatic")
+    val objTextstylestatic: TextstylestaticRequestCompound? = null
+
+) {
+
+
+}
 

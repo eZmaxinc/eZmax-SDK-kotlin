@@ -32,5 +32,8 @@ data class EzsigntemplatedocumentEditEzsigntemplatesignaturesV1Request (
     @Json(name = "a_objEzsigntemplatesignature")
     val aObjEzsigntemplatesignature: kotlin.collections.List<EzsigntemplatesignatureRequestCompound>
 
-)
+) {
+
+
+}
 

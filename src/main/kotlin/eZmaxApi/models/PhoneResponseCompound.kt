@@ -58,5 +58,8 @@ data class PhoneResponseCompound (
     @Json(name = "bPhoneInternational")
     val bPhoneInternational: kotlin.Boolean? = null
 
-)
+) {
+
+
+}
 

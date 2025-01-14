@@ -32,5 +32,8 @@ data class SubnetEditObjectV1Request (
     @Json(name = "objSubnet")
     val objSubnet: SubnetRequestCompound
 
-)
+) {
+
+
+}
 

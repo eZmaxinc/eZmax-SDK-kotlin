@@ -47,5 +47,8 @@ data class EzsignfoldertypeListElement (
     @Json(name = "bEzsignfoldertypeIsactive")
     val bEzsignfoldertypeIsactive: kotlin.Boolean
 
-)
+) {
+
+
+}
 

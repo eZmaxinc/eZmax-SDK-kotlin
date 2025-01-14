@@ -32,5 +32,8 @@ data class VariableexpenseEditObjectV1Request (
     @Json(name = "objVariableexpense")
     val objVariableexpense: VariableexpenseRequestCompound
 
-)
+) {
+
+
+}
 

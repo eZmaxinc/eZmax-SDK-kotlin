@@ -32,5 +32,8 @@ data class EzmaxinvoicingGetObjectV2ResponseMPayload (
     @Json(name = "objEzmaxinvoicing")
     val objEzmaxinvoicing: EzmaxinvoicingResponseCompound
 
-)
+) {
+
+
+}
 

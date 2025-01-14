@@ -33,5 +33,8 @@ data class PeriodGetAutocompleteV2ResponseMPayload (
     @Json(name = "a_objPeriod")
     val aObjPeriod: kotlin.collections.List<PeriodAutocompleteElementResponse>
 
-)
+) {
+
+
+}
 

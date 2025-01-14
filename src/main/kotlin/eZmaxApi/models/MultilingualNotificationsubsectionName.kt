@@ -37,5 +37,8 @@ data class MultilingualNotificationsubsectionName (
     @Json(name = "sNotificationsubsectionName2")
     val sNotificationsubsectionName2: kotlin.String? = null
 
-)
+) {
+
+
+}
 

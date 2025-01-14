@@ -37,5 +37,8 @@ data class MultilingualUsergroupName (
     @Json(name = "sUsergroupName2")
     val sUsergroupName2: kotlin.String? = null
 
-)
+) {
+
+
+}
 

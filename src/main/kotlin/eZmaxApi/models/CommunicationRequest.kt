@@ -89,5 +89,6 @@ data class CommunicationRequest (
         @Json(name = "Attachment") Attachment("Attachment"),
         @Json(name = "Url") Url("Url");
     }
+
 }
 

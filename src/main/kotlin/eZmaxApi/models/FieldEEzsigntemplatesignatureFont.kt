@@ -20,7 +20,7 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * The font of the signature. This can only be set if eEzsigntemplatesignatureType is **Name** or **Initials**
+ * The font of the signature. This can only be set if eEzsigntemplatesignatureType is **Name** or **Initials** **Deprecated**
  *
  * Values: Normal,Cursive
  */

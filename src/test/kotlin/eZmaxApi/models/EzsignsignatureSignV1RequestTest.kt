@@ -26,7 +26,7 @@ class EzsignsignatureSignV1RequestTest : ShouldSpec() {
         // uncomment below to create an instance of EzsignsignatureSignV1Request
         //val modelInstance = EzsignsignatureSignV1Request()
 
-        // to test the property `bIsAutomatic` - Indicates if the Ezsignsignature was part of an automatic process or not.  This can only be true if eEzsignsignatureType is **Acknowledgement**, **City**, **Handwritten**, **Initials**, **Name** or **Stamp**. 
+        // to test the property `bIsAutomatic` - Indicates if the Ezsignsignature was part of an automatic process or not.  This can only be true if eEzsignsignatureType is **Acknowledgement**, **City**, **Signature**, **Initials** or **Stamp**. 
         should("test bIsAutomatic") {
             // uncomment below to test the property
             //modelInstance.bIsAutomatic shouldBe ("TODO")
@@ -36,6 +36,12 @@ class EzsignsignatureSignV1RequestTest : ShouldSpec() {
         should("test fkiEzsignsigningreasonID") {
             // uncomment below to test the property
             //modelInstance.fkiEzsignsigningreasonID shouldBe ("TODO")
+        }
+
+        // to test the property `fkiFontID` - The unique ID of the Font
+        should("test fkiFontID") {
+            // uncomment below to test the property
+            //modelInstance.fkiFontID shouldBe ("TODO")
         }
 
         // to test the property `sValue` - The value required for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **City**, **FieldText** or **FieldTextarea**
@@ -56,7 +62,7 @@ class EzsignsignatureSignV1RequestTest : ShouldSpec() {
             //modelInstance.sAttachmentsRefusalReason shouldBe ("TODO")
         }
 
-        // to test the property `sSvg` - The SVG of the handwritten signature.  This can only be set if eEzsignsignatureType is **Handwritten** and **bIsAutomatic** is false
+        // to test the property `sSvg` - The SVG of the signature.  This can only be set if eEzsignsignatureType is **Signature**_/_**Initials** and **bIsAutomatic** is false
         should("test sSvg") {
             // uncomment below to test the property
             //modelInstance.sSvg shouldBe ("TODO")

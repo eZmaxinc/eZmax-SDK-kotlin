@@ -42,5 +42,8 @@ data class EzsigntemplateglobalGetAutocompleteV2Response (
     @Json(name = "objDebug")
     val objDebug: CommonResponseObjDebug? = null
 
-)
+) {
+
+
+}
 

@@ -42,5 +42,8 @@ data class EmailRequest (
     @Json(name = "pkiEmailID")
     val pkiEmailID: kotlin.Int? = null
 
-)
+) {
+
+
+}
 

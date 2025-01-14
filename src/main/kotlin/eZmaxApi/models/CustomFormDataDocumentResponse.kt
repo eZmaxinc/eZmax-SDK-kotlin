@@ -52,5 +52,8 @@ data class CustomFormDataDocumentResponse (
     @Json(name = "a_objFormDataSigner")
     val aObjFormDataSigner: kotlin.collections.List<CustomFormDataSignerResponse>
 
-)
+) {
+
+
+}
 

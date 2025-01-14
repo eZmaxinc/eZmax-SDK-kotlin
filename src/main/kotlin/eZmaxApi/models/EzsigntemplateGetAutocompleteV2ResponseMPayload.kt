@@ -33,5 +33,8 @@ data class EzsigntemplateGetAutocompleteV2ResponseMPayload (
     @Json(name = "a_objEzsigntemplate")
     val aObjEzsigntemplate: kotlin.collections.List<EzsigntemplateAutocompleteElementResponse>
 
-)
+) {
+
+
+}
 

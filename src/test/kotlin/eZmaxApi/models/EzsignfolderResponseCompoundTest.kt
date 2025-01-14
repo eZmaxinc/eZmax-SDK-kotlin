@@ -21,6 +21,7 @@ import io.kotlintest.specs.ShouldSpec
 import eZmaxApi.models.EzsignfolderResponseCompound
 import eZmaxApi.models.CommonAudit
 import eZmaxApi.models.CustomEzsignfoldertypeResponse
+import eZmaxApi.models.CustomTimezoneWithCodeResponse
 import eZmaxApi.models.FieldEEzsignfolderCompletion
 import eZmaxApi.models.FieldEEzsignfolderSendreminderfrequency
 import eZmaxApi.models.FieldEEzsignfolderStep
@@ -58,6 +59,12 @@ class EzsignfolderResponseCompoundTest : ShouldSpec() {
         should("test objEzsignfoldertype") {
             // uncomment below to test the property
             //modelInstance.objEzsignfoldertype shouldBe ("TODO")
+        }
+
+        // to test the property `fkiTimezoneID` - The unique ID of the Timezone
+        should("test fkiTimezoneID") {
+            // uncomment below to test the property
+            //modelInstance.fkiTimezoneID shouldBe ("TODO")
         }
 
         // to test the property `sEzsignfoldertypeNameX`
@@ -106,6 +113,18 @@ class EzsignfolderResponseCompoundTest : ShouldSpec() {
         should("test eEzsignfolderSendreminderfrequency") {
             // uncomment below to test the property
             //modelInstance.eEzsignfolderSendreminderfrequency shouldBe ("TODO")
+        }
+
+        // to test the property `iEzsignfolderSendreminderfirstdays` - The number of days before the the first reminder sending
+        should("test iEzsignfolderSendreminderfirstdays") {
+            // uncomment below to test the property
+            //modelInstance.iEzsignfolderSendreminderfirstdays shouldBe ("TODO")
+        }
+
+        // to test the property `iEzsignfolderSendreminderotherdays` - The number of days after the first reminder sending
+        should("test iEzsignfolderSendreminderotherdays") {
+            // uncomment below to test the property
+            //modelInstance.iEzsignfolderSendreminderotherdays shouldBe ("TODO")
         }
 
         // to test the property `dtEzsignfolderDelayedsenddate` - The date and time at which the Ezsignfolder will be sent in the future.
@@ -166,6 +185,12 @@ class EzsignfolderResponseCompoundTest : ShouldSpec() {
         should("test sEzsignfolderExternalid") {
             // uncomment below to test the property
             //modelInstance.sEzsignfolderExternalid shouldBe ("TODO")
+        }
+
+        // to test the property `objTimezone`
+        should("test objTimezone") {
+            // uncomment below to test the property
+            //modelInstance.objTimezone shouldBe ("TODO")
         }
 
     }

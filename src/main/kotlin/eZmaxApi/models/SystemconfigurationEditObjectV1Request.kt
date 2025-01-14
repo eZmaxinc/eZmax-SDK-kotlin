@@ -32,5 +32,8 @@ data class SystemconfigurationEditObjectV1Request (
     @Json(name = "objSystemconfiguration")
     val objSystemconfiguration: SystemconfigurationRequestCompound
 
-)
+) {
+
+
+}
 

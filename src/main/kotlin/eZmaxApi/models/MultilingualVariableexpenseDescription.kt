@@ -37,5 +37,8 @@ data class MultilingualVariableexpenseDescription (
     @Json(name = "sVariableexpenseDescription2")
     val sVariableexpenseDescription2: kotlin.String? = null
 
-)
+) {
+
+
+}
 

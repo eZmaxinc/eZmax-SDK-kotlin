@@ -16,7 +16,7 @@
 package eZmaxApi.apis
 
 import java.io.IOException
-import okhttp3.OkHttpClient
+import okhttp3.Call
 import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommonResponseError
@@ -45,7 +45,7 @@ import eZmaxApi.infrastructure.ResponseType
 import eZmaxApi.infrastructure.Success
 import eZmaxApi.infrastructure.toMultiValue
 
-class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = ApiClient.defaultClient) : ApiClient(basePath, client) {
+class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
@@ -204,7 +204,16 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
      * enum for parameter sSelector
      */
      enum class SSelectorVariableexpenseGetAutocompleteV2(val value: kotlin.String) {
-         @Json(name = "All") All("All")
+         @Json(name = "All") All("All");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
      }
 
     /**
@@ -213,7 +222,16 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
      enum class EFilterActiveVariableexpenseGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "All") All("All"),
          @Json(name = "Active") Active("Active"),
-         @Json(name = "Inactive") Inactive("Inactive")
+         @Json(name = "Inactive") Inactive("Inactive");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
      }
 
     /**
@@ -318,7 +336,16 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
          @Json(name = "eVariableexpenseTaxable_ASC") eVariableexpenseTaxable_ASC("eVariableexpenseTaxable_ASC"),
          @Json(name = "eVariableexpenseTaxable_DESC") eVariableexpenseTaxable_DESC("eVariableexpenseTaxable_DESC"),
          @Json(name = "bVariableexpenseIsactive_ASC") bVariableexpenseIsactive_ASC("bVariableexpenseIsactive_ASC"),
-         @Json(name = "bVariableexpenseIsactive_DESC") bVariableexpenseIsactive_DESC("bVariableexpenseIsactive_DESC")
+         @Json(name = "bVariableexpenseIsactive_DESC") bVariableexpenseIsactive_DESC("bVariableexpenseIsactive_DESC");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
      }
 
     /**

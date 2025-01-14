@@ -16,7 +16,7 @@
 package eZmaxApi.apis
 
 import java.io.IOException
-import okhttp3.OkHttpClient
+import okhttp3.Call
 import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommonResponseError
@@ -48,7 +48,7 @@ import eZmaxApi.infrastructure.ResponseType
 import eZmaxApi.infrastructure.Success
 import eZmaxApi.infrastructure.toMultiValue
 
-class ObjectEzsigntemplatepackageApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = ApiClient.defaultClient) : ApiClient(basePath, client) {
+class ObjectEzsigntemplatepackageApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
@@ -354,7 +354,17 @@ class ObjectEzsigntemplatepackageApi(basePath: kotlin.String = defaultBasePath, 
      */
      enum class SSelectorEzsigntemplatepackageGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "All") All("All"),
-         @Json(name = "AllMultipleCopiesDisabled") AllMultipleCopiesDisabled("AllMultipleCopiesDisabled")
+         @Json(name = "AllMultipleCopiesDisabled") AllMultipleCopiesDisabled("AllMultipleCopiesDisabled"),
+         @Json(name = "Ezsigntemplatepublic") Ezsigntemplatepublic("Ezsigntemplatepublic");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
      }
 
     /**
@@ -363,7 +373,16 @@ class ObjectEzsigntemplatepackageApi(basePath: kotlin.String = defaultBasePath, 
      enum class EFilterActiveEzsigntemplatepackageGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "All") All("All"),
          @Json(name = "Active") Active("Active"),
-         @Json(name = "Inactive") Inactive("Inactive")
+         @Json(name = "Inactive") Inactive("Inactive");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
      }
 
     /**
@@ -373,6 +392,7 @@ class ObjectEzsigntemplatepackageApi(basePath: kotlin.String = defaultBasePath, 
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
+     * @param fkiEzsignfoldertypeID The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic (optional)
      * @return EzsigntemplatepackageGetAutocompleteV2Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -382,8 +402,8 @@ class ObjectEzsigntemplatepackageApi(basePath: kotlin.String = defaultBasePath, 
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsigntemplatepackageGetAutocompleteV2(sSelector: SSelectorEzsigntemplatepackageGetAutocompleteV2, eFilterActive: EFilterActiveEzsigntemplatepackageGetAutocompleteV2? = EFilterActiveEzsigntemplatepackageGetAutocompleteV2.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderAcceptLanguage? = null) : EzsigntemplatepackageGetAutocompleteV2Response {
-        val localVarResponse = ezsigntemplatepackageGetAutocompleteV2WithHttpInfo(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
+    fun ezsigntemplatepackageGetAutocompleteV2(sSelector: SSelectorEzsigntemplatepackageGetAutocompleteV2, eFilterActive: EFilterActiveEzsigntemplatepackageGetAutocompleteV2? = EFilterActiveEzsigntemplatepackageGetAutocompleteV2.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderAcceptLanguage? = null, fkiEzsignfoldertypeID: kotlin.Int? = null) : EzsigntemplatepackageGetAutocompleteV2Response {
+        val localVarResponse = ezsigntemplatepackageGetAutocompleteV2WithHttpInfo(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage, fkiEzsignfoldertypeID = fkiEzsignfoldertypeID)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigntemplatepackageGetAutocompleteV2Response
@@ -407,14 +427,15 @@ class ObjectEzsigntemplatepackageApi(basePath: kotlin.String = defaultBasePath, 
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
+     * @param fkiEzsignfoldertypeID The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic (optional)
      * @return ApiResponse<EzsigntemplatepackageGetAutocompleteV2Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsigntemplatepackageGetAutocompleteV2WithHttpInfo(sSelector: SSelectorEzsigntemplatepackageGetAutocompleteV2, eFilterActive: EFilterActiveEzsigntemplatepackageGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : ApiResponse<EzsigntemplatepackageGetAutocompleteV2Response?> {
-        val localVariableConfig = ezsigntemplatepackageGetAutocompleteV2RequestConfig(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
+    fun ezsigntemplatepackageGetAutocompleteV2WithHttpInfo(sSelector: SSelectorEzsigntemplatepackageGetAutocompleteV2, eFilterActive: EFilterActiveEzsigntemplatepackageGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?, fkiEzsignfoldertypeID: kotlin.Int?) : ApiResponse<EzsigntemplatepackageGetAutocompleteV2Response?> {
+        val localVariableConfig = ezsigntemplatepackageGetAutocompleteV2RequestConfig(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage, fkiEzsignfoldertypeID = fkiEzsignfoldertypeID)
 
         return request<Unit, EzsigntemplatepackageGetAutocompleteV2Response>(
             localVariableConfig
@@ -428,9 +449,10 @@ class ObjectEzsigntemplatepackageApi(basePath: kotlin.String = defaultBasePath, 
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
+     * @param fkiEzsignfoldertypeID The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic (optional)
      * @return RequestConfig
      */
-    fun ezsigntemplatepackageGetAutocompleteV2RequestConfig(sSelector: SSelectorEzsigntemplatepackageGetAutocompleteV2, eFilterActive: EFilterActiveEzsigntemplatepackageGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : RequestConfig<Unit> {
+    fun ezsigntemplatepackageGetAutocompleteV2RequestConfig(sSelector: SSelectorEzsigntemplatepackageGetAutocompleteV2, eFilterActive: EFilterActiveEzsigntemplatepackageGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?, fkiEzsignfoldertypeID: kotlin.Int?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
@@ -439,6 +461,9 @@ class ObjectEzsigntemplatepackageApi(basePath: kotlin.String = defaultBasePath, 
                 }
                 if (sQuery != null) {
                     put("sQuery", listOf(sQuery.toString()))
+                }
+                if (fkiEzsignfoldertypeID != null) {
+                    put("fkiEzsignfoldertypeID", listOf(fkiEzsignfoldertypeID.toString()))
                 }
             }
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
@@ -478,7 +503,16 @@ class ObjectEzsigntemplatepackageApi(basePath: kotlin.String = defaultBasePath, 
          @Json(name = "iEzsigntemplatepackagemembership_ASC") iEzsigntemplatepackagemembership_ASC("iEzsigntemplatepackagemembership_ASC"),
          @Json(name = "iEzsigntemplatepackagemembership_DESC") iEzsigntemplatepackagemembership_DESC("iEzsigntemplatepackagemembership_DESC"),
          @Json(name = "bEzsigntemplatepackageIsactive_ASC") bEzsigntemplatepackageIsactive_ASC("bEzsigntemplatepackageIsactive_ASC"),
-         @Json(name = "bEzsigntemplatepackageIsactive_DESC") bEzsigntemplatepackageIsactive_DESC("bEzsigntemplatepackageIsactive_DESC")
+         @Json(name = "bEzsigntemplatepackageIsactive_DESC") bEzsigntemplatepackageIsactive_DESC("bEzsigntemplatepackageIsactive_DESC");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
      }
 
     /**

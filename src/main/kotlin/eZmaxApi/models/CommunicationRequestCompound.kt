@@ -109,5 +109,6 @@ data class CommunicationRequestCompound (
         @Json(name = "Attachment") Attachment("Attachment"),
         @Json(name = "Url") Url("Url");
     }
+
 }
 

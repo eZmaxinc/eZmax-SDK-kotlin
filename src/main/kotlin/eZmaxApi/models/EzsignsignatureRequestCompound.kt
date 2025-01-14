@@ -19,6 +19,7 @@ import eZmaxApi.models.EnumTextvalidation
 import eZmaxApi.models.EzsignelementdependencyRequestCompound
 import eZmaxApi.models.EzsignsignaturecustomdateRequestCompound
 import eZmaxApi.models.FieldEEzsignsignatureAttachmentnamesource
+import eZmaxApi.models.FieldEEzsignsignatureConsultationtrigger
 import eZmaxApi.models.FieldEEzsignsignatureDependencyrequirement
 import eZmaxApi.models.FieldEEzsignsignatureFont
 import eZmaxApi.models.FieldEEzsignsignatureTooltipposition
@@ -44,12 +45,17 @@ import com.squareup.moshi.JsonClass
  * @param eEzsignsignatureTooltipposition 
  * @param eEzsignsignatureFont 
  * @param fkiEzsignfoldersignerassociationIDValidation The unique ID of the Ezsignfoldersignerassociation
- * @param bEzsignsignatureRequired Whether the Ezsignsignature is required or not. This field is relevant only with Ezsignsignature with eEzsignsignatureType = Attachments.
+ * @param bEzsignsignatureHandwritten Whether the Ezsignsignature must be handwritten or not when eEzsignsignatureType = Signature.
+ * @param bEzsignsignatureReason Whether the Ezsignsignature must include a reason or not when eEzsignsignatureType = Signature.
+ * @param bEzsignsignatureRequired Whether the Ezsignsignature is required or not. This field is relevant only with Ezsignsignature with eEzsignsignatureType = Attachments, Text or Textarea.
  * @param eEzsignsignatureAttachmentnamesource 
  * @param sEzsignsignatureAttachmentdescription The description attached to the attachment name added in Ezsignsignature of eEzsignsignatureType Attachments
+ * @param eEzsignsignatureConsultationtrigger 
  * @param iEzsignsignatureValidationstep The step when the Ezsignsigner will be invited to validate the Ezsignsignature of eEzsignsignatureType Attachments
  * @param iEzsignsignatureMaxlength The maximum length for the value in the Ezsignsignature  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea**
+ * @param sEzsignsignatureDefaultvalue The default value for the Ezsignsignature  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | ------------------------- | ------------ | ------------ | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sCompany} | Company name | eZmax Solutions Inc. | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 |
  * @param eEzsignsignatureTextvalidation 
+ * @param sEzsignsignatureTextvalidationcustommessage Description of validation rule. Show by signatory.
  * @param sEzsignsignatureRegexp A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom**
  * @param eEzsignsignatureDependencyrequirement 
  * @param bEzsignsignatureCustomdate Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)
@@ -113,7 +119,15 @@ data class EzsignsignatureRequestCompound (
     @Json(name = "fkiEzsignfoldersignerassociationIDValidation")
     val fkiEzsignfoldersignerassociationIDValidation: kotlin.Int? = null,
 
-    /* Whether the Ezsignsignature is required or not. This field is relevant only with Ezsignsignature with eEzsignsignatureType = Attachments. */
+    /* Whether the Ezsignsignature must be handwritten or not when eEzsignsignatureType = Signature. */
+    @Json(name = "bEzsignsignatureHandwritten")
+    val bEzsignsignatureHandwritten: kotlin.Boolean? = null,
+
+    /* Whether the Ezsignsignature must include a reason or not when eEzsignsignatureType = Signature. */
+    @Json(name = "bEzsignsignatureReason")
+    val bEzsignsignatureReason: kotlin.Boolean? = null,
+
+    /* Whether the Ezsignsignature is required or not. This field is relevant only with Ezsignsignature with eEzsignsignatureType = Attachments, Text or Textarea. */
     @Json(name = "bEzsignsignatureRequired")
     val bEzsignsignatureRequired: kotlin.Boolean? = null,
 
@@ -124,6 +138,9 @@ data class EzsignsignatureRequestCompound (
     @Json(name = "sEzsignsignatureAttachmentdescription")
     val sEzsignsignatureAttachmentdescription: kotlin.String? = null,
 
+    @Json(name = "eEzsignsignatureConsultationtrigger")
+    val eEzsignsignatureConsultationtrigger: FieldEEzsignsignatureConsultationtrigger? = null,
+
     /* The step when the Ezsignsigner will be invited to validate the Ezsignsignature of eEzsignsignatureType Attachments */
     @Json(name = "iEzsignsignatureValidationstep")
     val iEzsignsignatureValidationstep: kotlin.Int? = null,
@@ -132,8 +149,16 @@ data class EzsignsignatureRequestCompound (
     @Json(name = "iEzsignsignatureMaxlength")
     val iEzsignsignatureMaxlength: kotlin.Int? = null,
 
+    /* The default value for the Ezsignsignature  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | ------------------------- | ------------ | ------------ | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sCompany} | Company name | eZmax Solutions Inc. | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 | */
+    @Json(name = "sEzsignsignatureDefaultvalue")
+    val sEzsignsignatureDefaultvalue: kotlin.String? = null,
+
     @Json(name = "eEzsignsignatureTextvalidation")
     val eEzsignsignatureTextvalidation: EnumTextvalidation? = null,
+
+    /* Description of validation rule. Show by signatory. */
+    @Json(name = "sEzsignsignatureTextvalidationcustommessage")
+    val sEzsignsignatureTextvalidationcustommessage: kotlin.String? = null,
 
     /* A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom** */
     @Json(name = "sEzsignsignatureRegexp")
@@ -153,5 +178,8 @@ data class EzsignsignatureRequestCompound (
     @Json(name = "a_objEzsignelementdependency")
     val aObjEzsignelementdependency: kotlin.collections.List<EzsignelementdependencyRequestCompound>? = null
 
-)
+) {
+
+
+}
 

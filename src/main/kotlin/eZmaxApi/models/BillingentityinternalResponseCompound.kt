@@ -42,5 +42,8 @@ data class BillingentityinternalResponseCompound (
     @Json(name = "a_objBillingentityinternalproduct")
     val aObjBillingentityinternalproduct: kotlin.collections.List<BillingentityinternalproductResponseCompound>
 
-)
+) {
+
+
+}
 

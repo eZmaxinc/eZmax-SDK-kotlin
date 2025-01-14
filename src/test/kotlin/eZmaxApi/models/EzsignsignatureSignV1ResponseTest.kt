@@ -21,6 +21,7 @@ import io.kotlintest.specs.ShouldSpec
 import eZmaxApi.models.EzsignsignatureSignV1Response
 import eZmaxApi.models.CommonResponseObjDebug
 import eZmaxApi.models.CommonResponseObjDebugPayload
+import eZmaxApi.models.EzsignsignatureSignV1ResponseMPayload
 
 class EzsignsignatureSignV1ResponseTest : ShouldSpec() {
     init {
@@ -31,6 +32,12 @@ class EzsignsignatureSignV1ResponseTest : ShouldSpec() {
         should("test objDebugPayload") {
             // uncomment below to test the property
             //modelInstance.objDebugPayload shouldBe ("TODO")
+        }
+
+        // to test the property `mPayload`
+        should("test mPayload") {
+            // uncomment below to test the property
+            //modelInstance.mPayload shouldBe ("TODO")
         }
 
         // to test the property `objDebug`

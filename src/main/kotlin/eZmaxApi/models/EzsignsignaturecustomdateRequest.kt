@@ -57,5 +57,8 @@ data class EzsignsignaturecustomdateRequest (
     @Json(name = "iEzsignsignaturecustomdateOffsety")
     val iEzsignsignaturecustomdateOffsety: kotlin.Int? = null
 
-)
+) {
+
+
+}
 

@@ -42,5 +42,8 @@ data class EzsignsignergroupRequest (
     @Json(name = "pkiEzsignsignergroupID")
     val pkiEzsignsignergroupID: kotlin.Int? = null
 
-)
+) {
+
+
+}
 

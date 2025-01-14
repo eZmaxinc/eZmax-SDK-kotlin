@@ -37,5 +37,8 @@ data class CustomDropdownElementRequestCompound (
     @Json(name = "sValue")
     val sValue: kotlin.String
 
-)
+) {
+
+
+}
 

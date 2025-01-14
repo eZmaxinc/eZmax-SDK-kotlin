@@ -40,11 +40,12 @@ import com.squareup.moshi.JsonClass
  * @param aObjEzsignformfield 
  * @param aObjEzsignformfieldgroupsigner 
  * @param eEzsignformfieldgroupSignerrequirement 
- * @param sEzsignformfieldgroupDefaultvalue The default value for the Ezsignformfieldgroup  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | ------------------------- | ------------ | ------------ | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 |
+ * @param sEzsignformfieldgroupDefaultvalue The default value for the Ezsignformfieldgroup  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | ------------------------- | ------------ | ------------ | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sCompany} | Company name | eZmax Solutions Inc. | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 |
  * @param iEzsignformfieldgroupMaxlength The maximum length for the value in the Ezsignformfieldgroup  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**
  * @param bEzsignformfieldgroupEncrypted Whether the Ezsignformfieldgroup is encrypted in the database or not. Encrypted values are not displayed on the Ezsigndocument. This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**
  * @param eEzsignformfieldgroupTextvalidation 
  * @param sEzsignformfieldgroupRegexp A regular expression to indicate what values are acceptable for the Ezsignformfieldgroup.  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**
+ * @param sEzsignformfieldgroupTextvalidationcustommessage Description of validation rule. Show by signatory.
  * @param tEzsignformfieldgroupTooltip A tooltip that will be presented to Ezsignsigner about the Ezsignformfieldgroup
  * @param eEzsignformfieldgroupTooltipposition 
  * @param aObjDropdownElement 
@@ -94,7 +95,7 @@ data class EzsignformfieldgroupResponseCompound (
     @Deprecated(message = "This property is deprecated.")
     val eEzsignformfieldgroupSignerrequirement: FieldEEzsignformfieldgroupSignerrequirement? = null,
 
-    /* The default value for the Ezsignformfieldgroup  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | ------------------------- | ------------ | ------------ | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 | */
+    /* The default value for the Ezsignformfieldgroup  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | ------------------------- | ------------ | ------------ | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sCompany} | Company name | eZmax Solutions Inc. | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 | */
     @Json(name = "sEzsignformfieldgroupDefaultvalue")
     val sEzsignformfieldgroupDefaultvalue: kotlin.String? = null,
 
@@ -113,6 +114,10 @@ data class EzsignformfieldgroupResponseCompound (
     @Json(name = "sEzsignformfieldgroupRegexp")
     val sEzsignformfieldgroupRegexp: kotlin.String? = null,
 
+    /* Description of validation rule. Show by signatory. */
+    @Json(name = "sEzsignformfieldgroupTextvalidationcustommessage")
+    val sEzsignformfieldgroupTextvalidationcustommessage: kotlin.String? = null,
+
     /* A tooltip that will be presented to Ezsignsigner about the Ezsignformfieldgroup */
     @Json(name = "tEzsignformfieldgroupTooltip")
     val tEzsignformfieldgroupTooltip: kotlin.String? = null,
@@ -123,5 +128,8 @@ data class EzsignformfieldgroupResponseCompound (
     @Json(name = "a_objDropdownElement")
     val aObjDropdownElement: kotlin.collections.List<CustomDropdownElementResponseCompound>? = null
 
-)
+) {
+
+
+}
 

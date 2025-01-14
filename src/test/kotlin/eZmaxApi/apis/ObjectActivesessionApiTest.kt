@@ -19,6 +19,8 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectActivesessionApi
+import eZmaxApi.models.ActivesessionGenerateFederationTokenV1Request
+import eZmaxApi.models.ActivesessionGenerateFederationTokenV1Response
 import eZmaxApi.models.ActivesessionGetCurrentV1Response
 import eZmaxApi.models.ActivesessionGetListV1Response
 import eZmaxApi.models.CommonResponseError
@@ -29,6 +31,14 @@ class ObjectActivesessionApiTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of ObjectActivesessionApi
         //val apiInstance = ObjectActivesessionApi()
+
+        // to test activesessionGenerateFederationTokenV1
+        should("test activesessionGenerateFederationTokenV1") {
+            // uncomment below to test activesessionGenerateFederationTokenV1
+            //val activesessionGenerateFederationTokenV1Request : ActivesessionGenerateFederationTokenV1Request =  // ActivesessionGenerateFederationTokenV1Request | 
+            //val result : ActivesessionGenerateFederationTokenV1Response = apiInstance.activesessionGenerateFederationTokenV1(activesessionGenerateFederationTokenV1Request)
+            //result shouldBe ("TODO")
+        }
 
         // to test activesessionGetCurrentV1
         should("test activesessionGetCurrentV1") {

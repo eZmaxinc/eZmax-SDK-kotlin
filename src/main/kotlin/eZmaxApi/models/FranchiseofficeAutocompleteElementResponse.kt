@@ -42,5 +42,8 @@ data class FranchiseofficeAutocompleteElementResponse (
     @Json(name = "bFranchiseofficeIsactive")
     val bFranchiseofficeIsactive: kotlin.Boolean
 
-)
+) {
+
+
+}
 

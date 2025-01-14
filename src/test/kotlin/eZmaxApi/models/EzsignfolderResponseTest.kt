@@ -60,6 +60,12 @@ class EzsignfolderResponseTest : ShouldSpec() {
             //modelInstance.objEzsignfoldertype shouldBe ("TODO")
         }
 
+        // to test the property `fkiTimezoneID` - The unique ID of the Timezone
+        should("test fkiTimezoneID") {
+            // uncomment below to test the property
+            //modelInstance.fkiTimezoneID shouldBe ("TODO")
+        }
+
         // to test the property `sEzsignfoldertypeNameX`
         should("test sEzsignfoldertypeNameX") {
             // uncomment below to test the property
@@ -106,6 +112,18 @@ class EzsignfolderResponseTest : ShouldSpec() {
         should("test eEzsignfolderSendreminderfrequency") {
             // uncomment below to test the property
             //modelInstance.eEzsignfolderSendreminderfrequency shouldBe ("TODO")
+        }
+
+        // to test the property `iEzsignfolderSendreminderfirstdays` - The number of days before the the first reminder sending
+        should("test iEzsignfolderSendreminderfirstdays") {
+            // uncomment below to test the property
+            //modelInstance.iEzsignfolderSendreminderfirstdays shouldBe ("TODO")
+        }
+
+        // to test the property `iEzsignfolderSendreminderotherdays` - The number of days after the first reminder sending
+        should("test iEzsignfolderSendreminderotherdays") {
+            // uncomment below to test the property
+            //modelInstance.iEzsignfolderSendreminderotherdays shouldBe ("TODO")
         }
 
         // to test the property `dtEzsignfolderDelayedsenddate` - The date and time at which the Ezsignfolder will be sent in the future.

@@ -62,5 +62,8 @@ data class EzsigndiscussionResponse (
     @Json(name = "objDiscussion")
     val objDiscussion: DiscussionResponseCompound
 
-)
+) {
+
+
+}
 

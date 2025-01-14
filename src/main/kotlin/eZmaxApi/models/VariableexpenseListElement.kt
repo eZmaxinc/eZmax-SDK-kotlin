@@ -52,5 +52,8 @@ data class VariableexpenseListElement (
     @Json(name = "bVariableexpenseIsactive")
     val bVariableexpenseIsactive: kotlin.Boolean? = null
 
-)
+) {
+
+
+}
 

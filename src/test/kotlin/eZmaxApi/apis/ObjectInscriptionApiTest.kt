@@ -21,7 +21,9 @@ import io.kotlintest.specs.ShouldSpec
 import eZmaxApi.apis.ObjectInscriptionApi
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.InscriptionGetAttachmentsV1Response
+import eZmaxApi.models.InscriptionGetCommunicationCountV1Response
 import eZmaxApi.models.InscriptionGetCommunicationListV1Response
+import eZmaxApi.models.InscriptionGetCommunicationrecipientsV1Response
 import eZmaxApi.models.InscriptionGetCommunicationsendersV1Response
 
 class ObjectInscriptionApiTest : ShouldSpec() {
@@ -37,11 +39,27 @@ class ObjectInscriptionApiTest : ShouldSpec() {
             //result shouldBe ("TODO")
         }
 
+        // to test inscriptionGetCommunicationCountV1
+        should("test inscriptionGetCommunicationCountV1") {
+            // uncomment below to test inscriptionGetCommunicationCountV1
+            //val pkiInscriptionID : kotlin.Int = 56 // kotlin.Int | 
+            //val result : InscriptionGetCommunicationCountV1Response = apiInstance.inscriptionGetCommunicationCountV1(pkiInscriptionID)
+            //result shouldBe ("TODO")
+        }
+
         // to test inscriptionGetCommunicationListV1
         should("test inscriptionGetCommunicationListV1") {
             // uncomment below to test inscriptionGetCommunicationListV1
             //val pkiInscriptionID : kotlin.Int = 56 // kotlin.Int | 
             //val result : InscriptionGetCommunicationListV1Response = apiInstance.inscriptionGetCommunicationListV1(pkiInscriptionID)
+            //result shouldBe ("TODO")
+        }
+
+        // to test inscriptionGetCommunicationrecipientsV1
+        should("test inscriptionGetCommunicationrecipientsV1") {
+            // uncomment below to test inscriptionGetCommunicationrecipientsV1
+            //val pkiInscriptionID : kotlin.Int = 56 // kotlin.Int | 
+            //val result : InscriptionGetCommunicationrecipientsV1Response = apiInstance.inscriptionGetCommunicationrecipientsV1(pkiInscriptionID)
             //result shouldBe ("TODO")
         }
 

@@ -38,5 +38,11 @@ class CommonResponseErrorTooManyRequestsTest : ShouldSpec() {
             //modelInstance.eErrorCode shouldBe ("TODO")
         }
 
+        // to test the property `aSErrorMessagedetail` - More error message detail
+        should("test aSErrorMessagedetail") {
+            // uncomment below to test the property
+            //modelInstance.aSErrorMessagedetail shouldBe ("TODO")
+        }
+
     }
 }

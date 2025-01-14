@@ -37,5 +37,8 @@ data class UserCreateEzsignuserV1ResponseMPayload (
     @Json(name = "a_sEmailAddressFailure")
     val aSEmailAddressFailure: kotlin.collections.List<kotlin.String>
 
-)
+) {
+
+
+}
 

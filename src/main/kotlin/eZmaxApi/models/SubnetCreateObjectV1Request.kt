@@ -32,5 +32,8 @@ data class SubnetCreateObjectV1Request (
     @Json(name = "a_objSubnet")
     val aObjSubnet: kotlin.collections.List<SubnetRequestCompound>
 
-)
+) {
+
+
+}
 

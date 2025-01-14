@@ -33,5 +33,8 @@ data class UserlogintypeGetAutocompleteV2ResponseMPayload (
     @Json(name = "a_objUserlogintype")
     val aObjUserlogintype: kotlin.collections.List<UserlogintypeAutocompleteElementResponse>
 
-)
+) {
+
+
+}
 

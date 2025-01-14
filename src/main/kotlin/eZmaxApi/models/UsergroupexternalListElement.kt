@@ -42,5 +42,8 @@ data class UsergroupexternalListElement (
     @Json(name = "sUsergroupexternalID")
     val sUsergroupexternalID: kotlin.String
 
-)
+) {
+
+
+}
 

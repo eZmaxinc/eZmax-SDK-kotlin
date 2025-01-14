@@ -82,5 +82,8 @@ data class ClonehistoryListElement (
     @Json(name = "dtClonehistoryLasthit")
     val dtClonehistoryLasthit: kotlin.String? = null
 
-)
+) {
+
+
+}
 

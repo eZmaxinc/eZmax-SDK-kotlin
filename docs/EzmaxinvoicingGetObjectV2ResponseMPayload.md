@@ -2,9 +2,9 @@
 # EzmaxinvoicingGetObjectV2ResponseMPayload
 
 ## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**objEzmaxinvoicing** | [**EzmaxinvoicingResponseCompound**](EzmaxinvoicingResponseCompound.md) |  | 
+| Name | Type | Description | Notes |
+| ------------ | ------------- | ------------- | ------------- |
+| **objEzmaxinvoicing** | [**EzmaxinvoicingResponseCompound**](EzmaxinvoicingResponseCompound.md) |  |  |
 
 
 

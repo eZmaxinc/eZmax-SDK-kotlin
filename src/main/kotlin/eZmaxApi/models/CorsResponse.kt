@@ -42,5 +42,8 @@ data class CorsResponse (
     @Json(name = "sCorsEntryurl")
     val sCorsEntryurl: kotlin.String
 
-)
+) {
+
+
+}
 

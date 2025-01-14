@@ -42,5 +42,8 @@ data class TimezoneAutocompleteElementResponse (
     @Json(name = "bTimezoneIsactive")
     val bTimezoneIsactive: kotlin.Boolean
 
-)
+) {
+
+
+}
 

@@ -32,5 +32,8 @@ data class EzsigndocumentGetObjectV2ResponseMPayload (
     @Json(name = "objEzsigndocument")
     val objEzsigndocument: EzsigndocumentResponseCompound
 
-)
+) {
+
+
+}
 

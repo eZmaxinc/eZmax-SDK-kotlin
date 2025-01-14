@@ -57,5 +57,8 @@ data class EzsignfoldersignerassociationRequest (
     @Json(name = "tEzsignfoldersignerassociationMessage")
     val tEzsignfoldersignerassociationMessage: kotlin.String? = null
 
-)
+) {
+
+
+}
 

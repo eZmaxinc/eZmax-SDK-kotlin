@@ -32,5 +32,8 @@ data class BillingentityinternalGetObjectV2ResponseMPayload (
     @Json(name = "objBillingentityinternal")
     val objBillingentityinternal: BillingentityinternalResponseCompound
 
-)
+) {
+
+
+}
 

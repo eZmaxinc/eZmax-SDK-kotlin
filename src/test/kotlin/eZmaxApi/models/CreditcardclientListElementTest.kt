@@ -37,7 +37,13 @@ class CreditcardclientListElementTest : ShouldSpec() {
             //modelInstance.fkiCreditcarddetailID shouldBe ("TODO")
         }
 
-        // to test the property `bCreditcardclientrelationIsdefault` - Whether if it's an relationisdefault
+        // to test the property `fkiCreditcardtypeID` - The unique ID of the Creditcardtype
+        should("test fkiCreditcardtypeID") {
+            // uncomment below to test the property
+            //modelInstance.fkiCreditcardtypeID shouldBe ("TODO")
+        }
+
+        // to test the property `bCreditcardclientrelationIsdefault` - Whether if it's the creditcardclient is the default one
         should("test bCreditcardclientrelationIsdefault") {
             // uncomment below to test the property
             //modelInstance.bCreditcardclientrelationIsdefault shouldBe ("TODO")
@@ -49,22 +55,10 @@ class CreditcardclientListElementTest : ShouldSpec() {
             //modelInstance.sCreditcardclientDescription shouldBe ("TODO")
         }
 
-        // to test the property `bCreditcardclientIsactive` - Whether the creditcardclient is active or not
-        should("test bCreditcardclientIsactive") {
+        // to test the property `bCreditcardclientAllowedcompanypayment` - Whether if it's an allowedagencypayment
+        should("test bCreditcardclientAllowedcompanypayment") {
             // uncomment below to test the property
-            //modelInstance.bCreditcardclientIsactive shouldBe ("TODO")
-        }
-
-        // to test the property `bCreditcardclientAllowedagencypayment` - Whether if it's an allowedagencypayment
-        should("test bCreditcardclientAllowedagencypayment") {
-            // uncomment below to test the property
-            //modelInstance.bCreditcardclientAllowedagencypayment shouldBe ("TODO")
-        }
-
-        // to test the property `bCreditcardclientAllowedroyallepageprotection` - Whether if it's an allowedroyallepageprotection
-        should("test bCreditcardclientAllowedroyallepageprotection") {
-            // uncomment below to test the property
-            //modelInstance.bCreditcardclientAllowedroyallepageprotection shouldBe ("TODO")
+            //modelInstance.bCreditcardclientAllowedcompanypayment shouldBe ("TODO")
         }
 
         // to test the property `bCreditcardclientAllowedtranquillit` - Whether if it's an allowedtranquillit
@@ -85,10 +79,10 @@ class CreditcardclientListElementTest : ShouldSpec() {
             //modelInstance.iCreditcarddetailExpirationyear shouldBe ("TODO")
         }
 
-        // to test the property `sCreditcarddetailNumbermasked` - The numbermasked of the Creditcarddetail
-        should("test sCreditcarddetailNumbermasked") {
+        // to test the property `iCreditcarddetailLastdigits` - The last digits of the Creditcarddetail
+        should("test iCreditcarddetailLastdigits") {
             // uncomment below to test the property
-            //modelInstance.sCreditcarddetailNumbermasked shouldBe ("TODO")
+            //modelInstance.iCreditcarddetailLastdigits shouldBe ("TODO")
         }
 
     }

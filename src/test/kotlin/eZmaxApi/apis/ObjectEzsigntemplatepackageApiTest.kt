@@ -78,7 +78,8 @@ class ObjectEzsigntemplatepackageApiTest : ShouldSpec() {
             //val eFilterActive : kotlin.String = eFilterActive_example // kotlin.String | Specify which results we want to display.
             //val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter the returned results
             //val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
-            //val result : EzsigntemplatepackageGetAutocompleteV2Response = apiInstance.ezsigntemplatepackageGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+            //val fkiEzsignfoldertypeID : kotlin.Int = 56 // kotlin.Int | The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic
+            //val result : EzsigntemplatepackageGetAutocompleteV2Response = apiInstance.ezsigntemplatepackageGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage, fkiEzsignfoldertypeID)
             //result shouldBe ("TODO")
         }
 

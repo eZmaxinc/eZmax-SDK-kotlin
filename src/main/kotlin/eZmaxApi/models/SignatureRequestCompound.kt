@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.FieldESignaturePreference
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -22,20 +23,37 @@ import com.squareup.moshi.JsonClass
 /**
  * A Signature Object and children
  *
- * @param tSignatureSvg The svg of the Signature
+ * @param fkiFontID The unique ID of the Font
+ * @param eSignaturePreference 
  * @param pkiSignatureID The unique ID of the Signature
+ * @param tSignatureSvg The svg of the Signature
+ * @param tSignatureSvginitials The svg of the Initials
  */
 
 
 data class SignatureRequestCompound (
 
-    /* The svg of the Signature */
-    @Json(name = "tSignatureSvg")
-    val tSignatureSvg: kotlin.String,
+    /* The unique ID of the Font */
+    @Json(name = "fkiFontID")
+    val fkiFontID: kotlin.Int,
+
+    @Json(name = "eSignaturePreference")
+    val eSignaturePreference: FieldESignaturePreference,
 
     /* The unique ID of the Signature */
     @Json(name = "pkiSignatureID")
-    val pkiSignatureID: kotlin.Int? = null
+    val pkiSignatureID: kotlin.Int? = null,
 
-)
+    /* The svg of the Signature */
+    @Json(name = "tSignatureSvg")
+    val tSignatureSvg: kotlin.String? = null,
+
+    /* The svg of the Initials */
+    @Json(name = "tSignatureSvginitials")
+    val tSignatureSvginitials: kotlin.String? = null
+
+) {
+
+
+}
 

@@ -67,5 +67,8 @@ data class EzsigntemplatepackageListElement (
     @Json(name = "bEzsigntemplatepackageIsactive")
     val bEzsigntemplatepackageIsactive: kotlin.Boolean
 
-)
+) {
+
+
+}
 

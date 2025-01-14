@@ -22,7 +22,7 @@ import com.squareup.moshi.JsonClass
 /**
  * A Franchisebroker AutocompleteElement Response
  *
- * @param sFranchisebrokerName The name of the Franchisebroker in the language of the requester
+ * @param sFranchisebrokerName The name of the Franchisebroker
  * @param pkiFranchisebrokerID The unique ID of the Franchisebroker
  * @param bFranchisebrokerIsactive Whether the Franchisebroker is active or not
  */
@@ -30,7 +30,7 @@ import com.squareup.moshi.JsonClass
 
 data class FranchisebrokerAutocompleteElementResponse (
 
-    /* The name of the Franchisebroker in the language of the requester */
+    /* The name of the Franchisebroker */
     @Json(name = "sFranchisebrokerName")
     val sFranchisebrokerName: kotlin.String,
 
@@ -42,5 +42,8 @@ data class FranchisebrokerAutocompleteElementResponse (
     @Json(name = "bFranchisebrokerIsactive")
     val bFranchisebrokerIsactive: kotlin.Boolean
 
-)
+) {
+
+
+}
 

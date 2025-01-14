@@ -32,5 +32,8 @@ data class EzsignfolderGetAttachmentCountV1ResponseMPayload (
     @Json(name = "iAttachmentCount")
     val iAttachmentCount: kotlin.Int
 
-)
+) {
+
+
+}
 

@@ -55,6 +55,12 @@ class EzsigntemplatedocumentResponseCompoundTest : ShouldSpec() {
             //modelInstance.iEzsigntemplatedocumentSignaturetotal shouldBe ("TODO")
         }
 
+        // to test the property `iEzsigntemplatedocumentFormfieldtotal` - The number of total form fields in the Ezsigntemplate.
+        should("test iEzsigntemplatedocumentFormfieldtotal") {
+            // uncomment below to test the property
+            //modelInstance.iEzsigntemplatedocumentFormfieldtotal shouldBe ("TODO")
+        }
+
         // to test the property `bEzsigntemplatedocumentHassignedsignatures` - If the Ezsigntemplatedocument contains signed signatures (From internal or external sources)
         should("test bEzsigntemplatedocumentHassignedsignatures") {
             // uncomment below to test the property

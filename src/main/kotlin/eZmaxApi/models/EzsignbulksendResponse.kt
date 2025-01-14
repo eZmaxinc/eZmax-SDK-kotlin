@@ -82,5 +82,8 @@ data class EzsignbulksendResponse (
     @Json(name = "objAudit")
     val objAudit: CommonAudit
 
-)
+) {
+
+
+}
 

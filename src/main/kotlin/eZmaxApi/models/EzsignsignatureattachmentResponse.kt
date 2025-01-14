@@ -52,5 +52,8 @@ data class EzsignsignatureattachmentResponse (
     @Json(name = "sDownloadUrl")
     val sDownloadUrl: kotlin.String
 
-)
+) {
+
+
+}
 

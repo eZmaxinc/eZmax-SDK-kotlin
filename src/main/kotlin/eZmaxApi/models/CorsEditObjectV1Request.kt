@@ -32,5 +32,8 @@ data class CorsEditObjectV1Request (
     @Json(name = "objCors")
     val objCors: CorsRequestCompound
 
-)
+) {
+
+
+}
 

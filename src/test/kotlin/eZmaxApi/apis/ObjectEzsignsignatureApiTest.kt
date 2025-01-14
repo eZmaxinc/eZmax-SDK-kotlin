@@ -24,12 +24,14 @@ import eZmaxApi.models.EzsignsignatureCreateObjectV1Request
 import eZmaxApi.models.EzsignsignatureCreateObjectV1Response
 import eZmaxApi.models.EzsignsignatureCreateObjectV2Request
 import eZmaxApi.models.EzsignsignatureCreateObjectV2Response
+import eZmaxApi.models.EzsignsignatureCreateObjectV3Request
+import eZmaxApi.models.EzsignsignatureCreateObjectV3Response
 import eZmaxApi.models.EzsignsignatureDeleteObjectV1Response
-import eZmaxApi.models.EzsignsignatureEditObjectV1Request
-import eZmaxApi.models.EzsignsignatureEditObjectV1Response
+import eZmaxApi.models.EzsignsignatureEditObjectV2Request
+import eZmaxApi.models.EzsignsignatureEditObjectV2Response
 import eZmaxApi.models.EzsignsignatureGetEzsignsignatureattachmentV1Response
 import eZmaxApi.models.EzsignsignatureGetEzsignsignaturesAutomaticV1Response
-import eZmaxApi.models.EzsignsignatureGetObjectV2Response
+import eZmaxApi.models.EzsignsignatureGetObjectV3Response
 import eZmaxApi.models.EzsignsignatureSignV1Request
 import eZmaxApi.models.EzsignsignatureSignV1Response
 
@@ -54,6 +56,14 @@ class ObjectEzsignsignatureApiTest : ShouldSpec() {
             //result shouldBe ("TODO")
         }
 
+        // to test ezsignsignatureCreateObjectV3
+        should("test ezsignsignatureCreateObjectV3") {
+            // uncomment below to test ezsignsignatureCreateObjectV3
+            //val ezsignsignatureCreateObjectV3Request : EzsignsignatureCreateObjectV3Request =  // EzsignsignatureCreateObjectV3Request | 
+            //val result : EzsignsignatureCreateObjectV3Response = apiInstance.ezsignsignatureCreateObjectV3(ezsignsignatureCreateObjectV3Request)
+            //result shouldBe ("TODO")
+        }
+
         // to test ezsignsignatureDeleteObjectV1
         should("test ezsignsignatureDeleteObjectV1") {
             // uncomment below to test ezsignsignatureDeleteObjectV1
@@ -62,12 +72,12 @@ class ObjectEzsignsignatureApiTest : ShouldSpec() {
             //result shouldBe ("TODO")
         }
 
-        // to test ezsignsignatureEditObjectV1
-        should("test ezsignsignatureEditObjectV1") {
-            // uncomment below to test ezsignsignatureEditObjectV1
+        // to test ezsignsignatureEditObjectV2
+        should("test ezsignsignatureEditObjectV2") {
+            // uncomment below to test ezsignsignatureEditObjectV2
             //val pkiEzsignsignatureID : kotlin.Int = 56 // kotlin.Int | 
-            //val ezsignsignatureEditObjectV1Request : EzsignsignatureEditObjectV1Request =  // EzsignsignatureEditObjectV1Request | 
-            //val result : EzsignsignatureEditObjectV1Response = apiInstance.ezsignsignatureEditObjectV1(pkiEzsignsignatureID, ezsignsignatureEditObjectV1Request)
+            //val ezsignsignatureEditObjectV2Request : EzsignsignatureEditObjectV2Request =  // EzsignsignatureEditObjectV2Request | 
+            //val result : EzsignsignatureEditObjectV2Response = apiInstance.ezsignsignatureEditObjectV2(pkiEzsignsignatureID, ezsignsignatureEditObjectV2Request)
             //result shouldBe ("TODO")
         }
 
@@ -86,11 +96,11 @@ class ObjectEzsignsignatureApiTest : ShouldSpec() {
             //result shouldBe ("TODO")
         }
 
-        // to test ezsignsignatureGetObjectV2
-        should("test ezsignsignatureGetObjectV2") {
-            // uncomment below to test ezsignsignatureGetObjectV2
+        // to test ezsignsignatureGetObjectV3
+        should("test ezsignsignatureGetObjectV3") {
+            // uncomment below to test ezsignsignatureGetObjectV3
             //val pkiEzsignsignatureID : kotlin.Int = 56 // kotlin.Int | 
-            //val result : EzsignsignatureGetObjectV2Response = apiInstance.ezsignsignatureGetObjectV2(pkiEzsignsignatureID)
+            //val result : EzsignsignatureGetObjectV3Response = apiInstance.ezsignsignatureGetObjectV3(pkiEzsignsignatureID)
             //result shouldBe ("TODO")
         }
 

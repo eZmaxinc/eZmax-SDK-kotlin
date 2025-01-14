@@ -2,9 +2,9 @@
 
 All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/rest*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**notificationsectionGetNotificationtestsV1**](ObjectNotificationsectionApi.md#notificationsectionGetNotificationtestsV1) | **GET** /1/object/notificationsection/{pkiNotificationsectionID}/getNotificationtests | Retrieve an existing Notificationsection&#39;s Notificationtests
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**notificationsectionGetNotificationtestsV1**](ObjectNotificationsectionApi.md#notificationsectionGetNotificationtestsV1) | **GET** /1/object/notificationsection/{pkiNotificationsectionID}/getNotificationtests | Retrieve an existing Notificationsection&#39;s Notificationtests |
 
 
 <a id="notificationsectionGetNotificationtestsV1"></a>
@@ -37,11 +37,10 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiNotificationsectionID** | **kotlin.Int**|  |
- **bShowHidden** | **kotlin.Boolean**| Whether or not to return the hidden Notificationtests |
+| **pkiNotificationsectionID** | **kotlin.Int**|  | |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **bShowHidden** | **kotlin.Boolean**| Whether or not to return the hidden Notificationtests | |
 
 ### Return type
 

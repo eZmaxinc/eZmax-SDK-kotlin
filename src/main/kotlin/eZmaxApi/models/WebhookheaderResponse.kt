@@ -47,5 +47,8 @@ data class WebhookheaderResponse (
     @Json(name = "sWebhookheaderValue")
     val sWebhookheaderValue: kotlin.String
 
-)
+) {
+
+
+}
 

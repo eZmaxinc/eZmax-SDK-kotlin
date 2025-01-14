@@ -32,5 +32,8 @@ data class VersionhistoryGetObjectV2ResponseMPayload (
     @Json(name = "objVersionhistory")
     val objVersionhistory: VersionhistoryResponseCompound
 
-)
+) {
+
+
+}
 

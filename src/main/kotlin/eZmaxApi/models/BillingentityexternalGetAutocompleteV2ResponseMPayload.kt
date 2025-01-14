@@ -33,5 +33,8 @@ data class BillingentityexternalGetAutocompleteV2ResponseMPayload (
     @Json(name = "a_objBillingentityexternal")
     val aObjBillingentityexternal: kotlin.collections.List<BillingentityexternalAutocompleteElementResponse>
 
-)
+) {
+
+
+}
 

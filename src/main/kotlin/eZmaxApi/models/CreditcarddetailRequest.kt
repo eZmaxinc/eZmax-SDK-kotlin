@@ -42,15 +42,18 @@ data class CreditcarddetailRequest (
 
     /* The civic of the Creditcarddetail */
     @Json(name = "sCreditcarddetailCivic")
-    val sCreditcarddetailCivic: kotlin.String? = null,
+    val sCreditcarddetailCivic: kotlin.String,
 
     /* The street of the Creditcarddetail */
     @Json(name = "sCreditcarddetailStreet")
-    val sCreditcarddetailStreet: kotlin.String? = null,
+    val sCreditcarddetailStreet: kotlin.String,
 
     /* The zip of the Creditcarddetail */
     @Json(name = "sCreditcarddetailZip")
-    val sCreditcarddetailZip: kotlin.String? = null
+    val sCreditcarddetailZip: kotlin.String
 
-)
+) {
+
+
+}
 

@@ -16,12 +16,15 @@
 package eZmaxApi.apis
 
 import java.io.IOException
-import okhttp3.OkHttpClient
+import okhttp3.Call
 import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.InvoiceGetAttachmentsV1Response
+import eZmaxApi.models.InvoiceGetCommunicationCountV1Response
 import eZmaxApi.models.InvoiceGetCommunicationListV1Response
+import eZmaxApi.models.InvoiceGetCommunicationrecipientsV1Response
+import eZmaxApi.models.InvoiceGetCommunicationsendersV1Response
 
 import com.squareup.moshi.Json
 
@@ -39,7 +42,7 @@ import eZmaxApi.infrastructure.ResponseType
 import eZmaxApi.infrastructure.Success
 import eZmaxApi.infrastructure.toMultiValue
 
-class ObjectInvoiceApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = ApiClient.defaultClient) : ApiClient(basePath, client) {
+class ObjectInvoiceApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
@@ -119,6 +122,77 @@ class ObjectInvoiceApi(basePath: kotlin.String = defaultBasePath, client: OkHttp
     }
 
     /**
+     * Retrieve Communication count
+     * 
+     * @param pkiInvoiceID 
+     * @return InvoiceGetCommunicationCountV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun invoiceGetCommunicationCountV1(pkiInvoiceID: kotlin.Int) : InvoiceGetCommunicationCountV1Response {
+        val localVarResponse = invoiceGetCommunicationCountV1WithHttpInfo(pkiInvoiceID = pkiInvoiceID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as InvoiceGetCommunicationCountV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve Communication count
+     * 
+     * @param pkiInvoiceID 
+     * @return ApiResponse<InvoiceGetCommunicationCountV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun invoiceGetCommunicationCountV1WithHttpInfo(pkiInvoiceID: kotlin.Int) : ApiResponse<InvoiceGetCommunicationCountV1Response?> {
+        val localVariableConfig = invoiceGetCommunicationCountV1RequestConfig(pkiInvoiceID = pkiInvoiceID)
+
+        return request<Unit, InvoiceGetCommunicationCountV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation invoiceGetCommunicationCountV1
+     *
+     * @param pkiInvoiceID 
+     * @return RequestConfig
+     */
+    fun invoiceGetCommunicationCountV1RequestConfig(pkiInvoiceID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/invoice/{pkiInvoiceID}/getCommunicationCount".replace("{"+"pkiInvoiceID"+"}", encodeURIComponent(pkiInvoiceID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
      * Retrieve Communication list
      * 
      * @param pkiInvoiceID 
@@ -182,6 +256,148 @@ class ObjectInvoiceApi(basePath: kotlin.String = defaultBasePath, client: OkHttp
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/invoice/{pkiInvoiceID}/getCommunicationList".replace("{"+"pkiInvoiceID"+"}", encodeURIComponent(pkiInvoiceID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Retrieve Invoice&#39;s Communicationrecipient
+     * 
+     * @param pkiInvoiceID 
+     * @return InvoiceGetCommunicationrecipientsV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun invoiceGetCommunicationrecipientsV1(pkiInvoiceID: kotlin.Int) : InvoiceGetCommunicationrecipientsV1Response {
+        val localVarResponse = invoiceGetCommunicationrecipientsV1WithHttpInfo(pkiInvoiceID = pkiInvoiceID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as InvoiceGetCommunicationrecipientsV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve Invoice&#39;s Communicationrecipient
+     * 
+     * @param pkiInvoiceID 
+     * @return ApiResponse<InvoiceGetCommunicationrecipientsV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun invoiceGetCommunicationrecipientsV1WithHttpInfo(pkiInvoiceID: kotlin.Int) : ApiResponse<InvoiceGetCommunicationrecipientsV1Response?> {
+        val localVariableConfig = invoiceGetCommunicationrecipientsV1RequestConfig(pkiInvoiceID = pkiInvoiceID)
+
+        return request<Unit, InvoiceGetCommunicationrecipientsV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation invoiceGetCommunicationrecipientsV1
+     *
+     * @param pkiInvoiceID 
+     * @return RequestConfig
+     */
+    fun invoiceGetCommunicationrecipientsV1RequestConfig(pkiInvoiceID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/invoice/{pkiInvoiceID}/getCommunicationrecipients".replace("{"+"pkiInvoiceID"+"}", encodeURIComponent(pkiInvoiceID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Retrieve Invoice&#39;s Communicationsender
+     * 
+     * @param pkiInvoiceID 
+     * @return InvoiceGetCommunicationsendersV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun invoiceGetCommunicationsendersV1(pkiInvoiceID: kotlin.Int) : InvoiceGetCommunicationsendersV1Response {
+        val localVarResponse = invoiceGetCommunicationsendersV1WithHttpInfo(pkiInvoiceID = pkiInvoiceID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as InvoiceGetCommunicationsendersV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve Invoice&#39;s Communicationsender
+     * 
+     * @param pkiInvoiceID 
+     * @return ApiResponse<InvoiceGetCommunicationsendersV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun invoiceGetCommunicationsendersV1WithHttpInfo(pkiInvoiceID: kotlin.Int) : ApiResponse<InvoiceGetCommunicationsendersV1Response?> {
+        val localVariableConfig = invoiceGetCommunicationsendersV1RequestConfig(pkiInvoiceID = pkiInvoiceID)
+
+        return request<Unit, InvoiceGetCommunicationsendersV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation invoiceGetCommunicationsendersV1
+     *
+     * @param pkiInvoiceID 
+     * @return RequestConfig
+     */
+    fun invoiceGetCommunicationsendersV1RequestConfig(pkiInvoiceID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/invoice/{pkiInvoiceID}/getCommunicationsenders".replace("{"+"pkiInvoiceID"+"}", encodeURIComponent(pkiInvoiceID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

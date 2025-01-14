@@ -37,5 +37,8 @@ data class CommonResponseWarning (
     @Json(name = "eWarningCode")
     val eWarningCode: kotlin.String
 
-)
+) {
+
+
+}
 

@@ -33,5 +33,8 @@ data class EzsignfoldertypeGetAutocompleteV2ResponseMPayload (
     @Json(name = "a_objEzsignfoldertype")
     val aObjEzsignfoldertype: kotlin.collections.List<EzsignfoldertypeAutocompleteElementResponse>
 
-)
+) {
+
+
+}
 

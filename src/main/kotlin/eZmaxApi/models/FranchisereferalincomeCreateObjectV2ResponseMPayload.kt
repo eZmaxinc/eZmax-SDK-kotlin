@@ -32,5 +32,8 @@ data class FranchisereferalincomeCreateObjectV2ResponseMPayload (
     @Json(name = "a_pkiFranchisereferalincomeID")
     val aPkiFranchisereferalincomeID: kotlin.collections.List<kotlin.Int>
 
-)
+) {
+
+
+}
 

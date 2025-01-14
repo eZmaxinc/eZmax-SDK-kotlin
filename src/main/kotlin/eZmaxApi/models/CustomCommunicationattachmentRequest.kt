@@ -37,5 +37,8 @@ data class CustomCommunicationattachmentRequest (
     @Json(name = "objCommunicationexternalattachment")
     val objCommunicationexternalattachment: CommonFile? = null
 
-)
+) {
+
+
+}
 

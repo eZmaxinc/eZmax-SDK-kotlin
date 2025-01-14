@@ -37,5 +37,8 @@ data class MultilingualApikeyDescription (
     @Json(name = "sApikeyDescription2")
     val sApikeyDescription2: kotlin.String? = null
 
-)
+) {
+
+
+}
 

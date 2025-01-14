@@ -16,7 +16,7 @@
 package eZmaxApi.apis
 
 import java.io.IOException
-import okhttp3.OkHttpClient
+import okhttp3.Call
 import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommonResponseError
@@ -35,6 +35,8 @@ import eZmaxApi.models.EzsignfoldersignerassociationGetObjectV1Response
 import eZmaxApi.models.EzsignfoldersignerassociationGetObjectV2Response
 import eZmaxApi.models.EzsignfoldersignerassociationPatchObjectV1Request
 import eZmaxApi.models.EzsignfoldersignerassociationPatchObjectV1Response
+import eZmaxApi.models.EzsignfoldersignerassociationReassignV1Request
+import eZmaxApi.models.EzsignfoldersignerassociationReassignV1Response
 
 import com.squareup.moshi.Json
 
@@ -52,7 +54,7 @@ import eZmaxApi.infrastructure.ResponseType
 import eZmaxApi.infrastructure.Success
 import eZmaxApi.infrastructure.toMultiValue
 
-class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = ApiClient.defaultClient) : ApiClient(basePath, client) {
+class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
@@ -62,7 +64,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
 
     /**
      * Creates an Url to allow embedded signing
-     * This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.  There will be a list to retrieve informations after the signing happens in the embedded version. To do so, there is a list of parameter to add to your sReturnUrl.  In example: https://www.example.com/sReturl?sParameter1&amp;sParameter2. The sParameter1 et sParameter2 will be replace when we will redirect on the url.
+     * This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
      * @param pkiEzsignfoldersignerassociationID 
      * @param ezsignfoldersignerassociationCreateEmbeddedUrlV1Request 
      * @return EzsignfoldersignerassociationCreateEmbeddedUrlV1Response
@@ -94,7 +96,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
 
     /**
      * Creates an Url to allow embedded signing
-     * This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.  There will be a list to retrieve informations after the signing happens in the embedded version. To do so, there is a list of parameter to add to your sReturnUrl.  In example: https://www.example.com/sReturl?sParameter1&amp;sParameter2. The sParameter1 et sParameter2 will be replace when we will redirect on the url.
+     * This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
      * @param pkiEzsignfoldersignerassociationID 
      * @param ezsignfoldersignerassociationCreateEmbeddedUrlV1Request 
      * @return ApiResponse<EzsignfoldersignerassociationCreateEmbeddedUrlV1Response?>
@@ -791,6 +793,81 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
         return RequestConfig(
             method = RequestMethod.PATCH,
             path = "/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}".replace("{"+"pkiEzsignfoldersignerassociationID"+"}", encodeURIComponent(pkiEzsignfoldersignerassociationID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Reassign remaining unsigned signatures and forms
+     * Reassign remaining unsigned signatures and forms
+     * @param pkiEzsignfoldersignerassociationID 
+     * @param ezsignfoldersignerassociationReassignV1Request 
+     * @return EzsignfoldersignerassociationReassignV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignfoldersignerassociationReassignV1(pkiEzsignfoldersignerassociationID: kotlin.Int, ezsignfoldersignerassociationReassignV1Request: EzsignfoldersignerassociationReassignV1Request) : EzsignfoldersignerassociationReassignV1Response {
+        val localVarResponse = ezsignfoldersignerassociationReassignV1WithHttpInfo(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationReassignV1Request = ezsignfoldersignerassociationReassignV1Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfoldersignerassociationReassignV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Reassign remaining unsigned signatures and forms
+     * Reassign remaining unsigned signatures and forms
+     * @param pkiEzsignfoldersignerassociationID 
+     * @param ezsignfoldersignerassociationReassignV1Request 
+     * @return ApiResponse<EzsignfoldersignerassociationReassignV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignfoldersignerassociationReassignV1WithHttpInfo(pkiEzsignfoldersignerassociationID: kotlin.Int, ezsignfoldersignerassociationReassignV1Request: EzsignfoldersignerassociationReassignV1Request) : ApiResponse<EzsignfoldersignerassociationReassignV1Response?> {
+        val localVariableConfig = ezsignfoldersignerassociationReassignV1RequestConfig(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationReassignV1Request = ezsignfoldersignerassociationReassignV1Request)
+
+        return request<EzsignfoldersignerassociationReassignV1Request, EzsignfoldersignerassociationReassignV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsignfoldersignerassociationReassignV1
+     *
+     * @param pkiEzsignfoldersignerassociationID 
+     * @param ezsignfoldersignerassociationReassignV1Request 
+     * @return RequestConfig
+     */
+    fun ezsignfoldersignerassociationReassignV1RequestConfig(pkiEzsignfoldersignerassociationID: kotlin.Int, ezsignfoldersignerassociationReassignV1Request: EzsignfoldersignerassociationReassignV1Request) : RequestConfig<EzsignfoldersignerassociationReassignV1Request> {
+        val localVariableBody = ezsignfoldersignerassociationReassignV1Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/reassign".replace("{"+"pkiEzsignfoldersignerassociationID"+"}", encodeURIComponent(pkiEzsignfoldersignerassociationID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

@@ -33,5 +33,8 @@ data class TaxassignmentGetAutocompleteV2ResponseMPayload (
     @Json(name = "a_objTaxassignment")
     val aObjTaxassignment: kotlin.collections.List<TaxassignmentAutocompleteElementResponse>
 
-)
+) {
+
+
+}
 

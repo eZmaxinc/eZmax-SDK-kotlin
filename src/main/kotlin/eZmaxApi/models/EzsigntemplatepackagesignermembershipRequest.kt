@@ -52,5 +52,8 @@ data class EzsigntemplatepackagesignermembershipRequest (
     @Json(name = "iEzsigntemplatepackagesignermembershipCopy")
     val iEzsigntemplatepackagesignermembershipCopy: kotlin.Int? = null
 
-)
+) {
+
+
+}
 

@@ -52,5 +52,8 @@ data class CommunicationexternalrecipientRequest (
     @Json(name = "sCommunicationexternalrecipientName")
     val sCommunicationexternalrecipientName: kotlin.String? = null
 
-)
+) {
+
+
+}
 

@@ -32,5 +32,8 @@ data class ScimServiceProviderConfigChangePassword (
     @Json(name = "supported")
     val supported: kotlin.Boolean
 
-)
+) {
+
+
+}
 

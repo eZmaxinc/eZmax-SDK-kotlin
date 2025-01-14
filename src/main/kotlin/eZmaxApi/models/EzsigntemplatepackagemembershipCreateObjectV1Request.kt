@@ -32,5 +32,8 @@ data class EzsigntemplatepackagemembershipCreateObjectV1Request (
     @Json(name = "a_objEzsigntemplatepackagemembership")
     val aObjEzsigntemplatepackagemembership: kotlin.collections.List<EzsigntemplatepackagemembershipRequestCompound>
 
-)
+) {
+
+
+}
 

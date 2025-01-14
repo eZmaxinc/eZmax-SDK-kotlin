@@ -72,5 +72,8 @@ data class DiscussionmessageResponse (
     @Json(name = "sDiscussionmessageActionrequiredname")
     val sDiscussionmessageActionrequiredname: kotlin.String? = null
 
-)
+) {
+
+
+}
 

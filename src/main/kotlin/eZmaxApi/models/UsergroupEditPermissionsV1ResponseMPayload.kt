@@ -31,5 +31,8 @@ data class UsergroupEditPermissionsV1ResponseMPayload (
     @Json(name = "a_pkiPermissionID")
     val aPkiPermissionID: kotlin.collections.List<kotlin.Int>
 
-)
+) {
+
+
+}
 

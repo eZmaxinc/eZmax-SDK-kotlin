@@ -77,5 +77,8 @@ data class SessionhistoryListElement (
     @Json(name = "sUserLoginname")
     val sUserLoginname: kotlin.String? = null
 
-)
+) {
+
+
+}
 

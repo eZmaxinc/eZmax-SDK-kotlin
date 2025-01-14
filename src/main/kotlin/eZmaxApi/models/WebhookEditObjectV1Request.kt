@@ -32,5 +32,8 @@ data class WebhookEditObjectV1Request (
     @Json(name = "objWebhook")
     val objWebhook: WebhookRequestCompound
 
-)
+) {
+
+
+}
 

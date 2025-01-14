@@ -42,5 +42,8 @@ data class BrandingGetListV1ResponseMPayload (
     @Json(name = "a_objBranding")
     val aObjBranding: kotlin.collections.List<BrandingListElement>
 
-)
+) {
+
+
+}
 

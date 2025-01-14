@@ -32,5 +32,8 @@ data class EzsignfolderImportEzsigntemplatepackageV1ResponseMPayload (
     @Json(name = "a_objEzsigndocument")
     val aObjEzsigndocument: kotlin.collections.List<EzsigndocumentResponseCompound>
 
-)
+) {
+
+
+}
 

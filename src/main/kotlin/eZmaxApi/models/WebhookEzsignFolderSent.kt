@@ -43,5 +43,8 @@ data class WebhookEzsignFolderSent (
     @Json(name = "objEzsignfolder")
     val objEzsignfolder: EzsignfolderResponse
 
-)
+) {
+
+
+}
 

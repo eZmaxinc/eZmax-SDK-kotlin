@@ -37,5 +37,8 @@ data class CustomWebhooklogResponse (
     @Json(name = "tWebhooklogJson")
     val tWebhooklogJson: kotlin.String
 
-)
+) {
+
+
+}
 

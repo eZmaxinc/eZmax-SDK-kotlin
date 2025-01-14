@@ -61,5 +61,11 @@ class EzsigntemplatepackageRequestTest : ShouldSpec() {
             //modelInstance.pkiEzsigntemplatepackageID shouldBe ("TODO")
         }
 
+        // to test the property `fkiEzdoctemplatedocumentID` - The unique ID of the Ezdoctemplatedocument
+        should("test fkiEzdoctemplatedocumentID") {
+            // uncomment below to test the property
+            //modelInstance.fkiEzdoctemplatedocumentID shouldBe ("TODO")
+        }
+
     }
 }

@@ -32,5 +32,8 @@ data class SignatureGetObjectV2ResponseMPayload (
     @Json(name = "objSignature")
     val objSignature: SignatureResponseCompound
 
-)
+) {
+
+
+}
 

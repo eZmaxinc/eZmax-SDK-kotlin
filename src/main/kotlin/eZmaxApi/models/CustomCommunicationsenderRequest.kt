@@ -52,5 +52,8 @@ data class CustomCommunicationsenderRequest (
     @Json(name = "fkiUserID")
     val fkiUserID: kotlin.Int? = null
 
-)
+) {
+
+
+}
 

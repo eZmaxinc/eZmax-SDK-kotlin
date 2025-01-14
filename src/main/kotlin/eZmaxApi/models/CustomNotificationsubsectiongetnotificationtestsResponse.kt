@@ -57,5 +57,8 @@ data class CustomNotificationsubsectiongetnotificationtestsResponse (
     @Json(name = "sNotificationsectionNameX")
     val sNotificationsectionNameX: kotlin.String? = null
 
-)
+) {
+
+
+}
 

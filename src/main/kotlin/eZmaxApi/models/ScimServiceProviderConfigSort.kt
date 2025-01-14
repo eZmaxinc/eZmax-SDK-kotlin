@@ -32,5 +32,8 @@ data class ScimServiceProviderConfigSort (
     @Json(name = "supported")
     val supported: kotlin.Boolean
 
-)
+) {
+
+
+}
 

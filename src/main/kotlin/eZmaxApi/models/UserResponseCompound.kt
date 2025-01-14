@@ -216,5 +216,8 @@ data class UserResponseCompound (
     @Json(name = "bUserAttachmentautoverified")
     val bUserAttachmentautoverified: kotlin.Boolean? = null
 
-)
+) {
+
+
+}
 

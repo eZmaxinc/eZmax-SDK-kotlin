@@ -31,6 +31,24 @@ class CustomEzsignfoldertypeResponseTest : ShouldSpec() {
             //modelInstance.pkiEzsignfoldertypeID shouldBe ("TODO")
         }
 
+        // to test the property `fkiFontIDAnnotation` - The unique ID of the Font
+        should("test fkiFontIDAnnotation") {
+            // uncomment below to test the property
+            //modelInstance.fkiFontIDAnnotation shouldBe ("TODO")
+        }
+
+        // to test the property `fkiFontIDFormfield` - The unique ID of the Font
+        should("test fkiFontIDFormfield") {
+            // uncomment below to test the property
+            //modelInstance.fkiFontIDFormfield shouldBe ("TODO")
+        }
+
+        // to test the property `fkiFontIDSignature` - The unique ID of the Font
+        should("test fkiFontIDSignature") {
+            // uncomment below to test the property
+            //modelInstance.fkiFontIDSignature shouldBe ("TODO")
+        }
+
         // to test the property `sEzsignfoldertypeNameX` - The name of the Ezsignfoldertype in the language of the requester
         should("test sEzsignfoldertypeNameX") {
             // uncomment below to test the property
@@ -55,6 +73,12 @@ class CustomEzsignfoldertypeResponseTest : ShouldSpec() {
             //modelInstance.bEzsignfoldertypeAllowdownloadproofezsignsigner shouldBe ("TODO")
         }
 
+        // to test the property `bEzsignfoldertypeAutomaticsignature` - Whether we allow the automatic signature by an User
+        should("test bEzsignfoldertypeAutomaticsignature") {
+            // uncomment below to test the property
+            //modelInstance.bEzsignfoldertypeAutomaticsignature shouldBe ("TODO")
+        }
+
         // to test the property `bEzsignfoldertypeDelegate` - Wheter if delegation of signature is allowed to another user or not
         should("test bEzsignfoldertypeDelegate") {
             // uncomment below to test the property
@@ -77,6 +101,30 @@ class CustomEzsignfoldertypeResponseTest : ShouldSpec() {
         should("test bEzsignfoldertypeReassignuser") {
             // uncomment below to test the property
             //modelInstance.bEzsignfoldertypeReassignuser shouldBe ("TODO")
+        }
+
+        // to test the property `bEzsignfoldertypeReassigngroup` - Wheter if Reassignment of signatures of the groups to which the user belongs is authorized by a user to himself
+        should("test bEzsignfoldertypeReassigngroup") {
+            // uncomment below to test the property
+            //modelInstance.bEzsignfoldertypeReassigngroup shouldBe ("TODO")
+        }
+
+        // to test the property `iEzsignfoldertypeDeadlinedays` - The number of days to get all Ezsignsignatures
+        should("test iEzsignfoldertypeDeadlinedays") {
+            // uncomment below to test the property
+            //modelInstance.iEzsignfoldertypeDeadlinedays shouldBe ("TODO")
+        }
+
+        // to test the property `iEzsignfoldertypeFontsizeannotation` - Font size for annotations
+        should("test iEzsignfoldertypeFontsizeannotation") {
+            // uncomment below to test the property
+            //modelInstance.iEzsignfoldertypeFontsizeannotation shouldBe ("TODO")
+        }
+
+        // to test the property `iEzsignfoldertypeFontsizeformfield` - Font size for form fields
+        should("test iEzsignfoldertypeFontsizeformfield") {
+            // uncomment below to test the property
+            //modelInstance.iEzsignfoldertypeFontsizeformfield shouldBe ("TODO")
         }
 
     }

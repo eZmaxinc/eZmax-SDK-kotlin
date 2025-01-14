@@ -2,16 +2,17 @@
 
 All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/rest*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**ezsignsignatureCreateObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureCreateObjectV1) | **POST** /1/object/ezsignsignature | Create a new Ezsignsignature
-[**ezsignsignatureCreateObjectV2**](ObjectEzsignsignatureApi.md#ezsignsignatureCreateObjectV2) | **POST** /2/object/ezsignsignature | Create a new Ezsignsignature
-[**ezsignsignatureDeleteObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureDeleteObjectV1) | **DELETE** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Delete an existing Ezsignsignature
-[**ezsignsignatureEditObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureEditObjectV1) | **PUT** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Edit an existing Ezsignsignature
-[**ezsignsignatureGetEzsignsignatureattachmentV1**](ObjectEzsignsignatureApi.md#ezsignsignatureGetEzsignsignatureattachmentV1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID}/getEzsignsignatureattachment | Retrieve an existing Ezsignsignature&#39;s Ezsignsignatureattachments
-[**ezsignsignatureGetEzsignsignaturesAutomaticV1**](ObjectEzsignsignatureApi.md#ezsignsignatureGetEzsignsignaturesAutomaticV1) | **GET** /1/object/ezsignsignature/getEzsignsignaturesAutomatic | Retrieve all automatic Ezsignsignatures
-[**ezsignsignatureGetObjectV2**](ObjectEzsignsignatureApi.md#ezsignsignatureGetObjectV2) | **GET** /2/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
-[**ezsignsignatureSignV1**](ObjectEzsignsignatureApi.md#ezsignsignatureSignV1) | **POST** /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign | Sign the Ezsignsignature
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**ezsignsignatureCreateObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureCreateObjectV1) | **POST** /1/object/ezsignsignature | Create a new Ezsignsignature |
+| [**ezsignsignatureCreateObjectV2**](ObjectEzsignsignatureApi.md#ezsignsignatureCreateObjectV2) | **POST** /2/object/ezsignsignature | Create a new Ezsignsignature |
+| [**ezsignsignatureCreateObjectV3**](ObjectEzsignsignatureApi.md#ezsignsignatureCreateObjectV3) | **POST** /3/object/ezsignsignature | Create a new Ezsignsignature |
+| [**ezsignsignatureDeleteObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureDeleteObjectV1) | **DELETE** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Delete an existing Ezsignsignature |
+| [**ezsignsignatureEditObjectV2**](ObjectEzsignsignatureApi.md#ezsignsignatureEditObjectV2) | **PUT** /2/object/ezsignsignature/{pkiEzsignsignatureID} | Edit an existing Ezsignsignature |
+| [**ezsignsignatureGetEzsignsignatureattachmentV1**](ObjectEzsignsignatureApi.md#ezsignsignatureGetEzsignsignatureattachmentV1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID}/getEzsignsignatureattachment | Retrieve an existing Ezsignsignature&#39;s Ezsignsignatureattachments |
+| [**ezsignsignatureGetEzsignsignaturesAutomaticV1**](ObjectEzsignsignatureApi.md#ezsignsignatureGetEzsignsignaturesAutomaticV1) | **GET** /1/object/ezsignsignature/getEzsignsignaturesAutomatic | Retrieve all automatic Ezsignsignatures |
+| [**ezsignsignatureGetObjectV3**](ObjectEzsignsignatureApi.md#ezsignsignatureGetObjectV3) | **GET** /3/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature |
+| [**ezsignsignatureSignV1**](ObjectEzsignsignatureApi.md#ezsignsignatureSignV1) | **POST** /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign | Sign the Ezsignsignature |
 
 
 <a id="ezsignsignatureCreateObjectV1"></a>
@@ -43,10 +44,9 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ezsignsignatureCreateObjectV1Request** | [**kotlin.collections.List&lt;EzsignsignatureCreateObjectV1Request&gt;**](EzsignsignatureCreateObjectV1Request.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **ezsignsignatureCreateObjectV1Request** | [**kotlin.collections.List&lt;EzsignsignatureCreateObjectV1Request&gt;**](EzsignsignatureCreateObjectV1Request.md)|  | |
 
 ### Return type
 
@@ -93,14 +93,62 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ezsignsignatureCreateObjectV2Request** | [**EzsignsignatureCreateObjectV2Request**](EzsignsignatureCreateObjectV2Request.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **ezsignsignatureCreateObjectV2Request** | [**EzsignsignatureCreateObjectV2Request**](EzsignsignatureCreateObjectV2Request.md)|  | |
 
 ### Return type
 
 [**EzsignsignatureCreateObjectV2Response**](EzsignsignatureCreateObjectV2Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a id="ezsignsignatureCreateObjectV3"></a>
+# **ezsignsignatureCreateObjectV3**
+> EzsignsignatureCreateObjectV3Response ezsignsignatureCreateObjectV3(ezsignsignatureCreateObjectV3Request)
+
+Create a new Ezsignsignature
+
+The endpoint allows to create one or many elements at once.
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsignsignatureApi()
+val ezsignsignatureCreateObjectV3Request : EzsignsignatureCreateObjectV3Request =  // EzsignsignatureCreateObjectV3Request | 
+try {
+    val result : EzsignsignatureCreateObjectV3Response = apiInstance.ezsignsignatureCreateObjectV3(ezsignsignatureCreateObjectV3Request)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsignsignatureApi#ezsignsignatureCreateObjectV3")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsignsignatureApi#ezsignsignatureCreateObjectV3")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **ezsignsignatureCreateObjectV3Request** | [**EzsignsignatureCreateObjectV3Request**](EzsignsignatureCreateObjectV3Request.md)|  | |
+
+### Return type
+
+[**EzsignsignatureCreateObjectV3Response**](EzsignsignatureCreateObjectV3Response.md)
 
 ### Authorization
 
@@ -143,10 +191,9 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsignsignatureID** | **kotlin.Int**|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsignsignatureID** | **kotlin.Int**|  | |
 
 ### Return type
 
@@ -164,9 +211,9 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a id="ezsignsignatureEditObjectV1"></a>
-# **ezsignsignatureEditObjectV1**
-> EzsignsignatureEditObjectV1Response ezsignsignatureEditObjectV1(pkiEzsignsignatureID, ezsignsignatureEditObjectV1Request)
+<a id="ezsignsignatureEditObjectV2"></a>
+# **ezsignsignatureEditObjectV2**
+> EzsignsignatureEditObjectV2Response ezsignsignatureEditObjectV2(pkiEzsignsignatureID, ezsignsignatureEditObjectV2Request)
 
 Edit an existing Ezsignsignature
 
@@ -180,29 +227,28 @@ Edit an existing Ezsignsignature
 
 val apiInstance = ObjectEzsignsignatureApi()
 val pkiEzsignsignatureID : kotlin.Int = 56 // kotlin.Int | 
-val ezsignsignatureEditObjectV1Request : EzsignsignatureEditObjectV1Request =  // EzsignsignatureEditObjectV1Request | 
+val ezsignsignatureEditObjectV2Request : EzsignsignatureEditObjectV2Request =  // EzsignsignatureEditObjectV2Request | 
 try {
-    val result : EzsignsignatureEditObjectV1Response = apiInstance.ezsignsignatureEditObjectV1(pkiEzsignsignatureID, ezsignsignatureEditObjectV1Request)
+    val result : EzsignsignatureEditObjectV2Response = apiInstance.ezsignsignatureEditObjectV2(pkiEzsignsignatureID, ezsignsignatureEditObjectV2Request)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling ObjectEzsignsignatureApi#ezsignsignatureEditObjectV1")
+    println("4xx response calling ObjectEzsignsignatureApi#ezsignsignatureEditObjectV2")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling ObjectEzsignsignatureApi#ezsignsignatureEditObjectV1")
+    println("5xx response calling ObjectEzsignsignatureApi#ezsignsignatureEditObjectV2")
     e.printStackTrace()
 }
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsignsignatureID** | **kotlin.Int**|  |
- **ezsignsignatureEditObjectV1Request** | [**EzsignsignatureEditObjectV1Request**](EzsignsignatureEditObjectV1Request.md)|  |
+| **pkiEzsignsignatureID** | **kotlin.Int**|  | |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **ezsignsignatureEditObjectV2Request** | [**EzsignsignatureEditObjectV2Request**](EzsignsignatureEditObjectV2Request.md)|  | |
 
 ### Return type
 
-[**EzsignsignatureEditObjectV1Response**](EzsignsignatureEditObjectV1Response.md)
+[**EzsignsignatureEditObjectV2Response**](EzsignsignatureEditObjectV2Response.md)
 
 ### Authorization
 
@@ -243,10 +289,9 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsignsignatureID** | **kotlin.Int**|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsignsignatureID** | **kotlin.Int**|  | |
 
 ### Return type
 
@@ -310,9 +355,9 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a id="ezsignsignatureGetObjectV2"></a>
-# **ezsignsignatureGetObjectV2**
-> EzsignsignatureGetObjectV2Response ezsignsignatureGetObjectV2(pkiEzsignsignatureID)
+<a id="ezsignsignatureGetObjectV3"></a>
+# **ezsignsignatureGetObjectV3**
+> EzsignsignatureGetObjectV3Response ezsignsignatureGetObjectV3(pkiEzsignsignatureID)
 
 Retrieve an existing Ezsignsignature
 
@@ -327,26 +372,25 @@ Retrieve an existing Ezsignsignature
 val apiInstance = ObjectEzsignsignatureApi()
 val pkiEzsignsignatureID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : EzsignsignatureGetObjectV2Response = apiInstance.ezsignsignatureGetObjectV2(pkiEzsignsignatureID)
+    val result : EzsignsignatureGetObjectV3Response = apiInstance.ezsignsignatureGetObjectV3(pkiEzsignsignatureID)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling ObjectEzsignsignatureApi#ezsignsignatureGetObjectV2")
+    println("4xx response calling ObjectEzsignsignatureApi#ezsignsignatureGetObjectV3")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling ObjectEzsignsignatureApi#ezsignsignatureGetObjectV2")
+    println("5xx response calling ObjectEzsignsignatureApi#ezsignsignatureGetObjectV3")
     e.printStackTrace()
 }
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsignsignatureID** | **kotlin.Int**|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsignsignatureID** | **kotlin.Int**|  | |
 
 ### Return type
 
-[**EzsignsignatureGetObjectV2Response**](EzsignsignatureGetObjectV2Response.md)
+[**EzsignsignatureGetObjectV3Response**](EzsignsignatureGetObjectV3Response.md)
 
 ### Authorization
 
@@ -390,11 +434,10 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsignsignatureID** | **kotlin.Int**|  |
- **ezsignsignatureSignV1Request** | [**EzsignsignatureSignV1Request**](EzsignsignatureSignV1Request.md)|  |
+| **pkiEzsignsignatureID** | **kotlin.Int**|  | |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **ezsignsignatureSignV1Request** | [**EzsignsignatureSignV1Request**](EzsignsignatureSignV1Request.md)|  | |
 
 ### Return type
 

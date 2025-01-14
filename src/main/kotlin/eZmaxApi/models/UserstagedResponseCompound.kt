@@ -57,5 +57,8 @@ data class UserstagedResponseCompound (
     @Json(name = "sUserstagedExternalid")
     val sUserstagedExternalid: kotlin.String
 
-)
+) {
+
+
+}
 

@@ -37,5 +37,8 @@ data class EzsigntemplateformfieldgroupsignerResponse (
     @Json(name = "fkiEzsigntemplatesignerID")
     val fkiEzsigntemplatesignerID: kotlin.Int
 
-)
+) {
+
+
+}
 

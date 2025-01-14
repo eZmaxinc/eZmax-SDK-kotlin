@@ -33,5 +33,8 @@ data class UsergroupexternalGetAutocompleteV2ResponseMPayload (
     @Json(name = "a_objUsergroupexternal")
     val aObjUsergroupexternal: kotlin.collections.List<UsergroupexternalAutocompleteElementResponse>
 
-)
+) {
+
+
+}
 

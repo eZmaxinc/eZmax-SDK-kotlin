@@ -72,5 +72,8 @@ data class CommunicationreferenceRequest (
     @Json(name = "fkiRejectedoffertopurchaseID")
     val fkiRejectedoffertopurchaseID: kotlin.Int? = null
 
-)
+) {
+
+
+}
 

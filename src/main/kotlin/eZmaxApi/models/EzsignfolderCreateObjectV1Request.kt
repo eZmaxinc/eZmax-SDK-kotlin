@@ -37,5 +37,8 @@ data class EzsignfolderCreateObjectV1Request (
     @Json(name = "objEzsignfolderCompound")
     val objEzsignfolderCompound: EzsignfolderRequestCompound? = null
 
-)
+) {
+
+
+}
 

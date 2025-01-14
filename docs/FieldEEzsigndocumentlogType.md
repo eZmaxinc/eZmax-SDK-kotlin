@@ -40,9 +40,13 @@
 
     * `ImportFromInstanet` (value: `"ImportFromInstanet"`)
 
+    * `CreatedFromEzsigntemplatepublic` (value: `"CreatedFromEzsigntemplatepublic"`)
+
     * `SendEmail` (value: `"SendEmail"`)
 
     * `FormCompletion` (value: `"FormCompletion"`)
+
+    * `FormSaveAsDraft` (value: `"FormSaveAsDraft"`)
 
     * `SignatureAttachmentAdd` (value: `"SignatureAttachmentAdd"`)
 
@@ -65,6 +69,8 @@
     * `RegeneratePageForm` (value: `"RegeneratePageForm"`)
 
     * `Reassign` (value: `"Reassign"`)
+
+    * `DocumentCompletion` (value: `"DocumentCompletion"`)
 
 
 

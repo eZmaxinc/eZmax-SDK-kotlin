@@ -32,5 +32,8 @@ data class EzsignsignergroupEditObjectV1Request (
     @Json(name = "objEzsignsignergroup")
     val objEzsignsignergroup: EzsignsignergroupRequestCompound
 
-)
+) {
+
+
+}
 

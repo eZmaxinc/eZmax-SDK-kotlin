@@ -37,5 +37,11 @@ class WebsiteRequestCompoundTest : ShouldSpec() {
             //modelInstance.sWebsiteAddress shouldBe ("TODO")
         }
 
+        // to test the property `pkiWebsiteID` - The unique ID of the Website Default
+        should("test pkiWebsiteID") {
+            // uncomment below to test the property
+            //modelInstance.pkiWebsiteID shouldBe ("TODO")
+        }
+
     }
 }

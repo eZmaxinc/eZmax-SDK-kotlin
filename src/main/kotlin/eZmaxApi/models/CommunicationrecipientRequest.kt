@@ -102,5 +102,8 @@ data class CommunicationrecipientRequest (
     @Json(name = "eCommunicationrecipientType")
     val eCommunicationrecipientType: FieldECommunicationrecipientType? = null
 
-)
+) {
+
+
+}
 

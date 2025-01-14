@@ -23,7 +23,9 @@ import com.squareup.moshi.JsonClass
  * A Signature Object
  *
  * @param pkiSignatureID The unique ID of the Signature
+ * @param fkiFontID The unique ID of the Font
  * @param sSignatureUrl The URL of the SVG file for the Signature
+ * @param sSignatureUrlinitials The URL of the SVG file for the Initials
  */
 
 
@@ -33,9 +35,20 @@ data class SignatureResponseCompound (
     @Json(name = "pkiSignatureID")
     val pkiSignatureID: kotlin.Int,
 
+    /* The unique ID of the Font */
+    @Json(name = "fkiFontID")
+    val fkiFontID: kotlin.Int? = null,
+
     /* The URL of the SVG file for the Signature */
     @Json(name = "sSignatureUrl")
-    val sSignatureUrl: kotlin.String
+    val sSignatureUrl: kotlin.String? = null,
 
-)
+    /* The URL of the SVG file for the Initials */
+    @Json(name = "sSignatureUrlinitials")
+    val sSignatureUrlinitials: kotlin.String? = null
+
+) {
+
+
+}
 

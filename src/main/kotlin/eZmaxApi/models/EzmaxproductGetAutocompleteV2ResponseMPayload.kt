@@ -33,5 +33,8 @@ data class EzmaxproductGetAutocompleteV2ResponseMPayload (
     @Json(name = "a_objEzmaxproduct")
     val aObjEzmaxproduct: kotlin.collections.List<EzmaxproductAutocompleteElementResponse>
 
-)
+) {
+
+
+}
 

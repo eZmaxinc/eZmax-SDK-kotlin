@@ -33,5 +33,8 @@ data class EzsigntsarequirementGetAutocompleteV2ResponseMPayload (
     @Json(name = "a_objEzsigntsarequirement")
     val aObjEzsigntsarequirement: kotlin.collections.List<EzsigntsarequirementAutocompleteElementResponse>
 
-)
+) {
+
+
+}
 

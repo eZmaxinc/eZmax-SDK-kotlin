@@ -127,5 +127,8 @@ data class EzmaxinvoicingsummaryglobalResponseCompound (
     @Json(name = "a_objEzmaxinvoicingcommission")
     val aObjEzmaxinvoicingcommission: kotlin.collections.List<EzmaxinvoicingcommissionResponseCompound>? = null
 
-)
+) {
+
+
+}
 

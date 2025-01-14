@@ -42,5 +42,8 @@ data class EzmaxinvoicingGetProvisionalV1Response (
     @Json(name = "objDebug")
     val objDebug: CommonResponseObjDebug? = null
 
-)
+) {
+
+
+}
 

@@ -42,5 +42,8 @@ data class EzsigndiscussionCreateObjectV1Response (
     @Json(name = "objDebug")
     val objDebug: CommonResponseObjDebug? = null
 
-)
+) {
+
+
+}
 

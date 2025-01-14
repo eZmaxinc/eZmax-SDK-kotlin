@@ -68,5 +68,8 @@ data class ScimServiceProviderConfig (
     @Json(name = "sort")
     val sort: ScimServiceProviderConfigSort
 
-)
+) {
+
+
+}
 

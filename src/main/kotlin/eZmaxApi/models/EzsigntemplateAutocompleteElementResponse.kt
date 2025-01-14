@@ -47,5 +47,8 @@ data class EzsigntemplateAutocompleteElementResponse (
     @Json(name = "bEzsigntemplateIsactive")
     val bEzsigntemplateIsactive: kotlin.Boolean
 
-)
+) {
+
+
+}
 

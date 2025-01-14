@@ -52,5 +52,8 @@ data class EzsignfoldersignerassociationResponseCompoundUser (
     @Json(name = "sEmailAddress")
     val sEmailAddress: kotlin.String
 
-)
+) {
+
+
+}
 

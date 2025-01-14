@@ -32,5 +32,8 @@ data class BillingentityinternalCreateObjectV1Request (
     @Json(name = "a_objBillingentityinternal")
     val aObjBillingentityinternal: kotlin.collections.List<BillingentityinternalRequestCompound>
 
-)
+) {
+
+
+}
 

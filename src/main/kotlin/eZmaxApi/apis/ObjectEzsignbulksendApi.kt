@@ -16,12 +16,12 @@
 package eZmaxApi.apis
 
 import java.io.IOException
-import okhttp3.OkHttpClient
+import okhttp3.Call
 import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommonResponseError
-import eZmaxApi.models.EzsignbulksendCreateEzsignbulksendtransmissionV1Request
-import eZmaxApi.models.EzsignbulksendCreateEzsignbulksendtransmissionV1Response
+import eZmaxApi.models.EzsignbulksendCreateEzsignbulksendtransmissionV2Request
+import eZmaxApi.models.EzsignbulksendCreateEzsignbulksendtransmissionV2Response
 import eZmaxApi.models.EzsignbulksendCreateObjectV1Request
 import eZmaxApi.models.EzsignbulksendCreateObjectV1Response
 import eZmaxApi.models.EzsignbulksendDeleteObjectV1Response
@@ -52,7 +52,7 @@ import eZmaxApi.infrastructure.ResponseType
 import eZmaxApi.infrastructure.Success
 import eZmaxApi.infrastructure.toMultiValue
 
-class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = ApiClient.defaultClient) : ApiClient(basePath, client) {
+class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
@@ -64,8 +64,8 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
      * Create a new Ezsignbulksendtransmission in the Ezsignbulksend
      * 
      * @param pkiEzsignbulksendID 
-     * @param ezsignbulksendCreateEzsignbulksendtransmissionV1Request 
-     * @return EzsignbulksendCreateEzsignbulksendtransmissionV1Response
+     * @param ezsignbulksendCreateEzsignbulksendtransmissionV2Request 
+     * @return EzsignbulksendCreateEzsignbulksendtransmissionV2Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -74,11 +74,11 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignbulksendCreateEzsignbulksendtransmissionV1(pkiEzsignbulksendID: kotlin.Int, ezsignbulksendCreateEzsignbulksendtransmissionV1Request: EzsignbulksendCreateEzsignbulksendtransmissionV1Request) : EzsignbulksendCreateEzsignbulksendtransmissionV1Response {
-        val localVarResponse = ezsignbulksendCreateEzsignbulksendtransmissionV1WithHttpInfo(pkiEzsignbulksendID = pkiEzsignbulksendID, ezsignbulksendCreateEzsignbulksendtransmissionV1Request = ezsignbulksendCreateEzsignbulksendtransmissionV1Request)
+    fun ezsignbulksendCreateEzsignbulksendtransmissionV2(pkiEzsignbulksendID: kotlin.Int, ezsignbulksendCreateEzsignbulksendtransmissionV2Request: EzsignbulksendCreateEzsignbulksendtransmissionV2Request) : EzsignbulksendCreateEzsignbulksendtransmissionV2Response {
+        val localVarResponse = ezsignbulksendCreateEzsignbulksendtransmissionV2WithHttpInfo(pkiEzsignbulksendID = pkiEzsignbulksendID, ezsignbulksendCreateEzsignbulksendtransmissionV2Request = ezsignbulksendCreateEzsignbulksendtransmissionV2Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignbulksendCreateEzsignbulksendtransmissionV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignbulksendCreateEzsignbulksendtransmissionV2Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -96,30 +96,30 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
      * Create a new Ezsignbulksendtransmission in the Ezsignbulksend
      * 
      * @param pkiEzsignbulksendID 
-     * @param ezsignbulksendCreateEzsignbulksendtransmissionV1Request 
-     * @return ApiResponse<EzsignbulksendCreateEzsignbulksendtransmissionV1Response?>
+     * @param ezsignbulksendCreateEzsignbulksendtransmissionV2Request 
+     * @return ApiResponse<EzsignbulksendCreateEzsignbulksendtransmissionV2Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignbulksendCreateEzsignbulksendtransmissionV1WithHttpInfo(pkiEzsignbulksendID: kotlin.Int, ezsignbulksendCreateEzsignbulksendtransmissionV1Request: EzsignbulksendCreateEzsignbulksendtransmissionV1Request) : ApiResponse<EzsignbulksendCreateEzsignbulksendtransmissionV1Response?> {
-        val localVariableConfig = ezsignbulksendCreateEzsignbulksendtransmissionV1RequestConfig(pkiEzsignbulksendID = pkiEzsignbulksendID, ezsignbulksendCreateEzsignbulksendtransmissionV1Request = ezsignbulksendCreateEzsignbulksendtransmissionV1Request)
+    fun ezsignbulksendCreateEzsignbulksendtransmissionV2WithHttpInfo(pkiEzsignbulksendID: kotlin.Int, ezsignbulksendCreateEzsignbulksendtransmissionV2Request: EzsignbulksendCreateEzsignbulksendtransmissionV2Request) : ApiResponse<EzsignbulksendCreateEzsignbulksendtransmissionV2Response?> {
+        val localVariableConfig = ezsignbulksendCreateEzsignbulksendtransmissionV2RequestConfig(pkiEzsignbulksendID = pkiEzsignbulksendID, ezsignbulksendCreateEzsignbulksendtransmissionV2Request = ezsignbulksendCreateEzsignbulksendtransmissionV2Request)
 
-        return request<EzsignbulksendCreateEzsignbulksendtransmissionV1Request, EzsignbulksendCreateEzsignbulksendtransmissionV1Response>(
+        return request<EzsignbulksendCreateEzsignbulksendtransmissionV2Request, EzsignbulksendCreateEzsignbulksendtransmissionV2Response>(
             localVariableConfig
         )
     }
 
     /**
-     * To obtain the request config of the operation ezsignbulksendCreateEzsignbulksendtransmissionV1
+     * To obtain the request config of the operation ezsignbulksendCreateEzsignbulksendtransmissionV2
      *
      * @param pkiEzsignbulksendID 
-     * @param ezsignbulksendCreateEzsignbulksendtransmissionV1Request 
+     * @param ezsignbulksendCreateEzsignbulksendtransmissionV2Request 
      * @return RequestConfig
      */
-    fun ezsignbulksendCreateEzsignbulksendtransmissionV1RequestConfig(pkiEzsignbulksendID: kotlin.Int, ezsignbulksendCreateEzsignbulksendtransmissionV1Request: EzsignbulksendCreateEzsignbulksendtransmissionV1Request) : RequestConfig<EzsignbulksendCreateEzsignbulksendtransmissionV1Request> {
-        val localVariableBody = ezsignbulksendCreateEzsignbulksendtransmissionV1Request
+    fun ezsignbulksendCreateEzsignbulksendtransmissionV2RequestConfig(pkiEzsignbulksendID: kotlin.Int, ezsignbulksendCreateEzsignbulksendtransmissionV2Request: EzsignbulksendCreateEzsignbulksendtransmissionV2Request) : RequestConfig<EzsignbulksendCreateEzsignbulksendtransmissionV2Request> {
+        val localVariableBody = ezsignbulksendCreateEzsignbulksendtransmissionV2Request
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Content-Type"] = "application/json"
@@ -127,7 +127,7 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
 
         return RequestConfig(
             method = RequestMethod.POST,
-            path = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission".replace("{"+"pkiEzsignbulksendID"+"}", encodeURIComponent(pkiEzsignbulksendID.toString())),
+            path = "/2/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission".replace("{"+"pkiEzsignbulksendID"+"}", encodeURIComponent(pkiEzsignbulksendID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,
@@ -358,7 +358,16 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
      */
      enum class ECsvSeparatorEzsignbulksendGetCsvTemplateV1(val value: kotlin.String) {
          @Json(name = "Comma") Comma("Comma"),
-         @Json(name = "Semicolon") Semicolon("Semicolon")
+         @Json(name = "Semicolon") Semicolon("Semicolon");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
      }
 
     /**
@@ -678,7 +687,16 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
          @Json(name = "iEzsignsignatureSigned_ASC") iEzsignsignatureSigned_ASC("iEzsignsignatureSigned_ASC"),
          @Json(name = "iEzsignsignatureSigned_DESC") iEzsignsignatureSigned_DESC("iEzsignsignatureSigned_DESC"),
          @Json(name = "bEzsignbulksendIsactive_ASC") bEzsignbulksendIsactive_ASC("bEzsignbulksendIsactive_ASC"),
-         @Json(name = "bEzsignbulksendIsactive_DESC") bEzsignbulksendIsactive_DESC("bEzsignbulksendIsactive_DESC")
+         @Json(name = "bEzsignbulksendIsactive_DESC") bEzsignbulksendIsactive_DESC("bEzsignbulksendIsactive_DESC");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
      }
 
     /**

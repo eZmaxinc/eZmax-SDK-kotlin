@@ -37,5 +37,8 @@ data class WebsocketResponseErrorV1MPayload (
     @Json(name = "eErrorCode")
     val eErrorCode: FieldEErrorCode
 
-)
+) {
+
+
+}
 

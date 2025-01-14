@@ -16,7 +16,7 @@
 package eZmaxApi.apis
 
 import java.io.IOException
-import okhttp3.OkHttpClient
+import okhttp3.Call
 import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommonResponseError
@@ -24,12 +24,14 @@ import eZmaxApi.models.EzsignsignatureCreateObjectV1Request
 import eZmaxApi.models.EzsignsignatureCreateObjectV1Response
 import eZmaxApi.models.EzsignsignatureCreateObjectV2Request
 import eZmaxApi.models.EzsignsignatureCreateObjectV2Response
+import eZmaxApi.models.EzsignsignatureCreateObjectV3Request
+import eZmaxApi.models.EzsignsignatureCreateObjectV3Response
 import eZmaxApi.models.EzsignsignatureDeleteObjectV1Response
-import eZmaxApi.models.EzsignsignatureEditObjectV1Request
-import eZmaxApi.models.EzsignsignatureEditObjectV1Response
+import eZmaxApi.models.EzsignsignatureEditObjectV2Request
+import eZmaxApi.models.EzsignsignatureEditObjectV2Response
 import eZmaxApi.models.EzsignsignatureGetEzsignsignatureattachmentV1Response
 import eZmaxApi.models.EzsignsignatureGetEzsignsignaturesAutomaticV1Response
-import eZmaxApi.models.EzsignsignatureGetObjectV2Response
+import eZmaxApi.models.EzsignsignatureGetObjectV3Response
 import eZmaxApi.models.EzsignsignatureSignV1Request
 import eZmaxApi.models.EzsignsignatureSignV1Response
 
@@ -49,7 +51,7 @@ import eZmaxApi.infrastructure.ResponseType
 import eZmaxApi.infrastructure.Success
 import eZmaxApi.infrastructure.toMultiValue
 
-class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = ApiClient.defaultClient) : ApiClient(basePath, client) {
+class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
@@ -147,7 +149,9 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsignsignatureCreateObjectV2(ezsignsignatureCreateObjectV2Request: EzsignsignatureCreateObjectV2Request) : EzsignsignatureCreateObjectV2Response {
+        @Suppress("DEPRECATION")
         val localVarResponse = ezsignsignatureCreateObjectV2WithHttpInfo(ezsignsignatureCreateObjectV2Request = ezsignsignatureCreateObjectV2Request)
 
         return when (localVarResponse.responseType) {
@@ -175,7 +179,9 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsignsignatureCreateObjectV2WithHttpInfo(ezsignsignatureCreateObjectV2Request: EzsignsignatureCreateObjectV2Request) : ApiResponse<EzsignsignatureCreateObjectV2Response?> {
+        @Suppress("DEPRECATION")
         val localVariableConfig = ezsignsignatureCreateObjectV2RequestConfig(ezsignsignatureCreateObjectV2Request = ezsignsignatureCreateObjectV2Request)
 
         return request<EzsignsignatureCreateObjectV2Request, EzsignsignatureCreateObjectV2Response>(
@@ -189,6 +195,7 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client
      * @param ezsignsignatureCreateObjectV2Request 
      * @return RequestConfig
      */
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsignsignatureCreateObjectV2RequestConfig(ezsignsignatureCreateObjectV2Request: EzsignsignatureCreateObjectV2Request) : RequestConfig<EzsignsignatureCreateObjectV2Request> {
         val localVariableBody = ezsignsignatureCreateObjectV2Request
         val localVariableQuery: MultiValueMap = mutableMapOf()
@@ -199,6 +206,78 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/2/object/ezsignsignature",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Create a new Ezsignsignature
+     * The endpoint allows to create one or many elements at once.
+     * @param ezsignsignatureCreateObjectV3Request 
+     * @return EzsignsignatureCreateObjectV3Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignsignatureCreateObjectV3(ezsignsignatureCreateObjectV3Request: EzsignsignatureCreateObjectV3Request) : EzsignsignatureCreateObjectV3Response {
+        val localVarResponse = ezsignsignatureCreateObjectV3WithHttpInfo(ezsignsignatureCreateObjectV3Request = ezsignsignatureCreateObjectV3Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignsignatureCreateObjectV3Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Create a new Ezsignsignature
+     * The endpoint allows to create one or many elements at once.
+     * @param ezsignsignatureCreateObjectV3Request 
+     * @return ApiResponse<EzsignsignatureCreateObjectV3Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignsignatureCreateObjectV3WithHttpInfo(ezsignsignatureCreateObjectV3Request: EzsignsignatureCreateObjectV3Request) : ApiResponse<EzsignsignatureCreateObjectV3Response?> {
+        val localVariableConfig = ezsignsignatureCreateObjectV3RequestConfig(ezsignsignatureCreateObjectV3Request = ezsignsignatureCreateObjectV3Request)
+
+        return request<EzsignsignatureCreateObjectV3Request, EzsignsignatureCreateObjectV3Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsignsignatureCreateObjectV3
+     *
+     * @param ezsignsignatureCreateObjectV3Request 
+     * @return RequestConfig
+     */
+    fun ezsignsignatureCreateObjectV3RequestConfig(ezsignsignatureCreateObjectV3Request: EzsignsignatureCreateObjectV3Request) : RequestConfig<EzsignsignatureCreateObjectV3Request> {
+        val localVariableBody = ezsignsignatureCreateObjectV3Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/3/object/ezsignsignature",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,
@@ -281,8 +360,8 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client
      * Edit an existing Ezsignsignature
      * 
      * @param pkiEzsignsignatureID 
-     * @param ezsignsignatureEditObjectV1Request 
-     * @return EzsignsignatureEditObjectV1Response
+     * @param ezsignsignatureEditObjectV2Request 
+     * @return EzsignsignatureEditObjectV2Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -291,11 +370,11 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignsignatureEditObjectV1(pkiEzsignsignatureID: kotlin.Int, ezsignsignatureEditObjectV1Request: EzsignsignatureEditObjectV1Request) : EzsignsignatureEditObjectV1Response {
-        val localVarResponse = ezsignsignatureEditObjectV1WithHttpInfo(pkiEzsignsignatureID = pkiEzsignsignatureID, ezsignsignatureEditObjectV1Request = ezsignsignatureEditObjectV1Request)
+    fun ezsignsignatureEditObjectV2(pkiEzsignsignatureID: kotlin.Int, ezsignsignatureEditObjectV2Request: EzsignsignatureEditObjectV2Request) : EzsignsignatureEditObjectV2Response {
+        val localVarResponse = ezsignsignatureEditObjectV2WithHttpInfo(pkiEzsignsignatureID = pkiEzsignsignatureID, ezsignsignatureEditObjectV2Request = ezsignsignatureEditObjectV2Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignsignatureEditObjectV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignsignatureEditObjectV2Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -313,30 +392,30 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client
      * Edit an existing Ezsignsignature
      * 
      * @param pkiEzsignsignatureID 
-     * @param ezsignsignatureEditObjectV1Request 
-     * @return ApiResponse<EzsignsignatureEditObjectV1Response?>
+     * @param ezsignsignatureEditObjectV2Request 
+     * @return ApiResponse<EzsignsignatureEditObjectV2Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignsignatureEditObjectV1WithHttpInfo(pkiEzsignsignatureID: kotlin.Int, ezsignsignatureEditObjectV1Request: EzsignsignatureEditObjectV1Request) : ApiResponse<EzsignsignatureEditObjectV1Response?> {
-        val localVariableConfig = ezsignsignatureEditObjectV1RequestConfig(pkiEzsignsignatureID = pkiEzsignsignatureID, ezsignsignatureEditObjectV1Request = ezsignsignatureEditObjectV1Request)
+    fun ezsignsignatureEditObjectV2WithHttpInfo(pkiEzsignsignatureID: kotlin.Int, ezsignsignatureEditObjectV2Request: EzsignsignatureEditObjectV2Request) : ApiResponse<EzsignsignatureEditObjectV2Response?> {
+        val localVariableConfig = ezsignsignatureEditObjectV2RequestConfig(pkiEzsignsignatureID = pkiEzsignsignatureID, ezsignsignatureEditObjectV2Request = ezsignsignatureEditObjectV2Request)
 
-        return request<EzsignsignatureEditObjectV1Request, EzsignsignatureEditObjectV1Response>(
+        return request<EzsignsignatureEditObjectV2Request, EzsignsignatureEditObjectV2Response>(
             localVariableConfig
         )
     }
 
     /**
-     * To obtain the request config of the operation ezsignsignatureEditObjectV1
+     * To obtain the request config of the operation ezsignsignatureEditObjectV2
      *
      * @param pkiEzsignsignatureID 
-     * @param ezsignsignatureEditObjectV1Request 
+     * @param ezsignsignatureEditObjectV2Request 
      * @return RequestConfig
      */
-    fun ezsignsignatureEditObjectV1RequestConfig(pkiEzsignsignatureID: kotlin.Int, ezsignsignatureEditObjectV1Request: EzsignsignatureEditObjectV1Request) : RequestConfig<EzsignsignatureEditObjectV1Request> {
-        val localVariableBody = ezsignsignatureEditObjectV1Request
+    fun ezsignsignatureEditObjectV2RequestConfig(pkiEzsignsignatureID: kotlin.Int, ezsignsignatureEditObjectV2Request: EzsignsignatureEditObjectV2Request) : RequestConfig<EzsignsignatureEditObjectV2Request> {
+        val localVariableBody = ezsignsignatureEditObjectV2Request
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Content-Type"] = "application/json"
@@ -344,7 +423,7 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client
 
         return RequestConfig(
             method = RequestMethod.PUT,
-            path = "/1/object/ezsignsignature/{pkiEzsignsignatureID}".replace("{"+"pkiEzsignsignatureID"+"}", encodeURIComponent(pkiEzsignsignatureID.toString())),
+            path = "/2/object/ezsignsignature/{pkiEzsignsignatureID}".replace("{"+"pkiEzsignsignatureID"+"}", encodeURIComponent(pkiEzsignsignatureID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,
@@ -495,7 +574,7 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client
      * Retrieve an existing Ezsignsignature
      * 
      * @param pkiEzsignsignatureID 
-     * @return EzsignsignatureGetObjectV2Response
+     * @return EzsignsignatureGetObjectV3Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -504,11 +583,11 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignsignatureGetObjectV2(pkiEzsignsignatureID: kotlin.Int) : EzsignsignatureGetObjectV2Response {
-        val localVarResponse = ezsignsignatureGetObjectV2WithHttpInfo(pkiEzsignsignatureID = pkiEzsignsignatureID)
+    fun ezsignsignatureGetObjectV3(pkiEzsignsignatureID: kotlin.Int) : EzsignsignatureGetObjectV3Response {
+        val localVarResponse = ezsignsignatureGetObjectV3WithHttpInfo(pkiEzsignsignatureID = pkiEzsignsignatureID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignsignatureGetObjectV2Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignsignatureGetObjectV3Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -526,27 +605,27 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client
      * Retrieve an existing Ezsignsignature
      * 
      * @param pkiEzsignsignatureID 
-     * @return ApiResponse<EzsignsignatureGetObjectV2Response?>
+     * @return ApiResponse<EzsignsignatureGetObjectV3Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignsignatureGetObjectV2WithHttpInfo(pkiEzsignsignatureID: kotlin.Int) : ApiResponse<EzsignsignatureGetObjectV2Response?> {
-        val localVariableConfig = ezsignsignatureGetObjectV2RequestConfig(pkiEzsignsignatureID = pkiEzsignsignatureID)
+    fun ezsignsignatureGetObjectV3WithHttpInfo(pkiEzsignsignatureID: kotlin.Int) : ApiResponse<EzsignsignatureGetObjectV3Response?> {
+        val localVariableConfig = ezsignsignatureGetObjectV3RequestConfig(pkiEzsignsignatureID = pkiEzsignsignatureID)
 
-        return request<Unit, EzsignsignatureGetObjectV2Response>(
+        return request<Unit, EzsignsignatureGetObjectV3Response>(
             localVariableConfig
         )
     }
 
     /**
-     * To obtain the request config of the operation ezsignsignatureGetObjectV2
+     * To obtain the request config of the operation ezsignsignatureGetObjectV3
      *
      * @param pkiEzsignsignatureID 
      * @return RequestConfig
      */
-    fun ezsignsignatureGetObjectV2RequestConfig(pkiEzsignsignatureID: kotlin.Int) : RequestConfig<Unit> {
+    fun ezsignsignatureGetObjectV3RequestConfig(pkiEzsignsignatureID: kotlin.Int) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
@@ -554,7 +633,7 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/2/object/ezsignsignature/{pkiEzsignsignatureID}".replace("{"+"pkiEzsignsignatureID"+"}", encodeURIComponent(pkiEzsignsignatureID.toString())),
+            path = "/3/object/ezsignsignature/{pkiEzsignsignatureID}".replace("{"+"pkiEzsignsignatureID"+"}", encodeURIComponent(pkiEzsignsignatureID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

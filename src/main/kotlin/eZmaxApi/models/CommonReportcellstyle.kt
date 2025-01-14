@@ -67,5 +67,8 @@ data class CommonReportcellstyle (
     @Json(name = "eReportcellFontunderline")
     val eReportcellFontunderline: EnumFontunderline
 
-)
+) {
+
+
+}
 

@@ -2,9 +2,9 @@
 # EzsignfolderCreateObjectV2Request
 
 ## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**aObjEzsignfolder** | [**kotlin.collections.List&lt;EzsignfolderRequestCompound&gt;**](EzsignfolderRequestCompound.md) |  | 
+| Name | Type | Description | Notes |
+| ------------ | ------------- | ------------- | ------------- |
+| **aObjEzsignfolder** | [**kotlin.collections.List&lt;EzsignfolderRequestCompound&gt;**](EzsignfolderRequestCompound.md) |  |  |
 
 
 

@@ -51,6 +51,12 @@ class CustomEzsignfoldertransmissionResponseTest : ShouldSpec() {
             //modelInstance.iEzsignfolderSignaturetotal shouldBe ("TODO")
         }
 
+        // to test the property `iEzsignfolderFormfieldtotal` - The number of total form fields that were requested in the Ezsignfolder
+        should("test iEzsignfolderFormfieldtotal") {
+            // uncomment below to test the property
+            //modelInstance.iEzsignfolderFormfieldtotal shouldBe ("TODO")
+        }
+
         // to test the property `iEzsignfolderSignaturesigned` - The number of signatures that were signed in the Ezsignfolder.
         should("test iEzsignfolderSignaturesigned") {
             // uncomment below to test the property

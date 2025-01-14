@@ -32,5 +32,8 @@ data class EzsigndocumentGetFormDataV1ResponseMPayload (
     @Json(name = "objFormDataDocument")
     val objFormDataDocument: CustomFormDataDocumentResponse
 
-)
+) {
+
+
+}
 

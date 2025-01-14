@@ -42,5 +42,8 @@ data class TaxassignmentAutocompleteElementResponse (
     @Json(name = "bTaxassignmentIsactive")
     val bTaxassignmentIsactive: kotlin.Boolean
 
-)
+) {
+
+
+}
 

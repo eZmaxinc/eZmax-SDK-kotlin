@@ -19,7 +19,11 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.ActivesessionResponse
+import eZmaxApi.models.FieldEActivesessionEzsign
+import eZmaxApi.models.FieldEActivesessionEzsignaccess
+import eZmaxApi.models.FieldEActivesessionEzsignprepaid
 import eZmaxApi.models.FieldEActivesessionOrigin
+import eZmaxApi.models.FieldEActivesessionRealestateinprogress
 import eZmaxApi.models.FieldEActivesessionUsertype
 import eZmaxApi.models.FieldEActivesessionWeekdaystart
 
@@ -76,6 +80,12 @@ class ActivesessionResponseTest : ShouldSpec() {
             //modelInstance.bActivesessionIssuperadmin shouldBe ("TODO")
         }
 
+        // to test the property `eActivesessionEzsignaccess`
+        should("test eActivesessionEzsignaccess") {
+            // uncomment below to test the property
+            //modelInstance.eActivesessionEzsignaccess shouldBe ("TODO")
+        }
+
         // to test the property `pksCustomerCode` - The customer code assigned to your account
         should("test pksCustomerCode") {
             // uncomment below to test the property
@@ -86,6 +96,48 @@ class ActivesessionResponseTest : ShouldSpec() {
         should("test fkiSystemconfigurationtypeID") {
             // uncomment below to test the property
             //modelInstance.fkiSystemconfigurationtypeID shouldBe ("TODO")
+        }
+
+        // to test the property `bActivesessionAttachment` - Can access attachment when we clone a user
+        should("test bActivesessionAttachment") {
+            // uncomment below to test the property
+            //modelInstance.bActivesessionAttachment shouldBe ("TODO")
+        }
+
+        // to test the property `bActivesessionCanafe` - Can access canafe when we clone a user
+        should("test bActivesessionCanafe") {
+            // uncomment below to test the property
+            //modelInstance.bActivesessionCanafe shouldBe ("TODO")
+        }
+
+        // to test the property `bActivesessionFinancial` - Can access financial element when we clone a user
+        should("test bActivesessionFinancial") {
+            // uncomment below to test the property
+            //modelInstance.bActivesessionFinancial shouldBe ("TODO")
+        }
+
+        // to test the property `bActivesessionRealestatecompleted` - Can access closed realestate folders when we clone a user
+        should("test bActivesessionRealestatecompleted") {
+            // uncomment below to test the property
+            //modelInstance.bActivesessionRealestatecompleted shouldBe ("TODO")
+        }
+
+        // to test the property `eActivesessionEzsign`
+        should("test eActivesessionEzsign") {
+            // uncomment below to test the property
+            //modelInstance.eActivesessionEzsign shouldBe ("TODO")
+        }
+
+        // to test the property `eActivesessionEzsignprepaid`
+        should("test eActivesessionEzsignprepaid") {
+            // uncomment below to test the property
+            //modelInstance.eActivesessionEzsignprepaid shouldBe ("TODO")
+        }
+
+        // to test the property `eActivesessionRealestateinprogress`
+        should("test eActivesessionRealestateinprogress") {
+            // uncomment below to test the property
+            //modelInstance.eActivesessionRealestateinprogress shouldBe ("TODO")
         }
 
         // to test the property `fkiSignatureID` - The unique ID of the Signature

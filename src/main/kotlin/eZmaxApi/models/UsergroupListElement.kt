@@ -42,5 +42,8 @@ data class UsergroupListElement (
     @Json(name = "iCountUser")
     val iCountUser: kotlin.Int
 
-)
+) {
+
+
+}
 

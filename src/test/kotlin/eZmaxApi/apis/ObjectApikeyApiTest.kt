@@ -25,6 +25,8 @@ import eZmaxApi.models.ApikeyEditObjectV1Request
 import eZmaxApi.models.ApikeyEditObjectV1Response
 import eZmaxApi.models.ApikeyEditPermissionsV1Request
 import eZmaxApi.models.ApikeyEditPermissionsV1Response
+import eZmaxApi.models.ApikeyGenerateDelegatedCredentialsV1Request
+import eZmaxApi.models.ApikeyGenerateDelegatedCredentialsV1Response
 import eZmaxApi.models.ApikeyGetCorsV1Response
 import eZmaxApi.models.ApikeyGetListV1Response
 import eZmaxApi.models.ApikeyGetObjectV2Response
@@ -63,6 +65,14 @@ class ObjectApikeyApiTest : ShouldSpec() {
             //val pkiApikeyID : kotlin.Int = 56 // kotlin.Int | 
             //val apikeyEditPermissionsV1Request : ApikeyEditPermissionsV1Request =  // ApikeyEditPermissionsV1Request | 
             //val result : ApikeyEditPermissionsV1Response = apiInstance.apikeyEditPermissionsV1(pkiApikeyID, apikeyEditPermissionsV1Request)
+            //result shouldBe ("TODO")
+        }
+
+        // to test apikeyGenerateDelegatedCredentialsV1
+        should("test apikeyGenerateDelegatedCredentialsV1") {
+            // uncomment below to test apikeyGenerateDelegatedCredentialsV1
+            //val apikeyGenerateDelegatedCredentialsV1Request : ApikeyGenerateDelegatedCredentialsV1Request =  // ApikeyGenerateDelegatedCredentialsV1Request | 
+            //val result : ApikeyGenerateDelegatedCredentialsV1Response = apiInstance.apikeyGenerateDelegatedCredentialsV1(apikeyGenerateDelegatedCredentialsV1Request)
             //result shouldBe ("TODO")
         }
 

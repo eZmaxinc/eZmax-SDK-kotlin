@@ -32,5 +32,8 @@ data class EzsignbulksendEditObjectV1Request (
     @Json(name = "objEzsignbulksend")
     val objEzsignbulksend: EzsignbulksendRequestCompound
 
-)
+) {
+
+
+}
 

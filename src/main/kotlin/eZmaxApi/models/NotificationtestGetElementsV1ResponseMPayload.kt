@@ -45,5 +45,8 @@ data class NotificationtestGetElementsV1ResponseMPayload (
     @Json(name = "a_objVariableobject")
     val aObjVariableobject: kotlin.collections.List<kotlin.collections.Map<kotlin.String, kotlin.Any>>
 
-)
+) {
+
+
+}
 

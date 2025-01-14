@@ -33,5 +33,8 @@ data class PhonetypeGetAutocompleteV2ResponseMPayload (
     @Json(name = "a_objPhonetype")
     val aObjPhonetype: kotlin.collections.List<PhonetypeAutocompleteElementResponse>
 
-)
+) {
+
+
+}
 

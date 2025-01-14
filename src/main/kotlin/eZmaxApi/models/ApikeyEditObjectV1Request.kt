@@ -32,5 +32,8 @@ data class ApikeyEditObjectV1Request (
     @Json(name = "objApikey")
     val objApikey: ApikeyRequestCompound
 
-)
+) {
+
+
+}
 

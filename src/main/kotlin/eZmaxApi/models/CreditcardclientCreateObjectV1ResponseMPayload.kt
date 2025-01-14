@@ -32,5 +32,8 @@ data class CreditcardclientCreateObjectV1ResponseMPayload (
     @Json(name = "a_pkiCreditcardclientID")
     val aPkiCreditcardclientID: kotlin.collections.List<kotlin.Int>
 
-)
+) {
+
+
+}
 

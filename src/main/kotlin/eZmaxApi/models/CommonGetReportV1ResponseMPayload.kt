@@ -32,5 +32,8 @@ data class CommonGetReportV1ResponseMPayload (
     @Json(name = "objReportgroup")
     val objReportgroup: CommonReportgroup
 
-)
+) {
+
+
+}
 

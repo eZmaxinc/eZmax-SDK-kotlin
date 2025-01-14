@@ -32,5 +32,8 @@ data class EzsigndocumentGetTemporaryProofV1ResponseMPayload (
     @Json(name = "a_objEzsigndocumentlog")
     val aObjEzsigndocumentlog: kotlin.collections.List<EzsigndocumentlogResponseCompound>
 
-)
+) {
+
+
+}
 

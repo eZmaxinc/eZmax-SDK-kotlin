@@ -2,18 +2,18 @@
 
 All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/rest*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**brandingCreateObjectV1**](ObjectBrandingApi.md#brandingCreateObjectV1) | **POST** /1/object/branding | Create a new Branding
-[**brandingEditObjectV1**](ObjectBrandingApi.md#brandingEditObjectV1) | **PUT** /1/object/branding/{pkiBrandingID} | Edit an existing Branding
-[**brandingGetAutocompleteV2**](ObjectBrandingApi.md#brandingGetAutocompleteV2) | **GET** /2/object/branding/getAutocomplete/{sSelector} | Retrieve Brandings and IDs
-[**brandingGetListV1**](ObjectBrandingApi.md#brandingGetListV1) | **GET** /1/object/branding/getList | Retrieve Branding list
-[**brandingGetObjectV2**](ObjectBrandingApi.md#brandingGetObjectV2) | **GET** /2/object/branding/{pkiBrandingID} | Retrieve an existing Branding
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**brandingCreateObjectV2**](ObjectBrandingApi.md#brandingCreateObjectV2) | **POST** /2/object/branding | Create a new Branding |
+| [**brandingEditObjectV2**](ObjectBrandingApi.md#brandingEditObjectV2) | **PUT** /2/object/branding/{pkiBrandingID} | Edit an existing Branding |
+| [**brandingGetAutocompleteV2**](ObjectBrandingApi.md#brandingGetAutocompleteV2) | **GET** /2/object/branding/getAutocomplete/{sSelector} | Retrieve Brandings and IDs |
+| [**brandingGetListV1**](ObjectBrandingApi.md#brandingGetListV1) | **GET** /1/object/branding/getList | Retrieve Branding list |
+| [**brandingGetObjectV3**](ObjectBrandingApi.md#brandingGetObjectV3) | **GET** /3/object/branding/{pkiBrandingID} | Retrieve an existing Branding |
 
 
-<a id="brandingCreateObjectV1"></a>
-# **brandingCreateObjectV1**
-> BrandingCreateObjectV1Response brandingCreateObjectV1(brandingCreateObjectV1Request)
+<a id="brandingCreateObjectV2"></a>
+# **brandingCreateObjectV2**
+> BrandingCreateObjectV2Response brandingCreateObjectV2(brandingCreateObjectV2Request)
 
 Create a new Branding
 
@@ -26,28 +26,27 @@ The endpoint allows to create one or many elements at once.
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectBrandingApi()
-val brandingCreateObjectV1Request : BrandingCreateObjectV1Request =  // BrandingCreateObjectV1Request | 
+val brandingCreateObjectV2Request : BrandingCreateObjectV2Request =  // BrandingCreateObjectV2Request | 
 try {
-    val result : BrandingCreateObjectV1Response = apiInstance.brandingCreateObjectV1(brandingCreateObjectV1Request)
+    val result : BrandingCreateObjectV2Response = apiInstance.brandingCreateObjectV2(brandingCreateObjectV2Request)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling ObjectBrandingApi#brandingCreateObjectV1")
+    println("4xx response calling ObjectBrandingApi#brandingCreateObjectV2")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling ObjectBrandingApi#brandingCreateObjectV1")
+    println("5xx response calling ObjectBrandingApi#brandingCreateObjectV2")
     e.printStackTrace()
 }
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **brandingCreateObjectV1Request** | [**BrandingCreateObjectV1Request**](BrandingCreateObjectV1Request.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **brandingCreateObjectV2Request** | [**BrandingCreateObjectV2Request**](BrandingCreateObjectV2Request.md)|  | |
 
 ### Return type
 
-[**BrandingCreateObjectV1Response**](BrandingCreateObjectV1Response.md)
+[**BrandingCreateObjectV2Response**](BrandingCreateObjectV2Response.md)
 
 ### Authorization
 
@@ -61,9 +60,9 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a id="brandingEditObjectV1"></a>
-# **brandingEditObjectV1**
-> BrandingEditObjectV1Response brandingEditObjectV1(pkiBrandingID, brandingEditObjectV1Request)
+<a id="brandingEditObjectV2"></a>
+# **brandingEditObjectV2**
+> BrandingEditObjectV2Response brandingEditObjectV2(pkiBrandingID, brandingEditObjectV2Request)
 
 Edit an existing Branding
 
@@ -77,29 +76,28 @@ Edit an existing Branding
 
 val apiInstance = ObjectBrandingApi()
 val pkiBrandingID : kotlin.Int = 56 // kotlin.Int | 
-val brandingEditObjectV1Request : BrandingEditObjectV1Request =  // BrandingEditObjectV1Request | 
+val brandingEditObjectV2Request : BrandingEditObjectV2Request =  // BrandingEditObjectV2Request | 
 try {
-    val result : BrandingEditObjectV1Response = apiInstance.brandingEditObjectV1(pkiBrandingID, brandingEditObjectV1Request)
+    val result : BrandingEditObjectV2Response = apiInstance.brandingEditObjectV2(pkiBrandingID, brandingEditObjectV2Request)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling ObjectBrandingApi#brandingEditObjectV1")
+    println("4xx response calling ObjectBrandingApi#brandingEditObjectV2")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling ObjectBrandingApi#brandingEditObjectV1")
+    println("5xx response calling ObjectBrandingApi#brandingEditObjectV2")
     e.printStackTrace()
 }
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiBrandingID** | **kotlin.Int**|  |
- **brandingEditObjectV1Request** | [**BrandingEditObjectV1Request**](BrandingEditObjectV1Request.md)|  |
+| **pkiBrandingID** | **kotlin.Int**|  | |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **brandingEditObjectV2Request** | [**BrandingEditObjectV2Request**](BrandingEditObjectV2Request.md)|  | |
 
 ### Return type
 
-[**BrandingEditObjectV1Response**](BrandingEditObjectV1Response.md)
+[**BrandingEditObjectV2Response**](BrandingEditObjectV2Response.md)
 
 ### Authorization
 
@@ -145,13 +143,12 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sSelector** | **kotlin.String**| The type of Brandings to return | [enum: All]
- **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
- **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional]
- **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
+| **sSelector** | **kotlin.String**| The type of Brandings to return | [enum: All] |
+| **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive] |
+| **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional] |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
 
 ### Return type
 
@@ -202,14 +199,13 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiBrandingID_ASC, pkiBrandingID_DESC, sBrandingDescriptionX_ASC, sBrandingDescriptionX_DESC, iBrandingColortext_ASC, iBrandingColortext_DESC, iBrandingColortextlinkbox_ASC, iBrandingColortextlinkbox_DESC, iBrandingColortextbutton_ASC, iBrandingColortextbutton_DESC, iBrandingColorbackground_ASC, iBrandingColorbackground_DESC, iBrandingColorbackgroundbutton_ASC, iBrandingColorbackgroundbutton_DESC, iBrandingColorbackgroundsmallbox_ASC, iBrandingColorbackgroundsmallbox_DESC, bBrandingIsactive_ASC, bBrandingIsactive_DESC]
- **iRowMax** | **kotlin.Int**|  | [optional]
- **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0]
- **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
- **sFilter** | **kotlin.String**|  | [optional]
+| **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiBrandingID_ASC, pkiBrandingID_DESC, sBrandingDescriptionX_ASC, sBrandingDescriptionX_DESC, iBrandingColortext_ASC, iBrandingColortext_DESC, iBrandingColortextlinkbox_ASC, iBrandingColortextlinkbox_DESC, iBrandingColortextbutton_ASC, iBrandingColortextbutton_DESC, iBrandingColorbackground_ASC, iBrandingColorbackground_DESC, iBrandingColorbackgroundbutton_ASC, iBrandingColorbackgroundbutton_DESC, iBrandingColorbackgroundsmallbox_ASC, iBrandingColorbackgroundsmallbox_DESC, bBrandingIsactive_ASC, bBrandingIsactive_DESC] |
+| **iRowMax** | **kotlin.Int**|  | [optional] |
+| **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0] |
+| **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sFilter** | **kotlin.String**|  | [optional] |
 
 ### Return type
 
@@ -227,9 +223,9 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a id="brandingGetObjectV2"></a>
-# **brandingGetObjectV2**
-> BrandingGetObjectV2Response brandingGetObjectV2(pkiBrandingID)
+<a id="brandingGetObjectV3"></a>
+# **brandingGetObjectV3**
+> BrandingGetObjectV3Response brandingGetObjectV3(pkiBrandingID)
 
 Retrieve an existing Branding
 
@@ -244,26 +240,25 @@ Retrieve an existing Branding
 val apiInstance = ObjectBrandingApi()
 val pkiBrandingID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : BrandingGetObjectV2Response = apiInstance.brandingGetObjectV2(pkiBrandingID)
+    val result : BrandingGetObjectV3Response = apiInstance.brandingGetObjectV3(pkiBrandingID)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling ObjectBrandingApi#brandingGetObjectV2")
+    println("4xx response calling ObjectBrandingApi#brandingGetObjectV3")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling ObjectBrandingApi#brandingGetObjectV2")
+    println("5xx response calling ObjectBrandingApi#brandingGetObjectV3")
     e.printStackTrace()
 }
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiBrandingID** | **kotlin.Int**|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiBrandingID** | **kotlin.Int**|  | |
 
 ### Return type
 
-[**BrandingGetObjectV2Response**](BrandingGetObjectV2Response.md)
+[**BrandingGetObjectV3Response**](BrandingGetObjectV3Response.md)
 
 ### Authorization
 

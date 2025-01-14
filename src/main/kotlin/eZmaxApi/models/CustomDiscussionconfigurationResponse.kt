@@ -52,5 +52,8 @@ data class CustomDiscussionconfigurationResponse (
     @Json(name = "bDiscussionconfigurationEditdiscussionmessageallowed")
     val bDiscussionconfigurationEditdiscussionmessageallowed: kotlin.Boolean
 
-)
+) {
+
+
+}
 

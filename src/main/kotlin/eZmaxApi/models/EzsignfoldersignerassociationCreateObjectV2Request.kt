@@ -32,5 +32,8 @@ data class EzsignfoldersignerassociationCreateObjectV2Request (
     @Json(name = "a_objEzsignfoldersignerassociation")
     val aObjEzsignfoldersignerassociation: kotlin.collections.List<EzsignfoldersignerassociationRequestCompound>
 
-)
+) {
+
+
+}
 

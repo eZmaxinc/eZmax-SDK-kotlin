@@ -37,5 +37,8 @@ data class CustomFormDataEzsignformfieldResponse (
     @Json(name = "sEzsignformfieldValue")
     val sEzsignformfieldValue: kotlin.String
 
-)
+) {
+
+
+}
 

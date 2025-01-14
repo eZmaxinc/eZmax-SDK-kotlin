@@ -42,5 +42,8 @@ data class EmailResponse (
     @Json(name = "sEmailAddress")
     val sEmailAddress: kotlin.String
 
-)
+) {
+
+
+}
 

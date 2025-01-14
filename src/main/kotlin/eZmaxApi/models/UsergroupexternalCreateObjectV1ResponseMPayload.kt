@@ -32,5 +32,8 @@ data class UsergroupexternalCreateObjectV1ResponseMPayload (
     @Json(name = "a_pkiUsergroupexternalID")
     val aPkiUsergroupexternalID: kotlin.collections.List<kotlin.Int>
 
-)
+) {
+
+
+}
 

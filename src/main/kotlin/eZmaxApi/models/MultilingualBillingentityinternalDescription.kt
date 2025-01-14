@@ -37,5 +37,8 @@ data class MultilingualBillingentityinternalDescription (
     @Json(name = "sBillingentityinternalDescription2")
     val sBillingentityinternalDescription2: kotlin.String? = null
 
-)
+) {
+
+
+}
 

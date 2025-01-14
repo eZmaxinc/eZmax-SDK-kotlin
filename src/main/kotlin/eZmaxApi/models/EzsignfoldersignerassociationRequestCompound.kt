@@ -62,5 +62,8 @@ data class EzsignfoldersignerassociationRequestCompound (
     @Json(name = "objEzsignsigner")
     val objEzsignsigner: EzsignsignerRequestCompound? = null
 
-)
+) {
+
+
+}
 

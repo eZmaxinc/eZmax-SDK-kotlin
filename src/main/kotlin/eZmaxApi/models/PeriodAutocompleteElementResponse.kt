@@ -42,5 +42,8 @@ data class PeriodAutocompleteElementResponse (
     @Json(name = "bPeriodIsactive")
     val bPeriodIsactive: kotlin.Boolean
 
-)
+) {
+
+
+}
 

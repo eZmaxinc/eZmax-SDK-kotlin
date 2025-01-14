@@ -19,6 +19,7 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectFranchisereferalincomeApi
+import eZmaxApi.models.CommonResponseErrorWrongFranchiseoffice
 import eZmaxApi.models.FranchisereferalincomeCreateObjectV2Request
 import eZmaxApi.models.FranchisereferalincomeCreateObjectV2Response
 

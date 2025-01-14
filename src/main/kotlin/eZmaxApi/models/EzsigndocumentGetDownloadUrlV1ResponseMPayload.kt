@@ -32,5 +32,8 @@ data class EzsigndocumentGetDownloadUrlV1ResponseMPayload (
     @Json(name = "sDownloadUrl")
     val sDownloadUrl: kotlin.String
 
-)
+) {
+
+
+}
 

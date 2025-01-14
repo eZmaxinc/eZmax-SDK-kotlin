@@ -31,5 +31,8 @@ data class EzsignfolderReorderV1Request (
     @Json(name = "a_pkiEzsigndocumentID")
     val aPkiEzsigndocumentID: kotlin.collections.List<kotlin.Int>
 
-)
+) {
+
+
+}
 

@@ -52,5 +52,8 @@ data class UserstagedListElement (
     @Json(name = "sUserstagedExternalid")
     val sUserstagedExternalid: kotlin.String
 
-)
+) {
+
+
+}
 

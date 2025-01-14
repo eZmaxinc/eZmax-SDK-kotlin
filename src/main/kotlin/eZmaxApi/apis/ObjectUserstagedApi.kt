@@ -16,7 +16,7 @@
 package eZmaxApi.apis
 
 import java.io.IOException
-import okhttp3.OkHttpClient
+import okhttp3.Call
 import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommonResponseError
@@ -44,7 +44,7 @@ import eZmaxApi.infrastructure.ResponseType
 import eZmaxApi.infrastructure.Success
 import eZmaxApi.infrastructure.toMultiValue
 
-class ObjectUserstagedApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = ApiClient.defaultClient) : ApiClient(basePath, client) {
+class ObjectUserstagedApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
@@ -211,7 +211,16 @@ class ObjectUserstagedApi(basePath: kotlin.String = defaultBasePath, client: OkH
          @Json(name = "sUserstagedLastname_ASC") sUserstagedLastname_ASC("sUserstagedLastname_ASC"),
          @Json(name = "sUserstagedLastname_DESC") sUserstagedLastname_DESC("sUserstagedLastname_DESC"),
          @Json(name = "sUserstagedExternalid_ASC") sUserstagedExternalid_ASC("sUserstagedExternalid_ASC"),
-         @Json(name = "sUserstagedExternalid_DESC") sUserstagedExternalid_DESC("sUserstagedExternalid_DESC")
+         @Json(name = "sUserstagedExternalid_DESC") sUserstagedExternalid_DESC("sUserstagedExternalid_DESC");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
      }
 
     /**

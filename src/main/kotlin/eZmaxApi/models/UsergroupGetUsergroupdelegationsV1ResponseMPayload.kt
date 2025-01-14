@@ -32,5 +32,8 @@ data class UsergroupGetUsergroupdelegationsV1ResponseMPayload (
     @Json(name = "a_objUsergroupdelegation")
     val aObjUsergroupdelegation: kotlin.collections.List<UsergroupdelegationResponseCompound>
 
-)
+) {
+
+
+}
 

@@ -37,5 +37,8 @@ data class EzsignformfieldgroupsignerRequest (
     @Json(name = "pkiEzsignformfieldgroupsignerID")
     val pkiEzsignformfieldgroupsignerID: kotlin.Int? = null
 
-)
+) {
+
+
+}
 

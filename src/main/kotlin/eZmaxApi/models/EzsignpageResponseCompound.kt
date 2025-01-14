@@ -62,5 +62,8 @@ data class EzsignpageResponseCompound (
     @Json(name = "sComputedImageurl")
     val sComputedImageurl: kotlin.String
 
-)
+) {
+
+
+}
 

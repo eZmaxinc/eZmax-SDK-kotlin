@@ -97,5 +97,8 @@ data class FranchisereferalincomeRequestCompound (
     @Json(name = "objAddress")
     val objAddress: AddressRequest? = null
 
-)
+) {
+
+
+}
 

@@ -43,5 +43,8 @@ data class ScimGroupMember (
     @Json(name = "\$ref")
     val dollarRef: kotlin.String? = null
 
-)
+) {
+
+
+}
 

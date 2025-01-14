@@ -43,5 +43,8 @@ data class WebhookEzsignDocumentCompleted (
     @Json(name = "objEzsigndocument")
     val objEzsigndocument: EzsigndocumentResponse
 
-)
+) {
+
+
+}
 

@@ -77,5 +77,8 @@ data class EzsigntemplateglobalResponse (
     @Json(name = "sModuleNameX")
     val sModuleNameX: kotlin.String? = null
 
-)
+) {
+
+
+}
 

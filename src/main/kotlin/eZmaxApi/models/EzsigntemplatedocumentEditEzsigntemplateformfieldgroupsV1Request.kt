@@ -32,5 +32,8 @@ data class EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request (
     @Json(name = "a_objEzsigntemplateformfieldgroup")
     val aObjEzsigntemplateformfieldgroup: kotlin.collections.List<EzsigntemplateformfieldgroupRequestCompound>
 
-)
+) {
+
+
+}
 

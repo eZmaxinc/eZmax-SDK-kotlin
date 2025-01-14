@@ -48,5 +48,8 @@ data class ScimUserList (
     @Json(name = "Resources")
     val resources: kotlin.collections.List<ScimUser>? = null
 
-)
+) {
+
+
+}
 

@@ -52,5 +52,8 @@ data class ProvinceAutocompleteElementResponse (
     @Json(name = "bProvinceIsactive")
     val bProvinceIsactive: kotlin.Boolean
 
-)
+) {
+
+
+}
 

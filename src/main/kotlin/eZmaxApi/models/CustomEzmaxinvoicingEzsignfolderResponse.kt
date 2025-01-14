@@ -62,5 +62,8 @@ data class CustomEzmaxinvoicingEzsignfolderResponse (
     @Json(name = "fkiBillingentityinternalID")
     val fkiBillingentityinternalID: kotlin.Int? = null
 
-)
+) {
+
+
+}
 

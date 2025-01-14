@@ -32,5 +32,8 @@ data class EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload (
     @Json(name = "a_objEzsignfoldersignerassociation")
     val aObjEzsignfoldersignerassociation: kotlin.collections.List<CustomEzsignfoldersignerassociationActionableElementResponse>
 
-)
+) {
+
+
+}
 

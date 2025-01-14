@@ -32,5 +32,8 @@ data class EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload (
     @Json(name = "sLoginUrl")
     val sLoginUrl: kotlin.String
 
-)
+) {
+
+
+}
 

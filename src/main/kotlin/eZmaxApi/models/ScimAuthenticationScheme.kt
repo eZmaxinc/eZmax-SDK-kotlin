@@ -57,5 +57,6 @@ data class ScimAuthenticationScheme (
         @Json(name = "httpbasic") httpbasic("httpbasic"),
         @Json(name = "httpdigest") httpdigest("httpdigest");
     }
+
 }
 

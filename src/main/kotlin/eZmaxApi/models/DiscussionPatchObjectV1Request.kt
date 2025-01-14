@@ -32,5 +32,8 @@ data class DiscussionPatchObjectV1Request (
     @Json(name = "objDiscussion")
     val objDiscussion: DiscussionRequestPatch
 
-)
+) {
+
+
+}
 

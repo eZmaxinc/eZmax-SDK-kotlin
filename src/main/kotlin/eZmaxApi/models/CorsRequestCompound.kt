@@ -42,5 +42,8 @@ data class CorsRequestCompound (
     @Json(name = "pkiCorsID")
     val pkiCorsID: kotlin.Int? = null
 
-)
+) {
+
+
+}
 

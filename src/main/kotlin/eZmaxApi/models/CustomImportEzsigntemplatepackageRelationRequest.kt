@@ -42,5 +42,8 @@ data class CustomImportEzsigntemplatepackageRelationRequest (
     @Json(name = "sEzsigntemplatepackagesignerDescription")
     val sEzsigntemplatepackagesignerDescription: kotlin.String? = null
 
-)
+) {
+
+
+}
 

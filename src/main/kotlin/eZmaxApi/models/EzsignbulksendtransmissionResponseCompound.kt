@@ -57,5 +57,8 @@ data class EzsignbulksendtransmissionResponseCompound (
     @Json(name = "a_objEzsignfoldertransmission")
     val aObjEzsignfoldertransmission: kotlin.collections.List<CustomEzsignfoldertransmissionResponse>
 
-)
+) {
+
+
+}
 

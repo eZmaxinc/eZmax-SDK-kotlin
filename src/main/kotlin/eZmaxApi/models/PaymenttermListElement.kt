@@ -57,5 +57,8 @@ data class PaymenttermListElement (
     @Json(name = "bPaymenttermIsactive")
     val bPaymenttermIsactive: kotlin.Boolean
 
-)
+) {
+
+
+}
 

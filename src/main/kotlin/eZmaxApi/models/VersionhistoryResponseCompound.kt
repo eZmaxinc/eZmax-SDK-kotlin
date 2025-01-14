@@ -82,5 +82,8 @@ data class VersionhistoryResponseCompound (
     @Json(name = "dtVersionhistoryDateend")
     val dtVersionhistoryDateend: kotlin.String? = null
 
-)
+) {
+
+
+}
 

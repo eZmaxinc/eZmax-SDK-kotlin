@@ -31,10 +31,22 @@ class SignatureResponseCompoundTest : ShouldSpec() {
             //modelInstance.pkiSignatureID shouldBe ("TODO")
         }
 
+        // to test the property `fkiFontID` - The unique ID of the Font
+        should("test fkiFontID") {
+            // uncomment below to test the property
+            //modelInstance.fkiFontID shouldBe ("TODO")
+        }
+
         // to test the property `sSignatureUrl` - The URL of the SVG file for the Signature
         should("test sSignatureUrl") {
             // uncomment below to test the property
             //modelInstance.sSignatureUrl shouldBe ("TODO")
+        }
+
+        // to test the property `sSignatureUrlinitials` - The URL of the SVG file for the Initials
+        should("test sSignatureUrlinitials") {
+            // uncomment below to test the property
+            //modelInstance.sSignatureUrlinitials shouldBe ("TODO")
         }
 
     }

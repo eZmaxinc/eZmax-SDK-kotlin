@@ -23,14 +23,22 @@ import com.squareup.moshi.JsonClass
  * A Custom Ezsignfoldertype Object
  *
  * @param pkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
+ * @param fkiFontIDAnnotation The unique ID of the Font
+ * @param fkiFontIDFormfield The unique ID of the Font
+ * @param fkiFontIDSignature The unique ID of the Font
  * @param sEzsignfoldertypeNameX The name of the Ezsignfoldertype in the language of the requester
  * @param bEzsignfoldertypeSendproofezsignsigner Whether we send the proof in the email to Ezsignsigner
  * @param bEzsignfoldertypeAllowdownloadattachmentezsignsigner Whether we allow the Ezsigndocument to be downloaded by an Ezsignsigner
  * @param bEzsignfoldertypeAllowdownloadproofezsignsigner Whether we allow the proof to be downloaded by an Ezsignsigner
+ * @param bEzsignfoldertypeAutomaticsignature Whether we allow the automatic signature by an User
  * @param bEzsignfoldertypeDelegate Wheter if delegation of signature is allowed to another user or not
  * @param bEzsignfoldertypeDiscussion Wheter if creating a new Discussion is allowed or not
  * @param bEzsignfoldertypeReassignezsignsigner Wheter if Reassignment of signature is allowed by a signatory to another signatory or not
  * @param bEzsignfoldertypeReassignuser Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not
+ * @param bEzsignfoldertypeReassigngroup Wheter if Reassignment of signatures of the groups to which the user belongs is authorized by a user to himself
+ * @param iEzsignfoldertypeDeadlinedays The number of days to get all Ezsignsignatures
+ * @param iEzsignfoldertypeFontsizeannotation Font size for annotations
+ * @param iEzsignfoldertypeFontsizeformfield Font size for form fields
  */
 
 
@@ -39,6 +47,18 @@ data class CustomEzsignfoldertypeResponse (
     /* The unique ID of the Ezsignfoldertype. */
     @Json(name = "pkiEzsignfoldertypeID")
     val pkiEzsignfoldertypeID: kotlin.Int,
+
+    /* The unique ID of the Font */
+    @Json(name = "fkiFontIDAnnotation")
+    val fkiFontIDAnnotation: kotlin.Int? = null,
+
+    /* The unique ID of the Font */
+    @Json(name = "fkiFontIDFormfield")
+    val fkiFontIDFormfield: kotlin.Int? = null,
+
+    /* The unique ID of the Font */
+    @Json(name = "fkiFontIDSignature")
+    val fkiFontIDSignature: kotlin.Int? = null,
 
     /* The name of the Ezsignfoldertype in the language of the requester */
     @Json(name = "sEzsignfoldertypeNameX")
@@ -56,6 +76,10 @@ data class CustomEzsignfoldertypeResponse (
     @Json(name = "bEzsignfoldertypeAllowdownloadproofezsignsigner")
     val bEzsignfoldertypeAllowdownloadproofezsignsigner: kotlin.Boolean? = null,
 
+    /* Whether we allow the automatic signature by an User */
+    @Json(name = "bEzsignfoldertypeAutomaticsignature")
+    val bEzsignfoldertypeAutomaticsignature: kotlin.Boolean? = null,
+
     /* Wheter if delegation of signature is allowed to another user or not */
     @Json(name = "bEzsignfoldertypeDelegate")
     val bEzsignfoldertypeDelegate: kotlin.Boolean? = null,
@@ -70,7 +94,26 @@ data class CustomEzsignfoldertypeResponse (
 
     /* Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not */
     @Json(name = "bEzsignfoldertypeReassignuser")
-    val bEzsignfoldertypeReassignuser: kotlin.Boolean? = null
+    val bEzsignfoldertypeReassignuser: kotlin.Boolean? = null,
 
-)
+    /* Wheter if Reassignment of signatures of the groups to which the user belongs is authorized by a user to himself */
+    @Json(name = "bEzsignfoldertypeReassigngroup")
+    val bEzsignfoldertypeReassigngroup: kotlin.Boolean? = null,
+
+    /* The number of days to get all Ezsignsignatures */
+    @Json(name = "iEzsignfoldertypeDeadlinedays")
+    val iEzsignfoldertypeDeadlinedays: kotlin.Int? = null,
+
+    /* Font size for annotations */
+    @Json(name = "iEzsignfoldertypeFontsizeannotation")
+    val iEzsignfoldertypeFontsizeannotation: kotlin.Int? = null,
+
+    /* Font size for form fields */
+    @Json(name = "iEzsignfoldertypeFontsizeformfield")
+    val iEzsignfoldertypeFontsizeformfield: kotlin.Int? = null
+
+) {
+
+
+}
 

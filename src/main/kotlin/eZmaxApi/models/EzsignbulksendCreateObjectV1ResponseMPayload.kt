@@ -32,5 +32,8 @@ data class EzsignbulksendCreateObjectV1ResponseMPayload (
     @Json(name = "a_pkiEzsignbulksendID")
     val aPkiEzsignbulksendID: kotlin.collections.List<kotlin.Int>
 
-)
+) {
+
+
+}
 

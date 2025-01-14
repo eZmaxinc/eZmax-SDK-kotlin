@@ -26,7 +26,7 @@ class CreditcardclientRequestTest : ShouldSpec() {
         // uncomment below to create an instance of CreditcardclientRequest
         //val modelInstance = CreditcardclientRequest()
 
-        // to test the property `bCreditcardclientrelationIsdefault` - Whether if it's an relationisdefault
+        // to test the property `bCreditcardclientrelationIsdefault` - Whether if it's the creditcardclient is the default one
         should("test bCreditcardclientrelationIsdefault") {
             // uncomment below to test the property
             //modelInstance.bCreditcardclientrelationIsdefault shouldBe ("TODO")
@@ -38,22 +38,16 @@ class CreditcardclientRequestTest : ShouldSpec() {
             //modelInstance.sCreditcardclientDescription shouldBe ("TODO")
         }
 
-        // to test the property `bCreditcardclientIsactive` - Whether the creditcardclient is active or not
-        should("test bCreditcardclientIsactive") {
+        // to test the property `bCreditcardclientAllowedcompanypayment` - Whether if it's an allowedagencypayment
+        should("test bCreditcardclientAllowedcompanypayment") {
             // uncomment below to test the property
-            //modelInstance.bCreditcardclientIsactive shouldBe ("TODO")
+            //modelInstance.bCreditcardclientAllowedcompanypayment shouldBe ("TODO")
         }
 
-        // to test the property `bCreditcardclientAllowedagencypayment` - Whether if it's an allowedagencypayment
-        should("test bCreditcardclientAllowedagencypayment") {
+        // to test the property `bCreditcardclientAllowedezsign` - Whether if it's an allowedroyallepageprotection
+        should("test bCreditcardclientAllowedezsign") {
             // uncomment below to test the property
-            //modelInstance.bCreditcardclientAllowedagencypayment shouldBe ("TODO")
-        }
-
-        // to test the property `bCreditcardclientAllowedroyallepageprotection` - Whether if it's an allowedroyallepageprotection
-        should("test bCreditcardclientAllowedroyallepageprotection") {
-            // uncomment below to test the property
-            //modelInstance.bCreditcardclientAllowedroyallepageprotection shouldBe ("TODO")
+            //modelInstance.bCreditcardclientAllowedezsign shouldBe ("TODO")
         }
 
         // to test the property `bCreditcardclientAllowedtranquillit` - Whether if it's an allowedtranquillit

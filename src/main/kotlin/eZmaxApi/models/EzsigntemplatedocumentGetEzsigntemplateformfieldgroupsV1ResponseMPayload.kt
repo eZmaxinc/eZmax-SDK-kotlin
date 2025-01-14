@@ -32,5 +32,8 @@ data class EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1ResponseMPayl
     @Json(name = "a_objEzsigntemplateformfieldgroup")
     val aObjEzsigntemplateformfieldgroup: kotlin.collections.List<EzsigntemplateformfieldgroupResponseCompound>
 
-)
+) {
+
+
+}
 

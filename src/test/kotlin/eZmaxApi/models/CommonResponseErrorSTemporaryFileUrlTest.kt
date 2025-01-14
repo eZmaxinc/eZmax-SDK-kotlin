@@ -38,6 +38,12 @@ class CommonResponseErrorSTemporaryFileUrlTest : ShouldSpec() {
             //modelInstance.eErrorCode shouldBe ("TODO")
         }
 
+        // to test the property `aSErrorMessagedetail` - More error message detail
+        should("test aSErrorMessagedetail") {
+            // uncomment below to test the property
+            //modelInstance.aSErrorMessagedetail shouldBe ("TODO")
+        }
+
         // to test the property `sTemporaryFileUrl` - The Temporary File Url of the document that was uploaded. That url can be reused instead of uploading the file again.
         should("test sTemporaryFileUrl") {
             // uncomment below to test the property

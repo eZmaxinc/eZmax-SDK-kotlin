@@ -37,5 +37,8 @@ data class CommonGetListV1ResponseMPayload (
     @Json(name = "iRowFiltered")
     val iRowFiltered: kotlin.Int
 
-)
+) {
+
+
+}
 

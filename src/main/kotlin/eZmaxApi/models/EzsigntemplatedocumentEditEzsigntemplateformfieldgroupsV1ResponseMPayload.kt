@@ -31,5 +31,8 @@ data class EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1ResponseMPay
     @Json(name = "a_pkiEzsigntemplateformfieldgroupID")
     val aPkiEzsigntemplateformfieldgroupID: kotlin.collections.List<kotlin.Int>
 
-)
+) {
+
+
+}
 

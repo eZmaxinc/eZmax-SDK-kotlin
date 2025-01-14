@@ -72,5 +72,8 @@ data class BrandingListElement (
     @Json(name = "bBrandingIsactive")
     val bBrandingIsactive: kotlin.Boolean
 
-)
+) {
+
+
+}
 

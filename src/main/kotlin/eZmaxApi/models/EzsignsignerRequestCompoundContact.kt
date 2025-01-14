@@ -72,5 +72,8 @@ data class EzsignsignerRequestCompoundContact (
     @Deprecated(message = "This property is deprecated.")
     val sPhoneNumberCell: kotlin.String? = null
 
-)
+) {
+
+
+}
 

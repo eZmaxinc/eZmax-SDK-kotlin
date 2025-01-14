@@ -37,5 +37,8 @@ data class CommonReportcell (
     @Json(name = "iReportcellRowspan")
     val iReportcellRowspan: kotlin.Int
 
-)
+) {
+
+
+}
 

@@ -32,5 +32,8 @@ data class ApikeyCreateObjectV2Request (
     @Json(name = "a_objApikey")
     val aObjApikey: kotlin.collections.List<ApikeyRequestCompound>
 
-)
+) {
+
+
+}
 

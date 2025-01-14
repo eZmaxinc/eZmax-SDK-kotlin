@@ -37,5 +37,8 @@ data class CommonResponse (
     @Json(name = "objDebug")
     val objDebug: CommonResponseObjDebug? = null
 
-)
+) {
+
+
+}
 

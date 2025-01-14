@@ -42,5 +42,8 @@ data class CommonResponseFilter (
     @Json(name = "a_Enum")
     val aEnum: kotlin.collections.Map<kotlin.String, kotlin.collections.Map<kotlin.String, kotlin.String>>? = null
 
-)
+) {
+
+
+}
 

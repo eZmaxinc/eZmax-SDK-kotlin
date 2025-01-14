@@ -37,5 +37,8 @@ data class GlobalEzmaxclientVersionV1Response (
     @Json(name = "sEzmaxclientOslatestversion")
     val sEzmaxclientOslatestversion: kotlin.String = "11"
 
-)
+) {
+
+
+}
 

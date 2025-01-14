@@ -42,5 +42,8 @@ data class ClonehistoryGetListV1ResponseMPayload (
     @Json(name = "a_objClonehistory")
     val aObjClonehistory: kotlin.collections.List<ClonehistoryListElement>
 
-)
+) {
+
+
+}
 

@@ -33,5 +33,8 @@ data class ModuleGetAutocompleteV2ResponseMPayload (
     @Json(name = "a_objModule")
     val aObjModule: kotlin.collections.List<ModuleAutocompleteElementResponse>
 
-)
+) {
+
+
+}
 

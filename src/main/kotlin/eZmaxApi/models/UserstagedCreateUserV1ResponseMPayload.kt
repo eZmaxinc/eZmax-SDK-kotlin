@@ -32,5 +32,8 @@ data class UserstagedCreateUserV1ResponseMPayload (
     @Json(name = "pkiUserID")
     val pkiUserID: kotlin.Int
 
-)
+) {
+
+
+}
 

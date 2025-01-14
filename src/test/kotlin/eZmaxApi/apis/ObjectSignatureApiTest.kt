@@ -26,6 +26,7 @@ import eZmaxApi.models.SignatureDeleteObjectV1Response
 import eZmaxApi.models.SignatureEditObjectV1Request
 import eZmaxApi.models.SignatureEditObjectV1Response
 import eZmaxApi.models.SignatureGetObjectV2Response
+import eZmaxApi.models.SignatureGetObjectV3Response
 
 class ObjectSignatureApiTest : ShouldSpec() {
     init {
@@ -63,6 +64,28 @@ class ObjectSignatureApiTest : ShouldSpec() {
             //val pkiSignatureID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Signature
             //val result : SignatureGetObjectV2Response = apiInstance.signatureGetObjectV2(pkiSignatureID)
             //result shouldBe ("TODO")
+        }
+
+        // to test signatureGetObjectV3
+        should("test signatureGetObjectV3") {
+            // uncomment below to test signatureGetObjectV3
+            //val pkiSignatureID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Signature
+            //val result : SignatureGetObjectV3Response = apiInstance.signatureGetObjectV3(pkiSignatureID)
+            //result shouldBe ("TODO")
+        }
+
+        // to test signatureGetSVGInitialsV1
+        should("test signatureGetSVGInitialsV1") {
+            // uncomment below to test signatureGetSVGInitialsV1
+            //val pkiSignatureID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Signature
+            //apiInstance.signatureGetSVGInitialsV1(pkiSignatureID)
+        }
+
+        // to test signatureGetSVGSignatureV1
+        should("test signatureGetSVGSignatureV1") {
+            // uncomment below to test signatureGetSVGSignatureV1
+            //val pkiSignatureID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Signature
+            //apiInstance.signatureGetSVGSignatureV1(pkiSignatureID)
         }
 
     }

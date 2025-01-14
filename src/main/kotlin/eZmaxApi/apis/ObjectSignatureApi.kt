@@ -16,7 +16,7 @@
 package eZmaxApi.apis
 
 import java.io.IOException
-import okhttp3.OkHttpClient
+import okhttp3.Call
 import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommonResponseError
@@ -26,6 +26,7 @@ import eZmaxApi.models.SignatureDeleteObjectV1Response
 import eZmaxApi.models.SignatureEditObjectV1Request
 import eZmaxApi.models.SignatureEditObjectV1Response
 import eZmaxApi.models.SignatureGetObjectV2Response
+import eZmaxApi.models.SignatureGetObjectV3Response
 
 import com.squareup.moshi.Json
 
@@ -43,7 +44,7 @@ import eZmaxApi.infrastructure.ResponseType
 import eZmaxApi.infrastructure.Success
 import eZmaxApi.infrastructure.toMultiValue
 
-class ObjectSignatureApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = ApiClient.defaultClient) : ApiClient(basePath, client) {
+class ObjectSignatureApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
@@ -282,7 +283,9 @@ class ObjectSignatureApi(basePath: kotlin.String = defaultBasePath, client: OkHt
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun signatureGetObjectV2(pkiSignatureID: kotlin.Int) : SignatureGetObjectV2Response {
+        @Suppress("DEPRECATION")
         val localVarResponse = signatureGetObjectV2WithHttpInfo(pkiSignatureID = pkiSignatureID)
 
         return when (localVarResponse.responseType) {
@@ -310,7 +313,9 @@ class ObjectSignatureApi(basePath: kotlin.String = defaultBasePath, client: OkHt
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun signatureGetObjectV2WithHttpInfo(pkiSignatureID: kotlin.Int) : ApiResponse<SignatureGetObjectV2Response?> {
+        @Suppress("DEPRECATION")
         val localVariableConfig = signatureGetObjectV2RequestConfig(pkiSignatureID = pkiSignatureID)
 
         return request<Unit, SignatureGetObjectV2Response>(
@@ -324,6 +329,7 @@ class ObjectSignatureApi(basePath: kotlin.String = defaultBasePath, client: OkHt
      * @param pkiSignatureID The unique ID of the Signature
      * @return RequestConfig
      */
+    @Deprecated(message = "This operation is deprecated.")
     fun signatureGetObjectV2RequestConfig(pkiSignatureID: kotlin.Int) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
@@ -333,6 +339,215 @@ class ObjectSignatureApi(basePath: kotlin.String = defaultBasePath, client: OkHt
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/2/object/signature/{pkiSignatureID}".replace("{"+"pkiSignatureID"+"}", encodeURIComponent(pkiSignatureID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Retrieve an existing Signature
+     * 
+     * @param pkiSignatureID The unique ID of the Signature
+     * @return SignatureGetObjectV3Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun signatureGetObjectV3(pkiSignatureID: kotlin.Int) : SignatureGetObjectV3Response {
+        val localVarResponse = signatureGetObjectV3WithHttpInfo(pkiSignatureID = pkiSignatureID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as SignatureGetObjectV3Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve an existing Signature
+     * 
+     * @param pkiSignatureID The unique ID of the Signature
+     * @return ApiResponse<SignatureGetObjectV3Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun signatureGetObjectV3WithHttpInfo(pkiSignatureID: kotlin.Int) : ApiResponse<SignatureGetObjectV3Response?> {
+        val localVariableConfig = signatureGetObjectV3RequestConfig(pkiSignatureID = pkiSignatureID)
+
+        return request<Unit, SignatureGetObjectV3Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation signatureGetObjectV3
+     *
+     * @param pkiSignatureID The unique ID of the Signature
+     * @return RequestConfig
+     */
+    fun signatureGetObjectV3RequestConfig(pkiSignatureID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/3/object/signature/{pkiSignatureID}".replace("{"+"pkiSignatureID"+"}", encodeURIComponent(pkiSignatureID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Retrieve an existing Signature initial SVG
+     * 
+     * @param pkiSignatureID The unique ID of the Signature
+     * @return void
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun signatureGetSVGInitialsV1(pkiSignatureID: kotlin.Int) : Unit {
+        val localVarResponse = signatureGetSVGInitialsV1WithHttpInfo(pkiSignatureID = pkiSignatureID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> Unit
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve an existing Signature initial SVG
+     * 
+     * @param pkiSignatureID The unique ID of the Signature
+     * @return ApiResponse<Unit?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Throws(IllegalStateException::class, IOException::class)
+    fun signatureGetSVGInitialsV1WithHttpInfo(pkiSignatureID: kotlin.Int) : ApiResponse<Unit?> {
+        val localVariableConfig = signatureGetSVGInitialsV1RequestConfig(pkiSignatureID = pkiSignatureID)
+
+        return request<Unit, Unit>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation signatureGetSVGInitialsV1
+     *
+     * @param pkiSignatureID The unique ID of the Signature
+     * @return RequestConfig
+     */
+    fun signatureGetSVGInitialsV1RequestConfig(pkiSignatureID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/signature/{pkiSignatureID}/getSVGInitials".replace("{"+"pkiSignatureID"+"}", encodeURIComponent(pkiSignatureID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Retrieve an existing Signature SVG
+     * 
+     * @param pkiSignatureID The unique ID of the Signature
+     * @return void
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun signatureGetSVGSignatureV1(pkiSignatureID: kotlin.Int) : Unit {
+        val localVarResponse = signatureGetSVGSignatureV1WithHttpInfo(pkiSignatureID = pkiSignatureID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> Unit
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve an existing Signature SVG
+     * 
+     * @param pkiSignatureID The unique ID of the Signature
+     * @return ApiResponse<Unit?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Throws(IllegalStateException::class, IOException::class)
+    fun signatureGetSVGSignatureV1WithHttpInfo(pkiSignatureID: kotlin.Int) : ApiResponse<Unit?> {
+        val localVariableConfig = signatureGetSVGSignatureV1RequestConfig(pkiSignatureID = pkiSignatureID)
+
+        return request<Unit, Unit>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation signatureGetSVGSignatureV1
+     *
+     * @param pkiSignatureID The unique ID of the Signature
+     * @return RequestConfig
+     */
+    fun signatureGetSVGSignatureV1RequestConfig(pkiSignatureID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/signature/{pkiSignatureID}/getSVGSignature".replace("{"+"pkiSignatureID"+"}", encodeURIComponent(pkiSignatureID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

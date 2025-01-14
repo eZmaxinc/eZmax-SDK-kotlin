@@ -32,5 +32,8 @@ data class PaymenttermCreateObjectV1Request (
     @Json(name = "a_objPaymentterm")
     val aObjPaymentterm: kotlin.collections.List<PaymenttermRequestCompound>
 
-)
+) {
+
+
+}
 

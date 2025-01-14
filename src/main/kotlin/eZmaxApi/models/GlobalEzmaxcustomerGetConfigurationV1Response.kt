@@ -52,5 +52,8 @@ data class GlobalEzmaxcustomerGetConfigurationV1Response (
     @Json(name = "sCognitoClientIDExternal")
     val sCognitoClientIDExternal: kotlin.String? = null
 
-)
+) {
+
+
+}
 

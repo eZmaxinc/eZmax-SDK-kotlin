@@ -349,5 +349,8 @@ data class CustomAttachmentResponse (
     @Json(name = "a_objAttachmentVersion")
     val aObjAttachmentVersion: kotlin.collections.List<AttachmentResponseCompound>? = null
 
-)
+) {
+
+
+}
 

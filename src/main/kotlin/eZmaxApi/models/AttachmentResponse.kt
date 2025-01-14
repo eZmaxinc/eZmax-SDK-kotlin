@@ -332,5 +332,8 @@ data class AttachmentResponse (
     @Json(name = "objAudit")
     val objAudit: CommonAudit? = null
 
-)
+) {
+
+
+}
 

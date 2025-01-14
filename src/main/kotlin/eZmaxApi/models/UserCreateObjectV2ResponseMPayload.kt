@@ -32,5 +32,8 @@ data class UserCreateObjectV2ResponseMPayload (
     @Json(name = "a_pkiUserID")
     val aPkiUserID: kotlin.collections.List<kotlin.Int>
 
-)
+) {
+
+
+}
 

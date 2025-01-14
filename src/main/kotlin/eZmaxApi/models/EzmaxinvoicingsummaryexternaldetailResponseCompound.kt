@@ -77,5 +77,8 @@ data class EzmaxinvoicingsummaryexternaldetailResponseCompound (
     @Json(name = "fkiEzmaxinvoicingsummaryexternalID")
     val fkiEzmaxinvoicingsummaryexternalID: kotlin.Int? = null
 
-)
+) {
+
+
+}
 

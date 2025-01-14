@@ -32,5 +32,8 @@ data class EzsignformfieldgroupCreateObjectV1Request (
     @Json(name = "a_objEzsignformfieldgroup")
     val aObjEzsignformfieldgroup: kotlin.collections.List<EzsignformfieldgroupRequestCompound>
 
-)
+) {
+
+
+}
 

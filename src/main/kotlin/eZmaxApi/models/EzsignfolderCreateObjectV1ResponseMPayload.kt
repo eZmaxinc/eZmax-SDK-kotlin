@@ -32,5 +32,8 @@ data class EzsignfolderCreateObjectV1ResponseMPayload (
     @Json(name = "a_pkiEzsignfolderID")
     val aPkiEzsignfolderID: kotlin.collections.List<kotlin.Int>
 
-)
+) {
+
+
+}
 

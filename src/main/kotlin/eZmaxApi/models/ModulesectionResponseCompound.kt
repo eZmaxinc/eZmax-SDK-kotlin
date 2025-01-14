@@ -52,5 +52,8 @@ data class ModulesectionResponseCompound (
     @Json(name = "a_objPermission")
     val aObjPermission: kotlin.collections.List<PermissionResponseCompound>? = null
 
-)
+) {
+
+
+}
 

@@ -2,18 +2,15 @@
 
 All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/rest*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**ezsigntemplateCopyV1**](ObjectEzsigntemplateApi.md#ezsigntemplateCopyV1) | **POST** /1/object/ezsigntemplate/{pkiEzsigntemplateID}/copy | Copy the Ezsigntemplate
-[**ezsigntemplateCreateObjectV1**](ObjectEzsigntemplateApi.md#ezsigntemplateCreateObjectV1) | **POST** /1/object/ezsigntemplate | Create a new Ezsigntemplate
-[**ezsigntemplateCreateObjectV2**](ObjectEzsigntemplateApi.md#ezsigntemplateCreateObjectV2) | **POST** /2/object/ezsigntemplate | Create a new Ezsigntemplate
-[**ezsigntemplateDeleteObjectV1**](ObjectEzsigntemplateApi.md#ezsigntemplateDeleteObjectV1) | **DELETE** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Delete an existing Ezsigntemplate
-[**ezsigntemplateEditObjectV1**](ObjectEzsigntemplateApi.md#ezsigntemplateEditObjectV1) | **PUT** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Edit an existing Ezsigntemplate
-[**ezsigntemplateEditObjectV2**](ObjectEzsigntemplateApi.md#ezsigntemplateEditObjectV2) | **PUT** /2/object/ezsigntemplate/{pkiEzsigntemplateID} | Edit an existing Ezsigntemplate
-[**ezsigntemplateGetAutocompleteV2**](ObjectEzsigntemplateApi.md#ezsigntemplateGetAutocompleteV2) | **GET** /2/object/ezsigntemplate/getAutocomplete/{sSelector} | Retrieve Ezsigntemplates and IDs
-[**ezsigntemplateGetListV1**](ObjectEzsigntemplateApi.md#ezsigntemplateGetListV1) | **GET** /1/object/ezsigntemplate/getList | Retrieve Ezsigntemplate list
-[**ezsigntemplateGetObjectV1**](ObjectEzsigntemplateApi.md#ezsigntemplateGetObjectV1) | **GET** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate
-[**ezsigntemplateGetObjectV2**](ObjectEzsigntemplateApi.md#ezsigntemplateGetObjectV2) | **GET** /2/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**ezsigntemplateCopyV1**](ObjectEzsigntemplateApi.md#ezsigntemplateCopyV1) | **POST** /1/object/ezsigntemplate/{pkiEzsigntemplateID}/copy | Copy the Ezsigntemplate |
+| [**ezsigntemplateCreateObjectV3**](ObjectEzsigntemplateApi.md#ezsigntemplateCreateObjectV3) | **POST** /3/object/ezsigntemplate | Create a new Ezsigntemplate |
+| [**ezsigntemplateDeleteObjectV1**](ObjectEzsigntemplateApi.md#ezsigntemplateDeleteObjectV1) | **DELETE** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Delete an existing Ezsigntemplate |
+| [**ezsigntemplateEditObjectV3**](ObjectEzsigntemplateApi.md#ezsigntemplateEditObjectV3) | **PUT** /3/object/ezsigntemplate/{pkiEzsigntemplateID} | Edit an existing Ezsigntemplate |
+| [**ezsigntemplateGetAutocompleteV2**](ObjectEzsigntemplateApi.md#ezsigntemplateGetAutocompleteV2) | **GET** /2/object/ezsigntemplate/getAutocomplete/{sSelector} | Retrieve Ezsigntemplates and IDs |
+| [**ezsigntemplateGetListV1**](ObjectEzsigntemplateApi.md#ezsigntemplateGetListV1) | **GET** /1/object/ezsigntemplate/getList | Retrieve Ezsigntemplate list |
+| [**ezsigntemplateGetObjectV3**](ObjectEzsigntemplateApi.md#ezsigntemplateGetObjectV3) | **GET** /3/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate |
 
 
 <a id="ezsigntemplateCopyV1"></a>
@@ -46,11 +43,10 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsigntemplateID** | **kotlin.Int**|  |
- **ezsigntemplateCopyV1Request** | [**EzsigntemplateCopyV1Request**](EzsigntemplateCopyV1Request.md)|  |
+| **pkiEzsigntemplateID** | **kotlin.Int**|  | |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **ezsigntemplateCopyV1Request** | [**EzsigntemplateCopyV1Request**](EzsigntemplateCopyV1Request.md)|  | |
 
 ### Return type
 
@@ -68,9 +64,9 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a id="ezsigntemplateCreateObjectV1"></a>
-# **ezsigntemplateCreateObjectV1**
-> EzsigntemplateCreateObjectV1Response ezsigntemplateCreateObjectV1(ezsigntemplateCreateObjectV1Request)
+<a id="ezsigntemplateCreateObjectV3"></a>
+# **ezsigntemplateCreateObjectV3**
+> EzsigntemplateCreateObjectV3Response ezsigntemplateCreateObjectV3(ezsigntemplateCreateObjectV3Request)
 
 Create a new Ezsigntemplate
 
@@ -83,78 +79,27 @@ The endpoint allows to create one or many elements at once.
 //import eZmaxApi.models.*
 
 val apiInstance = ObjectEzsigntemplateApi()
-val ezsigntemplateCreateObjectV1Request : EzsigntemplateCreateObjectV1Request =  // EzsigntemplateCreateObjectV1Request | 
+val ezsigntemplateCreateObjectV3Request : EzsigntemplateCreateObjectV3Request =  // EzsigntemplateCreateObjectV3Request | 
 try {
-    val result : EzsigntemplateCreateObjectV1Response = apiInstance.ezsigntemplateCreateObjectV1(ezsigntemplateCreateObjectV1Request)
+    val result : EzsigntemplateCreateObjectV3Response = apiInstance.ezsigntemplateCreateObjectV3(ezsigntemplateCreateObjectV3Request)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling ObjectEzsigntemplateApi#ezsigntemplateCreateObjectV1")
+    println("4xx response calling ObjectEzsigntemplateApi#ezsigntemplateCreateObjectV3")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling ObjectEzsigntemplateApi#ezsigntemplateCreateObjectV1")
+    println("5xx response calling ObjectEzsigntemplateApi#ezsigntemplateCreateObjectV3")
     e.printStackTrace()
 }
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ezsigntemplateCreateObjectV1Request** | [**EzsigntemplateCreateObjectV1Request**](EzsigntemplateCreateObjectV1Request.md)|  |
-
-### Return type
-
-[**EzsigntemplateCreateObjectV1Response**](EzsigntemplateCreateObjectV1Response.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a id="ezsigntemplateCreateObjectV2"></a>
-# **ezsigntemplateCreateObjectV2**
-> EzsigntemplateCreateObjectV2Response ezsigntemplateCreateObjectV2(ezsigntemplateCreateObjectV2Request)
-
-Create a new Ezsigntemplate
-
-The endpoint allows to create one or many elements at once.
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectEzsigntemplateApi()
-val ezsigntemplateCreateObjectV2Request : EzsigntemplateCreateObjectV2Request =  // EzsigntemplateCreateObjectV2Request | 
-try {
-    val result : EzsigntemplateCreateObjectV2Response = apiInstance.ezsigntemplateCreateObjectV2(ezsigntemplateCreateObjectV2Request)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectEzsigntemplateApi#ezsigntemplateCreateObjectV2")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectEzsigntemplateApi#ezsigntemplateCreateObjectV2")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ezsigntemplateCreateObjectV2Request** | [**EzsigntemplateCreateObjectV2Request**](EzsigntemplateCreateObjectV2Request.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **ezsigntemplateCreateObjectV3Request** | [**EzsigntemplateCreateObjectV3Request**](EzsigntemplateCreateObjectV3Request.md)|  | |
 
 ### Return type
 
-[**EzsigntemplateCreateObjectV2Response**](EzsigntemplateCreateObjectV2Response.md)
+[**EzsigntemplateCreateObjectV3Response**](EzsigntemplateCreateObjectV3Response.md)
 
 ### Authorization
 
@@ -197,10 +142,9 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsigntemplateID** | **kotlin.Int**|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsigntemplateID** | **kotlin.Int**|  | |
 
 ### Return type
 
@@ -218,9 +162,9 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a id="ezsigntemplateEditObjectV1"></a>
-# **ezsigntemplateEditObjectV1**
-> EzsigntemplateEditObjectV1Response ezsigntemplateEditObjectV1(pkiEzsigntemplateID, ezsigntemplateEditObjectV1Request)
+<a id="ezsigntemplateEditObjectV3"></a>
+# **ezsigntemplateEditObjectV3**
+> EzsigntemplateEditObjectV3Response ezsigntemplateEditObjectV3(pkiEzsigntemplateID, ezsigntemplateEditObjectV3Request)
 
 Edit an existing Ezsigntemplate
 
@@ -234,81 +178,28 @@ Edit an existing Ezsigntemplate
 
 val apiInstance = ObjectEzsigntemplateApi()
 val pkiEzsigntemplateID : kotlin.Int = 56 // kotlin.Int | 
-val ezsigntemplateEditObjectV1Request : EzsigntemplateEditObjectV1Request =  // EzsigntemplateEditObjectV1Request | 
+val ezsigntemplateEditObjectV3Request : EzsigntemplateEditObjectV3Request =  // EzsigntemplateEditObjectV3Request | 
 try {
-    val result : EzsigntemplateEditObjectV1Response = apiInstance.ezsigntemplateEditObjectV1(pkiEzsigntemplateID, ezsigntemplateEditObjectV1Request)
+    val result : EzsigntemplateEditObjectV3Response = apiInstance.ezsigntemplateEditObjectV3(pkiEzsigntemplateID, ezsigntemplateEditObjectV3Request)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling ObjectEzsigntemplateApi#ezsigntemplateEditObjectV1")
+    println("4xx response calling ObjectEzsigntemplateApi#ezsigntemplateEditObjectV3")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling ObjectEzsigntemplateApi#ezsigntemplateEditObjectV1")
+    println("5xx response calling ObjectEzsigntemplateApi#ezsigntemplateEditObjectV3")
     e.printStackTrace()
 }
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsigntemplateID** | **kotlin.Int**|  |
- **ezsigntemplateEditObjectV1Request** | [**EzsigntemplateEditObjectV1Request**](EzsigntemplateEditObjectV1Request.md)|  |
-
-### Return type
-
-[**EzsigntemplateEditObjectV1Response**](EzsigntemplateEditObjectV1Response.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a id="ezsigntemplateEditObjectV2"></a>
-# **ezsigntemplateEditObjectV2**
-> EzsigntemplateEditObjectV2Response ezsigntemplateEditObjectV2(pkiEzsigntemplateID, ezsigntemplateEditObjectV2Request)
-
-Edit an existing Ezsigntemplate
-
-
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectEzsigntemplateApi()
-val pkiEzsigntemplateID : kotlin.Int = 56 // kotlin.Int | 
-val ezsigntemplateEditObjectV2Request : EzsigntemplateEditObjectV2Request =  // EzsigntemplateEditObjectV2Request | 
-try {
-    val result : EzsigntemplateEditObjectV2Response = apiInstance.ezsigntemplateEditObjectV2(pkiEzsigntemplateID, ezsigntemplateEditObjectV2Request)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectEzsigntemplateApi#ezsigntemplateEditObjectV2")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectEzsigntemplateApi#ezsigntemplateEditObjectV2")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsigntemplateID** | **kotlin.Int**|  |
- **ezsigntemplateEditObjectV2Request** | [**EzsigntemplateEditObjectV2Request**](EzsigntemplateEditObjectV2Request.md)|  |
+| **pkiEzsigntemplateID** | **kotlin.Int**|  | |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **ezsigntemplateEditObjectV3Request** | [**EzsigntemplateEditObjectV3Request**](EzsigntemplateEditObjectV3Request.md)|  | |
 
 ### Return type
 
-[**EzsigntemplateEditObjectV2Response**](EzsigntemplateEditObjectV2Response.md)
+[**EzsigntemplateEditObjectV3Response**](EzsigntemplateEditObjectV3Response.md)
 
 ### Authorization
 
@@ -324,7 +215,7 @@ Configure Authorization:
 
 <a id="ezsigntemplateGetAutocompleteV2"></a>
 # **ezsigntemplateGetAutocompleteV2**
-> EzsigntemplateGetAutocompleteV2Response ezsigntemplateGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+> EzsigntemplateGetAutocompleteV2Response ezsigntemplateGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage, fkiEzsignfoldertypeID)
 
 Retrieve Ezsigntemplates and IDs
 
@@ -341,8 +232,9 @@ val sSelector : kotlin.String = sSelector_example // kotlin.String | The type of
 val eFilterActive : kotlin.String = eFilterActive_example // kotlin.String | Specify which results we want to display.
 val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter the returned results
 val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
+val fkiEzsignfoldertypeID : kotlin.Int = 56 // kotlin.Int | The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic
 try {
-    val result : EzsigntemplateGetAutocompleteV2Response = apiInstance.ezsigntemplateGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+    val result : EzsigntemplateGetAutocompleteV2Response = apiInstance.ezsigntemplateGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage, fkiEzsignfoldertypeID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplateApi#ezsigntemplateGetAutocompleteV2")
@@ -354,13 +246,13 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sSelector** | **kotlin.String**| The type of Ezsigntemplates to return | [enum: All]
- **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive]
- **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional]
- **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
+| **sSelector** | **kotlin.String**| The type of Ezsigntemplates to return | [enum: All, Ezsigntemplatepublic] |
+| **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive] |
+| **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional] |
+| **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **fkiEzsignfoldertypeID** | **kotlin.Int**| The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic | [optional] |
 
 ### Return type
 
@@ -411,14 +303,13 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiEzsigntemplateID_ASC, pkiEzsigntemplateID_DESC, fkiTeamID_ASC, fkiTeamID_DESC, fkiEzsignfoldertypeID_ASC, fkiEzsignfoldertypeID_DESC, fkiUserIDOwner_ASC, fkiUserIDOwner_DESC, fkiLanguageID_ASC, fkiLanguageID_DESC, eEzsigntemplateType_ASC, eEzsigntemplateType_DESC, sEzsigntemplateDescription_ASC, sEzsigntemplateDescription_DESC, sEzsigntemplatedocumentDescription_ASC, sEzsigntemplatedocumentDescription_DESC, iEzsigntemplatedocumentPagetotal_ASC, iEzsigntemplatedocumentPagetotal_DESC, iEzsigntemplateSignaturetotal_ASC, iEzsigntemplateSignaturetotal_DESC, sEzsignfoldertypeNameX_ASC, sEzsignfoldertypeNameX_DESC, eEzsigntemplateType_ASC, eEzsigntemplateType_DESC]
- **iRowMax** | **kotlin.Int**|  | [optional]
- **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0]
- **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
- **sFilter** | **kotlin.String**|  | [optional]
+| **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiEzsigntemplateID_ASC, pkiEzsigntemplateID_DESC, fkiTeamID_ASC, fkiTeamID_DESC, fkiEzsignfoldertypeID_ASC, fkiEzsignfoldertypeID_DESC, fkiUserIDOwner_ASC, fkiUserIDOwner_DESC, fkiLanguageID_ASC, fkiLanguageID_DESC, eEzsigntemplateType_ASC, eEzsigntemplateType_DESC, sEzsigntemplateDescription_ASC, sEzsigntemplateDescription_DESC, sEzsigntemplatedocumentDescription_ASC, sEzsigntemplatedocumentDescription_DESC, iEzsigntemplatedocumentPagetotal_ASC, iEzsigntemplatedocumentPagetotal_DESC, iEzsigntemplateSignaturetotal_ASC, iEzsigntemplateSignaturetotal_DESC, sEzsignfoldertypeNameX_ASC, sEzsignfoldertypeNameX_DESC, eEzsigntemplateType_ASC, eEzsigntemplateType_DESC] |
+| **iRowMax** | **kotlin.Int**|  | [optional] |
+| **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0] |
+| **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sFilter** | **kotlin.String**|  | [optional] |
 
 ### Return type
 
@@ -436,9 +327,9 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a id="ezsigntemplateGetObjectV1"></a>
-# **ezsigntemplateGetObjectV1**
-> EzsigntemplateGetObjectV1Response ezsigntemplateGetObjectV1(pkiEzsigntemplateID)
+<a id="ezsigntemplateGetObjectV3"></a>
+# **ezsigntemplateGetObjectV3**
+> EzsigntemplateGetObjectV3Response ezsigntemplateGetObjectV3(pkiEzsigntemplateID)
 
 Retrieve an existing Ezsigntemplate
 
@@ -453,76 +344,25 @@ Retrieve an existing Ezsigntemplate
 val apiInstance = ObjectEzsigntemplateApi()
 val pkiEzsigntemplateID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : EzsigntemplateGetObjectV1Response = apiInstance.ezsigntemplateGetObjectV1(pkiEzsigntemplateID)
+    val result : EzsigntemplateGetObjectV3Response = apiInstance.ezsigntemplateGetObjectV3(pkiEzsigntemplateID)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling ObjectEzsigntemplateApi#ezsigntemplateGetObjectV1")
+    println("4xx response calling ObjectEzsigntemplateApi#ezsigntemplateGetObjectV3")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling ObjectEzsigntemplateApi#ezsigntemplateGetObjectV1")
+    println("5xx response calling ObjectEzsigntemplateApi#ezsigntemplateGetObjectV3")
     e.printStackTrace()
 }
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsigntemplateID** | **kotlin.Int**|  |
-
-### Return type
-
-[**EzsigntemplateGetObjectV1Response**](EzsigntemplateGetObjectV1Response.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a id="ezsigntemplateGetObjectV2"></a>
-# **ezsigntemplateGetObjectV2**
-> EzsigntemplateGetObjectV2Response ezsigntemplateGetObjectV2(pkiEzsigntemplateID)
-
-Retrieve an existing Ezsigntemplate
-
-
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectEzsigntemplateApi()
-val pkiEzsigntemplateID : kotlin.Int = 56 // kotlin.Int | 
-try {
-    val result : EzsigntemplateGetObjectV2Response = apiInstance.ezsigntemplateGetObjectV2(pkiEzsigntemplateID)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectEzsigntemplateApi#ezsigntemplateGetObjectV2")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectEzsigntemplateApi#ezsigntemplateGetObjectV2")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsigntemplateID** | **kotlin.Int**|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsigntemplateID** | **kotlin.Int**|  | |
 
 ### Return type
 
-[**EzsigntemplateGetObjectV2Response**](EzsigntemplateGetObjectV2Response.md)
+[**EzsigntemplateGetObjectV3Response**](EzsigntemplateGetObjectV3Response.md)
 
 ### Authorization
 

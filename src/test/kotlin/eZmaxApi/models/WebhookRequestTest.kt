@@ -70,6 +70,12 @@ class WebhookRequestTest : ShouldSpec() {
             //modelInstance.pkiWebhookID shouldBe ("TODO")
         }
 
+        // to test the property `fkiAuthenticationexternalID` - The unique ID of the Authenticationexternal
+        should("test fkiAuthenticationexternalID") {
+            // uncomment below to test the property
+            //modelInstance.fkiAuthenticationexternalID shouldBe ("TODO")
+        }
+
         // to test the property `fkiEzsignfoldertypeID` - The unique ID of the Ezsignfoldertype.
         should("test fkiEzsignfoldertypeID") {
             // uncomment below to test the property

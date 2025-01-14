@@ -32,6 +32,8 @@ import eZmaxApi.models.WebhookGetListV1Response
 import eZmaxApi.models.WebhookGetObjectV2Response
 import eZmaxApi.models.WebhookRegenerateApikeyV1Request
 import eZmaxApi.models.WebhookRegenerateApikeyV1Response
+import eZmaxApi.models.WebhookSendWebhookV1Request
+import eZmaxApi.models.WebhookSendWebhookV1Response
 import eZmaxApi.models.WebhookTestV1Response
 
 class ObjectWebhookApiTest : ShouldSpec() {
@@ -99,6 +101,14 @@ class ObjectWebhookApiTest : ShouldSpec() {
             //val pkiWebhookID : kotlin.Int = 56 // kotlin.Int | 
             //val webhookRegenerateApikeyV1Request : WebhookRegenerateApikeyV1Request =  // WebhookRegenerateApikeyV1Request | 
             //val result : WebhookRegenerateApikeyV1Response = apiInstance.webhookRegenerateApikeyV1(pkiWebhookID, webhookRegenerateApikeyV1Request)
+            //result shouldBe ("TODO")
+        }
+
+        // to test webhookSendWebhookV1
+        should("test webhookSendWebhookV1") {
+            // uncomment below to test webhookSendWebhookV1
+            //val webhookSendWebhookV1Request : WebhookSendWebhookV1Request =  // WebhookSendWebhookV1Request | 
+            //val result : WebhookSendWebhookV1Response = apiInstance.webhookSendWebhookV1(webhookSendWebhookV1Request)
             //result shouldBe ("TODO")
         }
 

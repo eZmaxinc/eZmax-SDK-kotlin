@@ -37,5 +37,8 @@ data class DiscussionRequestPatch (
     @Json(name = "bDiscussionClosed")
     val bDiscussionClosed: kotlin.Boolean? = null
 
-)
+) {
+
+
+}
 

@@ -82,5 +82,8 @@ data class CustomEzsignfoldersignerassociationActionableElementResponse (
     @Json(name = "objEzsignsigner")
     val objEzsignsigner: EzsignsignerResponseCompound? = null
 
-)
+) {
+
+
+}
 

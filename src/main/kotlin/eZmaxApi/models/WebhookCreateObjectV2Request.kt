@@ -32,5 +32,8 @@ data class WebhookCreateObjectV2Request (
     @Json(name = "a_objWebhook")
     val aObjWebhook: kotlin.collections.List<WebhookRequestCompound>
 
-)
+) {
+
+
+}
 

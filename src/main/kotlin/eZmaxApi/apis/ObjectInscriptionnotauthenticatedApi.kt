@@ -16,11 +16,14 @@
 package eZmaxApi.apis
 
 import java.io.IOException
-import okhttp3.OkHttpClient
+import okhttp3.Call
 import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.InscriptionnotauthenticatedGetCommunicationCountV1Response
 import eZmaxApi.models.InscriptionnotauthenticatedGetCommunicationListV1Response
+import eZmaxApi.models.InscriptionnotauthenticatedGetCommunicationrecipientsV1Response
+import eZmaxApi.models.InscriptionnotauthenticatedGetCommunicationsendersV1Response
 
 import com.squareup.moshi.Json
 
@@ -38,12 +41,83 @@ import eZmaxApi.infrastructure.ResponseType
 import eZmaxApi.infrastructure.Success
 import eZmaxApi.infrastructure.toMultiValue
 
-class ObjectInscriptionnotauthenticatedApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = ApiClient.defaultClient) : ApiClient(basePath, client) {
+class ObjectInscriptionnotauthenticatedApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
             System.getProperties().getProperty(ApiClient.baseUrlKey, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
+    }
+
+    /**
+     * Retrieve Communication count
+     * 
+     * @param pkiInscriptionnotauthenticatedID 
+     * @return InscriptionnotauthenticatedGetCommunicationCountV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun inscriptionnotauthenticatedGetCommunicationCountV1(pkiInscriptionnotauthenticatedID: kotlin.Int) : InscriptionnotauthenticatedGetCommunicationCountV1Response {
+        val localVarResponse = inscriptionnotauthenticatedGetCommunicationCountV1WithHttpInfo(pkiInscriptionnotauthenticatedID = pkiInscriptionnotauthenticatedID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as InscriptionnotauthenticatedGetCommunicationCountV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve Communication count
+     * 
+     * @param pkiInscriptionnotauthenticatedID 
+     * @return ApiResponse<InscriptionnotauthenticatedGetCommunicationCountV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun inscriptionnotauthenticatedGetCommunicationCountV1WithHttpInfo(pkiInscriptionnotauthenticatedID: kotlin.Int) : ApiResponse<InscriptionnotauthenticatedGetCommunicationCountV1Response?> {
+        val localVariableConfig = inscriptionnotauthenticatedGetCommunicationCountV1RequestConfig(pkiInscriptionnotauthenticatedID = pkiInscriptionnotauthenticatedID)
+
+        return request<Unit, InscriptionnotauthenticatedGetCommunicationCountV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation inscriptionnotauthenticatedGetCommunicationCountV1
+     *
+     * @param pkiInscriptionnotauthenticatedID 
+     * @return RequestConfig
+     */
+    fun inscriptionnotauthenticatedGetCommunicationCountV1RequestConfig(pkiInscriptionnotauthenticatedID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationCount".replace("{"+"pkiInscriptionnotauthenticatedID"+"}", encodeURIComponent(pkiInscriptionnotauthenticatedID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
     }
 
     /**
@@ -110,6 +184,148 @@ class ObjectInscriptionnotauthenticatedApi(basePath: kotlin.String = defaultBase
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationList".replace("{"+"pkiInscriptionnotauthenticatedID"+"}", encodeURIComponent(pkiInscriptionnotauthenticatedID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Retrieve Inscriptionnotauthenticated&#39;s Communicationrecipient
+     * 
+     * @param pkiInscriptionnotauthenticatedID 
+     * @return InscriptionnotauthenticatedGetCommunicationrecipientsV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun inscriptionnotauthenticatedGetCommunicationrecipientsV1(pkiInscriptionnotauthenticatedID: kotlin.Int) : InscriptionnotauthenticatedGetCommunicationrecipientsV1Response {
+        val localVarResponse = inscriptionnotauthenticatedGetCommunicationrecipientsV1WithHttpInfo(pkiInscriptionnotauthenticatedID = pkiInscriptionnotauthenticatedID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as InscriptionnotauthenticatedGetCommunicationrecipientsV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve Inscriptionnotauthenticated&#39;s Communicationrecipient
+     * 
+     * @param pkiInscriptionnotauthenticatedID 
+     * @return ApiResponse<InscriptionnotauthenticatedGetCommunicationrecipientsV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun inscriptionnotauthenticatedGetCommunicationrecipientsV1WithHttpInfo(pkiInscriptionnotauthenticatedID: kotlin.Int) : ApiResponse<InscriptionnotauthenticatedGetCommunicationrecipientsV1Response?> {
+        val localVariableConfig = inscriptionnotauthenticatedGetCommunicationrecipientsV1RequestConfig(pkiInscriptionnotauthenticatedID = pkiInscriptionnotauthenticatedID)
+
+        return request<Unit, InscriptionnotauthenticatedGetCommunicationrecipientsV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation inscriptionnotauthenticatedGetCommunicationrecipientsV1
+     *
+     * @param pkiInscriptionnotauthenticatedID 
+     * @return RequestConfig
+     */
+    fun inscriptionnotauthenticatedGetCommunicationrecipientsV1RequestConfig(pkiInscriptionnotauthenticatedID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationrecipients".replace("{"+"pkiInscriptionnotauthenticatedID"+"}", encodeURIComponent(pkiInscriptionnotauthenticatedID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Retrieve Inscriptionnotauthenticated&#39;s Communicationsender
+     * 
+     * @param pkiInscriptionnotauthenticatedID 
+     * @return InscriptionnotauthenticatedGetCommunicationsendersV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun inscriptionnotauthenticatedGetCommunicationsendersV1(pkiInscriptionnotauthenticatedID: kotlin.Int) : InscriptionnotauthenticatedGetCommunicationsendersV1Response {
+        val localVarResponse = inscriptionnotauthenticatedGetCommunicationsendersV1WithHttpInfo(pkiInscriptionnotauthenticatedID = pkiInscriptionnotauthenticatedID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as InscriptionnotauthenticatedGetCommunicationsendersV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve Inscriptionnotauthenticated&#39;s Communicationsender
+     * 
+     * @param pkiInscriptionnotauthenticatedID 
+     * @return ApiResponse<InscriptionnotauthenticatedGetCommunicationsendersV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun inscriptionnotauthenticatedGetCommunicationsendersV1WithHttpInfo(pkiInscriptionnotauthenticatedID: kotlin.Int) : ApiResponse<InscriptionnotauthenticatedGetCommunicationsendersV1Response?> {
+        val localVariableConfig = inscriptionnotauthenticatedGetCommunicationsendersV1RequestConfig(pkiInscriptionnotauthenticatedID = pkiInscriptionnotauthenticatedID)
+
+        return request<Unit, InscriptionnotauthenticatedGetCommunicationsendersV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation inscriptionnotauthenticatedGetCommunicationsendersV1
+     *
+     * @param pkiInscriptionnotauthenticatedID 
+     * @return RequestConfig
+     */
+    fun inscriptionnotauthenticatedGetCommunicationsendersV1RequestConfig(pkiInscriptionnotauthenticatedID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationsenders".replace("{"+"pkiInscriptionnotauthenticatedID"+"}", encodeURIComponent(pkiInscriptionnotauthenticatedID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

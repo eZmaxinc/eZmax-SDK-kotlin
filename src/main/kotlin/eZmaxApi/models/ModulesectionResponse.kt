@@ -47,5 +47,8 @@ data class ModulesectionResponse (
     @Json(name = "sModulesectionNameX")
     val sModulesectionNameX: kotlin.String
 
-)
+) {
+
+
+}
 

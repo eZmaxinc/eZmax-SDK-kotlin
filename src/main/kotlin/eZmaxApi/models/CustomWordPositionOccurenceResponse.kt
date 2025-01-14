@@ -42,5 +42,8 @@ data class CustomWordPositionOccurenceResponse (
     @Json(name = "iY")
     val iY: kotlin.Int? = null
 
-)
+) {
+
+
+}
 

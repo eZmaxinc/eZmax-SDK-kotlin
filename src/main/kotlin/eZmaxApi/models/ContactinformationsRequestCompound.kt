@@ -67,5 +67,8 @@ data class ContactinformationsRequestCompound (
     @Json(name = "a_objWebsite")
     val aObjWebsite: kotlin.collections.List<WebsiteRequestCompound>
 
-)
+) {
+
+
+}
 

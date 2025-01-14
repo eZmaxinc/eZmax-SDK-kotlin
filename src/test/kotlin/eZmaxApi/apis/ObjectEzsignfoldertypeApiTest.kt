@@ -20,16 +20,14 @@ import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectEzsignfoldertypeApi
 import eZmaxApi.models.CommonResponseError
-import eZmaxApi.models.EzsignfoldertypeCreateObjectV2Request
-import eZmaxApi.models.EzsignfoldertypeCreateObjectV2Response
-import eZmaxApi.models.EzsignfoldertypeEditObjectV1Request
-import eZmaxApi.models.EzsignfoldertypeEditObjectV1Response
-import eZmaxApi.models.EzsignfoldertypeEditObjectV2Request
-import eZmaxApi.models.EzsignfoldertypeEditObjectV2Response
+import eZmaxApi.models.EzsignfoldertypeCreateObjectV3Request
+import eZmaxApi.models.EzsignfoldertypeCreateObjectV3Response
+import eZmaxApi.models.EzsignfoldertypeEditObjectV3Request
+import eZmaxApi.models.EzsignfoldertypeEditObjectV3Response
 import eZmaxApi.models.EzsignfoldertypeGetAutocompleteV2Response
 import eZmaxApi.models.EzsignfoldertypeGetListV1Response
 import eZmaxApi.models.EzsignfoldertypeGetObjectV2Response
-import eZmaxApi.models.EzsignfoldertypeGetObjectV3Response
+import eZmaxApi.models.EzsignfoldertypeGetObjectV4Response
 import eZmaxApi.models.HeaderAcceptLanguage
 
 class ObjectEzsignfoldertypeApiTest : ShouldSpec() {
@@ -37,29 +35,20 @@ class ObjectEzsignfoldertypeApiTest : ShouldSpec() {
         // uncomment below to create an instance of ObjectEzsignfoldertypeApi
         //val apiInstance = ObjectEzsignfoldertypeApi()
 
-        // to test ezsignfoldertypeCreateObjectV2
-        should("test ezsignfoldertypeCreateObjectV2") {
-            // uncomment below to test ezsignfoldertypeCreateObjectV2
-            //val ezsignfoldertypeCreateObjectV2Request : EzsignfoldertypeCreateObjectV2Request =  // EzsignfoldertypeCreateObjectV2Request | 
-            //val result : EzsignfoldertypeCreateObjectV2Response = apiInstance.ezsignfoldertypeCreateObjectV2(ezsignfoldertypeCreateObjectV2Request)
+        // to test ezsignfoldertypeCreateObjectV3
+        should("test ezsignfoldertypeCreateObjectV3") {
+            // uncomment below to test ezsignfoldertypeCreateObjectV3
+            //val ezsignfoldertypeCreateObjectV3Request : EzsignfoldertypeCreateObjectV3Request =  // EzsignfoldertypeCreateObjectV3Request | 
+            //val result : EzsignfoldertypeCreateObjectV3Response = apiInstance.ezsignfoldertypeCreateObjectV3(ezsignfoldertypeCreateObjectV3Request)
             //result shouldBe ("TODO")
         }
 
-        // to test ezsignfoldertypeEditObjectV1
-        should("test ezsignfoldertypeEditObjectV1") {
-            // uncomment below to test ezsignfoldertypeEditObjectV1
+        // to test ezsignfoldertypeEditObjectV3
+        should("test ezsignfoldertypeEditObjectV3") {
+            // uncomment below to test ezsignfoldertypeEditObjectV3
             //val pkiEzsignfoldertypeID : kotlin.Int = 56 // kotlin.Int | 
-            //val ezsignfoldertypeEditObjectV1Request : EzsignfoldertypeEditObjectV1Request =  // EzsignfoldertypeEditObjectV1Request | 
-            //val result : EzsignfoldertypeEditObjectV1Response = apiInstance.ezsignfoldertypeEditObjectV1(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV1Request)
-            //result shouldBe ("TODO")
-        }
-
-        // to test ezsignfoldertypeEditObjectV2
-        should("test ezsignfoldertypeEditObjectV2") {
-            // uncomment below to test ezsignfoldertypeEditObjectV2
-            //val pkiEzsignfoldertypeID : kotlin.Int = 56 // kotlin.Int | 
-            //val ezsignfoldertypeEditObjectV2Request : EzsignfoldertypeEditObjectV2Request =  // EzsignfoldertypeEditObjectV2Request | 
-            //val result : EzsignfoldertypeEditObjectV2Response = apiInstance.ezsignfoldertypeEditObjectV2(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV2Request)
+            //val ezsignfoldertypeEditObjectV3Request : EzsignfoldertypeEditObjectV3Request =  // EzsignfoldertypeEditObjectV3Request | 
+            //val result : EzsignfoldertypeEditObjectV3Response = apiInstance.ezsignfoldertypeEditObjectV3(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV3Request)
             //result shouldBe ("TODO")
         }
 
@@ -94,11 +83,11 @@ class ObjectEzsignfoldertypeApiTest : ShouldSpec() {
             //result shouldBe ("TODO")
         }
 
-        // to test ezsignfoldertypeGetObjectV3
-        should("test ezsignfoldertypeGetObjectV3") {
-            // uncomment below to test ezsignfoldertypeGetObjectV3
+        // to test ezsignfoldertypeGetObjectV4
+        should("test ezsignfoldertypeGetObjectV4") {
+            // uncomment below to test ezsignfoldertypeGetObjectV4
             //val pkiEzsignfoldertypeID : kotlin.Int = 56 // kotlin.Int | 
-            //val result : EzsignfoldertypeGetObjectV3Response = apiInstance.ezsignfoldertypeGetObjectV3(pkiEzsignfoldertypeID)
+            //val result : EzsignfoldertypeGetObjectV4Response = apiInstance.ezsignfoldertypeGetObjectV4(pkiEzsignfoldertypeID)
             //result shouldBe ("TODO")
         }
 

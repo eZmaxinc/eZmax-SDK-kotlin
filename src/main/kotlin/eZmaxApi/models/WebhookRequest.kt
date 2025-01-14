@@ -32,6 +32,7 @@ import com.squareup.moshi.JsonClass
  * @param bWebhookIsactive Whether the Webhook is active or not
  * @param bWebhookSkipsslvalidation Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use
  * @param pkiWebhookID The unique ID of the Webhook
+ * @param fkiAuthenticationexternalID The unique ID of the Authenticationexternal
  * @param fkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
  * @param eWebhookEzsignevent 
  * @param eWebhookManagementevent 
@@ -68,6 +69,10 @@ data class WebhookRequest (
     @Json(name = "pkiWebhookID")
     val pkiWebhookID: kotlin.Int? = null,
 
+    /* The unique ID of the Authenticationexternal */
+    @Json(name = "fkiAuthenticationexternalID")
+    val fkiAuthenticationexternalID: kotlin.Int? = null,
+
     /* The unique ID of the Ezsignfoldertype. */
     @Json(name = "fkiEzsignfoldertypeID")
     val fkiEzsignfoldertypeID: kotlin.Int? = null,
@@ -82,5 +87,8 @@ data class WebhookRequest (
     @Json(name = "bWebhookIssigned")
     val bWebhookIssigned: kotlin.Boolean? = null
 
-)
+) {
+
+
+}
 

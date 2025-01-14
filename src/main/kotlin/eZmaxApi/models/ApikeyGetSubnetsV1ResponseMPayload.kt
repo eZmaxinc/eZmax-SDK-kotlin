@@ -32,5 +32,8 @@ data class ApikeyGetSubnetsV1ResponseMPayload (
     @Json(name = "a_objSubnet")
     val aObjSubnet: kotlin.collections.List<SubnetResponseCompound>
 
-)
+) {
+
+
+}
 

@@ -47,5 +47,8 @@ data class CustomEzsignformfieldRequest (
     @Json(name = "sEzsignformfieldEnteredvalue")
     val sEzsignformfieldEnteredvalue: kotlin.String? = null
 
-)
+) {
+
+
+}
 

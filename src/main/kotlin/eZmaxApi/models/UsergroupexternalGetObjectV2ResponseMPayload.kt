@@ -32,5 +32,8 @@ data class UsergroupexternalGetObjectV2ResponseMPayload (
     @Json(name = "objUsergroupexternal")
     val objUsergroupexternal: UsergroupexternalResponseCompound
 
-)
+) {
+
+
+}
 

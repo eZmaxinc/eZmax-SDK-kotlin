@@ -54,5 +54,6 @@ data class EzsigndocumentGetWordsPositionsV1Request (
         @Json(name = "All") All("All"),
         @Json(name = "Words") Words("Words");
     }
+
 }
 

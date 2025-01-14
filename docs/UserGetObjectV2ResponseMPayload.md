@@ -2,9 +2,9 @@
 # UserGetObjectV2ResponseMPayload
 
 ## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**objUser** | [**UserResponseCompound**](UserResponseCompound.md) |  | 
+| Name | Type | Description | Notes |
+| ------------ | ------------- | ------------- | ------------- |
+| **objUser** | [**UserResponseCompound**](UserResponseCompound.md) |  |  |
 
 
 

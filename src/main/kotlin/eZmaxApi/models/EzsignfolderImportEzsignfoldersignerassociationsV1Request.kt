@@ -31,5 +31,8 @@ data class EzsignfolderImportEzsignfoldersignerassociationsV1Request (
     @Json(name = "a_fkiEzsignfoldersignerassociationID")
     val aFkiEzsignfoldersignerassociationID: kotlin.collections.Set<kotlin.Int>
 
-)
+) {
+
+
+}
 

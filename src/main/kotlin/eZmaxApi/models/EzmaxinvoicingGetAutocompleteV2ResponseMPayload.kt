@@ -33,5 +33,8 @@ data class EzmaxinvoicingGetAutocompleteV2ResponseMPayload (
     @Json(name = "a_objEzmaxinvoicing")
     val aObjEzmaxinvoicing: kotlin.collections.List<EzmaxinvoicingAutocompleteElementResponse>
 
-)
+) {
+
+
+}
 

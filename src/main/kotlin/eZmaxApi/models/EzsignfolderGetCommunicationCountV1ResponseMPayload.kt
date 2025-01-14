@@ -32,5 +32,8 @@ data class EzsignfolderGetCommunicationCountV1ResponseMPayload (
     @Json(name = "iCommunicationCount")
     val iCommunicationCount: kotlin.Int
 
-)
+) {
+
+
+}
 

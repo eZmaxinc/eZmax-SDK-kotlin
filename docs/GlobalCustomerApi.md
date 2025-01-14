@@ -2,9 +2,9 @@
 
 All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/rest*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**globalCustomerGetEndpointV1**](GlobalCustomerApi.md#globalCustomerGetEndpointV1) | **GET** /1/customer/{pksCustomerCode}/endpoint | Get customer endpoint
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**globalCustomerGetEndpointV1**](GlobalCustomerApi.md#globalCustomerGetEndpointV1) | **GET** /1/customer/{pksCustomerCode}/endpoint | Get customer endpoint |
 
 
 <a id="globalCustomerGetEndpointV1"></a>
@@ -37,11 +37,10 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pksCustomerCode** | **kotlin.String**|  |
- **sInfrastructureproductCode** | **kotlin.String**| The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed | [optional] [enum: appcluster01, ezsignuser]
+| **pksCustomerCode** | **kotlin.String**|  | |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sInfrastructureproductCode** | **kotlin.String**| The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed | [optional] [enum: appcluster01, ezsignuser] |
 
 ### Return type
 

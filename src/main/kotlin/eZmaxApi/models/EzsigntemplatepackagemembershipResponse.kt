@@ -47,5 +47,8 @@ data class EzsigntemplatepackagemembershipResponse (
     @Json(name = "iEzsigntemplatepackagemembershipOrder")
     val iEzsigntemplatepackagemembershipOrder: kotlin.Int
 
-)
+) {
+
+
+}
 

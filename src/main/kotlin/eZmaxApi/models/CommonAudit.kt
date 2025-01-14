@@ -36,5 +36,8 @@ data class CommonAudit (
     @Json(name = "objAuditdetailModified")
     val objAuditdetailModified: CommonAuditdetail? = null
 
-)
+) {
+
+
+}
 

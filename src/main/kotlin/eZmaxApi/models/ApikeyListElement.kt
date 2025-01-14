@@ -57,5 +57,8 @@ data class ApikeyListElement (
     @Json(name = "bApikeyIssigned")
     val bApikeyIssigned: kotlin.Boolean
 
-)
+) {
+
+
+}
 

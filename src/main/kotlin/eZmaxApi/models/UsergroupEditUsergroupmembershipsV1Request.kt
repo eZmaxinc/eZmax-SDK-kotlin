@@ -32,5 +32,8 @@ data class UsergroupEditUsergroupmembershipsV1Request (
     @Json(name = "a_objUsergroupmembership")
     val aObjUsergroupmembership: kotlin.collections.List<UsergroupmembershipRequestCompound>
 
-)
+) {
+
+
+}
 

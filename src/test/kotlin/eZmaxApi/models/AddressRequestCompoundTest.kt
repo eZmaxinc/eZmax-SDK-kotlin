@@ -43,12 +43,6 @@ class AddressRequestCompoundTest : ShouldSpec() {
             //modelInstance.sAddressStreet shouldBe ("TODO")
         }
 
-        // to test the property `sAddressSuite` - The Suite or appartment number
-        should("test sAddressSuite") {
-            // uncomment below to test the property
-            //modelInstance.sAddressSuite shouldBe ("TODO")
-        }
-
         // to test the property `sAddressCity` - The City name
         should("test sAddressCity") {
             // uncomment below to test the property
@@ -71,6 +65,18 @@ class AddressRequestCompoundTest : ShouldSpec() {
         should("test sAddressZip") {
             // uncomment below to test the property
             //modelInstance.sAddressZip shouldBe ("TODO")
+        }
+
+        // to test the property `pkiAddressID` - The unique ID of the Address
+        should("test pkiAddressID") {
+            // uncomment below to test the property
+            //modelInstance.pkiAddressID shouldBe ("TODO")
+        }
+
+        // to test the property `sAddressSuite` - The Suite or appartment number
+        should("test sAddressSuite") {
+            // uncomment below to test the property
+            //modelInstance.sAddressSuite shouldBe ("TODO")
         }
 
         // to test the property `fAddressLongitude` - The Longitude of the Address

@@ -32,5 +32,8 @@ data class UserstagedMapV1Request (
     @Json(name = "fkiUserID")
     val fkiUserID: kotlin.Int
 
-)
+) {
+
+
+}
 

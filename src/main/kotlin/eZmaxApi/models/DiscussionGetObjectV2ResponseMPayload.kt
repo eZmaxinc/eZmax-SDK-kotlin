@@ -32,5 +32,8 @@ data class DiscussionGetObjectV2ResponseMPayload (
     @Json(name = "objDiscussion")
     val objDiscussion: DiscussionResponseCompound
 
-)
+) {
+
+
+}
 

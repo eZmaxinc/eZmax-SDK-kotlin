@@ -62,5 +62,8 @@ data class EzsignbulksenddocumentmappingResponseCompound (
     @Json(name = "objEzsigntemplatepackage")
     val objEzsigntemplatepackage: EzsigntemplatepackageResponseCompound? = null
 
-)
+) {
+
+
+}
 

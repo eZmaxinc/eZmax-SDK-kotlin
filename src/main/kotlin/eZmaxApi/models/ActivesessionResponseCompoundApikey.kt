@@ -37,5 +37,8 @@ data class ActivesessionResponseCompoundApikey (
     @Json(name = "sApikeyDescriptionX")
     val sApikeyDescriptionX: kotlin.String
 
-)
+) {
+
+
+}
 

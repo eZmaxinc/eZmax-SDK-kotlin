@@ -47,5 +47,8 @@ data class CustomEzmaxpricingResponse (
     @Json(name = "dtEzmaxpricingEnd")
     val dtEzmaxpricingEnd: kotlin.String? = null
 
-)
+) {
+
+
+}
 

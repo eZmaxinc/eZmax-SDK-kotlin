@@ -42,5 +42,8 @@ data class BillingentityinternalGetListV1ResponseMPayload (
     @Json(name = "a_objBillingentityinternal")
     val aObjBillingentityinternal: kotlin.collections.List<BillingentityinternalListElement>
 
-)
+) {
+
+
+}
 

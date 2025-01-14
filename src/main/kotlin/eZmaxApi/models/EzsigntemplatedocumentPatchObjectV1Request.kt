@@ -32,5 +32,8 @@ data class EzsigntemplatedocumentPatchObjectV1Request (
     @Json(name = "objEzsigntemplatedocument")
     val objEzsigntemplatedocument: EzsigntemplatedocumentRequestPatch
 
-)
+) {
+
+
+}
 

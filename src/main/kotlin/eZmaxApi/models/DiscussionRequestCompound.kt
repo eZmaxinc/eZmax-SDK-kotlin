@@ -42,5 +42,8 @@ data class DiscussionRequestCompound (
     @Json(name = "bDiscussionClosed")
     val bDiscussionClosed: kotlin.Boolean? = null
 
-)
+) {
+
+
+}
 

@@ -47,5 +47,8 @@ data class PhoneRequestV2 (
     @Json(name = "sPhoneE164")
     val sPhoneE164: kotlin.String? = null
 
-)
+) {
+
+
+}
 

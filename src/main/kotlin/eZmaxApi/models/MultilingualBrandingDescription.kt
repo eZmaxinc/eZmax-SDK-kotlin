@@ -37,5 +37,8 @@ data class MultilingualBrandingDescription (
     @Json(name = "sBrandingDescription2")
     val sBrandingDescription2: kotlin.String? = null
 
-)
+) {
+
+
+}
 

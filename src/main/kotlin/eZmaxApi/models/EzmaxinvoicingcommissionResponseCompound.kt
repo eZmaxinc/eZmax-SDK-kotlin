@@ -72,5 +72,8 @@ data class EzmaxinvoicingcommissionResponseCompound (
     @Json(name = "objContactName")
     val objContactName: CustomContactNameResponse? = null
 
-)
+) {
+
+
+}
 

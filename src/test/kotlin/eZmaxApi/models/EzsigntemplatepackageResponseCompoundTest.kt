@@ -99,5 +99,17 @@ class EzsigntemplatepackageResponseCompoundTest : ShouldSpec() {
             //modelInstance.aObjEzsigntemplatepackagemembership shouldBe ("TODO")
         }
 
+        // to test the property `fkiEzdoctemplatedocumentID` - The unique ID of the Ezdoctemplatedocument
+        should("test fkiEzdoctemplatedocumentID") {
+            // uncomment below to test the property
+            //modelInstance.fkiEzdoctemplatedocumentID shouldBe ("TODO")
+        }
+
+        // to test the property `sEzdoctemplatedocumentNameX` - The name of the Ezdoctemplatedocument in the language of the requester
+        should("test sEzdoctemplatedocumentNameX") {
+            // uncomment below to test the property
+            //modelInstance.sEzdoctemplatedocumentNameX shouldBe ("TODO")
+        }
+
     }
 }

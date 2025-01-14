@@ -19,6 +19,7 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.SystemconfigurationResponse
+import eZmaxApi.models.CustomBrandingResponse
 import eZmaxApi.models.FieldESystemconfigurationEzsign
 import eZmaxApi.models.FieldESystemconfigurationEzsignofficeplan
 import eZmaxApi.models.FieldESystemconfigurationLanguage1
@@ -78,6 +79,12 @@ class SystemconfigurationResponseTest : ShouldSpec() {
             //modelInstance.bSystemconfigurationSspr shouldBe ("TODO")
         }
 
+        // to test the property `fkiBrandingID` - The unique ID of the Branding
+        should("test fkiBrandingID") {
+            // uncomment below to test the property
+            //modelInstance.fkiBrandingID shouldBe ("TODO")
+        }
+
         // to test the property `eSystemconfigurationEzsign`
         should("test eSystemconfigurationEzsign") {
             // uncomment below to test the property
@@ -96,6 +103,12 @@ class SystemconfigurationResponseTest : ShouldSpec() {
             //modelInstance.bSystemconfigurationEzsignpaidbyoffice shouldBe ("TODO")
         }
 
+        // to test the property `bSystemconfigurationHascreditcardmerchant` - Whether there is a creditcard merchant configured or not
+        should("test bSystemconfigurationHascreditcardmerchant") {
+            // uncomment below to test the property
+            //modelInstance.bSystemconfigurationHascreditcardmerchant shouldBe ("TODO")
+        }
+
         // to test the property `bSystemconfigurationIsdisposalactive` - Whether is Disposal processus is active or not
         should("test bSystemconfigurationIsdisposalactive") {
             // uncomment below to test the property
@@ -112,6 +125,12 @@ class SystemconfigurationResponseTest : ShouldSpec() {
         should("test dtSystemconfigurationReadonlyexpirationend") {
             // uncomment below to test the property
             //modelInstance.dtSystemconfigurationReadonlyexpirationend shouldBe ("TODO")
+        }
+
+        // to test the property `objBranding`
+        should("test objBranding") {
+            // uncomment below to test the property
+            //modelInstance.objBranding shouldBe ("TODO")
         }
 
     }

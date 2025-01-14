@@ -62,5 +62,8 @@ data class DiscussionResponse (
     @Json(name = "objDiscussionconfiguration")
     val objDiscussionconfiguration: CustomDiscussionconfigurationResponse? = null
 
-)
+) {
+
+
+}
 

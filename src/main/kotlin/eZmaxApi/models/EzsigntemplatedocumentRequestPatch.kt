@@ -32,5 +32,8 @@ data class EzsigntemplatedocumentRequestPatch (
     @Json(name = "sEzsigntemplatedocumentName")
     val sEzsigntemplatedocumentName: kotlin.String? = null
 
-)
+) {
+
+
+}
 

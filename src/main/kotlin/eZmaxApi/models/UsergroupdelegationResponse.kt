@@ -67,5 +67,8 @@ data class UsergroupdelegationResponse (
     @Json(name = "sEmailAddress")
     val sEmailAddress: kotlin.String? = null
 
-)
+) {
+
+
+}
 

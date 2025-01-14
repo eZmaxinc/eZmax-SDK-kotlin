@@ -20,7 +20,6 @@ import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectAttachmentApi
 import eZmaxApi.models.AttachmentGetAttachmentlogsV1Response
-import eZmaxApi.models.AttachmentGetDownloadUrlV1Response
 import eZmaxApi.models.CommonResponseError
 
 class ObjectAttachmentApiTest : ShouldSpec() {
@@ -40,14 +39,6 @@ class ObjectAttachmentApiTest : ShouldSpec() {
             // uncomment below to test attachmentGetAttachmentlogsV1
             //val pkiAttachmentID : kotlin.Int = 56 // kotlin.Int | 
             //val result : AttachmentGetAttachmentlogsV1Response = apiInstance.attachmentGetAttachmentlogsV1(pkiAttachmentID)
-            //result shouldBe ("TODO")
-        }
-
-        // to test attachmentGetDownloadUrlV1
-        should("test attachmentGetDownloadUrlV1") {
-            // uncomment below to test attachmentGetDownloadUrlV1
-            //val pkiAttachmentID : kotlin.Int = 56 // kotlin.Int | 
-            //val result : AttachmentGetDownloadUrlV1Response = apiInstance.attachmentGetDownloadUrlV1(pkiAttachmentID)
             //result shouldBe ("TODO")
         }
 

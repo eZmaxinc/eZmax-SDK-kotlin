@@ -57,5 +57,8 @@ data class EzsigntemplatepackagemembershipResponseCompound (
     @Json(name = "a_objEzsigntemplatepackagesignermembership")
     val aObjEzsigntemplatepackagesignermembership: kotlin.collections.List<EzsigntemplatepackagesignermembershipResponseCompound>
 
-)
+) {
+
+
+}
 

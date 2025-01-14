@@ -42,5 +42,8 @@ data class VariableexpenseGetListV1ResponseMPayload (
     @Json(name = "a_objVariableexpense")
     val aObjVariableexpense: kotlin.collections.List<VariableexpenseListElement>
 
-)
+) {
+
+
+}
 

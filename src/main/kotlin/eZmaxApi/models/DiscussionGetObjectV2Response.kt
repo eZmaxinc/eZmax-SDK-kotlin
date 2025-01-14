@@ -42,5 +42,8 @@ data class DiscussionGetObjectV2Response (
     @Json(name = "objDebug")
     val objDebug: CommonResponseObjDebug? = null
 
-)
+) {
+
+
+}
 

@@ -42,5 +42,8 @@ data class CustomEzsignsignatureEzsignsignaturesAutomaticResponse (
     @Json(name = "iEzsignpagePagenumber")
     val iEzsignpagePagenumber: kotlin.Int
 
-)
+) {
+
+
+}
 

@@ -21,7 +21,7 @@ import io.kotlintest.specs.ShouldSpec
 import eZmaxApi.models.CommunicationSendV1Response
 import eZmaxApi.models.CommonResponseObjDebug
 import eZmaxApi.models.CommonResponseObjDebugPayload
-import eZmaxApi.models.CommunicationCreateObjectV1ResponseMPayload
+import eZmaxApi.models.CommunicationSendV1ResponseMPayload
 
 class CommunicationSendV1ResponseTest : ShouldSpec() {
     init {

@@ -33,5 +33,8 @@ data class SecretquestionGetAutocompleteV2ResponseMPayload (
     @Json(name = "a_objSecretquestion")
     val aObjSecretquestion: kotlin.collections.List<SecretquestionAutocompleteElementResponse>
 
-)
+) {
+
+
+}
 

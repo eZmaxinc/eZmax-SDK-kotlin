@@ -90,5 +90,6 @@ data class CustomCommunicationsenderResponse (
         @Json(name = "Mailboxshared") Mailboxshared("Mailboxshared"),
         @Json(name = "Phonelineshared") Phonelineshared("Phonelineshared");
     }
+
 }
 

@@ -42,5 +42,8 @@ data class FontAutocompleteElementResponse (
     @Json(name = "bFontIsactive")
     val bFontIsactive: kotlin.Boolean
 
-)
+) {
+
+
+}
 

@@ -66,6 +66,12 @@ class SystemconfigurationRequestTest : ShouldSpec() {
             //modelInstance.pkiSystemconfigurationID shouldBe ("TODO")
         }
 
+        // to test the property `fkiBrandingID` - The unique ID of the Branding
+        should("test fkiBrandingID") {
+            // uncomment below to test the property
+            //modelInstance.fkiBrandingID shouldBe ("TODO")
+        }
+
         // to test the property `eSystemconfigurationEzsign`
         should("test eSystemconfigurationEzsign") {
             // uncomment below to test the property

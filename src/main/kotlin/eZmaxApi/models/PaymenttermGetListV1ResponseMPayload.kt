@@ -42,5 +42,8 @@ data class PaymenttermGetListV1ResponseMPayload (
     @Json(name = "a_objPaymentterm")
     val aObjPaymentterm: kotlin.collections.List<PaymenttermListElement>
 
-)
+) {
+
+
+}
 

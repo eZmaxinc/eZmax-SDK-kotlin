@@ -32,5 +32,8 @@ data class EzsigntemplatepackagesignerCreateObjectV1ResponseMPayload (
     @Json(name = "a_pkiEzsigntemplatepackagesignerID")
     val aPkiEzsigntemplatepackagesignerID: kotlin.collections.List<kotlin.Int>
 
-)
+) {
+
+
+}
 

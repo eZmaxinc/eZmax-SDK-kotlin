@@ -122,6 +122,12 @@ class EzsigntemplateformfieldgroupResponseCompoundTest : ShouldSpec() {
             //modelInstance.sEzsigntemplateformfieldgroupRegexp shouldBe ("TODO")
         }
 
+        // to test the property `sEzsigntemplateformfieldgroupTextvalidationcustommessage` - Description of validation rule. Show by signatory.
+        should("test sEzsigntemplateformfieldgroupTextvalidationcustommessage") {
+            // uncomment below to test the property
+            //modelInstance.sEzsigntemplateformfieldgroupTextvalidationcustommessage shouldBe ("TODO")
+        }
+
         // to test the property `eEzsigntemplateformfieldgroupTextvalidation`
         should("test eEzsigntemplateformfieldgroupTextvalidation") {
             // uncomment below to test the property

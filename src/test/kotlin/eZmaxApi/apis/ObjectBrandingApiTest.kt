@@ -19,13 +19,13 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectBrandingApi
-import eZmaxApi.models.BrandingCreateObjectV1Request
-import eZmaxApi.models.BrandingCreateObjectV1Response
-import eZmaxApi.models.BrandingEditObjectV1Request
-import eZmaxApi.models.BrandingEditObjectV1Response
+import eZmaxApi.models.BrandingCreateObjectV2Request
+import eZmaxApi.models.BrandingCreateObjectV2Response
+import eZmaxApi.models.BrandingEditObjectV2Request
+import eZmaxApi.models.BrandingEditObjectV2Response
 import eZmaxApi.models.BrandingGetAutocompleteV2Response
 import eZmaxApi.models.BrandingGetListV1Response
-import eZmaxApi.models.BrandingGetObjectV2Response
+import eZmaxApi.models.BrandingGetObjectV3Response
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.HeaderAcceptLanguage
 
@@ -34,20 +34,20 @@ class ObjectBrandingApiTest : ShouldSpec() {
         // uncomment below to create an instance of ObjectBrandingApi
         //val apiInstance = ObjectBrandingApi()
 
-        // to test brandingCreateObjectV1
-        should("test brandingCreateObjectV1") {
-            // uncomment below to test brandingCreateObjectV1
-            //val brandingCreateObjectV1Request : BrandingCreateObjectV1Request =  // BrandingCreateObjectV1Request | 
-            //val result : BrandingCreateObjectV1Response = apiInstance.brandingCreateObjectV1(brandingCreateObjectV1Request)
+        // to test brandingCreateObjectV2
+        should("test brandingCreateObjectV2") {
+            // uncomment below to test brandingCreateObjectV2
+            //val brandingCreateObjectV2Request : BrandingCreateObjectV2Request =  // BrandingCreateObjectV2Request | 
+            //val result : BrandingCreateObjectV2Response = apiInstance.brandingCreateObjectV2(brandingCreateObjectV2Request)
             //result shouldBe ("TODO")
         }
 
-        // to test brandingEditObjectV1
-        should("test brandingEditObjectV1") {
-            // uncomment below to test brandingEditObjectV1
+        // to test brandingEditObjectV2
+        should("test brandingEditObjectV2") {
+            // uncomment below to test brandingEditObjectV2
             //val pkiBrandingID : kotlin.Int = 56 // kotlin.Int | 
-            //val brandingEditObjectV1Request : BrandingEditObjectV1Request =  // BrandingEditObjectV1Request | 
-            //val result : BrandingEditObjectV1Response = apiInstance.brandingEditObjectV1(pkiBrandingID, brandingEditObjectV1Request)
+            //val brandingEditObjectV2Request : BrandingEditObjectV2Request =  // BrandingEditObjectV2Request | 
+            //val result : BrandingEditObjectV2Response = apiInstance.brandingEditObjectV2(pkiBrandingID, brandingEditObjectV2Request)
             //result shouldBe ("TODO")
         }
 
@@ -74,11 +74,11 @@ class ObjectBrandingApiTest : ShouldSpec() {
             //result shouldBe ("TODO")
         }
 
-        // to test brandingGetObjectV2
-        should("test brandingGetObjectV2") {
-            // uncomment below to test brandingGetObjectV2
+        // to test brandingGetObjectV3
+        should("test brandingGetObjectV3") {
+            // uncomment below to test brandingGetObjectV3
             //val pkiBrandingID : kotlin.Int = 56 // kotlin.Int | 
-            //val result : BrandingGetObjectV2Response = apiInstance.brandingGetObjectV2(pkiBrandingID)
+            //val result : BrandingGetObjectV3Response = apiInstance.brandingGetObjectV3(pkiBrandingID)
             //result shouldBe ("TODO")
         }
 

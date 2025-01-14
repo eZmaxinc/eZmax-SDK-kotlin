@@ -32,5 +32,8 @@ data class SubnetCreateObjectV1ResponseMPayload (
     @Json(name = "a_pkiSubnetID")
     val aPkiSubnetID: kotlin.collections.List<kotlin.Int>
 
-)
+) {
+
+
+}
 

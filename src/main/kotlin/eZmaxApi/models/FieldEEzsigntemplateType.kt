@@ -20,9 +20,9 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * The Type of Ezsigntemplate
+ * The Type of Ezsigntemplate  **Usergroup** is now deprecated and replace with **Ezsignfoldertype**
  *
- * Values: User,Usergroup,Company
+ * Values: User,Usergroup,Company,Ezsignfoldertype
  */
 
 @JsonClass(generateAdapter = false)
@@ -35,7 +35,10 @@ enum class FieldEEzsigntemplateType(val value: kotlin.String) {
     Usergroup("Usergroup"),
 
     @Json(name = "Company")
-    Company("Company");
+    Company("Company"),
+
+    @Json(name = "Ezsignfoldertype")
+    Ezsignfoldertype("Ezsignfoldertype");
 
     /**
      * Override [toString()] to avoid using the enum variable name as the value, and instead use

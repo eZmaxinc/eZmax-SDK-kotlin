@@ -62,5 +62,8 @@ data class PermissionResponseCompound (
     @Json(name = "sCompanyNameX")
     val sCompanyNameX: kotlin.String? = null
 
-)
+) {
+
+
+}
 

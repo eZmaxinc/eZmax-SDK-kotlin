@@ -37,5 +37,8 @@ data class CustomEzsignformfielderrortestResponse (
     @Json(name = "sEzsignformfielderrortestDetail")
     val sEzsignformfielderrortestDetail: kotlin.String
 
-)
+) {
+
+
+}
 

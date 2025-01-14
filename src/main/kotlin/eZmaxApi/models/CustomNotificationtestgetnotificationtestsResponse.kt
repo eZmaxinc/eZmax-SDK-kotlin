@@ -62,5 +62,8 @@ data class CustomNotificationtestgetnotificationtestsResponse (
     @Json(name = "iNotificationtest")
     val iNotificationtest: kotlin.Int
 
-)
+) {
+
+
+}
 

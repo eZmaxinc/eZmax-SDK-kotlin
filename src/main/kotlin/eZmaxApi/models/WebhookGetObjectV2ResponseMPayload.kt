@@ -32,5 +32,8 @@ data class WebhookGetObjectV2ResponseMPayload (
     @Json(name = "objWebhook")
     val objWebhook: WebhookResponseCompound
 
-)
+) {
+
+
+}
 

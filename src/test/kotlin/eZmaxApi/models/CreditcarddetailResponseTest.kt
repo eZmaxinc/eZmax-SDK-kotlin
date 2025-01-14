@@ -37,10 +37,10 @@ class CreditcarddetailResponseTest : ShouldSpec() {
             //modelInstance.fkiCreditcardtypeID shouldBe ("TODO")
         }
 
-        // to test the property `sCreditcarddetailNumbermasked` - The numbermasked of the Creditcarddetail
-        should("test sCreditcarddetailNumbermasked") {
+        // to test the property `iCreditcarddetailLastdigits` - The last digits of the Creditcarddetail
+        should("test iCreditcarddetailLastdigits") {
             // uncomment below to test the property
-            //modelInstance.sCreditcarddetailNumbermasked shouldBe ("TODO")
+            //modelInstance.iCreditcarddetailLastdigits shouldBe ("TODO")
         }
 
         // to test the property `iCreditcarddetailExpirationmonth` - The expirationmonth of the Creditcarddetail

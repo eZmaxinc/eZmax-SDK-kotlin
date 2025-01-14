@@ -31,5 +31,8 @@ data class EzsignbulksendReorderV1Request (
     @Json(name = "a_pkiEzsignbulksenddocumentmappingID")
     val aPkiEzsignbulksenddocumentmappingID: kotlin.collections.List<kotlin.Int>
 
-)
+) {
+
+
+}
 

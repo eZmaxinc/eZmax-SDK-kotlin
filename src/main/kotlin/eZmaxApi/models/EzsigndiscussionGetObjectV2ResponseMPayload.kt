@@ -32,5 +32,8 @@ data class EzsigndiscussionGetObjectV2ResponseMPayload (
     @Json(name = "objEzsigndiscussion")
     val objEzsigndiscussion: EzsigndiscussionResponseCompound
 
-)
+) {
+
+
+}
 

@@ -16,11 +16,14 @@
 package eZmaxApi.apis
 
 import java.io.IOException
-import okhttp3.OkHttpClient
+import okhttp3.Call
 import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.RejectedoffertopurchaseGetCommunicationCountV1Response
 import eZmaxApi.models.RejectedoffertopurchaseGetCommunicationListV1Response
+import eZmaxApi.models.RejectedoffertopurchaseGetCommunicationrecipientsV1Response
+import eZmaxApi.models.RejectedoffertopurchaseGetCommunicationsendersV1Response
 
 import com.squareup.moshi.Json
 
@@ -38,12 +41,83 @@ import eZmaxApi.infrastructure.ResponseType
 import eZmaxApi.infrastructure.Success
 import eZmaxApi.infrastructure.toMultiValue
 
-class ObjectRejectedoffertopurchaseApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = ApiClient.defaultClient) : ApiClient(basePath, client) {
+class ObjectRejectedoffertopurchaseApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
             System.getProperties().getProperty(ApiClient.baseUrlKey, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
+    }
+
+    /**
+     * Retrieve Communication count
+     * 
+     * @param pkiRejectedoffertopurchaseID 
+     * @return RejectedoffertopurchaseGetCommunicationCountV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun rejectedoffertopurchaseGetCommunicationCountV1(pkiRejectedoffertopurchaseID: kotlin.Int) : RejectedoffertopurchaseGetCommunicationCountV1Response {
+        val localVarResponse = rejectedoffertopurchaseGetCommunicationCountV1WithHttpInfo(pkiRejectedoffertopurchaseID = pkiRejectedoffertopurchaseID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as RejectedoffertopurchaseGetCommunicationCountV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve Communication count
+     * 
+     * @param pkiRejectedoffertopurchaseID 
+     * @return ApiResponse<RejectedoffertopurchaseGetCommunicationCountV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun rejectedoffertopurchaseGetCommunicationCountV1WithHttpInfo(pkiRejectedoffertopurchaseID: kotlin.Int) : ApiResponse<RejectedoffertopurchaseGetCommunicationCountV1Response?> {
+        val localVariableConfig = rejectedoffertopurchaseGetCommunicationCountV1RequestConfig(pkiRejectedoffertopurchaseID = pkiRejectedoffertopurchaseID)
+
+        return request<Unit, RejectedoffertopurchaseGetCommunicationCountV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation rejectedoffertopurchaseGetCommunicationCountV1
+     *
+     * @param pkiRejectedoffertopurchaseID 
+     * @return RequestConfig
+     */
+    fun rejectedoffertopurchaseGetCommunicationCountV1RequestConfig(pkiRejectedoffertopurchaseID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationCount".replace("{"+"pkiRejectedoffertopurchaseID"+"}", encodeURIComponent(pkiRejectedoffertopurchaseID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
     }
 
     /**
@@ -110,6 +184,148 @@ class ObjectRejectedoffertopurchaseApi(basePath: kotlin.String = defaultBasePath
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationList".replace("{"+"pkiRejectedoffertopurchaseID"+"}", encodeURIComponent(pkiRejectedoffertopurchaseID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Retrieve Rejectedoffertopurchase&#39;s Communicationrecipient
+     * 
+     * @param pkiRejectedoffertopurchaseID 
+     * @return RejectedoffertopurchaseGetCommunicationrecipientsV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun rejectedoffertopurchaseGetCommunicationrecipientsV1(pkiRejectedoffertopurchaseID: kotlin.Int) : RejectedoffertopurchaseGetCommunicationrecipientsV1Response {
+        val localVarResponse = rejectedoffertopurchaseGetCommunicationrecipientsV1WithHttpInfo(pkiRejectedoffertopurchaseID = pkiRejectedoffertopurchaseID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as RejectedoffertopurchaseGetCommunicationrecipientsV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve Rejectedoffertopurchase&#39;s Communicationrecipient
+     * 
+     * @param pkiRejectedoffertopurchaseID 
+     * @return ApiResponse<RejectedoffertopurchaseGetCommunicationrecipientsV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun rejectedoffertopurchaseGetCommunicationrecipientsV1WithHttpInfo(pkiRejectedoffertopurchaseID: kotlin.Int) : ApiResponse<RejectedoffertopurchaseGetCommunicationrecipientsV1Response?> {
+        val localVariableConfig = rejectedoffertopurchaseGetCommunicationrecipientsV1RequestConfig(pkiRejectedoffertopurchaseID = pkiRejectedoffertopurchaseID)
+
+        return request<Unit, RejectedoffertopurchaseGetCommunicationrecipientsV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation rejectedoffertopurchaseGetCommunicationrecipientsV1
+     *
+     * @param pkiRejectedoffertopurchaseID 
+     * @return RequestConfig
+     */
+    fun rejectedoffertopurchaseGetCommunicationrecipientsV1RequestConfig(pkiRejectedoffertopurchaseID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationrecipients".replace("{"+"pkiRejectedoffertopurchaseID"+"}", encodeURIComponent(pkiRejectedoffertopurchaseID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Retrieve Rejectedoffertopurchase&#39;s Communicationsender
+     * 
+     * @param pkiRejectedoffertopurchaseID 
+     * @return RejectedoffertopurchaseGetCommunicationsendersV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun rejectedoffertopurchaseGetCommunicationsendersV1(pkiRejectedoffertopurchaseID: kotlin.Int) : RejectedoffertopurchaseGetCommunicationsendersV1Response {
+        val localVarResponse = rejectedoffertopurchaseGetCommunicationsendersV1WithHttpInfo(pkiRejectedoffertopurchaseID = pkiRejectedoffertopurchaseID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as RejectedoffertopurchaseGetCommunicationsendersV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve Rejectedoffertopurchase&#39;s Communicationsender
+     * 
+     * @param pkiRejectedoffertopurchaseID 
+     * @return ApiResponse<RejectedoffertopurchaseGetCommunicationsendersV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun rejectedoffertopurchaseGetCommunicationsendersV1WithHttpInfo(pkiRejectedoffertopurchaseID: kotlin.Int) : ApiResponse<RejectedoffertopurchaseGetCommunicationsendersV1Response?> {
+        val localVariableConfig = rejectedoffertopurchaseGetCommunicationsendersV1RequestConfig(pkiRejectedoffertopurchaseID = pkiRejectedoffertopurchaseID)
+
+        return request<Unit, RejectedoffertopurchaseGetCommunicationsendersV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation rejectedoffertopurchaseGetCommunicationsendersV1
+     *
+     * @param pkiRejectedoffertopurchaseID 
+     * @return RequestConfig
+     */
+    fun rejectedoffertopurchaseGetCommunicationsendersV1RequestConfig(pkiRejectedoffertopurchaseID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationsenders".replace("{"+"pkiRejectedoffertopurchaseID"+"}", encodeURIComponent(pkiRejectedoffertopurchaseID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

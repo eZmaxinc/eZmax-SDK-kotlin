@@ -87,5 +87,8 @@ data class ActivesessionListElement (
     @Json(name = "sActivesessionIP")
     val sActivesessionIP: kotlin.String
 
-)
+) {
+
+
+}
 

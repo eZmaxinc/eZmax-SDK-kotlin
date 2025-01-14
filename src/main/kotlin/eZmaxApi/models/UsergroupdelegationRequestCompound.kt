@@ -42,5 +42,8 @@ data class UsergroupdelegationRequestCompound (
     @Json(name = "pkiUsergroupdelegationID")
     val pkiUsergroupdelegationID: kotlin.Int? = null
 
-)
+) {
+
+
+}
 

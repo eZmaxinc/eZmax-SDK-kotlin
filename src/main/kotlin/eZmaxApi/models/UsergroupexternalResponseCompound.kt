@@ -42,5 +42,8 @@ data class UsergroupexternalResponseCompound (
     @Json(name = "sUsergroupexternalID")
     val sUsergroupexternalID: kotlin.String
 
-)
+) {
+
+
+}
 

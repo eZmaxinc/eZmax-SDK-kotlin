@@ -26,6 +26,7 @@ import com.squareup.moshi.JsonClass
  * @param iEzsignsignaturestatusStep The step at which the Ezsignsigner will be invited to sign or fill the form fields
  * @param iEzsignsignaturestatusTotal The total number of signature or form fields the Ezsignsigner must process at the current step
  * @param iEzsignsignaturestatusSigned The number of signature or form fields the Ezsignsigner has already processed at the current step
+ * @param iEzsignsignaturestatusConditional The number of signature or form fields the Ezsignsigner need to sign or fill under current conditions.
  */
 
 
@@ -45,7 +46,11 @@ data class CustomEzsignsignaturestatusResponse (
 
     /* The number of signature or form fields the Ezsignsigner has already processed at the current step */
     @Json(name = "iEzsignsignaturestatusSigned")
-    val iEzsignsignaturestatusSigned: kotlin.Int
+    val iEzsignsignaturestatusSigned: kotlin.Int,
+
+    /* The number of signature or form fields the Ezsignsigner need to sign or fill under current conditions. */
+    @Json(name = "iEzsignsignaturestatusConditional")
+    val iEzsignsignaturestatusConditional: kotlin.Int
 
 ) {
 
@@ -59,5 +64,6 @@ data class CustomEzsignsignaturestatusResponse (
         @Json(name = "Form") Form("Form"),
         @Json(name = "Signature") Signature("Signature");
     }
+
 }
 

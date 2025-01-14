@@ -57,5 +57,8 @@ data class SubnetRequestCompound (
     @Json(name = "fkiApikeyID")
     val fkiApikeyID: kotlin.Int? = null
 
-)
+) {
+
+
+}
 

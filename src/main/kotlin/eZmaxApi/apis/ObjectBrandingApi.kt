@@ -16,16 +16,16 @@
 package eZmaxApi.apis
 
 import java.io.IOException
-import okhttp3.OkHttpClient
+import okhttp3.Call
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.BrandingCreateObjectV1Request
-import eZmaxApi.models.BrandingCreateObjectV1Response
-import eZmaxApi.models.BrandingEditObjectV1Request
-import eZmaxApi.models.BrandingEditObjectV1Response
+import eZmaxApi.models.BrandingCreateObjectV2Request
+import eZmaxApi.models.BrandingCreateObjectV2Response
+import eZmaxApi.models.BrandingEditObjectV2Request
+import eZmaxApi.models.BrandingEditObjectV2Response
 import eZmaxApi.models.BrandingGetAutocompleteV2Response
 import eZmaxApi.models.BrandingGetListV1Response
-import eZmaxApi.models.BrandingGetObjectV2Response
+import eZmaxApi.models.BrandingGetObjectV3Response
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.HeaderAcceptLanguage
 
@@ -45,7 +45,7 @@ import eZmaxApi.infrastructure.ResponseType
 import eZmaxApi.infrastructure.Success
 import eZmaxApi.infrastructure.toMultiValue
 
-class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = ApiClient.defaultClient) : ApiClient(basePath, client) {
+class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
@@ -56,8 +56,8 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
     /**
      * Create a new Branding
      * The endpoint allows to create one or many elements at once.
-     * @param brandingCreateObjectV1Request 
-     * @return BrandingCreateObjectV1Response
+     * @param brandingCreateObjectV2Request 
+     * @return BrandingCreateObjectV2Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -66,11 +66,11 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun brandingCreateObjectV1(brandingCreateObjectV1Request: BrandingCreateObjectV1Request) : BrandingCreateObjectV1Response {
-        val localVarResponse = brandingCreateObjectV1WithHttpInfo(brandingCreateObjectV1Request = brandingCreateObjectV1Request)
+    fun brandingCreateObjectV2(brandingCreateObjectV2Request: BrandingCreateObjectV2Request) : BrandingCreateObjectV2Response {
+        val localVarResponse = brandingCreateObjectV2WithHttpInfo(brandingCreateObjectV2Request = brandingCreateObjectV2Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as BrandingCreateObjectV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as BrandingCreateObjectV2Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -87,29 +87,29 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
     /**
      * Create a new Branding
      * The endpoint allows to create one or many elements at once.
-     * @param brandingCreateObjectV1Request 
-     * @return ApiResponse<BrandingCreateObjectV1Response?>
+     * @param brandingCreateObjectV2Request 
+     * @return ApiResponse<BrandingCreateObjectV2Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun brandingCreateObjectV1WithHttpInfo(brandingCreateObjectV1Request: BrandingCreateObjectV1Request) : ApiResponse<BrandingCreateObjectV1Response?> {
-        val localVariableConfig = brandingCreateObjectV1RequestConfig(brandingCreateObjectV1Request = brandingCreateObjectV1Request)
+    fun brandingCreateObjectV2WithHttpInfo(brandingCreateObjectV2Request: BrandingCreateObjectV2Request) : ApiResponse<BrandingCreateObjectV2Response?> {
+        val localVariableConfig = brandingCreateObjectV2RequestConfig(brandingCreateObjectV2Request = brandingCreateObjectV2Request)
 
-        return request<BrandingCreateObjectV1Request, BrandingCreateObjectV1Response>(
+        return request<BrandingCreateObjectV2Request, BrandingCreateObjectV2Response>(
             localVariableConfig
         )
     }
 
     /**
-     * To obtain the request config of the operation brandingCreateObjectV1
+     * To obtain the request config of the operation brandingCreateObjectV2
      *
-     * @param brandingCreateObjectV1Request 
+     * @param brandingCreateObjectV2Request 
      * @return RequestConfig
      */
-    fun brandingCreateObjectV1RequestConfig(brandingCreateObjectV1Request: BrandingCreateObjectV1Request) : RequestConfig<BrandingCreateObjectV1Request> {
-        val localVariableBody = brandingCreateObjectV1Request
+    fun brandingCreateObjectV2RequestConfig(brandingCreateObjectV2Request: BrandingCreateObjectV2Request) : RequestConfig<BrandingCreateObjectV2Request> {
+        val localVariableBody = brandingCreateObjectV2Request
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Content-Type"] = "application/json"
@@ -117,7 +117,7 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
 
         return RequestConfig(
             method = RequestMethod.POST,
-            path = "/1/object/branding",
+            path = "/2/object/branding",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,
@@ -129,8 +129,8 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      * Edit an existing Branding
      * 
      * @param pkiBrandingID 
-     * @param brandingEditObjectV1Request 
-     * @return BrandingEditObjectV1Response
+     * @param brandingEditObjectV2Request 
+     * @return BrandingEditObjectV2Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -139,11 +139,11 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun brandingEditObjectV1(pkiBrandingID: kotlin.Int, brandingEditObjectV1Request: BrandingEditObjectV1Request) : BrandingEditObjectV1Response {
-        val localVarResponse = brandingEditObjectV1WithHttpInfo(pkiBrandingID = pkiBrandingID, brandingEditObjectV1Request = brandingEditObjectV1Request)
+    fun brandingEditObjectV2(pkiBrandingID: kotlin.Int, brandingEditObjectV2Request: BrandingEditObjectV2Request) : BrandingEditObjectV2Response {
+        val localVarResponse = brandingEditObjectV2WithHttpInfo(pkiBrandingID = pkiBrandingID, brandingEditObjectV2Request = brandingEditObjectV2Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as BrandingEditObjectV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as BrandingEditObjectV2Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -161,30 +161,30 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      * Edit an existing Branding
      * 
      * @param pkiBrandingID 
-     * @param brandingEditObjectV1Request 
-     * @return ApiResponse<BrandingEditObjectV1Response?>
+     * @param brandingEditObjectV2Request 
+     * @return ApiResponse<BrandingEditObjectV2Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun brandingEditObjectV1WithHttpInfo(pkiBrandingID: kotlin.Int, brandingEditObjectV1Request: BrandingEditObjectV1Request) : ApiResponse<BrandingEditObjectV1Response?> {
-        val localVariableConfig = brandingEditObjectV1RequestConfig(pkiBrandingID = pkiBrandingID, brandingEditObjectV1Request = brandingEditObjectV1Request)
+    fun brandingEditObjectV2WithHttpInfo(pkiBrandingID: kotlin.Int, brandingEditObjectV2Request: BrandingEditObjectV2Request) : ApiResponse<BrandingEditObjectV2Response?> {
+        val localVariableConfig = brandingEditObjectV2RequestConfig(pkiBrandingID = pkiBrandingID, brandingEditObjectV2Request = brandingEditObjectV2Request)
 
-        return request<BrandingEditObjectV1Request, BrandingEditObjectV1Response>(
+        return request<BrandingEditObjectV2Request, BrandingEditObjectV2Response>(
             localVariableConfig
         )
     }
 
     /**
-     * To obtain the request config of the operation brandingEditObjectV1
+     * To obtain the request config of the operation brandingEditObjectV2
      *
      * @param pkiBrandingID 
-     * @param brandingEditObjectV1Request 
+     * @param brandingEditObjectV2Request 
      * @return RequestConfig
      */
-    fun brandingEditObjectV1RequestConfig(pkiBrandingID: kotlin.Int, brandingEditObjectV1Request: BrandingEditObjectV1Request) : RequestConfig<BrandingEditObjectV1Request> {
-        val localVariableBody = brandingEditObjectV1Request
+    fun brandingEditObjectV2RequestConfig(pkiBrandingID: kotlin.Int, brandingEditObjectV2Request: BrandingEditObjectV2Request) : RequestConfig<BrandingEditObjectV2Request> {
+        val localVariableBody = brandingEditObjectV2Request
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Content-Type"] = "application/json"
@@ -192,7 +192,7 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
 
         return RequestConfig(
             method = RequestMethod.PUT,
-            path = "/1/object/branding/{pkiBrandingID}".replace("{"+"pkiBrandingID"+"}", encodeURIComponent(pkiBrandingID.toString())),
+            path = "/2/object/branding/{pkiBrandingID}".replace("{"+"pkiBrandingID"+"}", encodeURIComponent(pkiBrandingID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,
@@ -204,7 +204,16 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      * enum for parameter sSelector
      */
      enum class SSelectorBrandingGetAutocompleteV2(val value: kotlin.String) {
-         @Json(name = "All") All("All")
+         @Json(name = "All") All("All");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
      }
 
     /**
@@ -213,7 +222,16 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      enum class EFilterActiveBrandingGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "All") All("All"),
          @Json(name = "Active") Active("Active"),
-         @Json(name = "Inactive") Inactive("Inactive")
+         @Json(name = "Inactive") Inactive("Inactive");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
      }
 
     /**
@@ -326,7 +344,16 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
          @Json(name = "iBrandingColorbackgroundsmallbox_ASC") iBrandingColorbackgroundsmallbox_ASC("iBrandingColorbackgroundsmallbox_ASC"),
          @Json(name = "iBrandingColorbackgroundsmallbox_DESC") iBrandingColorbackgroundsmallbox_DESC("iBrandingColorbackgroundsmallbox_DESC"),
          @Json(name = "bBrandingIsactive_ASC") bBrandingIsactive_ASC("bBrandingIsactive_ASC"),
-         @Json(name = "bBrandingIsactive_DESC") bBrandingIsactive_DESC("bBrandingIsactive_DESC")
+         @Json(name = "bBrandingIsactive_DESC") bBrandingIsactive_DESC("bBrandingIsactive_DESC");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
      }
 
     /**
@@ -431,7 +458,7 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      * Retrieve an existing Branding
      * 
      * @param pkiBrandingID 
-     * @return BrandingGetObjectV2Response
+     * @return BrandingGetObjectV3Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -440,11 +467,11 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun brandingGetObjectV2(pkiBrandingID: kotlin.Int) : BrandingGetObjectV2Response {
-        val localVarResponse = brandingGetObjectV2WithHttpInfo(pkiBrandingID = pkiBrandingID)
+    fun brandingGetObjectV3(pkiBrandingID: kotlin.Int) : BrandingGetObjectV3Response {
+        val localVarResponse = brandingGetObjectV3WithHttpInfo(pkiBrandingID = pkiBrandingID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as BrandingGetObjectV2Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as BrandingGetObjectV3Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -462,27 +489,27 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
      * Retrieve an existing Branding
      * 
      * @param pkiBrandingID 
-     * @return ApiResponse<BrandingGetObjectV2Response?>
+     * @return ApiResponse<BrandingGetObjectV3Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun brandingGetObjectV2WithHttpInfo(pkiBrandingID: kotlin.Int) : ApiResponse<BrandingGetObjectV2Response?> {
-        val localVariableConfig = brandingGetObjectV2RequestConfig(pkiBrandingID = pkiBrandingID)
+    fun brandingGetObjectV3WithHttpInfo(pkiBrandingID: kotlin.Int) : ApiResponse<BrandingGetObjectV3Response?> {
+        val localVariableConfig = brandingGetObjectV3RequestConfig(pkiBrandingID = pkiBrandingID)
 
-        return request<Unit, BrandingGetObjectV2Response>(
+        return request<Unit, BrandingGetObjectV3Response>(
             localVariableConfig
         )
     }
 
     /**
-     * To obtain the request config of the operation brandingGetObjectV2
+     * To obtain the request config of the operation brandingGetObjectV3
      *
      * @param pkiBrandingID 
      * @return RequestConfig
      */
-    fun brandingGetObjectV2RequestConfig(pkiBrandingID: kotlin.Int) : RequestConfig<Unit> {
+    fun brandingGetObjectV3RequestConfig(pkiBrandingID: kotlin.Int) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
@@ -490,7 +517,7 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: OkHtt
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/2/object/branding/{pkiBrandingID}".replace("{"+"pkiBrandingID"+"}", encodeURIComponent(pkiBrandingID.toString())),
+            path = "/3/object/branding/{pkiBrandingID}".replace("{"+"pkiBrandingID"+"}", encodeURIComponent(pkiBrandingID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

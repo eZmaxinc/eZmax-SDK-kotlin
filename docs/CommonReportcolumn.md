@@ -2,10 +2,10 @@
 # CommonReportcolumn
 
 ## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**objReportcellstyleDefault** | [**CommonReportcellstyle**](CommonReportcellstyle.md) |  | 
-**iReportcolumnWidth** | **kotlin.Int** | The Reportcolumn width in pixels | 
+| Name | Type | Description | Notes |
+| ------------ | ------------- | ------------- | ------------- |
+| **objReportcellstyleDefault** | [**CommonReportcellstyle**](CommonReportcellstyle.md) |  |  |
+| **iReportcolumnWidth** | **kotlin.Int** | The Reportcolumn width in pixels |  |
 
 
 

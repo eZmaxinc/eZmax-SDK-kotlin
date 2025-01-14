@@ -32,5 +32,8 @@ data class EzsigndiscussionCreateObjectV1Request (
     @Json(name = "a_objEzsigndiscussion")
     val aObjEzsigndiscussion: kotlin.collections.List<EzsigndiscussionRequestCompound>
 
-)
+) {
+
+
+}
 

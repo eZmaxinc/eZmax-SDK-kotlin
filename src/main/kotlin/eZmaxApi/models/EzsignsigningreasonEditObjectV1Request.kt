@@ -32,5 +32,8 @@ data class EzsignsigningreasonEditObjectV1Request (
     @Json(name = "objEzsignsigningreason")
     val objEzsignsigningreason: EzsignsigningreasonRequestCompound
 
-)
+) {
+
+
+}
 

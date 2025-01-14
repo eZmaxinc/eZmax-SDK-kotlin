@@ -37,5 +37,8 @@ data class EzsigndocumentCreateObjectV1Request (
     @Json(name = "objEzsigndocumentCompound")
     val objEzsigndocumentCompound: EzsigndocumentRequestCompound? = null
 
-)
+) {
+
+
+}
 

@@ -42,5 +42,8 @@ data class EzmaxinvoicingAutocompleteElementResponse (
     @Json(name = "bEzmaxinvoicingIsactive")
     val bEzmaxinvoicingIsactive: kotlin.Boolean
 
-)
+) {
+
+
+}
 

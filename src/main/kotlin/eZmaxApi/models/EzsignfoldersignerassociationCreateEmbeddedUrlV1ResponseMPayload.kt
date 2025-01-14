@@ -32,5 +32,8 @@ data class EzsignfoldersignerassociationCreateEmbeddedUrlV1ResponseMPayload (
     @Json(name = "sEmbeddedUrl")
     val sEmbeddedUrl: kotlin.String
 
-)
+) {
+
+
+}
 

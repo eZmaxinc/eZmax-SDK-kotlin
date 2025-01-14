@@ -32,5 +32,8 @@ data class EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload (
     @Json(name = "a_objEzsignsignergroupmembership")
     val aObjEzsignsignergroupmembership: kotlin.collections.List<EzsignsignergroupmembershipResponseCompound>
 
-)
+) {
+
+
+}
 

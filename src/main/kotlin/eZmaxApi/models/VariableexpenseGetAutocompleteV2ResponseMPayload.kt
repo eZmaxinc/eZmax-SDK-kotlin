@@ -33,5 +33,8 @@ data class VariableexpenseGetAutocompleteV2ResponseMPayload (
     @Json(name = "a_objVariableexpense")
     val aObjVariableexpense: kotlin.collections.List<VariableexpenseAutocompleteElementResponse>
 
-)
+) {
+
+
+}
 

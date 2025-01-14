@@ -87,5 +87,8 @@ data class EzsigntemplateglobalResponseCompound (
     @Json(name = "objEzsigntemplateglobaldocument")
     val objEzsigntemplateglobaldocument: EzsigntemplateglobaldocumentResponse? = null
 
-)
+) {
+
+
+}
 

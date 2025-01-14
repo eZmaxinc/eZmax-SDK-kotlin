@@ -72,5 +72,8 @@ data class ApikeyResponse (
     @Json(name = "bApikeyIssigned")
     val bApikeyIssigned: kotlin.Boolean? = null
 
-)
+) {
+
+
+}
 

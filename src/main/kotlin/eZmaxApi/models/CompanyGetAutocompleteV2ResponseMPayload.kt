@@ -33,5 +33,8 @@ data class CompanyGetAutocompleteV2ResponseMPayload (
     @Json(name = "a_objCompany")
     val aObjCompany: kotlin.collections.List<CompanyAutocompleteElementResponse>
 
-)
+) {
+
+
+}
 

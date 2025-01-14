@@ -16,7 +16,7 @@
 package eZmaxApi.apis
 
 import java.io.IOException
-import okhttp3.OkHttpClient
+import okhttp3.Call
 import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommonResponseError
@@ -25,12 +25,15 @@ import eZmaxApi.models.UserCreateObjectV1Request
 import eZmaxApi.models.UserCreateObjectV1Response
 import eZmaxApi.models.UserCreateObjectV2Request
 import eZmaxApi.models.UserCreateObjectV2Response
+import eZmaxApi.models.UserEditColleaguesV2Request
+import eZmaxApi.models.UserEditColleaguesV2Response
 import eZmaxApi.models.UserEditObjectV1Request
 import eZmaxApi.models.UserEditObjectV1Response
 import eZmaxApi.models.UserEditPermissionsV1Request
 import eZmaxApi.models.UserEditPermissionsV1Response
 import eZmaxApi.models.UserGetApikeysV1Response
 import eZmaxApi.models.UserGetAutocompleteV2Response
+import eZmaxApi.models.UserGetColleaguesV2Response
 import eZmaxApi.models.UserGetEffectivePermissionsV1Response
 import eZmaxApi.models.UserGetListV1Response
 import eZmaxApi.models.UserGetObjectV2Response
@@ -56,7 +59,7 @@ import eZmaxApi.infrastructure.ResponseType
 import eZmaxApi.infrastructure.Success
 import eZmaxApi.infrastructure.toMultiValue
 
-class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = ApiClient.defaultClient) : ApiClient(basePath, client) {
+class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
@@ -201,6 +204,81 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/2/object/user",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Edit multiple Colleagues
+     * Using this endpoint, you can edit multiple Colleagues at the same time.
+     * @param pkiUserID 
+     * @param userEditColleaguesV2Request 
+     * @return UserEditColleaguesV2Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun userEditColleaguesV2(pkiUserID: kotlin.Int, userEditColleaguesV2Request: UserEditColleaguesV2Request) : UserEditColleaguesV2Response {
+        val localVarResponse = userEditColleaguesV2WithHttpInfo(pkiUserID = pkiUserID, userEditColleaguesV2Request = userEditColleaguesV2Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as UserEditColleaguesV2Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Edit multiple Colleagues
+     * Using this endpoint, you can edit multiple Colleagues at the same time.
+     * @param pkiUserID 
+     * @param userEditColleaguesV2Request 
+     * @return ApiResponse<UserEditColleaguesV2Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun userEditColleaguesV2WithHttpInfo(pkiUserID: kotlin.Int, userEditColleaguesV2Request: UserEditColleaguesV2Request) : ApiResponse<UserEditColleaguesV2Response?> {
+        val localVariableConfig = userEditColleaguesV2RequestConfig(pkiUserID = pkiUserID, userEditColleaguesV2Request = userEditColleaguesV2Request)
+
+        return request<UserEditColleaguesV2Request, UserEditColleaguesV2Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation userEditColleaguesV2
+     *
+     * @param pkiUserID 
+     * @param userEditColleaguesV2Request 
+     * @return RequestConfig
+     */
+    fun userEditColleaguesV2RequestConfig(pkiUserID: kotlin.Int, userEditColleaguesV2Request: UserEditColleaguesV2Request) : RequestConfig<UserEditColleaguesV2Request> {
+        val localVariableBody = userEditColleaguesV2Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.PUT,
+            path = "/2/object/user/{pkiUserID}/editColleagues".replace("{"+"pkiUserID"+"}", encodeURIComponent(pkiUserID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,
@@ -433,13 +511,24 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
      * enum for parameter sSelector
      */
      enum class SSelectorUserGetAutocompleteV2(val value: kotlin.String) {
+         @Json(name = "AgentBrokerAssistant") AgentBrokerAssistant("AgentBrokerAssistant"),
          @Json(name = "AgentBrokerEmployeeEzsignUserNormal") AgentBrokerEmployeeEzsignUserNormal("AgentBrokerEmployeeEzsignUserNormal"),
          @Json(name = "AgentBrokerEmployeeNormalBuiltIn") AgentBrokerEmployeeNormalBuiltIn("AgentBrokerEmployeeNormalBuiltIn"),
          @Json(name = "AgentBrokerEzsignuserNormal") AgentBrokerEzsignuserNormal("AgentBrokerEzsignuserNormal"),
          @Json(name = "ClonableUsers") ClonableUsers("ClonableUsers"),
          @Json(name = "EzsignuserBuiltIn") EzsignuserBuiltIn("EzsignuserBuiltIn"),
+         @Json(name = "Ezsignuser") Ezsignuser("Ezsignuser"),
          @Json(name = "Normal") Normal("Normal"),
-         @Json(name = "UsergroupDelegated") UsergroupDelegated("UsergroupDelegated")
+         @Json(name = "UsergroupDelegated") UsergroupDelegated("UsergroupDelegated");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
      }
 
     /**
@@ -448,7 +537,16 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
      enum class EFilterActiveUserGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "All") All("All"),
          @Json(name = "Active") Active("Active"),
-         @Json(name = "Inactive") Inactive("Inactive")
+         @Json(name = "Inactive") Inactive("Inactive");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
      }
 
     /**
@@ -533,6 +631,77 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/2/object/user/getAutocomplete/{sSelector}".replace("{"+"sSelector"+"}", encodeURIComponent(sSelector.value.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Retrieve an existing User&#39;s Colleagues
+     * 
+     * @param pkiUserID 
+     * @return UserGetColleaguesV2Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun userGetColleaguesV2(pkiUserID: kotlin.Int) : UserGetColleaguesV2Response {
+        val localVarResponse = userGetColleaguesV2WithHttpInfo(pkiUserID = pkiUserID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as UserGetColleaguesV2Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve an existing User&#39;s Colleagues
+     * 
+     * @param pkiUserID 
+     * @return ApiResponse<UserGetColleaguesV2Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun userGetColleaguesV2WithHttpInfo(pkiUserID: kotlin.Int) : ApiResponse<UserGetColleaguesV2Response?> {
+        val localVariableConfig = userGetColleaguesV2RequestConfig(pkiUserID = pkiUserID)
+
+        return request<Unit, UserGetColleaguesV2Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation userGetColleaguesV2
+     *
+     * @param pkiUserID 
+     * @return RequestConfig
+     */
+    fun userGetColleaguesV2RequestConfig(pkiUserID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/2/object/user/{pkiUserID}/getColleagues".replace("{"+"pkiUserID"+"}", encodeURIComponent(pkiUserID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,
@@ -634,7 +803,16 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: OkHttpCli
          @Json(name = "dtUserEzsignprepaidexpiration_ASC") dtUserEzsignprepaidexpiration_ASC("dtUserEzsignprepaidexpiration_ASC"),
          @Json(name = "dtUserEzsignprepaidexpiration_DESC") dtUserEzsignprepaidexpiration_DESC("dtUserEzsignprepaidexpiration_DESC"),
          @Json(name = "sEmailAddress_ASC") sEmailAddress_ASC("sEmailAddress_ASC"),
-         @Json(name = "sEmailAddress_DESC") sEmailAddress_DESC("sEmailAddress_DESC")
+         @Json(name = "sEmailAddress_DESC") sEmailAddress_DESC("sEmailAddress_DESC");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
      }
 
     /**

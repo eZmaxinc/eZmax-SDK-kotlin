@@ -53,5 +53,8 @@ data class CommonResponseObjDebug (
     @Json(name = "a_objSQLQuery")
     val aObjSQLQuery: kotlin.collections.List<CommonResponseObjSQLQuery>
 
-)
+) {
+
+
+}
 

@@ -32,5 +32,8 @@ data class SubnetGetObjectV2ResponseMPayload (
     @Json(name = "objSubnet")
     val objSubnet: SubnetResponseCompound
 
-)
+) {
+
+
+}
 

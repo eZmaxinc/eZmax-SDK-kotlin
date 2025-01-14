@@ -32,5 +32,8 @@ data class UserGetObjectV2ResponseMPayload (
     @Json(name = "objUser")
     val objUser: UserResponseCompound
 
-)
+) {
+
+
+}
 

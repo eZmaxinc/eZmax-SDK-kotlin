@@ -33,5 +33,8 @@ data class PaymenttermGetAutocompleteV2ResponseMPayload (
     @Json(name = "a_objPaymentterm")
     val aObjPaymentterm: kotlin.collections.List<PaymenttermAutocompleteElementResponse>
 
-)
+) {
+
+
+}
 

@@ -72,5 +72,8 @@ data class CustomCommunicationListElementResponse (
     @Json(name = "sCommunicationRecipient")
     val sCommunicationRecipient: kotlin.String
 
-)
+) {
+
+
+}
 

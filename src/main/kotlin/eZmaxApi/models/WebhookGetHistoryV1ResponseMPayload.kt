@@ -32,5 +32,8 @@ data class WebhookGetHistoryV1ResponseMPayload (
     @Json(name = "a_objWebhooklog")
     val aObjWebhooklog: kotlin.collections.List<CustomWebhooklogResponse>
 
-)
+) {
+
+
+}
 

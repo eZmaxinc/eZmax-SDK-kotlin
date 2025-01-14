@@ -42,5 +42,8 @@ data class EzsigndocumentApplyEzsigntemplateV2Response (
     @Json(name = "a_objWarning")
     val aObjWarning: kotlin.collections.List<CommonResponseWarning>? = null
 
-)
+) {
+
+
+}
 

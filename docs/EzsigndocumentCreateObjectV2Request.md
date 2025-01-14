@@ -2,9 +2,9 @@
 # EzsigndocumentCreateObjectV2Request
 
 ## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**aObjEzsigndocument** | [**kotlin.collections.List&lt;EzsigndocumentRequestCompound&gt;**](EzsigndocumentRequestCompound.md) |  | 
+| Name | Type | Description | Notes |
+| ------------ | ------------- | ------------- | ------------- |
+| **aObjEzsigndocument** | [**kotlin.collections.List&lt;EzsigndocumentRequestCompound&gt;**](EzsigndocumentRequestCompound.md) |  |  |
 
 
 

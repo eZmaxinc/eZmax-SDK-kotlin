@@ -57,5 +57,8 @@ data class ContactRequest (
     @Json(name = "dtContactBirthdate")
     val dtContactBirthdate: kotlin.String? = null
 
-)
+) {
+
+
+}
 

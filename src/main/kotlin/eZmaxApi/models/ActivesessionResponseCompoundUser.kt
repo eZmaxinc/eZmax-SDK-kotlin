@@ -77,5 +77,8 @@ data class ActivesessionResponseCompoundUser (
     @Json(name = "sEmailAddress")
     val sEmailAddress: kotlin.String? = null
 
-)
+) {
+
+
+}
 

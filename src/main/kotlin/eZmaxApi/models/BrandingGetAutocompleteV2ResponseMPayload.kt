@@ -33,5 +33,8 @@ data class BrandingGetAutocompleteV2ResponseMPayload (
     @Json(name = "a_objBranding")
     val aObjBranding: kotlin.collections.List<BrandingAutocompleteElementResponse>
 
-)
+) {
+
+
+}
 

@@ -16,20 +16,25 @@
 package eZmaxApi.apis
 
 import java.io.IOException
-import okhttp3.OkHttpClient
+import okhttp3.Call
 import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.CommonResponseErrorSTemporaryFileUrl
 import eZmaxApi.models.EzsigntemplatedocumentCreateObjectV1Request
 import eZmaxApi.models.EzsigntemplatedocumentCreateObjectV1Response
+import eZmaxApi.models.EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request
+import eZmaxApi.models.EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Response
 import eZmaxApi.models.EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request
 import eZmaxApi.models.EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Response
 import eZmaxApi.models.EzsigntemplatedocumentEditEzsigntemplatesignaturesV1Request
 import eZmaxApi.models.EzsigntemplatedocumentEditEzsigntemplatesignaturesV1Response
 import eZmaxApi.models.EzsigntemplatedocumentEditObjectV1Request
 import eZmaxApi.models.EzsigntemplatedocumentEditObjectV1Response
+import eZmaxApi.models.EzsigntemplatedocumentExtractTextV1Request
+import eZmaxApi.models.EzsigntemplatedocumentExtractTextV1Response
 import eZmaxApi.models.EzsigntemplatedocumentFlattenV1Response
+import eZmaxApi.models.EzsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1Response
 import eZmaxApi.models.EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1Response
 import eZmaxApi.models.EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response
 import eZmaxApi.models.EzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response
@@ -55,7 +60,7 @@ import eZmaxApi.infrastructure.ResponseType
 import eZmaxApi.infrastructure.Success
 import eZmaxApi.infrastructure.toMultiValue
 
-class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = ApiClient.defaultClient) : ApiClient(basePath, client) {
+class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
@@ -128,6 +133,81 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/ezsigntemplatedocument",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Edit multiple Ezsigntemplatedocumentpagerecognitions
+     * Edit multiple Ezsigntemplatedocumentpagerecognitions
+     * @param pkiEzsigntemplatedocumentID 
+     * @param ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request 
+     * @return EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1(pkiEzsigntemplatedocumentID: kotlin.Int, ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request: EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request) : EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Response {
+        val localVarResponse = ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1WithHttpInfo(pkiEzsigntemplatedocumentID = pkiEzsigntemplatedocumentID, ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request = ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Edit multiple Ezsigntemplatedocumentpagerecognitions
+     * Edit multiple Ezsigntemplatedocumentpagerecognitions
+     * @param pkiEzsigntemplatedocumentID 
+     * @param ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request 
+     * @return ApiResponse<EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1WithHttpInfo(pkiEzsigntemplatedocumentID: kotlin.Int, ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request: EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request) : ApiResponse<EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Response?> {
+        val localVariableConfig = ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1RequestConfig(pkiEzsigntemplatedocumentID = pkiEzsigntemplatedocumentID, ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request = ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request)
+
+        return request<EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request, EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1
+     *
+     * @param pkiEzsigntemplatedocumentID 
+     * @param ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request 
+     * @return RequestConfig
+     */
+    fun ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1RequestConfig(pkiEzsigntemplatedocumentID: kotlin.Int, ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request: EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request) : RequestConfig<EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request> {
+        val localVariableBody = ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.PUT,
+            path = "/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplatedocumentpagerecognitions".replace("{"+"pkiEzsigntemplatedocumentID"+"}", encodeURIComponent(pkiEzsigntemplatedocumentID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,
@@ -361,6 +441,81 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * Extract text from Ezsigntemplatedocument area
+     * Extract text from Ezsigntemplatedocument area
+     * @param pkiEzsigntemplatedocumentID 
+     * @param ezsigntemplatedocumentExtractTextV1Request 
+     * @return EzsigntemplatedocumentExtractTextV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsigntemplatedocumentExtractTextV1(pkiEzsigntemplatedocumentID: kotlin.Int, ezsigntemplatedocumentExtractTextV1Request: EzsigntemplatedocumentExtractTextV1Request) : EzsigntemplatedocumentExtractTextV1Response {
+        val localVarResponse = ezsigntemplatedocumentExtractTextV1WithHttpInfo(pkiEzsigntemplatedocumentID = pkiEzsigntemplatedocumentID, ezsigntemplatedocumentExtractTextV1Request = ezsigntemplatedocumentExtractTextV1Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigntemplatedocumentExtractTextV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Extract text from Ezsigntemplatedocument area
+     * Extract text from Ezsigntemplatedocument area
+     * @param pkiEzsigntemplatedocumentID 
+     * @param ezsigntemplatedocumentExtractTextV1Request 
+     * @return ApiResponse<EzsigntemplatedocumentExtractTextV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsigntemplatedocumentExtractTextV1WithHttpInfo(pkiEzsigntemplatedocumentID: kotlin.Int, ezsigntemplatedocumentExtractTextV1Request: EzsigntemplatedocumentExtractTextV1Request) : ApiResponse<EzsigntemplatedocumentExtractTextV1Response?> {
+        val localVariableConfig = ezsigntemplatedocumentExtractTextV1RequestConfig(pkiEzsigntemplatedocumentID = pkiEzsigntemplatedocumentID, ezsigntemplatedocumentExtractTextV1Request = ezsigntemplatedocumentExtractTextV1Request)
+
+        return request<EzsigntemplatedocumentExtractTextV1Request, EzsigntemplatedocumentExtractTextV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsigntemplatedocumentExtractTextV1
+     *
+     * @param pkiEzsigntemplatedocumentID 
+     * @param ezsigntemplatedocumentExtractTextV1Request 
+     * @return RequestConfig
+     */
+    fun ezsigntemplatedocumentExtractTextV1RequestConfig(pkiEzsigntemplatedocumentID: kotlin.Int, ezsigntemplatedocumentExtractTextV1Request: EzsigntemplatedocumentExtractTextV1Request) : RequestConfig<EzsigntemplatedocumentExtractTextV1Request> {
+        val localVariableBody = ezsigntemplatedocumentExtractTextV1Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/extractText".replace("{"+"pkiEzsigntemplatedocumentID"+"}", encodeURIComponent(pkiEzsigntemplatedocumentID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
      * Flatten
      * Flatten an Ezsigntemplatedocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
      * @param pkiEzsigntemplatedocumentID 
@@ -428,6 +583,77 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/flatten".replace("{"+"pkiEzsigntemplatedocumentID"+"}", encodeURIComponent(pkiEzsigntemplatedocumentID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Retrieve an existing Ezsigntemplatedocument&#39;s Ezsigntemplatedocumentpagerecognitions
+     * 
+     * @param pkiEzsigntemplatedocumentID 
+     * @return EzsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1(pkiEzsigntemplatedocumentID: kotlin.Int) : EzsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1Response {
+        val localVarResponse = ezsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1WithHttpInfo(pkiEzsigntemplatedocumentID = pkiEzsigntemplatedocumentID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve an existing Ezsigntemplatedocument&#39;s Ezsigntemplatedocumentpagerecognitions
+     * 
+     * @param pkiEzsigntemplatedocumentID 
+     * @return ApiResponse<EzsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1WithHttpInfo(pkiEzsigntemplatedocumentID: kotlin.Int) : ApiResponse<EzsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1Response?> {
+        val localVariableConfig = ezsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1RequestConfig(pkiEzsigntemplatedocumentID = pkiEzsigntemplatedocumentID)
+
+        return request<Unit, EzsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1
+     *
+     * @param pkiEzsigntemplatedocumentID 
+     * @return RequestConfig
+     */
+    fun ezsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1RequestConfig(pkiEzsigntemplatedocumentID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplatedocumentpagerecognitions".replace("{"+"pkiEzsigntemplatedocumentID"+"}", encodeURIComponent(pkiEzsigntemplatedocumentID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

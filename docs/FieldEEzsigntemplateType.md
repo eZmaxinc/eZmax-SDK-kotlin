@@ -10,5 +10,7 @@
 
     * `Company` (value: `"Company"`)
 
+    * `Ezsignfoldertype` (value: `"Ezsignfoldertype"`)
+
 
 

@@ -32,5 +32,8 @@ data class ApikeyRegenerateV1ResponseMPayload (
     @Json(name = "objApikey")
     val objApikey: ApikeyResponseCompound
 
-)
+) {
+
+
+}
 

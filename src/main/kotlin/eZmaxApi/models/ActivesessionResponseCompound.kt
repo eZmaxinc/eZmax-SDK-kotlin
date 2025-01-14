@@ -17,7 +17,11 @@ package eZmaxApi.models
 
 import eZmaxApi.models.ActivesessionResponseCompoundApikey
 import eZmaxApi.models.ActivesessionResponseCompoundUser
+import eZmaxApi.models.FieldEActivesessionEzsign
+import eZmaxApi.models.FieldEActivesessionEzsignaccess
+import eZmaxApi.models.FieldEActivesessionEzsignprepaid
 import eZmaxApi.models.FieldEActivesessionOrigin
+import eZmaxApi.models.FieldEActivesessionRealestateinprogress
 import eZmaxApi.models.FieldEActivesessionUsertype
 import eZmaxApi.models.FieldEActivesessionWeekdaystart
 import eZmaxApi.models.FieldESystemconfigurationEzsignofficeplan
@@ -38,16 +42,26 @@ import com.squareup.moshi.JsonClass
  * @param sDepartmentNameX The Name of the Department in the language of the requester
  * @param bActivesessionDebug Whether the active session is in debug or not
  * @param bActivesessionIssuperadmin Whether the active session is superadmin or not
+ * @param eActivesessionEzsignaccess 
  * @param pksCustomerCode The customer code assigned to your account
  * @param fkiSystemconfigurationtypeID The unique ID of the Systemconfigurationtype
  * @param eUserEzsignaccess 
  * @param aPkiPermissionID An array of permissions granted to the user or api key
  * @param objUserReal 
  * @param aEModuleInternalname An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key.
+ * @param bActivesessionAttachment Can access attachment when we clone a user
+ * @param bActivesessionCanafe Can access canafe when we clone a user
+ * @param bActivesessionFinancial Can access financial element when we clone a user
+ * @param bActivesessionRealestatecompleted Can access closed realestate folders when we clone a user
+ * @param eActivesessionEzsign 
+ * @param eActivesessionEzsignprepaid 
+ * @param eActivesessionRealestateinprogress 
  * @param fkiSignatureID The unique ID of the Signature
+ * @param fkiEzsignuserID The unique ID of the Ezsignuser
  * @param bSystemconfigurationEzsignpaidbyoffice Whether if Ezsign is paid by the company or not
  * @param eSystemconfigurationEzsignofficeplan 
  * @param eUserEzsignprepaid 
+ * @param bUserEzsigntrial Whether the User's eZsign subscription is a trial
  * @param dtUserEzsignprepaidexpiration The eZsign prepaid expiration date
  * @param objUserCloned 
  * @param objApikey 
@@ -85,6 +99,9 @@ data class ActivesessionResponseCompound (
     @Json(name = "bActivesessionIssuperadmin")
     val bActivesessionIssuperadmin: kotlin.Boolean,
 
+    @Json(name = "eActivesessionEzsignaccess")
+    val eActivesessionEzsignaccess: FieldEActivesessionEzsignaccess,
+
     /* The customer code assigned to your account */
     @Json(name = "pksCustomerCode")
     val pksCustomerCode: kotlin.String,
@@ -107,9 +124,38 @@ data class ActivesessionResponseCompound (
     @Json(name = "a_eModuleInternalname")
     val aEModuleInternalname: kotlin.collections.List<kotlin.String>,
 
+    /* Can access attachment when we clone a user */
+    @Json(name = "bActivesessionAttachment")
+    val bActivesessionAttachment: kotlin.Boolean? = null,
+
+    /* Can access canafe when we clone a user */
+    @Json(name = "bActivesessionCanafe")
+    val bActivesessionCanafe: kotlin.Boolean? = null,
+
+    /* Can access financial element when we clone a user */
+    @Json(name = "bActivesessionFinancial")
+    val bActivesessionFinancial: kotlin.Boolean? = null,
+
+    /* Can access closed realestate folders when we clone a user */
+    @Json(name = "bActivesessionRealestatecompleted")
+    val bActivesessionRealestatecompleted: kotlin.Boolean? = null,
+
+    @Json(name = "eActivesessionEzsign")
+    val eActivesessionEzsign: FieldEActivesessionEzsign? = null,
+
+    @Json(name = "eActivesessionEzsignprepaid")
+    val eActivesessionEzsignprepaid: FieldEActivesessionEzsignprepaid? = null,
+
+    @Json(name = "eActivesessionRealestateinprogress")
+    val eActivesessionRealestateinprogress: FieldEActivesessionRealestateinprogress? = null,
+
     /* The unique ID of the Signature */
     @Json(name = "fkiSignatureID")
     val fkiSignatureID: kotlin.Int? = null,
+
+    /* The unique ID of the Ezsignuser */
+    @Json(name = "fkiEzsignuserID")
+    val fkiEzsignuserID: kotlin.Int? = null,
 
     /* Whether if Ezsign is paid by the company or not */
     @Json(name = "bSystemconfigurationEzsignpaidbyoffice")
@@ -121,6 +167,10 @@ data class ActivesessionResponseCompound (
     @Json(name = "eUserEzsignprepaid")
     val eUserEzsignprepaid: FieldEUserEzsignprepaid? = null,
 
+    /* Whether the User's eZsign subscription is a trial */
+    @Json(name = "bUserEzsigntrial")
+    val bUserEzsigntrial: kotlin.Boolean? = null,
+
     /* The eZsign prepaid expiration date */
     @Json(name = "dtUserEzsignprepaidexpiration")
     val dtUserEzsignprepaidexpiration: kotlin.String? = null,
@@ -131,5 +181,8 @@ data class ActivesessionResponseCompound (
     @Json(name = "objApikey")
     val objApikey: ActivesessionResponseCompoundApikey? = null
 
-)
+) {
+
+
+}
 

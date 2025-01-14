@@ -32,5 +32,8 @@ data class InscriptionGetAttachmentsV1ResponseMPayload (
     @Json(name = "a_objAttachmentdocumenttype")
     val aObjAttachmentdocumenttype: kotlin.collections.List<CustomAttachmentdocumenttypeResponse>
 
-)
+) {
+
+
+}
 

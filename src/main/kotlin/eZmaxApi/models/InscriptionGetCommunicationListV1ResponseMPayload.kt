@@ -32,5 +32,8 @@ data class InscriptionGetCommunicationListV1ResponseMPayload (
     @Json(name = "a_objCommunication")
     val aObjCommunication: kotlin.collections.List<CustomCommunicationListElementResponse>
 
-)
+) {
+
+
+}
 

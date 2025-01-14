@@ -42,5 +42,8 @@ data class SessionhistoryGetListV1ResponseMPayload (
     @Json(name = "a_objSessionhistory")
     val aObjSessionhistory: kotlin.collections.List<SessionhistoryListElement>
 
-)
+) {
+
+
+}
 

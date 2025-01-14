@@ -37,5 +37,8 @@ data class MultilingualUserlogintypeDescription (
     @Json(name = "sUserlogintypeDescription2")
     val sUserlogintypeDescription2: kotlin.String? = null
 
-)
+) {
+
+
+}
 

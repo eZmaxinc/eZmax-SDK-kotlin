@@ -32,5 +32,8 @@ data class CommunicationSendV1Request (
     @Json(name = "a_objCommunication")
     val aObjCommunication: kotlin.collections.List<CommunicationRequestCompound>
 
-)
+) {
+
+
+}
 

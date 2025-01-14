@@ -4,6 +4,8 @@
 ## Enum
 
 
+    * `Android` (value: `"Android"`)
+
     * `iOS` (value: `"iOS"`)
 
     * `iPadOS` (value: `"iPadOS"`)

@@ -53,5 +53,6 @@ data class WebsocketResponseInformationV1 (
     enum class EWebsocketMessagetype(val value: kotlin.String) {
         @Json(name = "Response-Information-V1") ResponseMinusInformationMinusV1("Response-Information-V1");
     }
+
 }
 

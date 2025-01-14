@@ -43,5 +43,6 @@ data class WebsocketRequestServerGetWebsocketIDV1 (
     enum class EWebsocketMessagetype(val value: kotlin.String) {
         @Json(name = "RequestServer-GetWebsocketID-V1") RequestServerMinusGetWebsocketIDMinusV1("RequestServer-GetWebsocketID-V1");
     }
+
 }
 

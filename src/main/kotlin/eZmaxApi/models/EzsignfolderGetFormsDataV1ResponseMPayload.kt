@@ -32,5 +32,8 @@ data class EzsignfolderGetFormsDataV1ResponseMPayload (
     @Json(name = "objFormsDataFolder")
     val objFormsDataFolder: CustomFormsDataFolderResponse
 
-)
+) {
+
+
+}
 

@@ -37,5 +37,8 @@ data class DiscussionUpdateDiscussionreadstatusV1Response (
     @Json(name = "objDebug")
     val objDebug: CommonResponseObjDebug? = null
 
-)
+) {
+
+
+}
 

@@ -42,5 +42,8 @@ data class PaymenttermAutocompleteElementResponse (
     @Json(name = "bPaymenttermIsactive")
     val bPaymenttermIsactive: kotlin.Boolean
 
-)
+) {
+
+
+}
 

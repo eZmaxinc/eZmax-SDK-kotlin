@@ -19,6 +19,7 @@ import eZmaxApi.models.EnumTextvalidation
 import eZmaxApi.models.EzsigntemplateelementdependencyResponseCompound
 import eZmaxApi.models.EzsigntemplatesignaturecustomdateResponseCompound
 import eZmaxApi.models.FieldEEzsigntemplatesignatureAttachmentnamesource
+import eZmaxApi.models.FieldEEzsigntemplatesignatureConsultationtrigger
 import eZmaxApi.models.FieldEEzsigntemplatesignatureDependencyrequirement
 import eZmaxApi.models.FieldEEzsigntemplatesignatureFont
 import eZmaxApi.models.FieldEEzsigntemplatesignaturePositioning
@@ -39,11 +40,14 @@ import com.squareup.moshi.JsonClass
  * @param iEzsigntemplatesignatureStep The step when the Ezsigntemplatesigner will be invited to sign
  * @param eEzsigntemplatesignatureType 
  * @param fkiEzsigntemplatesignerIDValidation The unique ID of the Ezsigntemplatesigner
+ * @param bEzsigntemplatesignatureHandwritten Whether the Ezsigntemplatesignature must be handwritten or not when eEzsigntemplatesignatureType = Signature.
+ * @param bEzsigntemplatesignatureReason Whether the Ezsigntemplatesignature must include a reason or not when eEzsigntemplatesignatureType = Signature.
  * @param eEzsigntemplatesignaturePositioning 
  * @param iEzsigntemplatesignatureX The X coordinate (Horizontal) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 2 inches from the left border of the page, you would use \"200\" for the X coordinate.
  * @param iEzsigntemplatesignatureY The Y coordinate (Vertical) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.
  * @param iEzsigntemplatesignatureWidth The width of the Ezsigntemplatesignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsigntemplatesignature to have a width of 2 inches, you would use \"200\" for the iEzsigntemplatesignatureWidth.
  * @param iEzsigntemplatesignatureHeight The height of the Ezsigntemplatesignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsigntemplatesignature to have an height of 2 inches, you would use \"200\" for the iEzsigntemplatesignatureHeight.
+ * @param eEzsigntemplatesignatureConsultationtrigger 
  * @param tEzsigntemplatesignatureTooltip A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplatesignature
  * @param eEzsigntemplatesignatureTooltipposition 
  * @param eEzsigntemplatesignatureFont 
@@ -52,8 +56,10 @@ import com.squareup.moshi.JsonClass
  * @param eEzsigntemplatesignatureAttachmentnamesource 
  * @param bEzsigntemplatesignatureRequired Whether the Ezsigntemplatesignature is required or not. This field is relevant only with Ezsigntemplatesignature with eEzsigntemplatesignatureType = Attachments.
  * @param iEzsigntemplatesignatureMaxlength The maximum length for the value in the Ezsigntemplatesignature  This can only be set if eEzsigntemplatesignatureType is **FieldText** or **FieldTextarea**
+ * @param sEzsigntemplatesignatureDefaultvalue The default value for the Ezsigntemplatesignature  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | ------------------------- | ------------ | ------------ | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sCompany} | Company name | eZmax Solutions Inc. | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 |
  * @param sEzsigntemplatesignatureRegexp A regular expression to indicate what values are acceptable for the Ezsigntemplatesignature.  This can only be set if eEzsigntemplatesignatureType is **Text** or **Textarea**
  * @param eEzsigntemplatesignatureTextvalidation 
+ * @param sEzsigntemplatesignatureTextvalidationcustommessage Description of validation rule. Show by signatory.
  * @param eEzsigntemplatesignatureDependencyrequirement 
  * @param sEzsigntemplatesignaturePositioningpattern The string pattern to search for the positioning. **This is not a regexp**  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**
  * @param iEzsigntemplatesignaturePositioningoffsetx The offset X  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**
@@ -94,6 +100,14 @@ data class EzsigntemplatesignatureResponseCompound (
     @Json(name = "fkiEzsigntemplatesignerIDValidation")
     val fkiEzsigntemplatesignerIDValidation: kotlin.Int? = null,
 
+    /* Whether the Ezsigntemplatesignature must be handwritten or not when eEzsigntemplatesignatureType = Signature. */
+    @Json(name = "bEzsigntemplatesignatureHandwritten")
+    val bEzsigntemplatesignatureHandwritten: kotlin.Boolean? = null,
+
+    /* Whether the Ezsigntemplatesignature must include a reason or not when eEzsigntemplatesignatureType = Signature. */
+    @Json(name = "bEzsigntemplatesignatureReason")
+    val bEzsigntemplatesignatureReason: kotlin.Boolean? = null,
+
     @Json(name = "eEzsigntemplatesignaturePositioning")
     val eEzsigntemplatesignaturePositioning: FieldEEzsigntemplatesignaturePositioning? = null,
 
@@ -112,6 +126,9 @@ data class EzsigntemplatesignatureResponseCompound (
     /* The height of the Ezsigntemplatesignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsigntemplatesignature to have an height of 2 inches, you would use \"200\" for the iEzsigntemplatesignatureHeight. */
     @Json(name = "iEzsigntemplatesignatureHeight")
     val iEzsigntemplatesignatureHeight: kotlin.Int? = null,
+
+    @Json(name = "eEzsigntemplatesignatureConsultationtrigger")
+    val eEzsigntemplatesignatureConsultationtrigger: FieldEEzsigntemplatesignatureConsultationtrigger? = null,
 
     /* A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplatesignature */
     @Json(name = "tEzsigntemplatesignatureTooltip")
@@ -142,12 +159,20 @@ data class EzsigntemplatesignatureResponseCompound (
     @Json(name = "iEzsigntemplatesignatureMaxlength")
     val iEzsigntemplatesignatureMaxlength: kotlin.Int? = null,
 
+    /* The default value for the Ezsigntemplatesignature  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | ------------------------- | ------------ | ------------ | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sCompany} | Company name | eZmax Solutions Inc. | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 | */
+    @Json(name = "sEzsigntemplatesignatureDefaultvalue")
+    val sEzsigntemplatesignatureDefaultvalue: kotlin.String? = null,
+
     /* A regular expression to indicate what values are acceptable for the Ezsigntemplatesignature.  This can only be set if eEzsigntemplatesignatureType is **Text** or **Textarea** */
     @Json(name = "sEzsigntemplatesignatureRegexp")
     val sEzsigntemplatesignatureRegexp: kotlin.String? = null,
 
     @Json(name = "eEzsigntemplatesignatureTextvalidation")
     val eEzsigntemplatesignatureTextvalidation: EnumTextvalidation? = null,
+
+    /* Description of validation rule. Show by signatory. */
+    @Json(name = "sEzsigntemplatesignatureTextvalidationcustommessage")
+    val sEzsigntemplatesignatureTextvalidationcustommessage: kotlin.String? = null,
 
     @Json(name = "eEzsigntemplatesignatureDependencyrequirement")
     val eEzsigntemplatesignatureDependencyrequirement: FieldEEzsigntemplatesignatureDependencyrequirement? = null,
@@ -178,5 +203,8 @@ data class EzsigntemplatesignatureResponseCompound (
     @Json(name = "a_objEzsigntemplateelementdependency")
     val aObjEzsigntemplateelementdependency: kotlin.collections.List<EzsigntemplateelementdependencyResponseCompound>? = null
 
-)
+) {
+
+
+}
 

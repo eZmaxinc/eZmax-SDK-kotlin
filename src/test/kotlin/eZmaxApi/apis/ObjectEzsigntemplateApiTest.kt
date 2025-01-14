@@ -22,19 +22,14 @@ import eZmaxApi.apis.ObjectEzsigntemplateApi
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.EzsigntemplateCopyV1Request
 import eZmaxApi.models.EzsigntemplateCopyV1Response
-import eZmaxApi.models.EzsigntemplateCreateObjectV1Request
-import eZmaxApi.models.EzsigntemplateCreateObjectV1Response
-import eZmaxApi.models.EzsigntemplateCreateObjectV2Request
-import eZmaxApi.models.EzsigntemplateCreateObjectV2Response
+import eZmaxApi.models.EzsigntemplateCreateObjectV3Request
+import eZmaxApi.models.EzsigntemplateCreateObjectV3Response
 import eZmaxApi.models.EzsigntemplateDeleteObjectV1Response
-import eZmaxApi.models.EzsigntemplateEditObjectV1Request
-import eZmaxApi.models.EzsigntemplateEditObjectV1Response
-import eZmaxApi.models.EzsigntemplateEditObjectV2Request
-import eZmaxApi.models.EzsigntemplateEditObjectV2Response
+import eZmaxApi.models.EzsigntemplateEditObjectV3Request
+import eZmaxApi.models.EzsigntemplateEditObjectV3Response
 import eZmaxApi.models.EzsigntemplateGetAutocompleteV2Response
 import eZmaxApi.models.EzsigntemplateGetListV1Response
-import eZmaxApi.models.EzsigntemplateGetObjectV1Response
-import eZmaxApi.models.EzsigntemplateGetObjectV2Response
+import eZmaxApi.models.EzsigntemplateGetObjectV3Response
 import eZmaxApi.models.HeaderAcceptLanguage
 
 class ObjectEzsigntemplateApiTest : ShouldSpec() {
@@ -51,19 +46,11 @@ class ObjectEzsigntemplateApiTest : ShouldSpec() {
             //result shouldBe ("TODO")
         }
 
-        // to test ezsigntemplateCreateObjectV1
-        should("test ezsigntemplateCreateObjectV1") {
-            // uncomment below to test ezsigntemplateCreateObjectV1
-            //val ezsigntemplateCreateObjectV1Request : EzsigntemplateCreateObjectV1Request =  // EzsigntemplateCreateObjectV1Request | 
-            //val result : EzsigntemplateCreateObjectV1Response = apiInstance.ezsigntemplateCreateObjectV1(ezsigntemplateCreateObjectV1Request)
-            //result shouldBe ("TODO")
-        }
-
-        // to test ezsigntemplateCreateObjectV2
-        should("test ezsigntemplateCreateObjectV2") {
-            // uncomment below to test ezsigntemplateCreateObjectV2
-            //val ezsigntemplateCreateObjectV2Request : EzsigntemplateCreateObjectV2Request =  // EzsigntemplateCreateObjectV2Request | 
-            //val result : EzsigntemplateCreateObjectV2Response = apiInstance.ezsigntemplateCreateObjectV2(ezsigntemplateCreateObjectV2Request)
+        // to test ezsigntemplateCreateObjectV3
+        should("test ezsigntemplateCreateObjectV3") {
+            // uncomment below to test ezsigntemplateCreateObjectV3
+            //val ezsigntemplateCreateObjectV3Request : EzsigntemplateCreateObjectV3Request =  // EzsigntemplateCreateObjectV3Request | 
+            //val result : EzsigntemplateCreateObjectV3Response = apiInstance.ezsigntemplateCreateObjectV3(ezsigntemplateCreateObjectV3Request)
             //result shouldBe ("TODO")
         }
 
@@ -75,21 +62,12 @@ class ObjectEzsigntemplateApiTest : ShouldSpec() {
             //result shouldBe ("TODO")
         }
 
-        // to test ezsigntemplateEditObjectV1
-        should("test ezsigntemplateEditObjectV1") {
-            // uncomment below to test ezsigntemplateEditObjectV1
+        // to test ezsigntemplateEditObjectV3
+        should("test ezsigntemplateEditObjectV3") {
+            // uncomment below to test ezsigntemplateEditObjectV3
             //val pkiEzsigntemplateID : kotlin.Int = 56 // kotlin.Int | 
-            //val ezsigntemplateEditObjectV1Request : EzsigntemplateEditObjectV1Request =  // EzsigntemplateEditObjectV1Request | 
-            //val result : EzsigntemplateEditObjectV1Response = apiInstance.ezsigntemplateEditObjectV1(pkiEzsigntemplateID, ezsigntemplateEditObjectV1Request)
-            //result shouldBe ("TODO")
-        }
-
-        // to test ezsigntemplateEditObjectV2
-        should("test ezsigntemplateEditObjectV2") {
-            // uncomment below to test ezsigntemplateEditObjectV2
-            //val pkiEzsigntemplateID : kotlin.Int = 56 // kotlin.Int | 
-            //val ezsigntemplateEditObjectV2Request : EzsigntemplateEditObjectV2Request =  // EzsigntemplateEditObjectV2Request | 
-            //val result : EzsigntemplateEditObjectV2Response = apiInstance.ezsigntemplateEditObjectV2(pkiEzsigntemplateID, ezsigntemplateEditObjectV2Request)
+            //val ezsigntemplateEditObjectV3Request : EzsigntemplateEditObjectV3Request =  // EzsigntemplateEditObjectV3Request | 
+            //val result : EzsigntemplateEditObjectV3Response = apiInstance.ezsigntemplateEditObjectV3(pkiEzsigntemplateID, ezsigntemplateEditObjectV3Request)
             //result shouldBe ("TODO")
         }
 
@@ -100,7 +78,8 @@ class ObjectEzsigntemplateApiTest : ShouldSpec() {
             //val eFilterActive : kotlin.String = eFilterActive_example // kotlin.String | Specify which results we want to display.
             //val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter the returned results
             //val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
-            //val result : EzsigntemplateGetAutocompleteV2Response = apiInstance.ezsigntemplateGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+            //val fkiEzsignfoldertypeID : kotlin.Int = 56 // kotlin.Int | The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic
+            //val result : EzsigntemplateGetAutocompleteV2Response = apiInstance.ezsigntemplateGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage, fkiEzsignfoldertypeID)
             //result shouldBe ("TODO")
         }
 
@@ -116,19 +95,11 @@ class ObjectEzsigntemplateApiTest : ShouldSpec() {
             //result shouldBe ("TODO")
         }
 
-        // to test ezsigntemplateGetObjectV1
-        should("test ezsigntemplateGetObjectV1") {
-            // uncomment below to test ezsigntemplateGetObjectV1
+        // to test ezsigntemplateGetObjectV3
+        should("test ezsigntemplateGetObjectV3") {
+            // uncomment below to test ezsigntemplateGetObjectV3
             //val pkiEzsigntemplateID : kotlin.Int = 56 // kotlin.Int | 
-            //val result : EzsigntemplateGetObjectV1Response = apiInstance.ezsigntemplateGetObjectV1(pkiEzsigntemplateID)
-            //result shouldBe ("TODO")
-        }
-
-        // to test ezsigntemplateGetObjectV2
-        should("test ezsigntemplateGetObjectV2") {
-            // uncomment below to test ezsigntemplateGetObjectV2
-            //val pkiEzsigntemplateID : kotlin.Int = 56 // kotlin.Int | 
-            //val result : EzsigntemplateGetObjectV2Response = apiInstance.ezsigntemplateGetObjectV2(pkiEzsigntemplateID)
+            //val result : EzsigntemplateGetObjectV3Response = apiInstance.ezsigntemplateGetObjectV3(pkiEzsigntemplateID)
             //result shouldBe ("TODO")
         }
 

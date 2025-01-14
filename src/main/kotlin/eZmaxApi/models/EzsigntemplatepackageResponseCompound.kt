@@ -36,6 +36,8 @@ import com.squareup.moshi.JsonClass
  * @param bEzsigntemplatepackageEditallowed Whether the Ezsigntemplatepackage if allowed to edit or not
  * @param aObjEzsigntemplatepackagesigner 
  * @param aObjEzsigntemplatepackagemembership 
+ * @param fkiEzdoctemplatedocumentID The unique ID of the Ezdoctemplatedocument
+ * @param sEzdoctemplatedocumentNameX The name of the Ezdoctemplatedocument in the language of the requester
  */
 
 
@@ -85,7 +87,18 @@ data class EzsigntemplatepackageResponseCompound (
     val aObjEzsigntemplatepackagesigner: kotlin.collections.List<EzsigntemplatepackagesignerResponseCompound>,
 
     @Json(name = "a_objEzsigntemplatepackagemembership")
-    val aObjEzsigntemplatepackagemembership: kotlin.collections.List<EzsigntemplatepackagemembershipResponseCompound>
+    val aObjEzsigntemplatepackagemembership: kotlin.collections.List<EzsigntemplatepackagemembershipResponseCompound>,
 
-)
+    /* The unique ID of the Ezdoctemplatedocument */
+    @Json(name = "fkiEzdoctemplatedocumentID")
+    val fkiEzdoctemplatedocumentID: kotlin.Int? = null,
+
+    /* The name of the Ezdoctemplatedocument in the language of the requester */
+    @Json(name = "sEzdoctemplatedocumentNameX")
+    val sEzdoctemplatedocumentNameX: kotlin.String? = null
+
+) {
+
+
+}
 

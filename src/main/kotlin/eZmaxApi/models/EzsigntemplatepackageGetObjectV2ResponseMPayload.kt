@@ -32,5 +32,8 @@ data class EzsigntemplatepackageGetObjectV2ResponseMPayload (
     @Json(name = "objEzsigntemplatepackage")
     val objEzsigntemplatepackage: EzsigntemplatepackageResponseCompound
 
-)
+) {
+
+
+}
 

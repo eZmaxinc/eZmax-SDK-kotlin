@@ -23,13 +23,26 @@ import com.squareup.moshi.JsonClass
  * Request for POST /1/object/ezsigntemplate/{pkiEzsigntemplateID}/copy
  *
  * @param aFkiEzsignfoldertypeID 
+ * @param bCopyCompany Whether we shall copy the Ezsigntemplate as a company Ezsigntemplate
+ * @param bCopyUser Whether we shall copy the Ezsigntemplate as a user Ezsigntemplate
  */
 
 
 data class EzsigntemplateCopyV1Request (
 
     @Json(name = "a_fkiEzsignfoldertypeID")
-    val aFkiEzsignfoldertypeID: kotlin.collections.List<kotlin.Int>
+    val aFkiEzsignfoldertypeID: kotlin.collections.List<kotlin.Int>? = null,
 
-)
+    /* Whether we shall copy the Ezsigntemplate as a company Ezsigntemplate */
+    @Json(name = "bCopyCompany")
+    val bCopyCompany: kotlin.Boolean? = null,
+
+    /* Whether we shall copy the Ezsigntemplate as a user Ezsigntemplate */
+    @Json(name = "bCopyUser")
+    val bCopyUser: kotlin.Boolean? = null
+
+) {
+
+
+}
 

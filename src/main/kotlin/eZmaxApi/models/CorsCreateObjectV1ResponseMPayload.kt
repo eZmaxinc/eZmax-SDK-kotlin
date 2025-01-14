@@ -32,5 +32,8 @@ data class CorsCreateObjectV1ResponseMPayload (
     @Json(name = "a_pkiCorsID")
     val aPkiCorsID: kotlin.collections.List<kotlin.Int>
 
-)
+) {
+
+
+}
 

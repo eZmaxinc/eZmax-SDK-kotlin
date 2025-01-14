@@ -42,5 +42,8 @@ data class EzsigntemplateGetListV1ResponseMPayload (
     @Json(name = "a_objEzsigntemplate")
     val aObjEzsigntemplate: kotlin.collections.List<EzsigntemplateListElement>
 
-)
+) {
+
+
+}
 

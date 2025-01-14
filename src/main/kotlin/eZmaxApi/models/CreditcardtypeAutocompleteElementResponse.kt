@@ -42,5 +42,8 @@ data class CreditcardtypeAutocompleteElementResponse (
     @Json(name = "eCreditcardtypeCodename")
     val eCreditcardtypeCodename: FieldECreditcardtypeCodename
 
-)
+) {
+
+
+}
 

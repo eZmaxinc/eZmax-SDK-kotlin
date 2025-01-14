@@ -37,5 +37,8 @@ data class ScimServiceProviderConfigFilter (
     @Json(name = "maxResults")
     val maxResults: kotlin.Int
 
-)
+) {
+
+
+}
 

@@ -42,5 +42,8 @@ data class UserlogintypeGetAutocompleteV2Response (
     @Json(name = "objDebug")
     val objDebug: CommonResponseObjDebug? = null
 
-)
+) {
+
+
+}
 

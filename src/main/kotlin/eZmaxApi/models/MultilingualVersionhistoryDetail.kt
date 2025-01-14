@@ -37,5 +37,8 @@ data class MultilingualVersionhistoryDetail (
     @Json(name = "tVersionhistoryDetail2")
     val tVersionhistoryDetail2: kotlin.String? = null
 
-)
+) {
+
+
+}
 

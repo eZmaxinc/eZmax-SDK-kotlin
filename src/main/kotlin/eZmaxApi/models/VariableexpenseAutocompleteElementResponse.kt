@@ -42,5 +42,8 @@ data class VariableexpenseAutocompleteElementResponse (
     @Json(name = "bVariableexpenseIsactive")
     val bVariableexpenseIsactive: kotlin.Boolean
 
-)
+) {
+
+
+}
 

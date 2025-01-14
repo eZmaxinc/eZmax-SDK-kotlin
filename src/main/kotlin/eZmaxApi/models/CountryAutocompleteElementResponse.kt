@@ -47,5 +47,8 @@ data class CountryAutocompleteElementResponse (
     @Json(name = "bCountryIsactive")
     val bCountryIsactive: kotlin.Boolean
 
-)
+) {
+
+
+}
 

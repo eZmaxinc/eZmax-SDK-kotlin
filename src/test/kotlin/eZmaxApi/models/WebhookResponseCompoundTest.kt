@@ -84,6 +84,12 @@ class WebhookResponseCompoundTest : ShouldSpec() {
             //modelInstance.objAudit shouldBe ("TODO")
         }
 
+        // to test the property `fkiAuthenticationexternalID` - The unique ID of the Authenticationexternal
+        should("test fkiAuthenticationexternalID") {
+            // uncomment below to test the property
+            //modelInstance.fkiAuthenticationexternalID shouldBe ("TODO")
+        }
+
         // to test the property `fkiEzsignfoldertypeID` - The unique ID of the Ezsignfoldertype.
         should("test fkiEzsignfoldertypeID") {
             // uncomment below to test the property
@@ -118,6 +124,12 @@ class WebhookResponseCompoundTest : ShouldSpec() {
         should("test sWebhookSecret") {
             // uncomment below to test the property
             //modelInstance.sWebhookSecret shouldBe ("TODO")
+        }
+
+        // to test the property `sAuthenticationexternalDescription` - The description of the Authenticationexternal
+        should("test sAuthenticationexternalDescription") {
+            // uncomment below to test the property
+            //modelInstance.sAuthenticationexternalDescription shouldBe ("TODO")
         }
 
         // to test the property `sWebhookEvent` - The concatenated string to describe the Webhook event

@@ -16,9 +16,11 @@
 package eZmaxApi.apis
 
 import java.io.IOException
-import okhttp3.OkHttpClient
+import okhttp3.Call
 import okhttp3.HttpUrl
 
+import eZmaxApi.models.ActivesessionGenerateFederationTokenV1Request
+import eZmaxApi.models.ActivesessionGenerateFederationTokenV1Response
 import eZmaxApi.models.ActivesessionGetCurrentV1Response
 import eZmaxApi.models.ActivesessionGetListV1Response
 import eZmaxApi.models.CommonResponseError
@@ -41,12 +43,84 @@ import eZmaxApi.infrastructure.ResponseType
 import eZmaxApi.infrastructure.Success
 import eZmaxApi.infrastructure.toMultiValue
 
-class ObjectActivesessionApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = ApiClient.defaultClient) : ApiClient(basePath, client) {
+class ObjectActivesessionApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
             System.getProperties().getProperty(ApiClient.baseUrlKey, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
+    }
+
+    /**
+     * Generate a federation token
+     * 
+     * @param activesessionGenerateFederationTokenV1Request 
+     * @return ActivesessionGenerateFederationTokenV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun activesessionGenerateFederationTokenV1(activesessionGenerateFederationTokenV1Request: ActivesessionGenerateFederationTokenV1Request) : ActivesessionGenerateFederationTokenV1Response {
+        val localVarResponse = activesessionGenerateFederationTokenV1WithHttpInfo(activesessionGenerateFederationTokenV1Request = activesessionGenerateFederationTokenV1Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ActivesessionGenerateFederationTokenV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Generate a federation token
+     * 
+     * @param activesessionGenerateFederationTokenV1Request 
+     * @return ApiResponse<ActivesessionGenerateFederationTokenV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun activesessionGenerateFederationTokenV1WithHttpInfo(activesessionGenerateFederationTokenV1Request: ActivesessionGenerateFederationTokenV1Request) : ApiResponse<ActivesessionGenerateFederationTokenV1Response?> {
+        val localVariableConfig = activesessionGenerateFederationTokenV1RequestConfig(activesessionGenerateFederationTokenV1Request = activesessionGenerateFederationTokenV1Request)
+
+        return request<ActivesessionGenerateFederationTokenV1Request, ActivesessionGenerateFederationTokenV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation activesessionGenerateFederationTokenV1
+     *
+     * @param activesessionGenerateFederationTokenV1Request 
+     * @return RequestConfig
+     */
+    fun activesessionGenerateFederationTokenV1RequestConfig(activesessionGenerateFederationTokenV1Request: ActivesessionGenerateFederationTokenV1Request) : RequestConfig<ActivesessionGenerateFederationTokenV1Request> {
+        val localVariableBody = activesessionGenerateFederationTokenV1Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/activesession/generateFederationToken",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
     }
 
     /**
@@ -144,7 +218,16 @@ class ObjectActivesessionApi(basePath: kotlin.String = defaultBasePath, client: 
          @Json(name = "dtActivesessionLasthit_ASC") dtActivesessionLasthit_ASC("dtActivesessionLasthit_ASC"),
          @Json(name = "dtActivesessionLasthit_DESC") dtActivesessionLasthit_DESC("dtActivesessionLasthit_DESC"),
          @Json(name = "sActivesessionIP_ASC") sActivesessionIP_ASC("sActivesessionIP_ASC"),
-         @Json(name = "sActivesessionIP_DESC") sActivesessionIP_DESC("sActivesessionIP_DESC")
+         @Json(name = "sActivesessionIP_DESC") sActivesessionIP_DESC("sActivesessionIP_DESC");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
      }
 
     /**

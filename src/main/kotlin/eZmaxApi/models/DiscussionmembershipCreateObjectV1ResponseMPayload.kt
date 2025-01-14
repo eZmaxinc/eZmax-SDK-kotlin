@@ -32,5 +32,8 @@ data class DiscussionmembershipCreateObjectV1ResponseMPayload (
     @Json(name = "a_pkiDiscussionmembershipID")
     val aPkiDiscussionmembershipID: kotlin.collections.List<kotlin.Int>
 
-)
+) {
+
+
+}
 

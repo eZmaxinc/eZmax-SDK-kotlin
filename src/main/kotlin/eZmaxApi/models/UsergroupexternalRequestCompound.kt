@@ -42,5 +42,8 @@ data class UsergroupexternalRequestCompound (
     @Json(name = "pkiUsergroupexternalID")
     val pkiUsergroupexternalID: kotlin.Int? = null
 
-)
+) {
+
+
+}
 

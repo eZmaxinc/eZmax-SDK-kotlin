@@ -43,5 +43,8 @@ data class WebhookEzsignSignatureSigned (
     @Json(name = "objEzsignsignature")
     val objEzsignsignature: EzsignsignatureResponse
 
-)
+) {
+
+
+}
 

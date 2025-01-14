@@ -42,5 +42,8 @@ data class UsergroupGetListV1ResponseMPayload (
     @Json(name = "a_objUsergroup")
     val aObjUsergroup: kotlin.collections.List<UsergroupListElement>
 
-)
+) {
+
+
+}
 

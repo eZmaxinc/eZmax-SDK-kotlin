@@ -49,5 +49,6 @@ data class EzsignfolderBatchDownloadV1Request (
         @Json(name = "Proof") Proof("Proof"),
         @Json(name = "Proofdocument") Proofdocument("Proofdocument");
     }
+
 }
 

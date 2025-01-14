@@ -31,5 +31,17 @@ class EzsigntemplateCopyV1RequestTest : ShouldSpec() {
             //modelInstance.aFkiEzsignfoldertypeID shouldBe ("TODO")
         }
 
+        // to test the property `bCopyCompany` - Whether we shall copy the Ezsigntemplate as a company Ezsigntemplate
+        should("test bCopyCompany") {
+            // uncomment below to test the property
+            //modelInstance.bCopyCompany shouldBe ("TODO")
+        }
+
+        // to test the property `bCopyUser` - Whether we shall copy the Ezsigntemplate as a user Ezsigntemplate
+        should("test bCopyUser") {
+            // uncomment below to test the property
+            //modelInstance.bCopyUser shouldBe ("TODO")
+        }
+
     }
 }

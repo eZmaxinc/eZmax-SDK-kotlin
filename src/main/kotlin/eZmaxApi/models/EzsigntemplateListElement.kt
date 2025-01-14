@@ -77,5 +77,8 @@ data class EzsigntemplateListElement (
     @Json(name = "sEzsignfoldertypeNameX")
     val sEzsignfoldertypeNameX: kotlin.String? = null
 
-)
+) {
+
+
+}
 

@@ -47,5 +47,8 @@ data class UserAutocompleteElementResponse (
     @Json(name = "bUserIsactive")
     val bUserIsactive: kotlin.Boolean
 
-)
+) {
+
+
+}
 

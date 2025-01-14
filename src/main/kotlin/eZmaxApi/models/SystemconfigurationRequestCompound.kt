@@ -33,6 +33,7 @@ import com.squareup.moshi.JsonClass
  * @param bSystemconfigurationEzsignpersonnal Whether if we allow the creation of personal files in eZsign
  * @param bSystemconfigurationSspr Whether if we allow SSPR
  * @param pkiSystemconfigurationID The unique ID of the Systemconfiguration
+ * @param fkiBrandingID The unique ID of the Branding
  * @param eSystemconfigurationEzsign 
  * @param eSystemconfigurationEzsignofficeplan 
  * @param bSystemconfigurationEzsignpaidbyoffice Whether if Ezsign is paid by the company or not
@@ -64,6 +65,10 @@ data class SystemconfigurationRequestCompound (
     @Json(name = "pkiSystemconfigurationID")
     val pkiSystemconfigurationID: kotlin.Int? = null,
 
+    /* The unique ID of the Branding */
+    @Json(name = "fkiBrandingID")
+    val fkiBrandingID: kotlin.Int? = null,
+
     @Json(name = "eSystemconfigurationEzsign")
     @Deprecated(message = "This property is deprecated.")
     val eSystemconfigurationEzsign: FieldESystemconfigurationEzsign? = null,
@@ -83,5 +88,8 @@ data class SystemconfigurationRequestCompound (
     @Json(name = "dtSystemconfigurationReadonlyexpirationend")
     val dtSystemconfigurationReadonlyexpirationend: kotlin.String? = null
 
-)
+) {
+
+
+}
 

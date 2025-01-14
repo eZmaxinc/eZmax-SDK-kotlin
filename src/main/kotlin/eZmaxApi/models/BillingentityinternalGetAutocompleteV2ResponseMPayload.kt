@@ -33,5 +33,8 @@ data class BillingentityinternalGetAutocompleteV2ResponseMPayload (
     @Json(name = "a_objBillingentityinternal")
     val aObjBillingentityinternal: kotlin.collections.List<BillingentityinternalAutocompleteElementResponse>
 
-)
+) {
+
+
+}
 

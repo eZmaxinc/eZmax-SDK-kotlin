@@ -32,5 +32,8 @@ data class UsergroupexternalEditObjectV1Request (
     @Json(name = "objUsergroupexternal")
     val objUsergroupexternal: UsergroupexternalRequestCompound
 
-)
+) {
+
+
+}
 

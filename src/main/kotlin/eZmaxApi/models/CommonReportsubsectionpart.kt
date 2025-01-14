@@ -50,5 +50,6 @@ data class CommonReportsubsectionpart (
         @Json(name = "Body") Body("Body"),
         @Json(name = "Footer") Footer("Footer");
     }
+
 }
 

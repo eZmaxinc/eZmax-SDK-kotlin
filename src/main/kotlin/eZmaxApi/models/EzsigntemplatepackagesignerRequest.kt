@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.FieldEEzsigntemplatepackagesignerMapping
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -25,6 +26,11 @@ import com.squareup.moshi.JsonClass
  * @param fkiEzsigntemplatepackageID The unique ID of the Ezsigntemplatepackage
  * @param sEzsigntemplatepackagesignerDescription The description of the Ezsigntemplatepackagesigner
  * @param pkiEzsigntemplatepackagesignerID The unique ID of the Ezsigntemplatepackagesigner
+ * @param fkiEzdoctemplatedocumentID The unique ID of the Ezdoctemplatedocument
+ * @param fkiUserID The unique ID of the User
+ * @param fkiUsergroupID The unique ID of the Usergroup
+ * @param bEzsigntemplatepackagesignerReceivecopy If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document.
+ * @param eEzsigntemplatepackagesignerMapping 
  */
 
 
@@ -40,7 +46,29 @@ data class EzsigntemplatepackagesignerRequest (
 
     /* The unique ID of the Ezsigntemplatepackagesigner */
     @Json(name = "pkiEzsigntemplatepackagesignerID")
-    val pkiEzsigntemplatepackagesignerID: kotlin.Int? = null
+    val pkiEzsigntemplatepackagesignerID: kotlin.Int? = null,
 
-)
+    /* The unique ID of the Ezdoctemplatedocument */
+    @Json(name = "fkiEzdoctemplatedocumentID")
+    val fkiEzdoctemplatedocumentID: kotlin.Int? = null,
+
+    /* The unique ID of the User */
+    @Json(name = "fkiUserID")
+    val fkiUserID: kotlin.Int? = null,
+
+    /* The unique ID of the Usergroup */
+    @Json(name = "fkiUsergroupID")
+    val fkiUsergroupID: kotlin.Int? = null,
+
+    /* If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document. */
+    @Json(name = "bEzsigntemplatepackagesignerReceivecopy")
+    val bEzsigntemplatepackagesignerReceivecopy: kotlin.Boolean? = null,
+
+    @Json(name = "eEzsigntemplatepackagesignerMapping")
+    val eEzsigntemplatepackagesignerMapping: FieldEEzsigntemplatepackagesignerMapping? = FieldEEzsigntemplatepackagesignerMapping.Manual
+
+) {
+
+
+}
 

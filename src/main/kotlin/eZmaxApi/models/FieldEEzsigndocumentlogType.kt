@@ -22,7 +22,7 @@ import com.squareup.moshi.JsonClass
 /**
  * The Ezsigndocumentlog Type.
  *
- * Values: Clone,Login,Sendcode,Badcode,Goodcode,Badresponse,Goodresponse,Authentication,Createpage,Download,Send,Sign,Upload,View,Completion,Changelimitdate,Unsign,ImportFromInstanet,SendEmail,FormCompletion,SignatureAttachmentAdd,SignatureAttachmentValidation,SignatureAttachmentRefused,SignatureAttachmentDeleted,DeclinedToSign,DelayedSendEmail,AnnotationAdded,Flatten,RegeneratePage,RegeneratePageForm,Reassign
+ * Values: Clone,Login,Sendcode,Badcode,Goodcode,Badresponse,Goodresponse,Authentication,Createpage,Download,Send,Sign,Upload,View,Completion,Changelimitdate,Unsign,ImportFromInstanet,CreatedFromEzsigntemplatepublic,SendEmail,FormCompletion,FormSaveAsDraft,SignatureAttachmentAdd,SignatureAttachmentValidation,SignatureAttachmentRefused,SignatureAttachmentDeleted,DeclinedToSign,DelayedSendEmail,AnnotationAdded,Flatten,RegeneratePage,RegeneratePageForm,Reassign,DocumentCompletion
  */
 
 @JsonClass(generateAdapter = false)
@@ -82,11 +82,17 @@ enum class FieldEEzsigndocumentlogType(val value: kotlin.String) {
     @Json(name = "ImportFromInstanet")
     ImportFromInstanet("ImportFromInstanet"),
 
+    @Json(name = "CreatedFromEzsigntemplatepublic")
+    CreatedFromEzsigntemplatepublic("CreatedFromEzsigntemplatepublic"),
+
     @Json(name = "SendEmail")
     SendEmail("SendEmail"),
 
     @Json(name = "FormCompletion")
     FormCompletion("FormCompletion"),
+
+    @Json(name = "FormSaveAsDraft")
+    FormSaveAsDraft("FormSaveAsDraft"),
 
     @Json(name = "SignatureAttachmentAdd")
     SignatureAttachmentAdd("SignatureAttachmentAdd"),
@@ -119,7 +125,10 @@ enum class FieldEEzsigndocumentlogType(val value: kotlin.String) {
     RegeneratePageForm("RegeneratePageForm"),
 
     @Json(name = "Reassign")
-    Reassign("Reassign");
+    Reassign("Reassign"),
+
+    @Json(name = "DocumentCompletion")
+    DocumentCompletion("DocumentCompletion");
 
     /**
      * Override [toString()] to avoid using the enum variable name as the value, and instead use

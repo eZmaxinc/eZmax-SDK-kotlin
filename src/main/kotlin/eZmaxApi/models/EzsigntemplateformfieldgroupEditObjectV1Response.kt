@@ -37,5 +37,8 @@ data class EzsigntemplateformfieldgroupEditObjectV1Response (
     @Json(name = "objDebug")
     val objDebug: CommonResponseObjDebug? = null
 
-)
+) {
+
+
+}
 

@@ -62,5 +62,8 @@ data class ModuleResponseCompound (
     @Json(name = "a_objModulesection")
     val aObjModulesection: kotlin.collections.List<ModulesectionResponseCompound>? = null
 
-)
+) {
+
+
+}
 

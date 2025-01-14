@@ -42,5 +42,8 @@ data class PhonetypeAutocompleteElementResponse (
     @Json(name = "bPhonetypeIsactive")
     val bPhonetypeIsactive: kotlin.Boolean
 
-)
+) {
+
+
+}
 

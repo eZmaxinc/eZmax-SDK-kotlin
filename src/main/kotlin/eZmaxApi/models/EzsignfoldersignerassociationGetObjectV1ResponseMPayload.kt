@@ -72,5 +72,8 @@ data class EzsignfoldersignerassociationGetObjectV1ResponseMPayload (
     @Json(name = "objEzsignsigner")
     val objEzsignsigner: EzsignsignerResponseCompound? = null
 
-)
+) {
+
+
+}
 

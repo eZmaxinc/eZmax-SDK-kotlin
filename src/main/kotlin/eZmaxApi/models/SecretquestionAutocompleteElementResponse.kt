@@ -42,5 +42,8 @@ data class SecretquestionAutocompleteElementResponse (
     @Json(name = "bSecretquestionIsactive")
     val bSecretquestionIsactive: kotlin.Boolean
 
-)
+) {
+
+
+}
 

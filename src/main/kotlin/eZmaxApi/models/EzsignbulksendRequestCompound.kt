@@ -62,5 +62,8 @@ data class EzsignbulksendRequestCompound (
     @Json(name = "pkiEzsignbulksendID")
     val pkiEzsignbulksendID: kotlin.Int? = null
 
-)
+) {
+
+
+}
 

@@ -67,5 +67,8 @@ data class EzsignsignerResponseCompoundContact (
     @Json(name = "sPhoneE164Cell")
     val sPhoneE164Cell: kotlin.String? = null
 
-)
+) {
+
+
+}
 

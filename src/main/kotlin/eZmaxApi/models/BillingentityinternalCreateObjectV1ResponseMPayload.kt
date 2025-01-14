@@ -32,5 +32,8 @@ data class BillingentityinternalCreateObjectV1ResponseMPayload (
     @Json(name = "a_pkiBillingentityinternalID")
     val aPkiBillingentityinternalID: kotlin.collections.List<kotlin.Int>
 
-)
+) {
+
+
+}
 

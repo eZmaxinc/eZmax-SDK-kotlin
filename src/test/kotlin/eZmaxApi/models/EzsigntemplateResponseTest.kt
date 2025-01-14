@@ -81,6 +81,24 @@ class EzsigntemplateResponseTest : ShouldSpec() {
             //modelInstance.fkiEzsignfoldertypeID shouldBe ("TODO")
         }
 
+        // to test the property `fkiEzdoctemplatedocumentID` - The unique ID of the Ezdoctemplatedocument
+        should("test fkiEzdoctemplatedocumentID") {
+            // uncomment below to test the property
+            //modelInstance.fkiEzdoctemplatedocumentID shouldBe ("TODO")
+        }
+
+        // to test the property `sEzsigntemplateExternaldescription` - The external description of the Ezsigntemplate
+        should("test sEzsigntemplateExternaldescription") {
+            // uncomment below to test the property
+            //modelInstance.sEzsigntemplateExternaldescription shouldBe ("TODO")
+        }
+
+        // to test the property `tEzsigntemplateComment` - The comment of the Ezsigntemplate
+        should("test tEzsigntemplateComment") {
+            // uncomment below to test the property
+            //modelInstance.tEzsigntemplateComment shouldBe ("TODO")
+        }
+
         // to test the property `sEzsigntemplateFilenamepattern` - The filename pattern of the Ezsigntemplate
         should("test sEzsigntemplateFilenamepattern") {
             // uncomment below to test the property

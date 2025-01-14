@@ -32,5 +32,8 @@ data class VariableexpenseCreateObjectV1ResponseMPayload (
     @Json(name = "a_pkiVariableexpenseID")
     val aPkiVariableexpenseID: kotlin.collections.List<kotlin.Int>
 
-)
+) {
+
+
+}
 

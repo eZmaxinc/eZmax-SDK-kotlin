@@ -33,5 +33,8 @@ data class DepartmentGetAutocompleteV2ResponseMPayload (
     @Json(name = "a_objDepartment")
     val aObjDepartment: kotlin.collections.List<DepartmentAutocompleteElementResponse>
 
-)
+) {
+
+
+}
 

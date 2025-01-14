@@ -40,5 +40,8 @@ data class EzsigndocumentApplyEzsigntemplateV1Request (
     @Json(name = "a_pkiEzsignfoldersignerassociationID")
     val aPkiEzsignfoldersignerassociationID: kotlin.collections.List<kotlin.Int>
 
-)
+) {
+
+
+}
 

@@ -42,5 +42,8 @@ data class CreditcardclientGetListV1ResponseMPayload (
     @Json(name = "a_objCreditcardclient")
     val aObjCreditcardclient: kotlin.collections.List<CreditcardclientListElement>
 
-)
+) {
+
+
+}
 

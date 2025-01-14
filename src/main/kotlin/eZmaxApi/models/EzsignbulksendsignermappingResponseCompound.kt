@@ -47,5 +47,8 @@ data class EzsignbulksendsignermappingResponseCompound (
     @Json(name = "fkiUserID")
     val fkiUserID: kotlin.Int? = null
 
-)
+) {
+
+
+}
 

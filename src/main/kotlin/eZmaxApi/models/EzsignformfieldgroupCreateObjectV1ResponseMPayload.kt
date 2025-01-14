@@ -32,5 +32,8 @@ data class EzsignformfieldgroupCreateObjectV1ResponseMPayload (
     @Json(name = "a_pkiEzsignformfieldgroupID")
     val aPkiEzsignformfieldgroupID: kotlin.collections.List<kotlin.Int>
 
-)
+) {
+
+
+}
 

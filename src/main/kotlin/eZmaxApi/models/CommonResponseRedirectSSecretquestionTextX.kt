@@ -32,5 +32,8 @@ data class CommonResponseRedirectSSecretquestionTextX (
     @Json(name = "sSecretquestionTextX")
     val sSecretquestionTextX: kotlin.String
 
-)
+) {
+
+
+}
 

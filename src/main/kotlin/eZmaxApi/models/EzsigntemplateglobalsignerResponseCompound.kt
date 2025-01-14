@@ -42,5 +42,8 @@ data class EzsigntemplateglobalsignerResponseCompound (
     @Json(name = "sEzsigntemplateglobalsignerDescription")
     val sEzsigntemplateglobalsignerDescription: kotlin.String
 
-)
+) {
+
+
+}
 

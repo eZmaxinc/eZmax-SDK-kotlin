@@ -166,5 +166,8 @@ data class UserRequestV2 (
     @Json(name = "bUserChangepassword")
     val bUserChangepassword: kotlin.Boolean? = null
 
-)
+) {
+
+
+}
 

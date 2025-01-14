@@ -42,5 +42,8 @@ data class CustomContactNameResponse (
     @Json(name = "sContactCompany")
     val sContactCompany: kotlin.String? = null
 
-)
+) {
+
+
+}
 

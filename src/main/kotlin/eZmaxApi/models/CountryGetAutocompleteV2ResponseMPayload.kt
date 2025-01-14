@@ -33,5 +33,8 @@ data class CountryGetAutocompleteV2ResponseMPayload (
     @Json(name = "a_objCountry")
     val aObjCountry: kotlin.collections.List<CountryAutocompleteElementResponse>
 
-)
+) {
+
+
+}
 

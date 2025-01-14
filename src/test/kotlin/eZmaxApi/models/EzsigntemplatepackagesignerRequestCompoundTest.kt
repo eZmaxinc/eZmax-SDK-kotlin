@@ -19,6 +19,7 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.EzsigntemplatepackagesignerRequestCompound
+import eZmaxApi.models.FieldEEzsigntemplatepackagesignerMapping
 
 class EzsigntemplatepackagesignerRequestCompoundTest : ShouldSpec() {
     init {
@@ -41,6 +42,36 @@ class EzsigntemplatepackagesignerRequestCompoundTest : ShouldSpec() {
         should("test pkiEzsigntemplatepackagesignerID") {
             // uncomment below to test the property
             //modelInstance.pkiEzsigntemplatepackagesignerID shouldBe ("TODO")
+        }
+
+        // to test the property `fkiEzdoctemplatedocumentID` - The unique ID of the Ezdoctemplatedocument
+        should("test fkiEzdoctemplatedocumentID") {
+            // uncomment below to test the property
+            //modelInstance.fkiEzdoctemplatedocumentID shouldBe ("TODO")
+        }
+
+        // to test the property `fkiUserID` - The unique ID of the User
+        should("test fkiUserID") {
+            // uncomment below to test the property
+            //modelInstance.fkiUserID shouldBe ("TODO")
+        }
+
+        // to test the property `fkiUsergroupID` - The unique ID of the Usergroup
+        should("test fkiUsergroupID") {
+            // uncomment below to test the property
+            //modelInstance.fkiUsergroupID shouldBe ("TODO")
+        }
+
+        // to test the property `bEzsigntemplatepackagesignerReceivecopy` - If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document.
+        should("test bEzsigntemplatepackagesignerReceivecopy") {
+            // uncomment below to test the property
+            //modelInstance.bEzsigntemplatepackagesignerReceivecopy shouldBe ("TODO")
+        }
+
+        // to test the property `eEzsigntemplatepackagesignerMapping`
+        should("test eEzsigntemplatepackagesignerMapping") {
+            // uncomment below to test the property
+            //modelInstance.eEzsigntemplatepackagesignerMapping shouldBe ("TODO")
         }
 
     }

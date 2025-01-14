@@ -137,5 +137,8 @@ data class EzmaxinvoicingGetProvisionalV1ResponseMPayload (
     @Json(name = "objAudit")
     val objAudit: CommonAudit? = null
 
-)
+) {
+
+
+}
 

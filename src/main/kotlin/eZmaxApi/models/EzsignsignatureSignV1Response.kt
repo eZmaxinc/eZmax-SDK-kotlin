@@ -17,6 +17,7 @@ package eZmaxApi.models
 
 import eZmaxApi.models.CommonResponseObjDebug
 import eZmaxApi.models.CommonResponseObjDebugPayload
+import eZmaxApi.models.EzsignsignatureSignV1ResponseMPayload
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -25,6 +26,7 @@ import com.squareup.moshi.JsonClass
  * Response for POST /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign
  *
  * @param objDebugPayload 
+ * @param mPayload 
  * @param objDebug 
  */
 
@@ -34,8 +36,14 @@ data class EzsignsignatureSignV1Response (
     @Json(name = "objDebugPayload")
     val objDebugPayload: CommonResponseObjDebugPayload,
 
+    @Json(name = "mPayload")
+    val mPayload: EzsignsignatureSignV1ResponseMPayload,
+
     @Json(name = "objDebug")
     val objDebug: CommonResponseObjDebug? = null
 
-)
+) {
+
+
+}
 

@@ -32,5 +32,8 @@ data class CreditcardclientGetObjectV2ResponseMPayload (
     @Json(name = "objCreditcardclient")
     val objCreditcardclient: CreditcardclientResponseCompound
 
-)
+) {
+
+
+}
 

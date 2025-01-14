@@ -60,5 +60,6 @@ data class CustomCreateEzsignelementsPositionedByWordRequest (
         @Json(name = "First") First("First"),
         @Json(name = "Last") Last("Last");
     }
+
 }
 

@@ -77,5 +77,8 @@ data class EzmaxinvoicinguserResponseCompound (
     @Json(name = "fkiEzmaxinvoicingID")
     val fkiEzmaxinvoicingID: kotlin.Int? = null
 
-)
+) {
+
+
+}
 

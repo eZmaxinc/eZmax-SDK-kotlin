@@ -24,7 +24,7 @@ import com.squareup.moshi.JsonClass
  *
  * @param pkiCreditcarddetailID The unique ID of the Creditcarddetail
  * @param fkiCreditcardtypeID The unique ID of the Creditcardtype
- * @param sCreditcarddetailNumbermasked The numbermasked of the Creditcarddetail
+ * @param iCreditcarddetailLastdigits The last digits of the Creditcarddetail
  * @param iCreditcarddetailExpirationmonth The expirationmonth of the Creditcarddetail
  * @param iCreditcarddetailExpirationyear The expirationyear of the Creditcarddetail
  * @param sCreditcarddetailCivic The civic of the Creditcarddetail
@@ -43,9 +43,9 @@ data class CreditcarddetailResponse (
     @Json(name = "fkiCreditcardtypeID")
     val fkiCreditcardtypeID: kotlin.Int,
 
-    /* The numbermasked of the Creditcarddetail */
-    @Json(name = "sCreditcarddetailNumbermasked")
-    val sCreditcarddetailNumbermasked: kotlin.String,
+    /* The last digits of the Creditcarddetail */
+    @Json(name = "iCreditcarddetailLastdigits")
+    val iCreditcarddetailLastdigits: kotlin.Int,
 
     /* The expirationmonth of the Creditcarddetail */
     @Json(name = "iCreditcarddetailExpirationmonth")
@@ -67,5 +67,8 @@ data class CreditcarddetailResponse (
     @Json(name = "sCreditcarddetailZip")
     val sCreditcarddetailZip: kotlin.String
 
-)
+) {
+
+
+}
 

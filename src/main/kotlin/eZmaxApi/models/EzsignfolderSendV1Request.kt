@@ -32,5 +32,8 @@ data class EzsignfolderSendV1Request (
     @Json(name = "tExtraMessage")
     val tExtraMessage: kotlin.String
 
-)
+) {
+
+
+}
 

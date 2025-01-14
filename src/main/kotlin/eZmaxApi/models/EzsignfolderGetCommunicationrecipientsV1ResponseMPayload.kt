@@ -32,5 +32,8 @@ data class EzsignfolderGetCommunicationrecipientsV1ResponseMPayload (
     @Json(name = "a_objCommunicationrecipientsgroup")
     val aObjCommunicationrecipientsgroup: kotlin.collections.List<CustomCommunicationrecipientsgroupResponse>
 
-)
+) {
+
+
+}
 

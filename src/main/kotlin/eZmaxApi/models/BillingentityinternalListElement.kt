@@ -37,5 +37,8 @@ data class BillingentityinternalListElement (
     @Json(name = "sBillingentityinternalDescriptionX")
     val sBillingentityinternalDescriptionX: kotlin.String
 
-)
+) {
+
+
+}
 

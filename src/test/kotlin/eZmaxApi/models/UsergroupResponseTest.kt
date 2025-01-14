@@ -19,6 +19,7 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.UsergroupResponse
+import eZmaxApi.models.EmailRequest
 import eZmaxApi.models.MultilingualUsergroupName
 
 class UsergroupResponseTest : ShouldSpec() {
@@ -42,6 +43,12 @@ class UsergroupResponseTest : ShouldSpec() {
         should("test sUsergroupNameX") {
             // uncomment below to test the property
             //modelInstance.sUsergroupNameX shouldBe ("TODO")
+        }
+
+        // to test the property `objEmail`
+        should("test objEmail") {
+            // uncomment below to test the property
+            //modelInstance.objEmail shouldBe ("TODO")
         }
 
     }

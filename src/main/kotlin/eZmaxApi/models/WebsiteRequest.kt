@@ -24,6 +24,7 @@ import com.squareup.moshi.JsonClass
  *
  * @param fkiWebsitetypeID The unique ID of the Websitetype.  Valid values:  |Value|Description| |-|-| |1|Website| |2|Twitter| |3|Facebook| |4|Survey|
  * @param sWebsiteAddress The URL of the website.
+ * @param pkiWebsiteID The unique ID of the Website Default
  */
 
 
@@ -35,7 +36,14 @@ data class WebsiteRequest (
 
     /* The URL of the website. */
     @Json(name = "sWebsiteAddress")
-    val sWebsiteAddress: kotlin.String
+    val sWebsiteAddress: kotlin.String,
 
-)
+    /* The unique ID of the Website Default */
+    @Json(name = "pkiWebsiteID")
+    val pkiWebsiteID: kotlin.Int? = null
+
+) {
+
+
+}
 

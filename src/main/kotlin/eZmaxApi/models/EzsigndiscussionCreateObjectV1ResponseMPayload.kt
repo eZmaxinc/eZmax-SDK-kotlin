@@ -32,5 +32,8 @@ data class EzsigndiscussionCreateObjectV1ResponseMPayload (
     @Json(name = "a_pkiEzsigndiscussionID")
     val aPkiEzsigndiscussionID: kotlin.collections.List<kotlin.Int>
 
-)
+) {
+
+
+}
 

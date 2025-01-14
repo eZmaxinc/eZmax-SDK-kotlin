@@ -42,5 +42,8 @@ data class EmailRequestCompound (
     @Json(name = "pkiEmailID")
     val pkiEmailID: kotlin.Int? = null
 
-)
+) {
+
+
+}
 

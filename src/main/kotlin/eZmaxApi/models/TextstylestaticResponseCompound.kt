@@ -23,6 +23,7 @@ import com.squareup.moshi.JsonClass
  * A Textstylestatic Object
  *
  * @param fkiFontID The unique ID of the Font
+ * @param sFontName The name of the Font
  * @param bTextstylestaticBold Whether the Textstylestatic is Bold or not
  * @param bTextstylestaticUnderline Whether the Textstylestatic is Underline or not
  * @param bTextstylestaticItalic Whether the Textstylestatic is Italic or not
@@ -38,6 +39,10 @@ data class TextstylestaticResponseCompound (
     /* The unique ID of the Font */
     @Json(name = "fkiFontID")
     val fkiFontID: kotlin.Int,
+
+    /* The name of the Font */
+    @Json(name = "sFontName")
+    val sFontName: kotlin.String,
 
     /* Whether the Textstylestatic is Bold or not */
     @Json(name = "bTextstylestaticBold")
@@ -67,5 +72,8 @@ data class TextstylestaticResponseCompound (
     @Json(name = "pkiTextstylestaticID")
     val pkiTextstylestaticID: kotlin.Int? = null
 
-)
+) {
+
+
+}
 

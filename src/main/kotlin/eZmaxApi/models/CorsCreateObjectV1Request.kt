@@ -32,5 +32,8 @@ data class CorsCreateObjectV1Request (
     @Json(name = "a_objCors")
     val aObjCors: kotlin.collections.List<CorsRequestCompound>
 
-)
+) {
+
+
+}
 

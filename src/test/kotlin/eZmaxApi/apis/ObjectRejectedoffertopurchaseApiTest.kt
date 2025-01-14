@@ -20,18 +20,45 @@ import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectRejectedoffertopurchaseApi
 import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.RejectedoffertopurchaseGetCommunicationCountV1Response
 import eZmaxApi.models.RejectedoffertopurchaseGetCommunicationListV1Response
+import eZmaxApi.models.RejectedoffertopurchaseGetCommunicationrecipientsV1Response
+import eZmaxApi.models.RejectedoffertopurchaseGetCommunicationsendersV1Response
 
 class ObjectRejectedoffertopurchaseApiTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of ObjectRejectedoffertopurchaseApi
         //val apiInstance = ObjectRejectedoffertopurchaseApi()
 
+        // to test rejectedoffertopurchaseGetCommunicationCountV1
+        should("test rejectedoffertopurchaseGetCommunicationCountV1") {
+            // uncomment below to test rejectedoffertopurchaseGetCommunicationCountV1
+            //val pkiRejectedoffertopurchaseID : kotlin.Int = 56 // kotlin.Int | 
+            //val result : RejectedoffertopurchaseGetCommunicationCountV1Response = apiInstance.rejectedoffertopurchaseGetCommunicationCountV1(pkiRejectedoffertopurchaseID)
+            //result shouldBe ("TODO")
+        }
+
         // to test rejectedoffertopurchaseGetCommunicationListV1
         should("test rejectedoffertopurchaseGetCommunicationListV1") {
             // uncomment below to test rejectedoffertopurchaseGetCommunicationListV1
             //val pkiRejectedoffertopurchaseID : kotlin.Int = 56 // kotlin.Int | 
             //val result : RejectedoffertopurchaseGetCommunicationListV1Response = apiInstance.rejectedoffertopurchaseGetCommunicationListV1(pkiRejectedoffertopurchaseID)
+            //result shouldBe ("TODO")
+        }
+
+        // to test rejectedoffertopurchaseGetCommunicationrecipientsV1
+        should("test rejectedoffertopurchaseGetCommunicationrecipientsV1") {
+            // uncomment below to test rejectedoffertopurchaseGetCommunicationrecipientsV1
+            //val pkiRejectedoffertopurchaseID : kotlin.Int = 56 // kotlin.Int | 
+            //val result : RejectedoffertopurchaseGetCommunicationrecipientsV1Response = apiInstance.rejectedoffertopurchaseGetCommunicationrecipientsV1(pkiRejectedoffertopurchaseID)
+            //result shouldBe ("TODO")
+        }
+
+        // to test rejectedoffertopurchaseGetCommunicationsendersV1
+        should("test rejectedoffertopurchaseGetCommunicationsendersV1") {
+            // uncomment below to test rejectedoffertopurchaseGetCommunicationsendersV1
+            //val pkiRejectedoffertopurchaseID : kotlin.Int = 56 // kotlin.Int | 
+            //val result : RejectedoffertopurchaseGetCommunicationsendersV1Response = apiInstance.rejectedoffertopurchaseGetCommunicationsendersV1(pkiRejectedoffertopurchaseID)
             //result shouldBe ("TODO")
         }
 

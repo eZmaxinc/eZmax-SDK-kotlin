@@ -16,10 +16,13 @@
 package eZmaxApi.apis
 
 import java.io.IOException
-import okhttp3.OkHttpClient
+import okhttp3.Call
 import okhttp3.HttpUrl
 
+import eZmaxApi.models.BuyercontractGetCommunicationCountV1Response
 import eZmaxApi.models.BuyercontractGetCommunicationListV1Response
+import eZmaxApi.models.BuyercontractGetCommunicationrecipientsV1Response
+import eZmaxApi.models.BuyercontractGetCommunicationsendersV1Response
 import eZmaxApi.models.CommonResponseError
 
 import com.squareup.moshi.Json
@@ -38,12 +41,83 @@ import eZmaxApi.infrastructure.ResponseType
 import eZmaxApi.infrastructure.Success
 import eZmaxApi.infrastructure.toMultiValue
 
-class ObjectBuyercontractApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = ApiClient.defaultClient) : ApiClient(basePath, client) {
+class ObjectBuyercontractApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
             System.getProperties().getProperty(ApiClient.baseUrlKey, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
+    }
+
+    /**
+     * Retrieve Communication count
+     * 
+     * @param pkiBuyercontractID 
+     * @return BuyercontractGetCommunicationCountV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun buyercontractGetCommunicationCountV1(pkiBuyercontractID: kotlin.Int) : BuyercontractGetCommunicationCountV1Response {
+        val localVarResponse = buyercontractGetCommunicationCountV1WithHttpInfo(pkiBuyercontractID = pkiBuyercontractID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as BuyercontractGetCommunicationCountV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve Communication count
+     * 
+     * @param pkiBuyercontractID 
+     * @return ApiResponse<BuyercontractGetCommunicationCountV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun buyercontractGetCommunicationCountV1WithHttpInfo(pkiBuyercontractID: kotlin.Int) : ApiResponse<BuyercontractGetCommunicationCountV1Response?> {
+        val localVariableConfig = buyercontractGetCommunicationCountV1RequestConfig(pkiBuyercontractID = pkiBuyercontractID)
+
+        return request<Unit, BuyercontractGetCommunicationCountV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation buyercontractGetCommunicationCountV1
+     *
+     * @param pkiBuyercontractID 
+     * @return RequestConfig
+     */
+    fun buyercontractGetCommunicationCountV1RequestConfig(pkiBuyercontractID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/buyercontract/{pkiBuyercontractID}/getCommunicationCount".replace("{"+"pkiBuyercontractID"+"}", encodeURIComponent(pkiBuyercontractID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
     }
 
     /**
@@ -110,6 +184,148 @@ class ObjectBuyercontractApi(basePath: kotlin.String = defaultBasePath, client: 
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/buyercontract/{pkiBuyercontractID}/getCommunicationList".replace("{"+"pkiBuyercontractID"+"}", encodeURIComponent(pkiBuyercontractID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Retrieve Buyercontract&#39;s Communicationrecipient
+     * 
+     * @param pkiBuyercontractID 
+     * @return BuyercontractGetCommunicationrecipientsV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun buyercontractGetCommunicationrecipientsV1(pkiBuyercontractID: kotlin.Int) : BuyercontractGetCommunicationrecipientsV1Response {
+        val localVarResponse = buyercontractGetCommunicationrecipientsV1WithHttpInfo(pkiBuyercontractID = pkiBuyercontractID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as BuyercontractGetCommunicationrecipientsV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve Buyercontract&#39;s Communicationrecipient
+     * 
+     * @param pkiBuyercontractID 
+     * @return ApiResponse<BuyercontractGetCommunicationrecipientsV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun buyercontractGetCommunicationrecipientsV1WithHttpInfo(pkiBuyercontractID: kotlin.Int) : ApiResponse<BuyercontractGetCommunicationrecipientsV1Response?> {
+        val localVariableConfig = buyercontractGetCommunicationrecipientsV1RequestConfig(pkiBuyercontractID = pkiBuyercontractID)
+
+        return request<Unit, BuyercontractGetCommunicationrecipientsV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation buyercontractGetCommunicationrecipientsV1
+     *
+     * @param pkiBuyercontractID 
+     * @return RequestConfig
+     */
+    fun buyercontractGetCommunicationrecipientsV1RequestConfig(pkiBuyercontractID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/buyercontract/{pkiBuyercontractID}/getCommunicationrecipients".replace("{"+"pkiBuyercontractID"+"}", encodeURIComponent(pkiBuyercontractID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Retrieve Buyercontract&#39;s Communicationsender
+     * 
+     * @param pkiBuyercontractID 
+     * @return BuyercontractGetCommunicationsendersV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun buyercontractGetCommunicationsendersV1(pkiBuyercontractID: kotlin.Int) : BuyercontractGetCommunicationsendersV1Response {
+        val localVarResponse = buyercontractGetCommunicationsendersV1WithHttpInfo(pkiBuyercontractID = pkiBuyercontractID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as BuyercontractGetCommunicationsendersV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Retrieve Buyercontract&#39;s Communicationsender
+     * 
+     * @param pkiBuyercontractID 
+     * @return ApiResponse<BuyercontractGetCommunicationsendersV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun buyercontractGetCommunicationsendersV1WithHttpInfo(pkiBuyercontractID: kotlin.Int) : ApiResponse<BuyercontractGetCommunicationsendersV1Response?> {
+        val localVariableConfig = buyercontractGetCommunicationsendersV1RequestConfig(pkiBuyercontractID = pkiBuyercontractID)
+
+        return request<Unit, BuyercontractGetCommunicationsendersV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation buyercontractGetCommunicationsendersV1
+     *
+     * @param pkiBuyercontractID 
+     * @return RequestConfig
+     */
+    fun buyercontractGetCommunicationsendersV1RequestConfig(pkiBuyercontractID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/buyercontract/{pkiBuyercontractID}/getCommunicationsenders".replace("{"+"pkiBuyercontractID"+"}", encodeURIComponent(pkiBuyercontractID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,
