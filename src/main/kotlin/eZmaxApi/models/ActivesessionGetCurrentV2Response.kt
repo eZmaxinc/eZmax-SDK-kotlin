@@ -15,15 +15,15 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.ActivesessionGetCurrentV2ResponseMPayload
 import eZmaxApi.models.CommonResponseObjDebug
 import eZmaxApi.models.CommonResponseObjDebugPayload
-import eZmaxApi.models.WebhookGetHistoryV1ResponseMPayload
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * Response for GET /1/object/webhook/{pkiWebhookID}/getHistory
+ * Response for GET /2/object/activesession/getCurrent
  *
  * @param objDebugPayload 
  * @param mPayload 
@@ -31,13 +31,13 @@ import com.squareup.moshi.JsonClass
  */
 
 
-data class WebhookGetHistoryV1Response (
+data class ActivesessionGetCurrentV2Response (
 
     @Json(name = "objDebugPayload")
     val objDebugPayload: CommonResponseObjDebugPayload,
 
     @Json(name = "mPayload")
-    val mPayload: WebhookGetHistoryV1ResponseMPayload,
+    val mPayload: ActivesessionGetCurrentV2ResponseMPayload,
 
     @Json(name = "objDebug")
     val objDebug: CommonResponseObjDebug? = null

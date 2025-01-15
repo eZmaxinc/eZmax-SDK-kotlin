@@ -18,15 +18,15 @@ package eZmaxApi.models
 import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
-import eZmaxApi.models.WebhookGetHistoryV1Response
+import eZmaxApi.models.ActivesessionGetCurrentV2Response
+import eZmaxApi.models.ActivesessionGetCurrentV2ResponseMPayload
 import eZmaxApi.models.CommonResponseObjDebug
 import eZmaxApi.models.CommonResponseObjDebugPayload
-import eZmaxApi.models.WebhookGetHistoryV1ResponseMPayload
 
-class WebhookGetHistoryV1ResponseTest : ShouldSpec() {
+class ActivesessionGetCurrentV2ResponseTest : ShouldSpec() {
     init {
-        // uncomment below to create an instance of WebhookGetHistoryV1Response
-        //val modelInstance = WebhookGetHistoryV1Response()
+        // uncomment below to create an instance of ActivesessionGetCurrentV2Response
+        //val modelInstance = ActivesessionGetCurrentV2Response()
 
         // to test the property `objDebugPayload`
         should("test objDebugPayload") {

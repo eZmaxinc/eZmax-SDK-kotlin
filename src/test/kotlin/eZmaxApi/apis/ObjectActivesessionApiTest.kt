@@ -22,6 +22,7 @@ import eZmaxApi.apis.ObjectActivesessionApi
 import eZmaxApi.models.ActivesessionGenerateFederationTokenV1Request
 import eZmaxApi.models.ActivesessionGenerateFederationTokenV1Response
 import eZmaxApi.models.ActivesessionGetCurrentV1Response
+import eZmaxApi.models.ActivesessionGetCurrentV2Response
 import eZmaxApi.models.ActivesessionGetListV1Response
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.CommonResponseRedirectSSecretquestionTextX
@@ -44,6 +45,13 @@ class ObjectActivesessionApiTest : ShouldSpec() {
         should("test activesessionGetCurrentV1") {
             // uncomment below to test activesessionGetCurrentV1
             //val result : ActivesessionGetCurrentV1Response = apiInstance.activesessionGetCurrentV1()
+            //result shouldBe ("TODO")
+        }
+
+        // to test activesessionGetCurrentV2
+        should("test activesessionGetCurrentV2") {
+            // uncomment below to test activesessionGetCurrentV2
+            //val result : ActivesessionGetCurrentV2Response = apiInstance.activesessionGetCurrentV2()
             //result shouldBe ("TODO")
         }
 

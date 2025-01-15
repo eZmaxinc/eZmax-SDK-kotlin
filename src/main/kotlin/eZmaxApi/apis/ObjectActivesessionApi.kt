@@ -22,6 +22,7 @@ import okhttp3.HttpUrl
 import eZmaxApi.models.ActivesessionGenerateFederationTokenV1Request
 import eZmaxApi.models.ActivesessionGenerateFederationTokenV1Response
 import eZmaxApi.models.ActivesessionGetCurrentV1Response
+import eZmaxApi.models.ActivesessionGetCurrentV2Response
 import eZmaxApi.models.ActivesessionGetListV1Response
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.CommonResponseRedirectSSecretquestionTextX
@@ -135,7 +136,9 @@ class ObjectActivesessionApi(basePath: kotlin.String = defaultBasePath, client: 
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun activesessionGetCurrentV1() : ActivesessionGetCurrentV1Response {
+        @Suppress("DEPRECATION")
         val localVarResponse = activesessionGetCurrentV1WithHttpInfo()
 
         return when (localVarResponse.responseType) {
@@ -162,7 +165,9 @@ class ObjectActivesessionApi(basePath: kotlin.String = defaultBasePath, client: 
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun activesessionGetCurrentV1WithHttpInfo() : ApiResponse<ActivesessionGetCurrentV1Response?> {
+        @Suppress("DEPRECATION")
         val localVariableConfig = activesessionGetCurrentV1RequestConfig()
 
         return request<Unit, ActivesessionGetCurrentV1Response>(
@@ -175,6 +180,7 @@ class ObjectActivesessionApi(basePath: kotlin.String = defaultBasePath, client: 
      *
      * @return RequestConfig
      */
+    @Deprecated(message = "This operation is deprecated.")
     fun activesessionGetCurrentV1RequestConfig() : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
@@ -184,6 +190,74 @@ class ObjectActivesessionApi(basePath: kotlin.String = defaultBasePath, client: 
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/activesession/getCurrent",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Get Current Activesession
+     * Retrieve the details about the current activesession
+     * @return ActivesessionGetCurrentV2Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun activesessionGetCurrentV2() : ActivesessionGetCurrentV2Response {
+        val localVarResponse = activesessionGetCurrentV2WithHttpInfo()
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ActivesessionGetCurrentV2Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Get Current Activesession
+     * Retrieve the details about the current activesession
+     * @return ApiResponse<ActivesessionGetCurrentV2Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun activesessionGetCurrentV2WithHttpInfo() : ApiResponse<ActivesessionGetCurrentV2Response?> {
+        val localVariableConfig = activesessionGetCurrentV2RequestConfig()
+
+        return request<Unit, ActivesessionGetCurrentV2Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation activesessionGetCurrentV2
+     *
+     * @return RequestConfig
+     */
+    fun activesessionGetCurrentV2RequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/2/object/activesession/getCurrent",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

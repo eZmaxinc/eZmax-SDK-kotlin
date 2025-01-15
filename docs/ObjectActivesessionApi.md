@@ -6,6 +6,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | ------------- | ------------- | ------------- |
 | [**activesessionGenerateFederationTokenV1**](ObjectActivesessionApi.md#activesessionGenerateFederationTokenV1) | **POST** /1/object/activesession/generateFederationToken | Generate a federation token |
 | [**activesessionGetCurrentV1**](ObjectActivesessionApi.md#activesessionGetCurrentV1) | **GET** /1/object/activesession/getCurrent | Get Current Activesession |
+| [**activesessionGetCurrentV2**](ObjectActivesessionApi.md#activesessionGetCurrentV2) | **GET** /2/object/activesession/getCurrent | Get Current Activesession |
 | [**activesessionGetListV1**](ObjectActivesessionApi.md#activesessionGetListV1) | **GET** /1/object/activesession/getList | Retrieve Activesession list |
 
 
@@ -91,6 +92,52 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**ActivesessionGetCurrentV1Response**](ActivesessionGetCurrentV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="activesessionGetCurrentV2"></a>
+# **activesessionGetCurrentV2**
+> ActivesessionGetCurrentV2Response activesessionGetCurrentV2()
+
+Get Current Activesession
+
+Retrieve the details about the current activesession
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectActivesessionApi()
+try {
+    val result : ActivesessionGetCurrentV2Response = apiInstance.activesessionGetCurrentV2()
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectActivesessionApi#activesessionGetCurrentV2")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectActivesessionApi#activesessionGetCurrentV2")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ActivesessionGetCurrentV2Response**](ActivesessionGetCurrentV2Response.md)
 
 ### Authorization
 

@@ -6,6 +6,8 @@ docs/ActivesessionGenerateFederationTokenV1Response.md
 docs/ActivesessionGenerateFederationTokenV1ResponseMPayload.md
 docs/ActivesessionGetCurrentV1Response.md
 docs/ActivesessionGetCurrentV1ResponseMPayload.md
+docs/ActivesessionGetCurrentV2Response.md
+docs/ActivesessionGetCurrentV2ResponseMPayload.md
 docs/ActivesessionGetListV1Response.md
 docs/ActivesessionGetListV1ResponseMPayload.md
 docs/ActivesessionListElement.md
@@ -1881,6 +1883,8 @@ src/main/kotlin/eZmaxApi/models/ActivesessionGenerateFederationTokenV1Response.k
 src/main/kotlin/eZmaxApi/models/ActivesessionGenerateFederationTokenV1ResponseMPayload.kt
 src/main/kotlin/eZmaxApi/models/ActivesessionGetCurrentV1Response.kt
 src/main/kotlin/eZmaxApi/models/ActivesessionGetCurrentV1ResponseMPayload.kt
+src/main/kotlin/eZmaxApi/models/ActivesessionGetCurrentV2Response.kt
+src/main/kotlin/eZmaxApi/models/ActivesessionGetCurrentV2ResponseMPayload.kt
 src/main/kotlin/eZmaxApi/models/ActivesessionGetListV1Response.kt
 src/main/kotlin/eZmaxApi/models/ActivesessionGetListV1ResponseMPayload.kt
 src/main/kotlin/eZmaxApi/models/ActivesessionListElement.kt
@@ -3625,6 +3629,8 @@ src/test/kotlin/eZmaxApi/models/ActivesessionGenerateFederationTokenV1ResponseMP
 src/test/kotlin/eZmaxApi/models/ActivesessionGenerateFederationTokenV1ResponseTest.kt
 src/test/kotlin/eZmaxApi/models/ActivesessionGetCurrentV1ResponseMPayloadTest.kt
 src/test/kotlin/eZmaxApi/models/ActivesessionGetCurrentV1ResponseTest.kt
+src/test/kotlin/eZmaxApi/models/ActivesessionGetCurrentV2ResponseMPayloadTest.kt
+src/test/kotlin/eZmaxApi/models/ActivesessionGetCurrentV2ResponseTest.kt
 src/test/kotlin/eZmaxApi/models/ActivesessionGetListV1ResponseMPayloadTest.kt
 src/test/kotlin/eZmaxApi/models/ActivesessionGetListV1ResponseTest.kt
 src/test/kotlin/eZmaxApi/models/ActivesessionListElementTest.kt

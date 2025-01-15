@@ -53,6 +53,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | *ModuleUserApi* | [**userCreateEzsignuserV1**](docs/ModuleUserApi.md#usercreateezsignuserv1) | **POST** /1/module/user/createezsignuser | Create a new User of type Ezsignuser |
 | *ObjectActivesessionApi* | [**activesessionGenerateFederationTokenV1**](docs/ObjectActivesessionApi.md#activesessiongeneratefederationtokenv1) | **POST** /1/object/activesession/generateFederationToken | Generate a federation token |
 | *ObjectActivesessionApi* | [**activesessionGetCurrentV1**](docs/ObjectActivesessionApi.md#activesessiongetcurrentv1) | **GET** /1/object/activesession/getCurrent | Get Current Activesession |
+| *ObjectActivesessionApi* | [**activesessionGetCurrentV2**](docs/ObjectActivesessionApi.md#activesessiongetcurrentv2) | **GET** /2/object/activesession/getCurrent | Get Current Activesession |
 | *ObjectActivesessionApi* | [**activesessionGetListV1**](docs/ObjectActivesessionApi.md#activesessiongetlistv1) | **GET** /1/object/activesession/getList | Retrieve Activesession list |
 | *ObjectApikeyApi* | [**apikeyCreateObjectV2**](docs/ObjectApikeyApi.md#apikeycreateobjectv2) | **POST** /2/object/apikey | Create a new Apikey |
 | *ObjectApikeyApi* | [**apikeyEditObjectV1**](docs/ObjectApikeyApi.md#apikeyeditobjectv1) | **PUT** /1/object/apikey/{pkiApikeyID} | Edit an existing Apikey |
@@ -511,6 +512,8 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.ActivesessionGenerateFederationTokenV1ResponseMPayload](docs/ActivesessionGenerateFederationTokenV1ResponseMPayload.md)
  - [eZmaxApi.models.ActivesessionGetCurrentV1Response](docs/ActivesessionGetCurrentV1Response.md)
  - [eZmaxApi.models.ActivesessionGetCurrentV1ResponseMPayload](docs/ActivesessionGetCurrentV1ResponseMPayload.md)
+ - [eZmaxApi.models.ActivesessionGetCurrentV2Response](docs/ActivesessionGetCurrentV2Response.md)
+ - [eZmaxApi.models.ActivesessionGetCurrentV2ResponseMPayload](docs/ActivesessionGetCurrentV2ResponseMPayload.md)
  - [eZmaxApi.models.ActivesessionGetListV1Response](docs/ActivesessionGetListV1Response.md)
  - [eZmaxApi.models.ActivesessionGetListV1ResponseMPayload](docs/ActivesessionGetListV1ResponseMPayload.md)
  - [eZmaxApi.models.ActivesessionListElement](docs/ActivesessionListElement.md)
