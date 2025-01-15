@@ -62,7 +62,7 @@ Configure Authorization:
 
 <a id="brandingEditObjectV2"></a>
 # **brandingEditObjectV2**
-> BrandingEditObjectV2Response brandingEditObjectV2(pkiBrandingID, brandingEditObjectV2Request)
+> CommonResponse brandingEditObjectV2(pkiBrandingID, brandingEditObjectV2Request)
 
 Edit an existing Branding
 
@@ -78,7 +78,7 @@ val apiInstance = ObjectBrandingApi()
 val pkiBrandingID : kotlin.Int = 56 // kotlin.Int | 
 val brandingEditObjectV2Request : BrandingEditObjectV2Request =  // BrandingEditObjectV2Request | 
 try {
-    val result : BrandingEditObjectV2Response = apiInstance.brandingEditObjectV2(pkiBrandingID, brandingEditObjectV2Request)
+    val result : CommonResponse = apiInstance.brandingEditObjectV2(pkiBrandingID, brandingEditObjectV2Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectBrandingApi#brandingEditObjectV2")
@@ -97,7 +97,7 @@ try {
 
 ### Return type
 
-[**BrandingEditObjectV2Response**](BrandingEditObjectV2Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

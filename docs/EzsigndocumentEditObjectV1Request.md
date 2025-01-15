@@ -4,7 +4,7 @@
 ## Properties
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **objEzsigndocument** | [**EzsigndocumentRequestCompound**](EzsigndocumentRequestCompound.md) |  |  |
+| **objEzsigndocument** | [**EzsigndocumentRequest**](EzsigndocumentRequest.md) | An Ezsigndocument Object and children to create a complete structure |  |
 
 
 

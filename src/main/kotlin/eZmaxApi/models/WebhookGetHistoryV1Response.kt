@@ -17,7 +17,6 @@ package eZmaxApi.models
 
 import eZmaxApi.models.CommonResponseObjDebug
 import eZmaxApi.models.CommonResponseObjDebugPayload
-import eZmaxApi.models.WebhookGetHistoryV1ResponseMPayload
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -26,7 +25,7 @@ import com.squareup.moshi.JsonClass
  * Response for GET /1/object/webhook/{pkiWebhookID}/getHistory
  *
  * @param objDebugPayload 
- * @param mPayload 
+ * @param mPayload Payload for GET /1/object/webhook/{pkiWebhookID}/getHistory
  * @param objDebug 
  */
 
@@ -36,8 +35,9 @@ data class WebhookGetHistoryV1Response (
     @Json(name = "objDebugPayload")
     val objDebugPayload: CommonResponseObjDebugPayload,
 
+    /* Payload for GET /1/object/webhook/{pkiWebhookID}/getHistory */
     @Json(name = "mPayload")
-    val mPayload: WebhookGetHistoryV1ResponseMPayload,
+    val mPayload: kotlin.Any,
 
     @Json(name = "objDebug")
     val objDebug: CommonResponseObjDebug? = null

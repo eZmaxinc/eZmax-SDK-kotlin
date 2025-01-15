@@ -19,9 +19,9 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.WebhookUserstagedUserstagedCreated
-import eZmaxApi.models.AttemptResponseCompound
+import eZmaxApi.models.AttemptResponse
 import eZmaxApi.models.CustomWebhookResponse
-import eZmaxApi.models.UserstagedResponseCompound
+import eZmaxApi.models.UserstagedResponse
 
 class WebhookUserstagedUserstagedCreatedTest : ShouldSpec() {
     init {
@@ -40,7 +40,7 @@ class WebhookUserstagedUserstagedCreatedTest : ShouldSpec() {
             //modelInstance.aObjAttempt shouldBe ("TODO")
         }
 
-        // to test the property `objUserstaged`
+        // to test the property `objUserstaged` - A Userstaged Object
         should("test objUserstaged") {
             // uncomment below to test the property
             //modelInstance.objUserstaged shouldBe ("TODO")

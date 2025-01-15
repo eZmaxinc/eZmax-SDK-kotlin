@@ -19,7 +19,6 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.WebhookGetHistoryV1ResponseMPayload
-import eZmaxApi.models.CustomWebhooklogResponse
 
 class WebhookGetHistoryV1ResponseMPayloadTest : ShouldSpec() {
     init {

@@ -16,8 +16,8 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.EnumTextvalidation
-import eZmaxApi.models.EzsignelementdependencyRequestCompound
-import eZmaxApi.models.EzsignsignaturecustomdateRequestCompoundV2
+import eZmaxApi.models.EzsignelementdependencyRequest
+import eZmaxApi.models.EzsignsignaturecustomdateRequestV2
 import eZmaxApi.models.FieldEEzsignsignatureAttachmentnamesource
 import eZmaxApi.models.FieldEEzsignsignatureConsultationtrigger
 import eZmaxApi.models.FieldEEzsignsignatureDependencyrequirement
@@ -173,10 +173,10 @@ data class EzsignsignatureRequestCompoundV2 (
 
     /* An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all. */
     @Json(name = "a_objEzsignsignaturecustomdate")
-    val aObjEzsignsignaturecustomdate: kotlin.collections.List<EzsignsignaturecustomdateRequestCompoundV2>? = null,
+    val aObjEzsignsignaturecustomdate: kotlin.collections.List<EzsignsignaturecustomdateRequestV2>? = null,
 
     @Json(name = "a_objEzsignelementdependency")
-    val aObjEzsignelementdependency: kotlin.collections.List<EzsignelementdependencyRequestCompound>? = null
+    val aObjEzsignelementdependency: kotlin.collections.List<EzsignelementdependencyRequest>? = null
 
 ) {
 

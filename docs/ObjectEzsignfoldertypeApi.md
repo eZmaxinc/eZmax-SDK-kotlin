@@ -63,7 +63,7 @@ Configure Authorization:
 
 <a id="ezsignfoldertypeEditObjectV3"></a>
 # **ezsignfoldertypeEditObjectV3**
-> EzsignfoldertypeEditObjectV3Response ezsignfoldertypeEditObjectV3(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV3Request)
+> CommonResponse ezsignfoldertypeEditObjectV3(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV3Request)
 
 Edit an existing Ezsignfoldertype
 
@@ -79,7 +79,7 @@ val apiInstance = ObjectEzsignfoldertypeApi()
 val pkiEzsignfoldertypeID : kotlin.Int = 56 // kotlin.Int | 
 val ezsignfoldertypeEditObjectV3Request : EzsignfoldertypeEditObjectV3Request =  // EzsignfoldertypeEditObjectV3Request | 
 try {
-    val result : EzsignfoldertypeEditObjectV3Response = apiInstance.ezsignfoldertypeEditObjectV3(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV3Request)
+    val result : CommonResponse = apiInstance.ezsignfoldertypeEditObjectV3(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV3Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignfoldertypeApi#ezsignfoldertypeEditObjectV3")
@@ -98,7 +98,7 @@ try {
 
 ### Return type
 
-[**EzsignfoldertypeEditObjectV3Response**](EzsignfoldertypeEditObjectV3Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

@@ -19,11 +19,11 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectEzsignfoldertypeApi
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.EzsignfoldertypeCreateObjectV3Request
 import eZmaxApi.models.EzsignfoldertypeCreateObjectV3Response
 import eZmaxApi.models.EzsignfoldertypeEditObjectV3Request
-import eZmaxApi.models.EzsignfoldertypeEditObjectV3Response
 import eZmaxApi.models.EzsignfoldertypeGetAutocompleteV2Response
 import eZmaxApi.models.EzsignfoldertypeGetListV1Response
 import eZmaxApi.models.EzsignfoldertypeGetObjectV2Response
@@ -48,7 +48,7 @@ class ObjectEzsignfoldertypeApiTest : ShouldSpec() {
             // uncomment below to test ezsignfoldertypeEditObjectV3
             //val pkiEzsignfoldertypeID : kotlin.Int = 56 // kotlin.Int | 
             //val ezsignfoldertypeEditObjectV3Request : EzsignfoldertypeEditObjectV3Request =  // EzsignfoldertypeEditObjectV3Request | 
-            //val result : EzsignfoldertypeEditObjectV3Response = apiInstance.ezsignfoldertypeEditObjectV3(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV3Request)
+            //val result : CommonResponse = apiInstance.ezsignfoldertypeEditObjectV3(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV3Request)
             //result shouldBe ("TODO")
         }
 

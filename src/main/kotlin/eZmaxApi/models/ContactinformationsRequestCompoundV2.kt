@@ -15,11 +15,11 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.AddressRequestCompound
-import eZmaxApi.models.EmailRequestCompound
+import eZmaxApi.models.AddressRequest
+import eZmaxApi.models.EmailRequest
 import eZmaxApi.models.FieldEContactinformationsType
-import eZmaxApi.models.PhoneRequestCompound
-import eZmaxApi.models.WebsiteRequestCompound
+import eZmaxApi.models.PhoneRequest
+import eZmaxApi.models.WebsiteRequest
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -61,16 +61,16 @@ data class ContactinformationsRequestCompoundV2 (
     val iWebsiteDefault: kotlin.Int,
 
     @Json(name = "a_objAddress")
-    val aObjAddress: kotlin.collections.List<AddressRequestCompound>,
+    val aObjAddress: kotlin.collections.List<AddressRequest>,
 
     @Json(name = "a_objPhone")
-    val aObjPhone: kotlin.collections.List<PhoneRequestCompound>,
+    val aObjPhone: kotlin.collections.List<PhoneRequest>,
 
     @Json(name = "a_objEmail")
-    val aObjEmail: kotlin.collections.List<EmailRequestCompound>,
+    val aObjEmail: kotlin.collections.List<EmailRequest>,
 
     @Json(name = "a_objWebsite")
-    val aObjWebsite: kotlin.collections.List<WebsiteRequestCompound>
+    val aObjWebsite: kotlin.collections.List<WebsiteRequest>
 
 ) {
 

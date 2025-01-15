@@ -15,7 +15,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.CustomDiscussionconfigurationResponse
 import eZmaxApi.models.DiscussionmembershipResponseCompound
 import eZmaxApi.models.DiscussionmessageResponseCompound
 
@@ -33,7 +32,7 @@ import com.squareup.moshi.JsonClass
  * @param aObjDiscussionmembership 
  * @param aObjDiscussionmessage 
  * @param dtDiscussionLastread The date the Discussion was last read
- * @param objDiscussionconfiguration 
+ * @param objDiscussionconfiguration A Custom Discussionconfiguration Object
  */
 
 
@@ -69,8 +68,9 @@ data class DiscussionResponseCompound (
     @Json(name = "dtDiscussionLastread")
     val dtDiscussionLastread: kotlin.String? = null,
 
+    /* A Custom Discussionconfiguration Object */
     @Json(name = "objDiscussionconfiguration")
-    val objDiscussionconfiguration: CustomDiscussionconfigurationResponse? = null
+    val objDiscussionconfiguration: kotlin.Any? = null
 
 ) {
 

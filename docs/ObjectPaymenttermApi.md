@@ -62,7 +62,7 @@ Configure Authorization:
 
 <a id="paymenttermEditObjectV1"></a>
 # **paymenttermEditObjectV1**
-> PaymenttermEditObjectV1Response paymenttermEditObjectV1(pkiPaymenttermID, paymenttermEditObjectV1Request)
+> CommonResponse paymenttermEditObjectV1(pkiPaymenttermID, paymenttermEditObjectV1Request)
 
 Edit an existing Paymentterm
 
@@ -78,7 +78,7 @@ val apiInstance = ObjectPaymenttermApi()
 val pkiPaymenttermID : kotlin.Int = 56 // kotlin.Int | 
 val paymenttermEditObjectV1Request : PaymenttermEditObjectV1Request =  // PaymenttermEditObjectV1Request | 
 try {
-    val result : PaymenttermEditObjectV1Response = apiInstance.paymenttermEditObjectV1(pkiPaymenttermID, paymenttermEditObjectV1Request)
+    val result : CommonResponse = apiInstance.paymenttermEditObjectV1(pkiPaymenttermID, paymenttermEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectPaymenttermApi#paymenttermEditObjectV1")
@@ -97,7 +97,7 @@ try {
 
 ### Return type
 
-[**PaymenttermEditObjectV1Response**](PaymenttermEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

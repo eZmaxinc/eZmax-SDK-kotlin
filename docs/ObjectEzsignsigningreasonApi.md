@@ -62,7 +62,7 @@ Configure Authorization:
 
 <a id="ezsignsigningreasonEditObjectV1"></a>
 # **ezsignsigningreasonEditObjectV1**
-> EzsignsigningreasonEditObjectV1Response ezsignsigningreasonEditObjectV1(pkiEzsignsigningreasonID, ezsignsigningreasonEditObjectV1Request)
+> CommonResponse ezsignsigningreasonEditObjectV1(pkiEzsignsigningreasonID, ezsignsigningreasonEditObjectV1Request)
 
 Edit an existing Ezsignsigningreason
 
@@ -78,7 +78,7 @@ val apiInstance = ObjectEzsignsigningreasonApi()
 val pkiEzsignsigningreasonID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsignsigningreason
 val ezsignsigningreasonEditObjectV1Request : EzsignsigningreasonEditObjectV1Request =  // EzsignsigningreasonEditObjectV1Request | 
 try {
-    val result : EzsignsigningreasonEditObjectV1Response = apiInstance.ezsignsigningreasonEditObjectV1(pkiEzsignsigningreasonID, ezsignsigningreasonEditObjectV1Request)
+    val result : CommonResponse = apiInstance.ezsignsigningreasonEditObjectV1(pkiEzsignsigningreasonID, ezsignsigningreasonEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignsigningreasonApi#ezsignsigningreasonEditObjectV1")
@@ -97,7 +97,7 @@ try {
 
 ### Return type
 
-[**EzsignsigningreasonEditObjectV1Response**](EzsignsigningreasonEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

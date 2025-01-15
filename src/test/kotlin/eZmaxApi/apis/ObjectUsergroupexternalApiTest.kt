@@ -19,13 +19,12 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectUsergroupexternalApi
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.HeaderAcceptLanguage
 import eZmaxApi.models.UsergroupexternalCreateObjectV1Request
 import eZmaxApi.models.UsergroupexternalCreateObjectV1Response
-import eZmaxApi.models.UsergroupexternalDeleteObjectV1Response
 import eZmaxApi.models.UsergroupexternalEditObjectV1Request
-import eZmaxApi.models.UsergroupexternalEditObjectV1Response
 import eZmaxApi.models.UsergroupexternalGetAutocompleteV2Response
 import eZmaxApi.models.UsergroupexternalGetListV1Response
 import eZmaxApi.models.UsergroupexternalGetObjectV2Response
@@ -49,7 +48,7 @@ class ObjectUsergroupexternalApiTest : ShouldSpec() {
         should("test usergroupexternalDeleteObjectV1") {
             // uncomment below to test usergroupexternalDeleteObjectV1
             //val pkiUsergroupexternalID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Usergroupexternal
-            //val result : UsergroupexternalDeleteObjectV1Response = apiInstance.usergroupexternalDeleteObjectV1(pkiUsergroupexternalID)
+            //val result : CommonResponse = apiInstance.usergroupexternalDeleteObjectV1(pkiUsergroupexternalID)
             //result shouldBe ("TODO")
         }
 
@@ -58,7 +57,7 @@ class ObjectUsergroupexternalApiTest : ShouldSpec() {
             // uncomment below to test usergroupexternalEditObjectV1
             //val pkiUsergroupexternalID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Usergroupexternal
             //val usergroupexternalEditObjectV1Request : UsergroupexternalEditObjectV1Request =  // UsergroupexternalEditObjectV1Request | 
-            //val result : UsergroupexternalEditObjectV1Response = apiInstance.usergroupexternalEditObjectV1(pkiUsergroupexternalID, usergroupexternalEditObjectV1Request)
+            //val result : CommonResponse = apiInstance.usergroupexternalEditObjectV1(pkiUsergroupexternalID, usergroupexternalEditObjectV1Request)
             //result shouldBe ("TODO")
         }
 

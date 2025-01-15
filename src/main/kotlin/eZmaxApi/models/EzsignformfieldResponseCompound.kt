@@ -16,7 +16,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.EnumHorizontalalignment
-import eZmaxApi.models.EzsignelementdependencyResponseCompound
+import eZmaxApi.models.EzsignelementdependencyResponse
 import eZmaxApi.models.FieldEEzsignformfieldDependencyrequirement
 import eZmaxApi.models.TextstylestaticResponseCompound
 
@@ -100,7 +100,7 @@ data class EzsignformfieldResponseCompound (
     val objTextstylestatic: TextstylestaticResponseCompound? = null,
 
     @Json(name = "a_objEzsignelementdependency")
-    val aObjEzsignelementdependency: kotlin.collections.List<EzsignelementdependencyResponseCompound>? = null
+    val aObjEzsignelementdependency: kotlin.collections.List<EzsignelementdependencyResponse>? = null
 
 ) {
 

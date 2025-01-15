@@ -19,12 +19,11 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectSignatureApi
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.SignatureCreateObjectV1Request
 import eZmaxApi.models.SignatureCreateObjectV1Response
-import eZmaxApi.models.SignatureDeleteObjectV1Response
 import eZmaxApi.models.SignatureEditObjectV1Request
-import eZmaxApi.models.SignatureEditObjectV1Response
 import eZmaxApi.models.SignatureGetObjectV2Response
 import eZmaxApi.models.SignatureGetObjectV3Response
 
@@ -45,7 +44,7 @@ class ObjectSignatureApiTest : ShouldSpec() {
         should("test signatureDeleteObjectV1") {
             // uncomment below to test signatureDeleteObjectV1
             //val pkiSignatureID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Signature
-            //val result : SignatureDeleteObjectV1Response = apiInstance.signatureDeleteObjectV1(pkiSignatureID)
+            //val result : CommonResponse = apiInstance.signatureDeleteObjectV1(pkiSignatureID)
             //result shouldBe ("TODO")
         }
 
@@ -54,7 +53,7 @@ class ObjectSignatureApiTest : ShouldSpec() {
             // uncomment below to test signatureEditObjectV1
             //val pkiSignatureID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Signature
             //val signatureEditObjectV1Request : SignatureEditObjectV1Request =  // SignatureEditObjectV1Request | 
-            //val result : SignatureEditObjectV1Response = apiInstance.signatureEditObjectV1(pkiSignatureID, signatureEditObjectV1Request)
+            //val result : CommonResponse = apiInstance.signatureEditObjectV1(pkiSignatureID, signatureEditObjectV1Request)
             //result shouldBe ("TODO")
         }
 

@@ -64,7 +64,7 @@ Configure Authorization:
 
 <a id="signatureDeleteObjectV1"></a>
 # **signatureDeleteObjectV1**
-> SignatureDeleteObjectV1Response signatureDeleteObjectV1(pkiSignatureID)
+> CommonResponse signatureDeleteObjectV1(pkiSignatureID)
 
 Delete an existing Signature
 
@@ -79,7 +79,7 @@ Delete an existing Signature
 val apiInstance = ObjectSignatureApi()
 val pkiSignatureID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Signature
 try {
-    val result : SignatureDeleteObjectV1Response = apiInstance.signatureDeleteObjectV1(pkiSignatureID)
+    val result : CommonResponse = apiInstance.signatureDeleteObjectV1(pkiSignatureID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectSignatureApi#signatureDeleteObjectV1")
@@ -97,7 +97,7 @@ try {
 
 ### Return type
 
-[**SignatureDeleteObjectV1Response**](SignatureDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -113,7 +113,7 @@ Configure Authorization:
 
 <a id="signatureEditObjectV1"></a>
 # **signatureEditObjectV1**
-> SignatureEditObjectV1Response signatureEditObjectV1(pkiSignatureID, signatureEditObjectV1Request)
+> CommonResponse signatureEditObjectV1(pkiSignatureID, signatureEditObjectV1Request)
 
 Edit an existing Signature
 
@@ -129,7 +129,7 @@ val apiInstance = ObjectSignatureApi()
 val pkiSignatureID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Signature
 val signatureEditObjectV1Request : SignatureEditObjectV1Request =  // SignatureEditObjectV1Request | 
 try {
-    val result : SignatureEditObjectV1Response = apiInstance.signatureEditObjectV1(pkiSignatureID, signatureEditObjectV1Request)
+    val result : CommonResponse = apiInstance.signatureEditObjectV1(pkiSignatureID, signatureEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectSignatureApi#signatureEditObjectV1")
@@ -148,7 +148,7 @@ try {
 
 ### Return type
 
-[**SignatureEditObjectV1Response**](SignatureEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

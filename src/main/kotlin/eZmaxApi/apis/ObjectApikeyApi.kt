@@ -22,7 +22,6 @@ import okhttp3.HttpUrl
 import eZmaxApi.models.ApikeyCreateObjectV2Request
 import eZmaxApi.models.ApikeyCreateObjectV2Response
 import eZmaxApi.models.ApikeyEditObjectV1Request
-import eZmaxApi.models.ApikeyEditObjectV1Response
 import eZmaxApi.models.ApikeyEditPermissionsV1Request
 import eZmaxApi.models.ApikeyEditPermissionsV1Response
 import eZmaxApi.models.ApikeyGenerateDelegatedCredentialsV1Request
@@ -34,6 +33,7 @@ import eZmaxApi.models.ApikeyGetPermissionsV1Response
 import eZmaxApi.models.ApikeyGetSubnetsV1Response
 import eZmaxApi.models.ApikeyRegenerateV1Request
 import eZmaxApi.models.ApikeyRegenerateV1Response
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.HeaderAcceptLanguage
 
@@ -138,7 +138,7 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
      * 
      * @param pkiApikeyID The unique ID of the Apikey
      * @param apikeyEditObjectV1Request 
-     * @return ApikeyEditObjectV1Response
+     * @return CommonResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -147,11 +147,11 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun apikeyEditObjectV1(pkiApikeyID: kotlin.Int, apikeyEditObjectV1Request: ApikeyEditObjectV1Request) : ApikeyEditObjectV1Response {
+    fun apikeyEditObjectV1(pkiApikeyID: kotlin.Int, apikeyEditObjectV1Request: ApikeyEditObjectV1Request) : CommonResponse {
         val localVarResponse = apikeyEditObjectV1WithHttpInfo(pkiApikeyID = pkiApikeyID, apikeyEditObjectV1Request = apikeyEditObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as ApikeyEditObjectV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -170,16 +170,16 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
      * 
      * @param pkiApikeyID The unique ID of the Apikey
      * @param apikeyEditObjectV1Request 
-     * @return ApiResponse<ApikeyEditObjectV1Response?>
+     * @return ApiResponse<CommonResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun apikeyEditObjectV1WithHttpInfo(pkiApikeyID: kotlin.Int, apikeyEditObjectV1Request: ApikeyEditObjectV1Request) : ApiResponse<ApikeyEditObjectV1Response?> {
+    fun apikeyEditObjectV1WithHttpInfo(pkiApikeyID: kotlin.Int, apikeyEditObjectV1Request: ApikeyEditObjectV1Request) : ApiResponse<CommonResponse?> {
         val localVariableConfig = apikeyEditObjectV1RequestConfig(pkiApikeyID = pkiApikeyID, apikeyEditObjectV1Request = apikeyEditObjectV1Request)
 
-        return request<ApikeyEditObjectV1Request, ApikeyEditObjectV1Response>(
+        return request<ApikeyEditObjectV1Request, CommonResponse>(
             localVariableConfig
         )
     }

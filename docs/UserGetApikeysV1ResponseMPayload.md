@@ -4,7 +4,7 @@
 ## Properties
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **aObjApikey** | [**kotlin.collections.List&lt;ApikeyResponseCompound&gt;**](ApikeyResponseCompound.md) |  |  |
+| **aObjApikey** | [**kotlin.collections.List&lt;ApikeyResponseCompound&gt;**](ApikeyResponse.md) |  |  |
 
 
 

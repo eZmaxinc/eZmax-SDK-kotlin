@@ -61,7 +61,7 @@ Configure Authorization:
 
 <a id="usergroupdelegationDeleteObjectV1"></a>
 # **usergroupdelegationDeleteObjectV1**
-> UsergroupdelegationDeleteObjectV1Response usergroupdelegationDeleteObjectV1(pkiUsergroupdelegationID)
+> CommonResponse usergroupdelegationDeleteObjectV1(pkiUsergroupdelegationID)
 
 Delete an existing Usergroupdelegation
 
@@ -76,7 +76,7 @@ Delete an existing Usergroupdelegation
 val apiInstance = ObjectUsergroupdelegationApi()
 val pkiUsergroupdelegationID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Usergroupdelegation
 try {
-    val result : UsergroupdelegationDeleteObjectV1Response = apiInstance.usergroupdelegationDeleteObjectV1(pkiUsergroupdelegationID)
+    val result : CommonResponse = apiInstance.usergroupdelegationDeleteObjectV1(pkiUsergroupdelegationID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectUsergroupdelegationApi#usergroupdelegationDeleteObjectV1")
@@ -94,7 +94,7 @@ try {
 
 ### Return type
 
-[**UsergroupdelegationDeleteObjectV1Response**](UsergroupdelegationDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -110,7 +110,7 @@ Configure Authorization:
 
 <a id="usergroupdelegationEditObjectV1"></a>
 # **usergroupdelegationEditObjectV1**
-> UsergroupdelegationEditObjectV1Response usergroupdelegationEditObjectV1(pkiUsergroupdelegationID, usergroupdelegationEditObjectV1Request)
+> CommonResponse usergroupdelegationEditObjectV1(pkiUsergroupdelegationID, usergroupdelegationEditObjectV1Request)
 
 Edit an existing Usergroupdelegation
 
@@ -126,7 +126,7 @@ val apiInstance = ObjectUsergroupdelegationApi()
 val pkiUsergroupdelegationID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Usergroupdelegation
 val usergroupdelegationEditObjectV1Request : UsergroupdelegationEditObjectV1Request =  // UsergroupdelegationEditObjectV1Request | 
 try {
-    val result : UsergroupdelegationEditObjectV1Response = apiInstance.usergroupdelegationEditObjectV1(pkiUsergroupdelegationID, usergroupdelegationEditObjectV1Request)
+    val result : CommonResponse = apiInstance.usergroupdelegationEditObjectV1(pkiUsergroupdelegationID, usergroupdelegationEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectUsergroupdelegationApi#usergroupdelegationEditObjectV1")
@@ -145,7 +145,7 @@ try {
 
 ### Return type
 
-[**UsergroupdelegationEditObjectV1Response**](UsergroupdelegationEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

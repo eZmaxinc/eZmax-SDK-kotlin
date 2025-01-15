@@ -19,10 +19,10 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectEzsigntemplatepackagemembershipApi
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.EzsigntemplatepackagemembershipCreateObjectV1Request
 import eZmaxApi.models.EzsigntemplatepackagemembershipCreateObjectV1Response
-import eZmaxApi.models.EzsigntemplatepackagemembershipDeleteObjectV1Response
 import eZmaxApi.models.EzsigntemplatepackagemembershipGetObjectV2Response
 
 class ObjectEzsigntemplatepackagemembershipApiTest : ShouldSpec() {
@@ -42,7 +42,7 @@ class ObjectEzsigntemplatepackagemembershipApiTest : ShouldSpec() {
         should("test ezsigntemplatepackagemembershipDeleteObjectV1") {
             // uncomment below to test ezsigntemplatepackagemembershipDeleteObjectV1
             //val pkiEzsigntemplatepackagemembershipID : kotlin.Int = 56 // kotlin.Int | 
-            //val result : EzsigntemplatepackagemembershipDeleteObjectV1Response = apiInstance.ezsigntemplatepackagemembershipDeleteObjectV1(pkiEzsigntemplatepackagemembershipID)
+            //val result : CommonResponse = apiInstance.ezsigntemplatepackagemembershipDeleteObjectV1(pkiEzsigntemplatepackagemembershipID)
             //result shouldBe ("TODO")
         }
 

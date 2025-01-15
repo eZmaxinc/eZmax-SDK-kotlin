@@ -21,7 +21,6 @@ import io.kotlintest.specs.ShouldSpec
 import eZmaxApi.models.WebhookGetHistoryV1Response
 import eZmaxApi.models.CommonResponseObjDebug
 import eZmaxApi.models.CommonResponseObjDebugPayload
-import eZmaxApi.models.WebhookGetHistoryV1ResponseMPayload
 
 class WebhookGetHistoryV1ResponseTest : ShouldSpec() {
     init {
@@ -34,7 +33,7 @@ class WebhookGetHistoryV1ResponseTest : ShouldSpec() {
             //modelInstance.objDebugPayload shouldBe ("TODO")
         }
 
-        // to test the property `mPayload`
+        // to test the property `mPayload` - Payload for GET /1/object/webhook/{pkiWebhookID}/getHistory
         should("test mPayload") {
             // uncomment below to test the property
             //modelInstance.mPayload shouldBe ("TODO")

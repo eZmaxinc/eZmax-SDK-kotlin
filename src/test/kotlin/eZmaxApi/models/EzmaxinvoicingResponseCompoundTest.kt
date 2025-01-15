@@ -20,8 +20,6 @@ import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.EzmaxinvoicingResponseCompound
 import eZmaxApi.models.CommonAudit
-import eZmaxApi.models.CustomEzmaxinvoicingEzsigndocumentResponse
-import eZmaxApi.models.CustomEzmaxinvoicingEzsignfolderResponse
 import eZmaxApi.models.CustomEzmaxpricingResponse
 import eZmaxApi.models.EzmaxinvoicingagentResponseCompound
 import eZmaxApi.models.EzmaxinvoicingcontractResponseCompound

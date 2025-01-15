@@ -61,7 +61,7 @@ Configure Authorization:
 
 <a id="usergroupmembershipDeleteObjectV1"></a>
 # **usergroupmembershipDeleteObjectV1**
-> UsergroupmembershipDeleteObjectV1Response usergroupmembershipDeleteObjectV1(pkiUsergroupmembershipID)
+> CommonResponse usergroupmembershipDeleteObjectV1(pkiUsergroupmembershipID)
 
 Delete an existing Usergroupmembership
 
@@ -76,7 +76,7 @@ Delete an existing Usergroupmembership
 val apiInstance = ObjectUsergroupmembershipApi()
 val pkiUsergroupmembershipID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : UsergroupmembershipDeleteObjectV1Response = apiInstance.usergroupmembershipDeleteObjectV1(pkiUsergroupmembershipID)
+    val result : CommonResponse = apiInstance.usergroupmembershipDeleteObjectV1(pkiUsergroupmembershipID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectUsergroupmembershipApi#usergroupmembershipDeleteObjectV1")
@@ -94,7 +94,7 @@ try {
 
 ### Return type
 
-[**UsergroupmembershipDeleteObjectV1Response**](UsergroupmembershipDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -110,7 +110,7 @@ Configure Authorization:
 
 <a id="usergroupmembershipEditObjectV1"></a>
 # **usergroupmembershipEditObjectV1**
-> UsergroupmembershipEditObjectV1Response usergroupmembershipEditObjectV1(pkiUsergroupmembershipID, usergroupmembershipEditObjectV1Request)
+> CommonResponse usergroupmembershipEditObjectV1(pkiUsergroupmembershipID, usergroupmembershipEditObjectV1Request)
 
 Edit an existing Usergroupmembership
 
@@ -126,7 +126,7 @@ val apiInstance = ObjectUsergroupmembershipApi()
 val pkiUsergroupmembershipID : kotlin.Int = 56 // kotlin.Int | 
 val usergroupmembershipEditObjectV1Request : UsergroupmembershipEditObjectV1Request =  // UsergroupmembershipEditObjectV1Request | 
 try {
-    val result : UsergroupmembershipEditObjectV1Response = apiInstance.usergroupmembershipEditObjectV1(pkiUsergroupmembershipID, usergroupmembershipEditObjectV1Request)
+    val result : CommonResponse = apiInstance.usergroupmembershipEditObjectV1(pkiUsergroupmembershipID, usergroupmembershipEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectUsergroupmembershipApi#usergroupmembershipEditObjectV1")
@@ -145,7 +145,7 @@ try {
 
 ### Return type
 
-[**UsergroupmembershipEditObjectV1Response**](UsergroupmembershipEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

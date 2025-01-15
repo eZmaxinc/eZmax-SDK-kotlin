@@ -10,7 +10,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 <a id="ezsignuserEditObjectV1"></a>
 # **ezsignuserEditObjectV1**
-> EzsignuserEditObjectV1Response ezsignuserEditObjectV1(pkiEzsignuserID, ezsignuserEditObjectV1Request)
+> CommonResponse ezsignuserEditObjectV1(pkiEzsignuserID, ezsignuserEditObjectV1Request)
 
 Edit an existing Ezsignuser
 
@@ -26,7 +26,7 @@ val apiInstance = ObjectEzsignuserApi()
 val pkiEzsignuserID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsignuser
 val ezsignuserEditObjectV1Request : EzsignuserEditObjectV1Request =  // EzsignuserEditObjectV1Request | 
 try {
-    val result : EzsignuserEditObjectV1Response = apiInstance.ezsignuserEditObjectV1(pkiEzsignuserID, ezsignuserEditObjectV1Request)
+    val result : CommonResponse = apiInstance.ezsignuserEditObjectV1(pkiEzsignuserID, ezsignuserEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignuserApi#ezsignuserEditObjectV1")
@@ -45,7 +45,7 @@ try {
 
 ### Return type
 
-[**EzsignuserEditObjectV1Response**](EzsignuserEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

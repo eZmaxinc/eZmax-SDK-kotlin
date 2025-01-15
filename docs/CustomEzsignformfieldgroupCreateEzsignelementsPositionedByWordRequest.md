@@ -11,7 +11,7 @@
 | **iEzsignformfieldgroupFilledmin** | **kotlin.Int** | The minimum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup |  |
 | **iEzsignformfieldgroupFilledmax** | **kotlin.Int** | The maximum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup |  |
 | **bEzsignformfieldgroupReadonly** | **kotlin.Boolean** | Whether the Ezsignformfieldgroup is read only or not. |  |
-| **aObjEzsignformfieldgroupsigner** | [**kotlin.collections.List&lt;EzsignformfieldgroupsignerRequestCompound&gt;**](EzsignformfieldgroupsignerRequestCompound.md) |  |  |
+| **aObjEzsignformfieldgroupsigner** | [**kotlin.collections.List&lt;EzsignformfieldgroupsignerRequestCompound&gt;**](EzsignformfieldgroupsignerRequest.md) |  |  |
 | **aObjEzsignformfield** | [**kotlin.collections.List&lt;EzsignformfieldRequestCompound&gt;**](EzsignformfieldRequestCompound.md) |  |  |
 | **objCreateezsignelementspositionedbyword** | [**CustomCreateEzsignelementsPositionedByWordRequest**](CustomCreateEzsignelementsPositionedByWordRequest.md) |  |  |
 | **pkiEzsignformfieldgroupID** | **kotlin.Int** | The unique ID of the Ezsignformfieldgroup |  [optional] |
@@ -24,7 +24,7 @@
 | **tEzsignformfieldgroupTooltip** | **kotlin.String** | A tooltip that will be presented to Ezsignsigner about the Ezsignformfieldgroup |  [optional] |
 | **eEzsignformfieldgroupTooltipposition** | [**FieldEEzsignformfieldgroupTooltipposition**](FieldEEzsignformfieldgroupTooltipposition.md) |  |  [optional] |
 | **eEzsignformfieldgroupTextvalidation** | [**EnumTextvalidation**](EnumTextvalidation.md) |  |  [optional] |
-| **aObjDropdownElement** | [**kotlin.collections.List&lt;CustomDropdownElementRequestCompound&gt;**](CustomDropdownElementRequestCompound.md) |  |  [optional] |
+| **aObjDropdownElement** | [**kotlin.collections.List&lt;CustomDropdownElementRequestCompound&gt;**](CustomDropdownElementRequest.md) |  |  [optional] |
 
 
 

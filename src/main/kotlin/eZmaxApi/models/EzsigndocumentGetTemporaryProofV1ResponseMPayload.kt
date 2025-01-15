@@ -15,7 +15,7 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.EzsigndocumentlogResponseCompound
+import eZmaxApi.models.EzsigndocumentlogResponse
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -30,7 +30,7 @@ import com.squareup.moshi.JsonClass
 data class EzsigndocumentGetTemporaryProofV1ResponseMPayload (
 
     @Json(name = "a_objEzsigndocumentlog")
-    val aObjEzsigndocumentlog: kotlin.collections.List<EzsigndocumentlogResponseCompound>
+    val aObjEzsigndocumentlog: kotlin.collections.List<EzsigndocumentlogResponse>
 
 ) {
 

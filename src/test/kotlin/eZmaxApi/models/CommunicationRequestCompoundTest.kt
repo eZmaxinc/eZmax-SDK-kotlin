@@ -21,7 +21,7 @@ import io.kotlintest.specs.ShouldSpec
 import eZmaxApi.models.CommunicationRequestCompound
 import eZmaxApi.models.CommunicationexternalrecipientRequestCompound
 import eZmaxApi.models.CommunicationrecipientRequestCompound
-import eZmaxApi.models.CommunicationreferenceRequestCompound
+import eZmaxApi.models.CommunicationreferenceRequest
 import eZmaxApi.models.CustomCommunicationattachmentRequest
 import eZmaxApi.models.CustomCommunicationsenderRequest
 import eZmaxApi.models.FieldECommunicationImportance

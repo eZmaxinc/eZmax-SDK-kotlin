@@ -19,15 +19,13 @@ import java.io.IOException
 import okhttp3.Call
 import okhttp3.HttpUrl
 
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.DiscussionCreateObjectV1Request
 import eZmaxApi.models.DiscussionCreateObjectV1Response
-import eZmaxApi.models.DiscussionDeleteObjectV1Response
 import eZmaxApi.models.DiscussionGetObjectV2Response
 import eZmaxApi.models.DiscussionPatchObjectV1Request
-import eZmaxApi.models.DiscussionPatchObjectV1Response
 import eZmaxApi.models.DiscussionUpdateDiscussionreadstatusV1Request
-import eZmaxApi.models.DiscussionUpdateDiscussionreadstatusV1Response
 
 import com.squareup.moshi.Json
 
@@ -129,7 +127,7 @@ class ObjectDiscussionApi(basePath: kotlin.String = defaultBasePath, client: Cal
      * Delete an existing Discussion
      * 
      * @param pkiDiscussionID The unique ID of the Discussion
-     * @return DiscussionDeleteObjectV1Response
+     * @return CommonResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -138,11 +136,11 @@ class ObjectDiscussionApi(basePath: kotlin.String = defaultBasePath, client: Cal
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun discussionDeleteObjectV1(pkiDiscussionID: kotlin.Int) : DiscussionDeleteObjectV1Response {
+    fun discussionDeleteObjectV1(pkiDiscussionID: kotlin.Int) : CommonResponse {
         val localVarResponse = discussionDeleteObjectV1WithHttpInfo(pkiDiscussionID = pkiDiscussionID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as DiscussionDeleteObjectV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -160,16 +158,16 @@ class ObjectDiscussionApi(basePath: kotlin.String = defaultBasePath, client: Cal
      * Delete an existing Discussion
      * 
      * @param pkiDiscussionID The unique ID of the Discussion
-     * @return ApiResponse<DiscussionDeleteObjectV1Response?>
+     * @return ApiResponse<CommonResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun discussionDeleteObjectV1WithHttpInfo(pkiDiscussionID: kotlin.Int) : ApiResponse<DiscussionDeleteObjectV1Response?> {
+    fun discussionDeleteObjectV1WithHttpInfo(pkiDiscussionID: kotlin.Int) : ApiResponse<CommonResponse?> {
         val localVariableConfig = discussionDeleteObjectV1RequestConfig(pkiDiscussionID = pkiDiscussionID)
 
-        return request<Unit, DiscussionDeleteObjectV1Response>(
+        return request<Unit, CommonResponse>(
             localVariableConfig
         )
     }
@@ -272,7 +270,7 @@ class ObjectDiscussionApi(basePath: kotlin.String = defaultBasePath, client: Cal
      * 
      * @param pkiDiscussionID The unique ID of the Discussion
      * @param discussionPatchObjectV1Request 
-     * @return DiscussionPatchObjectV1Response
+     * @return CommonResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -281,11 +279,11 @@ class ObjectDiscussionApi(basePath: kotlin.String = defaultBasePath, client: Cal
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun discussionPatchObjectV1(pkiDiscussionID: kotlin.Int, discussionPatchObjectV1Request: DiscussionPatchObjectV1Request) : DiscussionPatchObjectV1Response {
+    fun discussionPatchObjectV1(pkiDiscussionID: kotlin.Int, discussionPatchObjectV1Request: DiscussionPatchObjectV1Request) : CommonResponse {
         val localVarResponse = discussionPatchObjectV1WithHttpInfo(pkiDiscussionID = pkiDiscussionID, discussionPatchObjectV1Request = discussionPatchObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as DiscussionPatchObjectV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -304,16 +302,16 @@ class ObjectDiscussionApi(basePath: kotlin.String = defaultBasePath, client: Cal
      * 
      * @param pkiDiscussionID The unique ID of the Discussion
      * @param discussionPatchObjectV1Request 
-     * @return ApiResponse<DiscussionPatchObjectV1Response?>
+     * @return ApiResponse<CommonResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun discussionPatchObjectV1WithHttpInfo(pkiDiscussionID: kotlin.Int, discussionPatchObjectV1Request: DiscussionPatchObjectV1Request) : ApiResponse<DiscussionPatchObjectV1Response?> {
+    fun discussionPatchObjectV1WithHttpInfo(pkiDiscussionID: kotlin.Int, discussionPatchObjectV1Request: DiscussionPatchObjectV1Request) : ApiResponse<CommonResponse?> {
         val localVariableConfig = discussionPatchObjectV1RequestConfig(pkiDiscussionID = pkiDiscussionID, discussionPatchObjectV1Request = discussionPatchObjectV1Request)
 
-        return request<DiscussionPatchObjectV1Request, DiscussionPatchObjectV1Response>(
+        return request<DiscussionPatchObjectV1Request, CommonResponse>(
             localVariableConfig
         )
     }
@@ -347,7 +345,7 @@ class ObjectDiscussionApi(basePath: kotlin.String = defaultBasePath, client: Cal
      * 
      * @param pkiDiscussionID 
      * @param discussionUpdateDiscussionreadstatusV1Request 
-     * @return DiscussionUpdateDiscussionreadstatusV1Response
+     * @return CommonResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -356,11 +354,11 @@ class ObjectDiscussionApi(basePath: kotlin.String = defaultBasePath, client: Cal
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun discussionUpdateDiscussionreadstatusV1(pkiDiscussionID: kotlin.Int, discussionUpdateDiscussionreadstatusV1Request: DiscussionUpdateDiscussionreadstatusV1Request) : DiscussionUpdateDiscussionreadstatusV1Response {
+    fun discussionUpdateDiscussionreadstatusV1(pkiDiscussionID: kotlin.Int, discussionUpdateDiscussionreadstatusV1Request: DiscussionUpdateDiscussionreadstatusV1Request) : CommonResponse {
         val localVarResponse = discussionUpdateDiscussionreadstatusV1WithHttpInfo(pkiDiscussionID = pkiDiscussionID, discussionUpdateDiscussionreadstatusV1Request = discussionUpdateDiscussionreadstatusV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as DiscussionUpdateDiscussionreadstatusV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -379,16 +377,16 @@ class ObjectDiscussionApi(basePath: kotlin.String = defaultBasePath, client: Cal
      * 
      * @param pkiDiscussionID 
      * @param discussionUpdateDiscussionreadstatusV1Request 
-     * @return ApiResponse<DiscussionUpdateDiscussionreadstatusV1Response?>
+     * @return ApiResponse<CommonResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun discussionUpdateDiscussionreadstatusV1WithHttpInfo(pkiDiscussionID: kotlin.Int, discussionUpdateDiscussionreadstatusV1Request: DiscussionUpdateDiscussionreadstatusV1Request) : ApiResponse<DiscussionUpdateDiscussionreadstatusV1Response?> {
+    fun discussionUpdateDiscussionreadstatusV1WithHttpInfo(pkiDiscussionID: kotlin.Int, discussionUpdateDiscussionreadstatusV1Request: DiscussionUpdateDiscussionreadstatusV1Request) : ApiResponse<CommonResponse?> {
         val localVariableConfig = discussionUpdateDiscussionreadstatusV1RequestConfig(pkiDiscussionID = pkiDiscussionID, discussionUpdateDiscussionreadstatusV1Request = discussionUpdateDiscussionreadstatusV1Request)
 
-        return request<DiscussionUpdateDiscussionreadstatusV1Request, DiscussionUpdateDiscussionreadstatusV1Response>(
+        return request<DiscussionUpdateDiscussionreadstatusV1Request, CommonResponse>(
             localVariableConfig
         )
     }

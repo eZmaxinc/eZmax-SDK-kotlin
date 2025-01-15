@@ -9,7 +9,7 @@
 | **bCommunicationPrivate** | **kotlin.Boolean** | Whether the Communication is private or not |  |
 | **aObjCommunicationattachment** | [**kotlin.collections.List&lt;CustomCommunicationattachmentRequest&gt;**](CustomCommunicationattachmentRequest.md) |  |  |
 | **aObjCommunicationrecipient** | [**kotlin.collections.List&lt;CommunicationrecipientRequestCompound&gt;**](CommunicationrecipientRequestCompound.md) |  |  |
-| **aObjCommunicationreference** | [**kotlin.collections.List&lt;CommunicationreferenceRequestCompound&gt;**](CommunicationreferenceRequestCompound.md) |  |  |
+| **aObjCommunicationreference** | [**kotlin.collections.List&lt;CommunicationreferenceRequestCompound&gt;**](CommunicationreferenceRequest.md) |  |  |
 | **aObjCommunicationexternalrecipient** | [**kotlin.collections.List&lt;CommunicationexternalrecipientRequestCompound&gt;**](CommunicationexternalrecipientRequestCompound.md) |  |  |
 | **pkiCommunicationID** | **kotlin.Int** | The unique ID of the Communication. |  [optional] |
 | **eCommunicationImportance** | [**FieldECommunicationImportance**](FieldECommunicationImportance.md) |  |  [optional] |

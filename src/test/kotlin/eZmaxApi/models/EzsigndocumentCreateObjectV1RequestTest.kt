@@ -20,7 +20,6 @@ import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.EzsigndocumentCreateObjectV1Request
 import eZmaxApi.models.EzsigndocumentRequest
-import eZmaxApi.models.EzsigndocumentRequestCompound
 
 class EzsigndocumentCreateObjectV1RequestTest : ShouldSpec() {
     init {
@@ -33,7 +32,7 @@ class EzsigndocumentCreateObjectV1RequestTest : ShouldSpec() {
             //modelInstance.objEzsigndocument shouldBe ("TODO")
         }
 
-        // to test the property `objEzsigndocumentCompound`
+        // to test the property `objEzsigndocumentCompound` - An Ezsigndocument Object and children to create a complete structure
         should("test objEzsigndocumentCompound") {
             // uncomment below to test the property
             //modelInstance.objEzsigndocumentCompound shouldBe ("TODO")

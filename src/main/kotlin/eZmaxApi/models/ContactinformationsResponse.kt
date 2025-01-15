@@ -15,11 +15,11 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.AddressResponseCompound
-import eZmaxApi.models.EmailResponseCompound
+import eZmaxApi.models.AddressResponse
+import eZmaxApi.models.EmailResponse
 import eZmaxApi.models.FieldEContactinformationsType
 import eZmaxApi.models.PhoneResponseCompound
-import eZmaxApi.models.WebsiteResponseCompound
+import eZmaxApi.models.WebsiteResponse
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -34,10 +34,10 @@ import com.squareup.moshi.JsonClass
  * @param fkiEmailIDDefault The unique ID of the Email
  * @param fkiWebsiteIDDefault The unique ID of the Website Default
  * @param sContactinformationsUrl The url of the Contactinformations
- * @param objAddressDefault 
+ * @param objAddressDefault An Address Object and children to create a complete structure
  * @param objPhoneDefault 
- * @param objEmailDefault 
- * @param objWebsiteDefault 
+ * @param objEmailDefault An Email Object and children to create a complete structure
+ * @param objWebsiteDefault A Website Object and children to create a complete structure
  */
 
 
@@ -70,17 +70,20 @@ data class ContactinformationsResponse (
     @Json(name = "sContactinformationsUrl")
     val sContactinformationsUrl: kotlin.String? = null,
 
+    /* An Address Object and children to create a complete structure */
     @Json(name = "objAddressDefault")
-    val objAddressDefault: AddressResponseCompound? = null,
+    val objAddressDefault: AddressResponse? = null,
 
     @Json(name = "objPhoneDefault")
     val objPhoneDefault: PhoneResponseCompound? = null,
 
+    /* An Email Object and children to create a complete structure */
     @Json(name = "objEmailDefault")
-    val objEmailDefault: EmailResponseCompound? = null,
+    val objEmailDefault: EmailResponse? = null,
 
+    /* A Website Object and children to create a complete structure */
     @Json(name = "objWebsiteDefault")
-    val objWebsiteDefault: WebsiteResponseCompound? = null
+    val objWebsiteDefault: WebsiteResponse? = null
 
 ) {
 

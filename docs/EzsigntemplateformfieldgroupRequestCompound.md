@@ -12,7 +12,7 @@
 | **iEzsigntemplateformfieldgroupFilledmin** | **kotlin.Int** | The minimum number of Ezsigntemplateformfield that must be filled in the Ezsigntemplateformfieldgroup |  |
 | **iEzsigntemplateformfieldgroupFilledmax** | **kotlin.Int** | The maximum number of Ezsigntemplateformfield that must be filled in the Ezsigntemplateformfieldgroup |  |
 | **bEzsigntemplateformfieldgroupReadonly** | **kotlin.Boolean** | Whether the Ezsigntemplateformfieldgroup is read only or not. |  |
-| **aObjEzsigntemplateformfieldgroupsigner** | [**kotlin.collections.List&lt;EzsigntemplateformfieldgroupsignerRequestCompound&gt;**](EzsigntemplateformfieldgroupsignerRequestCompound.md) |  |  |
+| **aObjEzsigntemplateformfieldgroupsigner** | [**kotlin.collections.List&lt;EzsigntemplateformfieldgroupsignerRequestCompound&gt;**](EzsigntemplateformfieldgroupsignerRequest.md) |  |  |
 | **aObjEzsigntemplateformfield** | [**kotlin.collections.List&lt;EzsigntemplateformfieldRequestCompound&gt;**](EzsigntemplateformfieldRequestCompound.md) |  |  |
 | **pkiEzsigntemplateformfieldgroupID** | **kotlin.Int** | The unique ID of the Ezsigntemplateformfieldgroup |  [optional] |
 | **eEzsigntemplateformfieldgroupSignerrequirement** | [**FieldEEzsigntemplateformfieldgroupSignerrequirement**](FieldEEzsigntemplateformfieldgroupSignerrequirement.md) |  |  [optional] |
@@ -23,7 +23,7 @@
 | **eEzsigntemplateformfieldgroupTextvalidation** | [**EnumTextvalidation**](EnumTextvalidation.md) |  |  [optional] |
 | **tEzsigntemplateformfieldgroupTooltip** | **kotlin.String** | A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplateformfieldgroup |  [optional] |
 | **eEzsigntemplateformfieldgroupTooltipposition** | [**FieldEEzsigntemplateformfieldgroupTooltipposition**](FieldEEzsigntemplateformfieldgroupTooltipposition.md) |  |  [optional] |
-| **aObjDropdownElement** | [**kotlin.collections.List&lt;CustomDropdownElementRequestCompound&gt;**](CustomDropdownElementRequestCompound.md) |  |  [optional] |
+| **aObjDropdownElement** | [**kotlin.collections.List&lt;CustomDropdownElementRequestCompound&gt;**](CustomDropdownElementRequest.md) |  |  [optional] |
 
 
 

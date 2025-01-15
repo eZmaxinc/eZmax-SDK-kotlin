@@ -19,7 +19,6 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1ResponseMPayload
-import eZmaxApi.models.CustomBrandingResponse
 
 class EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1ResponseMPayloadTest : ShouldSpec() {
     init {
@@ -38,7 +37,7 @@ class EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1ResponseMPayloadTest :
             //modelInstance.aSEzsigntemplatesignerDescription shouldBe ("TODO")
         }
 
-        // to test the property `objBranding`
+        // to test the property `objBranding` - A Custom Branding Object
         should("test objBranding") {
             // uncomment below to test the property
             //modelInstance.objBranding shouldBe ("TODO")

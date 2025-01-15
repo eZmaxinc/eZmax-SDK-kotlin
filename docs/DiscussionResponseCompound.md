@@ -12,7 +12,7 @@
 | **aObjDiscussionmembership** | [**kotlin.collections.List&lt;DiscussionmembershipResponseCompound&gt;**](DiscussionmembershipResponseCompound.md) |  |  |
 | **aObjDiscussionmessage** | [**kotlin.collections.List&lt;DiscussionmessageResponseCompound&gt;**](DiscussionmessageResponseCompound.md) |  |  |
 | **dtDiscussionLastread** | **kotlin.String** | The date the Discussion was last read |  [optional] |
-| **objDiscussionconfiguration** | [**CustomDiscussionconfigurationResponse**](CustomDiscussionconfigurationResponse.md) |  |  [optional] |
+| **objDiscussionconfiguration** | [**kotlin.Any**](kotlin.Any.md) | A Custom Discussionconfiguration Object |  [optional] |
 
 
 

@@ -4,7 +4,7 @@
 ## Properties
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **aObjEzsigntemplatedocumentpage** | [**kotlin.collections.List&lt;EzsigntemplatedocumentpageResponseCompound&gt;**](EzsigntemplatedocumentpageResponseCompound.md) |  |  |
+| **aObjEzsigntemplatedocumentpage** | [**kotlin.collections.List&lt;EzsigntemplatedocumentpageResponseCompound&gt;**](EzsigntemplatedocumentpageResponse.md) |  |  |
 
 
 

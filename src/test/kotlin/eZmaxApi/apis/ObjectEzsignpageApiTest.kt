@@ -19,8 +19,8 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectEzsignpageApi
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
-import eZmaxApi.models.EzsignpageConsultV1Response
 
 class ObjectEzsignpageApiTest : ShouldSpec() {
     init {
@@ -32,7 +32,7 @@ class ObjectEzsignpageApiTest : ShouldSpec() {
             // uncomment below to test ezsignpageConsultV1
             //val pkiEzsignpageID : kotlin.Int = 56 // kotlin.Int | 
             //val body : kotlin.Any = Object // kotlin.Any | 
-            //val result : EzsignpageConsultV1Response = apiInstance.ezsignpageConsultV1(pkiEzsignpageID, body)
+            //val result : CommonResponse = apiInstance.ezsignpageConsultV1(pkiEzsignpageID, body)
             //result shouldBe ("TODO")
         }
 

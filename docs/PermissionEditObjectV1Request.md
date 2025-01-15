@@ -4,7 +4,7 @@
 ## Properties
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **objPermission** | [**PermissionRequestCompound**](PermissionRequestCompound.md) |  |  |
+| **objPermission** | [**PermissionRequest**](PermissionRequest.md) | A Permission Object and children to create a complete structure |  |
 
 
 

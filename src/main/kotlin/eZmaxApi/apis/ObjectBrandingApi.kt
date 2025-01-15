@@ -22,10 +22,10 @@ import okhttp3.HttpUrl
 import eZmaxApi.models.BrandingCreateObjectV2Request
 import eZmaxApi.models.BrandingCreateObjectV2Response
 import eZmaxApi.models.BrandingEditObjectV2Request
-import eZmaxApi.models.BrandingEditObjectV2Response
 import eZmaxApi.models.BrandingGetAutocompleteV2Response
 import eZmaxApi.models.BrandingGetListV1Response
 import eZmaxApi.models.BrandingGetObjectV3Response
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.HeaderAcceptLanguage
 
@@ -130,7 +130,7 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: Call.
      * 
      * @param pkiBrandingID 
      * @param brandingEditObjectV2Request 
-     * @return BrandingEditObjectV2Response
+     * @return CommonResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -139,11 +139,11 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: Call.
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun brandingEditObjectV2(pkiBrandingID: kotlin.Int, brandingEditObjectV2Request: BrandingEditObjectV2Request) : BrandingEditObjectV2Response {
+    fun brandingEditObjectV2(pkiBrandingID: kotlin.Int, brandingEditObjectV2Request: BrandingEditObjectV2Request) : CommonResponse {
         val localVarResponse = brandingEditObjectV2WithHttpInfo(pkiBrandingID = pkiBrandingID, brandingEditObjectV2Request = brandingEditObjectV2Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as BrandingEditObjectV2Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -162,16 +162,16 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: Call.
      * 
      * @param pkiBrandingID 
      * @param brandingEditObjectV2Request 
-     * @return ApiResponse<BrandingEditObjectV2Response?>
+     * @return ApiResponse<CommonResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun brandingEditObjectV2WithHttpInfo(pkiBrandingID: kotlin.Int, brandingEditObjectV2Request: BrandingEditObjectV2Request) : ApiResponse<BrandingEditObjectV2Response?> {
+    fun brandingEditObjectV2WithHttpInfo(pkiBrandingID: kotlin.Int, brandingEditObjectV2Request: BrandingEditObjectV2Request) : ApiResponse<CommonResponse?> {
         val localVariableConfig = brandingEditObjectV2RequestConfig(pkiBrandingID = pkiBrandingID, brandingEditObjectV2Request = brandingEditObjectV2Request)
 
-        return request<BrandingEditObjectV2Request, BrandingEditObjectV2Response>(
+        return request<BrandingEditObjectV2Request, CommonResponse>(
             localVariableConfig
         )
     }

@@ -10,7 +10,7 @@
 | **bDomainValidmailfrom** | **kotlin.Boolean** | Whether the mail from is valid or not |  |
 | **bDomainValidcustomer** | **kotlin.Boolean** | Whether the customer has access to it or not |  |
 | **objAudit** | [**CommonAudit**](CommonAudit.md) |  |  |
-| **aObjDnsrecord** | [**kotlin.collections.List&lt;CustomDnsrecordResponse&gt;**](CustomDnsrecordResponse.md) |  |  |
+| **aObjDnsrecord** | [**kotlin.collections.List&lt;CustomDnsrecordResponse&gt;**](kotlin.Any.md) |  |  |
 
 
 

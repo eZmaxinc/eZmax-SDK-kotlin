@@ -20,7 +20,7 @@
 | **bSystemconfigurationIsdisposalactive** | **kotlin.Boolean** | Whether is Disposal processus is active or not |  [optional] |
 | **dtSystemconfigurationReadonlyexpirationstart** | **kotlin.String** | The start date where the system will be in read only |  [optional] |
 | **dtSystemconfigurationReadonlyexpirationend** | **kotlin.String** | The end date where the system will be in read only |  [optional] |
-| **objBranding** | [**CustomBrandingResponse**](CustomBrandingResponse.md) |  |  [optional] |
+| **objBranding** | [**kotlin.Any**](kotlin.Any.md) | A Custom Branding Object |  [optional] |
 
 
 

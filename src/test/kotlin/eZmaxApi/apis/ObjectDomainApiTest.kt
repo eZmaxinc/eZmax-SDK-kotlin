@@ -19,10 +19,10 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectDomainApi
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.DomainCreateObjectV1Request
 import eZmaxApi.models.DomainCreateObjectV1Response
-import eZmaxApi.models.DomainDeleteObjectV1Response
 import eZmaxApi.models.DomainGetListV1Response
 import eZmaxApi.models.DomainGetObjectV2Response
 import eZmaxApi.models.HeaderAcceptLanguage
@@ -44,7 +44,7 @@ class ObjectDomainApiTest : ShouldSpec() {
         should("test domainDeleteObjectV1") {
             // uncomment below to test domainDeleteObjectV1
             //val pkiDomainID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Domain
-            //val result : DomainDeleteObjectV1Response = apiInstance.domainDeleteObjectV1(pkiDomainID)
+            //val result : CommonResponse = apiInstance.domainDeleteObjectV1(pkiDomainID)
             //result shouldBe ("TODO")
         }
 

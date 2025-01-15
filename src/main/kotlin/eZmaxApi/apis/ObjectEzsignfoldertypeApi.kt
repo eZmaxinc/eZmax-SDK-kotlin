@@ -19,11 +19,11 @@ import java.io.IOException
 import okhttp3.Call
 import okhttp3.HttpUrl
 
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.EzsignfoldertypeCreateObjectV3Request
 import eZmaxApi.models.EzsignfoldertypeCreateObjectV3Response
 import eZmaxApi.models.EzsignfoldertypeEditObjectV3Request
-import eZmaxApi.models.EzsignfoldertypeEditObjectV3Response
 import eZmaxApi.models.EzsignfoldertypeGetAutocompleteV2Response
 import eZmaxApi.models.EzsignfoldertypeGetListV1Response
 import eZmaxApi.models.EzsignfoldertypeGetObjectV2Response
@@ -131,7 +131,7 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
      * 
      * @param pkiEzsignfoldertypeID 
      * @param ezsignfoldertypeEditObjectV3Request 
-     * @return EzsignfoldertypeEditObjectV3Response
+     * @return CommonResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -140,11 +140,11 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignfoldertypeEditObjectV3(pkiEzsignfoldertypeID: kotlin.Int, ezsignfoldertypeEditObjectV3Request: EzsignfoldertypeEditObjectV3Request) : EzsignfoldertypeEditObjectV3Response {
+    fun ezsignfoldertypeEditObjectV3(pkiEzsignfoldertypeID: kotlin.Int, ezsignfoldertypeEditObjectV3Request: EzsignfoldertypeEditObjectV3Request) : CommonResponse {
         val localVarResponse = ezsignfoldertypeEditObjectV3WithHttpInfo(pkiEzsignfoldertypeID = pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV3Request = ezsignfoldertypeEditObjectV3Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfoldertypeEditObjectV3Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -163,16 +163,16 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
      * 
      * @param pkiEzsignfoldertypeID 
      * @param ezsignfoldertypeEditObjectV3Request 
-     * @return ApiResponse<EzsignfoldertypeEditObjectV3Response?>
+     * @return ApiResponse<CommonResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignfoldertypeEditObjectV3WithHttpInfo(pkiEzsignfoldertypeID: kotlin.Int, ezsignfoldertypeEditObjectV3Request: EzsignfoldertypeEditObjectV3Request) : ApiResponse<EzsignfoldertypeEditObjectV3Response?> {
+    fun ezsignfoldertypeEditObjectV3WithHttpInfo(pkiEzsignfoldertypeID: kotlin.Int, ezsignfoldertypeEditObjectV3Request: EzsignfoldertypeEditObjectV3Request) : ApiResponse<CommonResponse?> {
         val localVariableConfig = ezsignfoldertypeEditObjectV3RequestConfig(pkiEzsignfoldertypeID = pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV3Request = ezsignfoldertypeEditObjectV3Request)
 
-        return request<EzsignfoldertypeEditObjectV3Request, EzsignfoldertypeEditObjectV3Response>(
+        return request<EzsignfoldertypeEditObjectV3Request, CommonResponse>(
             localVariableConfig
         )
     }
