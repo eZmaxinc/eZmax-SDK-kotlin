@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.CustomDiscussionconfigurationResponse
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -28,7 +29,7 @@ import com.squareup.moshi.JsonClass
  * @param iDiscussionmessageCount The count of Attachment.
  * @param iDiscussionmessageCountunread The count of Attachment.
  * @param dtDiscussionLastread The date the Discussion was last read
- * @param objDiscussionconfiguration A Custom Discussionconfiguration Object
+ * @param objDiscussionconfiguration 
  */
 
 
@@ -58,9 +59,8 @@ data class DiscussionResponse (
     @Json(name = "dtDiscussionLastread")
     val dtDiscussionLastread: kotlin.String? = null,
 
-    /* A Custom Discussionconfiguration Object */
     @Json(name = "objDiscussionconfiguration")
-    val objDiscussionconfiguration: kotlin.Any? = null
+    val objDiscussionconfiguration: CustomDiscussionconfigurationResponse? = null
 
 ) {
 

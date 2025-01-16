@@ -17,6 +17,7 @@ package eZmaxApi.models
 
 import eZmaxApi.models.CommonAudit
 import eZmaxApi.models.ComputedEEzsignfolderAccess
+import eZmaxApi.models.CustomEzsignfoldertypeResponse
 import eZmaxApi.models.FieldEEzsignfolderCompletion
 import eZmaxApi.models.FieldEEzsignfolderDocumentdependency
 import eZmaxApi.models.FieldEEzsignfolderStep
@@ -31,7 +32,7 @@ import com.squareup.moshi.JsonClass
  * @param eEzsignfolderCompletion 
  * @param sEzsignfolderDescription The description of the Ezsignfolder
  * @param fkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
- * @param objEzsignfoldertype A Custom Ezsignfoldertype Object
+ * @param objEzsignfoldertype 
  * @param fkiTimezoneID The unique ID of the Timezone
  * @param eEzsignfolderDocumentdependency 
  * @param sEzsignfoldertypeNameX 
@@ -74,9 +75,8 @@ data class EzsignfolderResponseV3 (
     @Json(name = "fkiEzsignfoldertypeID")
     val fkiEzsignfoldertypeID: kotlin.Int? = null,
 
-    /* A Custom Ezsignfoldertype Object */
     @Json(name = "objEzsignfoldertype")
-    val objEzsignfoldertype: kotlin.Any? = null,
+    val objEzsignfoldertype: CustomEzsignfoldertypeResponse? = null,
 
     /* The unique ID of the Timezone */
     @Json(name = "fkiTimezoneID")

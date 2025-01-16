@@ -8,7 +8,7 @@
 | **eEzsignfolderCompletion** | [**FieldEEzsignfolderCompletion**](FieldEEzsignfolderCompletion.md) |  |  |
 | **sEzsignfolderDescription** | **kotlin.String** | The description of the Ezsignfolder |  |
 | **fkiEzsignfoldertypeID** | **kotlin.Int** | The unique ID of the Ezsignfoldertype. |  [optional] |
-| **objEzsignfoldertype** | [**kotlin.Any**](kotlin.Any.md) | A Custom Ezsignfoldertype Object |  [optional] |
+| **objEzsignfoldertype** | [**CustomEzsignfoldertypeResponse**](CustomEzsignfoldertypeResponse.md) |  |  [optional] |
 | **fkiTimezoneID** | **kotlin.Int** | The unique ID of the Timezone |  [optional] |
 | **eEzsignfolderDocumentdependency** | [**FieldEEzsignfolderDocumentdependency**](FieldEEzsignfolderDocumentdependency.md) |  |  [optional] |
 | **sEzsignfoldertypeNameX** | **kotlin.String** |  |  [optional] |

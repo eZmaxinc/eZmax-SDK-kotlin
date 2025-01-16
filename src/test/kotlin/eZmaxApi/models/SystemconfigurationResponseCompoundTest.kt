@@ -19,6 +19,7 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.SystemconfigurationResponseCompound
+import eZmaxApi.models.CustomBrandingResponse
 import eZmaxApi.models.FieldESystemconfigurationEzsign
 import eZmaxApi.models.FieldESystemconfigurationEzsignofficeplan
 import eZmaxApi.models.FieldESystemconfigurationLanguage1
@@ -126,7 +127,7 @@ class SystemconfigurationResponseCompoundTest : ShouldSpec() {
             //modelInstance.dtSystemconfigurationReadonlyexpirationend shouldBe ("TODO")
         }
 
-        // to test the property `objBranding` - A Custom Branding Object
+        // to test the property `objBranding`
         should("test objBranding") {
             // uncomment below to test the property
             //modelInstance.objBranding shouldBe ("TODO")

@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.CustomBrandingResponse
 import eZmaxApi.models.FieldESystemconfigurationEzsign
 import eZmaxApi.models.FieldESystemconfigurationEzsignofficeplan
 import eZmaxApi.models.FieldESystemconfigurationLanguage1
@@ -43,7 +44,7 @@ import com.squareup.moshi.JsonClass
  * @param bSystemconfigurationIsdisposalactive Whether is Disposal processus is active or not
  * @param dtSystemconfigurationReadonlyexpirationstart The start date where the system will be in read only
  * @param dtSystemconfigurationReadonlyexpirationend The end date where the system will be in read only
- * @param objBranding A Custom Branding Object
+ * @param objBranding 
  */
 
 
@@ -109,9 +110,8 @@ data class SystemconfigurationResponse (
     @Json(name = "dtSystemconfigurationReadonlyexpirationend")
     val dtSystemconfigurationReadonlyexpirationend: kotlin.String? = null,
 
-    /* A Custom Branding Object */
     @Json(name = "objBranding")
-    val objBranding: kotlin.Any? = null
+    val objBranding: CustomBrandingResponse? = null
 
 ) {
 

@@ -20,6 +20,7 @@ import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.EzsignfolderResponse
 import eZmaxApi.models.CommonAudit
+import eZmaxApi.models.CustomEzsignfoldertypeResponse
 import eZmaxApi.models.FieldEEzsignfolderCompletion
 import eZmaxApi.models.FieldEEzsignfolderSendreminderfrequency
 import eZmaxApi.models.FieldEEzsignfolderStep
@@ -53,7 +54,7 @@ class EzsignfolderResponseTest : ShouldSpec() {
             //modelInstance.fkiEzsignfoldertypeID shouldBe ("TODO")
         }
 
-        // to test the property `objEzsignfoldertype` - A Custom Ezsignfoldertype Object
+        // to test the property `objEzsignfoldertype`
         should("test objEzsignfoldertype") {
             // uncomment below to test the property
             //modelInstance.objEzsignfoldertype shouldBe ("TODO")

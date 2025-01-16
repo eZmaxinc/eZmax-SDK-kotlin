@@ -19,6 +19,7 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.DiscussionResponse
+import eZmaxApi.models.CustomDiscussionconfigurationResponse
 
 class DiscussionResponseTest : ShouldSpec() {
     init {
@@ -61,7 +62,7 @@ class DiscussionResponseTest : ShouldSpec() {
             //modelInstance.dtDiscussionLastread shouldBe ("TODO")
         }
 
-        // to test the property `objDiscussionconfiguration` - A Custom Discussionconfiguration Object
+        // to test the property `objDiscussionconfiguration`
         should("test objDiscussionconfiguration") {
             // uncomment below to test the property
             //modelInstance.objDiscussionconfiguration shouldBe ("TODO")
