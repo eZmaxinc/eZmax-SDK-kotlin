@@ -16,6 +16,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.EzmaxinvoicingcommissionResponseCompound
+import eZmaxApi.models.EzmaxinvoicingsummaryglobalResponse
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -50,84 +51,84 @@ data class EzmaxinvoicingsummaryglobalResponseCompound (
 
     /* The unique ID of the Ezmaxproduct */
     @Json(name = "fkiEzmaxproductID")
-    val fkiEzmaxproductID: kotlin.Int,
+    override val fkiEzmaxproductID: kotlin.Int,
 
     /* The description of the Ezmaxproduct in the language of the requester */
     @Json(name = "sEzmaxproductDescriptionX")
-    val sEzmaxproductDescriptionX: kotlin.String,
+    override val sEzmaxproductDescriptionX: kotlin.String,
 
     /* The start date for the Ezmaxinvoicingsummaryglobal */
     @Json(name = "dtEzmaxinvoicingsummaryglobalStart")
-    val dtEzmaxinvoicingsummaryglobalStart: kotlin.String,
+    override val dtEzmaxinvoicingsummaryglobalStart: kotlin.String,
 
     /* The end date for the Ezmaxinvoicingsummaryglobal */
     @Json(name = "dtEzmaxinvoicingsummaryglobalEnd")
-    val dtEzmaxinvoicingsummaryglobalEnd: kotlin.String,
+    override val dtEzmaxinvoicingsummaryglobalEnd: kotlin.String,
 
     /* The number of days for the Ezmaxinvoicingsummaryglobal */
     @Json(name = "iEzmaxinvoicingsummaryglobalDays")
-    val iEzmaxinvoicingsummaryglobalDays: kotlin.Int,
+    override val iEzmaxinvoicingsummaryglobalDays: kotlin.Int,
 
     /* The count item calculated */
     @Json(name = "dEzmaxinvoicingsummaryglobalCountreal")
-    val dEzmaxinvoicingsummaryglobalCountreal: kotlin.String,
+    override val dEzmaxinvoicingsummaryglobalCountreal: kotlin.String,
 
     /* The count item billed */
     @Json(name = "dEzmaxinvoicingsummaryglobalCountbilled")
-    val dEzmaxinvoicingsummaryglobalCountbilled: kotlin.String,
+    override val dEzmaxinvoicingsummaryglobalCountbilled: kotlin.String,
 
     /* The Ezmaxinvoicingsummaryglobal subtotal */
     @Json(name = "dEzmaxinvoicingsummaryglobalSubtotal")
-    val dEzmaxinvoicingsummaryglobalSubtotal: kotlin.String,
+    override val dEzmaxinvoicingsummaryglobalSubtotal: kotlin.String,
 
     /* The rebate amount for the Ezmaxinvoicingsummaryglobal */
     @Json(name = "dEzmaxinvoicingsummaryglobalRebateamount")
-    val dEzmaxinvoicingsummaryglobalRebateamount: kotlin.String,
+    override val dEzmaxinvoicingsummaryglobalRebateamount: kotlin.String,
 
     /* The rebate percentage of the Ezmaxinvoicingsummaryglobal */
     @Json(name = "dEzmaxinvoicingsummaryglobalRebatepercent")
-    val dEzmaxinvoicingsummaryglobalRebatepercent: kotlin.String,
+    override val dEzmaxinvoicingsummaryglobalRebatepercent: kotlin.String,
 
     /* The rebate amount total for the Ezmaxinvoicingsummaryglobal */
     @Json(name = "dEzmaxinvoicingsummaryglobalRebatetotal")
-    val dEzmaxinvoicingsummaryglobalRebatetotal: kotlin.String,
+    override val dEzmaxinvoicingsummaryglobalRebatetotal: kotlin.String,
 
     /* The Ezmaxinvoicingsummaryglobal total */
     @Json(name = "dEzmaxinvoicingsummaryglobalTotal")
-    val dEzmaxinvoicingsummaryglobalTotal: kotlin.String,
+    override val dEzmaxinvoicingsummaryglobalTotal: kotlin.String,
 
     /* Whether it is adjustment for the Ezmaxinvoicingsummaryglobal */
     @Json(name = "bEzmaxinvoicingsummaryglobalAdjustment")
-    val bEzmaxinvoicingsummaryglobalAdjustment: kotlin.Boolean,
+    override val bEzmaxinvoicingsummaryglobalAdjustment: kotlin.Boolean,
 
     /* The help message of the Ezmaxproduct in the language of the requester */
     @Json(name = "tEzmaxproductHelpX")
-    val tEzmaxproductHelpX: kotlin.String,
+    override val tEzmaxproductHelpX: kotlin.String,
 
     /* The unique ID of the Ezmaxinvoicingsummaryglobal */
     @Json(name = "pkiEzmaxinvoicingsummaryglobalID")
-    val pkiEzmaxinvoicingsummaryglobalID: kotlin.Int? = null,
+    override val pkiEzmaxinvoicingsummaryglobalID: kotlin.Int? = null,
 
     /* The unique ID of the Ezmaxinvoicing */
     @Json(name = "fkiEzmaxinvoicingID")
-    val fkiEzmaxinvoicingID: kotlin.Int? = null,
+    override val fkiEzmaxinvoicingID: kotlin.Int? = null,
 
     /* The amount of commission for the representative */
     @Json(name = "dEzmaxinvoicingsummaryglobalRepresentative")
-    val dEzmaxinvoicingsummaryglobalRepresentative: kotlin.String? = null,
+    override val dEzmaxinvoicingsummaryglobalRepresentative: kotlin.String? = null,
 
     /* The amount of commission for the partner */
     @Json(name = "dEzmaxinvoicingsummaryglobalPartner")
-    val dEzmaxinvoicingsummaryglobalPartner: kotlin.String? = null,
+    override val dEzmaxinvoicingsummaryglobalPartner: kotlin.String? = null,
 
     /* The net amount of the Ezmaxinvoicingsummaryglobal */
     @Json(name = "dEzmaxinvoicingsummaryglobalNet")
-    val dEzmaxinvoicingsummaryglobalNet: kotlin.String? = null,
+    override val dEzmaxinvoicingsummaryglobalNet: kotlin.String? = null,
 
     @Json(name = "a_objEzmaxinvoicingcommission")
     val aObjEzmaxinvoicingcommission: kotlin.collections.List<EzmaxinvoicingcommissionResponseCompound>? = null
 
-) {
+) : EzmaxinvoicingsummaryglobalResponse {
 
 
 }

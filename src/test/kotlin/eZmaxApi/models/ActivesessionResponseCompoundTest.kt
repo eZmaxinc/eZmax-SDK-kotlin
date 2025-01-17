@@ -19,6 +19,7 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.ActivesessionResponseCompound
+import eZmaxApi.models.ActivesessionResponse
 import eZmaxApi.models.ActivesessionResponseCompoundApikey
 import eZmaxApi.models.ActivesessionResponseCompoundUser
 import eZmaxApi.models.FieldEActivesessionEzsign
@@ -36,72 +37,6 @@ class ActivesessionResponseCompoundTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of ActivesessionResponseCompound
         //val modelInstance = ActivesessionResponseCompound()
-
-        // to test the property `eActivesessionUsertype`
-        should("test eActivesessionUsertype") {
-            // uncomment below to test the property
-            //modelInstance.eActivesessionUsertype shouldBe ("TODO")
-        }
-
-        // to test the property `eActivesessionOrigin`
-        should("test eActivesessionOrigin") {
-            // uncomment below to test the property
-            //modelInstance.eActivesessionOrigin shouldBe ("TODO")
-        }
-
-        // to test the property `eActivesessionWeekdaystart`
-        should("test eActivesessionWeekdaystart") {
-            // uncomment below to test the property
-            //modelInstance.eActivesessionWeekdaystart shouldBe ("TODO")
-        }
-
-        // to test the property `fkiLanguageID` - The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
-        should("test fkiLanguageID") {
-            // uncomment below to test the property
-            //modelInstance.fkiLanguageID shouldBe ("TODO")
-        }
-
-        // to test the property `sCompanyNameX` - The Name of the Company in the language of the requester
-        should("test sCompanyNameX") {
-            // uncomment below to test the property
-            //modelInstance.sCompanyNameX shouldBe ("TODO")
-        }
-
-        // to test the property `sDepartmentNameX` - The Name of the Department in the language of the requester
-        should("test sDepartmentNameX") {
-            // uncomment below to test the property
-            //modelInstance.sDepartmentNameX shouldBe ("TODO")
-        }
-
-        // to test the property `bActivesessionDebug` - Whether the active session is in debug or not
-        should("test bActivesessionDebug") {
-            // uncomment below to test the property
-            //modelInstance.bActivesessionDebug shouldBe ("TODO")
-        }
-
-        // to test the property `bActivesessionIssuperadmin` - Whether the active session is superadmin or not
-        should("test bActivesessionIssuperadmin") {
-            // uncomment below to test the property
-            //modelInstance.bActivesessionIssuperadmin shouldBe ("TODO")
-        }
-
-        // to test the property `eActivesessionEzsignaccess`
-        should("test eActivesessionEzsignaccess") {
-            // uncomment below to test the property
-            //modelInstance.eActivesessionEzsignaccess shouldBe ("TODO")
-        }
-
-        // to test the property `pksCustomerCode` - The customer code assigned to your account
-        should("test pksCustomerCode") {
-            // uncomment below to test the property
-            //modelInstance.pksCustomerCode shouldBe ("TODO")
-        }
-
-        // to test the property `fkiSystemconfigurationtypeID` - The unique ID of the Systemconfigurationtype
-        should("test fkiSystemconfigurationtypeID") {
-            // uncomment below to test the property
-            //modelInstance.fkiSystemconfigurationtypeID shouldBe ("TODO")
-        }
 
         // to test the property `eUserEzsignaccess`
         should("test eUserEzsignaccess") {
@@ -125,54 +60,6 @@ class ActivesessionResponseCompoundTest : ShouldSpec() {
         should("test aEModuleInternalname") {
             // uncomment below to test the property
             //modelInstance.aEModuleInternalname shouldBe ("TODO")
-        }
-
-        // to test the property `bActivesessionAttachment` - Can access attachment when we clone a user
-        should("test bActivesessionAttachment") {
-            // uncomment below to test the property
-            //modelInstance.bActivesessionAttachment shouldBe ("TODO")
-        }
-
-        // to test the property `bActivesessionCanafe` - Can access canafe when we clone a user
-        should("test bActivesessionCanafe") {
-            // uncomment below to test the property
-            //modelInstance.bActivesessionCanafe shouldBe ("TODO")
-        }
-
-        // to test the property `bActivesessionFinancial` - Can access financial element when we clone a user
-        should("test bActivesessionFinancial") {
-            // uncomment below to test the property
-            //modelInstance.bActivesessionFinancial shouldBe ("TODO")
-        }
-
-        // to test the property `bActivesessionRealestatecompleted` - Can access closed realestate folders when we clone a user
-        should("test bActivesessionRealestatecompleted") {
-            // uncomment below to test the property
-            //modelInstance.bActivesessionRealestatecompleted shouldBe ("TODO")
-        }
-
-        // to test the property `eActivesessionEzsign`
-        should("test eActivesessionEzsign") {
-            // uncomment below to test the property
-            //modelInstance.eActivesessionEzsign shouldBe ("TODO")
-        }
-
-        // to test the property `eActivesessionEzsignprepaid`
-        should("test eActivesessionEzsignprepaid") {
-            // uncomment below to test the property
-            //modelInstance.eActivesessionEzsignprepaid shouldBe ("TODO")
-        }
-
-        // to test the property `eActivesessionRealestateinprogress`
-        should("test eActivesessionRealestateinprogress") {
-            // uncomment below to test the property
-            //modelInstance.eActivesessionRealestateinprogress shouldBe ("TODO")
-        }
-
-        // to test the property `fkiSignatureID` - The unique ID of the Signature
-        should("test fkiSignatureID") {
-            // uncomment below to test the property
-            //modelInstance.fkiSignatureID shouldBe ("TODO")
         }
 
         // to test the property `fkiEzsignuserID` - The unique ID of the Ezsignuser

@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.EzsigntemplatedocumentResponse
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -32,37 +33,37 @@ import com.squareup.moshi.JsonClass
  */
 
 
-data class EzsigntemplatedocumentResponseCompound (
+class EzsigntemplatedocumentResponseCompound (
 
     /* The unique ID of the Ezsigntemplatedocument */
     @Json(name = "pkiEzsigntemplatedocumentID")
-    val pkiEzsigntemplatedocumentID: kotlin.Int,
+    override val pkiEzsigntemplatedocumentID: kotlin.Int,
 
     /* The unique ID of the Ezsigntemplate */
     @Json(name = "fkiEzsigntemplateID")
-    val fkiEzsigntemplateID: kotlin.Int,
+    override val fkiEzsigntemplateID: kotlin.Int,
 
     /* The name of the Ezsigntemplatedocument. */
     @Json(name = "sEzsigntemplatedocumentName")
-    val sEzsigntemplatedocumentName: kotlin.String,
+    override val sEzsigntemplatedocumentName: kotlin.String,
 
     /* The number of pages in the Ezsigntemplatedocument. */
     @Json(name = "iEzsigntemplatedocumentPagetotal")
-    val iEzsigntemplatedocumentPagetotal: kotlin.Int,
+    override val iEzsigntemplatedocumentPagetotal: kotlin.Int,
 
     /* The number of total signatures in the Ezsigntemplate. */
     @Json(name = "iEzsigntemplatedocumentSignaturetotal")
-    val iEzsigntemplatedocumentSignaturetotal: kotlin.Int,
+    override val iEzsigntemplatedocumentSignaturetotal: kotlin.Int,
 
     /* The number of total form fields in the Ezsigntemplate. */
     @Json(name = "iEzsigntemplatedocumentFormfieldtotal")
-    val iEzsigntemplatedocumentFormfieldtotal: kotlin.Int,
+    override val iEzsigntemplatedocumentFormfieldtotal: kotlin.Int,
 
     /* If the Ezsigntemplatedocument contains signed signatures (From internal or external sources) */
     @Json(name = "bEzsigntemplatedocumentHassignedsignatures")
-    val bEzsigntemplatedocumentHassignedsignatures: kotlin.Boolean
+    override val bEzsigntemplatedocumentHassignedsignatures: kotlin.Boolean
 
-) {
+) : EzsigntemplatedocumentResponse {
 
 
 }

@@ -17,6 +17,7 @@ package eZmaxApi.models
 
 import eZmaxApi.models.EnumHorizontalalignment
 import eZmaxApi.models.EnumVerticalalignment
+import eZmaxApi.models.EzsignannotationResponse
 import eZmaxApi.models.FieldEEzsignannotationType
 import eZmaxApi.models.TextstylestaticResponseCompound
 
@@ -45,49 +46,49 @@ data class EzsignannotationResponseCompound (
 
     /* The unique ID of the Ezsignannotation */
     @Json(name = "pkiEzsignannotationID")
-    val pkiEzsignannotationID: kotlin.Int,
+    override val pkiEzsignannotationID: kotlin.Int,
 
     /* The unique ID of the Ezsigndocument */
     @Json(name = "fkiEzsigndocumentID")
-    val fkiEzsigndocumentID: kotlin.Int,
+    override val fkiEzsigndocumentID: kotlin.Int,
 
     @Json(name = "eEzsignannotationType")
-    val eEzsignannotationType: FieldEEzsignannotationType,
+    override val eEzsignannotationType: FieldEEzsignannotationType,
 
     /* The X coordinate (Horizontal) where to put the Ezsignannotation on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignannotation 2 inches from the left border of the page, you would use \"200\" for the X coordinate. */
     @Json(name = "iEzsignannotationX")
-    val iEzsignannotationX: kotlin.Int,
+    override val iEzsignannotationX: kotlin.Int,
 
     /* The Y coordinate (Vertical) where to put the Ezsignannotation on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignannotation 3 inches from the top border of the page, you would use \"300\" for the Y coordinate. */
     @Json(name = "iEzsignannotationY")
-    val iEzsignannotationY: kotlin.Int,
+    override val iEzsignannotationY: kotlin.Int,
 
     /* The page number in the Ezsigndocument */
     @Json(name = "iEzsignpagePagenumber")
-    val iEzsignpagePagenumber: kotlin.Int,
+    override val iEzsignpagePagenumber: kotlin.Int,
 
     @Json(name = "eEzsignannotationHorizontalalignment")
-    val eEzsignannotationHorizontalalignment: EnumHorizontalalignment? = null,
+    override val eEzsignannotationHorizontalalignment: EnumHorizontalalignment? = null,
 
     @Json(name = "eEzsignannotationVerticalalignment")
-    val eEzsignannotationVerticalalignment: EnumVerticalalignment? = null,
+    override val eEzsignannotationVerticalalignment: EnumVerticalalignment? = null,
 
     /* The Width of the Ezsignannotation.  Width is calculated at 100dpi (dot per inch). So for example, if you want to have the width of the Ezsignannotation to be 3 inches, you would use \"300\" for the Width. */
     @Json(name = "iEzsignannotationWidth")
-    val iEzsignannotationWidth: kotlin.Int? = null,
+    override val iEzsignannotationWidth: kotlin.Int? = null,
 
     /* The Height of the Ezsignannotation.  Height is calculated at 100dpi (dot per inch). So for example, if you want to have the height of the Ezsignannotation to be 2 inches, you would use \"200\" for the Height.  This can only be set if eEzsignannotationType is **StrikethroughBlock** or **Text** */
     @Json(name = "iEzsignannotationHeight")
-    val iEzsignannotationHeight: kotlin.Int? = null,
+    override val iEzsignannotationHeight: kotlin.Int? = null,
 
     /* The Text of the Ezsignannotation */
     @Json(name = "sEzsignannotationText")
-    val sEzsignannotationText: kotlin.String? = null,
+    override val sEzsignannotationText: kotlin.String? = null,
 
     @Json(name = "objTextstylestatic")
     val objTextstylestatic: TextstylestaticResponseCompound? = null
 
-) {
+) : EzsignannotationResponse {
 
 
 }

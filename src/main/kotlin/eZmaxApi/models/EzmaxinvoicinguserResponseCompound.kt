@@ -16,6 +16,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.CustomContactNameResponse
+import eZmaxApi.models.EzmaxinvoicinguserResponse
 import eZmaxApi.models.FieldEEzmaxinvoicinguserVariationezsign
 
 import com.squareup.moshi.Json
@@ -41,43 +42,43 @@ data class EzmaxinvoicinguserResponseCompound (
 
     /* The unique ID of the Billingentityinternal. */
     @Json(name = "fkiBillingentityinternalID")
-    val fkiBillingentityinternalID: kotlin.Int,
+    override val fkiBillingentityinternalID: kotlin.Int,
 
     /* The description of the Billingentityinternal in the language of the requester */
     @Json(name = "sBillingentityinternalDescriptionX")
-    val sBillingentityinternalDescriptionX: kotlin.String,
+    override val sBillingentityinternalDescriptionX: kotlin.String,
 
     /* The unique ID of the User */
     @Json(name = "fkiUserID")
-    val fkiUserID: kotlin.Int,
+    override val fkiUserID: kotlin.Int,
 
     /* The number of ezsign documents */
     @Json(name = "iEzmaxinvoicinguserEzsigndocument")
-    val iEzmaxinvoicinguserEzsigndocument: kotlin.Int,
+    override val iEzmaxinvoicinguserEzsigndocument: kotlin.Int,
 
     /* Whether there is an eZsign account */
     @Json(name = "bEzmaxinvoicinguserEzsignaccount")
-    val bEzmaxinvoicinguserEzsignaccount: kotlin.Boolean,
+    override val bEzmaxinvoicinguserEzsignaccount: kotlin.Boolean,
 
     /* Whether it is billable for eZsign */
     @Json(name = "bEzmaxinvoicinguserBillableezsign")
-    val bEzmaxinvoicinguserBillableezsign: kotlin.Boolean,
+    override val bEzmaxinvoicinguserBillableezsign: kotlin.Boolean,
 
     @Json(name = "eEzmaxinvoicinguserVariationezsign")
-    val eEzmaxinvoicinguserVariationezsign: FieldEEzmaxinvoicinguserVariationezsign,
+    override val eEzmaxinvoicinguserVariationezsign: FieldEEzmaxinvoicinguserVariationezsign,
 
     @Json(name = "objContactName")
     val objContactName: CustomContactNameResponse,
 
     /* The unique ID of the Ezmaxinvoicinguser */
     @Json(name = "pkiEzmaxinvoicinguserID")
-    val pkiEzmaxinvoicinguserID: kotlin.Int? = null,
+    override val pkiEzmaxinvoicinguserID: kotlin.Int? = null,
 
     /* The unique ID of the Ezmaxinvoicing */
     @Json(name = "fkiEzmaxinvoicingID")
-    val fkiEzmaxinvoicingID: kotlin.Int? = null
+    override val fkiEzmaxinvoicingID: kotlin.Int? = null
 
-) {
+) : EzmaxinvoicinguserResponse {
 
 
 }

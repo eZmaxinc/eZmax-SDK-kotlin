@@ -19,6 +19,7 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.EzsigntemplateglobalResponseCompound
+import eZmaxApi.models.EzsigntemplateglobalResponse
 import eZmaxApi.models.EzsigntemplateglobaldocumentResponse
 import eZmaxApi.models.EzsigntemplateglobalsignerResponseCompound
 import eZmaxApi.models.FieldEEzsigntemplateglobalModule
@@ -29,70 +30,10 @@ class EzsigntemplateglobalResponseCompoundTest : ShouldSpec() {
         // uncomment below to create an instance of EzsigntemplateglobalResponseCompound
         //val modelInstance = EzsigntemplateglobalResponseCompound()
 
-        // to test the property `pkiEzsigntemplateglobalID` - The unique ID of the Ezsigntemplateglobal
-        should("test pkiEzsigntemplateglobalID") {
-            // uncomment below to test the property
-            //modelInstance.pkiEzsigntemplateglobalID shouldBe ("TODO")
-        }
-
-        // to test the property `fkiEzsigntemplateglobaldocumentID` - The unique ID of the Ezsigntemplateglobaldocument
-        should("test fkiEzsigntemplateglobaldocumentID") {
-            // uncomment below to test the property
-            //modelInstance.fkiEzsigntemplateglobaldocumentID shouldBe ("TODO")
-        }
-
-        // to test the property `fkiModuleID` - The unique ID of the Module
-        should("test fkiModuleID") {
-            // uncomment below to test the property
-            //modelInstance.fkiModuleID shouldBe ("TODO")
-        }
-
-        // to test the property `fkiLanguageID` - The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
-        should("test fkiLanguageID") {
-            // uncomment below to test the property
-            //modelInstance.fkiLanguageID shouldBe ("TODO")
-        }
-
-        // to test the property `sLanguageNameX` - The Name of the Language in the language of the requester
-        should("test sLanguageNameX") {
-            // uncomment below to test the property
-            //modelInstance.sLanguageNameX shouldBe ("TODO")
-        }
-
-        // to test the property `eEzsigntemplateglobalModule`
-        should("test eEzsigntemplateglobalModule") {
-            // uncomment below to test the property
-            //modelInstance.eEzsigntemplateglobalModule shouldBe ("TODO")
-        }
-
-        // to test the property `eEzsigntemplateglobalSupplier`
-        should("test eEzsigntemplateglobalSupplier") {
-            // uncomment below to test the property
-            //modelInstance.eEzsigntemplateglobalSupplier shouldBe ("TODO")
-        }
-
-        // to test the property `sEzsigntemplateglobalCode` - The Code of the Ezsigntemplateglobal
-        should("test sEzsigntemplateglobalCode") {
-            // uncomment below to test the property
-            //modelInstance.sEzsigntemplateglobalCode shouldBe ("TODO")
-        }
-
-        // to test the property `sEzsigntemplateglobalDescription` - The description of the Ezsigntemplate
-        should("test sEzsigntemplateglobalDescription") {
-            // uncomment below to test the property
-            //modelInstance.sEzsigntemplateglobalDescription shouldBe ("TODO")
-        }
-
         // to test the property `aObjEzsigntemplateglobalsigner`
         should("test aObjEzsigntemplateglobalsigner") {
             // uncomment below to test the property
             //modelInstance.aObjEzsigntemplateglobalsigner shouldBe ("TODO")
-        }
-
-        // to test the property `sModuleNameX` - The Name of the Module in the language of the requester
-        should("test sModuleNameX") {
-            // uncomment below to test the property
-            //modelInstance.sModuleNameX shouldBe ("TODO")
         }
 
         // to test the property `objEzsigntemplateglobaldocument`

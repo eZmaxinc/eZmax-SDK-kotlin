@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseObjDebug
 import eZmaxApi.models.CommonResponseObjDebugPayload
 import eZmaxApi.models.CustomWordPositionWordResponse
@@ -34,16 +35,16 @@ import com.squareup.moshi.JsonClass
 data class EzsigndocumentGetWordsPositionsV1Response (
 
     @Json(name = "objDebugPayload")
-    val objDebugPayload: CommonResponseObjDebugPayload,
+    override val objDebugPayload: CommonResponseObjDebugPayload,
 
     /* Payload for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions */
     @Json(name = "mPayload")
     val mPayload: kotlin.collections.List<CustomWordPositionWordResponse>,
 
     @Json(name = "objDebug")
-    val objDebug: CommonResponseObjDebug? = null
+    override val objDebug: CommonResponseObjDebug? = null
 
-) {
+) : CommonResponse {
 
 
 }

@@ -20,36 +20,13 @@ import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.EzsigntemplatepackagemembershipResponseCompound
 import eZmaxApi.models.EzsigntemplateResponseCompound
+import eZmaxApi.models.EzsigntemplatepackagemembershipResponse
 import eZmaxApi.models.EzsigntemplatepackagesignermembershipResponseCompound
 
 class EzsigntemplatepackagemembershipResponseCompoundTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of EzsigntemplatepackagemembershipResponseCompound
         //val modelInstance = EzsigntemplatepackagemembershipResponseCompound()
-
-        // to test the property `pkiEzsigntemplatepackagemembershipID` - The unique ID of the Ezsigntemplatepackagemembership
-        should("test pkiEzsigntemplatepackagemembershipID") {
-            // uncomment below to test the property
-            //modelInstance.pkiEzsigntemplatepackagemembershipID shouldBe ("TODO")
-        }
-
-        // to test the property `fkiEzsigntemplatepackageID` - The unique ID of the Ezsigntemplatepackage
-        should("test fkiEzsigntemplatepackageID") {
-            // uncomment below to test the property
-            //modelInstance.fkiEzsigntemplatepackageID shouldBe ("TODO")
-        }
-
-        // to test the property `fkiEzsigntemplateID` - The unique ID of the Ezsigntemplate
-        should("test fkiEzsigntemplateID") {
-            // uncomment below to test the property
-            //modelInstance.fkiEzsigntemplateID shouldBe ("TODO")
-        }
-
-        // to test the property `iEzsigntemplatepackagemembershipOrder` - The order in which the Ezsigntemplate will be imported when using an Ezsigntemplatepackage.
-        should("test iEzsigntemplatepackagemembershipOrder") {
-            // uncomment below to test the property
-            //modelInstance.iEzsigntemplatepackagemembershipOrder shouldBe ("TODO")
-        }
 
         // to test the property `objEzsigntemplate`
         should("test objEzsigntemplate") {

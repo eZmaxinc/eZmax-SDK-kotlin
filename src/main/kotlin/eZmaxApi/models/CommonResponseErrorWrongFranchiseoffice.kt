@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.FieldEErrorCode
 
 import com.squareup.moshi.Json
@@ -37,10 +38,10 @@ data class CommonResponseErrorWrongFranchiseoffice (
 
     /* The message giving details about the error */
     @Json(name = "sErrorMessage")
-    val sErrorMessage: kotlin.String,
+    override val sErrorMessage: kotlin.String,
 
     @Json(name = "eErrorCode")
-    val eErrorCode: FieldEErrorCode,
+    override val eErrorCode: FieldEErrorCode,
 
     /* The unique ID of the Franchiseagence */
     @Json(name = "fkiFranchiseagenceID")
@@ -60,9 +61,9 @@ data class CommonResponseErrorWrongFranchiseoffice (
 
     /* More error message detail */
     @Json(name = "a_sErrorMessagedetail")
-    val aSErrorMessagedetail: kotlin.collections.List<kotlin.String>? = null
+    override val aSErrorMessagedetail: kotlin.collections.List<kotlin.String>? = null
 
-) {
+) : CommonResponseError {
 
 
 }

@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.CorsRequest
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -28,21 +29,21 @@ import com.squareup.moshi.JsonClass
  */
 
 
-data class CorsRequestCompound (
+class CorsRequestCompound (
 
     /* The unique ID of the Apikey */
     @Json(name = "fkiApikeyID")
-    val fkiApikeyID: kotlin.Int,
+    override val fkiApikeyID: kotlin.Int,
 
     /* The entryurl of the Cors */
     @Json(name = "sCorsEntryurl")
-    val sCorsEntryurl: kotlin.String,
+    override val sCorsEntryurl: kotlin.String,
 
     /* The unique ID of the Cors */
     @Json(name = "pkiCorsID")
-    val pkiCorsID: kotlin.Int? = null
+    override val pkiCorsID: kotlin.Int? = null
 
-) {
+) : CorsRequest {
 
 
 }

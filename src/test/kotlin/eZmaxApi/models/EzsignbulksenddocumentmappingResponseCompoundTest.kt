@@ -19,6 +19,7 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.EzsignbulksenddocumentmappingResponseCompound
+import eZmaxApi.models.EzsignbulksenddocumentmappingResponse
 import eZmaxApi.models.EzsigntemplateResponseCompound
 import eZmaxApi.models.EzsigntemplatepackageResponseCompound
 
@@ -26,36 +27,6 @@ class EzsignbulksenddocumentmappingResponseCompoundTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of EzsignbulksenddocumentmappingResponseCompound
         //val modelInstance = EzsignbulksenddocumentmappingResponseCompound()
-
-        // to test the property `pkiEzsignbulksenddocumentmappingID` - The unique ID of the Ezsignbulksenddocumentmapping.
-        should("test pkiEzsignbulksenddocumentmappingID") {
-            // uncomment below to test the property
-            //modelInstance.pkiEzsignbulksenddocumentmappingID shouldBe ("TODO")
-        }
-
-        // to test the property `fkiEzsignbulksendID` - The unique ID of the Ezsignbulksend
-        should("test fkiEzsignbulksendID") {
-            // uncomment below to test the property
-            //modelInstance.fkiEzsignbulksendID shouldBe ("TODO")
-        }
-
-        // to test the property `iEzsignbulksenddocumentmappingOrder` - The order in which the Ezsigntemplate or Ezsigntemplatepackage will be presented to the signatory in the Ezsignfolder.
-        should("test iEzsignbulksenddocumentmappingOrder") {
-            // uncomment below to test the property
-            //modelInstance.iEzsignbulksenddocumentmappingOrder shouldBe ("TODO")
-        }
-
-        // to test the property `fkiEzsigntemplatepackageID` - The unique ID of the Ezsigntemplatepackage
-        should("test fkiEzsigntemplatepackageID") {
-            // uncomment below to test the property
-            //modelInstance.fkiEzsigntemplatepackageID shouldBe ("TODO")
-        }
-
-        // to test the property `fkiEzsigntemplateID` - The unique ID of the Ezsigntemplate
-        should("test fkiEzsigntemplateID") {
-            // uncomment below to test the property
-            //modelInstance.fkiEzsigntemplateID shouldBe ("TODO")
-        }
 
         // to test the property `objEzsigntemplate`
         should("test objEzsigntemplate") {

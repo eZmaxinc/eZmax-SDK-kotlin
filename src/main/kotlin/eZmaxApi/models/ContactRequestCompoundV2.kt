@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.ContactRequestV2
 import eZmaxApi.models.ContactinformationsRequestCompoundV2
 import eZmaxApi.models.FieldEContactType
 
@@ -42,47 +43,47 @@ data class ContactRequestCompoundV2 (
 
     /* The unique ID of the Contacttitle.  Valid values:  |Value|Description| |-|-| |1|Ms.| |2|Mr.| |4|(Blank)| |5|Me (For Notaries)| */
     @Json(name = "fkiContacttitleID")
-    val fkiContacttitleID: kotlin.Int,
+    override val fkiContacttitleID: kotlin.Int,
 
     /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| */
     @Json(name = "fkiLanguageID")
-    val fkiLanguageID: kotlin.Int,
+    override val fkiLanguageID: kotlin.Int,
 
     @Json(name = "eContactType")
-    val eContactType: FieldEContactType,
+    override val eContactType: FieldEContactType,
 
     /* The First name of the contact */
     @Json(name = "sContactFirstname")
-    val sContactFirstname: kotlin.String,
+    override val sContactFirstname: kotlin.String,
 
     /* The Last name of the contact */
     @Json(name = "sContactLastname")
-    val sContactLastname: kotlin.String,
+    override val sContactLastname: kotlin.String,
 
     @Json(name = "objContactinformations")
     val objContactinformations: ContactinformationsRequestCompoundV2,
 
     /* The Company name of the contact */
     @Json(name = "sContactCompany")
-    val sContactCompany: kotlin.String? = null,
+    override val sContactCompany: kotlin.String? = null,
 
     /* The Birth Date of the contact */
     @Json(name = "dtContactBirthdate")
-    val dtContactBirthdate: kotlin.String? = null,
+    override val dtContactBirthdate: kotlin.String? = null,
 
     /* The occupation of the Contact */
     @Json(name = "sContactOccupation")
-    val sContactOccupation: kotlin.String? = null,
+    override val sContactOccupation: kotlin.String? = null,
 
     /* The note of the Contact */
     @Json(name = "tContactNote")
-    val tContactNote: kotlin.String? = null,
+    override val tContactNote: kotlin.String? = null,
 
     /* Whether the contact is active or not */
     @Json(name = "bContactIsactive")
-    val bContactIsactive: kotlin.Boolean? = null
+    override val bContactIsactive: kotlin.Boolean? = null
 
-) {
+) : ContactRequestV2 {
 
 
 }

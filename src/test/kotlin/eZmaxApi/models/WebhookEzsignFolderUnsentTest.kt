@@ -20,6 +20,7 @@ import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.WebhookEzsignFolderUnsent
 import eZmaxApi.models.AttemptResponse
+import eZmaxApi.models.CommonWebhook
 import eZmaxApi.models.CustomWebhookResponse
 import eZmaxApi.models.EzsignfolderResponse
 
@@ -27,18 +28,6 @@ class WebhookEzsignFolderUnsentTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of WebhookEzsignFolderUnsent
         //val modelInstance = WebhookEzsignFolderUnsent()
-
-        // to test the property `objWebhook`
-        should("test objWebhook") {
-            // uncomment below to test the property
-            //modelInstance.objWebhook shouldBe ("TODO")
-        }
-
-        // to test the property `aObjAttempt` - An array containing details of previous attempts that were made to deliver the message. The array is empty if it's the first attempt.
-        should("test aObjAttempt") {
-            // uncomment below to test the property
-            //modelInstance.aObjAttempt shouldBe ("TODO")
-        }
 
         // to test the property `objEzsignfolder`
         should("test objEzsignfolder") {

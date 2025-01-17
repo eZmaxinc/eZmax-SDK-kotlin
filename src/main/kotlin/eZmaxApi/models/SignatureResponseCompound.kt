@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.SignatureResponse
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -29,25 +30,25 @@ import com.squareup.moshi.JsonClass
  */
 
 
-data class SignatureResponseCompound (
+class SignatureResponseCompound (
 
     /* The unique ID of the Signature */
     @Json(name = "pkiSignatureID")
-    val pkiSignatureID: kotlin.Int,
+    override val pkiSignatureID: kotlin.Int,
 
     /* The unique ID of the Font */
     @Json(name = "fkiFontID")
-    val fkiFontID: kotlin.Int? = null,
+    override val fkiFontID: kotlin.Int? = null,
 
     /* The URL of the SVG file for the Signature */
     @Json(name = "sSignatureUrl")
-    val sSignatureUrl: kotlin.String? = null,
+    override val sSignatureUrl: kotlin.String? = null,
 
     /* The URL of the SVG file for the Initials */
     @Json(name = "sSignatureUrlinitials")
-    val sSignatureUrlinitials: kotlin.String? = null
+    override val sSignatureUrlinitials: kotlin.String? = null
 
-) {
+) : SignatureResponse {
 
 
 }

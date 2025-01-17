@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.UsergroupdelegationResponse
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -33,41 +34,41 @@ import com.squareup.moshi.JsonClass
  */
 
 
-data class UsergroupdelegationResponseCompound (
+class UsergroupdelegationResponseCompound (
 
     /* The unique ID of the Usergroupdelegation */
     @Json(name = "pkiUsergroupdelegationID")
-    val pkiUsergroupdelegationID: kotlin.Int,
+    override val pkiUsergroupdelegationID: kotlin.Int,
 
     /* The unique ID of the Usergroup */
     @Json(name = "fkiUsergroupID")
-    val fkiUsergroupID: kotlin.Int,
+    override val fkiUsergroupID: kotlin.Int,
 
     /* The unique ID of the User */
     @Json(name = "fkiUserID")
-    val fkiUserID: kotlin.Int,
+    override val fkiUserID: kotlin.Int,
 
     /* The first name of the user */
     @Json(name = "sUserFirstname")
-    val sUserFirstname: kotlin.String,
+    override val sUserFirstname: kotlin.String,
 
     /* The last name of the user */
     @Json(name = "sUserLastname")
-    val sUserLastname: kotlin.String,
+    override val sUserLastname: kotlin.String,
 
     /* The login name of the User. */
     @Json(name = "sUserLoginname")
-    val sUserLoginname: kotlin.String,
+    override val sUserLoginname: kotlin.String,
 
     /* The Name of the Usergroup in the language of the requester */
     @Json(name = "sUsergroupNameX")
-    val sUsergroupNameX: kotlin.String,
+    override val sUsergroupNameX: kotlin.String,
 
     /* The email address. */
     @Json(name = "sEmailAddress")
-    val sEmailAddress: kotlin.String? = null
+    override val sEmailAddress: kotlin.String? = null
 
-) {
+) : UsergroupdelegationResponse {
 
 
 }

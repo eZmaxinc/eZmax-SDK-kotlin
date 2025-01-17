@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.ModulesectionResponse
 import eZmaxApi.models.PermissionResponse
 
 import com.squareup.moshi.Json
@@ -35,24 +36,24 @@ data class ModulesectionResponseCompound (
 
     /* The unique ID of the Modulesection */
     @Json(name = "pkiModulesectionID")
-    val pkiModulesectionID: kotlin.Int,
+    override val pkiModulesectionID: kotlin.Int,
 
     /* The unique ID of the Module */
     @Json(name = "fkiModuleID")
-    val fkiModuleID: kotlin.Int,
+    override val fkiModuleID: kotlin.Int,
 
     /* The Internal name of the Module section. */
     @Json(name = "sModulesectionInternalname")
-    val sModulesectionInternalname: kotlin.String,
+    override val sModulesectionInternalname: kotlin.String,
 
     /* The Name of the Modulesection in the language of the requester */
     @Json(name = "sModulesectionNameX")
-    val sModulesectionNameX: kotlin.String,
+    override val sModulesectionNameX: kotlin.String,
 
     @Json(name = "a_objPermission")
     val aObjPermission: kotlin.collections.List<PermissionResponse>? = null
 
-) {
+) : ModulesectionResponse {
 
 
 }

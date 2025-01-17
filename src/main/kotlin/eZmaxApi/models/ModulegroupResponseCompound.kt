@@ -16,6 +16,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.ModuleResponseCompound
+import eZmaxApi.models.ModulegroupResponse
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -33,16 +34,16 @@ data class ModulegroupResponseCompound (
 
     /* The unique ID of the Modulegroup */
     @Json(name = "pkiModulegroupID")
-    val pkiModulegroupID: kotlin.Int,
+    override val pkiModulegroupID: kotlin.Int,
 
     /* The name of the Modulegroup in the language of the requester */
     @Json(name = "sModulegroupNameX")
-    val sModulegroupNameX: kotlin.String,
+    override val sModulegroupNameX: kotlin.String,
 
     @Json(name = "a_objModule")
     val aObjModule: kotlin.collections.List<ModuleResponseCompound>? = null
 
-) {
+) : ModulegroupResponse {
 
 
 }

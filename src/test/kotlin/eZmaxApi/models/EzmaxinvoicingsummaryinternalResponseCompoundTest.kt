@@ -19,6 +19,7 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.EzmaxinvoicingsummaryinternalResponseCompound
+import eZmaxApi.models.EzmaxinvoicingsummaryinternalResponse
 import eZmaxApi.models.EzmaxinvoicingsummaryinternaldetailResponseCompound
 import eZmaxApi.models.MultilingualEzmaxinvoicingsummaryinternalDescription
 
@@ -27,46 +28,10 @@ class EzmaxinvoicingsummaryinternalResponseCompoundTest : ShouldSpec() {
         // uncomment below to create an instance of EzmaxinvoicingsummaryinternalResponseCompound
         //val modelInstance = EzmaxinvoicingsummaryinternalResponseCompound()
 
-        // to test the property `objEzmaxinvoicingsummaryinternalDescription`
-        should("test objEzmaxinvoicingsummaryinternalDescription") {
-            // uncomment below to test the property
-            //modelInstance.objEzmaxinvoicingsummaryinternalDescription shouldBe ("TODO")
-        }
-
-        // to test the property `sEzmaxinvoicingsummaryinternalDescriptionX` - The Ezmaxinvoicingsummaryinternal description in the language of the requester
-        should("test sEzmaxinvoicingsummaryinternalDescriptionX") {
-            // uncomment below to test the property
-            //modelInstance.sEzmaxinvoicingsummaryinternalDescriptionX shouldBe ("TODO")
-        }
-
-        // to test the property `fkiBillingentityinternalID` - The unique ID of the Billingentityinternal.
-        should("test fkiBillingentityinternalID") {
-            // uncomment below to test the property
-            //modelInstance.fkiBillingentityinternalID shouldBe ("TODO")
-        }
-
-        // to test the property `sBillingentityinternalDescriptionX` - The description of the Billingentityinternal in the language of the requester
-        should("test sBillingentityinternalDescriptionX") {
-            // uncomment below to test the property
-            //modelInstance.sBillingentityinternalDescriptionX shouldBe ("TODO")
-        }
-
         // to test the property `aObjEzmaxinvoicingsummaryinternaldetail` - 
         should("test aObjEzmaxinvoicingsummaryinternaldetail") {
             // uncomment below to test the property
             //modelInstance.aObjEzmaxinvoicingsummaryinternaldetail shouldBe ("TODO")
-        }
-
-        // to test the property `pkiEzmaxinvoicingsummaryinternalID` - The unique ID of the Ezmaxinvoicingsummaryinternal
-        should("test pkiEzmaxinvoicingsummaryinternalID") {
-            // uncomment below to test the property
-            //modelInstance.pkiEzmaxinvoicingsummaryinternalID shouldBe ("TODO")
-        }
-
-        // to test the property `fkiEzmaxinvoicingID` - The unique ID of the Ezmaxinvoicing
-        should("test fkiEzmaxinvoicingID") {
-            // uncomment below to test the property
-            //modelInstance.fkiEzmaxinvoicingID shouldBe ("TODO")
         }
 
     }

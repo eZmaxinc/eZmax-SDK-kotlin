@@ -16,6 +16,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.EzsigntemplateResponseCompound
+import eZmaxApi.models.EzsigntemplatepackagemembershipResponse
 import eZmaxApi.models.EzsigntemplatepackagesignermembershipResponseCompound
 
 import com.squareup.moshi.Json
@@ -37,19 +38,19 @@ data class EzsigntemplatepackagemembershipResponseCompound (
 
     /* The unique ID of the Ezsigntemplatepackagemembership */
     @Json(name = "pkiEzsigntemplatepackagemembershipID")
-    val pkiEzsigntemplatepackagemembershipID: kotlin.Int,
+    override val pkiEzsigntemplatepackagemembershipID: kotlin.Int,
 
     /* The unique ID of the Ezsigntemplatepackage */
     @Json(name = "fkiEzsigntemplatepackageID")
-    val fkiEzsigntemplatepackageID: kotlin.Int,
+    override val fkiEzsigntemplatepackageID: kotlin.Int,
 
     /* The unique ID of the Ezsigntemplate */
     @Json(name = "fkiEzsigntemplateID")
-    val fkiEzsigntemplateID: kotlin.Int,
+    override val fkiEzsigntemplateID: kotlin.Int,
 
     /* The order in which the Ezsigntemplate will be imported when using an Ezsigntemplatepackage. */
     @Json(name = "iEzsigntemplatepackagemembershipOrder")
-    val iEzsigntemplatepackagemembershipOrder: kotlin.Int,
+    override val iEzsigntemplatepackagemembershipOrder: kotlin.Int,
 
     @Json(name = "objEzsigntemplate")
     val objEzsigntemplate: EzsigntemplateResponseCompound,
@@ -57,7 +58,7 @@ data class EzsigntemplatepackagemembershipResponseCompound (
     @Json(name = "a_objEzsigntemplatepackagesignermembership")
     val aObjEzsigntemplatepackagesignermembership: kotlin.collections.List<EzsigntemplatepackagesignermembershipResponseCompound>
 
-) {
+) : EzsigntemplatepackagemembershipResponse {
 
 
 }

@@ -16,6 +16,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.BuyercontractGetCommunicationsendersV1ResponseMPayload
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseObjDebug
 import eZmaxApi.models.CommonResponseObjDebugPayload
 
@@ -34,15 +35,15 @@ import com.squareup.moshi.JsonClass
 data class BuyercontractGetCommunicationsendersV1Response (
 
     @Json(name = "objDebugPayload")
-    val objDebugPayload: CommonResponseObjDebugPayload,
+    override val objDebugPayload: CommonResponseObjDebugPayload,
 
     @Json(name = "mPayload")
     val mPayload: BuyercontractGetCommunicationsendersV1ResponseMPayload,
 
     @Json(name = "objDebug")
-    val objDebug: CommonResponseObjDebug? = null
+    override val objDebug: CommonResponseObjDebug? = null
 
-) {
+) : CommonResponse {
 
 
 }

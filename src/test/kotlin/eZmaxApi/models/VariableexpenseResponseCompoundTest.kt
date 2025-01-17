@@ -21,41 +21,12 @@ import io.kotlintest.specs.ShouldSpec
 import eZmaxApi.models.VariableexpenseResponseCompound
 import eZmaxApi.models.FieldEVariableexpenseTaxable
 import eZmaxApi.models.MultilingualVariableexpenseDescription
+import eZmaxApi.models.VariableexpenseResponse
 
 class VariableexpenseResponseCompoundTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of VariableexpenseResponseCompound
         //val modelInstance = VariableexpenseResponseCompound()
-
-        // to test the property `pkiVariableexpenseID` - The unique ID of the Variableexpense
-        should("test pkiVariableexpenseID") {
-            // uncomment below to test the property
-            //modelInstance.pkiVariableexpenseID shouldBe ("TODO")
-        }
-
-        // to test the property `objVariableexpenseDescription`
-        should("test objVariableexpenseDescription") {
-            // uncomment below to test the property
-            //modelInstance.objVariableexpenseDescription shouldBe ("TODO")
-        }
-
-        // to test the property `sVariableexpenseCode` - The code of the Variableexpense
-        should("test sVariableexpenseCode") {
-            // uncomment below to test the property
-            //modelInstance.sVariableexpenseCode shouldBe ("TODO")
-        }
-
-        // to test the property `eVariableexpenseTaxable`
-        should("test eVariableexpenseTaxable") {
-            // uncomment below to test the property
-            //modelInstance.eVariableexpenseTaxable shouldBe ("TODO")
-        }
-
-        // to test the property `bVariableexpenseIsactive` - Whether the variableexpense is active or not
-        should("test bVariableexpenseIsactive") {
-            // uncomment below to test the property
-            //modelInstance.bVariableexpenseIsactive shouldBe ("TODO")
-        }
 
     }
 }

@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.BrandingResponseV3
 import eZmaxApi.models.FieldEBrandingAlignlogo
 import eZmaxApi.models.FieldEBrandingLogo
 import eZmaxApi.models.MultilingualBrandingDescription
@@ -45,40 +46,40 @@ data class BrandingResponseCompoundV3 (
 
     /* The unique ID of the Branding */
     @Json(name = "pkiBrandingID")
-    val pkiBrandingID: kotlin.Int,
+    override val pkiBrandingID: kotlin.Int,
 
     @Json(name = "objBrandingDescription")
-    val objBrandingDescription: MultilingualBrandingDescription,
+    override val objBrandingDescription: MultilingualBrandingDescription,
 
     /* The Description of the Branding in the language of the requester */
     @Json(name = "sBrandingDescriptionX")
-    val sBrandingDescriptionX: kotlin.String,
+    override val sBrandingDescriptionX: kotlin.String,
 
     @Json(name = "eBrandingLogo")
-    val eBrandingLogo: FieldEBrandingLogo,
+    override val eBrandingLogo: FieldEBrandingLogo,
 
     @Json(name = "eBrandingAlignlogo")
-    val eBrandingAlignlogo: FieldEBrandingAlignlogo,
+    override val eBrandingAlignlogo: FieldEBrandingAlignlogo,
 
     /* The primary color. This is a RGB color converted into integer */
     @Json(name = "iBrandingColor")
-    val iBrandingColor: kotlin.Int,
+    override val iBrandingColor: kotlin.Int,
 
     /* Whether the Branding is active or not */
     @Json(name = "bBrandingIsactive")
-    val bBrandingIsactive: kotlin.Boolean,
+    override val bBrandingIsactive: kotlin.Boolean,
 
     /* The unique ID of the Email */
     @Json(name = "fkiEmailID")
-    val fkiEmailID: kotlin.Int? = null,
+    override val fkiEmailID: kotlin.Int? = null,
 
     /* The name of the Branding  This value will only be set if you wish to overwrite the default name. If you want to keep the default name, leave this property empty */
     @Json(name = "sBrandingName")
-    val sBrandingName: kotlin.String? = null,
+    override val sBrandingName: kotlin.String? = null,
 
     /* The email address. */
     @Json(name = "sEmailAddress")
-    val sEmailAddress: kotlin.String? = null,
+    override val sEmailAddress: kotlin.String? = null,
 
     /* The url of the picture used as logo in the Branding */
     @Json(name = "sBrandingLogourl")
@@ -92,7 +93,7 @@ data class BrandingResponseCompoundV3 (
     @Json(name = "sBrandingLogointerfaceurl")
     val sBrandingLogointerfaceurl: kotlin.String? = null
 
-) {
+) : BrandingResponseV3 {
 
 
 }

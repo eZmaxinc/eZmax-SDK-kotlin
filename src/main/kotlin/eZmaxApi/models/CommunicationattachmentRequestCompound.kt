@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.CommunicationattachmentRequest
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -29,25 +30,25 @@ import com.squareup.moshi.JsonClass
  */
 
 
-data class CommunicationattachmentRequestCompound (
+class CommunicationattachmentRequestCompound (
 
     /* The unique ID of the Communicationattachment */
     @Json(name = "pkiCommunicationattachmentID")
-    val pkiCommunicationattachmentID: kotlin.Int? = null,
+    override val pkiCommunicationattachmentID: kotlin.Int? = null,
 
     /* The unique ID of the Attachment. */
     @Json(name = "fkiAttachmentID")
-    val fkiAttachmentID: kotlin.Int? = null,
+    override val fkiAttachmentID: kotlin.Int? = null,
 
     /* The unique ID of the Invoice. */
     @Json(name = "fkiInvoiceID")
-    val fkiInvoiceID: kotlin.Int? = null,
+    override val fkiInvoiceID: kotlin.Int? = null,
 
     /* The unique ID of the Salarypreparation. */
     @Json(name = "fkiSalarypreparationID")
-    val fkiSalarypreparationID: kotlin.Int? = null
+    override val fkiSalarypreparationID: kotlin.Int? = null
 
-) {
+) : CommunicationattachmentRequest {
 
 
 }

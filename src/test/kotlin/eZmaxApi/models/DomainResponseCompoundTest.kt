@@ -20,47 +20,12 @@ import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.DomainResponseCompound
 import eZmaxApi.models.CommonAudit
+import eZmaxApi.models.DomainResponse
 
 class DomainResponseCompoundTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of DomainResponseCompound
         //val modelInstance = DomainResponseCompound()
-
-        // to test the property `pkiDomainID` - The unique ID of the Domain
-        should("test pkiDomainID") {
-            // uncomment below to test the property
-            //modelInstance.pkiDomainID shouldBe ("TODO")
-        }
-
-        // to test the property `sDomainName` - The name of the Domain
-        should("test sDomainName") {
-            // uncomment below to test the property
-            //modelInstance.sDomainName shouldBe ("TODO")
-        }
-
-        // to test the property `bDomainValiddkim` - Whether the DKIM is valid or not
-        should("test bDomainValiddkim") {
-            // uncomment below to test the property
-            //modelInstance.bDomainValiddkim shouldBe ("TODO")
-        }
-
-        // to test the property `bDomainValidmailfrom` - Whether the mail from is valid or not
-        should("test bDomainValidmailfrom") {
-            // uncomment below to test the property
-            //modelInstance.bDomainValidmailfrom shouldBe ("TODO")
-        }
-
-        // to test the property `bDomainValidcustomer` - Whether the customer has access to it or not
-        should("test bDomainValidcustomer") {
-            // uncomment below to test the property
-            //modelInstance.bDomainValidcustomer shouldBe ("TODO")
-        }
-
-        // to test the property `objAudit`
-        should("test objAudit") {
-            // uncomment below to test the property
-            //modelInstance.objAudit shouldBe ("TODO")
-        }
 
         // to test the property `aObjDnsrecord` - 
         should("test aObjDnsrecord") {

@@ -20,6 +20,7 @@ import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.BrandingCreateObjectV2Response
 import eZmaxApi.models.BrandingCreateObjectV2ResponseMPayload
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseObjDebug
 import eZmaxApi.models.CommonResponseObjDebugPayload
 
@@ -28,22 +29,10 @@ class BrandingCreateObjectV2ResponseTest : ShouldSpec() {
         // uncomment below to create an instance of BrandingCreateObjectV2Response
         //val modelInstance = BrandingCreateObjectV2Response()
 
-        // to test the property `objDebugPayload`
-        should("test objDebugPayload") {
-            // uncomment below to test the property
-            //modelInstance.objDebugPayload shouldBe ("TODO")
-        }
-
         // to test the property `mPayload`
         should("test mPayload") {
             // uncomment below to test the property
             //modelInstance.mPayload shouldBe ("TODO")
-        }
-
-        // to test the property `objDebug`
-        should("test objDebug") {
-            // uncomment below to test the property
-            //modelInstance.objDebug shouldBe ("TODO")
         }
 
     }

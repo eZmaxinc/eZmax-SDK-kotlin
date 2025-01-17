@@ -21,6 +21,7 @@ import io.kotlintest.specs.ShouldSpec
 import eZmaxApi.models.EzsigntemplatepublicResponseCompound
 import eZmaxApi.models.CommonAudit
 import eZmaxApi.models.CustomEzsignfolderezsigntemplatepublicResponse
+import eZmaxApi.models.EzsigntemplatepublicResponse
 import eZmaxApi.models.FieldEEzsigntemplatepublicLimittype
 
 class EzsigntemplatepublicResponseCompoundTest : ShouldSpec() {
@@ -28,118 +29,10 @@ class EzsigntemplatepublicResponseCompoundTest : ShouldSpec() {
         // uncomment below to create an instance of EzsigntemplatepublicResponseCompound
         //val modelInstance = EzsigntemplatepublicResponseCompound()
 
-        // to test the property `pkiEzsigntemplatepublicID` - The unique ID of the Ezsigntemplatepublic
-        should("test pkiEzsigntemplatepublicID") {
-            // uncomment below to test the property
-            //modelInstance.pkiEzsigntemplatepublicID shouldBe ("TODO")
-        }
-
-        // to test the property `fkiEzsignfoldertypeID` - The unique ID of the Ezsignfoldertype.
-        should("test fkiEzsignfoldertypeID") {
-            // uncomment below to test the property
-            //modelInstance.fkiEzsignfoldertypeID shouldBe ("TODO")
-        }
-
-        // to test the property `sEzsignfoldertypeNameX` - The name of the Ezsignfoldertype in the language of the requester
-        should("test sEzsignfoldertypeNameX") {
-            // uncomment below to test the property
-            //modelInstance.sEzsignfoldertypeNameX shouldBe ("TODO")
-        }
-
-        // to test the property `fkiUserlogintypeID` - The unique ID of the Userlogintype  Valid values:  |Value|Description|Detail| |-|-|-| |1|**Email Only**|The Ezsignsigner will receive a secure link by email| |2|**Email and phone or SMS**|The Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**| |3|**Email and secret question**|The Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer| |4|**In person only**|The Ezsignsigner will only be able to sign \"In-Person\" and there won't be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type| |5|**In person with phone or SMS**|The Ezsignsigner will only be able to sign \"In-Person\" and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**| |6|**Embedded**|The Ezsignsigner will only be able to sign in the embedded solution. No email will be sent for invitation to sign. **Additional fee applies**|   |7|**Embedded with phone or SMS**|The Ezsignsigner will only be able to sign in the embedded solution and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**|   |8|**No validation**|The Ezsignsigner will not receive an email and won't have to validate his connection using 2 factor. **Additional fee applies**|      |9|**Sms only**|The Ezsignsigner will not receive an email but will will need to authenticate using SMS. **Additional fee applies**|     
-        should("test fkiUserlogintypeID") {
-            // uncomment below to test the property
-            //modelInstance.fkiUserlogintypeID shouldBe ("TODO")
-        }
-
-        // to test the property `sUserlogintypeDescriptionX` - The description of the Userlogintype in the language of the requester
-        should("test sUserlogintypeDescriptionX") {
-            // uncomment below to test the property
-            //modelInstance.sUserlogintypeDescriptionX shouldBe ("TODO")
-        }
-
-        // to test the property `sEzsigntemplatepublicDescription` - The description of the Ezsigntemplatepublic
-        should("test sEzsigntemplatepublicDescription") {
-            // uncomment below to test the property
-            //modelInstance.sEzsigntemplatepublicDescription shouldBe ("TODO")
-        }
-
-        // to test the property `sEzsigntemplatepublicReferenceid` - The referenceid of the Ezsigntemplatepublic
-        should("test sEzsigntemplatepublicReferenceid") {
-            // uncomment below to test the property
-            //modelInstance.sEzsigntemplatepublicReferenceid shouldBe ("TODO")
-        }
-
-        // to test the property `bEzsigntemplatepublicIsactive` - Whether the ezsigntemplatepublic is active or not
-        should("test bEzsigntemplatepublicIsactive") {
-            // uncomment below to test the property
-            //modelInstance.bEzsigntemplatepublicIsactive shouldBe ("TODO")
-        }
-
-        // to test the property `tEzsigntemplatepublicNote` - The note of the Ezsigntemplatepublic
-        should("test tEzsigntemplatepublicNote") {
-            // uncomment below to test the property
-            //modelInstance.tEzsigntemplatepublicNote shouldBe ("TODO")
-        }
-
-        // to test the property `eEzsigntemplatepublicLimittype`
-        should("test eEzsigntemplatepublicLimittype") {
-            // uncomment below to test the property
-            //modelInstance.eEzsigntemplatepublicLimittype shouldBe ("TODO")
-        }
-
-        // to test the property `iEzsigntemplatepublicLimit` - The limit of the Ezsigntemplatepublic
-        should("test iEzsigntemplatepublicLimit") {
-            // uncomment below to test the property
-            //modelInstance.iEzsigntemplatepublicLimit shouldBe ("TODO")
-        }
-
-        // to test the property `iEzsigntemplatepublicLimitexceeded` - The limitexceeded of the Ezsigntemplatepublic
-        should("test iEzsigntemplatepublicLimitexceeded") {
-            // uncomment below to test the property
-            //modelInstance.iEzsigntemplatepublicLimitexceeded shouldBe ("TODO")
-        }
-
-        // to test the property `dtEzsigntemplatepublicLimitexceededsince` - The limitexceededsince of the Ezsigntemplatepublic
-        should("test dtEzsigntemplatepublicLimitexceededsince") {
-            // uncomment below to test the property
-            //modelInstance.dtEzsigntemplatepublicLimitexceededsince shouldBe ("TODO")
-        }
-
-        // to test the property `sEzsigntemplatepublicUrl` - The url of the Ezsigntemplatepublic  You can add these value as query parameters to prefill the corresponding role  |Parameter|Description| |-|-| |sEzsigntemplatesignerDescription|The role to fill| |sContactFirstname|The contact firstname| |sContactLastname|The contact lastname| |sEmailAddress|The contact email| |sPhoneE164|The contact phone number| |sPhoneE164Cell|The contact cell phone number|
-        should("test sEzsigntemplatepublicUrl") {
-            // uncomment below to test the property
-            //modelInstance.sEzsigntemplatepublicUrl shouldBe ("TODO")
-        }
-
-        // to test the property `sEzsigntemplatepublicEzsigntemplatedescription` - The Ezsigntemplate/Ezsigntemplatepackage description
-        should("test sEzsigntemplatepublicEzsigntemplatedescription") {
-            // uncomment below to test the property
-            //modelInstance.sEzsigntemplatepublicEzsigntemplatedescription shouldBe ("TODO")
-        }
-
         // to test the property `aObjEzsignfolderezsigntemplatepublic`
         should("test aObjEzsignfolderezsigntemplatepublic") {
             // uncomment below to test the property
             //modelInstance.aObjEzsignfolderezsigntemplatepublic shouldBe ("TODO")
-        }
-
-        // to test the property `fkiEzsigntemplateID` - The unique ID of the Ezsigntemplate
-        should("test fkiEzsigntemplateID") {
-            // uncomment below to test the property
-            //modelInstance.fkiEzsigntemplateID shouldBe ("TODO")
-        }
-
-        // to test the property `fkiEzsigntemplatepackageID` - The unique ID of the Ezsigntemplatepackage
-        should("test fkiEzsigntemplatepackageID") {
-            // uncomment below to test the property
-            //modelInstance.fkiEzsigntemplatepackageID shouldBe ("TODO")
-        }
-
-        // to test the property `objAudit`
-        should("test objAudit") {
-            // uncomment below to test the property
-            //modelInstance.objAudit shouldBe ("TODO")
         }
 
     }

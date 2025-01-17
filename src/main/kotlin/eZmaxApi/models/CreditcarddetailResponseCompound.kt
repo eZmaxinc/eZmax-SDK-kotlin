@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.CreditcarddetailResponse
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -33,41 +34,41 @@ import com.squareup.moshi.JsonClass
  */
 
 
-data class CreditcarddetailResponseCompound (
+class CreditcarddetailResponseCompound (
 
     /* The unique ID of the Creditcarddetail */
     @Json(name = "pkiCreditcarddetailID")
-    val pkiCreditcarddetailID: kotlin.Int,
+    override val pkiCreditcarddetailID: kotlin.Int,
 
     /* The unique ID of the Creditcardtype */
     @Json(name = "fkiCreditcardtypeID")
-    val fkiCreditcardtypeID: kotlin.Int,
+    override val fkiCreditcardtypeID: kotlin.Int,
 
     /* The last digits of the Creditcarddetail */
     @Json(name = "iCreditcarddetailLastdigits")
-    val iCreditcarddetailLastdigits: kotlin.Int,
+    override val iCreditcarddetailLastdigits: kotlin.Int,
 
     /* The expirationmonth of the Creditcarddetail */
     @Json(name = "iCreditcarddetailExpirationmonth")
-    val iCreditcarddetailExpirationmonth: kotlin.Int,
+    override val iCreditcarddetailExpirationmonth: kotlin.Int,
 
     /* The expirationyear of the Creditcarddetail */
     @Json(name = "iCreditcarddetailExpirationyear")
-    val iCreditcarddetailExpirationyear: kotlin.Int,
+    override val iCreditcarddetailExpirationyear: kotlin.Int,
 
     /* The civic of the Creditcarddetail */
     @Json(name = "sCreditcarddetailCivic")
-    val sCreditcarddetailCivic: kotlin.String,
+    override val sCreditcarddetailCivic: kotlin.String,
 
     /* The street of the Creditcarddetail */
     @Json(name = "sCreditcarddetailStreet")
-    val sCreditcarddetailStreet: kotlin.String,
+    override val sCreditcarddetailStreet: kotlin.String,
 
     /* The zip of the Creditcarddetail */
     @Json(name = "sCreditcarddetailZip")
-    val sCreditcarddetailZip: kotlin.String
+    override val sCreditcarddetailZip: kotlin.String
 
-) {
+) : CreditcarddetailResponse {
 
 
 }

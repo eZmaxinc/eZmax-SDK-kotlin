@@ -19,35 +19,12 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.UsergroupmembershipRequestCompound
+import eZmaxApi.models.UsergroupmembershipRequest
 
 class UsergroupmembershipRequestCompoundTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of UsergroupmembershipRequestCompound
         //val modelInstance = UsergroupmembershipRequestCompound()
-
-        // to test the property `fkiUsergroupID` - The unique ID of the Usergroup
-        should("test fkiUsergroupID") {
-            // uncomment below to test the property
-            //modelInstance.fkiUsergroupID shouldBe ("TODO")
-        }
-
-        // to test the property `pkiUsergroupmembershipID` - The unique ID of the Usergroupmembership
-        should("test pkiUsergroupmembershipID") {
-            // uncomment below to test the property
-            //modelInstance.pkiUsergroupmembershipID shouldBe ("TODO")
-        }
-
-        // to test the property `fkiUserID` - The unique ID of the User
-        should("test fkiUserID") {
-            // uncomment below to test the property
-            //modelInstance.fkiUserID shouldBe ("TODO")
-        }
-
-        // to test the property `fkiUsergroupexternalID` - The unique ID of the Usergroupexternal
-        should("test fkiUsergroupexternalID") {
-            // uncomment below to test the property
-            //modelInstance.fkiUsergroupexternalID shouldBe ("TODO")
-        }
 
     }
 }

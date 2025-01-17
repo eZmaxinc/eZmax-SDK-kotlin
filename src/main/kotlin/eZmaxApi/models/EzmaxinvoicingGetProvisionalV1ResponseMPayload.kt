@@ -17,6 +17,7 @@ package eZmaxApi.models
 
 import eZmaxApi.models.CommonAudit
 import eZmaxApi.models.CustomEzmaxpricingResponse
+import eZmaxApi.models.EzmaxinvoicingResponseCompound
 import eZmaxApi.models.EzmaxinvoicingagentResponseCompound
 import eZmaxApi.models.EzmaxinvoicingcontractResponseCompound
 import eZmaxApi.models.EzmaxinvoicingsummaryexternalResponseCompound
@@ -56,86 +57,86 @@ import com.squareup.moshi.JsonClass
  */
 
 
-data class EzmaxinvoicingGetProvisionalV1ResponseMPayload (
+class EzmaxinvoicingGetProvisionalV1ResponseMPayload (
 
     /* The unique ID of the Ezmaxinvoicingcontract */
     @Json(name = "fkiEzmaxinvoicingcontractID")
-    val fkiEzmaxinvoicingcontractID: kotlin.Int,
+    override val fkiEzmaxinvoicingcontractID: kotlin.Int,
 
     /* The unique ID of the Ezmaxpricing */
     @Json(name = "fkiEzmaxpricingID")
-    val fkiEzmaxpricingID: kotlin.Int,
+    override val fkiEzmaxpricingID: kotlin.Int,
 
     /* The unique ID of the Systemconfigurationtype */
     @Json(name = "fkiSystemconfigurationtypeID")
-    val fkiSystemconfigurationtypeID: kotlin.Int,
+    override val fkiSystemconfigurationtypeID: kotlin.Int,
 
     /* The description of the Systemconfigurationtype in the language of the requester */
     @Json(name = "sSystemconfigurationtypeDescriptionX")
-    val sSystemconfigurationtypeDescriptionX: kotlin.String,
+    override val sSystemconfigurationtypeDescriptionX: kotlin.String,
 
     /* The YYYYMM period of the Ezmaxinvoicing */
     @Json(name = "yyyymmEzmaxinvoicing")
-    val yyyymmEzmaxinvoicing: kotlin.String,
+    override val yyyymmEzmaxinvoicing: kotlin.String,
 
     /* The number of days invoiced */
     @Json(name = "iEzmaxinvoicingDays")
-    val iEzmaxinvoicingDays: kotlin.Int,
+    override val iEzmaxinvoicingDays: kotlin.Int,
 
     @Json(name = "eEzmaxinvoicingPaymenttype")
-    val eEzmaxinvoicingPaymenttype: FieldEEzmaxinvoicingPaymenttype,
+    override val eEzmaxinvoicingPaymenttype: FieldEEzmaxinvoicingPaymenttype,
 
     /* The percentage of rebate depending of the payment type */
     @Json(name = "dEzmaxinvoicingRebatepaymenttype")
-    val dEzmaxinvoicingRebatepaymenttype: kotlin.String,
+    override val dEzmaxinvoicingRebatepaymenttype: kotlin.String,
 
     /* The length of the contract in years */
     @Json(name = "iEzmaxinvoicingContractlength")
-    val iEzmaxinvoicingContractlength: kotlin.Int,
+    override val iEzmaxinvoicingContractlength: kotlin.Int,
 
     /* The percentage of rebate depending of the contract length */
     @Json(name = "dEzmaxinvoicingRebatecontractlength")
-    val dEzmaxinvoicingRebatecontractlength: kotlin.String,
+    override val dEzmaxinvoicingRebatecontractlength: kotlin.String,
 
     /* Whether the rebate for eZsign is for all agents */
     @Json(name = "bEzmaxinvoicingRebateEzsignallagents")
-    val bEzmaxinvoicingRebateEzsignallagents: kotlin.Boolean,
+    override val bEzmaxinvoicingRebateEzsignallagents: kotlin.Boolean,
 
     @Json(name = "objEzmaxinvoicingcontract")
-    val objEzmaxinvoicingcontract: EzmaxinvoicingcontractResponseCompound,
+    override val objEzmaxinvoicingcontract: EzmaxinvoicingcontractResponseCompound,
 
     @Json(name = "objEzmaxpricing")
-    val objEzmaxpricing: CustomEzmaxpricingResponse,
+    override val objEzmaxpricing: CustomEzmaxpricingResponse,
 
     @Json(name = "a_objEzmaxinvoicingsummaryglobal")
-    val aObjEzmaxinvoicingsummaryglobal: kotlin.collections.List<EzmaxinvoicingsummaryglobalResponseCompound>,
+    override val aObjEzmaxinvoicingsummaryglobal: kotlin.collections.List<EzmaxinvoicingsummaryglobalResponseCompound>,
 
     @Json(name = "a_objEzmaxinvoicingsummaryexternal")
-    val aObjEzmaxinvoicingsummaryexternal: kotlin.collections.List<EzmaxinvoicingsummaryexternalResponseCompound>,
+    override val aObjEzmaxinvoicingsummaryexternal: kotlin.collections.List<EzmaxinvoicingsummaryexternalResponseCompound>,
 
     @Json(name = "a_objEzmaxinvoicingsummaryinternal")
-    val aObjEzmaxinvoicingsummaryinternal: kotlin.collections.List<EzmaxinvoicingsummaryinternalResponseCompound>,
+    override val aObjEzmaxinvoicingsummaryinternal: kotlin.collections.List<EzmaxinvoicingsummaryinternalResponseCompound>,
 
     @Json(name = "a_objEzmaxinvoicingagent")
-    val aObjEzmaxinvoicingagent: kotlin.collections.List<EzmaxinvoicingagentResponseCompound>,
+    override val aObjEzmaxinvoicingagent: kotlin.collections.List<EzmaxinvoicingagentResponseCompound>,
 
     @Json(name = "a_objEzmaxinvoicinguser")
-    val aObjEzmaxinvoicinguser: kotlin.collections.List<EzmaxinvoicinguserResponseCompound>,
+    override val aObjEzmaxinvoicinguser: kotlin.collections.List<EzmaxinvoicinguserResponseCompound>,
 
     @Json(name = "a_objEzmaxinvoicingezsignfolder")
-    val aObjEzmaxinvoicingezsignfolder: kotlin.collections.List<kotlin.Any>,
+    override val aObjEzmaxinvoicingezsignfolder: kotlin.collections.List<kotlin.Any>,
 
     @Json(name = "a_objEzmaxinvoicingezsigndocument")
-    val aObjEzmaxinvoicingezsigndocument: kotlin.collections.List<kotlin.Any>,
+    override val aObjEzmaxinvoicingezsigndocument: kotlin.collections.List<kotlin.Any>,
 
     /* The unique ID of the Ezmaxinvoicing */
     @Json(name = "pkiEzmaxinvoicingID")
-    val pkiEzmaxinvoicingID: kotlin.Int? = null,
+    override val pkiEzmaxinvoicingID: kotlin.Int? = null,
 
     @Json(name = "objAudit")
-    val objAudit: CommonAudit? = null
+    override val objAudit: CommonAudit? = null
 
-) {
+) : EzmaxinvoicingResponseCompound {
 
 
 }

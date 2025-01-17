@@ -19,53 +19,12 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.EzsigntemplatedocumentResponseCompound
+import eZmaxApi.models.EzsigntemplatedocumentResponse
 
 class EzsigntemplatedocumentResponseCompoundTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of EzsigntemplatedocumentResponseCompound
         //val modelInstance = EzsigntemplatedocumentResponseCompound()
-
-        // to test the property `pkiEzsigntemplatedocumentID` - The unique ID of the Ezsigntemplatedocument
-        should("test pkiEzsigntemplatedocumentID") {
-            // uncomment below to test the property
-            //modelInstance.pkiEzsigntemplatedocumentID shouldBe ("TODO")
-        }
-
-        // to test the property `fkiEzsigntemplateID` - The unique ID of the Ezsigntemplate
-        should("test fkiEzsigntemplateID") {
-            // uncomment below to test the property
-            //modelInstance.fkiEzsigntemplateID shouldBe ("TODO")
-        }
-
-        // to test the property `sEzsigntemplatedocumentName` - The name of the Ezsigntemplatedocument.
-        should("test sEzsigntemplatedocumentName") {
-            // uncomment below to test the property
-            //modelInstance.sEzsigntemplatedocumentName shouldBe ("TODO")
-        }
-
-        // to test the property `iEzsigntemplatedocumentPagetotal` - The number of pages in the Ezsigntemplatedocument.
-        should("test iEzsigntemplatedocumentPagetotal") {
-            // uncomment below to test the property
-            //modelInstance.iEzsigntemplatedocumentPagetotal shouldBe ("TODO")
-        }
-
-        // to test the property `iEzsigntemplatedocumentSignaturetotal` - The number of total signatures in the Ezsigntemplate.
-        should("test iEzsigntemplatedocumentSignaturetotal") {
-            // uncomment below to test the property
-            //modelInstance.iEzsigntemplatedocumentSignaturetotal shouldBe ("TODO")
-        }
-
-        // to test the property `iEzsigntemplatedocumentFormfieldtotal` - The number of total form fields in the Ezsigntemplate.
-        should("test iEzsigntemplatedocumentFormfieldtotal") {
-            // uncomment below to test the property
-            //modelInstance.iEzsigntemplatedocumentFormfieldtotal shouldBe ("TODO")
-        }
-
-        // to test the property `bEzsigntemplatedocumentHassignedsignatures` - If the Ezsigntemplatedocument contains signed signatures (From internal or external sources)
-        should("test bEzsigntemplatedocumentHassignedsignatures") {
-            // uncomment below to test the property
-            //modelInstance.bEzsigntemplatedocumentHassignedsignatures shouldBe ("TODO")
-        }
 
     }
 }

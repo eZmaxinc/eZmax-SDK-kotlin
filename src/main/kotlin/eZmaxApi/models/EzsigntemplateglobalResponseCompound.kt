@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.EzsigntemplateglobalResponse
 import eZmaxApi.models.EzsigntemplateglobaldocumentResponse
 import eZmaxApi.models.EzsigntemplateglobalsignerResponseCompound
 import eZmaxApi.models.FieldEEzsigntemplateglobalModule
@@ -45,49 +46,49 @@ data class EzsigntemplateglobalResponseCompound (
 
     /* The unique ID of the Ezsigntemplateglobal */
     @Json(name = "pkiEzsigntemplateglobalID")
-    val pkiEzsigntemplateglobalID: kotlin.Int,
+    override val pkiEzsigntemplateglobalID: kotlin.Int,
 
     /* The unique ID of the Ezsigntemplateglobaldocument */
     @Json(name = "fkiEzsigntemplateglobaldocumentID")
-    val fkiEzsigntemplateglobaldocumentID: kotlin.Int,
+    override val fkiEzsigntemplateglobaldocumentID: kotlin.Int,
 
     /* The unique ID of the Module */
     @Json(name = "fkiModuleID")
-    val fkiModuleID: kotlin.Int,
+    override val fkiModuleID: kotlin.Int,
 
     /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| */
     @Json(name = "fkiLanguageID")
-    val fkiLanguageID: kotlin.Int,
+    override val fkiLanguageID: kotlin.Int,
 
     /* The Name of the Language in the language of the requester */
     @Json(name = "sLanguageNameX")
-    val sLanguageNameX: kotlin.String,
+    override val sLanguageNameX: kotlin.String,
 
     @Json(name = "eEzsigntemplateglobalModule")
-    val eEzsigntemplateglobalModule: FieldEEzsigntemplateglobalModule,
+    override val eEzsigntemplateglobalModule: FieldEEzsigntemplateglobalModule,
 
     @Json(name = "eEzsigntemplateglobalSupplier")
-    val eEzsigntemplateglobalSupplier: FieldEEzsigntemplateglobalSupplier,
+    override val eEzsigntemplateglobalSupplier: FieldEEzsigntemplateglobalSupplier,
 
     /* The Code of the Ezsigntemplateglobal */
     @Json(name = "sEzsigntemplateglobalCode")
-    val sEzsigntemplateglobalCode: kotlin.String,
+    override val sEzsigntemplateglobalCode: kotlin.String,
 
     /* The description of the Ezsigntemplate */
     @Json(name = "sEzsigntemplateglobalDescription")
-    val sEzsigntemplateglobalDescription: kotlin.String,
+    override val sEzsigntemplateglobalDescription: kotlin.String,
 
     @Json(name = "a_objEzsigntemplateglobalsigner")
     val aObjEzsigntemplateglobalsigner: kotlin.collections.List<EzsigntemplateglobalsignerResponseCompound>,
 
     /* The Name of the Module in the language of the requester */
     @Json(name = "sModuleNameX")
-    val sModuleNameX: kotlin.String? = null,
+    override val sModuleNameX: kotlin.String? = null,
 
     @Json(name = "objEzsigntemplateglobaldocument")
     val objEzsigntemplateglobaldocument: EzsigntemplateglobaldocumentResponse? = null
 
-) {
+) : EzsigntemplateglobalResponse {
 
 
 }

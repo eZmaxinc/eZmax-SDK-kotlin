@@ -20,6 +20,7 @@ import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.ContactinformationsRequestCompound
 import eZmaxApi.models.AddressRequest
+import eZmaxApi.models.ContactinformationsRequest
 import eZmaxApi.models.EmailRequest
 import eZmaxApi.models.PhoneRequest
 import eZmaxApi.models.WebsiteRequest
@@ -28,30 +29,6 @@ class ContactinformationsRequestCompoundTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of ContactinformationsRequestCompound
         //val modelInstance = ContactinformationsRequestCompound()
-
-        // to test the property `iAddressDefault` - The index in the a_objAddress array (zero based index) representing the Address object that should become the default one.  You can leave the value to 0 if the array is empty.
-        should("test iAddressDefault") {
-            // uncomment below to test the property
-            //modelInstance.iAddressDefault shouldBe ("TODO")
-        }
-
-        // to test the property `iPhoneDefault` - The index in the a_objPhone array (zero based index) representing the Phone object that should become the default one.  You can leave the value to 0 if the array is empty.
-        should("test iPhoneDefault") {
-            // uncomment below to test the property
-            //modelInstance.iPhoneDefault shouldBe ("TODO")
-        }
-
-        // to test the property `iEmailDefault` - The index in the a_objEmail array (zero based index) representing the Email object that should become the default one.  You can leave the value to 0 if the array is empty.
-        should("test iEmailDefault") {
-            // uncomment below to test the property
-            //modelInstance.iEmailDefault shouldBe ("TODO")
-        }
-
-        // to test the property `iWebsiteDefault` - The index in the a_objWebsite array (zero based index) representing the Website object that should become the default one.  You can leave the value to 0 if the array is empty.
-        should("test iWebsiteDefault") {
-            // uncomment below to test the property
-            //modelInstance.iWebsiteDefault shouldBe ("TODO")
-        }
 
         // to test the property `aObjAddress`
         should("test aObjAddress") {

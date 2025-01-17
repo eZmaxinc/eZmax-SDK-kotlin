@@ -19,6 +19,7 @@ import eZmaxApi.models.CommonAudit
 import eZmaxApi.models.FieldEWebhookEzsignevent
 import eZmaxApi.models.FieldEWebhookManagementevent
 import eZmaxApi.models.FieldEWebhookModule
+import eZmaxApi.models.WebhookResponse
 import eZmaxApi.models.WebhookheaderResponseCompound
 
 import com.squareup.moshi.Json
@@ -53,67 +54,67 @@ data class WebhookResponseCompound (
 
     /* The unique ID of the Webhook */
     @Json(name = "pkiWebhookID")
-    val pkiWebhookID: kotlin.Int,
+    override val pkiWebhookID: kotlin.Int,
 
     /* The description of the Webhook */
     @Json(name = "sWebhookDescription")
-    val sWebhookDescription: kotlin.String,
+    override val sWebhookDescription: kotlin.String,
 
     @Json(name = "eWebhookModule")
-    val eWebhookModule: FieldEWebhookModule,
+    override val eWebhookModule: FieldEWebhookModule,
 
     /* The URL of the Webhook callback */
     @Json(name = "sWebhookUrl")
-    val sWebhookUrl: kotlin.String,
+    override val sWebhookUrl: kotlin.String,
 
     /* The email that will receive the Webhook in case all attempts fail */
     @Json(name = "sWebhookEmailfailed")
-    val sWebhookEmailfailed: kotlin.String,
+    override val sWebhookEmailfailed: kotlin.String,
 
     /* Whether the Webhook is active or not */
     @Json(name = "bWebhookIsactive")
-    val bWebhookIsactive: kotlin.Boolean,
+    override val bWebhookIsactive: kotlin.Boolean,
 
     /* Whether the requests will be signed or not */
     @Json(name = "bWebhookIssigned")
-    val bWebhookIssigned: kotlin.Boolean,
+    override val bWebhookIssigned: kotlin.Boolean,
 
     /* Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use */
     @Json(name = "bWebhookSkipsslvalidation")
-    val bWebhookSkipsslvalidation: kotlin.Boolean,
+    override val bWebhookSkipsslvalidation: kotlin.Boolean,
 
     @Json(name = "objAudit")
-    val objAudit: CommonAudit,
+    override val objAudit: CommonAudit,
 
     /* The unique ID of the Authenticationexternal */
     @Json(name = "fkiAuthenticationexternalID")
-    val fkiAuthenticationexternalID: kotlin.Int? = null,
+    override val fkiAuthenticationexternalID: kotlin.Int? = null,
 
     /* The unique ID of the Ezsignfoldertype. */
     @Json(name = "fkiEzsignfoldertypeID")
-    val fkiEzsignfoldertypeID: kotlin.Int? = null,
+    override val fkiEzsignfoldertypeID: kotlin.Int? = null,
 
     /* The name of the Ezsignfoldertype in the language of the requester */
     @Json(name = "sEzsignfoldertypeNameX")
-    val sEzsignfoldertypeNameX: kotlin.String? = null,
+    override val sEzsignfoldertypeNameX: kotlin.String? = null,
 
     @Json(name = "eWebhookEzsignevent")
-    val eWebhookEzsignevent: FieldEWebhookEzsignevent? = null,
+    override val eWebhookEzsignevent: FieldEWebhookEzsignevent? = null,
 
     @Json(name = "eWebhookManagementevent")
-    val eWebhookManagementevent: FieldEWebhookManagementevent? = null,
+    override val eWebhookManagementevent: FieldEWebhookManagementevent? = null,
 
     /* The Apikey for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey. */
     @Json(name = "sWebhookApikey")
-    val sWebhookApikey: kotlin.String? = null,
+    override val sWebhookApikey: kotlin.String? = null,
 
     /* The Secret for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey. */
     @Json(name = "sWebhookSecret")
-    val sWebhookSecret: kotlin.String? = null,
+    override val sWebhookSecret: kotlin.String? = null,
 
     /* The description of the Authenticationexternal */
     @Json(name = "sAuthenticationexternalDescription")
-    val sAuthenticationexternalDescription: kotlin.String? = null,
+    override val sAuthenticationexternalDescription: kotlin.String? = null,
 
     /* The concatenated string to describe the Webhook event */
     @Json(name = "sWebhookEvent")
@@ -122,7 +123,7 @@ data class WebhookResponseCompound (
     @Json(name = "a_objWebhookheader")
     val aObjWebhookheader: kotlin.collections.List<WebhookheaderResponseCompound>? = null
 
-) {
+) : WebhookResponse {
 
 
 }

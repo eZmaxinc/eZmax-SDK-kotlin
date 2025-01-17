@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.EzsignfoldersignerassociationResponseCompound
 import eZmaxApi.models.EzsignfoldersignerassociationResponseCompoundUser
 import eZmaxApi.models.EzsignsignerResponseCompound
 import eZmaxApi.models.EzsignsignergroupResponseCompound
@@ -43,27 +44,27 @@ data class CustomEzsignfoldersignerassociationActionableElementResponse (
 
     /* The unique ID of the Ezsignfoldersignerassociation */
     @Json(name = "pkiEzsignfoldersignerassociationID")
-    val pkiEzsignfoldersignerassociationID: kotlin.Int,
+    override val pkiEzsignfoldersignerassociationID: kotlin.Int,
 
     /* The unique ID of the Ezsignfolder */
     @Json(name = "fkiEzsignfolderID")
-    val fkiEzsignfolderID: kotlin.Int,
+    override val fkiEzsignfolderID: kotlin.Int,
 
     /* If this flag is true the signatory is part of a delayed send. */
     @Json(name = "bEzsignfoldersignerassociationDelayedsend")
-    val bEzsignfoldersignerassociationDelayedsend: kotlin.Boolean,
+    override val bEzsignfoldersignerassociationDelayedsend: kotlin.Boolean,
 
     /* If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document. */
     @Json(name = "bEzsignfoldersignerassociationReceivecopy")
-    val bEzsignfoldersignerassociationReceivecopy: kotlin.Boolean,
+    override val bEzsignfoldersignerassociationReceivecopy: kotlin.Boolean,
 
     /* A custom text message that will be added to the email sent. */
     @Json(name = "tEzsignfoldersignerassociationMessage")
-    val tEzsignfoldersignerassociationMessage: kotlin.String,
+    override val tEzsignfoldersignerassociationMessage: kotlin.String,
 
     /* If the Ezsignfoldersignerassociation is allowed to sign in person or not */
     @Json(name = "bEzsignfoldersignerassociationAllowsigninginperson")
-    val bEzsignfoldersignerassociationAllowsigninginperson: kotlin.Boolean,
+    override val bEzsignfoldersignerassociationAllowsigninginperson: kotlin.Boolean,
 
     /* Indicates if the Ezsignfoldersignerassociation has actionable elements in the current step */
     @Json(name = "bEzsignfoldersignerassociationHasactionableelementsCurrent")
@@ -74,15 +75,15 @@ data class CustomEzsignfoldersignerassociationActionableElementResponse (
     val bEzsignfoldersignerassociationHasactionableelementsFuture: kotlin.Boolean,
 
     @Json(name = "objEzsignsignergroup")
-    val objEzsignsignergroup: EzsignsignergroupResponseCompound? = null,
+    override val objEzsignsignergroup: EzsignsignergroupResponseCompound? = null,
 
     @Json(name = "objUser")
-    val objUser: EzsignfoldersignerassociationResponseCompoundUser? = null,
+    override val objUser: EzsignfoldersignerassociationResponseCompoundUser? = null,
 
     @Json(name = "objEzsignsigner")
-    val objEzsignsigner: EzsignsignerResponseCompound? = null
+    override val objEzsignsigner: EzsignsignerResponseCompound? = null
 
-) {
+) : EzsignfoldersignerassociationResponseCompound {
 
 
 }

@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.WebhookheaderResponse
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -29,25 +30,25 @@ import com.squareup.moshi.JsonClass
  */
 
 
-data class WebhookheaderResponseCompound (
+class WebhookheaderResponseCompound (
 
     /* The unique ID of the Webhookheader */
     @Json(name = "pkiWebhookheaderID")
-    val pkiWebhookheaderID: kotlin.Int,
+    override val pkiWebhookheaderID: kotlin.Int,
 
     /* The unique ID of the Webhook */
     @Json(name = "fkiWebhookID")
-    val fkiWebhookID: kotlin.Int,
+    override val fkiWebhookID: kotlin.Int,
 
     /* The Name of the Webhookheader */
     @Json(name = "sWebhookheaderName")
-    val sWebhookheaderName: kotlin.String,
+    override val sWebhookheaderName: kotlin.String,
 
     /* The Value of the Webhookheader */
     @Json(name = "sWebhookheaderValue")
-    val sWebhookheaderValue: kotlin.String
+    override val sWebhookheaderValue: kotlin.String
 
-) {
+) : WebhookheaderResponse {
 
 
 }

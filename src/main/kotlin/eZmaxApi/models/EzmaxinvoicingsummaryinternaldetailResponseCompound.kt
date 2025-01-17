@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.EzmaxinvoicingsummaryinternaldetailResponse
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -37,57 +38,57 @@ import com.squareup.moshi.JsonClass
  */
 
 
-data class EzmaxinvoicingsummaryinternaldetailResponseCompound (
+class EzmaxinvoicingsummaryinternaldetailResponseCompound (
 
     /* The unique ID of the Ezmaxproduct */
     @Json(name = "fkiEzmaxproductID")
-    val fkiEzmaxproductID: kotlin.Int,
+    override val fkiEzmaxproductID: kotlin.Int,
 
     /* The description of the Ezmaxproduct in the language of the requester */
     @Json(name = "sEzmaxproductDescriptionX")
-    val sEzmaxproductDescriptionX: kotlin.String,
+    override val sEzmaxproductDescriptionX: kotlin.String,
 
     /* The unique ID of the Billingentityexternal */
     @Json(name = "fkiBillingentityexternalID")
-    val fkiBillingentityexternalID: kotlin.Int,
+    override val fkiBillingentityexternalID: kotlin.Int,
 
     /* The description of the Billingentityexternal */
     @Json(name = "sBillingentityexternalDescription")
-    val sBillingentityexternalDescription: kotlin.String,
+    override val sBillingentityexternalDescription: kotlin.String,
 
     /* The count item invoiced for the product */
     @Json(name = "dEzmaxinvoicingsummaryinternaldetailCountreal")
-    val dEzmaxinvoicingsummaryinternaldetailCountreal: kotlin.String,
+    override val dEzmaxinvoicingsummaryinternaldetailCountreal: kotlin.String,
 
     /* The subtotal invoiced for the product */
     @Json(name = "dEzmaxinvoicingsummaryinternaldetailSubtotal")
-    val dEzmaxinvoicingsummaryinternaldetailSubtotal: kotlin.String,
+    override val dEzmaxinvoicingsummaryinternaldetailSubtotal: kotlin.String,
 
     /* The rebate for the product */
     @Json(name = "dEzmaxinvoicingsummaryinternaldetailRebate")
-    val dEzmaxinvoicingsummaryinternaldetailRebate: kotlin.String,
+    override val dEzmaxinvoicingsummaryinternaldetailRebate: kotlin.String,
 
     /* The total invoiced for the product */
     @Json(name = "dEzmaxinvoicingsummaryinternaldetailTotal")
-    val dEzmaxinvoicingsummaryinternaldetailTotal: kotlin.String,
+    override val dEzmaxinvoicingsummaryinternaldetailTotal: kotlin.String,
 
     /* Whether if it's an adjustment */
     @Json(name = "bEzmaxinvoicingsummaryinternaldetailAdjustment")
-    val bEzmaxinvoicingsummaryinternaldetailAdjustment: kotlin.Boolean,
+    override val bEzmaxinvoicingsummaryinternaldetailAdjustment: kotlin.Boolean,
 
     /* The help message of the Ezmaxproduct in the language of the requester */
     @Json(name = "tEzmaxproductHelpX")
-    val tEzmaxproductHelpX: kotlin.String,
+    override val tEzmaxproductHelpX: kotlin.String,
 
     /* The unique ID of the Ezmaxinvoicingsummaryinternaldetail */
     @Json(name = "pkiEzmaxinvoicingsummaryinternaldetailID")
-    val pkiEzmaxinvoicingsummaryinternaldetailID: kotlin.Int? = null,
+    override val pkiEzmaxinvoicingsummaryinternaldetailID: kotlin.Int? = null,
 
     /* The unique ID of the Ezmaxinvoicingsummaryinternal */
     @Json(name = "fkiEzmaxinvoicingsummaryinternalID")
-    val fkiEzmaxinvoicingsummaryinternalID: kotlin.Int? = null
+    override val fkiEzmaxinvoicingsummaryinternalID: kotlin.Int? = null
 
-) {
+) : EzmaxinvoicingsummaryinternaldetailResponse {
 
 
 }

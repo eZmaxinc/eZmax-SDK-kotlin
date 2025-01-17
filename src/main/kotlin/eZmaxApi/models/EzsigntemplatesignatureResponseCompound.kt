@@ -17,6 +17,7 @@ package eZmaxApi.models
 
 import eZmaxApi.models.EnumTextvalidation
 import eZmaxApi.models.EzsigntemplateelementdependencyResponse
+import eZmaxApi.models.EzsigntemplatesignatureResponse
 import eZmaxApi.models.EzsigntemplatesignaturecustomdateResponse
 import eZmaxApi.models.FieldEEzsigntemplatesignatureAttachmentnamesource
 import eZmaxApi.models.FieldEEzsigntemplatesignatureConsultationtrigger
@@ -75,122 +76,122 @@ data class EzsigntemplatesignatureResponseCompound (
 
     /* The unique ID of the Ezsigntemplatesignature */
     @Json(name = "pkiEzsigntemplatesignatureID")
-    val pkiEzsigntemplatesignatureID: kotlin.Int,
+    override val pkiEzsigntemplatesignatureID: kotlin.Int,
 
     /* The unique ID of the Ezsigntemplatedocument */
     @Json(name = "fkiEzsigntemplatedocumentID")
-    val fkiEzsigntemplatedocumentID: kotlin.Int,
+    override val fkiEzsigntemplatedocumentID: kotlin.Int,
 
     /* The unique ID of the Ezsigntemplatesigner */
     @Json(name = "fkiEzsigntemplatesignerID")
-    val fkiEzsigntemplatesignerID: kotlin.Int,
+    override val fkiEzsigntemplatesignerID: kotlin.Int,
 
     /* The page number in the Ezsigntemplatedocument */
     @Json(name = "iEzsigntemplatedocumentpagePagenumber")
-    val iEzsigntemplatedocumentpagePagenumber: kotlin.Int,
+    override val iEzsigntemplatedocumentpagePagenumber: kotlin.Int,
 
     /* The step when the Ezsigntemplatesigner will be invited to sign */
     @Json(name = "iEzsigntemplatesignatureStep")
-    val iEzsigntemplatesignatureStep: kotlin.Int,
+    override val iEzsigntemplatesignatureStep: kotlin.Int,
 
     @Json(name = "eEzsigntemplatesignatureType")
-    val eEzsigntemplatesignatureType: FieldEEzsigntemplatesignatureType,
+    override val eEzsigntemplatesignatureType: FieldEEzsigntemplatesignatureType,
 
     /* The unique ID of the Ezsigntemplatesigner */
     @Json(name = "fkiEzsigntemplatesignerIDValidation")
-    val fkiEzsigntemplatesignerIDValidation: kotlin.Int? = null,
+    override val fkiEzsigntemplatesignerIDValidation: kotlin.Int? = null,
 
     /* Whether the Ezsigntemplatesignature must be handwritten or not when eEzsigntemplatesignatureType = Signature. */
     @Json(name = "bEzsigntemplatesignatureHandwritten")
-    val bEzsigntemplatesignatureHandwritten: kotlin.Boolean? = null,
+    override val bEzsigntemplatesignatureHandwritten: kotlin.Boolean? = null,
 
     /* Whether the Ezsigntemplatesignature must include a reason or not when eEzsigntemplatesignatureType = Signature. */
     @Json(name = "bEzsigntemplatesignatureReason")
-    val bEzsigntemplatesignatureReason: kotlin.Boolean? = null,
+    override val bEzsigntemplatesignatureReason: kotlin.Boolean? = null,
 
     @Json(name = "eEzsigntemplatesignaturePositioning")
-    val eEzsigntemplatesignaturePositioning: FieldEEzsigntemplatesignaturePositioning? = null,
+    override val eEzsigntemplatesignaturePositioning: FieldEEzsigntemplatesignaturePositioning? = null,
 
     /* The X coordinate (Horizontal) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 2 inches from the left border of the page, you would use \"200\" for the X coordinate. */
     @Json(name = "iEzsigntemplatesignatureX")
-    val iEzsigntemplatesignatureX: kotlin.Int? = null,
+    override val iEzsigntemplatesignatureX: kotlin.Int? = null,
 
     /* The Y coordinate (Vertical) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 3 inches from the top border of the page, you would use \"300\" for the Y coordinate. */
     @Json(name = "iEzsigntemplatesignatureY")
-    val iEzsigntemplatesignatureY: kotlin.Int? = null,
+    override val iEzsigntemplatesignatureY: kotlin.Int? = null,
 
     /* The width of the Ezsigntemplatesignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsigntemplatesignature to have a width of 2 inches, you would use \"200\" for the iEzsigntemplatesignatureWidth. */
     @Json(name = "iEzsigntemplatesignatureWidth")
-    val iEzsigntemplatesignatureWidth: kotlin.Int? = null,
+    override val iEzsigntemplatesignatureWidth: kotlin.Int? = null,
 
     /* The height of the Ezsigntemplatesignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsigntemplatesignature to have an height of 2 inches, you would use \"200\" for the iEzsigntemplatesignatureHeight. */
     @Json(name = "iEzsigntemplatesignatureHeight")
-    val iEzsigntemplatesignatureHeight: kotlin.Int? = null,
+    override val iEzsigntemplatesignatureHeight: kotlin.Int? = null,
 
     @Json(name = "eEzsigntemplatesignatureConsultationtrigger")
-    val eEzsigntemplatesignatureConsultationtrigger: FieldEEzsigntemplatesignatureConsultationtrigger? = null,
+    override val eEzsigntemplatesignatureConsultationtrigger: FieldEEzsigntemplatesignatureConsultationtrigger? = null,
 
     /* A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplatesignature */
     @Json(name = "tEzsigntemplatesignatureTooltip")
-    val tEzsigntemplatesignatureTooltip: kotlin.String? = null,
+    override val tEzsigntemplatesignatureTooltip: kotlin.String? = null,
 
     @Json(name = "eEzsigntemplatesignatureTooltipposition")
-    val eEzsigntemplatesignatureTooltipposition: FieldEEzsigntemplatesignatureTooltipposition? = null,
+    override val eEzsigntemplatesignatureTooltipposition: FieldEEzsigntemplatesignatureTooltipposition? = null,
 
     @Json(name = "eEzsigntemplatesignatureFont")
-    val eEzsigntemplatesignatureFont: FieldEEzsigntemplatesignatureFont? = null,
+    override val eEzsigntemplatesignatureFont: FieldEEzsigntemplatesignatureFont? = null,
 
     /* The step when the Ezsigntemplatesigner will be invited to validate the Ezsigntemplatesignature of eEzsigntemplatesignatureType Attachments */
     @Json(name = "iEzsigntemplatesignatureValidationstep")
-    val iEzsigntemplatesignatureValidationstep: kotlin.Int? = null,
+    override val iEzsigntemplatesignatureValidationstep: kotlin.Int? = null,
 
     /* The description attached to the attachment name added in Ezsigntemplatesignature of eEzsigntemplatesignatureType Attachments */
     @Json(name = "sEzsigntemplatesignatureAttachmentdescription")
-    val sEzsigntemplatesignatureAttachmentdescription: kotlin.String? = null,
+    override val sEzsigntemplatesignatureAttachmentdescription: kotlin.String? = null,
 
     @Json(name = "eEzsigntemplatesignatureAttachmentnamesource")
-    val eEzsigntemplatesignatureAttachmentnamesource: FieldEEzsigntemplatesignatureAttachmentnamesource? = null,
+    override val eEzsigntemplatesignatureAttachmentnamesource: FieldEEzsigntemplatesignatureAttachmentnamesource? = null,
 
     /* Whether the Ezsigntemplatesignature is required or not. This field is relevant only with Ezsigntemplatesignature with eEzsigntemplatesignatureType = Attachments. */
     @Json(name = "bEzsigntemplatesignatureRequired")
-    val bEzsigntemplatesignatureRequired: kotlin.Boolean? = null,
+    override val bEzsigntemplatesignatureRequired: kotlin.Boolean? = null,
 
     /* The maximum length for the value in the Ezsigntemplatesignature  This can only be set if eEzsigntemplatesignatureType is **FieldText** or **FieldTextarea** */
     @Json(name = "iEzsigntemplatesignatureMaxlength")
-    val iEzsigntemplatesignatureMaxlength: kotlin.Int? = null,
+    override val iEzsigntemplatesignatureMaxlength: kotlin.Int? = null,
 
     /* The default value for the Ezsigntemplatesignature  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | ------------------------- | ------------ | ------------ | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sCompany} | Company name | eZmax Solutions Inc. | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 | */
     @Json(name = "sEzsigntemplatesignatureDefaultvalue")
-    val sEzsigntemplatesignatureDefaultvalue: kotlin.String? = null,
+    override val sEzsigntemplatesignatureDefaultvalue: kotlin.String? = null,
 
     /* A regular expression to indicate what values are acceptable for the Ezsigntemplatesignature.  This can only be set if eEzsigntemplatesignatureType is **Text** or **Textarea** */
     @Json(name = "sEzsigntemplatesignatureRegexp")
-    val sEzsigntemplatesignatureRegexp: kotlin.String? = null,
+    override val sEzsigntemplatesignatureRegexp: kotlin.String? = null,
 
     @Json(name = "eEzsigntemplatesignatureTextvalidation")
-    val eEzsigntemplatesignatureTextvalidation: EnumTextvalidation? = null,
+    override val eEzsigntemplatesignatureTextvalidation: EnumTextvalidation? = null,
 
     /* Description of validation rule. Show by signatory. */
     @Json(name = "sEzsigntemplatesignatureTextvalidationcustommessage")
-    val sEzsigntemplatesignatureTextvalidationcustommessage: kotlin.String? = null,
+    override val sEzsigntemplatesignatureTextvalidationcustommessage: kotlin.String? = null,
 
     @Json(name = "eEzsigntemplatesignatureDependencyrequirement")
-    val eEzsigntemplatesignatureDependencyrequirement: FieldEEzsigntemplatesignatureDependencyrequirement? = null,
+    override val eEzsigntemplatesignatureDependencyrequirement: FieldEEzsigntemplatesignatureDependencyrequirement? = null,
 
     /* The string pattern to search for the positioning. **This is not a regexp**  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates** */
     @Json(name = "sEzsigntemplatesignaturePositioningpattern")
-    val sEzsigntemplatesignaturePositioningpattern: kotlin.String? = null,
+    override val sEzsigntemplatesignaturePositioningpattern: kotlin.String? = null,
 
     /* The offset X  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates** */
     @Json(name = "iEzsigntemplatesignaturePositioningoffsetx")
-    val iEzsigntemplatesignaturePositioningoffsetx: kotlin.Int? = null,
+    override val iEzsigntemplatesignaturePositioningoffsetx: kotlin.Int? = null,
 
     /* The offset Y  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates** */
     @Json(name = "iEzsigntemplatesignaturePositioningoffsety")
-    val iEzsigntemplatesignaturePositioningoffsety: kotlin.Int? = null,
+    override val iEzsigntemplatesignaturePositioningoffsety: kotlin.Int? = null,
 
     @Json(name = "eEzsigntemplatesignaturePositioningoccurence")
-    val eEzsigntemplatesignaturePositioningoccurence: FieldEEzsigntemplatesignaturePositioningoccurence? = null,
+    override val eEzsigntemplatesignaturePositioningoccurence: FieldEEzsigntemplatesignaturePositioningoccurence? = null,
 
     /* Whether the Ezsigntemplatesignature has a custom date format or not. (Only possible when eEzsigntemplatesignatureType is **Name** or **Handwritten**) */
     @Json(name = "bEzsigntemplatesignatureCustomdate")
@@ -203,7 +204,7 @@ data class EzsigntemplatesignatureResponseCompound (
     @Json(name = "a_objEzsigntemplateelementdependency")
     val aObjEzsigntemplateelementdependency: kotlin.collections.List<EzsigntemplateelementdependencyResponse>? = null
 
-) {
+) : EzsigntemplatesignatureResponse {
 
 
 }

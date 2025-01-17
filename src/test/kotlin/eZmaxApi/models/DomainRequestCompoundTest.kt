@@ -19,23 +19,12 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.DomainRequestCompound
+import eZmaxApi.models.DomainRequest
 
 class DomainRequestCompoundTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of DomainRequestCompound
         //val modelInstance = DomainRequestCompound()
-
-        // to test the property `sDomainName` - The name of the Domain
-        should("test sDomainName") {
-            // uncomment below to test the property
-            //modelInstance.sDomainName shouldBe ("TODO")
-        }
-
-        // to test the property `pkiDomainID` - The unique ID of the Domain
-        should("test pkiDomainID") {
-            // uncomment below to test the property
-            //modelInstance.pkiDomainID shouldBe ("TODO")
-        }
 
     }
 }

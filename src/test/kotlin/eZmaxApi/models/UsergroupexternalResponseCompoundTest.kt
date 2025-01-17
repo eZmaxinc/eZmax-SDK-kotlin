@@ -19,29 +19,12 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.UsergroupexternalResponseCompound
+import eZmaxApi.models.UsergroupexternalResponse
 
 class UsergroupexternalResponseCompoundTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of UsergroupexternalResponseCompound
         //val modelInstance = UsergroupexternalResponseCompound()
-
-        // to test the property `pkiUsergroupexternalID` - The unique ID of the Usergroupexternal
-        should("test pkiUsergroupexternalID") {
-            // uncomment below to test the property
-            //modelInstance.pkiUsergroupexternalID shouldBe ("TODO")
-        }
-
-        // to test the property `sUsergroupexternalName` - The name of the Usergroupexternal
-        should("test sUsergroupexternalName") {
-            // uncomment below to test the property
-            //modelInstance.sUsergroupexternalName shouldBe ("TODO")
-        }
-
-        // to test the property `sUsergroupexternalID` - The id of the Usergroupexternal
-        should("test sUsergroupexternalID") {
-            // uncomment below to test the property
-            //modelInstance.sUsergroupexternalID shouldBe ("TODO")
-        }
 
     }
 }

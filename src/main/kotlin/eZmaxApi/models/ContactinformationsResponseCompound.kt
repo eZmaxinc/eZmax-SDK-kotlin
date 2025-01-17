@@ -16,6 +16,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.AddressResponse
+import eZmaxApi.models.ContactinformationsResponse
 import eZmaxApi.models.EmailResponse
 import eZmaxApi.models.FieldEContactinformationsType
 import eZmaxApi.models.PhoneResponseCompound
@@ -49,10 +50,10 @@ data class ContactinformationsResponseCompound (
 
     /* The unique ID of the Contactinformations */
     @Json(name = "pkiContactinformationsID")
-    val pkiContactinformationsID: kotlin.Int,
+    override val pkiContactinformationsID: kotlin.Int,
 
     @Json(name = "eContactinformationsType")
-    val eContactinformationsType: FieldEContactinformationsType,
+    override val eContactinformationsType: FieldEContactinformationsType,
 
     @Json(name = "a_objAddress")
     val aObjAddress: kotlin.collections.List<AddressResponse>,
@@ -68,40 +69,40 @@ data class ContactinformationsResponseCompound (
 
     /* The unique ID of the Address */
     @Json(name = "fkiAddressIDDefault")
-    val fkiAddressIDDefault: kotlin.Int? = null,
+    override val fkiAddressIDDefault: kotlin.Int? = null,
 
     /* The unique ID of the Phone. */
     @Json(name = "fkiPhoneIDDefault")
-    val fkiPhoneIDDefault: kotlin.Int? = null,
+    override val fkiPhoneIDDefault: kotlin.Int? = null,
 
     /* The unique ID of the Email */
     @Json(name = "fkiEmailIDDefault")
-    val fkiEmailIDDefault: kotlin.Int? = null,
+    override val fkiEmailIDDefault: kotlin.Int? = null,
 
     /* The unique ID of the Website Default */
     @Json(name = "fkiWebsiteIDDefault")
-    val fkiWebsiteIDDefault: kotlin.Int? = null,
+    override val fkiWebsiteIDDefault: kotlin.Int? = null,
 
     /* The url of the Contactinformations */
     @Json(name = "sContactinformationsUrl")
-    val sContactinformationsUrl: kotlin.String? = null,
+    override val sContactinformationsUrl: kotlin.String? = null,
 
     /* An Address Object and children to create a complete structure */
     @Json(name = "objAddressDefault")
-    val objAddressDefault: AddressResponse? = null,
+    override val objAddressDefault: AddressResponse? = null,
 
     @Json(name = "objPhoneDefault")
-    val objPhoneDefault: PhoneResponseCompound? = null,
+    override val objPhoneDefault: PhoneResponseCompound? = null,
 
     /* An Email Object and children to create a complete structure */
     @Json(name = "objEmailDefault")
-    val objEmailDefault: EmailResponse? = null,
+    override val objEmailDefault: EmailResponse? = null,
 
     /* A Website Object and children to create a complete structure */
     @Json(name = "objWebsiteDefault")
-    val objWebsiteDefault: WebsiteResponse? = null
+    override val objWebsiteDefault: WebsiteResponse? = null
 
-) {
+) : ContactinformationsResponse {
 
 
 }

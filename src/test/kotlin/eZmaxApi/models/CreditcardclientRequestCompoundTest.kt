@@ -19,66 +19,13 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.CreditcardclientRequestCompound
+import eZmaxApi.models.CreditcardclientRequest
 import eZmaxApi.models.CreditcarddetailRequest
 
 class CreditcardclientRequestCompoundTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of CreditcardclientRequestCompound
         //val modelInstance = CreditcardclientRequestCompound()
-
-        // to test the property `bCreditcardclientrelationIsdefault` - Whether if it's the creditcardclient is the default one
-        should("test bCreditcardclientrelationIsdefault") {
-            // uncomment below to test the property
-            //modelInstance.bCreditcardclientrelationIsdefault shouldBe ("TODO")
-        }
-
-        // to test the property `sCreditcardclientDescription` - The description of the Creditcardclient
-        should("test sCreditcardclientDescription") {
-            // uncomment below to test the property
-            //modelInstance.sCreditcardclientDescription shouldBe ("TODO")
-        }
-
-        // to test the property `bCreditcardclientAllowedcompanypayment` - Whether if it's an allowedagencypayment
-        should("test bCreditcardclientAllowedcompanypayment") {
-            // uncomment below to test the property
-            //modelInstance.bCreditcardclientAllowedcompanypayment shouldBe ("TODO")
-        }
-
-        // to test the property `bCreditcardclientAllowedezsign` - Whether if it's an allowedroyallepageprotection
-        should("test bCreditcardclientAllowedezsign") {
-            // uncomment below to test the property
-            //modelInstance.bCreditcardclientAllowedezsign shouldBe ("TODO")
-        }
-
-        // to test the property `bCreditcardclientAllowedtranquillit` - Whether if it's an allowedtranquillit
-        should("test bCreditcardclientAllowedtranquillit") {
-            // uncomment below to test the property
-            //modelInstance.bCreditcardclientAllowedtranquillit shouldBe ("TODO")
-        }
-
-        // to test the property `objCreditcarddetail`
-        should("test objCreditcarddetail") {
-            // uncomment below to test the property
-            //modelInstance.objCreditcarddetail shouldBe ("TODO")
-        }
-
-        // to test the property `sCreditcardclientCVV` - The creditcard card CVV
-        should("test sCreditcardclientCVV") {
-            // uncomment below to test the property
-            //modelInstance.sCreditcardclientCVV shouldBe ("TODO")
-        }
-
-        // to test the property `pkiCreditcardclientID` - The unique ID of the Creditcardclient
-        should("test pkiCreditcardclientID") {
-            // uncomment below to test the property
-            //modelInstance.pkiCreditcardclientID shouldBe ("TODO")
-        }
-
-        // to test the property `fksCreditcardtokenID` - The creditcard token identifier
-        should("test fksCreditcardtokenID") {
-            // uncomment below to test the property
-            //modelInstance.fksCreditcardtokenID shouldBe ("TODO")
-        }
 
     }
 }

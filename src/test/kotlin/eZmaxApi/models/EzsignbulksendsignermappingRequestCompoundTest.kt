@@ -19,35 +19,12 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.EzsignbulksendsignermappingRequestCompound
+import eZmaxApi.models.EzsignbulksendsignermappingRequest
 
 class EzsignbulksendsignermappingRequestCompoundTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of EzsignbulksendsignermappingRequestCompound
         //val modelInstance = EzsignbulksendsignermappingRequestCompound()
-
-        // to test the property `fkiEzsignbulksendID` - The unique ID of the Ezsignbulksend
-        should("test fkiEzsignbulksendID") {
-            // uncomment below to test the property
-            //modelInstance.fkiEzsignbulksendID shouldBe ("TODO")
-        }
-
-        // to test the property `sEzsignbulksendsignermappingDescription` - The description of the Ezsignbulksendsignermapping
-        should("test sEzsignbulksendsignermappingDescription") {
-            // uncomment below to test the property
-            //modelInstance.sEzsignbulksendsignermappingDescription shouldBe ("TODO")
-        }
-
-        // to test the property `pkiEzsignbulksendsignermappingID` - The unique ID of the Ezsignbulksendsignermapping
-        should("test pkiEzsignbulksendsignermappingID") {
-            // uncomment below to test the property
-            //modelInstance.pkiEzsignbulksendsignermappingID shouldBe ("TODO")
-        }
-
-        // to test the property `fkiUserID` - The unique ID of the User
-        should("test fkiUserID") {
-            // uncomment below to test the property
-            //modelInstance.fkiUserID shouldBe ("TODO")
-        }
 
     }
 }

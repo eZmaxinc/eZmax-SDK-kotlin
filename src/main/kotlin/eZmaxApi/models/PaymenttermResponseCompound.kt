@@ -18,6 +18,7 @@ package eZmaxApi.models
 import eZmaxApi.models.CommonAudit
 import eZmaxApi.models.FieldEPaymenttermType
 import eZmaxApi.models.MultilingualPaymenttermDescription
+import eZmaxApi.models.PaymenttermResponse
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -35,34 +36,34 @@ import com.squareup.moshi.JsonClass
  */
 
 
-data class PaymenttermResponseCompound (
+class PaymenttermResponseCompound (
 
     /* The unique ID of the Paymentterm */
     @Json(name = "pkiPaymenttermID")
-    val pkiPaymenttermID: kotlin.Int,
+    override val pkiPaymenttermID: kotlin.Int,
 
     /* The code of the Paymentterm */
     @Json(name = "sPaymenttermCode")
-    val sPaymenttermCode: kotlin.String,
+    override val sPaymenttermCode: kotlin.String,
 
     @Json(name = "ePaymenttermType")
-    val ePaymenttermType: FieldEPaymenttermType,
+    override val ePaymenttermType: FieldEPaymenttermType,
 
     /* The day of the Paymentterm */
     @Json(name = "iPaymenttermDay")
-    val iPaymenttermDay: kotlin.Int,
+    override val iPaymenttermDay: kotlin.Int,
 
     @Json(name = "objPaymenttermDescription")
-    val objPaymenttermDescription: MultilingualPaymenttermDescription,
+    override val objPaymenttermDescription: MultilingualPaymenttermDescription,
 
     /* Whether the Paymentterm is active or not */
     @Json(name = "bPaymenttermIsactive")
-    val bPaymenttermIsactive: kotlin.Boolean,
+    override val bPaymenttermIsactive: kotlin.Boolean,
 
     @Json(name = "objAudit")
-    val objAudit: CommonAudit
+    override val objAudit: CommonAudit
 
-) {
+) : PaymenttermResponse {
 
 
 }

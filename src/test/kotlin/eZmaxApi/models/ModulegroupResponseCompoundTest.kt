@@ -20,23 +20,12 @@ import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.ModulegroupResponseCompound
 import eZmaxApi.models.ModuleResponseCompound
+import eZmaxApi.models.ModulegroupResponse
 
 class ModulegroupResponseCompoundTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of ModulegroupResponseCompound
         //val modelInstance = ModulegroupResponseCompound()
-
-        // to test the property `pkiModulegroupID` - The unique ID of the Modulegroup
-        should("test pkiModulegroupID") {
-            // uncomment below to test the property
-            //modelInstance.pkiModulegroupID shouldBe ("TODO")
-        }
-
-        // to test the property `sModulegroupNameX` - The name of the Modulegroup in the language of the requester
-        should("test sModulegroupNameX") {
-            // uncomment below to test the property
-            //modelInstance.sModulegroupNameX shouldBe ("TODO")
-        }
 
         // to test the property `aObjModule`
         should("test aObjModule") {

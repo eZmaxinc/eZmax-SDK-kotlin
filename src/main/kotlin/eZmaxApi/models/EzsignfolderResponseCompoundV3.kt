@@ -19,6 +19,7 @@ import eZmaxApi.models.CommonAudit
 import eZmaxApi.models.ComputedEEzsignfolderAccess
 import eZmaxApi.models.CustomEzsignfoldertypeResponse
 import eZmaxApi.models.CustomTimezoneWithCodeResponse
+import eZmaxApi.models.EzsignfolderResponseV3
 import eZmaxApi.models.FieldEEzsignfolderCompletion
 import eZmaxApi.models.FieldEEzsignfolderDocumentdependency
 import eZmaxApi.models.FieldEEzsignfolderStep
@@ -64,110 +65,110 @@ data class EzsignfolderResponseCompoundV3 (
 
     /* The unique ID of the Ezsignfolder */
     @Json(name = "pkiEzsignfolderID")
-    val pkiEzsignfolderID: kotlin.Int,
+    override val pkiEzsignfolderID: kotlin.Int,
 
     @Json(name = "eEzsignfolderCompletion")
-    val eEzsignfolderCompletion: FieldEEzsignfolderCompletion,
+    override val eEzsignfolderCompletion: FieldEEzsignfolderCompletion,
 
     /* The description of the Ezsignfolder */
     @Json(name = "sEzsignfolderDescription")
-    val sEzsignfolderDescription: kotlin.String,
+    override val sEzsignfolderDescription: kotlin.String,
 
     /* The unique ID of the Ezsignfoldertype. */
     @Json(name = "fkiEzsignfoldertypeID")
-    val fkiEzsignfoldertypeID: kotlin.Int? = null,
+    override val fkiEzsignfoldertypeID: kotlin.Int? = null,
 
     @Json(name = "objEzsignfoldertype")
-    val objEzsignfoldertype: CustomEzsignfoldertypeResponse? = null,
+    override val objEzsignfoldertype: CustomEzsignfoldertypeResponse? = null,
 
     /* The unique ID of the Timezone */
     @Json(name = "fkiTimezoneID")
-    val fkiTimezoneID: kotlin.Int? = null,
+    override val fkiTimezoneID: kotlin.Int? = null,
 
     @Json(name = "eEzsignfolderDocumentdependency")
-    val eEzsignfolderDocumentdependency: FieldEEzsignfolderDocumentdependency? = null,
+    override val eEzsignfolderDocumentdependency: FieldEEzsignfolderDocumentdependency? = null,
 
     @Json(name = "sEzsignfoldertypeNameX")
     @Deprecated(message = "This property is deprecated.")
-    val sEzsignfoldertypeNameX: kotlin.String? = null,
+    override val sEzsignfoldertypeNameX: kotlin.String? = null,
 
     /* The unique ID of the Billingentityinternal. */
     @Json(name = "fkiBillingentityinternalID")
-    val fkiBillingentityinternalID: kotlin.Int? = null,
+    override val fkiBillingentityinternalID: kotlin.Int? = null,
 
     /* The description of the Billingentityinternal in the language of the requester */
     @Json(name = "sBillingentityinternalDescriptionX")
-    val sBillingentityinternalDescriptionX: kotlin.String? = null,
+    override val sBillingentityinternalDescriptionX: kotlin.String? = null,
 
     /* The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server's time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server's time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**| */
     @Json(name = "fkiEzsigntsarequirementID")
-    val fkiEzsigntsarequirementID: kotlin.Int? = null,
+    override val fkiEzsigntsarequirementID: kotlin.Int? = null,
 
     /* The description of the Ezsigntsarequirement in the language of the requester */
     @Json(name = "sEzsigntsarequirementDescriptionX")
-    val sEzsigntsarequirementDescriptionX: kotlin.String? = null,
+    override val sEzsigntsarequirementDescriptionX: kotlin.String? = null,
 
     /* Note about the Ezsignfolder */
     @Json(name = "tEzsignfolderNote")
-    val tEzsignfolderNote: kotlin.String? = null,
+    override val tEzsignfolderNote: kotlin.String? = null,
 
     /* If the Ezsigndocument can be disposed */
     @Json(name = "bEzsignfolderIsdisposable")
-    val bEzsignfolderIsdisposable: kotlin.Boolean? = null,
+    override val bEzsignfolderIsdisposable: kotlin.Boolean? = null,
 
     /* The number of days before the the first reminder sending */
     @Json(name = "iEzsignfolderSendreminderfirstdays")
-    val iEzsignfolderSendreminderfirstdays: kotlin.Int? = null,
+    override val iEzsignfolderSendreminderfirstdays: kotlin.Int? = null,
 
     /* The number of days after the first reminder sending */
     @Json(name = "iEzsignfolderSendreminderotherdays")
-    val iEzsignfolderSendreminderotherdays: kotlin.Int? = null,
+    override val iEzsignfolderSendreminderotherdays: kotlin.Int? = null,
 
     /* The date and time at which the Ezsignfolder will be sent in the future. */
     @Json(name = "dtEzsignfolderDelayedsenddate")
-    val dtEzsignfolderDelayedsenddate: kotlin.String? = null,
+    override val dtEzsignfolderDelayedsenddate: kotlin.String? = null,
 
     /* The maximum date and time at which the Ezsignfolder can be signed. */
     @Json(name = "dtEzsignfolderDuedate")
-    val dtEzsignfolderDuedate: kotlin.String? = null,
+    override val dtEzsignfolderDuedate: kotlin.String? = null,
 
     /* The date and time at which the Ezsignfolder was sent the last time. */
     @Json(name = "dtEzsignfolderSentdate")
-    val dtEzsignfolderSentdate: kotlin.String? = null,
+    override val dtEzsignfolderSentdate: kotlin.String? = null,
 
     /* The scheduled date and time at which the Ezsignfolder should be archived. */
     @Json(name = "dtEzsignfolderScheduledarchive")
-    val dtEzsignfolderScheduledarchive: kotlin.String? = null,
+    override val dtEzsignfolderScheduledarchive: kotlin.String? = null,
 
     /* The scheduled date at which the Ezsignfolder should be Disposed. */
     @Json(name = "dtEzsignfolderScheduleddispose")
-    val dtEzsignfolderScheduleddispose: kotlin.String? = null,
+    override val dtEzsignfolderScheduleddispose: kotlin.String? = null,
 
     @Json(name = "eEzsignfolderStep")
-    val eEzsignfolderStep: FieldEEzsignfolderStep? = null,
+    override val eEzsignfolderStep: FieldEEzsignfolderStep? = null,
 
     /* The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely. */
     @Json(name = "dtEzsignfolderClose")
-    val dtEzsignfolderClose: kotlin.String? = null,
+    override val dtEzsignfolderClose: kotlin.String? = null,
 
     /* A custom text message that will be added to the email sent. */
     @Json(name = "tEzsignfolderMessage")
-    val tEzsignfolderMessage: kotlin.String? = null,
+    override val tEzsignfolderMessage: kotlin.String? = null,
 
     @Json(name = "objAudit")
-    val objAudit: CommonAudit? = null,
+    override val objAudit: CommonAudit? = null,
 
     /* This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format.  */
     @Json(name = "sEzsignfolderExternalid")
-    val sEzsignfolderExternalid: kotlin.String? = null,
+    override val sEzsignfolderExternalid: kotlin.String? = null,
 
     @Json(name = "eEzsignfolderAccess")
-    val eEzsignfolderAccess: ComputedEEzsignfolderAccess? = null,
+    override val eEzsignfolderAccess: ComputedEEzsignfolderAccess? = null,
 
     @Json(name = "objTimezone")
     val objTimezone: CustomTimezoneWithCodeResponse? = null
 
-) {
+) : EzsignfolderResponseV3 {
 
 
 }

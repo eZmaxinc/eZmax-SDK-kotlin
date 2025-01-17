@@ -19,29 +19,12 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.CorsResponseCompound
+import eZmaxApi.models.CorsResponse
 
 class CorsResponseCompoundTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of CorsResponseCompound
         //val modelInstance = CorsResponseCompound()
-
-        // to test the property `pkiCorsID` - The unique ID of the Cors
-        should("test pkiCorsID") {
-            // uncomment below to test the property
-            //modelInstance.pkiCorsID shouldBe ("TODO")
-        }
-
-        // to test the property `fkiApikeyID` - The unique ID of the Apikey
-        should("test fkiApikeyID") {
-            // uncomment below to test the property
-            //modelInstance.fkiApikeyID shouldBe ("TODO")
-        }
-
-        // to test the property `sCorsEntryurl` - The entryurl of the Cors
-        should("test sCorsEntryurl") {
-            // uncomment below to test the property
-            //modelInstance.sCorsEntryurl shouldBe ("TODO")
-        }
 
     }
 }

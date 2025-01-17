@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.ModuleResponse
 import eZmaxApi.models.ModulesectionResponseCompound
 
 import com.squareup.moshi.Json
@@ -37,32 +38,32 @@ data class ModuleResponseCompound (
 
     /* The unique ID of the Module */
     @Json(name = "pkiModuleID")
-    val pkiModuleID: kotlin.Int,
+    override val pkiModuleID: kotlin.Int,
 
     /* The unique ID of the Modulegroup */
     @Json(name = "fkiModulegroupID")
-    val fkiModulegroupID: kotlin.Int,
+    override val fkiModulegroupID: kotlin.Int,
 
     /* The Internal name of the Module.  This is theoretically an enum field but there are so many possibles values we decided not to list them all. */
     @Json(name = "eModuleInternalname")
-    val eModuleInternalname: kotlin.String,
+    override val eModuleInternalname: kotlin.String,
 
     /* The Name of the Module in the language of the requester */
     @Json(name = "sModuleNameX")
-    val sModuleNameX: kotlin.String,
+    override val sModuleNameX: kotlin.String,
 
     /* Whether the Module is registered or not */
     @Json(name = "bModuleRegistered")
-    val bModuleRegistered: kotlin.Boolean,
+    override val bModuleRegistered: kotlin.Boolean,
 
     /* Whether the Module is registered or not for api use */
     @Json(name = "bModuleRegisteredapi")
-    val bModuleRegisteredapi: kotlin.Boolean,
+    override val bModuleRegisteredapi: kotlin.Boolean,
 
     @Json(name = "a_objModulesection")
     val aObjModulesection: kotlin.collections.List<ModulesectionResponseCompound>? = null
 
-) {
+) : ModuleResponse {
 
 
 }

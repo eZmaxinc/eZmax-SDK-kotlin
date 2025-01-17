@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.BillingentityinternalResponse
 import eZmaxApi.models.BillingentityinternalproductResponseCompound
 import eZmaxApi.models.MultilingualBillingentityinternalDescription
 
@@ -34,15 +35,15 @@ data class BillingentityinternalResponseCompound (
 
     /* The unique ID of the Billingentityinternal. */
     @Json(name = "pkiBillingentityinternalID")
-    val pkiBillingentityinternalID: kotlin.Int,
+    override val pkiBillingentityinternalID: kotlin.Int,
 
     @Json(name = "objBillingentityinternalDescription")
-    val objBillingentityinternalDescription: MultilingualBillingentityinternalDescription,
+    override val objBillingentityinternalDescription: MultilingualBillingentityinternalDescription,
 
     @Json(name = "a_objBillingentityinternalproduct")
     val aObjBillingentityinternalproduct: kotlin.collections.List<BillingentityinternalproductResponseCompound>
 
-) {
+) : BillingentityinternalResponse {
 
 
 }

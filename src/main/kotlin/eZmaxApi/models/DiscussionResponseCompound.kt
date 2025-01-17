@@ -16,6 +16,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.CustomDiscussionconfigurationResponse
+import eZmaxApi.models.DiscussionResponse
 import eZmaxApi.models.DiscussionmembershipResponseCompound
 import eZmaxApi.models.DiscussionmessageResponseCompound
 
@@ -41,23 +42,23 @@ data class DiscussionResponseCompound (
 
     /* The unique ID of the Discussion */
     @Json(name = "pkiDiscussionID")
-    val pkiDiscussionID: kotlin.Int,
+    override val pkiDiscussionID: kotlin.Int,
 
     /* The description of the Discussion */
     @Json(name = "sDiscussionDescription")
-    val sDiscussionDescription: kotlin.String,
+    override val sDiscussionDescription: kotlin.String,
 
     /* Whether if it's an closed */
     @Json(name = "bDiscussionClosed")
-    val bDiscussionClosed: kotlin.Boolean,
+    override val bDiscussionClosed: kotlin.Boolean,
 
     /* The count of Attachment. */
     @Json(name = "iDiscussionmessageCount")
-    val iDiscussionmessageCount: kotlin.Int,
+    override val iDiscussionmessageCount: kotlin.Int,
 
     /* The count of Attachment. */
     @Json(name = "iDiscussionmessageCountunread")
-    val iDiscussionmessageCountunread: kotlin.Int,
+    override val iDiscussionmessageCountunread: kotlin.Int,
 
     @Json(name = "a_objDiscussionmembership")
     val aObjDiscussionmembership: kotlin.collections.List<DiscussionmembershipResponseCompound>,
@@ -67,12 +68,12 @@ data class DiscussionResponseCompound (
 
     /* The date the Discussion was last read */
     @Json(name = "dtDiscussionLastread")
-    val dtDiscussionLastread: kotlin.String? = null,
+    override val dtDiscussionLastread: kotlin.String? = null,
 
     @Json(name = "objDiscussionconfiguration")
-    val objDiscussionconfiguration: CustomDiscussionconfigurationResponse? = null
+    override val objDiscussionconfiguration: CustomDiscussionconfigurationResponse? = null
 
-) {
+) : DiscussionResponse {
 
 
 }

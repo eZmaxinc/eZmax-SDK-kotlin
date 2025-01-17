@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.ActivesessionResponse
 import eZmaxApi.models.ActivesessionResponseCompoundApikey
 import eZmaxApi.models.ActivesessionResponseCompoundUser
 import eZmaxApi.models.FieldEActivesessionEzsign
@@ -71,44 +72,44 @@ import com.squareup.moshi.JsonClass
 data class ActivesessionResponseCompound (
 
     @Json(name = "eActivesessionUsertype")
-    val eActivesessionUsertype: FieldEActivesessionUsertype,
+    override val eActivesessionUsertype: FieldEActivesessionUsertype,
 
     @Json(name = "eActivesessionOrigin")
-    val eActivesessionOrigin: FieldEActivesessionOrigin,
+    override val eActivesessionOrigin: FieldEActivesessionOrigin,
 
     @Json(name = "eActivesessionWeekdaystart")
-    val eActivesessionWeekdaystart: FieldEActivesessionWeekdaystart,
+    override val eActivesessionWeekdaystart: FieldEActivesessionWeekdaystart,
 
     /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| */
     @Json(name = "fkiLanguageID")
-    val fkiLanguageID: kotlin.Int,
+    override val fkiLanguageID: kotlin.Int,
 
     /* The Name of the Company in the language of the requester */
     @Json(name = "sCompanyNameX")
-    val sCompanyNameX: kotlin.String,
+    override val sCompanyNameX: kotlin.String,
 
     /* The Name of the Department in the language of the requester */
     @Json(name = "sDepartmentNameX")
-    val sDepartmentNameX: kotlin.String,
+    override val sDepartmentNameX: kotlin.String,
 
     /* Whether the active session is in debug or not */
     @Json(name = "bActivesessionDebug")
-    val bActivesessionDebug: kotlin.Boolean,
+    override val bActivesessionDebug: kotlin.Boolean,
 
     /* Whether the active session is superadmin or not */
     @Json(name = "bActivesessionIssuperadmin")
-    val bActivesessionIssuperadmin: kotlin.Boolean,
+    override val bActivesessionIssuperadmin: kotlin.Boolean,
 
     @Json(name = "eActivesessionEzsignaccess")
-    val eActivesessionEzsignaccess: FieldEActivesessionEzsignaccess,
+    override val eActivesessionEzsignaccess: FieldEActivesessionEzsignaccess,
 
     /* The customer code assigned to your account */
     @Json(name = "pksCustomerCode")
-    val pksCustomerCode: kotlin.String,
+    override val pksCustomerCode: kotlin.String,
 
     /* The unique ID of the Systemconfigurationtype */
     @Json(name = "fkiSystemconfigurationtypeID")
-    val fkiSystemconfigurationtypeID: kotlin.Int,
+    override val fkiSystemconfigurationtypeID: kotlin.Int,
 
     @Json(name = "eUserEzsignaccess")
     val eUserEzsignaccess: FieldEUserEzsignaccess,
@@ -126,32 +127,32 @@ data class ActivesessionResponseCompound (
 
     /* Can access attachment when we clone a user */
     @Json(name = "bActivesessionAttachment")
-    val bActivesessionAttachment: kotlin.Boolean? = null,
+    override val bActivesessionAttachment: kotlin.Boolean? = null,
 
     /* Can access canafe when we clone a user */
     @Json(name = "bActivesessionCanafe")
-    val bActivesessionCanafe: kotlin.Boolean? = null,
+    override val bActivesessionCanafe: kotlin.Boolean? = null,
 
     /* Can access financial element when we clone a user */
     @Json(name = "bActivesessionFinancial")
-    val bActivesessionFinancial: kotlin.Boolean? = null,
+    override val bActivesessionFinancial: kotlin.Boolean? = null,
 
     /* Can access closed realestate folders when we clone a user */
     @Json(name = "bActivesessionRealestatecompleted")
-    val bActivesessionRealestatecompleted: kotlin.Boolean? = null,
+    override val bActivesessionRealestatecompleted: kotlin.Boolean? = null,
 
     @Json(name = "eActivesessionEzsign")
-    val eActivesessionEzsign: FieldEActivesessionEzsign? = null,
+    override val eActivesessionEzsign: FieldEActivesessionEzsign? = null,
 
     @Json(name = "eActivesessionEzsignprepaid")
-    val eActivesessionEzsignprepaid: FieldEActivesessionEzsignprepaid? = null,
+    override val eActivesessionEzsignprepaid: FieldEActivesessionEzsignprepaid? = null,
 
     @Json(name = "eActivesessionRealestateinprogress")
-    val eActivesessionRealestateinprogress: FieldEActivesessionRealestateinprogress? = null,
+    override val eActivesessionRealestateinprogress: FieldEActivesessionRealestateinprogress? = null,
 
     /* The unique ID of the Signature */
     @Json(name = "fkiSignatureID")
-    val fkiSignatureID: kotlin.Int? = null,
+    override val fkiSignatureID: kotlin.Int? = null,
 
     /* The unique ID of the Ezsignuser */
     @Json(name = "fkiEzsignuserID")
@@ -181,7 +182,7 @@ data class ActivesessionResponseCompound (
     @Json(name = "objApikey")
     val objApikey: ActivesessionResponseCompoundApikey? = null
 
-) {
+) : ActivesessionResponse {
 
 
 }

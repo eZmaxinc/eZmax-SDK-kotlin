@@ -19,42 +19,13 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.CommunicationexternalrecipientRequestCompound
+import eZmaxApi.models.CommunicationexternalrecipientRequest
 import eZmaxApi.models.FieldECommunicationexternalrecipientType
 
 class CommunicationexternalrecipientRequestCompoundTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of CommunicationexternalrecipientRequestCompound
         //val modelInstance = CommunicationexternalrecipientRequestCompound()
-
-        // to test the property `pkiCommunicationexternalrecipientID` - The unique ID of the Communicationexternalrecipient
-        should("test pkiCommunicationexternalrecipientID") {
-            // uncomment below to test the property
-            //modelInstance.pkiCommunicationexternalrecipientID shouldBe ("TODO")
-        }
-
-        // to test the property `sEmailAddress` - The email address.
-        should("test sEmailAddress") {
-            // uncomment below to test the property
-            //modelInstance.sEmailAddress shouldBe ("TODO")
-        }
-
-        // to test the property `sPhoneE164` - A phone number in E.164 Format
-        should("test sPhoneE164") {
-            // uncomment below to test the property
-            //modelInstance.sPhoneE164 shouldBe ("TODO")
-        }
-
-        // to test the property `eCommunicationexternalrecipientType`
-        should("test eCommunicationexternalrecipientType") {
-            // uncomment below to test the property
-            //modelInstance.eCommunicationexternalrecipientType shouldBe ("TODO")
-        }
-
-        // to test the property `sCommunicationexternalrecipientName` - The name of the Communicationexternalrecipient
-        should("test sCommunicationexternalrecipientName") {
-            // uncomment below to test the property
-            //modelInstance.sCommunicationexternalrecipientName shouldBe ("TODO")
-        }
 
     }
 }

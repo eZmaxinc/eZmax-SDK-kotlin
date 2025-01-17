@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.EzsigntemplatepackageRequest
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -32,37 +33,37 @@ import com.squareup.moshi.JsonClass
  */
 
 
-data class EzsigntemplatepackageRequestCompound (
+class EzsigntemplatepackageRequestCompound (
 
     /* The unique ID of the Ezsignfoldertype. */
     @Json(name = "fkiEzsignfoldertypeID")
-    val fkiEzsignfoldertypeID: kotlin.Int,
+    override val fkiEzsignfoldertypeID: kotlin.Int,
 
     /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| */
     @Json(name = "fkiLanguageID")
-    val fkiLanguageID: kotlin.Int,
+    override val fkiLanguageID: kotlin.Int,
 
     /* The description of the Ezsigntemplatepackage */
     @Json(name = "sEzsigntemplatepackageDescription")
-    val sEzsigntemplatepackageDescription: kotlin.String,
+    override val sEzsigntemplatepackageDescription: kotlin.String,
 
     /* Whether the Ezsigntemplatepackage can be accessed by admin users only (eUserType=Normal) */
     @Json(name = "bEzsigntemplatepackageAdminonly")
-    val bEzsigntemplatepackageAdminonly: kotlin.Boolean,
+    override val bEzsigntemplatepackageAdminonly: kotlin.Boolean,
 
     /* Whether the Ezsigntemplatepackage is active or not */
     @Json(name = "bEzsigntemplatepackageIsactive")
-    val bEzsigntemplatepackageIsactive: kotlin.Boolean,
+    override val bEzsigntemplatepackageIsactive: kotlin.Boolean,
 
     /* The unique ID of the Ezsigntemplatepackage */
     @Json(name = "pkiEzsigntemplatepackageID")
-    val pkiEzsigntemplatepackageID: kotlin.Int? = null,
+    override val pkiEzsigntemplatepackageID: kotlin.Int? = null,
 
     /* The unique ID of the Ezdoctemplatedocument */
     @Json(name = "fkiEzdoctemplatedocumentID")
-    val fkiEzdoctemplatedocumentID: kotlin.Int? = null
+    override val fkiEzdoctemplatedocumentID: kotlin.Int? = null
 
-) {
+) : EzsigntemplatepackageRequest {
 
 
 }

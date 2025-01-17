@@ -19,29 +19,12 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.WebhookheaderRequestCompound
+import eZmaxApi.models.WebhookheaderRequest
 
 class WebhookheaderRequestCompoundTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of WebhookheaderRequestCompound
         //val modelInstance = WebhookheaderRequestCompound()
-
-        // to test the property `sWebhookheaderName` - The Name of the Webhookheader
-        should("test sWebhookheaderName") {
-            // uncomment below to test the property
-            //modelInstance.sWebhookheaderName shouldBe ("TODO")
-        }
-
-        // to test the property `sWebhookheaderValue` - The Value of the Webhookheader
-        should("test sWebhookheaderValue") {
-            // uncomment below to test the property
-            //modelInstance.sWebhookheaderValue shouldBe ("TODO")
-        }
-
-        // to test the property `pkiWebhookheaderID` - The unique ID of the Webhookheader
-        should("test pkiWebhookheaderID") {
-            // uncomment below to test the property
-            //modelInstance.pkiWebhookheaderID shouldBe ("TODO")
-        }
 
     }
 }

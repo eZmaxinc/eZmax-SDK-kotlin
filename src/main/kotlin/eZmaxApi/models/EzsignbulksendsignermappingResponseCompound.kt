@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.EzsignbulksendsignermappingResponse
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -29,25 +30,25 @@ import com.squareup.moshi.JsonClass
  */
 
 
-data class EzsignbulksendsignermappingResponseCompound (
+class EzsignbulksendsignermappingResponseCompound (
 
     /* The unique ID of the Ezsignbulksendsignermapping */
     @Json(name = "pkiEzsignbulksendsignermappingID")
-    val pkiEzsignbulksendsignermappingID: kotlin.Int,
+    override val pkiEzsignbulksendsignermappingID: kotlin.Int,
 
     /* The unique ID of the Ezsignbulksend */
     @Json(name = "fkiEzsignbulksendID")
-    val fkiEzsignbulksendID: kotlin.Int,
+    override val fkiEzsignbulksendID: kotlin.Int,
 
     /* The description of the Ezsignbulksendsignermapping */
     @Json(name = "sEzsignbulksendsignermappingDescription")
-    val sEzsignbulksendsignermappingDescription: kotlin.String,
+    override val sEzsignbulksendsignermappingDescription: kotlin.String,
 
     /* The unique ID of the User */
     @Json(name = "fkiUserID")
-    val fkiUserID: kotlin.Int? = null
+    override val fkiUserID: kotlin.Int? = null
 
-) {
+) : EzsignbulksendsignermappingResponse {
 
 
 }

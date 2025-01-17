@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseObjDebug
 import eZmaxApi.models.CommonResponseObjDebugPayload
 import eZmaxApi.models.EzsignfolderCreateObjectV2ResponseMPayload
@@ -34,15 +35,15 @@ import com.squareup.moshi.JsonClass
 data class EzsignfolderCreateObjectV2Response (
 
     @Json(name = "objDebugPayload")
-    val objDebugPayload: CommonResponseObjDebugPayload,
+    override val objDebugPayload: CommonResponseObjDebugPayload,
 
     @Json(name = "mPayload")
     val mPayload: EzsignfolderCreateObjectV2ResponseMPayload,
 
     @Json(name = "objDebug")
-    val objDebug: CommonResponseObjDebug? = null
+    override val objDebug: CommonResponseObjDebug? = null
 
-) {
+) : CommonResponse {
 
 
 }

@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.CreditcardclientResponse
 import eZmaxApi.models.CreditcarddetailResponseCompound
 
 import com.squareup.moshi.Json
@@ -33,36 +34,36 @@ import com.squareup.moshi.JsonClass
  */
 
 
-data class CreditcardclientResponseCompound (
+class CreditcardclientResponseCompound (
 
     /* The unique ID of the Creditcardclient */
     @Json(name = "pkiCreditcardclientID")
-    val pkiCreditcardclientID: kotlin.Int,
+    override val pkiCreditcardclientID: kotlin.Int,
 
     /* The unique ID of the Creditcarddetail */
     @Json(name = "fkiCreditcarddetailID")
-    val fkiCreditcarddetailID: kotlin.Int,
+    override val fkiCreditcarddetailID: kotlin.Int,
 
     /* Whether if it's the creditcardclient is the default one */
     @Json(name = "bCreditcardclientrelationIsdefault")
-    val bCreditcardclientrelationIsdefault: kotlin.Boolean,
+    override val bCreditcardclientrelationIsdefault: kotlin.Boolean,
 
     /* The description of the Creditcardclient */
     @Json(name = "sCreditcardclientDescription")
-    val sCreditcardclientDescription: kotlin.String,
+    override val sCreditcardclientDescription: kotlin.String,
 
     /* Whether if it's an allowedagencypayment */
     @Json(name = "bCreditcardclientAllowedcompanypayment")
-    val bCreditcardclientAllowedcompanypayment: kotlin.Boolean,
+    override val bCreditcardclientAllowedcompanypayment: kotlin.Boolean,
 
     /* Whether if it's an allowedtranquillit */
     @Json(name = "bCreditcardclientAllowedtranquillit")
-    val bCreditcardclientAllowedtranquillit: kotlin.Boolean,
+    override val bCreditcardclientAllowedtranquillit: kotlin.Boolean,
 
     @Json(name = "objCreditcarddetail")
-    val objCreditcarddetail: CreditcarddetailResponseCompound
+    override val objCreditcarddetail: CreditcarddetailResponseCompound
 
-) {
+) : CreditcardclientResponse {
 
 
 }

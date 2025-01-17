@@ -20,6 +20,7 @@ import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.ClonehistoryGetListV1Response
 import eZmaxApi.models.ClonehistoryGetListV1ResponseMPayload
+import eZmaxApi.models.CommonResponseGetList
 import eZmaxApi.models.CommonResponseObjDebug
 import eZmaxApi.models.CommonResponseObjDebugPayloadGetList
 
@@ -28,22 +29,10 @@ class ClonehistoryGetListV1ResponseTest : ShouldSpec() {
         // uncomment below to create an instance of ClonehistoryGetListV1Response
         //val modelInstance = ClonehistoryGetListV1Response()
 
-        // to test the property `objDebugPayload`
-        should("test objDebugPayload") {
-            // uncomment below to test the property
-            //modelInstance.objDebugPayload shouldBe ("TODO")
-        }
-
         // to test the property `mPayload`
         should("test mPayload") {
             // uncomment below to test the property
             //modelInstance.mPayload shouldBe ("TODO")
-        }
-
-        // to test the property `objDebug`
-        should("test objDebug") {
-            // uncomment below to test the property
-            //modelInstance.objDebug shouldBe ("TODO")
         }
 
     }

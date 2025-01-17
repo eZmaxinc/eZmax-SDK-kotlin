@@ -21,41 +21,12 @@ import io.kotlintest.specs.ShouldSpec
 import eZmaxApi.models.CustomNotificationtestgetnotificationtestsResponse
 import eZmaxApi.models.FieldENotificationpreferenceStatus
 import eZmaxApi.models.MultilingualNotificationtestName
+import eZmaxApi.models.NotificationtestResponse
 
 class CustomNotificationtestgetnotificationtestsResponseTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of CustomNotificationtestgetnotificationtestsResponse
         //val modelInstance = CustomNotificationtestgetnotificationtestsResponse()
-
-        // to test the property `pkiNotificationtestID` - The unique ID of the Notificationtest
-        should("test pkiNotificationtestID") {
-            // uncomment below to test the property
-            //modelInstance.pkiNotificationtestID shouldBe ("TODO")
-        }
-
-        // to test the property `objNotificationtestName`
-        should("test objNotificationtestName") {
-            // uncomment below to test the property
-            //modelInstance.objNotificationtestName shouldBe ("TODO")
-        }
-
-        // to test the property `fkiNotificationsubsectionID` - The unique ID of the Notificationsubsection
-        should("test fkiNotificationsubsectionID") {
-            // uncomment below to test the property
-            //modelInstance.fkiNotificationsubsectionID shouldBe ("TODO")
-        }
-
-        // to test the property `sNotificationtestFunction` - The function name of the Notificationtest
-        should("test sNotificationtestFunction") {
-            // uncomment below to test the property
-            //modelInstance.sNotificationtestFunction shouldBe ("TODO")
-        }
-
-        // to test the property `sNotificationtestNameX` - The name of the Notificationtest in the language of the requester
-        should("test sNotificationtestNameX") {
-            // uncomment below to test the property
-            //modelInstance.sNotificationtestNameX shouldBe ("TODO")
-        }
 
         // to test the property `eNotificationpreferenceStatus`
         should("test eNotificationpreferenceStatus") {

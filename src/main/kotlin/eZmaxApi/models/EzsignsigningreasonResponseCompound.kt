@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.EzsignsigningreasonResponse
 import eZmaxApi.models.MultilingualEzsignsigningreasonDescription
 
 import com.squareup.moshi.Json
@@ -29,20 +30,20 @@ import com.squareup.moshi.JsonClass
  */
 
 
-data class EzsignsigningreasonResponseCompound (
+class EzsignsigningreasonResponseCompound (
 
     /* The unique ID of the Ezsignsigningreason */
     @Json(name = "pkiEzsignsigningreasonID")
-    val pkiEzsignsigningreasonID: kotlin.Int,
+    override val pkiEzsignsigningreasonID: kotlin.Int,
 
     @Json(name = "objEzsignsigningreasonDescription")
-    val objEzsignsigningreasonDescription: MultilingualEzsignsigningreasonDescription,
+    override val objEzsignsigningreasonDescription: MultilingualEzsignsigningreasonDescription,
 
     /* Whether the ezsignsigningreason is active or not */
     @Json(name = "bEzsignsigningreasonIsactive")
-    val bEzsignsigningreasonIsactive: kotlin.Boolean
+    override val bEzsignsigningreasonIsactive: kotlin.Boolean
 
-) {
+) : EzsignsigningreasonResponse {
 
 
 }

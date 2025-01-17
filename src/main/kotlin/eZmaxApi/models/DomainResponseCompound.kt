@@ -16,6 +16,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.CommonAudit
+import eZmaxApi.models.DomainResponse
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -37,32 +38,32 @@ data class DomainResponseCompound (
 
     /* The unique ID of the Domain */
     @Json(name = "pkiDomainID")
-    val pkiDomainID: kotlin.Int,
+    override val pkiDomainID: kotlin.Int,
 
     /* The name of the Domain */
     @Json(name = "sDomainName")
-    val sDomainName: kotlin.String,
+    override val sDomainName: kotlin.String,
 
     /* Whether the DKIM is valid or not */
     @Json(name = "bDomainValiddkim")
-    val bDomainValiddkim: kotlin.Boolean,
+    override val bDomainValiddkim: kotlin.Boolean,
 
     /* Whether the mail from is valid or not */
     @Json(name = "bDomainValidmailfrom")
-    val bDomainValidmailfrom: kotlin.Boolean,
+    override val bDomainValidmailfrom: kotlin.Boolean,
 
     /* Whether the customer has access to it or not */
     @Json(name = "bDomainValidcustomer")
-    val bDomainValidcustomer: kotlin.Boolean,
+    override val bDomainValidcustomer: kotlin.Boolean,
 
     @Json(name = "objAudit")
-    val objAudit: CommonAudit,
+    override val objAudit: CommonAudit,
 
     /*  */
     @Json(name = "a_objDnsrecord")
     val aObjDnsrecord: kotlin.collections.List<kotlin.Any>
 
-) {
+) : DomainResponse {
 
 
 }

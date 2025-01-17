@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.ContactRequest
 import eZmaxApi.models.ContactinformationsRequestCompound
 
 import com.squareup.moshi.Json
@@ -37,32 +38,32 @@ data class ContactRequestCompound (
 
     /* The unique ID of the Contacttitle.  Valid values:  |Value|Description| |-|-| |1|Ms.| |2|Mr.| |4|(Blank)| |5|Me (For Notaries)| */
     @Json(name = "fkiContacttitleID")
-    val fkiContacttitleID: kotlin.Int,
+    override val fkiContacttitleID: kotlin.Int,
 
     /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| */
     @Json(name = "fkiLanguageID")
-    val fkiLanguageID: kotlin.Int,
+    override val fkiLanguageID: kotlin.Int,
 
     /* The First name of the contact */
     @Json(name = "sContactFirstname")
-    val sContactFirstname: kotlin.String,
+    override val sContactFirstname: kotlin.String,
 
     /* The Last name of the contact */
     @Json(name = "sContactLastname")
-    val sContactLastname: kotlin.String,
+    override val sContactLastname: kotlin.String,
 
     /* The Company name of the contact */
     @Json(name = "sContactCompany")
-    val sContactCompany: kotlin.String,
+    override val sContactCompany: kotlin.String,
 
     @Json(name = "objContactinformations")
     val objContactinformations: ContactinformationsRequestCompound,
 
     /* The Birth Date of the contact */
     @Json(name = "dtContactBirthdate")
-    val dtContactBirthdate: kotlin.String? = null
+    override val dtContactBirthdate: kotlin.String? = null
 
-) {
+) : ContactRequest {
 
 
 }

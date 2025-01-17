@@ -19,35 +19,12 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.DiscussionmessageRequestCompound
+import eZmaxApi.models.DiscussionmessageRequest
 
 class DiscussionmessageRequestCompoundTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of DiscussionmessageRequestCompound
         //val modelInstance = DiscussionmessageRequestCompound()
-
-        // to test the property `fkiDiscussionID` - The unique ID of the Discussion
-        should("test fkiDiscussionID") {
-            // uncomment below to test the property
-            //modelInstance.fkiDiscussionID shouldBe ("TODO")
-        }
-
-        // to test the property `tDiscussionmessageContent` - The content of the Discussionmessage
-        should("test tDiscussionmessageContent") {
-            // uncomment below to test the property
-            //modelInstance.tDiscussionmessageContent shouldBe ("TODO")
-        }
-
-        // to test the property `pkiDiscussionmessageID` - The unique ID of the Discussionmessage
-        should("test pkiDiscussionmessageID") {
-            // uncomment below to test the property
-            //modelInstance.pkiDiscussionmessageID shouldBe ("TODO")
-        }
-
-        // to test the property `fkiDiscussionmembershipIDActionrequired` - The unique ID of the Discussionmembership
-        should("test fkiDiscussionmembershipIDActionrequired") {
-            // uncomment below to test the property
-            //modelInstance.fkiDiscussionmembershipIDActionrequired shouldBe ("TODO")
-        }
 
     }
 }

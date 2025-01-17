@@ -21,35 +21,12 @@ import io.kotlintest.specs.ShouldSpec
 import eZmaxApi.models.UsergroupResponseCompound
 import eZmaxApi.models.EmailRequest
 import eZmaxApi.models.MultilingualUsergroupName
+import eZmaxApi.models.UsergroupResponse
 
 class UsergroupResponseCompoundTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of UsergroupResponseCompound
         //val modelInstance = UsergroupResponseCompound()
-
-        // to test the property `pkiUsergroupID` - The unique ID of the Usergroup
-        should("test pkiUsergroupID") {
-            // uncomment below to test the property
-            //modelInstance.pkiUsergroupID shouldBe ("TODO")
-        }
-
-        // to test the property `objUsergroupName`
-        should("test objUsergroupName") {
-            // uncomment below to test the property
-            //modelInstance.objUsergroupName shouldBe ("TODO")
-        }
-
-        // to test the property `sUsergroupNameX` - The Name of the Usergroup in the language of the requester
-        should("test sUsergroupNameX") {
-            // uncomment below to test the property
-            //modelInstance.sUsergroupNameX shouldBe ("TODO")
-        }
-
-        // to test the property `objEmail`
-        should("test objEmail") {
-            // uncomment below to test the property
-            //modelInstance.objEmail shouldBe ("TODO")
-        }
 
     }
 }

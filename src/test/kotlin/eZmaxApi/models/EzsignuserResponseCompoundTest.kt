@@ -21,35 +21,12 @@ import io.kotlintest.specs.ShouldSpec
 import eZmaxApi.models.EzsignuserResponseCompound
 import eZmaxApi.models.CommonAudit
 import eZmaxApi.models.ContactResponseCompound
+import eZmaxApi.models.EzsignuserResponse
 
 class EzsignuserResponseCompoundTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of EzsignuserResponseCompound
         //val modelInstance = EzsignuserResponseCompound()
-
-        // to test the property `pkiEzsignuserID` - The unique ID of the Ezsignuser
-        should("test pkiEzsignuserID") {
-            // uncomment below to test the property
-            //modelInstance.pkiEzsignuserID shouldBe ("TODO")
-        }
-
-        // to test the property `fkiContactID` - The unique ID of the Contact
-        should("test fkiContactID") {
-            // uncomment below to test the property
-            //modelInstance.fkiContactID shouldBe ("TODO")
-        }
-
-        // to test the property `objContact`
-        should("test objContact") {
-            // uncomment below to test the property
-            //modelInstance.objContact shouldBe ("TODO")
-        }
-
-        // to test the property `objAudit`
-        should("test objAudit") {
-            // uncomment below to test the property
-            //modelInstance.objAudit shouldBe ("TODO")
-        }
 
     }
 }

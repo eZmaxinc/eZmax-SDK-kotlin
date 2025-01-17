@@ -18,6 +18,7 @@ package eZmaxApi.models
 import eZmaxApi.models.FieldEWebhookEzsignevent
 import eZmaxApi.models.FieldEWebhookManagementevent
 import eZmaxApi.models.FieldEWebhookModule
+import eZmaxApi.models.WebhookRequest
 import eZmaxApi.models.WebhookheaderRequestCompound
 
 import com.squareup.moshi.Json
@@ -46,53 +47,53 @@ data class WebhookRequestCompound (
 
     /* The description of the Webhook */
     @Json(name = "sWebhookDescription")
-    val sWebhookDescription: kotlin.String,
+    override val sWebhookDescription: kotlin.String,
 
     @Json(name = "eWebhookModule")
-    val eWebhookModule: FieldEWebhookModule,
+    override val eWebhookModule: FieldEWebhookModule,
 
     /* The URL of the Webhook callback */
     @Json(name = "sWebhookUrl")
-    val sWebhookUrl: kotlin.String,
+    override val sWebhookUrl: kotlin.String,
 
     /* The email that will receive the Webhook in case all attempts fail */
     @Json(name = "sWebhookEmailfailed")
-    val sWebhookEmailfailed: kotlin.String,
+    override val sWebhookEmailfailed: kotlin.String,
 
     /* Whether the Webhook is active or not */
     @Json(name = "bWebhookIsactive")
-    val bWebhookIsactive: kotlin.Boolean,
+    override val bWebhookIsactive: kotlin.Boolean,
 
     /* Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use */
     @Json(name = "bWebhookSkipsslvalidation")
-    val bWebhookSkipsslvalidation: kotlin.Boolean,
+    override val bWebhookSkipsslvalidation: kotlin.Boolean,
 
     /* The unique ID of the Webhook */
     @Json(name = "pkiWebhookID")
-    val pkiWebhookID: kotlin.Int? = null,
+    override val pkiWebhookID: kotlin.Int? = null,
 
     /* The unique ID of the Authenticationexternal */
     @Json(name = "fkiAuthenticationexternalID")
-    val fkiAuthenticationexternalID: kotlin.Int? = null,
+    override val fkiAuthenticationexternalID: kotlin.Int? = null,
 
     /* The unique ID of the Ezsignfoldertype. */
     @Json(name = "fkiEzsignfoldertypeID")
-    val fkiEzsignfoldertypeID: kotlin.Int? = null,
+    override val fkiEzsignfoldertypeID: kotlin.Int? = null,
 
     @Json(name = "eWebhookEzsignevent")
-    val eWebhookEzsignevent: FieldEWebhookEzsignevent? = null,
+    override val eWebhookEzsignevent: FieldEWebhookEzsignevent? = null,
 
     @Json(name = "eWebhookManagementevent")
-    val eWebhookManagementevent: FieldEWebhookManagementevent? = null,
+    override val eWebhookManagementevent: FieldEWebhookManagementevent? = null,
 
     /* Whether the requests will be signed or not */
     @Json(name = "bWebhookIssigned")
-    val bWebhookIssigned: kotlin.Boolean? = null,
+    override val bWebhookIssigned: kotlin.Boolean? = null,
 
     @Json(name = "a_objWebhookheader")
     val aObjWebhookheader: kotlin.collections.List<WebhookheaderRequestCompound>? = null
 
-) {
+) : WebhookRequest {
 
 
 }

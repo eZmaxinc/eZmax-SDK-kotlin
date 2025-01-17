@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.DiscussionRequest
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -28,21 +29,21 @@ import com.squareup.moshi.JsonClass
  */
 
 
-data class DiscussionRequestCompound (
+class DiscussionRequestCompound (
 
     /* The description of the Discussion */
     @Json(name = "sDiscussionDescription")
-    val sDiscussionDescription: kotlin.String,
+    override val sDiscussionDescription: kotlin.String,
 
     /* The unique ID of the Discussion */
     @Json(name = "pkiDiscussionID")
-    val pkiDiscussionID: kotlin.Int? = null,
+    override val pkiDiscussionID: kotlin.Int? = null,
 
     /* Whether if it's an closed */
     @Json(name = "bDiscussionClosed")
-    val bDiscussionClosed: kotlin.Boolean? = null
+    override val bDiscussionClosed: kotlin.Boolean? = null
 
-) {
+) : DiscussionRequest {
 
 
 }

@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.ColleagueRequestV2
 import eZmaxApi.models.FieldEColleagueEzsign
 import eZmaxApi.models.FieldEColleagueRealestateinprogess
 
@@ -41,63 +42,63 @@ import com.squareup.moshi.JsonClass
  */
 
 
-data class ColleagueRequestCompoundV2 (
+class ColleagueRequestCompoundV2 (
 
     /* The unique ID of the User */
     @Json(name = "fkiUserID")
-    val fkiUserID: kotlin.Int,
+    override val fkiUserID: kotlin.Int,
 
     /* The unique ID of the User */
     @Json(name = "fkiUserIDColleague")
-    val fkiUserIDColleague: kotlin.Int,
+    override val fkiUserIDColleague: kotlin.Int,
 
     /* Whether the email can be used by the cloning user in Ezsign */
     @Json(name = "bColleagueEzsignemail")
-    val bColleagueEzsignemail: kotlin.Boolean,
+    override val bColleagueEzsignemail: kotlin.Boolean,
 
     /* Whether the cloning user has access to the financial */
     @Json(name = "bColleagueFinancial")
-    val bColleagueFinancial: kotlin.Boolean,
+    override val bColleagueFinancial: kotlin.Boolean,
 
     /* Whether the cloning user has access to the cloned user email to send communications */
     @Json(name = "bColleagueUsecloneemail")
-    val bColleagueUsecloneemail: kotlin.Boolean,
+    override val bColleagueUsecloneemail: kotlin.Boolean,
 
     /* Whether the cloning user has access to the attachment */
     @Json(name = "bColleagueAttachment")
-    val bColleagueAttachment: kotlin.Boolean,
+    override val bColleagueAttachment: kotlin.Boolean,
 
     /* Whether the cloning user has access to canafe */
     @Json(name = "bColleagueCanafe")
-    val bColleagueCanafe: kotlin.Boolean,
+    override val bColleagueCanafe: kotlin.Boolean,
 
     /* Whether the cloning user copies the permission of the cloned user */
     @Json(name = "bColleaguePermission")
-    val bColleaguePermission: kotlin.Boolean,
+    override val bColleaguePermission: kotlin.Boolean,
 
     /* Whether if the cloning user has access to the completed folders in real estate */
     @Json(name = "bColleagueRealestatecompleted")
-    val bColleagueRealestatecompleted: kotlin.Boolean,
+    override val bColleagueRealestatecompleted: kotlin.Boolean,
 
     @Json(name = "eColleagueEzsign")
-    val eColleagueEzsign: FieldEColleagueEzsign,
+    override val eColleagueEzsign: FieldEColleagueEzsign,
 
     @Json(name = "eColleagueRealestateinprogress")
-    val eColleagueRealestateinprogress: FieldEColleagueRealestateinprogess,
+    override val eColleagueRealestateinprogress: FieldEColleagueRealestateinprogess,
 
     /* The unique ID of the Colleague */
     @Json(name = "pkiColleagueID")
-    val pkiColleagueID: kotlin.Int? = null,
+    override val pkiColleagueID: kotlin.Int? = null,
 
     /* The from of the Colleague */
     @Json(name = "dtColleagueFrom")
-    val dtColleagueFrom: kotlin.String? = null,
+    override val dtColleagueFrom: kotlin.String? = null,
 
     /* The to of the Colleague */
     @Json(name = "dtColleagueTo")
-    val dtColleagueTo: kotlin.String? = null
+    override val dtColleagueTo: kotlin.String? = null
 
-) {
+) : ColleagueRequestV2 {
 
 
 }

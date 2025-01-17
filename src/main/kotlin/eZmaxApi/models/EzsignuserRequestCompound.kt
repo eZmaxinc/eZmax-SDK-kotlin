@@ -16,6 +16,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.ContactRequestCompoundV2
+import eZmaxApi.models.EzsignuserRequest
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -29,20 +30,20 @@ import com.squareup.moshi.JsonClass
  */
 
 
-data class EzsignuserRequestCompound (
+class EzsignuserRequestCompound (
 
     /* The unique ID of the Contact */
     @Json(name = "fkiContactID")
-    val fkiContactID: kotlin.Int,
+    override val fkiContactID: kotlin.Int,
 
     @Json(name = "objContact")
-    val objContact: ContactRequestCompoundV2,
+    override val objContact: ContactRequestCompoundV2,
 
     /* The unique ID of the Ezsignuser */
     @Json(name = "pkiEzsignuserID")
-    val pkiEzsignuserID: kotlin.Int? = null
+    override val pkiEzsignuserID: kotlin.Int? = null
 
-) {
+) : EzsignuserRequest {
 
 
 }

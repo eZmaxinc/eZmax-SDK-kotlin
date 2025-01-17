@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.EzmaxinvoicingsummaryinternalResponse
 import eZmaxApi.models.EzmaxinvoicingsummaryinternaldetailResponseCompound
 import eZmaxApi.models.MultilingualEzmaxinvoicingsummaryinternalDescription
 
@@ -37,19 +38,19 @@ import com.squareup.moshi.JsonClass
 data class EzmaxinvoicingsummaryinternalResponseCompound (
 
     @Json(name = "objEzmaxinvoicingsummaryinternalDescription")
-    val objEzmaxinvoicingsummaryinternalDescription: MultilingualEzmaxinvoicingsummaryinternalDescription,
+    override val objEzmaxinvoicingsummaryinternalDescription: MultilingualEzmaxinvoicingsummaryinternalDescription,
 
     /* The Ezmaxinvoicingsummaryinternal description in the language of the requester */
     @Json(name = "sEzmaxinvoicingsummaryinternalDescriptionX")
-    val sEzmaxinvoicingsummaryinternalDescriptionX: kotlin.String,
+    override val sEzmaxinvoicingsummaryinternalDescriptionX: kotlin.String,
 
     /* The unique ID of the Billingentityinternal. */
     @Json(name = "fkiBillingentityinternalID")
-    val fkiBillingentityinternalID: kotlin.Int,
+    override val fkiBillingentityinternalID: kotlin.Int,
 
     /* The description of the Billingentityinternal in the language of the requester */
     @Json(name = "sBillingentityinternalDescriptionX")
-    val sBillingentityinternalDescriptionX: kotlin.String,
+    override val sBillingentityinternalDescriptionX: kotlin.String,
 
     /*  */
     @Json(name = "a_objEzmaxinvoicingsummaryinternaldetail")
@@ -57,13 +58,13 @@ data class EzmaxinvoicingsummaryinternalResponseCompound (
 
     /* The unique ID of the Ezmaxinvoicingsummaryinternal */
     @Json(name = "pkiEzmaxinvoicingsummaryinternalID")
-    val pkiEzmaxinvoicingsummaryinternalID: kotlin.Int? = null,
+    override val pkiEzmaxinvoicingsummaryinternalID: kotlin.Int? = null,
 
     /* The unique ID of the Ezmaxinvoicing */
     @Json(name = "fkiEzmaxinvoicingID")
-    val fkiEzmaxinvoicingID: kotlin.Int? = null
+    override val fkiEzmaxinvoicingID: kotlin.Int? = null
 
-) {
+) : EzmaxinvoicingsummaryinternalResponse {
 
 
 }

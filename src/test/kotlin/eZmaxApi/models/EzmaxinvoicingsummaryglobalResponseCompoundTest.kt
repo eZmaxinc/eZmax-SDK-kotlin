@@ -20,125 +20,12 @@ import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.EzmaxinvoicingsummaryglobalResponseCompound
 import eZmaxApi.models.EzmaxinvoicingcommissionResponseCompound
+import eZmaxApi.models.EzmaxinvoicingsummaryglobalResponse
 
 class EzmaxinvoicingsummaryglobalResponseCompoundTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of EzmaxinvoicingsummaryglobalResponseCompound
         //val modelInstance = EzmaxinvoicingsummaryglobalResponseCompound()
-
-        // to test the property `fkiEzmaxproductID` - The unique ID of the Ezmaxproduct
-        should("test fkiEzmaxproductID") {
-            // uncomment below to test the property
-            //modelInstance.fkiEzmaxproductID shouldBe ("TODO")
-        }
-
-        // to test the property `sEzmaxproductDescriptionX` - The description of the Ezmaxproduct in the language of the requester
-        should("test sEzmaxproductDescriptionX") {
-            // uncomment below to test the property
-            //modelInstance.sEzmaxproductDescriptionX shouldBe ("TODO")
-        }
-
-        // to test the property `dtEzmaxinvoicingsummaryglobalStart` - The start date for the Ezmaxinvoicingsummaryglobal
-        should("test dtEzmaxinvoicingsummaryglobalStart") {
-            // uncomment below to test the property
-            //modelInstance.dtEzmaxinvoicingsummaryglobalStart shouldBe ("TODO")
-        }
-
-        // to test the property `dtEzmaxinvoicingsummaryglobalEnd` - The end date for the Ezmaxinvoicingsummaryglobal
-        should("test dtEzmaxinvoicingsummaryglobalEnd") {
-            // uncomment below to test the property
-            //modelInstance.dtEzmaxinvoicingsummaryglobalEnd shouldBe ("TODO")
-        }
-
-        // to test the property `iEzmaxinvoicingsummaryglobalDays` - The number of days for the Ezmaxinvoicingsummaryglobal
-        should("test iEzmaxinvoicingsummaryglobalDays") {
-            // uncomment below to test the property
-            //modelInstance.iEzmaxinvoicingsummaryglobalDays shouldBe ("TODO")
-        }
-
-        // to test the property `dEzmaxinvoicingsummaryglobalCountreal` - The count item calculated
-        should("test dEzmaxinvoicingsummaryglobalCountreal") {
-            // uncomment below to test the property
-            //modelInstance.dEzmaxinvoicingsummaryglobalCountreal shouldBe ("TODO")
-        }
-
-        // to test the property `dEzmaxinvoicingsummaryglobalCountbilled` - The count item billed
-        should("test dEzmaxinvoicingsummaryglobalCountbilled") {
-            // uncomment below to test the property
-            //modelInstance.dEzmaxinvoicingsummaryglobalCountbilled shouldBe ("TODO")
-        }
-
-        // to test the property `dEzmaxinvoicingsummaryglobalSubtotal` - The Ezmaxinvoicingsummaryglobal subtotal
-        should("test dEzmaxinvoicingsummaryglobalSubtotal") {
-            // uncomment below to test the property
-            //modelInstance.dEzmaxinvoicingsummaryglobalSubtotal shouldBe ("TODO")
-        }
-
-        // to test the property `dEzmaxinvoicingsummaryglobalRebateamount` - The rebate amount for the Ezmaxinvoicingsummaryglobal
-        should("test dEzmaxinvoicingsummaryglobalRebateamount") {
-            // uncomment below to test the property
-            //modelInstance.dEzmaxinvoicingsummaryglobalRebateamount shouldBe ("TODO")
-        }
-
-        // to test the property `dEzmaxinvoicingsummaryglobalRebatepercent` - The rebate percentage of the Ezmaxinvoicingsummaryglobal
-        should("test dEzmaxinvoicingsummaryglobalRebatepercent") {
-            // uncomment below to test the property
-            //modelInstance.dEzmaxinvoicingsummaryglobalRebatepercent shouldBe ("TODO")
-        }
-
-        // to test the property `dEzmaxinvoicingsummaryglobalRebatetotal` - The rebate amount total for the Ezmaxinvoicingsummaryglobal
-        should("test dEzmaxinvoicingsummaryglobalRebatetotal") {
-            // uncomment below to test the property
-            //modelInstance.dEzmaxinvoicingsummaryglobalRebatetotal shouldBe ("TODO")
-        }
-
-        // to test the property `dEzmaxinvoicingsummaryglobalTotal` - The Ezmaxinvoicingsummaryglobal total
-        should("test dEzmaxinvoicingsummaryglobalTotal") {
-            // uncomment below to test the property
-            //modelInstance.dEzmaxinvoicingsummaryglobalTotal shouldBe ("TODO")
-        }
-
-        // to test the property `bEzmaxinvoicingsummaryglobalAdjustment` - Whether it is adjustment for the Ezmaxinvoicingsummaryglobal
-        should("test bEzmaxinvoicingsummaryglobalAdjustment") {
-            // uncomment below to test the property
-            //modelInstance.bEzmaxinvoicingsummaryglobalAdjustment shouldBe ("TODO")
-        }
-
-        // to test the property `tEzmaxproductHelpX` - The help message of the Ezmaxproduct in the language of the requester
-        should("test tEzmaxproductHelpX") {
-            // uncomment below to test the property
-            //modelInstance.tEzmaxproductHelpX shouldBe ("TODO")
-        }
-
-        // to test the property `pkiEzmaxinvoicingsummaryglobalID` - The unique ID of the Ezmaxinvoicingsummaryglobal
-        should("test pkiEzmaxinvoicingsummaryglobalID") {
-            // uncomment below to test the property
-            //modelInstance.pkiEzmaxinvoicingsummaryglobalID shouldBe ("TODO")
-        }
-
-        // to test the property `fkiEzmaxinvoicingID` - The unique ID of the Ezmaxinvoicing
-        should("test fkiEzmaxinvoicingID") {
-            // uncomment below to test the property
-            //modelInstance.fkiEzmaxinvoicingID shouldBe ("TODO")
-        }
-
-        // to test the property `dEzmaxinvoicingsummaryglobalRepresentative` - The amount of commission for the representative
-        should("test dEzmaxinvoicingsummaryglobalRepresentative") {
-            // uncomment below to test the property
-            //modelInstance.dEzmaxinvoicingsummaryglobalRepresentative shouldBe ("TODO")
-        }
-
-        // to test the property `dEzmaxinvoicingsummaryglobalPartner` - The amount of commission for the partner
-        should("test dEzmaxinvoicingsummaryglobalPartner") {
-            // uncomment below to test the property
-            //modelInstance.dEzmaxinvoicingsummaryglobalPartner shouldBe ("TODO")
-        }
-
-        // to test the property `dEzmaxinvoicingsummaryglobalNet` - The net amount of the Ezmaxinvoicingsummaryglobal
-        should("test dEzmaxinvoicingsummaryglobalNet") {
-            // uncomment below to test the property
-            //modelInstance.dEzmaxinvoicingsummaryglobalNet shouldBe ("TODO")
-        }
 
         // to test the property `aObjEzmaxinvoicingcommission`
         should("test aObjEzmaxinvoicingcommission") {

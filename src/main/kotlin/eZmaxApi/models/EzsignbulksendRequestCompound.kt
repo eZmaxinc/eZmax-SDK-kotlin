@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.EzsignbulksendRequest
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -32,37 +33,37 @@ import com.squareup.moshi.JsonClass
  */
 
 
-data class EzsignbulksendRequestCompound (
+class EzsignbulksendRequestCompound (
 
     /* The unique ID of the Ezsignfoldertype. */
     @Json(name = "fkiEzsignfoldertypeID")
-    val fkiEzsignfoldertypeID: kotlin.Int,
+    override val fkiEzsignfoldertypeID: kotlin.Int,
 
     /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| */
     @Json(name = "fkiLanguageID")
-    val fkiLanguageID: kotlin.Int,
+    override val fkiLanguageID: kotlin.Int,
 
     /* The description of the Ezsignbulksend */
     @Json(name = "sEzsignbulksendDescription")
-    val sEzsignbulksendDescription: kotlin.String,
+    override val sEzsignbulksendDescription: kotlin.String,
 
     /* Note about the Ezsignbulksend */
     @Json(name = "tEzsignbulksendNote")
-    val tEzsignbulksendNote: kotlin.String,
+    override val tEzsignbulksendNote: kotlin.String,
 
     /* Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation */
     @Json(name = "bEzsignbulksendNeedvalidation")
-    val bEzsignbulksendNeedvalidation: kotlin.Boolean,
+    override val bEzsignbulksendNeedvalidation: kotlin.Boolean,
 
     /* Whether the Ezsignbulksend is active or not */
     @Json(name = "bEzsignbulksendIsactive")
-    val bEzsignbulksendIsactive: kotlin.Boolean,
+    override val bEzsignbulksendIsactive: kotlin.Boolean,
 
     /* The unique ID of the Ezsignbulksend */
     @Json(name = "pkiEzsignbulksendID")
-    val pkiEzsignbulksendID: kotlin.Int? = null
+    override val pkiEzsignbulksendID: kotlin.Int? = null
 
-) {
+) : EzsignbulksendRequest {
 
 
 }

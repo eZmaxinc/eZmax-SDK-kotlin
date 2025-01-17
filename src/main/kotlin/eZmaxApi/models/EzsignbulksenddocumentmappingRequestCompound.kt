@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.EzsignbulksenddocumentmappingRequest
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -29,25 +30,25 @@ import com.squareup.moshi.JsonClass
  */
 
 
-data class EzsignbulksenddocumentmappingRequestCompound (
+class EzsignbulksenddocumentmappingRequestCompound (
 
     /* The unique ID of the Ezsignbulksend */
     @Json(name = "fkiEzsignbulksendID")
-    val fkiEzsignbulksendID: kotlin.Int,
+    override val fkiEzsignbulksendID: kotlin.Int,
 
     /* The unique ID of the Ezsignbulksenddocumentmapping. */
     @Json(name = "pkiEzsignbulksenddocumentmappingID")
-    val pkiEzsignbulksenddocumentmappingID: kotlin.Int? = null,
+    override val pkiEzsignbulksenddocumentmappingID: kotlin.Int? = null,
 
     /* The unique ID of the Ezsigntemplatepackage */
     @Json(name = "fkiEzsigntemplatepackageID")
-    val fkiEzsigntemplatepackageID: kotlin.Int? = null,
+    override val fkiEzsigntemplatepackageID: kotlin.Int? = null,
 
     /* The unique ID of the Ezsigntemplate */
     @Json(name = "fkiEzsigntemplateID")
-    val fkiEzsigntemplateID: kotlin.Int? = null
+    override val fkiEzsigntemplateID: kotlin.Int? = null
 
-) {
+) : EzsignbulksenddocumentmappingRequest {
 
 
 }

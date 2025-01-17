@@ -20,23 +20,12 @@ import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.BillingentityinternalGetListV1ResponseMPayload
 import eZmaxApi.models.BillingentityinternalListElement
+import eZmaxApi.models.CommonGetListV1ResponseMPayload
 
 class BillingentityinternalGetListV1ResponseMPayloadTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of BillingentityinternalGetListV1ResponseMPayload
         //val modelInstance = BillingentityinternalGetListV1ResponseMPayload()
-
-        // to test the property `iRowReturned` - The number of rows returned
-        should("test iRowReturned") {
-            // uncomment below to test the property
-            //modelInstance.iRowReturned shouldBe ("TODO")
-        }
-
-        // to test the property `iRowFiltered` - The number of rows matching your filters (if any) or the total number of rows
-        should("test iRowFiltered") {
-            // uncomment below to test the property
-            //modelInstance.iRowFiltered shouldBe ("TODO")
-        }
 
         // to test the property `aObjBillingentityinternal`
         should("test aObjBillingentityinternal") {

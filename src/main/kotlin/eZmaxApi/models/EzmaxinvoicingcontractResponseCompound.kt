@@ -16,6 +16,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.CommonAudit
+import eZmaxApi.models.EzmaxinvoicingcontractResponse
 import eZmaxApi.models.FieldEEzmaxinvoicingcontractPaymenttype
 
 import com.squareup.moshi.Json
@@ -36,43 +37,43 @@ import com.squareup.moshi.JsonClass
  */
 
 
-data class EzmaxinvoicingcontractResponseCompound (
+class EzmaxinvoicingcontractResponseCompound (
 
     /* The unique ID of the Ezmaxinvoicingcontract */
     @Json(name = "pkiEzmaxinvoicingcontractID")
-    val pkiEzmaxinvoicingcontractID: kotlin.Int,
+    override val pkiEzmaxinvoicingcontractID: kotlin.Int,
 
     @Json(name = "eEzmaxinvoicingcontractPaymenttype")
-    val eEzmaxinvoicingcontractPaymenttype: FieldEEzmaxinvoicingcontractPaymenttype,
+    override val eEzmaxinvoicingcontractPaymenttype: FieldEEzmaxinvoicingcontractPaymenttype,
 
     /* The length in years of the Ezmaxinvoicingcontract */
     @Json(name = "iEzmaxinvoicingcontractLength")
-    val iEzmaxinvoicingcontractLength: kotlin.Int,
+    override val iEzmaxinvoicingcontractLength: kotlin.Int,
 
     /* The start date of the Ezmaxinvoicingcontract */
     @Json(name = "dtEzmaxinvoicingcontractStart")
-    val dtEzmaxinvoicingcontractStart: kotlin.String,
+    override val dtEzmaxinvoicingcontractStart: kotlin.String,
 
     /* The end date of the Ezmaxinvoicingcontract */
     @Json(name = "dtEzmaxinvoicingcontractEnd")
-    val dtEzmaxinvoicingcontractEnd: kotlin.String,
+    override val dtEzmaxinvoicingcontractEnd: kotlin.String,
 
     /* The price of the license */
     @Json(name = "dEzmaxinvoicingcontractLicense")
-    val dEzmaxinvoicingcontractLicense: kotlin.String,
+    override val dEzmaxinvoicingcontractLicense: kotlin.String,
 
     /* The price for 121QA */
     @Json(name = "dEzmaxinvoicingcontract121qa")
-    val dEzmaxinvoicingcontract121qa: kotlin.String,
+    override val dEzmaxinvoicingcontract121qa: kotlin.String,
 
     /* Whether eZsign is for all agents */
     @Json(name = "bEzmaxinvoicingcontractEzsignallagents")
-    val bEzmaxinvoicingcontractEzsignallagents: kotlin.Boolean,
+    override val bEzmaxinvoicingcontractEzsignallagents: kotlin.Boolean,
 
     @Json(name = "objAudit")
-    val objAudit: CommonAudit
+    override val objAudit: CommonAudit
 
-) {
+) : EzmaxinvoicingcontractResponse {
 
 
 }

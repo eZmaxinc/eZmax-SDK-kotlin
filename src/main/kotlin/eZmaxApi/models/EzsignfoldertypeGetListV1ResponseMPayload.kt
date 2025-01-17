@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.CommonGetListV1ResponseMPayload
 import eZmaxApi.models.EzsignfoldertypeListElement
 
 import com.squareup.moshi.Json
@@ -33,17 +34,17 @@ data class EzsignfoldertypeGetListV1ResponseMPayload (
 
     /* The number of rows returned */
     @Json(name = "iRowReturned")
-    val iRowReturned: kotlin.Int,
+    override val iRowReturned: kotlin.Int,
 
     /* The number of rows matching your filters (if any) or the total number of rows */
     @Json(name = "iRowFiltered")
-    val iRowFiltered: kotlin.Int,
+    override val iRowFiltered: kotlin.Int,
 
     /*  */
     @Json(name = "a_objEzsignfoldertype")
     val aObjEzsignfoldertype: kotlin.collections.List<EzsignfoldertypeListElement>
 
-) {
+) : CommonGetListV1ResponseMPayload {
 
 
 }

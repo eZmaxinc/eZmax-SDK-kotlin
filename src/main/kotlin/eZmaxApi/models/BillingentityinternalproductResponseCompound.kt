@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.BillingentityinternalproductResponse
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -32,37 +33,37 @@ import com.squareup.moshi.JsonClass
  */
 
 
-data class BillingentityinternalproductResponseCompound (
+class BillingentityinternalproductResponseCompound (
 
     /* The unique ID of the Billingentityinternalproduct */
     @Json(name = "pkiBillingentityinternalproductID")
-    val pkiBillingentityinternalproductID: kotlin.Int,
+    override val pkiBillingentityinternalproductID: kotlin.Int,
 
     /* The unique ID of the Billingentityinternal. */
     @Json(name = "fkiBillingentityinternalID")
-    val fkiBillingentityinternalID: kotlin.Int,
+    override val fkiBillingentityinternalID: kotlin.Int,
 
     /* The description of the Billingentityinternal in the language of the requester */
     @Json(name = "sBillingentityinternalDescriptionX")
-    val sBillingentityinternalDescriptionX: kotlin.String,
+    override val sBillingentityinternalDescriptionX: kotlin.String,
 
     /* The unique ID of the Ezmaxproduct */
     @Json(name = "fkiEzmaxproductID")
-    val fkiEzmaxproductID: kotlin.Int,
+    override val fkiEzmaxproductID: kotlin.Int,
 
     /* The description of the Ezmaxproduct in the language of the requester */
     @Json(name = "sEzmaxproductDescriptionX")
-    val sEzmaxproductDescriptionX: kotlin.String,
+    override val sEzmaxproductDescriptionX: kotlin.String,
 
     /* The unique ID of the Billingentityexternal */
     @Json(name = "fkiBillingentityexternalID")
-    val fkiBillingentityexternalID: kotlin.Int,
+    override val fkiBillingentityexternalID: kotlin.Int,
 
     /* The description of the Billingentityexternal */
     @Json(name = "sBillingentityexternalDescription")
-    val sBillingentityexternalDescription: kotlin.String
+    override val sBillingentityexternalDescription: kotlin.String
 
-) {
+) : BillingentityinternalproductResponse {
 
 
 }

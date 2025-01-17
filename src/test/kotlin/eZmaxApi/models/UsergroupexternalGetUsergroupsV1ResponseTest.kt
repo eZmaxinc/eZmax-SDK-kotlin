@@ -19,6 +19,7 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.UsergroupexternalGetUsergroupsV1Response
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseObjDebug
 import eZmaxApi.models.CommonResponseObjDebugPayload
 import eZmaxApi.models.UsergroupexternalGetUsergroupsV1ResponseMPayload
@@ -28,22 +29,10 @@ class UsergroupexternalGetUsergroupsV1ResponseTest : ShouldSpec() {
         // uncomment below to create an instance of UsergroupexternalGetUsergroupsV1Response
         //val modelInstance = UsergroupexternalGetUsergroupsV1Response()
 
-        // to test the property `objDebugPayload`
-        should("test objDebugPayload") {
-            // uncomment below to test the property
-            //modelInstance.objDebugPayload shouldBe ("TODO")
-        }
-
         // to test the property `mPayload`
         should("test mPayload") {
             // uncomment below to test the property
             //modelInstance.mPayload shouldBe ("TODO")
-        }
-
-        // to test the property `objDebug`
-        should("test objDebug") {
-            // uncomment below to test the property
-            //modelInstance.objDebug shouldBe ("TODO")
         }
 
     }

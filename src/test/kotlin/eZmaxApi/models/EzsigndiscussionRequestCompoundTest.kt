@@ -20,47 +20,12 @@ import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.EzsigndiscussionRequestCompound
 import eZmaxApi.models.DiscussionRequest
+import eZmaxApi.models.EzsigndiscussionRequest
 
 class EzsigndiscussionRequestCompoundTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of EzsigndiscussionRequestCompound
         //val modelInstance = EzsigndiscussionRequestCompound()
-
-        // to test the property `fkiEzsigndocumentID` - The unique ID of the Ezsigndocument
-        should("test fkiEzsigndocumentID") {
-            // uncomment below to test the property
-            //modelInstance.fkiEzsigndocumentID shouldBe ("TODO")
-        }
-
-        // to test the property `iEzsigndiscussionPagenumber` - The page number in the Ezsigndocument for the Ezsigndiscussion
-        should("test iEzsigndiscussionPagenumber") {
-            // uncomment below to test the property
-            //modelInstance.iEzsigndiscussionPagenumber shouldBe ("TODO")
-        }
-
-        // to test the property `iEzsigndiscussionX` - The x of the Ezsigndiscussion
-        should("test iEzsigndiscussionX") {
-            // uncomment below to test the property
-            //modelInstance.iEzsigndiscussionX shouldBe ("TODO")
-        }
-
-        // to test the property `iEzsigndiscussionY` - The y of the Ezsigndiscussion
-        should("test iEzsigndiscussionY") {
-            // uncomment below to test the property
-            //modelInstance.iEzsigndiscussionY shouldBe ("TODO")
-        }
-
-        // to test the property `objDiscussion`
-        should("test objDiscussion") {
-            // uncomment below to test the property
-            //modelInstance.objDiscussion shouldBe ("TODO")
-        }
-
-        // to test the property `pkiEzsigndiscussionID` - The unique ID of the Ezsigndiscussion
-        should("test pkiEzsigndiscussionID") {
-            // uncomment below to test the property
-            //modelInstance.pkiEzsigndiscussionID shouldBe ("TODO")
-        }
 
     }
 }

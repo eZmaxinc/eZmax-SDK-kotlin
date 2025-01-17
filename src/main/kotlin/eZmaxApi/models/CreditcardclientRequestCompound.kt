@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.CreditcardclientRequest
 import eZmaxApi.models.CreditcarddetailRequest
 
 import com.squareup.moshi.Json
@@ -35,44 +36,44 @@ import com.squareup.moshi.JsonClass
  */
 
 
-data class CreditcardclientRequestCompound (
+class CreditcardclientRequestCompound (
 
     /* Whether if it's the creditcardclient is the default one */
     @Json(name = "bCreditcardclientrelationIsdefault")
-    val bCreditcardclientrelationIsdefault: kotlin.Boolean,
+    override val bCreditcardclientrelationIsdefault: kotlin.Boolean,
 
     /* The description of the Creditcardclient */
     @Json(name = "sCreditcardclientDescription")
-    val sCreditcardclientDescription: kotlin.String,
+    override val sCreditcardclientDescription: kotlin.String,
 
     /* Whether if it's an allowedagencypayment */
     @Json(name = "bCreditcardclientAllowedcompanypayment")
-    val bCreditcardclientAllowedcompanypayment: kotlin.Boolean,
+    override val bCreditcardclientAllowedcompanypayment: kotlin.Boolean,
 
     /* Whether if it's an allowedroyallepageprotection */
     @Json(name = "bCreditcardclientAllowedezsign")
-    val bCreditcardclientAllowedezsign: kotlin.Boolean,
+    override val bCreditcardclientAllowedezsign: kotlin.Boolean,
 
     /* Whether if it's an allowedtranquillit */
     @Json(name = "bCreditcardclientAllowedtranquillit")
-    val bCreditcardclientAllowedtranquillit: kotlin.Boolean,
+    override val bCreditcardclientAllowedtranquillit: kotlin.Boolean,
 
     @Json(name = "objCreditcarddetail")
-    val objCreditcarddetail: CreditcarddetailRequest,
+    override val objCreditcarddetail: CreditcarddetailRequest,
 
     /* The creditcard card CVV */
     @Json(name = "sCreditcardclientCVV")
-    val sCreditcardclientCVV: kotlin.String,
+    override val sCreditcardclientCVV: kotlin.String,
 
     /* The unique ID of the Creditcardclient */
     @Json(name = "pkiCreditcardclientID")
-    val pkiCreditcardclientID: kotlin.Int? = null,
+    override val pkiCreditcardclientID: kotlin.Int? = null,
 
     /* The creditcard token identifier */
     @Json(name = "fksCreditcardtokenID")
-    val fksCreditcardtokenID: kotlin.String? = null
+    override val fksCreditcardtokenID: kotlin.String? = null
 
-) {
+) : CreditcardclientRequest {
 
 
 }

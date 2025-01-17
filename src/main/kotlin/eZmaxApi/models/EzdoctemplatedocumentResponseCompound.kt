@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.EzdoctemplatedocumentResponse
 import eZmaxApi.models.FieldEEzdoctemplatedocumentPrivacylevel
 import eZmaxApi.models.MultilingualEzdoctemplatedocumentName
 
@@ -39,55 +40,55 @@ import com.squareup.moshi.JsonClass
  */
 
 
-data class EzdoctemplatedocumentResponseCompound (
+class EzdoctemplatedocumentResponseCompound (
 
     /* The unique ID of the Ezdoctemplatedocument */
     @Json(name = "pkiEzdoctemplatedocumentID")
-    val pkiEzdoctemplatedocumentID: kotlin.Int,
+    override val pkiEzdoctemplatedocumentID: kotlin.Int,
 
     /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| */
     @Json(name = "fkiLanguageID")
-    val fkiLanguageID: kotlin.Int,
+    override val fkiLanguageID: kotlin.Int,
 
     /* The unique ID of the Ezdoctemplatetype */
     @Json(name = "fkiEzdoctemplatetypeID")
-    val fkiEzdoctemplatetypeID: kotlin.Int,
+    override val fkiEzdoctemplatetypeID: kotlin.Int,
 
     /* The unique ID of the Ezdoctemplatefieldtypecategory */
     @Json(name = "fkiEzdoctemplatefieldtypecategoryID")
-    val fkiEzdoctemplatefieldtypecategoryID: kotlin.Int,
+    override val fkiEzdoctemplatefieldtypecategoryID: kotlin.Int,
 
     /* Whether the ezdoctemplatedocument is active or not */
     @Json(name = "bEzdoctemplatedocumentIsactive")
-    val bEzdoctemplatedocumentIsactive: kotlin.Boolean,
+    override val bEzdoctemplatedocumentIsactive: kotlin.Boolean,
 
     @Json(name = "objEzdoctemplatedocumentName")
-    val objEzdoctemplatedocumentName: MultilingualEzdoctemplatedocumentName,
+    override val objEzdoctemplatedocumentName: MultilingualEzdoctemplatedocumentName,
 
     /* The description of the Ezdoctemplatefieldtypecategory in the language of the requester */
     @Json(name = "sEzdoctemplatefieldtypecategoryDescriptionX")
-    val sEzdoctemplatefieldtypecategoryDescriptionX: kotlin.String,
+    override val sEzdoctemplatefieldtypecategoryDescriptionX: kotlin.String,
 
     /* The description of the Ezdoctemplatetype in the language of the requester */
     @Json(name = "sEzdoctemplatetypeDescriptionX")
-    val sEzdoctemplatetypeDescriptionX: kotlin.String,
+    override val sEzdoctemplatetypeDescriptionX: kotlin.String,
 
     /* The unique ID of the Ezsignfoldertype. */
     @Json(name = "fkiEzsignfoldertypeID")
-    val fkiEzsignfoldertypeID: kotlin.Int? = null,
+    override val fkiEzsignfoldertypeID: kotlin.Int? = null,
 
     @Json(name = "eEzdoctemplatedocumentPrivacylevel")
-    val eEzdoctemplatedocumentPrivacylevel: FieldEEzdoctemplatedocumentPrivacylevel? = null,
+    override val eEzdoctemplatedocumentPrivacylevel: FieldEEzdoctemplatedocumentPrivacylevel? = null,
 
     /* The name of the Ezdoctemplatedocument in the language of the requester */
     @Json(name = "sEzdoctemplatedocumentNameX")
-    val sEzdoctemplatedocumentNameX: kotlin.String? = null,
+    override val sEzdoctemplatedocumentNameX: kotlin.String? = null,
 
     /* The name of the Ezsignfoldertype in the language of the requester */
     @Json(name = "sEzsignfoldertypeNameX")
-    val sEzsignfoldertypeNameX: kotlin.String? = null
+    override val sEzsignfoldertypeNameX: kotlin.String? = null
 
-) {
+) : EzdoctemplatedocumentResponse {
 
 
 }

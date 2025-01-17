@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.CommonGetListV1ResponseMPayload
 import eZmaxApi.models.UserstagedListElement
 
 import com.squareup.moshi.Json
@@ -33,16 +34,16 @@ data class UserstagedGetListV1ResponseMPayload (
 
     /* The number of rows returned */
     @Json(name = "iRowReturned")
-    val iRowReturned: kotlin.Int,
+    override val iRowReturned: kotlin.Int,
 
     /* The number of rows matching your filters (if any) or the total number of rows */
     @Json(name = "iRowFiltered")
-    val iRowFiltered: kotlin.Int,
+    override val iRowFiltered: kotlin.Int,
 
     @Json(name = "a_objUserstaged")
     val aObjUserstaged: kotlin.collections.List<UserstagedListElement>
 
-) {
+) : CommonGetListV1ResponseMPayload {
 
 
 }

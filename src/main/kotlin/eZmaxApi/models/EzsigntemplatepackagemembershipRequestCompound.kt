@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.EzsigntemplatepackagemembershipRequest
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -28,21 +29,21 @@ import com.squareup.moshi.JsonClass
  */
 
 
-data class EzsigntemplatepackagemembershipRequestCompound (
+class EzsigntemplatepackagemembershipRequestCompound (
 
     /* The unique ID of the Ezsigntemplatepackage */
     @Json(name = "fkiEzsigntemplatepackageID")
-    val fkiEzsigntemplatepackageID: kotlin.Int,
+    override val fkiEzsigntemplatepackageID: kotlin.Int,
 
     /* The unique ID of the Ezsigntemplate */
     @Json(name = "fkiEzsigntemplateID")
-    val fkiEzsigntemplateID: kotlin.Int,
+    override val fkiEzsigntemplateID: kotlin.Int,
 
     /* The unique ID of the Ezsigntemplatepackagemembership */
     @Json(name = "pkiEzsigntemplatepackagemembershipID")
-    val pkiEzsigntemplatepackagemembershipID: kotlin.Int? = null
+    override val pkiEzsigntemplatepackagemembershipID: kotlin.Int? = null
 
-) {
+) : EzsigntemplatepackagemembershipRequest {
 
 
 }

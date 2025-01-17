@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.DiscussionmessageRequest
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -29,25 +30,25 @@ import com.squareup.moshi.JsonClass
  */
 
 
-data class DiscussionmessageRequestCompound (
+class DiscussionmessageRequestCompound (
 
     /* The unique ID of the Discussion */
     @Json(name = "fkiDiscussionID")
-    val fkiDiscussionID: kotlin.Int,
+    override val fkiDiscussionID: kotlin.Int,
 
     /* The content of the Discussionmessage */
     @Json(name = "tDiscussionmessageContent")
-    val tDiscussionmessageContent: kotlin.String,
+    override val tDiscussionmessageContent: kotlin.String,
 
     /* The unique ID of the Discussionmessage */
     @Json(name = "pkiDiscussionmessageID")
-    val pkiDiscussionmessageID: kotlin.Int? = null,
+    override val pkiDiscussionmessageID: kotlin.Int? = null,
 
     /* The unique ID of the Discussionmembership */
     @Json(name = "fkiDiscussionmembershipIDActionrequired")
-    val fkiDiscussionmembershipIDActionrequired: kotlin.Int? = null
+    override val fkiDiscussionmembershipIDActionrequired: kotlin.Int? = null
 
-) {
+) : DiscussionmessageRequest {
 
 
 }

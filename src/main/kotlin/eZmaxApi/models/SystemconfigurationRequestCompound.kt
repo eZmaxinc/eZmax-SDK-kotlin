@@ -20,6 +20,7 @@ import eZmaxApi.models.FieldESystemconfigurationEzsignofficeplan
 import eZmaxApi.models.FieldESystemconfigurationLanguage1
 import eZmaxApi.models.FieldESystemconfigurationLanguage2
 import eZmaxApi.models.FieldESystemconfigurationNewexternaluseraction
+import eZmaxApi.models.SystemconfigurationRequest
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -42,53 +43,53 @@ import com.squareup.moshi.JsonClass
  */
 
 
-data class SystemconfigurationRequestCompound (
+class SystemconfigurationRequestCompound (
 
     @Json(name = "eSystemconfigurationNewexternaluseraction")
-    val eSystemconfigurationNewexternaluseraction: FieldESystemconfigurationNewexternaluseraction,
+    override val eSystemconfigurationNewexternaluseraction: FieldESystemconfigurationNewexternaluseraction,
 
     @Json(name = "eSystemconfigurationLanguage1")
-    val eSystemconfigurationLanguage1: FieldESystemconfigurationLanguage1,
+    override val eSystemconfigurationLanguage1: FieldESystemconfigurationLanguage1,
 
     @Json(name = "eSystemconfigurationLanguage2")
-    val eSystemconfigurationLanguage2: FieldESystemconfigurationLanguage2,
+    override val eSystemconfigurationLanguage2: FieldESystemconfigurationLanguage2,
 
     /* Whether if we allow the creation of personal files in eZsign */
     @Json(name = "bSystemconfigurationEzsignpersonnal")
-    val bSystemconfigurationEzsignpersonnal: kotlin.Boolean,
+    override val bSystemconfigurationEzsignpersonnal: kotlin.Boolean,
 
     /* Whether if we allow SSPR */
     @Json(name = "bSystemconfigurationSspr")
-    val bSystemconfigurationSspr: kotlin.Boolean,
+    override val bSystemconfigurationSspr: kotlin.Boolean,
 
     /* The unique ID of the Systemconfiguration */
     @Json(name = "pkiSystemconfigurationID")
-    val pkiSystemconfigurationID: kotlin.Int? = null,
+    override val pkiSystemconfigurationID: kotlin.Int? = null,
 
     /* The unique ID of the Branding */
     @Json(name = "fkiBrandingID")
-    val fkiBrandingID: kotlin.Int? = null,
+    override val fkiBrandingID: kotlin.Int? = null,
 
     @Json(name = "eSystemconfigurationEzsign")
     @Deprecated(message = "This property is deprecated.")
-    val eSystemconfigurationEzsign: FieldESystemconfigurationEzsign? = null,
+    override val eSystemconfigurationEzsign: FieldESystemconfigurationEzsign? = null,
 
     @Json(name = "eSystemconfigurationEzsignofficeplan")
-    val eSystemconfigurationEzsignofficeplan: FieldESystemconfigurationEzsignofficeplan? = null,
+    override val eSystemconfigurationEzsignofficeplan: FieldESystemconfigurationEzsignofficeplan? = null,
 
     /* Whether if Ezsign is paid by the company or not */
     @Json(name = "bSystemconfigurationEzsignpaidbyoffice")
-    val bSystemconfigurationEzsignpaidbyoffice: kotlin.Boolean? = null,
+    override val bSystemconfigurationEzsignpaidbyoffice: kotlin.Boolean? = null,
 
     /* The start date where the system will be in read only */
     @Json(name = "dtSystemconfigurationReadonlyexpirationstart")
-    val dtSystemconfigurationReadonlyexpirationstart: kotlin.String? = null,
+    override val dtSystemconfigurationReadonlyexpirationstart: kotlin.String? = null,
 
     /* The end date where the system will be in read only */
     @Json(name = "dtSystemconfigurationReadonlyexpirationend")
-    val dtSystemconfigurationReadonlyexpirationend: kotlin.String? = null
+    override val dtSystemconfigurationReadonlyexpirationend: kotlin.String? = null
 
-) {
+) : SystemconfigurationRequest {
 
 
 }

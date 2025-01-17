@@ -20,41 +20,12 @@ import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.CommonResponseObjDebugPayloadGetList
 import eZmaxApi.models.CommonResponseFilter
+import eZmaxApi.models.CommonResponseObjDebugPayload
 
 class CommonResponseObjDebugPayloadGetListTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of CommonResponseObjDebugPayloadGetList
         //val modelInstance = CommonResponseObjDebugPayloadGetList()
-
-        // to test the property `iVersionMin` - The minimum version of the function that can be called
-        should("test iVersionMin") {
-            // uncomment below to test the property
-            //modelInstance.iVersionMin shouldBe ("TODO")
-        }
-
-        // to test the property `iVersionMax` - The maximum version of the function that can be called
-        should("test iVersionMax") {
-            // uncomment below to test the property
-            //modelInstance.iVersionMax shouldBe ("TODO")
-        }
-
-        // to test the property `aRequiredPermission` - An array of permissions required to access this function.  If the value \"0\" is present in the array, anyone can call this function.  You must have one of the permission to access the function. You don't need to have all of them.
-        should("test aRequiredPermission") {
-            // uncomment below to test the property
-            //modelInstance.aRequiredPermission shouldBe ("TODO")
-        }
-
-        // to test the property `bVersionDeprecated` - Wheter the current route is deprecated or not
-        should("test bVersionDeprecated") {
-            // uncomment below to test the property
-            //modelInstance.bVersionDeprecated shouldBe ("TODO")
-        }
-
-        // to test the property `dtResponseDate` - Represent a Date Time. The timezone is the one configured in the User's profile.
-        should("test dtResponseDate") {
-            // uncomment below to test the property
-            //modelInstance.dtResponseDate shouldBe ("TODO")
-        }
 
         // to test the property `aFilter`
         should("test aFilter") {

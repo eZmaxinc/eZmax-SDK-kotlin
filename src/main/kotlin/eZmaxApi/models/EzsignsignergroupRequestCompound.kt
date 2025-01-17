@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.EzsignsignergroupRequest
 import eZmaxApi.models.MultilingualEzsignsignergroupDescription
 
 import com.squareup.moshi.Json
@@ -29,20 +30,20 @@ import com.squareup.moshi.JsonClass
  */
 
 
-data class EzsignsignergroupRequestCompound (
+class EzsignsignergroupRequestCompound (
 
     /* The unique ID of the Ezsignfolder */
     @Json(name = "fkiEzsignfolderID")
-    val fkiEzsignfolderID: kotlin.Int,
+    override val fkiEzsignfolderID: kotlin.Int,
 
     @Json(name = "objEzsignsignergroupDescription")
-    val objEzsignsignergroupDescription: MultilingualEzsignsignergroupDescription,
+    override val objEzsignsignergroupDescription: MultilingualEzsignsignergroupDescription,
 
     /* The unique ID of the Ezsignsignergroup */
     @Json(name = "pkiEzsignsignergroupID")
-    val pkiEzsignsignergroupID: kotlin.Int? = null
+    override val pkiEzsignsignergroupID: kotlin.Int? = null
 
-) {
+) : EzsignsignergroupRequest {
 
 
 }

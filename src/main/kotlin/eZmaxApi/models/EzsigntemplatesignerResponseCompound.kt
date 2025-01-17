@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.EzsigntemplatesignerResponse
 import eZmaxApi.models.FieldEEzsigntemplatesignerMapping
 
 import com.squareup.moshi.Json
@@ -36,48 +37,48 @@ import com.squareup.moshi.JsonClass
  */
 
 
-data class EzsigntemplatesignerResponseCompound (
+class EzsigntemplatesignerResponseCompound (
 
     /* The unique ID of the Ezsigntemplatesigner */
     @Json(name = "pkiEzsigntemplatesignerID")
-    val pkiEzsigntemplatesignerID: kotlin.Int,
+    override val pkiEzsigntemplatesignerID: kotlin.Int,
 
     /* The unique ID of the Ezsigntemplate */
     @Json(name = "fkiEzsigntemplateID")
-    val fkiEzsigntemplateID: kotlin.Int,
+    override val fkiEzsigntemplateID: kotlin.Int,
 
     /* The description of the Ezsigntemplatesigner */
     @Json(name = "sEzsigntemplatesignerDescription")
-    val sEzsigntemplatesignerDescription: kotlin.String,
+    override val sEzsigntemplatesignerDescription: kotlin.String,
 
     /* The unique ID of the User */
     @Json(name = "fkiUserID")
-    val fkiUserID: kotlin.Int? = null,
+    override val fkiUserID: kotlin.Int? = null,
 
     /* The unique ID of the Usergroup */
     @Json(name = "fkiUsergroupID")
-    val fkiUsergroupID: kotlin.Int? = null,
+    override val fkiUsergroupID: kotlin.Int? = null,
 
     /* The unique ID of the Ezdoctemplatedocument */
     @Json(name = "fkiEzdoctemplatedocumentID")
-    val fkiEzdoctemplatedocumentID: kotlin.Int? = null,
+    override val fkiEzdoctemplatedocumentID: kotlin.Int? = null,
 
     /* If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document. */
     @Json(name = "bEzsigntemplatesignerReceivecopy")
-    val bEzsigntemplatesignerReceivecopy: kotlin.Boolean? = null,
+    override val bEzsigntemplatesignerReceivecopy: kotlin.Boolean? = null,
 
     @Json(name = "eEzsigntemplatesignerMapping")
-    val eEzsigntemplatesignerMapping: FieldEEzsigntemplatesignerMapping? = null,
+    override val eEzsigntemplatesignerMapping: FieldEEzsigntemplatesignerMapping? = null,
 
     /* The description of the User in the language of the requester */
     @Json(name = "sUserName")
-    val sUserName: kotlin.String? = null,
+    override val sUserName: kotlin.String? = null,
 
     /* The Name of the Usergroup in the language of the requester */
     @Json(name = "sUsergroupNameX")
-    val sUsergroupNameX: kotlin.String? = null
+    override val sUsergroupNameX: kotlin.String? = null
 
-) {
+) : EzsigntemplatesignerResponse {
 
 
 }

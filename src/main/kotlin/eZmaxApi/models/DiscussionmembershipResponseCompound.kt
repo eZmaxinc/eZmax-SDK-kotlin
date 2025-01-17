@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.DiscussionmembershipResponse
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -32,37 +33,37 @@ import com.squareup.moshi.JsonClass
  */
 
 
-data class DiscussionmembershipResponseCompound (
+class DiscussionmembershipResponseCompound (
 
     /* The unique ID of the Discussionmembership */
     @Json(name = "pkiDiscussionmembershipID")
-    val pkiDiscussionmembershipID: kotlin.Int,
+    override val pkiDiscussionmembershipID: kotlin.Int,
 
     /* The unique ID of the Discussion */
     @Json(name = "fkiDiscussionID")
-    val fkiDiscussionID: kotlin.Int,
+    override val fkiDiscussionID: kotlin.Int,
 
     /* The Description containing the detail of who the Discussionmembership refers to */
     @Json(name = "sDiscussionmembershipDescription")
-    val sDiscussionmembershipDescription: kotlin.String,
+    override val sDiscussionmembershipDescription: kotlin.String,
 
     /* The joined date of the Discussionmembership */
     @Json(name = "dtDiscussionmembershipJoined")
-    val dtDiscussionmembershipJoined: kotlin.String,
+    override val dtDiscussionmembershipJoined: kotlin.String,
 
     /* The unique ID of the User */
     @Json(name = "fkiUserID")
-    val fkiUserID: kotlin.Int? = null,
+    override val fkiUserID: kotlin.Int? = null,
 
     /* The unique ID of the Usergroup */
     @Json(name = "fkiUsergroupID")
-    val fkiUsergroupID: kotlin.Int? = null,
+    override val fkiUsergroupID: kotlin.Int? = null,
 
     /* The unique ID of the Modulesection */
     @Json(name = "fkiModulesectionID")
-    val fkiModulesectionID: kotlin.Int? = null
+    override val fkiModulesectionID: kotlin.Int? = null
 
-) {
+) : DiscussionmembershipResponse {
 
 
 }

@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.EzmaxinvoicingsummaryexternalResponse
 import eZmaxApi.models.EzmaxinvoicingsummaryexternaldetailResponseCompound
 
 import com.squareup.moshi.Json
@@ -36,28 +37,28 @@ data class EzmaxinvoicingsummaryexternalResponseCompound (
 
     /* The unique ID of the Billingentityexternal */
     @Json(name = "fkiBillingentityexternalID")
-    val fkiBillingentityexternalID: kotlin.Int,
+    override val fkiBillingentityexternalID: kotlin.Int,
 
     /* The description of the Billingentityexternal */
     @Json(name = "sBillingentityexternalDescription")
-    val sBillingentityexternalDescription: kotlin.String,
+    override val sBillingentityexternalDescription: kotlin.String,
 
     /* The description of the Ezmaxinvoicingsummaryexternal */
     @Json(name = "sEzmaxinvoicingsummaryexternalDescription")
-    val sEzmaxinvoicingsummaryexternalDescription: kotlin.String,
+    override val sEzmaxinvoicingsummaryexternalDescription: kotlin.String,
 
     @Json(name = "a_objEzmaxinvoicingsummaryexternaldetail")
     val aObjEzmaxinvoicingsummaryexternaldetail: kotlin.collections.List<EzmaxinvoicingsummaryexternaldetailResponseCompound>,
 
     /* The unique ID of the Ezmaxinvoicingsummaryexternal */
     @Json(name = "pkiEzmaxinvoicingsummaryexternalID")
-    val pkiEzmaxinvoicingsummaryexternalID: kotlin.Int? = null,
+    override val pkiEzmaxinvoicingsummaryexternalID: kotlin.Int? = null,
 
     /* The unique ID of the Ezmaxinvoicing */
     @Json(name = "fkiEzmaxinvoicingID")
-    val fkiEzmaxinvoicingID: kotlin.Int? = null
+    override val fkiEzmaxinvoicingID: kotlin.Int? = null
 
-) {
+) : EzmaxinvoicingsummaryexternalResponse {
 
 
 }

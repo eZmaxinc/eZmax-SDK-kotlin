@@ -16,6 +16,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.DiscussionResponseCompound
+import eZmaxApi.models.EzsigndiscussionResponse
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -33,36 +34,36 @@ import com.squareup.moshi.JsonClass
  */
 
 
-data class EzsigndiscussionResponseCompound (
+class EzsigndiscussionResponseCompound (
 
     /* The unique ID of the Ezsigndiscussion */
     @Json(name = "pkiEzsigndiscussionID")
-    val pkiEzsigndiscussionID: kotlin.Int,
+    override val pkiEzsigndiscussionID: kotlin.Int,
 
     /* The unique ID of the Ezsignpage */
     @Json(name = "fkiEzsignpageID")
-    val fkiEzsignpageID: kotlin.Int,
+    override val fkiEzsignpageID: kotlin.Int,
 
     /* The unique ID of the Discussion */
     @Json(name = "fkiDiscussionID")
-    val fkiDiscussionID: kotlin.Int,
+    override val fkiDiscussionID: kotlin.Int,
 
     /* The x of the Ezsigndiscussion */
     @Json(name = "iEzsigndiscussionX")
-    val iEzsigndiscussionX: kotlin.Int,
+    override val iEzsigndiscussionX: kotlin.Int,
 
     /* The y of the Ezsigndiscussion */
     @Json(name = "iEzsigndiscussionY")
-    val iEzsigndiscussionY: kotlin.Int,
+    override val iEzsigndiscussionY: kotlin.Int,
 
     /* The page number in the Ezsigndocument for the Ezsigndiscussion */
     @Json(name = "iEzsigndiscussionPagenumber")
-    val iEzsigndiscussionPagenumber: kotlin.Int,
+    override val iEzsigndiscussionPagenumber: kotlin.Int,
 
     @Json(name = "objDiscussion")
-    val objDiscussion: DiscussionResponseCompound
+    override val objDiscussion: DiscussionResponseCompound
 
-) {
+) : EzsigndiscussionResponse {
 
 
 }

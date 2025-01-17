@@ -19,48 +19,13 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.EzsignfoldersignerassociationRequestCompound
+import eZmaxApi.models.EzsignfoldersignerassociationRequest
 import eZmaxApi.models.EzsignsignerRequestCompound
 
 class EzsignfoldersignerassociationRequestCompoundTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of EzsignfoldersignerassociationRequestCompound
         //val modelInstance = EzsignfoldersignerassociationRequestCompound()
-
-        // to test the property `fkiEzsignfolderID` - The unique ID of the Ezsignfolder
-        should("test fkiEzsignfolderID") {
-            // uncomment below to test the property
-            //modelInstance.fkiEzsignfolderID shouldBe ("TODO")
-        }
-
-        // to test the property `pkiEzsignfoldersignerassociationID` - The unique ID of the Ezsignfoldersignerassociation
-        should("test pkiEzsignfoldersignerassociationID") {
-            // uncomment below to test the property
-            //modelInstance.pkiEzsignfoldersignerassociationID shouldBe ("TODO")
-        }
-
-        // to test the property `fkiUserID` - The unique ID of the User
-        should("test fkiUserID") {
-            // uncomment below to test the property
-            //modelInstance.fkiUserID shouldBe ("TODO")
-        }
-
-        // to test the property `fkiEzsignsignergroupID` - The unique ID of the Ezsignsignergroup
-        should("test fkiEzsignsignergroupID") {
-            // uncomment below to test the property
-            //modelInstance.fkiEzsignsignergroupID shouldBe ("TODO")
-        }
-
-        // to test the property `bEzsignfoldersignerassociationReceivecopy` - If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document.
-        should("test bEzsignfoldersignerassociationReceivecopy") {
-            // uncomment below to test the property
-            //modelInstance.bEzsignfoldersignerassociationReceivecopy shouldBe ("TODO")
-        }
-
-        // to test the property `tEzsignfoldersignerassociationMessage` - A custom text message that will be added to the email sent.
-        should("test tEzsignfoldersignerassociationMessage") {
-            // uncomment below to test the property
-            //modelInstance.tEzsignfoldersignerassociationMessage shouldBe ("TODO")
-        }
 
         // to test the property `objEzsignsigner`
         should("test objEzsignsigner") {

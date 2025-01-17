@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.AuthenticationexternalRequest
 import eZmaxApi.models.FieldEAuthenticationexternalType
 
 import com.squareup.moshi.Json
@@ -29,20 +30,20 @@ import com.squareup.moshi.JsonClass
  */
 
 
-data class AuthenticationexternalRequestCompound (
+class AuthenticationexternalRequestCompound (
 
     /* The description of the Authenticationexternal */
     @Json(name = "sAuthenticationexternalDescription")
-    val sAuthenticationexternalDescription: kotlin.String,
+    override val sAuthenticationexternalDescription: kotlin.String,
 
     @Json(name = "eAuthenticationexternalType")
-    val eAuthenticationexternalType: FieldEAuthenticationexternalType,
+    override val eAuthenticationexternalType: FieldEAuthenticationexternalType,
 
     /* The unique ID of the Authenticationexternal */
     @Json(name = "pkiAuthenticationexternalID")
-    val pkiAuthenticationexternalID: kotlin.Int? = null
+    override val pkiAuthenticationexternalID: kotlin.Int? = null
 
-) {
+) : AuthenticationexternalRequest {
 
 
 }

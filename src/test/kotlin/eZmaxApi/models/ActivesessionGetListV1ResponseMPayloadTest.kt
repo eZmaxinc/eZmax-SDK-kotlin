@@ -20,23 +20,12 @@ import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.ActivesessionGetListV1ResponseMPayload
 import eZmaxApi.models.ActivesessionListElement
+import eZmaxApi.models.CommonGetListV1ResponseMPayload
 
 class ActivesessionGetListV1ResponseMPayloadTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of ActivesessionGetListV1ResponseMPayload
         //val modelInstance = ActivesessionGetListV1ResponseMPayload()
-
-        // to test the property `iRowReturned` - The number of rows returned
-        should("test iRowReturned") {
-            // uncomment below to test the property
-            //modelInstance.iRowReturned shouldBe ("TODO")
-        }
-
-        // to test the property `iRowFiltered` - The number of rows matching your filters (if any) or the total number of rows
-        should("test iRowFiltered") {
-            // uncomment below to test the property
-            //modelInstance.iRowFiltered shouldBe ("TODO")
-        }
 
         // to test the property `aObjActivesession`
         should("test aObjActivesession") {

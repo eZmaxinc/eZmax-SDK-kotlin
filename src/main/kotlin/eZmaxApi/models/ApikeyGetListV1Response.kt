@@ -16,6 +16,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.ApikeyGetListV1ResponseMPayload
+import eZmaxApi.models.CommonResponseGetList
 import eZmaxApi.models.CommonResponseObjDebug
 import eZmaxApi.models.CommonResponseObjDebugPayloadGetList
 
@@ -34,15 +35,15 @@ import com.squareup.moshi.JsonClass
 data class ApikeyGetListV1Response (
 
     @Json(name = "objDebugPayload")
-    val objDebugPayload: CommonResponseObjDebugPayloadGetList,
+    override val objDebugPayload: CommonResponseObjDebugPayloadGetList,
 
     @Json(name = "mPayload")
     val mPayload: ApikeyGetListV1ResponseMPayload,
 
     @Json(name = "objDebug")
-    val objDebug: CommonResponseObjDebug? = null
+    override val objDebug: CommonResponseObjDebug? = null
 
-) {
+) : CommonResponseGetList {
 
 
 }

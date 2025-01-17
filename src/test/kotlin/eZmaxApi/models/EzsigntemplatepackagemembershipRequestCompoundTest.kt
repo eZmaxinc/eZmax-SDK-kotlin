@@ -19,29 +19,12 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.EzsigntemplatepackagemembershipRequestCompound
+import eZmaxApi.models.EzsigntemplatepackagemembershipRequest
 
 class EzsigntemplatepackagemembershipRequestCompoundTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of EzsigntemplatepackagemembershipRequestCompound
         //val modelInstance = EzsigntemplatepackagemembershipRequestCompound()
-
-        // to test the property `fkiEzsigntemplatepackageID` - The unique ID of the Ezsigntemplatepackage
-        should("test fkiEzsigntemplatepackageID") {
-            // uncomment below to test the property
-            //modelInstance.fkiEzsigntemplatepackageID shouldBe ("TODO")
-        }
-
-        // to test the property `fkiEzsigntemplateID` - The unique ID of the Ezsigntemplate
-        should("test fkiEzsigntemplateID") {
-            // uncomment below to test the property
-            //modelInstance.fkiEzsigntemplateID shouldBe ("TODO")
-        }
-
-        // to test the property `pkiEzsigntemplatepackagemembershipID` - The unique ID of the Ezsigntemplatepackagemembership
-        should("test pkiEzsigntemplatepackagemembershipID") {
-            // uncomment below to test the property
-            //modelInstance.pkiEzsigntemplatepackagemembershipID shouldBe ("TODO")
-        }
 
     }
 }

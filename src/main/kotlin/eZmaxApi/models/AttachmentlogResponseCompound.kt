@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.AttachmentlogResponse
 import eZmaxApi.models.FieldEAttachmentlogType
 
 import com.squareup.moshi.Json
@@ -31,28 +32,28 @@ import com.squareup.moshi.JsonClass
  */
 
 
-data class AttachmentlogResponseCompound (
+class AttachmentlogResponseCompound (
 
     /* The unique ID of the Attachment. */
     @Json(name = "fkiAttachmentID")
-    val fkiAttachmentID: kotlin.Int,
+    override val fkiAttachmentID: kotlin.Int,
 
     /* The unique ID of the User */
     @Json(name = "fkiUserID")
-    val fkiUserID: kotlin.Int,
+    override val fkiUserID: kotlin.Int,
 
     /* The created date */
     @Json(name = "dtAttachmentlogDatetime")
-    val dtAttachmentlogDatetime: kotlin.String,
+    override val dtAttachmentlogDatetime: kotlin.String,
 
     @Json(name = "eAttachmentlogType")
-    val eAttachmentlogType: FieldEAttachmentlogType,
+    override val eAttachmentlogType: FieldEAttachmentlogType,
 
     /* The additionnal detail */
     @Json(name = "sAttachmentlogDetail")
-    val sAttachmentlogDetail: kotlin.String? = null
+    override val sAttachmentlogDetail: kotlin.String? = null
 
-) {
+) : AttachmentlogResponse {
 
 
 }
