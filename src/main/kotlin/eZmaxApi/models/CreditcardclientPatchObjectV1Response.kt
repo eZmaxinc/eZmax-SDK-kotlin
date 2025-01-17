@@ -15,7 +15,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseObjDebug
 import eZmaxApi.models.CommonResponseObjDebugPayload
 
@@ -30,15 +29,15 @@ import com.squareup.moshi.JsonClass
  */
 
 
-class CreditcardclientPatchObjectV1Response (
+data class CreditcardclientPatchObjectV1Response (
 
     @Json(name = "objDebugPayload")
-    override val objDebugPayload: CommonResponseObjDebugPayload,
+    val objDebugPayload: CommonResponseObjDebugPayload,
 
     @Json(name = "objDebug")
-    override val objDebug: CommonResponseObjDebug? = null
+    val objDebug: CommonResponseObjDebug? = null
 
-) : CommonResponse {
+) {
 
 
 }

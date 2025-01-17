@@ -16,7 +16,6 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.DiscussionRequest
-import eZmaxApi.models.EzsigndiscussionRequest
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -33,32 +32,32 @@ import com.squareup.moshi.JsonClass
  */
 
 
-class EzsigndiscussionRequestCompound (
+data class EzsigndiscussionRequestCompound (
 
     /* The unique ID of the Ezsigndocument */
     @Json(name = "fkiEzsigndocumentID")
-    override val fkiEzsigndocumentID: kotlin.Int,
+    val fkiEzsigndocumentID: kotlin.Int,
 
     /* The page number in the Ezsigndocument for the Ezsigndiscussion */
     @Json(name = "iEzsigndiscussionPagenumber")
-    override val iEzsigndiscussionPagenumber: kotlin.Int,
+    val iEzsigndiscussionPagenumber: kotlin.Int,
 
     /* The x of the Ezsigndiscussion */
     @Json(name = "iEzsigndiscussionX")
-    override val iEzsigndiscussionX: kotlin.Int,
+    val iEzsigndiscussionX: kotlin.Int,
 
     /* The y of the Ezsigndiscussion */
     @Json(name = "iEzsigndiscussionY")
-    override val iEzsigndiscussionY: kotlin.Int,
+    val iEzsigndiscussionY: kotlin.Int,
 
     @Json(name = "objDiscussion")
-    override val objDiscussion: DiscussionRequest,
+    val objDiscussion: DiscussionRequest,
 
     /* The unique ID of the Ezsigndiscussion */
     @Json(name = "pkiEzsigndiscussionID")
-    override val pkiEzsigndiscussionID: kotlin.Int? = null
+    val pkiEzsigndiscussionID: kotlin.Int? = null
 
-) : EzsigndiscussionRequest {
+) {
 
 
 }

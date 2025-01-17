@@ -16,7 +16,6 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.CommonAudit
-import eZmaxApi.models.DiscussionmessageResponse
 import eZmaxApi.models.FieldEDiscussionmessageStatus
 
 import com.squareup.moshi.Json
@@ -37,43 +36,43 @@ import com.squareup.moshi.JsonClass
  */
 
 
-class DiscussionmessageResponseCompound (
+data class DiscussionmessageResponseCompound (
 
     /* The unique ID of the Discussionmessage */
     @Json(name = "pkiDiscussionmessageID")
-    override val pkiDiscussionmessageID: kotlin.Int,
+    val pkiDiscussionmessageID: kotlin.Int,
 
     /* The unique ID of the Discussion */
     @Json(name = "fkiDiscussionID")
-    override val fkiDiscussionID: kotlin.Int,
+    val fkiDiscussionID: kotlin.Int,
 
     @Json(name = "eDiscussionmessageStatus")
-    override val eDiscussionmessageStatus: FieldEDiscussionmessageStatus,
+    val eDiscussionmessageStatus: FieldEDiscussionmessageStatus,
 
     /* The content of the Discussionmessage */
     @Json(name = "tDiscussionmessageContent")
-    override val tDiscussionmessageContent: kotlin.String,
+    val tDiscussionmessageContent: kotlin.String,
 
     /* The name the creator of the Discussionmessage. */
     @Json(name = "sDiscussionmessageCreatorname")
-    override val sDiscussionmessageCreatorname: kotlin.String,
+    val sDiscussionmessageCreatorname: kotlin.String,
 
     @Json(name = "objAudit")
-    override val objAudit: CommonAudit,
+    val objAudit: CommonAudit,
 
     /* The unique ID of the Discussionmembership */
     @Json(name = "fkiDiscussionmembershipID")
-    override val fkiDiscussionmembershipID: kotlin.Int? = null,
+    val fkiDiscussionmembershipID: kotlin.Int? = null,
 
     /* The unique ID of the Discussionmembership */
     @Json(name = "fkiDiscussionmembershipIDActionrequired")
-    override val fkiDiscussionmembershipIDActionrequired: kotlin.Int? = null,
+    val fkiDiscussionmembershipIDActionrequired: kotlin.Int? = null,
 
     /* The name the Actionrequired of the Discussionmessage. */
     @Json(name = "sDiscussionmessageActionrequiredname")
-    override val sDiscussionmessageActionrequiredname: kotlin.String? = null
+    val sDiscussionmessageActionrequiredname: kotlin.String? = null
 
-) : DiscussionmessageResponse {
+) {
 
 
 }

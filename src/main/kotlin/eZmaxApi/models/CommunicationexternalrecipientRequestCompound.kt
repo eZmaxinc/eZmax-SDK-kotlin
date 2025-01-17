@@ -15,7 +15,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.CommunicationexternalrecipientRequest
 import eZmaxApi.models.FieldECommunicationexternalrecipientType
 
 import com.squareup.moshi.Json
@@ -32,28 +31,28 @@ import com.squareup.moshi.JsonClass
  */
 
 
-class CommunicationexternalrecipientRequestCompound (
+data class CommunicationexternalrecipientRequestCompound (
 
     /* The unique ID of the Communicationexternalrecipient */
     @Json(name = "pkiCommunicationexternalrecipientID")
-    override val pkiCommunicationexternalrecipientID: kotlin.Int? = null,
+    val pkiCommunicationexternalrecipientID: kotlin.Int? = null,
 
     /* The email address. */
     @Json(name = "sEmailAddress")
-    override val sEmailAddress: kotlin.String? = null,
+    val sEmailAddress: kotlin.String? = null,
 
     /* A phone number in E.164 Format */
     @Json(name = "sPhoneE164")
-    override val sPhoneE164: kotlin.String? = null,
+    val sPhoneE164: kotlin.String? = null,
 
     @Json(name = "eCommunicationexternalrecipientType")
-    override val eCommunicationexternalrecipientType: FieldECommunicationexternalrecipientType? = null,
+    val eCommunicationexternalrecipientType: FieldECommunicationexternalrecipientType? = null,
 
     /* The name of the Communicationexternalrecipient */
     @Json(name = "sCommunicationexternalrecipientName")
-    override val sCommunicationexternalrecipientName: kotlin.String? = null
+    val sCommunicationexternalrecipientName: kotlin.String? = null
 
-) : CommunicationexternalrecipientRequest {
+) {
 
 
 }

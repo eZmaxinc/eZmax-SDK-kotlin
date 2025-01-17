@@ -19,10 +19,10 @@ import java.io.IOException
 import okhttp3.Call
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.EzsigndiscussionCreateObjectV1Request
 import eZmaxApi.models.EzsigndiscussionCreateObjectV1Response
+import eZmaxApi.models.EzsigndiscussionDeleteObjectV1Response
 import eZmaxApi.models.EzsigndiscussionGetObjectV2Response
 
 import com.squareup.moshi.Json
@@ -125,7 +125,7 @@ class ObjectEzsigndiscussionApi(basePath: kotlin.String = defaultBasePath, clien
      * Delete an existing Ezsigndiscussion
      * 
      * @param pkiEzsigndiscussionID The unique ID of the Ezsigndiscussion
-     * @return CommonResponse
+     * @return EzsigndiscussionDeleteObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -134,11 +134,11 @@ class ObjectEzsigndiscussionApi(basePath: kotlin.String = defaultBasePath, clien
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsigndiscussionDeleteObjectV1(pkiEzsigndiscussionID: kotlin.Int) : CommonResponse {
+    fun ezsigndiscussionDeleteObjectV1(pkiEzsigndiscussionID: kotlin.Int) : EzsigndiscussionDeleteObjectV1Response {
         val localVarResponse = ezsigndiscussionDeleteObjectV1WithHttpInfo(pkiEzsigndiscussionID = pkiEzsigndiscussionID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigndiscussionDeleteObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -156,16 +156,16 @@ class ObjectEzsigndiscussionApi(basePath: kotlin.String = defaultBasePath, clien
      * Delete an existing Ezsigndiscussion
      * 
      * @param pkiEzsigndiscussionID The unique ID of the Ezsigndiscussion
-     * @return ApiResponse<CommonResponse?>
+     * @return ApiResponse<EzsigndiscussionDeleteObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsigndiscussionDeleteObjectV1WithHttpInfo(pkiEzsigndiscussionID: kotlin.Int) : ApiResponse<CommonResponse?> {
+    fun ezsigndiscussionDeleteObjectV1WithHttpInfo(pkiEzsigndiscussionID: kotlin.Int) : ApiResponse<EzsigndiscussionDeleteObjectV1Response?> {
         val localVariableConfig = ezsigndiscussionDeleteObjectV1RequestConfig(pkiEzsigndiscussionID = pkiEzsigndiscussionID)
 
-        return request<Unit, CommonResponse>(
+        return request<Unit, EzsigndiscussionDeleteObjectV1Response>(
             localVariableConfig
         )
     }

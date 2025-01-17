@@ -22,6 +22,7 @@ import eZmaxApi.apis.ObjectApikeyApi
 import eZmaxApi.models.ApikeyCreateObjectV2Request
 import eZmaxApi.models.ApikeyCreateObjectV2Response
 import eZmaxApi.models.ApikeyEditObjectV1Request
+import eZmaxApi.models.ApikeyEditObjectV1Response
 import eZmaxApi.models.ApikeyEditPermissionsV1Request
 import eZmaxApi.models.ApikeyEditPermissionsV1Response
 import eZmaxApi.models.ApikeyGenerateDelegatedCredentialsV1Request
@@ -33,7 +34,6 @@ import eZmaxApi.models.ApikeyGetPermissionsV1Response
 import eZmaxApi.models.ApikeyGetSubnetsV1Response
 import eZmaxApi.models.ApikeyRegenerateV1Request
 import eZmaxApi.models.ApikeyRegenerateV1Response
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.HeaderAcceptLanguage
 
@@ -55,7 +55,7 @@ class ObjectApikeyApiTest : ShouldSpec() {
             // uncomment below to test apikeyEditObjectV1
             //val pkiApikeyID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Apikey
             //val apikeyEditObjectV1Request : ApikeyEditObjectV1Request =  // ApikeyEditObjectV1Request | 
-            //val result : CommonResponse = apiInstance.apikeyEditObjectV1(pkiApikeyID, apikeyEditObjectV1Request)
+            //val result : ApikeyEditObjectV1Response = apiInstance.apikeyEditObjectV1(pkiApikeyID, apikeyEditObjectV1Request)
             //result shouldBe ("TODO")
         }
 

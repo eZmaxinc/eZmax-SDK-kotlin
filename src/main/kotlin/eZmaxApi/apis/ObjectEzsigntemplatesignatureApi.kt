@@ -19,11 +19,12 @@ import java.io.IOException
 import okhttp3.Call
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.EzsigntemplatesignatureCreateObjectV2Request
 import eZmaxApi.models.EzsigntemplatesignatureCreateObjectV2Response
+import eZmaxApi.models.EzsigntemplatesignatureDeleteObjectV1Response
 import eZmaxApi.models.EzsigntemplatesignatureEditObjectV2Request
+import eZmaxApi.models.EzsigntemplatesignatureEditObjectV2Response
 import eZmaxApi.models.EzsigntemplatesignatureGetObjectV3Response
 
 import com.squareup.moshi.Json
@@ -126,7 +127,7 @@ class ObjectEzsigntemplatesignatureApi(basePath: kotlin.String = defaultBasePath
      * Delete an existing Ezsigntemplatesignature
      * 
      * @param pkiEzsigntemplatesignatureID 
-     * @return CommonResponse
+     * @return EzsigntemplatesignatureDeleteObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -135,11 +136,11 @@ class ObjectEzsigntemplatesignatureApi(basePath: kotlin.String = defaultBasePath
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsigntemplatesignatureDeleteObjectV1(pkiEzsigntemplatesignatureID: kotlin.Int) : CommonResponse {
+    fun ezsigntemplatesignatureDeleteObjectV1(pkiEzsigntemplatesignatureID: kotlin.Int) : EzsigntemplatesignatureDeleteObjectV1Response {
         val localVarResponse = ezsigntemplatesignatureDeleteObjectV1WithHttpInfo(pkiEzsigntemplatesignatureID = pkiEzsigntemplatesignatureID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigntemplatesignatureDeleteObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -157,16 +158,16 @@ class ObjectEzsigntemplatesignatureApi(basePath: kotlin.String = defaultBasePath
      * Delete an existing Ezsigntemplatesignature
      * 
      * @param pkiEzsigntemplatesignatureID 
-     * @return ApiResponse<CommonResponse?>
+     * @return ApiResponse<EzsigntemplatesignatureDeleteObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsigntemplatesignatureDeleteObjectV1WithHttpInfo(pkiEzsigntemplatesignatureID: kotlin.Int) : ApiResponse<CommonResponse?> {
+    fun ezsigntemplatesignatureDeleteObjectV1WithHttpInfo(pkiEzsigntemplatesignatureID: kotlin.Int) : ApiResponse<EzsigntemplatesignatureDeleteObjectV1Response?> {
         val localVariableConfig = ezsigntemplatesignatureDeleteObjectV1RequestConfig(pkiEzsigntemplatesignatureID = pkiEzsigntemplatesignatureID)
 
-        return request<Unit, CommonResponse>(
+        return request<Unit, EzsigntemplatesignatureDeleteObjectV1Response>(
             localVariableConfig
         )
     }
@@ -198,7 +199,7 @@ class ObjectEzsigntemplatesignatureApi(basePath: kotlin.String = defaultBasePath
      * 
      * @param pkiEzsigntemplatesignatureID 
      * @param ezsigntemplatesignatureEditObjectV2Request 
-     * @return CommonResponse
+     * @return EzsigntemplatesignatureEditObjectV2Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -207,11 +208,11 @@ class ObjectEzsigntemplatesignatureApi(basePath: kotlin.String = defaultBasePath
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsigntemplatesignatureEditObjectV2(pkiEzsigntemplatesignatureID: kotlin.Int, ezsigntemplatesignatureEditObjectV2Request: EzsigntemplatesignatureEditObjectV2Request) : CommonResponse {
+    fun ezsigntemplatesignatureEditObjectV2(pkiEzsigntemplatesignatureID: kotlin.Int, ezsigntemplatesignatureEditObjectV2Request: EzsigntemplatesignatureEditObjectV2Request) : EzsigntemplatesignatureEditObjectV2Response {
         val localVarResponse = ezsigntemplatesignatureEditObjectV2WithHttpInfo(pkiEzsigntemplatesignatureID = pkiEzsigntemplatesignatureID, ezsigntemplatesignatureEditObjectV2Request = ezsigntemplatesignatureEditObjectV2Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigntemplatesignatureEditObjectV2Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -230,16 +231,16 @@ class ObjectEzsigntemplatesignatureApi(basePath: kotlin.String = defaultBasePath
      * 
      * @param pkiEzsigntemplatesignatureID 
      * @param ezsigntemplatesignatureEditObjectV2Request 
-     * @return ApiResponse<CommonResponse?>
+     * @return ApiResponse<EzsigntemplatesignatureEditObjectV2Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsigntemplatesignatureEditObjectV2WithHttpInfo(pkiEzsigntemplatesignatureID: kotlin.Int, ezsigntemplatesignatureEditObjectV2Request: EzsigntemplatesignatureEditObjectV2Request) : ApiResponse<CommonResponse?> {
+    fun ezsigntemplatesignatureEditObjectV2WithHttpInfo(pkiEzsigntemplatesignatureID: kotlin.Int, ezsigntemplatesignatureEditObjectV2Request: EzsigntemplatesignatureEditObjectV2Request) : ApiResponse<EzsigntemplatesignatureEditObjectV2Response?> {
         val localVariableConfig = ezsigntemplatesignatureEditObjectV2RequestConfig(pkiEzsigntemplatesignatureID = pkiEzsigntemplatesignatureID, ezsigntemplatesignatureEditObjectV2Request = ezsigntemplatesignatureEditObjectV2Request)
 
-        return request<EzsigntemplatesignatureEditObjectV2Request, CommonResponse>(
+        return request<EzsigntemplatesignatureEditObjectV2Request, EzsigntemplatesignatureEditObjectV2Response>(
             localVariableConfig
         )
     }

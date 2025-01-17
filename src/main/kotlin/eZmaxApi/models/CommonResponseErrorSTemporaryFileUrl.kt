@@ -15,7 +15,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.FieldEErrorCode
 
 import com.squareup.moshi.Json
@@ -35,20 +34,20 @@ data class CommonResponseErrorSTemporaryFileUrl (
 
     /* The message giving details about the error */
     @Json(name = "sErrorMessage")
-    override val sErrorMessage: kotlin.String,
+    val sErrorMessage: kotlin.String,
 
     @Json(name = "eErrorCode")
-    override val eErrorCode: FieldEErrorCode,
+    val eErrorCode: FieldEErrorCode,
 
     /* More error message detail */
     @Json(name = "a_sErrorMessagedetail")
-    override val aSErrorMessagedetail: kotlin.collections.List<kotlin.String>? = null,
+    val aSErrorMessagedetail: kotlin.collections.List<kotlin.String>? = null,
 
     /* The Temporary File Url of the document that was uploaded. That url can be reused instead of uploading the file again. */
     @Json(name = "sTemporaryFileUrl")
     val sTemporaryFileUrl: kotlin.String? = null
 
-) : CommonResponseError {
+) {
 
 
 }

@@ -61,7 +61,7 @@ Configure Authorization:
 
 <a id="domainDeleteObjectV1"></a>
 # **domainDeleteObjectV1**
-> CommonResponse domainDeleteObjectV1(pkiDomainID)
+> DomainDeleteObjectV1Response domainDeleteObjectV1(pkiDomainID)
 
 Delete an existing Domain
 
@@ -76,7 +76,7 @@ Delete an existing Domain
 val apiInstance = ObjectDomainApi()
 val pkiDomainID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Domain
 try {
-    val result : CommonResponse = apiInstance.domainDeleteObjectV1(pkiDomainID)
+    val result : DomainDeleteObjectV1Response = apiInstance.domainDeleteObjectV1(pkiDomainID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectDomainApi#domainDeleteObjectV1")
@@ -94,7 +94,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**DomainDeleteObjectV1Response**](DomainDeleteObjectV1Response.md)
 
 ### Authorization
 

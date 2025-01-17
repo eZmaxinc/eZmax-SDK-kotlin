@@ -15,7 +15,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.EzsignbulksenddocumentmappingResponse
 import eZmaxApi.models.EzsigntemplateResponseCompound
 import eZmaxApi.models.EzsigntemplatepackageResponseCompound
 
@@ -39,23 +38,23 @@ data class EzsignbulksenddocumentmappingResponseCompound (
 
     /* The unique ID of the Ezsignbulksenddocumentmapping. */
     @Json(name = "pkiEzsignbulksenddocumentmappingID")
-    override val pkiEzsignbulksenddocumentmappingID: kotlin.Int,
+    val pkiEzsignbulksenddocumentmappingID: kotlin.Int,
 
     /* The unique ID of the Ezsignbulksend */
     @Json(name = "fkiEzsignbulksendID")
-    override val fkiEzsignbulksendID: kotlin.Int,
+    val fkiEzsignbulksendID: kotlin.Int,
 
     /* The order in which the Ezsigntemplate or Ezsigntemplatepackage will be presented to the signatory in the Ezsignfolder. */
     @Json(name = "iEzsignbulksenddocumentmappingOrder")
-    override val iEzsignbulksenddocumentmappingOrder: kotlin.Int,
+    val iEzsignbulksenddocumentmappingOrder: kotlin.Int,
 
     /* The unique ID of the Ezsigntemplatepackage */
     @Json(name = "fkiEzsigntemplatepackageID")
-    override val fkiEzsigntemplatepackageID: kotlin.Int? = null,
+    val fkiEzsigntemplatepackageID: kotlin.Int? = null,
 
     /* The unique ID of the Ezsigntemplate */
     @Json(name = "fkiEzsigntemplateID")
-    override val fkiEzsigntemplateID: kotlin.Int? = null,
+    val fkiEzsigntemplateID: kotlin.Int? = null,
 
     @Json(name = "objEzsigntemplate")
     val objEzsigntemplate: EzsigntemplateResponseCompound? = null,
@@ -63,7 +62,7 @@ data class EzsignbulksenddocumentmappingResponseCompound (
     @Json(name = "objEzsigntemplatepackage")
     val objEzsigntemplatepackage: EzsigntemplatepackageResponseCompound? = null
 
-) : EzsignbulksenddocumentmappingResponse {
+) {
 
 
 }

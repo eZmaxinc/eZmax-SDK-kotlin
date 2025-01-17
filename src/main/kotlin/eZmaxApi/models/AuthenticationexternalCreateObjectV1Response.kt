@@ -16,7 +16,6 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.AuthenticationexternalCreateObjectV1ResponseMPayload
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseObjDebug
 import eZmaxApi.models.CommonResponseObjDebugPayload
 
@@ -35,15 +34,15 @@ import com.squareup.moshi.JsonClass
 data class AuthenticationexternalCreateObjectV1Response (
 
     @Json(name = "objDebugPayload")
-    override val objDebugPayload: CommonResponseObjDebugPayload,
+    val objDebugPayload: CommonResponseObjDebugPayload,
 
     @Json(name = "mPayload")
     val mPayload: AuthenticationexternalCreateObjectV1ResponseMPayload,
 
     @Json(name = "objDebug")
-    override val objDebug: CommonResponseObjDebug? = null
+    val objDebug: CommonResponseObjDebug? = null
 
-) : CommonResponse {
+) {
 
 
 }

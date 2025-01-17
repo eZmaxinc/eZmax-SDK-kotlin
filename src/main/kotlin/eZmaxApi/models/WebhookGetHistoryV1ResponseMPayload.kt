@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.CustomWebhooklogResponse
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -29,7 +30,7 @@ import com.squareup.moshi.JsonClass
 data class WebhookGetHistoryV1ResponseMPayload (
 
     @Json(name = "a_objWebhooklog")
-    val aObjWebhooklog: kotlin.collections.List<kotlin.Any>
+    val aObjWebhooklog: kotlin.collections.List<CustomWebhooklogResponse>
 
 ) {
 

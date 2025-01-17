@@ -16,8 +16,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.EnumHorizontalalignment
-import eZmaxApi.models.EzsigntemplateelementdependencyRequest
-import eZmaxApi.models.EzsigntemplateformfieldRequest
+import eZmaxApi.models.EzsigntemplateelementdependencyRequestCompound
 import eZmaxApi.models.FieldEEzsigntemplateformfieldDependencyrequirement
 import eZmaxApi.models.FieldEEzsigntemplateformfieldPositioning
 import eZmaxApi.models.FieldEEzsigntemplateformfieldPositioningoccurence
@@ -55,75 +54,75 @@ data class EzsigntemplateformfieldRequestCompound (
 
     /* The page number in the Ezsigntemplatedocument */
     @Json(name = "iEzsigntemplatedocumentpagePagenumber")
-    override val iEzsigntemplatedocumentpagePagenumber: kotlin.Int,
+    val iEzsigntemplatedocumentpagePagenumber: kotlin.Int,
 
     /* The Label for the Ezsigntemplateformfield */
     @Json(name = "sEzsigntemplateformfieldLabel")
-    override val sEzsigntemplateformfieldLabel: kotlin.String,
+    val sEzsigntemplateformfieldLabel: kotlin.String,
 
     /* The Width of the Ezsigntemplateformfield in pixels calculated at 100 DPI */
     @Json(name = "iEzsigntemplateformfieldWidth")
-    override val iEzsigntemplateformfieldWidth: kotlin.Int,
+    val iEzsigntemplateformfieldWidth: kotlin.Int,
 
     /* The Height of the Ezsigntemplateformfield in pixels calculated at 100 DPI  */
     @Json(name = "iEzsigntemplateformfieldHeight")
-    override val iEzsigntemplateformfieldHeight: kotlin.Int,
+    val iEzsigntemplateformfieldHeight: kotlin.Int,
 
     /* The unique ID of the Ezsigntemplateformfield */
     @Json(name = "pkiEzsigntemplateformfieldID")
-    override val pkiEzsigntemplateformfieldID: kotlin.Int? = null,
+    val pkiEzsigntemplateformfieldID: kotlin.Int? = null,
 
     @Json(name = "eEzsigntemplateformfieldPositioning")
-    override val eEzsigntemplateformfieldPositioning: FieldEEzsigntemplateformfieldPositioning? = FieldEEzsigntemplateformfieldPositioning.PerCoordinates,
+    val eEzsigntemplateformfieldPositioning: FieldEEzsigntemplateformfieldPositioning? = FieldEEzsigntemplateformfieldPositioning.PerCoordinates,
 
     /* The value for the Ezsigntemplateformfield */
     @Json(name = "sEzsigntemplateformfieldValue")
-    override val sEzsigntemplateformfieldValue: kotlin.String? = null,
+    val sEzsigntemplateformfieldValue: kotlin.String? = null,
 
     /* The X coordinate (Horizontal) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 2 inches from the left border of the page, you would use \"200\" for the X coordinate. */
     @Json(name = "iEzsigntemplateformfieldX")
-    override val iEzsigntemplateformfieldX: kotlin.Int? = null,
+    val iEzsigntemplateformfieldX: kotlin.Int? = null,
 
     /* The Y coordinate (Vertical) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 3 inches from the top border of the page, you would use \"300\" for the Y coordinate. */
     @Json(name = "iEzsigntemplateformfieldY")
-    override val iEzsigntemplateformfieldY: kotlin.Int? = null,
+    val iEzsigntemplateformfieldY: kotlin.Int? = null,
 
     /* Whether the Ezsigntemplateformfield allows the use of the autocomplete of the browser.  This can only be set if eEzsigntemplateformfieldgroupType is **Text** */
     @Json(name = "bEzsigntemplateformfieldAutocomplete")
-    override val bEzsigntemplateformfieldAutocomplete: kotlin.Boolean? = null,
+    val bEzsigntemplateformfieldAutocomplete: kotlin.Boolean? = null,
 
     /* Whether the Ezsigntemplateformfield is selected or not by default.  This can only be set if eEzsigntemplateformfieldgroupType is **Checkbox** or **Radio** */
     @Json(name = "bEzsigntemplateformfieldSelected")
-    override val bEzsigntemplateformfieldSelected: kotlin.Boolean? = null,
+    val bEzsigntemplateformfieldSelected: kotlin.Boolean? = null,
 
     @Json(name = "eEzsigntemplateformfieldDependencyrequirement")
-    override val eEzsigntemplateformfieldDependencyrequirement: FieldEEzsigntemplateformfieldDependencyrequirement? = null,
+    val eEzsigntemplateformfieldDependencyrequirement: FieldEEzsigntemplateformfieldDependencyrequirement? = null,
 
     /* The string pattern to search for the positioning. **This is not a regexp**  This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates** */
     @Json(name = "sEzsigntemplateformfieldPositioningpattern")
-    override val sEzsigntemplateformfieldPositioningpattern: kotlin.String? = null,
+    val sEzsigntemplateformfieldPositioningpattern: kotlin.String? = null,
 
     /* The offset X  This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates** */
     @Json(name = "iEzsigntemplateformfieldPositioningoffsetx")
-    override val iEzsigntemplateformfieldPositioningoffsetx: kotlin.Int? = null,
+    val iEzsigntemplateformfieldPositioningoffsetx: kotlin.Int? = null,
 
     /* The offset Y  This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates** */
     @Json(name = "iEzsigntemplateformfieldPositioningoffsety")
-    override val iEzsigntemplateformfieldPositioningoffsety: kotlin.Int? = null,
+    val iEzsigntemplateformfieldPositioningoffsety: kotlin.Int? = null,
 
     @Json(name = "eEzsigntemplateformfieldPositioningoccurence")
-    override val eEzsigntemplateformfieldPositioningoccurence: FieldEEzsigntemplateformfieldPositioningoccurence? = null,
+    val eEzsigntemplateformfieldPositioningoccurence: FieldEEzsigntemplateformfieldPositioningoccurence? = null,
 
     @Json(name = "eEzsigntemplateformfieldHorizontalalignment")
-    override val eEzsigntemplateformfieldHorizontalalignment: EnumHorizontalalignment? = null,
+    val eEzsigntemplateformfieldHorizontalalignment: EnumHorizontalalignment? = null,
 
     @Json(name = "objTextstylestatic")
-    override val objTextstylestatic: TextstylestaticRequestCompound? = null,
+    val objTextstylestatic: TextstylestaticRequestCompound? = null,
 
     @Json(name = "a_objEzsigntemplateelementdependency")
-    val aObjEzsigntemplateelementdependency: kotlin.collections.List<EzsigntemplateelementdependencyRequest>? = null
+    val aObjEzsigntemplateelementdependency: kotlin.collections.List<EzsigntemplateelementdependencyRequestCompound>? = null
 
-) : EzsigntemplateformfieldRequest {
+) {
 
 
 }

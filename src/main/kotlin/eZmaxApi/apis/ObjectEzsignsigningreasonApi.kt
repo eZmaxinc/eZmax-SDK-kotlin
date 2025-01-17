@@ -19,11 +19,11 @@ import java.io.IOException
 import okhttp3.Call
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.EzsignsigningreasonCreateObjectV1Request
 import eZmaxApi.models.EzsignsigningreasonCreateObjectV1Response
 import eZmaxApi.models.EzsignsigningreasonEditObjectV1Request
+import eZmaxApi.models.EzsignsigningreasonEditObjectV1Response
 import eZmaxApi.models.EzsignsigningreasonGetAutocompleteV2Response
 import eZmaxApi.models.EzsignsigningreasonGetListV1Response
 import eZmaxApi.models.EzsignsigningreasonGetObjectV2Response
@@ -130,7 +130,7 @@ class ObjectEzsignsigningreasonApi(basePath: kotlin.String = defaultBasePath, cl
      * 
      * @param pkiEzsignsigningreasonID The unique ID of the Ezsignsigningreason
      * @param ezsignsigningreasonEditObjectV1Request 
-     * @return CommonResponse
+     * @return EzsignsigningreasonEditObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -139,11 +139,11 @@ class ObjectEzsignsigningreasonApi(basePath: kotlin.String = defaultBasePath, cl
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignsigningreasonEditObjectV1(pkiEzsignsigningreasonID: kotlin.Int, ezsignsigningreasonEditObjectV1Request: EzsignsigningreasonEditObjectV1Request) : CommonResponse {
+    fun ezsignsigningreasonEditObjectV1(pkiEzsignsigningreasonID: kotlin.Int, ezsignsigningreasonEditObjectV1Request: EzsignsigningreasonEditObjectV1Request) : EzsignsigningreasonEditObjectV1Response {
         val localVarResponse = ezsignsigningreasonEditObjectV1WithHttpInfo(pkiEzsignsigningreasonID = pkiEzsignsigningreasonID, ezsignsigningreasonEditObjectV1Request = ezsignsigningreasonEditObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignsigningreasonEditObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -162,16 +162,16 @@ class ObjectEzsignsigningreasonApi(basePath: kotlin.String = defaultBasePath, cl
      * 
      * @param pkiEzsignsigningreasonID The unique ID of the Ezsignsigningreason
      * @param ezsignsigningreasonEditObjectV1Request 
-     * @return ApiResponse<CommonResponse?>
+     * @return ApiResponse<EzsignsigningreasonEditObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignsigningreasonEditObjectV1WithHttpInfo(pkiEzsignsigningreasonID: kotlin.Int, ezsignsigningreasonEditObjectV1Request: EzsignsigningreasonEditObjectV1Request) : ApiResponse<CommonResponse?> {
+    fun ezsignsigningreasonEditObjectV1WithHttpInfo(pkiEzsignsigningreasonID: kotlin.Int, ezsignsigningreasonEditObjectV1Request: EzsignsigningreasonEditObjectV1Request) : ApiResponse<EzsignsigningreasonEditObjectV1Response?> {
         val localVariableConfig = ezsignsigningreasonEditObjectV1RequestConfig(pkiEzsignsigningreasonID = pkiEzsignsigningreasonID, ezsignsigningreasonEditObjectV1Request = ezsignsigningreasonEditObjectV1Request)
 
-        return request<EzsignsigningreasonEditObjectV1Request, CommonResponse>(
+        return request<EzsignsigningreasonEditObjectV1Request, EzsignsigningreasonEditObjectV1Response>(
             localVariableConfig
         )
     }

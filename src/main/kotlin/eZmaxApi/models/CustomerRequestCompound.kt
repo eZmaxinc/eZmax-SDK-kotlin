@@ -15,7 +15,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.CustomerRequest
 import eZmaxApi.models.FieldECustomerMarketingcorrespondence
 import eZmaxApi.models.FieldECustomerType
 
@@ -79,210 +78,210 @@ import com.squareup.moshi.JsonClass
  */
 
 
-class CustomerRequestCompound (
+data class CustomerRequestCompound (
 
     /* The unique ID of the Company */
     @Json(name = "fkiCompanyID")
-    override val fkiCompanyID: kotlin.Int,
+    val fkiCompanyID: kotlin.Int,
 
     /* The unique ID of the Customergroup */
     @Json(name = "fkiCustomergroupID")
-    override val fkiCustomergroupID: kotlin.Int,
+    val fkiCustomergroupID: kotlin.Int,
 
     /* The name of the Customer */
     @Json(name = "sCustomerName")
-    override val sCustomerName: kotlin.String,
+    val sCustomerName: kotlin.String,
 
     /* The unique ID of the Contactinformations */
     @Json(name = "fkiContactinformationsID")
-    override val fkiContactinformationsID: kotlin.Int,
+    val fkiContactinformationsID: kotlin.Int,
 
     /* The unique ID of the Contactcontainer */
     @Json(name = "fkiContactcontainerID")
-    override val fkiContactcontainerID: kotlin.Int,
+    val fkiContactcontainerID: kotlin.Int,
 
     /* The unique ID of the Image */
     @Json(name = "fkiImageID")
-    override val fkiImageID: kotlin.Int,
+    val fkiImageID: kotlin.Int,
 
     /* The unique ID of the Glaccountcontainer */
     @Json(name = "fkiGlaccountcontainerID")
-    override val fkiGlaccountcontainerID: kotlin.Int,
+    val fkiGlaccountcontainerID: kotlin.Int,
 
     /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| */
     @Json(name = "fkiLanguageID")
-    override val fkiLanguageID: kotlin.Int,
+    val fkiLanguageID: kotlin.Int,
 
     /* The unique ID of the Department */
     @Json(name = "fkiDepartmentID")
-    override val fkiDepartmentID: kotlin.Int,
+    val fkiDepartmentID: kotlin.Int,
 
     /* The unique ID of the Paymentmethod */
     @Json(name = "fkiPaymentmethodID")
-    override val fkiPaymentmethodID: kotlin.Int,
+    val fkiPaymentmethodID: kotlin.Int,
 
     /* The unique ID of the Electronicfundstransferbankaccount */
     @Json(name = "fkiElectronicfundstransferbankaccountID")
-    override val fkiElectronicfundstransferbankaccountID: kotlin.Int,
+    val fkiElectronicfundstransferbankaccountID: kotlin.Int,
 
     /* The unique ID of the Electronicfundstransferbankaccount */
     @Json(name = "fkiElectronicfundstransferbankaccountIDDirectdebit")
-    override val fkiElectronicfundstransferbankaccountIDDirectdebit: kotlin.Int,
+    val fkiElectronicfundstransferbankaccountIDDirectdebit: kotlin.Int,
 
     /* The unique ID of the Sendingmethod */
     @Json(name = "fkiSendingmethodID")
-    override val fkiSendingmethodID: kotlin.Int,
+    val fkiSendingmethodID: kotlin.Int,
 
     /* The unique ID of the Taxassignment.  Valid values:  |Value|Description| |-|-| |1|No tax| |2|GST| |3|HST (ON)| |4|HST (NB)| |5|HST (NS)| |6|HST (NL)| |7|HST (PE)| |8|GST + QST (QC)| |9|GST + QST (QC) Non-Recoverable| |10|GST + PST (BC)| |11|GST + PST (SK)| |12|GST + RST (MB)| |13|GST + PST (BC) Non-Recoverable| |14|GST + PST (SK) Non-Recoverable| |15|GST + RST (MB) Non-Recoverable| */
     @Json(name = "fkiTaxassignmentID")
-    override val fkiTaxassignmentID: kotlin.Int,
+    val fkiTaxassignmentID: kotlin.Int,
 
     /* The unique ID of the Attendancestatus */
     @Json(name = "fkiAttendancestatusID")
-    override val fkiAttendancestatusID: kotlin.Int,
+    val fkiAttendancestatusID: kotlin.Int,
 
     /* The unique ID of the Agent. */
     @Json(name = "fkiAgentIDVariableexpensechargeto")
-    override val fkiAgentIDVariableexpensechargeto: kotlin.Int,
+    val fkiAgentIDVariableexpensechargeto: kotlin.Int,
 
     /* The unique ID of the Broker. */
     @Json(name = "fkiBrokerIDVariableexpensechargeto")
-    override val fkiBrokerIDVariableexpensechargeto: kotlin.Int,
+    val fkiBrokerIDVariableexpensechargeto: kotlin.Int,
 
     /* The unique ID of the Customer. */
     @Json(name = "fkiCustomerIDVariableexpensechargeto")
-    override val fkiCustomerIDVariableexpensechargeto: kotlin.Int,
+    val fkiCustomerIDVariableexpensechargeto: kotlin.Int,
 
     /* The unique ID of the Glaccountcontainer */
     @Json(name = "fkiGlaccountcontainerIDVariableexpensechargeto")
-    override val fkiGlaccountcontainerIDVariableexpensechargeto: kotlin.Int,
+    val fkiGlaccountcontainerIDVariableexpensechargeto: kotlin.Int,
 
     /* The unique ID of the Agent. */
     @Json(name = "fkiAgentIDSupplychargechargeto")
-    override val fkiAgentIDSupplychargechargeto: kotlin.Int,
+    val fkiAgentIDSupplychargechargeto: kotlin.Int,
 
     /* The unique ID of the Broker. */
     @Json(name = "fkiBrokerIDSupplychargechargeto")
-    override val fkiBrokerIDSupplychargechargeto: kotlin.Int,
+    val fkiBrokerIDSupplychargechargeto: kotlin.Int,
 
     /* The unique ID of the Customer. */
     @Json(name = "fkiCustomerIDSupplychargechargeto")
-    override val fkiCustomerIDSupplychargechargeto: kotlin.Int,
+    val fkiCustomerIDSupplychargechargeto: kotlin.Int,
 
     /* The unique ID of the Glaccountcontainer */
     @Json(name = "fkiGlaccountcontainerIDSupplychargechargeto")
-    override val fkiGlaccountcontainerIDSupplychargechargeto: kotlin.Int,
+    val fkiGlaccountcontainerIDSupplychargechargeto: kotlin.Int,
 
     /* The unique ID of the Invoicealternatelogo */
     @Json(name = "fkiInvoicealternatelogoID")
-    override val fkiInvoicealternatelogoID: kotlin.Int,
+    val fkiInvoicealternatelogoID: kotlin.Int,
 
     /* The unique ID of the Synchronizationlinkserver */
     @Json(name = "fkiSynchronizationlinkserverID")
-    override val fkiSynchronizationlinkserverID: kotlin.Int,
+    val fkiSynchronizationlinkserverID: kotlin.Int,
 
     /* The code of the Customer */
     @Json(name = "sCustomerCode")
-    override val sCustomerCode: kotlin.String,
+    val sCustomerCode: kotlin.String,
 
     /* The fulltimeequivalent of the Customer */
     @Json(name = "dCustomerFulltimeequivalent")
-    override val dCustomerFulltimeequivalent: kotlin.String,
+    val dCustomerFulltimeequivalent: kotlin.String,
 
     /* The photocopiercode of the Customer */
     @Json(name = "iCustomerPhotocopiercode")
-    override val iCustomerPhotocopiercode: kotlin.Int,
+    val iCustomerPhotocopiercode: kotlin.Int,
 
     /* The longdistancecode of the Customer */
     @Json(name = "iCustomerLongdistancecode")
-    override val iCustomerLongdistancecode: kotlin.Int,
+    val iCustomerLongdistancecode: kotlin.Int,
 
     /* The timewindowstart of the Customer */
     @Json(name = "iCustomerTimewindowstart")
-    override val iCustomerTimewindowstart: kotlin.Int,
+    val iCustomerTimewindowstart: kotlin.Int,
 
     /* The timewindowend of the Customer */
     @Json(name = "iCustomerTimewindowend")
-    override val iCustomerTimewindowend: kotlin.Int,
+    val iCustomerTimewindowend: kotlin.Int,
 
     /* The minimumchargeableinterests of the Customer */
     @Json(name = "dCustomerMinimumchargeableinterests")
-    override val dCustomerMinimumchargeableinterests: kotlin.String,
+    val dCustomerMinimumchargeableinterests: kotlin.String,
 
     /* The birthdate of the Customer */
     @Json(name = "dtCustomerBirthdate")
-    override val dtCustomerBirthdate: kotlin.String,
+    val dtCustomerBirthdate: kotlin.String,
 
     /* The transfer of the Customer */
     @Json(name = "dtCustomerTransfer")
-    override val dtCustomerTransfer: kotlin.String,
+    val dtCustomerTransfer: kotlin.String,
 
     /* The transferappointment of the Customer */
     @Json(name = "dtCustomerTransferappointment")
-    override val dtCustomerTransferappointment: kotlin.String,
+    val dtCustomerTransferappointment: kotlin.String,
 
     /* The transfersurvey of the Customer */
     @Json(name = "dtCustomerTransfersurvey")
-    override val dtCustomerTransfersurvey: kotlin.String,
+    val dtCustomerTransfersurvey: kotlin.String,
 
     /* Whether the customer is active or not */
     @Json(name = "bCustomerIsactive")
-    override val bCustomerIsactive: kotlin.Boolean,
+    val bCustomerIsactive: kotlin.Boolean,
 
     /* Whether if it's an variableexpensefinanced */
     @Json(name = "bCustomerVariableexpensefinanced")
-    override val bCustomerVariableexpensefinanced: kotlin.Boolean,
+    val bCustomerVariableexpensefinanced: kotlin.Boolean,
 
     /* Whether if it's an variableexpensefinancedtaxes */
     @Json(name = "bCustomerVariableexpensefinancedtaxes")
-    override val bCustomerVariableexpensefinancedtaxes: kotlin.Boolean,
+    val bCustomerVariableexpensefinancedtaxes: kotlin.Boolean,
 
     /* Whether if it's an supplychargefinanced */
     @Json(name = "bCustomerSupplychargefinanced")
-    override val bCustomerSupplychargefinanced: kotlin.Boolean,
+    val bCustomerSupplychargefinanced: kotlin.Boolean,
 
     /* Whether if it's an supplychargefinancedtaxes */
     @Json(name = "bCustomerSupplychargefinancedtaxes")
-    override val bCustomerSupplychargefinancedtaxes: kotlin.Boolean,
+    val bCustomerSupplychargefinancedtaxes: kotlin.Boolean,
 
     /* Whether if it's an attendance */
     @Json(name = "bCustomerAttendance")
-    override val bCustomerAttendance: kotlin.Boolean,
+    val bCustomerAttendance: kotlin.Boolean,
 
     @Json(name = "eCustomerType")
-    override val eCustomerType: FieldECustomerType,
+    val eCustomerType: FieldECustomerType,
 
     @Json(name = "eCustomerMarketingcorrespondence")
-    override val eCustomerMarketingcorrespondence: FieldECustomerMarketingcorrespondence,
+    val eCustomerMarketingcorrespondence: FieldECustomerMarketingcorrespondence,
 
     /* Whether if it's an blackcopycarbon */
     @Json(name = "bCustomerBlackcopycarbon")
-    override val bCustomerBlackcopycarbon: kotlin.Boolean,
+    val bCustomerBlackcopycarbon: kotlin.Boolean,
 
     /* Whether if it's an unsubscribeinfo */
     @Json(name = "bCustomerUnsubscribeinfo")
-    override val bCustomerUnsubscribeinfo: kotlin.Boolean,
+    val bCustomerUnsubscribeinfo: kotlin.Boolean,
 
     /* The comment of the Customer */
     @Json(name = "tCustomerComment")
-    override val tCustomerComment: kotlin.String,
+    val tCustomerComment: kotlin.String,
 
     /* The unique ID of the Customer. */
     @Json(name = "pkiCustomerID")
-    override val pkiCustomerID: kotlin.Int? = null,
+    val pkiCustomerID: kotlin.Int? = null,
 
     /* The unique ID of the User */
     @Json(name = "efkiUserID")
-    override val efkiUserID: kotlin.Int? = null,
+    val efkiUserID: kotlin.Int? = null,
 
     /* The code of the Customer */
     @Json(name = "efksCustomerCode")
-    override val efksCustomerCode: kotlin.String? = null,
+    val efksCustomerCode: kotlin.String? = null,
 
     @Json(name = "IMPORTID")
-    override val IMPORTID: kotlin.String? = null
+    val IMPORTID: kotlin.String? = null
 
-) : CustomerRequest {
+) {
 
 
 }

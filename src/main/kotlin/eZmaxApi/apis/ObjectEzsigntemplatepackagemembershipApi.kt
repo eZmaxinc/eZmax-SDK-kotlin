@@ -19,10 +19,10 @@ import java.io.IOException
 import okhttp3.Call
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.EzsigntemplatepackagemembershipCreateObjectV1Request
 import eZmaxApi.models.EzsigntemplatepackagemembershipCreateObjectV1Response
+import eZmaxApi.models.EzsigntemplatepackagemembershipDeleteObjectV1Response
 import eZmaxApi.models.EzsigntemplatepackagemembershipGetObjectV2Response
 
 import com.squareup.moshi.Json
@@ -125,7 +125,7 @@ class ObjectEzsigntemplatepackagemembershipApi(basePath: kotlin.String = default
      * Delete an existing Ezsigntemplatepackagemembership
      * 
      * @param pkiEzsigntemplatepackagemembershipID 
-     * @return CommonResponse
+     * @return EzsigntemplatepackagemembershipDeleteObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -134,11 +134,11 @@ class ObjectEzsigntemplatepackagemembershipApi(basePath: kotlin.String = default
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsigntemplatepackagemembershipDeleteObjectV1(pkiEzsigntemplatepackagemembershipID: kotlin.Int) : CommonResponse {
+    fun ezsigntemplatepackagemembershipDeleteObjectV1(pkiEzsigntemplatepackagemembershipID: kotlin.Int) : EzsigntemplatepackagemembershipDeleteObjectV1Response {
         val localVarResponse = ezsigntemplatepackagemembershipDeleteObjectV1WithHttpInfo(pkiEzsigntemplatepackagemembershipID = pkiEzsigntemplatepackagemembershipID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigntemplatepackagemembershipDeleteObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -156,16 +156,16 @@ class ObjectEzsigntemplatepackagemembershipApi(basePath: kotlin.String = default
      * Delete an existing Ezsigntemplatepackagemembership
      * 
      * @param pkiEzsigntemplatepackagemembershipID 
-     * @return ApiResponse<CommonResponse?>
+     * @return ApiResponse<EzsigntemplatepackagemembershipDeleteObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsigntemplatepackagemembershipDeleteObjectV1WithHttpInfo(pkiEzsigntemplatepackagemembershipID: kotlin.Int) : ApiResponse<CommonResponse?> {
+    fun ezsigntemplatepackagemembershipDeleteObjectV1WithHttpInfo(pkiEzsigntemplatepackagemembershipID: kotlin.Int) : ApiResponse<EzsigntemplatepackagemembershipDeleteObjectV1Response?> {
         val localVariableConfig = ezsigntemplatepackagemembershipDeleteObjectV1RequestConfig(pkiEzsigntemplatepackagemembershipID = pkiEzsigntemplatepackagemembershipID)
 
-        return request<Unit, CommonResponse>(
+        return request<Unit, EzsigntemplatepackagemembershipDeleteObjectV1Response>(
             localVariableConfig
         )
     }

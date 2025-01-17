@@ -18,7 +18,6 @@ package eZmaxApi.models
 import eZmaxApi.models.CommonAudit
 import eZmaxApi.models.ComputedEEzsigndocumentSteptype
 import eZmaxApi.models.CustomEzsignfoldersignerassociationstatusResponse
-import eZmaxApi.models.EzsigndocumentResponseCompound
 import eZmaxApi.models.EzsigndocumentdependencyResponse
 import eZmaxApi.models.FieldEEzsigndocumentStep
 
@@ -62,128 +61,128 @@ import com.squareup.moshi.JsonClass
  */
 
 
-class EzsigndocumentGetObjectV1ResponseMPayload (
+data class EzsigndocumentGetObjectV1ResponseMPayload (
 
     /* The unique ID of the Ezsigndocument */
     @Json(name = "pkiEzsigndocumentID")
-    override val pkiEzsigndocumentID: kotlin.Int,
+    val pkiEzsigndocumentID: kotlin.Int,
 
     /* The unique ID of the Ezsignfolder */
     @Json(name = "fkiEzsignfolderID")
-    override val fkiEzsignfolderID: kotlin.Int,
+    val fkiEzsignfolderID: kotlin.Int,
 
     /* The maximum date and time at which the Ezsigndocument can be signed. */
     @Json(name = "dtEzsigndocumentDuedate")
-    override val dtEzsigndocumentDuedate: kotlin.String,
+    val dtEzsigndocumentDuedate: kotlin.String,
 
     /* The name of the document that will be presented to Ezsignfoldersignerassociations */
     @Json(name = "sEzsigndocumentName")
-    override val sEzsigndocumentName: kotlin.String,
+    val sEzsigndocumentName: kotlin.String,
 
     @Json(name = "eEzsigndocumentStep")
-    override val eEzsigndocumentStep: FieldEEzsigndocumentStep,
+    val eEzsigndocumentStep: FieldEEzsigndocumentStep,
 
     /* The order in which the Ezsigndocument will be presented to the signatory in the Ezsignfolder. */
     @Json(name = "iEzsigndocumentOrder")
-    override val iEzsigndocumentOrder: kotlin.Int,
+    val iEzsigndocumentOrder: kotlin.Int,
 
     /* The number of pages in the Ezsigndocument. */
     @Json(name = "iEzsigndocumentPagetotal")
-    override val iEzsigndocumentPagetotal: kotlin.Int,
+    val iEzsigndocumentPagetotal: kotlin.Int,
 
     /* The number of signatures that were signed in the document. */
     @Json(name = "iEzsigndocumentSignaturesigned")
-    override val iEzsigndocumentSignaturesigned: kotlin.Int,
+    val iEzsigndocumentSignaturesigned: kotlin.Int,
 
     /* The number of total signatures that were requested in the Ezsigndocument. */
     @Json(name = "iEzsigndocumentSignaturetotal")
-    override val iEzsigndocumentSignaturetotal: kotlin.Int,
+    val iEzsigndocumentSignaturetotal: kotlin.Int,
 
     /* The number of total Ezsignformfield that were requested in the Ezsigndocument. */
     @Json(name = "iEzsigndocumentFormfieldtotal")
-    override val iEzsigndocumentFormfieldtotal: kotlin.Int,
+    val iEzsigndocumentFormfieldtotal: kotlin.Int,
 
     /* The number of Ezsigndocumentattachment total */
     @Json(name = "iEzsigndocumentEzsignsignatureattachmenttotal")
-    override val iEzsigndocumentEzsignsignatureattachmenttotal: kotlin.Int,
+    val iEzsigndocumentEzsignsignatureattachmenttotal: kotlin.Int,
 
     /* The total number of Ezsigndiscussions */
     @Json(name = "iEzsigndocumentEzsigndiscussiontotal")
-    override val iEzsigndocumentEzsigndiscussiontotal: kotlin.Int,
+    val iEzsigndocumentEzsigndiscussiontotal: kotlin.Int,
 
     @Json(name = "eEzsigndocumentSteptype")
-    override val eEzsigndocumentSteptype: ComputedEEzsigndocumentSteptype,
+    val eEzsigndocumentSteptype: ComputedEEzsigndocumentSteptype,
 
     /* The total number of steps in the form filling phase */
     @Json(name = "iEzsigndocumentStepformtotal")
-    override val iEzsigndocumentStepformtotal: kotlin.Int,
+    val iEzsigndocumentStepformtotal: kotlin.Int,
 
     /* The current step in the form filling phase */
     @Json(name = "iEzsigndocumentStepformcurrent")
-    override val iEzsigndocumentStepformcurrent: kotlin.Int,
+    val iEzsigndocumentStepformcurrent: kotlin.Int,
 
     /* The total number of steps in the signature filling phase */
     @Json(name = "iEzsigndocumentStepsignaturetotal")
-    override val iEzsigndocumentStepsignaturetotal: kotlin.Int,
+    val iEzsigndocumentStepsignaturetotal: kotlin.Int,
 
     /* The current step in the signature phase */
     @Json(name = "iEzsigndocumentStepsignatureCurrent")
-    override val iEzsigndocumentStepsignatureCurrent: kotlin.Int,
+    val iEzsigndocumentStepsignatureCurrent: kotlin.Int,
 
     @Json(name = "a_objEzsignfoldersignerassociationstatus")
-    override val aObjEzsignfoldersignerassociationstatus: kotlin.collections.List<CustomEzsignfoldersignerassociationstatusResponse>,
+    val aObjEzsignfoldersignerassociationstatus: kotlin.collections.List<CustomEzsignfoldersignerassociationstatusResponse>,
 
     /* The unique ID of the Ezsignfoldersignerassociation */
     @Json(name = "fkiEzsignfoldersignerassociationIDDeclinedtosign")
-    override val fkiEzsignfoldersignerassociationIDDeclinedtosign: kotlin.Int? = null,
+    val fkiEzsignfoldersignerassociationIDDeclinedtosign: kotlin.Int? = null,
 
     /* The date and time at which the Ezsignform has been completed. */
     @Json(name = "dtEzsignformCompleted")
-    override val dtEzsignformCompleted: kotlin.String? = null,
+    val dtEzsignformCompleted: kotlin.String? = null,
 
     /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| */
     @Json(name = "fkiLanguageID")
-    override val fkiLanguageID: kotlin.Int? = null,
+    val fkiLanguageID: kotlin.Int? = null,
 
     /* The date and time when the Ezsigndocument was first sent. */
     @Json(name = "dtEzsigndocumentFirstsend")
-    override val dtEzsigndocumentFirstsend: kotlin.String? = null,
+    val dtEzsigndocumentFirstsend: kotlin.String? = null,
 
     /* The date and time when the Ezsigndocument was sent the last time. */
     @Json(name = "dtEzsigndocumentLastsend")
-    override val dtEzsigndocumentLastsend: kotlin.String? = null,
+    val dtEzsigndocumentLastsend: kotlin.String? = null,
 
     /* MD5 Hash of the initial PDF Document before signatures were applied to it. */
     @Json(name = "sEzsigndocumentMD5initial")
-    override val sEzsigndocumentMD5initial: kotlin.String? = null,
+    val sEzsigndocumentMD5initial: kotlin.String? = null,
 
     /* A custom text message that will contain the refusal message if the Ezsigndocument is declined to sign */
     @Json(name = "tEzsigndocumentDeclinedtosignreason")
-    override val tEzsigndocumentDeclinedtosignreason: kotlin.String? = null,
+    val tEzsigndocumentDeclinedtosignreason: kotlin.String? = null,
 
     /* MD5 Hash of the final PDF Document after all signatures were applied to it. */
     @Json(name = "sEzsigndocumentMD5signed")
-    override val sEzsigndocumentMD5signed: kotlin.String? = null,
+    val sEzsigndocumentMD5signed: kotlin.String? = null,
 
     /* If the Ezsigndocument contains an Ezsignform or not */
     @Json(name = "bEzsigndocumentEzsignform")
-    override val bEzsigndocumentEzsignform: kotlin.Boolean? = null,
+    val bEzsigndocumentEzsignform: kotlin.Boolean? = null,
 
     /* If the Ezsigndocument contains signed signatures (From internal or external sources) */
     @Json(name = "bEzsigndocumentHassignedsignatures")
-    override val bEzsigndocumentHassignedsignatures: kotlin.Boolean? = null,
+    val bEzsigndocumentHassignedsignatures: kotlin.Boolean? = null,
 
     @Json(name = "objAudit")
-    override val objAudit: CommonAudit? = null,
+    val objAudit: CommonAudit? = null,
 
     /* This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format.  */
     @Json(name = "sEzsigndocumentExternalid")
-    override val sEzsigndocumentExternalid: kotlin.String? = null,
+    val sEzsigndocumentExternalid: kotlin.String? = null,
 
     @Json(name = "a_objEzsigndocumentdependency")
-    override val aObjEzsigndocumentdependency: kotlin.collections.List<EzsigndocumentdependencyResponse>? = null
+    val aObjEzsigndocumentdependency: kotlin.collections.List<EzsigndocumentdependencyResponse>? = null
 
-) : EzsigndocumentResponseCompound {
+) {
 
 
 }

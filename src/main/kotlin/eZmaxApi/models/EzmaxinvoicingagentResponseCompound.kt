@@ -16,7 +16,6 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.CustomContactNameResponse
-import eZmaxApi.models.EzmaxinvoicingagentResponse
 import eZmaxApi.models.FieldEEzmaxinvoicingagentVariationezmax
 import eZmaxApi.models.FieldEEzmaxinvoicingagentVariationezsign
 
@@ -54,86 +53,86 @@ data class EzmaxinvoicingagentResponseCompound (
 
     /* The unique ID of the Billingentityinternal. */
     @Json(name = "fkiBillingentityinternalID")
-    override val fkiBillingentityinternalID: kotlin.Int,
+    val fkiBillingentityinternalID: kotlin.Int,
 
     /* The description of the Billingentityinternal in the language of the requester */
     @Json(name = "sBillingentityinternalDescriptionX")
-    override val sBillingentityinternalDescriptionX: kotlin.String,
+    val sBillingentityinternalDescriptionX: kotlin.String,
 
     /* The number of sessions */
     @Json(name = "iEzmaxinvoicingagentSession")
-    override val iEzmaxinvoicingagentSession: kotlin.Int,
+    val iEzmaxinvoicingagentSession: kotlin.Int,
 
     /* The number of times this user was cloned */
     @Json(name = "iEzmaxinvoicingagentCloned")
-    override val iEzmaxinvoicingagentCloned: kotlin.Int,
+    val iEzmaxinvoicingagentCloned: kotlin.Int,
 
     /* The number of invoices */
     @Json(name = "iEzmaxinvoicingagentInvoice")
-    override val iEzmaxinvoicingagentInvoice: kotlin.Int,
+    val iEzmaxinvoicingagentInvoice: kotlin.Int,
 
     /* The number of inscriptions */
     @Json(name = "iEzmaxinvoicingagentInscription")
-    override val iEzmaxinvoicingagentInscription: kotlin.Int,
+    val iEzmaxinvoicingagentInscription: kotlin.Int,
 
     /* The number of active inscriptions */
     @Json(name = "iEzmaxinvoicingagentInscriptionactive")
-    override val iEzmaxinvoicingagentInscriptionactive: kotlin.Int,
+    val iEzmaxinvoicingagentInscriptionactive: kotlin.Int,
 
     /* The number of sales */
     @Json(name = "iEzmaxinvoicingagentSale")
-    override val iEzmaxinvoicingagentSale: kotlin.Int,
+    val iEzmaxinvoicingagentSale: kotlin.Int,
 
     /* The number of otherincomes */
     @Json(name = "iEzmaxinvoicingagentOtherincome")
-    override val iEzmaxinvoicingagentOtherincome: kotlin.Int,
+    val iEzmaxinvoicingagentOtherincome: kotlin.Int,
 
     /* The number of commission calculations */
     @Json(name = "iEzmaxinvoicingagentCommissioncalculation")
-    override val iEzmaxinvoicingagentCommissioncalculation: kotlin.Int,
+    val iEzmaxinvoicingagentCommissioncalculation: kotlin.Int,
 
     /* The number of ezsign documents */
     @Json(name = "iEzmaxinvoicingagentEzsigndocument")
-    override val iEzmaxinvoicingagentEzsigndocument: kotlin.Int,
+    val iEzmaxinvoicingagentEzsigndocument: kotlin.Int,
 
     /* Whether the agent has an eZsign account */
     @Json(name = "bEzmaxinvoicingagentEzsignaccount")
-    override val bEzmaxinvoicingagentEzsignaccount: kotlin.Boolean,
+    val bEzmaxinvoicingagentEzsignaccount: kotlin.Boolean,
 
     /* Whether it is billable for eZmax */
     @Json(name = "bEzmaxinvoicingagentBillableezmax")
-    override val bEzmaxinvoicingagentBillableezmax: kotlin.Boolean,
+    val bEzmaxinvoicingagentBillableezmax: kotlin.Boolean,
 
     @Json(name = "eEzmaxinvoicingagentVariationezmax")
-    override val eEzmaxinvoicingagentVariationezmax: FieldEEzmaxinvoicingagentVariationezmax,
+    val eEzmaxinvoicingagentVariationezmax: FieldEEzmaxinvoicingagentVariationezmax,
 
     /* Whether it is billable for eZsign */
     @Json(name = "bEzmaxinvoicingagentBillableezsign")
-    override val bEzmaxinvoicingagentBillableezsign: kotlin.Boolean,
+    val bEzmaxinvoicingagentBillableezsign: kotlin.Boolean,
 
     @Json(name = "eEzmaxinvoicingagentVariationezsign")
-    override val eEzmaxinvoicingagentVariationezsign: FieldEEzmaxinvoicingagentVariationezsign,
+    val eEzmaxinvoicingagentVariationezsign: FieldEEzmaxinvoicingagentVariationezsign,
 
     @Json(name = "objContactName")
     val objContactName: CustomContactNameResponse,
 
     /* The unique ID of the Ezmaxinvoicingagent */
     @Json(name = "pkiEzmaxinvoicingagentID")
-    override val pkiEzmaxinvoicingagentID: kotlin.Int? = null,
+    val pkiEzmaxinvoicingagentID: kotlin.Int? = null,
 
     /* The unique ID of the Ezmaxinvoicing */
     @Json(name = "fkiEzmaxinvoicingID")
-    override val fkiEzmaxinvoicingID: kotlin.Int? = null,
+    val fkiEzmaxinvoicingID: kotlin.Int? = null,
 
     /* The unique ID of the Agent. */
     @Json(name = "fkiAgentID")
-    override val fkiAgentID: kotlin.Int? = null,
+    val fkiAgentID: kotlin.Int? = null,
 
     /* The unique ID of the Broker. */
     @Json(name = "fkiBrokerID")
-    override val fkiBrokerID: kotlin.Int? = null
+    val fkiBrokerID: kotlin.Int? = null
 
-) : EzmaxinvoicingagentResponse {
+) {
 
 
 }

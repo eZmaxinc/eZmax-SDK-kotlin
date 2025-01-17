@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.CustomEzsignformfieldgroupRequest
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -34,7 +35,7 @@ data class EzsigndocumentSubmitEzsignformV1Request (
     val bEzsignformIsdraft: kotlin.Boolean,
 
     @Json(name = "a_objEzsignformfieldgroup")
-    val aObjEzsignformfieldgroup: kotlin.collections.List<kotlin.Any>
+    val aObjEzsignformfieldgroup: kotlin.collections.List<CustomEzsignformfieldgroupRequest>
 
 ) {
 

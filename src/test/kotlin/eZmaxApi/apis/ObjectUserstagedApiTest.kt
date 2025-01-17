@@ -19,13 +19,14 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectUserstagedApi
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.HeaderAcceptLanguage
 import eZmaxApi.models.UserstagedCreateUserV1Response
+import eZmaxApi.models.UserstagedDeleteObjectV1Response
 import eZmaxApi.models.UserstagedGetListV1Response
 import eZmaxApi.models.UserstagedGetObjectV2Response
 import eZmaxApi.models.UserstagedMapV1Request
+import eZmaxApi.models.UserstagedMapV1Response
 
 class ObjectUserstagedApiTest : ShouldSpec() {
     init {
@@ -45,7 +46,7 @@ class ObjectUserstagedApiTest : ShouldSpec() {
         should("test userstagedDeleteObjectV1") {
             // uncomment below to test userstagedDeleteObjectV1
             //val pkiUserstagedID : kotlin.Int = 56 // kotlin.Int | 
-            //val result : CommonResponse = apiInstance.userstagedDeleteObjectV1(pkiUserstagedID)
+            //val result : UserstagedDeleteObjectV1Response = apiInstance.userstagedDeleteObjectV1(pkiUserstagedID)
             //result shouldBe ("TODO")
         }
 
@@ -74,7 +75,7 @@ class ObjectUserstagedApiTest : ShouldSpec() {
             // uncomment below to test userstagedMapV1
             //val pkiUserstagedID : kotlin.Int = 56 // kotlin.Int | 
             //val userstagedMapV1Request : UserstagedMapV1Request =  // UserstagedMapV1Request | 
-            //val result : CommonResponse = apiInstance.userstagedMapV1(pkiUserstagedID, userstagedMapV1Request)
+            //val result : UserstagedMapV1Response = apiInstance.userstagedMapV1(pkiUserstagedID, userstagedMapV1Request)
             //result shouldBe ("TODO")
         }
 

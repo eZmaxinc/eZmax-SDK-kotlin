@@ -19,14 +19,14 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.UserGetObjectV2ResponseMPayload
-import eZmaxApi.models.UserResponse
+import eZmaxApi.models.UserResponseCompound
 
 class UserGetObjectV2ResponseMPayloadTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of UserGetObjectV2ResponseMPayload
         //val modelInstance = UserGetObjectV2ResponseMPayload()
 
-        // to test the property `objUser` - A User Object and children to create a complete structure
+        // to test the property `objUser`
         should("test objUser") {
             // uncomment below to test the property
             //modelInstance.objUser shouldBe ("TODO")

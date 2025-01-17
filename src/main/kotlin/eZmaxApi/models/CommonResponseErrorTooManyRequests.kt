@@ -15,7 +15,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.FieldEErrorCode
 
 import com.squareup.moshi.Json
@@ -30,20 +29,20 @@ import com.squareup.moshi.JsonClass
  */
 
 
-class CommonResponseErrorTooManyRequests (
+data class CommonResponseErrorTooManyRequests (
 
     /* The message giving details about the error */
     @Json(name = "sErrorMessage")
-    override val sErrorMessage: kotlin.String,
+    val sErrorMessage: kotlin.String,
 
     @Json(name = "eErrorCode")
-    override val eErrorCode: FieldEErrorCode,
+    val eErrorCode: FieldEErrorCode,
 
     /* More error message detail */
     @Json(name = "a_sErrorMessagedetail")
-    override val aSErrorMessagedetail: kotlin.collections.List<kotlin.String>? = null
+    val aSErrorMessagedetail: kotlin.collections.List<kotlin.String>? = null
 
-) : CommonResponseError {
+) {
 
 
 }

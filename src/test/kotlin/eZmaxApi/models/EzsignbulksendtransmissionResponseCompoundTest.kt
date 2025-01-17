@@ -21,12 +21,41 @@ import io.kotlintest.specs.ShouldSpec
 import eZmaxApi.models.EzsignbulksendtransmissionResponseCompound
 import eZmaxApi.models.CommonAudit
 import eZmaxApi.models.CustomEzsignfoldertransmissionResponse
-import eZmaxApi.models.EzsignbulksendtransmissionResponse
 
 class EzsignbulksendtransmissionResponseCompoundTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of EzsignbulksendtransmissionResponseCompound
         //val modelInstance = EzsignbulksendtransmissionResponseCompound()
+
+        // to test the property `pkiEzsignbulksendtransmissionID` - The unique ID of the Ezsignbulksendtransmission
+        should("test pkiEzsignbulksendtransmissionID") {
+            // uncomment below to test the property
+            //modelInstance.pkiEzsignbulksendtransmissionID shouldBe ("TODO")
+        }
+
+        // to test the property `fkiEzsignbulksendID` - The unique ID of the Ezsignbulksend
+        should("test fkiEzsignbulksendID") {
+            // uncomment below to test the property
+            //modelInstance.fkiEzsignbulksendID shouldBe ("TODO")
+        }
+
+        // to test the property `sEzsignbulksendtransmissionDescription` - The description of the Ezsignbulksendtransmission
+        should("test sEzsignbulksendtransmissionDescription") {
+            // uncomment below to test the property
+            //modelInstance.sEzsignbulksendtransmissionDescription shouldBe ("TODO")
+        }
+
+        // to test the property `iEzsignbulksendtransmissionErrors` - The number of errors during the Ezsignbulksendtransmission
+        should("test iEzsignbulksendtransmissionErrors") {
+            // uncomment below to test the property
+            //modelInstance.iEzsignbulksendtransmissionErrors shouldBe ("TODO")
+        }
+
+        // to test the property `objAudit`
+        should("test objAudit") {
+            // uncomment below to test the property
+            //modelInstance.objAudit shouldBe ("TODO")
+        }
 
         // to test the property `aObjEzsignfoldertransmission`
         should("test aObjEzsignfoldertransmission") {

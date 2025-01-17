@@ -15,7 +15,7 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.ApikeyResponse
+import eZmaxApi.models.ApikeyResponseCompound
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -23,15 +23,14 @@ import com.squareup.moshi.JsonClass
 /**
  * Response for GET /1/object/apikey/{pkiApikeyID}/regenerate
  *
- * @param objApikey An Apikey Object and children to create a complete structure
+ * @param objApikey 
  */
 
 
 data class ApikeyRegenerateV1ResponseMPayload (
 
-    /* An Apikey Object and children to create a complete structure */
     @Json(name = "objApikey")
-    val objApikey: ApikeyResponse
+    val objApikey: ApikeyResponseCompound
 
 ) {
 

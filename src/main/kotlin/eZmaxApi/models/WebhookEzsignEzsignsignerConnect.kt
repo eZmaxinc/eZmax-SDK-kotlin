@@ -15,8 +15,7 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.AttemptResponse
-import eZmaxApi.models.CommonWebhook
+import eZmaxApi.models.AttemptResponseCompound
 import eZmaxApi.models.CustomWebhookResponse
 import eZmaxApi.models.EzsignfolderResponse
 import eZmaxApi.models.EzsignfoldersignerassociationResponseCompound
@@ -37,11 +36,11 @@ import com.squareup.moshi.JsonClass
 data class WebhookEzsignEzsignsignerConnect (
 
     @Json(name = "objWebhook")
-    override val objWebhook: CustomWebhookResponse,
+    val objWebhook: CustomWebhookResponse,
 
     /* An array containing details of previous attempts that were made to deliver the message. The array is empty if it's the first attempt. */
     @Json(name = "a_objAttempt")
-    override val aObjAttempt: kotlin.collections.List<AttemptResponse>,
+    val aObjAttempt: kotlin.collections.List<AttemptResponseCompound>,
 
     @Json(name = "objEzsignfoldersignerassociation")
     val objEzsignfoldersignerassociation: EzsignfoldersignerassociationResponseCompound,
@@ -49,7 +48,7 @@ data class WebhookEzsignEzsignsignerConnect (
     @Json(name = "objEzsignfolder")
     val objEzsignfolder: EzsignfolderResponse? = null
 
-) : CommonWebhook {
+) {
 
 
 }

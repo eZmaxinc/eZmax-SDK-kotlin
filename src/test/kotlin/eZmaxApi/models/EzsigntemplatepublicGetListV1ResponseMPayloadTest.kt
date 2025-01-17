@@ -19,13 +19,24 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.EzsigntemplatepublicGetListV1ResponseMPayload
-import eZmaxApi.models.CommonGetListV1ResponseMPayload
 import eZmaxApi.models.EzsigntemplatepublicListElement
 
 class EzsigntemplatepublicGetListV1ResponseMPayloadTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of EzsigntemplatepublicGetListV1ResponseMPayload
         //val modelInstance = EzsigntemplatepublicGetListV1ResponseMPayload()
+
+        // to test the property `iRowReturned` - The number of rows returned
+        should("test iRowReturned") {
+            // uncomment below to test the property
+            //modelInstance.iRowReturned shouldBe ("TODO")
+        }
+
+        // to test the property `iRowFiltered` - The number of rows matching your filters (if any) or the total number of rows
+        should("test iRowFiltered") {
+            // uncomment below to test the property
+            //modelInstance.iRowFiltered shouldBe ("TODO")
+        }
 
         // to test the property `aObjEzsigntemplatepublic`
         should("test aObjEzsigntemplatepublic") {

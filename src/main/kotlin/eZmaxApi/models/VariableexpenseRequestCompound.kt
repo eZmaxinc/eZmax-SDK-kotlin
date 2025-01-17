@@ -17,7 +17,6 @@ package eZmaxApi.models
 
 import eZmaxApi.models.FieldEVariableexpenseTaxable
 import eZmaxApi.models.MultilingualVariableexpenseDescription
-import eZmaxApi.models.VariableexpenseRequest
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -33,27 +32,27 @@ import com.squareup.moshi.JsonClass
  */
 
 
-class VariableexpenseRequestCompound (
+data class VariableexpenseRequestCompound (
 
     /* The code of the Variableexpense */
     @Json(name = "sVariableexpenseCode")
-    override val sVariableexpenseCode: kotlin.String,
+    val sVariableexpenseCode: kotlin.String,
 
     @Json(name = "objVariableexpenseDescription")
-    override val objVariableexpenseDescription: MultilingualVariableexpenseDescription,
+    val objVariableexpenseDescription: MultilingualVariableexpenseDescription,
 
     @Json(name = "eVariableexpenseTaxable")
-    override val eVariableexpenseTaxable: FieldEVariableexpenseTaxable,
+    val eVariableexpenseTaxable: FieldEVariableexpenseTaxable,
 
     /* Whether the variableexpense is active or not */
     @Json(name = "bVariableexpenseIsactive")
-    override val bVariableexpenseIsactive: kotlin.Boolean,
+    val bVariableexpenseIsactive: kotlin.Boolean,
 
     /* The unique ID of the Variableexpense */
     @Json(name = "pkiVariableexpenseID")
-    override val pkiVariableexpenseID: kotlin.Int? = null
+    val pkiVariableexpenseID: kotlin.Int? = null
 
-) : VariableexpenseRequest {
+) {
 
 
 }

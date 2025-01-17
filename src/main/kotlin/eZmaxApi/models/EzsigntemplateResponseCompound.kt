@@ -16,7 +16,6 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.CommonAudit
-import eZmaxApi.models.EzsigntemplateResponse
 import eZmaxApi.models.EzsigntemplatedocumentResponse
 import eZmaxApi.models.EzsigntemplatesignerResponseCompound
 import eZmaxApi.models.FieldEEzsigntemplateType
@@ -51,69 +50,69 @@ data class EzsigntemplateResponseCompound (
 
     /* The unique ID of the Ezsigntemplate */
     @Json(name = "pkiEzsigntemplateID")
-    override val pkiEzsigntemplateID: kotlin.Int,
+    val pkiEzsigntemplateID: kotlin.Int,
 
     /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| */
     @Json(name = "fkiLanguageID")
-    override val fkiLanguageID: kotlin.Int,
+    val fkiLanguageID: kotlin.Int,
 
     /* The Name of the Language in the language of the requester */
     @Json(name = "sLanguageNameX")
-    override val sLanguageNameX: kotlin.String,
+    val sLanguageNameX: kotlin.String,
 
     /* The description of the Ezsigntemplate */
     @Json(name = "sEzsigntemplateDescription")
-    override val sEzsigntemplateDescription: kotlin.String,
+    val sEzsigntemplateDescription: kotlin.String,
 
     /* Whether the Ezsigntemplate can be accessed by admin users only (eUserType=Normal) */
     @Json(name = "bEzsigntemplateAdminonly")
-    override val bEzsigntemplateAdminonly: kotlin.Boolean,
+    val bEzsigntemplateAdminonly: kotlin.Boolean,
 
     @Json(name = "objAudit")
-    override val objAudit: CommonAudit,
+    val objAudit: CommonAudit,
 
     /* Whether the Ezsigntemplate if allowed to edit or not */
     @Json(name = "bEzsigntemplateEditallowed")
-    override val bEzsigntemplateEditallowed: kotlin.Boolean,
+    val bEzsigntemplateEditallowed: kotlin.Boolean,
 
     @Json(name = "a_objEzsigntemplatesigner")
     val aObjEzsigntemplatesigner: kotlin.collections.List<EzsigntemplatesignerResponseCompound>,
 
     /* The unique ID of the Ezsigntemplatedocument */
     @Json(name = "fkiEzsigntemplatedocumentID")
-    override val fkiEzsigntemplatedocumentID: kotlin.Int? = null,
+    val fkiEzsigntemplatedocumentID: kotlin.Int? = null,
 
     /* The unique ID of the Ezsignfoldertype. */
     @Json(name = "fkiEzsignfoldertypeID")
-    override val fkiEzsignfoldertypeID: kotlin.Int? = null,
+    val fkiEzsignfoldertypeID: kotlin.Int? = null,
 
     /* The unique ID of the Ezdoctemplatedocument */
     @Json(name = "fkiEzdoctemplatedocumentID")
-    override val fkiEzdoctemplatedocumentID: kotlin.Int? = null,
+    val fkiEzdoctemplatedocumentID: kotlin.Int? = null,
 
     /* The external description of the Ezsigntemplate */
     @Json(name = "sEzsigntemplateExternaldescription")
-    override val sEzsigntemplateExternaldescription: kotlin.String? = null,
+    val sEzsigntemplateExternaldescription: kotlin.String? = null,
 
     /* The comment of the Ezsigntemplate */
     @Json(name = "tEzsigntemplateComment")
-    override val tEzsigntemplateComment: kotlin.String? = null,
+    val tEzsigntemplateComment: kotlin.String? = null,
 
     /* The filename pattern of the Ezsigntemplate */
     @Json(name = "sEzsigntemplateFilenamepattern")
-    override val sEzsigntemplateFilenamepattern: kotlin.String? = null,
+    val sEzsigntemplateFilenamepattern: kotlin.String? = null,
 
     /* The name of the Ezsignfoldertype in the language of the requester */
     @Json(name = "sEzsignfoldertypeNameX")
-    override val sEzsignfoldertypeNameX: kotlin.String? = null,
+    val sEzsignfoldertypeNameX: kotlin.String? = null,
 
     @Json(name = "eEzsigntemplateType")
-    override val eEzsigntemplateType: FieldEEzsigntemplateType? = null,
+    val eEzsigntemplateType: FieldEEzsigntemplateType? = null,
 
     @Json(name = "objEzsigntemplatedocument")
     val objEzsigntemplatedocument: EzsigntemplatedocumentResponse? = null
 
-) : EzsigntemplateResponse {
+) {
 
 
 }

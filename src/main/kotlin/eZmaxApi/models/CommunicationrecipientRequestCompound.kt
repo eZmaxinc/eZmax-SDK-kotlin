@@ -15,7 +15,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.CommunicationrecipientRequest
 import eZmaxApi.models.FieldECommunicationrecipientType
 
 import com.squareup.moshi.Json
@@ -42,68 +41,68 @@ import com.squareup.moshi.JsonClass
  */
 
 
-class CommunicationrecipientRequestCompound (
+data class CommunicationrecipientRequestCompound (
 
     /* The unique ID of the Communicationrecipient. */
     @Json(name = "pkiCommunicationrecipientID")
-    override val pkiCommunicationrecipientID: kotlin.Int? = null,
+    val pkiCommunicationrecipientID: kotlin.Int? = null,
 
     /* The unique ID of the Agent. */
     @Json(name = "fkiAgentID")
-    override val fkiAgentID: kotlin.Int? = null,
+    val fkiAgentID: kotlin.Int? = null,
 
     /* The unique ID of the Broker. */
     @Json(name = "fkiBrokerID")
-    override val fkiBrokerID: kotlin.Int? = null,
+    val fkiBrokerID: kotlin.Int? = null,
 
     /* The unique ID of the Contact */
     @Json(name = "fkiContactID")
-    override val fkiContactID: kotlin.Int? = null,
+    val fkiContactID: kotlin.Int? = null,
 
     /* The unique ID of the Customer. */
     @Json(name = "fkiCustomerID")
-    override val fkiCustomerID: kotlin.Int? = null,
+    val fkiCustomerID: kotlin.Int? = null,
 
     /* The unique ID of the Employee. */
     @Json(name = "fkiEmployeeID")
-    override val fkiEmployeeID: kotlin.Int? = null,
+    val fkiEmployeeID: kotlin.Int? = null,
 
     /* The unique ID of the Assistant. */
     @Json(name = "fkiAssistantID")
-    override val fkiAssistantID: kotlin.Int? = null,
+    val fkiAssistantID: kotlin.Int? = null,
 
     /* The unique ID of the Externalbroker. */
     @Json(name = "fkiExternalbrokerID")
-    override val fkiExternalbrokerID: kotlin.Int? = null,
+    val fkiExternalbrokerID: kotlin.Int? = null,
 
     /* The unique ID of the Ezsignsigner */
     @Json(name = "fkiEzsignsignerID")
-    override val fkiEzsignsignerID: kotlin.Int? = null,
+    val fkiEzsignsignerID: kotlin.Int? = null,
 
     /* The unique ID of the Notary. */
     @Json(name = "fkiNotaryID")
-    override val fkiNotaryID: kotlin.Int? = null,
+    val fkiNotaryID: kotlin.Int? = null,
 
     /* The unique ID of the Supplier. */
     @Json(name = "fkiSupplierID")
-    override val fkiSupplierID: kotlin.Int? = null,
+    val fkiSupplierID: kotlin.Int? = null,
 
     /* The unique ID of the User */
     @Json(name = "fkiUserID")
-    override val fkiUserID: kotlin.Int? = null,
+    val fkiUserID: kotlin.Int? = null,
 
     /* The unique ID of the Mailboxshared */
     @Json(name = "fkiMailboxsharedID")
-    override val fkiMailboxsharedID: kotlin.Int? = null,
+    val fkiMailboxsharedID: kotlin.Int? = null,
 
     /* The unique ID of the Phonelineshared */
     @Json(name = "fkiPhonelinesharedID")
-    override val fkiPhonelinesharedID: kotlin.Int? = null,
+    val fkiPhonelinesharedID: kotlin.Int? = null,
 
     @Json(name = "eCommunicationrecipientType")
-    override val eCommunicationrecipientType: FieldECommunicationrecipientType? = null
+    val eCommunicationrecipientType: FieldECommunicationrecipientType? = null
 
-) : CommunicationrecipientRequest {
+) {
 
 
 }

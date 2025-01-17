@@ -64,7 +64,7 @@ Configure Authorization:
 
 <a id="userstagedDeleteObjectV1"></a>
 # **userstagedDeleteObjectV1**
-> CommonResponse userstagedDeleteObjectV1(pkiUserstagedID)
+> UserstagedDeleteObjectV1Response userstagedDeleteObjectV1(pkiUserstagedID)
 
 Delete an existing Userstaged
 
@@ -79,7 +79,7 @@ Delete an existing Userstaged
 val apiInstance = ObjectUserstagedApi()
 val pkiUserstagedID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : CommonResponse = apiInstance.userstagedDeleteObjectV1(pkiUserstagedID)
+    val result : UserstagedDeleteObjectV1Response = apiInstance.userstagedDeleteObjectV1(pkiUserstagedID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectUserstagedApi#userstagedDeleteObjectV1")
@@ -97,7 +97,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**UserstagedDeleteObjectV1Response**](UserstagedDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -219,7 +219,7 @@ Configure Authorization:
 
 <a id="userstagedMapV1"></a>
 # **userstagedMapV1**
-> CommonResponse userstagedMapV1(pkiUserstagedID, userstagedMapV1Request)
+> UserstagedMapV1Response userstagedMapV1(pkiUserstagedID, userstagedMapV1Request)
 
 Map the Userstaged to an existing user
 
@@ -235,7 +235,7 @@ val apiInstance = ObjectUserstagedApi()
 val pkiUserstagedID : kotlin.Int = 56 // kotlin.Int | 
 val userstagedMapV1Request : UserstagedMapV1Request =  // UserstagedMapV1Request | 
 try {
-    val result : CommonResponse = apiInstance.userstagedMapV1(pkiUserstagedID, userstagedMapV1Request)
+    val result : UserstagedMapV1Response = apiInstance.userstagedMapV1(pkiUserstagedID, userstagedMapV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectUserstagedApi#userstagedMapV1")
@@ -254,7 +254,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**UserstagedMapV1Response**](UserstagedMapV1Response.md)
 
 ### Authorization
 

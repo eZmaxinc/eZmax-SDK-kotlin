@@ -15,7 +15,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.EzsigntemplatedocumentRequest
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -38,58 +37,96 @@ import com.squareup.moshi.JsonClass
  */
 
 
-class EzsigntemplatedocumentRequestCompound (
+data class EzsigntemplatedocumentRequestCompound (
 
     /* The unique ID of the Ezsigntemplate */
     @Json(name = "fkiEzsigntemplateID")
-    override val fkiEzsigntemplateID: kotlin.Int,
+    val fkiEzsigntemplateID: kotlin.Int,
 
     /* The name of the Ezsigntemplatedocument. */
     @Json(name = "sEzsigntemplatedocumentName")
-    override val sEzsigntemplatedocumentName: kotlin.String,
+    val sEzsigntemplatedocumentName: kotlin.String,
 
     /* Indicates where to look for the document binary content. */
     @Json(name = "eEzsigntemplatedocumentSource")
-    override val eEzsigntemplatedocumentSource: EzsigntemplatedocumentRequestCompound.EEzsigntemplatedocumentSource,
+    val eEzsigntemplatedocumentSource: EzsigntemplatedocumentRequestCompound.EEzsigntemplatedocumentSource,
 
     /* The unique ID of the Ezsigntemplatedocument */
     @Json(name = "pkiEzsigntemplatedocumentID")
-    override val pkiEzsigntemplatedocumentID: kotlin.Int? = null,
+    val pkiEzsigntemplatedocumentID: kotlin.Int? = null,
 
     /* The unique ID of the Ezsigndocument */
     @Json(name = "fkiEzsigndocumentID")
-    override val fkiEzsigndocumentID: kotlin.Int? = null,
+    val fkiEzsigndocumentID: kotlin.Int? = null,
 
     /* The unique ID of the Ezsigntemplatesigner */
     @Json(name = "fkiEzsigntemplatesignerID")
-    override val fkiEzsigntemplatesignerID: kotlin.Int? = null,
+    val fkiEzsigntemplatesignerID: kotlin.Int? = null,
 
     /* Indicates the format of the template. */
     @Json(name = "eEzsigntemplatedocumentFormat")
-    override val eEzsigntemplatedocumentFormat: EzsigntemplatedocumentRequestCompound.EEzsigntemplatedocumentFormat? = null,
+    val eEzsigntemplatedocumentFormat: EzsigntemplatedocumentRequestCompound.EEzsigntemplatedocumentFormat? = null,
 
     /* The Base64 encoded binary content of the document.  This field is Required when eEzsigntemplatedocumentSource = Base64. */
     @Json(name = "sEzsigntemplatedocumentBase64")
-    override val sEzsigntemplatedocumentBase64: kotlin.ByteArray? = null,
+    val sEzsigntemplatedocumentBase64: kotlin.ByteArray? = null,
 
     /* The url where the document content resides.  This field is Required when eEzsigntemplatedocumentSource = Url. */
     @Json(name = "sEzsigntemplatedocumentUrl")
-    override val sEzsigntemplatedocumentUrl: kotlin.String? = null,
+    val sEzsigntemplatedocumentUrl: kotlin.String? = null,
 
     /* Try to repair the document or flatten it if it cannot be used for electronic signature. */
     @Json(name = "bEzsigntemplatedocumentForcerepair")
-    override val bEzsigntemplatedocumentForcerepair: kotlin.Boolean? = null,
+    val bEzsigntemplatedocumentForcerepair: kotlin.Boolean? = null,
 
     /* If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsigntemplateformfieldgroups and assign them to the specified **fkiEzsigntemplatesignerID**  **Discard** removes the form from the document  **Flatten** prints the form values in the document. */
     @Json(name = "eEzsigntemplatedocumentForm")
-    override val eEzsigntemplatedocumentForm: EzsigntemplatedocumentRequestCompound.EEzsigntemplatedocumentForm? = null,
+    val eEzsigntemplatedocumentForm: EzsigntemplatedocumentRequestCompound.EEzsigntemplatedocumentForm? = null,
 
     /* If the source template is password protected, the password to open/modify it. */
     @Json(name = "sEzsigntemplatedocumentPassword")
-    override val sEzsigntemplatedocumentPassword: kotlin.String? = ""
+    val sEzsigntemplatedocumentPassword: kotlin.String? = ""
 
-) : EzsigntemplatedocumentRequest {
+) {
 
+    /**
+     * Indicates where to look for the document binary content.
+     *
+     * Values: Base64,Url,Ezsigndocument
+     */
+    @JsonClass(generateAdapter = false)
+    enum class EEzsigntemplatedocumentSource(val value: kotlin.String) {
+        @Json(name = "Base64") Base64("Base64"),
+        @Json(name = "Url") Url("Url"),
+        @Json(name = "Ezsigndocument") Ezsigndocument("Ezsigndocument");
+    }
+    /**
+     * Indicates the format of the template.
+     *
+     * Values: Pdf,Doc,Docx,Xls,Xlsx,Ppt,Pptx
+     */
+    @JsonClass(generateAdapter = false)
+    enum class EEzsigntemplatedocumentFormat(val value: kotlin.String) {
+        @Json(name = "Pdf") Pdf("Pdf"),
+        @Json(name = "Doc") Doc("Doc"),
+        @Json(name = "Docx") Docx("Docx"),
+        @Json(name = "Xls") Xls("Xls"),
+        @Json(name = "Xlsx") Xlsx("Xlsx"),
+        @Json(name = "Ppt") Ppt("Ppt"),
+        @Json(name = "Pptx") Pptx("Pptx");
+    }
+    /**
+     * If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsigntemplateformfieldgroups and assign them to the specified **fkiEzsigntemplatesignerID**  **Discard** removes the form from the document  **Flatten** prints the form values in the document.
+     *
+     * Values: Keep,Convert,Discard,Flatten
+     */
+    @JsonClass(generateAdapter = false)
+    enum class EEzsigntemplatedocumentForm(val value: kotlin.String) {
+        @Json(name = "Keep") Keep("Keep"),
+        @Json(name = "Convert") Convert("Convert"),
+        @Json(name = "Discard") Discard("Discard"),
+        @Json(name = "Flatten") Flatten("Flatten");
+    }
 
 }
 

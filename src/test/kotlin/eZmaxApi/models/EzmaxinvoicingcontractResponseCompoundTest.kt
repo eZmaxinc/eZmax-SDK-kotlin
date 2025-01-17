@@ -20,13 +20,66 @@ import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.EzmaxinvoicingcontractResponseCompound
 import eZmaxApi.models.CommonAudit
-import eZmaxApi.models.EzmaxinvoicingcontractResponse
 import eZmaxApi.models.FieldEEzmaxinvoicingcontractPaymenttype
 
 class EzmaxinvoicingcontractResponseCompoundTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of EzmaxinvoicingcontractResponseCompound
         //val modelInstance = EzmaxinvoicingcontractResponseCompound()
+
+        // to test the property `pkiEzmaxinvoicingcontractID` - The unique ID of the Ezmaxinvoicingcontract
+        should("test pkiEzmaxinvoicingcontractID") {
+            // uncomment below to test the property
+            //modelInstance.pkiEzmaxinvoicingcontractID shouldBe ("TODO")
+        }
+
+        // to test the property `eEzmaxinvoicingcontractPaymenttype`
+        should("test eEzmaxinvoicingcontractPaymenttype") {
+            // uncomment below to test the property
+            //modelInstance.eEzmaxinvoicingcontractPaymenttype shouldBe ("TODO")
+        }
+
+        // to test the property `iEzmaxinvoicingcontractLength` - The length in years of the Ezmaxinvoicingcontract
+        should("test iEzmaxinvoicingcontractLength") {
+            // uncomment below to test the property
+            //modelInstance.iEzmaxinvoicingcontractLength shouldBe ("TODO")
+        }
+
+        // to test the property `dtEzmaxinvoicingcontractStart` - The start date of the Ezmaxinvoicingcontract
+        should("test dtEzmaxinvoicingcontractStart") {
+            // uncomment below to test the property
+            //modelInstance.dtEzmaxinvoicingcontractStart shouldBe ("TODO")
+        }
+
+        // to test the property `dtEzmaxinvoicingcontractEnd` - The end date of the Ezmaxinvoicingcontract
+        should("test dtEzmaxinvoicingcontractEnd") {
+            // uncomment below to test the property
+            //modelInstance.dtEzmaxinvoicingcontractEnd shouldBe ("TODO")
+        }
+
+        // to test the property `dEzmaxinvoicingcontractLicense` - The price of the license
+        should("test dEzmaxinvoicingcontractLicense") {
+            // uncomment below to test the property
+            //modelInstance.dEzmaxinvoicingcontractLicense shouldBe ("TODO")
+        }
+
+        // to test the property `dEzmaxinvoicingcontract121qa` - The price for 121QA
+        should("test dEzmaxinvoicingcontract121qa") {
+            // uncomment below to test the property
+            //modelInstance.dEzmaxinvoicingcontract121qa shouldBe ("TODO")
+        }
+
+        // to test the property `bEzmaxinvoicingcontractEzsignallagents` - Whether eZsign is for all agents
+        should("test bEzmaxinvoicingcontractEzsignallagents") {
+            // uncomment below to test the property
+            //modelInstance.bEzmaxinvoicingcontractEzsignallagents shouldBe ("TODO")
+        }
+
+        // to test the property `objAudit`
+        should("test objAudit") {
+            // uncomment below to test the property
+            //modelInstance.objAudit shouldBe ("TODO")
+        }
 
     }
 }

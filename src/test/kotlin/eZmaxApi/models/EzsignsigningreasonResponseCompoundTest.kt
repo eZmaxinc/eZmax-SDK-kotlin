@@ -19,13 +19,30 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.EzsignsigningreasonResponseCompound
-import eZmaxApi.models.EzsignsigningreasonResponse
 import eZmaxApi.models.MultilingualEzsignsigningreasonDescription
 
 class EzsignsigningreasonResponseCompoundTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of EzsignsigningreasonResponseCompound
         //val modelInstance = EzsignsigningreasonResponseCompound()
+
+        // to test the property `pkiEzsignsigningreasonID` - The unique ID of the Ezsignsigningreason
+        should("test pkiEzsignsigningreasonID") {
+            // uncomment below to test the property
+            //modelInstance.pkiEzsignsigningreasonID shouldBe ("TODO")
+        }
+
+        // to test the property `objEzsignsigningreasonDescription`
+        should("test objEzsignsigningreasonDescription") {
+            // uncomment below to test the property
+            //modelInstance.objEzsignsigningreasonDescription shouldBe ("TODO")
+        }
+
+        // to test the property `bEzsignsigningreasonIsactive` - Whether the ezsignsigningreason is active or not
+        should("test bEzsignsigningreasonIsactive") {
+            // uncomment below to test the property
+            //modelInstance.bEzsignsigningreasonIsactive shouldBe ("TODO")
+        }
 
     }
 }

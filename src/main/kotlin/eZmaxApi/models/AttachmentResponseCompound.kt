@@ -15,7 +15,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.AttachmentResponse
 import eZmaxApi.models.CommonAudit
 import eZmaxApi.models.FieldEAttachmentDocumenttype
 import eZmaxApi.models.FieldEAttachmentPrivacy
@@ -92,248 +91,248 @@ import com.squareup.moshi.JsonClass
  */
 
 
-class AttachmentResponseCompound (
+data class AttachmentResponseCompound (
 
     /* The unique ID of the Attachment. */
     @Json(name = "pkiAttachmentID")
-    override val pkiAttachmentID: kotlin.Int,
+    val pkiAttachmentID: kotlin.Int,
 
     @Json(name = "eAttachmentDocumenttype")
-    override val eAttachmentDocumenttype: FieldEAttachmentDocumenttype,
+    val eAttachmentDocumenttype: FieldEAttachmentDocumenttype,
 
     /* The name of the Attachment */
     @Json(name = "sAttachmentName")
-    override val sAttachmentName: kotlin.String,
+    val sAttachmentName: kotlin.String,
 
     @Json(name = "eAttachmentPrivacy")
-    override val eAttachmentPrivacy: FieldEAttachmentPrivacy,
+    val eAttachmentPrivacy: FieldEAttachmentPrivacy,
 
     @Json(name = "eAttachmentType")
-    override val eAttachmentType: FieldEAttachmentType,
+    val eAttachmentType: FieldEAttachmentType,
 
     /* The size of the Attachment */
     @Json(name = "iAttachmentSize")
-    override val iAttachmentSize: kotlin.Int,
+    val iAttachmentSize: kotlin.Int,
 
     /* The md5 of the Attachment */
     @Json(name = "sAttachmentMD5")
-    override val sAttachmentMD5: kotlin.String,
+    val sAttachmentMD5: kotlin.String,
 
     /* Whether if it's deleted */
     @Json(name = "bAttachmentDeleted")
-    override val bAttachmentDeleted: kotlin.Boolean,
+    val bAttachmentDeleted: kotlin.Boolean,
 
     /* Whether if it's valid */
     @Json(name = "bAttachmentValid")
-    override val bAttachmentValid: kotlin.Boolean,
+    val bAttachmentValid: kotlin.Boolean,
 
     @Json(name = "eAttachmentVerified")
-    override val eAttachmentVerified: FieldEAttachmentVerified,
+    val eAttachmentVerified: FieldEAttachmentVerified,
 
     /* The unique ID of the Computer */
     @Json(name = "fkiComputerID")
-    override val fkiComputerID: kotlin.Int? = null,
+    val fkiComputerID: kotlin.Int? = null,
 
     /* The unique ID of the Adjustment */
     @Json(name = "fkiAdjustmentID")
-    override val fkiAdjustmentID: kotlin.Int? = null,
+    val fkiAdjustmentID: kotlin.Int? = null,
 
     /* The unique ID of the Agent. */
     @Json(name = "fkiAgentID")
-    override val fkiAgentID: kotlin.Int? = null,
+    val fkiAgentID: kotlin.Int? = null,
 
     /* The unique ID of the Bankaccount */
     @Json(name = "fkiBankaccountID")
-    override val fkiBankaccountID: kotlin.Int? = null,
+    val fkiBankaccountID: kotlin.Int? = null,
 
     /* The unique ID of the Broker. */
     @Json(name = "fkiBrokerID")
-    override val fkiBrokerID: kotlin.Int? = null,
+    val fkiBrokerID: kotlin.Int? = null,
 
     /* The unique ID of the Commissionadvance */
     @Json(name = "fkiCommissionadvanceID")
-    override val fkiCommissionadvanceID: kotlin.Int? = null,
+    val fkiCommissionadvanceID: kotlin.Int? = null,
 
     /* The unique ID of the Communication. */
     @Json(name = "fkiCommunicationID")
-    override val fkiCommunicationID: kotlin.Int? = null,
+    val fkiCommunicationID: kotlin.Int? = null,
 
     /* The unique ID of the Customer. */
     @Json(name = "fkiCustomerID")
-    override val fkiCustomerID: kotlin.Int? = null,
+    val fkiCustomerID: kotlin.Int? = null,
 
     /* The unique ID of the Customertemplate */
     @Json(name = "fkiCustomertemplateID")
-    override val fkiCustomertemplateID: kotlin.Int? = null,
+    val fkiCustomertemplateID: kotlin.Int? = null,
 
     /* The unique ID of the Deposit */
     @Json(name = "fkiDepositID")
-    override val fkiDepositID: kotlin.Int? = null,
+    val fkiDepositID: kotlin.Int? = null,
 
     /* The unique ID of the Deposittransitcheque */
     @Json(name = "fkiDeposittransitchequeID")
-    override val fkiDeposittransitchequeID: kotlin.Int? = null,
+    val fkiDeposittransitchequeID: kotlin.Int? = null,
 
     /* The unique ID of the Electronicfundstransfer */
     @Json(name = "fkiElectronicfundstransferID")
-    override val fkiElectronicfundstransferID: kotlin.Int? = null,
+    val fkiElectronicfundstransferID: kotlin.Int? = null,
 
     /* The unique ID of the Employee. */
     @Json(name = "fkiEmployeeID")
-    override val fkiEmployeeID: kotlin.Int? = null,
+    val fkiEmployeeID: kotlin.Int? = null,
 
     /* The unique ID of the Externalbroker. */
     @Json(name = "fkiExternalbrokerID")
-    override val fkiExternalbrokerID: kotlin.Int? = null,
+    val fkiExternalbrokerID: kotlin.Int? = null,
 
     /* The unique ID of the Ezcomadvanceserver */
     @Json(name = "fkiEzcomadvanceserverID")
-    override val fkiEzcomadvanceserverID: kotlin.Int? = null,
+    val fkiEzcomadvanceserverID: kotlin.Int? = null,
 
     /* The unique ID of the Ezcomcompany */
     @Json(name = "fkiEzcomcompanyID")
-    override val fkiEzcomcompanyID: kotlin.Int? = null,
+    val fkiEzcomcompanyID: kotlin.Int? = null,
 
     /* The unique ID of the Ezsigndocument */
     @Json(name = "fkiEzsigndocumentID")
-    override val fkiEzsigndocumentID: kotlin.Int? = null,
+    val fkiEzsigndocumentID: kotlin.Int? = null,
 
     /* The unique ID of the Ghacqcontract */
     @Json(name = "fkiGhacqcontractID")
-    override val fkiGhacqcontractID: kotlin.Int? = null,
+    val fkiGhacqcontractID: kotlin.Int? = null,
 
     /* The unique ID of the Inscription. */
     @Json(name = "fkiInscriptionID")
-    override val fkiInscriptionID: kotlin.Int? = null,
+    val fkiInscriptionID: kotlin.Int? = null,
 
     /* The unique ID of the Inscriptiontemp */
     @Json(name = "fkiInscriptiontempID")
-    override val fkiInscriptiontempID: kotlin.Int? = null,
+    val fkiInscriptiontempID: kotlin.Int? = null,
 
     /* The unique ID of the Inscriptionnotauthenticated. */
     @Json(name = "fkiInscriptionnotauthenticatedID")
-    override val fkiInscriptionnotauthenticatedID: kotlin.Int? = null,
+    val fkiInscriptionnotauthenticatedID: kotlin.Int? = null,
 
     /* The unique ID of the Invoice. */
     @Json(name = "fkiInvoiceID")
-    override val fkiInvoiceID: kotlin.Int? = null,
+    val fkiInvoiceID: kotlin.Int? = null,
 
     /* The unique ID of the Buyercontract */
     @Json(name = "fkiBuyercontractID")
-    override val fkiBuyercontractID: kotlin.Int? = null,
+    val fkiBuyercontractID: kotlin.Int? = null,
 
     /* The unique ID of the Franchisebroker */
     @Json(name = "fkiFranchisebrokerID")
-    override val fkiFranchisebrokerID: kotlin.Int? = null,
+    val fkiFranchisebrokerID: kotlin.Int? = null,
 
     /* The unique ID of the Franchiseagence */
     @Json(name = "fkiFranchiseagenceID")
-    override val fkiFranchiseagenceID: kotlin.Int? = null,
+    val fkiFranchiseagenceID: kotlin.Int? = null,
 
     /* The unique ID of the Franchisereoffice */
     @Json(name = "fkiFranchiseofficeID")
-    override val fkiFranchiseofficeID: kotlin.Int? = null,
+    val fkiFranchiseofficeID: kotlin.Int? = null,
 
     /* The unique ID of the Franchisefranchise */
     @Json(name = "fkiFranchisefranchiseID")
-    override val fkiFranchisefranchiseID: kotlin.Int? = null,
+    val fkiFranchisefranchiseID: kotlin.Int? = null,
 
     /* The unique ID of the Franchisecomplaint */
     @Json(name = "fkiFranchisecomplaintID")
-    override val fkiFranchisecomplaintID: kotlin.Int? = null,
+    val fkiFranchisecomplaintID: kotlin.Int? = null,
 
     /* The unique ID of the Lead */
     @Json(name = "fkiLeadID")
-    override val fkiLeadID: kotlin.Int? = null,
+    val fkiLeadID: kotlin.Int? = null,
 
     /* The unique ID of the Marketingprogram */
     @Json(name = "fkiMarketingprogramID")
-    override val fkiMarketingprogramID: kotlin.Int? = null,
+    val fkiMarketingprogramID: kotlin.Int? = null,
 
     /* The unique ID of the Marketingfollow */
     @Json(name = "fkiMarketingfollowID")
-    override val fkiMarketingfollowID: kotlin.Int? = null,
+    val fkiMarketingfollowID: kotlin.Int? = null,
 
     /* The unique ID of the Notary. */
     @Json(name = "fkiNotaryID")
-    override val fkiNotaryID: kotlin.Int? = null,
+    val fkiNotaryID: kotlin.Int? = null,
 
     /* The unique ID of the Officetaxreport */
     @Json(name = "fkiOfficetaxreportID")
-    override val fkiOfficetaxreportID: kotlin.Int? = null,
+    val fkiOfficetaxreportID: kotlin.Int? = null,
 
     /* The unique ID of the Otherincome */
     @Json(name = "fkiOtherincomeID")
-    override val fkiOtherincomeID: kotlin.Int? = null,
+    val fkiOtherincomeID: kotlin.Int? = null,
 
     /* The unique ID of the Paymentpreparation */
     @Json(name = "fkiPaymentpreparationID")
-    override val fkiPaymentpreparationID: kotlin.Int? = null,
+    val fkiPaymentpreparationID: kotlin.Int? = null,
 
     /* The unique ID of the Purchase */
     @Json(name = "fkiPurchaseID")
-    override val fkiPurchaseID: kotlin.Int? = null,
+    val fkiPurchaseID: kotlin.Int? = null,
 
     /* The unique ID of the Salary */
     @Json(name = "fkiSalaryID")
-    override val fkiSalaryID: kotlin.Int? = null,
+    val fkiSalaryID: kotlin.Int? = null,
 
     /* The unique ID of the Supplier. */
     @Json(name = "fkiSupplierID")
-    override val fkiSupplierID: kotlin.Int? = null,
+    val fkiSupplierID: kotlin.Int? = null,
 
     /* The unique ID of the Tranqcontract */
     @Json(name = "fkiTranqcontractID")
-    override val fkiTranqcontractID: kotlin.Int? = null,
+    val fkiTranqcontractID: kotlin.Int? = null,
 
     /* The unique ID of the Template */
     @Json(name = "fkiTemplateID")
-    override val fkiTemplateID: kotlin.Int? = null,
+    val fkiTemplateID: kotlin.Int? = null,
 
     /* The unique ID of the Inscriptionchecklist */
     @Json(name = "fkiInscriptionchecklistID")
-    override val fkiInscriptionchecklistID: kotlin.Int? = null,
+    val fkiInscriptionchecklistID: kotlin.Int? = null,
 
     /* The unique ID of the Folder */
     @Json(name = "fkiFolderID")
-    override val fkiFolderID: kotlin.Int? = null,
+    val fkiFolderID: kotlin.Int? = null,
 
     /* The unique ID of the Rejectedoffertopurchase */
     @Json(name = "fkiRejectedoffertopurchaseID")
-    override val fkiRejectedoffertopurchaseID: kotlin.Int? = null,
+    val fkiRejectedoffertopurchaseID: kotlin.Int? = null,
 
     /* The unique ID of the Disclosure */
     @Json(name = "fkiDisclosureID")
-    override val fkiDisclosureID: kotlin.Int? = null,
+    val fkiDisclosureID: kotlin.Int? = null,
 
     /* The unique ID of the Reconciliation */
     @Json(name = "fkiReconciliationID")
-    override val fkiReconciliationID: kotlin.Int? = null,
+    val fkiReconciliationID: kotlin.Int? = null,
 
     /* The unique ID of the Ezsigndocument */
     @Json(name = "fkiEzsigndocumentIDReference")
-    override val fkiEzsigndocumentIDReference: kotlin.Int? = null,
+    val fkiEzsigndocumentIDReference: kotlin.Int? = null,
 
     /* The unique ID of the User */
     @Json(name = "fkiUserIDSpecific")
-    override val fkiUserIDSpecific: kotlin.Int? = null,
+    val fkiUserIDSpecific: kotlin.Int? = null,
 
     /* The edmmoduleflag of the Attachment */
     @Json(name = "iAttachmentEDMmoduleflag")
-    override val iAttachmentEDMmoduleflag: kotlin.Int? = null,
+    val iAttachmentEDMmoduleflag: kotlin.Int? = null,
 
     /* The rejectioncomment of the Attachment */
     @Json(name = "tAttachmentRejectioncomment")
-    override val tAttachmentRejectioncomment: kotlin.String? = null,
+    val tAttachmentRejectioncomment: kotlin.String? = null,
 
     /* The unique ID of the User */
     @Json(name = "fkiUserIDOwner")
-    override val fkiUserIDOwner: kotlin.Int? = null,
+    val fkiUserIDOwner: kotlin.Int? = null,
 
     @Json(name = "objAudit")
-    override val objAudit: CommonAudit? = null
+    val objAudit: CommonAudit? = null
 
-) : AttachmentResponse {
+) {
 
 
 }

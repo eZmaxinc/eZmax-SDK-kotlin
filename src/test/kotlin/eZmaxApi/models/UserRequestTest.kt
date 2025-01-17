@@ -19,11 +19,11 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.UserRequest
-import eZmaxApi.models.EmailRequest
+import eZmaxApi.models.EmailRequestCompound
 import eZmaxApi.models.FieldEUserEzsignaccess
 import eZmaxApi.models.FieldEUserLogintype
 import eZmaxApi.models.FieldEUserType
-import eZmaxApi.models.PhoneRequest
+import eZmaxApi.models.PhoneRequestCompound
 
 class UserRequestTest : ShouldSpec() {
     init {
@@ -54,7 +54,7 @@ class UserRequestTest : ShouldSpec() {
             //modelInstance.fkiLanguageID shouldBe ("TODO")
         }
 
-        // to test the property `objEmail` - An Email Object and children to create a complete structure
+        // to test the property `objEmail`
         should("test objEmail") {
             // uncomment below to test the property
             //modelInstance.objEmail shouldBe ("TODO")
@@ -138,13 +138,13 @@ class UserRequestTest : ShouldSpec() {
             //modelInstance.fkiEmployeeID shouldBe ("TODO")
         }
 
-        // to test the property `objPhoneHome` - A Phone Object and children to create a complete structure
+        // to test the property `objPhoneHome`
         should("test objPhoneHome") {
             // uncomment below to test the property
             //modelInstance.objPhoneHome shouldBe ("TODO")
         }
 
-        // to test the property `objPhoneSMS` - A Phone Object and children to create a complete structure
+        // to test the property `objPhoneSMS`
         should("test objPhoneSMS") {
             // uncomment below to test the property
             //modelInstance.objPhoneSMS shouldBe ("TODO")

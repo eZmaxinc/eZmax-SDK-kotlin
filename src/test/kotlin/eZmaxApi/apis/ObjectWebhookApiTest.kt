@@ -19,22 +19,22 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectWebhookApi
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.CommonResponseErrorTooManyRequests
-import eZmaxApi.models.CustomEWebhookEzsignevent
-import eZmaxApi.models.FieldEWebhookManagementevent
-import eZmaxApi.models.FieldEWebhookModule
 import eZmaxApi.models.HeaderAcceptLanguage
 import eZmaxApi.models.WebhookCreateObjectV2Request
 import eZmaxApi.models.WebhookCreateObjectV2Response
+import eZmaxApi.models.WebhookDeleteObjectV1Response
 import eZmaxApi.models.WebhookEditObjectV1Request
+import eZmaxApi.models.WebhookEditObjectV1Response
 import eZmaxApi.models.WebhookGetHistoryV1Response
 import eZmaxApi.models.WebhookGetListV1Response
 import eZmaxApi.models.WebhookGetObjectV2Response
 import eZmaxApi.models.WebhookRegenerateApikeyV1Request
 import eZmaxApi.models.WebhookRegenerateApikeyV1Response
 import eZmaxApi.models.WebhookSendWebhookV1Request
+import eZmaxApi.models.WebhookSendWebhookV1Response
+import eZmaxApi.models.WebhookTestV1Response
 
 class ObjectWebhookApiTest : ShouldSpec() {
     init {
@@ -53,7 +53,7 @@ class ObjectWebhookApiTest : ShouldSpec() {
         should("test webhookDeleteObjectV1") {
             // uncomment below to test webhookDeleteObjectV1
             //val pkiWebhookID : kotlin.Int = 56 // kotlin.Int | 
-            //val result : CommonResponse = apiInstance.webhookDeleteObjectV1(pkiWebhookID)
+            //val result : WebhookDeleteObjectV1Response = apiInstance.webhookDeleteObjectV1(pkiWebhookID)
             //result shouldBe ("TODO")
         }
 
@@ -62,7 +62,7 @@ class ObjectWebhookApiTest : ShouldSpec() {
             // uncomment below to test webhookEditObjectV1
             //val pkiWebhookID : kotlin.Int = 56 // kotlin.Int | 
             //val webhookEditObjectV1Request : WebhookEditObjectV1Request =  // WebhookEditObjectV1Request | 
-            //val result : CommonResponse = apiInstance.webhookEditObjectV1(pkiWebhookID, webhookEditObjectV1Request)
+            //val result : WebhookEditObjectV1Response = apiInstance.webhookEditObjectV1(pkiWebhookID, webhookEditObjectV1Request)
             //result shouldBe ("TODO")
         }
 
@@ -108,7 +108,7 @@ class ObjectWebhookApiTest : ShouldSpec() {
         should("test webhookSendWebhookV1") {
             // uncomment below to test webhookSendWebhookV1
             //val webhookSendWebhookV1Request : WebhookSendWebhookV1Request =  // WebhookSendWebhookV1Request | 
-            //val result : CommonResponse = apiInstance.webhookSendWebhookV1(webhookSendWebhookV1Request)
+            //val result : WebhookSendWebhookV1Response = apiInstance.webhookSendWebhookV1(webhookSendWebhookV1Request)
             //result shouldBe ("TODO")
         }
 
@@ -117,7 +117,7 @@ class ObjectWebhookApiTest : ShouldSpec() {
             // uncomment below to test webhookTestV1
             //val pkiWebhookID : kotlin.Int = 56 // kotlin.Int | 
             //val body : kotlin.Any = Object // kotlin.Any | 
-            //val result : CommonResponse = apiInstance.webhookTestV1(pkiWebhookID, body)
+            //val result : WebhookTestV1Response = apiInstance.webhookTestV1(pkiWebhookID, body)
             //result shouldBe ("TODO")
         }
 

@@ -19,7 +19,7 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.ApikeyEditPermissionsV1Request
-import eZmaxApi.models.PermissionRequest
+import eZmaxApi.models.PermissionRequestCompound
 
 class ApikeyEditPermissionsV1RequestTest : ShouldSpec() {
     init {

@@ -15,7 +15,7 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.PermissionRequest
+import eZmaxApi.models.PermissionRequestCompound
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -23,15 +23,14 @@ import com.squareup.moshi.JsonClass
 /**
  * Request for PUT /1/object/permission/{pkiPermissionID}
  *
- * @param objPermission A Permission Object and children to create a complete structure
+ * @param objPermission 
  */
 
 
 data class PermissionEditObjectV1Request (
 
-    /* A Permission Object and children to create a complete structure */
     @Json(name = "objPermission")
-    val objPermission: PermissionRequest
+    val objPermission: PermissionRequestCompound
 
 ) {
 

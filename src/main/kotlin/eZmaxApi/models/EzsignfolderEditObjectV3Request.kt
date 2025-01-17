@@ -15,7 +15,7 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.EzsignfolderRequestV3
+import eZmaxApi.models.EzsignfolderRequestCompoundV3
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -23,15 +23,14 @@ import com.squareup.moshi.JsonClass
 /**
  * Request for PUT /3/object/ezsignfolder/{pkiEzsignfolderID}
  *
- * @param objEzsignfolder An Ezsignfolder Object and children to create a complete structure
+ * @param objEzsignfolder 
  */
 
 
 data class EzsignfolderEditObjectV3Request (
 
-    /* An Ezsignfolder Object and children to create a complete structure */
     @Json(name = "objEzsignfolder")
-    val objEzsignfolder: EzsignfolderRequestV3
+    val objEzsignfolder: EzsignfolderRequestCompoundV3
 
 ) {
 

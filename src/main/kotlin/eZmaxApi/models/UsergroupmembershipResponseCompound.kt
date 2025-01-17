@@ -15,7 +15,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.UsergroupmembershipResponse
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -36,49 +35,49 @@ import com.squareup.moshi.JsonClass
  */
 
 
-class UsergroupmembershipResponseCompound (
+data class UsergroupmembershipResponseCompound (
 
     /* The unique ID of the Usergroupmembership */
     @Json(name = "pkiUsergroupmembershipID")
-    override val pkiUsergroupmembershipID: kotlin.Int,
+    val pkiUsergroupmembershipID: kotlin.Int,
 
     /* The unique ID of the Usergroup */
     @Json(name = "fkiUsergroupID")
-    override val fkiUsergroupID: kotlin.Int,
+    val fkiUsergroupID: kotlin.Int,
 
     /* The Name of the Usergroup in the language of the requester */
     @Json(name = "sUsergroupNameX")
-    override val sUsergroupNameX: kotlin.String,
+    val sUsergroupNameX: kotlin.String,
 
     /* The unique ID of the User */
     @Json(name = "fkiUserID")
-    override val fkiUserID: kotlin.Int? = null,
+    val fkiUserID: kotlin.Int? = null,
 
     /* The unique ID of the Usergroupexternal */
     @Json(name = "fkiUsergroupexternalID")
-    override val fkiUsergroupexternalID: kotlin.Int? = null,
+    val fkiUsergroupexternalID: kotlin.Int? = null,
 
     /* The first name of the user */
     @Json(name = "sUserFirstname")
-    override val sUserFirstname: kotlin.String? = null,
+    val sUserFirstname: kotlin.String? = null,
 
     /* The last name of the user */
     @Json(name = "sUserLastname")
-    override val sUserLastname: kotlin.String? = null,
+    val sUserLastname: kotlin.String? = null,
 
     /* The login name of the User. */
     @Json(name = "sUserLoginname")
-    override val sUserLoginname: kotlin.String? = null,
+    val sUserLoginname: kotlin.String? = null,
 
     /* The email address. */
     @Json(name = "sEmailAddress")
-    override val sEmailAddress: kotlin.String? = null,
+    val sEmailAddress: kotlin.String? = null,
 
     /* The name of the Usergroupexternal */
     @Json(name = "sUsergroupexternalName")
-    override val sUsergroupexternalName: kotlin.String? = null
+    val sUsergroupexternalName: kotlin.String? = null
 
-) : UsergroupmembershipResponse {
+) {
 
 
 }

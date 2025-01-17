@@ -4,7 +4,10 @@
 ## Properties
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **aObjEzsignformfielderror** | [**kotlin.collections.List&lt;CustomEzsignformfielderrorResponse&gt;**](kotlin.Any.md) |  |  |
+| **sErrorMessage** | **kotlin.String** | The message giving details about the error |  |
+| **eErrorCode** | [**FieldEErrorCode**](FieldEErrorCode.md) |  |  |
+| **aObjEzsignformfielderror** | [**kotlin.collections.List&lt;CustomEzsignformfielderrorResponse&gt;**](CustomEzsignformfielderrorResponse.md) |  |  |
+| **aSErrorMessagedetail** | **kotlin.collections.List&lt;kotlin.String&gt;** | More error message detail |  [optional] |
 
 
 

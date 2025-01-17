@@ -20,7 +20,6 @@ import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.BuyercontractGetCommunicationrecipientsV1Response
 import eZmaxApi.models.BuyercontractGetCommunicationrecipientsV1ResponseMPayload
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseObjDebug
 import eZmaxApi.models.CommonResponseObjDebugPayload
 
@@ -29,10 +28,22 @@ class BuyercontractGetCommunicationrecipientsV1ResponseTest : ShouldSpec() {
         // uncomment below to create an instance of BuyercontractGetCommunicationrecipientsV1Response
         //val modelInstance = BuyercontractGetCommunicationrecipientsV1Response()
 
+        // to test the property `objDebugPayload`
+        should("test objDebugPayload") {
+            // uncomment below to test the property
+            //modelInstance.objDebugPayload shouldBe ("TODO")
+        }
+
         // to test the property `mPayload`
         should("test mPayload") {
             // uncomment below to test the property
             //modelInstance.mPayload shouldBe ("TODO")
+        }
+
+        // to test the property `objDebug`
+        should("test objDebug") {
+            // uncomment below to test the property
+            //modelInstance.objDebug shouldBe ("TODO")
         }
 
     }

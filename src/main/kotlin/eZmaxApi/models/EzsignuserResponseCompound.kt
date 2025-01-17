@@ -17,7 +17,6 @@ package eZmaxApi.models
 
 import eZmaxApi.models.CommonAudit
 import eZmaxApi.models.ContactResponseCompound
-import eZmaxApi.models.EzsignuserResponse
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -32,23 +31,23 @@ import com.squareup.moshi.JsonClass
  */
 
 
-class EzsignuserResponseCompound (
+data class EzsignuserResponseCompound (
 
     /* The unique ID of the Ezsignuser */
     @Json(name = "pkiEzsignuserID")
-    override val pkiEzsignuserID: kotlin.Int,
+    val pkiEzsignuserID: kotlin.Int,
 
     /* The unique ID of the Contact */
     @Json(name = "fkiContactID")
-    override val fkiContactID: kotlin.Int,
+    val fkiContactID: kotlin.Int,
 
     @Json(name = "objContact")
-    override val objContact: ContactResponseCompound,
+    val objContact: ContactResponseCompound,
 
     @Json(name = "objAudit")
-    override val objAudit: CommonAudit
+    val objAudit: CommonAudit
 
-) : EzsignuserResponse {
+) {
 
 
 }

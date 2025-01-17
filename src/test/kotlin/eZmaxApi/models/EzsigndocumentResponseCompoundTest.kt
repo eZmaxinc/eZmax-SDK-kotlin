@@ -22,7 +22,6 @@ import eZmaxApi.models.EzsigndocumentResponseCompound
 import eZmaxApi.models.CommonAudit
 import eZmaxApi.models.ComputedEEzsigndocumentSteptype
 import eZmaxApi.models.CustomEzsignfoldersignerassociationstatusResponse
-import eZmaxApi.models.EzsigndocumentResponse
 import eZmaxApi.models.EzsigndocumentdependencyResponse
 import eZmaxApi.models.FieldEEzsigndocumentStep
 
@@ -30,6 +29,78 @@ class EzsigndocumentResponseCompoundTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of EzsigndocumentResponseCompound
         //val modelInstance = EzsigndocumentResponseCompound()
+
+        // to test the property `pkiEzsigndocumentID` - The unique ID of the Ezsigndocument
+        should("test pkiEzsigndocumentID") {
+            // uncomment below to test the property
+            //modelInstance.pkiEzsigndocumentID shouldBe ("TODO")
+        }
+
+        // to test the property `fkiEzsignfolderID` - The unique ID of the Ezsignfolder
+        should("test fkiEzsignfolderID") {
+            // uncomment below to test the property
+            //modelInstance.fkiEzsignfolderID shouldBe ("TODO")
+        }
+
+        // to test the property `dtEzsigndocumentDuedate` - The maximum date and time at which the Ezsigndocument can be signed.
+        should("test dtEzsigndocumentDuedate") {
+            // uncomment below to test the property
+            //modelInstance.dtEzsigndocumentDuedate shouldBe ("TODO")
+        }
+
+        // to test the property `sEzsigndocumentName` - The name of the document that will be presented to Ezsignfoldersignerassociations
+        should("test sEzsigndocumentName") {
+            // uncomment below to test the property
+            //modelInstance.sEzsigndocumentName shouldBe ("TODO")
+        }
+
+        // to test the property `eEzsigndocumentStep`
+        should("test eEzsigndocumentStep") {
+            // uncomment below to test the property
+            //modelInstance.eEzsigndocumentStep shouldBe ("TODO")
+        }
+
+        // to test the property `iEzsigndocumentOrder` - The order in which the Ezsigndocument will be presented to the signatory in the Ezsignfolder.
+        should("test iEzsigndocumentOrder") {
+            // uncomment below to test the property
+            //modelInstance.iEzsigndocumentOrder shouldBe ("TODO")
+        }
+
+        // to test the property `iEzsigndocumentPagetotal` - The number of pages in the Ezsigndocument.
+        should("test iEzsigndocumentPagetotal") {
+            // uncomment below to test the property
+            //modelInstance.iEzsigndocumentPagetotal shouldBe ("TODO")
+        }
+
+        // to test the property `iEzsigndocumentSignaturesigned` - The number of signatures that were signed in the document.
+        should("test iEzsigndocumentSignaturesigned") {
+            // uncomment below to test the property
+            //modelInstance.iEzsigndocumentSignaturesigned shouldBe ("TODO")
+        }
+
+        // to test the property `iEzsigndocumentSignaturetotal` - The number of total signatures that were requested in the Ezsigndocument.
+        should("test iEzsigndocumentSignaturetotal") {
+            // uncomment below to test the property
+            //modelInstance.iEzsigndocumentSignaturetotal shouldBe ("TODO")
+        }
+
+        // to test the property `iEzsigndocumentFormfieldtotal` - The number of total Ezsignformfield that were requested in the Ezsigndocument.
+        should("test iEzsigndocumentFormfieldtotal") {
+            // uncomment below to test the property
+            //modelInstance.iEzsigndocumentFormfieldtotal shouldBe ("TODO")
+        }
+
+        // to test the property `iEzsigndocumentEzsignsignatureattachmenttotal` - The number of Ezsigndocumentattachment total
+        should("test iEzsigndocumentEzsignsignatureattachmenttotal") {
+            // uncomment below to test the property
+            //modelInstance.iEzsigndocumentEzsignsignatureattachmenttotal shouldBe ("TODO")
+        }
+
+        // to test the property `iEzsigndocumentEzsigndiscussiontotal` - The total number of Ezsigndiscussions
+        should("test iEzsigndocumentEzsigndiscussiontotal") {
+            // uncomment below to test the property
+            //modelInstance.iEzsigndocumentEzsigndiscussiontotal shouldBe ("TODO")
+        }
 
         // to test the property `eEzsigndocumentSteptype`
         should("test eEzsigndocumentSteptype") {
@@ -65,6 +136,78 @@ class EzsigndocumentResponseCompoundTest : ShouldSpec() {
         should("test aObjEzsignfoldersignerassociationstatus") {
             // uncomment below to test the property
             //modelInstance.aObjEzsignfoldersignerassociationstatus shouldBe ("TODO")
+        }
+
+        // to test the property `fkiEzsignfoldersignerassociationIDDeclinedtosign` - The unique ID of the Ezsignfoldersignerassociation
+        should("test fkiEzsignfoldersignerassociationIDDeclinedtosign") {
+            // uncomment below to test the property
+            //modelInstance.fkiEzsignfoldersignerassociationIDDeclinedtosign shouldBe ("TODO")
+        }
+
+        // to test the property `dtEzsignformCompleted` - The date and time at which the Ezsignform has been completed.
+        should("test dtEzsignformCompleted") {
+            // uncomment below to test the property
+            //modelInstance.dtEzsignformCompleted shouldBe ("TODO")
+        }
+
+        // to test the property `fkiLanguageID` - The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
+        should("test fkiLanguageID") {
+            // uncomment below to test the property
+            //modelInstance.fkiLanguageID shouldBe ("TODO")
+        }
+
+        // to test the property `dtEzsigndocumentFirstsend` - The date and time when the Ezsigndocument was first sent.
+        should("test dtEzsigndocumentFirstsend") {
+            // uncomment below to test the property
+            //modelInstance.dtEzsigndocumentFirstsend shouldBe ("TODO")
+        }
+
+        // to test the property `dtEzsigndocumentLastsend` - The date and time when the Ezsigndocument was sent the last time.
+        should("test dtEzsigndocumentLastsend") {
+            // uncomment below to test the property
+            //modelInstance.dtEzsigndocumentLastsend shouldBe ("TODO")
+        }
+
+        // to test the property `sEzsigndocumentMD5initial` - MD5 Hash of the initial PDF Document before signatures were applied to it.
+        should("test sEzsigndocumentMD5initial") {
+            // uncomment below to test the property
+            //modelInstance.sEzsigndocumentMD5initial shouldBe ("TODO")
+        }
+
+        // to test the property `tEzsigndocumentDeclinedtosignreason` - A custom text message that will contain the refusal message if the Ezsigndocument is declined to sign
+        should("test tEzsigndocumentDeclinedtosignreason") {
+            // uncomment below to test the property
+            //modelInstance.tEzsigndocumentDeclinedtosignreason shouldBe ("TODO")
+        }
+
+        // to test the property `sEzsigndocumentMD5signed` - MD5 Hash of the final PDF Document after all signatures were applied to it.
+        should("test sEzsigndocumentMD5signed") {
+            // uncomment below to test the property
+            //modelInstance.sEzsigndocumentMD5signed shouldBe ("TODO")
+        }
+
+        // to test the property `bEzsigndocumentEzsignform` - If the Ezsigndocument contains an Ezsignform or not
+        should("test bEzsigndocumentEzsignform") {
+            // uncomment below to test the property
+            //modelInstance.bEzsigndocumentEzsignform shouldBe ("TODO")
+        }
+
+        // to test the property `bEzsigndocumentHassignedsignatures` - If the Ezsigndocument contains signed signatures (From internal or external sources)
+        should("test bEzsigndocumentHassignedsignatures") {
+            // uncomment below to test the property
+            //modelInstance.bEzsigndocumentHassignedsignatures shouldBe ("TODO")
+        }
+
+        // to test the property `objAudit`
+        should("test objAudit") {
+            // uncomment below to test the property
+            //modelInstance.objAudit shouldBe ("TODO")
+        }
+
+        // to test the property `sEzsigndocumentExternalid` - This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
+        should("test sEzsigndocumentExternalid") {
+            // uncomment below to test the property
+            //modelInstance.sEzsigndocumentExternalid shouldBe ("TODO")
         }
 
         // to test the property `aObjEzsigndocumentdependency`

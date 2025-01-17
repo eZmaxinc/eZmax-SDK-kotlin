@@ -19,7 +19,6 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.SupplyGetListV1Response
-import eZmaxApi.models.CommonResponseGetList
 import eZmaxApi.models.CommonResponseObjDebug
 import eZmaxApi.models.CommonResponseObjDebugPayloadGetList
 import eZmaxApi.models.SupplyGetListV1ResponseMPayload
@@ -29,10 +28,22 @@ class SupplyGetListV1ResponseTest : ShouldSpec() {
         // uncomment below to create an instance of SupplyGetListV1Response
         //val modelInstance = SupplyGetListV1Response()
 
+        // to test the property `objDebugPayload`
+        should("test objDebugPayload") {
+            // uncomment below to test the property
+            //modelInstance.objDebugPayload shouldBe ("TODO")
+        }
+
         // to test the property `mPayload`
         should("test mPayload") {
             // uncomment below to test the property
             //modelInstance.mPayload shouldBe ("TODO")
+        }
+
+        // to test the property `objDebug`
+        should("test objDebug") {
+            // uncomment below to test the property
+            //modelInstance.objDebug shouldBe ("TODO")
         }
 
     }

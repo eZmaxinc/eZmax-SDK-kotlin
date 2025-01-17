@@ -15,7 +15,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.EzsigntemplatepackageResponse
 import eZmaxApi.models.EzsigntemplatepackagemembershipResponseCompound
 import eZmaxApi.models.EzsigntemplatepackagesignerResponseCompound
 
@@ -46,43 +45,43 @@ data class EzsigntemplatepackageResponseCompound (
 
     /* The unique ID of the Ezsigntemplatepackage */
     @Json(name = "pkiEzsigntemplatepackageID")
-    override val pkiEzsigntemplatepackageID: kotlin.Int,
+    val pkiEzsigntemplatepackageID: kotlin.Int,
 
     /* The unique ID of the Ezsignfoldertype. */
     @Json(name = "fkiEzsignfoldertypeID")
-    override val fkiEzsignfoldertypeID: kotlin.Int,
+    val fkiEzsignfoldertypeID: kotlin.Int,
 
     /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| */
     @Json(name = "fkiLanguageID")
-    override val fkiLanguageID: kotlin.Int,
+    val fkiLanguageID: kotlin.Int,
 
     /* The Name of the Language in the language of the requester */
     @Json(name = "sLanguageNameX")
-    override val sLanguageNameX: kotlin.String,
+    val sLanguageNameX: kotlin.String,
 
     /* The description of the Ezsigntemplatepackage */
     @Json(name = "sEzsigntemplatepackageDescription")
-    override val sEzsigntemplatepackageDescription: kotlin.String,
+    val sEzsigntemplatepackageDescription: kotlin.String,
 
     /* Whether the Ezsigntemplatepackage can be accessed by admin users only (eUserType=Normal) */
     @Json(name = "bEzsigntemplatepackageAdminonly")
-    override val bEzsigntemplatepackageAdminonly: kotlin.Boolean,
+    val bEzsigntemplatepackageAdminonly: kotlin.Boolean,
 
     /* Whether the Ezsignbulksend was automatically modified and needs a manual validation */
     @Json(name = "bEzsigntemplatepackageNeedvalidation")
-    override val bEzsigntemplatepackageNeedvalidation: kotlin.Boolean,
+    val bEzsigntemplatepackageNeedvalidation: kotlin.Boolean,
 
     /* Whether the Ezsigntemplatepackage is active or not */
     @Json(name = "bEzsigntemplatepackageIsactive")
-    override val bEzsigntemplatepackageIsactive: kotlin.Boolean,
+    val bEzsigntemplatepackageIsactive: kotlin.Boolean,
 
     /* The name of the Ezsignfoldertype in the language of the requester */
     @Json(name = "sEzsignfoldertypeNameX")
-    override val sEzsignfoldertypeNameX: kotlin.String,
+    val sEzsignfoldertypeNameX: kotlin.String,
 
     /* Whether the Ezsigntemplatepackage if allowed to edit or not */
     @Json(name = "bEzsigntemplatepackageEditallowed")
-    override val bEzsigntemplatepackageEditallowed: kotlin.Boolean,
+    val bEzsigntemplatepackageEditallowed: kotlin.Boolean,
 
     @Json(name = "a_objEzsigntemplatepackagesigner")
     val aObjEzsigntemplatepackagesigner: kotlin.collections.List<EzsigntemplatepackagesignerResponseCompound>,
@@ -92,13 +91,13 @@ data class EzsigntemplatepackageResponseCompound (
 
     /* The unique ID of the Ezdoctemplatedocument */
     @Json(name = "fkiEzdoctemplatedocumentID")
-    override val fkiEzdoctemplatedocumentID: kotlin.Int? = null,
+    val fkiEzdoctemplatedocumentID: kotlin.Int? = null,
 
     /* The name of the Ezdoctemplatedocument in the language of the requester */
     @Json(name = "sEzdoctemplatedocumentNameX")
-    override val sEzdoctemplatedocumentNameX: kotlin.String? = null
+    val sEzdoctemplatedocumentNameX: kotlin.String? = null
 
-) : EzsigntemplatepackageResponse {
+) {
 
 
 }

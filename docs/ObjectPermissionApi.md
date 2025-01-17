@@ -61,7 +61,7 @@ Configure Authorization:
 
 <a id="permissionDeleteObjectV1"></a>
 # **permissionDeleteObjectV1**
-> CommonResponse permissionDeleteObjectV1(pkiPermissionID)
+> PermissionDeleteObjectV1Response permissionDeleteObjectV1(pkiPermissionID)
 
 Delete an existing Permission
 
@@ -76,7 +76,7 @@ Delete an existing Permission
 val apiInstance = ObjectPermissionApi()
 val pkiPermissionID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Permission
 try {
-    val result : CommonResponse = apiInstance.permissionDeleteObjectV1(pkiPermissionID)
+    val result : PermissionDeleteObjectV1Response = apiInstance.permissionDeleteObjectV1(pkiPermissionID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectPermissionApi#permissionDeleteObjectV1")
@@ -94,7 +94,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**PermissionDeleteObjectV1Response**](PermissionDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -110,7 +110,7 @@ Configure Authorization:
 
 <a id="permissionEditObjectV1"></a>
 # **permissionEditObjectV1**
-> CommonResponse permissionEditObjectV1(pkiPermissionID, permissionEditObjectV1Request)
+> PermissionEditObjectV1Response permissionEditObjectV1(pkiPermissionID, permissionEditObjectV1Request)
 
 Edit an existing Permission
 
@@ -126,7 +126,7 @@ val apiInstance = ObjectPermissionApi()
 val pkiPermissionID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Permission
 val permissionEditObjectV1Request : PermissionEditObjectV1Request =  // PermissionEditObjectV1Request | 
 try {
-    val result : CommonResponse = apiInstance.permissionEditObjectV1(pkiPermissionID, permissionEditObjectV1Request)
+    val result : PermissionEditObjectV1Response = apiInstance.permissionEditObjectV1(pkiPermissionID, permissionEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectPermissionApi#permissionEditObjectV1")
@@ -145,7 +145,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**PermissionEditObjectV1Response**](PermissionEditObjectV1Response.md)
 
 ### Authorization
 

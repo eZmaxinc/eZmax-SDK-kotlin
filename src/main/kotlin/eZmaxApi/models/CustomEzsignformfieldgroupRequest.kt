@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.CustomEzsignformfieldRequest
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -32,7 +33,7 @@ data class CustomEzsignformfieldgroupRequest (
 
     /* An array containing all the values to fill the Ezsignform. */
     @Json(name = "a_objEzsignformfield")
-    val aObjEzsignformfield: kotlin.collections.List<kotlin.Any>,
+    val aObjEzsignformfield: kotlin.collections.List<CustomEzsignformfieldRequest>,
 
     /* The unique ID of the Ezsignformfieldgroup */
     @Json(name = "pkiEzsignformfieldgroupID")

@@ -17,7 +17,6 @@ package eZmaxApi.models
 
 import eZmaxApi.models.CommonAudit
 import eZmaxApi.models.CustomEzsignfoldertransmissionResponse
-import eZmaxApi.models.EzsignbulksendtransmissionResponse
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -38,27 +37,27 @@ data class EzsignbulksendtransmissionResponseCompound (
 
     /* The unique ID of the Ezsignbulksendtransmission */
     @Json(name = "pkiEzsignbulksendtransmissionID")
-    override val pkiEzsignbulksendtransmissionID: kotlin.Int,
+    val pkiEzsignbulksendtransmissionID: kotlin.Int,
 
     /* The unique ID of the Ezsignbulksend */
     @Json(name = "fkiEzsignbulksendID")
-    override val fkiEzsignbulksendID: kotlin.Int,
+    val fkiEzsignbulksendID: kotlin.Int,
 
     /* The description of the Ezsignbulksendtransmission */
     @Json(name = "sEzsignbulksendtransmissionDescription")
-    override val sEzsignbulksendtransmissionDescription: kotlin.String,
+    val sEzsignbulksendtransmissionDescription: kotlin.String,
 
     /* The number of errors during the Ezsignbulksendtransmission */
     @Json(name = "iEzsignbulksendtransmissionErrors")
-    override val iEzsignbulksendtransmissionErrors: kotlin.Int,
+    val iEzsignbulksendtransmissionErrors: kotlin.Int,
 
     @Json(name = "objAudit")
-    override val objAudit: CommonAudit,
+    val objAudit: CommonAudit,
 
     @Json(name = "a_objEzsignfoldertransmission")
     val aObjEzsignfoldertransmission: kotlin.collections.List<CustomEzsignfoldertransmissionResponse>
 
-) : EzsignbulksendtransmissionResponse {
+) {
 
 
 }

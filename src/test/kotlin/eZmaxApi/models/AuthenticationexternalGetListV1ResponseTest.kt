@@ -20,7 +20,6 @@ import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.AuthenticationexternalGetListV1Response
 import eZmaxApi.models.AuthenticationexternalGetListV1ResponseMPayload
-import eZmaxApi.models.CommonResponseGetList
 import eZmaxApi.models.CommonResponseObjDebug
 import eZmaxApi.models.CommonResponseObjDebugPayloadGetList
 
@@ -29,10 +28,22 @@ class AuthenticationexternalGetListV1ResponseTest : ShouldSpec() {
         // uncomment below to create an instance of AuthenticationexternalGetListV1Response
         //val modelInstance = AuthenticationexternalGetListV1Response()
 
+        // to test the property `objDebugPayload`
+        should("test objDebugPayload") {
+            // uncomment below to test the property
+            //modelInstance.objDebugPayload shouldBe ("TODO")
+        }
+
         // to test the property `mPayload`
         should("test mPayload") {
             // uncomment below to test the property
             //modelInstance.mPayload shouldBe ("TODO")
+        }
+
+        // to test the property `objDebug`
+        should("test objDebug") {
+            // uncomment below to test the property
+            //modelInstance.objDebug shouldBe ("TODO")
         }
 
     }

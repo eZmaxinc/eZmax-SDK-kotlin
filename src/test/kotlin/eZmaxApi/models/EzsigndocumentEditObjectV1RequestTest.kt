@@ -19,14 +19,14 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.EzsigndocumentEditObjectV1Request
-import eZmaxApi.models.EzsigndocumentRequest
+import eZmaxApi.models.EzsigndocumentRequestCompound
 
 class EzsigndocumentEditObjectV1RequestTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of EzsigndocumentEditObjectV1Request
         //val modelInstance = EzsigndocumentEditObjectV1Request()
 
-        // to test the property `objEzsigndocument` - An Ezsigndocument Object and children to create a complete structure
+        // to test the property `objEzsigndocument`
         should("test objEzsigndocument") {
             // uncomment below to test the property
             //modelInstance.objEzsigndocument shouldBe ("TODO")

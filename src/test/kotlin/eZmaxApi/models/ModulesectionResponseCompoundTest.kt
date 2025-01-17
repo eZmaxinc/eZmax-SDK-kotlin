@@ -19,13 +19,36 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.ModulesectionResponseCompound
-import eZmaxApi.models.ModulesectionResponse
-import eZmaxApi.models.PermissionResponse
+import eZmaxApi.models.PermissionResponseCompound
 
 class ModulesectionResponseCompoundTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of ModulesectionResponseCompound
         //val modelInstance = ModulesectionResponseCompound()
+
+        // to test the property `pkiModulesectionID` - The unique ID of the Modulesection
+        should("test pkiModulesectionID") {
+            // uncomment below to test the property
+            //modelInstance.pkiModulesectionID shouldBe ("TODO")
+        }
+
+        // to test the property `fkiModuleID` - The unique ID of the Module
+        should("test fkiModuleID") {
+            // uncomment below to test the property
+            //modelInstance.fkiModuleID shouldBe ("TODO")
+        }
+
+        // to test the property `sModulesectionInternalname` - The Internal name of the Module section.
+        should("test sModulesectionInternalname") {
+            // uncomment below to test the property
+            //modelInstance.sModulesectionInternalname shouldBe ("TODO")
+        }
+
+        // to test the property `sModulesectionNameX` - The Name of the Modulesection in the language of the requester
+        should("test sModulesectionNameX") {
+            // uncomment below to test the property
+            //modelInstance.sModulesectionNameX shouldBe ("TODO")
+        }
 
         // to test the property `aObjPermission`
         should("test aObjPermission") {

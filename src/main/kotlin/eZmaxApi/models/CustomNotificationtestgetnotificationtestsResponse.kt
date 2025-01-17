@@ -17,7 +17,6 @@ package eZmaxApi.models
 
 import eZmaxApi.models.FieldENotificationpreferenceStatus
 import eZmaxApi.models.MultilingualNotificationtestName
-import eZmaxApi.models.NotificationtestResponse
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -39,22 +38,22 @@ data class CustomNotificationtestgetnotificationtestsResponse (
 
     /* The unique ID of the Notificationtest */
     @Json(name = "pkiNotificationtestID")
-    override val pkiNotificationtestID: kotlin.Int,
+    val pkiNotificationtestID: kotlin.Int,
 
     @Json(name = "objNotificationtestName")
-    override val objNotificationtestName: MultilingualNotificationtestName,
+    val objNotificationtestName: MultilingualNotificationtestName,
 
     /* The unique ID of the Notificationsubsection */
     @Json(name = "fkiNotificationsubsectionID")
-    override val fkiNotificationsubsectionID: kotlin.Int,
+    val fkiNotificationsubsectionID: kotlin.Int,
 
     /* The function name of the Notificationtest */
     @Json(name = "sNotificationtestFunction")
-    override val sNotificationtestFunction: kotlin.String,
+    val sNotificationtestFunction: kotlin.String,
 
     /* The name of the Notificationtest in the language of the requester */
     @Json(name = "sNotificationtestNameX")
-    override val sNotificationtestNameX: kotlin.String,
+    val sNotificationtestNameX: kotlin.String,
 
     @Json(name = "eNotificationpreferenceStatus")
     val eNotificationpreferenceStatus: FieldENotificationpreferenceStatus,
@@ -63,7 +62,7 @@ data class CustomNotificationtestgetnotificationtestsResponse (
     @Json(name = "iNotificationtest")
     val iNotificationtest: kotlin.Int
 
-) : NotificationtestResponse {
+) {
 
 
 }

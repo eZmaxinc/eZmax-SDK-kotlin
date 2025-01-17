@@ -19,14 +19,14 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.ApikeyEditObjectV1Request
-import eZmaxApi.models.ApikeyRequest
+import eZmaxApi.models.ApikeyRequestCompound
 
 class ApikeyEditObjectV1RequestTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of ApikeyEditObjectV1Request
         //val modelInstance = ApikeyEditObjectV1Request()
 
-        // to test the property `objApikey` - An Apikey Object and children to create a complete structure
+        // to test the property `objApikey`
         should("test objApikey") {
             // uncomment below to test the property
             //modelInstance.objApikey shouldBe ("TODO")

@@ -15,7 +15,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.DiscussionmembershipRequest
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -32,33 +31,33 @@ import com.squareup.moshi.JsonClass
  */
 
 
-class DiscussionmembershipRequestCompound (
+data class DiscussionmembershipRequestCompound (
 
     /* The unique ID of the Discussion */
     @Json(name = "fkiDiscussionID")
-    override val fkiDiscussionID: kotlin.Int,
+    val fkiDiscussionID: kotlin.Int,
 
     /* The joined date of the Discussionmembership */
     @Json(name = "dtDiscussionmembershipJoined")
-    override val dtDiscussionmembershipJoined: kotlin.String,
+    val dtDiscussionmembershipJoined: kotlin.String,
 
     /* The unique ID of the Discussionmembership */
     @Json(name = "pkiDiscussionmembershipID")
-    override val pkiDiscussionmembershipID: kotlin.Int? = null,
+    val pkiDiscussionmembershipID: kotlin.Int? = null,
 
     /* The unique ID of the User */
     @Json(name = "fkiUserID")
-    override val fkiUserID: kotlin.Int? = null,
+    val fkiUserID: kotlin.Int? = null,
 
     /* The unique ID of the Usergroup */
     @Json(name = "fkiUsergroupID")
-    override val fkiUsergroupID: kotlin.Int? = null,
+    val fkiUsergroupID: kotlin.Int? = null,
 
     /* The unique ID of the Modulesection */
     @Json(name = "fkiModulesectionID")
-    override val fkiModulesectionID: kotlin.Int? = null
+    val fkiModulesectionID: kotlin.Int? = null
 
-) : DiscussionmembershipRequest {
+) {
 
 
 }

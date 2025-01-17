@@ -15,7 +15,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.UsergroupdelegationRequest
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -29,21 +28,21 @@ import com.squareup.moshi.JsonClass
  */
 
 
-class UsergroupdelegationRequestCompound (
+data class UsergroupdelegationRequestCompound (
 
     /* The unique ID of the Usergroup */
     @Json(name = "fkiUsergroupID")
-    override val fkiUsergroupID: kotlin.Int,
+    val fkiUsergroupID: kotlin.Int,
 
     /* The unique ID of the User */
     @Json(name = "fkiUserID")
-    override val fkiUserID: kotlin.Int,
+    val fkiUserID: kotlin.Int,
 
     /* The unique ID of the Usergroupdelegation */
     @Json(name = "pkiUsergroupdelegationID")
-    override val pkiUsergroupdelegationID: kotlin.Int? = null
+    val pkiUsergroupdelegationID: kotlin.Int? = null
 
-) : UsergroupdelegationRequest {
+) {
 
 
 }

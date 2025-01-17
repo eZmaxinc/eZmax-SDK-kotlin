@@ -15,7 +15,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.EzdoctemplatedocumentRequest
 import eZmaxApi.models.FieldEEzdoctemplatedocumentPrivacylevel
 import eZmaxApi.models.MultilingualEzdoctemplatedocumentName
 
@@ -36,39 +35,39 @@ import com.squareup.moshi.JsonClass
  */
 
 
-class EzdoctemplatedocumentRequestCompound (
+data class EzdoctemplatedocumentRequestCompound (
 
     /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| */
     @Json(name = "fkiLanguageID")
-    override val fkiLanguageID: kotlin.Int,
+    val fkiLanguageID: kotlin.Int,
 
     /* The unique ID of the Ezdoctemplatetype */
     @Json(name = "fkiEzdoctemplatetypeID")
-    override val fkiEzdoctemplatetypeID: kotlin.Int,
+    val fkiEzdoctemplatetypeID: kotlin.Int,
 
     /* The unique ID of the Ezdoctemplatefieldtypecategory */
     @Json(name = "fkiEzdoctemplatefieldtypecategoryID")
-    override val fkiEzdoctemplatefieldtypecategoryID: kotlin.Int,
+    val fkiEzdoctemplatefieldtypecategoryID: kotlin.Int,
 
     /* Whether the ezdoctemplatedocument is active or not */
     @Json(name = "bEzdoctemplatedocumentIsactive")
-    override val bEzdoctemplatedocumentIsactive: kotlin.Boolean,
+    val bEzdoctemplatedocumentIsactive: kotlin.Boolean,
 
     @Json(name = "objEzdoctemplatedocumentName")
-    override val objEzdoctemplatedocumentName: MultilingualEzdoctemplatedocumentName,
+    val objEzdoctemplatedocumentName: MultilingualEzdoctemplatedocumentName,
 
     /* The unique ID of the Ezdoctemplatedocument */
     @Json(name = "pkiEzdoctemplatedocumentID")
-    override val pkiEzdoctemplatedocumentID: kotlin.Int? = null,
+    val pkiEzdoctemplatedocumentID: kotlin.Int? = null,
 
     /* The unique ID of the Ezsignfoldertype. */
     @Json(name = "fkiEzsignfoldertypeID")
-    override val fkiEzsignfoldertypeID: kotlin.Int? = null,
+    val fkiEzsignfoldertypeID: kotlin.Int? = null,
 
     @Json(name = "eEzdoctemplatedocumentPrivacylevel")
-    override val eEzdoctemplatedocumentPrivacylevel: FieldEEzdoctemplatedocumentPrivacylevel? = null
+    val eEzdoctemplatedocumentPrivacylevel: FieldEEzdoctemplatedocumentPrivacylevel? = null
 
-) : EzdoctemplatedocumentRequest {
+) {
 
 
 }

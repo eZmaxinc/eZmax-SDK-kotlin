@@ -20,12 +20,41 @@ import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.SignatureResponseCompoundV3
 import eZmaxApi.models.FieldESignaturePreference
-import eZmaxApi.models.SignatureResponseV3
 
 class SignatureResponseCompoundV3Test : ShouldSpec() {
     init {
         // uncomment below to create an instance of SignatureResponseCompoundV3
         //val modelInstance = SignatureResponseCompoundV3()
+
+        // to test the property `pkiSignatureID` - The unique ID of the Signature
+        should("test pkiSignatureID") {
+            // uncomment below to test the property
+            //modelInstance.pkiSignatureID shouldBe ("TODO")
+        }
+
+        // to test the property `fkiFontID` - The unique ID of the Font
+        should("test fkiFontID") {
+            // uncomment below to test the property
+            //modelInstance.fkiFontID shouldBe ("TODO")
+        }
+
+        // to test the property `eSignaturePreference`
+        should("test eSignaturePreference") {
+            // uncomment below to test the property
+            //modelInstance.eSignaturePreference shouldBe ("TODO")
+        }
+
+        // to test the property `bSignatureSvg` - Whether the signature has a SVG or not
+        should("test bSignatureSvg") {
+            // uncomment below to test the property
+            //modelInstance.bSignatureSvg shouldBe ("TODO")
+        }
+
+        // to test the property `bSignatureSvginitials` - Whether the initials has a SVG or not
+        should("test bSignatureSvginitials") {
+            // uncomment below to test the property
+            //modelInstance.bSignatureSvginitials shouldBe ("TODO")
+        }
 
     }
 }

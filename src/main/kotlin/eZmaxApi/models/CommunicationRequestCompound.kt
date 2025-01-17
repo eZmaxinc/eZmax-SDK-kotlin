@@ -15,10 +15,9 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.CommunicationRequest
 import eZmaxApi.models.CommunicationexternalrecipientRequestCompound
 import eZmaxApi.models.CommunicationrecipientRequestCompound
-import eZmaxApi.models.CommunicationreferenceRequest
+import eZmaxApi.models.CommunicationreferenceRequestCompound
 import eZmaxApi.models.CustomCommunicationattachmentRequest
 import eZmaxApi.models.CustomCommunicationsenderRequest
 import eZmaxApi.models.FieldECommunicationImportance
@@ -50,15 +49,15 @@ import com.squareup.moshi.JsonClass
 data class CommunicationRequestCompound (
 
     @Json(name = "eCommunicationType")
-    override val eCommunicationType: FieldECommunicationType,
+    val eCommunicationType: FieldECommunicationType,
 
     /* The Body of the Communication */
     @Json(name = "tCommunicationBody")
-    override val tCommunicationBody: kotlin.String,
+    val tCommunicationBody: kotlin.String,
 
     /* Whether the Communication is private or not */
     @Json(name = "bCommunicationPrivate")
-    override val bCommunicationPrivate: kotlin.Boolean,
+    val bCommunicationPrivate: kotlin.Boolean,
 
     @Json(name = "a_objCommunicationattachment")
     val aObjCommunicationattachment: kotlin.collections.List<CustomCommunicationattachmentRequest>,
@@ -67,39 +66,49 @@ data class CommunicationRequestCompound (
     val aObjCommunicationrecipient: kotlin.collections.List<CommunicationrecipientRequestCompound>,
 
     @Json(name = "a_objCommunicationreference")
-    val aObjCommunicationreference: kotlin.collections.List<CommunicationreferenceRequest>,
+    val aObjCommunicationreference: kotlin.collections.List<CommunicationreferenceRequestCompound>,
 
     @Json(name = "a_objCommunicationexternalrecipient")
     val aObjCommunicationexternalrecipient: kotlin.collections.List<CommunicationexternalrecipientRequestCompound>,
 
     /* The unique ID of the Communication. */
     @Json(name = "pkiCommunicationID")
-    override val pkiCommunicationID: kotlin.Int? = null,
+    val pkiCommunicationID: kotlin.Int? = null,
 
     @Json(name = "eCommunicationImportance")
-    override val eCommunicationImportance: FieldECommunicationImportance? = null,
+    val eCommunicationImportance: FieldECommunicationImportance? = null,
 
     @Json(name = "objCommunicationsender")
-    override val objCommunicationsender: CustomCommunicationsenderRequest? = null,
+    val objCommunicationsender: CustomCommunicationsenderRequest? = null,
 
     /* The subject of the Communication */
     @Json(name = "sCommunicationSubject")
-    override val sCommunicationSubject: kotlin.String? = null,
+    val sCommunicationSubject: kotlin.String? = null,
 
     /* How the attachment should be included in the email.   Only used if eCommunicationType is **Email** */
     @Json(name = "eCommunicationAttachmenttype")
-    override val eCommunicationAttachmenttype: CommunicationRequestCompound.ECommunicationAttachmenttype? = null,
+    val eCommunicationAttachmenttype: CommunicationRequestCompound.ECommunicationAttachmenttype? = null,
 
     /* The number of days before the attachment link expired.   Only used if eCommunicationType is **Email** and eCommunicationattachmentType is **Link** */
     @Json(name = "iCommunicationAttachmentlinkexpiration")
-    override val iCommunicationAttachmentlinkexpiration: kotlin.Int? = null,
+    val iCommunicationAttachmentlinkexpiration: kotlin.Int? = null,
 
     /* Whether we ask for a read receipt or not. */
     @Json(name = "bCommunicationReadreceipt")
-    override val bCommunicationReadreceipt: kotlin.Boolean? = null
+    val bCommunicationReadreceipt: kotlin.Boolean? = null
 
-) : CommunicationRequest {
+) {
 
+    /**
+     * How the attachment should be included in the email.   Only used if eCommunicationType is **Email**
+     *
+     * Values: Attachment,Url
+     */
+    @JsonClass(generateAdapter = false)
+    enum class ECommunicationAttachmenttype(val value: kotlin.String) {
+        @Json(name = "Attachment") Attachment("Attachment"),
+        @Json(name = "Url") Url("Url");
+    }
 
 }
 

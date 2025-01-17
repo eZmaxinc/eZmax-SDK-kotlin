@@ -15,7 +15,7 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.PermissionRequest
+import eZmaxApi.models.PermissionRequestCompound
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -30,7 +30,7 @@ import com.squareup.moshi.JsonClass
 data class UsergroupEditPermissionsV1Request (
 
     @Json(name = "a_objPermission")
-    val aObjPermission: kotlin.collections.List<PermissionRequest>
+    val aObjPermission: kotlin.collections.List<PermissionRequestCompound>
 
 ) {
 

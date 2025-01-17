@@ -15,7 +15,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.CommonResponseGetList
 import eZmaxApi.models.CommonResponseObjDebug
 import eZmaxApi.models.CommonResponseObjDebugPayloadGetList
 import eZmaxApi.models.EzsigntemplatepackageGetListV1ResponseMPayload
@@ -35,15 +34,15 @@ import com.squareup.moshi.JsonClass
 data class EzsigntemplatepackageGetListV1Response (
 
     @Json(name = "objDebugPayload")
-    override val objDebugPayload: CommonResponseObjDebugPayloadGetList,
+    val objDebugPayload: CommonResponseObjDebugPayloadGetList,
 
     @Json(name = "mPayload")
     val mPayload: EzsigntemplatepackageGetListV1ResponseMPayload,
 
     @Json(name = "objDebug")
-    override val objDebug: CommonResponseObjDebug? = null
+    val objDebug: CommonResponseObjDebug? = null
 
-) : CommonResponseGetList {
+) {
 
 
 }

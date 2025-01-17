@@ -15,7 +15,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.UsergroupexternalResponse
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -29,21 +28,21 @@ import com.squareup.moshi.JsonClass
  */
 
 
-class UsergroupexternalResponseCompound (
+data class UsergroupexternalResponseCompound (
 
     /* The unique ID of the Usergroupexternal */
     @Json(name = "pkiUsergroupexternalID")
-    override val pkiUsergroupexternalID: kotlin.Int,
+    val pkiUsergroupexternalID: kotlin.Int,
 
     /* The name of the Usergroupexternal */
     @Json(name = "sUsergroupexternalName")
-    override val sUsergroupexternalName: kotlin.String,
+    val sUsergroupexternalName: kotlin.String,
 
     /* The id of the Usergroupexternal */
     @Json(name = "sUsergroupexternalID")
-    override val sUsergroupexternalID: kotlin.String
+    val sUsergroupexternalID: kotlin.String
 
-) : UsergroupexternalResponse {
+) {
 
 
 }

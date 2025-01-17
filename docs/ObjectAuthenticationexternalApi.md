@@ -64,7 +64,7 @@ Configure Authorization:
 
 <a id="authenticationexternalDeleteObjectV1"></a>
 # **authenticationexternalDeleteObjectV1**
-> CommonResponse authenticationexternalDeleteObjectV1(pkiAuthenticationexternalID)
+> AuthenticationexternalDeleteObjectV1Response authenticationexternalDeleteObjectV1(pkiAuthenticationexternalID)
 
 Delete an existing Authenticationexternal
 
@@ -79,7 +79,7 @@ Delete an existing Authenticationexternal
 val apiInstance = ObjectAuthenticationexternalApi()
 val pkiAuthenticationexternalID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Authenticationexternal
 try {
-    val result : CommonResponse = apiInstance.authenticationexternalDeleteObjectV1(pkiAuthenticationexternalID)
+    val result : AuthenticationexternalDeleteObjectV1Response = apiInstance.authenticationexternalDeleteObjectV1(pkiAuthenticationexternalID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectAuthenticationexternalApi#authenticationexternalDeleteObjectV1")
@@ -97,7 +97,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**AuthenticationexternalDeleteObjectV1Response**](AuthenticationexternalDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -113,7 +113,7 @@ Configure Authorization:
 
 <a id="authenticationexternalEditObjectV1"></a>
 # **authenticationexternalEditObjectV1**
-> CommonResponse authenticationexternalEditObjectV1(pkiAuthenticationexternalID, authenticationexternalEditObjectV1Request)
+> AuthenticationexternalEditObjectV1Response authenticationexternalEditObjectV1(pkiAuthenticationexternalID, authenticationexternalEditObjectV1Request)
 
 Edit an existing Authenticationexternal
 
@@ -129,7 +129,7 @@ val apiInstance = ObjectAuthenticationexternalApi()
 val pkiAuthenticationexternalID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Authenticationexternal
 val authenticationexternalEditObjectV1Request : AuthenticationexternalEditObjectV1Request =  // AuthenticationexternalEditObjectV1Request | 
 try {
-    val result : CommonResponse = apiInstance.authenticationexternalEditObjectV1(pkiAuthenticationexternalID, authenticationexternalEditObjectV1Request)
+    val result : AuthenticationexternalEditObjectV1Response = apiInstance.authenticationexternalEditObjectV1(pkiAuthenticationexternalID, authenticationexternalEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectAuthenticationexternalApi#authenticationexternalEditObjectV1")
@@ -148,7 +148,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**AuthenticationexternalEditObjectV1Response**](AuthenticationexternalEditObjectV1Response.md)
 
 ### Authorization
 
@@ -325,7 +325,7 @@ Configure Authorization:
 
 <a id="authenticationexternalResetAuthorizationV1"></a>
 # **authenticationexternalResetAuthorizationV1**
-> CommonResponse authenticationexternalResetAuthorizationV1(pkiAuthenticationexternalID, body)
+> AuthenticationexternalResetAuthorizationV1Response authenticationexternalResetAuthorizationV1(pkiAuthenticationexternalID, body)
 
 Reset the Authenticationexternal authorization
 
@@ -341,7 +341,7 @@ val apiInstance = ObjectAuthenticationexternalApi()
 val pkiAuthenticationexternalID : kotlin.Int = 56 // kotlin.Int | 
 val body : kotlin.Any = Object // kotlin.Any | 
 try {
-    val result : CommonResponse = apiInstance.authenticationexternalResetAuthorizationV1(pkiAuthenticationexternalID, body)
+    val result : AuthenticationexternalResetAuthorizationV1Response = apiInstance.authenticationexternalResetAuthorizationV1(pkiAuthenticationexternalID, body)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectAuthenticationexternalApi#authenticationexternalResetAuthorizationV1")
@@ -360,7 +360,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**AuthenticationexternalResetAuthorizationV1Response**](AuthenticationexternalResetAuthorizationV1Response.md)
 
 ### Authorization
 

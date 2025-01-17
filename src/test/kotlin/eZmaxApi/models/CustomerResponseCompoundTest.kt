@@ -19,7 +19,6 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.CustomerResponseCompound
-import eZmaxApi.models.CustomerResponse
 import eZmaxApi.models.FieldECustomerMarketingcorrespondence
 import eZmaxApi.models.FieldECustomerType
 
@@ -27,6 +26,312 @@ class CustomerResponseCompoundTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of CustomerResponseCompound
         //val modelInstance = CustomerResponseCompound()
+
+        // to test the property `pkiCustomerID` - The unique ID of the Customer.
+        should("test pkiCustomerID") {
+            // uncomment below to test the property
+            //modelInstance.pkiCustomerID shouldBe ("TODO")
+        }
+
+        // to test the property `fkiCompanyID` - The unique ID of the Company
+        should("test fkiCompanyID") {
+            // uncomment below to test the property
+            //modelInstance.fkiCompanyID shouldBe ("TODO")
+        }
+
+        // to test the property `fkiCustomergroupID` - The unique ID of the Customergroup
+        should("test fkiCustomergroupID") {
+            // uncomment below to test the property
+            //modelInstance.fkiCustomergroupID shouldBe ("TODO")
+        }
+
+        // to test the property `sCustomerName` - The name of the Customer
+        should("test sCustomerName") {
+            // uncomment below to test the property
+            //modelInstance.sCustomerName shouldBe ("TODO")
+        }
+
+        // to test the property `fkiContactinformationsID` - The unique ID of the Contactinformations
+        should("test fkiContactinformationsID") {
+            // uncomment below to test the property
+            //modelInstance.fkiContactinformationsID shouldBe ("TODO")
+        }
+
+        // to test the property `fkiContactcontainerID` - The unique ID of the Contactcontainer
+        should("test fkiContactcontainerID") {
+            // uncomment below to test the property
+            //modelInstance.fkiContactcontainerID shouldBe ("TODO")
+        }
+
+        // to test the property `fkiImageID` - The unique ID of the Image
+        should("test fkiImageID") {
+            // uncomment below to test the property
+            //modelInstance.fkiImageID shouldBe ("TODO")
+        }
+
+        // to test the property `fkiGlaccountcontainerID` - The unique ID of the Glaccountcontainer
+        should("test fkiGlaccountcontainerID") {
+            // uncomment below to test the property
+            //modelInstance.fkiGlaccountcontainerID shouldBe ("TODO")
+        }
+
+        // to test the property `fkiLanguageID` - The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
+        should("test fkiLanguageID") {
+            // uncomment below to test the property
+            //modelInstance.fkiLanguageID shouldBe ("TODO")
+        }
+
+        // to test the property `fkiDepartmentID` - The unique ID of the Department
+        should("test fkiDepartmentID") {
+            // uncomment below to test the property
+            //modelInstance.fkiDepartmentID shouldBe ("TODO")
+        }
+
+        // to test the property `fkiPaymentmethodID` - The unique ID of the Paymentmethod
+        should("test fkiPaymentmethodID") {
+            // uncomment below to test the property
+            //modelInstance.fkiPaymentmethodID shouldBe ("TODO")
+        }
+
+        // to test the property `fkiElectronicfundstransferbankaccountID` - The unique ID of the Electronicfundstransferbankaccount
+        should("test fkiElectronicfundstransferbankaccountID") {
+            // uncomment below to test the property
+            //modelInstance.fkiElectronicfundstransferbankaccountID shouldBe ("TODO")
+        }
+
+        // to test the property `fkiElectronicfundstransferbankaccountIDDirectdebit` - The unique ID of the Electronicfundstransferbankaccount
+        should("test fkiElectronicfundstransferbankaccountIDDirectdebit") {
+            // uncomment below to test the property
+            //modelInstance.fkiElectronicfundstransferbankaccountIDDirectdebit shouldBe ("TODO")
+        }
+
+        // to test the property `fkiSendingmethodID` - The unique ID of the Sendingmethod
+        should("test fkiSendingmethodID") {
+            // uncomment below to test the property
+            //modelInstance.fkiSendingmethodID shouldBe ("TODO")
+        }
+
+        // to test the property `fkiTaxassignmentID` - The unique ID of the Taxassignment.  Valid values:  |Value|Description| |-|-| |1|No tax| |2|GST| |3|HST (ON)| |4|HST (NB)| |5|HST (NS)| |6|HST (NL)| |7|HST (PE)| |8|GST + QST (QC)| |9|GST + QST (QC) Non-Recoverable| |10|GST + PST (BC)| |11|GST + PST (SK)| |12|GST + RST (MB)| |13|GST + PST (BC) Non-Recoverable| |14|GST + PST (SK) Non-Recoverable| |15|GST + RST (MB) Non-Recoverable|
+        should("test fkiTaxassignmentID") {
+            // uncomment below to test the property
+            //modelInstance.fkiTaxassignmentID shouldBe ("TODO")
+        }
+
+        // to test the property `fkiAttendancestatusID` - The unique ID of the Attendancestatus
+        should("test fkiAttendancestatusID") {
+            // uncomment below to test the property
+            //modelInstance.fkiAttendancestatusID shouldBe ("TODO")
+        }
+
+        // to test the property `fkiAgentIDVariableexpensechargeto` - The unique ID of the Agent.
+        should("test fkiAgentIDVariableexpensechargeto") {
+            // uncomment below to test the property
+            //modelInstance.fkiAgentIDVariableexpensechargeto shouldBe ("TODO")
+        }
+
+        // to test the property `fkiBrokerIDVariableexpensechargeto` - The unique ID of the Broker.
+        should("test fkiBrokerIDVariableexpensechargeto") {
+            // uncomment below to test the property
+            //modelInstance.fkiBrokerIDVariableexpensechargeto shouldBe ("TODO")
+        }
+
+        // to test the property `fkiCustomerIDVariableexpensechargeto` - The unique ID of the Customer.
+        should("test fkiCustomerIDVariableexpensechargeto") {
+            // uncomment below to test the property
+            //modelInstance.fkiCustomerIDVariableexpensechargeto shouldBe ("TODO")
+        }
+
+        // to test the property `fkiGlaccountcontainerIDVariableexpensechargeto` - The unique ID of the Glaccountcontainer
+        should("test fkiGlaccountcontainerIDVariableexpensechargeto") {
+            // uncomment below to test the property
+            //modelInstance.fkiGlaccountcontainerIDVariableexpensechargeto shouldBe ("TODO")
+        }
+
+        // to test the property `fkiAgentIDSupplychargechargeto` - The unique ID of the Agent.
+        should("test fkiAgentIDSupplychargechargeto") {
+            // uncomment below to test the property
+            //modelInstance.fkiAgentIDSupplychargechargeto shouldBe ("TODO")
+        }
+
+        // to test the property `fkiBrokerIDSupplychargechargeto` - The unique ID of the Broker.
+        should("test fkiBrokerIDSupplychargechargeto") {
+            // uncomment below to test the property
+            //modelInstance.fkiBrokerIDSupplychargechargeto shouldBe ("TODO")
+        }
+
+        // to test the property `fkiCustomerIDSupplychargechargeto` - The unique ID of the Customer.
+        should("test fkiCustomerIDSupplychargechargeto") {
+            // uncomment below to test the property
+            //modelInstance.fkiCustomerIDSupplychargechargeto shouldBe ("TODO")
+        }
+
+        // to test the property `fkiGlaccountcontainerIDSupplychargechargeto` - The unique ID of the Glaccountcontainer
+        should("test fkiGlaccountcontainerIDSupplychargechargeto") {
+            // uncomment below to test the property
+            //modelInstance.fkiGlaccountcontainerIDSupplychargechargeto shouldBe ("TODO")
+        }
+
+        // to test the property `fkiInvoicealternatelogoID` - The unique ID of the Invoicealternatelogo
+        should("test fkiInvoicealternatelogoID") {
+            // uncomment below to test the property
+            //modelInstance.fkiInvoicealternatelogoID shouldBe ("TODO")
+        }
+
+        // to test the property `fkiSynchronizationlinkserverID` - The unique ID of the Synchronizationlinkserver
+        should("test fkiSynchronizationlinkserverID") {
+            // uncomment below to test the property
+            //modelInstance.fkiSynchronizationlinkserverID shouldBe ("TODO")
+        }
+
+        // to test the property `sCustomerCode` - The code of the Customer
+        should("test sCustomerCode") {
+            // uncomment below to test the property
+            //modelInstance.sCustomerCode shouldBe ("TODO")
+        }
+
+        // to test the property `dCustomerFulltimeequivalent` - The fulltimeequivalent of the Customer
+        should("test dCustomerFulltimeequivalent") {
+            // uncomment below to test the property
+            //modelInstance.dCustomerFulltimeequivalent shouldBe ("TODO")
+        }
+
+        // to test the property `iCustomerPhotocopiercode` - The photocopiercode of the Customer
+        should("test iCustomerPhotocopiercode") {
+            // uncomment below to test the property
+            //modelInstance.iCustomerPhotocopiercode shouldBe ("TODO")
+        }
+
+        // to test the property `iCustomerLongdistancecode` - The longdistancecode of the Customer
+        should("test iCustomerLongdistancecode") {
+            // uncomment below to test the property
+            //modelInstance.iCustomerLongdistancecode shouldBe ("TODO")
+        }
+
+        // to test the property `iCustomerTimewindowstart` - The timewindowstart of the Customer
+        should("test iCustomerTimewindowstart") {
+            // uncomment below to test the property
+            //modelInstance.iCustomerTimewindowstart shouldBe ("TODO")
+        }
+
+        // to test the property `iCustomerTimewindowend` - The timewindowend of the Customer
+        should("test iCustomerTimewindowend") {
+            // uncomment below to test the property
+            //modelInstance.iCustomerTimewindowend shouldBe ("TODO")
+        }
+
+        // to test the property `dCustomerMinimumchargeableinterests` - The minimumchargeableinterests of the Customer
+        should("test dCustomerMinimumchargeableinterests") {
+            // uncomment below to test the property
+            //modelInstance.dCustomerMinimumchargeableinterests shouldBe ("TODO")
+        }
+
+        // to test the property `dtCustomerBirthdate` - The birthdate of the Customer
+        should("test dtCustomerBirthdate") {
+            // uncomment below to test the property
+            //modelInstance.dtCustomerBirthdate shouldBe ("TODO")
+        }
+
+        // to test the property `dtCustomerTransfer` - The transfer of the Customer
+        should("test dtCustomerTransfer") {
+            // uncomment below to test the property
+            //modelInstance.dtCustomerTransfer shouldBe ("TODO")
+        }
+
+        // to test the property `dtCustomerTransferappointment` - The transferappointment of the Customer
+        should("test dtCustomerTransferappointment") {
+            // uncomment below to test the property
+            //modelInstance.dtCustomerTransferappointment shouldBe ("TODO")
+        }
+
+        // to test the property `dtCustomerTransfersurvey` - The transfersurvey of the Customer
+        should("test dtCustomerTransfersurvey") {
+            // uncomment below to test the property
+            //modelInstance.dtCustomerTransfersurvey shouldBe ("TODO")
+        }
+
+        // to test the property `bCustomerIsactive` - Whether the customer is active or not
+        should("test bCustomerIsactive") {
+            // uncomment below to test the property
+            //modelInstance.bCustomerIsactive shouldBe ("TODO")
+        }
+
+        // to test the property `bCustomerVariableexpensefinanced` - Whether if it's an variableexpensefinanced
+        should("test bCustomerVariableexpensefinanced") {
+            // uncomment below to test the property
+            //modelInstance.bCustomerVariableexpensefinanced shouldBe ("TODO")
+        }
+
+        // to test the property `bCustomerVariableexpensefinancedtaxes` - Whether if it's an variableexpensefinancedtaxes
+        should("test bCustomerVariableexpensefinancedtaxes") {
+            // uncomment below to test the property
+            //modelInstance.bCustomerVariableexpensefinancedtaxes shouldBe ("TODO")
+        }
+
+        // to test the property `bCustomerSupplychargefinanced` - Whether if it's an supplychargefinanced
+        should("test bCustomerSupplychargefinanced") {
+            // uncomment below to test the property
+            //modelInstance.bCustomerSupplychargefinanced shouldBe ("TODO")
+        }
+
+        // to test the property `bCustomerSupplychargefinancedtaxes` - Whether if it's an supplychargefinancedtaxes
+        should("test bCustomerSupplychargefinancedtaxes") {
+            // uncomment below to test the property
+            //modelInstance.bCustomerSupplychargefinancedtaxes shouldBe ("TODO")
+        }
+
+        // to test the property `bCustomerAttendance` - Whether if it's an attendance
+        should("test bCustomerAttendance") {
+            // uncomment below to test the property
+            //modelInstance.bCustomerAttendance shouldBe ("TODO")
+        }
+
+        // to test the property `eCustomerType`
+        should("test eCustomerType") {
+            // uncomment below to test the property
+            //modelInstance.eCustomerType shouldBe ("TODO")
+        }
+
+        // to test the property `eCustomerMarketingcorrespondence`
+        should("test eCustomerMarketingcorrespondence") {
+            // uncomment below to test the property
+            //modelInstance.eCustomerMarketingcorrespondence shouldBe ("TODO")
+        }
+
+        // to test the property `bCustomerBlackcopycarbon` - Whether if it's an blackcopycarbon
+        should("test bCustomerBlackcopycarbon") {
+            // uncomment below to test the property
+            //modelInstance.bCustomerBlackcopycarbon shouldBe ("TODO")
+        }
+
+        // to test the property `bCustomerUnsubscribeinfo` - Whether if it's an unsubscribeinfo
+        should("test bCustomerUnsubscribeinfo") {
+            // uncomment below to test the property
+            //modelInstance.bCustomerUnsubscribeinfo shouldBe ("TODO")
+        }
+
+        // to test the property `tCustomerComment` - The comment of the Customer
+        should("test tCustomerComment") {
+            // uncomment below to test the property
+            //modelInstance.tCustomerComment shouldBe ("TODO")
+        }
+
+        // to test the property `efkiUserID` - The unique ID of the User
+        should("test efkiUserID") {
+            // uncomment below to test the property
+            //modelInstance.efkiUserID shouldBe ("TODO")
+        }
+
+        // to test the property `efksCustomerCode` - The code of the Customer
+        should("test efksCustomerCode") {
+            // uncomment below to test the property
+            //modelInstance.efksCustomerCode shouldBe ("TODO")
+        }
+
+        // to test the property `IMPORTID`
+        should("test IMPORTID") {
+            // uncomment below to test the property
+            //modelInstance.IMPORTID shouldBe ("TODO")
+        }
 
     }
 }

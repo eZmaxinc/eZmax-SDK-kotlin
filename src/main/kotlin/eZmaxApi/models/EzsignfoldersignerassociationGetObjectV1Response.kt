@@ -15,10 +15,9 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseObjDebug
 import eZmaxApi.models.CommonResponseObjDebugPayload
-import eZmaxApi.models.EzsignfoldersignerassociationResponseCompound
+import eZmaxApi.models.EzsignfoldersignerassociationGetObjectV1ResponseMPayload
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -27,7 +26,7 @@ import com.squareup.moshi.JsonClass
  * Response for GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}
  *
  * @param objDebugPayload 
- * @param mPayload Payload for GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}
+ * @param mPayload 
  * @param objDebug 
  */
 
@@ -35,16 +34,15 @@ import com.squareup.moshi.JsonClass
 data class EzsignfoldersignerassociationGetObjectV1Response (
 
     @Json(name = "objDebugPayload")
-    override val objDebugPayload: CommonResponseObjDebugPayload,
+    val objDebugPayload: CommonResponseObjDebugPayload,
 
-    /* Payload for GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} */
     @Json(name = "mPayload")
-    val mPayload: EzsignfoldersignerassociationResponseCompound,
+    val mPayload: EzsignfoldersignerassociationGetObjectV1ResponseMPayload,
 
     @Json(name = "objDebug")
-    override val objDebug: CommonResponseObjDebug? = null
+    val objDebug: CommonResponseObjDebug? = null
 
-) : CommonResponse {
+) {
 
 
 }

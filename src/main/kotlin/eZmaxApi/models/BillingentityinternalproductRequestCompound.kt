@@ -15,7 +15,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.BillingentityinternalproductRequest
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -29,21 +28,21 @@ import com.squareup.moshi.JsonClass
  */
 
 
-class BillingentityinternalproductRequestCompound (
+data class BillingentityinternalproductRequestCompound (
 
     /* The unique ID of the Ezmaxproduct */
     @Json(name = "fkiEzmaxproductID")
-    override val fkiEzmaxproductID: kotlin.Int,
+    val fkiEzmaxproductID: kotlin.Int,
 
     /* The unique ID of the Billingentityexternal */
     @Json(name = "fkiBillingentityexternalID")
-    override val fkiBillingentityexternalID: kotlin.Int,
+    val fkiBillingentityexternalID: kotlin.Int,
 
     /* The unique ID of the Billingentityinternalproduct */
     @Json(name = "pkiBillingentityinternalproductID")
-    override val pkiBillingentityinternalproductID: kotlin.Int? = null
+    val pkiBillingentityinternalproductID: kotlin.Int? = null
 
-) : BillingentityinternalproductRequest {
+) {
 
 
 }

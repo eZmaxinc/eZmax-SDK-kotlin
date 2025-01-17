@@ -19,10 +19,10 @@ import java.io.IOException
 import okhttp3.Call
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.DiscussionmembershipCreateObjectV1Request
 import eZmaxApi.models.DiscussionmembershipCreateObjectV1Response
+import eZmaxApi.models.DiscussionmembershipDeleteObjectV1Response
 
 import com.squareup.moshi.Json
 
@@ -124,7 +124,7 @@ class ObjectDiscussionmembershipApi(basePath: kotlin.String = defaultBasePath, c
      * Delete an existing Discussionmembership
      * 
      * @param pkiDiscussionmembershipID The unique ID of the Discussionmembership
-     * @return CommonResponse
+     * @return DiscussionmembershipDeleteObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -133,11 +133,11 @@ class ObjectDiscussionmembershipApi(basePath: kotlin.String = defaultBasePath, c
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun discussionmembershipDeleteObjectV1(pkiDiscussionmembershipID: kotlin.Int) : CommonResponse {
+    fun discussionmembershipDeleteObjectV1(pkiDiscussionmembershipID: kotlin.Int) : DiscussionmembershipDeleteObjectV1Response {
         val localVarResponse = discussionmembershipDeleteObjectV1WithHttpInfo(pkiDiscussionmembershipID = pkiDiscussionmembershipID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as DiscussionmembershipDeleteObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -155,16 +155,16 @@ class ObjectDiscussionmembershipApi(basePath: kotlin.String = defaultBasePath, c
      * Delete an existing Discussionmembership
      * 
      * @param pkiDiscussionmembershipID The unique ID of the Discussionmembership
-     * @return ApiResponse<CommonResponse?>
+     * @return ApiResponse<DiscussionmembershipDeleteObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun discussionmembershipDeleteObjectV1WithHttpInfo(pkiDiscussionmembershipID: kotlin.Int) : ApiResponse<CommonResponse?> {
+    fun discussionmembershipDeleteObjectV1WithHttpInfo(pkiDiscussionmembershipID: kotlin.Int) : ApiResponse<DiscussionmembershipDeleteObjectV1Response?> {
         val localVariableConfig = discussionmembershipDeleteObjectV1RequestConfig(pkiDiscussionmembershipID = pkiDiscussionmembershipID)
 
-        return request<Unit, CommonResponse>(
+        return request<Unit, DiscussionmembershipDeleteObjectV1Response>(
             localVariableConfig
         )
     }

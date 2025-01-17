@@ -15,7 +15,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.EzsigntemplatesignerRequest
 import eZmaxApi.models.FieldEEzsigntemplatesignerMapping
 
 import com.squareup.moshi.Json
@@ -35,40 +34,40 @@ import com.squareup.moshi.JsonClass
  */
 
 
-class EzsigntemplatesignerRequestCompound (
+data class EzsigntemplatesignerRequestCompound (
 
     /* The unique ID of the Ezsigntemplate */
     @Json(name = "fkiEzsigntemplateID")
-    override val fkiEzsigntemplateID: kotlin.Int,
+    val fkiEzsigntemplateID: kotlin.Int,
 
     /* The description of the Ezsigntemplatesigner */
     @Json(name = "sEzsigntemplatesignerDescription")
-    override val sEzsigntemplatesignerDescription: kotlin.String,
+    val sEzsigntemplatesignerDescription: kotlin.String,
 
     /* The unique ID of the Ezsigntemplatesigner */
     @Json(name = "pkiEzsigntemplatesignerID")
-    override val pkiEzsigntemplatesignerID: kotlin.Int? = null,
+    val pkiEzsigntemplatesignerID: kotlin.Int? = null,
 
     /* The unique ID of the User */
     @Json(name = "fkiUserID")
-    override val fkiUserID: kotlin.Int? = null,
+    val fkiUserID: kotlin.Int? = null,
 
     /* The unique ID of the Usergroup */
     @Json(name = "fkiUsergroupID")
-    override val fkiUsergroupID: kotlin.Int? = null,
+    val fkiUsergroupID: kotlin.Int? = null,
 
     /* The unique ID of the Ezdoctemplatedocument */
     @Json(name = "fkiEzdoctemplatedocumentID")
-    override val fkiEzdoctemplatedocumentID: kotlin.Int? = null,
+    val fkiEzdoctemplatedocumentID: kotlin.Int? = null,
 
     /* If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document. */
     @Json(name = "bEzsigntemplatesignerReceivecopy")
-    override val bEzsigntemplatesignerReceivecopy: kotlin.Boolean? = null,
+    val bEzsigntemplatesignerReceivecopy: kotlin.Boolean? = null,
 
     @Json(name = "eEzsigntemplatesignerMapping")
-    override val eEzsigntemplatesignerMapping: FieldEEzsigntemplatesignerMapping? = null
+    val eEzsigntemplatesignerMapping: FieldEEzsigntemplatesignerMapping? = null
 
-) : EzsigntemplatesignerRequest {
+) {
 
 
 }

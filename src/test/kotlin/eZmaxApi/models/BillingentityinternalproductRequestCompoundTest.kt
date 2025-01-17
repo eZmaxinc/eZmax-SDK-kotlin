@@ -19,12 +19,29 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.BillingentityinternalproductRequestCompound
-import eZmaxApi.models.BillingentityinternalproductRequest
 
 class BillingentityinternalproductRequestCompoundTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of BillingentityinternalproductRequestCompound
         //val modelInstance = BillingentityinternalproductRequestCompound()
+
+        // to test the property `fkiEzmaxproductID` - The unique ID of the Ezmaxproduct
+        should("test fkiEzmaxproductID") {
+            // uncomment below to test the property
+            //modelInstance.fkiEzmaxproductID shouldBe ("TODO")
+        }
+
+        // to test the property `fkiBillingentityexternalID` - The unique ID of the Billingentityexternal
+        should("test fkiBillingentityexternalID") {
+            // uncomment below to test the property
+            //modelInstance.fkiBillingentityexternalID shouldBe ("TODO")
+        }
+
+        // to test the property `pkiBillingentityinternalproductID` - The unique ID of the Billingentityinternalproduct
+        should("test pkiBillingentityinternalproductID") {
+            // uncomment below to test the property
+            //modelInstance.pkiBillingentityinternalproductID shouldBe ("TODO")
+        }
 
     }
 }

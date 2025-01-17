@@ -17,7 +17,6 @@ package eZmaxApi.models
 
 import eZmaxApi.models.AddressRequest
 import eZmaxApi.models.ContactRequestCompound
-import eZmaxApi.models.FranchisereferalincomeRequest
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -46,59 +45,59 @@ data class FranchisereferalincomeRequestCompound (
 
     /* The unique ID of the Franchisebroker */
     @Json(name = "fkiFranchisebrokerID")
-    override val fkiFranchisebrokerID: kotlin.Int,
+    val fkiFranchisebrokerID: kotlin.Int,
 
     /* The unique ID of the Franchisereferalincomeprogram */
     @Json(name = "fkiFranchisereferalincomeprogramID")
-    override val fkiFranchisereferalincomeprogramID: kotlin.Int,
+    val fkiFranchisereferalincomeprogramID: kotlin.Int,
 
     /* The unique ID of the Period */
     @Json(name = "fkiPeriodID")
-    override val fkiPeriodID: kotlin.Int,
+    val fkiPeriodID: kotlin.Int,
 
     /* The loan amount */
     @Json(name = "dFranchisereferalincomeLoan")
-    override val dFranchisereferalincomeLoan: kotlin.String,
+    val dFranchisereferalincomeLoan: kotlin.String,
 
     /* The amount that will be given to the franchise */
     @Json(name = "dFranchisereferalincomeFranchiseamount")
-    override val dFranchisereferalincomeFranchiseamount: kotlin.String,
+    val dFranchisereferalincomeFranchiseamount: kotlin.String,
 
     /* The amount that will be kept by the franchisor */
     @Json(name = "dFranchisereferalincomeFranchisoramount")
-    override val dFranchisereferalincomeFranchisoramount: kotlin.String,
+    val dFranchisereferalincomeFranchisoramount: kotlin.String,
 
     /* The amount that will be given to the agent */
     @Json(name = "dFranchisereferalincomeAgentamount")
-    override val dFranchisereferalincomeAgentamount: kotlin.String,
+    val dFranchisereferalincomeAgentamount: kotlin.String,
 
     /* The date the amounts were disbursed */
     @Json(name = "dtFranchisereferalincomeDisbursed")
-    override val dtFranchisereferalincomeDisbursed: kotlin.String,
+    val dtFranchisereferalincomeDisbursed: kotlin.String,
 
     /* Comment about the transaction */
     @Json(name = "tFranchisereferalincomeComment")
-    override val tFranchisereferalincomeComment: kotlin.String,
+    val tFranchisereferalincomeComment: kotlin.String,
 
     /* The unique ID of the Franchisereoffice */
     @Json(name = "fkiFranchiseofficeID")
-    override val fkiFranchiseofficeID: kotlin.Int,
+    val fkiFranchiseofficeID: kotlin.Int,
 
     /*  */
     @Json(name = "sFranchisereferalincomeRemoteid")
-    override val sFranchisereferalincomeRemoteid: kotlin.String,
+    val sFranchisereferalincomeRemoteid: kotlin.String,
 
     @Json(name = "a_objContact")
     val aObjContact: kotlin.collections.List<ContactRequestCompound>,
 
     /* The unique ID of the Franchisereferalincome */
     @Json(name = "pkiFranchisereferalincomeID")
-    override val pkiFranchisereferalincomeID: kotlin.Int? = null,
+    val pkiFranchisereferalincomeID: kotlin.Int? = null,
 
     @Json(name = "objAddress")
     val objAddress: AddressRequest? = null
 
-) : FranchisereferalincomeRequest {
+) {
 
 
 }

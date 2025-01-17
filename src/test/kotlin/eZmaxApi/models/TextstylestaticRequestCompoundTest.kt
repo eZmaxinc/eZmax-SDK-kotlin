@@ -19,12 +19,53 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.TextstylestaticRequestCompound
-import eZmaxApi.models.TextstylestaticRequest
 
 class TextstylestaticRequestCompoundTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of TextstylestaticRequestCompound
         //val modelInstance = TextstylestaticRequestCompound()
+
+        // to test the property `fkiFontID` - The unique ID of the Font
+        should("test fkiFontID") {
+            // uncomment below to test the property
+            //modelInstance.fkiFontID shouldBe ("TODO")
+        }
+
+        // to test the property `bTextstylestaticBold` - Whether the Textstylestatic is Bold or not
+        should("test bTextstylestaticBold") {
+            // uncomment below to test the property
+            //modelInstance.bTextstylestaticBold shouldBe ("TODO")
+        }
+
+        // to test the property `bTextstylestaticUnderline` - Whether the Textstylestatic is Underline or not
+        should("test bTextstylestaticUnderline") {
+            // uncomment below to test the property
+            //modelInstance.bTextstylestaticUnderline shouldBe ("TODO")
+        }
+
+        // to test the property `bTextstylestaticItalic` - Whether the Textstylestatic is Italic or not
+        should("test bTextstylestaticItalic") {
+            // uncomment below to test the property
+            //modelInstance.bTextstylestaticItalic shouldBe ("TODO")
+        }
+
+        // to test the property `bTextstylestaticStrikethrough` - Whether the Textstylestatic is Strikethrough or not
+        should("test bTextstylestaticStrikethrough") {
+            // uncomment below to test the property
+            //modelInstance.bTextstylestaticStrikethrough shouldBe ("TODO")
+        }
+
+        // to test the property `iTextstylestaticFontcolor` - The int32 representation of the Fontcolor. For example, RGB color #39435B would be 3752795
+        should("test iTextstylestaticFontcolor") {
+            // uncomment below to test the property
+            //modelInstance.iTextstylestaticFontcolor shouldBe ("TODO")
+        }
+
+        // to test the property `iTextstylestaticSize` - The Size for the Font of the Textstylestatic
+        should("test iTextstylestaticSize") {
+            // uncomment below to test the property
+            //modelInstance.iTextstylestaticSize shouldBe ("TODO")
+        }
 
     }
 }

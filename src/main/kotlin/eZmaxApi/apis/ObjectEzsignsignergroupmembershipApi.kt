@@ -19,10 +19,10 @@ import java.io.IOException
 import okhttp3.Call
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.EzsignsignergroupmembershipCreateObjectV1Request
 import eZmaxApi.models.EzsignsignergroupmembershipCreateObjectV1Response
+import eZmaxApi.models.EzsignsignergroupmembershipDeleteObjectV1Response
 import eZmaxApi.models.EzsignsignergroupmembershipGetObjectV2Response
 
 import com.squareup.moshi.Json
@@ -125,7 +125,7 @@ class ObjectEzsignsignergroupmembershipApi(basePath: kotlin.String = defaultBase
      * Delete an existing Ezsignsignergroupmembership
      * 
      * @param pkiEzsignsignergroupmembershipID The unique ID of the Ezsignsignergroupmembership
-     * @return CommonResponse
+     * @return EzsignsignergroupmembershipDeleteObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -134,11 +134,11 @@ class ObjectEzsignsignergroupmembershipApi(basePath: kotlin.String = defaultBase
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignsignergroupmembershipDeleteObjectV1(pkiEzsignsignergroupmembershipID: kotlin.Int) : CommonResponse {
+    fun ezsignsignergroupmembershipDeleteObjectV1(pkiEzsignsignergroupmembershipID: kotlin.Int) : EzsignsignergroupmembershipDeleteObjectV1Response {
         val localVarResponse = ezsignsignergroupmembershipDeleteObjectV1WithHttpInfo(pkiEzsignsignergroupmembershipID = pkiEzsignsignergroupmembershipID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignsignergroupmembershipDeleteObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -156,16 +156,16 @@ class ObjectEzsignsignergroupmembershipApi(basePath: kotlin.String = defaultBase
      * Delete an existing Ezsignsignergroupmembership
      * 
      * @param pkiEzsignsignergroupmembershipID The unique ID of the Ezsignsignergroupmembership
-     * @return ApiResponse<CommonResponse?>
+     * @return ApiResponse<EzsignsignergroupmembershipDeleteObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignsignergroupmembershipDeleteObjectV1WithHttpInfo(pkiEzsignsignergroupmembershipID: kotlin.Int) : ApiResponse<CommonResponse?> {
+    fun ezsignsignergroupmembershipDeleteObjectV1WithHttpInfo(pkiEzsignsignergroupmembershipID: kotlin.Int) : ApiResponse<EzsignsignergroupmembershipDeleteObjectV1Response?> {
         val localVariableConfig = ezsignsignergroupmembershipDeleteObjectV1RequestConfig(pkiEzsignsignergroupmembershipID = pkiEzsignsignergroupmembershipID)
 
-        return request<Unit, CommonResponse>(
+        return request<Unit, EzsignsignergroupmembershipDeleteObjectV1Response>(
             localVariableConfig
         )
     }

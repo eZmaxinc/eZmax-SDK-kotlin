@@ -16,11 +16,10 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.CustomCreateEzsignelementsPositionedByWordRequest
-import eZmaxApi.models.CustomDropdownElementRequest
+import eZmaxApi.models.CustomDropdownElementRequestCompound
 import eZmaxApi.models.EnumTextvalidation
 import eZmaxApi.models.EzsignformfieldRequestCompound
-import eZmaxApi.models.EzsignformfieldgroupRequestCompound
-import eZmaxApi.models.EzsignformfieldgroupsignerRequest
+import eZmaxApi.models.EzsignformfieldgroupsignerRequestCompound
 import eZmaxApi.models.FieldEEzsignformfieldgroupSignerrequirement
 import eZmaxApi.models.FieldEEzsignformfieldgroupTooltipposition
 import eZmaxApi.models.FieldEEzsignformfieldgroupType
@@ -59,82 +58,82 @@ data class CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest
 
     /* The unique ID of the Ezsigndocument */
     @Json(name = "fkiEzsigndocumentID")
-    override val fkiEzsigndocumentID: kotlin.Int,
+    val fkiEzsigndocumentID: kotlin.Int,
 
     @Json(name = "eEzsignformfieldgroupType")
-    override val eEzsignformfieldgroupType: FieldEEzsignformfieldgroupType,
+    val eEzsignformfieldgroupType: FieldEEzsignformfieldgroupType,
 
     /* The Label for the Ezsignformfieldgroup */
     @Json(name = "sEzsignformfieldgroupLabel")
-    override val sEzsignformfieldgroupLabel: kotlin.String,
+    val sEzsignformfieldgroupLabel: kotlin.String,
 
     /* The step when the Ezsignsigner will be invited to fill the form fields */
     @Json(name = "iEzsignformfieldgroupStep")
-    override val iEzsignformfieldgroupStep: kotlin.Int,
+    val iEzsignformfieldgroupStep: kotlin.Int,
 
     /* The minimum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup */
     @Json(name = "iEzsignformfieldgroupFilledmin")
-    override val iEzsignformfieldgroupFilledmin: kotlin.Int,
+    val iEzsignformfieldgroupFilledmin: kotlin.Int,
 
     /* The maximum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup */
     @Json(name = "iEzsignformfieldgroupFilledmax")
-    override val iEzsignformfieldgroupFilledmax: kotlin.Int,
+    val iEzsignformfieldgroupFilledmax: kotlin.Int,
 
     /* Whether the Ezsignformfieldgroup is read only or not. */
     @Json(name = "bEzsignformfieldgroupReadonly")
-    override val bEzsignformfieldgroupReadonly: kotlin.Boolean,
+    val bEzsignformfieldgroupReadonly: kotlin.Boolean,
 
     @Json(name = "a_objEzsignformfieldgroupsigner")
-    override val aObjEzsignformfieldgroupsigner: kotlin.collections.List<EzsignformfieldgroupsignerRequest>,
+    val aObjEzsignformfieldgroupsigner: kotlin.collections.List<EzsignformfieldgroupsignerRequestCompound>,
 
     @Json(name = "a_objEzsignformfield")
-    override val aObjEzsignformfield: kotlin.collections.List<EzsignformfieldRequestCompound>,
+    val aObjEzsignformfield: kotlin.collections.List<EzsignformfieldRequestCompound>,
 
     @Json(name = "objCreateezsignelementspositionedbyword")
     val objCreateezsignelementspositionedbyword: CustomCreateEzsignelementsPositionedByWordRequest,
 
     /* The unique ID of the Ezsignformfieldgroup */
     @Json(name = "pkiEzsignformfieldgroupID")
-    override val pkiEzsignformfieldgroupID: kotlin.Int? = null,
+    val pkiEzsignformfieldgroupID: kotlin.Int? = null,
 
     @Json(name = "eEzsignformfieldgroupSignerrequirement")
     @Deprecated(message = "This property is deprecated.")
-    override val eEzsignformfieldgroupSignerrequirement: FieldEEzsignformfieldgroupSignerrequirement? = null,
+    val eEzsignformfieldgroupSignerrequirement: FieldEEzsignformfieldgroupSignerrequirement? = null,
 
     /* The default value for the Ezsignformfieldgroup  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | ------------------------- | ------------ | ------------ | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sCompany} | Company name | eZmax Solutions Inc. | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 | */
     @Json(name = "sEzsignformfieldgroupDefaultvalue")
-    override val sEzsignformfieldgroupDefaultvalue: kotlin.String? = null,
+    val sEzsignformfieldgroupDefaultvalue: kotlin.String? = null,
 
     /* The maximum length for the value in the Ezsignformfieldgroup  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea** */
     @Json(name = "iEzsignformfieldgroupMaxlength")
-    override val iEzsignformfieldgroupMaxlength: kotlin.Int? = null,
+    val iEzsignformfieldgroupMaxlength: kotlin.Int? = null,
 
     /* Whether the Ezsignformfieldgroup is encrypted in the database or not. Encrypted values are not displayed on the Ezsigndocument. This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea** */
     @Json(name = "bEzsignformfieldgroupEncrypted")
-    override val bEzsignformfieldgroupEncrypted: kotlin.Boolean? = null,
+    val bEzsignformfieldgroupEncrypted: kotlin.Boolean? = null,
 
     /* A regular expression to indicate what values are acceptable for the Ezsignformfieldgroup.  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea** */
     @Json(name = "sEzsignformfieldgroupRegexp")
-    override val sEzsignformfieldgroupRegexp: kotlin.String? = null,
+    val sEzsignformfieldgroupRegexp: kotlin.String? = null,
 
     /* Description of validation rule. Show by signatory. */
     @Json(name = "sEzsignformfieldgroupTextvalidationcustommessage")
-    override val sEzsignformfieldgroupTextvalidationcustommessage: kotlin.String? = null,
+    val sEzsignformfieldgroupTextvalidationcustommessage: kotlin.String? = null,
 
     /* A tooltip that will be presented to Ezsignsigner about the Ezsignformfieldgroup */
     @Json(name = "tEzsignformfieldgroupTooltip")
-    override val tEzsignformfieldgroupTooltip: kotlin.String? = null,
+    val tEzsignformfieldgroupTooltip: kotlin.String? = null,
 
     @Json(name = "eEzsignformfieldgroupTooltipposition")
-    override val eEzsignformfieldgroupTooltipposition: FieldEEzsignformfieldgroupTooltipposition? = null,
+    val eEzsignformfieldgroupTooltipposition: FieldEEzsignformfieldgroupTooltipposition? = null,
 
     @Json(name = "eEzsignformfieldgroupTextvalidation")
-    override val eEzsignformfieldgroupTextvalidation: EnumTextvalidation? = null,
+    val eEzsignformfieldgroupTextvalidation: EnumTextvalidation? = null,
 
     @Json(name = "a_objDropdownElement")
-    override val aObjDropdownElement: kotlin.collections.List<CustomDropdownElementRequest>? = null
+    val aObjDropdownElement: kotlin.collections.List<CustomDropdownElementRequestCompound>? = null
 
-) : EzsignformfieldgroupRequestCompound {
+) {
 
 
 }

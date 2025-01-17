@@ -20,7 +20,7 @@ import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.CustomCommunicationsenderResponse
 import eZmaxApi.models.CustomContactNameResponse
-import eZmaxApi.models.EmailResponse
+import eZmaxApi.models.EmailResponseCompound
 import eZmaxApi.models.PhoneResponseCompound
 
 class CustomCommunicationsenderResponseTest : ShouldSpec() {
@@ -70,7 +70,7 @@ class CustomCommunicationsenderResponseTest : ShouldSpec() {
             //modelInstance.fkiPhonelinesharedID shouldBe ("TODO")
         }
 
-        // to test the property `objEmail` - An Email Object and children to create a complete structure
+        // to test the property `objEmail`
         should("test objEmail") {
             // uncomment below to test the property
             //modelInstance.objEmail shouldBe ("TODO")

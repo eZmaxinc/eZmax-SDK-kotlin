@@ -19,11 +19,10 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.EzsigntemplateformfieldgroupRequestCompound
-import eZmaxApi.models.CustomDropdownElementRequest
+import eZmaxApi.models.CustomDropdownElementRequestCompound
 import eZmaxApi.models.EnumTextvalidation
 import eZmaxApi.models.EzsigntemplateformfieldRequestCompound
-import eZmaxApi.models.EzsigntemplateformfieldgroupRequest
-import eZmaxApi.models.EzsigntemplateformfieldgroupsignerRequest
+import eZmaxApi.models.EzsigntemplateformfieldgroupsignerRequestCompound
 import eZmaxApi.models.FieldEEzsigntemplateformfieldgroupSignerrequirement
 import eZmaxApi.models.FieldEEzsigntemplateformfieldgroupTooltipposition
 import eZmaxApi.models.FieldEEzsigntemplateformfieldgroupType
@@ -32,6 +31,54 @@ class EzsigntemplateformfieldgroupRequestCompoundTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of EzsigntemplateformfieldgroupRequestCompound
         //val modelInstance = EzsigntemplateformfieldgroupRequestCompound()
+
+        // to test the property `fkiEzsigntemplatedocumentID` - The unique ID of the Ezsigntemplatedocument
+        should("test fkiEzsigntemplatedocumentID") {
+            // uncomment below to test the property
+            //modelInstance.fkiEzsigntemplatedocumentID shouldBe ("TODO")
+        }
+
+        // to test the property `eEzsigntemplateformfieldgroupType`
+        should("test eEzsigntemplateformfieldgroupType") {
+            // uncomment below to test the property
+            //modelInstance.eEzsigntemplateformfieldgroupType shouldBe ("TODO")
+        }
+
+        // to test the property `sEzsigntemplateformfieldgroupLabel` - The Label for the Ezsigntemplateformfieldgroup
+        should("test sEzsigntemplateformfieldgroupLabel") {
+            // uncomment below to test the property
+            //modelInstance.sEzsigntemplateformfieldgroupLabel shouldBe ("TODO")
+        }
+
+        // to test the property `iEzsigntemplateformfieldgroupStep` - The step when the Ezsigntemplatesigner will be invited to fill the form fields
+        should("test iEzsigntemplateformfieldgroupStep") {
+            // uncomment below to test the property
+            //modelInstance.iEzsigntemplateformfieldgroupStep shouldBe ("TODO")
+        }
+
+        // to test the property `sEzsigntemplateformfieldgroupDefaultvalue` - The default value for the Ezsigntemplateformfieldgroup  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | ------------------------- | ------------ | ------------ | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 |
+        should("test sEzsigntemplateformfieldgroupDefaultvalue") {
+            // uncomment below to test the property
+            //modelInstance.sEzsigntemplateformfieldgroupDefaultvalue shouldBe ("TODO")
+        }
+
+        // to test the property `iEzsigntemplateformfieldgroupFilledmin` - The minimum number of Ezsigntemplateformfield that must be filled in the Ezsigntemplateformfieldgroup
+        should("test iEzsigntemplateformfieldgroupFilledmin") {
+            // uncomment below to test the property
+            //modelInstance.iEzsigntemplateformfieldgroupFilledmin shouldBe ("TODO")
+        }
+
+        // to test the property `iEzsigntemplateformfieldgroupFilledmax` - The maximum number of Ezsigntemplateformfield that must be filled in the Ezsigntemplateformfieldgroup
+        should("test iEzsigntemplateformfieldgroupFilledmax") {
+            // uncomment below to test the property
+            //modelInstance.iEzsigntemplateformfieldgroupFilledmax shouldBe ("TODO")
+        }
+
+        // to test the property `bEzsigntemplateformfieldgroupReadonly` - Whether the Ezsigntemplateformfieldgroup is read only or not.
+        should("test bEzsigntemplateformfieldgroupReadonly") {
+            // uncomment below to test the property
+            //modelInstance.bEzsigntemplateformfieldgroupReadonly shouldBe ("TODO")
+        }
 
         // to test the property `aObjEzsigntemplateformfieldgroupsigner`
         should("test aObjEzsigntemplateformfieldgroupsigner") {
@@ -43,6 +90,60 @@ class EzsigntemplateformfieldgroupRequestCompoundTest : ShouldSpec() {
         should("test aObjEzsigntemplateformfield") {
             // uncomment below to test the property
             //modelInstance.aObjEzsigntemplateformfield shouldBe ("TODO")
+        }
+
+        // to test the property `pkiEzsigntemplateformfieldgroupID` - The unique ID of the Ezsigntemplateformfieldgroup
+        should("test pkiEzsigntemplateformfieldgroupID") {
+            // uncomment below to test the property
+            //modelInstance.pkiEzsigntemplateformfieldgroupID shouldBe ("TODO")
+        }
+
+        // to test the property `eEzsigntemplateformfieldgroupSignerrequirement`
+        should("test eEzsigntemplateformfieldgroupSignerrequirement") {
+            // uncomment below to test the property
+            //modelInstance.eEzsigntemplateformfieldgroupSignerrequirement shouldBe ("TODO")
+        }
+
+        // to test the property `iEzsigntemplateformfieldgroupMaxlength` - The maximum length for the value in the Ezsigntemplateformfieldgroup  This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea**
+        should("test iEzsigntemplateformfieldgroupMaxlength") {
+            // uncomment below to test the property
+            //modelInstance.iEzsigntemplateformfieldgroupMaxlength shouldBe ("TODO")
+        }
+
+        // to test the property `bEzsigntemplateformfieldgroupEncrypted` - Whether the Ezsigntemplateformfieldgroup is encrypted in the database or not. Encrypted values are not displayed on the Ezsigndocument. This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea**
+        should("test bEzsigntemplateformfieldgroupEncrypted") {
+            // uncomment below to test the property
+            //modelInstance.bEzsigntemplateformfieldgroupEncrypted shouldBe ("TODO")
+        }
+
+        // to test the property `sEzsigntemplateformfieldgroupRegexp` - A regular expression to indicate what values are acceptable for the Ezsigntemplateformfieldgroup.  This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea**
+        should("test sEzsigntemplateformfieldgroupRegexp") {
+            // uncomment below to test the property
+            //modelInstance.sEzsigntemplateformfieldgroupRegexp shouldBe ("TODO")
+        }
+
+        // to test the property `sEzsigntemplateformfieldgroupTextvalidationcustommessage` - Description of validation rule. Show by signatory.
+        should("test sEzsigntemplateformfieldgroupTextvalidationcustommessage") {
+            // uncomment below to test the property
+            //modelInstance.sEzsigntemplateformfieldgroupTextvalidationcustommessage shouldBe ("TODO")
+        }
+
+        // to test the property `eEzsigntemplateformfieldgroupTextvalidation`
+        should("test eEzsigntemplateformfieldgroupTextvalidation") {
+            // uncomment below to test the property
+            //modelInstance.eEzsigntemplateformfieldgroupTextvalidation shouldBe ("TODO")
+        }
+
+        // to test the property `tEzsigntemplateformfieldgroupTooltip` - A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplateformfieldgroup
+        should("test tEzsigntemplateformfieldgroupTooltip") {
+            // uncomment below to test the property
+            //modelInstance.tEzsigntemplateformfieldgroupTooltip shouldBe ("TODO")
+        }
+
+        // to test the property `eEzsigntemplateformfieldgroupTooltipposition`
+        should("test eEzsigntemplateformfieldgroupTooltipposition") {
+            // uncomment below to test the property
+            //modelInstance.eEzsigntemplateformfieldgroupTooltipposition shouldBe ("TODO")
         }
 
         // to test the property `aObjDropdownElement`

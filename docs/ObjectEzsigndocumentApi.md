@@ -42,7 +42,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 <a id="ezsigndocumentApplyEzsigntemplateV1"></a>
 # **ezsigndocumentApplyEzsigntemplateV1**
-> CommonResponse ezsigndocumentApplyEzsigntemplateV1(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV1Request)
+> EzsigndocumentApplyEzsigntemplateV1Response ezsigndocumentApplyEzsigntemplateV1(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV1Request)
 
 Apply an Ezsigntemplate to the Ezsigndocument.
 
@@ -58,7 +58,7 @@ val apiInstance = ObjectEzsigndocumentApi()
 val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | 
 val ezsigndocumentApplyEzsigntemplateV1Request : EzsigndocumentApplyEzsigntemplateV1Request =  // EzsigndocumentApplyEzsigntemplateV1Request | 
 try {
-    val result : CommonResponse = apiInstance.ezsigndocumentApplyEzsigntemplateV1(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV1Request)
+    val result : EzsigndocumentApplyEzsigntemplateV1Response = apiInstance.ezsigndocumentApplyEzsigntemplateV1(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigndocumentApi#ezsigndocumentApplyEzsigntemplateV1")
@@ -77,7 +77,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigndocumentApplyEzsigntemplateV1Response**](EzsigndocumentApplyEzsigntemplateV1Response.md)
 
 ### Authorization
 
@@ -393,7 +393,7 @@ Configure Authorization:
 
 <a id="ezsigndocumentDeclineToSignV1"></a>
 # **ezsigndocumentDeclineToSignV1**
-> CommonResponse ezsigndocumentDeclineToSignV1(pkiEzsigndocumentID, ezsigndocumentDeclineToSignV1Request)
+> EzsigndocumentDeclineToSignV1Response ezsigndocumentDeclineToSignV1(pkiEzsigndocumentID, ezsigndocumentDeclineToSignV1Request)
 
 Decline to sign
 
@@ -409,7 +409,7 @@ val apiInstance = ObjectEzsigndocumentApi()
 val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | 
 val ezsigndocumentDeclineToSignV1Request : EzsigndocumentDeclineToSignV1Request =  // EzsigndocumentDeclineToSignV1Request | 
 try {
-    val result : CommonResponse = apiInstance.ezsigndocumentDeclineToSignV1(pkiEzsigndocumentID, ezsigndocumentDeclineToSignV1Request)
+    val result : EzsigndocumentDeclineToSignV1Response = apiInstance.ezsigndocumentDeclineToSignV1(pkiEzsigndocumentID, ezsigndocumentDeclineToSignV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigndocumentApi#ezsigndocumentDeclineToSignV1")
@@ -428,7 +428,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigndocumentDeclineToSignV1Response**](EzsigndocumentDeclineToSignV1Response.md)
 
 ### Authorization
 
@@ -444,7 +444,7 @@ Configure Authorization:
 
 <a id="ezsigndocumentDeleteObjectV1"></a>
 # **ezsigndocumentDeleteObjectV1**
-> CommonResponse ezsigndocumentDeleteObjectV1(pkiEzsigndocumentID)
+> EzsigndocumentDeleteObjectV1Response ezsigndocumentDeleteObjectV1(pkiEzsigndocumentID)
 
 Delete an existing Ezsigndocument
 
@@ -459,7 +459,7 @@ Delete an existing Ezsigndocument
 val apiInstance = ObjectEzsigndocumentApi()
 val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : CommonResponse = apiInstance.ezsigndocumentDeleteObjectV1(pkiEzsigndocumentID)
+    val result : EzsigndocumentDeleteObjectV1Response = apiInstance.ezsigndocumentDeleteObjectV1(pkiEzsigndocumentID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigndocumentApi#ezsigndocumentDeleteObjectV1")
@@ -477,7 +477,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigndocumentDeleteObjectV1Response**](EzsigndocumentDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -697,7 +697,7 @@ Configure Authorization:
 
 <a id="ezsigndocumentEndPrematurelyV1"></a>
 # **ezsigndocumentEndPrematurelyV1**
-> CommonResponse ezsigndocumentEndPrematurelyV1(pkiEzsigndocumentID, body)
+> EzsigndocumentEndPrematurelyV1Response ezsigndocumentEndPrematurelyV1(pkiEzsigndocumentID, body)
 
 End prematurely
 
@@ -713,7 +713,7 @@ val apiInstance = ObjectEzsigndocumentApi()
 val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | 
 val body : kotlin.Any = Object // kotlin.Any | 
 try {
-    val result : CommonResponse = apiInstance.ezsigndocumentEndPrematurelyV1(pkiEzsigndocumentID, body)
+    val result : EzsigndocumentEndPrematurelyV1Response = apiInstance.ezsigndocumentEndPrematurelyV1(pkiEzsigndocumentID, body)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigndocumentApi#ezsigndocumentEndPrematurelyV1")
@@ -732,7 +732,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigndocumentEndPrematurelyV1Response**](EzsigndocumentEndPrematurelyV1Response.md)
 
 ### Authorization
 
@@ -799,7 +799,7 @@ Configure Authorization:
 
 <a id="ezsigndocumentFlattenV1"></a>
 # **ezsigndocumentFlattenV1**
-> CommonResponse ezsigndocumentFlattenV1(pkiEzsigndocumentID, body)
+> EzsigndocumentFlattenV1Response ezsigndocumentFlattenV1(pkiEzsigndocumentID, body)
 
 Flatten
 
@@ -815,7 +815,7 @@ val apiInstance = ObjectEzsigndocumentApi()
 val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | 
 val body : kotlin.Any = Object // kotlin.Any | 
 try {
-    val result : CommonResponse = apiInstance.ezsigndocumentFlattenV1(pkiEzsigndocumentID, body)
+    val result : EzsigndocumentFlattenV1Response = apiInstance.ezsigndocumentFlattenV1(pkiEzsigndocumentID, body)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigndocumentApi#ezsigndocumentFlattenV1")
@@ -834,7 +834,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigndocumentFlattenV1Response**](EzsigndocumentFlattenV1Response.md)
 
 ### Authorization
 
@@ -1587,7 +1587,7 @@ Configure Authorization:
 
 <a id="ezsigndocumentPatchObjectV1"></a>
 # **ezsigndocumentPatchObjectV1**
-> CommonResponse ezsigndocumentPatchObjectV1(pkiEzsigndocumentID, ezsigndocumentPatchObjectV1Request)
+> EzsigndocumentPatchObjectV1Response ezsigndocumentPatchObjectV1(pkiEzsigndocumentID, ezsigndocumentPatchObjectV1Request)
 
 Patch an existing Ezsigndocument
 
@@ -1603,7 +1603,7 @@ val apiInstance = ObjectEzsigndocumentApi()
 val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | 
 val ezsigndocumentPatchObjectV1Request : EzsigndocumentPatchObjectV1Request =  // EzsigndocumentPatchObjectV1Request | 
 try {
-    val result : CommonResponse = apiInstance.ezsigndocumentPatchObjectV1(pkiEzsigndocumentID, ezsigndocumentPatchObjectV1Request)
+    val result : EzsigndocumentPatchObjectV1Response = apiInstance.ezsigndocumentPatchObjectV1(pkiEzsigndocumentID, ezsigndocumentPatchObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigndocumentApi#ezsigndocumentPatchObjectV1")
@@ -1622,7 +1622,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigndocumentPatchObjectV1Response**](EzsigndocumentPatchObjectV1Response.md)
 
 ### Authorization
 
@@ -1638,7 +1638,7 @@ Configure Authorization:
 
 <a id="ezsigndocumentSubmitEzsignformV1"></a>
 # **ezsigndocumentSubmitEzsignformV1**
-> CommonResponse ezsigndocumentSubmitEzsignformV1(pkiEzsigndocumentID, ezsigndocumentSubmitEzsignformV1Request)
+> EzsigndocumentSubmitEzsignformV1Response ezsigndocumentSubmitEzsignformV1(pkiEzsigndocumentID, ezsigndocumentSubmitEzsignformV1Request)
 
 Submit the Ezsignform
 
@@ -1654,7 +1654,7 @@ val apiInstance = ObjectEzsigndocumentApi()
 val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | 
 val ezsigndocumentSubmitEzsignformV1Request : EzsigndocumentSubmitEzsignformV1Request =  // EzsigndocumentSubmitEzsignformV1Request | 
 try {
-    val result : CommonResponse = apiInstance.ezsigndocumentSubmitEzsignformV1(pkiEzsigndocumentID, ezsigndocumentSubmitEzsignformV1Request)
+    val result : EzsigndocumentSubmitEzsignformV1Response = apiInstance.ezsigndocumentSubmitEzsignformV1(pkiEzsigndocumentID, ezsigndocumentSubmitEzsignformV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigndocumentApi#ezsigndocumentSubmitEzsignformV1")
@@ -1673,7 +1673,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigndocumentSubmitEzsignformV1Response**](EzsigndocumentSubmitEzsignformV1Response.md)
 
 ### Authorization
 
@@ -1689,7 +1689,7 @@ Configure Authorization:
 
 <a id="ezsigndocumentUnsendV1"></a>
 # **ezsigndocumentUnsendV1**
-> CommonResponse ezsigndocumentUnsendV1(pkiEzsigndocumentID, body)
+> EzsigndocumentUnsendV1Response ezsigndocumentUnsendV1(pkiEzsigndocumentID, body)
 
 Unsend the Ezsigndocument
 
@@ -1705,7 +1705,7 @@ val apiInstance = ObjectEzsigndocumentApi()
 val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | 
 val body : kotlin.Any = Object // kotlin.Any | 
 try {
-    val result : CommonResponse = apiInstance.ezsigndocumentUnsendV1(pkiEzsigndocumentID, body)
+    val result : EzsigndocumentUnsendV1Response = apiInstance.ezsigndocumentUnsendV1(pkiEzsigndocumentID, body)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigndocumentApi#ezsigndocumentUnsendV1")
@@ -1724,7 +1724,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigndocumentUnsendV1Response**](EzsigndocumentUnsendV1Response.md)
 
 ### Authorization
 

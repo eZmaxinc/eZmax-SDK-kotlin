@@ -15,7 +15,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.CustomCreditcardtransactionresponseResponse
 import eZmaxApi.models.FieldEErrorCode
 
@@ -36,19 +35,19 @@ data class CommonResponseErrorCreditcardValidation (
 
     /* The message giving details about the error */
     @Json(name = "sErrorMessage")
-    override val sErrorMessage: kotlin.String,
+    val sErrorMessage: kotlin.String,
 
     @Json(name = "eErrorCode")
-    override val eErrorCode: FieldEErrorCode,
+    val eErrorCode: FieldEErrorCode,
 
     /* More error message detail */
     @Json(name = "a_sErrorMessagedetail")
-    override val aSErrorMessagedetail: kotlin.collections.List<kotlin.String>? = null,
+    val aSErrorMessagedetail: kotlin.collections.List<kotlin.String>? = null,
 
     @Json(name = "objCreditcardtransactionresponse")
     val objCreditcardtransactionresponse: CustomCreditcardtransactionresponseResponse? = null
 
-) : CommonResponseError {
+) {
 
 
 }

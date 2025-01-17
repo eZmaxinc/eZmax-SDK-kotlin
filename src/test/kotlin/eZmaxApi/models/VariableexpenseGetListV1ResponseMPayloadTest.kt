@@ -19,13 +19,24 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.VariableexpenseGetListV1ResponseMPayload
-import eZmaxApi.models.CommonGetListV1ResponseMPayload
 import eZmaxApi.models.VariableexpenseListElement
 
 class VariableexpenseGetListV1ResponseMPayloadTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of VariableexpenseGetListV1ResponseMPayload
         //val modelInstance = VariableexpenseGetListV1ResponseMPayload()
+
+        // to test the property `iRowReturned` - The number of rows returned
+        should("test iRowReturned") {
+            // uncomment below to test the property
+            //modelInstance.iRowReturned shouldBe ("TODO")
+        }
+
+        // to test the property `iRowFiltered` - The number of rows matching your filters (if any) or the total number of rows
+        should("test iRowFiltered") {
+            // uncomment below to test the property
+            //modelInstance.iRowFiltered shouldBe ("TODO")
+        }
 
         // to test the property `aObjVariableexpense`
         should("test aObjVariableexpense") {

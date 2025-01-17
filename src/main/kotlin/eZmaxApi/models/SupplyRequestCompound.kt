@@ -16,7 +16,6 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.MultilingualSupplyDescription
-import eZmaxApi.models.SupplyRequest
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -36,44 +35,44 @@ import com.squareup.moshi.JsonClass
  */
 
 
-class SupplyRequestCompound (
+data class SupplyRequestCompound (
 
     /* The unique ID of the Variableexpense */
     @Json(name = "fkiVariableexpenseID")
-    override val fkiVariableexpenseID: kotlin.Int,
+    val fkiVariableexpenseID: kotlin.Int,
 
     /* The code of the Supply */
     @Json(name = "sSupplyCode")
-    override val sSupplyCode: kotlin.String,
+    val sSupplyCode: kotlin.String,
 
     @Json(name = "objSupplyDescription")
-    override val objSupplyDescription: MultilingualSupplyDescription,
+    val objSupplyDescription: MultilingualSupplyDescription,
 
     /* The unit price of the Supply */
     @Json(name = "dSupplyUnitprice")
-    override val dSupplyUnitprice: kotlin.String,
+    val dSupplyUnitprice: kotlin.String,
 
     /* Whether the supply is active or not */
     @Json(name = "bSupplyIsactive")
-    override val bSupplyIsactive: kotlin.Boolean,
+    val bSupplyIsactive: kotlin.Boolean,
 
     /* Whether if the price is variable */
     @Json(name = "bSupplyVariableprice")
-    override val bSupplyVariableprice: kotlin.Boolean,
+    val bSupplyVariableprice: kotlin.Boolean,
 
     /* The unique ID of the Supply */
     @Json(name = "pkiSupplyID")
-    override val pkiSupplyID: kotlin.Int? = null,
+    val pkiSupplyID: kotlin.Int? = null,
 
     /* The unique ID of the Glaccount */
     @Json(name = "fkiGlaccountID")
-    override val fkiGlaccountID: kotlin.Int? = null,
+    val fkiGlaccountID: kotlin.Int? = null,
 
     /* The unique ID of the Glaccountcontainer */
     @Json(name = "fkiGlaccountcontainerID")
-    override val fkiGlaccountcontainerID: kotlin.Int? = null
+    val fkiGlaccountcontainerID: kotlin.Int? = null
 
-) : SupplyRequest {
+) {
 
 
 }

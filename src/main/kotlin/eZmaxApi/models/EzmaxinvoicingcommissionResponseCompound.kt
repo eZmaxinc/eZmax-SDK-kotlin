@@ -16,7 +16,6 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.CustomContactNameResponse
-import eZmaxApi.models.EzmaxinvoicingcommissionResponse
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -40,40 +39,40 @@ data class EzmaxinvoicingcommissionResponseCompound (
 
     /* The start date for the Ezmaxinvoicingcommission */
     @Json(name = "dtEzmaxinvoicingcommissionStart")
-    override val dtEzmaxinvoicingcommissionStart: kotlin.String,
+    val dtEzmaxinvoicingcommissionStart: kotlin.String,
 
     /* The end date for the Ezmaxinvoicingcommission */
     @Json(name = "dtEzmaxinvoicingcommissionEnd")
-    override val dtEzmaxinvoicingcommissionEnd: kotlin.String,
+    val dtEzmaxinvoicingcommissionEnd: kotlin.String,
 
     /* This is the number of days during the month on which the Ezmaxinvoigcommission applies */
     @Json(name = "iEzmaxinvoicingcommissionDays")
-    override val iEzmaxinvoicingcommissionDays: kotlin.Int,
+    val iEzmaxinvoicingcommissionDays: kotlin.Int,
 
     /* The amount of Ezmaxinvoicingcommission */
     @Json(name = "dEzmaxinvoicingcommissionAmount")
-    override val dEzmaxinvoicingcommissionAmount: kotlin.String,
+    val dEzmaxinvoicingcommissionAmount: kotlin.String,
 
     /* The unique ID of the Ezmaxinvoicingcommission */
     @Json(name = "pkiEzmaxinvoicingcommissionID")
-    override val pkiEzmaxinvoicingcommissionID: kotlin.Int? = null,
+    val pkiEzmaxinvoicingcommissionID: kotlin.Int? = null,
 
     /* The unique ID of the Ezmaxinvoicingsummaryglobal */
     @Json(name = "fkiEzmaxinvoicingsummaryglobalID")
-    override val fkiEzmaxinvoicingsummaryglobalID: kotlin.Int? = null,
+    val fkiEzmaxinvoicingsummaryglobalID: kotlin.Int? = null,
 
     /* The unique ID of the Ezmaxpartner */
     @Json(name = "fkiEzmaxpartnerID")
-    override val fkiEzmaxpartnerID: kotlin.Int? = null,
+    val fkiEzmaxpartnerID: kotlin.Int? = null,
 
     /* The unique ID of the Ezmaxrepresentative */
     @Json(name = "fkiEzmaxrepresentativeID")
-    override val fkiEzmaxrepresentativeID: kotlin.Int? = null,
+    val fkiEzmaxrepresentativeID: kotlin.Int? = null,
 
     @Json(name = "objContactName")
     val objContactName: CustomContactNameResponse? = null
 
-) : EzmaxinvoicingcommissionResponse {
+) {
 
 
 }

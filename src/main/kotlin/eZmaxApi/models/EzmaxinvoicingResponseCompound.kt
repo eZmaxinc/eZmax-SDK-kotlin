@@ -16,8 +16,9 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.CommonAudit
+import eZmaxApi.models.CustomEzmaxinvoicingEzsigndocumentResponse
+import eZmaxApi.models.CustomEzmaxinvoicingEzsignfolderResponse
 import eZmaxApi.models.CustomEzmaxpricingResponse
-import eZmaxApi.models.EzmaxinvoicingResponse
 import eZmaxApi.models.EzmaxinvoicingagentResponseCompound
 import eZmaxApi.models.EzmaxinvoicingcontractResponseCompound
 import eZmaxApi.models.EzmaxinvoicingsummaryexternalResponseCompound
@@ -61,46 +62,46 @@ data class EzmaxinvoicingResponseCompound (
 
     /* The unique ID of the Ezmaxinvoicingcontract */
     @Json(name = "fkiEzmaxinvoicingcontractID")
-    override val fkiEzmaxinvoicingcontractID: kotlin.Int,
+    val fkiEzmaxinvoicingcontractID: kotlin.Int,
 
     /* The unique ID of the Ezmaxpricing */
     @Json(name = "fkiEzmaxpricingID")
-    override val fkiEzmaxpricingID: kotlin.Int,
+    val fkiEzmaxpricingID: kotlin.Int,
 
     /* The unique ID of the Systemconfigurationtype */
     @Json(name = "fkiSystemconfigurationtypeID")
-    override val fkiSystemconfigurationtypeID: kotlin.Int,
+    val fkiSystemconfigurationtypeID: kotlin.Int,
 
     /* The description of the Systemconfigurationtype in the language of the requester */
     @Json(name = "sSystemconfigurationtypeDescriptionX")
-    override val sSystemconfigurationtypeDescriptionX: kotlin.String,
+    val sSystemconfigurationtypeDescriptionX: kotlin.String,
 
     /* The YYYYMM period of the Ezmaxinvoicing */
     @Json(name = "yyyymmEzmaxinvoicing")
-    override val yyyymmEzmaxinvoicing: kotlin.String,
+    val yyyymmEzmaxinvoicing: kotlin.String,
 
     /* The number of days invoiced */
     @Json(name = "iEzmaxinvoicingDays")
-    override val iEzmaxinvoicingDays: kotlin.Int,
+    val iEzmaxinvoicingDays: kotlin.Int,
 
     @Json(name = "eEzmaxinvoicingPaymenttype")
-    override val eEzmaxinvoicingPaymenttype: FieldEEzmaxinvoicingPaymenttype,
+    val eEzmaxinvoicingPaymenttype: FieldEEzmaxinvoicingPaymenttype,
 
     /* The percentage of rebate depending of the payment type */
     @Json(name = "dEzmaxinvoicingRebatepaymenttype")
-    override val dEzmaxinvoicingRebatepaymenttype: kotlin.String,
+    val dEzmaxinvoicingRebatepaymenttype: kotlin.String,
 
     /* The length of the contract in years */
     @Json(name = "iEzmaxinvoicingContractlength")
-    override val iEzmaxinvoicingContractlength: kotlin.Int,
+    val iEzmaxinvoicingContractlength: kotlin.Int,
 
     /* The percentage of rebate depending of the contract length */
     @Json(name = "dEzmaxinvoicingRebatecontractlength")
-    override val dEzmaxinvoicingRebatecontractlength: kotlin.String,
+    val dEzmaxinvoicingRebatecontractlength: kotlin.String,
 
     /* Whether the rebate for eZsign is for all agents */
     @Json(name = "bEzmaxinvoicingRebateEzsignallagents")
-    override val bEzmaxinvoicingRebateEzsignallagents: kotlin.Boolean,
+    val bEzmaxinvoicingRebateEzsignallagents: kotlin.Boolean,
 
     @Json(name = "objEzmaxinvoicingcontract")
     val objEzmaxinvoicingcontract: EzmaxinvoicingcontractResponseCompound,
@@ -124,19 +125,19 @@ data class EzmaxinvoicingResponseCompound (
     val aObjEzmaxinvoicinguser: kotlin.collections.List<EzmaxinvoicinguserResponseCompound>,
 
     @Json(name = "a_objEzmaxinvoicingezsignfolder")
-    val aObjEzmaxinvoicingezsignfolder: kotlin.collections.List<kotlin.Any>,
+    val aObjEzmaxinvoicingezsignfolder: kotlin.collections.List<CustomEzmaxinvoicingEzsignfolderResponse>,
 
     @Json(name = "a_objEzmaxinvoicingezsigndocument")
-    val aObjEzmaxinvoicingezsigndocument: kotlin.collections.List<kotlin.Any>,
+    val aObjEzmaxinvoicingezsigndocument: kotlin.collections.List<CustomEzmaxinvoicingEzsigndocumentResponse>,
 
     /* The unique ID of the Ezmaxinvoicing */
     @Json(name = "pkiEzmaxinvoicingID")
-    override val pkiEzmaxinvoicingID: kotlin.Int? = null,
+    val pkiEzmaxinvoicingID: kotlin.Int? = null,
 
     @Json(name = "objAudit")
-    override val objAudit: CommonAudit? = null
+    val objAudit: CommonAudit? = null
 
-) : EzmaxinvoicingResponse {
+) {
 
 
 }

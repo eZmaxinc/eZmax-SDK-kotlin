@@ -15,7 +15,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.BrandingRequestV2
 import eZmaxApi.models.FieldEBrandingAlignlogo
 import eZmaxApi.models.FieldEBrandingLogo
 import eZmaxApi.models.MultilingualBrandingDescription
@@ -38,42 +37,42 @@ import com.squareup.moshi.JsonClass
  */
 
 
-class BrandingRequestCompoundV2 (
+data class BrandingRequestCompoundV2 (
 
     @Json(name = "objBrandingDescription")
-    override val objBrandingDescription: MultilingualBrandingDescription,
+    val objBrandingDescription: MultilingualBrandingDescription,
 
     @Json(name = "eBrandingLogo")
-    override val eBrandingLogo: FieldEBrandingLogo,
+    val eBrandingLogo: FieldEBrandingLogo,
 
     /* The primary color. This is a RGB color converted into integer */
     @Json(name = "iBrandingColor")
-    override val iBrandingColor: kotlin.Int,
+    val iBrandingColor: kotlin.Int,
 
     /* Whether the Branding is active or not */
     @Json(name = "bBrandingIsactive")
-    override val bBrandingIsactive: kotlin.Boolean,
+    val bBrandingIsactive: kotlin.Boolean,
 
     /* The unique ID of the Branding */
     @Json(name = "pkiBrandingID")
-    override val pkiBrandingID: kotlin.Int? = null,
+    val pkiBrandingID: kotlin.Int? = null,
 
     @Json(name = "eBrandingAlignlogo")
-    override val eBrandingAlignlogo: FieldEBrandingAlignlogo? = null,
+    val eBrandingAlignlogo: FieldEBrandingAlignlogo? = null,
 
     /* The Base64 encoded binary content of the branding logo. This need to match image type selected in eBrandingLogo if you supply an image. If you select 'Default', the logo will be deleted and the default one will be used. */
     @Json(name = "sBrandingBase64")
-    override val sBrandingBase64: kotlin.ByteArray? = null,
+    val sBrandingBase64: kotlin.ByteArray? = null,
 
     /* The name of the Branding  This value will only be set if you wish to overwrite the default name. If you want to keep the default name, leave this property empty */
     @Json(name = "sBrandingName")
-    override val sBrandingName: kotlin.String? = null,
+    val sBrandingName: kotlin.String? = null,
 
     /* The email address. */
     @Json(name = "sEmailAddress")
-    override val sEmailAddress: kotlin.String? = null
+    val sEmailAddress: kotlin.String? = null
 
-) : BrandingRequestV2 {
+) {
 
 
 }

@@ -19,11 +19,12 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectEzsignformfieldgroupApi
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.EzsignformfieldgroupCreateObjectV1Request
 import eZmaxApi.models.EzsignformfieldgroupCreateObjectV1Response
+import eZmaxApi.models.EzsignformfieldgroupDeleteObjectV1Response
 import eZmaxApi.models.EzsignformfieldgroupEditObjectV1Request
+import eZmaxApi.models.EzsignformfieldgroupEditObjectV1Response
 import eZmaxApi.models.EzsignformfieldgroupGetObjectV2Response
 
 class ObjectEzsignformfieldgroupApiTest : ShouldSpec() {
@@ -43,7 +44,7 @@ class ObjectEzsignformfieldgroupApiTest : ShouldSpec() {
         should("test ezsignformfieldgroupDeleteObjectV1") {
             // uncomment below to test ezsignformfieldgroupDeleteObjectV1
             //val pkiEzsignformfieldgroupID : kotlin.Int = 56 // kotlin.Int | 
-            //val result : CommonResponse = apiInstance.ezsignformfieldgroupDeleteObjectV1(pkiEzsignformfieldgroupID)
+            //val result : EzsignformfieldgroupDeleteObjectV1Response = apiInstance.ezsignformfieldgroupDeleteObjectV1(pkiEzsignformfieldgroupID)
             //result shouldBe ("TODO")
         }
 
@@ -52,7 +53,7 @@ class ObjectEzsignformfieldgroupApiTest : ShouldSpec() {
             // uncomment below to test ezsignformfieldgroupEditObjectV1
             //val pkiEzsignformfieldgroupID : kotlin.Int = 56 // kotlin.Int | 
             //val ezsignformfieldgroupEditObjectV1Request : EzsignformfieldgroupEditObjectV1Request =  // EzsignformfieldgroupEditObjectV1Request | 
-            //val result : CommonResponse = apiInstance.ezsignformfieldgroupEditObjectV1(pkiEzsignformfieldgroupID, ezsignformfieldgroupEditObjectV1Request)
+            //val result : EzsignformfieldgroupEditObjectV1Response = apiInstance.ezsignformfieldgroupEditObjectV1(pkiEzsignformfieldgroupID, ezsignformfieldgroupEditObjectV1Request)
             //result shouldBe ("TODO")
         }
 

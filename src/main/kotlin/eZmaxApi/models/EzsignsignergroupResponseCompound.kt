@@ -15,7 +15,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.EzsignsignergroupResponse
 import eZmaxApi.models.MultilingualEzsignsignergroupDescription
 
 import com.squareup.moshi.Json
@@ -30,20 +29,20 @@ import com.squareup.moshi.JsonClass
  */
 
 
-class EzsignsignergroupResponseCompound (
+data class EzsignsignergroupResponseCompound (
 
     /* The unique ID of the Ezsignsignergroup */
     @Json(name = "pkiEzsignsignergroupID")
-    override val pkiEzsignsignergroupID: kotlin.Int,
+    val pkiEzsignsignergroupID: kotlin.Int,
 
     @Json(name = "objEzsignsignergroupDescription")
-    override val objEzsignsignergroupDescription: MultilingualEzsignsignergroupDescription,
+    val objEzsignsignergroupDescription: MultilingualEzsignsignergroupDescription,
 
     /* The Description of the Ezsignsignergroup in the language of the requester */
     @Json(name = "sEzsignsignergroupDescriptionX")
-    override val sEzsignsignergroupDescriptionX: kotlin.String? = null
+    val sEzsignsignergroupDescriptionX: kotlin.String? = null
 
-) : EzsignsignergroupResponse {
+) {
 
 
 }

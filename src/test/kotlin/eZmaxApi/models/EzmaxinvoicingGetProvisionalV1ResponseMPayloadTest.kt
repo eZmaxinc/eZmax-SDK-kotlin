@@ -20,8 +20,9 @@ import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.EzmaxinvoicingGetProvisionalV1ResponseMPayload
 import eZmaxApi.models.CommonAudit
+import eZmaxApi.models.CustomEzmaxinvoicingEzsigndocumentResponse
+import eZmaxApi.models.CustomEzmaxinvoicingEzsignfolderResponse
 import eZmaxApi.models.CustomEzmaxpricingResponse
-import eZmaxApi.models.EzmaxinvoicingResponseCompound
 import eZmaxApi.models.EzmaxinvoicingagentResponseCompound
 import eZmaxApi.models.EzmaxinvoicingcontractResponseCompound
 import eZmaxApi.models.EzmaxinvoicingsummaryexternalResponseCompound
@@ -34,6 +35,138 @@ class EzmaxinvoicingGetProvisionalV1ResponseMPayloadTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of EzmaxinvoicingGetProvisionalV1ResponseMPayload
         //val modelInstance = EzmaxinvoicingGetProvisionalV1ResponseMPayload()
+
+        // to test the property `fkiEzmaxinvoicingcontractID` - The unique ID of the Ezmaxinvoicingcontract
+        should("test fkiEzmaxinvoicingcontractID") {
+            // uncomment below to test the property
+            //modelInstance.fkiEzmaxinvoicingcontractID shouldBe ("TODO")
+        }
+
+        // to test the property `fkiEzmaxpricingID` - The unique ID of the Ezmaxpricing
+        should("test fkiEzmaxpricingID") {
+            // uncomment below to test the property
+            //modelInstance.fkiEzmaxpricingID shouldBe ("TODO")
+        }
+
+        // to test the property `fkiSystemconfigurationtypeID` - The unique ID of the Systemconfigurationtype
+        should("test fkiSystemconfigurationtypeID") {
+            // uncomment below to test the property
+            //modelInstance.fkiSystemconfigurationtypeID shouldBe ("TODO")
+        }
+
+        // to test the property `sSystemconfigurationtypeDescriptionX` - The description of the Systemconfigurationtype in the language of the requester
+        should("test sSystemconfigurationtypeDescriptionX") {
+            // uncomment below to test the property
+            //modelInstance.sSystemconfigurationtypeDescriptionX shouldBe ("TODO")
+        }
+
+        // to test the property `yyyymmEzmaxinvoicing` - The YYYYMM period of the Ezmaxinvoicing
+        should("test yyyymmEzmaxinvoicing") {
+            // uncomment below to test the property
+            //modelInstance.yyyymmEzmaxinvoicing shouldBe ("TODO")
+        }
+
+        // to test the property `iEzmaxinvoicingDays` - The number of days invoiced
+        should("test iEzmaxinvoicingDays") {
+            // uncomment below to test the property
+            //modelInstance.iEzmaxinvoicingDays shouldBe ("TODO")
+        }
+
+        // to test the property `eEzmaxinvoicingPaymenttype`
+        should("test eEzmaxinvoicingPaymenttype") {
+            // uncomment below to test the property
+            //modelInstance.eEzmaxinvoicingPaymenttype shouldBe ("TODO")
+        }
+
+        // to test the property `dEzmaxinvoicingRebatepaymenttype` - The percentage of rebate depending of the payment type
+        should("test dEzmaxinvoicingRebatepaymenttype") {
+            // uncomment below to test the property
+            //modelInstance.dEzmaxinvoicingRebatepaymenttype shouldBe ("TODO")
+        }
+
+        // to test the property `iEzmaxinvoicingContractlength` - The length of the contract in years
+        should("test iEzmaxinvoicingContractlength") {
+            // uncomment below to test the property
+            //modelInstance.iEzmaxinvoicingContractlength shouldBe ("TODO")
+        }
+
+        // to test the property `dEzmaxinvoicingRebatecontractlength` - The percentage of rebate depending of the contract length
+        should("test dEzmaxinvoicingRebatecontractlength") {
+            // uncomment below to test the property
+            //modelInstance.dEzmaxinvoicingRebatecontractlength shouldBe ("TODO")
+        }
+
+        // to test the property `bEzmaxinvoicingRebateEzsignallagents` - Whether the rebate for eZsign is for all agents
+        should("test bEzmaxinvoicingRebateEzsignallagents") {
+            // uncomment below to test the property
+            //modelInstance.bEzmaxinvoicingRebateEzsignallagents shouldBe ("TODO")
+        }
+
+        // to test the property `objEzmaxinvoicingcontract`
+        should("test objEzmaxinvoicingcontract") {
+            // uncomment below to test the property
+            //modelInstance.objEzmaxinvoicingcontract shouldBe ("TODO")
+        }
+
+        // to test the property `objEzmaxpricing`
+        should("test objEzmaxpricing") {
+            // uncomment below to test the property
+            //modelInstance.objEzmaxpricing shouldBe ("TODO")
+        }
+
+        // to test the property `aObjEzmaxinvoicingsummaryglobal`
+        should("test aObjEzmaxinvoicingsummaryglobal") {
+            // uncomment below to test the property
+            //modelInstance.aObjEzmaxinvoicingsummaryglobal shouldBe ("TODO")
+        }
+
+        // to test the property `aObjEzmaxinvoicingsummaryexternal`
+        should("test aObjEzmaxinvoicingsummaryexternal") {
+            // uncomment below to test the property
+            //modelInstance.aObjEzmaxinvoicingsummaryexternal shouldBe ("TODO")
+        }
+
+        // to test the property `aObjEzmaxinvoicingsummaryinternal`
+        should("test aObjEzmaxinvoicingsummaryinternal") {
+            // uncomment below to test the property
+            //modelInstance.aObjEzmaxinvoicingsummaryinternal shouldBe ("TODO")
+        }
+
+        // to test the property `aObjEzmaxinvoicingagent`
+        should("test aObjEzmaxinvoicingagent") {
+            // uncomment below to test the property
+            //modelInstance.aObjEzmaxinvoicingagent shouldBe ("TODO")
+        }
+
+        // to test the property `aObjEzmaxinvoicinguser`
+        should("test aObjEzmaxinvoicinguser") {
+            // uncomment below to test the property
+            //modelInstance.aObjEzmaxinvoicinguser shouldBe ("TODO")
+        }
+
+        // to test the property `aObjEzmaxinvoicingezsignfolder`
+        should("test aObjEzmaxinvoicingezsignfolder") {
+            // uncomment below to test the property
+            //modelInstance.aObjEzmaxinvoicingezsignfolder shouldBe ("TODO")
+        }
+
+        // to test the property `aObjEzmaxinvoicingezsigndocument`
+        should("test aObjEzmaxinvoicingezsigndocument") {
+            // uncomment below to test the property
+            //modelInstance.aObjEzmaxinvoicingezsigndocument shouldBe ("TODO")
+        }
+
+        // to test the property `pkiEzmaxinvoicingID` - The unique ID of the Ezmaxinvoicing
+        should("test pkiEzmaxinvoicingID") {
+            // uncomment below to test the property
+            //modelInstance.pkiEzmaxinvoicingID shouldBe ("TODO")
+        }
+
+        // to test the property `objAudit`
+        should("test objAudit") {
+            // uncomment below to test the property
+            //modelInstance.objAudit shouldBe ("TODO")
+        }
 
     }
 }

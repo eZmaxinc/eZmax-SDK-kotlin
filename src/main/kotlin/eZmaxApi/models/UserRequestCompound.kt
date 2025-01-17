@@ -15,12 +15,11 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.EmailRequest
+import eZmaxApi.models.EmailRequestCompound
 import eZmaxApi.models.FieldEUserEzsignaccess
 import eZmaxApi.models.FieldEUserLogintype
 import eZmaxApi.models.FieldEUserType
-import eZmaxApi.models.PhoneRequest
-import eZmaxApi.models.UserRequest
+import eZmaxApi.models.PhoneRequestCompound
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -32,7 +31,7 @@ import com.squareup.moshi.JsonClass
  * @param fkiDepartmentIDDefault The unique ID of the Department
  * @param fkiTimezoneID The unique ID of the Timezone
  * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
- * @param objEmail An Email Object and children to create a complete structure
+ * @param objEmail 
  * @param fkiBillingentityinternalID The unique ID of the Billingentityinternal.
  * @param eUserType 
  * @param eUserLogintype 
@@ -46,8 +45,8 @@ import com.squareup.moshi.JsonClass
  * @param fkiBrokerID The unique ID of the Broker.
  * @param fkiAssistantID The unique ID of the Assistant.
  * @param fkiEmployeeID The unique ID of the Employee.
- * @param objPhoneHome A Phone Object and children to create a complete structure
- * @param objPhoneSMS A Phone Object and children to create a complete structure
+ * @param objPhoneHome 
+ * @param objPhoneSMS 
  * @param fkiSecretquestionID The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father's middle name| |15|Your mother's maiden name| |16|Name of your eldest child| |17|Your spouse's middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat's name| |22|Date of Birth (YYYY-MM-DD)| |22|Secret Code| |22|Your reference code|
  * @param sUserSecretresponse The answer to the Secretquestion
  * @param fkiModuleIDForm The unique ID of the Module
@@ -59,118 +58,115 @@ import com.squareup.moshi.JsonClass
  */
 
 
-class UserRequestCompound (
+data class UserRequestCompound (
 
     /* The unique ID of the Company */
     @Json(name = "fkiCompanyIDDefault")
-    override val fkiCompanyIDDefault: kotlin.Int,
+    val fkiCompanyIDDefault: kotlin.Int,
 
     /* The unique ID of the Department */
     @Json(name = "fkiDepartmentIDDefault")
-    override val fkiDepartmentIDDefault: kotlin.Int,
+    val fkiDepartmentIDDefault: kotlin.Int,
 
     /* The unique ID of the Timezone */
     @Json(name = "fkiTimezoneID")
-    override val fkiTimezoneID: kotlin.Int,
+    val fkiTimezoneID: kotlin.Int,
 
     /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| */
     @Json(name = "fkiLanguageID")
-    override val fkiLanguageID: kotlin.Int,
+    val fkiLanguageID: kotlin.Int,
 
-    /* An Email Object and children to create a complete structure */
     @Json(name = "objEmail")
-    override val objEmail: EmailRequest,
+    val objEmail: EmailRequestCompound,
 
     /* The unique ID of the Billingentityinternal. */
     @Json(name = "fkiBillingentityinternalID")
-    override val fkiBillingentityinternalID: kotlin.Int,
+    val fkiBillingentityinternalID: kotlin.Int,
 
     @Json(name = "eUserType")
-    override val eUserType: FieldEUserType,
+    val eUserType: FieldEUserType,
 
     @Json(name = "eUserLogintype")
-    override val eUserLogintype: FieldEUserLogintype,
+    val eUserLogintype: FieldEUserLogintype,
 
     /* The first name of the user */
     @Json(name = "sUserFirstname")
-    override val sUserFirstname: kotlin.String,
+    val sUserFirstname: kotlin.String,
 
     /* The last name of the user */
     @Json(name = "sUserLastname")
-    override val sUserLastname: kotlin.String,
+    val sUserLastname: kotlin.String,
 
     /* The login name of the User. */
     @Json(name = "sUserLoginname")
-    override val sUserLoginname: kotlin.String,
+    val sUserLoginname: kotlin.String,
 
     @Json(name = "eUserEzsignaccess")
-    override val eUserEzsignaccess: FieldEUserEzsignaccess,
+    val eUserEzsignaccess: FieldEUserEzsignaccess,
 
     /* Whether the User is active or not */
     @Json(name = "bUserIsactive")
-    override val bUserIsactive: kotlin.Boolean,
+    val bUserIsactive: kotlin.Boolean,
 
     /* The unique ID of the User */
     @Json(name = "pkiUserID")
-    override val pkiUserID: kotlin.Int? = null,
+    val pkiUserID: kotlin.Int? = null,
 
     /* The unique ID of the Agent. */
     @Json(name = "fkiAgentID")
-    override val fkiAgentID: kotlin.Int? = null,
+    val fkiAgentID: kotlin.Int? = null,
 
     /* The unique ID of the Broker. */
     @Json(name = "fkiBrokerID")
-    override val fkiBrokerID: kotlin.Int? = null,
+    val fkiBrokerID: kotlin.Int? = null,
 
     /* The unique ID of the Assistant. */
     @Json(name = "fkiAssistantID")
-    override val fkiAssistantID: kotlin.Int? = null,
+    val fkiAssistantID: kotlin.Int? = null,
 
     /* The unique ID of the Employee. */
     @Json(name = "fkiEmployeeID")
-    override val fkiEmployeeID: kotlin.Int? = null,
+    val fkiEmployeeID: kotlin.Int? = null,
 
-    /* A Phone Object and children to create a complete structure */
     @Json(name = "objPhoneHome")
-    override val objPhoneHome: PhoneRequest? = null,
+    val objPhoneHome: PhoneRequestCompound? = null,
 
-    /* A Phone Object and children to create a complete structure */
     @Json(name = "objPhoneSMS")
-    override val objPhoneSMS: PhoneRequest? = null,
+    val objPhoneSMS: PhoneRequestCompound? = null,
 
     /* The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father's middle name| |15|Your mother's maiden name| |16|Name of your eldest child| |17|Your spouse's middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat's name| |22|Date of Birth (YYYY-MM-DD)| |22|Secret Code| |22|Your reference code| */
     @Json(name = "fkiSecretquestionID")
-    override val fkiSecretquestionID: kotlin.Int? = null,
+    val fkiSecretquestionID: kotlin.Int? = null,
 
     /* The answer to the Secretquestion */
     @Json(name = "sUserSecretresponse")
-    override val sUserSecretresponse: kotlin.String? = null,
+    val sUserSecretresponse: kotlin.String? = null,
 
     /* The unique ID of the Module */
     @Json(name = "fkiModuleIDForm")
-    override val fkiModuleIDForm: kotlin.Int? = null,
+    val fkiModuleIDForm: kotlin.Int? = null,
 
     /* The job title of the user */
     @Json(name = "sUserJobtitle")
-    override val sUserJobtitle: kotlin.String? = null,
+    val sUserJobtitle: kotlin.String? = null,
 
     /* Whether if the transactions in which the User is implicated must be validated by administrative personnel or not */
     @Json(name = "bUserValidatebyadministration")
-    override val bUserValidatebyadministration: kotlin.Boolean? = null,
+    val bUserValidatebyadministration: kotlin.Boolean? = null,
 
     /* Whether if the transactions in which the User is implicated must be validated by a director or not */
     @Json(name = "bUserValidatebydirector")
-    override val bUserValidatebydirector: kotlin.Boolean? = null,
+    val bUserValidatebydirector: kotlin.Boolean? = null,
 
     /* Whether if Attachments uploaded by the User must be validated or not */
     @Json(name = "bUserAttachmentautoverified")
-    override val bUserAttachmentautoverified: kotlin.Boolean? = null,
+    val bUserAttachmentautoverified: kotlin.Boolean? = null,
 
     /* Whether if the User is forced to change its password */
     @Json(name = "bUserChangepassword")
-    override val bUserChangepassword: kotlin.Boolean? = null
+    val bUserChangepassword: kotlin.Boolean? = null
 
-) : UserRequest {
+) {
 
 
 }

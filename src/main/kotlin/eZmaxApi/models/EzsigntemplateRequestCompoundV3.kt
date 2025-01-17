@@ -15,7 +15,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.EzsigntemplateRequestV3
 import eZmaxApi.models.FieldEEzsigntemplateRecognition
 import eZmaxApi.models.FieldEEzsigntemplateType
 
@@ -39,51 +38,51 @@ import com.squareup.moshi.JsonClass
  */
 
 
-class EzsigntemplateRequestCompoundV3 (
+data class EzsigntemplateRequestCompoundV3 (
 
     /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| */
     @Json(name = "fkiLanguageID")
-    override val fkiLanguageID: kotlin.Int,
+    val fkiLanguageID: kotlin.Int,
 
     /* The description of the Ezsigntemplate */
     @Json(name = "sEzsigntemplateDescription")
-    override val sEzsigntemplateDescription: kotlin.String,
+    val sEzsigntemplateDescription: kotlin.String,
 
     /* Whether the Ezsigntemplate can be accessed by admin users only (eUserType=Normal) */
     @Json(name = "bEzsigntemplateAdminonly")
-    override val bEzsigntemplateAdminonly: kotlin.Boolean,
+    val bEzsigntemplateAdminonly: kotlin.Boolean,
 
     @Json(name = "eEzsigntemplateType")
-    override val eEzsigntemplateType: FieldEEzsigntemplateType,
+    val eEzsigntemplateType: FieldEEzsigntemplateType,
 
     /* The unique ID of the Ezsigntemplate */
     @Json(name = "pkiEzsigntemplateID")
-    override val pkiEzsigntemplateID: kotlin.Int? = null,
+    val pkiEzsigntemplateID: kotlin.Int? = null,
 
     /* The unique ID of the Ezsignfoldertype. */
     @Json(name = "fkiEzsignfoldertypeID")
-    override val fkiEzsignfoldertypeID: kotlin.Int? = null,
+    val fkiEzsignfoldertypeID: kotlin.Int? = null,
 
     /* The unique ID of the Ezdoctemplatedocument */
     @Json(name = "fkiEzdoctemplatedocumentID")
-    override val fkiEzdoctemplatedocumentID: kotlin.Int? = null,
+    val fkiEzdoctemplatedocumentID: kotlin.Int? = null,
 
     /* The external description of the Ezsigntemplate */
     @Json(name = "sEzsigntemplateExternaldescription")
-    override val sEzsigntemplateExternaldescription: kotlin.String? = null,
+    val sEzsigntemplateExternaldescription: kotlin.String? = null,
 
     /* The comment of the Ezsigntemplate */
     @Json(name = "tEzsigntemplateComment")
-    override val tEzsigntemplateComment: kotlin.String? = null,
+    val tEzsigntemplateComment: kotlin.String? = null,
 
     @Json(name = "eEzsigntemplateRecognition")
-    override val eEzsigntemplateRecognition: FieldEEzsigntemplateRecognition? = FieldEEzsigntemplateRecognition.No,
+    val eEzsigntemplateRecognition: FieldEEzsigntemplateRecognition? = FieldEEzsigntemplateRecognition.No,
 
     /* The filename regexp of the Ezsigntemplate. */
     @Json(name = "sEzsigntemplateFilenameregexp")
-    override val sEzsigntemplateFilenameregexp: kotlin.String? = null
+    val sEzsigntemplateFilenameregexp: kotlin.String? = null
 
-) : EzsigntemplateRequestV3 {
+) {
 
 
 }

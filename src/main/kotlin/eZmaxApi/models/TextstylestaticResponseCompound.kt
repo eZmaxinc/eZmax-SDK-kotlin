@@ -15,7 +15,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.TextstylestaticResponse
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -35,45 +34,45 @@ import com.squareup.moshi.JsonClass
  */
 
 
-class TextstylestaticResponseCompound (
+data class TextstylestaticResponseCompound (
 
     /* The unique ID of the Font */
     @Json(name = "fkiFontID")
-    override val fkiFontID: kotlin.Int,
+    val fkiFontID: kotlin.Int,
 
     /* The name of the Font */
     @Json(name = "sFontName")
-    override val sFontName: kotlin.String,
+    val sFontName: kotlin.String,
 
     /* Whether the Textstylestatic is Bold or not */
     @Json(name = "bTextstylestaticBold")
-    override val bTextstylestaticBold: kotlin.Boolean,
+    val bTextstylestaticBold: kotlin.Boolean,
 
     /* Whether the Textstylestatic is Underline or not */
     @Json(name = "bTextstylestaticUnderline")
-    override val bTextstylestaticUnderline: kotlin.Boolean,
+    val bTextstylestaticUnderline: kotlin.Boolean,
 
     /* Whether the Textstylestatic is Italic or not */
     @Json(name = "bTextstylestaticItalic")
-    override val bTextstylestaticItalic: kotlin.Boolean,
+    val bTextstylestaticItalic: kotlin.Boolean,
 
     /* Whether the Textstylestatic is Strikethrough or not */
     @Json(name = "bTextstylestaticStrikethrough")
-    override val bTextstylestaticStrikethrough: kotlin.Boolean,
+    val bTextstylestaticStrikethrough: kotlin.Boolean,
 
     /* The int32 representation of the Fontcolor. For example, RGB color #39435B would be 3752795 */
     @Json(name = "iTextstylestaticFontcolor")
-    override val iTextstylestaticFontcolor: kotlin.Int,
+    val iTextstylestaticFontcolor: kotlin.Int,
 
     /* The Size for the Font of the Textstylestatic */
     @Json(name = "iTextstylestaticSize")
-    override val iTextstylestaticSize: kotlin.Int,
+    val iTextstylestaticSize: kotlin.Int,
 
     /* The unique ID of the Textstylestatic */
     @Json(name = "pkiTextstylestaticID")
-    override val pkiTextstylestaticID: kotlin.Int? = null
+    val pkiTextstylestaticID: kotlin.Int? = null
 
-) : TextstylestaticResponse {
+) {
 
 
 }

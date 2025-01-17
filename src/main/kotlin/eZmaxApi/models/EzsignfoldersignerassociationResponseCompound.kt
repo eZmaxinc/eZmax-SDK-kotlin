@@ -15,7 +15,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.EzsignfoldersignerassociationResponse
 import eZmaxApi.models.EzsignfoldersignerassociationResponseCompoundUser
 import eZmaxApi.models.EzsignsignerResponseCompound
 import eZmaxApi.models.EzsignsignergroupResponseCompound
@@ -42,27 +41,27 @@ data class EzsignfoldersignerassociationResponseCompound (
 
     /* The unique ID of the Ezsignfoldersignerassociation */
     @Json(name = "pkiEzsignfoldersignerassociationID")
-    override val pkiEzsignfoldersignerassociationID: kotlin.Int,
+    val pkiEzsignfoldersignerassociationID: kotlin.Int,
 
     /* The unique ID of the Ezsignfolder */
     @Json(name = "fkiEzsignfolderID")
-    override val fkiEzsignfolderID: kotlin.Int,
+    val fkiEzsignfolderID: kotlin.Int,
 
     /* If this flag is true the signatory is part of a delayed send. */
     @Json(name = "bEzsignfoldersignerassociationDelayedsend")
-    override val bEzsignfoldersignerassociationDelayedsend: kotlin.Boolean,
+    val bEzsignfoldersignerassociationDelayedsend: kotlin.Boolean,
 
     /* If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document. */
     @Json(name = "bEzsignfoldersignerassociationReceivecopy")
-    override val bEzsignfoldersignerassociationReceivecopy: kotlin.Boolean,
+    val bEzsignfoldersignerassociationReceivecopy: kotlin.Boolean,
 
     /* A custom text message that will be added to the email sent. */
     @Json(name = "tEzsignfoldersignerassociationMessage")
-    override val tEzsignfoldersignerassociationMessage: kotlin.String,
+    val tEzsignfoldersignerassociationMessage: kotlin.String,
 
     /* If the Ezsignfoldersignerassociation is allowed to sign in person or not */
     @Json(name = "bEzsignfoldersignerassociationAllowsigninginperson")
-    override val bEzsignfoldersignerassociationAllowsigninginperson: kotlin.Boolean,
+    val bEzsignfoldersignerassociationAllowsigninginperson: kotlin.Boolean,
 
     @Json(name = "objEzsignsignergroup")
     val objEzsignsignergroup: EzsignsignergroupResponseCompound? = null,
@@ -73,7 +72,7 @@ data class EzsignfoldersignerassociationResponseCompound (
     @Json(name = "objEzsignsigner")
     val objEzsignsigner: EzsignsignerResponseCompound? = null
 
-) : EzsignfoldersignerassociationResponse {
+) {
 
 
 }

@@ -21,7 +21,7 @@
 | **fkiNotaryID** | **kotlin.Int** | The unique ID of the Notary. |  [optional] |
 | **fkiRewardmemberID** | **kotlin.Int** | The unique ID of the Rewardmember. |  [optional] |
 | **fkiSupplierID** | **kotlin.Int** | The unique ID of the Supplier. |  [optional] |
-| **objEmail** | [**EmailResponse**](EmailResponse.md) | An Email Object and children to create a complete structure |  [optional] |
+| **objEmail** | [**EmailResponseCompound**](EmailResponseCompound.md) |  |  [optional] |
 | **objPhoneFax** | [**PhoneResponseCompound**](PhoneResponseCompound.md) |  |  [optional] |
 | **objPhoneSMS** | [**PhoneResponseCompound**](PhoneResponseCompound.md) |  |  [optional] |
 

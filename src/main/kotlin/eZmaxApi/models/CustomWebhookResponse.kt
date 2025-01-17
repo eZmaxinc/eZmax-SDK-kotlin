@@ -19,7 +19,6 @@ import eZmaxApi.models.CommonAudit
 import eZmaxApi.models.FieldEWebhookEzsignevent
 import eZmaxApi.models.FieldEWebhookManagementevent
 import eZmaxApi.models.FieldEWebhookModule
-import eZmaxApi.models.WebhookResponseCompound
 import eZmaxApi.models.WebhookheaderResponseCompound
 
 import com.squareup.moshi.Json
@@ -57,37 +56,37 @@ data class CustomWebhookResponse (
 
     /* The unique ID of the Webhook */
     @Json(name = "pkiWebhookID")
-    override val pkiWebhookID: kotlin.Int,
+    val pkiWebhookID: kotlin.Int,
 
     /* The description of the Webhook */
     @Json(name = "sWebhookDescription")
-    override val sWebhookDescription: kotlin.String,
+    val sWebhookDescription: kotlin.String,
 
     @Json(name = "eWebhookModule")
-    override val eWebhookModule: FieldEWebhookModule,
+    val eWebhookModule: FieldEWebhookModule,
 
     /* The URL of the Webhook callback */
     @Json(name = "sWebhookUrl")
-    override val sWebhookUrl: kotlin.String,
+    val sWebhookUrl: kotlin.String,
 
     /* The email that will receive the Webhook in case all attempts fail */
     @Json(name = "sWebhookEmailfailed")
-    override val sWebhookEmailfailed: kotlin.String,
+    val sWebhookEmailfailed: kotlin.String,
 
     /* Whether the Webhook is active or not */
     @Json(name = "bWebhookIsactive")
-    override val bWebhookIsactive: kotlin.Boolean,
+    val bWebhookIsactive: kotlin.Boolean,
 
     /* Whether the requests will be signed or not */
     @Json(name = "bWebhookIssigned")
-    override val bWebhookIssigned: kotlin.Boolean,
+    val bWebhookIssigned: kotlin.Boolean,
 
     /* Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use */
     @Json(name = "bWebhookSkipsslvalidation")
-    override val bWebhookSkipsslvalidation: kotlin.Boolean,
+    val bWebhookSkipsslvalidation: kotlin.Boolean,
 
     @Json(name = "objAudit")
-    override val objAudit: CommonAudit,
+    val objAudit: CommonAudit,
 
     /* The customer code assigned to your account */
     @Json(name = "pksCustomerCode")
@@ -100,46 +99,46 @@ data class CustomWebhookResponse (
 
     /* The unique ID of the Authenticationexternal */
     @Json(name = "fkiAuthenticationexternalID")
-    override val fkiAuthenticationexternalID: kotlin.Int? = null,
+    val fkiAuthenticationexternalID: kotlin.Int? = null,
 
     /* The unique ID of the Ezsignfoldertype. */
     @Json(name = "fkiEzsignfoldertypeID")
-    override val fkiEzsignfoldertypeID: kotlin.Int? = null,
+    val fkiEzsignfoldertypeID: kotlin.Int? = null,
 
     /* The name of the Ezsignfoldertype in the language of the requester */
     @Json(name = "sEzsignfoldertypeNameX")
-    override val sEzsignfoldertypeNameX: kotlin.String? = null,
+    val sEzsignfoldertypeNameX: kotlin.String? = null,
 
     @Json(name = "eWebhookEzsignevent")
-    override val eWebhookEzsignevent: FieldEWebhookEzsignevent? = null,
+    val eWebhookEzsignevent: FieldEWebhookEzsignevent? = null,
 
     @Json(name = "eWebhookManagementevent")
-    override val eWebhookManagementevent: FieldEWebhookManagementevent? = null,
+    val eWebhookManagementevent: FieldEWebhookManagementevent? = null,
 
     /* The Apikey for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey. */
     @Json(name = "sWebhookApikey")
-    override val sWebhookApikey: kotlin.String? = null,
+    val sWebhookApikey: kotlin.String? = null,
 
     /* The Secret for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey. */
     @Json(name = "sWebhookSecret")
-    override val sWebhookSecret: kotlin.String? = null,
+    val sWebhookSecret: kotlin.String? = null,
 
     /* The description of the Authenticationexternal */
     @Json(name = "sAuthenticationexternalDescription")
-    override val sAuthenticationexternalDescription: kotlin.String? = null,
+    val sAuthenticationexternalDescription: kotlin.String? = null,
 
     /* The concatenated string to describe the Webhook event */
     @Json(name = "sWebhookEvent")
-    override val sWebhookEvent: kotlin.String? = null,
+    val sWebhookEvent: kotlin.String? = null,
 
     @Json(name = "a_objWebhookheader")
-    override val aObjWebhookheader: kotlin.collections.List<WebhookheaderResponseCompound>? = null,
+    val aObjWebhookheader: kotlin.collections.List<WebhookheaderResponseCompound>? = null,
 
     /* Wheter the webhook received is a manual test or a real event */
     @Json(name = "eWebhookEmittype")
     val eWebhookEmittype: CustomWebhookResponse.EWebhookEmittype? = null
 
-) : WebhookResponseCompound {
+) {
 
     /**
      * Wheter the webhook received is a manual test or a real event

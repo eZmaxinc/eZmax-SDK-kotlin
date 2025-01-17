@@ -19,14 +19,14 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.ApikeyGetObjectV2ResponseMPayload
-import eZmaxApi.models.ApikeyResponse
+import eZmaxApi.models.ApikeyResponseCompound
 
 class ApikeyGetObjectV2ResponseMPayloadTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of ApikeyGetObjectV2ResponseMPayload
         //val modelInstance = ApikeyGetObjectV2ResponseMPayload()
 
-        // to test the property `objApikey` - An Apikey Object and children to create a complete structure
+        // to test the property `objApikey`
         should("test objApikey") {
             // uncomment below to test the property
             //modelInstance.objApikey shouldBe ("TODO")

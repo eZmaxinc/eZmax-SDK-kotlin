@@ -15,7 +15,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.UsergroupexternalmembershipResponse
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -34,41 +33,41 @@ import com.squareup.moshi.JsonClass
  */
 
 
-class UsergroupexternalmembershipResponseCompound (
+data class UsergroupexternalmembershipResponseCompound (
 
     /* The unique ID of the Usergroupexternalmembership */
     @Json(name = "pkiUsergroupexternalmembershipID")
-    override val pkiUsergroupexternalmembershipID: kotlin.Int,
+    val pkiUsergroupexternalmembershipID: kotlin.Int,
 
     /* The unique ID of the Usergroupexternal */
     @Json(name = "fkiUsergroupexternalID")
-    override val fkiUsergroupexternalID: kotlin.Int,
+    val fkiUsergroupexternalID: kotlin.Int,
 
     /* The unique ID of the User */
     @Json(name = "fkiUserID")
-    override val fkiUserID: kotlin.Int,
+    val fkiUserID: kotlin.Int,
 
     /* The first name of the user */
     @Json(name = "sUserFirstname")
-    override val sUserFirstname: kotlin.String,
+    val sUserFirstname: kotlin.String,
 
     /* The last name of the user */
     @Json(name = "sUserLastname")
-    override val sUserLastname: kotlin.String,
+    val sUserLastname: kotlin.String,
 
     /* The login name of the User. */
     @Json(name = "sUserLoginname")
-    override val sUserLoginname: kotlin.String,
+    val sUserLoginname: kotlin.String,
 
     /* The email address. */
     @Json(name = "sEmailAddress")
-    override val sEmailAddress: kotlin.String,
+    val sEmailAddress: kotlin.String,
 
     /* The name of the Usergroupexternal */
     @Json(name = "sUsergroupexternalName")
-    override val sUsergroupexternalName: kotlin.String
+    val sUsergroupexternalName: kotlin.String
 
-) : UsergroupexternalmembershipResponse {
+) {
 
 
 }

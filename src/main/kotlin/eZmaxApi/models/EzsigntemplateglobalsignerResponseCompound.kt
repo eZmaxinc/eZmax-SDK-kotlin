@@ -15,7 +15,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.EzsigntemplateglobalsignerResponse
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -29,21 +28,21 @@ import com.squareup.moshi.JsonClass
  */
 
 
-class EzsigntemplateglobalsignerResponseCompound (
+data class EzsigntemplateglobalsignerResponseCompound (
 
     /* The unique ID of the Ezsigntemplateglobalsigner */
     @Json(name = "pkiEzsigntemplateglobalsignerID")
-    override val pkiEzsigntemplateglobalsignerID: kotlin.Int,
+    val pkiEzsigntemplateglobalsignerID: kotlin.Int,
 
     /* The unique ID of the Ezsigntemplateglobal */
     @Json(name = "fkiEzsigntemplateglobalID")
-    override val fkiEzsigntemplateglobalID: kotlin.Int,
+    val fkiEzsigntemplateglobalID: kotlin.Int,
 
     /* The description of the Ezsigntemplateglobalsigner */
     @Json(name = "sEzsigntemplateglobalsignerDescription")
-    override val sEzsigntemplateglobalsignerDescription: kotlin.String
+    val sEzsigntemplateglobalsignerDescription: kotlin.String
 
-) : EzsigntemplateglobalsignerResponse {
+) {
 
 
 }

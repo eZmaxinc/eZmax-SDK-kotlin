@@ -15,7 +15,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseObjDebug
 import eZmaxApi.models.CommonResponseObjDebugPayload
 import eZmaxApi.models.EzsignsigningreasonGetObjectV2ResponseMPayload
@@ -35,15 +34,15 @@ import com.squareup.moshi.JsonClass
 data class EzsignsigningreasonGetObjectV2Response (
 
     @Json(name = "objDebugPayload")
-    override val objDebugPayload: CommonResponseObjDebugPayload,
+    val objDebugPayload: CommonResponseObjDebugPayload,
 
     @Json(name = "mPayload")
     val mPayload: EzsignsigningreasonGetObjectV2ResponseMPayload,
 
     @Json(name = "objDebug")
-    override val objDebug: CommonResponseObjDebug? = null
+    val objDebug: CommonResponseObjDebug? = null
 
-) : CommonResponse {
+) {
 
 
 }

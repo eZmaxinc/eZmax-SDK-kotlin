@@ -17,7 +17,6 @@ package eZmaxApi.models
 
 import eZmaxApi.models.CustomNotificationtestgetnotificationtestsResponse
 import eZmaxApi.models.MultilingualNotificationsubsectionName
-import eZmaxApi.models.NotificationsubsectionResponse
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -38,27 +37,27 @@ data class CustomNotificationsubsectiongetnotificationtestsResponse (
 
     /* The unique ID of the Notificationsubsection */
     @Json(name = "pkiNotificationsubsectionID")
-    override val pkiNotificationsubsectionID: kotlin.Int,
+    val pkiNotificationsubsectionID: kotlin.Int,
 
     /* The unique ID of the Notificationsection */
     @Json(name = "fkiNotificationsectionID")
-    override val fkiNotificationsectionID: kotlin.Int,
+    val fkiNotificationsectionID: kotlin.Int,
 
     /* The name of the Notificationsubsection in the language of the requester */
     @Json(name = "sNotificationsubsectionNameX")
-    override val sNotificationsubsectionNameX: kotlin.String,
+    val sNotificationsubsectionNameX: kotlin.String,
 
     @Json(name = "a_objNotificationtest")
     val aObjNotificationtest: kotlin.collections.List<CustomNotificationtestgetnotificationtestsResponse>,
 
     @Json(name = "objNotificationsubsectionName")
-    override val objNotificationsubsectionName: MultilingualNotificationsubsectionName? = null,
+    val objNotificationsubsectionName: MultilingualNotificationsubsectionName? = null,
 
     /* The name of the Notificationsection in the language of the requester */
     @Json(name = "sNotificationsectionNameX")
-    override val sNotificationsectionNameX: kotlin.String? = null
+    val sNotificationsectionNameX: kotlin.String? = null
 
-) : NotificationsubsectionResponse {
+) {
 
 
 }

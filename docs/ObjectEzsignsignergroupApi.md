@@ -63,7 +63,7 @@ Configure Authorization:
 
 <a id="ezsignsignergroupDeleteObjectV1"></a>
 # **ezsignsignergroupDeleteObjectV1**
-> CommonResponse ezsignsignergroupDeleteObjectV1(pkiEzsignsignergroupID)
+> EzsignsignergroupDeleteObjectV1Response ezsignsignergroupDeleteObjectV1(pkiEzsignsignergroupID)
 
 Delete an existing Ezsignsignergroup
 
@@ -78,7 +78,7 @@ Delete an existing Ezsignsignergroup
 val apiInstance = ObjectEzsignsignergroupApi()
 val pkiEzsignsignergroupID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsignsignergroup
 try {
-    val result : CommonResponse = apiInstance.ezsignsignergroupDeleteObjectV1(pkiEzsignsignergroupID)
+    val result : EzsignsignergroupDeleteObjectV1Response = apiInstance.ezsignsignergroupDeleteObjectV1(pkiEzsignsignergroupID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignsignergroupApi#ezsignsignergroupDeleteObjectV1")
@@ -96,7 +96,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsignsignergroupDeleteObjectV1Response**](EzsignsignergroupDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -163,7 +163,7 @@ Configure Authorization:
 
 <a id="ezsignsignergroupEditObjectV1"></a>
 # **ezsignsignergroupEditObjectV1**
-> CommonResponse ezsignsignergroupEditObjectV1(pkiEzsignsignergroupID, ezsignsignergroupEditObjectV1Request)
+> EzsignsignergroupEditObjectV1Response ezsignsignergroupEditObjectV1(pkiEzsignsignergroupID, ezsignsignergroupEditObjectV1Request)
 
 Edit an existing Ezsignsignergroup
 
@@ -179,7 +179,7 @@ val apiInstance = ObjectEzsignsignergroupApi()
 val pkiEzsignsignergroupID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsignsignergroup
 val ezsignsignergroupEditObjectV1Request : EzsignsignergroupEditObjectV1Request =  // EzsignsignergroupEditObjectV1Request | 
 try {
-    val result : CommonResponse = apiInstance.ezsignsignergroupEditObjectV1(pkiEzsignsignergroupID, ezsignsignergroupEditObjectV1Request)
+    val result : EzsignsignergroupEditObjectV1Response = apiInstance.ezsignsignergroupEditObjectV1(pkiEzsignsignergroupID, ezsignsignergroupEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignsignergroupApi#ezsignsignergroupEditObjectV1")
@@ -198,7 +198,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsignsignergroupEditObjectV1Response**](EzsignsignergroupEditObjectV1Response.md)
 
 ### Authorization
 

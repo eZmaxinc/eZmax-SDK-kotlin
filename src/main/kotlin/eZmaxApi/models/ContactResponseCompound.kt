@@ -15,7 +15,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.ContactResponse
 import eZmaxApi.models.ContactinformationsResponseCompound
 import eZmaxApi.models.FieldEContactType
 
@@ -41,59 +40,59 @@ import com.squareup.moshi.JsonClass
  */
 
 
-class ContactResponseCompound (
+data class ContactResponseCompound (
 
     /* The unique ID of the Contact */
     @Json(name = "pkiContactID")
-    override val pkiContactID: kotlin.Int,
+    val pkiContactID: kotlin.Int,
 
     /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| */
     @Json(name = "fkiLanguageID")
-    override val fkiLanguageID: kotlin.Int,
+    val fkiLanguageID: kotlin.Int,
 
     /* The unique ID of the Contacttitle.  Valid values:  |Value|Description| |-|-| |1|Ms.| |2|Mr.| |4|(Blank)| |5|Me (For Notaries)| */
     @Json(name = "fkiContacttitleID")
-    override val fkiContacttitleID: kotlin.Int,
+    val fkiContacttitleID: kotlin.Int,
 
     /* The unique ID of the Contactinformations */
     @Json(name = "fkiContactinformationsID")
-    override val fkiContactinformationsID: kotlin.Int,
+    val fkiContactinformationsID: kotlin.Int,
 
     @Json(name = "eContactType")
-    override val eContactType: FieldEContactType,
+    val eContactType: FieldEContactType,
 
     /* The First name of the contact */
     @Json(name = "sContactFirstname")
-    override val sContactFirstname: kotlin.String,
+    val sContactFirstname: kotlin.String,
 
     /* The Last name of the contact */
     @Json(name = "sContactLastname")
-    override val sContactLastname: kotlin.String,
+    val sContactLastname: kotlin.String,
 
     /* Whether the contact is active or not */
     @Json(name = "bContactIsactive")
-    override val bContactIsactive: kotlin.Boolean,
+    val bContactIsactive: kotlin.Boolean,
 
     @Json(name = "objContactinformations")
-    override val objContactinformations: ContactinformationsResponseCompound,
+    val objContactinformations: ContactinformationsResponseCompound,
 
     /* The Birth Date of the contact */
     @Json(name = "dtContactBirthdate")
-    override val dtContactBirthdate: kotlin.String? = null,
+    val dtContactBirthdate: kotlin.String? = null,
 
     /* The Company name of the contact */
     @Json(name = "sContactCompany")
-    override val sContactCompany: kotlin.String? = null,
+    val sContactCompany: kotlin.String? = null,
 
     /* The occupation of the Contact */
     @Json(name = "sContactOccupation")
-    override val sContactOccupation: kotlin.String? = null,
+    val sContactOccupation: kotlin.String? = null,
 
     /* The note of the Contact */
     @Json(name = "tContactNote")
-    override val tContactNote: kotlin.String? = null
+    val tContactNote: kotlin.String? = null
 
-) : ContactResponse {
+) {
 
 
 }

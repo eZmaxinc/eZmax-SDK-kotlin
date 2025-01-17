@@ -19,13 +19,30 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.AuthenticationexternalRequestCompound
-import eZmaxApi.models.AuthenticationexternalRequest
 import eZmaxApi.models.FieldEAuthenticationexternalType
 
 class AuthenticationexternalRequestCompoundTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of AuthenticationexternalRequestCompound
         //val modelInstance = AuthenticationexternalRequestCompound()
+
+        // to test the property `sAuthenticationexternalDescription` - The description of the Authenticationexternal
+        should("test sAuthenticationexternalDescription") {
+            // uncomment below to test the property
+            //modelInstance.sAuthenticationexternalDescription shouldBe ("TODO")
+        }
+
+        // to test the property `eAuthenticationexternalType`
+        should("test eAuthenticationexternalType") {
+            // uncomment below to test the property
+            //modelInstance.eAuthenticationexternalType shouldBe ("TODO")
+        }
+
+        // to test the property `pkiAuthenticationexternalID` - The unique ID of the Authenticationexternal
+        should("test pkiAuthenticationexternalID") {
+            // uncomment below to test the property
+            //modelInstance.pkiAuthenticationexternalID shouldBe ("TODO")
+        }
 
     }
 }

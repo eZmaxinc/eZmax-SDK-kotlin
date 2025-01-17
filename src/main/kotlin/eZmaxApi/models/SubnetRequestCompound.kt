@@ -16,7 +16,6 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.MultilingualSubnetDescription
-import eZmaxApi.models.SubnetRequest
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -33,32 +32,32 @@ import com.squareup.moshi.JsonClass
  */
 
 
-class SubnetRequestCompound (
+data class SubnetRequestCompound (
 
     @Json(name = "objSubnetDescription")
-    override val objSubnetDescription: MultilingualSubnetDescription,
+    val objSubnetDescription: MultilingualSubnetDescription,
 
     /* The network of the Subnet in integer form. For example 8.8.8.0 would be 134744064 */
     @Json(name = "iSubnetNetwork")
-    override val iSubnetNetwork: kotlin.Long,
+    val iSubnetNetwork: kotlin.Long,
 
     /* The mask of the Subnet  in integer form. For example 255.255.255.0 would be 4294967040 */
     @Json(name = "iSubnetMask")
-    override val iSubnetMask: kotlin.Long,
+    val iSubnetMask: kotlin.Long,
 
     /* The unique ID of the Subnet */
     @Json(name = "pkiSubnetID")
-    override val pkiSubnetID: kotlin.Int? = null,
+    val pkiSubnetID: kotlin.Int? = null,
 
     /* The unique ID of the User */
     @Json(name = "fkiUserID")
-    override val fkiUserID: kotlin.Int? = null,
+    val fkiUserID: kotlin.Int? = null,
 
     /* The unique ID of the Apikey */
     @Json(name = "fkiApikeyID")
-    override val fkiApikeyID: kotlin.Int? = null
+    val fkiApikeyID: kotlin.Int? = null
 
-) : SubnetRequest {
+) {
 
 
 }

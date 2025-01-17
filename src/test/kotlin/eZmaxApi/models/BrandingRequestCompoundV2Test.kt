@@ -19,7 +19,6 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.BrandingRequestCompoundV2
-import eZmaxApi.models.BrandingRequestV2
 import eZmaxApi.models.FieldEBrandingAlignlogo
 import eZmaxApi.models.FieldEBrandingLogo
 import eZmaxApi.models.MultilingualBrandingDescription
@@ -28,6 +27,60 @@ class BrandingRequestCompoundV2Test : ShouldSpec() {
     init {
         // uncomment below to create an instance of BrandingRequestCompoundV2
         //val modelInstance = BrandingRequestCompoundV2()
+
+        // to test the property `objBrandingDescription`
+        should("test objBrandingDescription") {
+            // uncomment below to test the property
+            //modelInstance.objBrandingDescription shouldBe ("TODO")
+        }
+
+        // to test the property `eBrandingLogo`
+        should("test eBrandingLogo") {
+            // uncomment below to test the property
+            //modelInstance.eBrandingLogo shouldBe ("TODO")
+        }
+
+        // to test the property `iBrandingColor` - The primary color. This is a RGB color converted into integer
+        should("test iBrandingColor") {
+            // uncomment below to test the property
+            //modelInstance.iBrandingColor shouldBe ("TODO")
+        }
+
+        // to test the property `bBrandingIsactive` - Whether the Branding is active or not
+        should("test bBrandingIsactive") {
+            // uncomment below to test the property
+            //modelInstance.bBrandingIsactive shouldBe ("TODO")
+        }
+
+        // to test the property `pkiBrandingID` - The unique ID of the Branding
+        should("test pkiBrandingID") {
+            // uncomment below to test the property
+            //modelInstance.pkiBrandingID shouldBe ("TODO")
+        }
+
+        // to test the property `eBrandingAlignlogo`
+        should("test eBrandingAlignlogo") {
+            // uncomment below to test the property
+            //modelInstance.eBrandingAlignlogo shouldBe ("TODO")
+        }
+
+        // to test the property `sBrandingBase64` - The Base64 encoded binary content of the branding logo. This need to match image type selected in eBrandingLogo if you supply an image. If you select 'Default', the logo will be deleted and the default one will be used.
+        should("test sBrandingBase64") {
+            // uncomment below to test the property
+            //modelInstance.sBrandingBase64 shouldBe ("TODO")
+        }
+
+        // to test the property `sBrandingName` - The name of the Branding  This value will only be set if you wish to overwrite the default name. If you want to keep the default name, leave this property empty
+        should("test sBrandingName") {
+            // uncomment below to test the property
+            //modelInstance.sBrandingName shouldBe ("TODO")
+        }
+
+        // to test the property `sEmailAddress` - The email address.
+        should("test sEmailAddress") {
+            // uncomment below to test the property
+            //modelInstance.sEmailAddress shouldBe ("TODO")
+        }
 
     }
 }

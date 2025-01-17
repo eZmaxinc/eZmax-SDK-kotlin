@@ -19,7 +19,6 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.OtherincomeGetCommunicationrecipientsV1Response
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseObjDebug
 import eZmaxApi.models.CommonResponseObjDebugPayload
 import eZmaxApi.models.OtherincomeGetCommunicationrecipientsV1ResponseMPayload
@@ -29,10 +28,22 @@ class OtherincomeGetCommunicationrecipientsV1ResponseTest : ShouldSpec() {
         // uncomment below to create an instance of OtherincomeGetCommunicationrecipientsV1Response
         //val modelInstance = OtherincomeGetCommunicationrecipientsV1Response()
 
+        // to test the property `objDebugPayload`
+        should("test objDebugPayload") {
+            // uncomment below to test the property
+            //modelInstance.objDebugPayload shouldBe ("TODO")
+        }
+
         // to test the property `mPayload`
         should("test mPayload") {
             // uncomment below to test the property
             //modelInstance.mPayload shouldBe ("TODO")
+        }
+
+        // to test the property `objDebug`
+        should("test objDebug") {
+            // uncomment below to test the property
+            //modelInstance.objDebug shouldBe ("TODO")
         }
 
     }

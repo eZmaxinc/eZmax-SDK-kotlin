@@ -19,11 +19,12 @@ import java.io.IOException
 import okhttp3.Call
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.DiscussionmessageCreateObjectV1Request
 import eZmaxApi.models.DiscussionmessageCreateObjectV1Response
+import eZmaxApi.models.DiscussionmessageDeleteObjectV1Response
 import eZmaxApi.models.DiscussionmessagePatchObjectV1Request
+import eZmaxApi.models.DiscussionmessagePatchObjectV1Response
 
 import com.squareup.moshi.Json
 
@@ -125,7 +126,7 @@ class ObjectDiscussionmessageApi(basePath: kotlin.String = defaultBasePath, clie
      * Delete an existing Discussionmessage
      * 
      * @param pkiDiscussionmessageID The unique ID of the Discussionmessage
-     * @return CommonResponse
+     * @return DiscussionmessageDeleteObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -134,11 +135,11 @@ class ObjectDiscussionmessageApi(basePath: kotlin.String = defaultBasePath, clie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun discussionmessageDeleteObjectV1(pkiDiscussionmessageID: kotlin.Int) : CommonResponse {
+    fun discussionmessageDeleteObjectV1(pkiDiscussionmessageID: kotlin.Int) : DiscussionmessageDeleteObjectV1Response {
         val localVarResponse = discussionmessageDeleteObjectV1WithHttpInfo(pkiDiscussionmessageID = pkiDiscussionmessageID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as DiscussionmessageDeleteObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -156,16 +157,16 @@ class ObjectDiscussionmessageApi(basePath: kotlin.String = defaultBasePath, clie
      * Delete an existing Discussionmessage
      * 
      * @param pkiDiscussionmessageID The unique ID of the Discussionmessage
-     * @return ApiResponse<CommonResponse?>
+     * @return ApiResponse<DiscussionmessageDeleteObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun discussionmessageDeleteObjectV1WithHttpInfo(pkiDiscussionmessageID: kotlin.Int) : ApiResponse<CommonResponse?> {
+    fun discussionmessageDeleteObjectV1WithHttpInfo(pkiDiscussionmessageID: kotlin.Int) : ApiResponse<DiscussionmessageDeleteObjectV1Response?> {
         val localVariableConfig = discussionmessageDeleteObjectV1RequestConfig(pkiDiscussionmessageID = pkiDiscussionmessageID)
 
-        return request<Unit, CommonResponse>(
+        return request<Unit, DiscussionmessageDeleteObjectV1Response>(
             localVariableConfig
         )
     }
@@ -197,7 +198,7 @@ class ObjectDiscussionmessageApi(basePath: kotlin.String = defaultBasePath, clie
      * 
      * @param pkiDiscussionmessageID The unique ID of the Discussionmessage
      * @param discussionmessagePatchObjectV1Request 
-     * @return CommonResponse
+     * @return DiscussionmessagePatchObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -206,11 +207,11 @@ class ObjectDiscussionmessageApi(basePath: kotlin.String = defaultBasePath, clie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun discussionmessagePatchObjectV1(pkiDiscussionmessageID: kotlin.Int, discussionmessagePatchObjectV1Request: DiscussionmessagePatchObjectV1Request) : CommonResponse {
+    fun discussionmessagePatchObjectV1(pkiDiscussionmessageID: kotlin.Int, discussionmessagePatchObjectV1Request: DiscussionmessagePatchObjectV1Request) : DiscussionmessagePatchObjectV1Response {
         val localVarResponse = discussionmessagePatchObjectV1WithHttpInfo(pkiDiscussionmessageID = pkiDiscussionmessageID, discussionmessagePatchObjectV1Request = discussionmessagePatchObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as DiscussionmessagePatchObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -229,16 +230,16 @@ class ObjectDiscussionmessageApi(basePath: kotlin.String = defaultBasePath, clie
      * 
      * @param pkiDiscussionmessageID The unique ID of the Discussionmessage
      * @param discussionmessagePatchObjectV1Request 
-     * @return ApiResponse<CommonResponse?>
+     * @return ApiResponse<DiscussionmessagePatchObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun discussionmessagePatchObjectV1WithHttpInfo(pkiDiscussionmessageID: kotlin.Int, discussionmessagePatchObjectV1Request: DiscussionmessagePatchObjectV1Request) : ApiResponse<CommonResponse?> {
+    fun discussionmessagePatchObjectV1WithHttpInfo(pkiDiscussionmessageID: kotlin.Int, discussionmessagePatchObjectV1Request: DiscussionmessagePatchObjectV1Request) : ApiResponse<DiscussionmessagePatchObjectV1Response?> {
         val localVariableConfig = discussionmessagePatchObjectV1RequestConfig(pkiDiscussionmessageID = pkiDiscussionmessageID, discussionmessagePatchObjectV1Request = discussionmessagePatchObjectV1Request)
 
-        return request<DiscussionmessagePatchObjectV1Request, CommonResponse>(
+        return request<DiscussionmessagePatchObjectV1Request, DiscussionmessagePatchObjectV1Response>(
             localVariableConfig
         )
     }

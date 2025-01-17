@@ -19,12 +19,35 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.EzsignbulksenddocumentmappingRequestCompound
-import eZmaxApi.models.EzsignbulksenddocumentmappingRequest
 
 class EzsignbulksenddocumentmappingRequestCompoundTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of EzsignbulksenddocumentmappingRequestCompound
         //val modelInstance = EzsignbulksenddocumentmappingRequestCompound()
+
+        // to test the property `fkiEzsignbulksendID` - The unique ID of the Ezsignbulksend
+        should("test fkiEzsignbulksendID") {
+            // uncomment below to test the property
+            //modelInstance.fkiEzsignbulksendID shouldBe ("TODO")
+        }
+
+        // to test the property `pkiEzsignbulksenddocumentmappingID` - The unique ID of the Ezsignbulksenddocumentmapping.
+        should("test pkiEzsignbulksenddocumentmappingID") {
+            // uncomment below to test the property
+            //modelInstance.pkiEzsignbulksenddocumentmappingID shouldBe ("TODO")
+        }
+
+        // to test the property `fkiEzsigntemplatepackageID` - The unique ID of the Ezsigntemplatepackage
+        should("test fkiEzsigntemplatepackageID") {
+            // uncomment below to test the property
+            //modelInstance.fkiEzsigntemplatepackageID shouldBe ("TODO")
+        }
+
+        // to test the property `fkiEzsigntemplateID` - The unique ID of the Ezsigntemplate
+        should("test fkiEzsigntemplateID") {
+            // uncomment below to test the property
+            //modelInstance.fkiEzsigntemplateID shouldBe ("TODO")
+        }
 
     }
 }

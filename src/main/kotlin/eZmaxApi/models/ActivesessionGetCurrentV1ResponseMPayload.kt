@@ -15,7 +15,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.ActivesessionResponseCompound
 import eZmaxApi.models.ActivesessionResponseCompoundApikey
 import eZmaxApi.models.ActivesessionResponseCompoundUser
 import eZmaxApi.models.FieldEActivesessionEzsign
@@ -69,120 +68,120 @@ import com.squareup.moshi.JsonClass
  */
 
 
-class ActivesessionGetCurrentV1ResponseMPayload (
+data class ActivesessionGetCurrentV1ResponseMPayload (
 
     @Json(name = "eActivesessionUsertype")
-    override val eActivesessionUsertype: FieldEActivesessionUsertype,
+    val eActivesessionUsertype: FieldEActivesessionUsertype,
 
     @Json(name = "eActivesessionOrigin")
-    override val eActivesessionOrigin: FieldEActivesessionOrigin,
+    val eActivesessionOrigin: FieldEActivesessionOrigin,
 
     @Json(name = "eActivesessionWeekdaystart")
-    override val eActivesessionWeekdaystart: FieldEActivesessionWeekdaystart,
+    val eActivesessionWeekdaystart: FieldEActivesessionWeekdaystart,
 
     /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| */
     @Json(name = "fkiLanguageID")
-    override val fkiLanguageID: kotlin.Int,
+    val fkiLanguageID: kotlin.Int,
 
     /* The Name of the Company in the language of the requester */
     @Json(name = "sCompanyNameX")
-    override val sCompanyNameX: kotlin.String,
+    val sCompanyNameX: kotlin.String,
 
     /* The Name of the Department in the language of the requester */
     @Json(name = "sDepartmentNameX")
-    override val sDepartmentNameX: kotlin.String,
+    val sDepartmentNameX: kotlin.String,
 
     /* Whether the active session is in debug or not */
     @Json(name = "bActivesessionDebug")
-    override val bActivesessionDebug: kotlin.Boolean,
+    val bActivesessionDebug: kotlin.Boolean,
 
     /* Whether the active session is superadmin or not */
     @Json(name = "bActivesessionIssuperadmin")
-    override val bActivesessionIssuperadmin: kotlin.Boolean,
+    val bActivesessionIssuperadmin: kotlin.Boolean,
 
     @Json(name = "eActivesessionEzsignaccess")
-    override val eActivesessionEzsignaccess: FieldEActivesessionEzsignaccess,
+    val eActivesessionEzsignaccess: FieldEActivesessionEzsignaccess,
 
     /* The customer code assigned to your account */
     @Json(name = "pksCustomerCode")
-    override val pksCustomerCode: kotlin.String,
+    val pksCustomerCode: kotlin.String,
 
     /* The unique ID of the Systemconfigurationtype */
     @Json(name = "fkiSystemconfigurationtypeID")
-    override val fkiSystemconfigurationtypeID: kotlin.Int,
+    val fkiSystemconfigurationtypeID: kotlin.Int,
 
     @Json(name = "eUserEzsignaccess")
-    override val eUserEzsignaccess: FieldEUserEzsignaccess,
+    val eUserEzsignaccess: FieldEUserEzsignaccess,
 
     /* An array of permissions granted to the user or api key */
     @Json(name = "a_pkiPermissionID")
-    override val aPkiPermissionID: kotlin.collections.List<kotlin.Int>,
+    val aPkiPermissionID: kotlin.collections.List<kotlin.Int>,
 
     @Json(name = "objUserReal")
-    override val objUserReal: ActivesessionResponseCompoundUser,
+    val objUserReal: ActivesessionResponseCompoundUser,
 
     /* An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key. */
     @Json(name = "a_eModuleInternalname")
-    override val aEModuleInternalname: kotlin.collections.List<kotlin.String>,
+    val aEModuleInternalname: kotlin.collections.List<kotlin.String>,
 
     /* Can access attachment when we clone a user */
     @Json(name = "bActivesessionAttachment")
-    override val bActivesessionAttachment: kotlin.Boolean? = null,
+    val bActivesessionAttachment: kotlin.Boolean? = null,
 
     /* Can access canafe when we clone a user */
     @Json(name = "bActivesessionCanafe")
-    override val bActivesessionCanafe: kotlin.Boolean? = null,
+    val bActivesessionCanafe: kotlin.Boolean? = null,
 
     /* Can access financial element when we clone a user */
     @Json(name = "bActivesessionFinancial")
-    override val bActivesessionFinancial: kotlin.Boolean? = null,
+    val bActivesessionFinancial: kotlin.Boolean? = null,
 
     /* Can access closed realestate folders when we clone a user */
     @Json(name = "bActivesessionRealestatecompleted")
-    override val bActivesessionRealestatecompleted: kotlin.Boolean? = null,
+    val bActivesessionRealestatecompleted: kotlin.Boolean? = null,
 
     @Json(name = "eActivesessionEzsign")
-    override val eActivesessionEzsign: FieldEActivesessionEzsign? = null,
+    val eActivesessionEzsign: FieldEActivesessionEzsign? = null,
 
     @Json(name = "eActivesessionEzsignprepaid")
-    override val eActivesessionEzsignprepaid: FieldEActivesessionEzsignprepaid? = null,
+    val eActivesessionEzsignprepaid: FieldEActivesessionEzsignprepaid? = null,
 
     @Json(name = "eActivesessionRealestateinprogress")
-    override val eActivesessionRealestateinprogress: FieldEActivesessionRealestateinprogress? = null,
+    val eActivesessionRealestateinprogress: FieldEActivesessionRealestateinprogress? = null,
 
     /* The unique ID of the Signature */
     @Json(name = "fkiSignatureID")
-    override val fkiSignatureID: kotlin.Int? = null,
+    val fkiSignatureID: kotlin.Int? = null,
 
     /* The unique ID of the Ezsignuser */
     @Json(name = "fkiEzsignuserID")
-    override val fkiEzsignuserID: kotlin.Int? = null,
+    val fkiEzsignuserID: kotlin.Int? = null,
 
     /* Whether if Ezsign is paid by the company or not */
     @Json(name = "bSystemconfigurationEzsignpaidbyoffice")
-    override val bSystemconfigurationEzsignpaidbyoffice: kotlin.Boolean? = null,
+    val bSystemconfigurationEzsignpaidbyoffice: kotlin.Boolean? = null,
 
     @Json(name = "eSystemconfigurationEzsignofficeplan")
-    override val eSystemconfigurationEzsignofficeplan: FieldESystemconfigurationEzsignofficeplan? = null,
+    val eSystemconfigurationEzsignofficeplan: FieldESystemconfigurationEzsignofficeplan? = null,
 
     @Json(name = "eUserEzsignprepaid")
-    override val eUserEzsignprepaid: FieldEUserEzsignprepaid? = null,
+    val eUserEzsignprepaid: FieldEUserEzsignprepaid? = null,
 
     /* Whether the User's eZsign subscription is a trial */
     @Json(name = "bUserEzsigntrial")
-    override val bUserEzsigntrial: kotlin.Boolean? = null,
+    val bUserEzsigntrial: kotlin.Boolean? = null,
 
     /* The eZsign prepaid expiration date */
     @Json(name = "dtUserEzsignprepaidexpiration")
-    override val dtUserEzsignprepaidexpiration: kotlin.String? = null,
+    val dtUserEzsignprepaidexpiration: kotlin.String? = null,
 
     @Json(name = "objUserCloned")
-    override val objUserCloned: ActivesessionResponseCompoundUser? = null,
+    val objUserCloned: ActivesessionResponseCompoundUser? = null,
 
     @Json(name = "objApikey")
-    override val objApikey: ActivesessionResponseCompoundApikey? = null
+    val objApikey: ActivesessionResponseCompoundApikey? = null
 
-) : ActivesessionResponseCompound {
+) {
 
 
 }

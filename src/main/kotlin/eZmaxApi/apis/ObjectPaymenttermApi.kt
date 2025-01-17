@@ -19,12 +19,12 @@ import java.io.IOException
 import okhttp3.Call
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.HeaderAcceptLanguage
 import eZmaxApi.models.PaymenttermCreateObjectV1Request
 import eZmaxApi.models.PaymenttermCreateObjectV1Response
 import eZmaxApi.models.PaymenttermEditObjectV1Request
+import eZmaxApi.models.PaymenttermEditObjectV1Response
 import eZmaxApi.models.PaymenttermGetAutocompleteV2Response
 import eZmaxApi.models.PaymenttermGetListV1Response
 import eZmaxApi.models.PaymenttermGetObjectV2Response
@@ -130,7 +130,7 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ca
      * 
      * @param pkiPaymenttermID 
      * @param paymenttermEditObjectV1Request 
-     * @return CommonResponse
+     * @return PaymenttermEditObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -139,11 +139,11 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ca
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun paymenttermEditObjectV1(pkiPaymenttermID: kotlin.Int, paymenttermEditObjectV1Request: PaymenttermEditObjectV1Request) : CommonResponse {
+    fun paymenttermEditObjectV1(pkiPaymenttermID: kotlin.Int, paymenttermEditObjectV1Request: PaymenttermEditObjectV1Request) : PaymenttermEditObjectV1Response {
         val localVarResponse = paymenttermEditObjectV1WithHttpInfo(pkiPaymenttermID = pkiPaymenttermID, paymenttermEditObjectV1Request = paymenttermEditObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as PaymenttermEditObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -162,16 +162,16 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ca
      * 
      * @param pkiPaymenttermID 
      * @param paymenttermEditObjectV1Request 
-     * @return ApiResponse<CommonResponse?>
+     * @return ApiResponse<PaymenttermEditObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun paymenttermEditObjectV1WithHttpInfo(pkiPaymenttermID: kotlin.Int, paymenttermEditObjectV1Request: PaymenttermEditObjectV1Request) : ApiResponse<CommonResponse?> {
+    fun paymenttermEditObjectV1WithHttpInfo(pkiPaymenttermID: kotlin.Int, paymenttermEditObjectV1Request: PaymenttermEditObjectV1Request) : ApiResponse<PaymenttermEditObjectV1Response?> {
         val localVariableConfig = paymenttermEditObjectV1RequestConfig(pkiPaymenttermID = pkiPaymenttermID, paymenttermEditObjectV1Request = paymenttermEditObjectV1Request)
 
-        return request<PaymenttermEditObjectV1Request, CommonResponse>(
+        return request<PaymenttermEditObjectV1Request, PaymenttermEditObjectV1Response>(
             localVariableConfig
         )
     }

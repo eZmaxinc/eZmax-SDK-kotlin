@@ -19,7 +19,6 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectUserApi
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.HeaderAcceptLanguage
 import eZmaxApi.models.UserCreateObjectV1Request
@@ -29,6 +28,7 @@ import eZmaxApi.models.UserCreateObjectV2Response
 import eZmaxApi.models.UserEditColleaguesV2Request
 import eZmaxApi.models.UserEditColleaguesV2Response
 import eZmaxApi.models.UserEditObjectV1Request
+import eZmaxApi.models.UserEditObjectV1Response
 import eZmaxApi.models.UserEditPermissionsV1Request
 import eZmaxApi.models.UserEditPermissionsV1Response
 import eZmaxApi.models.UserGetApikeysV1Response
@@ -41,6 +41,7 @@ import eZmaxApi.models.UserGetPermissionsV1Response
 import eZmaxApi.models.UserGetSubnetsV1Response
 import eZmaxApi.models.UserGetUsergroupexternalsV1Response
 import eZmaxApi.models.UserGetUsergroupsV1Response
+import eZmaxApi.models.UserSendPasswordResetV1Response
 
 class ObjectUserApiTest : ShouldSpec() {
     init {
@@ -77,7 +78,7 @@ class ObjectUserApiTest : ShouldSpec() {
             // uncomment below to test userEditObjectV1
             //val pkiUserID : kotlin.Int = 56 // kotlin.Int | The unique ID of the User
             //val userEditObjectV1Request : UserEditObjectV1Request =  // UserEditObjectV1Request | 
-            //val result : CommonResponse = apiInstance.userEditObjectV1(pkiUserID, userEditObjectV1Request)
+            //val result : UserEditObjectV1Response = apiInstance.userEditObjectV1(pkiUserID, userEditObjectV1Request)
             //result shouldBe ("TODO")
         }
 
@@ -182,7 +183,7 @@ class ObjectUserApiTest : ShouldSpec() {
             // uncomment below to test userSendPasswordResetV1
             //val pkiUserID : kotlin.Int = 56 // kotlin.Int | 
             //val body : kotlin.Any = Object // kotlin.Any | 
-            //val result : CommonResponse = apiInstance.userSendPasswordResetV1(pkiUserID, body)
+            //val result : UserSendPasswordResetV1Response = apiInstance.userSendPasswordResetV1(pkiUserID, body)
             //result shouldBe ("TODO")
         }
 

@@ -16,7 +16,6 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.ActivesessionGetCurrentV2ResponseMPayload
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseObjDebug
 import eZmaxApi.models.CommonResponseObjDebugPayload
 
@@ -35,15 +34,15 @@ import com.squareup.moshi.JsonClass
 data class ActivesessionGetCurrentV2Response (
 
     @Json(name = "objDebugPayload")
-    override val objDebugPayload: CommonResponseObjDebugPayload,
+    val objDebugPayload: CommonResponseObjDebugPayload,
 
     @Json(name = "mPayload")
     val mPayload: ActivesessionGetCurrentV2ResponseMPayload,
 
     @Json(name = "objDebug")
-    override val objDebug: CommonResponseObjDebug? = null
+    val objDebug: CommonResponseObjDebug? = null
 
-) : CommonResponse {
+) {
 
 
 }

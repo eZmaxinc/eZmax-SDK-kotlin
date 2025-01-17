@@ -21,17 +21,46 @@ import io.kotlintest.specs.ShouldSpec
 import eZmaxApi.models.CustomNotificationsubsectiongetnotificationtestsResponse
 import eZmaxApi.models.CustomNotificationtestgetnotificationtestsResponse
 import eZmaxApi.models.MultilingualNotificationsubsectionName
-import eZmaxApi.models.NotificationsubsectionResponse
 
 class CustomNotificationsubsectiongetnotificationtestsResponseTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of CustomNotificationsubsectiongetnotificationtestsResponse
         //val modelInstance = CustomNotificationsubsectiongetnotificationtestsResponse()
 
+        // to test the property `pkiNotificationsubsectionID` - The unique ID of the Notificationsubsection
+        should("test pkiNotificationsubsectionID") {
+            // uncomment below to test the property
+            //modelInstance.pkiNotificationsubsectionID shouldBe ("TODO")
+        }
+
+        // to test the property `fkiNotificationsectionID` - The unique ID of the Notificationsection
+        should("test fkiNotificationsectionID") {
+            // uncomment below to test the property
+            //modelInstance.fkiNotificationsectionID shouldBe ("TODO")
+        }
+
+        // to test the property `sNotificationsubsectionNameX` - The name of the Notificationsubsection in the language of the requester
+        should("test sNotificationsubsectionNameX") {
+            // uncomment below to test the property
+            //modelInstance.sNotificationsubsectionNameX shouldBe ("TODO")
+        }
+
         // to test the property `aObjNotificationtest`
         should("test aObjNotificationtest") {
             // uncomment below to test the property
             //modelInstance.aObjNotificationtest shouldBe ("TODO")
+        }
+
+        // to test the property `objNotificationsubsectionName`
+        should("test objNotificationsubsectionName") {
+            // uncomment below to test the property
+            //modelInstance.objNotificationsubsectionName shouldBe ("TODO")
+        }
+
+        // to test the property `sNotificationsectionNameX` - The name of the Notificationsection in the language of the requester
+        should("test sNotificationsectionNameX") {
+            // uncomment below to test the property
+            //modelInstance.sNotificationsectionNameX shouldBe ("TODO")
         }
 
     }

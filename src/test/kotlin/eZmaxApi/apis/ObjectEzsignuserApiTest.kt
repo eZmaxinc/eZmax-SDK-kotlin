@@ -19,9 +19,9 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectEzsignuserApi
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.EzsignuserEditObjectV1Request
+import eZmaxApi.models.EzsignuserEditObjectV1Response
 import eZmaxApi.models.EzsignuserGetObjectV2Response
 
 class ObjectEzsignuserApiTest : ShouldSpec() {
@@ -34,7 +34,7 @@ class ObjectEzsignuserApiTest : ShouldSpec() {
             // uncomment below to test ezsignuserEditObjectV1
             //val pkiEzsignuserID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsignuser
             //val ezsignuserEditObjectV1Request : EzsignuserEditObjectV1Request =  // EzsignuserEditObjectV1Request | 
-            //val result : CommonResponse = apiInstance.ezsignuserEditObjectV1(pkiEzsignuserID, ezsignuserEditObjectV1Request)
+            //val result : EzsignuserEditObjectV1Response = apiInstance.ezsignuserEditObjectV1(pkiEzsignuserID, ezsignuserEditObjectV1Request)
             //result shouldBe ("TODO")
         }
 

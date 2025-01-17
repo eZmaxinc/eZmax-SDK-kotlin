@@ -19,7 +19,6 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.CommonResponseErrorCreditcardValidation
-import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.CustomCreditcardtransactionresponseResponse
 import eZmaxApi.models.FieldEErrorCode
 
@@ -27,6 +26,24 @@ class CommonResponseErrorCreditcardValidationTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of CommonResponseErrorCreditcardValidation
         //val modelInstance = CommonResponseErrorCreditcardValidation()
+
+        // to test the property `sErrorMessage` - The message giving details about the error
+        should("test sErrorMessage") {
+            // uncomment below to test the property
+            //modelInstance.sErrorMessage shouldBe ("TODO")
+        }
+
+        // to test the property `eErrorCode`
+        should("test eErrorCode") {
+            // uncomment below to test the property
+            //modelInstance.eErrorCode shouldBe ("TODO")
+        }
+
+        // to test the property `aSErrorMessagedetail` - More error message detail
+        should("test aSErrorMessagedetail") {
+            // uncomment below to test the property
+            //modelInstance.aSErrorMessagedetail shouldBe ("TODO")
+        }
 
         // to test the property `objCreditcardtransactionresponse`
         should("test objCreditcardtransactionresponse") {

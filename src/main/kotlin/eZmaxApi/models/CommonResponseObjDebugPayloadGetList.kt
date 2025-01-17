@@ -16,7 +16,6 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.CommonResponseFilter
-import eZmaxApi.models.CommonResponseObjDebugPayload
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -40,23 +39,23 @@ data class CommonResponseObjDebugPayloadGetList (
 
     /* The minimum version of the function that can be called */
     @Json(name = "iVersionMin")
-    override val iVersionMin: kotlin.Int,
+    val iVersionMin: kotlin.Int,
 
     /* The maximum version of the function that can be called */
     @Json(name = "iVersionMax")
-    override val iVersionMax: kotlin.Int,
+    val iVersionMax: kotlin.Int,
 
     /* An array of permissions required to access this function.  If the value \"0\" is present in the array, anyone can call this function.  You must have one of the permission to access the function. You don't need to have all of them. */
     @Json(name = "a_RequiredPermission")
-    override val aRequiredPermission: kotlin.collections.List<kotlin.Int>,
+    val aRequiredPermission: kotlin.collections.List<kotlin.Int>,
 
     /* Wheter the current route is deprecated or not */
     @Json(name = "bVersionDeprecated")
-    override val bVersionDeprecated: kotlin.Boolean,
+    val bVersionDeprecated: kotlin.Boolean,
 
     /* Represent a Date Time. The timezone is the one configured in the User's profile. */
     @Json(name = "dtResponseDate")
-    override val dtResponseDate: kotlin.String,
+    val dtResponseDate: kotlin.String,
 
     @Json(name = "a_Filter")
     val aFilter: CommonResponseFilter,
@@ -73,7 +72,7 @@ data class CommonResponseObjDebugPayloadGetList (
     @Json(name = "iRowOffset")
     val iRowOffset: kotlin.Int = 0
 
-) : CommonResponseObjDebugPayload {
+) {
 
 
 }

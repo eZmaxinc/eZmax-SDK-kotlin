@@ -9,7 +9,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 <a id="ezsignpageConsultV1"></a>
 # **ezsignpageConsultV1**
-> CommonResponse ezsignpageConsultV1(pkiEzsignpageID, body)
+> EzsignpageConsultV1Response ezsignpageConsultV1(pkiEzsignpageID, body)
 
 Consult an Ezsignpage
 
@@ -23,7 +23,7 @@ val apiInstance = ObjectEzsignpageApi()
 val pkiEzsignpageID : kotlin.Int = 56 // kotlin.Int | 
 val body : kotlin.Any = Object // kotlin.Any | 
 try {
-    val result : CommonResponse = apiInstance.ezsignpageConsultV1(pkiEzsignpageID, body)
+    val result : EzsignpageConsultV1Response = apiInstance.ezsignpageConsultV1(pkiEzsignpageID, body)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignpageApi#ezsignpageConsultV1")
@@ -42,7 +42,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsignpageConsultV1Response**](EzsignpageConsultV1Response.md)
 
 ### Authorization
 

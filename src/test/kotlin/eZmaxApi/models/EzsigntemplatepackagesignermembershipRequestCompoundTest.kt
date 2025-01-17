@@ -19,12 +19,41 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.EzsigntemplatepackagesignermembershipRequestCompound
-import eZmaxApi.models.EzsigntemplatepackagesignermembershipRequest
 
 class EzsigntemplatepackagesignermembershipRequestCompoundTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of EzsigntemplatepackagesignermembershipRequestCompound
         //val modelInstance = EzsigntemplatepackagesignermembershipRequestCompound()
+
+        // to test the property `fkiEzsigntemplatepackagemembershipID` - The unique ID of the Ezsigntemplatepackagemembership
+        should("test fkiEzsigntemplatepackagemembershipID") {
+            // uncomment below to test the property
+            //modelInstance.fkiEzsigntemplatepackagemembershipID shouldBe ("TODO")
+        }
+
+        // to test the property `fkiEzsigntemplatepackagesignerID` - The unique ID of the Ezsigntemplatepackagesigner
+        should("test fkiEzsigntemplatepackagesignerID") {
+            // uncomment below to test the property
+            //modelInstance.fkiEzsigntemplatepackagesignerID shouldBe ("TODO")
+        }
+
+        // to test the property `fkiEzsigntemplatesignerID` - The unique ID of the Ezsigntemplatesigner
+        should("test fkiEzsigntemplatesignerID") {
+            // uncomment below to test the property
+            //modelInstance.fkiEzsigntemplatesignerID shouldBe ("TODO")
+        }
+
+        // to test the property `pkiEzsigntemplatepackagesignermembershipID` - The unique ID of the Ezsigntemplatepackagesignermembership
+        should("test pkiEzsigntemplatepackagesignermembershipID") {
+            // uncomment below to test the property
+            //modelInstance.pkiEzsigntemplatepackagesignermembershipID shouldBe ("TODO")
+        }
+
+        // to test the property `iEzsigntemplatepackagesignermembershipCopy` - The Copy number in case of multiple copies.
+        should("test iEzsigntemplatepackagesignermembershipCopy") {
+            // uncomment below to test the property
+            //modelInstance.iEzsigntemplatepackagesignermembershipCopy shouldBe ("TODO")
+        }
 
     }
 }

@@ -17,7 +17,6 @@ package eZmaxApi.models
 
 import eZmaxApi.models.EmailRequest
 import eZmaxApi.models.MultilingualUsergroupName
-import eZmaxApi.models.UsergroupResponse
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -32,23 +31,23 @@ import com.squareup.moshi.JsonClass
  */
 
 
-class UsergroupResponseCompound (
+data class UsergroupResponseCompound (
 
     /* The unique ID of the Usergroup */
     @Json(name = "pkiUsergroupID")
-    override val pkiUsergroupID: kotlin.Int,
+    val pkiUsergroupID: kotlin.Int,
 
     @Json(name = "objUsergroupName")
-    override val objUsergroupName: MultilingualUsergroupName,
+    val objUsergroupName: MultilingualUsergroupName,
 
     /* The Name of the Usergroup in the language of the requester */
     @Json(name = "sUsergroupNameX")
-    override val sUsergroupNameX: kotlin.String? = null,
+    val sUsergroupNameX: kotlin.String? = null,
 
     @Json(name = "objEmail")
-    override val objEmail: EmailRequest? = null
+    val objEmail: EmailRequest? = null
 
-) : UsergroupResponse {
+) {
 
 
 }

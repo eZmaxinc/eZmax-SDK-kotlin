@@ -15,7 +15,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.CommonGetListV1ResponseMPayload
 import eZmaxApi.models.EzsignbulksendListElement
 
 import com.squareup.moshi.Json
@@ -34,16 +33,16 @@ data class EzsignbulksendGetListV1ResponseMPayload (
 
     /* The number of rows returned */
     @Json(name = "iRowReturned")
-    override val iRowReturned: kotlin.Int,
+    val iRowReturned: kotlin.Int,
 
     /* The number of rows matching your filters (if any) or the total number of rows */
     @Json(name = "iRowFiltered")
-    override val iRowFiltered: kotlin.Int,
+    val iRowFiltered: kotlin.Int,
 
     @Json(name = "a_objEzsignbulksend")
     val aObjEzsignbulksend: kotlin.collections.List<EzsignbulksendListElement>
 
-) : CommonGetListV1ResponseMPayload {
+) {
 
 
 }

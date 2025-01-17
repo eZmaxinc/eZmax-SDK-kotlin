@@ -15,7 +15,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.EzsignsignergroupmembershipResponse
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -31,29 +30,29 @@ import com.squareup.moshi.JsonClass
  */
 
 
-class EzsignsignergroupmembershipResponseCompound (
+data class EzsignsignergroupmembershipResponseCompound (
 
     /* The unique ID of the Ezsignsignergroupmembership */
     @Json(name = "pkiEzsignsignergroupmembershipID")
-    override val pkiEzsignsignergroupmembershipID: kotlin.Int,
+    val pkiEzsignsignergroupmembershipID: kotlin.Int,
 
     /* The unique ID of the Ezsignsignergroup */
     @Json(name = "fkiEzsignsignergroupID")
-    override val fkiEzsignsignergroupID: kotlin.Int,
+    val fkiEzsignsignergroupID: kotlin.Int,
 
     /* The unique ID of the Ezsignsigner */
     @Json(name = "fkiEzsignsignerID")
-    override val fkiEzsignsignerID: kotlin.Int? = null,
+    val fkiEzsignsignerID: kotlin.Int? = null,
 
     /* The unique ID of the User */
     @Json(name = "fkiUserID")
-    override val fkiUserID: kotlin.Int? = null,
+    val fkiUserID: kotlin.Int? = null,
 
     /* The unique ID of the Usergroup */
     @Json(name = "fkiUsergroupID")
-    override val fkiUsergroupID: kotlin.Int? = null
+    val fkiUsergroupID: kotlin.Int? = null
 
-) : EzsignsignergroupmembershipResponse {
+) {
 
 
 }

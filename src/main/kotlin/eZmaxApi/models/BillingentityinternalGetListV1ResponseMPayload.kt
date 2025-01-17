@@ -16,7 +16,6 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.BillingentityinternalListElement
-import eZmaxApi.models.CommonGetListV1ResponseMPayload
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -34,16 +33,16 @@ data class BillingentityinternalGetListV1ResponseMPayload (
 
     /* The number of rows returned */
     @Json(name = "iRowReturned")
-    override val iRowReturned: kotlin.Int,
+    val iRowReturned: kotlin.Int,
 
     /* The number of rows matching your filters (if any) or the total number of rows */
     @Json(name = "iRowFiltered")
-    override val iRowFiltered: kotlin.Int,
+    val iRowFiltered: kotlin.Int,
 
     @Json(name = "a_objBillingentityinternal")
     val aObjBillingentityinternal: kotlin.collections.List<BillingentityinternalListElement>
 
-) : CommonGetListV1ResponseMPayload {
+) {
 
 
 }

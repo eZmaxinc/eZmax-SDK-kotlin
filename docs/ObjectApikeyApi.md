@@ -67,7 +67,7 @@ Configure Authorization:
 
 <a id="apikeyEditObjectV1"></a>
 # **apikeyEditObjectV1**
-> CommonResponse apikeyEditObjectV1(pkiApikeyID, apikeyEditObjectV1Request)
+> ApikeyEditObjectV1Response apikeyEditObjectV1(pkiApikeyID, apikeyEditObjectV1Request)
 
 Edit an existing Apikey
 
@@ -83,7 +83,7 @@ val apiInstance = ObjectApikeyApi()
 val pkiApikeyID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Apikey
 val apikeyEditObjectV1Request : ApikeyEditObjectV1Request =  // ApikeyEditObjectV1Request | 
 try {
-    val result : CommonResponse = apiInstance.apikeyEditObjectV1(pkiApikeyID, apikeyEditObjectV1Request)
+    val result : ApikeyEditObjectV1Response = apiInstance.apikeyEditObjectV1(pkiApikeyID, apikeyEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectApikeyApi#apikeyEditObjectV1")
@@ -102,7 +102,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**ApikeyEditObjectV1Response**](ApikeyEditObjectV1Response.md)
 
 ### Authorization
 

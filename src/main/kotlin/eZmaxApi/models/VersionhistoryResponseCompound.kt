@@ -18,7 +18,6 @@ package eZmaxApi.models
 import eZmaxApi.models.FieldEVersionhistoryType
 import eZmaxApi.models.FieldEVersionhistoryUsertype
 import eZmaxApi.models.MultilingualVersionhistoryDetail
-import eZmaxApi.models.VersionhistoryResponse
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -40,50 +39,50 @@ import com.squareup.moshi.JsonClass
  */
 
 
-class VersionhistoryResponseCompound (
+data class VersionhistoryResponseCompound (
 
     /* The unique ID of the Versionhistory */
     @Json(name = "pkiVersionhistoryID")
-    override val pkiVersionhistoryID: kotlin.Int,
+    val pkiVersionhistoryID: kotlin.Int,
 
     @Json(name = "objVersionhistoryDetail")
-    override val objVersionhistoryDetail: MultilingualVersionhistoryDetail,
+    val objVersionhistoryDetail: MultilingualVersionhistoryDetail,
 
     /* The date  at which the Versionhistory was published or should be published */
     @Json(name = "dtVersionhistoryDate")
-    override val dtVersionhistoryDate: kotlin.String,
+    val dtVersionhistoryDate: kotlin.String,
 
     @Json(name = "eVersionhistoryType")
-    override val eVersionhistoryType: FieldEVersionhistoryType,
+    val eVersionhistoryType: FieldEVersionhistoryType,
 
     /* Whether the Versionhistory is published or still a draft */
     @Json(name = "bVersionhistoryDraft")
-    override val bVersionhistoryDraft: kotlin.Boolean,
+    val bVersionhistoryDraft: kotlin.Boolean,
 
     /* The unique ID of the Module */
     @Json(name = "fkiModuleID")
-    override val fkiModuleID: kotlin.Int? = null,
+    val fkiModuleID: kotlin.Int? = null,
 
     /* The unique ID of the Modulesection */
     @Json(name = "fkiModulesectionID")
-    override val fkiModulesectionID: kotlin.Int? = null,
+    val fkiModulesectionID: kotlin.Int? = null,
 
     /* The Name of the Module in the language of the requester */
     @Json(name = "sModuleNameX")
-    override val sModuleNameX: kotlin.String? = null,
+    val sModuleNameX: kotlin.String? = null,
 
     /* The Name of the Modulesection in the language of the requester */
     @Json(name = "sModulesectionNameX")
-    override val sModulesectionNameX: kotlin.String? = null,
+    val sModulesectionNameX: kotlin.String? = null,
 
     @Json(name = "eVersionhistoryUsertype")
-    override val eVersionhistoryUsertype: FieldEVersionhistoryUsertype? = null,
+    val eVersionhistoryUsertype: FieldEVersionhistoryUsertype? = null,
 
     /* The date  at which the Versionhistory will no longer be visible */
     @Json(name = "dtVersionhistoryDateend")
-    override val dtVersionhistoryDateend: kotlin.String? = null
+    val dtVersionhistoryDateend: kotlin.String? = null
 
-) : VersionhistoryResponse {
+) {
 
 
 }

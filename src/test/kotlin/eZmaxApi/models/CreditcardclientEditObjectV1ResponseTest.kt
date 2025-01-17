@@ -19,7 +19,6 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.CreditcardclientEditObjectV1Response
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseObjDebug
 import eZmaxApi.models.CommonResponseObjDebugPayload
 
@@ -27,6 +26,18 @@ class CreditcardclientEditObjectV1ResponseTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of CreditcardclientEditObjectV1Response
         //val modelInstance = CreditcardclientEditObjectV1Response()
+
+        // to test the property `objDebugPayload`
+        should("test objDebugPayload") {
+            // uncomment below to test the property
+            //modelInstance.objDebugPayload shouldBe ("TODO")
+        }
+
+        // to test the property `objDebug`
+        should("test objDebug") {
+            // uncomment below to test the property
+            //modelInstance.objDebug shouldBe ("TODO")
+        }
 
     }
 }

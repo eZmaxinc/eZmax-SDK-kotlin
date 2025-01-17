@@ -20,7 +20,6 @@ import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.ApikeyGetListV1Response
 import eZmaxApi.models.ApikeyGetListV1ResponseMPayload
-import eZmaxApi.models.CommonResponseGetList
 import eZmaxApi.models.CommonResponseObjDebug
 import eZmaxApi.models.CommonResponseObjDebugPayloadGetList
 
@@ -29,10 +28,22 @@ class ApikeyGetListV1ResponseTest : ShouldSpec() {
         // uncomment below to create an instance of ApikeyGetListV1Response
         //val modelInstance = ApikeyGetListV1Response()
 
+        // to test the property `objDebugPayload`
+        should("test objDebugPayload") {
+            // uncomment below to test the property
+            //modelInstance.objDebugPayload shouldBe ("TODO")
+        }
+
         // to test the property `mPayload`
         should("test mPayload") {
             // uncomment below to test the property
             //modelInstance.mPayload shouldBe ("TODO")
+        }
+
+        // to test the property `objDebug`
+        should("test objDebug") {
+            // uncomment below to test the property
+            //modelInstance.objDebug shouldBe ("TODO")
         }
 
     }

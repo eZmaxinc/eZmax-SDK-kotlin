@@ -16,7 +16,6 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.MultilingualSupplyDescription
-import eZmaxApi.models.SupplyResponse
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -39,56 +38,56 @@ import com.squareup.moshi.JsonClass
  */
 
 
-class SupplyResponseCompound (
+data class SupplyResponseCompound (
 
     /* The unique ID of the Supply */
     @Json(name = "pkiSupplyID")
-    override val pkiSupplyID: kotlin.Int,
+    val pkiSupplyID: kotlin.Int,
 
     /* The unique ID of the Variableexpense */
     @Json(name = "fkiVariableexpenseID")
-    override val fkiVariableexpenseID: kotlin.Int,
+    val fkiVariableexpenseID: kotlin.Int,
 
     /* The code of the Supply */
     @Json(name = "sSupplyCode")
-    override val sSupplyCode: kotlin.String,
+    val sSupplyCode: kotlin.String,
 
     @Json(name = "objSupplyDescription")
-    override val objSupplyDescription: MultilingualSupplyDescription,
+    val objSupplyDescription: MultilingualSupplyDescription,
 
     /* The unit price of the Supply */
     @Json(name = "dSupplyUnitprice")
-    override val dSupplyUnitprice: kotlin.String,
+    val dSupplyUnitprice: kotlin.String,
 
     /* Whether the supply is active or not */
     @Json(name = "bSupplyIsactive")
-    override val bSupplyIsactive: kotlin.Boolean,
+    val bSupplyIsactive: kotlin.Boolean,
 
     /* Whether if the price is variable */
     @Json(name = "bSupplyVariableprice")
-    override val bSupplyVariableprice: kotlin.Boolean,
+    val bSupplyVariableprice: kotlin.Boolean,
 
     /* The unique ID of the Glaccount */
     @Json(name = "fkiGlaccountID")
-    override val fkiGlaccountID: kotlin.Int? = null,
+    val fkiGlaccountID: kotlin.Int? = null,
 
     /* The unique ID of the Glaccountcontainer */
     @Json(name = "fkiGlaccountcontainerID")
-    override val fkiGlaccountcontainerID: kotlin.Int? = null,
+    val fkiGlaccountcontainerID: kotlin.Int? = null,
 
     /* The Description for the Glaccount in the language of the requester */
     @Json(name = "sGlaccountDescriptionX")
-    override val sGlaccountDescriptionX: kotlin.String? = null,
+    val sGlaccountDescriptionX: kotlin.String? = null,
 
     /* The Description for the Glaccountcontainer in the language of the requester */
     @Json(name = "sGlaccountcontainerLongdescriptionX")
-    override val sGlaccountcontainerLongdescriptionX: kotlin.String? = null,
+    val sGlaccountcontainerLongdescriptionX: kotlin.String? = null,
 
     /* The description of the Variableexpense in the language of the requester */
     @Json(name = "sVariableexpenseDescriptionX")
-    override val sVariableexpenseDescriptionX: kotlin.String? = null
+    val sVariableexpenseDescriptionX: kotlin.String? = null
 
-) : SupplyResponse {
+) {
 
 
 }

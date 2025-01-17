@@ -15,7 +15,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.UsergroupmembershipRequest
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -30,25 +29,25 @@ import com.squareup.moshi.JsonClass
  */
 
 
-class UsergroupmembershipRequestCompound (
+data class UsergroupmembershipRequestCompound (
 
     /* The unique ID of the Usergroup */
     @Json(name = "fkiUsergroupID")
-    override val fkiUsergroupID: kotlin.Int,
+    val fkiUsergroupID: kotlin.Int,
 
     /* The unique ID of the Usergroupmembership */
     @Json(name = "pkiUsergroupmembershipID")
-    override val pkiUsergroupmembershipID: kotlin.Int? = null,
+    val pkiUsergroupmembershipID: kotlin.Int? = null,
 
     /* The unique ID of the User */
     @Json(name = "fkiUserID")
-    override val fkiUserID: kotlin.Int? = null,
+    val fkiUserID: kotlin.Int? = null,
 
     /* The unique ID of the Usergroupexternal */
     @Json(name = "fkiUsergroupexternalID")
-    override val fkiUsergroupexternalID: kotlin.Int? = null
+    val fkiUsergroupexternalID: kotlin.Int? = null
 
-) : UsergroupmembershipRequest {
+) {
 
 
 }

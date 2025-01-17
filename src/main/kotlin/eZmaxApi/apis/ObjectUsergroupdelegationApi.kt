@@ -19,11 +19,12 @@ import java.io.IOException
 import okhttp3.Call
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.UsergroupdelegationCreateObjectV1Request
 import eZmaxApi.models.UsergroupdelegationCreateObjectV1Response
+import eZmaxApi.models.UsergroupdelegationDeleteObjectV1Response
 import eZmaxApi.models.UsergroupdelegationEditObjectV1Request
+import eZmaxApi.models.UsergroupdelegationEditObjectV1Response
 import eZmaxApi.models.UsergroupdelegationGetObjectV2Response
 
 import com.squareup.moshi.Json
@@ -126,7 +127,7 @@ class ObjectUsergroupdelegationApi(basePath: kotlin.String = defaultBasePath, cl
      * Delete an existing Usergroupdelegation
      * 
      * @param pkiUsergroupdelegationID The unique ID of the Usergroupdelegation
-     * @return CommonResponse
+     * @return UsergroupdelegationDeleteObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -135,11 +136,11 @@ class ObjectUsergroupdelegationApi(basePath: kotlin.String = defaultBasePath, cl
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun usergroupdelegationDeleteObjectV1(pkiUsergroupdelegationID: kotlin.Int) : CommonResponse {
+    fun usergroupdelegationDeleteObjectV1(pkiUsergroupdelegationID: kotlin.Int) : UsergroupdelegationDeleteObjectV1Response {
         val localVarResponse = usergroupdelegationDeleteObjectV1WithHttpInfo(pkiUsergroupdelegationID = pkiUsergroupdelegationID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as UsergroupdelegationDeleteObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -157,16 +158,16 @@ class ObjectUsergroupdelegationApi(basePath: kotlin.String = defaultBasePath, cl
      * Delete an existing Usergroupdelegation
      * 
      * @param pkiUsergroupdelegationID The unique ID of the Usergroupdelegation
-     * @return ApiResponse<CommonResponse?>
+     * @return ApiResponse<UsergroupdelegationDeleteObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun usergroupdelegationDeleteObjectV1WithHttpInfo(pkiUsergroupdelegationID: kotlin.Int) : ApiResponse<CommonResponse?> {
+    fun usergroupdelegationDeleteObjectV1WithHttpInfo(pkiUsergroupdelegationID: kotlin.Int) : ApiResponse<UsergroupdelegationDeleteObjectV1Response?> {
         val localVariableConfig = usergroupdelegationDeleteObjectV1RequestConfig(pkiUsergroupdelegationID = pkiUsergroupdelegationID)
 
-        return request<Unit, CommonResponse>(
+        return request<Unit, UsergroupdelegationDeleteObjectV1Response>(
             localVariableConfig
         )
     }
@@ -198,7 +199,7 @@ class ObjectUsergroupdelegationApi(basePath: kotlin.String = defaultBasePath, cl
      * 
      * @param pkiUsergroupdelegationID The unique ID of the Usergroupdelegation
      * @param usergroupdelegationEditObjectV1Request 
-     * @return CommonResponse
+     * @return UsergroupdelegationEditObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -207,11 +208,11 @@ class ObjectUsergroupdelegationApi(basePath: kotlin.String = defaultBasePath, cl
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun usergroupdelegationEditObjectV1(pkiUsergroupdelegationID: kotlin.Int, usergroupdelegationEditObjectV1Request: UsergroupdelegationEditObjectV1Request) : CommonResponse {
+    fun usergroupdelegationEditObjectV1(pkiUsergroupdelegationID: kotlin.Int, usergroupdelegationEditObjectV1Request: UsergroupdelegationEditObjectV1Request) : UsergroupdelegationEditObjectV1Response {
         val localVarResponse = usergroupdelegationEditObjectV1WithHttpInfo(pkiUsergroupdelegationID = pkiUsergroupdelegationID, usergroupdelegationEditObjectV1Request = usergroupdelegationEditObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as UsergroupdelegationEditObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -230,16 +231,16 @@ class ObjectUsergroupdelegationApi(basePath: kotlin.String = defaultBasePath, cl
      * 
      * @param pkiUsergroupdelegationID The unique ID of the Usergroupdelegation
      * @param usergroupdelegationEditObjectV1Request 
-     * @return ApiResponse<CommonResponse?>
+     * @return ApiResponse<UsergroupdelegationEditObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun usergroupdelegationEditObjectV1WithHttpInfo(pkiUsergroupdelegationID: kotlin.Int, usergroupdelegationEditObjectV1Request: UsergroupdelegationEditObjectV1Request) : ApiResponse<CommonResponse?> {
+    fun usergroupdelegationEditObjectV1WithHttpInfo(pkiUsergroupdelegationID: kotlin.Int, usergroupdelegationEditObjectV1Request: UsergroupdelegationEditObjectV1Request) : ApiResponse<UsergroupdelegationEditObjectV1Response?> {
         val localVariableConfig = usergroupdelegationEditObjectV1RequestConfig(pkiUsergroupdelegationID = pkiUsergroupdelegationID, usergroupdelegationEditObjectV1Request = usergroupdelegationEditObjectV1Request)
 
-        return request<UsergroupdelegationEditObjectV1Request, CommonResponse>(
+        return request<UsergroupdelegationEditObjectV1Request, UsergroupdelegationEditObjectV1Response>(
             localVariableConfig
         )
     }

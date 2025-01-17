@@ -15,11 +15,10 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.AddressRequest
-import eZmaxApi.models.ContactinformationsRequest
-import eZmaxApi.models.EmailRequest
-import eZmaxApi.models.PhoneRequest
-import eZmaxApi.models.WebsiteRequest
+import eZmaxApi.models.AddressRequestCompound
+import eZmaxApi.models.EmailRequestCompound
+import eZmaxApi.models.PhoneRequestCompound
+import eZmaxApi.models.WebsiteRequestCompound
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -42,33 +41,33 @@ data class ContactinformationsRequestCompound (
 
     /* The index in the a_objAddress array (zero based index) representing the Address object that should become the default one.  You can leave the value to 0 if the array is empty. */
     @Json(name = "iAddressDefault")
-    override val iAddressDefault: kotlin.Int,
+    val iAddressDefault: kotlin.Int,
 
     /* The index in the a_objPhone array (zero based index) representing the Phone object that should become the default one.  You can leave the value to 0 if the array is empty. */
     @Json(name = "iPhoneDefault")
-    override val iPhoneDefault: kotlin.Int,
+    val iPhoneDefault: kotlin.Int,
 
     /* The index in the a_objEmail array (zero based index) representing the Email object that should become the default one.  You can leave the value to 0 if the array is empty. */
     @Json(name = "iEmailDefault")
-    override val iEmailDefault: kotlin.Int,
+    val iEmailDefault: kotlin.Int,
 
     /* The index in the a_objWebsite array (zero based index) representing the Website object that should become the default one.  You can leave the value to 0 if the array is empty. */
     @Json(name = "iWebsiteDefault")
-    override val iWebsiteDefault: kotlin.Int,
+    val iWebsiteDefault: kotlin.Int,
 
     @Json(name = "a_objAddress")
-    val aObjAddress: kotlin.collections.List<AddressRequest>,
+    val aObjAddress: kotlin.collections.List<AddressRequestCompound>,
 
     @Json(name = "a_objPhone")
-    val aObjPhone: kotlin.collections.List<PhoneRequest>,
+    val aObjPhone: kotlin.collections.List<PhoneRequestCompound>,
 
     @Json(name = "a_objEmail")
-    val aObjEmail: kotlin.collections.List<EmailRequest>,
+    val aObjEmail: kotlin.collections.List<EmailRequestCompound>,
 
     @Json(name = "a_objWebsite")
-    val aObjWebsite: kotlin.collections.List<WebsiteRequest>
+    val aObjWebsite: kotlin.collections.List<WebsiteRequestCompound>
 
-) : ContactinformationsRequest {
+) {
 
 
 }

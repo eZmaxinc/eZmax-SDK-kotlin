@@ -61,7 +61,7 @@ Configure Authorization:
 
 <a id="ezsignformfieldgroupDeleteObjectV1"></a>
 # **ezsignformfieldgroupDeleteObjectV1**
-> CommonResponse ezsignformfieldgroupDeleteObjectV1(pkiEzsignformfieldgroupID)
+> EzsignformfieldgroupDeleteObjectV1Response ezsignformfieldgroupDeleteObjectV1(pkiEzsignformfieldgroupID)
 
 Delete an existing Ezsignformfieldgroup
 
@@ -76,7 +76,7 @@ Delete an existing Ezsignformfieldgroup
 val apiInstance = ObjectEzsignformfieldgroupApi()
 val pkiEzsignformfieldgroupID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : CommonResponse = apiInstance.ezsignformfieldgroupDeleteObjectV1(pkiEzsignformfieldgroupID)
+    val result : EzsignformfieldgroupDeleteObjectV1Response = apiInstance.ezsignformfieldgroupDeleteObjectV1(pkiEzsignformfieldgroupID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignformfieldgroupApi#ezsignformfieldgroupDeleteObjectV1")
@@ -94,7 +94,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsignformfieldgroupDeleteObjectV1Response**](EzsignformfieldgroupDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -110,7 +110,7 @@ Configure Authorization:
 
 <a id="ezsignformfieldgroupEditObjectV1"></a>
 # **ezsignformfieldgroupEditObjectV1**
-> CommonResponse ezsignformfieldgroupEditObjectV1(pkiEzsignformfieldgroupID, ezsignformfieldgroupEditObjectV1Request)
+> EzsignformfieldgroupEditObjectV1Response ezsignformfieldgroupEditObjectV1(pkiEzsignformfieldgroupID, ezsignformfieldgroupEditObjectV1Request)
 
 Edit an existing Ezsignformfieldgroup
 
@@ -126,7 +126,7 @@ val apiInstance = ObjectEzsignformfieldgroupApi()
 val pkiEzsignformfieldgroupID : kotlin.Int = 56 // kotlin.Int | 
 val ezsignformfieldgroupEditObjectV1Request : EzsignformfieldgroupEditObjectV1Request =  // EzsignformfieldgroupEditObjectV1Request | 
 try {
-    val result : CommonResponse = apiInstance.ezsignformfieldgroupEditObjectV1(pkiEzsignformfieldgroupID, ezsignformfieldgroupEditObjectV1Request)
+    val result : EzsignformfieldgroupEditObjectV1Response = apiInstance.ezsignformfieldgroupEditObjectV1(pkiEzsignformfieldgroupID, ezsignformfieldgroupEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignformfieldgroupApi#ezsignformfieldgroupEditObjectV1")
@@ -145,7 +145,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsignformfieldgroupEditObjectV1Response**](EzsignformfieldgroupEditObjectV1Response.md)
 
 ### Authorization
 

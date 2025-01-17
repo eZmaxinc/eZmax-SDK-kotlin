@@ -15,7 +15,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.DomainRequest
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -28,17 +27,17 @@ import com.squareup.moshi.JsonClass
  */
 
 
-class DomainRequestCompound (
+data class DomainRequestCompound (
 
     /* The name of the Domain */
     @Json(name = "sDomainName")
-    override val sDomainName: kotlin.String,
+    val sDomainName: kotlin.String,
 
     /* The unique ID of the Domain */
     @Json(name = "pkiDomainID")
-    override val pkiDomainID: kotlin.Int? = null
+    val pkiDomainID: kotlin.Int? = null
 
-) : DomainRequest {
+) {
 
 
 }

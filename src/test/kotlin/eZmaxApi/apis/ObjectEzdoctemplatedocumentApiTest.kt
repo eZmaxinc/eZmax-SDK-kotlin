@@ -19,15 +19,16 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectEzdoctemplatedocumentApi
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.EzdoctemplatedocumentCreateObjectV1Request
 import eZmaxApi.models.EzdoctemplatedocumentCreateObjectV1Response
 import eZmaxApi.models.EzdoctemplatedocumentEditObjectV1Request
+import eZmaxApi.models.EzdoctemplatedocumentEditObjectV1Response
 import eZmaxApi.models.EzdoctemplatedocumentGetAutocompleteV2Response
 import eZmaxApi.models.EzdoctemplatedocumentGetListV1Response
 import eZmaxApi.models.EzdoctemplatedocumentGetObjectV2Response
 import eZmaxApi.models.EzdoctemplatedocumentPatchObjectV1Request
+import eZmaxApi.models.EzdoctemplatedocumentPatchObjectV1Response
 import eZmaxApi.models.HeaderAcceptLanguage
 
 class ObjectEzdoctemplatedocumentApiTest : ShouldSpec() {
@@ -55,7 +56,7 @@ class ObjectEzdoctemplatedocumentApiTest : ShouldSpec() {
             // uncomment below to test ezdoctemplatedocumentEditObjectV1
             //val pkiEzdoctemplatedocumentID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezdoctemplatedocument
             //val ezdoctemplatedocumentEditObjectV1Request : EzdoctemplatedocumentEditObjectV1Request =  // EzdoctemplatedocumentEditObjectV1Request | 
-            //val result : CommonResponse = apiInstance.ezdoctemplatedocumentEditObjectV1(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentEditObjectV1Request)
+            //val result : EzdoctemplatedocumentEditObjectV1Response = apiInstance.ezdoctemplatedocumentEditObjectV1(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentEditObjectV1Request)
             //result shouldBe ("TODO")
         }
 
@@ -97,7 +98,7 @@ class ObjectEzdoctemplatedocumentApiTest : ShouldSpec() {
             // uncomment below to test ezdoctemplatedocumentPatchObjectV1
             //val pkiEzdoctemplatedocumentID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezdoctemplatedocument
             //val ezdoctemplatedocumentPatchObjectV1Request : EzdoctemplatedocumentPatchObjectV1Request =  // EzdoctemplatedocumentPatchObjectV1Request | 
-            //val result : CommonResponse = apiInstance.ezdoctemplatedocumentPatchObjectV1(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentPatchObjectV1Request)
+            //val result : EzdoctemplatedocumentPatchObjectV1Response = apiInstance.ezdoctemplatedocumentPatchObjectV1(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentPatchObjectV1Request)
             //result shouldBe ("TODO")
         }
 

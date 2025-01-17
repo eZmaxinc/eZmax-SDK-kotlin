@@ -15,7 +15,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.EzsigntemplatedocumentpagerecognitionResponse
 import eZmaxApi.models.FieldEEzsigntemplatedocumentpagerecognitionOperator
 import eZmaxApi.models.FieldEEzsigntemplatedocumentpagerecognitionSection
 
@@ -38,47 +37,47 @@ import com.squareup.moshi.JsonClass
  */
 
 
-class EzsigntemplatedocumentpagerecognitionResponseCompound (
+data class EzsigntemplatedocumentpagerecognitionResponseCompound (
 
     /* The unique ID of the Ezsigntemplatedocumentpagerecognition */
     @Json(name = "pkiEzsigntemplatedocumentpagerecognitionID")
-    override val pkiEzsigntemplatedocumentpagerecognitionID: kotlin.Int,
+    val pkiEzsigntemplatedocumentpagerecognitionID: kotlin.Int,
 
     /* The unique ID of the Ezsigntemplatedocumentpage */
     @Json(name = "fkiEzsigntemplatedocumentpageID")
-    override val fkiEzsigntemplatedocumentpageID: kotlin.Int,
+    val fkiEzsigntemplatedocumentpageID: kotlin.Int,
 
     @Json(name = "eEzsigntemplatedocumentpagerecognitionOperator")
-    override val eEzsigntemplatedocumentpagerecognitionOperator: FieldEEzsigntemplatedocumentpagerecognitionOperator,
+    val eEzsigntemplatedocumentpagerecognitionOperator: FieldEEzsigntemplatedocumentpagerecognitionOperator,
 
     @Json(name = "eEzsigntemplatedocumentpagerecognitionSection")
-    override val eEzsigntemplatedocumentpagerecognitionSection: FieldEEzsigntemplatedocumentpagerecognitionSection,
+    val eEzsigntemplatedocumentpagerecognitionSection: FieldEEzsigntemplatedocumentpagerecognitionSection,
 
     /* The text of the Ezsigntemplatedocumentpagerecognition */
     @Json(name = "tEzsigntemplatedocumentpagerecognitionText")
-    override val tEzsigntemplatedocumentpagerecognitionText: kotlin.String,
+    val tEzsigntemplatedocumentpagerecognitionText: kotlin.String,
 
     /* The similarpercentage of the Ezsigntemplatedocumentpagerecognition */
     @Json(name = "iEzsigntemplatedocumentpagerecognitionSimilarpercentage")
-    override val iEzsigntemplatedocumentpagerecognitionSimilarpercentage: kotlin.Int? = null,
+    val iEzsigntemplatedocumentpagerecognitionSimilarpercentage: kotlin.Int? = null,
 
     /* The x of the Ezsigntemplatedocumentpagerecognition */
     @Json(name = "iEzsigntemplatedocumentpagerecognitionX")
-    override val iEzsigntemplatedocumentpagerecognitionX: kotlin.Int? = null,
+    val iEzsigntemplatedocumentpagerecognitionX: kotlin.Int? = null,
 
     /* The y of the Ezsigntemplatedocumentpagerecognition */
     @Json(name = "iEzsigntemplatedocumentpagerecognitionY")
-    override val iEzsigntemplatedocumentpagerecognitionY: kotlin.Int? = null,
+    val iEzsigntemplatedocumentpagerecognitionY: kotlin.Int? = null,
 
     /* The width of the Ezsigntemplatedocumentpagerecognition */
     @Json(name = "iEzsigntemplatedocumentpagerecognitionWidth")
-    override val iEzsigntemplatedocumentpagerecognitionWidth: kotlin.Int? = null,
+    val iEzsigntemplatedocumentpagerecognitionWidth: kotlin.Int? = null,
 
     /* The height of the Ezsigntemplatedocumentpagerecognition */
     @Json(name = "iEzsigntemplatedocumentpagerecognitionHeight")
-    override val iEzsigntemplatedocumentpagerecognitionHeight: kotlin.Int? = null
+    val iEzsigntemplatedocumentpagerecognitionHeight: kotlin.Int? = null
 
-) : EzsigntemplatedocumentpagerecognitionResponse {
+) {
 
 
 }

@@ -15,7 +15,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.AuthenticationexternalResponse
 import eZmaxApi.models.CommonAudit
 import eZmaxApi.models.FieldEAuthenticationexternalType
 
@@ -34,31 +33,31 @@ import com.squareup.moshi.JsonClass
  */
 
 
-class AuthenticationexternalResponseCompound (
+data class AuthenticationexternalResponseCompound (
 
     /* The unique ID of the Authenticationexternal */
     @Json(name = "pkiAuthenticationexternalID")
-    override val pkiAuthenticationexternalID: kotlin.Int,
+    val pkiAuthenticationexternalID: kotlin.Int,
 
     /* The description of the Authenticationexternal */
     @Json(name = "sAuthenticationexternalDescription")
-    override val sAuthenticationexternalDescription: kotlin.String,
+    val sAuthenticationexternalDescription: kotlin.String,
 
     @Json(name = "eAuthenticationexternalType")
-    override val eAuthenticationexternalType: FieldEAuthenticationexternalType,
+    val eAuthenticationexternalType: FieldEAuthenticationexternalType,
 
     @Json(name = "objAudit")
-    override val objAudit: CommonAudit,
+    val objAudit: CommonAudit,
 
     /* Whether the Authenticationexternal has been connected or not */
     @Json(name = "bAuthenticationexternalConnected")
-    override val bAuthenticationexternalConnected: kotlin.Boolean? = null,
+    val bAuthenticationexternalConnected: kotlin.Boolean? = null,
 
     /* The url to authorize the Authenticationexternal */
     @Json(name = "sAuthenticationexternalAuthorizationurl")
-    override val sAuthenticationexternalAuthorizationurl: kotlin.String? = null
+    val sAuthenticationexternalAuthorizationurl: kotlin.String? = null
 
-) : AuthenticationexternalResponse {
+) {
 
 
 }

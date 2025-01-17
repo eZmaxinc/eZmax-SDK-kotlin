@@ -16,7 +16,6 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.BrandingGetObjectV3ResponseMPayload
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseObjDebug
 import eZmaxApi.models.CommonResponseObjDebugPayload
 
@@ -35,15 +34,15 @@ import com.squareup.moshi.JsonClass
 data class BrandingGetObjectV3Response (
 
     @Json(name = "objDebugPayload")
-    override val objDebugPayload: CommonResponseObjDebugPayload,
+    val objDebugPayload: CommonResponseObjDebugPayload,
 
     @Json(name = "mPayload")
     val mPayload: BrandingGetObjectV3ResponseMPayload,
 
     @Json(name = "objDebug")
-    override val objDebug: CommonResponseObjDebug? = null
+    val objDebug: CommonResponseObjDebug? = null
 
-) : CommonResponse {
+) {
 
 
 }

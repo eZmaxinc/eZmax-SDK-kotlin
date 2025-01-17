@@ -19,13 +19,30 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.EzsignsignergroupResponseCompound
-import eZmaxApi.models.EzsignsignergroupResponse
 import eZmaxApi.models.MultilingualEzsignsignergroupDescription
 
 class EzsignsignergroupResponseCompoundTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of EzsignsignergroupResponseCompound
         //val modelInstance = EzsignsignergroupResponseCompound()
+
+        // to test the property `pkiEzsignsignergroupID` - The unique ID of the Ezsignsignergroup
+        should("test pkiEzsignsignergroupID") {
+            // uncomment below to test the property
+            //modelInstance.pkiEzsignsignergroupID shouldBe ("TODO")
+        }
+
+        // to test the property `objEzsignsignergroupDescription`
+        should("test objEzsignsignergroupDescription") {
+            // uncomment below to test the property
+            //modelInstance.objEzsignsignergroupDescription shouldBe ("TODO")
+        }
+
+        // to test the property `sEzsignsignergroupDescriptionX` - The Description of the Ezsignsignergroup in the language of the requester
+        should("test sEzsignsignergroupDescriptionX") {
+            // uncomment below to test the property
+            //modelInstance.sEzsignsignergroupDescriptionX shouldBe ("TODO")
+        }
 
     }
 }

@@ -19,10 +19,9 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.CommunicationRequestCompound
-import eZmaxApi.models.CommunicationRequest
 import eZmaxApi.models.CommunicationexternalrecipientRequestCompound
 import eZmaxApi.models.CommunicationrecipientRequestCompound
-import eZmaxApi.models.CommunicationreferenceRequest
+import eZmaxApi.models.CommunicationreferenceRequestCompound
 import eZmaxApi.models.CustomCommunicationattachmentRequest
 import eZmaxApi.models.CustomCommunicationsenderRequest
 import eZmaxApi.models.FieldECommunicationImportance
@@ -32,6 +31,24 @@ class CommunicationRequestCompoundTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of CommunicationRequestCompound
         //val modelInstance = CommunicationRequestCompound()
+
+        // to test the property `eCommunicationType`
+        should("test eCommunicationType") {
+            // uncomment below to test the property
+            //modelInstance.eCommunicationType shouldBe ("TODO")
+        }
+
+        // to test the property `tCommunicationBody` - The Body of the Communication
+        should("test tCommunicationBody") {
+            // uncomment below to test the property
+            //modelInstance.tCommunicationBody shouldBe ("TODO")
+        }
+
+        // to test the property `bCommunicationPrivate` - Whether the Communication is private or not
+        should("test bCommunicationPrivate") {
+            // uncomment below to test the property
+            //modelInstance.bCommunicationPrivate shouldBe ("TODO")
+        }
 
         // to test the property `aObjCommunicationattachment`
         should("test aObjCommunicationattachment") {
@@ -55,6 +72,48 @@ class CommunicationRequestCompoundTest : ShouldSpec() {
         should("test aObjCommunicationexternalrecipient") {
             // uncomment below to test the property
             //modelInstance.aObjCommunicationexternalrecipient shouldBe ("TODO")
+        }
+
+        // to test the property `pkiCommunicationID` - The unique ID of the Communication.
+        should("test pkiCommunicationID") {
+            // uncomment below to test the property
+            //modelInstance.pkiCommunicationID shouldBe ("TODO")
+        }
+
+        // to test the property `eCommunicationImportance`
+        should("test eCommunicationImportance") {
+            // uncomment below to test the property
+            //modelInstance.eCommunicationImportance shouldBe ("TODO")
+        }
+
+        // to test the property `objCommunicationsender`
+        should("test objCommunicationsender") {
+            // uncomment below to test the property
+            //modelInstance.objCommunicationsender shouldBe ("TODO")
+        }
+
+        // to test the property `sCommunicationSubject` - The subject of the Communication
+        should("test sCommunicationSubject") {
+            // uncomment below to test the property
+            //modelInstance.sCommunicationSubject shouldBe ("TODO")
+        }
+
+        // to test the property `eCommunicationAttachmenttype` - How the attachment should be included in the email.   Only used if eCommunicationType is **Email**
+        should("test eCommunicationAttachmenttype") {
+            // uncomment below to test the property
+            //modelInstance.eCommunicationAttachmenttype shouldBe ("TODO")
+        }
+
+        // to test the property `iCommunicationAttachmentlinkexpiration` - The number of days before the attachment link expired.   Only used if eCommunicationType is **Email** and eCommunicationattachmentType is **Link**
+        should("test iCommunicationAttachmentlinkexpiration") {
+            // uncomment below to test the property
+            //modelInstance.iCommunicationAttachmentlinkexpiration shouldBe ("TODO")
+        }
+
+        // to test the property `bCommunicationReadreceipt` - Whether we ask for a read receipt or not.
+        should("test bCommunicationReadreceipt") {
+            // uncomment below to test the property
+            //modelInstance.bCommunicationReadreceipt shouldBe ("TODO")
         }
 
     }

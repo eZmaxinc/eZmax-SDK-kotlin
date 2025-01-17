@@ -15,7 +15,7 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.EzsigndocumentRequest
+import eZmaxApi.models.EzsigndocumentRequestCompound
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -23,15 +23,14 @@ import com.squareup.moshi.JsonClass
 /**
  * Request for PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}
  *
- * @param objEzsigndocument An Ezsigndocument Object and children to create a complete structure
+ * @param objEzsigndocument 
  */
 
 
 data class EzsigndocumentEditObjectV1Request (
 
-    /* An Ezsigndocument Object and children to create a complete structure */
     @Json(name = "objEzsigndocument")
-    val objEzsigndocument: EzsigndocumentRequest
+    val objEzsigndocument: EzsigndocumentRequestCompound
 
 ) {
 

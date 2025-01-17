@@ -16,7 +16,6 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.CommonAudit
-import eZmaxApi.models.EzsignbulksendResponse
 import eZmaxApi.models.EzsignbulksenddocumentmappingResponseCompound
 import eZmaxApi.models.EzsignbulksendsignermappingResponse
 import eZmaxApi.models.FieldEEzsignfoldertypePrivacylevel
@@ -47,45 +46,45 @@ data class EzsignbulksendResponseCompound (
 
     /* The unique ID of the Ezsignbulksend */
     @Json(name = "pkiEzsignbulksendID")
-    override val pkiEzsignbulksendID: kotlin.Int,
+    val pkiEzsignbulksendID: kotlin.Int,
 
     /* The unique ID of the Ezsignfoldertype. */
     @Json(name = "fkiEzsignfoldertypeID")
-    override val fkiEzsignfoldertypeID: kotlin.Int,
+    val fkiEzsignfoldertypeID: kotlin.Int,
 
     /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| */
     @Json(name = "fkiLanguageID")
-    override val fkiLanguageID: kotlin.Int,
+    val fkiLanguageID: kotlin.Int,
 
     /* The Name of the Language in the language of the requester */
     @Json(name = "sLanguageNameX")
-    override val sLanguageNameX: kotlin.String,
+    val sLanguageNameX: kotlin.String,
 
     @Json(name = "eEzsignfoldertypePrivacylevel")
-    override val eEzsignfoldertypePrivacylevel: FieldEEzsignfoldertypePrivacylevel,
+    val eEzsignfoldertypePrivacylevel: FieldEEzsignfoldertypePrivacylevel,
 
     /* The name of the Ezsignfoldertype in the language of the requester */
     @Json(name = "sEzsignfoldertypeNameX")
-    override val sEzsignfoldertypeNameX: kotlin.String,
+    val sEzsignfoldertypeNameX: kotlin.String,
 
     /* The description of the Ezsignbulksend */
     @Json(name = "sEzsignbulksendDescription")
-    override val sEzsignbulksendDescription: kotlin.String,
+    val sEzsignbulksendDescription: kotlin.String,
 
     /* Note about the Ezsignbulksend */
     @Json(name = "tEzsignbulksendNote")
-    override val tEzsignbulksendNote: kotlin.String,
+    val tEzsignbulksendNote: kotlin.String,
 
     /* Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation */
     @Json(name = "bEzsignbulksendNeedvalidation")
-    override val bEzsignbulksendNeedvalidation: kotlin.Boolean,
+    val bEzsignbulksendNeedvalidation: kotlin.Boolean,
 
     /* Whether the Ezsignbulksend is active or not */
     @Json(name = "bEzsignbulksendIsactive")
-    override val bEzsignbulksendIsactive: kotlin.Boolean,
+    val bEzsignbulksendIsactive: kotlin.Boolean,
 
     @Json(name = "objAudit")
-    override val objAudit: CommonAudit,
+    val objAudit: CommonAudit,
 
     @Json(name = "a_objEzsignbulksenddocumentmapping")
     val aObjEzsignbulksenddocumentmapping: kotlin.collections.List<EzsignbulksenddocumentmappingResponseCompound>,
@@ -93,7 +92,7 @@ data class EzsignbulksendResponseCompound (
     @Json(name = "a_objEzsignbulksendsignermapping")
     val aObjEzsignbulksendsignermapping: kotlin.collections.List<EzsignbulksendsignermappingResponse>
 
-) : EzsignbulksendResponse {
+) {
 
 
 }

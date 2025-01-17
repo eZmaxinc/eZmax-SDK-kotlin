@@ -19,7 +19,6 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.BillingentityinternalResponseCompound
-import eZmaxApi.models.BillingentityinternalResponse
 import eZmaxApi.models.BillingentityinternalproductResponseCompound
 import eZmaxApi.models.MultilingualBillingentityinternalDescription
 
@@ -27,6 +26,18 @@ class BillingentityinternalResponseCompoundTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of BillingentityinternalResponseCompound
         //val modelInstance = BillingentityinternalResponseCompound()
+
+        // to test the property `pkiBillingentityinternalID` - The unique ID of the Billingentityinternal.
+        should("test pkiBillingentityinternalID") {
+            // uncomment below to test the property
+            //modelInstance.pkiBillingentityinternalID shouldBe ("TODO")
+        }
+
+        // to test the property `objBillingentityinternalDescription`
+        should("test objBillingentityinternalDescription") {
+            // uncomment below to test the property
+            //modelInstance.objBillingentityinternalDescription shouldBe ("TODO")
+        }
 
         // to test the property `aObjBillingentityinternalproduct`
         should("test aObjBillingentityinternalproduct") {

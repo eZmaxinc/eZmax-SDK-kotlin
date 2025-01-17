@@ -15,7 +15,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.EzsigntemplatepackagesignermembershipRequest
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -31,29 +30,29 @@ import com.squareup.moshi.JsonClass
  */
 
 
-class EzsigntemplatepackagesignermembershipRequestCompound (
+data class EzsigntemplatepackagesignermembershipRequestCompound (
 
     /* The unique ID of the Ezsigntemplatepackagemembership */
     @Json(name = "fkiEzsigntemplatepackagemembershipID")
-    override val fkiEzsigntemplatepackagemembershipID: kotlin.Int,
+    val fkiEzsigntemplatepackagemembershipID: kotlin.Int,
 
     /* The unique ID of the Ezsigntemplatepackagesigner */
     @Json(name = "fkiEzsigntemplatepackagesignerID")
-    override val fkiEzsigntemplatepackagesignerID: kotlin.Int,
+    val fkiEzsigntemplatepackagesignerID: kotlin.Int,
 
     /* The unique ID of the Ezsigntemplatesigner */
     @Json(name = "fkiEzsigntemplatesignerID")
-    override val fkiEzsigntemplatesignerID: kotlin.Int,
+    val fkiEzsigntemplatesignerID: kotlin.Int,
 
     /* The unique ID of the Ezsigntemplatepackagesignermembership */
     @Json(name = "pkiEzsigntemplatepackagesignermembershipID")
-    override val pkiEzsigntemplatepackagesignermembershipID: kotlin.Int? = null,
+    val pkiEzsigntemplatepackagesignermembershipID: kotlin.Int? = null,
 
     /* The Copy number in case of multiple copies. */
     @Json(name = "iEzsigntemplatepackagesignermembershipCopy")
-    override val iEzsigntemplatepackagesignermembershipCopy: kotlin.Int? = null
+    val iEzsigntemplatepackagesignermembershipCopy: kotlin.Int? = null
 
-) : EzsigntemplatepackagesignermembershipRequest {
+) {
 
 
 }

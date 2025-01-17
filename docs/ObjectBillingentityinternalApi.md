@@ -62,7 +62,7 @@ Configure Authorization:
 
 <a id="billingentityinternalEditObjectV1"></a>
 # **billingentityinternalEditObjectV1**
-> CommonResponse billingentityinternalEditObjectV1(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request)
+> BillingentityinternalEditObjectV1Response billingentityinternalEditObjectV1(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request)
 
 Edit an existing Billingentityinternal
 
@@ -78,7 +78,7 @@ val apiInstance = ObjectBillingentityinternalApi()
 val pkiBillingentityinternalID : kotlin.Int = 56 // kotlin.Int | 
 val billingentityinternalEditObjectV1Request : BillingentityinternalEditObjectV1Request =  // BillingentityinternalEditObjectV1Request | 
 try {
-    val result : CommonResponse = apiInstance.billingentityinternalEditObjectV1(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request)
+    val result : BillingentityinternalEditObjectV1Response = apiInstance.billingentityinternalEditObjectV1(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectBillingentityinternalApi#billingentityinternalEditObjectV1")
@@ -97,7 +97,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**BillingentityinternalEditObjectV1Response**](BillingentityinternalEditObjectV1Response.md)
 
 ### Authorization
 

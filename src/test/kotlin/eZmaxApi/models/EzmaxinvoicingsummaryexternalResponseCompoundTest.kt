@@ -19,7 +19,6 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.EzmaxinvoicingsummaryexternalResponseCompound
-import eZmaxApi.models.EzmaxinvoicingsummaryexternalResponse
 import eZmaxApi.models.EzmaxinvoicingsummaryexternaldetailResponseCompound
 
 class EzmaxinvoicingsummaryexternalResponseCompoundTest : ShouldSpec() {
@@ -27,10 +26,40 @@ class EzmaxinvoicingsummaryexternalResponseCompoundTest : ShouldSpec() {
         // uncomment below to create an instance of EzmaxinvoicingsummaryexternalResponseCompound
         //val modelInstance = EzmaxinvoicingsummaryexternalResponseCompound()
 
+        // to test the property `fkiBillingentityexternalID` - The unique ID of the Billingentityexternal
+        should("test fkiBillingentityexternalID") {
+            // uncomment below to test the property
+            //modelInstance.fkiBillingentityexternalID shouldBe ("TODO")
+        }
+
+        // to test the property `sBillingentityexternalDescription` - The description of the Billingentityexternal
+        should("test sBillingentityexternalDescription") {
+            // uncomment below to test the property
+            //modelInstance.sBillingentityexternalDescription shouldBe ("TODO")
+        }
+
+        // to test the property `sEzmaxinvoicingsummaryexternalDescription` - The description of the Ezmaxinvoicingsummaryexternal
+        should("test sEzmaxinvoicingsummaryexternalDescription") {
+            // uncomment below to test the property
+            //modelInstance.sEzmaxinvoicingsummaryexternalDescription shouldBe ("TODO")
+        }
+
         // to test the property `aObjEzmaxinvoicingsummaryexternaldetail`
         should("test aObjEzmaxinvoicingsummaryexternaldetail") {
             // uncomment below to test the property
             //modelInstance.aObjEzmaxinvoicingsummaryexternaldetail shouldBe ("TODO")
+        }
+
+        // to test the property `pkiEzmaxinvoicingsummaryexternalID` - The unique ID of the Ezmaxinvoicingsummaryexternal
+        should("test pkiEzmaxinvoicingsummaryexternalID") {
+            // uncomment below to test the property
+            //modelInstance.pkiEzmaxinvoicingsummaryexternalID shouldBe ("TODO")
+        }
+
+        // to test the property `fkiEzmaxinvoicingID` - The unique ID of the Ezmaxinvoicing
+        should("test fkiEzmaxinvoicingID") {
+            // uncomment below to test the property
+            //modelInstance.fkiEzmaxinvoicingID shouldBe ("TODO")
         }
 
     }

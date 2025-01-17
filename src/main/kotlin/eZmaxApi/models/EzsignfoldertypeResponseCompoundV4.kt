@@ -16,7 +16,6 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.CommonAudit
-import eZmaxApi.models.EzsignfoldertypeResponseV4
 import eZmaxApi.models.FieldEEzsignfoldertypeCompletion
 import eZmaxApi.models.FieldEEzsignfoldertypeDisposal
 import eZmaxApi.models.FieldEEzsignfoldertypeDocumentdependency
@@ -107,245 +106,245 @@ data class EzsignfoldertypeResponseCompoundV4 (
 
     /* The unique ID of the Ezsignfoldertype. */
     @Json(name = "pkiEzsignfoldertypeID")
-    override val pkiEzsignfoldertypeID: kotlin.Int,
+    val pkiEzsignfoldertypeID: kotlin.Int,
 
     @Json(name = "objEzsignfoldertypeName")
-    override val objEzsignfoldertypeName: MultilingualEzsignfoldertypeName,
+    val objEzsignfoldertypeName: MultilingualEzsignfoldertypeName,
 
     /* The unique ID of the Branding */
     @Json(name = "fkiBrandingID")
-    override val fkiBrandingID: kotlin.Int,
+    val fkiBrandingID: kotlin.Int,
 
     /* The Description of the Branding in the language of the requester */
     @Json(name = "sBrandingDescriptionX")
-    override val sBrandingDescriptionX: kotlin.String,
+    val sBrandingDescriptionX: kotlin.String,
 
     @Json(name = "eEzsignfoldertypePrivacylevel")
-    override val eEzsignfoldertypePrivacylevel: FieldEEzsignfoldertypePrivacylevel,
+    val eEzsignfoldertypePrivacylevel: FieldEEzsignfoldertypePrivacylevel,
 
     /* The number of days before the archival of Ezsignfolders created using this Ezsignfoldertype */
     @Json(name = "iEzsignfoldertypeArchivaldays")
-    override val iEzsignfoldertypeArchivaldays: kotlin.Int,
+    val iEzsignfoldertypeArchivaldays: kotlin.Int,
 
     @Json(name = "eEzsignfoldertypeDisposal")
-    override val eEzsignfoldertypeDisposal: FieldEEzsignfoldertypeDisposal,
+    val eEzsignfoldertypeDisposal: FieldEEzsignfoldertypeDisposal,
 
     @Json(name = "eEzsignfoldertypeCompletion")
-    override val eEzsignfoldertypeCompletion: FieldEEzsignfoldertypeCompletion,
+    val eEzsignfoldertypeCompletion: FieldEEzsignfoldertypeCompletion,
 
     /* The number of days to get all Ezsignsignatures */
     @Json(name = "iEzsignfoldertypeDeadlinedays")
-    override val iEzsignfoldertypeDeadlinedays: kotlin.Int,
+    val iEzsignfoldertypeDeadlinedays: kotlin.Int,
 
     /* Whether we send the signed Ezsigndocument to the Ezsigndocument's owner */
     @Json(name = "bEzsignfoldertypeSendsignedtodocumentowner")
-    override val bEzsignfoldertypeSendsignedtodocumentowner: kotlin.Boolean,
+    val bEzsignfoldertypeSendsignedtodocumentowner: kotlin.Boolean,
 
     /* Whether we send the signed Ezsigndocument to the Ezsignfolder's owner */
     @Json(name = "bEzsignfoldertypeSendsignedtofolderowner")
-    override val bEzsignfoldertypeSendsignedtofolderowner: kotlin.Boolean,
+    val bEzsignfoldertypeSendsignedtofolderowner: kotlin.Boolean,
 
     /* Whether we send the signed Ezsigndocument to the colleagues */
     @Json(name = "bEzsignfoldertypeSendsignedtocolleague")
-    override val bEzsignfoldertypeSendsignedtocolleague: kotlin.Boolean,
+    val bEzsignfoldertypeSendsignedtocolleague: kotlin.Boolean,
 
     /* Whether we send the summary to the Ezsigndocument's owner */
     @Json(name = "bEzsignfoldertypeSendsummarytodocumentowner")
-    override val bEzsignfoldertypeSendsummarytodocumentowner: kotlin.Boolean,
+    val bEzsignfoldertypeSendsummarytodocumentowner: kotlin.Boolean,
 
     /* Whether we send the summary to the Ezsignfolder's owner */
     @Json(name = "bEzsignfoldertypeSendsummarytofolderowner")
-    override val bEzsignfoldertypeSendsummarytofolderowner: kotlin.Boolean,
+    val bEzsignfoldertypeSendsummarytofolderowner: kotlin.Boolean,
 
     /* Whether we send the summary to the colleagues */
     @Json(name = "bEzsignfoldertypeSendsummarytocolleague")
-    override val bEzsignfoldertypeSendsummarytocolleague: kotlin.Boolean,
+    val bEzsignfoldertypeSendsummarytocolleague: kotlin.Boolean,
 
     /* Whether the Ezsignfoldertype is active or not */
     @Json(name = "bEzsignfoldertypeIsactive")
-    override val bEzsignfoldertypeIsactive: kotlin.Boolean,
+    val bEzsignfoldertypeIsactive: kotlin.Boolean,
 
     @Json(name = "a_objUserlogintype")
-    override val aObjUserlogintype: kotlin.collections.List<UserlogintypeResponse>,
+    val aObjUserlogintype: kotlin.collections.List<UserlogintypeResponse>,
 
     @Json(name = "objAudit")
-    override val objAudit: CommonAudit,
+    val objAudit: CommonAudit,
 
     /* The unique ID of the Billingentityinternal. */
     @Json(name = "fkiBillingentityinternalID")
-    override val fkiBillingentityinternalID: kotlin.Int? = null,
+    val fkiBillingentityinternalID: kotlin.Int? = null,
 
     /* The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server's time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server's time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**| */
     @Json(name = "fkiEzsigntsarequirementID")
-    override val fkiEzsigntsarequirementID: kotlin.Int? = null,
+    val fkiEzsigntsarequirementID: kotlin.Int? = null,
 
     /* The unique ID of the Font */
     @Json(name = "fkiFontIDAnnotation")
-    override val fkiFontIDAnnotation: kotlin.Int? = null,
+    val fkiFontIDAnnotation: kotlin.Int? = null,
 
     /* The unique ID of the Font */
     @Json(name = "fkiFontIDFormfield")
-    override val fkiFontIDFormfield: kotlin.Int? = null,
+    val fkiFontIDFormfield: kotlin.Int? = null,
 
     /* The unique ID of the Font */
     @Json(name = "fkiFontIDSignature")
-    override val fkiFontIDSignature: kotlin.Int? = null,
+    val fkiFontIDSignature: kotlin.Int? = null,
 
     /* The unique ID of the Pdfalevel */
     @Json(name = "fkiPdfalevelIDConvert")
-    override val fkiPdfalevelIDConvert: kotlin.Int? = null,
+    val fkiPdfalevelIDConvert: kotlin.Int? = null,
 
     @Json(name = "eEzsignfoldertypeDocumentdependency")
-    override val eEzsignfoldertypeDocumentdependency: FieldEEzsignfoldertypeDocumentdependency? = null,
+    val eEzsignfoldertypeDocumentdependency: FieldEEzsignfoldertypeDocumentdependency? = null,
 
     /* The description of the Billingentityinternal in the language of the requester */
     @Json(name = "sBillingentityinternalDescriptionX")
-    override val sBillingentityinternalDescriptionX: kotlin.String? = null,
+    val sBillingentityinternalDescriptionX: kotlin.String? = null,
 
     /* The description of the Ezsigntsarequirement in the language of the requester */
     @Json(name = "sEzsigntsarequirementDescriptionX")
-    override val sEzsigntsarequirementDescriptionX: kotlin.String? = null,
+    val sEzsigntsarequirementDescriptionX: kotlin.String? = null,
 
     /* The email address. */
     @Json(name = "sEmailAddressSigned")
-    override val sEmailAddressSigned: kotlin.String? = null,
+    val sEmailAddressSigned: kotlin.String? = null,
 
     /* The email address. */
     @Json(name = "sEmailAddressSummary")
-    override val sEmailAddressSummary: kotlin.String? = null,
+    val sEmailAddressSummary: kotlin.String? = null,
 
     @Json(name = "eEzsignfoldertypePdfarequirement")
-    override val eEzsignfoldertypePdfarequirement: FieldEEzsignfoldertypePdfarequirement? = null,
+    val eEzsignfoldertypePdfarequirement: FieldEEzsignfoldertypePdfarequirement? = null,
 
     @Json(name = "eEzsignfoldertypePdfanoncompliantaction")
-    override val eEzsignfoldertypePdfanoncompliantaction: FieldEEzsignfoldertypePdfanoncompliantaction? = null,
+    val eEzsignfoldertypePdfanoncompliantaction: FieldEEzsignfoldertypePdfanoncompliantaction? = null,
 
     /* Font size for annotations */
     @Json(name = "iEzsignfoldertypeFontsizeannotation")
-    override val iEzsignfoldertypeFontsizeannotation: kotlin.Int? = null,
+    val iEzsignfoldertypeFontsizeannotation: kotlin.Int? = null,
 
     /* Font size for form fields */
     @Json(name = "iEzsignfoldertypeFontsizeformfield")
-    override val iEzsignfoldertypeFontsizeformfield: kotlin.Int? = null,
+    val iEzsignfoldertypeFontsizeformfield: kotlin.Int? = null,
 
     /* The number of days before the the first reminder sending */
     @Json(name = "iEzsignfoldertypeSendreminderfirstdays")
-    override val iEzsignfoldertypeSendreminderfirstdays: kotlin.Int? = null,
+    val iEzsignfoldertypeSendreminderfirstdays: kotlin.Int? = null,
 
     /* The number of days after the first reminder sending */
     @Json(name = "iEzsignfoldertypeSendreminderotherdays")
-    override val iEzsignfoldertypeSendreminderotherdays: kotlin.Int? = null,
+    val iEzsignfoldertypeSendreminderotherdays: kotlin.Int? = null,
 
     /* The number of days after the archival before the disposal of the Ezsignfolder */
     @Json(name = "iEzsignfoldertypeDisposaldays")
-    override val iEzsignfoldertypeDisposaldays: kotlin.Int? = null,
+    val iEzsignfoldertypeDisposaldays: kotlin.Int? = null,
 
     /* Wheter if document will be ended prematurely after Ezsignfolder expires. */
     @Json(name = "bEzsignfoldertypePrematurelyendautomatically")
-    override val bEzsignfoldertypePrematurelyendautomatically: kotlin.Boolean? = null,
+    val bEzsignfoldertypePrematurelyendautomatically: kotlin.Boolean? = null,
 
     /* Number of days between Ezsignfolder expiration and automatic prematurely end of Ezsigndocuments. */
     @Json(name = "iEzsignfoldertypePrematurelyendautomaticallydays")
-    override val iEzsignfoldertypePrematurelyendautomaticallydays: kotlin.Int? = null,
+    val iEzsignfoldertypePrematurelyendautomaticallydays: kotlin.Int? = null,
 
     /* Whether we allow the automatic signature by an User */
     @Json(name = "bEzsignfoldertypeAutomaticsignature")
-    override val bEzsignfoldertypeAutomaticsignature: kotlin.Boolean? = null,
+    val bEzsignfoldertypeAutomaticsignature: kotlin.Boolean? = null,
 
     /* Wheter if delegation of signature is allowed to another user or not */
     @Json(name = "bEzsignfoldertypeDelegate")
-    override val bEzsignfoldertypeDelegate: kotlin.Boolean? = null,
+    val bEzsignfoldertypeDelegate: kotlin.Boolean? = null,
 
     /* Wheter if creating a new Discussion is allowed or not */
     @Json(name = "bEzsignfoldertypeDiscussion")
-    override val bEzsignfoldertypeDiscussion: kotlin.Boolean? = null,
+    val bEzsignfoldertypeDiscussion: kotlin.Boolean? = null,
 
     /* Whether we log recipient of signed document in proof */
     @Json(name = "bEzsignfoldertypeLogrecipientinproof")
-    override val bEzsignfoldertypeLogrecipientinproof: kotlin.Boolean? = null,
+    val bEzsignfoldertypeLogrecipientinproof: kotlin.Boolean? = null,
 
     /* Wheter if Reassignment of signature is allowed by a signatory to another signatory or not */
     @Json(name = "bEzsignfoldertypeReassignezsignsigner")
-    override val bEzsignfoldertypeReassignezsignsigner: kotlin.Boolean? = null,
+    val bEzsignfoldertypeReassignezsignsigner: kotlin.Boolean? = null,
 
     /* Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not */
     @Json(name = "bEzsignfoldertypeReassignuser")
-    override val bEzsignfoldertypeReassignuser: kotlin.Boolean? = null,
+    val bEzsignfoldertypeReassignuser: kotlin.Boolean? = null,
 
     /* Wheter if Reassignment of signatures of the groups to which the user belongs is authorized by a user to himself */
     @Json(name = "bEzsignfoldertypeReassigngroup")
-    override val bEzsignfoldertypeReassigngroup: kotlin.Boolean? = null,
+    val bEzsignfoldertypeReassigngroup: kotlin.Boolean? = null,
 
     /* Whether we send an email to Ezsignsigner  when document is completed */
     @Json(name = "bEzsignfoldertypeSendsignedtoezsignsigner")
-    override val bEzsignfoldertypeSendsignedtoezsignsigner: kotlin.Boolean? = null,
+    val bEzsignfoldertypeSendsignedtoezsignsigner: kotlin.Boolean? = null,
 
     /* Whether we send an email to User who signed when document is completed */
     @Json(name = "bEzsignfoldertypeSendsignedtouser")
-    override val bEzsignfoldertypeSendsignedtouser: kotlin.Boolean? = null,
+    val bEzsignfoldertypeSendsignedtouser: kotlin.Boolean? = null,
 
     /* Whether we send the Ezsigndocument in the email to Ezsignsigner */
     @Json(name = "bEzsignfoldertypeSendattachmentezsignsigner")
-    override val bEzsignfoldertypeSendattachmentezsignsigner: kotlin.Boolean? = null,
+    val bEzsignfoldertypeSendattachmentezsignsigner: kotlin.Boolean? = null,
 
     /* Whether we send the proof in the email to Ezsignsigner */
     @Json(name = "bEzsignfoldertypeSendproofezsignsigner")
-    override val bEzsignfoldertypeSendproofezsignsigner: kotlin.Boolean? = null,
+    val bEzsignfoldertypeSendproofezsignsigner: kotlin.Boolean? = null,
 
     /* Whether we send the Ezsigndocument in the email to User */
     @Json(name = "bEzsignfoldertypeSendattachmentuser")
-    override val bEzsignfoldertypeSendattachmentuser: kotlin.Boolean? = null,
+    val bEzsignfoldertypeSendattachmentuser: kotlin.Boolean? = null,
 
     /* Whether we send the proof in the email to User */
     @Json(name = "bEzsignfoldertypeSendproofuser")
-    override val bEzsignfoldertypeSendproofuser: kotlin.Boolean? = null,
+    val bEzsignfoldertypeSendproofuser: kotlin.Boolean? = null,
 
     /* Whether we send the proof in the email to external recipient */
     @Json(name = "bEzsignfoldertypeSendproofemail")
-    override val bEzsignfoldertypeSendproofemail: kotlin.Boolean? = null,
+    val bEzsignfoldertypeSendproofemail: kotlin.Boolean? = null,
 
     /* Whether we allow the Ezsigndocument to be downloaded by an Ezsignsigner */
     @Json(name = "bEzsignfoldertypeAllowdownloadattachmentezsignsigner")
-    override val bEzsignfoldertypeAllowdownloadattachmentezsignsigner: kotlin.Boolean? = null,
+    val bEzsignfoldertypeAllowdownloadattachmentezsignsigner: kotlin.Boolean? = null,
 
     /* Whether we allow the proof to be downloaded by an Ezsignsigner */
     @Json(name = "bEzsignfoldertypeAllowdownloadproofezsignsigner")
-    override val bEzsignfoldertypeAllowdownloadproofezsignsigner: kotlin.Boolean? = null,
+    val bEzsignfoldertypeAllowdownloadproofezsignsigner: kotlin.Boolean? = null,
 
     /* Whether we send the proof to user and Ezsignsigner who receive all documents. */
     @Json(name = "bEzsignfoldertypeSendproofreceivealldocument")
-    override val bEzsignfoldertypeSendproofreceivealldocument: kotlin.Boolean? = null,
+    val bEzsignfoldertypeSendproofreceivealldocument: kotlin.Boolean? = null,
 
     /* Whether we send the signed Ezsigndocument to the Usergroup that has acces to all Ezsignfolders */
     @Json(name = "bEzsignfoldertypeSendsignedtofullgroup")
-    override val bEzsignfoldertypeSendsignedtofullgroup: kotlin.Boolean? = null,
+    val bEzsignfoldertypeSendsignedtofullgroup: kotlin.Boolean? = null,
 
     /* THIS FIELD WILL BE DELETED. Whether we send the signed Ezsigndocument to the Usergroup that has acces to only their own Ezsignfolders */
     @Json(name = "bEzsignfoldertypeSendsignedtolimitedgroup")
-    override val bEzsignfoldertypeSendsignedtolimitedgroup: kotlin.Boolean? = null,
+    val bEzsignfoldertypeSendsignedtolimitedgroup: kotlin.Boolean? = null,
 
     /* Whether we send the summary to the Usergroup that has acces to all Ezsignfolders */
     @Json(name = "bEzsignfoldertypeSendsummarytofullgroup")
-    override val bEzsignfoldertypeSendsummarytofullgroup: kotlin.Boolean? = null,
+    val bEzsignfoldertypeSendsummarytofullgroup: kotlin.Boolean? = null,
 
     /* Whether we send the summary to the Usergroup that has acces to only their own Ezsignfolders */
     @Json(name = "bEzsignfoldertypeSendsummarytolimitedgroup")
-    override val bEzsignfoldertypeSendsummarytolimitedgroup: kotlin.Boolean? = null,
+    val bEzsignfoldertypeSendsummarytolimitedgroup: kotlin.Boolean? = null,
 
     @Json(name = "eEzsignfoldertypeSigneraccess")
-    override val eEzsignfoldertypeSigneraccess: FieldEEzsignfoldertypeSigneraccess? = null,
+    val eEzsignfoldertypeSigneraccess: FieldEEzsignfoldertypeSigneraccess? = null,
 
     @Json(name = "a_fkiPdfalevelID")
-    override val aFkiPdfalevelID: kotlin.collections.List<kotlin.Int>? = null,
+    val aFkiPdfalevelID: kotlin.collections.List<kotlin.Int>? = null,
 
     @Json(name = "a_objUsergroupAll")
-    override val aObjUsergroupAll: kotlin.collections.List<UsergroupResponse>? = null,
+    val aObjUsergroupAll: kotlin.collections.List<UsergroupResponse>? = null,
 
     @Json(name = "a_objUsergroupRestricted")
-    override val aObjUsergroupRestricted: kotlin.collections.List<UsergroupResponse>? = null,
+    val aObjUsergroupRestricted: kotlin.collections.List<UsergroupResponse>? = null,
 
     @Json(name = "a_objUsergroupTemplate")
-    override val aObjUsergroupTemplate: kotlin.collections.List<UsergroupResponse>? = null,
+    val aObjUsergroupTemplate: kotlin.collections.List<UsergroupResponse>? = null,
 
     @Json(name = "a_fkiUserIDSigned")
     val aFkiUserIDSigned: kotlin.collections.List<kotlin.Int>? = null,
@@ -353,7 +352,7 @@ data class EzsignfoldertypeResponseCompoundV4 (
     @Json(name = "a_fkiUserIDSummary")
     val aFkiUserIDSummary: kotlin.collections.List<kotlin.Int>? = null
 
-) : EzsignfoldertypeResponseV4 {
+) {
 
 
 }
