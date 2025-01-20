@@ -22,8 +22,8 @@
 | **aObjEzmaxinvoicingsummaryinternal** | [**kotlin.collections.List&lt;EzmaxinvoicingsummaryinternalResponseCompound&gt;**](EzmaxinvoicingsummaryinternalResponseCompound.md) |  |  |
 | **aObjEzmaxinvoicingagent** | [**kotlin.collections.List&lt;EzmaxinvoicingagentResponseCompound&gt;**](EzmaxinvoicingagentResponseCompound.md) |  |  |
 | **aObjEzmaxinvoicinguser** | [**kotlin.collections.List&lt;EzmaxinvoicinguserResponseCompound&gt;**](EzmaxinvoicinguserResponseCompound.md) |  |  |
-| **aObjEzmaxinvoicingezsignfolder** | [**kotlin.collections.List&lt;CustomEzmaxinvoicingEzsignfolderResponse&gt;**](CustomEzmaxinvoicingEzsignfolderResponse.md) |  |  |
-| **aObjEzmaxinvoicingezsigndocument** | [**kotlin.collections.List&lt;CustomEzmaxinvoicingEzsigndocumentResponse&gt;**](CustomEzmaxinvoicingEzsigndocumentResponse.md) |  |  |
+| **aObjEzmaxinvoicingezsignfolder** | [**kotlin.collections.List&lt;CustomEzmaxinvoicingEzsignfolderResponse&gt;**](kotlin.Any.md) |  |  |
+| **aObjEzmaxinvoicingezsigndocument** | [**kotlin.collections.List&lt;CustomEzmaxinvoicingEzsigndocumentResponse&gt;**](kotlin.Any.md) |  |  |
 | **pkiEzmaxinvoicingID** | **kotlin.Int** | The unique ID of the Ezmaxinvoicing |  [optional] |
 | **objAudit** | [**CommonAudit**](CommonAudit.md) |  |  [optional] |
 

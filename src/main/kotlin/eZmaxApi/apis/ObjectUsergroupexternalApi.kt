@@ -19,13 +19,12 @@ import java.io.IOException
 import okhttp3.Call
 import okhttp3.HttpUrl
 
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.HeaderAcceptLanguage
 import eZmaxApi.models.UsergroupexternalCreateObjectV1Request
 import eZmaxApi.models.UsergroupexternalCreateObjectV1Response
-import eZmaxApi.models.UsergroupexternalDeleteObjectV1Response
 import eZmaxApi.models.UsergroupexternalEditObjectV1Request
-import eZmaxApi.models.UsergroupexternalEditObjectV1Response
 import eZmaxApi.models.UsergroupexternalGetAutocompleteV2Response
 import eZmaxApi.models.UsergroupexternalGetListV1Response
 import eZmaxApi.models.UsergroupexternalGetObjectV2Response
@@ -132,7 +131,7 @@ class ObjectUsergroupexternalApi(basePath: kotlin.String = defaultBasePath, clie
      * Delete an existing Usergroupexternal
      * 
      * @param pkiUsergroupexternalID The unique ID of the Usergroupexternal
-     * @return UsergroupexternalDeleteObjectV1Response
+     * @return CommonResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -141,11 +140,11 @@ class ObjectUsergroupexternalApi(basePath: kotlin.String = defaultBasePath, clie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun usergroupexternalDeleteObjectV1(pkiUsergroupexternalID: kotlin.Int) : UsergroupexternalDeleteObjectV1Response {
+    fun usergroupexternalDeleteObjectV1(pkiUsergroupexternalID: kotlin.Int) : CommonResponse {
         val localVarResponse = usergroupexternalDeleteObjectV1WithHttpInfo(pkiUsergroupexternalID = pkiUsergroupexternalID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as UsergroupexternalDeleteObjectV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -163,16 +162,16 @@ class ObjectUsergroupexternalApi(basePath: kotlin.String = defaultBasePath, clie
      * Delete an existing Usergroupexternal
      * 
      * @param pkiUsergroupexternalID The unique ID of the Usergroupexternal
-     * @return ApiResponse<UsergroupexternalDeleteObjectV1Response?>
+     * @return ApiResponse<CommonResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun usergroupexternalDeleteObjectV1WithHttpInfo(pkiUsergroupexternalID: kotlin.Int) : ApiResponse<UsergroupexternalDeleteObjectV1Response?> {
+    fun usergroupexternalDeleteObjectV1WithHttpInfo(pkiUsergroupexternalID: kotlin.Int) : ApiResponse<CommonResponse?> {
         val localVariableConfig = usergroupexternalDeleteObjectV1RequestConfig(pkiUsergroupexternalID = pkiUsergroupexternalID)
 
-        return request<Unit, UsergroupexternalDeleteObjectV1Response>(
+        return request<Unit, CommonResponse>(
             localVariableConfig
         )
     }
@@ -204,7 +203,7 @@ class ObjectUsergroupexternalApi(basePath: kotlin.String = defaultBasePath, clie
      * 
      * @param pkiUsergroupexternalID The unique ID of the Usergroupexternal
      * @param usergroupexternalEditObjectV1Request 
-     * @return UsergroupexternalEditObjectV1Response
+     * @return CommonResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -213,11 +212,11 @@ class ObjectUsergroupexternalApi(basePath: kotlin.String = defaultBasePath, clie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun usergroupexternalEditObjectV1(pkiUsergroupexternalID: kotlin.Int, usergroupexternalEditObjectV1Request: UsergroupexternalEditObjectV1Request) : UsergroupexternalEditObjectV1Response {
+    fun usergroupexternalEditObjectV1(pkiUsergroupexternalID: kotlin.Int, usergroupexternalEditObjectV1Request: UsergroupexternalEditObjectV1Request) : CommonResponse {
         val localVarResponse = usergroupexternalEditObjectV1WithHttpInfo(pkiUsergroupexternalID = pkiUsergroupexternalID, usergroupexternalEditObjectV1Request = usergroupexternalEditObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as UsergroupexternalEditObjectV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -236,16 +235,16 @@ class ObjectUsergroupexternalApi(basePath: kotlin.String = defaultBasePath, clie
      * 
      * @param pkiUsergroupexternalID The unique ID of the Usergroupexternal
      * @param usergroupexternalEditObjectV1Request 
-     * @return ApiResponse<UsergroupexternalEditObjectV1Response?>
+     * @return ApiResponse<CommonResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun usergroupexternalEditObjectV1WithHttpInfo(pkiUsergroupexternalID: kotlin.Int, usergroupexternalEditObjectV1Request: UsergroupexternalEditObjectV1Request) : ApiResponse<UsergroupexternalEditObjectV1Response?> {
+    fun usergroupexternalEditObjectV1WithHttpInfo(pkiUsergroupexternalID: kotlin.Int, usergroupexternalEditObjectV1Request: UsergroupexternalEditObjectV1Request) : ApiResponse<CommonResponse?> {
         val localVariableConfig = usergroupexternalEditObjectV1RequestConfig(pkiUsergroupexternalID = pkiUsergroupexternalID, usergroupexternalEditObjectV1Request = usergroupexternalEditObjectV1Request)
 
-        return request<UsergroupexternalEditObjectV1Request, UsergroupexternalEditObjectV1Response>(
+        return request<UsergroupexternalEditObjectV1Request, CommonResponse>(
             localVariableConfig
         )
     }

@@ -15,7 +15,7 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.PermissionResponseCompound
+import eZmaxApi.models.PermissionResponse
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -23,14 +23,15 @@ import com.squareup.moshi.JsonClass
 /**
  * Payload for GET /2/object/permission/{pkiPermissionID}
  *
- * @param objPermission 
+ * @param objPermission A Permission Object and children to create a complete structure
  */
 
 
 data class PermissionGetObjectV2ResponseMPayload (
 
+    /* A Permission Object and children to create a complete structure */
     @Json(name = "objPermission")
-    val objPermission: PermissionResponseCompound
+    val objPermission: PermissionResponse
 
 ) {
 

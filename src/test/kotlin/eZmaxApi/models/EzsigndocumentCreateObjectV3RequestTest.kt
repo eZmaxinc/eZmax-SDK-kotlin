@@ -19,7 +19,7 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.EzsigndocumentCreateObjectV3Request
-import eZmaxApi.models.EzsigndocumentRequestCompound
+import eZmaxApi.models.EzsigndocumentRequest
 
 class EzsigndocumentCreateObjectV3RequestTest : ShouldSpec() {
     init {

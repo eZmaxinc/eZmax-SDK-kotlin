@@ -18,7 +18,7 @@
 | **eEzsignformfieldDependencyrequirement** | [**FieldEEzsignformfieldDependencyrequirement**](FieldEEzsignformfieldDependencyrequirement.md) |  |  [optional] |
 | **eEzsignformfieldHorizontalalignment** | [**EnumHorizontalalignment**](EnumHorizontalalignment.md) |  |  [optional] |
 | **objTextstylestatic** | [**TextstylestaticResponseCompound**](TextstylestaticResponseCompound.md) |  |  [optional] |
-| **aObjEzsignelementdependency** | [**kotlin.collections.List&lt;EzsignelementdependencyResponseCompound&gt;**](EzsignelementdependencyResponseCompound.md) |  |  [optional] |
+| **aObjEzsignelementdependency** | [**kotlin.collections.List&lt;EzsignelementdependencyResponseCompound&gt;**](EzsignelementdependencyResponse.md) |  |  [optional] |
 
 
 

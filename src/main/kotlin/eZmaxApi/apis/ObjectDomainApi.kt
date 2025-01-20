@@ -19,10 +19,10 @@ import java.io.IOException
 import okhttp3.Call
 import okhttp3.HttpUrl
 
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.DomainCreateObjectV1Request
 import eZmaxApi.models.DomainCreateObjectV1Response
-import eZmaxApi.models.DomainDeleteObjectV1Response
 import eZmaxApi.models.DomainGetListV1Response
 import eZmaxApi.models.DomainGetObjectV2Response
 import eZmaxApi.models.HeaderAcceptLanguage
@@ -127,7 +127,7 @@ class ObjectDomainApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
      * Delete an existing Domain
      * 
      * @param pkiDomainID The unique ID of the Domain
-     * @return DomainDeleteObjectV1Response
+     * @return CommonResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -136,11 +136,11 @@ class ObjectDomainApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun domainDeleteObjectV1(pkiDomainID: kotlin.Int) : DomainDeleteObjectV1Response {
+    fun domainDeleteObjectV1(pkiDomainID: kotlin.Int) : CommonResponse {
         val localVarResponse = domainDeleteObjectV1WithHttpInfo(pkiDomainID = pkiDomainID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as DomainDeleteObjectV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -158,16 +158,16 @@ class ObjectDomainApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
      * Delete an existing Domain
      * 
      * @param pkiDomainID The unique ID of the Domain
-     * @return ApiResponse<DomainDeleteObjectV1Response?>
+     * @return ApiResponse<CommonResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun domainDeleteObjectV1WithHttpInfo(pkiDomainID: kotlin.Int) : ApiResponse<DomainDeleteObjectV1Response?> {
+    fun domainDeleteObjectV1WithHttpInfo(pkiDomainID: kotlin.Int) : ApiResponse<CommonResponse?> {
         val localVariableConfig = domainDeleteObjectV1RequestConfig(pkiDomainID = pkiDomainID)
 
-        return request<Unit, DomainDeleteObjectV1Response>(
+        return request<Unit, CommonResponse>(
             localVariableConfig
         )
     }

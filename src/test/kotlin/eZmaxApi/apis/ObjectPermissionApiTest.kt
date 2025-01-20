@@ -19,12 +19,11 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectPermissionApi
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.PermissionCreateObjectV1Request
 import eZmaxApi.models.PermissionCreateObjectV1Response
-import eZmaxApi.models.PermissionDeleteObjectV1Response
 import eZmaxApi.models.PermissionEditObjectV1Request
-import eZmaxApi.models.PermissionEditObjectV1Response
 import eZmaxApi.models.PermissionGetObjectV2Response
 
 class ObjectPermissionApiTest : ShouldSpec() {
@@ -44,7 +43,7 @@ class ObjectPermissionApiTest : ShouldSpec() {
         should("test permissionDeleteObjectV1") {
             // uncomment below to test permissionDeleteObjectV1
             //val pkiPermissionID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Permission
-            //val result : PermissionDeleteObjectV1Response = apiInstance.permissionDeleteObjectV1(pkiPermissionID)
+            //val result : CommonResponse = apiInstance.permissionDeleteObjectV1(pkiPermissionID)
             //result shouldBe ("TODO")
         }
 
@@ -53,7 +52,7 @@ class ObjectPermissionApiTest : ShouldSpec() {
             // uncomment below to test permissionEditObjectV1
             //val pkiPermissionID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Permission
             //val permissionEditObjectV1Request : PermissionEditObjectV1Request =  // PermissionEditObjectV1Request | 
-            //val result : PermissionEditObjectV1Response = apiInstance.permissionEditObjectV1(pkiPermissionID, permissionEditObjectV1Request)
+            //val result : CommonResponse = apiInstance.permissionEditObjectV1(pkiPermissionID, permissionEditObjectV1Request)
             //result shouldBe ("TODO")
         }
 

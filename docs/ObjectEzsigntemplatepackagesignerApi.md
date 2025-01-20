@@ -110,7 +110,7 @@ Configure Authorization:
 
 <a id="ezsigntemplatepackagesignerEditObjectV1"></a>
 # **ezsigntemplatepackagesignerEditObjectV1**
-> EzsigntemplatepackagesignerEditObjectV1Response ezsigntemplatepackagesignerEditObjectV1(pkiEzsigntemplatepackagesignerID, ezsigntemplatepackagesignerEditObjectV1Request)
+> CommonResponse ezsigntemplatepackagesignerEditObjectV1(pkiEzsigntemplatepackagesignerID, ezsigntemplatepackagesignerEditObjectV1Request)
 
 Edit an existing Ezsigntemplatepackagesigner
 
@@ -126,7 +126,7 @@ val apiInstance = ObjectEzsigntemplatepackagesignerApi()
 val pkiEzsigntemplatepackagesignerID : kotlin.Int = 56 // kotlin.Int | 
 val ezsigntemplatepackagesignerEditObjectV1Request : EzsigntemplatepackagesignerEditObjectV1Request =  // EzsigntemplatepackagesignerEditObjectV1Request | 
 try {
-    val result : EzsigntemplatepackagesignerEditObjectV1Response = apiInstance.ezsigntemplatepackagesignerEditObjectV1(pkiEzsigntemplatepackagesignerID, ezsigntemplatepackagesignerEditObjectV1Request)
+    val result : CommonResponse = apiInstance.ezsigntemplatepackagesignerEditObjectV1(pkiEzsigntemplatepackagesignerID, ezsigntemplatepackagesignerEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplatepackagesignerApi#ezsigntemplatepackagesignerEditObjectV1")
@@ -145,7 +145,7 @@ try {
 
 ### Return type
 
-[**EzsigntemplatepackagesignerEditObjectV1Response**](EzsigntemplatepackagesignerEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

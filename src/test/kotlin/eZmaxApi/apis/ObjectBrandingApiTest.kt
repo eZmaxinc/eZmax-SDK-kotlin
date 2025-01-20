@@ -22,10 +22,10 @@ import eZmaxApi.apis.ObjectBrandingApi
 import eZmaxApi.models.BrandingCreateObjectV2Request
 import eZmaxApi.models.BrandingCreateObjectV2Response
 import eZmaxApi.models.BrandingEditObjectV2Request
-import eZmaxApi.models.BrandingEditObjectV2Response
 import eZmaxApi.models.BrandingGetAutocompleteV2Response
 import eZmaxApi.models.BrandingGetListV1Response
 import eZmaxApi.models.BrandingGetObjectV3Response
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.HeaderAcceptLanguage
 
@@ -47,7 +47,7 @@ class ObjectBrandingApiTest : ShouldSpec() {
             // uncomment below to test brandingEditObjectV2
             //val pkiBrandingID : kotlin.Int = 56 // kotlin.Int | 
             //val brandingEditObjectV2Request : BrandingEditObjectV2Request =  // BrandingEditObjectV2Request | 
-            //val result : BrandingEditObjectV2Response = apiInstance.brandingEditObjectV2(pkiBrandingID, brandingEditObjectV2Request)
+            //val result : CommonResponse = apiInstance.brandingEditObjectV2(pkiBrandingID, brandingEditObjectV2Request)
             //result shouldBe ("TODO")
         }
 

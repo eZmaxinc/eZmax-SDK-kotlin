@@ -19,6 +19,7 @@ import java.io.IOException
 import okhttp3.Call
 import okhttp3.HttpUrl
 
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.EzsignfoldersignerassociationCreateEmbeddedUrlV1Request
 import eZmaxApi.models.EzsignfoldersignerassociationCreateEmbeddedUrlV1Response
@@ -26,17 +27,12 @@ import eZmaxApi.models.EzsignfoldersignerassociationCreateObjectV1Request
 import eZmaxApi.models.EzsignfoldersignerassociationCreateObjectV1Response
 import eZmaxApi.models.EzsignfoldersignerassociationCreateObjectV2Request
 import eZmaxApi.models.EzsignfoldersignerassociationCreateObjectV2Response
-import eZmaxApi.models.EzsignfoldersignerassociationDeleteObjectV1Response
 import eZmaxApi.models.EzsignfoldersignerassociationEditObjectV1Request
-import eZmaxApi.models.EzsignfoldersignerassociationEditObjectV1Response
-import eZmaxApi.models.EzsignfoldersignerassociationForceDisconnectV1Response
 import eZmaxApi.models.EzsignfoldersignerassociationGetInPersonLoginUrlV1Response
 import eZmaxApi.models.EzsignfoldersignerassociationGetObjectV1Response
 import eZmaxApi.models.EzsignfoldersignerassociationGetObjectV2Response
 import eZmaxApi.models.EzsignfoldersignerassociationPatchObjectV1Request
-import eZmaxApi.models.EzsignfoldersignerassociationPatchObjectV1Response
 import eZmaxApi.models.EzsignfoldersignerassociationReassignV1Request
-import eZmaxApi.models.EzsignfoldersignerassociationReassignV1Response
 
 import com.squareup.moshi.Json
 
@@ -290,7 +286,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
      * Delete an existing Ezsignfoldersignerassociation
      * 
      * @param pkiEzsignfoldersignerassociationID 
-     * @return EzsignfoldersignerassociationDeleteObjectV1Response
+     * @return CommonResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -299,11 +295,11 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignfoldersignerassociationDeleteObjectV1(pkiEzsignfoldersignerassociationID: kotlin.Int) : EzsignfoldersignerassociationDeleteObjectV1Response {
+    fun ezsignfoldersignerassociationDeleteObjectV1(pkiEzsignfoldersignerassociationID: kotlin.Int) : CommonResponse {
         val localVarResponse = ezsignfoldersignerassociationDeleteObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfoldersignerassociationDeleteObjectV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -321,16 +317,16 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
      * Delete an existing Ezsignfoldersignerassociation
      * 
      * @param pkiEzsignfoldersignerassociationID 
-     * @return ApiResponse<EzsignfoldersignerassociationDeleteObjectV1Response?>
+     * @return ApiResponse<CommonResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignfoldersignerassociationDeleteObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID: kotlin.Int) : ApiResponse<EzsignfoldersignerassociationDeleteObjectV1Response?> {
+    fun ezsignfoldersignerassociationDeleteObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID: kotlin.Int) : ApiResponse<CommonResponse?> {
         val localVariableConfig = ezsignfoldersignerassociationDeleteObjectV1RequestConfig(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID)
 
-        return request<Unit, EzsignfoldersignerassociationDeleteObjectV1Response>(
+        return request<Unit, CommonResponse>(
             localVariableConfig
         )
     }
@@ -362,7 +358,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
      * 
      * @param pkiEzsignfoldersignerassociationID 
      * @param ezsignfoldersignerassociationEditObjectV1Request 
-     * @return EzsignfoldersignerassociationEditObjectV1Response
+     * @return CommonResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -371,11 +367,11 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignfoldersignerassociationEditObjectV1(pkiEzsignfoldersignerassociationID: kotlin.Int, ezsignfoldersignerassociationEditObjectV1Request: EzsignfoldersignerassociationEditObjectV1Request) : EzsignfoldersignerassociationEditObjectV1Response {
+    fun ezsignfoldersignerassociationEditObjectV1(pkiEzsignfoldersignerassociationID: kotlin.Int, ezsignfoldersignerassociationEditObjectV1Request: EzsignfoldersignerassociationEditObjectV1Request) : CommonResponse {
         val localVarResponse = ezsignfoldersignerassociationEditObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationEditObjectV1Request = ezsignfoldersignerassociationEditObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfoldersignerassociationEditObjectV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -394,16 +390,16 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
      * 
      * @param pkiEzsignfoldersignerassociationID 
      * @param ezsignfoldersignerassociationEditObjectV1Request 
-     * @return ApiResponse<EzsignfoldersignerassociationEditObjectV1Response?>
+     * @return ApiResponse<CommonResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignfoldersignerassociationEditObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID: kotlin.Int, ezsignfoldersignerassociationEditObjectV1Request: EzsignfoldersignerassociationEditObjectV1Request) : ApiResponse<EzsignfoldersignerassociationEditObjectV1Response?> {
+    fun ezsignfoldersignerassociationEditObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID: kotlin.Int, ezsignfoldersignerassociationEditObjectV1Request: EzsignfoldersignerassociationEditObjectV1Request) : ApiResponse<CommonResponse?> {
         val localVariableConfig = ezsignfoldersignerassociationEditObjectV1RequestConfig(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationEditObjectV1Request = ezsignfoldersignerassociationEditObjectV1Request)
 
-        return request<EzsignfoldersignerassociationEditObjectV1Request, EzsignfoldersignerassociationEditObjectV1Response>(
+        return request<EzsignfoldersignerassociationEditObjectV1Request, CommonResponse>(
             localVariableConfig
         )
     }
@@ -437,7 +433,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
      * 
      * @param pkiEzsignfoldersignerassociationID 
      * @param body 
-     * @return EzsignfoldersignerassociationForceDisconnectV1Response
+     * @return CommonResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -446,11 +442,11 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignfoldersignerassociationForceDisconnectV1(pkiEzsignfoldersignerassociationID: kotlin.Int, body: kotlin.Any) : EzsignfoldersignerassociationForceDisconnectV1Response {
+    fun ezsignfoldersignerassociationForceDisconnectV1(pkiEzsignfoldersignerassociationID: kotlin.Int, body: kotlin.Any) : CommonResponse {
         val localVarResponse = ezsignfoldersignerassociationForceDisconnectV1WithHttpInfo(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID, body = body)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfoldersignerassociationForceDisconnectV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -469,16 +465,16 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
      * 
      * @param pkiEzsignfoldersignerassociationID 
      * @param body 
-     * @return ApiResponse<EzsignfoldersignerassociationForceDisconnectV1Response?>
+     * @return ApiResponse<CommonResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignfoldersignerassociationForceDisconnectV1WithHttpInfo(pkiEzsignfoldersignerassociationID: kotlin.Int, body: kotlin.Any) : ApiResponse<EzsignfoldersignerassociationForceDisconnectV1Response?> {
+    fun ezsignfoldersignerassociationForceDisconnectV1WithHttpInfo(pkiEzsignfoldersignerassociationID: kotlin.Int, body: kotlin.Any) : ApiResponse<CommonResponse?> {
         val localVariableConfig = ezsignfoldersignerassociationForceDisconnectV1RequestConfig(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID, body = body)
 
-        return request<kotlin.Any, EzsignfoldersignerassociationForceDisconnectV1Response>(
+        return request<kotlin.Any, CommonResponse>(
             localVariableConfig
         )
     }
@@ -730,7 +726,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
      * 
      * @param pkiEzsignfoldersignerassociationID 
      * @param ezsignfoldersignerassociationPatchObjectV1Request 
-     * @return EzsignfoldersignerassociationPatchObjectV1Response
+     * @return CommonResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -739,11 +735,11 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignfoldersignerassociationPatchObjectV1(pkiEzsignfoldersignerassociationID: kotlin.Int, ezsignfoldersignerassociationPatchObjectV1Request: EzsignfoldersignerassociationPatchObjectV1Request) : EzsignfoldersignerassociationPatchObjectV1Response {
+    fun ezsignfoldersignerassociationPatchObjectV1(pkiEzsignfoldersignerassociationID: kotlin.Int, ezsignfoldersignerassociationPatchObjectV1Request: EzsignfoldersignerassociationPatchObjectV1Request) : CommonResponse {
         val localVarResponse = ezsignfoldersignerassociationPatchObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationPatchObjectV1Request = ezsignfoldersignerassociationPatchObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfoldersignerassociationPatchObjectV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -762,16 +758,16 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
      * 
      * @param pkiEzsignfoldersignerassociationID 
      * @param ezsignfoldersignerassociationPatchObjectV1Request 
-     * @return ApiResponse<EzsignfoldersignerassociationPatchObjectV1Response?>
+     * @return ApiResponse<CommonResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignfoldersignerassociationPatchObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID: kotlin.Int, ezsignfoldersignerassociationPatchObjectV1Request: EzsignfoldersignerassociationPatchObjectV1Request) : ApiResponse<EzsignfoldersignerassociationPatchObjectV1Response?> {
+    fun ezsignfoldersignerassociationPatchObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID: kotlin.Int, ezsignfoldersignerassociationPatchObjectV1Request: EzsignfoldersignerassociationPatchObjectV1Request) : ApiResponse<CommonResponse?> {
         val localVariableConfig = ezsignfoldersignerassociationPatchObjectV1RequestConfig(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationPatchObjectV1Request = ezsignfoldersignerassociationPatchObjectV1Request)
 
-        return request<EzsignfoldersignerassociationPatchObjectV1Request, EzsignfoldersignerassociationPatchObjectV1Response>(
+        return request<EzsignfoldersignerassociationPatchObjectV1Request, CommonResponse>(
             localVariableConfig
         )
     }
@@ -805,7 +801,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
      * Reassign remaining unsigned signatures and forms
      * @param pkiEzsignfoldersignerassociationID 
      * @param ezsignfoldersignerassociationReassignV1Request 
-     * @return EzsignfoldersignerassociationReassignV1Response
+     * @return CommonResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -814,11 +810,11 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignfoldersignerassociationReassignV1(pkiEzsignfoldersignerassociationID: kotlin.Int, ezsignfoldersignerassociationReassignV1Request: EzsignfoldersignerassociationReassignV1Request) : EzsignfoldersignerassociationReassignV1Response {
+    fun ezsignfoldersignerassociationReassignV1(pkiEzsignfoldersignerassociationID: kotlin.Int, ezsignfoldersignerassociationReassignV1Request: EzsignfoldersignerassociationReassignV1Request) : CommonResponse {
         val localVarResponse = ezsignfoldersignerassociationReassignV1WithHttpInfo(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationReassignV1Request = ezsignfoldersignerassociationReassignV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfoldersignerassociationReassignV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -837,16 +833,16 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
      * Reassign remaining unsigned signatures and forms
      * @param pkiEzsignfoldersignerassociationID 
      * @param ezsignfoldersignerassociationReassignV1Request 
-     * @return ApiResponse<EzsignfoldersignerassociationReassignV1Response?>
+     * @return ApiResponse<CommonResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignfoldersignerassociationReassignV1WithHttpInfo(pkiEzsignfoldersignerassociationID: kotlin.Int, ezsignfoldersignerassociationReassignV1Request: EzsignfoldersignerassociationReassignV1Request) : ApiResponse<EzsignfoldersignerassociationReassignV1Response?> {
+    fun ezsignfoldersignerassociationReassignV1WithHttpInfo(pkiEzsignfoldersignerassociationID: kotlin.Int, ezsignfoldersignerassociationReassignV1Request: EzsignfoldersignerassociationReassignV1Request) : ApiResponse<CommonResponse?> {
         val localVariableConfig = ezsignfoldersignerassociationReassignV1RequestConfig(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationReassignV1Request = ezsignfoldersignerassociationReassignV1Request)
 
-        return request<EzsignfoldersignerassociationReassignV1Request, EzsignfoldersignerassociationReassignV1Response>(
+        return request<EzsignfoldersignerassociationReassignV1Request, CommonResponse>(
             localVariableConfig
         )
     }

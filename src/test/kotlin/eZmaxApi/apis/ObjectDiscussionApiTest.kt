@@ -19,15 +19,13 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectDiscussionApi
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.DiscussionCreateObjectV1Request
 import eZmaxApi.models.DiscussionCreateObjectV1Response
-import eZmaxApi.models.DiscussionDeleteObjectV1Response
 import eZmaxApi.models.DiscussionGetObjectV2Response
 import eZmaxApi.models.DiscussionPatchObjectV1Request
-import eZmaxApi.models.DiscussionPatchObjectV1Response
 import eZmaxApi.models.DiscussionUpdateDiscussionreadstatusV1Request
-import eZmaxApi.models.DiscussionUpdateDiscussionreadstatusV1Response
 
 class ObjectDiscussionApiTest : ShouldSpec() {
     init {
@@ -46,7 +44,7 @@ class ObjectDiscussionApiTest : ShouldSpec() {
         should("test discussionDeleteObjectV1") {
             // uncomment below to test discussionDeleteObjectV1
             //val pkiDiscussionID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Discussion
-            //val result : DiscussionDeleteObjectV1Response = apiInstance.discussionDeleteObjectV1(pkiDiscussionID)
+            //val result : CommonResponse = apiInstance.discussionDeleteObjectV1(pkiDiscussionID)
             //result shouldBe ("TODO")
         }
 
@@ -63,7 +61,7 @@ class ObjectDiscussionApiTest : ShouldSpec() {
             // uncomment below to test discussionPatchObjectV1
             //val pkiDiscussionID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Discussion
             //val discussionPatchObjectV1Request : DiscussionPatchObjectV1Request =  // DiscussionPatchObjectV1Request | 
-            //val result : DiscussionPatchObjectV1Response = apiInstance.discussionPatchObjectV1(pkiDiscussionID, discussionPatchObjectV1Request)
+            //val result : CommonResponse = apiInstance.discussionPatchObjectV1(pkiDiscussionID, discussionPatchObjectV1Request)
             //result shouldBe ("TODO")
         }
 
@@ -72,7 +70,7 @@ class ObjectDiscussionApiTest : ShouldSpec() {
             // uncomment below to test discussionUpdateDiscussionreadstatusV1
             //val pkiDiscussionID : kotlin.Int = 56 // kotlin.Int | 
             //val discussionUpdateDiscussionreadstatusV1Request : DiscussionUpdateDiscussionreadstatusV1Request =  // DiscussionUpdateDiscussionreadstatusV1Request | 
-            //val result : DiscussionUpdateDiscussionreadstatusV1Response = apiInstance.discussionUpdateDiscussionreadstatusV1(pkiDiscussionID, discussionUpdateDiscussionreadstatusV1Request)
+            //val result : CommonResponse = apiInstance.discussionUpdateDiscussionreadstatusV1(pkiDiscussionID, discussionUpdateDiscussionreadstatusV1Request)
             //result shouldBe ("TODO")
         }
 

@@ -60,7 +60,7 @@ Configure Authorization:
 
 <a id="ezsigndiscussionDeleteObjectV1"></a>
 # **ezsigndiscussionDeleteObjectV1**
-> EzsigndiscussionDeleteObjectV1Response ezsigndiscussionDeleteObjectV1(pkiEzsigndiscussionID)
+> CommonResponse ezsigndiscussionDeleteObjectV1(pkiEzsigndiscussionID)
 
 Delete an existing Ezsigndiscussion
 
@@ -75,7 +75,7 @@ Delete an existing Ezsigndiscussion
 val apiInstance = ObjectEzsigndiscussionApi()
 val pkiEzsigndiscussionID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsigndiscussion
 try {
-    val result : EzsigndiscussionDeleteObjectV1Response = apiInstance.ezsigndiscussionDeleteObjectV1(pkiEzsigndiscussionID)
+    val result : CommonResponse = apiInstance.ezsigndiscussionDeleteObjectV1(pkiEzsigndiscussionID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigndiscussionApi#ezsigndiscussionDeleteObjectV1")
@@ -93,7 +93,7 @@ try {
 
 ### Return type
 
-[**EzsigndiscussionDeleteObjectV1Response**](EzsigndiscussionDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

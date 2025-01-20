@@ -60,7 +60,7 @@ Configure Authorization:
 
 <a id="discussionmessageDeleteObjectV1"></a>
 # **discussionmessageDeleteObjectV1**
-> DiscussionmessageDeleteObjectV1Response discussionmessageDeleteObjectV1(pkiDiscussionmessageID)
+> CommonResponse discussionmessageDeleteObjectV1(pkiDiscussionmessageID)
 
 Delete an existing Discussionmessage
 
@@ -75,7 +75,7 @@ Delete an existing Discussionmessage
 val apiInstance = ObjectDiscussionmessageApi()
 val pkiDiscussionmessageID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Discussionmessage
 try {
-    val result : DiscussionmessageDeleteObjectV1Response = apiInstance.discussionmessageDeleteObjectV1(pkiDiscussionmessageID)
+    val result : CommonResponse = apiInstance.discussionmessageDeleteObjectV1(pkiDiscussionmessageID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectDiscussionmessageApi#discussionmessageDeleteObjectV1")
@@ -93,7 +93,7 @@ try {
 
 ### Return type
 
-[**DiscussionmessageDeleteObjectV1Response**](DiscussionmessageDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -109,7 +109,7 @@ Configure Authorization:
 
 <a id="discussionmessagePatchObjectV1"></a>
 # **discussionmessagePatchObjectV1**
-> DiscussionmessagePatchObjectV1Response discussionmessagePatchObjectV1(pkiDiscussionmessageID, discussionmessagePatchObjectV1Request)
+> CommonResponse discussionmessagePatchObjectV1(pkiDiscussionmessageID, discussionmessagePatchObjectV1Request)
 
 Patch an existing Discussionmessage
 
@@ -125,7 +125,7 @@ val apiInstance = ObjectDiscussionmessageApi()
 val pkiDiscussionmessageID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Discussionmessage
 val discussionmessagePatchObjectV1Request : DiscussionmessagePatchObjectV1Request =  // DiscussionmessagePatchObjectV1Request | 
 try {
-    val result : DiscussionmessagePatchObjectV1Response = apiInstance.discussionmessagePatchObjectV1(pkiDiscussionmessageID, discussionmessagePatchObjectV1Request)
+    val result : CommonResponse = apiInstance.discussionmessagePatchObjectV1(pkiDiscussionmessageID, discussionmessagePatchObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectDiscussionmessageApi#discussionmessagePatchObjectV1")
@@ -144,7 +144,7 @@ try {
 
 ### Return type
 
-[**DiscussionmessagePatchObjectV1Response**](DiscussionmessagePatchObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

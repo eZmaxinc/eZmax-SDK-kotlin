@@ -19,21 +19,19 @@ import java.io.IOException
 import okhttp3.Call
 import okhttp3.HttpUrl
 
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.EzsignbulksendCreateEzsignbulksendtransmissionV2Request
 import eZmaxApi.models.EzsignbulksendCreateEzsignbulksendtransmissionV2Response
 import eZmaxApi.models.EzsignbulksendCreateObjectV1Request
 import eZmaxApi.models.EzsignbulksendCreateObjectV1Response
-import eZmaxApi.models.EzsignbulksendDeleteObjectV1Response
 import eZmaxApi.models.EzsignbulksendEditObjectV1Request
-import eZmaxApi.models.EzsignbulksendEditObjectV1Response
 import eZmaxApi.models.EzsignbulksendGetEzsignbulksendtransmissionsV1Response
 import eZmaxApi.models.EzsignbulksendGetEzsignsignaturesAutomaticV1Response
 import eZmaxApi.models.EzsignbulksendGetFormsDataV1Response
 import eZmaxApi.models.EzsignbulksendGetListV1Response
 import eZmaxApi.models.EzsignbulksendGetObjectV2Response
 import eZmaxApi.models.EzsignbulksendReorderV1Request
-import eZmaxApi.models.EzsignbulksendReorderV1Response
 import eZmaxApi.models.HeaderAcceptLanguage
 
 import com.squareup.moshi.Json
@@ -211,7 +209,7 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
      * Delete an existing Ezsignbulksend
      * 
      * @param pkiEzsignbulksendID 
-     * @return EzsignbulksendDeleteObjectV1Response
+     * @return CommonResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -220,11 +218,11 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignbulksendDeleteObjectV1(pkiEzsignbulksendID: kotlin.Int) : EzsignbulksendDeleteObjectV1Response {
+    fun ezsignbulksendDeleteObjectV1(pkiEzsignbulksendID: kotlin.Int) : CommonResponse {
         val localVarResponse = ezsignbulksendDeleteObjectV1WithHttpInfo(pkiEzsignbulksendID = pkiEzsignbulksendID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignbulksendDeleteObjectV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -242,16 +240,16 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
      * Delete an existing Ezsignbulksend
      * 
      * @param pkiEzsignbulksendID 
-     * @return ApiResponse<EzsignbulksendDeleteObjectV1Response?>
+     * @return ApiResponse<CommonResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignbulksendDeleteObjectV1WithHttpInfo(pkiEzsignbulksendID: kotlin.Int) : ApiResponse<EzsignbulksendDeleteObjectV1Response?> {
+    fun ezsignbulksendDeleteObjectV1WithHttpInfo(pkiEzsignbulksendID: kotlin.Int) : ApiResponse<CommonResponse?> {
         val localVariableConfig = ezsignbulksendDeleteObjectV1RequestConfig(pkiEzsignbulksendID = pkiEzsignbulksendID)
 
-        return request<Unit, EzsignbulksendDeleteObjectV1Response>(
+        return request<Unit, CommonResponse>(
             localVariableConfig
         )
     }
@@ -283,7 +281,7 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
      * 
      * @param pkiEzsignbulksendID 
      * @param ezsignbulksendEditObjectV1Request 
-     * @return EzsignbulksendEditObjectV1Response
+     * @return CommonResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -292,11 +290,11 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignbulksendEditObjectV1(pkiEzsignbulksendID: kotlin.Int, ezsignbulksendEditObjectV1Request: EzsignbulksendEditObjectV1Request) : EzsignbulksendEditObjectV1Response {
+    fun ezsignbulksendEditObjectV1(pkiEzsignbulksendID: kotlin.Int, ezsignbulksendEditObjectV1Request: EzsignbulksendEditObjectV1Request) : CommonResponse {
         val localVarResponse = ezsignbulksendEditObjectV1WithHttpInfo(pkiEzsignbulksendID = pkiEzsignbulksendID, ezsignbulksendEditObjectV1Request = ezsignbulksendEditObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignbulksendEditObjectV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -315,16 +313,16 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
      * 
      * @param pkiEzsignbulksendID 
      * @param ezsignbulksendEditObjectV1Request 
-     * @return ApiResponse<EzsignbulksendEditObjectV1Response?>
+     * @return ApiResponse<CommonResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignbulksendEditObjectV1WithHttpInfo(pkiEzsignbulksendID: kotlin.Int, ezsignbulksendEditObjectV1Request: EzsignbulksendEditObjectV1Request) : ApiResponse<EzsignbulksendEditObjectV1Response?> {
+    fun ezsignbulksendEditObjectV1WithHttpInfo(pkiEzsignbulksendID: kotlin.Int, ezsignbulksendEditObjectV1Request: EzsignbulksendEditObjectV1Request) : ApiResponse<CommonResponse?> {
         val localVariableConfig = ezsignbulksendEditObjectV1RequestConfig(pkiEzsignbulksendID = pkiEzsignbulksendID, ezsignbulksendEditObjectV1Request = ezsignbulksendEditObjectV1Request)
 
-        return request<EzsignbulksendEditObjectV1Request, EzsignbulksendEditObjectV1Response>(
+        return request<EzsignbulksendEditObjectV1Request, CommonResponse>(
             localVariableConfig
         )
     }
@@ -873,7 +871,7 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
      * 
      * @param pkiEzsignbulksendID 
      * @param ezsignbulksendReorderV1Request 
-     * @return EzsignbulksendReorderV1Response
+     * @return CommonResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -882,11 +880,11 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignbulksendReorderV1(pkiEzsignbulksendID: kotlin.Int, ezsignbulksendReorderV1Request: EzsignbulksendReorderV1Request) : EzsignbulksendReorderV1Response {
+    fun ezsignbulksendReorderV1(pkiEzsignbulksendID: kotlin.Int, ezsignbulksendReorderV1Request: EzsignbulksendReorderV1Request) : CommonResponse {
         val localVarResponse = ezsignbulksendReorderV1WithHttpInfo(pkiEzsignbulksendID = pkiEzsignbulksendID, ezsignbulksendReorderV1Request = ezsignbulksendReorderV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignbulksendReorderV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -905,16 +903,16 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
      * 
      * @param pkiEzsignbulksendID 
      * @param ezsignbulksendReorderV1Request 
-     * @return ApiResponse<EzsignbulksendReorderV1Response?>
+     * @return ApiResponse<CommonResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignbulksendReorderV1WithHttpInfo(pkiEzsignbulksendID: kotlin.Int, ezsignbulksendReorderV1Request: EzsignbulksendReorderV1Request) : ApiResponse<EzsignbulksendReorderV1Response?> {
+    fun ezsignbulksendReorderV1WithHttpInfo(pkiEzsignbulksendID: kotlin.Int, ezsignbulksendReorderV1Request: EzsignbulksendReorderV1Request) : ApiResponse<CommonResponse?> {
         val localVariableConfig = ezsignbulksendReorderV1RequestConfig(pkiEzsignbulksendID = pkiEzsignbulksendID, ezsignbulksendReorderV1Request = ezsignbulksendReorderV1Request)
 
-        return request<EzsignbulksendReorderV1Request, EzsignbulksendReorderV1Response>(
+        return request<EzsignbulksendReorderV1Request, CommonResponse>(
             localVariableConfig
         )
     }

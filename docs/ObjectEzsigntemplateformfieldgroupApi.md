@@ -61,7 +61,7 @@ Configure Authorization:
 
 <a id="ezsigntemplateformfieldgroupDeleteObjectV1"></a>
 # **ezsigntemplateformfieldgroupDeleteObjectV1**
-> EzsigntemplateformfieldgroupDeleteObjectV1Response ezsigntemplateformfieldgroupDeleteObjectV1(pkiEzsigntemplateformfieldgroupID)
+> CommonResponse ezsigntemplateformfieldgroupDeleteObjectV1(pkiEzsigntemplateformfieldgroupID)
 
 Delete an existing Ezsigntemplateformfieldgroup
 
@@ -76,7 +76,7 @@ Delete an existing Ezsigntemplateformfieldgroup
 val apiInstance = ObjectEzsigntemplateformfieldgroupApi()
 val pkiEzsigntemplateformfieldgroupID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : EzsigntemplateformfieldgroupDeleteObjectV1Response = apiInstance.ezsigntemplateformfieldgroupDeleteObjectV1(pkiEzsigntemplateformfieldgroupID)
+    val result : CommonResponse = apiInstance.ezsigntemplateformfieldgroupDeleteObjectV1(pkiEzsigntemplateformfieldgroupID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplateformfieldgroupApi#ezsigntemplateformfieldgroupDeleteObjectV1")
@@ -94,7 +94,7 @@ try {
 
 ### Return type
 
-[**EzsigntemplateformfieldgroupDeleteObjectV1Response**](EzsigntemplateformfieldgroupDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -110,7 +110,7 @@ Configure Authorization:
 
 <a id="ezsigntemplateformfieldgroupEditObjectV1"></a>
 # **ezsigntemplateformfieldgroupEditObjectV1**
-> EzsigntemplateformfieldgroupEditObjectV1Response ezsigntemplateformfieldgroupEditObjectV1(pkiEzsigntemplateformfieldgroupID, ezsigntemplateformfieldgroupEditObjectV1Request)
+> CommonResponse ezsigntemplateformfieldgroupEditObjectV1(pkiEzsigntemplateformfieldgroupID, ezsigntemplateformfieldgroupEditObjectV1Request)
 
 Edit an existing Ezsigntemplateformfieldgroup
 
@@ -126,7 +126,7 @@ val apiInstance = ObjectEzsigntemplateformfieldgroupApi()
 val pkiEzsigntemplateformfieldgroupID : kotlin.Int = 56 // kotlin.Int | 
 val ezsigntemplateformfieldgroupEditObjectV1Request : EzsigntemplateformfieldgroupEditObjectV1Request =  // EzsigntemplateformfieldgroupEditObjectV1Request | 
 try {
-    val result : EzsigntemplateformfieldgroupEditObjectV1Response = apiInstance.ezsigntemplateformfieldgroupEditObjectV1(pkiEzsigntemplateformfieldgroupID, ezsigntemplateformfieldgroupEditObjectV1Request)
+    val result : CommonResponse = apiInstance.ezsigntemplateformfieldgroupEditObjectV1(pkiEzsigntemplateformfieldgroupID, ezsigntemplateformfieldgroupEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplateformfieldgroupApi#ezsigntemplateformfieldgroupEditObjectV1")
@@ -145,7 +145,7 @@ try {
 
 ### Return type
 
-[**EzsigntemplateformfieldgroupEditObjectV1Response**](EzsigntemplateformfieldgroupEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

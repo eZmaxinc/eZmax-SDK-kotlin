@@ -5,7 +5,7 @@
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
 | **objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
-| **mPayload** | [**EzsignfolderGetObjectV1ResponseMPayload**](EzsignfolderGetObjectV1ResponseMPayload.md) |  |  |
+| **mPayload** | [**EzsignfolderResponseCompound**](EzsignfolderResponseCompound.md) | Payload for GET /1/object/ezsignfolder/{pkiEzsignfolderID} |  |
 | **objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
 
 

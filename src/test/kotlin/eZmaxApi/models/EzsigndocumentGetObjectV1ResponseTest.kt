@@ -21,7 +21,7 @@ import io.kotlintest.specs.ShouldSpec
 import eZmaxApi.models.EzsigndocumentGetObjectV1Response
 import eZmaxApi.models.CommonResponseObjDebug
 import eZmaxApi.models.CommonResponseObjDebugPayload
-import eZmaxApi.models.EzsigndocumentGetObjectV1ResponseMPayload
+import eZmaxApi.models.EzsigndocumentResponseCompound
 
 class EzsigndocumentGetObjectV1ResponseTest : ShouldSpec() {
     init {
@@ -34,7 +34,7 @@ class EzsigndocumentGetObjectV1ResponseTest : ShouldSpec() {
             //modelInstance.objDebugPayload shouldBe ("TODO")
         }
 
-        // to test the property `mPayload`
+        // to test the property `mPayload` - Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}
         should("test mPayload") {
             // uncomment below to test the property
             //modelInstance.mPayload shouldBe ("TODO")

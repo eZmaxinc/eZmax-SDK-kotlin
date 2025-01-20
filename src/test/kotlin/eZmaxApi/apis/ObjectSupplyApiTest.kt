@@ -19,13 +19,12 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectSupplyApi
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.HeaderAcceptLanguage
 import eZmaxApi.models.SupplyCreateObjectV1Request
 import eZmaxApi.models.SupplyCreateObjectV1Response
-import eZmaxApi.models.SupplyDeleteObjectV1Response
 import eZmaxApi.models.SupplyEditObjectV1Request
-import eZmaxApi.models.SupplyEditObjectV1Response
 import eZmaxApi.models.SupplyGetAutocompleteV2Response
 import eZmaxApi.models.SupplyGetListV1Response
 import eZmaxApi.models.SupplyGetObjectV2Response
@@ -47,7 +46,7 @@ class ObjectSupplyApiTest : ShouldSpec() {
         should("test supplyDeleteObjectV1") {
             // uncomment below to test supplyDeleteObjectV1
             //val pkiSupplyID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Supply
-            //val result : SupplyDeleteObjectV1Response = apiInstance.supplyDeleteObjectV1(pkiSupplyID)
+            //val result : CommonResponse = apiInstance.supplyDeleteObjectV1(pkiSupplyID)
             //result shouldBe ("TODO")
         }
 
@@ -56,7 +55,7 @@ class ObjectSupplyApiTest : ShouldSpec() {
             // uncomment below to test supplyEditObjectV1
             //val pkiSupplyID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Supply
             //val supplyEditObjectV1Request : SupplyEditObjectV1Request =  // SupplyEditObjectV1Request | 
-            //val result : SupplyEditObjectV1Response = apiInstance.supplyEditObjectV1(pkiSupplyID, supplyEditObjectV1Request)
+            //val result : CommonResponse = apiInstance.supplyEditObjectV1(pkiSupplyID, supplyEditObjectV1Request)
             //result shouldBe ("TODO")
         }
 

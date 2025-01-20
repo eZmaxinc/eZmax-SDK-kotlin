@@ -19,13 +19,12 @@ import java.io.IOException
 import okhttp3.Call
 import okhttp3.HttpUrl
 
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.HeaderAcceptLanguage
 import eZmaxApi.models.SupplyCreateObjectV1Request
 import eZmaxApi.models.SupplyCreateObjectV1Response
-import eZmaxApi.models.SupplyDeleteObjectV1Response
 import eZmaxApi.models.SupplyEditObjectV1Request
-import eZmaxApi.models.SupplyEditObjectV1Response
 import eZmaxApi.models.SupplyGetAutocompleteV2Response
 import eZmaxApi.models.SupplyGetListV1Response
 import eZmaxApi.models.SupplyGetObjectV2Response
@@ -130,7 +129,7 @@ class ObjectSupplyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
      * Delete an existing Supply
      * 
      * @param pkiSupplyID The unique ID of the Supply
-     * @return SupplyDeleteObjectV1Response
+     * @return CommonResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -139,11 +138,11 @@ class ObjectSupplyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun supplyDeleteObjectV1(pkiSupplyID: kotlin.Int) : SupplyDeleteObjectV1Response {
+    fun supplyDeleteObjectV1(pkiSupplyID: kotlin.Int) : CommonResponse {
         val localVarResponse = supplyDeleteObjectV1WithHttpInfo(pkiSupplyID = pkiSupplyID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as SupplyDeleteObjectV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -161,16 +160,16 @@ class ObjectSupplyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
      * Delete an existing Supply
      * 
      * @param pkiSupplyID The unique ID of the Supply
-     * @return ApiResponse<SupplyDeleteObjectV1Response?>
+     * @return ApiResponse<CommonResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun supplyDeleteObjectV1WithHttpInfo(pkiSupplyID: kotlin.Int) : ApiResponse<SupplyDeleteObjectV1Response?> {
+    fun supplyDeleteObjectV1WithHttpInfo(pkiSupplyID: kotlin.Int) : ApiResponse<CommonResponse?> {
         val localVariableConfig = supplyDeleteObjectV1RequestConfig(pkiSupplyID = pkiSupplyID)
 
-        return request<Unit, SupplyDeleteObjectV1Response>(
+        return request<Unit, CommonResponse>(
             localVariableConfig
         )
     }
@@ -202,7 +201,7 @@ class ObjectSupplyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
      * 
      * @param pkiSupplyID The unique ID of the Supply
      * @param supplyEditObjectV1Request 
-     * @return SupplyEditObjectV1Response
+     * @return CommonResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -211,11 +210,11 @@ class ObjectSupplyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun supplyEditObjectV1(pkiSupplyID: kotlin.Int, supplyEditObjectV1Request: SupplyEditObjectV1Request) : SupplyEditObjectV1Response {
+    fun supplyEditObjectV1(pkiSupplyID: kotlin.Int, supplyEditObjectV1Request: SupplyEditObjectV1Request) : CommonResponse {
         val localVarResponse = supplyEditObjectV1WithHttpInfo(pkiSupplyID = pkiSupplyID, supplyEditObjectV1Request = supplyEditObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as SupplyEditObjectV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -234,16 +233,16 @@ class ObjectSupplyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
      * 
      * @param pkiSupplyID The unique ID of the Supply
      * @param supplyEditObjectV1Request 
-     * @return ApiResponse<SupplyEditObjectV1Response?>
+     * @return ApiResponse<CommonResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun supplyEditObjectV1WithHttpInfo(pkiSupplyID: kotlin.Int, supplyEditObjectV1Request: SupplyEditObjectV1Request) : ApiResponse<SupplyEditObjectV1Response?> {
+    fun supplyEditObjectV1WithHttpInfo(pkiSupplyID: kotlin.Int, supplyEditObjectV1Request: SupplyEditObjectV1Request) : ApiResponse<CommonResponse?> {
         val localVariableConfig = supplyEditObjectV1RequestConfig(pkiSupplyID = pkiSupplyID, supplyEditObjectV1Request = supplyEditObjectV1Request)
 
-        return request<SupplyEditObjectV1Request, SupplyEditObjectV1Response>(
+        return request<SupplyEditObjectV1Request, CommonResponse>(
             localVariableConfig
         )
     }

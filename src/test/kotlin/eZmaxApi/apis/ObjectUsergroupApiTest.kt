@@ -19,12 +19,12 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectUsergroupApi
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.HeaderAcceptLanguage
 import eZmaxApi.models.UsergroupCreateObjectV1Request
 import eZmaxApi.models.UsergroupCreateObjectV1Response
 import eZmaxApi.models.UsergroupEditObjectV1Request
-import eZmaxApi.models.UsergroupEditObjectV1Response
 import eZmaxApi.models.UsergroupEditPermissionsV1Request
 import eZmaxApi.models.UsergroupEditPermissionsV1Response
 import eZmaxApi.models.UsergroupEditUsergroupdelegationsV1Request
@@ -56,7 +56,7 @@ class ObjectUsergroupApiTest : ShouldSpec() {
             // uncomment below to test usergroupEditObjectV1
             //val pkiUsergroupID : kotlin.Int = 56 // kotlin.Int | 
             //val usergroupEditObjectV1Request : UsergroupEditObjectV1Request =  // UsergroupEditObjectV1Request | 
-            //val result : UsergroupEditObjectV1Response = apiInstance.usergroupEditObjectV1(pkiUsergroupID, usergroupEditObjectV1Request)
+            //val result : CommonResponse = apiInstance.usergroupEditObjectV1(pkiUsergroupID, usergroupEditObjectV1Request)
             //result shouldBe ("TODO")
         }
 

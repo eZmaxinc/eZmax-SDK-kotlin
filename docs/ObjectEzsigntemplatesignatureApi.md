@@ -61,7 +61,7 @@ Configure Authorization:
 
 <a id="ezsigntemplatesignatureDeleteObjectV1"></a>
 # **ezsigntemplatesignatureDeleteObjectV1**
-> EzsigntemplatesignatureDeleteObjectV1Response ezsigntemplatesignatureDeleteObjectV1(pkiEzsigntemplatesignatureID)
+> CommonResponse ezsigntemplatesignatureDeleteObjectV1(pkiEzsigntemplatesignatureID)
 
 Delete an existing Ezsigntemplatesignature
 
@@ -76,7 +76,7 @@ Delete an existing Ezsigntemplatesignature
 val apiInstance = ObjectEzsigntemplatesignatureApi()
 val pkiEzsigntemplatesignatureID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : EzsigntemplatesignatureDeleteObjectV1Response = apiInstance.ezsigntemplatesignatureDeleteObjectV1(pkiEzsigntemplatesignatureID)
+    val result : CommonResponse = apiInstance.ezsigntemplatesignatureDeleteObjectV1(pkiEzsigntemplatesignatureID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplatesignatureApi#ezsigntemplatesignatureDeleteObjectV1")
@@ -94,7 +94,7 @@ try {
 
 ### Return type
 
-[**EzsigntemplatesignatureDeleteObjectV1Response**](EzsigntemplatesignatureDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -110,7 +110,7 @@ Configure Authorization:
 
 <a id="ezsigntemplatesignatureEditObjectV2"></a>
 # **ezsigntemplatesignatureEditObjectV2**
-> EzsigntemplatesignatureEditObjectV2Response ezsigntemplatesignatureEditObjectV2(pkiEzsigntemplatesignatureID, ezsigntemplatesignatureEditObjectV2Request)
+> CommonResponse ezsigntemplatesignatureEditObjectV2(pkiEzsigntemplatesignatureID, ezsigntemplatesignatureEditObjectV2Request)
 
 Edit an existing Ezsigntemplatesignature
 
@@ -126,7 +126,7 @@ val apiInstance = ObjectEzsigntemplatesignatureApi()
 val pkiEzsigntemplatesignatureID : kotlin.Int = 56 // kotlin.Int | 
 val ezsigntemplatesignatureEditObjectV2Request : EzsigntemplatesignatureEditObjectV2Request =  // EzsigntemplatesignatureEditObjectV2Request | 
 try {
-    val result : EzsigntemplatesignatureEditObjectV2Response = apiInstance.ezsigntemplatesignatureEditObjectV2(pkiEzsigntemplatesignatureID, ezsigntemplatesignatureEditObjectV2Request)
+    val result : CommonResponse = apiInstance.ezsigntemplatesignatureEditObjectV2(pkiEzsigntemplatesignatureID, ezsigntemplatesignatureEditObjectV2Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplatesignatureApi#ezsigntemplatesignatureEditObjectV2")
@@ -145,7 +145,7 @@ try {
 
 ### Return type
 
-[**EzsigntemplatesignatureEditObjectV2Response**](EzsigntemplatesignatureEditObjectV2Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

@@ -60,7 +60,7 @@ Configure Authorization:
 
 <a id="ezsignsignergroupmembershipDeleteObjectV1"></a>
 # **ezsignsignergroupmembershipDeleteObjectV1**
-> EzsignsignergroupmembershipDeleteObjectV1Response ezsignsignergroupmembershipDeleteObjectV1(pkiEzsignsignergroupmembershipID)
+> CommonResponse ezsignsignergroupmembershipDeleteObjectV1(pkiEzsignsignergroupmembershipID)
 
 Delete an existing Ezsignsignergroupmembership
 
@@ -75,7 +75,7 @@ Delete an existing Ezsignsignergroupmembership
 val apiInstance = ObjectEzsignsignergroupmembershipApi()
 val pkiEzsignsignergroupmembershipID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsignsignergroupmembership
 try {
-    val result : EzsignsignergroupmembershipDeleteObjectV1Response = apiInstance.ezsignsignergroupmembershipDeleteObjectV1(pkiEzsignsignergroupmembershipID)
+    val result : CommonResponse = apiInstance.ezsignsignergroupmembershipDeleteObjectV1(pkiEzsignsignergroupmembershipID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignsignergroupmembershipApi#ezsignsignergroupmembershipDeleteObjectV1")
@@ -93,7 +93,7 @@ try {
 
 ### Return type
 
-[**EzsignsignergroupmembershipDeleteObjectV1Response**](EzsignsignergroupmembershipDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

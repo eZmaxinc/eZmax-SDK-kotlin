@@ -19,7 +19,7 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.ApikeyCreateObjectV2Request
-import eZmaxApi.models.ApikeyRequestCompound
+import eZmaxApi.models.ApikeyRequest
 
 class ApikeyCreateObjectV2RequestTest : ShouldSpec() {
     init {

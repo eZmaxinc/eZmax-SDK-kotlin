@@ -60,7 +60,7 @@ Configure Authorization:
 
 <a id="ezsignbulksenddocumentmappingDeleteObjectV1"></a>
 # **ezsignbulksenddocumentmappingDeleteObjectV1**
-> EzsignbulksenddocumentmappingDeleteObjectV1Response ezsignbulksenddocumentmappingDeleteObjectV1(pkiEzsignbulksenddocumentmappingID)
+> CommonResponse ezsignbulksenddocumentmappingDeleteObjectV1(pkiEzsignbulksenddocumentmappingID)
 
 Delete an existing Ezsignbulksenddocumentmapping
 
@@ -75,7 +75,7 @@ Delete an existing Ezsignbulksenddocumentmapping
 val apiInstance = ObjectEzsignbulksenddocumentmappingApi()
 val pkiEzsignbulksenddocumentmappingID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : EzsignbulksenddocumentmappingDeleteObjectV1Response = apiInstance.ezsignbulksenddocumentmappingDeleteObjectV1(pkiEzsignbulksenddocumentmappingID)
+    val result : CommonResponse = apiInstance.ezsignbulksenddocumentmappingDeleteObjectV1(pkiEzsignbulksenddocumentmappingID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignbulksenddocumentmappingApi#ezsignbulksenddocumentmappingDeleteObjectV1")
@@ -93,7 +93,7 @@ try {
 
 ### Return type
 
-[**EzsignbulksenddocumentmappingDeleteObjectV1Response**](EzsignbulksenddocumentmappingDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

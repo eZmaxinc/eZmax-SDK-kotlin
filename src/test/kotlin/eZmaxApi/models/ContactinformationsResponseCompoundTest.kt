@@ -19,11 +19,11 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.ContactinformationsResponseCompound
-import eZmaxApi.models.AddressResponseCompound
-import eZmaxApi.models.EmailResponseCompound
+import eZmaxApi.models.AddressResponse
+import eZmaxApi.models.EmailResponse
 import eZmaxApi.models.FieldEContactinformationsType
 import eZmaxApi.models.PhoneResponseCompound
-import eZmaxApi.models.WebsiteResponseCompound
+import eZmaxApi.models.WebsiteResponse
 
 class ContactinformationsResponseCompoundTest : ShouldSpec() {
     init {
@@ -96,7 +96,7 @@ class ContactinformationsResponseCompoundTest : ShouldSpec() {
             //modelInstance.sContactinformationsUrl shouldBe ("TODO")
         }
 
-        // to test the property `objAddressDefault`
+        // to test the property `objAddressDefault` - An Address Object and children to create a complete structure
         should("test objAddressDefault") {
             // uncomment below to test the property
             //modelInstance.objAddressDefault shouldBe ("TODO")
@@ -108,13 +108,13 @@ class ContactinformationsResponseCompoundTest : ShouldSpec() {
             //modelInstance.objPhoneDefault shouldBe ("TODO")
         }
 
-        // to test the property `objEmailDefault`
+        // to test the property `objEmailDefault` - An Email Object and children to create a complete structure
         should("test objEmailDefault") {
             // uncomment below to test the property
             //modelInstance.objEmailDefault shouldBe ("TODO")
         }
 
-        // to test the property `objWebsiteDefault`
+        // to test the property `objWebsiteDefault` - A Website Object and children to create a complete structure
         should("test objWebsiteDefault") {
             // uncomment below to test the property
             //modelInstance.objWebsiteDefault shouldBe ("TODO")

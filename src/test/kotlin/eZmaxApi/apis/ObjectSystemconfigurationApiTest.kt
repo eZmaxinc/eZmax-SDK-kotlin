@@ -19,9 +19,9 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectSystemconfigurationApi
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.SystemconfigurationEditObjectV1Request
-import eZmaxApi.models.SystemconfigurationEditObjectV1Response
 import eZmaxApi.models.SystemconfigurationGetObjectV2Response
 
 class ObjectSystemconfigurationApiTest : ShouldSpec() {
@@ -34,7 +34,7 @@ class ObjectSystemconfigurationApiTest : ShouldSpec() {
             // uncomment below to test systemconfigurationEditObjectV1
             //val pkiSystemconfigurationID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Systemconfiguration
             //val systemconfigurationEditObjectV1Request : SystemconfigurationEditObjectV1Request =  // SystemconfigurationEditObjectV1Request | 
-            //val result : SystemconfigurationEditObjectV1Response = apiInstance.systemconfigurationEditObjectV1(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request)
+            //val result : CommonResponse = apiInstance.systemconfigurationEditObjectV1(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request)
             //result shouldBe ("TODO")
         }
 

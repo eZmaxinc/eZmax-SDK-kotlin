@@ -16,8 +16,6 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.CommonAudit
-import eZmaxApi.models.CustomEzmaxinvoicingEzsigndocumentResponse
-import eZmaxApi.models.CustomEzmaxinvoicingEzsignfolderResponse
 import eZmaxApi.models.CustomEzmaxpricingResponse
 import eZmaxApi.models.EzmaxinvoicingagentResponseCompound
 import eZmaxApi.models.EzmaxinvoicingcontractResponseCompound
@@ -125,10 +123,10 @@ data class EzmaxinvoicingGetProvisionalV1ResponseMPayload (
     val aObjEzmaxinvoicinguser: kotlin.collections.List<EzmaxinvoicinguserResponseCompound>,
 
     @Json(name = "a_objEzmaxinvoicingezsignfolder")
-    val aObjEzmaxinvoicingezsignfolder: kotlin.collections.List<CustomEzmaxinvoicingEzsignfolderResponse>,
+    val aObjEzmaxinvoicingezsignfolder: kotlin.collections.List<kotlin.Any>,
 
     @Json(name = "a_objEzmaxinvoicingezsigndocument")
-    val aObjEzmaxinvoicingezsigndocument: kotlin.collections.List<CustomEzmaxinvoicingEzsigndocumentResponse>,
+    val aObjEzmaxinvoicingezsigndocument: kotlin.collections.List<kotlin.Any>,
 
     /* The unique ID of the Ezmaxinvoicing */
     @Json(name = "pkiEzmaxinvoicingID")

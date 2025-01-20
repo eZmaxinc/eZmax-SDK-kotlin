@@ -22,10 +22,10 @@ import eZmaxApi.apis.ObjectBillingentityinternalApi
 import eZmaxApi.models.BillingentityinternalCreateObjectV1Request
 import eZmaxApi.models.BillingentityinternalCreateObjectV1Response
 import eZmaxApi.models.BillingentityinternalEditObjectV1Request
-import eZmaxApi.models.BillingentityinternalEditObjectV1Response
 import eZmaxApi.models.BillingentityinternalGetAutocompleteV2Response
 import eZmaxApi.models.BillingentityinternalGetListV1Response
 import eZmaxApi.models.BillingentityinternalGetObjectV2Response
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.HeaderAcceptLanguage
 
@@ -47,7 +47,7 @@ class ObjectBillingentityinternalApiTest : ShouldSpec() {
             // uncomment below to test billingentityinternalEditObjectV1
             //val pkiBillingentityinternalID : kotlin.Int = 56 // kotlin.Int | 
             //val billingentityinternalEditObjectV1Request : BillingentityinternalEditObjectV1Request =  // BillingentityinternalEditObjectV1Request | 
-            //val result : BillingentityinternalEditObjectV1Response = apiInstance.billingentityinternalEditObjectV1(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request)
+            //val result : CommonResponse = apiInstance.billingentityinternalEditObjectV1(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request)
             //result shouldBe ("TODO")
         }
 

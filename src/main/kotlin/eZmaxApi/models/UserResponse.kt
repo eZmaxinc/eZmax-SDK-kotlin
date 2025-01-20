@@ -16,7 +16,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.CommonAudit
-import eZmaxApi.models.EmailResponseCompound
+import eZmaxApi.models.EmailResponse
 import eZmaxApi.models.FieldEUserEzsignaccess
 import eZmaxApi.models.FieldEUserLogintype
 import eZmaxApi.models.FieldEUserOrigin
@@ -38,7 +38,7 @@ import com.squareup.moshi.JsonClass
  * @param sTimezoneName The description of the Timezone
  * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
  * @param sLanguageNameX The Name of the Language in the language of the requester
- * @param objEmail 
+ * @param objEmail An Email Object and children to create a complete structure
  * @param fkiBillingentityinternalID The unique ID of the Billingentityinternal.
  * @param sBillingentityinternalDescriptionX The description of the Billingentityinternal in the language of the requester
  * @param eUserOrigin 
@@ -108,8 +108,9 @@ data class UserResponse (
     @Json(name = "sLanguageNameX")
     val sLanguageNameX: kotlin.String,
 
+    /* An Email Object and children to create a complete structure */
     @Json(name = "objEmail")
-    val objEmail: EmailResponseCompound,
+    val objEmail: EmailResponse,
 
     /* The unique ID of the Billingentityinternal. */
     @Json(name = "fkiBillingentityinternalID")

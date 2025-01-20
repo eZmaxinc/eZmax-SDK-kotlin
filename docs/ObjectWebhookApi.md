@@ -66,7 +66,7 @@ Configure Authorization:
 
 <a id="webhookDeleteObjectV1"></a>
 # **webhookDeleteObjectV1**
-> WebhookDeleteObjectV1Response webhookDeleteObjectV1(pkiWebhookID)
+> CommonResponse webhookDeleteObjectV1(pkiWebhookID)
 
 Delete an existing Webhook
 
@@ -81,7 +81,7 @@ Delete an existing Webhook
 val apiInstance = ObjectWebhookApi()
 val pkiWebhookID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : WebhookDeleteObjectV1Response = apiInstance.webhookDeleteObjectV1(pkiWebhookID)
+    val result : CommonResponse = apiInstance.webhookDeleteObjectV1(pkiWebhookID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectWebhookApi#webhookDeleteObjectV1")
@@ -99,7 +99,7 @@ try {
 
 ### Return type
 
-[**WebhookDeleteObjectV1Response**](WebhookDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -115,7 +115,7 @@ Configure Authorization:
 
 <a id="webhookEditObjectV1"></a>
 # **webhookEditObjectV1**
-> WebhookEditObjectV1Response webhookEditObjectV1(pkiWebhookID, webhookEditObjectV1Request)
+> CommonResponse webhookEditObjectV1(pkiWebhookID, webhookEditObjectV1Request)
 
 Edit an existing Webhook
 
@@ -131,7 +131,7 @@ val apiInstance = ObjectWebhookApi()
 val pkiWebhookID : kotlin.Int = 56 // kotlin.Int | 
 val webhookEditObjectV1Request : WebhookEditObjectV1Request =  // WebhookEditObjectV1Request | 
 try {
-    val result : WebhookEditObjectV1Response = apiInstance.webhookEditObjectV1(pkiWebhookID, webhookEditObjectV1Request)
+    val result : CommonResponse = apiInstance.webhookEditObjectV1(pkiWebhookID, webhookEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectWebhookApi#webhookEditObjectV1")
@@ -150,7 +150,7 @@ try {
 
 ### Return type
 
-[**WebhookEditObjectV1Response**](WebhookEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -374,7 +374,7 @@ Configure Authorization:
 
 <a id="webhookSendWebhookV1"></a>
 # **webhookSendWebhookV1**
-> WebhookSendWebhookV1Response webhookSendWebhookV1(webhookSendWebhookV1Request)
+> CommonResponse webhookSendWebhookV1(webhookSendWebhookV1Request)
 
 Emit a Webhook event
 
@@ -387,7 +387,7 @@ Emit a Webhook event
 val apiInstance = ObjectWebhookApi()
 val webhookSendWebhookV1Request : WebhookSendWebhookV1Request =  // WebhookSendWebhookV1Request | 
 try {
-    val result : WebhookSendWebhookV1Response = apiInstance.webhookSendWebhookV1(webhookSendWebhookV1Request)
+    val result : CommonResponse = apiInstance.webhookSendWebhookV1(webhookSendWebhookV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectWebhookApi#webhookSendWebhookV1")
@@ -405,7 +405,7 @@ try {
 
 ### Return type
 
-[**WebhookSendWebhookV1Response**](WebhookSendWebhookV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -421,7 +421,7 @@ Configure Authorization:
 
 <a id="webhookTestV1"></a>
 # **webhookTestV1**
-> WebhookTestV1Response webhookTestV1(pkiWebhookID, body)
+> CommonResponse webhookTestV1(pkiWebhookID, body)
 
 Test the Webhook by calling the Url
 
@@ -437,7 +437,7 @@ val apiInstance = ObjectWebhookApi()
 val pkiWebhookID : kotlin.Int = 56 // kotlin.Int | 
 val body : kotlin.Any = Object // kotlin.Any | 
 try {
-    val result : WebhookTestV1Response = apiInstance.webhookTestV1(pkiWebhookID, body)
+    val result : CommonResponse = apiInstance.webhookTestV1(pkiWebhookID, body)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectWebhookApi#webhookTestV1")
@@ -456,7 +456,7 @@ try {
 
 ### Return type
 
-[**WebhookTestV1Response**](WebhookTestV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

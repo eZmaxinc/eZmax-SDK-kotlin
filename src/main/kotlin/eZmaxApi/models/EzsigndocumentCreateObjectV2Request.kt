@@ -15,7 +15,7 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.EzsigndocumentRequestCompound
+import eZmaxApi.models.EzsigndocumentRequest
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -30,7 +30,7 @@ import com.squareup.moshi.JsonClass
 data class EzsigndocumentCreateObjectV2Request (
 
     @Json(name = "a_objEzsigndocument")
-    val aObjEzsigndocument: kotlin.collections.List<EzsigndocumentRequestCompound>
+    val aObjEzsigndocument: kotlin.collections.List<EzsigndocumentRequest>
 
 ) {
 

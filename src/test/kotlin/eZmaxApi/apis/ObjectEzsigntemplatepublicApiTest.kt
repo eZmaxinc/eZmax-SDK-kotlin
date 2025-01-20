@@ -19,13 +19,13 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectEzsigntemplatepublicApi
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.EzsigntemplatepublicCreateEzsignfolderV1Request
 import eZmaxApi.models.EzsigntemplatepublicCreateEzsignfolderV1Response
 import eZmaxApi.models.EzsigntemplatepublicCreateObjectV1Request
 import eZmaxApi.models.EzsigntemplatepublicCreateObjectV1Response
 import eZmaxApi.models.EzsigntemplatepublicEditObjectV1Request
-import eZmaxApi.models.EzsigntemplatepublicEditObjectV1Response
 import eZmaxApi.models.EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request
 import eZmaxApi.models.EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Response
 import eZmaxApi.models.EzsigntemplatepublicGetFormsDataV1Response
@@ -61,7 +61,7 @@ class ObjectEzsigntemplatepublicApiTest : ShouldSpec() {
             // uncomment below to test ezsigntemplatepublicEditObjectV1
             //val pkiEzsigntemplatepublicID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsigntemplatepublic
             //val ezsigntemplatepublicEditObjectV1Request : EzsigntemplatepublicEditObjectV1Request =  // EzsigntemplatepublicEditObjectV1Request | 
-            //val result : EzsigntemplatepublicEditObjectV1Response = apiInstance.ezsigntemplatepublicEditObjectV1(pkiEzsigntemplatepublicID, ezsigntemplatepublicEditObjectV1Request)
+            //val result : CommonResponse = apiInstance.ezsigntemplatepublicEditObjectV1(pkiEzsigntemplatepublicID, ezsigntemplatepublicEditObjectV1Request)
             //result shouldBe ("TODO")
         }
 

@@ -19,7 +19,6 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.CustomEzsignformfielderrorResponse
-import eZmaxApi.models.CustomEzsignformfielderrortestResponse
 
 class CustomEzsignformfielderrorResponseTest : ShouldSpec() {
     init {

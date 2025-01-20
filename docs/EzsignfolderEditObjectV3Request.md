@@ -4,7 +4,7 @@
 ## Properties
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **objEzsignfolder** | [**EzsignfolderRequestCompoundV3**](EzsignfolderRequestCompoundV3.md) |  |  |
+| **objEzsignfolder** | [**EzsignfolderRequestV3**](EzsignfolderRequestV3.md) | An Ezsignfolder Object and children to create a complete structure |  |
 
 
 

@@ -19,11 +19,11 @@ import java.io.IOException
 import okhttp3.Call
 import okhttp3.HttpUrl
 
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.CommonResponseErrorEzsignformValidation
 import eZmaxApi.models.CommonResponseErrorSTemporaryFileUrl
 import eZmaxApi.models.EzsigndocumentApplyEzsigntemplateV1Request
-import eZmaxApi.models.EzsigndocumentApplyEzsigntemplateV1Response
 import eZmaxApi.models.EzsigndocumentApplyEzsigntemplateV2Request
 import eZmaxApi.models.EzsigndocumentApplyEzsigntemplateV2Response
 import eZmaxApi.models.EzsigndocumentApplyEzsigntemplateglobalV1Request
@@ -37,8 +37,6 @@ import eZmaxApi.models.EzsigndocumentCreateObjectV2Response
 import eZmaxApi.models.EzsigndocumentCreateObjectV3Request
 import eZmaxApi.models.EzsigndocumentCreateObjectV3Response
 import eZmaxApi.models.EzsigndocumentDeclineToSignV1Request
-import eZmaxApi.models.EzsigndocumentDeclineToSignV1Response
-import eZmaxApi.models.EzsigndocumentDeleteObjectV1Response
 import eZmaxApi.models.EzsigndocumentEditEzsignannotationsV1Request
 import eZmaxApi.models.EzsigndocumentEditEzsignannotationsV1Response
 import eZmaxApi.models.EzsigndocumentEditEzsignformfieldgroupsV1Request
@@ -47,10 +45,8 @@ import eZmaxApi.models.EzsigndocumentEditEzsignsignaturesV1Request
 import eZmaxApi.models.EzsigndocumentEditEzsignsignaturesV1Response
 import eZmaxApi.models.EzsigndocumentEditObjectV1Request
 import eZmaxApi.models.EzsigndocumentEditObjectV1Response
-import eZmaxApi.models.EzsigndocumentEndPrematurelyV1Response
 import eZmaxApi.models.EzsigndocumentExtractTextV1Request
 import eZmaxApi.models.EzsigndocumentExtractTextV1Response
-import eZmaxApi.models.EzsigndocumentFlattenV1Response
 import eZmaxApi.models.EzsigndocumentGetActionableElementsV1Response
 import eZmaxApi.models.EzsigndocumentGetAttachmentsV1Response
 import eZmaxApi.models.EzsigndocumentGetCompletedElementsV1Response
@@ -68,10 +64,7 @@ import eZmaxApi.models.EzsigndocumentGetTemporaryProofV1Response
 import eZmaxApi.models.EzsigndocumentGetWordsPositionsV1Request
 import eZmaxApi.models.EzsigndocumentGetWordsPositionsV1Response
 import eZmaxApi.models.EzsigndocumentPatchObjectV1Request
-import eZmaxApi.models.EzsigndocumentPatchObjectV1Response
 import eZmaxApi.models.EzsigndocumentSubmitEzsignformV1Request
-import eZmaxApi.models.EzsigndocumentSubmitEzsignformV1Response
-import eZmaxApi.models.EzsigndocumentUnsendV1Response
 
 import com.squareup.moshi.Json
 
@@ -102,7 +95,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
      * This function is deprecated. Please use *applyEzsigntemplate* instead which is doing the same thing but with a capital \&quot;E\&quot; to normalize the nomenclature.  This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
      * @param pkiEzsigndocumentID 
      * @param ezsigndocumentApplyEzsigntemplateV1Request 
-     * @return EzsigndocumentApplyEzsigntemplateV1Response
+     * @return CommonResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -112,12 +105,12 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
     @Deprecated(message = "This operation is deprecated.")
-    fun ezsigndocumentApplyEzsigntemplateV1(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentApplyEzsigntemplateV1Request: EzsigndocumentApplyEzsigntemplateV1Request) : EzsigndocumentApplyEzsigntemplateV1Response {
+    fun ezsigndocumentApplyEzsigntemplateV1(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentApplyEzsigntemplateV1Request: EzsigndocumentApplyEzsigntemplateV1Request) : CommonResponse {
         @Suppress("DEPRECATION")
         val localVarResponse = ezsigndocumentApplyEzsigntemplateV1WithHttpInfo(pkiEzsigndocumentID = pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV1Request = ezsigndocumentApplyEzsigntemplateV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigndocumentApplyEzsigntemplateV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -136,18 +129,18 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
      * This function is deprecated. Please use *applyEzsigntemplate* instead which is doing the same thing but with a capital \&quot;E\&quot; to normalize the nomenclature.  This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
      * @param pkiEzsigndocumentID 
      * @param ezsigndocumentApplyEzsigntemplateV1Request 
-     * @return ApiResponse<EzsigndocumentApplyEzsigntemplateV1Response?>
+     * @return ApiResponse<CommonResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
     @Deprecated(message = "This operation is deprecated.")
-    fun ezsigndocumentApplyEzsigntemplateV1WithHttpInfo(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentApplyEzsigntemplateV1Request: EzsigndocumentApplyEzsigntemplateV1Request) : ApiResponse<EzsigndocumentApplyEzsigntemplateV1Response?> {
+    fun ezsigndocumentApplyEzsigntemplateV1WithHttpInfo(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentApplyEzsigntemplateV1Request: EzsigndocumentApplyEzsigntemplateV1Request) : ApiResponse<CommonResponse?> {
         @Suppress("DEPRECATION")
         val localVariableConfig = ezsigndocumentApplyEzsigntemplateV1RequestConfig(pkiEzsigndocumentID = pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV1Request = ezsigndocumentApplyEzsigntemplateV1Request)
 
-        return request<EzsigndocumentApplyEzsigntemplateV1Request, EzsigndocumentApplyEzsigntemplateV1Response>(
+        return request<EzsigndocumentApplyEzsigntemplateV1Request, CommonResponse>(
             localVariableConfig
         )
     }
@@ -633,7 +626,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
      * Decline to sign
      * @param pkiEzsigndocumentID 
      * @param ezsigndocumentDeclineToSignV1Request 
-     * @return EzsigndocumentDeclineToSignV1Response
+     * @return CommonResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -642,11 +635,11 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsigndocumentDeclineToSignV1(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentDeclineToSignV1Request: EzsigndocumentDeclineToSignV1Request) : EzsigndocumentDeclineToSignV1Response {
+    fun ezsigndocumentDeclineToSignV1(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentDeclineToSignV1Request: EzsigndocumentDeclineToSignV1Request) : CommonResponse {
         val localVarResponse = ezsigndocumentDeclineToSignV1WithHttpInfo(pkiEzsigndocumentID = pkiEzsigndocumentID, ezsigndocumentDeclineToSignV1Request = ezsigndocumentDeclineToSignV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigndocumentDeclineToSignV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -665,16 +658,16 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
      * Decline to sign
      * @param pkiEzsigndocumentID 
      * @param ezsigndocumentDeclineToSignV1Request 
-     * @return ApiResponse<EzsigndocumentDeclineToSignV1Response?>
+     * @return ApiResponse<CommonResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsigndocumentDeclineToSignV1WithHttpInfo(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentDeclineToSignV1Request: EzsigndocumentDeclineToSignV1Request) : ApiResponse<EzsigndocumentDeclineToSignV1Response?> {
+    fun ezsigndocumentDeclineToSignV1WithHttpInfo(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentDeclineToSignV1Request: EzsigndocumentDeclineToSignV1Request) : ApiResponse<CommonResponse?> {
         val localVariableConfig = ezsigndocumentDeclineToSignV1RequestConfig(pkiEzsigndocumentID = pkiEzsigndocumentID, ezsigndocumentDeclineToSignV1Request = ezsigndocumentDeclineToSignV1Request)
 
-        return request<EzsigndocumentDeclineToSignV1Request, EzsigndocumentDeclineToSignV1Response>(
+        return request<EzsigndocumentDeclineToSignV1Request, CommonResponse>(
             localVariableConfig
         )
     }
@@ -707,7 +700,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
      * Delete an existing Ezsigndocument
      * 
      * @param pkiEzsigndocumentID 
-     * @return EzsigndocumentDeleteObjectV1Response
+     * @return CommonResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -716,11 +709,11 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsigndocumentDeleteObjectV1(pkiEzsigndocumentID: kotlin.Int) : EzsigndocumentDeleteObjectV1Response {
+    fun ezsigndocumentDeleteObjectV1(pkiEzsigndocumentID: kotlin.Int) : CommonResponse {
         val localVarResponse = ezsigndocumentDeleteObjectV1WithHttpInfo(pkiEzsigndocumentID = pkiEzsigndocumentID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigndocumentDeleteObjectV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -738,16 +731,16 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
      * Delete an existing Ezsigndocument
      * 
      * @param pkiEzsigndocumentID 
-     * @return ApiResponse<EzsigndocumentDeleteObjectV1Response?>
+     * @return ApiResponse<CommonResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsigndocumentDeleteObjectV1WithHttpInfo(pkiEzsigndocumentID: kotlin.Int) : ApiResponse<EzsigndocumentDeleteObjectV1Response?> {
+    fun ezsigndocumentDeleteObjectV1WithHttpInfo(pkiEzsigndocumentID: kotlin.Int) : ApiResponse<CommonResponse?> {
         val localVariableConfig = ezsigndocumentDeleteObjectV1RequestConfig(pkiEzsigndocumentID = pkiEzsigndocumentID)
 
-        return request<Unit, EzsigndocumentDeleteObjectV1Response>(
+        return request<Unit, CommonResponse>(
             localVariableConfig
         )
     }
@@ -1079,7 +1072,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
      * End prematurely an Ezsigndocument when some signatures are still required
      * @param pkiEzsigndocumentID 
      * @param body 
-     * @return EzsigndocumentEndPrematurelyV1Response
+     * @return CommonResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -1088,11 +1081,11 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsigndocumentEndPrematurelyV1(pkiEzsigndocumentID: kotlin.Int, body: kotlin.Any) : EzsigndocumentEndPrematurelyV1Response {
+    fun ezsigndocumentEndPrematurelyV1(pkiEzsigndocumentID: kotlin.Int, body: kotlin.Any) : CommonResponse {
         val localVarResponse = ezsigndocumentEndPrematurelyV1WithHttpInfo(pkiEzsigndocumentID = pkiEzsigndocumentID, body = body)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigndocumentEndPrematurelyV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -1111,16 +1104,16 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
      * End prematurely an Ezsigndocument when some signatures are still required
      * @param pkiEzsigndocumentID 
      * @param body 
-     * @return ApiResponse<EzsigndocumentEndPrematurelyV1Response?>
+     * @return ApiResponse<CommonResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsigndocumentEndPrematurelyV1WithHttpInfo(pkiEzsigndocumentID: kotlin.Int, body: kotlin.Any) : ApiResponse<EzsigndocumentEndPrematurelyV1Response?> {
+    fun ezsigndocumentEndPrematurelyV1WithHttpInfo(pkiEzsigndocumentID: kotlin.Int, body: kotlin.Any) : ApiResponse<CommonResponse?> {
         val localVariableConfig = ezsigndocumentEndPrematurelyV1RequestConfig(pkiEzsigndocumentID = pkiEzsigndocumentID, body = body)
 
-        return request<kotlin.Any, EzsigndocumentEndPrematurelyV1Response>(
+        return request<kotlin.Any, CommonResponse>(
             localVariableConfig
         )
     }
@@ -1229,7 +1222,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
      * Flatten an Ezsigndocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
      * @param pkiEzsigndocumentID 
      * @param body 
-     * @return EzsigndocumentFlattenV1Response
+     * @return CommonResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -1238,11 +1231,11 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsigndocumentFlattenV1(pkiEzsigndocumentID: kotlin.Int, body: kotlin.Any) : EzsigndocumentFlattenV1Response {
+    fun ezsigndocumentFlattenV1(pkiEzsigndocumentID: kotlin.Int, body: kotlin.Any) : CommonResponse {
         val localVarResponse = ezsigndocumentFlattenV1WithHttpInfo(pkiEzsigndocumentID = pkiEzsigndocumentID, body = body)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigndocumentFlattenV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -1261,16 +1254,16 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
      * Flatten an Ezsigndocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
      * @param pkiEzsigndocumentID 
      * @param body 
-     * @return ApiResponse<EzsigndocumentFlattenV1Response?>
+     * @return ApiResponse<CommonResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsigndocumentFlattenV1WithHttpInfo(pkiEzsigndocumentID: kotlin.Int, body: kotlin.Any) : ApiResponse<EzsigndocumentFlattenV1Response?> {
+    fun ezsigndocumentFlattenV1WithHttpInfo(pkiEzsigndocumentID: kotlin.Int, body: kotlin.Any) : ApiResponse<CommonResponse?> {
         val localVariableConfig = ezsigndocumentFlattenV1RequestConfig(pkiEzsigndocumentID = pkiEzsigndocumentID, body = body)
 
-        return request<kotlin.Any, EzsigndocumentFlattenV1Response>(
+        return request<kotlin.Any, CommonResponse>(
             localVariableConfig
         )
     }
@@ -2401,7 +2394,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
      * 
      * @param pkiEzsigndocumentID 
      * @param ezsigndocumentPatchObjectV1Request 
-     * @return EzsigndocumentPatchObjectV1Response
+     * @return CommonResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -2410,11 +2403,11 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsigndocumentPatchObjectV1(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentPatchObjectV1Request: EzsigndocumentPatchObjectV1Request) : EzsigndocumentPatchObjectV1Response {
+    fun ezsigndocumentPatchObjectV1(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentPatchObjectV1Request: EzsigndocumentPatchObjectV1Request) : CommonResponse {
         val localVarResponse = ezsigndocumentPatchObjectV1WithHttpInfo(pkiEzsigndocumentID = pkiEzsigndocumentID, ezsigndocumentPatchObjectV1Request = ezsigndocumentPatchObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigndocumentPatchObjectV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -2433,16 +2426,16 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
      * 
      * @param pkiEzsigndocumentID 
      * @param ezsigndocumentPatchObjectV1Request 
-     * @return ApiResponse<EzsigndocumentPatchObjectV1Response?>
+     * @return ApiResponse<CommonResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsigndocumentPatchObjectV1WithHttpInfo(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentPatchObjectV1Request: EzsigndocumentPatchObjectV1Request) : ApiResponse<EzsigndocumentPatchObjectV1Response?> {
+    fun ezsigndocumentPatchObjectV1WithHttpInfo(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentPatchObjectV1Request: EzsigndocumentPatchObjectV1Request) : ApiResponse<CommonResponse?> {
         val localVariableConfig = ezsigndocumentPatchObjectV1RequestConfig(pkiEzsigndocumentID = pkiEzsigndocumentID, ezsigndocumentPatchObjectV1Request = ezsigndocumentPatchObjectV1Request)
 
-        return request<EzsigndocumentPatchObjectV1Request, EzsigndocumentPatchObjectV1Response>(
+        return request<EzsigndocumentPatchObjectV1Request, CommonResponse>(
             localVariableConfig
         )
     }
@@ -2476,7 +2469,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
      * 
      * @param pkiEzsigndocumentID 
      * @param ezsigndocumentSubmitEzsignformV1Request 
-     * @return EzsigndocumentSubmitEzsignformV1Response
+     * @return CommonResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -2485,11 +2478,11 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsigndocumentSubmitEzsignformV1(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentSubmitEzsignformV1Request: EzsigndocumentSubmitEzsignformV1Request) : EzsigndocumentSubmitEzsignformV1Response {
+    fun ezsigndocumentSubmitEzsignformV1(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentSubmitEzsignformV1Request: EzsigndocumentSubmitEzsignformV1Request) : CommonResponse {
         val localVarResponse = ezsigndocumentSubmitEzsignformV1WithHttpInfo(pkiEzsigndocumentID = pkiEzsigndocumentID, ezsigndocumentSubmitEzsignformV1Request = ezsigndocumentSubmitEzsignformV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigndocumentSubmitEzsignformV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -2508,16 +2501,16 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
      * 
      * @param pkiEzsigndocumentID 
      * @param ezsigndocumentSubmitEzsignformV1Request 
-     * @return ApiResponse<EzsigndocumentSubmitEzsignformV1Response?>
+     * @return ApiResponse<CommonResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsigndocumentSubmitEzsignformV1WithHttpInfo(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentSubmitEzsignformV1Request: EzsigndocumentSubmitEzsignformV1Request) : ApiResponse<EzsigndocumentSubmitEzsignformV1Response?> {
+    fun ezsigndocumentSubmitEzsignformV1WithHttpInfo(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentSubmitEzsignformV1Request: EzsigndocumentSubmitEzsignformV1Request) : ApiResponse<CommonResponse?> {
         val localVariableConfig = ezsigndocumentSubmitEzsignformV1RequestConfig(pkiEzsigndocumentID = pkiEzsigndocumentID, ezsigndocumentSubmitEzsignformV1Request = ezsigndocumentSubmitEzsignformV1Request)
 
-        return request<EzsigndocumentSubmitEzsignformV1Request, EzsigndocumentSubmitEzsignformV1Response>(
+        return request<EzsigndocumentSubmitEzsignformV1Request, CommonResponse>(
             localVariableConfig
         )
     }
@@ -2551,7 +2544,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
      * Once an Ezsigndocument has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsigndocument and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on this Ezsigndocumentswill be lost.
      * @param pkiEzsigndocumentID 
      * @param body 
-     * @return EzsigndocumentUnsendV1Response
+     * @return CommonResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -2560,11 +2553,11 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsigndocumentUnsendV1(pkiEzsigndocumentID: kotlin.Int, body: kotlin.Any) : EzsigndocumentUnsendV1Response {
+    fun ezsigndocumentUnsendV1(pkiEzsigndocumentID: kotlin.Int, body: kotlin.Any) : CommonResponse {
         val localVarResponse = ezsigndocumentUnsendV1WithHttpInfo(pkiEzsigndocumentID = pkiEzsigndocumentID, body = body)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigndocumentUnsendV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -2583,16 +2576,16 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
      * Once an Ezsigndocument has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsigndocument and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on this Ezsigndocumentswill be lost.
      * @param pkiEzsigndocumentID 
      * @param body 
-     * @return ApiResponse<EzsigndocumentUnsendV1Response?>
+     * @return ApiResponse<CommonResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsigndocumentUnsendV1WithHttpInfo(pkiEzsigndocumentID: kotlin.Int, body: kotlin.Any) : ApiResponse<EzsigndocumentUnsendV1Response?> {
+    fun ezsigndocumentUnsendV1WithHttpInfo(pkiEzsigndocumentID: kotlin.Int, body: kotlin.Any) : ApiResponse<CommonResponse?> {
         val localVariableConfig = ezsigndocumentUnsendV1RequestConfig(pkiEzsigndocumentID = pkiEzsigndocumentID, body = body)
 
-        return request<kotlin.Any, EzsigndocumentUnsendV1Response>(
+        return request<kotlin.Any, CommonResponse>(
             localVariableConfig
         )
     }

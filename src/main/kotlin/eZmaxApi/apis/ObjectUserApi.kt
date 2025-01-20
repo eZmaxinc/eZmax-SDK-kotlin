@@ -19,6 +19,7 @@ import java.io.IOException
 import okhttp3.Call
 import okhttp3.HttpUrl
 
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.HeaderAcceptLanguage
 import eZmaxApi.models.UserCreateObjectV1Request
@@ -28,7 +29,6 @@ import eZmaxApi.models.UserCreateObjectV2Response
 import eZmaxApi.models.UserEditColleaguesV2Request
 import eZmaxApi.models.UserEditColleaguesV2Response
 import eZmaxApi.models.UserEditObjectV1Request
-import eZmaxApi.models.UserEditObjectV1Response
 import eZmaxApi.models.UserEditPermissionsV1Request
 import eZmaxApi.models.UserEditPermissionsV1Response
 import eZmaxApi.models.UserGetApikeysV1Response
@@ -41,7 +41,6 @@ import eZmaxApi.models.UserGetPermissionsV1Response
 import eZmaxApi.models.UserGetSubnetsV1Response
 import eZmaxApi.models.UserGetUsergroupexternalsV1Response
 import eZmaxApi.models.UserGetUsergroupsV1Response
-import eZmaxApi.models.UserSendPasswordResetV1Response
 
 import com.squareup.moshi.Json
 
@@ -291,7 +290,7 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
      * 
      * @param pkiUserID The unique ID of the User
      * @param userEditObjectV1Request 
-     * @return UserEditObjectV1Response
+     * @return CommonResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -300,11 +299,11 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun userEditObjectV1(pkiUserID: kotlin.Int, userEditObjectV1Request: UserEditObjectV1Request) : UserEditObjectV1Response {
+    fun userEditObjectV1(pkiUserID: kotlin.Int, userEditObjectV1Request: UserEditObjectV1Request) : CommonResponse {
         val localVarResponse = userEditObjectV1WithHttpInfo(pkiUserID = pkiUserID, userEditObjectV1Request = userEditObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as UserEditObjectV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -323,16 +322,16 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
      * 
      * @param pkiUserID The unique ID of the User
      * @param userEditObjectV1Request 
-     * @return ApiResponse<UserEditObjectV1Response?>
+     * @return ApiResponse<CommonResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun userEditObjectV1WithHttpInfo(pkiUserID: kotlin.Int, userEditObjectV1Request: UserEditObjectV1Request) : ApiResponse<UserEditObjectV1Response?> {
+    fun userEditObjectV1WithHttpInfo(pkiUserID: kotlin.Int, userEditObjectV1Request: UserEditObjectV1Request) : ApiResponse<CommonResponse?> {
         val localVariableConfig = userEditObjectV1RequestConfig(pkiUserID = pkiUserID, userEditObjectV1Request = userEditObjectV1Request)
 
-        return request<UserEditObjectV1Request, UserEditObjectV1Response>(
+        return request<UserEditObjectV1Request, CommonResponse>(
             localVariableConfig
         )
     }
@@ -1273,7 +1272,7 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
      * Send the password reset email
      * @param pkiUserID 
      * @param body 
-     * @return UserSendPasswordResetV1Response
+     * @return CommonResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -1282,11 +1281,11 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun userSendPasswordResetV1(pkiUserID: kotlin.Int, body: kotlin.Any) : UserSendPasswordResetV1Response {
+    fun userSendPasswordResetV1(pkiUserID: kotlin.Int, body: kotlin.Any) : CommonResponse {
         val localVarResponse = userSendPasswordResetV1WithHttpInfo(pkiUserID = pkiUserID, body = body)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as UserSendPasswordResetV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -1305,16 +1304,16 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
      * Send the password reset email
      * @param pkiUserID 
      * @param body 
-     * @return ApiResponse<UserSendPasswordResetV1Response?>
+     * @return ApiResponse<CommonResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun userSendPasswordResetV1WithHttpInfo(pkiUserID: kotlin.Int, body: kotlin.Any) : ApiResponse<UserSendPasswordResetV1Response?> {
+    fun userSendPasswordResetV1WithHttpInfo(pkiUserID: kotlin.Int, body: kotlin.Any) : ApiResponse<CommonResponse?> {
         val localVariableConfig = userSendPasswordResetV1RequestConfig(pkiUserID = pkiUserID, body = body)
 
-        return request<kotlin.Any, UserSendPasswordResetV1Response>(
+        return request<kotlin.Any, CommonResponse>(
             localVariableConfig
         )
     }
