@@ -115,7 +115,7 @@ Configure Authorization:
 
 <a id="ezsigntemplatepublicEditObjectV1"></a>
 # **ezsigntemplatepublicEditObjectV1**
-> EzsigntemplatepublicEditObjectV1Response ezsigntemplatepublicEditObjectV1(pkiEzsigntemplatepublicID, ezsigntemplatepublicEditObjectV1Request)
+> CommonResponse ezsigntemplatepublicEditObjectV1(pkiEzsigntemplatepublicID, ezsigntemplatepublicEditObjectV1Request)
 
 Edit an existing Ezsigntemplatepublic
 
@@ -131,7 +131,7 @@ val apiInstance = ObjectEzsigntemplatepublicApi()
 val pkiEzsigntemplatepublicID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsigntemplatepublic
 val ezsigntemplatepublicEditObjectV1Request : EzsigntemplatepublicEditObjectV1Request =  // EzsigntemplatepublicEditObjectV1Request | 
 try {
-    val result : EzsigntemplatepublicEditObjectV1Response = apiInstance.ezsigntemplatepublicEditObjectV1(pkiEzsigntemplatepublicID, ezsigntemplatepublicEditObjectV1Request)
+    val result : CommonResponse = apiInstance.ezsigntemplatepublicEditObjectV1(pkiEzsigntemplatepublicID, ezsigntemplatepublicEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplatepublicApi#ezsigntemplatepublicEditObjectV1")
@@ -150,7 +150,7 @@ try {
 
 ### Return type
 
-[**EzsigntemplatepublicEditObjectV1Response**](EzsigntemplatepublicEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

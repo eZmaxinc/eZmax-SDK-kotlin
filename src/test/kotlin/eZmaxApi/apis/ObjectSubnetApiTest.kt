@@ -19,12 +19,11 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectSubnetApi
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.SubnetCreateObjectV1Request
 import eZmaxApi.models.SubnetCreateObjectV1Response
-import eZmaxApi.models.SubnetDeleteObjectV1Response
 import eZmaxApi.models.SubnetEditObjectV1Request
-import eZmaxApi.models.SubnetEditObjectV1Response
 import eZmaxApi.models.SubnetGetObjectV2Response
 
 class ObjectSubnetApiTest : ShouldSpec() {
@@ -44,7 +43,7 @@ class ObjectSubnetApiTest : ShouldSpec() {
         should("test subnetDeleteObjectV1") {
             // uncomment below to test subnetDeleteObjectV1
             //val pkiSubnetID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Subnet
-            //val result : SubnetDeleteObjectV1Response = apiInstance.subnetDeleteObjectV1(pkiSubnetID)
+            //val result : CommonResponse = apiInstance.subnetDeleteObjectV1(pkiSubnetID)
             //result shouldBe ("TODO")
         }
 
@@ -53,7 +52,7 @@ class ObjectSubnetApiTest : ShouldSpec() {
             // uncomment below to test subnetEditObjectV1
             //val pkiSubnetID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Subnet
             //val subnetEditObjectV1Request : SubnetEditObjectV1Request =  // SubnetEditObjectV1Request | 
-            //val result : SubnetEditObjectV1Response = apiInstance.subnetEditObjectV1(pkiSubnetID, subnetEditObjectV1Request)
+            //val result : CommonResponse = apiInstance.subnetEditObjectV1(pkiSubnetID, subnetEditObjectV1Request)
             //result shouldBe ("TODO")
         }
 

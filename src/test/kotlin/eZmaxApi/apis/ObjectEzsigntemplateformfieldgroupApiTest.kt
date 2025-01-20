@@ -19,12 +19,11 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectEzsigntemplateformfieldgroupApi
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.EzsigntemplateformfieldgroupCreateObjectV1Request
 import eZmaxApi.models.EzsigntemplateformfieldgroupCreateObjectV1Response
-import eZmaxApi.models.EzsigntemplateformfieldgroupDeleteObjectV1Response
 import eZmaxApi.models.EzsigntemplateformfieldgroupEditObjectV1Request
-import eZmaxApi.models.EzsigntemplateformfieldgroupEditObjectV1Response
 import eZmaxApi.models.EzsigntemplateformfieldgroupGetObjectV2Response
 
 class ObjectEzsigntemplateformfieldgroupApiTest : ShouldSpec() {
@@ -44,7 +43,7 @@ class ObjectEzsigntemplateformfieldgroupApiTest : ShouldSpec() {
         should("test ezsigntemplateformfieldgroupDeleteObjectV1") {
             // uncomment below to test ezsigntemplateformfieldgroupDeleteObjectV1
             //val pkiEzsigntemplateformfieldgroupID : kotlin.Int = 56 // kotlin.Int | 
-            //val result : EzsigntemplateformfieldgroupDeleteObjectV1Response = apiInstance.ezsigntemplateformfieldgroupDeleteObjectV1(pkiEzsigntemplateformfieldgroupID)
+            //val result : CommonResponse = apiInstance.ezsigntemplateformfieldgroupDeleteObjectV1(pkiEzsigntemplateformfieldgroupID)
             //result shouldBe ("TODO")
         }
 
@@ -53,7 +52,7 @@ class ObjectEzsigntemplateformfieldgroupApiTest : ShouldSpec() {
             // uncomment below to test ezsigntemplateformfieldgroupEditObjectV1
             //val pkiEzsigntemplateformfieldgroupID : kotlin.Int = 56 // kotlin.Int | 
             //val ezsigntemplateformfieldgroupEditObjectV1Request : EzsigntemplateformfieldgroupEditObjectV1Request =  // EzsigntemplateformfieldgroupEditObjectV1Request | 
-            //val result : EzsigntemplateformfieldgroupEditObjectV1Response = apiInstance.ezsigntemplateformfieldgroupEditObjectV1(pkiEzsigntemplateformfieldgroupID, ezsigntemplateformfieldgroupEditObjectV1Request)
+            //val result : CommonResponse = apiInstance.ezsigntemplateformfieldgroupEditObjectV1(pkiEzsigntemplateformfieldgroupID, ezsigntemplateformfieldgroupEditObjectV1Request)
             //result shouldBe ("TODO")
         }
 

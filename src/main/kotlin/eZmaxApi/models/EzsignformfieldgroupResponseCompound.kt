@@ -15,10 +15,10 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.CustomDropdownElementResponseCompound
+import eZmaxApi.models.CustomDropdownElementResponse
 import eZmaxApi.models.EnumTextvalidation
 import eZmaxApi.models.EzsignformfieldResponseCompound
-import eZmaxApi.models.EzsignformfieldgroupsignerResponseCompound
+import eZmaxApi.models.EzsignformfieldgroupsignerResponse
 import eZmaxApi.models.FieldEEzsignformfieldgroupSignerrequirement
 import eZmaxApi.models.FieldEEzsignformfieldgroupTooltipposition
 import eZmaxApi.models.FieldEEzsignformfieldgroupType
@@ -89,7 +89,7 @@ data class EzsignformfieldgroupResponseCompound (
     val aObjEzsignformfield: kotlin.collections.List<EzsignformfieldResponseCompound>,
 
     @Json(name = "a_objEzsignformfieldgroupsigner")
-    val aObjEzsignformfieldgroupsigner: kotlin.collections.List<EzsignformfieldgroupsignerResponseCompound>,
+    val aObjEzsignformfieldgroupsigner: kotlin.collections.List<EzsignformfieldgroupsignerResponse>,
 
     @Json(name = "eEzsignformfieldgroupSignerrequirement")
     @Deprecated(message = "This property is deprecated.")
@@ -126,7 +126,7 @@ data class EzsignformfieldgroupResponseCompound (
     val eEzsignformfieldgroupTooltipposition: FieldEEzsignformfieldgroupTooltipposition? = null,
 
     @Json(name = "a_objDropdownElement")
-    val aObjDropdownElement: kotlin.collections.List<CustomDropdownElementResponseCompound>? = null
+    val aObjDropdownElement: kotlin.collections.List<CustomDropdownElementResponse>? = null
 
 ) {
 

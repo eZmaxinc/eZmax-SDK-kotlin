@@ -117,7 +117,7 @@ Configure Authorization:
 
 <a id="ezsignbulksendDeleteObjectV1"></a>
 # **ezsignbulksendDeleteObjectV1**
-> EzsignbulksendDeleteObjectV1Response ezsignbulksendDeleteObjectV1(pkiEzsignbulksendID)
+> CommonResponse ezsignbulksendDeleteObjectV1(pkiEzsignbulksendID)
 
 Delete an existing Ezsignbulksend
 
@@ -132,7 +132,7 @@ Delete an existing Ezsignbulksend
 val apiInstance = ObjectEzsignbulksendApi()
 val pkiEzsignbulksendID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : EzsignbulksendDeleteObjectV1Response = apiInstance.ezsignbulksendDeleteObjectV1(pkiEzsignbulksendID)
+    val result : CommonResponse = apiInstance.ezsignbulksendDeleteObjectV1(pkiEzsignbulksendID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignbulksendApi#ezsignbulksendDeleteObjectV1")
@@ -150,7 +150,7 @@ try {
 
 ### Return type
 
-[**EzsignbulksendDeleteObjectV1Response**](EzsignbulksendDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -166,7 +166,7 @@ Configure Authorization:
 
 <a id="ezsignbulksendEditObjectV1"></a>
 # **ezsignbulksendEditObjectV1**
-> EzsignbulksendEditObjectV1Response ezsignbulksendEditObjectV1(pkiEzsignbulksendID, ezsignbulksendEditObjectV1Request)
+> CommonResponse ezsignbulksendEditObjectV1(pkiEzsignbulksendID, ezsignbulksendEditObjectV1Request)
 
 Edit an existing Ezsignbulksend
 
@@ -182,7 +182,7 @@ val apiInstance = ObjectEzsignbulksendApi()
 val pkiEzsignbulksendID : kotlin.Int = 56 // kotlin.Int | 
 val ezsignbulksendEditObjectV1Request : EzsignbulksendEditObjectV1Request =  // EzsignbulksendEditObjectV1Request | 
 try {
-    val result : EzsignbulksendEditObjectV1Response = apiInstance.ezsignbulksendEditObjectV1(pkiEzsignbulksendID, ezsignbulksendEditObjectV1Request)
+    val result : CommonResponse = apiInstance.ezsignbulksendEditObjectV1(pkiEzsignbulksendID, ezsignbulksendEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignbulksendApi#ezsignbulksendEditObjectV1")
@@ -201,7 +201,7 @@ try {
 
 ### Return type
 
-[**EzsignbulksendEditObjectV1Response**](EzsignbulksendEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -521,7 +521,7 @@ Configure Authorization:
 
 <a id="ezsignbulksendReorderV1"></a>
 # **ezsignbulksendReorderV1**
-> EzsignbulksendReorderV1Response ezsignbulksendReorderV1(pkiEzsignbulksendID, ezsignbulksendReorderV1Request)
+> CommonResponse ezsignbulksendReorderV1(pkiEzsignbulksendID, ezsignbulksendReorderV1Request)
 
 Reorder Ezsignbulksenddocumentmappings in the Ezsignbulksend
 
@@ -535,7 +535,7 @@ val apiInstance = ObjectEzsignbulksendApi()
 val pkiEzsignbulksendID : kotlin.Int = 56 // kotlin.Int | 
 val ezsignbulksendReorderV1Request : EzsignbulksendReorderV1Request =  // EzsignbulksendReorderV1Request | 
 try {
-    val result : EzsignbulksendReorderV1Response = apiInstance.ezsignbulksendReorderV1(pkiEzsignbulksendID, ezsignbulksendReorderV1Request)
+    val result : CommonResponse = apiInstance.ezsignbulksendReorderV1(pkiEzsignbulksendID, ezsignbulksendReorderV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignbulksendApi#ezsignbulksendReorderV1")
@@ -554,7 +554,7 @@ try {
 
 ### Return type
 
-[**EzsignbulksendReorderV1Response**](EzsignbulksendReorderV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

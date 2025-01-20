@@ -19,12 +19,11 @@ import java.io.IOException
 import okhttp3.Call
 import okhttp3.HttpUrl
 
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.EzsigntemplatedocumentpagerecognitionCreateObjectV1Request
 import eZmaxApi.models.EzsigntemplatedocumentpagerecognitionCreateObjectV1Response
-import eZmaxApi.models.EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response
 import eZmaxApi.models.EzsigntemplatedocumentpagerecognitionEditObjectV1Request
-import eZmaxApi.models.EzsigntemplatedocumentpagerecognitionEditObjectV1Response
 import eZmaxApi.models.EzsigntemplatedocumentpagerecognitionGetObjectV2Response
 
 import com.squareup.moshi.Json
@@ -127,7 +126,7 @@ class ObjectEzsigntemplatedocumentpagerecognitionApi(basePath: kotlin.String = d
      * Delete an existing Ezsigntemplatedocumentpagerecognition
      * 
      * @param pkiEzsigntemplatedocumentpagerecognitionID The unique ID of the Ezsigntemplatedocumentpagerecognition
-     * @return EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response
+     * @return CommonResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -136,11 +135,11 @@ class ObjectEzsigntemplatedocumentpagerecognitionApi(basePath: kotlin.String = d
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsigntemplatedocumentpagerecognitionDeleteObjectV1(pkiEzsigntemplatedocumentpagerecognitionID: kotlin.Int) : EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response {
+    fun ezsigntemplatedocumentpagerecognitionDeleteObjectV1(pkiEzsigntemplatedocumentpagerecognitionID: kotlin.Int) : CommonResponse {
         val localVarResponse = ezsigntemplatedocumentpagerecognitionDeleteObjectV1WithHttpInfo(pkiEzsigntemplatedocumentpagerecognitionID = pkiEzsigntemplatedocumentpagerecognitionID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -158,16 +157,16 @@ class ObjectEzsigntemplatedocumentpagerecognitionApi(basePath: kotlin.String = d
      * Delete an existing Ezsigntemplatedocumentpagerecognition
      * 
      * @param pkiEzsigntemplatedocumentpagerecognitionID The unique ID of the Ezsigntemplatedocumentpagerecognition
-     * @return ApiResponse<EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response?>
+     * @return ApiResponse<CommonResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsigntemplatedocumentpagerecognitionDeleteObjectV1WithHttpInfo(pkiEzsigntemplatedocumentpagerecognitionID: kotlin.Int) : ApiResponse<EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response?> {
+    fun ezsigntemplatedocumentpagerecognitionDeleteObjectV1WithHttpInfo(pkiEzsigntemplatedocumentpagerecognitionID: kotlin.Int) : ApiResponse<CommonResponse?> {
         val localVariableConfig = ezsigntemplatedocumentpagerecognitionDeleteObjectV1RequestConfig(pkiEzsigntemplatedocumentpagerecognitionID = pkiEzsigntemplatedocumentpagerecognitionID)
 
-        return request<Unit, EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response>(
+        return request<Unit, CommonResponse>(
             localVariableConfig
         )
     }
@@ -199,7 +198,7 @@ class ObjectEzsigntemplatedocumentpagerecognitionApi(basePath: kotlin.String = d
      * 
      * @param pkiEzsigntemplatedocumentpagerecognitionID The unique ID of the Ezsigntemplatedocumentpagerecognition
      * @param ezsigntemplatedocumentpagerecognitionEditObjectV1Request 
-     * @return EzsigntemplatedocumentpagerecognitionEditObjectV1Response
+     * @return CommonResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -208,11 +207,11 @@ class ObjectEzsigntemplatedocumentpagerecognitionApi(basePath: kotlin.String = d
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsigntemplatedocumentpagerecognitionEditObjectV1(pkiEzsigntemplatedocumentpagerecognitionID: kotlin.Int, ezsigntemplatedocumentpagerecognitionEditObjectV1Request: EzsigntemplatedocumentpagerecognitionEditObjectV1Request) : EzsigntemplatedocumentpagerecognitionEditObjectV1Response {
+    fun ezsigntemplatedocumentpagerecognitionEditObjectV1(pkiEzsigntemplatedocumentpagerecognitionID: kotlin.Int, ezsigntemplatedocumentpagerecognitionEditObjectV1Request: EzsigntemplatedocumentpagerecognitionEditObjectV1Request) : CommonResponse {
         val localVarResponse = ezsigntemplatedocumentpagerecognitionEditObjectV1WithHttpInfo(pkiEzsigntemplatedocumentpagerecognitionID = pkiEzsigntemplatedocumentpagerecognitionID, ezsigntemplatedocumentpagerecognitionEditObjectV1Request = ezsigntemplatedocumentpagerecognitionEditObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigntemplatedocumentpagerecognitionEditObjectV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -231,16 +230,16 @@ class ObjectEzsigntemplatedocumentpagerecognitionApi(basePath: kotlin.String = d
      * 
      * @param pkiEzsigntemplatedocumentpagerecognitionID The unique ID of the Ezsigntemplatedocumentpagerecognition
      * @param ezsigntemplatedocumentpagerecognitionEditObjectV1Request 
-     * @return ApiResponse<EzsigntemplatedocumentpagerecognitionEditObjectV1Response?>
+     * @return ApiResponse<CommonResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsigntemplatedocumentpagerecognitionEditObjectV1WithHttpInfo(pkiEzsigntemplatedocumentpagerecognitionID: kotlin.Int, ezsigntemplatedocumentpagerecognitionEditObjectV1Request: EzsigntemplatedocumentpagerecognitionEditObjectV1Request) : ApiResponse<EzsigntemplatedocumentpagerecognitionEditObjectV1Response?> {
+    fun ezsigntemplatedocumentpagerecognitionEditObjectV1WithHttpInfo(pkiEzsigntemplatedocumentpagerecognitionID: kotlin.Int, ezsigntemplatedocumentpagerecognitionEditObjectV1Request: EzsigntemplatedocumentpagerecognitionEditObjectV1Request) : ApiResponse<CommonResponse?> {
         val localVariableConfig = ezsigntemplatedocumentpagerecognitionEditObjectV1RequestConfig(pkiEzsigntemplatedocumentpagerecognitionID = pkiEzsigntemplatedocumentpagerecognitionID, ezsigntemplatedocumentpagerecognitionEditObjectV1Request = ezsigntemplatedocumentpagerecognitionEditObjectV1Request)
 
-        return request<EzsigntemplatedocumentpagerecognitionEditObjectV1Request, EzsigntemplatedocumentpagerecognitionEditObjectV1Response>(
+        return request<EzsigntemplatedocumentpagerecognitionEditObjectV1Request, CommonResponse>(
             localVariableConfig
         )
     }

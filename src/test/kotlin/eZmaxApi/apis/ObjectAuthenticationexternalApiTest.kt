@@ -21,13 +21,11 @@ import io.kotlintest.specs.ShouldSpec
 import eZmaxApi.apis.ObjectAuthenticationexternalApi
 import eZmaxApi.models.AuthenticationexternalCreateObjectV1Request
 import eZmaxApi.models.AuthenticationexternalCreateObjectV1Response
-import eZmaxApi.models.AuthenticationexternalDeleteObjectV1Response
 import eZmaxApi.models.AuthenticationexternalEditObjectV1Request
-import eZmaxApi.models.AuthenticationexternalEditObjectV1Response
 import eZmaxApi.models.AuthenticationexternalGetAutocompleteV2Response
 import eZmaxApi.models.AuthenticationexternalGetListV1Response
 import eZmaxApi.models.AuthenticationexternalGetObjectV2Response
-import eZmaxApi.models.AuthenticationexternalResetAuthorizationV1Response
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.HeaderAcceptLanguage
 
@@ -48,7 +46,7 @@ class ObjectAuthenticationexternalApiTest : ShouldSpec() {
         should("test authenticationexternalDeleteObjectV1") {
             // uncomment below to test authenticationexternalDeleteObjectV1
             //val pkiAuthenticationexternalID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Authenticationexternal
-            //val result : AuthenticationexternalDeleteObjectV1Response = apiInstance.authenticationexternalDeleteObjectV1(pkiAuthenticationexternalID)
+            //val result : CommonResponse = apiInstance.authenticationexternalDeleteObjectV1(pkiAuthenticationexternalID)
             //result shouldBe ("TODO")
         }
 
@@ -57,7 +55,7 @@ class ObjectAuthenticationexternalApiTest : ShouldSpec() {
             // uncomment below to test authenticationexternalEditObjectV1
             //val pkiAuthenticationexternalID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Authenticationexternal
             //val authenticationexternalEditObjectV1Request : AuthenticationexternalEditObjectV1Request =  // AuthenticationexternalEditObjectV1Request | 
-            //val result : AuthenticationexternalEditObjectV1Response = apiInstance.authenticationexternalEditObjectV1(pkiAuthenticationexternalID, authenticationexternalEditObjectV1Request)
+            //val result : CommonResponse = apiInstance.authenticationexternalEditObjectV1(pkiAuthenticationexternalID, authenticationexternalEditObjectV1Request)
             //result shouldBe ("TODO")
         }
 
@@ -97,7 +95,7 @@ class ObjectAuthenticationexternalApiTest : ShouldSpec() {
             // uncomment below to test authenticationexternalResetAuthorizationV1
             //val pkiAuthenticationexternalID : kotlin.Int = 56 // kotlin.Int | 
             //val body : kotlin.Any = Object // kotlin.Any | 
-            //val result : AuthenticationexternalResetAuthorizationV1Response = apiInstance.authenticationexternalResetAuthorizationV1(pkiAuthenticationexternalID, body)
+            //val result : CommonResponse = apiInstance.authenticationexternalResetAuthorizationV1(pkiAuthenticationexternalID, body)
             //result shouldBe ("TODO")
         }
 

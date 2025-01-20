@@ -10,7 +10,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 <a id="systemconfigurationEditObjectV1"></a>
 # **systemconfigurationEditObjectV1**
-> SystemconfigurationEditObjectV1Response systemconfigurationEditObjectV1(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request)
+> CommonResponse systemconfigurationEditObjectV1(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request)
 
 Edit an existing Systemconfiguration
 
@@ -26,7 +26,7 @@ val apiInstance = ObjectSystemconfigurationApi()
 val pkiSystemconfigurationID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Systemconfiguration
 val systemconfigurationEditObjectV1Request : SystemconfigurationEditObjectV1Request =  // SystemconfigurationEditObjectV1Request | 
 try {
-    val result : SystemconfigurationEditObjectV1Response = apiInstance.systemconfigurationEditObjectV1(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request)
+    val result : CommonResponse = apiInstance.systemconfigurationEditObjectV1(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectSystemconfigurationApi#systemconfigurationEditObjectV1")
@@ -45,7 +45,7 @@ try {
 
 ### Return type
 
-[**SystemconfigurationEditObjectV1Response**](SystemconfigurationEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

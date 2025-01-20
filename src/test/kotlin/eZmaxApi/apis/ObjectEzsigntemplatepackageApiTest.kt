@@ -19,14 +19,13 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectEzsigntemplatepackageApi
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.EzsigntemplatepackageCreateObjectV1Request
 import eZmaxApi.models.EzsigntemplatepackageCreateObjectV1Response
-import eZmaxApi.models.EzsigntemplatepackageDeleteObjectV1Response
 import eZmaxApi.models.EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Request
 import eZmaxApi.models.EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response
 import eZmaxApi.models.EzsigntemplatepackageEditObjectV1Request
-import eZmaxApi.models.EzsigntemplatepackageEditObjectV1Response
 import eZmaxApi.models.EzsigntemplatepackageGetAutocompleteV2Response
 import eZmaxApi.models.EzsigntemplatepackageGetListV1Response
 import eZmaxApi.models.EzsigntemplatepackageGetObjectV2Response
@@ -49,7 +48,7 @@ class ObjectEzsigntemplatepackageApiTest : ShouldSpec() {
         should("test ezsigntemplatepackageDeleteObjectV1") {
             // uncomment below to test ezsigntemplatepackageDeleteObjectV1
             //val pkiEzsigntemplatepackageID : kotlin.Int = 56 // kotlin.Int | 
-            //val result : EzsigntemplatepackageDeleteObjectV1Response = apiInstance.ezsigntemplatepackageDeleteObjectV1(pkiEzsigntemplatepackageID)
+            //val result : CommonResponse = apiInstance.ezsigntemplatepackageDeleteObjectV1(pkiEzsigntemplatepackageID)
             //result shouldBe ("TODO")
         }
 
@@ -67,7 +66,7 @@ class ObjectEzsigntemplatepackageApiTest : ShouldSpec() {
             // uncomment below to test ezsigntemplatepackageEditObjectV1
             //val pkiEzsigntemplatepackageID : kotlin.Int = 56 // kotlin.Int | 
             //val ezsigntemplatepackageEditObjectV1Request : EzsigntemplatepackageEditObjectV1Request =  // EzsigntemplatepackageEditObjectV1Request | 
-            //val result : EzsigntemplatepackageEditObjectV1Response = apiInstance.ezsigntemplatepackageEditObjectV1(pkiEzsigntemplatepackageID, ezsigntemplatepackageEditObjectV1Request)
+            //val result : CommonResponse = apiInstance.ezsigntemplatepackageEditObjectV1(pkiEzsigntemplatepackageID, ezsigntemplatepackageEditObjectV1Request)
             //result shouldBe ("TODO")
         }
 

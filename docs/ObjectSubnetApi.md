@@ -61,7 +61,7 @@ Configure Authorization:
 
 <a id="subnetDeleteObjectV1"></a>
 # **subnetDeleteObjectV1**
-> SubnetDeleteObjectV1Response subnetDeleteObjectV1(pkiSubnetID)
+> CommonResponse subnetDeleteObjectV1(pkiSubnetID)
 
 Delete an existing Subnet
 
@@ -76,7 +76,7 @@ Delete an existing Subnet
 val apiInstance = ObjectSubnetApi()
 val pkiSubnetID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Subnet
 try {
-    val result : SubnetDeleteObjectV1Response = apiInstance.subnetDeleteObjectV1(pkiSubnetID)
+    val result : CommonResponse = apiInstance.subnetDeleteObjectV1(pkiSubnetID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectSubnetApi#subnetDeleteObjectV1")
@@ -94,7 +94,7 @@ try {
 
 ### Return type
 
-[**SubnetDeleteObjectV1Response**](SubnetDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -110,7 +110,7 @@ Configure Authorization:
 
 <a id="subnetEditObjectV1"></a>
 # **subnetEditObjectV1**
-> SubnetEditObjectV1Response subnetEditObjectV1(pkiSubnetID, subnetEditObjectV1Request)
+> CommonResponse subnetEditObjectV1(pkiSubnetID, subnetEditObjectV1Request)
 
 Edit an existing Subnet
 
@@ -126,7 +126,7 @@ val apiInstance = ObjectSubnetApi()
 val pkiSubnetID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Subnet
 val subnetEditObjectV1Request : SubnetEditObjectV1Request =  // SubnetEditObjectV1Request | 
 try {
-    val result : SubnetEditObjectV1Response = apiInstance.subnetEditObjectV1(pkiSubnetID, subnetEditObjectV1Request)
+    val result : CommonResponse = apiInstance.subnetEditObjectV1(pkiSubnetID, subnetEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectSubnetApi#subnetEditObjectV1")
@@ -145,7 +145,7 @@ try {
 
 ### Return type
 
-[**SubnetEditObjectV1Response**](SubnetEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

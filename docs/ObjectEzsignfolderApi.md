@@ -40,7 +40,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 <a id="ezsignfolderArchiveV1"></a>
 # **ezsignfolderArchiveV1**
-> EzsignfolderArchiveV1Response ezsignfolderArchiveV1(pkiEzsignfolderID, body)
+> CommonResponse ezsignfolderArchiveV1(pkiEzsignfolderID, body)
 
 Archive the Ezsignfolder
 
@@ -56,7 +56,7 @@ val apiInstance = ObjectEzsignfolderApi()
 val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
 val body : kotlin.Any = Object // kotlin.Any | 
 try {
-    val result : EzsignfolderArchiveV1Response = apiInstance.ezsignfolderArchiveV1(pkiEzsignfolderID, body)
+    val result : CommonResponse = apiInstance.ezsignfolderArchiveV1(pkiEzsignfolderID, body)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignfolderApi#ezsignfolderArchiveV1")
@@ -75,7 +75,7 @@ try {
 
 ### Return type
 
-[**EzsignfolderArchiveV1Response**](EzsignfolderArchiveV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -287,7 +287,7 @@ Configure Authorization:
 
 <a id="ezsignfolderDeleteObjectV1"></a>
 # **ezsignfolderDeleteObjectV1**
-> EzsignfolderDeleteObjectV1Response ezsignfolderDeleteObjectV1(pkiEzsignfolderID)
+> CommonResponse ezsignfolderDeleteObjectV1(pkiEzsignfolderID)
 
 Delete an existing Ezsignfolder
 
@@ -300,7 +300,7 @@ Delete an existing Ezsignfolder
 val apiInstance = ObjectEzsignfolderApi()
 val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : EzsignfolderDeleteObjectV1Response = apiInstance.ezsignfolderDeleteObjectV1(pkiEzsignfolderID)
+    val result : CommonResponse = apiInstance.ezsignfolderDeleteObjectV1(pkiEzsignfolderID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignfolderApi#ezsignfolderDeleteObjectV1")
@@ -318,7 +318,7 @@ try {
 
 ### Return type
 
-[**EzsignfolderDeleteObjectV1Response**](EzsignfolderDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -334,7 +334,7 @@ Configure Authorization:
 
 <a id="ezsignfolderDisposeEzsignfoldersV1"></a>
 # **ezsignfolderDisposeEzsignfoldersV1**
-> EzsignfolderDisposeEzsignfoldersV1Response ezsignfolderDisposeEzsignfoldersV1(ezsignfolderDisposeEzsignfoldersV1Request)
+> CommonResponse ezsignfolderDisposeEzsignfoldersV1(ezsignfolderDisposeEzsignfoldersV1Request)
 
 Dispose Ezsignfolders
 
@@ -349,7 +349,7 @@ Dispose Ezsignfolders
 val apiInstance = ObjectEzsignfolderApi()
 val ezsignfolderDisposeEzsignfoldersV1Request : EzsignfolderDisposeEzsignfoldersV1Request =  // EzsignfolderDisposeEzsignfoldersV1Request | 
 try {
-    val result : EzsignfolderDisposeEzsignfoldersV1Response = apiInstance.ezsignfolderDisposeEzsignfoldersV1(ezsignfolderDisposeEzsignfoldersV1Request)
+    val result : CommonResponse = apiInstance.ezsignfolderDisposeEzsignfoldersV1(ezsignfolderDisposeEzsignfoldersV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignfolderApi#ezsignfolderDisposeEzsignfoldersV1")
@@ -367,7 +367,7 @@ try {
 
 ### Return type
 
-[**EzsignfolderDisposeEzsignfoldersV1Response**](EzsignfolderDisposeEzsignfoldersV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -383,7 +383,7 @@ Configure Authorization:
 
 <a id="ezsignfolderDisposeV1"></a>
 # **ezsignfolderDisposeV1**
-> EzsignfolderDisposeV1Response ezsignfolderDisposeV1(pkiEzsignfolderID, body)
+> CommonResponse ezsignfolderDisposeV1(pkiEzsignfolderID, body)
 
 Dispose the Ezsignfolder
 
@@ -399,7 +399,7 @@ val apiInstance = ObjectEzsignfolderApi()
 val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
 val body : kotlin.Any = Object // kotlin.Any | 
 try {
-    val result : EzsignfolderDisposeV1Response = apiInstance.ezsignfolderDisposeV1(pkiEzsignfolderID, body)
+    val result : CommonResponse = apiInstance.ezsignfolderDisposeV1(pkiEzsignfolderID, body)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignfolderApi#ezsignfolderDisposeV1")
@@ -418,7 +418,7 @@ try {
 
 ### Return type
 
-[**EzsignfolderDisposeV1Response**](EzsignfolderDisposeV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -434,7 +434,7 @@ Configure Authorization:
 
 <a id="ezsignfolderEditObjectV3"></a>
 # **ezsignfolderEditObjectV3**
-> EzsignfolderEditObjectV3Response ezsignfolderEditObjectV3(pkiEzsignfolderID, ezsignfolderEditObjectV3Request)
+> CommonResponse ezsignfolderEditObjectV3(pkiEzsignfolderID, ezsignfolderEditObjectV3Request)
 
 Edit an existing Ezsignfolder
 
@@ -450,7 +450,7 @@ val apiInstance = ObjectEzsignfolderApi()
 val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
 val ezsignfolderEditObjectV3Request : EzsignfolderEditObjectV3Request =  // EzsignfolderEditObjectV3Request | 
 try {
-    val result : EzsignfolderEditObjectV3Response = apiInstance.ezsignfolderEditObjectV3(pkiEzsignfolderID, ezsignfolderEditObjectV3Request)
+    val result : CommonResponse = apiInstance.ezsignfolderEditObjectV3(pkiEzsignfolderID, ezsignfolderEditObjectV3Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignfolderApi#ezsignfolderEditObjectV3")
@@ -469,7 +469,7 @@ try {
 
 ### Return type
 
-[**EzsignfolderEditObjectV3Response**](EzsignfolderEditObjectV3Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -485,7 +485,7 @@ Configure Authorization:
 
 <a id="ezsignfolderEndPrematurelyV1"></a>
 # **ezsignfolderEndPrematurelyV1**
-> EzsignfolderEndPrematurelyV1Response ezsignfolderEndPrematurelyV1(pkiEzsignfolderID, body)
+> CommonResponse ezsignfolderEndPrematurelyV1(pkiEzsignfolderID, body)
 
 End prematurely
 
@@ -501,7 +501,7 @@ val apiInstance = ObjectEzsignfolderApi()
 val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
 val body : kotlin.Any = Object // kotlin.Any | 
 try {
-    val result : EzsignfolderEndPrematurelyV1Response = apiInstance.ezsignfolderEndPrematurelyV1(pkiEzsignfolderID, body)
+    val result : CommonResponse = apiInstance.ezsignfolderEndPrematurelyV1(pkiEzsignfolderID, body)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignfolderApi#ezsignfolderEndPrematurelyV1")
@@ -520,7 +520,7 @@ try {
 
 ### Return type
 
-[**EzsignfolderEndPrematurelyV1Response**](EzsignfolderEndPrematurelyV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -1379,7 +1379,7 @@ Configure Authorization:
 
 <a id="ezsignfolderReorderV1"></a>
 # **ezsignfolderReorderV1**
-> EzsignfolderReorderV1Response ezsignfolderReorderV1(pkiEzsignfolderID, ezsignfolderReorderV1Request)
+> CommonResponse ezsignfolderReorderV1(pkiEzsignfolderID, ezsignfolderReorderV1Request)
 
 Reorder Ezsigndocuments in the Ezsignfolder
 
@@ -1393,7 +1393,7 @@ val apiInstance = ObjectEzsignfolderApi()
 val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
 val ezsignfolderReorderV1Request : EzsignfolderReorderV1Request =  // EzsignfolderReorderV1Request | 
 try {
-    val result : EzsignfolderReorderV1Response = apiInstance.ezsignfolderReorderV1(pkiEzsignfolderID, ezsignfolderReorderV1Request)
+    val result : CommonResponse = apiInstance.ezsignfolderReorderV1(pkiEzsignfolderID, ezsignfolderReorderV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignfolderApi#ezsignfolderReorderV1")
@@ -1412,7 +1412,7 @@ try {
 
 ### Return type
 
-[**EzsignfolderReorderV1Response**](EzsignfolderReorderV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -1428,7 +1428,7 @@ Configure Authorization:
 
 <a id="ezsignfolderReorderV2"></a>
 # **ezsignfolderReorderV2**
-> EzsignfolderReorderV2Response ezsignfolderReorderV2(pkiEzsignfolderID, ezsignfolderReorderV2Request)
+> CommonResponse ezsignfolderReorderV2(pkiEzsignfolderID, ezsignfolderReorderV2Request)
 
 Reorder Ezsigndocuments in the Ezsignfolder
 
@@ -1442,7 +1442,7 @@ val apiInstance = ObjectEzsignfolderApi()
 val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
 val ezsignfolderReorderV2Request : EzsignfolderReorderV2Request =  // EzsignfolderReorderV2Request | 
 try {
-    val result : EzsignfolderReorderV2Response = apiInstance.ezsignfolderReorderV2(pkiEzsignfolderID, ezsignfolderReorderV2Request)
+    val result : CommonResponse = apiInstance.ezsignfolderReorderV2(pkiEzsignfolderID, ezsignfolderReorderV2Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignfolderApi#ezsignfolderReorderV2")
@@ -1461,7 +1461,7 @@ try {
 
 ### Return type
 
-[**EzsignfolderReorderV2Response**](EzsignfolderReorderV2Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -1477,7 +1477,7 @@ Configure Authorization:
 
 <a id="ezsignfolderSendV1"></a>
 # **ezsignfolderSendV1**
-> EzsignfolderSendV1Response ezsignfolderSendV1(pkiEzsignfolderID, ezsignfolderSendV1Request)
+> CommonResponse ezsignfolderSendV1(pkiEzsignfolderID, ezsignfolderSendV1Request)
 
 Send the Ezsignfolder to the signatories for signature
 
@@ -1493,7 +1493,7 @@ val apiInstance = ObjectEzsignfolderApi()
 val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
 val ezsignfolderSendV1Request : EzsignfolderSendV1Request =  // EzsignfolderSendV1Request | 
 try {
-    val result : EzsignfolderSendV1Response = apiInstance.ezsignfolderSendV1(pkiEzsignfolderID, ezsignfolderSendV1Request)
+    val result : CommonResponse = apiInstance.ezsignfolderSendV1(pkiEzsignfolderID, ezsignfolderSendV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignfolderApi#ezsignfolderSendV1")
@@ -1512,7 +1512,7 @@ try {
 
 ### Return type
 
-[**EzsignfolderSendV1Response**](EzsignfolderSendV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -1528,7 +1528,7 @@ Configure Authorization:
 
 <a id="ezsignfolderSendV3"></a>
 # **ezsignfolderSendV3**
-> EzsignfolderSendV3Response ezsignfolderSendV3(pkiEzsignfolderID, ezsignfolderSendV3Request)
+> CommonResponse ezsignfolderSendV3(pkiEzsignfolderID, ezsignfolderSendV3Request)
 
 Send the Ezsignfolder to the signatories for signature
 
@@ -1544,7 +1544,7 @@ val apiInstance = ObjectEzsignfolderApi()
 val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
 val ezsignfolderSendV3Request : EzsignfolderSendV3Request =  // EzsignfolderSendV3Request | 
 try {
-    val result : EzsignfolderSendV3Response = apiInstance.ezsignfolderSendV3(pkiEzsignfolderID, ezsignfolderSendV3Request)
+    val result : CommonResponse = apiInstance.ezsignfolderSendV3(pkiEzsignfolderID, ezsignfolderSendV3Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignfolderApi#ezsignfolderSendV3")
@@ -1563,7 +1563,7 @@ try {
 
 ### Return type
 
-[**EzsignfolderSendV3Response**](EzsignfolderSendV3Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -1579,7 +1579,7 @@ Configure Authorization:
 
 <a id="ezsignfolderUnsendV1"></a>
 # **ezsignfolderUnsendV1**
-> EzsignfolderUnsendV1Response ezsignfolderUnsendV1(pkiEzsignfolderID, body)
+> CommonResponse ezsignfolderUnsendV1(pkiEzsignfolderID, body)
 
 Unsend the Ezsignfolder
 
@@ -1595,7 +1595,7 @@ val apiInstance = ObjectEzsignfolderApi()
 val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
 val body : kotlin.Any = Object // kotlin.Any | 
 try {
-    val result : EzsignfolderUnsendV1Response = apiInstance.ezsignfolderUnsendV1(pkiEzsignfolderID, body)
+    val result : CommonResponse = apiInstance.ezsignfolderUnsendV1(pkiEzsignfolderID, body)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignfolderApi#ezsignfolderUnsendV1")
@@ -1614,7 +1614,7 @@ try {
 
 ### Return type
 
-[**EzsignfolderUnsendV1Response**](EzsignfolderUnsendV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

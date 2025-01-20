@@ -62,7 +62,7 @@ Configure Authorization:
 
 <a id="variableexpenseEditObjectV1"></a>
 # **variableexpenseEditObjectV1**
-> VariableexpenseEditObjectV1Response variableexpenseEditObjectV1(pkiVariableexpenseID, variableexpenseEditObjectV1Request)
+> CommonResponse variableexpenseEditObjectV1(pkiVariableexpenseID, variableexpenseEditObjectV1Request)
 
 Edit an existing Variableexpense
 
@@ -78,7 +78,7 @@ val apiInstance = ObjectVariableexpenseApi()
 val pkiVariableexpenseID : kotlin.Int = 56 // kotlin.Int | 
 val variableexpenseEditObjectV1Request : VariableexpenseEditObjectV1Request =  // VariableexpenseEditObjectV1Request | 
 try {
-    val result : VariableexpenseEditObjectV1Response = apiInstance.variableexpenseEditObjectV1(pkiVariableexpenseID, variableexpenseEditObjectV1Request)
+    val result : CommonResponse = apiInstance.variableexpenseEditObjectV1(pkiVariableexpenseID, variableexpenseEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectVariableexpenseApi#variableexpenseEditObjectV1")
@@ -97,7 +97,7 @@ try {
 
 ### Return type
 
-[**VariableexpenseEditObjectV1Response**](VariableexpenseEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

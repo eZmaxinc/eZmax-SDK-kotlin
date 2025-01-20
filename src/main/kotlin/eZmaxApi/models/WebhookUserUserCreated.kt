@@ -15,9 +15,9 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.AttemptResponseCompound
+import eZmaxApi.models.AttemptResponse
 import eZmaxApi.models.CustomWebhookResponse
-import eZmaxApi.models.UserResponseCompound
+import eZmaxApi.models.UserResponse
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -27,7 +27,7 @@ import com.squareup.moshi.JsonClass
  *
  * @param objWebhook 
  * @param aObjAttempt An array containing details of previous attempts that were made to deliver the message. The array is empty if it's the first attempt.
- * @param objUser 
+ * @param objUser A User Object and children to create a complete structure
  */
 
 
@@ -38,10 +38,11 @@ data class WebhookUserUserCreated (
 
     /* An array containing details of previous attempts that were made to deliver the message. The array is empty if it's the first attempt. */
     @Json(name = "a_objAttempt")
-    val aObjAttempt: kotlin.collections.List<AttemptResponseCompound>,
+    val aObjAttempt: kotlin.collections.List<AttemptResponse>,
 
+    /* A User Object and children to create a complete structure */
     @Json(name = "objUser")
-    val objUser: UserResponseCompound
+    val objUser: UserResponse
 
 ) {
 

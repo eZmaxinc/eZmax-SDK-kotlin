@@ -21,13 +21,11 @@ import okhttp3.HttpUrl
 
 import eZmaxApi.models.AuthenticationexternalCreateObjectV1Request
 import eZmaxApi.models.AuthenticationexternalCreateObjectV1Response
-import eZmaxApi.models.AuthenticationexternalDeleteObjectV1Response
 import eZmaxApi.models.AuthenticationexternalEditObjectV1Request
-import eZmaxApi.models.AuthenticationexternalEditObjectV1Response
 import eZmaxApi.models.AuthenticationexternalGetAutocompleteV2Response
 import eZmaxApi.models.AuthenticationexternalGetListV1Response
 import eZmaxApi.models.AuthenticationexternalGetObjectV2Response
-import eZmaxApi.models.AuthenticationexternalResetAuthorizationV1Response
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.HeaderAcceptLanguage
 
@@ -131,7 +129,7 @@ class ObjectAuthenticationexternalApi(basePath: kotlin.String = defaultBasePath,
      * Delete an existing Authenticationexternal
      * 
      * @param pkiAuthenticationexternalID The unique ID of the Authenticationexternal
-     * @return AuthenticationexternalDeleteObjectV1Response
+     * @return CommonResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -140,11 +138,11 @@ class ObjectAuthenticationexternalApi(basePath: kotlin.String = defaultBasePath,
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun authenticationexternalDeleteObjectV1(pkiAuthenticationexternalID: kotlin.Int) : AuthenticationexternalDeleteObjectV1Response {
+    fun authenticationexternalDeleteObjectV1(pkiAuthenticationexternalID: kotlin.Int) : CommonResponse {
         val localVarResponse = authenticationexternalDeleteObjectV1WithHttpInfo(pkiAuthenticationexternalID = pkiAuthenticationexternalID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as AuthenticationexternalDeleteObjectV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -162,16 +160,16 @@ class ObjectAuthenticationexternalApi(basePath: kotlin.String = defaultBasePath,
      * Delete an existing Authenticationexternal
      * 
      * @param pkiAuthenticationexternalID The unique ID of the Authenticationexternal
-     * @return ApiResponse<AuthenticationexternalDeleteObjectV1Response?>
+     * @return ApiResponse<CommonResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun authenticationexternalDeleteObjectV1WithHttpInfo(pkiAuthenticationexternalID: kotlin.Int) : ApiResponse<AuthenticationexternalDeleteObjectV1Response?> {
+    fun authenticationexternalDeleteObjectV1WithHttpInfo(pkiAuthenticationexternalID: kotlin.Int) : ApiResponse<CommonResponse?> {
         val localVariableConfig = authenticationexternalDeleteObjectV1RequestConfig(pkiAuthenticationexternalID = pkiAuthenticationexternalID)
 
-        return request<Unit, AuthenticationexternalDeleteObjectV1Response>(
+        return request<Unit, CommonResponse>(
             localVariableConfig
         )
     }
@@ -203,7 +201,7 @@ class ObjectAuthenticationexternalApi(basePath: kotlin.String = defaultBasePath,
      * 
      * @param pkiAuthenticationexternalID The unique ID of the Authenticationexternal
      * @param authenticationexternalEditObjectV1Request 
-     * @return AuthenticationexternalEditObjectV1Response
+     * @return CommonResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -212,11 +210,11 @@ class ObjectAuthenticationexternalApi(basePath: kotlin.String = defaultBasePath,
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun authenticationexternalEditObjectV1(pkiAuthenticationexternalID: kotlin.Int, authenticationexternalEditObjectV1Request: AuthenticationexternalEditObjectV1Request) : AuthenticationexternalEditObjectV1Response {
+    fun authenticationexternalEditObjectV1(pkiAuthenticationexternalID: kotlin.Int, authenticationexternalEditObjectV1Request: AuthenticationexternalEditObjectV1Request) : CommonResponse {
         val localVarResponse = authenticationexternalEditObjectV1WithHttpInfo(pkiAuthenticationexternalID = pkiAuthenticationexternalID, authenticationexternalEditObjectV1Request = authenticationexternalEditObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as AuthenticationexternalEditObjectV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -235,16 +233,16 @@ class ObjectAuthenticationexternalApi(basePath: kotlin.String = defaultBasePath,
      * 
      * @param pkiAuthenticationexternalID The unique ID of the Authenticationexternal
      * @param authenticationexternalEditObjectV1Request 
-     * @return ApiResponse<AuthenticationexternalEditObjectV1Response?>
+     * @return ApiResponse<CommonResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun authenticationexternalEditObjectV1WithHttpInfo(pkiAuthenticationexternalID: kotlin.Int, authenticationexternalEditObjectV1Request: AuthenticationexternalEditObjectV1Request) : ApiResponse<AuthenticationexternalEditObjectV1Response?> {
+    fun authenticationexternalEditObjectV1WithHttpInfo(pkiAuthenticationexternalID: kotlin.Int, authenticationexternalEditObjectV1Request: AuthenticationexternalEditObjectV1Request) : ApiResponse<CommonResponse?> {
         val localVariableConfig = authenticationexternalEditObjectV1RequestConfig(pkiAuthenticationexternalID = pkiAuthenticationexternalID, authenticationexternalEditObjectV1Request = authenticationexternalEditObjectV1Request)
 
-        return request<AuthenticationexternalEditObjectV1Request, AuthenticationexternalEditObjectV1Response>(
+        return request<AuthenticationexternalEditObjectV1Request, CommonResponse>(
             localVariableConfig
         )
     }
@@ -591,7 +589,7 @@ class ObjectAuthenticationexternalApi(basePath: kotlin.String = defaultBasePath,
      * 
      * @param pkiAuthenticationexternalID 
      * @param body 
-     * @return AuthenticationexternalResetAuthorizationV1Response
+     * @return CommonResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -600,11 +598,11 @@ class ObjectAuthenticationexternalApi(basePath: kotlin.String = defaultBasePath,
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun authenticationexternalResetAuthorizationV1(pkiAuthenticationexternalID: kotlin.Int, body: kotlin.Any) : AuthenticationexternalResetAuthorizationV1Response {
+    fun authenticationexternalResetAuthorizationV1(pkiAuthenticationexternalID: kotlin.Int, body: kotlin.Any) : CommonResponse {
         val localVarResponse = authenticationexternalResetAuthorizationV1WithHttpInfo(pkiAuthenticationexternalID = pkiAuthenticationexternalID, body = body)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as AuthenticationexternalResetAuthorizationV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -623,16 +621,16 @@ class ObjectAuthenticationexternalApi(basePath: kotlin.String = defaultBasePath,
      * 
      * @param pkiAuthenticationexternalID 
      * @param body 
-     * @return ApiResponse<AuthenticationexternalResetAuthorizationV1Response?>
+     * @return ApiResponse<CommonResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun authenticationexternalResetAuthorizationV1WithHttpInfo(pkiAuthenticationexternalID: kotlin.Int, body: kotlin.Any) : ApiResponse<AuthenticationexternalResetAuthorizationV1Response?> {
+    fun authenticationexternalResetAuthorizationV1WithHttpInfo(pkiAuthenticationexternalID: kotlin.Int, body: kotlin.Any) : ApiResponse<CommonResponse?> {
         val localVariableConfig = authenticationexternalResetAuthorizationV1RequestConfig(pkiAuthenticationexternalID = pkiAuthenticationexternalID, body = body)
 
-        return request<kotlin.Any, AuthenticationexternalResetAuthorizationV1Response>(
+        return request<kotlin.Any, CommonResponse>(
             localVariableConfig
         )
     }

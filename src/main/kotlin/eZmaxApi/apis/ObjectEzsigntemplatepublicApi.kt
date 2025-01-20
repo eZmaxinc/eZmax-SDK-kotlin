@@ -19,13 +19,13 @@ import java.io.IOException
 import okhttp3.Call
 import okhttp3.HttpUrl
 
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.EzsigntemplatepublicCreateEzsignfolderV1Request
 import eZmaxApi.models.EzsigntemplatepublicCreateEzsignfolderV1Response
 import eZmaxApi.models.EzsigntemplatepublicCreateObjectV1Request
 import eZmaxApi.models.EzsigntemplatepublicCreateObjectV1Response
 import eZmaxApi.models.EzsigntemplatepublicEditObjectV1Request
-import eZmaxApi.models.EzsigntemplatepublicEditObjectV1Response
 import eZmaxApi.models.EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request
 import eZmaxApi.models.EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Response
 import eZmaxApi.models.EzsigntemplatepublicGetFormsDataV1Response
@@ -208,7 +208,7 @@ class ObjectEzsigntemplatepublicApi(basePath: kotlin.String = defaultBasePath, c
      * 
      * @param pkiEzsigntemplatepublicID The unique ID of the Ezsigntemplatepublic
      * @param ezsigntemplatepublicEditObjectV1Request 
-     * @return EzsigntemplatepublicEditObjectV1Response
+     * @return CommonResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -217,11 +217,11 @@ class ObjectEzsigntemplatepublicApi(basePath: kotlin.String = defaultBasePath, c
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsigntemplatepublicEditObjectV1(pkiEzsigntemplatepublicID: kotlin.Int, ezsigntemplatepublicEditObjectV1Request: EzsigntemplatepublicEditObjectV1Request) : EzsigntemplatepublicEditObjectV1Response {
+    fun ezsigntemplatepublicEditObjectV1(pkiEzsigntemplatepublicID: kotlin.Int, ezsigntemplatepublicEditObjectV1Request: EzsigntemplatepublicEditObjectV1Request) : CommonResponse {
         val localVarResponse = ezsigntemplatepublicEditObjectV1WithHttpInfo(pkiEzsigntemplatepublicID = pkiEzsigntemplatepublicID, ezsigntemplatepublicEditObjectV1Request = ezsigntemplatepublicEditObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigntemplatepublicEditObjectV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -240,16 +240,16 @@ class ObjectEzsigntemplatepublicApi(basePath: kotlin.String = defaultBasePath, c
      * 
      * @param pkiEzsigntemplatepublicID The unique ID of the Ezsigntemplatepublic
      * @param ezsigntemplatepublicEditObjectV1Request 
-     * @return ApiResponse<EzsigntemplatepublicEditObjectV1Response?>
+     * @return ApiResponse<CommonResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsigntemplatepublicEditObjectV1WithHttpInfo(pkiEzsigntemplatepublicID: kotlin.Int, ezsigntemplatepublicEditObjectV1Request: EzsigntemplatepublicEditObjectV1Request) : ApiResponse<EzsigntemplatepublicEditObjectV1Response?> {
+    fun ezsigntemplatepublicEditObjectV1WithHttpInfo(pkiEzsigntemplatepublicID: kotlin.Int, ezsigntemplatepublicEditObjectV1Request: EzsigntemplatepublicEditObjectV1Request) : ApiResponse<CommonResponse?> {
         val localVariableConfig = ezsigntemplatepublicEditObjectV1RequestConfig(pkiEzsigntemplatepublicID = pkiEzsigntemplatepublicID, ezsigntemplatepublicEditObjectV1Request = ezsigntemplatepublicEditObjectV1Request)
 
-        return request<EzsigntemplatepublicEditObjectV1Request, EzsigntemplatepublicEditObjectV1Response>(
+        return request<EzsigntemplatepublicEditObjectV1Request, CommonResponse>(
             localVariableConfig
         )
     }

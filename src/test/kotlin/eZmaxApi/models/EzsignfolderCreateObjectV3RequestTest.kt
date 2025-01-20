@@ -19,7 +19,7 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.EzsignfolderCreateObjectV3Request
-import eZmaxApi.models.EzsignfolderRequestCompoundV3
+import eZmaxApi.models.EzsignfolderRequestV3
 
 class EzsignfolderCreateObjectV3RequestTest : ShouldSpec() {
     init {

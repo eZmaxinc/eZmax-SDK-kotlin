@@ -19,18 +19,16 @@ import java.io.IOException
 import okhttp3.Call
 import okhttp3.HttpUrl
 
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.CommonResponseErrorCreditcardValidation
 import eZmaxApi.models.CreditcardclientCreateObjectV1Request
 import eZmaxApi.models.CreditcardclientCreateObjectV1Response
-import eZmaxApi.models.CreditcardclientDeleteObjectV1Response
 import eZmaxApi.models.CreditcardclientEditObjectV1Request
-import eZmaxApi.models.CreditcardclientEditObjectV1Response
 import eZmaxApi.models.CreditcardclientGetAutocompleteV2Response
 import eZmaxApi.models.CreditcardclientGetListV1Response
 import eZmaxApi.models.CreditcardclientGetObjectV2Response
 import eZmaxApi.models.CreditcardclientPatchObjectV1Request
-import eZmaxApi.models.CreditcardclientPatchObjectV1Response
 import eZmaxApi.models.HeaderAcceptLanguage
 
 import com.squareup.moshi.Json
@@ -133,7 +131,7 @@ class ObjectCreditcardclientApi(basePath: kotlin.String = defaultBasePath, clien
      * Delete an existing Creditcardclient
      * 
      * @param pkiCreditcardclientID The unique ID of the Creditcardclient
-     * @return CreditcardclientDeleteObjectV1Response
+     * @return CommonResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -142,11 +140,11 @@ class ObjectCreditcardclientApi(basePath: kotlin.String = defaultBasePath, clien
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun creditcardclientDeleteObjectV1(pkiCreditcardclientID: kotlin.Int) : CreditcardclientDeleteObjectV1Response {
+    fun creditcardclientDeleteObjectV1(pkiCreditcardclientID: kotlin.Int) : CommonResponse {
         val localVarResponse = creditcardclientDeleteObjectV1WithHttpInfo(pkiCreditcardclientID = pkiCreditcardclientID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CreditcardclientDeleteObjectV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -164,16 +162,16 @@ class ObjectCreditcardclientApi(basePath: kotlin.String = defaultBasePath, clien
      * Delete an existing Creditcardclient
      * 
      * @param pkiCreditcardclientID The unique ID of the Creditcardclient
-     * @return ApiResponse<CreditcardclientDeleteObjectV1Response?>
+     * @return ApiResponse<CommonResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun creditcardclientDeleteObjectV1WithHttpInfo(pkiCreditcardclientID: kotlin.Int) : ApiResponse<CreditcardclientDeleteObjectV1Response?> {
+    fun creditcardclientDeleteObjectV1WithHttpInfo(pkiCreditcardclientID: kotlin.Int) : ApiResponse<CommonResponse?> {
         val localVariableConfig = creditcardclientDeleteObjectV1RequestConfig(pkiCreditcardclientID = pkiCreditcardclientID)
 
-        return request<Unit, CreditcardclientDeleteObjectV1Response>(
+        return request<Unit, CommonResponse>(
             localVariableConfig
         )
     }
@@ -205,7 +203,7 @@ class ObjectCreditcardclientApi(basePath: kotlin.String = defaultBasePath, clien
      * 
      * @param pkiCreditcardclientID The unique ID of the Creditcardclient
      * @param creditcardclientEditObjectV1Request 
-     * @return CreditcardclientEditObjectV1Response
+     * @return CommonResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -214,11 +212,11 @@ class ObjectCreditcardclientApi(basePath: kotlin.String = defaultBasePath, clien
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun creditcardclientEditObjectV1(pkiCreditcardclientID: kotlin.Int, creditcardclientEditObjectV1Request: CreditcardclientEditObjectV1Request) : CreditcardclientEditObjectV1Response {
+    fun creditcardclientEditObjectV1(pkiCreditcardclientID: kotlin.Int, creditcardclientEditObjectV1Request: CreditcardclientEditObjectV1Request) : CommonResponse {
         val localVarResponse = creditcardclientEditObjectV1WithHttpInfo(pkiCreditcardclientID = pkiCreditcardclientID, creditcardclientEditObjectV1Request = creditcardclientEditObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CreditcardclientEditObjectV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -237,16 +235,16 @@ class ObjectCreditcardclientApi(basePath: kotlin.String = defaultBasePath, clien
      * 
      * @param pkiCreditcardclientID The unique ID of the Creditcardclient
      * @param creditcardclientEditObjectV1Request 
-     * @return ApiResponse<CreditcardclientEditObjectV1Response?>
+     * @return ApiResponse<CommonResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun creditcardclientEditObjectV1WithHttpInfo(pkiCreditcardclientID: kotlin.Int, creditcardclientEditObjectV1Request: CreditcardclientEditObjectV1Request) : ApiResponse<CreditcardclientEditObjectV1Response?> {
+    fun creditcardclientEditObjectV1WithHttpInfo(pkiCreditcardclientID: kotlin.Int, creditcardclientEditObjectV1Request: CreditcardclientEditObjectV1Request) : ApiResponse<CommonResponse?> {
         val localVariableConfig = creditcardclientEditObjectV1RequestConfig(pkiCreditcardclientID = pkiCreditcardclientID, creditcardclientEditObjectV1Request = creditcardclientEditObjectV1Request)
 
-        return request<CreditcardclientEditObjectV1Request, CreditcardclientEditObjectV1Response>(
+        return request<CreditcardclientEditObjectV1Request, CommonResponse>(
             localVariableConfig
         )
     }
@@ -607,7 +605,7 @@ class ObjectCreditcardclientApi(basePath: kotlin.String = defaultBasePath, clien
      * 
      * @param pkiCreditcardclientID The unique ID of the Creditcardclient
      * @param creditcardclientPatchObjectV1Request 
-     * @return CreditcardclientPatchObjectV1Response
+     * @return CommonResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -616,11 +614,11 @@ class ObjectCreditcardclientApi(basePath: kotlin.String = defaultBasePath, clien
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun creditcardclientPatchObjectV1(pkiCreditcardclientID: kotlin.Int, creditcardclientPatchObjectV1Request: CreditcardclientPatchObjectV1Request) : CreditcardclientPatchObjectV1Response {
+    fun creditcardclientPatchObjectV1(pkiCreditcardclientID: kotlin.Int, creditcardclientPatchObjectV1Request: CreditcardclientPatchObjectV1Request) : CommonResponse {
         val localVarResponse = creditcardclientPatchObjectV1WithHttpInfo(pkiCreditcardclientID = pkiCreditcardclientID, creditcardclientPatchObjectV1Request = creditcardclientPatchObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CreditcardclientPatchObjectV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -639,16 +637,16 @@ class ObjectCreditcardclientApi(basePath: kotlin.String = defaultBasePath, clien
      * 
      * @param pkiCreditcardclientID The unique ID of the Creditcardclient
      * @param creditcardclientPatchObjectV1Request 
-     * @return ApiResponse<CreditcardclientPatchObjectV1Response?>
+     * @return ApiResponse<CommonResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun creditcardclientPatchObjectV1WithHttpInfo(pkiCreditcardclientID: kotlin.Int, creditcardclientPatchObjectV1Request: CreditcardclientPatchObjectV1Request) : ApiResponse<CreditcardclientPatchObjectV1Response?> {
+    fun creditcardclientPatchObjectV1WithHttpInfo(pkiCreditcardclientID: kotlin.Int, creditcardclientPatchObjectV1Request: CreditcardclientPatchObjectV1Request) : ApiResponse<CommonResponse?> {
         val localVariableConfig = creditcardclientPatchObjectV1RequestConfig(pkiCreditcardclientID = pkiCreditcardclientID, creditcardclientPatchObjectV1Request = creditcardclientPatchObjectV1Request)
 
-        return request<CreditcardclientPatchObjectV1Request, CreditcardclientPatchObjectV1Response>(
+        return request<CreditcardclientPatchObjectV1Request, CommonResponse>(
             localVariableConfig
         )
     }

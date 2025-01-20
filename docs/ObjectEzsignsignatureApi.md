@@ -164,7 +164,7 @@ Configure Authorization:
 
 <a id="ezsignsignatureDeleteObjectV1"></a>
 # **ezsignsignatureDeleteObjectV1**
-> EzsignsignatureDeleteObjectV1Response ezsignsignatureDeleteObjectV1(pkiEzsignsignatureID)
+> CommonResponse ezsignsignatureDeleteObjectV1(pkiEzsignsignatureID)
 
 Delete an existing Ezsignsignature
 
@@ -179,7 +179,7 @@ Delete an existing Ezsignsignature
 val apiInstance = ObjectEzsignsignatureApi()
 val pkiEzsignsignatureID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : EzsignsignatureDeleteObjectV1Response = apiInstance.ezsignsignatureDeleteObjectV1(pkiEzsignsignatureID)
+    val result : CommonResponse = apiInstance.ezsignsignatureDeleteObjectV1(pkiEzsignsignatureID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignsignatureApi#ezsignsignatureDeleteObjectV1")
@@ -197,7 +197,7 @@ try {
 
 ### Return type
 
-[**EzsignsignatureDeleteObjectV1Response**](EzsignsignatureDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -213,7 +213,7 @@ Configure Authorization:
 
 <a id="ezsignsignatureEditObjectV2"></a>
 # **ezsignsignatureEditObjectV2**
-> EzsignsignatureEditObjectV2Response ezsignsignatureEditObjectV2(pkiEzsignsignatureID, ezsignsignatureEditObjectV2Request)
+> CommonResponse ezsignsignatureEditObjectV2(pkiEzsignsignatureID, ezsignsignatureEditObjectV2Request)
 
 Edit an existing Ezsignsignature
 
@@ -229,7 +229,7 @@ val apiInstance = ObjectEzsignsignatureApi()
 val pkiEzsignsignatureID : kotlin.Int = 56 // kotlin.Int | 
 val ezsignsignatureEditObjectV2Request : EzsignsignatureEditObjectV2Request =  // EzsignsignatureEditObjectV2Request | 
 try {
-    val result : EzsignsignatureEditObjectV2Response = apiInstance.ezsignsignatureEditObjectV2(pkiEzsignsignatureID, ezsignsignatureEditObjectV2Request)
+    val result : CommonResponse = apiInstance.ezsignsignatureEditObjectV2(pkiEzsignsignatureID, ezsignsignatureEditObjectV2Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignsignatureApi#ezsignsignatureEditObjectV2")
@@ -248,7 +248,7 @@ try {
 
 ### Return type
 
-[**EzsignsignatureEditObjectV2Response**](EzsignsignatureEditObjectV2Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

@@ -168,7 +168,7 @@ Configure Authorization:
 
 <a id="ezsignfoldersignerassociationDeleteObjectV1"></a>
 # **ezsignfoldersignerassociationDeleteObjectV1**
-> EzsignfoldersignerassociationDeleteObjectV1Response ezsignfoldersignerassociationDeleteObjectV1(pkiEzsignfoldersignerassociationID)
+> CommonResponse ezsignfoldersignerassociationDeleteObjectV1(pkiEzsignfoldersignerassociationID)
 
 Delete an existing Ezsignfoldersignerassociation
 
@@ -183,7 +183,7 @@ Delete an existing Ezsignfoldersignerassociation
 val apiInstance = ObjectEzsignfoldersignerassociationApi()
 val pkiEzsignfoldersignerassociationID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : EzsignfoldersignerassociationDeleteObjectV1Response = apiInstance.ezsignfoldersignerassociationDeleteObjectV1(pkiEzsignfoldersignerassociationID)
+    val result : CommonResponse = apiInstance.ezsignfoldersignerassociationDeleteObjectV1(pkiEzsignfoldersignerassociationID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignfoldersignerassociationApi#ezsignfoldersignerassociationDeleteObjectV1")
@@ -201,7 +201,7 @@ try {
 
 ### Return type
 
-[**EzsignfoldersignerassociationDeleteObjectV1Response**](EzsignfoldersignerassociationDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -217,7 +217,7 @@ Configure Authorization:
 
 <a id="ezsignfoldersignerassociationEditObjectV1"></a>
 # **ezsignfoldersignerassociationEditObjectV1**
-> EzsignfoldersignerassociationEditObjectV1Response ezsignfoldersignerassociationEditObjectV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationEditObjectV1Request)
+> CommonResponse ezsignfoldersignerassociationEditObjectV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationEditObjectV1Request)
 
 Edit an existing Ezsignfoldersignerassociation
 
@@ -233,7 +233,7 @@ val apiInstance = ObjectEzsignfoldersignerassociationApi()
 val pkiEzsignfoldersignerassociationID : kotlin.Int = 56 // kotlin.Int | 
 val ezsignfoldersignerassociationEditObjectV1Request : EzsignfoldersignerassociationEditObjectV1Request =  // EzsignfoldersignerassociationEditObjectV1Request | 
 try {
-    val result : EzsignfoldersignerassociationEditObjectV1Response = apiInstance.ezsignfoldersignerassociationEditObjectV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationEditObjectV1Request)
+    val result : CommonResponse = apiInstance.ezsignfoldersignerassociationEditObjectV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignfoldersignerassociationApi#ezsignfoldersignerassociationEditObjectV1")
@@ -252,7 +252,7 @@ try {
 
 ### Return type
 
-[**EzsignfoldersignerassociationEditObjectV1Response**](EzsignfoldersignerassociationEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -268,7 +268,7 @@ Configure Authorization:
 
 <a id="ezsignfoldersignerassociationForceDisconnectV1"></a>
 # **ezsignfoldersignerassociationForceDisconnectV1**
-> EzsignfoldersignerassociationForceDisconnectV1Response ezsignfoldersignerassociationForceDisconnectV1(pkiEzsignfoldersignerassociationID, body)
+> CommonResponse ezsignfoldersignerassociationForceDisconnectV1(pkiEzsignfoldersignerassociationID, body)
 
 Disconnects the Ezsignfoldersignerassociation
 
@@ -284,7 +284,7 @@ val apiInstance = ObjectEzsignfoldersignerassociationApi()
 val pkiEzsignfoldersignerassociationID : kotlin.Int = 56 // kotlin.Int | 
 val body : kotlin.Any = Object // kotlin.Any | 
 try {
-    val result : EzsignfoldersignerassociationForceDisconnectV1Response = apiInstance.ezsignfoldersignerassociationForceDisconnectV1(pkiEzsignfoldersignerassociationID, body)
+    val result : CommonResponse = apiInstance.ezsignfoldersignerassociationForceDisconnectV1(pkiEzsignfoldersignerassociationID, body)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignfoldersignerassociationApi#ezsignfoldersignerassociationForceDisconnectV1")
@@ -303,7 +303,7 @@ try {
 
 ### Return type
 
-[**EzsignfoldersignerassociationForceDisconnectV1Response**](EzsignfoldersignerassociationForceDisconnectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -466,7 +466,7 @@ Configure Authorization:
 
 <a id="ezsignfoldersignerassociationPatchObjectV1"></a>
 # **ezsignfoldersignerassociationPatchObjectV1**
-> EzsignfoldersignerassociationPatchObjectV1Response ezsignfoldersignerassociationPatchObjectV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationPatchObjectV1Request)
+> CommonResponse ezsignfoldersignerassociationPatchObjectV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationPatchObjectV1Request)
 
 Patch an existing Ezsignfoldersignerassociation
 
@@ -480,7 +480,7 @@ val apiInstance = ObjectEzsignfoldersignerassociationApi()
 val pkiEzsignfoldersignerassociationID : kotlin.Int = 56 // kotlin.Int | 
 val ezsignfoldersignerassociationPatchObjectV1Request : EzsignfoldersignerassociationPatchObjectV1Request =  // EzsignfoldersignerassociationPatchObjectV1Request | 
 try {
-    val result : EzsignfoldersignerassociationPatchObjectV1Response = apiInstance.ezsignfoldersignerassociationPatchObjectV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationPatchObjectV1Request)
+    val result : CommonResponse = apiInstance.ezsignfoldersignerassociationPatchObjectV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationPatchObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignfoldersignerassociationApi#ezsignfoldersignerassociationPatchObjectV1")
@@ -499,7 +499,7 @@ try {
 
 ### Return type
 
-[**EzsignfoldersignerassociationPatchObjectV1Response**](EzsignfoldersignerassociationPatchObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -515,7 +515,7 @@ Configure Authorization:
 
 <a id="ezsignfoldersignerassociationReassignV1"></a>
 # **ezsignfoldersignerassociationReassignV1**
-> EzsignfoldersignerassociationReassignV1Response ezsignfoldersignerassociationReassignV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationReassignV1Request)
+> CommonResponse ezsignfoldersignerassociationReassignV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationReassignV1Request)
 
 Reassign remaining unsigned signatures and forms
 
@@ -531,7 +531,7 @@ val apiInstance = ObjectEzsignfoldersignerassociationApi()
 val pkiEzsignfoldersignerassociationID : kotlin.Int = 56 // kotlin.Int | 
 val ezsignfoldersignerassociationReassignV1Request : EzsignfoldersignerassociationReassignV1Request =  // EzsignfoldersignerassociationReassignV1Request | 
 try {
-    val result : EzsignfoldersignerassociationReassignV1Response = apiInstance.ezsignfoldersignerassociationReassignV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationReassignV1Request)
+    val result : CommonResponse = apiInstance.ezsignfoldersignerassociationReassignV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationReassignV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignfoldersignerassociationApi#ezsignfoldersignerassociationReassignV1")
@@ -550,7 +550,7 @@ try {
 
 ### Return type
 
-[**EzsignfoldersignerassociationReassignV1Response**](EzsignfoldersignerassociationReassignV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

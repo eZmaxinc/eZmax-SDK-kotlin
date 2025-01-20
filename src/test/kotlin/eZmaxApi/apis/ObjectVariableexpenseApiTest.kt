@@ -19,12 +19,12 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectVariableexpenseApi
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.HeaderAcceptLanguage
 import eZmaxApi.models.VariableexpenseCreateObjectV1Request
 import eZmaxApi.models.VariableexpenseCreateObjectV1Response
 import eZmaxApi.models.VariableexpenseEditObjectV1Request
-import eZmaxApi.models.VariableexpenseEditObjectV1Response
 import eZmaxApi.models.VariableexpenseGetAutocompleteV2Response
 import eZmaxApi.models.VariableexpenseGetListV1Response
 import eZmaxApi.models.VariableexpenseGetObjectV2Response
@@ -47,7 +47,7 @@ class ObjectVariableexpenseApiTest : ShouldSpec() {
             // uncomment below to test variableexpenseEditObjectV1
             //val pkiVariableexpenseID : kotlin.Int = 56 // kotlin.Int | 
             //val variableexpenseEditObjectV1Request : VariableexpenseEditObjectV1Request =  // VariableexpenseEditObjectV1Request | 
-            //val result : VariableexpenseEditObjectV1Response = apiInstance.variableexpenseEditObjectV1(pkiVariableexpenseID, variableexpenseEditObjectV1Request)
+            //val result : CommonResponse = apiInstance.variableexpenseEditObjectV1(pkiVariableexpenseID, variableexpenseEditObjectV1Request)
             //result shouldBe ("TODO")
         }
 

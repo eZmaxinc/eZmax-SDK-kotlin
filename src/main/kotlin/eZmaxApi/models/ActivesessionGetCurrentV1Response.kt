@@ -15,7 +15,7 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.ActivesessionGetCurrentV1ResponseMPayload
+import eZmaxApi.models.ActivesessionResponseCompound
 import eZmaxApi.models.CommonResponseObjDebug
 import eZmaxApi.models.CommonResponseObjDebugPayload
 
@@ -26,7 +26,7 @@ import com.squareup.moshi.JsonClass
  * Response for GET /1/object/activesession/getCurrent
  *
  * @param objDebugPayload 
- * @param mPayload 
+ * @param mPayload Payload for GET /1/object/activesession/getCurrent
  * @param objDebug 
  */
 
@@ -36,8 +36,9 @@ data class ActivesessionGetCurrentV1Response (
     @Json(name = "objDebugPayload")
     val objDebugPayload: CommonResponseObjDebugPayload,
 
+    /* Payload for GET /1/object/activesession/getCurrent */
     @Json(name = "mPayload")
-    val mPayload: ActivesessionGetCurrentV1ResponseMPayload,
+    val mPayload: ActivesessionResponseCompound,
 
     @Json(name = "objDebug")
     val objDebug: CommonResponseObjDebug? = null

@@ -19,7 +19,7 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.EzsigndocumentGetEzsignpagesV1ResponseMPayload
-import eZmaxApi.models.EzsignpageResponseCompound
+import eZmaxApi.models.EzsignpageResponse
 
 class EzsigndocumentGetEzsignpagesV1ResponseMPayloadTest : ShouldSpec() {
     init {

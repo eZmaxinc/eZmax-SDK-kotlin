@@ -15,10 +15,10 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.CustomDropdownElementRequestCompound
+import eZmaxApi.models.CustomDropdownElementRequest
 import eZmaxApi.models.EnumTextvalidation
 import eZmaxApi.models.EzsignformfieldRequestCompound
-import eZmaxApi.models.EzsignformfieldgroupsignerRequestCompound
+import eZmaxApi.models.EzsignformfieldgroupsignerRequest
 import eZmaxApi.models.FieldEEzsignformfieldgroupSignerrequirement
 import eZmaxApi.models.FieldEEzsignformfieldgroupTooltipposition
 import eZmaxApi.models.FieldEEzsignformfieldgroupType
@@ -82,7 +82,7 @@ data class EzsignformfieldgroupRequestCompound (
     val bEzsignformfieldgroupReadonly: kotlin.Boolean,
 
     @Json(name = "a_objEzsignformfieldgroupsigner")
-    val aObjEzsignformfieldgroupsigner: kotlin.collections.List<EzsignformfieldgroupsignerRequestCompound>,
+    val aObjEzsignformfieldgroupsigner: kotlin.collections.List<EzsignformfieldgroupsignerRequest>,
 
     @Json(name = "a_objEzsignformfield")
     val aObjEzsignformfield: kotlin.collections.List<EzsignformfieldRequestCompound>,
@@ -126,7 +126,7 @@ data class EzsignformfieldgroupRequestCompound (
     val eEzsignformfieldgroupTextvalidation: EnumTextvalidation? = null,
 
     @Json(name = "a_objDropdownElement")
-    val aObjDropdownElement: kotlin.collections.List<CustomDropdownElementRequestCompound>? = null
+    val aObjDropdownElement: kotlin.collections.List<CustomDropdownElementRequest>? = null
 
 ) {
 

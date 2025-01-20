@@ -21,7 +21,7 @@ import io.kotlintest.specs.ShouldSpec
 import eZmaxApi.models.EzmaxinvoicingGetProvisionalV1Response
 import eZmaxApi.models.CommonResponseObjDebug
 import eZmaxApi.models.CommonResponseObjDebugPayload
-import eZmaxApi.models.EzmaxinvoicingGetProvisionalV1ResponseMPayload
+import eZmaxApi.models.EzmaxinvoicingResponseCompound
 
 class EzmaxinvoicingGetProvisionalV1ResponseTest : ShouldSpec() {
     init {
@@ -34,7 +34,7 @@ class EzmaxinvoicingGetProvisionalV1ResponseTest : ShouldSpec() {
             //modelInstance.objDebugPayload shouldBe ("TODO")
         }
 
-        // to test the property `mPayload`
+        // to test the property `mPayload` - Payload for GET /1/object/ezmaxinvoicing/getProvisional
         should("test mPayload") {
             // uncomment below to test the property
             //modelInstance.mPayload shouldBe ("TODO")

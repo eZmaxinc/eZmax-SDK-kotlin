@@ -19,12 +19,11 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectCorsApi
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.CorsCreateObjectV1Request
 import eZmaxApi.models.CorsCreateObjectV1Response
-import eZmaxApi.models.CorsDeleteObjectV1Response
 import eZmaxApi.models.CorsEditObjectV1Request
-import eZmaxApi.models.CorsEditObjectV1Response
 import eZmaxApi.models.CorsGetObjectV2Response
 
 class ObjectCorsApiTest : ShouldSpec() {
@@ -44,7 +43,7 @@ class ObjectCorsApiTest : ShouldSpec() {
         should("test corsDeleteObjectV1") {
             // uncomment below to test corsDeleteObjectV1
             //val pkiCorsID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Cors
-            //val result : CorsDeleteObjectV1Response = apiInstance.corsDeleteObjectV1(pkiCorsID)
+            //val result : CommonResponse = apiInstance.corsDeleteObjectV1(pkiCorsID)
             //result shouldBe ("TODO")
         }
 
@@ -53,7 +52,7 @@ class ObjectCorsApiTest : ShouldSpec() {
             // uncomment below to test corsEditObjectV1
             //val pkiCorsID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Cors
             //val corsEditObjectV1Request : CorsEditObjectV1Request =  // CorsEditObjectV1Request | 
-            //val result : CorsEditObjectV1Response = apiInstance.corsEditObjectV1(pkiCorsID, corsEditObjectV1Request)
+            //val result : CommonResponse = apiInstance.corsEditObjectV1(pkiCorsID, corsEditObjectV1Request)
             //result shouldBe ("TODO")
         }
 

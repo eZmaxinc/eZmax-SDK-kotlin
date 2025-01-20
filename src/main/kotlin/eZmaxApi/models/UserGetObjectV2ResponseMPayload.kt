@@ -15,7 +15,7 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.UserResponseCompound
+import eZmaxApi.models.UserResponse
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -23,14 +23,15 @@ import com.squareup.moshi.JsonClass
 /**
  * Payload for GET /2/object/user/{pkiUserID}
  *
- * @param objUser 
+ * @param objUser A User Object and children to create a complete structure
  */
 
 
 data class UserGetObjectV2ResponseMPayload (
 
+    /* A User Object and children to create a complete structure */
     @Json(name = "objUser")
-    val objUser: UserResponseCompound
+    val objUser: UserResponse
 
 ) {
 

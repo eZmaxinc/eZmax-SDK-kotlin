@@ -17,7 +17,7 @@ package eZmaxApi.models
 
 import eZmaxApi.models.CommonResponseObjDebug
 import eZmaxApi.models.CommonResponseObjDebugPayload
-import eZmaxApi.models.EzmaxinvoicingGetProvisionalV1ResponseMPayload
+import eZmaxApi.models.EzmaxinvoicingResponseCompound
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -26,7 +26,7 @@ import com.squareup.moshi.JsonClass
  * Response for GET /1/object/ezmaxinvoicing/getProvisional
  *
  * @param objDebugPayload 
- * @param mPayload 
+ * @param mPayload Payload for GET /1/object/ezmaxinvoicing/getProvisional
  * @param objDebug 
  */
 
@@ -36,8 +36,9 @@ data class EzmaxinvoicingGetProvisionalV1Response (
     @Json(name = "objDebugPayload")
     val objDebugPayload: CommonResponseObjDebugPayload,
 
+    /* Payload for GET /1/object/ezmaxinvoicing/getProvisional */
     @Json(name = "mPayload")
-    val mPayload: EzmaxinvoicingGetProvisionalV1ResponseMPayload,
+    val mPayload: EzmaxinvoicingResponseCompound,
 
     @Json(name = "objDebug")
     val objDebug: CommonResponseObjDebug? = null

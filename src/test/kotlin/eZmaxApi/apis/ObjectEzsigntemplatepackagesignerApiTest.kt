@@ -19,12 +19,12 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectEzsigntemplatepackagesignerApi
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.EzsigntemplatepackagesignerCreateObjectV1Request
 import eZmaxApi.models.EzsigntemplatepackagesignerCreateObjectV1Response
 import eZmaxApi.models.EzsigntemplatepackagesignerDeleteObjectV1Response
 import eZmaxApi.models.EzsigntemplatepackagesignerEditObjectV1Request
-import eZmaxApi.models.EzsigntemplatepackagesignerEditObjectV1Response
 import eZmaxApi.models.EzsigntemplatepackagesignerGetObjectV2Response
 
 class ObjectEzsigntemplatepackagesignerApiTest : ShouldSpec() {
@@ -53,7 +53,7 @@ class ObjectEzsigntemplatepackagesignerApiTest : ShouldSpec() {
             // uncomment below to test ezsigntemplatepackagesignerEditObjectV1
             //val pkiEzsigntemplatepackagesignerID : kotlin.Int = 56 // kotlin.Int | 
             //val ezsigntemplatepackagesignerEditObjectV1Request : EzsigntemplatepackagesignerEditObjectV1Request =  // EzsigntemplatepackagesignerEditObjectV1Request | 
-            //val result : EzsigntemplatepackagesignerEditObjectV1Response = apiInstance.ezsigntemplatepackagesignerEditObjectV1(pkiEzsigntemplatepackagesignerID, ezsigntemplatepackagesignerEditObjectV1Request)
+            //val result : CommonResponse = apiInstance.ezsigntemplatepackagesignerEditObjectV1(pkiEzsigntemplatepackagesignerID, ezsigntemplatepackagesignerEditObjectV1Request)
             //result shouldBe ("TODO")
         }
 

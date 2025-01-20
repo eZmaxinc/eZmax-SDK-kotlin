@@ -65,7 +65,7 @@ Configure Authorization:
 
 <a id="usergroupexternalDeleteObjectV1"></a>
 # **usergroupexternalDeleteObjectV1**
-> UsergroupexternalDeleteObjectV1Response usergroupexternalDeleteObjectV1(pkiUsergroupexternalID)
+> CommonResponse usergroupexternalDeleteObjectV1(pkiUsergroupexternalID)
 
 Delete an existing Usergroupexternal
 
@@ -80,7 +80,7 @@ Delete an existing Usergroupexternal
 val apiInstance = ObjectUsergroupexternalApi()
 val pkiUsergroupexternalID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Usergroupexternal
 try {
-    val result : UsergroupexternalDeleteObjectV1Response = apiInstance.usergroupexternalDeleteObjectV1(pkiUsergroupexternalID)
+    val result : CommonResponse = apiInstance.usergroupexternalDeleteObjectV1(pkiUsergroupexternalID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectUsergroupexternalApi#usergroupexternalDeleteObjectV1")
@@ -98,7 +98,7 @@ try {
 
 ### Return type
 
-[**UsergroupexternalDeleteObjectV1Response**](UsergroupexternalDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -114,7 +114,7 @@ Configure Authorization:
 
 <a id="usergroupexternalEditObjectV1"></a>
 # **usergroupexternalEditObjectV1**
-> UsergroupexternalEditObjectV1Response usergroupexternalEditObjectV1(pkiUsergroupexternalID, usergroupexternalEditObjectV1Request)
+> CommonResponse usergroupexternalEditObjectV1(pkiUsergroupexternalID, usergroupexternalEditObjectV1Request)
 
 Edit an existing Usergroupexternal
 
@@ -130,7 +130,7 @@ val apiInstance = ObjectUsergroupexternalApi()
 val pkiUsergroupexternalID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Usergroupexternal
 val usergroupexternalEditObjectV1Request : UsergroupexternalEditObjectV1Request =  // UsergroupexternalEditObjectV1Request | 
 try {
-    val result : UsergroupexternalEditObjectV1Response = apiInstance.usergroupexternalEditObjectV1(pkiUsergroupexternalID, usergroupexternalEditObjectV1Request)
+    val result : CommonResponse = apiInstance.usergroupexternalEditObjectV1(pkiUsergroupexternalID, usergroupexternalEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectUsergroupexternalApi#usergroupexternalEditObjectV1")
@@ -149,7 +149,7 @@ try {
 
 ### Return type
 
-[**UsergroupexternalEditObjectV1Response**](UsergroupexternalEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

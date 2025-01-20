@@ -20,7 +20,7 @@ import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.CustomCommunicationrecipientsrecipientResponse
 import eZmaxApi.models.CustomContactNameResponse
-import eZmaxApi.models.EmailResponseCompound
+import eZmaxApi.models.EmailResponse
 import eZmaxApi.models.PhoneResponseCompound
 
 class CustomCommunicationrecipientsrecipientResponseTest : ShouldSpec() {
@@ -130,7 +130,7 @@ class CustomCommunicationrecipientsrecipientResponseTest : ShouldSpec() {
             //modelInstance.fkiSupplierID shouldBe ("TODO")
         }
 
-        // to test the property `objEmail`
+        // to test the property `objEmail` - An Email Object and children to create a complete structure
         should("test objEmail") {
             // uncomment below to test the property
             //modelInstance.objEmail shouldBe ("TODO")

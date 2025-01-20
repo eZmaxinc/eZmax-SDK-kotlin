@@ -19,9 +19,9 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.WebhookUserUserCreated
-import eZmaxApi.models.AttemptResponseCompound
+import eZmaxApi.models.AttemptResponse
 import eZmaxApi.models.CustomWebhookResponse
-import eZmaxApi.models.UserResponseCompound
+import eZmaxApi.models.UserResponse
 
 class WebhookUserUserCreatedTest : ShouldSpec() {
     init {
@@ -40,7 +40,7 @@ class WebhookUserUserCreatedTest : ShouldSpec() {
             //modelInstance.aObjAttempt shouldBe ("TODO")
         }
 
-        // to test the property `objUser`
+        // to test the property `objUser` - A User Object and children to create a complete structure
         should("test objUser") {
             // uncomment below to test the property
             //modelInstance.objUser shouldBe ("TODO")

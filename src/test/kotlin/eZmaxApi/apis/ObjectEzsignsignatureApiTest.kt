@@ -19,6 +19,7 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectEzsignsignatureApi
+import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.EzsignsignatureCreateObjectV1Request
 import eZmaxApi.models.EzsignsignatureCreateObjectV1Response
@@ -26,9 +27,7 @@ import eZmaxApi.models.EzsignsignatureCreateObjectV2Request
 import eZmaxApi.models.EzsignsignatureCreateObjectV2Response
 import eZmaxApi.models.EzsignsignatureCreateObjectV3Request
 import eZmaxApi.models.EzsignsignatureCreateObjectV3Response
-import eZmaxApi.models.EzsignsignatureDeleteObjectV1Response
 import eZmaxApi.models.EzsignsignatureEditObjectV2Request
-import eZmaxApi.models.EzsignsignatureEditObjectV2Response
 import eZmaxApi.models.EzsignsignatureGetEzsignsignatureattachmentV1Response
 import eZmaxApi.models.EzsignsignatureGetEzsignsignaturesAutomaticV1Response
 import eZmaxApi.models.EzsignsignatureGetObjectV3Response
@@ -68,7 +67,7 @@ class ObjectEzsignsignatureApiTest : ShouldSpec() {
         should("test ezsignsignatureDeleteObjectV1") {
             // uncomment below to test ezsignsignatureDeleteObjectV1
             //val pkiEzsignsignatureID : kotlin.Int = 56 // kotlin.Int | 
-            //val result : EzsignsignatureDeleteObjectV1Response = apiInstance.ezsignsignatureDeleteObjectV1(pkiEzsignsignatureID)
+            //val result : CommonResponse = apiInstance.ezsignsignatureDeleteObjectV1(pkiEzsignsignatureID)
             //result shouldBe ("TODO")
         }
 
@@ -77,7 +76,7 @@ class ObjectEzsignsignatureApiTest : ShouldSpec() {
             // uncomment below to test ezsignsignatureEditObjectV2
             //val pkiEzsignsignatureID : kotlin.Int = 56 // kotlin.Int | 
             //val ezsignsignatureEditObjectV2Request : EzsignsignatureEditObjectV2Request =  // EzsignsignatureEditObjectV2Request | 
-            //val result : EzsignsignatureEditObjectV2Response = apiInstance.ezsignsignatureEditObjectV2(pkiEzsignsignatureID, ezsignsignatureEditObjectV2Request)
+            //val result : CommonResponse = apiInstance.ezsignsignatureEditObjectV2(pkiEzsignsignatureID, ezsignsignatureEditObjectV2Request)
             //result shouldBe ("TODO")
         }
 

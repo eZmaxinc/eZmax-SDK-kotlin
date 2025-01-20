@@ -5,7 +5,7 @@
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
 | **bEzsignformIsdraft** | **kotlin.Boolean** | Whether the Ezsignform submitted is a draft or not. |  |
-| **aObjEzsignformfieldgroup** | [**kotlin.collections.List&lt;CustomEzsignformfieldgroupRequest&gt;**](CustomEzsignformfieldgroupRequest.md) |  |  |
+| **aObjEzsignformfieldgroup** | [**kotlin.collections.List&lt;CustomEzsignformfieldgroupRequest&gt;**](kotlin.Any.md) |  |  |
 
 
 

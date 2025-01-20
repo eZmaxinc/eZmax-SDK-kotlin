@@ -15,7 +15,7 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.ApikeyRequestCompound
+import eZmaxApi.models.ApikeyRequest
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -30,7 +30,7 @@ import com.squareup.moshi.JsonClass
 data class ApikeyCreateObjectV2Request (
 
     @Json(name = "a_objApikey")
-    val aObjApikey: kotlin.collections.List<ApikeyRequestCompound>
+    val aObjApikey: kotlin.collections.List<ApikeyRequest>
 
 ) {
 

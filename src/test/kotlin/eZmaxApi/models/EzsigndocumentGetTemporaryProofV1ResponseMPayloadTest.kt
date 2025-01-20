@@ -19,7 +19,7 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.EzsigndocumentGetTemporaryProofV1ResponseMPayload
-import eZmaxApi.models.EzsigndocumentlogResponseCompound
+import eZmaxApi.models.EzsigndocumentlogResponse
 
 class EzsigndocumentGetTemporaryProofV1ResponseMPayloadTest : ShouldSpec() {
     init {

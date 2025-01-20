@@ -20,7 +20,7 @@ import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.EzsigntemplateformfieldResponseCompound
 import eZmaxApi.models.EnumHorizontalalignment
-import eZmaxApi.models.EzsigntemplateelementdependencyResponseCompound
+import eZmaxApi.models.EzsigntemplateelementdependencyResponse
 import eZmaxApi.models.FieldEEzsigntemplateformfieldDependencyrequirement
 import eZmaxApi.models.FieldEEzsigntemplateformfieldPositioning
 import eZmaxApi.models.FieldEEzsigntemplateformfieldPositioningoccurence
