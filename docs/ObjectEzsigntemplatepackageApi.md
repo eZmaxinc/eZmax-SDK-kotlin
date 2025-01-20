@@ -64,7 +64,7 @@ Configure Authorization:
 
 <a id="ezsigntemplatepackageDeleteObjectV1"></a>
 # **ezsigntemplatepackageDeleteObjectV1**
-> CommonResponse ezsigntemplatepackageDeleteObjectV1(pkiEzsigntemplatepackageID)
+> EzsigntemplatepackageDeleteObjectV1Response ezsigntemplatepackageDeleteObjectV1(pkiEzsigntemplatepackageID)
 
 Delete an existing Ezsigntemplatepackage
 
@@ -79,7 +79,7 @@ Delete an existing Ezsigntemplatepackage
 val apiInstance = ObjectEzsigntemplatepackageApi()
 val pkiEzsigntemplatepackageID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : CommonResponse = apiInstance.ezsigntemplatepackageDeleteObjectV1(pkiEzsigntemplatepackageID)
+    val result : EzsigntemplatepackageDeleteObjectV1Response = apiInstance.ezsigntemplatepackageDeleteObjectV1(pkiEzsigntemplatepackageID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplatepackageApi#ezsigntemplatepackageDeleteObjectV1")
@@ -97,7 +97,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigntemplatepackageDeleteObjectV1Response**](EzsigntemplatepackageDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -164,7 +164,7 @@ Configure Authorization:
 
 <a id="ezsigntemplatepackageEditObjectV1"></a>
 # **ezsigntemplatepackageEditObjectV1**
-> CommonResponse ezsigntemplatepackageEditObjectV1(pkiEzsigntemplatepackageID, ezsigntemplatepackageEditObjectV1Request)
+> EzsigntemplatepackageEditObjectV1Response ezsigntemplatepackageEditObjectV1(pkiEzsigntemplatepackageID, ezsigntemplatepackageEditObjectV1Request)
 
 Edit an existing Ezsigntemplatepackage
 
@@ -180,7 +180,7 @@ val apiInstance = ObjectEzsigntemplatepackageApi()
 val pkiEzsigntemplatepackageID : kotlin.Int = 56 // kotlin.Int | 
 val ezsigntemplatepackageEditObjectV1Request : EzsigntemplatepackageEditObjectV1Request =  // EzsigntemplatepackageEditObjectV1Request | 
 try {
-    val result : CommonResponse = apiInstance.ezsigntemplatepackageEditObjectV1(pkiEzsigntemplatepackageID, ezsigntemplatepackageEditObjectV1Request)
+    val result : EzsigntemplatepackageEditObjectV1Response = apiInstance.ezsigntemplatepackageEditObjectV1(pkiEzsigntemplatepackageID, ezsigntemplatepackageEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplatepackageApi#ezsigntemplatepackageEditObjectV1")
@@ -199,7 +199,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigntemplatepackageEditObjectV1Response**](EzsigntemplatepackageEditObjectV1Response.md)
 
 ### Authorization
 

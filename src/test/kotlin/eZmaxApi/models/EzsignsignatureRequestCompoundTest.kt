@@ -20,8 +20,8 @@ import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.EzsignsignatureRequestCompound
 import eZmaxApi.models.EnumTextvalidation
-import eZmaxApi.models.EzsignelementdependencyRequest
-import eZmaxApi.models.EzsignsignaturecustomdateRequest
+import eZmaxApi.models.EzsignelementdependencyRequestCompound
+import eZmaxApi.models.EzsignsignaturecustomdateRequestCompound
 import eZmaxApi.models.FieldEEzsignsignatureAttachmentnamesource
 import eZmaxApi.models.FieldEEzsignsignatureConsultationtrigger
 import eZmaxApi.models.FieldEEzsignsignatureDependencyrequirement

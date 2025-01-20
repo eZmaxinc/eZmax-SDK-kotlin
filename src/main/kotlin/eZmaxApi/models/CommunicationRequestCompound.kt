@@ -17,7 +17,7 @@ package eZmaxApi.models
 
 import eZmaxApi.models.CommunicationexternalrecipientRequestCompound
 import eZmaxApi.models.CommunicationrecipientRequestCompound
-import eZmaxApi.models.CommunicationreferenceRequest
+import eZmaxApi.models.CommunicationreferenceRequestCompound
 import eZmaxApi.models.CustomCommunicationattachmentRequest
 import eZmaxApi.models.CustomCommunicationsenderRequest
 import eZmaxApi.models.FieldECommunicationImportance
@@ -66,7 +66,7 @@ data class CommunicationRequestCompound (
     val aObjCommunicationrecipient: kotlin.collections.List<CommunicationrecipientRequestCompound>,
 
     @Json(name = "a_objCommunicationreference")
-    val aObjCommunicationreference: kotlin.collections.List<CommunicationreferenceRequest>,
+    val aObjCommunicationreference: kotlin.collections.List<CommunicationreferenceRequestCompound>,
 
     @Json(name = "a_objCommunicationexternalrecipient")
     val aObjCommunicationexternalrecipient: kotlin.collections.List<CommunicationexternalrecipientRequestCompound>,

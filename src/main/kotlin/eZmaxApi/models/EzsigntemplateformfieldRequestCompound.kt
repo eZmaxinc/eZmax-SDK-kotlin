@@ -16,7 +16,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.EnumHorizontalalignment
-import eZmaxApi.models.EzsigntemplateelementdependencyRequest
+import eZmaxApi.models.EzsigntemplateelementdependencyRequestCompound
 import eZmaxApi.models.FieldEEzsigntemplateformfieldDependencyrequirement
 import eZmaxApi.models.FieldEEzsigntemplateformfieldPositioning
 import eZmaxApi.models.FieldEEzsigntemplateformfieldPositioningoccurence
@@ -120,7 +120,7 @@ data class EzsigntemplateformfieldRequestCompound (
     val objTextstylestatic: TextstylestaticRequestCompound? = null,
 
     @Json(name = "a_objEzsigntemplateelementdependency")
-    val aObjEzsigntemplateelementdependency: kotlin.collections.List<EzsigntemplateelementdependencyRequest>? = null
+    val aObjEzsigntemplateelementdependency: kotlin.collections.List<EzsigntemplateelementdependencyRequestCompound>? = null
 
 ) {
 

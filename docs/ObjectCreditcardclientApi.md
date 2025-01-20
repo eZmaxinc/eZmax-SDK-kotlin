@@ -64,7 +64,7 @@ Configure Authorization:
 
 <a id="creditcardclientDeleteObjectV1"></a>
 # **creditcardclientDeleteObjectV1**
-> CommonResponse creditcardclientDeleteObjectV1(pkiCreditcardclientID)
+> CreditcardclientDeleteObjectV1Response creditcardclientDeleteObjectV1(pkiCreditcardclientID)
 
 Delete an existing Creditcardclient
 
@@ -79,7 +79,7 @@ Delete an existing Creditcardclient
 val apiInstance = ObjectCreditcardclientApi()
 val pkiCreditcardclientID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Creditcardclient
 try {
-    val result : CommonResponse = apiInstance.creditcardclientDeleteObjectV1(pkiCreditcardclientID)
+    val result : CreditcardclientDeleteObjectV1Response = apiInstance.creditcardclientDeleteObjectV1(pkiCreditcardclientID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectCreditcardclientApi#creditcardclientDeleteObjectV1")
@@ -97,7 +97,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**CreditcardclientDeleteObjectV1Response**](CreditcardclientDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -113,7 +113,7 @@ Configure Authorization:
 
 <a id="creditcardclientEditObjectV1"></a>
 # **creditcardclientEditObjectV1**
-> CommonResponse creditcardclientEditObjectV1(pkiCreditcardclientID, creditcardclientEditObjectV1Request)
+> CreditcardclientEditObjectV1Response creditcardclientEditObjectV1(pkiCreditcardclientID, creditcardclientEditObjectV1Request)
 
 Edit an existing Creditcardclient
 
@@ -129,7 +129,7 @@ val apiInstance = ObjectCreditcardclientApi()
 val pkiCreditcardclientID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Creditcardclient
 val creditcardclientEditObjectV1Request : CreditcardclientEditObjectV1Request =  // CreditcardclientEditObjectV1Request | 
 try {
-    val result : CommonResponse = apiInstance.creditcardclientEditObjectV1(pkiCreditcardclientID, creditcardclientEditObjectV1Request)
+    val result : CreditcardclientEditObjectV1Response = apiInstance.creditcardclientEditObjectV1(pkiCreditcardclientID, creditcardclientEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectCreditcardclientApi#creditcardclientEditObjectV1")
@@ -148,7 +148,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**CreditcardclientEditObjectV1Response**](CreditcardclientEditObjectV1Response.md)
 
 ### Authorization
 
@@ -325,7 +325,7 @@ Configure Authorization:
 
 <a id="creditcardclientPatchObjectV1"></a>
 # **creditcardclientPatchObjectV1**
-> CommonResponse creditcardclientPatchObjectV1(pkiCreditcardclientID, creditcardclientPatchObjectV1Request)
+> CreditcardclientPatchObjectV1Response creditcardclientPatchObjectV1(pkiCreditcardclientID, creditcardclientPatchObjectV1Request)
 
 Patch an existing Creditcardclient
 
@@ -341,7 +341,7 @@ val apiInstance = ObjectCreditcardclientApi()
 val pkiCreditcardclientID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Creditcardclient
 val creditcardclientPatchObjectV1Request : CreditcardclientPatchObjectV1Request =  // CreditcardclientPatchObjectV1Request | 
 try {
-    val result : CommonResponse = apiInstance.creditcardclientPatchObjectV1(pkiCreditcardclientID, creditcardclientPatchObjectV1Request)
+    val result : CreditcardclientPatchObjectV1Response = apiInstance.creditcardclientPatchObjectV1(pkiCreditcardclientID, creditcardclientPatchObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectCreditcardclientApi#creditcardclientPatchObjectV1")
@@ -360,7 +360,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**CreditcardclientPatchObjectV1Response**](CreditcardclientPatchObjectV1Response.md)
 
 ### Authorization
 

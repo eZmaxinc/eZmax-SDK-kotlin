@@ -15,7 +15,7 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.PermissionResponse
+import eZmaxApi.models.PermissionResponseCompound
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -50,7 +50,7 @@ data class ModulesectionResponseCompound (
     val sModulesectionNameX: kotlin.String,
 
     @Json(name = "a_objPermission")
-    val aObjPermission: kotlin.collections.List<PermissionResponse>? = null
+    val aObjPermission: kotlin.collections.List<PermissionResponseCompound>? = null
 
 ) {
 

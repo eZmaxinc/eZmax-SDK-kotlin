@@ -21,7 +21,7 @@ import io.kotlintest.specs.ShouldSpec
 import eZmaxApi.models.EzsignfoldersignerassociationGetObjectV1Response
 import eZmaxApi.models.CommonResponseObjDebug
 import eZmaxApi.models.CommonResponseObjDebugPayload
-import eZmaxApi.models.EzsignfoldersignerassociationResponseCompound
+import eZmaxApi.models.EzsignfoldersignerassociationGetObjectV1ResponseMPayload
 
 class EzsignfoldersignerassociationGetObjectV1ResponseTest : ShouldSpec() {
     init {
@@ -34,7 +34,7 @@ class EzsignfoldersignerassociationGetObjectV1ResponseTest : ShouldSpec() {
             //modelInstance.objDebugPayload shouldBe ("TODO")
         }
 
-        // to test the property `mPayload` - Payload for GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}
+        // to test the property `mPayload`
         should("test mPayload") {
             // uncomment below to test the property
             //modelInstance.mPayload shouldBe ("TODO")

@@ -20,6 +20,7 @@ import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.EzsignfolderCreateObjectV1Request
 import eZmaxApi.models.EzsignfolderRequest
+import eZmaxApi.models.EzsignfolderRequestCompound
 
 class EzsignfolderCreateObjectV1RequestTest : ShouldSpec() {
     init {
@@ -32,7 +33,7 @@ class EzsignfolderCreateObjectV1RequestTest : ShouldSpec() {
             //modelInstance.objEzsignfolder shouldBe ("TODO")
         }
 
-        // to test the property `objEzsignfolderCompound` - An Ezsignfolder Object and children to create a complete structure
+        // to test the property `objEzsignfolderCompound`
         should("test objEzsignfolderCompound") {
             // uncomment below to test the property
             //modelInstance.objEzsignfolderCompound shouldBe ("TODO")

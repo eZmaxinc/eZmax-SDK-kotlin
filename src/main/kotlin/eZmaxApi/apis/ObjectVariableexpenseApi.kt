@@ -19,12 +19,12 @@ import java.io.IOException
 import okhttp3.Call
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.HeaderAcceptLanguage
 import eZmaxApi.models.VariableexpenseCreateObjectV1Request
 import eZmaxApi.models.VariableexpenseCreateObjectV1Response
 import eZmaxApi.models.VariableexpenseEditObjectV1Request
+import eZmaxApi.models.VariableexpenseEditObjectV1Response
 import eZmaxApi.models.VariableexpenseGetAutocompleteV2Response
 import eZmaxApi.models.VariableexpenseGetListV1Response
 import eZmaxApi.models.VariableexpenseGetObjectV2Response
@@ -130,7 +130,7 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
      * 
      * @param pkiVariableexpenseID 
      * @param variableexpenseEditObjectV1Request 
-     * @return CommonResponse
+     * @return VariableexpenseEditObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -139,11 +139,11 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun variableexpenseEditObjectV1(pkiVariableexpenseID: kotlin.Int, variableexpenseEditObjectV1Request: VariableexpenseEditObjectV1Request) : CommonResponse {
+    fun variableexpenseEditObjectV1(pkiVariableexpenseID: kotlin.Int, variableexpenseEditObjectV1Request: VariableexpenseEditObjectV1Request) : VariableexpenseEditObjectV1Response {
         val localVarResponse = variableexpenseEditObjectV1WithHttpInfo(pkiVariableexpenseID = pkiVariableexpenseID, variableexpenseEditObjectV1Request = variableexpenseEditObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as VariableexpenseEditObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -162,16 +162,16 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
      * 
      * @param pkiVariableexpenseID 
      * @param variableexpenseEditObjectV1Request 
-     * @return ApiResponse<CommonResponse?>
+     * @return ApiResponse<VariableexpenseEditObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun variableexpenseEditObjectV1WithHttpInfo(pkiVariableexpenseID: kotlin.Int, variableexpenseEditObjectV1Request: VariableexpenseEditObjectV1Request) : ApiResponse<CommonResponse?> {
+    fun variableexpenseEditObjectV1WithHttpInfo(pkiVariableexpenseID: kotlin.Int, variableexpenseEditObjectV1Request: VariableexpenseEditObjectV1Request) : ApiResponse<VariableexpenseEditObjectV1Response?> {
         val localVariableConfig = variableexpenseEditObjectV1RequestConfig(pkiVariableexpenseID = pkiVariableexpenseID, variableexpenseEditObjectV1Request = variableexpenseEditObjectV1Request)
 
-        return request<VariableexpenseEditObjectV1Request, CommonResponse>(
+        return request<VariableexpenseEditObjectV1Request, VariableexpenseEditObjectV1Response>(
             localVariableConfig
         )
     }

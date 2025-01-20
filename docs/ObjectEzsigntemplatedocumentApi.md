@@ -326,7 +326,7 @@ Configure Authorization:
 
 <a id="ezsigntemplatedocumentFlattenV1"></a>
 # **ezsigntemplatedocumentFlattenV1**
-> CommonResponse ezsigntemplatedocumentFlattenV1(pkiEzsigntemplatedocumentID, body)
+> EzsigntemplatedocumentFlattenV1Response ezsigntemplatedocumentFlattenV1(pkiEzsigntemplatedocumentID, body)
 
 Flatten
 
@@ -342,7 +342,7 @@ val apiInstance = ObjectEzsigntemplatedocumentApi()
 val pkiEzsigntemplatedocumentID : kotlin.Int = 56 // kotlin.Int | 
 val body : kotlin.Any = Object // kotlin.Any | 
 try {
-    val result : CommonResponse = apiInstance.ezsigntemplatedocumentFlattenV1(pkiEzsigntemplatedocumentID, body)
+    val result : EzsigntemplatedocumentFlattenV1Response = apiInstance.ezsigntemplatedocumentFlattenV1(pkiEzsigntemplatedocumentID, body)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplatedocumentApi#ezsigntemplatedocumentFlattenV1")
@@ -361,7 +361,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigntemplatedocumentFlattenV1Response**](EzsigntemplatedocumentFlattenV1Response.md)
 
 ### Authorization
 
@@ -673,7 +673,7 @@ Configure Authorization:
 
 <a id="ezsigntemplatedocumentPatchObjectV1"></a>
 # **ezsigntemplatedocumentPatchObjectV1**
-> CommonResponse ezsigntemplatedocumentPatchObjectV1(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentPatchObjectV1Request)
+> EzsigntemplatedocumentPatchObjectV1Response ezsigntemplatedocumentPatchObjectV1(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentPatchObjectV1Request)
 
 Patch an existing Ezsigntemplatedocument
 
@@ -689,7 +689,7 @@ val apiInstance = ObjectEzsigntemplatedocumentApi()
 val pkiEzsigntemplatedocumentID : kotlin.Int = 56 // kotlin.Int | 
 val ezsigntemplatedocumentPatchObjectV1Request : EzsigntemplatedocumentPatchObjectV1Request =  // EzsigntemplatedocumentPatchObjectV1Request | 
 try {
-    val result : CommonResponse = apiInstance.ezsigntemplatedocumentPatchObjectV1(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentPatchObjectV1Request)
+    val result : EzsigntemplatedocumentPatchObjectV1Response = apiInstance.ezsigntemplatedocumentPatchObjectV1(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentPatchObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplatedocumentApi#ezsigntemplatedocumentPatchObjectV1")
@@ -708,7 +708,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigntemplatedocumentPatchObjectV1Response**](EzsigntemplatedocumentPatchObjectV1Response.md)
 
 ### Authorization
 

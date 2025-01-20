@@ -19,8 +19,8 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectEzsignfolderApi
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.EzsignfolderArchiveV1Response
 import eZmaxApi.models.EzsignfolderBatchDownloadV1Request
 import eZmaxApi.models.EzsignfolderCreateObjectV1Request
 import eZmaxApi.models.EzsignfolderCreateObjectV1Response
@@ -28,8 +28,13 @@ import eZmaxApi.models.EzsignfolderCreateObjectV2Request
 import eZmaxApi.models.EzsignfolderCreateObjectV2Response
 import eZmaxApi.models.EzsignfolderCreateObjectV3Request
 import eZmaxApi.models.EzsignfolderCreateObjectV3Response
+import eZmaxApi.models.EzsignfolderDeleteObjectV1Response
 import eZmaxApi.models.EzsignfolderDisposeEzsignfoldersV1Request
+import eZmaxApi.models.EzsignfolderDisposeEzsignfoldersV1Response
+import eZmaxApi.models.EzsignfolderDisposeV1Response
 import eZmaxApi.models.EzsignfolderEditObjectV3Request
+import eZmaxApi.models.EzsignfolderEditObjectV3Response
+import eZmaxApi.models.EzsignfolderEndPrematurelyV1Response
 import eZmaxApi.models.EzsignfolderGetActionableElementsV1Response
 import eZmaxApi.models.EzsignfolderGetAttachmentCountV1Response
 import eZmaxApi.models.EzsignfolderGetAttachmentsV1Response
@@ -50,9 +55,14 @@ import eZmaxApi.models.EzsignfolderImportEzsignfoldersignerassociationsV1Respons
 import eZmaxApi.models.EzsignfolderImportEzsigntemplatepackageV1Request
 import eZmaxApi.models.EzsignfolderImportEzsigntemplatepackageV1Response
 import eZmaxApi.models.EzsignfolderReorderV1Request
+import eZmaxApi.models.EzsignfolderReorderV1Response
 import eZmaxApi.models.EzsignfolderReorderV2Request
+import eZmaxApi.models.EzsignfolderReorderV2Response
 import eZmaxApi.models.EzsignfolderSendV1Request
+import eZmaxApi.models.EzsignfolderSendV1Response
 import eZmaxApi.models.EzsignfolderSendV3Request
+import eZmaxApi.models.EzsignfolderSendV3Response
+import eZmaxApi.models.EzsignfolderUnsendV1Response
 import eZmaxApi.models.HeaderAcceptLanguage
 
 class ObjectEzsignfolderApiTest : ShouldSpec() {
@@ -65,7 +75,7 @@ class ObjectEzsignfolderApiTest : ShouldSpec() {
             // uncomment below to test ezsignfolderArchiveV1
             //val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
             //val body : kotlin.Any = Object // kotlin.Any | 
-            //val result : CommonResponse = apiInstance.ezsignfolderArchiveV1(pkiEzsignfolderID, body)
+            //val result : EzsignfolderArchiveV1Response = apiInstance.ezsignfolderArchiveV1(pkiEzsignfolderID, body)
             //result shouldBe ("TODO")
         }
 
@@ -106,7 +116,7 @@ class ObjectEzsignfolderApiTest : ShouldSpec() {
         should("test ezsignfolderDeleteObjectV1") {
             // uncomment below to test ezsignfolderDeleteObjectV1
             //val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
-            //val result : CommonResponse = apiInstance.ezsignfolderDeleteObjectV1(pkiEzsignfolderID)
+            //val result : EzsignfolderDeleteObjectV1Response = apiInstance.ezsignfolderDeleteObjectV1(pkiEzsignfolderID)
             //result shouldBe ("TODO")
         }
 
@@ -114,7 +124,7 @@ class ObjectEzsignfolderApiTest : ShouldSpec() {
         should("test ezsignfolderDisposeEzsignfoldersV1") {
             // uncomment below to test ezsignfolderDisposeEzsignfoldersV1
             //val ezsignfolderDisposeEzsignfoldersV1Request : EzsignfolderDisposeEzsignfoldersV1Request =  // EzsignfolderDisposeEzsignfoldersV1Request | 
-            //val result : CommonResponse = apiInstance.ezsignfolderDisposeEzsignfoldersV1(ezsignfolderDisposeEzsignfoldersV1Request)
+            //val result : EzsignfolderDisposeEzsignfoldersV1Response = apiInstance.ezsignfolderDisposeEzsignfoldersV1(ezsignfolderDisposeEzsignfoldersV1Request)
             //result shouldBe ("TODO")
         }
 
@@ -123,7 +133,7 @@ class ObjectEzsignfolderApiTest : ShouldSpec() {
             // uncomment below to test ezsignfolderDisposeV1
             //val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
             //val body : kotlin.Any = Object // kotlin.Any | 
-            //val result : CommonResponse = apiInstance.ezsignfolderDisposeV1(pkiEzsignfolderID, body)
+            //val result : EzsignfolderDisposeV1Response = apiInstance.ezsignfolderDisposeV1(pkiEzsignfolderID, body)
             //result shouldBe ("TODO")
         }
 
@@ -132,7 +142,7 @@ class ObjectEzsignfolderApiTest : ShouldSpec() {
             // uncomment below to test ezsignfolderEditObjectV3
             //val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
             //val ezsignfolderEditObjectV3Request : EzsignfolderEditObjectV3Request =  // EzsignfolderEditObjectV3Request | 
-            //val result : CommonResponse = apiInstance.ezsignfolderEditObjectV3(pkiEzsignfolderID, ezsignfolderEditObjectV3Request)
+            //val result : EzsignfolderEditObjectV3Response = apiInstance.ezsignfolderEditObjectV3(pkiEzsignfolderID, ezsignfolderEditObjectV3Request)
             //result shouldBe ("TODO")
         }
 
@@ -141,7 +151,7 @@ class ObjectEzsignfolderApiTest : ShouldSpec() {
             // uncomment below to test ezsignfolderEndPrematurelyV1
             //val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
             //val body : kotlin.Any = Object // kotlin.Any | 
-            //val result : CommonResponse = apiInstance.ezsignfolderEndPrematurelyV1(pkiEzsignfolderID, body)
+            //val result : EzsignfolderEndPrematurelyV1Response = apiInstance.ezsignfolderEndPrematurelyV1(pkiEzsignfolderID, body)
             //result shouldBe ("TODO")
         }
 
@@ -292,7 +302,7 @@ class ObjectEzsignfolderApiTest : ShouldSpec() {
             // uncomment below to test ezsignfolderReorderV1
             //val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
             //val ezsignfolderReorderV1Request : EzsignfolderReorderV1Request =  // EzsignfolderReorderV1Request | 
-            //val result : CommonResponse = apiInstance.ezsignfolderReorderV1(pkiEzsignfolderID, ezsignfolderReorderV1Request)
+            //val result : EzsignfolderReorderV1Response = apiInstance.ezsignfolderReorderV1(pkiEzsignfolderID, ezsignfolderReorderV1Request)
             //result shouldBe ("TODO")
         }
 
@@ -301,7 +311,7 @@ class ObjectEzsignfolderApiTest : ShouldSpec() {
             // uncomment below to test ezsignfolderReorderV2
             //val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
             //val ezsignfolderReorderV2Request : EzsignfolderReorderV2Request =  // EzsignfolderReorderV2Request | 
-            //val result : CommonResponse = apiInstance.ezsignfolderReorderV2(pkiEzsignfolderID, ezsignfolderReorderV2Request)
+            //val result : EzsignfolderReorderV2Response = apiInstance.ezsignfolderReorderV2(pkiEzsignfolderID, ezsignfolderReorderV2Request)
             //result shouldBe ("TODO")
         }
 
@@ -310,7 +320,7 @@ class ObjectEzsignfolderApiTest : ShouldSpec() {
             // uncomment below to test ezsignfolderSendV1
             //val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
             //val ezsignfolderSendV1Request : EzsignfolderSendV1Request =  // EzsignfolderSendV1Request | 
-            //val result : CommonResponse = apiInstance.ezsignfolderSendV1(pkiEzsignfolderID, ezsignfolderSendV1Request)
+            //val result : EzsignfolderSendV1Response = apiInstance.ezsignfolderSendV1(pkiEzsignfolderID, ezsignfolderSendV1Request)
             //result shouldBe ("TODO")
         }
 
@@ -319,7 +329,7 @@ class ObjectEzsignfolderApiTest : ShouldSpec() {
             // uncomment below to test ezsignfolderSendV3
             //val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
             //val ezsignfolderSendV3Request : EzsignfolderSendV3Request =  // EzsignfolderSendV3Request | 
-            //val result : CommonResponse = apiInstance.ezsignfolderSendV3(pkiEzsignfolderID, ezsignfolderSendV3Request)
+            //val result : EzsignfolderSendV3Response = apiInstance.ezsignfolderSendV3(pkiEzsignfolderID, ezsignfolderSendV3Request)
             //result shouldBe ("TODO")
         }
 
@@ -328,7 +338,7 @@ class ObjectEzsignfolderApiTest : ShouldSpec() {
             // uncomment below to test ezsignfolderUnsendV1
             //val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
             //val body : kotlin.Any = Object // kotlin.Any | 
-            //val result : CommonResponse = apiInstance.ezsignfolderUnsendV1(pkiEzsignfolderID, body)
+            //val result : EzsignfolderUnsendV1Response = apiInstance.ezsignfolderUnsendV1(pkiEzsignfolderID, body)
             //result shouldBe ("TODO")
         }
 

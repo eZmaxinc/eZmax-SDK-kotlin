@@ -19,11 +19,12 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectUsergroupmembershipApi
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.UsergroupmembershipCreateObjectV1Request
 import eZmaxApi.models.UsergroupmembershipCreateObjectV1Response
+import eZmaxApi.models.UsergroupmembershipDeleteObjectV1Response
 import eZmaxApi.models.UsergroupmembershipEditObjectV1Request
+import eZmaxApi.models.UsergroupmembershipEditObjectV1Response
 import eZmaxApi.models.UsergroupmembershipGetObjectV2Response
 
 class ObjectUsergroupmembershipApiTest : ShouldSpec() {
@@ -43,7 +44,7 @@ class ObjectUsergroupmembershipApiTest : ShouldSpec() {
         should("test usergroupmembershipDeleteObjectV1") {
             // uncomment below to test usergroupmembershipDeleteObjectV1
             //val pkiUsergroupmembershipID : kotlin.Int = 56 // kotlin.Int | 
-            //val result : CommonResponse = apiInstance.usergroupmembershipDeleteObjectV1(pkiUsergroupmembershipID)
+            //val result : UsergroupmembershipDeleteObjectV1Response = apiInstance.usergroupmembershipDeleteObjectV1(pkiUsergroupmembershipID)
             //result shouldBe ("TODO")
         }
 
@@ -52,7 +53,7 @@ class ObjectUsergroupmembershipApiTest : ShouldSpec() {
             // uncomment below to test usergroupmembershipEditObjectV1
             //val pkiUsergroupmembershipID : kotlin.Int = 56 // kotlin.Int | 
             //val usergroupmembershipEditObjectV1Request : UsergroupmembershipEditObjectV1Request =  // UsergroupmembershipEditObjectV1Request | 
-            //val result : CommonResponse = apiInstance.usergroupmembershipEditObjectV1(pkiUsergroupmembershipID, usergroupmembershipEditObjectV1Request)
+            //val result : UsergroupmembershipEditObjectV1Response = apiInstance.usergroupmembershipEditObjectV1(pkiUsergroupmembershipID, usergroupmembershipEditObjectV1Request)
             //result shouldBe ("TODO")
         }
 

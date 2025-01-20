@@ -19,11 +19,12 @@ import java.io.IOException
 import okhttp3.Call
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.SignatureCreateObjectV1Request
 import eZmaxApi.models.SignatureCreateObjectV1Response
+import eZmaxApi.models.SignatureDeleteObjectV1Response
 import eZmaxApi.models.SignatureEditObjectV1Request
+import eZmaxApi.models.SignatureEditObjectV1Response
 import eZmaxApi.models.SignatureGetObjectV2Response
 import eZmaxApi.models.SignatureGetObjectV3Response
 
@@ -127,7 +128,7 @@ class ObjectSignatureApi(basePath: kotlin.String = defaultBasePath, client: Call
      * Delete an existing Signature
      * 
      * @param pkiSignatureID The unique ID of the Signature
-     * @return CommonResponse
+     * @return SignatureDeleteObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -136,11 +137,11 @@ class ObjectSignatureApi(basePath: kotlin.String = defaultBasePath, client: Call
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun signatureDeleteObjectV1(pkiSignatureID: kotlin.Int) : CommonResponse {
+    fun signatureDeleteObjectV1(pkiSignatureID: kotlin.Int) : SignatureDeleteObjectV1Response {
         val localVarResponse = signatureDeleteObjectV1WithHttpInfo(pkiSignatureID = pkiSignatureID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as SignatureDeleteObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -158,16 +159,16 @@ class ObjectSignatureApi(basePath: kotlin.String = defaultBasePath, client: Call
      * Delete an existing Signature
      * 
      * @param pkiSignatureID The unique ID of the Signature
-     * @return ApiResponse<CommonResponse?>
+     * @return ApiResponse<SignatureDeleteObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun signatureDeleteObjectV1WithHttpInfo(pkiSignatureID: kotlin.Int) : ApiResponse<CommonResponse?> {
+    fun signatureDeleteObjectV1WithHttpInfo(pkiSignatureID: kotlin.Int) : ApiResponse<SignatureDeleteObjectV1Response?> {
         val localVariableConfig = signatureDeleteObjectV1RequestConfig(pkiSignatureID = pkiSignatureID)
 
-        return request<Unit, CommonResponse>(
+        return request<Unit, SignatureDeleteObjectV1Response>(
             localVariableConfig
         )
     }
@@ -199,7 +200,7 @@ class ObjectSignatureApi(basePath: kotlin.String = defaultBasePath, client: Call
      * 
      * @param pkiSignatureID The unique ID of the Signature
      * @param signatureEditObjectV1Request 
-     * @return CommonResponse
+     * @return SignatureEditObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -208,11 +209,11 @@ class ObjectSignatureApi(basePath: kotlin.String = defaultBasePath, client: Call
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun signatureEditObjectV1(pkiSignatureID: kotlin.Int, signatureEditObjectV1Request: SignatureEditObjectV1Request) : CommonResponse {
+    fun signatureEditObjectV1(pkiSignatureID: kotlin.Int, signatureEditObjectV1Request: SignatureEditObjectV1Request) : SignatureEditObjectV1Response {
         val localVarResponse = signatureEditObjectV1WithHttpInfo(pkiSignatureID = pkiSignatureID, signatureEditObjectV1Request = signatureEditObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as SignatureEditObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -231,16 +232,16 @@ class ObjectSignatureApi(basePath: kotlin.String = defaultBasePath, client: Call
      * 
      * @param pkiSignatureID The unique ID of the Signature
      * @param signatureEditObjectV1Request 
-     * @return ApiResponse<CommonResponse?>
+     * @return ApiResponse<SignatureEditObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun signatureEditObjectV1WithHttpInfo(pkiSignatureID: kotlin.Int, signatureEditObjectV1Request: SignatureEditObjectV1Request) : ApiResponse<CommonResponse?> {
+    fun signatureEditObjectV1WithHttpInfo(pkiSignatureID: kotlin.Int, signatureEditObjectV1Request: SignatureEditObjectV1Request) : ApiResponse<SignatureEditObjectV1Response?> {
         val localVariableConfig = signatureEditObjectV1RequestConfig(pkiSignatureID = pkiSignatureID, signatureEditObjectV1Request = signatureEditObjectV1Request)
 
-        return request<SignatureEditObjectV1Request, CommonResponse>(
+        return request<SignatureEditObjectV1Request, SignatureEditObjectV1Response>(
             localVariableConfig
         )
     }

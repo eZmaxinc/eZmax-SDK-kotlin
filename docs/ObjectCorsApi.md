@@ -61,7 +61,7 @@ Configure Authorization:
 
 <a id="corsDeleteObjectV1"></a>
 # **corsDeleteObjectV1**
-> CommonResponse corsDeleteObjectV1(pkiCorsID)
+> CorsDeleteObjectV1Response corsDeleteObjectV1(pkiCorsID)
 
 Delete an existing Cors
 
@@ -76,7 +76,7 @@ Delete an existing Cors
 val apiInstance = ObjectCorsApi()
 val pkiCorsID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Cors
 try {
-    val result : CommonResponse = apiInstance.corsDeleteObjectV1(pkiCorsID)
+    val result : CorsDeleteObjectV1Response = apiInstance.corsDeleteObjectV1(pkiCorsID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectCorsApi#corsDeleteObjectV1")
@@ -94,7 +94,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**CorsDeleteObjectV1Response**](CorsDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -110,7 +110,7 @@ Configure Authorization:
 
 <a id="corsEditObjectV1"></a>
 # **corsEditObjectV1**
-> CommonResponse corsEditObjectV1(pkiCorsID, corsEditObjectV1Request)
+> CorsEditObjectV1Response corsEditObjectV1(pkiCorsID, corsEditObjectV1Request)
 
 Edit an existing Cors
 
@@ -126,7 +126,7 @@ val apiInstance = ObjectCorsApi()
 val pkiCorsID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Cors
 val corsEditObjectV1Request : CorsEditObjectV1Request =  // CorsEditObjectV1Request | 
 try {
-    val result : CommonResponse = apiInstance.corsEditObjectV1(pkiCorsID, corsEditObjectV1Request)
+    val result : CorsEditObjectV1Response = apiInstance.corsEditObjectV1(pkiCorsID, corsEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectCorsApi#corsEditObjectV1")
@@ -145,7 +145,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**CorsEditObjectV1Response**](CorsEditObjectV1Response.md)
 
 ### Authorization
 

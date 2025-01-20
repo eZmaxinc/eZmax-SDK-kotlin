@@ -16,7 +16,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.CustomContactNameResponse
-import eZmaxApi.models.EmailResponse
+import eZmaxApi.models.EmailResponseCompound
 import eZmaxApi.models.PhoneResponseCompound
 
 import com.squareup.moshi.Json
@@ -42,7 +42,7 @@ import com.squareup.moshi.JsonClass
  * @param fkiNotaryID The unique ID of the Notary.
  * @param fkiRewardmemberID The unique ID of the Rewardmember.
  * @param fkiSupplierID The unique ID of the Supplier.
- * @param objEmail An Email Object and children to create a complete structure
+ * @param objEmail 
  * @param objPhoneFax 
  * @param objPhoneSMS 
  */
@@ -116,9 +116,8 @@ data class CustomCommunicationrecipientsrecipientResponse (
     @Json(name = "fkiSupplierID")
     val fkiSupplierID: kotlin.Int? = null,
 
-    /* An Email Object and children to create a complete structure */
     @Json(name = "objEmail")
-    val objEmail: EmailResponse? = null,
+    val objEmail: EmailResponseCompound? = null,
 
     @Json(name = "objPhoneFax")
     val objPhoneFax: PhoneResponseCompound? = null,

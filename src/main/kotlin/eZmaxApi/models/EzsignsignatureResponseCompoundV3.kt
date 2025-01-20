@@ -18,8 +18,8 @@ package eZmaxApi.models
 import eZmaxApi.models.CustomContactNameResponse
 import eZmaxApi.models.CustomCreditcardtransactionResponse
 import eZmaxApi.models.EnumTextvalidation
-import eZmaxApi.models.EzsignelementdependencyResponse
-import eZmaxApi.models.EzsignsignaturecustomdateResponseV2
+import eZmaxApi.models.EzsignelementdependencyResponseCompound
+import eZmaxApi.models.EzsignsignaturecustomdateResponseCompoundV2
 import eZmaxApi.models.FieldEEzsignsignatureAttachmentnamesource
 import eZmaxApi.models.FieldEEzsignsignatureConsultationtrigger
 import eZmaxApi.models.FieldEEzsignsignatureDependencyrequirement
@@ -224,13 +224,13 @@ data class EzsignsignatureResponseCompoundV3 (
 
     /* An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all. */
     @Json(name = "a_objEzsignsignaturecustomdate")
-    val aObjEzsignsignaturecustomdate: kotlin.collections.List<EzsignsignaturecustomdateResponseV2>? = null,
+    val aObjEzsignsignaturecustomdate: kotlin.collections.List<EzsignsignaturecustomdateResponseCompoundV2>? = null,
 
     @Json(name = "objCreditcardtransaction")
     val objCreditcardtransaction: CustomCreditcardtransactionResponse? = null,
 
     @Json(name = "a_objEzsignelementdependency")
-    val aObjEzsignelementdependency: kotlin.collections.List<EzsignelementdependencyResponse>? = null
+    val aObjEzsignelementdependency: kotlin.collections.List<EzsignelementdependencyResponseCompound>? = null
 
 ) {
 

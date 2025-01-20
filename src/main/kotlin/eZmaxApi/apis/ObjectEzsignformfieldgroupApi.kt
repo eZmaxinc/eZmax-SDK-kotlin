@@ -19,11 +19,12 @@ import java.io.IOException
 import okhttp3.Call
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.EzsignformfieldgroupCreateObjectV1Request
 import eZmaxApi.models.EzsignformfieldgroupCreateObjectV1Response
+import eZmaxApi.models.EzsignformfieldgroupDeleteObjectV1Response
 import eZmaxApi.models.EzsignformfieldgroupEditObjectV1Request
+import eZmaxApi.models.EzsignformfieldgroupEditObjectV1Response
 import eZmaxApi.models.EzsignformfieldgroupGetObjectV2Response
 
 import com.squareup.moshi.Json
@@ -126,7 +127,7 @@ class ObjectEzsignformfieldgroupApi(basePath: kotlin.String = defaultBasePath, c
      * Delete an existing Ezsignformfieldgroup
      * 
      * @param pkiEzsignformfieldgroupID 
-     * @return CommonResponse
+     * @return EzsignformfieldgroupDeleteObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -135,11 +136,11 @@ class ObjectEzsignformfieldgroupApi(basePath: kotlin.String = defaultBasePath, c
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignformfieldgroupDeleteObjectV1(pkiEzsignformfieldgroupID: kotlin.Int) : CommonResponse {
+    fun ezsignformfieldgroupDeleteObjectV1(pkiEzsignformfieldgroupID: kotlin.Int) : EzsignformfieldgroupDeleteObjectV1Response {
         val localVarResponse = ezsignformfieldgroupDeleteObjectV1WithHttpInfo(pkiEzsignformfieldgroupID = pkiEzsignformfieldgroupID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignformfieldgroupDeleteObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -157,16 +158,16 @@ class ObjectEzsignformfieldgroupApi(basePath: kotlin.String = defaultBasePath, c
      * Delete an existing Ezsignformfieldgroup
      * 
      * @param pkiEzsignformfieldgroupID 
-     * @return ApiResponse<CommonResponse?>
+     * @return ApiResponse<EzsignformfieldgroupDeleteObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignformfieldgroupDeleteObjectV1WithHttpInfo(pkiEzsignformfieldgroupID: kotlin.Int) : ApiResponse<CommonResponse?> {
+    fun ezsignformfieldgroupDeleteObjectV1WithHttpInfo(pkiEzsignformfieldgroupID: kotlin.Int) : ApiResponse<EzsignformfieldgroupDeleteObjectV1Response?> {
         val localVariableConfig = ezsignformfieldgroupDeleteObjectV1RequestConfig(pkiEzsignformfieldgroupID = pkiEzsignformfieldgroupID)
 
-        return request<Unit, CommonResponse>(
+        return request<Unit, EzsignformfieldgroupDeleteObjectV1Response>(
             localVariableConfig
         )
     }
@@ -198,7 +199,7 @@ class ObjectEzsignformfieldgroupApi(basePath: kotlin.String = defaultBasePath, c
      * 
      * @param pkiEzsignformfieldgroupID 
      * @param ezsignformfieldgroupEditObjectV1Request 
-     * @return CommonResponse
+     * @return EzsignformfieldgroupEditObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -207,11 +208,11 @@ class ObjectEzsignformfieldgroupApi(basePath: kotlin.String = defaultBasePath, c
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignformfieldgroupEditObjectV1(pkiEzsignformfieldgroupID: kotlin.Int, ezsignformfieldgroupEditObjectV1Request: EzsignformfieldgroupEditObjectV1Request) : CommonResponse {
+    fun ezsignformfieldgroupEditObjectV1(pkiEzsignformfieldgroupID: kotlin.Int, ezsignformfieldgroupEditObjectV1Request: EzsignformfieldgroupEditObjectV1Request) : EzsignformfieldgroupEditObjectV1Response {
         val localVarResponse = ezsignformfieldgroupEditObjectV1WithHttpInfo(pkiEzsignformfieldgroupID = pkiEzsignformfieldgroupID, ezsignformfieldgroupEditObjectV1Request = ezsignformfieldgroupEditObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignformfieldgroupEditObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -230,16 +231,16 @@ class ObjectEzsignformfieldgroupApi(basePath: kotlin.String = defaultBasePath, c
      * 
      * @param pkiEzsignformfieldgroupID 
      * @param ezsignformfieldgroupEditObjectV1Request 
-     * @return ApiResponse<CommonResponse?>
+     * @return ApiResponse<EzsignformfieldgroupEditObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignformfieldgroupEditObjectV1WithHttpInfo(pkiEzsignformfieldgroupID: kotlin.Int, ezsignformfieldgroupEditObjectV1Request: EzsignformfieldgroupEditObjectV1Request) : ApiResponse<CommonResponse?> {
+    fun ezsignformfieldgroupEditObjectV1WithHttpInfo(pkiEzsignformfieldgroupID: kotlin.Int, ezsignformfieldgroupEditObjectV1Request: EzsignformfieldgroupEditObjectV1Request) : ApiResponse<EzsignformfieldgroupEditObjectV1Response?> {
         val localVariableConfig = ezsignformfieldgroupEditObjectV1RequestConfig(pkiEzsignformfieldgroupID = pkiEzsignformfieldgroupID, ezsignformfieldgroupEditObjectV1Request = ezsignformfieldgroupEditObjectV1Request)
 
-        return request<EzsignformfieldgroupEditObjectV1Request, CommonResponse>(
+        return request<EzsignformfieldgroupEditObjectV1Request, EzsignformfieldgroupEditObjectV1Response>(
             localVariableConfig
         )
     }

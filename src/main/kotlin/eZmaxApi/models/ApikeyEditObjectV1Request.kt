@@ -15,7 +15,7 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.ApikeyRequest
+import eZmaxApi.models.ApikeyRequestCompound
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -23,15 +23,14 @@ import com.squareup.moshi.JsonClass
 /**
  * Request for PUT /1/object/apikey/{pkiApikeyID}
  *
- * @param objApikey An Apikey Object and children to create a complete structure
+ * @param objApikey 
  */
 
 
 data class ApikeyEditObjectV1Request (
 
-    /* An Apikey Object and children to create a complete structure */
     @Json(name = "objApikey")
-    val objApikey: ApikeyRequest
+    val objApikey: ApikeyRequestCompound
 
 ) {
 

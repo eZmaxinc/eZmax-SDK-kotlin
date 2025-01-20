@@ -19,7 +19,7 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.CustomEzsigndocumentRequest
-import eZmaxApi.models.EzsigndocumentdependencyRequest
+import eZmaxApi.models.EzsigndocumentdependencyRequestCompound
 
 class CustomEzsigndocumentRequestTest : ShouldSpec() {
     init {

@@ -20,7 +20,7 @@ import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.UserResponse
 import eZmaxApi.models.CommonAudit
-import eZmaxApi.models.EmailResponse
+import eZmaxApi.models.EmailResponseCompound
 import eZmaxApi.models.FieldEUserEzsignaccess
 import eZmaxApi.models.FieldEUserLogintype
 import eZmaxApi.models.FieldEUserOrigin
@@ -86,7 +86,7 @@ class UserResponseTest : ShouldSpec() {
             //modelInstance.sLanguageNameX shouldBe ("TODO")
         }
 
-        // to test the property `objEmail` - An Email Object and children to create a complete structure
+        // to test the property `objEmail`
         should("test objEmail") {
             // uncomment below to test the property
             //modelInstance.objEmail shouldBe ("TODO")

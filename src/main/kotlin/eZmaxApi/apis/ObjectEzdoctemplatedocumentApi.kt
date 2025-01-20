@@ -19,15 +19,16 @@ import java.io.IOException
 import okhttp3.Call
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.EzdoctemplatedocumentCreateObjectV1Request
 import eZmaxApi.models.EzdoctemplatedocumentCreateObjectV1Response
 import eZmaxApi.models.EzdoctemplatedocumentEditObjectV1Request
+import eZmaxApi.models.EzdoctemplatedocumentEditObjectV1Response
 import eZmaxApi.models.EzdoctemplatedocumentGetAutocompleteV2Response
 import eZmaxApi.models.EzdoctemplatedocumentGetListV1Response
 import eZmaxApi.models.EzdoctemplatedocumentGetObjectV2Response
 import eZmaxApi.models.EzdoctemplatedocumentPatchObjectV1Request
+import eZmaxApi.models.EzdoctemplatedocumentPatchObjectV1Response
 import eZmaxApi.models.HeaderAcceptLanguage
 
 import com.squareup.moshi.Json
@@ -200,7 +201,7 @@ class ObjectEzdoctemplatedocumentApi(basePath: kotlin.String = defaultBasePath, 
      * 
      * @param pkiEzdoctemplatedocumentID The unique ID of the Ezdoctemplatedocument
      * @param ezdoctemplatedocumentEditObjectV1Request 
-     * @return CommonResponse
+     * @return EzdoctemplatedocumentEditObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -209,11 +210,11 @@ class ObjectEzdoctemplatedocumentApi(basePath: kotlin.String = defaultBasePath, 
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezdoctemplatedocumentEditObjectV1(pkiEzdoctemplatedocumentID: kotlin.Int, ezdoctemplatedocumentEditObjectV1Request: EzdoctemplatedocumentEditObjectV1Request) : CommonResponse {
+    fun ezdoctemplatedocumentEditObjectV1(pkiEzdoctemplatedocumentID: kotlin.Int, ezdoctemplatedocumentEditObjectV1Request: EzdoctemplatedocumentEditObjectV1Request) : EzdoctemplatedocumentEditObjectV1Response {
         val localVarResponse = ezdoctemplatedocumentEditObjectV1WithHttpInfo(pkiEzdoctemplatedocumentID = pkiEzdoctemplatedocumentID, ezdoctemplatedocumentEditObjectV1Request = ezdoctemplatedocumentEditObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzdoctemplatedocumentEditObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -232,16 +233,16 @@ class ObjectEzdoctemplatedocumentApi(basePath: kotlin.String = defaultBasePath, 
      * 
      * @param pkiEzdoctemplatedocumentID The unique ID of the Ezdoctemplatedocument
      * @param ezdoctemplatedocumentEditObjectV1Request 
-     * @return ApiResponse<CommonResponse?>
+     * @return ApiResponse<EzdoctemplatedocumentEditObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezdoctemplatedocumentEditObjectV1WithHttpInfo(pkiEzdoctemplatedocumentID: kotlin.Int, ezdoctemplatedocumentEditObjectV1Request: EzdoctemplatedocumentEditObjectV1Request) : ApiResponse<CommonResponse?> {
+    fun ezdoctemplatedocumentEditObjectV1WithHttpInfo(pkiEzdoctemplatedocumentID: kotlin.Int, ezdoctemplatedocumentEditObjectV1Request: EzdoctemplatedocumentEditObjectV1Request) : ApiResponse<EzdoctemplatedocumentEditObjectV1Response?> {
         val localVariableConfig = ezdoctemplatedocumentEditObjectV1RequestConfig(pkiEzdoctemplatedocumentID = pkiEzdoctemplatedocumentID, ezdoctemplatedocumentEditObjectV1Request = ezdoctemplatedocumentEditObjectV1Request)
 
-        return request<EzdoctemplatedocumentEditObjectV1Request, CommonResponse>(
+        return request<EzdoctemplatedocumentEditObjectV1Request, EzdoctemplatedocumentEditObjectV1Response>(
             localVariableConfig
         )
     }
@@ -626,7 +627,7 @@ class ObjectEzdoctemplatedocumentApi(basePath: kotlin.String = defaultBasePath, 
      * 
      * @param pkiEzdoctemplatedocumentID The unique ID of the Ezdoctemplatedocument
      * @param ezdoctemplatedocumentPatchObjectV1Request 
-     * @return CommonResponse
+     * @return EzdoctemplatedocumentPatchObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -635,11 +636,11 @@ class ObjectEzdoctemplatedocumentApi(basePath: kotlin.String = defaultBasePath, 
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezdoctemplatedocumentPatchObjectV1(pkiEzdoctemplatedocumentID: kotlin.Int, ezdoctemplatedocumentPatchObjectV1Request: EzdoctemplatedocumentPatchObjectV1Request) : CommonResponse {
+    fun ezdoctemplatedocumentPatchObjectV1(pkiEzdoctemplatedocumentID: kotlin.Int, ezdoctemplatedocumentPatchObjectV1Request: EzdoctemplatedocumentPatchObjectV1Request) : EzdoctemplatedocumentPatchObjectV1Response {
         val localVarResponse = ezdoctemplatedocumentPatchObjectV1WithHttpInfo(pkiEzdoctemplatedocumentID = pkiEzdoctemplatedocumentID, ezdoctemplatedocumentPatchObjectV1Request = ezdoctemplatedocumentPatchObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzdoctemplatedocumentPatchObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -658,16 +659,16 @@ class ObjectEzdoctemplatedocumentApi(basePath: kotlin.String = defaultBasePath, 
      * 
      * @param pkiEzdoctemplatedocumentID The unique ID of the Ezdoctemplatedocument
      * @param ezdoctemplatedocumentPatchObjectV1Request 
-     * @return ApiResponse<CommonResponse?>
+     * @return ApiResponse<EzdoctemplatedocumentPatchObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezdoctemplatedocumentPatchObjectV1WithHttpInfo(pkiEzdoctemplatedocumentID: kotlin.Int, ezdoctemplatedocumentPatchObjectV1Request: EzdoctemplatedocumentPatchObjectV1Request) : ApiResponse<CommonResponse?> {
+    fun ezdoctemplatedocumentPatchObjectV1WithHttpInfo(pkiEzdoctemplatedocumentID: kotlin.Int, ezdoctemplatedocumentPatchObjectV1Request: EzdoctemplatedocumentPatchObjectV1Request) : ApiResponse<EzdoctemplatedocumentPatchObjectV1Response?> {
         val localVariableConfig = ezdoctemplatedocumentPatchObjectV1RequestConfig(pkiEzdoctemplatedocumentID = pkiEzdoctemplatedocumentID, ezdoctemplatedocumentPatchObjectV1Request = ezdoctemplatedocumentPatchObjectV1Request)
 
-        return request<EzdoctemplatedocumentPatchObjectV1Request, CommonResponse>(
+        return request<EzdoctemplatedocumentPatchObjectV1Request, EzdoctemplatedocumentPatchObjectV1Response>(
             localVariableConfig
         )
     }

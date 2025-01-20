@@ -22,10 +22,10 @@ import okhttp3.HttpUrl
 import eZmaxApi.models.BillingentityinternalCreateObjectV1Request
 import eZmaxApi.models.BillingentityinternalCreateObjectV1Response
 import eZmaxApi.models.BillingentityinternalEditObjectV1Request
+import eZmaxApi.models.BillingentityinternalEditObjectV1Response
 import eZmaxApi.models.BillingentityinternalGetAutocompleteV2Response
 import eZmaxApi.models.BillingentityinternalGetListV1Response
 import eZmaxApi.models.BillingentityinternalGetObjectV2Response
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.HeaderAcceptLanguage
 
@@ -130,7 +130,7 @@ class ObjectBillingentityinternalApi(basePath: kotlin.String = defaultBasePath, 
      * 
      * @param pkiBillingentityinternalID 
      * @param billingentityinternalEditObjectV1Request 
-     * @return CommonResponse
+     * @return BillingentityinternalEditObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -139,11 +139,11 @@ class ObjectBillingentityinternalApi(basePath: kotlin.String = defaultBasePath, 
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun billingentityinternalEditObjectV1(pkiBillingentityinternalID: kotlin.Int, billingentityinternalEditObjectV1Request: BillingentityinternalEditObjectV1Request) : CommonResponse {
+    fun billingentityinternalEditObjectV1(pkiBillingentityinternalID: kotlin.Int, billingentityinternalEditObjectV1Request: BillingentityinternalEditObjectV1Request) : BillingentityinternalEditObjectV1Response {
         val localVarResponse = billingentityinternalEditObjectV1WithHttpInfo(pkiBillingentityinternalID = pkiBillingentityinternalID, billingentityinternalEditObjectV1Request = billingentityinternalEditObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as BillingentityinternalEditObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -162,16 +162,16 @@ class ObjectBillingentityinternalApi(basePath: kotlin.String = defaultBasePath, 
      * 
      * @param pkiBillingentityinternalID 
      * @param billingentityinternalEditObjectV1Request 
-     * @return ApiResponse<CommonResponse?>
+     * @return ApiResponse<BillingentityinternalEditObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun billingentityinternalEditObjectV1WithHttpInfo(pkiBillingentityinternalID: kotlin.Int, billingentityinternalEditObjectV1Request: BillingentityinternalEditObjectV1Request) : ApiResponse<CommonResponse?> {
+    fun billingentityinternalEditObjectV1WithHttpInfo(pkiBillingentityinternalID: kotlin.Int, billingentityinternalEditObjectV1Request: BillingentityinternalEditObjectV1Request) : ApiResponse<BillingentityinternalEditObjectV1Response?> {
         val localVariableConfig = billingentityinternalEditObjectV1RequestConfig(pkiBillingentityinternalID = pkiBillingentityinternalID, billingentityinternalEditObjectV1Request = billingentityinternalEditObjectV1Request)
 
-        return request<BillingentityinternalEditObjectV1Request, CommonResponse>(
+        return request<BillingentityinternalEditObjectV1Request, BillingentityinternalEditObjectV1Response>(
             localVariableConfig
         )
     }

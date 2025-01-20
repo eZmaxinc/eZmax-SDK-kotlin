@@ -63,7 +63,7 @@ Configure Authorization:
 
 <a id="supplyDeleteObjectV1"></a>
 # **supplyDeleteObjectV1**
-> CommonResponse supplyDeleteObjectV1(pkiSupplyID)
+> SupplyDeleteObjectV1Response supplyDeleteObjectV1(pkiSupplyID)
 
 Delete an existing Supply
 
@@ -78,7 +78,7 @@ Delete an existing Supply
 val apiInstance = ObjectSupplyApi()
 val pkiSupplyID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Supply
 try {
-    val result : CommonResponse = apiInstance.supplyDeleteObjectV1(pkiSupplyID)
+    val result : SupplyDeleteObjectV1Response = apiInstance.supplyDeleteObjectV1(pkiSupplyID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectSupplyApi#supplyDeleteObjectV1")
@@ -96,7 +96,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**SupplyDeleteObjectV1Response**](SupplyDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -112,7 +112,7 @@ Configure Authorization:
 
 <a id="supplyEditObjectV1"></a>
 # **supplyEditObjectV1**
-> CommonResponse supplyEditObjectV1(pkiSupplyID, supplyEditObjectV1Request)
+> SupplyEditObjectV1Response supplyEditObjectV1(pkiSupplyID, supplyEditObjectV1Request)
 
 Edit an existing Supply
 
@@ -128,7 +128,7 @@ val apiInstance = ObjectSupplyApi()
 val pkiSupplyID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Supply
 val supplyEditObjectV1Request : SupplyEditObjectV1Request =  // SupplyEditObjectV1Request | 
 try {
-    val result : CommonResponse = apiInstance.supplyEditObjectV1(pkiSupplyID, supplyEditObjectV1Request)
+    val result : SupplyEditObjectV1Response = apiInstance.supplyEditObjectV1(pkiSupplyID, supplyEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectSupplyApi#supplyEditObjectV1")
@@ -147,7 +147,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**SupplyEditObjectV1Response**](SupplyEditObjectV1Response.md)
 
 ### Authorization
 

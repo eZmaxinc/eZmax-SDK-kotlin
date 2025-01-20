@@ -173,7 +173,7 @@ Configure Authorization:
 
 <a id="userEditObjectV1"></a>
 # **userEditObjectV1**
-> CommonResponse userEditObjectV1(pkiUserID, userEditObjectV1Request)
+> UserEditObjectV1Response userEditObjectV1(pkiUserID, userEditObjectV1Request)
 
 Edit an existing User
 
@@ -189,7 +189,7 @@ val apiInstance = ObjectUserApi()
 val pkiUserID : kotlin.Int = 56 // kotlin.Int | The unique ID of the User
 val userEditObjectV1Request : UserEditObjectV1Request =  // UserEditObjectV1Request | 
 try {
-    val result : CommonResponse = apiInstance.userEditObjectV1(pkiUserID, userEditObjectV1Request)
+    val result : UserEditObjectV1Response = apiInstance.userEditObjectV1(pkiUserID, userEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectUserApi#userEditObjectV1")
@@ -208,7 +208,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**UserEditObjectV1Response**](UserEditObjectV1Response.md)
 
 ### Authorization
 
@@ -767,7 +767,7 @@ Configure Authorization:
 
 <a id="userSendPasswordResetV1"></a>
 # **userSendPasswordResetV1**
-> CommonResponse userSendPasswordResetV1(pkiUserID, body)
+> UserSendPasswordResetV1Response userSendPasswordResetV1(pkiUserID, body)
 
 Send password reset
 
@@ -783,7 +783,7 @@ val apiInstance = ObjectUserApi()
 val pkiUserID : kotlin.Int = 56 // kotlin.Int | 
 val body : kotlin.Any = Object // kotlin.Any | 
 try {
-    val result : CommonResponse = apiInstance.userSendPasswordResetV1(pkiUserID, body)
+    val result : UserSendPasswordResetV1Response = apiInstance.userSendPasswordResetV1(pkiUserID, body)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectUserApi#userSendPasswordResetV1")
@@ -802,7 +802,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**UserSendPasswordResetV1Response**](UserSendPasswordResetV1Response.md)
 
 ### Authorization
 

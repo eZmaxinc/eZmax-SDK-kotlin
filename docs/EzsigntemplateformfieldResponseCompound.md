@@ -22,7 +22,7 @@
 | **eEzsigntemplateformfieldPositioningoccurence** | [**FieldEEzsigntemplateformfieldPositioningoccurence**](FieldEEzsigntemplateformfieldPositioningoccurence.md) |  |  [optional] |
 | **eEzsigntemplateformfieldHorizontalalignment** | [**EnumHorizontalalignment**](EnumHorizontalalignment.md) |  |  [optional] |
 | **objTextstylestatic** | [**TextstylestaticResponseCompound**](TextstylestaticResponseCompound.md) |  |  [optional] |
-| **aObjEzsigntemplateelementdependency** | [**kotlin.collections.List&lt;EzsigntemplateelementdependencyResponseCompound&gt;**](EzsigntemplateelementdependencyResponse.md) |  |  [optional] |
+| **aObjEzsigntemplateelementdependency** | [**kotlin.collections.List&lt;EzsigntemplateelementdependencyResponseCompound&gt;**](EzsigntemplateelementdependencyResponseCompound.md) |  |  [optional] |
 
 
 

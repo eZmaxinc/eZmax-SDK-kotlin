@@ -4,7 +4,7 @@
 ## Properties
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **aObjWebhooklog** | [**kotlin.collections.List&lt;CustomWebhooklogResponse&gt;**](kotlin.Any.md) |  |  |
+| **aObjWebhooklog** | [**kotlin.collections.List&lt;CustomWebhooklogResponse&gt;**](CustomWebhooklogResponse.md) |  |  |
 
 
 

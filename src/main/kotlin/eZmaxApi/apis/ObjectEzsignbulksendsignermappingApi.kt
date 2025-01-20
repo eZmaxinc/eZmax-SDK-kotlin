@@ -19,10 +19,10 @@ import java.io.IOException
 import okhttp3.Call
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.EzsignbulksendsignermappingCreateObjectV1Request
 import eZmaxApi.models.EzsignbulksendsignermappingCreateObjectV1Response
+import eZmaxApi.models.EzsignbulksendsignermappingDeleteObjectV1Response
 import eZmaxApi.models.EzsignbulksendsignermappingGetObjectV2Response
 
 import com.squareup.moshi.Json
@@ -125,7 +125,7 @@ class ObjectEzsignbulksendsignermappingApi(basePath: kotlin.String = defaultBase
      * Delete an existing Ezsignbulksendsignermapping
      * 
      * @param pkiEzsignbulksendsignermappingID 
-     * @return CommonResponse
+     * @return EzsignbulksendsignermappingDeleteObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -134,11 +134,11 @@ class ObjectEzsignbulksendsignermappingApi(basePath: kotlin.String = defaultBase
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignbulksendsignermappingDeleteObjectV1(pkiEzsignbulksendsignermappingID: kotlin.Int) : CommonResponse {
+    fun ezsignbulksendsignermappingDeleteObjectV1(pkiEzsignbulksendsignermappingID: kotlin.Int) : EzsignbulksendsignermappingDeleteObjectV1Response {
         val localVarResponse = ezsignbulksendsignermappingDeleteObjectV1WithHttpInfo(pkiEzsignbulksendsignermappingID = pkiEzsignbulksendsignermappingID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignbulksendsignermappingDeleteObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -156,16 +156,16 @@ class ObjectEzsignbulksendsignermappingApi(basePath: kotlin.String = defaultBase
      * Delete an existing Ezsignbulksendsignermapping
      * 
      * @param pkiEzsignbulksendsignermappingID 
-     * @return ApiResponse<CommonResponse?>
+     * @return ApiResponse<EzsignbulksendsignermappingDeleteObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignbulksendsignermappingDeleteObjectV1WithHttpInfo(pkiEzsignbulksendsignermappingID: kotlin.Int) : ApiResponse<CommonResponse?> {
+    fun ezsignbulksendsignermappingDeleteObjectV1WithHttpInfo(pkiEzsignbulksendsignermappingID: kotlin.Int) : ApiResponse<EzsignbulksendsignermappingDeleteObjectV1Response?> {
         val localVariableConfig = ezsignbulksendsignermappingDeleteObjectV1RequestConfig(pkiEzsignbulksendsignermappingID = pkiEzsignbulksendsignermappingID)
 
-        return request<Unit, CommonResponse>(
+        return request<Unit, EzsignbulksendsignermappingDeleteObjectV1Response>(
             localVariableConfig
         )
     }

@@ -19,10 +19,10 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.EzsigntemplateformfieldgroupResponseCompound
-import eZmaxApi.models.CustomDropdownElementResponse
+import eZmaxApi.models.CustomDropdownElementResponseCompound
 import eZmaxApi.models.EnumTextvalidation
 import eZmaxApi.models.EzsigntemplateformfieldResponseCompound
-import eZmaxApi.models.EzsigntemplateformfieldgroupsignerResponse
+import eZmaxApi.models.EzsigntemplateformfieldgroupsignerResponseCompound
 import eZmaxApi.models.FieldEEzsigntemplateformfieldgroupSignerrequirement
 import eZmaxApi.models.FieldEEzsigntemplateformfieldgroupTooltipposition
 import eZmaxApi.models.FieldEEzsigntemplateformfieldgroupType

@@ -115,7 +115,7 @@ Configure Authorization:
 
 <a id="ezsigntemplateDeleteObjectV1"></a>
 # **ezsigntemplateDeleteObjectV1**
-> CommonResponse ezsigntemplateDeleteObjectV1(pkiEzsigntemplateID)
+> EzsigntemplateDeleteObjectV1Response ezsigntemplateDeleteObjectV1(pkiEzsigntemplateID)
 
 Delete an existing Ezsigntemplate
 
@@ -130,7 +130,7 @@ Delete an existing Ezsigntemplate
 val apiInstance = ObjectEzsigntemplateApi()
 val pkiEzsigntemplateID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : CommonResponse = apiInstance.ezsigntemplateDeleteObjectV1(pkiEzsigntemplateID)
+    val result : EzsigntemplateDeleteObjectV1Response = apiInstance.ezsigntemplateDeleteObjectV1(pkiEzsigntemplateID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplateApi#ezsigntemplateDeleteObjectV1")
@@ -148,7 +148,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigntemplateDeleteObjectV1Response**](EzsigntemplateDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -164,7 +164,7 @@ Configure Authorization:
 
 <a id="ezsigntemplateEditObjectV3"></a>
 # **ezsigntemplateEditObjectV3**
-> CommonResponse ezsigntemplateEditObjectV3(pkiEzsigntemplateID, ezsigntemplateEditObjectV3Request)
+> EzsigntemplateEditObjectV3Response ezsigntemplateEditObjectV3(pkiEzsigntemplateID, ezsigntemplateEditObjectV3Request)
 
 Edit an existing Ezsigntemplate
 
@@ -180,7 +180,7 @@ val apiInstance = ObjectEzsigntemplateApi()
 val pkiEzsigntemplateID : kotlin.Int = 56 // kotlin.Int | 
 val ezsigntemplateEditObjectV3Request : EzsigntemplateEditObjectV3Request =  // EzsigntemplateEditObjectV3Request | 
 try {
-    val result : CommonResponse = apiInstance.ezsigntemplateEditObjectV3(pkiEzsigntemplateID, ezsigntemplateEditObjectV3Request)
+    val result : EzsigntemplateEditObjectV3Response = apiInstance.ezsigntemplateEditObjectV3(pkiEzsigntemplateID, ezsigntemplateEditObjectV3Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplateApi#ezsigntemplateEditObjectV3")
@@ -199,7 +199,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigntemplateEditObjectV3Response**](EzsigntemplateEditObjectV3Response.md)
 
 ### Authorization
 

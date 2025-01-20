@@ -19,12 +19,12 @@ import java.io.IOException
 import okhttp3.Call
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.HeaderAcceptLanguage
 import eZmaxApi.models.UsergroupCreateObjectV1Request
 import eZmaxApi.models.UsergroupCreateObjectV1Response
 import eZmaxApi.models.UsergroupEditObjectV1Request
+import eZmaxApi.models.UsergroupEditObjectV1Response
 import eZmaxApi.models.UsergroupEditPermissionsV1Request
 import eZmaxApi.models.UsergroupEditPermissionsV1Response
 import eZmaxApi.models.UsergroupEditUsergroupdelegationsV1Request
@@ -139,7 +139,7 @@ class ObjectUsergroupApi(basePath: kotlin.String = defaultBasePath, client: Call
      * 
      * @param pkiUsergroupID 
      * @param usergroupEditObjectV1Request 
-     * @return CommonResponse
+     * @return UsergroupEditObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -148,11 +148,11 @@ class ObjectUsergroupApi(basePath: kotlin.String = defaultBasePath, client: Call
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun usergroupEditObjectV1(pkiUsergroupID: kotlin.Int, usergroupEditObjectV1Request: UsergroupEditObjectV1Request) : CommonResponse {
+    fun usergroupEditObjectV1(pkiUsergroupID: kotlin.Int, usergroupEditObjectV1Request: UsergroupEditObjectV1Request) : UsergroupEditObjectV1Response {
         val localVarResponse = usergroupEditObjectV1WithHttpInfo(pkiUsergroupID = pkiUsergroupID, usergroupEditObjectV1Request = usergroupEditObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as UsergroupEditObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -171,16 +171,16 @@ class ObjectUsergroupApi(basePath: kotlin.String = defaultBasePath, client: Call
      * 
      * @param pkiUsergroupID 
      * @param usergroupEditObjectV1Request 
-     * @return ApiResponse<CommonResponse?>
+     * @return ApiResponse<UsergroupEditObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun usergroupEditObjectV1WithHttpInfo(pkiUsergroupID: kotlin.Int, usergroupEditObjectV1Request: UsergroupEditObjectV1Request) : ApiResponse<CommonResponse?> {
+    fun usergroupEditObjectV1WithHttpInfo(pkiUsergroupID: kotlin.Int, usergroupEditObjectV1Request: UsergroupEditObjectV1Request) : ApiResponse<UsergroupEditObjectV1Response?> {
         val localVariableConfig = usergroupEditObjectV1RequestConfig(pkiUsergroupID = pkiUsergroupID, usergroupEditObjectV1Request = usergroupEditObjectV1Request)
 
-        return request<UsergroupEditObjectV1Request, CommonResponse>(
+        return request<UsergroupEditObjectV1Request, UsergroupEditObjectV1Response>(
             localVariableConfig
         )
     }

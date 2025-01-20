@@ -19,7 +19,7 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.UsergroupEditPermissionsV1Request
-import eZmaxApi.models.PermissionRequest
+import eZmaxApi.models.PermissionRequestCompound
 
 class UsergroupEditPermissionsV1RequestTest : ShouldSpec() {
     init {

@@ -19,11 +19,12 @@ import java.io.IOException
 import okhttp3.Call
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.EzsigntemplateformfieldgroupCreateObjectV1Request
 import eZmaxApi.models.EzsigntemplateformfieldgroupCreateObjectV1Response
+import eZmaxApi.models.EzsigntemplateformfieldgroupDeleteObjectV1Response
 import eZmaxApi.models.EzsigntemplateformfieldgroupEditObjectV1Request
+import eZmaxApi.models.EzsigntemplateformfieldgroupEditObjectV1Response
 import eZmaxApi.models.EzsigntemplateformfieldgroupGetObjectV2Response
 
 import com.squareup.moshi.Json
@@ -126,7 +127,7 @@ class ObjectEzsigntemplateformfieldgroupApi(basePath: kotlin.String = defaultBas
      * Delete an existing Ezsigntemplateformfieldgroup
      * 
      * @param pkiEzsigntemplateformfieldgroupID 
-     * @return CommonResponse
+     * @return EzsigntemplateformfieldgroupDeleteObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -135,11 +136,11 @@ class ObjectEzsigntemplateformfieldgroupApi(basePath: kotlin.String = defaultBas
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsigntemplateformfieldgroupDeleteObjectV1(pkiEzsigntemplateformfieldgroupID: kotlin.Int) : CommonResponse {
+    fun ezsigntemplateformfieldgroupDeleteObjectV1(pkiEzsigntemplateformfieldgroupID: kotlin.Int) : EzsigntemplateformfieldgroupDeleteObjectV1Response {
         val localVarResponse = ezsigntemplateformfieldgroupDeleteObjectV1WithHttpInfo(pkiEzsigntemplateformfieldgroupID = pkiEzsigntemplateformfieldgroupID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigntemplateformfieldgroupDeleteObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -157,16 +158,16 @@ class ObjectEzsigntemplateformfieldgroupApi(basePath: kotlin.String = defaultBas
      * Delete an existing Ezsigntemplateformfieldgroup
      * 
      * @param pkiEzsigntemplateformfieldgroupID 
-     * @return ApiResponse<CommonResponse?>
+     * @return ApiResponse<EzsigntemplateformfieldgroupDeleteObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsigntemplateformfieldgroupDeleteObjectV1WithHttpInfo(pkiEzsigntemplateformfieldgroupID: kotlin.Int) : ApiResponse<CommonResponse?> {
+    fun ezsigntemplateformfieldgroupDeleteObjectV1WithHttpInfo(pkiEzsigntemplateformfieldgroupID: kotlin.Int) : ApiResponse<EzsigntemplateformfieldgroupDeleteObjectV1Response?> {
         val localVariableConfig = ezsigntemplateformfieldgroupDeleteObjectV1RequestConfig(pkiEzsigntemplateformfieldgroupID = pkiEzsigntemplateformfieldgroupID)
 
-        return request<Unit, CommonResponse>(
+        return request<Unit, EzsigntemplateformfieldgroupDeleteObjectV1Response>(
             localVariableConfig
         )
     }
@@ -198,7 +199,7 @@ class ObjectEzsigntemplateformfieldgroupApi(basePath: kotlin.String = defaultBas
      * 
      * @param pkiEzsigntemplateformfieldgroupID 
      * @param ezsigntemplateformfieldgroupEditObjectV1Request 
-     * @return CommonResponse
+     * @return EzsigntemplateformfieldgroupEditObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -207,11 +208,11 @@ class ObjectEzsigntemplateformfieldgroupApi(basePath: kotlin.String = defaultBas
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsigntemplateformfieldgroupEditObjectV1(pkiEzsigntemplateformfieldgroupID: kotlin.Int, ezsigntemplateformfieldgroupEditObjectV1Request: EzsigntemplateformfieldgroupEditObjectV1Request) : CommonResponse {
+    fun ezsigntemplateformfieldgroupEditObjectV1(pkiEzsigntemplateformfieldgroupID: kotlin.Int, ezsigntemplateformfieldgroupEditObjectV1Request: EzsigntemplateformfieldgroupEditObjectV1Request) : EzsigntemplateformfieldgroupEditObjectV1Response {
         val localVarResponse = ezsigntemplateformfieldgroupEditObjectV1WithHttpInfo(pkiEzsigntemplateformfieldgroupID = pkiEzsigntemplateformfieldgroupID, ezsigntemplateformfieldgroupEditObjectV1Request = ezsigntemplateformfieldgroupEditObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigntemplateformfieldgroupEditObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -230,16 +231,16 @@ class ObjectEzsigntemplateformfieldgroupApi(basePath: kotlin.String = defaultBas
      * 
      * @param pkiEzsigntemplateformfieldgroupID 
      * @param ezsigntemplateformfieldgroupEditObjectV1Request 
-     * @return ApiResponse<CommonResponse?>
+     * @return ApiResponse<EzsigntemplateformfieldgroupEditObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsigntemplateformfieldgroupEditObjectV1WithHttpInfo(pkiEzsigntemplateformfieldgroupID: kotlin.Int, ezsigntemplateformfieldgroupEditObjectV1Request: EzsigntemplateformfieldgroupEditObjectV1Request) : ApiResponse<CommonResponse?> {
+    fun ezsigntemplateformfieldgroupEditObjectV1WithHttpInfo(pkiEzsigntemplateformfieldgroupID: kotlin.Int, ezsigntemplateformfieldgroupEditObjectV1Request: EzsigntemplateformfieldgroupEditObjectV1Request) : ApiResponse<EzsigntemplateformfieldgroupEditObjectV1Response?> {
         val localVariableConfig = ezsigntemplateformfieldgroupEditObjectV1RequestConfig(pkiEzsigntemplateformfieldgroupID = pkiEzsigntemplateformfieldgroupID, ezsigntemplateformfieldgroupEditObjectV1Request = ezsigntemplateformfieldgroupEditObjectV1Request)
 
-        return request<EzsigntemplateformfieldgroupEditObjectV1Request, CommonResponse>(
+        return request<EzsigntemplateformfieldgroupEditObjectV1Request, EzsigntemplateformfieldgroupEditObjectV1Response>(
             localVariableConfig
         )
     }

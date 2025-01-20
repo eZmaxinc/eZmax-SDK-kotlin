@@ -19,11 +19,11 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.ContactinformationsRequestCompoundV2
-import eZmaxApi.models.AddressRequest
-import eZmaxApi.models.EmailRequest
+import eZmaxApi.models.AddressRequestCompound
+import eZmaxApi.models.EmailRequestCompound
 import eZmaxApi.models.FieldEContactinformationsType
-import eZmaxApi.models.PhoneRequest
-import eZmaxApi.models.WebsiteRequest
+import eZmaxApi.models.PhoneRequestCompound
+import eZmaxApi.models.WebsiteRequestCompound
 
 class ContactinformationsRequestCompoundV2Test : ShouldSpec() {
     init {

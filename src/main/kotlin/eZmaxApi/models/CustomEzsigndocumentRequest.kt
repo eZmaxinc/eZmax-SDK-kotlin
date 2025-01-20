@@ -15,7 +15,7 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.EzsigndocumentdependencyRequest
+import eZmaxApi.models.EzsigndocumentdependencyRequestCompound
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -35,7 +35,7 @@ data class CustomEzsigndocumentRequest (
     val pkiEzsigndocumentID: kotlin.Int,
 
     @Json(name = "a_objEzsigndocumentdependency")
-    val aObjEzsigndocumentdependency: kotlin.collections.List<EzsigndocumentdependencyRequest>
+    val aObjEzsigndocumentdependency: kotlin.collections.List<EzsigndocumentdependencyRequestCompound>
 
 ) {
 

@@ -19,11 +19,12 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectUsergroupdelegationApi
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.UsergroupdelegationCreateObjectV1Request
 import eZmaxApi.models.UsergroupdelegationCreateObjectV1Response
+import eZmaxApi.models.UsergroupdelegationDeleteObjectV1Response
 import eZmaxApi.models.UsergroupdelegationEditObjectV1Request
+import eZmaxApi.models.UsergroupdelegationEditObjectV1Response
 import eZmaxApi.models.UsergroupdelegationGetObjectV2Response
 
 class ObjectUsergroupdelegationApiTest : ShouldSpec() {
@@ -43,7 +44,7 @@ class ObjectUsergroupdelegationApiTest : ShouldSpec() {
         should("test usergroupdelegationDeleteObjectV1") {
             // uncomment below to test usergroupdelegationDeleteObjectV1
             //val pkiUsergroupdelegationID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Usergroupdelegation
-            //val result : CommonResponse = apiInstance.usergroupdelegationDeleteObjectV1(pkiUsergroupdelegationID)
+            //val result : UsergroupdelegationDeleteObjectV1Response = apiInstance.usergroupdelegationDeleteObjectV1(pkiUsergroupdelegationID)
             //result shouldBe ("TODO")
         }
 
@@ -52,7 +53,7 @@ class ObjectUsergroupdelegationApiTest : ShouldSpec() {
             // uncomment below to test usergroupdelegationEditObjectV1
             //val pkiUsergroupdelegationID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Usergroupdelegation
             //val usergroupdelegationEditObjectV1Request : UsergroupdelegationEditObjectV1Request =  // UsergroupdelegationEditObjectV1Request | 
-            //val result : CommonResponse = apiInstance.usergroupdelegationEditObjectV1(pkiUsergroupdelegationID, usergroupdelegationEditObjectV1Request)
+            //val result : UsergroupdelegationEditObjectV1Response = apiInstance.usergroupdelegationEditObjectV1(pkiUsergroupdelegationID, usergroupdelegationEditObjectV1Request)
             //result shouldBe ("TODO")
         }
 

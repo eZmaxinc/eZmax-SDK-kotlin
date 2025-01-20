@@ -62,7 +62,7 @@ Configure Authorization:
 
 <a id="discussionDeleteObjectV1"></a>
 # **discussionDeleteObjectV1**
-> CommonResponse discussionDeleteObjectV1(pkiDiscussionID)
+> DiscussionDeleteObjectV1Response discussionDeleteObjectV1(pkiDiscussionID)
 
 Delete an existing Discussion
 
@@ -77,7 +77,7 @@ Delete an existing Discussion
 val apiInstance = ObjectDiscussionApi()
 val pkiDiscussionID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Discussion
 try {
-    val result : CommonResponse = apiInstance.discussionDeleteObjectV1(pkiDiscussionID)
+    val result : DiscussionDeleteObjectV1Response = apiInstance.discussionDeleteObjectV1(pkiDiscussionID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectDiscussionApi#discussionDeleteObjectV1")
@@ -95,7 +95,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**DiscussionDeleteObjectV1Response**](DiscussionDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -160,7 +160,7 @@ Configure Authorization:
 
 <a id="discussionPatchObjectV1"></a>
 # **discussionPatchObjectV1**
-> CommonResponse discussionPatchObjectV1(pkiDiscussionID, discussionPatchObjectV1Request)
+> DiscussionPatchObjectV1Response discussionPatchObjectV1(pkiDiscussionID, discussionPatchObjectV1Request)
 
 Patch an existing Discussion
 
@@ -176,7 +176,7 @@ val apiInstance = ObjectDiscussionApi()
 val pkiDiscussionID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Discussion
 val discussionPatchObjectV1Request : DiscussionPatchObjectV1Request =  // DiscussionPatchObjectV1Request | 
 try {
-    val result : CommonResponse = apiInstance.discussionPatchObjectV1(pkiDiscussionID, discussionPatchObjectV1Request)
+    val result : DiscussionPatchObjectV1Response = apiInstance.discussionPatchObjectV1(pkiDiscussionID, discussionPatchObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectDiscussionApi#discussionPatchObjectV1")
@@ -195,7 +195,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**DiscussionPatchObjectV1Response**](DiscussionPatchObjectV1Response.md)
 
 ### Authorization
 
@@ -211,7 +211,7 @@ Configure Authorization:
 
 <a id="discussionUpdateDiscussionreadstatusV1"></a>
 # **discussionUpdateDiscussionreadstatusV1**
-> CommonResponse discussionUpdateDiscussionreadstatusV1(pkiDiscussionID, discussionUpdateDiscussionreadstatusV1Request)
+> DiscussionUpdateDiscussionreadstatusV1Response discussionUpdateDiscussionreadstatusV1(pkiDiscussionID, discussionUpdateDiscussionreadstatusV1Request)
 
 Update the read status of the discussion
 
@@ -225,7 +225,7 @@ val apiInstance = ObjectDiscussionApi()
 val pkiDiscussionID : kotlin.Int = 56 // kotlin.Int | 
 val discussionUpdateDiscussionreadstatusV1Request : DiscussionUpdateDiscussionreadstatusV1Request =  // DiscussionUpdateDiscussionreadstatusV1Request | 
 try {
-    val result : CommonResponse = apiInstance.discussionUpdateDiscussionreadstatusV1(pkiDiscussionID, discussionUpdateDiscussionreadstatusV1Request)
+    val result : DiscussionUpdateDiscussionreadstatusV1Response = apiInstance.discussionUpdateDiscussionreadstatusV1(pkiDiscussionID, discussionUpdateDiscussionreadstatusV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectDiscussionApi#discussionUpdateDiscussionreadstatusV1")
@@ -244,7 +244,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**DiscussionUpdateDiscussionreadstatusV1Response**](DiscussionUpdateDiscussionreadstatusV1Response.md)
 
 ### Authorization
 

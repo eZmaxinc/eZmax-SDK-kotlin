@@ -20,6 +20,7 @@ import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.DomainResponseCompound
 import eZmaxApi.models.CommonAudit
+import eZmaxApi.models.CustomDnsrecordResponse
 
 class DomainResponseCompoundTest : ShouldSpec() {
     init {

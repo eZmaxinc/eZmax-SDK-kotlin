@@ -19,14 +19,14 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.EzsignfolderEditObjectV3Request
-import eZmaxApi.models.EzsignfolderRequestV3
+import eZmaxApi.models.EzsignfolderRequestCompoundV3
 
 class EzsignfolderEditObjectV3RequestTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of EzsignfolderEditObjectV3Request
         //val modelInstance = EzsignfolderEditObjectV3Request()
 
-        // to test the property `objEzsignfolder` - An Ezsignfolder Object and children to create a complete structure
+        // to test the property `objEzsignfolder`
         should("test objEzsignfolder") {
             // uncomment below to test the property
             //modelInstance.objEzsignfolder shouldBe ("TODO")

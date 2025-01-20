@@ -68,7 +68,7 @@ Configure Authorization:
 
 <a id="usergroupEditObjectV1"></a>
 # **usergroupEditObjectV1**
-> CommonResponse usergroupEditObjectV1(pkiUsergroupID, usergroupEditObjectV1Request)
+> UsergroupEditObjectV1Response usergroupEditObjectV1(pkiUsergroupID, usergroupEditObjectV1Request)
 
 Edit an existing Usergroup
 
@@ -84,7 +84,7 @@ val apiInstance = ObjectUsergroupApi()
 val pkiUsergroupID : kotlin.Int = 56 // kotlin.Int | 
 val usergroupEditObjectV1Request : UsergroupEditObjectV1Request =  // UsergroupEditObjectV1Request | 
 try {
-    val result : CommonResponse = apiInstance.usergroupEditObjectV1(pkiUsergroupID, usergroupEditObjectV1Request)
+    val result : UsergroupEditObjectV1Response = apiInstance.usergroupEditObjectV1(pkiUsergroupID, usergroupEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectUsergroupApi#usergroupEditObjectV1")
@@ -103,7 +103,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**UsergroupEditObjectV1Response**](UsergroupEditObjectV1Response.md)
 
 ### Authorization
 

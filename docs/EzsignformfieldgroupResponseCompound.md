@@ -13,7 +13,7 @@
 | **iEzsignformfieldgroupFilledmax** | **kotlin.Int** | The maximum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup |  |
 | **bEzsignformfieldgroupReadonly** | **kotlin.Boolean** | Whether the Ezsignformfieldgroup is read only or not. |  |
 | **aObjEzsignformfield** | [**kotlin.collections.List&lt;EzsignformfieldResponseCompound&gt;**](EzsignformfieldResponseCompound.md) |  |  |
-| **aObjEzsignformfieldgroupsigner** | [**kotlin.collections.List&lt;EzsignformfieldgroupsignerResponseCompound&gt;**](EzsignformfieldgroupsignerResponse.md) |  |  |
+| **aObjEzsignformfieldgroupsigner** | [**kotlin.collections.List&lt;EzsignformfieldgroupsignerResponseCompound&gt;**](EzsignformfieldgroupsignerResponseCompound.md) |  |  |
 | **eEzsignformfieldgroupSignerrequirement** | [**FieldEEzsignformfieldgroupSignerrequirement**](FieldEEzsignformfieldgroupSignerrequirement.md) |  |  [optional] |
 | **sEzsignformfieldgroupDefaultvalue** | **kotlin.String** | The default value for the Ezsignformfieldgroup  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | ------------------------- | ------------ | ------------ | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sCompany} | Company name | eZmax Solutions Inc. | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 | |  [optional] |
 | **iEzsignformfieldgroupMaxlength** | **kotlin.Int** | The maximum length for the value in the Ezsignformfieldgroup  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea** |  [optional] |
@@ -23,7 +23,7 @@
 | **sEzsignformfieldgroupTextvalidationcustommessage** | **kotlin.String** | Description of validation rule. Show by signatory. |  [optional] |
 | **tEzsignformfieldgroupTooltip** | **kotlin.String** | A tooltip that will be presented to Ezsignsigner about the Ezsignformfieldgroup |  [optional] |
 | **eEzsignformfieldgroupTooltipposition** | [**FieldEEzsignformfieldgroupTooltipposition**](FieldEEzsignformfieldgroupTooltipposition.md) |  |  [optional] |
-| **aObjDropdownElement** | [**kotlin.collections.List&lt;CustomDropdownElementResponseCompound&gt;**](CustomDropdownElementResponse.md) |  |  [optional] |
+| **aObjDropdownElement** | [**kotlin.collections.List&lt;CustomDropdownElementResponseCompound&gt;**](CustomDropdownElementResponseCompound.md) |  |  [optional] |
 
 
 

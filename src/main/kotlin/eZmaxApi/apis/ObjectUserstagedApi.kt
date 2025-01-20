@@ -19,13 +19,14 @@ import java.io.IOException
 import okhttp3.Call
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.HeaderAcceptLanguage
 import eZmaxApi.models.UserstagedCreateUserV1Response
+import eZmaxApi.models.UserstagedDeleteObjectV1Response
 import eZmaxApi.models.UserstagedGetListV1Response
 import eZmaxApi.models.UserstagedGetObjectV2Response
 import eZmaxApi.models.UserstagedMapV1Request
+import eZmaxApi.models.UserstagedMapV1Response
 
 import com.squareup.moshi.Json
 
@@ -130,7 +131,7 @@ class ObjectUserstagedApi(basePath: kotlin.String = defaultBasePath, client: Cal
      * Delete an existing Userstaged
      * 
      * @param pkiUserstagedID 
-     * @return CommonResponse
+     * @return UserstagedDeleteObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -139,11 +140,11 @@ class ObjectUserstagedApi(basePath: kotlin.String = defaultBasePath, client: Cal
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun userstagedDeleteObjectV1(pkiUserstagedID: kotlin.Int) : CommonResponse {
+    fun userstagedDeleteObjectV1(pkiUserstagedID: kotlin.Int) : UserstagedDeleteObjectV1Response {
         val localVarResponse = userstagedDeleteObjectV1WithHttpInfo(pkiUserstagedID = pkiUserstagedID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as UserstagedDeleteObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -161,16 +162,16 @@ class ObjectUserstagedApi(basePath: kotlin.String = defaultBasePath, client: Cal
      * Delete an existing Userstaged
      * 
      * @param pkiUserstagedID 
-     * @return ApiResponse<CommonResponse?>
+     * @return ApiResponse<UserstagedDeleteObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun userstagedDeleteObjectV1WithHttpInfo(pkiUserstagedID: kotlin.Int) : ApiResponse<CommonResponse?> {
+    fun userstagedDeleteObjectV1WithHttpInfo(pkiUserstagedID: kotlin.Int) : ApiResponse<UserstagedDeleteObjectV1Response?> {
         val localVariableConfig = userstagedDeleteObjectV1RequestConfig(pkiUserstagedID = pkiUserstagedID)
 
-        return request<Unit, CommonResponse>(
+        return request<Unit, UserstagedDeleteObjectV1Response>(
             localVariableConfig
         )
     }
@@ -396,7 +397,7 @@ class ObjectUserstagedApi(basePath: kotlin.String = defaultBasePath, client: Cal
      * 
      * @param pkiUserstagedID 
      * @param userstagedMapV1Request 
-     * @return CommonResponse
+     * @return UserstagedMapV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -405,11 +406,11 @@ class ObjectUserstagedApi(basePath: kotlin.String = defaultBasePath, client: Cal
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun userstagedMapV1(pkiUserstagedID: kotlin.Int, userstagedMapV1Request: UserstagedMapV1Request) : CommonResponse {
+    fun userstagedMapV1(pkiUserstagedID: kotlin.Int, userstagedMapV1Request: UserstagedMapV1Request) : UserstagedMapV1Response {
         val localVarResponse = userstagedMapV1WithHttpInfo(pkiUserstagedID = pkiUserstagedID, userstagedMapV1Request = userstagedMapV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as UserstagedMapV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -428,16 +429,16 @@ class ObjectUserstagedApi(basePath: kotlin.String = defaultBasePath, client: Cal
      * 
      * @param pkiUserstagedID 
      * @param userstagedMapV1Request 
-     * @return ApiResponse<CommonResponse?>
+     * @return ApiResponse<UserstagedMapV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun userstagedMapV1WithHttpInfo(pkiUserstagedID: kotlin.Int, userstagedMapV1Request: UserstagedMapV1Request) : ApiResponse<CommonResponse?> {
+    fun userstagedMapV1WithHttpInfo(pkiUserstagedID: kotlin.Int, userstagedMapV1Request: UserstagedMapV1Request) : ApiResponse<UserstagedMapV1Response?> {
         val localVariableConfig = userstagedMapV1RequestConfig(pkiUserstagedID = pkiUserstagedID, userstagedMapV1Request = userstagedMapV1Request)
 
-        return request<UserstagedMapV1Request, CommonResponse>(
+        return request<UserstagedMapV1Request, UserstagedMapV1Response>(
             localVariableConfig
         )
     }

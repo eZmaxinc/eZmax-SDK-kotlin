@@ -19,10 +19,10 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectEzsigndiscussionApi
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.EzsigndiscussionCreateObjectV1Request
 import eZmaxApi.models.EzsigndiscussionCreateObjectV1Response
+import eZmaxApi.models.EzsigndiscussionDeleteObjectV1Response
 import eZmaxApi.models.EzsigndiscussionGetObjectV2Response
 
 class ObjectEzsigndiscussionApiTest : ShouldSpec() {
@@ -42,7 +42,7 @@ class ObjectEzsigndiscussionApiTest : ShouldSpec() {
         should("test ezsigndiscussionDeleteObjectV1") {
             // uncomment below to test ezsigndiscussionDeleteObjectV1
             //val pkiEzsigndiscussionID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsigndiscussion
-            //val result : CommonResponse = apiInstance.ezsigndiscussionDeleteObjectV1(pkiEzsigndiscussionID)
+            //val result : EzsigndiscussionDeleteObjectV1Response = apiInstance.ezsigndiscussionDeleteObjectV1(pkiEzsigndiscussionID)
             //result shouldBe ("TODO")
         }
 

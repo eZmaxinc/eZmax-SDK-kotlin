@@ -115,7 +115,7 @@ Configure Presigned:
 
 <a id="ezdoctemplatedocumentEditObjectV1"></a>
 # **ezdoctemplatedocumentEditObjectV1**
-> CommonResponse ezdoctemplatedocumentEditObjectV1(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentEditObjectV1Request)
+> EzdoctemplatedocumentEditObjectV1Response ezdoctemplatedocumentEditObjectV1(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentEditObjectV1Request)
 
 Edit an existing Ezdoctemplatedocument
 
@@ -131,7 +131,7 @@ val apiInstance = ObjectEzdoctemplatedocumentApi()
 val pkiEzdoctemplatedocumentID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezdoctemplatedocument
 val ezdoctemplatedocumentEditObjectV1Request : EzdoctemplatedocumentEditObjectV1Request =  // EzdoctemplatedocumentEditObjectV1Request | 
 try {
-    val result : CommonResponse = apiInstance.ezdoctemplatedocumentEditObjectV1(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentEditObjectV1Request)
+    val result : EzdoctemplatedocumentEditObjectV1Response = apiInstance.ezdoctemplatedocumentEditObjectV1(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzdoctemplatedocumentApi#ezdoctemplatedocumentEditObjectV1")
@@ -150,7 +150,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzdoctemplatedocumentEditObjectV1Response**](EzdoctemplatedocumentEditObjectV1Response.md)
 
 ### Authorization
 
@@ -331,7 +331,7 @@ Configure Authorization:
 
 <a id="ezdoctemplatedocumentPatchObjectV1"></a>
 # **ezdoctemplatedocumentPatchObjectV1**
-> CommonResponse ezdoctemplatedocumentPatchObjectV1(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentPatchObjectV1Request)
+> EzdoctemplatedocumentPatchObjectV1Response ezdoctemplatedocumentPatchObjectV1(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentPatchObjectV1Request)
 
 Patch an existing Ezdoctemplatedocument
 
@@ -347,7 +347,7 @@ val apiInstance = ObjectEzdoctemplatedocumentApi()
 val pkiEzdoctemplatedocumentID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezdoctemplatedocument
 val ezdoctemplatedocumentPatchObjectV1Request : EzdoctemplatedocumentPatchObjectV1Request =  // EzdoctemplatedocumentPatchObjectV1Request | 
 try {
-    val result : CommonResponse = apiInstance.ezdoctemplatedocumentPatchObjectV1(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentPatchObjectV1Request)
+    val result : EzdoctemplatedocumentPatchObjectV1Response = apiInstance.ezdoctemplatedocumentPatchObjectV1(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentPatchObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzdoctemplatedocumentApi#ezdoctemplatedocumentPatchObjectV1")
@@ -366,7 +366,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzdoctemplatedocumentPatchObjectV1Response**](EzdoctemplatedocumentPatchObjectV1Response.md)
 
 ### Authorization
 
