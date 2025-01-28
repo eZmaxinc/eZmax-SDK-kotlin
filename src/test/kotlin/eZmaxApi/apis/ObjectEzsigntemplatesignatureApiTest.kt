@@ -19,11 +19,12 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectEzsigntemplatesignatureApi
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.EzsigntemplatesignatureCreateObjectV2Request
 import eZmaxApi.models.EzsigntemplatesignatureCreateObjectV2Response
+import eZmaxApi.models.EzsigntemplatesignatureDeleteObjectV1Response
 import eZmaxApi.models.EzsigntemplatesignatureEditObjectV2Request
+import eZmaxApi.models.EzsigntemplatesignatureEditObjectV2Response
 import eZmaxApi.models.EzsigntemplatesignatureGetObjectV3Response
 
 class ObjectEzsigntemplatesignatureApiTest : ShouldSpec() {
@@ -43,7 +44,7 @@ class ObjectEzsigntemplatesignatureApiTest : ShouldSpec() {
         should("test ezsigntemplatesignatureDeleteObjectV1") {
             // uncomment below to test ezsigntemplatesignatureDeleteObjectV1
             //val pkiEzsigntemplatesignatureID : kotlin.Int = 56 // kotlin.Int | 
-            //val result : CommonResponse = apiInstance.ezsigntemplatesignatureDeleteObjectV1(pkiEzsigntemplatesignatureID)
+            //val result : EzsigntemplatesignatureDeleteObjectV1Response = apiInstance.ezsigntemplatesignatureDeleteObjectV1(pkiEzsigntemplatesignatureID)
             //result shouldBe ("TODO")
         }
 
@@ -52,7 +53,7 @@ class ObjectEzsigntemplatesignatureApiTest : ShouldSpec() {
             // uncomment below to test ezsigntemplatesignatureEditObjectV2
             //val pkiEzsigntemplatesignatureID : kotlin.Int = 56 // kotlin.Int | 
             //val ezsigntemplatesignatureEditObjectV2Request : EzsigntemplatesignatureEditObjectV2Request =  // EzsigntemplatesignatureEditObjectV2Request | 
-            //val result : CommonResponse = apiInstance.ezsigntemplatesignatureEditObjectV2(pkiEzsigntemplatesignatureID, ezsigntemplatesignatureEditObjectV2Request)
+            //val result : EzsigntemplatesignatureEditObjectV2Response = apiInstance.ezsigntemplatesignatureEditObjectV2(pkiEzsigntemplatesignatureID, ezsigntemplatesignatureEditObjectV2Request)
             //result shouldBe ("TODO")
         }
 

@@ -4,7 +4,7 @@
 ## Properties
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **aObjPermission** | [**kotlin.collections.List&lt;PermissionRequestCompound&gt;**](PermissionRequest.md) |  |  |
+| **aObjPermission** | [**kotlin.collections.List&lt;PermissionRequestCompound&gt;**](PermissionRequestCompound.md) |  |  |
 
 
 

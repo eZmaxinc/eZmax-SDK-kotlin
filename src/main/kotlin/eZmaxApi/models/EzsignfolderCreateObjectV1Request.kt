@@ -16,6 +16,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.EzsignfolderRequest
+import eZmaxApi.models.EzsignfolderRequestCompound
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -24,7 +25,7 @@ import com.squareup.moshi.JsonClass
  * Request for POST /1/object/ezsignfolder
  *
  * @param objEzsignfolder 
- * @param objEzsignfolderCompound An Ezsignfolder Object and children to create a complete structure
+ * @param objEzsignfolderCompound 
  */
 
 
@@ -33,9 +34,8 @@ data class EzsignfolderCreateObjectV1Request (
     @Json(name = "objEzsignfolder")
     val objEzsignfolder: EzsignfolderRequest? = null,
 
-    /* An Ezsignfolder Object and children to create a complete structure */
     @Json(name = "objEzsignfolderCompound")
-    val objEzsignfolderCompound: EzsignfolderRequest? = null
+    val objEzsignfolderCompound: EzsignfolderRequestCompound? = null
 
 ) {
 

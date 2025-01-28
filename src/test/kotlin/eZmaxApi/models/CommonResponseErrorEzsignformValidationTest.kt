@@ -19,6 +19,7 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.CommonResponseErrorEzsignformValidation
+import eZmaxApi.models.CustomEzsignformfielderrorResponse
 import eZmaxApi.models.FieldEErrorCode
 
 class CommonResponseErrorEzsignformValidationTest : ShouldSpec() {

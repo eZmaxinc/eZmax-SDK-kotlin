@@ -19,11 +19,12 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectEzsigntemplatedocumentpagerecognitionApi
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.EzsigntemplatedocumentpagerecognitionCreateObjectV1Request
 import eZmaxApi.models.EzsigntemplatedocumentpagerecognitionCreateObjectV1Response
+import eZmaxApi.models.EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response
 import eZmaxApi.models.EzsigntemplatedocumentpagerecognitionEditObjectV1Request
+import eZmaxApi.models.EzsigntemplatedocumentpagerecognitionEditObjectV1Response
 import eZmaxApi.models.EzsigntemplatedocumentpagerecognitionGetObjectV2Response
 
 class ObjectEzsigntemplatedocumentpagerecognitionApiTest : ShouldSpec() {
@@ -43,7 +44,7 @@ class ObjectEzsigntemplatedocumentpagerecognitionApiTest : ShouldSpec() {
         should("test ezsigntemplatedocumentpagerecognitionDeleteObjectV1") {
             // uncomment below to test ezsigntemplatedocumentpagerecognitionDeleteObjectV1
             //val pkiEzsigntemplatedocumentpagerecognitionID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsigntemplatedocumentpagerecognition
-            //val result : CommonResponse = apiInstance.ezsigntemplatedocumentpagerecognitionDeleteObjectV1(pkiEzsigntemplatedocumentpagerecognitionID)
+            //val result : EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response = apiInstance.ezsigntemplatedocumentpagerecognitionDeleteObjectV1(pkiEzsigntemplatedocumentpagerecognitionID)
             //result shouldBe ("TODO")
         }
 
@@ -52,7 +53,7 @@ class ObjectEzsigntemplatedocumentpagerecognitionApiTest : ShouldSpec() {
             // uncomment below to test ezsigntemplatedocumentpagerecognitionEditObjectV1
             //val pkiEzsigntemplatedocumentpagerecognitionID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsigntemplatedocumentpagerecognition
             //val ezsigntemplatedocumentpagerecognitionEditObjectV1Request : EzsigntemplatedocumentpagerecognitionEditObjectV1Request =  // EzsigntemplatedocumentpagerecognitionEditObjectV1Request | 
-            //val result : CommonResponse = apiInstance.ezsigntemplatedocumentpagerecognitionEditObjectV1(pkiEzsigntemplatedocumentpagerecognitionID, ezsigntemplatedocumentpagerecognitionEditObjectV1Request)
+            //val result : EzsigntemplatedocumentpagerecognitionEditObjectV1Response = apiInstance.ezsigntemplatedocumentpagerecognitionEditObjectV1(pkiEzsigntemplatedocumentpagerecognitionID, ezsigntemplatedocumentpagerecognitionEditObjectV1Request)
             //result shouldBe ("TODO")
         }
 

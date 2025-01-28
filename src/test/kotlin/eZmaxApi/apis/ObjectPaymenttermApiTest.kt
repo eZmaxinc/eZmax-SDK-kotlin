@@ -19,12 +19,12 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectPaymenttermApi
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.HeaderAcceptLanguage
 import eZmaxApi.models.PaymenttermCreateObjectV1Request
 import eZmaxApi.models.PaymenttermCreateObjectV1Response
 import eZmaxApi.models.PaymenttermEditObjectV1Request
+import eZmaxApi.models.PaymenttermEditObjectV1Response
 import eZmaxApi.models.PaymenttermGetAutocompleteV2Response
 import eZmaxApi.models.PaymenttermGetListV1Response
 import eZmaxApi.models.PaymenttermGetObjectV2Response
@@ -47,7 +47,7 @@ class ObjectPaymenttermApiTest : ShouldSpec() {
             // uncomment below to test paymenttermEditObjectV1
             //val pkiPaymenttermID : kotlin.Int = 56 // kotlin.Int | 
             //val paymenttermEditObjectV1Request : PaymenttermEditObjectV1Request =  // PaymenttermEditObjectV1Request | 
-            //val result : CommonResponse = apiInstance.paymenttermEditObjectV1(pkiPaymenttermID, paymenttermEditObjectV1Request)
+            //val result : PaymenttermEditObjectV1Response = apiInstance.paymenttermEditObjectV1(pkiPaymenttermID, paymenttermEditObjectV1Request)
             //result shouldBe ("TODO")
         }
 

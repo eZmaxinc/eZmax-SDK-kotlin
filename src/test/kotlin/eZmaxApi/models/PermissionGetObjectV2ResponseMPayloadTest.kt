@@ -19,14 +19,14 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.PermissionGetObjectV2ResponseMPayload
-import eZmaxApi.models.PermissionResponse
+import eZmaxApi.models.PermissionResponseCompound
 
 class PermissionGetObjectV2ResponseMPayloadTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of PermissionGetObjectV2ResponseMPayload
         //val modelInstance = PermissionGetObjectV2ResponseMPayload()
 
-        // to test the property `objPermission` - A Permission Object and children to create a complete structure
+        // to test the property `objPermission`
         should("test objPermission") {
             // uncomment below to test the property
             //modelInstance.objPermission shouldBe ("TODO")

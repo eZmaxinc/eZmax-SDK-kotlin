@@ -61,7 +61,7 @@ Configure Authorization:
 
 <a id="ezsignannotationDeleteObjectV1"></a>
 # **ezsignannotationDeleteObjectV1**
-> CommonResponse ezsignannotationDeleteObjectV1(pkiEzsignannotationID)
+> EzsignannotationDeleteObjectV1Response ezsignannotationDeleteObjectV1(pkiEzsignannotationID)
 
 Delete an existing Ezsignannotation
 
@@ -76,7 +76,7 @@ Delete an existing Ezsignannotation
 val apiInstance = ObjectEzsignannotationApi()
 val pkiEzsignannotationID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : CommonResponse = apiInstance.ezsignannotationDeleteObjectV1(pkiEzsignannotationID)
+    val result : EzsignannotationDeleteObjectV1Response = apiInstance.ezsignannotationDeleteObjectV1(pkiEzsignannotationID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignannotationApi#ezsignannotationDeleteObjectV1")
@@ -94,7 +94,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsignannotationDeleteObjectV1Response**](EzsignannotationDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -110,7 +110,7 @@ Configure Authorization:
 
 <a id="ezsignannotationEditObjectV1"></a>
 # **ezsignannotationEditObjectV1**
-> CommonResponse ezsignannotationEditObjectV1(pkiEzsignannotationID, ezsignannotationEditObjectV1Request)
+> EzsignannotationEditObjectV1Response ezsignannotationEditObjectV1(pkiEzsignannotationID, ezsignannotationEditObjectV1Request)
 
 Edit an existing Ezsignannotation
 
@@ -126,7 +126,7 @@ val apiInstance = ObjectEzsignannotationApi()
 val pkiEzsignannotationID : kotlin.Int = 56 // kotlin.Int | 
 val ezsignannotationEditObjectV1Request : EzsignannotationEditObjectV1Request =  // EzsignannotationEditObjectV1Request | 
 try {
-    val result : CommonResponse = apiInstance.ezsignannotationEditObjectV1(pkiEzsignannotationID, ezsignannotationEditObjectV1Request)
+    val result : EzsignannotationEditObjectV1Response = apiInstance.ezsignannotationEditObjectV1(pkiEzsignannotationID, ezsignannotationEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignannotationApi#ezsignannotationEditObjectV1")
@@ -145,7 +145,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsignannotationEditObjectV1Response**](EzsignannotationEditObjectV1Response.md)
 
 ### Authorization
 

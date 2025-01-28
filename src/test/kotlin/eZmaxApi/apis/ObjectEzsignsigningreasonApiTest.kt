@@ -19,11 +19,11 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectEzsignsigningreasonApi
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.EzsignsigningreasonCreateObjectV1Request
 import eZmaxApi.models.EzsignsigningreasonCreateObjectV1Response
 import eZmaxApi.models.EzsignsigningreasonEditObjectV1Request
+import eZmaxApi.models.EzsignsigningreasonEditObjectV1Response
 import eZmaxApi.models.EzsignsigningreasonGetAutocompleteV2Response
 import eZmaxApi.models.EzsignsigningreasonGetListV1Response
 import eZmaxApi.models.EzsignsigningreasonGetObjectV2Response
@@ -47,7 +47,7 @@ class ObjectEzsignsigningreasonApiTest : ShouldSpec() {
             // uncomment below to test ezsignsigningreasonEditObjectV1
             //val pkiEzsignsigningreasonID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsignsigningreason
             //val ezsignsigningreasonEditObjectV1Request : EzsignsigningreasonEditObjectV1Request =  // EzsignsigningreasonEditObjectV1Request | 
-            //val result : CommonResponse = apiInstance.ezsignsigningreasonEditObjectV1(pkiEzsignsigningreasonID, ezsignsigningreasonEditObjectV1Request)
+            //val result : EzsignsigningreasonEditObjectV1Response = apiInstance.ezsignsigningreasonEditObjectV1(pkiEzsignsigningreasonID, ezsignsigningreasonEditObjectV1Request)
             //result shouldBe ("TODO")
         }
 

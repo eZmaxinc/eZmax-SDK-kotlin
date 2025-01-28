@@ -15,7 +15,7 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.EzsignfolderRequestV3
+import eZmaxApi.models.EzsignfolderRequestCompoundV3
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -30,7 +30,7 @@ import com.squareup.moshi.JsonClass
 data class EzsignfolderCreateObjectV3Request (
 
     @Json(name = "a_objEzsignfolder")
-    val aObjEzsignfolder: kotlin.collections.List<EzsignfolderRequestV3>
+    val aObjEzsignfolder: kotlin.collections.List<EzsignfolderRequestCompoundV3>
 
 ) {
 

@@ -22,20 +22,20 @@ import com.squareup.moshi.JsonClass
 /**
  * The type of the english for the client
  *
- * Values: CA,QC,US
+ * Values: en_CA,en_QC,en_US
  */
 
 @JsonClass(generateAdapter = false)
 enum class FieldESystemconfigurationLanguage2(val value: kotlin.String) {
 
     @Json(name = "en_CA")
-    CA("en_CA"),
+    en_CA("en_CA"),
 
     @Json(name = "en_QC")
-    QC("en_QC"),
+    en_QC("en_QC"),
 
     @Json(name = "en_US")
-    US("en_US");
+    en_US("en_US");
 
     /**
      * Override [toString()] to avoid using the enum variable name as the value, and instead use

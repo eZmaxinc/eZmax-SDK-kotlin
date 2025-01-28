@@ -19,7 +19,6 @@ import java.io.IOException
 import okhttp3.Call
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.CommonResponseErrorSTemporaryFileUrl
 import eZmaxApi.models.EzsigntemplatedocumentCreateObjectV1Request
@@ -34,6 +33,7 @@ import eZmaxApi.models.EzsigntemplatedocumentEditObjectV1Request
 import eZmaxApi.models.EzsigntemplatedocumentEditObjectV1Response
 import eZmaxApi.models.EzsigntemplatedocumentExtractTextV1Request
 import eZmaxApi.models.EzsigntemplatedocumentExtractTextV1Response
+import eZmaxApi.models.EzsigntemplatedocumentFlattenV1Response
 import eZmaxApi.models.EzsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1Response
 import eZmaxApi.models.EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1Response
 import eZmaxApi.models.EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response
@@ -42,6 +42,7 @@ import eZmaxApi.models.EzsigntemplatedocumentGetObjectV2Response
 import eZmaxApi.models.EzsigntemplatedocumentGetWordsPositionsV1Request
 import eZmaxApi.models.EzsigntemplatedocumentGetWordsPositionsV1Response
 import eZmaxApi.models.EzsigntemplatedocumentPatchObjectV1Request
+import eZmaxApi.models.EzsigntemplatedocumentPatchObjectV1Response
 
 import com.squareup.moshi.Json
 
@@ -519,7 +520,7 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
      * Flatten an Ezsigntemplatedocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
      * @param pkiEzsigntemplatedocumentID 
      * @param body 
-     * @return CommonResponse
+     * @return EzsigntemplatedocumentFlattenV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -528,11 +529,11 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsigntemplatedocumentFlattenV1(pkiEzsigntemplatedocumentID: kotlin.Int, body: kotlin.Any) : CommonResponse {
+    fun ezsigntemplatedocumentFlattenV1(pkiEzsigntemplatedocumentID: kotlin.Int, body: kotlin.Any) : EzsigntemplatedocumentFlattenV1Response {
         val localVarResponse = ezsigntemplatedocumentFlattenV1WithHttpInfo(pkiEzsigntemplatedocumentID = pkiEzsigntemplatedocumentID, body = body)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigntemplatedocumentFlattenV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -551,16 +552,16 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
      * Flatten an Ezsigntemplatedocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
      * @param pkiEzsigntemplatedocumentID 
      * @param body 
-     * @return ApiResponse<CommonResponse?>
+     * @return ApiResponse<EzsigntemplatedocumentFlattenV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsigntemplatedocumentFlattenV1WithHttpInfo(pkiEzsigntemplatedocumentID: kotlin.Int, body: kotlin.Any) : ApiResponse<CommonResponse?> {
+    fun ezsigntemplatedocumentFlattenV1WithHttpInfo(pkiEzsigntemplatedocumentID: kotlin.Int, body: kotlin.Any) : ApiResponse<EzsigntemplatedocumentFlattenV1Response?> {
         val localVariableConfig = ezsigntemplatedocumentFlattenV1RequestConfig(pkiEzsigntemplatedocumentID = pkiEzsigntemplatedocumentID, body = body)
 
-        return request<kotlin.Any, CommonResponse>(
+        return request<kotlin.Any, EzsigntemplatedocumentFlattenV1Response>(
             localVariableConfig
         )
     }
@@ -1024,7 +1025,7 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
      * 
      * @param pkiEzsigntemplatedocumentID 
      * @param ezsigntemplatedocumentPatchObjectV1Request 
-     * @return CommonResponse
+     * @return EzsigntemplatedocumentPatchObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -1033,11 +1034,11 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsigntemplatedocumentPatchObjectV1(pkiEzsigntemplatedocumentID: kotlin.Int, ezsigntemplatedocumentPatchObjectV1Request: EzsigntemplatedocumentPatchObjectV1Request) : CommonResponse {
+    fun ezsigntemplatedocumentPatchObjectV1(pkiEzsigntemplatedocumentID: kotlin.Int, ezsigntemplatedocumentPatchObjectV1Request: EzsigntemplatedocumentPatchObjectV1Request) : EzsigntemplatedocumentPatchObjectV1Response {
         val localVarResponse = ezsigntemplatedocumentPatchObjectV1WithHttpInfo(pkiEzsigntemplatedocumentID = pkiEzsigntemplatedocumentID, ezsigntemplatedocumentPatchObjectV1Request = ezsigntemplatedocumentPatchObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigntemplatedocumentPatchObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -1056,16 +1057,16 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
      * 
      * @param pkiEzsigntemplatedocumentID 
      * @param ezsigntemplatedocumentPatchObjectV1Request 
-     * @return ApiResponse<CommonResponse?>
+     * @return ApiResponse<EzsigntemplatedocumentPatchObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsigntemplatedocumentPatchObjectV1WithHttpInfo(pkiEzsigntemplatedocumentID: kotlin.Int, ezsigntemplatedocumentPatchObjectV1Request: EzsigntemplatedocumentPatchObjectV1Request) : ApiResponse<CommonResponse?> {
+    fun ezsigntemplatedocumentPatchObjectV1WithHttpInfo(pkiEzsigntemplatedocumentID: kotlin.Int, ezsigntemplatedocumentPatchObjectV1Request: EzsigntemplatedocumentPatchObjectV1Request) : ApiResponse<EzsigntemplatedocumentPatchObjectV1Response?> {
         val localVariableConfig = ezsigntemplatedocumentPatchObjectV1RequestConfig(pkiEzsigntemplatedocumentID = pkiEzsigntemplatedocumentID, ezsigntemplatedocumentPatchObjectV1Request = ezsigntemplatedocumentPatchObjectV1Request)
 
-        return request<EzsigntemplatedocumentPatchObjectV1Request, CommonResponse>(
+        return request<EzsigntemplatedocumentPatchObjectV1Request, EzsigntemplatedocumentPatchObjectV1Response>(
             localVariableConfig
         )
     }

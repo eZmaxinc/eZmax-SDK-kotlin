@@ -16,6 +16,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.CommonAudit
+import eZmaxApi.models.CustomDnsrecordResponse
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -60,7 +61,7 @@ data class DomainResponseCompound (
 
     /*  */
     @Json(name = "a_objDnsrecord")
-    val aObjDnsrecord: kotlin.collections.List<kotlin.Any>
+    val aObjDnsrecord: kotlin.collections.List<CustomDnsrecordResponse>
 
 ) {
 

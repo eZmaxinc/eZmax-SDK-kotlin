@@ -19,9 +19,9 @@ import java.io.IOException
 import okhttp3.Call
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.EzsignuserEditObjectV1Request
+import eZmaxApi.models.EzsignuserEditObjectV1Response
 import eZmaxApi.models.EzsignuserGetObjectV2Response
 
 import com.squareup.moshi.Json
@@ -53,7 +53,7 @@ class ObjectEzsignuserApi(basePath: kotlin.String = defaultBasePath, client: Cal
      * 
      * @param pkiEzsignuserID The unique ID of the Ezsignuser
      * @param ezsignuserEditObjectV1Request 
-     * @return CommonResponse
+     * @return EzsignuserEditObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -62,11 +62,11 @@ class ObjectEzsignuserApi(basePath: kotlin.String = defaultBasePath, client: Cal
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignuserEditObjectV1(pkiEzsignuserID: kotlin.Int, ezsignuserEditObjectV1Request: EzsignuserEditObjectV1Request) : CommonResponse {
+    fun ezsignuserEditObjectV1(pkiEzsignuserID: kotlin.Int, ezsignuserEditObjectV1Request: EzsignuserEditObjectV1Request) : EzsignuserEditObjectV1Response {
         val localVarResponse = ezsignuserEditObjectV1WithHttpInfo(pkiEzsignuserID = pkiEzsignuserID, ezsignuserEditObjectV1Request = ezsignuserEditObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignuserEditObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -85,16 +85,16 @@ class ObjectEzsignuserApi(basePath: kotlin.String = defaultBasePath, client: Cal
      * 
      * @param pkiEzsignuserID The unique ID of the Ezsignuser
      * @param ezsignuserEditObjectV1Request 
-     * @return ApiResponse<CommonResponse?>
+     * @return ApiResponse<EzsignuserEditObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignuserEditObjectV1WithHttpInfo(pkiEzsignuserID: kotlin.Int, ezsignuserEditObjectV1Request: EzsignuserEditObjectV1Request) : ApiResponse<CommonResponse?> {
+    fun ezsignuserEditObjectV1WithHttpInfo(pkiEzsignuserID: kotlin.Int, ezsignuserEditObjectV1Request: EzsignuserEditObjectV1Request) : ApiResponse<EzsignuserEditObjectV1Response?> {
         val localVariableConfig = ezsignuserEditObjectV1RequestConfig(pkiEzsignuserID = pkiEzsignuserID, ezsignuserEditObjectV1Request = ezsignuserEditObjectV1Request)
 
-        return request<EzsignuserEditObjectV1Request, CommonResponse>(
+        return request<EzsignuserEditObjectV1Request, EzsignuserEditObjectV1Response>(
             localVariableConfig
         )
     }

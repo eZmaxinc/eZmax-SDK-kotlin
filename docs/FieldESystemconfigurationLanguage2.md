@@ -4,11 +4,11 @@
 ## Enum
 
 
-    * `CA` (value: `"en_CA"`)
+    * `en_CA` (value: `"en_CA"`)
 
-    * `QC` (value: `"en_QC"`)
+    * `en_QC` (value: `"en_QC"`)
 
-    * `US` (value: `"en_US"`)
+    * `en_US` (value: `"en_US"`)
 
 
 

@@ -15,7 +15,7 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.AttemptResponse
+import eZmaxApi.models.AttemptResponseCompound
 import eZmaxApi.models.CustomWebhookResponse
 import eZmaxApi.models.EzsignfolderResponse
 
@@ -38,7 +38,7 @@ data class WebhookEzsignFolderDisposed (
 
     /* An array containing details of previous attempts that were made to deliver the message. The array is empty if it's the first attempt. */
     @Json(name = "a_objAttempt")
-    val aObjAttempt: kotlin.collections.List<AttemptResponse>,
+    val aObjAttempt: kotlin.collections.List<AttemptResponseCompound>,
 
     @Json(name = "objEzsignfolder")
     val objEzsignfolder: EzsignfolderResponse

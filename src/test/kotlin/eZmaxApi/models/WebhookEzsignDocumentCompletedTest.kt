@@ -19,7 +19,7 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.WebhookEzsignDocumentCompleted
-import eZmaxApi.models.AttemptResponse
+import eZmaxApi.models.AttemptResponseCompound
 import eZmaxApi.models.CustomWebhookResponse
 import eZmaxApi.models.EzsigndocumentResponse
 

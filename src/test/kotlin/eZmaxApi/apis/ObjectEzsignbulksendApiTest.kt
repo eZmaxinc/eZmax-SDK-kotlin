@@ -19,19 +19,21 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectEzsignbulksendApi
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.EzsignbulksendCreateEzsignbulksendtransmissionV2Request
 import eZmaxApi.models.EzsignbulksendCreateEzsignbulksendtransmissionV2Response
 import eZmaxApi.models.EzsignbulksendCreateObjectV1Request
 import eZmaxApi.models.EzsignbulksendCreateObjectV1Response
+import eZmaxApi.models.EzsignbulksendDeleteObjectV1Response
 import eZmaxApi.models.EzsignbulksendEditObjectV1Request
+import eZmaxApi.models.EzsignbulksendEditObjectV1Response
 import eZmaxApi.models.EzsignbulksendGetEzsignbulksendtransmissionsV1Response
 import eZmaxApi.models.EzsignbulksendGetEzsignsignaturesAutomaticV1Response
 import eZmaxApi.models.EzsignbulksendGetFormsDataV1Response
 import eZmaxApi.models.EzsignbulksendGetListV1Response
 import eZmaxApi.models.EzsignbulksendGetObjectV2Response
 import eZmaxApi.models.EzsignbulksendReorderV1Request
+import eZmaxApi.models.EzsignbulksendReorderV1Response
 import eZmaxApi.models.HeaderAcceptLanguage
 
 class ObjectEzsignbulksendApiTest : ShouldSpec() {
@@ -60,7 +62,7 @@ class ObjectEzsignbulksendApiTest : ShouldSpec() {
         should("test ezsignbulksendDeleteObjectV1") {
             // uncomment below to test ezsignbulksendDeleteObjectV1
             //val pkiEzsignbulksendID : kotlin.Int = 56 // kotlin.Int | 
-            //val result : CommonResponse = apiInstance.ezsignbulksendDeleteObjectV1(pkiEzsignbulksendID)
+            //val result : EzsignbulksendDeleteObjectV1Response = apiInstance.ezsignbulksendDeleteObjectV1(pkiEzsignbulksendID)
             //result shouldBe ("TODO")
         }
 
@@ -69,7 +71,7 @@ class ObjectEzsignbulksendApiTest : ShouldSpec() {
             // uncomment below to test ezsignbulksendEditObjectV1
             //val pkiEzsignbulksendID : kotlin.Int = 56 // kotlin.Int | 
             //val ezsignbulksendEditObjectV1Request : EzsignbulksendEditObjectV1Request =  // EzsignbulksendEditObjectV1Request | 
-            //val result : CommonResponse = apiInstance.ezsignbulksendEditObjectV1(pkiEzsignbulksendID, ezsignbulksendEditObjectV1Request)
+            //val result : EzsignbulksendEditObjectV1Response = apiInstance.ezsignbulksendEditObjectV1(pkiEzsignbulksendID, ezsignbulksendEditObjectV1Request)
             //result shouldBe ("TODO")
         }
 
@@ -131,7 +133,7 @@ class ObjectEzsignbulksendApiTest : ShouldSpec() {
             // uncomment below to test ezsignbulksendReorderV1
             //val pkiEzsignbulksendID : kotlin.Int = 56 // kotlin.Int | 
             //val ezsignbulksendReorderV1Request : EzsignbulksendReorderV1Request =  // EzsignbulksendReorderV1Request | 
-            //val result : CommonResponse = apiInstance.ezsignbulksendReorderV1(pkiEzsignbulksendID, ezsignbulksendReorderV1Request)
+            //val result : EzsignbulksendReorderV1Response = apiInstance.ezsignbulksendReorderV1(pkiEzsignbulksendID, ezsignbulksendReorderV1Request)
             //result shouldBe ("TODO")
         }
 

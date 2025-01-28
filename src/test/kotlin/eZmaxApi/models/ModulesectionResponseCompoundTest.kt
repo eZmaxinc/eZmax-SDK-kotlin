@@ -19,7 +19,7 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.ModulesectionResponseCompound
-import eZmaxApi.models.PermissionResponse
+import eZmaxApi.models.PermissionResponseCompound
 
 class ModulesectionResponseCompoundTest : ShouldSpec() {
     init {

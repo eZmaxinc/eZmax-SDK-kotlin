@@ -19,11 +19,12 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectDiscussionmessageApi
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.DiscussionmessageCreateObjectV1Request
 import eZmaxApi.models.DiscussionmessageCreateObjectV1Response
+import eZmaxApi.models.DiscussionmessageDeleteObjectV1Response
 import eZmaxApi.models.DiscussionmessagePatchObjectV1Request
+import eZmaxApi.models.DiscussionmessagePatchObjectV1Response
 
 class ObjectDiscussionmessageApiTest : ShouldSpec() {
     init {
@@ -42,7 +43,7 @@ class ObjectDiscussionmessageApiTest : ShouldSpec() {
         should("test discussionmessageDeleteObjectV1") {
             // uncomment below to test discussionmessageDeleteObjectV1
             //val pkiDiscussionmessageID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Discussionmessage
-            //val result : CommonResponse = apiInstance.discussionmessageDeleteObjectV1(pkiDiscussionmessageID)
+            //val result : DiscussionmessageDeleteObjectV1Response = apiInstance.discussionmessageDeleteObjectV1(pkiDiscussionmessageID)
             //result shouldBe ("TODO")
         }
 
@@ -51,7 +52,7 @@ class ObjectDiscussionmessageApiTest : ShouldSpec() {
             // uncomment below to test discussionmessagePatchObjectV1
             //val pkiDiscussionmessageID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Discussionmessage
             //val discussionmessagePatchObjectV1Request : DiscussionmessagePatchObjectV1Request =  // DiscussionmessagePatchObjectV1Request | 
-            //val result : CommonResponse = apiInstance.discussionmessagePatchObjectV1(pkiDiscussionmessageID, discussionmessagePatchObjectV1Request)
+            //val result : DiscussionmessagePatchObjectV1Response = apiInstance.discussionmessagePatchObjectV1(pkiDiscussionmessageID, discussionmessagePatchObjectV1Request)
             //result shouldBe ("TODO")
         }
 

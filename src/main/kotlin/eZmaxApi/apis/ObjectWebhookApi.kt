@@ -19,22 +19,22 @@ import java.io.IOException
 import okhttp3.Call
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.CommonResponseErrorTooManyRequests
-import eZmaxApi.models.CustomEWebhookEzsignevent
-import eZmaxApi.models.FieldEWebhookManagementevent
-import eZmaxApi.models.FieldEWebhookModule
 import eZmaxApi.models.HeaderAcceptLanguage
 import eZmaxApi.models.WebhookCreateObjectV2Request
 import eZmaxApi.models.WebhookCreateObjectV2Response
+import eZmaxApi.models.WebhookDeleteObjectV1Response
 import eZmaxApi.models.WebhookEditObjectV1Request
+import eZmaxApi.models.WebhookEditObjectV1Response
 import eZmaxApi.models.WebhookGetHistoryV1Response
 import eZmaxApi.models.WebhookGetListV1Response
 import eZmaxApi.models.WebhookGetObjectV2Response
 import eZmaxApi.models.WebhookRegenerateApikeyV1Request
 import eZmaxApi.models.WebhookRegenerateApikeyV1Response
 import eZmaxApi.models.WebhookSendWebhookV1Request
+import eZmaxApi.models.WebhookSendWebhookV1Response
+import eZmaxApi.models.WebhookTestV1Response
 
 import com.squareup.moshi.Json
 
@@ -136,7 +136,7 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: Call.F
      * Delete an existing Webhook
      * 
      * @param pkiWebhookID 
-     * @return CommonResponse
+     * @return WebhookDeleteObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -145,11 +145,11 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: Call.F
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun webhookDeleteObjectV1(pkiWebhookID: kotlin.Int) : CommonResponse {
+    fun webhookDeleteObjectV1(pkiWebhookID: kotlin.Int) : WebhookDeleteObjectV1Response {
         val localVarResponse = webhookDeleteObjectV1WithHttpInfo(pkiWebhookID = pkiWebhookID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as WebhookDeleteObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -167,16 +167,16 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: Call.F
      * Delete an existing Webhook
      * 
      * @param pkiWebhookID 
-     * @return ApiResponse<CommonResponse?>
+     * @return ApiResponse<WebhookDeleteObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun webhookDeleteObjectV1WithHttpInfo(pkiWebhookID: kotlin.Int) : ApiResponse<CommonResponse?> {
+    fun webhookDeleteObjectV1WithHttpInfo(pkiWebhookID: kotlin.Int) : ApiResponse<WebhookDeleteObjectV1Response?> {
         val localVariableConfig = webhookDeleteObjectV1RequestConfig(pkiWebhookID = pkiWebhookID)
 
-        return request<Unit, CommonResponse>(
+        return request<Unit, WebhookDeleteObjectV1Response>(
             localVariableConfig
         )
     }
@@ -208,7 +208,7 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: Call.F
      * 
      * @param pkiWebhookID 
      * @param webhookEditObjectV1Request 
-     * @return CommonResponse
+     * @return WebhookEditObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -217,11 +217,11 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: Call.F
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun webhookEditObjectV1(pkiWebhookID: kotlin.Int, webhookEditObjectV1Request: WebhookEditObjectV1Request) : CommonResponse {
+    fun webhookEditObjectV1(pkiWebhookID: kotlin.Int, webhookEditObjectV1Request: WebhookEditObjectV1Request) : WebhookEditObjectV1Response {
         val localVarResponse = webhookEditObjectV1WithHttpInfo(pkiWebhookID = pkiWebhookID, webhookEditObjectV1Request = webhookEditObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as WebhookEditObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -240,16 +240,16 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: Call.F
      * 
      * @param pkiWebhookID 
      * @param webhookEditObjectV1Request 
-     * @return ApiResponse<CommonResponse?>
+     * @return ApiResponse<WebhookEditObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun webhookEditObjectV1WithHttpInfo(pkiWebhookID: kotlin.Int, webhookEditObjectV1Request: WebhookEditObjectV1Request) : ApiResponse<CommonResponse?> {
+    fun webhookEditObjectV1WithHttpInfo(pkiWebhookID: kotlin.Int, webhookEditObjectV1Request: WebhookEditObjectV1Request) : ApiResponse<WebhookEditObjectV1Response?> {
         val localVariableConfig = webhookEditObjectV1RequestConfig(pkiWebhookID = pkiWebhookID, webhookEditObjectV1Request = webhookEditObjectV1Request)
 
-        return request<WebhookEditObjectV1Request, CommonResponse>(
+        return request<WebhookEditObjectV1Request, WebhookEditObjectV1Response>(
             localVariableConfig
         )
     }
@@ -655,7 +655,7 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: Call.F
      * Emit a Webhook event
      * 
      * @param webhookSendWebhookV1Request 
-     * @return CommonResponse
+     * @return WebhookSendWebhookV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -664,11 +664,11 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: Call.F
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun webhookSendWebhookV1(webhookSendWebhookV1Request: WebhookSendWebhookV1Request) : CommonResponse {
+    fun webhookSendWebhookV1(webhookSendWebhookV1Request: WebhookSendWebhookV1Request) : WebhookSendWebhookV1Response {
         val localVarResponse = webhookSendWebhookV1WithHttpInfo(webhookSendWebhookV1Request = webhookSendWebhookV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as WebhookSendWebhookV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -686,16 +686,16 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: Call.F
      * Emit a Webhook event
      * 
      * @param webhookSendWebhookV1Request 
-     * @return ApiResponse<CommonResponse?>
+     * @return ApiResponse<WebhookSendWebhookV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun webhookSendWebhookV1WithHttpInfo(webhookSendWebhookV1Request: WebhookSendWebhookV1Request) : ApiResponse<CommonResponse?> {
+    fun webhookSendWebhookV1WithHttpInfo(webhookSendWebhookV1Request: WebhookSendWebhookV1Request) : ApiResponse<WebhookSendWebhookV1Response?> {
         val localVariableConfig = webhookSendWebhookV1RequestConfig(webhookSendWebhookV1Request = webhookSendWebhookV1Request)
 
-        return request<WebhookSendWebhookV1Request, CommonResponse>(
+        return request<WebhookSendWebhookV1Request, WebhookSendWebhookV1Response>(
             localVariableConfig
         )
     }
@@ -728,7 +728,7 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: Call.F
      * 
      * @param pkiWebhookID 
      * @param body 
-     * @return CommonResponse
+     * @return WebhookTestV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -737,11 +737,11 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: Call.F
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun webhookTestV1(pkiWebhookID: kotlin.Int, body: kotlin.Any) : CommonResponse {
+    fun webhookTestV1(pkiWebhookID: kotlin.Int, body: kotlin.Any) : WebhookTestV1Response {
         val localVarResponse = webhookTestV1WithHttpInfo(pkiWebhookID = pkiWebhookID, body = body)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as WebhookTestV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -760,16 +760,16 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: Call.F
      * 
      * @param pkiWebhookID 
      * @param body 
-     * @return ApiResponse<CommonResponse?>
+     * @return ApiResponse<WebhookTestV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun webhookTestV1WithHttpInfo(pkiWebhookID: kotlin.Int, body: kotlin.Any) : ApiResponse<CommonResponse?> {
+    fun webhookTestV1WithHttpInfo(pkiWebhookID: kotlin.Int, body: kotlin.Any) : ApiResponse<WebhookTestV1Response?> {
         val localVariableConfig = webhookTestV1RequestConfig(pkiWebhookID = pkiWebhookID, body = body)
 
-        return request<kotlin.Any, CommonResponse>(
+        return request<kotlin.Any, WebhookTestV1Response>(
             localVariableConfig
         )
     }

@@ -19,14 +19,14 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.PermissionEditObjectV1Request
-import eZmaxApi.models.PermissionRequest
+import eZmaxApi.models.PermissionRequestCompound
 
 class PermissionEditObjectV1RequestTest : ShouldSpec() {
     init {
         // uncomment below to create an instance of PermissionEditObjectV1Request
         //val modelInstance = PermissionEditObjectV1Request()
 
-        // to test the property `objPermission` - A Permission Object and children to create a complete structure
+        // to test the property `objPermission`
         should("test objPermission") {
             // uncomment below to test the property
             //modelInstance.objPermission shouldBe ("TODO")

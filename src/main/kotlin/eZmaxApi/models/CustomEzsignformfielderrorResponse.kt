@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.CustomEzsignformfielderrortestResponse
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -35,7 +36,7 @@ data class CustomEzsignformfielderrorResponse (
 
     /*  */
     @Json(name = "a_objEzsignformfielderrortest")
-    val aObjEzsignformfielderrortest: kotlin.collections.List<kotlin.Any>
+    val aObjEzsignformfielderrortest: kotlin.collections.List<CustomEzsignformfielderrortestResponse>
 
 ) {
 

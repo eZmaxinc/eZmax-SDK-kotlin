@@ -60,7 +60,7 @@ Configure Authorization:
 
 <a id="ezsigntemplatepackagemembershipDeleteObjectV1"></a>
 # **ezsigntemplatepackagemembershipDeleteObjectV1**
-> CommonResponse ezsigntemplatepackagemembershipDeleteObjectV1(pkiEzsigntemplatepackagemembershipID)
+> EzsigntemplatepackagemembershipDeleteObjectV1Response ezsigntemplatepackagemembershipDeleteObjectV1(pkiEzsigntemplatepackagemembershipID)
 
 Delete an existing Ezsigntemplatepackagemembership
 
@@ -75,7 +75,7 @@ Delete an existing Ezsigntemplatepackagemembership
 val apiInstance = ObjectEzsigntemplatepackagemembershipApi()
 val pkiEzsigntemplatepackagemembershipID : kotlin.Int = 56 // kotlin.Int | 
 try {
-    val result : CommonResponse = apiInstance.ezsigntemplatepackagemembershipDeleteObjectV1(pkiEzsigntemplatepackagemembershipID)
+    val result : EzsigntemplatepackagemembershipDeleteObjectV1Response = apiInstance.ezsigntemplatepackagemembershipDeleteObjectV1(pkiEzsigntemplatepackagemembershipID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplatepackagemembershipApi#ezsigntemplatepackagemembershipDeleteObjectV1")
@@ -93,7 +93,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigntemplatepackagemembershipDeleteObjectV1Response**](EzsigntemplatepackagemembershipDeleteObjectV1Response.md)
 
 ### Authorization
 

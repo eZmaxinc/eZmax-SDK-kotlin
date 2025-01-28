@@ -19,6 +19,7 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.CustomEzsignformfieldgroupRequest
+import eZmaxApi.models.CustomEzsignformfieldRequest
 
 class CustomEzsignformfieldgroupRequestTest : ShouldSpec() {
     init {

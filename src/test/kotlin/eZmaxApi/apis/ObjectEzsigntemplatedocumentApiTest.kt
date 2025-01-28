@@ -19,7 +19,6 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectEzsigntemplatedocumentApi
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.CommonResponseErrorSTemporaryFileUrl
 import eZmaxApi.models.EzsigntemplatedocumentCreateObjectV1Request
@@ -34,6 +33,7 @@ import eZmaxApi.models.EzsigntemplatedocumentEditObjectV1Request
 import eZmaxApi.models.EzsigntemplatedocumentEditObjectV1Response
 import eZmaxApi.models.EzsigntemplatedocumentExtractTextV1Request
 import eZmaxApi.models.EzsigntemplatedocumentExtractTextV1Response
+import eZmaxApi.models.EzsigntemplatedocumentFlattenV1Response
 import eZmaxApi.models.EzsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1Response
 import eZmaxApi.models.EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1Response
 import eZmaxApi.models.EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response
@@ -42,6 +42,7 @@ import eZmaxApi.models.EzsigntemplatedocumentGetObjectV2Response
 import eZmaxApi.models.EzsigntemplatedocumentGetWordsPositionsV1Request
 import eZmaxApi.models.EzsigntemplatedocumentGetWordsPositionsV1Response
 import eZmaxApi.models.EzsigntemplatedocumentPatchObjectV1Request
+import eZmaxApi.models.EzsigntemplatedocumentPatchObjectV1Response
 
 class ObjectEzsigntemplatedocumentApiTest : ShouldSpec() {
     init {
@@ -106,7 +107,7 @@ class ObjectEzsigntemplatedocumentApiTest : ShouldSpec() {
             // uncomment below to test ezsigntemplatedocumentFlattenV1
             //val pkiEzsigntemplatedocumentID : kotlin.Int = 56 // kotlin.Int | 
             //val body : kotlin.Any = Object // kotlin.Any | 
-            //val result : CommonResponse = apiInstance.ezsigntemplatedocumentFlattenV1(pkiEzsigntemplatedocumentID, body)
+            //val result : EzsigntemplatedocumentFlattenV1Response = apiInstance.ezsigntemplatedocumentFlattenV1(pkiEzsigntemplatedocumentID, body)
             //result shouldBe ("TODO")
         }
 
@@ -164,7 +165,7 @@ class ObjectEzsigntemplatedocumentApiTest : ShouldSpec() {
             // uncomment below to test ezsigntemplatedocumentPatchObjectV1
             //val pkiEzsigntemplatedocumentID : kotlin.Int = 56 // kotlin.Int | 
             //val ezsigntemplatedocumentPatchObjectV1Request : EzsigntemplatedocumentPatchObjectV1Request =  // EzsigntemplatedocumentPatchObjectV1Request | 
-            //val result : CommonResponse = apiInstance.ezsigntemplatedocumentPatchObjectV1(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentPatchObjectV1Request)
+            //val result : EzsigntemplatedocumentPatchObjectV1Response = apiInstance.ezsigntemplatedocumentPatchObjectV1(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentPatchObjectV1Request)
             //result shouldBe ("TODO")
         }
 

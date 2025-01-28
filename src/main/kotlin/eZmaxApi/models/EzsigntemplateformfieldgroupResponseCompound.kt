@@ -15,10 +15,10 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.CustomDropdownElementResponse
+import eZmaxApi.models.CustomDropdownElementResponseCompound
 import eZmaxApi.models.EnumTextvalidation
 import eZmaxApi.models.EzsigntemplateformfieldResponseCompound
-import eZmaxApi.models.EzsigntemplateformfieldgroupsignerResponse
+import eZmaxApi.models.EzsigntemplateformfieldgroupsignerResponseCompound
 import eZmaxApi.models.FieldEEzsigntemplateformfieldgroupSignerrequirement
 import eZmaxApi.models.FieldEEzsigntemplateformfieldgroupTooltipposition
 import eZmaxApi.models.FieldEEzsigntemplateformfieldgroupType
@@ -86,7 +86,7 @@ data class EzsigntemplateformfieldgroupResponseCompound (
     val bEzsigntemplateformfieldgroupReadonly: kotlin.Boolean,
 
     @Json(name = "a_objEzsigntemplateformfieldgroupsigner")
-    val aObjEzsigntemplateformfieldgroupsigner: kotlin.collections.List<EzsigntemplateformfieldgroupsignerResponse>,
+    val aObjEzsigntemplateformfieldgroupsigner: kotlin.collections.List<EzsigntemplateformfieldgroupsignerResponseCompound>,
 
     @Json(name = "a_objEzsigntemplateformfield")
     val aObjEzsigntemplateformfield: kotlin.collections.List<EzsigntemplateformfieldResponseCompound>,
@@ -126,7 +126,7 @@ data class EzsigntemplateformfieldgroupResponseCompound (
     val eEzsigntemplateformfieldgroupTooltipposition: FieldEEzsigntemplateformfieldgroupTooltipposition? = null,
 
     @Json(name = "a_objDropdownElement")
-    val aObjDropdownElement: kotlin.collections.List<CustomDropdownElementResponse>? = null
+    val aObjDropdownElement: kotlin.collections.List<CustomDropdownElementResponseCompound>? = null
 
 ) {
 

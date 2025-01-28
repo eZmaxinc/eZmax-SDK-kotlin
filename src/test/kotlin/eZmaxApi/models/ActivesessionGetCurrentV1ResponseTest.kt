@@ -19,7 +19,7 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.models.ActivesessionGetCurrentV1Response
-import eZmaxApi.models.ActivesessionResponseCompound
+import eZmaxApi.models.ActivesessionGetCurrentV1ResponseMPayload
 import eZmaxApi.models.CommonResponseObjDebug
 import eZmaxApi.models.CommonResponseObjDebugPayload
 
@@ -34,7 +34,7 @@ class ActivesessionGetCurrentV1ResponseTest : ShouldSpec() {
             //modelInstance.objDebugPayload shouldBe ("TODO")
         }
 
-        // to test the property `mPayload` - Payload for GET /1/object/activesession/getCurrent
+        // to test the property `mPayload`
         should("test mPayload") {
             // uncomment below to test the property
             //modelInstance.mPayload shouldBe ("TODO")

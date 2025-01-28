@@ -19,13 +19,14 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import eZmaxApi.apis.ObjectEzsignsignergroupApi
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.EzsignsignergroupCreateObjectV1Request
 import eZmaxApi.models.EzsignsignergroupCreateObjectV1Response
+import eZmaxApi.models.EzsignsignergroupDeleteObjectV1Response
 import eZmaxApi.models.EzsignsignergroupEditEzsignsignergroupmembershipsV1Request
 import eZmaxApi.models.EzsignsignergroupEditEzsignsignergroupmembershipsV1Response
 import eZmaxApi.models.EzsignsignergroupEditObjectV1Request
+import eZmaxApi.models.EzsignsignergroupEditObjectV1Response
 import eZmaxApi.models.EzsignsignergroupGetEzsignsignergroupmembershipsV1Response
 import eZmaxApi.models.EzsignsignergroupGetObjectV2Response
 
@@ -46,7 +47,7 @@ class ObjectEzsignsignergroupApiTest : ShouldSpec() {
         should("test ezsignsignergroupDeleteObjectV1") {
             // uncomment below to test ezsignsignergroupDeleteObjectV1
             //val pkiEzsignsignergroupID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsignsignergroup
-            //val result : CommonResponse = apiInstance.ezsignsignergroupDeleteObjectV1(pkiEzsignsignergroupID)
+            //val result : EzsignsignergroupDeleteObjectV1Response = apiInstance.ezsignsignergroupDeleteObjectV1(pkiEzsignsignergroupID)
             //result shouldBe ("TODO")
         }
 
@@ -64,7 +65,7 @@ class ObjectEzsignsignergroupApiTest : ShouldSpec() {
             // uncomment below to test ezsignsignergroupEditObjectV1
             //val pkiEzsignsignergroupID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsignsignergroup
             //val ezsignsignergroupEditObjectV1Request : EzsignsignergroupEditObjectV1Request =  // EzsignsignergroupEditObjectV1Request | 
-            //val result : CommonResponse = apiInstance.ezsignsignergroupEditObjectV1(pkiEzsignsignergroupID, ezsignsignergroupEditObjectV1Request)
+            //val result : EzsignsignergroupEditObjectV1Response = apiInstance.ezsignsignergroupEditObjectV1(pkiEzsignsignergroupID, ezsignsignergroupEditObjectV1Request)
             //result shouldBe ("TODO")
         }
 

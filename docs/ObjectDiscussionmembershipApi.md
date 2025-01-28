@@ -59,7 +59,7 @@ Configure Authorization:
 
 <a id="discussionmembershipDeleteObjectV1"></a>
 # **discussionmembershipDeleteObjectV1**
-> CommonResponse discussionmembershipDeleteObjectV1(pkiDiscussionmembershipID)
+> DiscussionmembershipDeleteObjectV1Response discussionmembershipDeleteObjectV1(pkiDiscussionmembershipID)
 
 Delete an existing Discussionmembership
 
@@ -74,7 +74,7 @@ Delete an existing Discussionmembership
 val apiInstance = ObjectDiscussionmembershipApi()
 val pkiDiscussionmembershipID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Discussionmembership
 try {
-    val result : CommonResponse = apiInstance.discussionmembershipDeleteObjectV1(pkiDiscussionmembershipID)
+    val result : DiscussionmembershipDeleteObjectV1Response = apiInstance.discussionmembershipDeleteObjectV1(pkiDiscussionmembershipID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectDiscussionmembershipApi#discussionmembershipDeleteObjectV1")
@@ -92,7 +92,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**DiscussionmembershipDeleteObjectV1Response**](DiscussionmembershipDeleteObjectV1Response.md)
 
 ### Authorization
 

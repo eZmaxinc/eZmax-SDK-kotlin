@@ -61,7 +61,7 @@ Configure Authorization:
 
 <a id="ezsigntemplatedocumentpagerecognitionDeleteObjectV1"></a>
 # **ezsigntemplatedocumentpagerecognitionDeleteObjectV1**
-> CommonResponse ezsigntemplatedocumentpagerecognitionDeleteObjectV1(pkiEzsigntemplatedocumentpagerecognitionID)
+> EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response ezsigntemplatedocumentpagerecognitionDeleteObjectV1(pkiEzsigntemplatedocumentpagerecognitionID)
 
 Delete an existing Ezsigntemplatedocumentpagerecognition
 
@@ -76,7 +76,7 @@ Delete an existing Ezsigntemplatedocumentpagerecognition
 val apiInstance = ObjectEzsigntemplatedocumentpagerecognitionApi()
 val pkiEzsigntemplatedocumentpagerecognitionID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsigntemplatedocumentpagerecognition
 try {
-    val result : CommonResponse = apiInstance.ezsigntemplatedocumentpagerecognitionDeleteObjectV1(pkiEzsigntemplatedocumentpagerecognitionID)
+    val result : EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response = apiInstance.ezsigntemplatedocumentpagerecognitionDeleteObjectV1(pkiEzsigntemplatedocumentpagerecognitionID)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplatedocumentpagerecognitionApi#ezsigntemplatedocumentpagerecognitionDeleteObjectV1")
@@ -94,7 +94,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response**](EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -110,7 +110,7 @@ Configure Authorization:
 
 <a id="ezsigntemplatedocumentpagerecognitionEditObjectV1"></a>
 # **ezsigntemplatedocumentpagerecognitionEditObjectV1**
-> CommonResponse ezsigntemplatedocumentpagerecognitionEditObjectV1(pkiEzsigntemplatedocumentpagerecognitionID, ezsigntemplatedocumentpagerecognitionEditObjectV1Request)
+> EzsigntemplatedocumentpagerecognitionEditObjectV1Response ezsigntemplatedocumentpagerecognitionEditObjectV1(pkiEzsigntemplatedocumentpagerecognitionID, ezsigntemplatedocumentpagerecognitionEditObjectV1Request)
 
 Edit an existing Ezsigntemplatedocumentpagerecognition
 
@@ -126,7 +126,7 @@ val apiInstance = ObjectEzsigntemplatedocumentpagerecognitionApi()
 val pkiEzsigntemplatedocumentpagerecognitionID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsigntemplatedocumentpagerecognition
 val ezsigntemplatedocumentpagerecognitionEditObjectV1Request : EzsigntemplatedocumentpagerecognitionEditObjectV1Request =  // EzsigntemplatedocumentpagerecognitionEditObjectV1Request | 
 try {
-    val result : CommonResponse = apiInstance.ezsigntemplatedocumentpagerecognitionEditObjectV1(pkiEzsigntemplatedocumentpagerecognitionID, ezsigntemplatedocumentpagerecognitionEditObjectV1Request)
+    val result : EzsigntemplatedocumentpagerecognitionEditObjectV1Response = apiInstance.ezsigntemplatedocumentpagerecognitionEditObjectV1(pkiEzsigntemplatedocumentpagerecognitionID, ezsigntemplatedocumentpagerecognitionEditObjectV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsigntemplatedocumentpagerecognitionApi#ezsigntemplatedocumentpagerecognitionEditObjectV1")
@@ -145,7 +145,7 @@ try {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigntemplatedocumentpagerecognitionEditObjectV1Response**](EzsigntemplatedocumentpagerecognitionEditObjectV1Response.md)
 
 ### Authorization
 

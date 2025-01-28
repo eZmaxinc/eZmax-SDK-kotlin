@@ -15,11 +15,11 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.EmailRequest
+import eZmaxApi.models.EmailRequestCompound
 import eZmaxApi.models.FieldEUserEzsignaccess
 import eZmaxApi.models.FieldEUserLogintype
 import eZmaxApi.models.FieldEUserType
-import eZmaxApi.models.PhoneRequestV2
+import eZmaxApi.models.PhoneRequestCompoundV2
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -31,7 +31,7 @@ import com.squareup.moshi.JsonClass
  * @param fkiDepartmentIDDefault The unique ID of the Department
  * @param fkiTimezoneID The unique ID of the Timezone
  * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
- * @param objEmail An Email Object and children to create a complete structure
+ * @param objEmail 
  * @param fkiBillingentityinternalID The unique ID of the Billingentityinternal.
  * @param eUserType 
  * @param eUserLogintype 
@@ -45,8 +45,8 @@ import com.squareup.moshi.JsonClass
  * @param fkiBrokerID The unique ID of the Broker.
  * @param fkiAssistantID The unique ID of the Assistant.
  * @param fkiEmployeeID The unique ID of the Employee.
- * @param objPhoneHome A Phone Object and children to create a complete structure
- * @param objPhoneSMS A Phone Object and children to create a complete structure
+ * @param objPhoneHome 
+ * @param objPhoneSMS 
  * @param fkiSecretquestionID The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father's middle name| |15|Your mother's maiden name| |16|Name of your eldest child| |17|Your spouse's middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat's name| |22|Date of Birth (YYYY-MM-DD)| |22|Secret Code| |22|Your reference code|
  * @param sUserSecretresponse The answer to the Secretquestion
  * @param fkiModuleIDForm The unique ID of the Module
@@ -76,9 +76,8 @@ data class UserRequestCompoundV2 (
     @Json(name = "fkiLanguageID")
     val fkiLanguageID: kotlin.Int,
 
-    /* An Email Object and children to create a complete structure */
     @Json(name = "objEmail")
-    val objEmail: EmailRequest,
+    val objEmail: EmailRequestCompound,
 
     /* The unique ID of the Billingentityinternal. */
     @Json(name = "fkiBillingentityinternalID")
@@ -129,13 +128,11 @@ data class UserRequestCompoundV2 (
     @Json(name = "fkiEmployeeID")
     val fkiEmployeeID: kotlin.Int? = null,
 
-    /* A Phone Object and children to create a complete structure */
     @Json(name = "objPhoneHome")
-    val objPhoneHome: PhoneRequestV2? = null,
+    val objPhoneHome: PhoneRequestCompoundV2? = null,
 
-    /* A Phone Object and children to create a complete structure */
     @Json(name = "objPhoneSMS")
-    val objPhoneSMS: PhoneRequestV2? = null,
+    val objPhoneSMS: PhoneRequestCompoundV2? = null,
 
     /* The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father's middle name| |15|Your mother's maiden name| |16|Name of your eldest child| |17|Your spouse's middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat's name| |22|Date of Birth (YYYY-MM-DD)| |22|Secret Code| |22|Your reference code| */
     @Json(name = "fkiSecretquestionID")

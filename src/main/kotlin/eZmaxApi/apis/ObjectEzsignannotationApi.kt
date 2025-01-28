@@ -19,11 +19,12 @@ import java.io.IOException
 import okhttp3.Call
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.CommonResponse
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.EzsignannotationCreateObjectV1Request
 import eZmaxApi.models.EzsignannotationCreateObjectV1Response
+import eZmaxApi.models.EzsignannotationDeleteObjectV1Response
 import eZmaxApi.models.EzsignannotationEditObjectV1Request
+import eZmaxApi.models.EzsignannotationEditObjectV1Response
 import eZmaxApi.models.EzsignannotationGetObjectV2Response
 
 import com.squareup.moshi.Json
@@ -126,7 +127,7 @@ class ObjectEzsignannotationApi(basePath: kotlin.String = defaultBasePath, clien
      * Delete an existing Ezsignannotation
      * 
      * @param pkiEzsignannotationID 
-     * @return CommonResponse
+     * @return EzsignannotationDeleteObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -135,11 +136,11 @@ class ObjectEzsignannotationApi(basePath: kotlin.String = defaultBasePath, clien
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignannotationDeleteObjectV1(pkiEzsignannotationID: kotlin.Int) : CommonResponse {
+    fun ezsignannotationDeleteObjectV1(pkiEzsignannotationID: kotlin.Int) : EzsignannotationDeleteObjectV1Response {
         val localVarResponse = ezsignannotationDeleteObjectV1WithHttpInfo(pkiEzsignannotationID = pkiEzsignannotationID)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignannotationDeleteObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -157,16 +158,16 @@ class ObjectEzsignannotationApi(basePath: kotlin.String = defaultBasePath, clien
      * Delete an existing Ezsignannotation
      * 
      * @param pkiEzsignannotationID 
-     * @return ApiResponse<CommonResponse?>
+     * @return ApiResponse<EzsignannotationDeleteObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignannotationDeleteObjectV1WithHttpInfo(pkiEzsignannotationID: kotlin.Int) : ApiResponse<CommonResponse?> {
+    fun ezsignannotationDeleteObjectV1WithHttpInfo(pkiEzsignannotationID: kotlin.Int) : ApiResponse<EzsignannotationDeleteObjectV1Response?> {
         val localVariableConfig = ezsignannotationDeleteObjectV1RequestConfig(pkiEzsignannotationID = pkiEzsignannotationID)
 
-        return request<Unit, CommonResponse>(
+        return request<Unit, EzsignannotationDeleteObjectV1Response>(
             localVariableConfig
         )
     }
@@ -198,7 +199,7 @@ class ObjectEzsignannotationApi(basePath: kotlin.String = defaultBasePath, clien
      * 
      * @param pkiEzsignannotationID 
      * @param ezsignannotationEditObjectV1Request 
-     * @return CommonResponse
+     * @return EzsignannotationEditObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -207,11 +208,11 @@ class ObjectEzsignannotationApi(basePath: kotlin.String = defaultBasePath, clien
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignannotationEditObjectV1(pkiEzsignannotationID: kotlin.Int, ezsignannotationEditObjectV1Request: EzsignannotationEditObjectV1Request) : CommonResponse {
+    fun ezsignannotationEditObjectV1(pkiEzsignannotationID: kotlin.Int, ezsignannotationEditObjectV1Request: EzsignannotationEditObjectV1Request) : EzsignannotationEditObjectV1Response {
         val localVarResponse = ezsignannotationEditObjectV1WithHttpInfo(pkiEzsignannotationID = pkiEzsignannotationID, ezsignannotationEditObjectV1Request = ezsignannotationEditObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommonResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignannotationEditObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -230,16 +231,16 @@ class ObjectEzsignannotationApi(basePath: kotlin.String = defaultBasePath, clien
      * 
      * @param pkiEzsignannotationID 
      * @param ezsignannotationEditObjectV1Request 
-     * @return ApiResponse<CommonResponse?>
+     * @return ApiResponse<EzsignannotationEditObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignannotationEditObjectV1WithHttpInfo(pkiEzsignannotationID: kotlin.Int, ezsignannotationEditObjectV1Request: EzsignannotationEditObjectV1Request) : ApiResponse<CommonResponse?> {
+    fun ezsignannotationEditObjectV1WithHttpInfo(pkiEzsignannotationID: kotlin.Int, ezsignannotationEditObjectV1Request: EzsignannotationEditObjectV1Request) : ApiResponse<EzsignannotationEditObjectV1Response?> {
         val localVariableConfig = ezsignannotationEditObjectV1RequestConfig(pkiEzsignannotationID = pkiEzsignannotationID, ezsignannotationEditObjectV1Request = ezsignannotationEditObjectV1Request)
 
-        return request<EzsignannotationEditObjectV1Request, CommonResponse>(
+        return request<EzsignannotationEditObjectV1Request, EzsignannotationEditObjectV1Response>(
             localVariableConfig
         )
     }
