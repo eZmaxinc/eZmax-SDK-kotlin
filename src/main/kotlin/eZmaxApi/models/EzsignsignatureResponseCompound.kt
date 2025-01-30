@@ -73,6 +73,7 @@ import com.squareup.moshi.JsonClass
  * @param objContactNameDelegation 
  * @param objSignature 
  * @param dtEzsignsignatureDateInFolderTimezone The date the Ezsignsignature was signed in folder's timezone
+ * @param sEzsignsignergroupDescriptionX The Description of the Ezsignsignergroup in the language of the requester
  * @param bEzsignsignatureCustomdate Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)
  * @param aObjEzsignsignaturecustomdate An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all.
  * @param objCreditcardtransaction 
@@ -224,6 +225,10 @@ data class EzsignsignatureResponseCompound (
     /* The date the Ezsignsignature was signed in folder's timezone */
     @Json(name = "dtEzsignsignatureDateInFolderTimezone")
     val dtEzsignsignatureDateInFolderTimezone: kotlin.String? = null,
+
+    /* The Description of the Ezsignsignergroup in the language of the requester */
+    @Json(name = "sEzsignsignergroupDescriptionX")
+    val sEzsignsignergroupDescriptionX: kotlin.String? = null,
 
     /* Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**) */
     @Json(name = "bEzsignsignatureCustomdate")

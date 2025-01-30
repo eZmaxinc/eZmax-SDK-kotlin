@@ -71,6 +71,7 @@ import com.squareup.moshi.JsonClass
  * @param sEzsignsignatureRegexp A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom**
  * @param objContactNameDelegation 
  * @param objSignature 
+ * @param sEzsignsignergroupDescriptionX The Description of the Ezsignsignergroup in the language of the requester
  * @param bEzsignsignatureCustomdate Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)
  * @param aObjEzsignsignaturecustomdate An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all.
  * @param objCreditcardtransaction 
@@ -217,6 +218,10 @@ data class EzsignsignatureResponseCompoundV3 (
 
     @Json(name = "objSignature")
     val objSignature: SignatureResponseCompound? = null,
+
+    /* The Description of the Ezsignsignergroup in the language of the requester */
+    @Json(name = "sEzsignsignergroupDescriptionX")
+    val sEzsignsignergroupDescriptionX: kotlin.String? = null,
 
     /* Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**) */
     @Json(name = "bEzsignsignatureCustomdate")
