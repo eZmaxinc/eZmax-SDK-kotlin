@@ -24,6 +24,7 @@ import eZmaxApi.models.EzsigntemplatepublicCreateEzsignfolderV1Request
 import eZmaxApi.models.EzsigntemplatepublicCreateEzsignfolderV1Response
 import eZmaxApi.models.EzsigntemplatepublicCreateObjectV1Request
 import eZmaxApi.models.EzsigntemplatepublicCreateObjectV1Response
+import eZmaxApi.models.EzsigntemplatepublicDeleteObjectV1Response
 import eZmaxApi.models.EzsigntemplatepublicEditObjectV1Request
 import eZmaxApi.models.EzsigntemplatepublicEditObjectV1Response
 import eZmaxApi.models.EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request
@@ -196,6 +197,77 @@ class ObjectEzsigntemplatepublicApi(basePath: kotlin.String = defaultBasePath, c
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/ezsigntemplatepublic",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * Delete an existing Ezsigntemplatepublic
+     * 
+     * @param pkiEzsigntemplatepublicID The unique ID of the Ezsigntemplatepublic
+     * @return EzsigntemplatepublicDeleteObjectV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsigntemplatepublicDeleteObjectV1(pkiEzsigntemplatepublicID: kotlin.Int) : EzsigntemplatepublicDeleteObjectV1Response {
+        val localVarResponse = ezsigntemplatepublicDeleteObjectV1WithHttpInfo(pkiEzsigntemplatepublicID = pkiEzsigntemplatepublicID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigntemplatepublicDeleteObjectV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * Delete an existing Ezsigntemplatepublic
+     * 
+     * @param pkiEzsigntemplatepublicID The unique ID of the Ezsigntemplatepublic
+     * @return ApiResponse<EzsigntemplatepublicDeleteObjectV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsigntemplatepublicDeleteObjectV1WithHttpInfo(pkiEzsigntemplatepublicID: kotlin.Int) : ApiResponse<EzsigntemplatepublicDeleteObjectV1Response?> {
+        val localVariableConfig = ezsigntemplatepublicDeleteObjectV1RequestConfig(pkiEzsigntemplatepublicID = pkiEzsigntemplatepublicID)
+
+        return request<Unit, EzsigntemplatepublicDeleteObjectV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsigntemplatepublicDeleteObjectV1
+     *
+     * @param pkiEzsigntemplatepublicID The unique ID of the Ezsigntemplatepublic
+     * @return RequestConfig
+     */
+    fun ezsigntemplatepublicDeleteObjectV1RequestConfig(pkiEzsigntemplatepublicID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.DELETE,
+            path = "/1/object/ezsigntemplatepublic/{pkiEzsigntemplatepublicID}".replace("{"+"pkiEzsigntemplatepublicID"+"}", encodeURIComponent(pkiEzsigntemplatepublicID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

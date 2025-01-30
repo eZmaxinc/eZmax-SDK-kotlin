@@ -1018,6 +1018,7 @@ docs/EzsigntemplatepublicCreateEzsignfolderV1ResponseMPayload.md
 docs/EzsigntemplatepublicCreateObjectV1Request.md
 docs/EzsigntemplatepublicCreateObjectV1Response.md
 docs/EzsigntemplatepublicCreateObjectV1ResponseMPayload.md
+docs/EzsigntemplatepublicDeleteObjectV1Response.md
 docs/EzsigntemplatepublicEditObjectV1Request.md
 docs/EzsigntemplatepublicEditObjectV1Response.md
 docs/EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request.md
@@ -2920,6 +2921,7 @@ src/main/kotlin/eZmaxApi/models/EzsigntemplatepublicCreateEzsignfolderV1Response
 src/main/kotlin/eZmaxApi/models/EzsigntemplatepublicCreateObjectV1Request.kt
 src/main/kotlin/eZmaxApi/models/EzsigntemplatepublicCreateObjectV1Response.kt
 src/main/kotlin/eZmaxApi/models/EzsigntemplatepublicCreateObjectV1ResponseMPayload.kt
+src/main/kotlin/eZmaxApi/models/EzsigntemplatepublicDeleteObjectV1Response.kt
 src/main/kotlin/eZmaxApi/models/EzsigntemplatepublicEditObjectV1Request.kt
 src/main/kotlin/eZmaxApi/models/EzsigntemplatepublicEditObjectV1Response.kt
 src/main/kotlin/eZmaxApi/models/EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request.kt

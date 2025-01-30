@@ -6,6 +6,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | ------------- | ------------- | ------------- |
 | [**ezsigntemplatepublicCreateEzsignfolderV1**](ObjectEzsigntemplatepublicApi.md#ezsigntemplatepublicCreateEzsignfolderV1) | **POST** /1/object/ezsigntemplatepublic/createEzsignfolder | Create an Ezsignfolder |
 | [**ezsigntemplatepublicCreateObjectV1**](ObjectEzsigntemplatepublicApi.md#ezsigntemplatepublicCreateObjectV1) | **POST** /1/object/ezsigntemplatepublic | Create a new Ezsigntemplatepublic |
+| [**ezsigntemplatepublicDeleteObjectV1**](ObjectEzsigntemplatepublicApi.md#ezsigntemplatepublicDeleteObjectV1) | **DELETE** /1/object/ezsigntemplatepublic/{pkiEzsigntemplatepublicID} | Delete an existing Ezsigntemplatepublic |
 | [**ezsigntemplatepublicEditObjectV1**](ObjectEzsigntemplatepublicApi.md#ezsigntemplatepublicEditObjectV1) | **PUT** /1/object/ezsigntemplatepublic/{pkiEzsigntemplatepublicID} | Edit an existing Ezsigntemplatepublic |
 | [**ezsigntemplatepublicGetEzsigntemplatepublicDetailsV1**](ObjectEzsigntemplatepublicApi.md#ezsigntemplatepublicGetEzsigntemplatepublicDetailsV1) | **POST** /1/object/ezsigntemplatepublic/getEzsigntemplatepublicDetails | Retrieve the Ezsigntemplatepublic details |
 | [**ezsigntemplatepublicGetFormsDataV1**](ObjectEzsigntemplatepublicApi.md#ezsigntemplatepublicGetFormsDataV1) | **GET** /1/object/ezsigntemplatepublic/{pkiEzsigntemplatepublicID}/getFormsData | Retrieve an existing Ezsigntemplatepublic&#39;s forms data |
@@ -111,6 +112,55 @@ Configure Authorization:
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a id="ezsigntemplatepublicDeleteObjectV1"></a>
+# **ezsigntemplatepublicDeleteObjectV1**
+> EzsigntemplatepublicDeleteObjectV1Response ezsigntemplatepublicDeleteObjectV1(pkiEzsigntemplatepublicID)
+
+Delete an existing Ezsigntemplatepublic
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsigntemplatepublicApi()
+val pkiEzsigntemplatepublicID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Ezsigntemplatepublic
+try {
+    val result : EzsigntemplatepublicDeleteObjectV1Response = apiInstance.ezsigntemplatepublicDeleteObjectV1(pkiEzsigntemplatepublicID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsigntemplatepublicApi#ezsigntemplatepublicDeleteObjectV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsigntemplatepublicApi#ezsigntemplatepublicDeleteObjectV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsigntemplatepublicID** | **kotlin.Int**| The unique ID of the Ezsigntemplatepublic | |
+
+### Return type
+
+[**EzsigntemplatepublicDeleteObjectV1Response**](EzsigntemplatepublicDeleteObjectV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a id="ezsigntemplatepublicEditObjectV1"></a>
