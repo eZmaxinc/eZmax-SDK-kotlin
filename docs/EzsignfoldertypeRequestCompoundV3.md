@@ -53,6 +53,7 @@
 | **bEzsignfoldertypeSendsignedtouser** | **kotlin.Boolean** | Whether we send an email to User who signed when document is completed |  [optional] |
 | **bEzsignfoldertypeSendattachmentezsignsigner** | **kotlin.Boolean** | Whether we send the Ezsigndocument in the email to Ezsignsigner |  [optional] |
 | **bEzsignfoldertypeSendproofezsignsigner** | **kotlin.Boolean** | Whether we send the proof in the email to Ezsignsigner |  [optional] |
+| **bEzsignfoldertypeSendattachmentreceivecopy** | **kotlin.Boolean** | Whether we send the Ezsigndocument in the email to Ezsignsigner or User when bEzsignfoldersignerassociationReceivecopy &#x3D; 1 |  [optional] |
 | **bEzsignfoldertypeSendattachmentuser** | **kotlin.Boolean** | Whether we send the Ezsigndocument in the email to User |  [optional] |
 | **bEzsignfoldertypeSendproofuser** | **kotlin.Boolean** | Whether we send the proof in the email to User |  [optional] |
 | **bEzsignfoldertypeSendproofemail** | **kotlin.Boolean** | Whether we send the proof in the email to external recipient |  [optional] |
