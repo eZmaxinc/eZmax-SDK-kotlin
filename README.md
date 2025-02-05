@@ -115,6 +115,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | *ObjectCreditcardmerchantApi* | [**creditcardmerchantGetListV1**](docs/ObjectCreditcardmerchantApi.md#creditcardmerchantgetlistv1) | **GET** /1/object/creditcardmerchant/getList | Retrieve Creditcardmerchant list |
 | *ObjectCreditcardmerchantApi* | [**creditcardmerchantGetObjectV2**](docs/ObjectCreditcardmerchantApi.md#creditcardmerchantgetobjectv2) | **GET** /2/object/creditcardmerchant/{pkiCreditcardmerchantID} | Retrieve an existing Creditcardmerchant |
 | *ObjectCreditcardtypeApi* | [**creditcardtypeGetAutocompleteV2**](docs/ObjectCreditcardtypeApi.md#creditcardtypegetautocompletev2) | **GET** /2/object/creditcardtype/getAutocomplete/{sSelector} | Retrieve Creditcardtypes and IDs |
+| *ObjectCurrencyApi* | [**currencyGetAutocompleteV2**](docs/ObjectCurrencyApi.md#currencygetautocompletev2) | **GET** /2/object/currency/getAutocomplete/{sSelector} | Retrieve Currencies and IDs |
 | *ObjectCustomerApi* | [**customerCreateObjectV1**](docs/ObjectCustomerApi.md#customercreateobjectv1) | **POST** /1/object/customer | Create a new Customer |
 | *ObjectCustomerApi* | [**customerGetObjectV2**](docs/ObjectCustomerApi.md#customergetobjectv2) | **GET** /2/object/customer/{pkiCustomerID} | Retrieve an existing Customer |
 | *ObjectDepartmentApi* | [**departmentGetAutocompleteV2**](docs/ObjectDepartmentApi.md#departmentgetautocompletev2) | **GET** /2/object/department/getAutocomplete/{sSelector} | Retrieve Departments and IDs |
@@ -776,6 +777,9 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.CreditcardtypeAutocompleteElementResponse](docs/CreditcardtypeAutocompleteElementResponse.md)
  - [eZmaxApi.models.CreditcardtypeGetAutocompleteV2Response](docs/CreditcardtypeGetAutocompleteV2Response.md)
  - [eZmaxApi.models.CreditcardtypeGetAutocompleteV2ResponseMPayload](docs/CreditcardtypeGetAutocompleteV2ResponseMPayload.md)
+ - [eZmaxApi.models.CurrencyAutocompleteElementResponse](docs/CurrencyAutocompleteElementResponse.md)
+ - [eZmaxApi.models.CurrencyGetAutocompleteV2Response](docs/CurrencyGetAutocompleteV2Response.md)
+ - [eZmaxApi.models.CurrencyGetAutocompleteV2ResponseMPayload](docs/CurrencyGetAutocompleteV2ResponseMPayload.md)
  - [eZmaxApi.models.CustomApikey](docs/CustomApikey.md)
  - [eZmaxApi.models.CustomApikeyfederation](docs/CustomApikeyfederation.md)
  - [eZmaxApi.models.CustomAttachmentResponse](docs/CustomAttachmentResponse.md)
