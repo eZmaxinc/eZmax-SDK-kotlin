@@ -145,7 +145,6 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | *ObjectEzdoctemplatedocumentApi* | [**ezdoctemplatedocumentPatchObjectV1**](docs/ObjectEzdoctemplatedocumentApi.md#ezdoctemplatedocumentpatchobjectv1) | **PATCH** /1/object/ezdoctemplatedocument/{pkiEzdoctemplatedocumentID} | Patch an existing Ezdoctemplatedocument |
 | *ObjectEzdoctemplatefieldtypecategoryApi* | [**ezdoctemplatefieldtypecategoryGetAutocompleteV2**](docs/ObjectEzdoctemplatefieldtypecategoryApi.md#ezdoctemplatefieldtypecategorygetautocompletev2) | **GET** /2/object/ezdoctemplatefieldtypecategory/getAutocomplete/{sSelector} | Retrieve Ezdoctemplatefieldtypecategorys and IDs |
 | *ObjectEzdoctemplatetypeApi* | [**ezdoctemplatetypeGetAutocompleteV2**](docs/ObjectEzdoctemplatetypeApi.md#ezdoctemplatetypegetautocompletev2) | **GET** /2/object/ezdoctemplatetype/getAutocomplete/{sSelector} | Retrieve Ezdoctemplatetypes and IDs |
-| *ObjectEzmaxcaseApi* | [**ezmaxcasePatchObjectV1**](docs/ObjectEzmaxcaseApi.md#ezmaxcasepatchobjectv1) | **PATCH** /1/object/ezmaxcase/{pkiEzmaxcaseID} | Patch an existing Ezmaxcase |
 | *ObjectEzmaxinvoicingApi* | [**ezmaxinvoicingGetAutocompleteV2**](docs/ObjectEzmaxinvoicingApi.md#ezmaxinvoicinggetautocompletev2) | **GET** /2/object/ezmaxinvoicing/getAutocomplete/{sSelector} | Retrieve Ezmaxinvoicings and IDs |
 | *ObjectEzmaxinvoicingApi* | [**ezmaxinvoicingGetObjectV2**](docs/ObjectEzmaxinvoicingApi.md#ezmaxinvoicinggetobjectv2) | **GET** /2/object/ezmaxinvoicing/{pkiEzmaxinvoicingID} | Retrieve an existing Ezmaxinvoicing |
 | *ObjectEzmaxinvoicingApi* | [**ezmaxinvoicingGetProvisionalV1**](docs/ObjectEzmaxinvoicingApi.md#ezmaxinvoicinggetprovisionalv1) | **GET** /1/object/ezmaxinvoicing/getProvisional | Retrieve provisional Ezmaxinvoicing |
@@ -955,9 +954,6 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.EzdoctemplatetypeAutocompleteElementResponse](docs/EzdoctemplatetypeAutocompleteElementResponse.md)
  - [eZmaxApi.models.EzdoctemplatetypeGetAutocompleteV2Response](docs/EzdoctemplatetypeGetAutocompleteV2Response.md)
  - [eZmaxApi.models.EzdoctemplatetypeGetAutocompleteV2ResponseMPayload](docs/EzdoctemplatetypeGetAutocompleteV2ResponseMPayload.md)
- - [eZmaxApi.models.EzmaxcasePatchObjectV1Request](docs/EzmaxcasePatchObjectV1Request.md)
- - [eZmaxApi.models.EzmaxcasePatchObjectV1Response](docs/EzmaxcasePatchObjectV1Response.md)
- - [eZmaxApi.models.EzmaxcaseRequestPatch](docs/EzmaxcaseRequestPatch.md)
  - [eZmaxApi.models.EzmaxinvoicingAutocompleteElementResponse](docs/EzmaxinvoicingAutocompleteElementResponse.md)
  - [eZmaxApi.models.EzmaxinvoicingGetAutocompleteV2Response](docs/EzmaxinvoicingGetAutocompleteV2Response.md)
  - [eZmaxApi.models.EzmaxinvoicingGetAutocompleteV2ResponseMPayload](docs/EzmaxinvoicingGetAutocompleteV2ResponseMPayload.md)

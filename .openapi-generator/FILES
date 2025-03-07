@@ -431,9 +431,6 @@ docs/EzdoctemplatefieldtypecategoryGetAutocompleteV2ResponseMPayload.md
 docs/EzdoctemplatetypeAutocompleteElementResponse.md
 docs/EzdoctemplatetypeGetAutocompleteV2Response.md
 docs/EzdoctemplatetypeGetAutocompleteV2ResponseMPayload.md
-docs/EzmaxcasePatchObjectV1Request.md
-docs/EzmaxcasePatchObjectV1Response.md
-docs/EzmaxcaseRequestPatch.md
 docs/EzmaxinvoicingAutocompleteElementResponse.md
 docs/EzmaxinvoicingGetAutocompleteV2Response.md
 docs/EzmaxinvoicingGetAutocompleteV2ResponseMPayload.md
@@ -1356,7 +1353,6 @@ docs/ObjectEmailtypeApi.md
 docs/ObjectEzdoctemplatedocumentApi.md
 docs/ObjectEzdoctemplatefieldtypecategoryApi.md
 docs/ObjectEzdoctemplatetypeApi.md
-docs/ObjectEzmaxcaseApi.md
 docs/ObjectEzmaxinvoicingApi.md
 docs/ObjectEzmaxproductApi.md
 docs/ObjectEzsignannotationApi.md
@@ -1861,7 +1857,6 @@ src/main/kotlin/eZmaxApi/apis/ObjectEmailtypeApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectEzdoctemplatedocumentApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectEzdoctemplatefieldtypecategoryApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectEzdoctemplatetypeApi.kt
-src/main/kotlin/eZmaxApi/apis/ObjectEzmaxcaseApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectEzmaxinvoicingApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectEzmaxproductApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectEzsignannotationApi.kt
@@ -2389,9 +2384,6 @@ src/main/kotlin/eZmaxApi/models/EzdoctemplatefieldtypecategoryGetAutocompleteV2R
 src/main/kotlin/eZmaxApi/models/EzdoctemplatetypeAutocompleteElementResponse.kt
 src/main/kotlin/eZmaxApi/models/EzdoctemplatetypeGetAutocompleteV2Response.kt
 src/main/kotlin/eZmaxApi/models/EzdoctemplatetypeGetAutocompleteV2ResponseMPayload.kt
-src/main/kotlin/eZmaxApi/models/EzmaxcasePatchObjectV1Request.kt
-src/main/kotlin/eZmaxApi/models/EzmaxcasePatchObjectV1Response.kt
-src/main/kotlin/eZmaxApi/models/EzmaxcaseRequestPatch.kt
 src/main/kotlin/eZmaxApi/models/EzmaxinvoicingAutocompleteElementResponse.kt
 src/main/kotlin/eZmaxApi/models/EzmaxinvoicingGetAutocompleteV2Response.kt
 src/main/kotlin/eZmaxApi/models/EzmaxinvoicingGetAutocompleteV2ResponseMPayload.kt
