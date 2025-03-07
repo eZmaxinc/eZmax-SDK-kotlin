@@ -50,6 +50,7 @@ class ObjectTranqcontractApi(basePath: kotlin.String = defaultBasePath, client: 
     }
 
     /**
+     * GET /1/object/tranqcontract/{pkiTranqcontractID}/getCommunicationCount
      * Retrieve Communication count
      * 
      * @param pkiTranqcontractID 
@@ -81,6 +82,7 @@ class ObjectTranqcontractApi(basePath: kotlin.String = defaultBasePath, client: 
     }
 
     /**
+     * GET /1/object/tranqcontract/{pkiTranqcontractID}/getCommunicationCount
      * Retrieve Communication count
      * 
      * @param pkiTranqcontractID 
@@ -121,6 +123,7 @@ class ObjectTranqcontractApi(basePath: kotlin.String = defaultBasePath, client: 
     }
 
     /**
+     * GET /1/object/tranqcontract/{pkiTranqcontractID}/getCommunicationList
      * Retrieve Communication list
      * 
      * @param pkiTranqcontractID 
@@ -152,6 +155,7 @@ class ObjectTranqcontractApi(basePath: kotlin.String = defaultBasePath, client: 
     }
 
     /**
+     * GET /1/object/tranqcontract/{pkiTranqcontractID}/getCommunicationList
      * Retrieve Communication list
      * 
      * @param pkiTranqcontractID 
@@ -192,6 +196,7 @@ class ObjectTranqcontractApi(basePath: kotlin.String = defaultBasePath, client: 
     }
 
     /**
+     * GET /1/object/tranqcontract/{pkiTranqcontractID}/getCommunicationrecipients
      * Retrieve Tranqcontract&#39;s Communicationrecipient
      * 
      * @param pkiTranqcontractID 
@@ -223,6 +228,7 @@ class ObjectTranqcontractApi(basePath: kotlin.String = defaultBasePath, client: 
     }
 
     /**
+     * GET /1/object/tranqcontract/{pkiTranqcontractID}/getCommunicationrecipients
      * Retrieve Tranqcontract&#39;s Communicationrecipient
      * 
      * @param pkiTranqcontractID 
@@ -263,6 +269,7 @@ class ObjectTranqcontractApi(basePath: kotlin.String = defaultBasePath, client: 
     }
 
     /**
+     * GET /1/object/tranqcontract/{pkiTranqcontractID}/getCommunicationsenders
      * Retrieve Tranqcontract&#39;s Communicationsender
      * 
      * @param pkiTranqcontractID 
@@ -294,6 +301,7 @@ class ObjectTranqcontractApi(basePath: kotlin.String = defaultBasePath, client: 
     }
 
     /**
+     * GET /1/object/tranqcontract/{pkiTranqcontractID}/getCommunicationsenders
      * Retrieve Tranqcontract&#39;s Communicationsender
      * 
      * @param pkiTranqcontractID 

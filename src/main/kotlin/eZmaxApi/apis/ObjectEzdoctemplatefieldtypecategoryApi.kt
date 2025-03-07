@@ -81,6 +81,7 @@ class ObjectEzdoctemplatefieldtypecategoryApi(basePath: kotlin.String = defaultB
      }
 
     /**
+     * GET /2/object/ezdoctemplatefieldtypecategory/getAutocomplete/{sSelector}
      * Retrieve Ezdoctemplatefieldtypecategorys and IDs
      * Get the list of Ezdoctemplatefieldtypecategory to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezdoctemplatefieldtypecategorys to return
@@ -115,6 +116,7 @@ class ObjectEzdoctemplatefieldtypecategoryApi(basePath: kotlin.String = defaultB
     }
 
     /**
+     * GET /2/object/ezdoctemplatefieldtypecategory/getAutocomplete/{sSelector}
      * Retrieve Ezdoctemplatefieldtypecategorys and IDs
      * Get the list of Ezdoctemplatefieldtypecategory to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezdoctemplatefieldtypecategorys to return

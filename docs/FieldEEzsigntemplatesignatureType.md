@@ -6,7 +6,17 @@
 
     * `Acknowledgement` (value: `"Acknowledgement"`)
 
+    * `Attachments` (value: `"Attachments"`)
+
     * `City` (value: `"City"`)
+
+    * `Consultation` (value: `"Consultation"`)
+
+    * `Creditcard` (value: `"Creditcard"`)
+
+    * `FieldText` (value: `"FieldText"`)
+
+    * `FieldTextarea` (value: `"FieldTextarea"`)
 
     * `Handwritten` (value: `"Handwritten"`)
 
@@ -15,14 +25,6 @@
     * `Name` (value: `"Name"`)
 
     * `NameReason` (value: `"NameReason"`)
-
-    * `Attachments` (value: `"Attachments"`)
-
-    * `FieldText` (value: `"FieldText"`)
-
-    * `FieldTextarea` (value: `"FieldTextarea"`)
-
-    * `Consultation` (value: `"Consultation"`)
 
     * `Signature` (value: `"Signature"`)
 

@@ -55,6 +55,7 @@ class ObjectSupplyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * POST /1/object/supply
      * Create a new Supply
      * The endpoint allows to create one or many elements at once.
      * @param supplyCreateObjectV1Request 
@@ -86,6 +87,7 @@ class ObjectSupplyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * POST /1/object/supply
      * Create a new Supply
      * The endpoint allows to create one or many elements at once.
      * @param supplyCreateObjectV1Request 
@@ -127,6 +129,7 @@ class ObjectSupplyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * DELETE /1/object/supply/{pkiSupplyID}
      * Delete an existing Supply
      * 
      * @param pkiSupplyID The unique ID of the Supply
@@ -158,6 +161,7 @@ class ObjectSupplyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * DELETE /1/object/supply/{pkiSupplyID}
      * Delete an existing Supply
      * 
      * @param pkiSupplyID The unique ID of the Supply
@@ -198,6 +202,7 @@ class ObjectSupplyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * PUT /1/object/supply/{pkiSupplyID}
      * Edit an existing Supply
      * 
      * @param pkiSupplyID The unique ID of the Supply
@@ -230,6 +235,7 @@ class ObjectSupplyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * PUT /1/object/supply/{pkiSupplyID}
      * Edit an existing Supply
      * 
      * @param pkiSupplyID The unique ID of the Supply
@@ -307,6 +313,7 @@ class ObjectSupplyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
      }
 
     /**
+     * GET /2/object/supply/getAutocomplete/{sSelector}
      * Retrieve Supplys and IDs
      * Get the list of Supply to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Supplys to return
@@ -341,6 +348,7 @@ class ObjectSupplyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * GET /2/object/supply/getAutocomplete/{sSelector}
      * Retrieve Supplys and IDs
      * Get the list of Supply to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Supplys to return
@@ -429,6 +437,7 @@ class ObjectSupplyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
      }
 
     /**
+     * GET /1/object/supply/getList
      * Retrieve Supply list
      * 
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -464,6 +473,7 @@ class ObjectSupplyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * GET /1/object/supply/getList
      * Retrieve Supply list
      * 
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -527,6 +537,7 @@ class ObjectSupplyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * GET /2/object/supply/{pkiSupplyID}
      * Retrieve an existing Supply
      * 
      * @param pkiSupplyID The unique ID of the Supply
@@ -558,6 +569,7 @@ class ObjectSupplyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * GET /2/object/supply/{pkiSupplyID}
      * Retrieve an existing Supply
      * 
      * @param pkiSupplyID The unique ID of the Supply

@@ -90,6 +90,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * POST /1/object/ezsignfolder/{pkiEzsignfolderID}/archive
      * Archive the Ezsignfolder
      * 
      * @param pkiEzsignfolderID 
@@ -122,6 +123,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * POST /1/object/ezsignfolder/{pkiEzsignfolderID}/archive
      * Archive the Ezsignfolder
      * 
      * @param pkiEzsignfolderID 
@@ -165,6 +167,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * POST /1/object/ezsignfolder/{pkiEzsignfolderID}/batchDownload
      * Download multiples files from an Ezsignfolder
      * 
      * @param pkiEzsignfolderID 
@@ -197,6 +200,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * POST /1/object/ezsignfolder/{pkiEzsignfolderID}/batchDownload
      * Download multiples files from an Ezsignfolder
      * 
      * @param pkiEzsignfolderID 
@@ -240,6 +244,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * POST /1/object/ezsignfolder
      * Create a new Ezsignfolder
      * The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
      * @param ezsignfolderCreateObjectV1Request 
@@ -273,6 +278,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * POST /1/object/ezsignfolder
      * Create a new Ezsignfolder
      * The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
      * @param ezsignfolderCreateObjectV1Request 
@@ -317,6 +323,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * POST /2/object/ezsignfolder
      * Create a new Ezsignfolder
      * The endpoint allows to create one or many elements at once.
      * @param ezsignfolderCreateObjectV2Request 
@@ -350,6 +357,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * POST /2/object/ezsignfolder
      * Create a new Ezsignfolder
      * The endpoint allows to create one or many elements at once.
      * @param ezsignfolderCreateObjectV2Request 
@@ -394,6 +402,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * POST /3/object/ezsignfolder
      * Create a new Ezsignfolder
      * The endpoint allows to create one or many elements at once.
      * @param ezsignfolderCreateObjectV3Request 
@@ -425,6 +434,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * POST /3/object/ezsignfolder
      * Create a new Ezsignfolder
      * The endpoint allows to create one or many elements at once.
      * @param ezsignfolderCreateObjectV3Request 
@@ -466,6 +476,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * DELETE /1/object/ezsignfolder/{pkiEzsignfolderID}
      * Delete an existing Ezsignfolder
      * 
      * @param pkiEzsignfolderID 
@@ -497,6 +508,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * DELETE /1/object/ezsignfolder/{pkiEzsignfolderID}
      * Delete an existing Ezsignfolder
      * 
      * @param pkiEzsignfolderID 
@@ -537,6 +549,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * POST /1/object/ezsignfolder/disposeEzsignfolders
      * Dispose Ezsignfolders
      * 
      * @param ezsignfolderDisposeEzsignfoldersV1Request 
@@ -568,6 +581,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * POST /1/object/ezsignfolder/disposeEzsignfolders
      * Dispose Ezsignfolders
      * 
      * @param ezsignfolderDisposeEzsignfoldersV1Request 
@@ -609,6 +623,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * POST /1/object/ezsignfolder/{pkiEzsignfolderID}/dispose
      * Dispose the Ezsignfolder
      * 
      * @param pkiEzsignfolderID 
@@ -641,6 +656,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * POST /1/object/ezsignfolder/{pkiEzsignfolderID}/dispose
      * Dispose the Ezsignfolder
      * 
      * @param pkiEzsignfolderID 
@@ -684,6 +700,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * PUT /3/object/ezsignfolder/{pkiEzsignfolderID}
      * Edit an existing Ezsignfolder
      * 
      * @param pkiEzsignfolderID 
@@ -716,6 +733,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * PUT /3/object/ezsignfolder/{pkiEzsignfolderID}
      * Edit an existing Ezsignfolder
      * 
      * @param pkiEzsignfolderID 
@@ -759,6 +777,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * POST /1/object/ezsignfolder/{pkiEzsignfolderID}/endPrematurely
      * End prematurely
      * End prematurely all Ezsigndocument of Ezsignfolder when some signatures are still required
      * @param pkiEzsignfolderID 
@@ -791,6 +810,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * POST /1/object/ezsignfolder/{pkiEzsignfolderID}/endPrematurely
      * End prematurely
      * End prematurely all Ezsigndocument of Ezsignfolder when some signatures are still required
      * @param pkiEzsignfolderID 
@@ -834,6 +854,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements
      * Retrieve actionable elements for the Ezsignfolder
      * Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
      * @param pkiEzsignfolderID 
@@ -865,6 +886,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements
      * Retrieve actionable elements for the Ezsignfolder
      * Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
      * @param pkiEzsignfolderID 
@@ -905,6 +927,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getAttachmentCount
      * Retrieve Attachment count
      * 
      * @param pkiEzsignfolderID 
@@ -936,6 +959,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getAttachmentCount
      * Retrieve Attachment count
      * 
      * @param pkiEzsignfolderID 
@@ -976,6 +1000,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getAttachments
      * Retrieve Ezsignfolder&#39;s Attachments
      * 
      * @param pkiEzsignfolderID 
@@ -1007,6 +1032,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getAttachments
      * Retrieve Ezsignfolder&#39;s Attachments
      * 
      * @param pkiEzsignfolderID 
@@ -1047,6 +1073,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationCount
      * Retrieve Communication count
      * 
      * @param pkiEzsignfolderID 
@@ -1078,6 +1105,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationCount
      * Retrieve Communication count
      * 
      * @param pkiEzsignfolderID 
@@ -1118,6 +1146,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationList
      * Retrieve Communication list
      * 
      * @param pkiEzsignfolderID 
@@ -1149,6 +1178,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationList
      * Retrieve Communication list
      * 
      * @param pkiEzsignfolderID 
@@ -1189,6 +1219,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationrecipients
      * Retrieve Ezsignfolder&#39;s Communicationrecipient
      * 
      * @param pkiEzsignfolderID 
@@ -1220,6 +1251,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationrecipients
      * Retrieve Ezsignfolder&#39;s Communicationrecipient
      * 
      * @param pkiEzsignfolderID 
@@ -1260,6 +1292,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationsenders
      * Retrieve Ezsignfolder&#39;s Communicationsender
      * 
      * @param pkiEzsignfolderID 
@@ -1291,6 +1324,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationsenders
      * Retrieve Ezsignfolder&#39;s Communicationsender
      * 
      * @param pkiEzsignfolderID 
@@ -1331,6 +1365,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments
      * Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
      * 
      * @param pkiEzsignfolderID 
@@ -1362,6 +1397,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments
      * Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
      * 
      * @param pkiEzsignfolderID 
@@ -1402,6 +1438,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations
      * Retrieve an existing Ezsignfolder&#39;s Ezsignfoldersignerassociations
      * 
      * @param pkiEzsignfolderID 
@@ -1433,6 +1470,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations
      * Retrieve an existing Ezsignfolder&#39;s Ezsignfoldersignerassociations
      * 
      * @param pkiEzsignfolderID 
@@ -1473,6 +1511,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignsignaturesAutomatic
      * Retrieve an existing Ezsignfolder&#39;s automatic Ezsignsignatures
      * Return the Ezsignsignatures that can be signed by the current user at the current step in the process
      * @param pkiEzsignfolderID 
@@ -1504,6 +1543,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignsignaturesAutomatic
      * Retrieve an existing Ezsignfolder&#39;s automatic Ezsignsignatures
      * Return the Ezsignsignatures that can be signed by the current user at the current step in the process
      * @param pkiEzsignfolderID 
@@ -1544,6 +1584,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData
      * Retrieve an existing Ezsignfolder&#39;s forms data
      * 
      * @param pkiEzsignfolderID 
@@ -1575,6 +1616,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData
      * Retrieve an existing Ezsignfolder&#39;s forms data
      * 
      * @param pkiEzsignfolderID 
@@ -1664,6 +1706,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
      }
 
     /**
+     * GET /1/object/ezsignfolder/getList
      * Retrieve Ezsignfolder list
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | fkiUserID | | sContactFirstname | | sContactLastname | | sUserFirstname | | sUserLastname | | sEzsigndocumentName |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -1699,6 +1742,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * GET /1/object/ezsignfolder/getList
      * Retrieve Ezsignfolder list
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | fkiUserID | | sContactFirstname | | sContactLastname | | sUserFirstname | | sUserLastname | | sEzsigndocumentName |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -1762,6 +1806,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * GET /1/object/ezsignfolder/{pkiEzsignfolderID}
      * Retrieve an existing Ezsignfolder
      * 
      * @param pkiEzsignfolderID 
@@ -1795,6 +1840,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * GET /1/object/ezsignfolder/{pkiEzsignfolderID}
      * Retrieve an existing Ezsignfolder
      * 
      * @param pkiEzsignfolderID 
@@ -1838,6 +1884,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * GET /2/object/ezsignfolder/{pkiEzsignfolderID}
      * Retrieve an existing Ezsignfolder
      * 
      * @param pkiEzsignfolderID 
@@ -1871,6 +1918,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * GET /2/object/ezsignfolder/{pkiEzsignfolderID}
      * Retrieve an existing Ezsignfolder
      * 
      * @param pkiEzsignfolderID 
@@ -1914,6 +1962,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * GET /3/object/ezsignfolder/{pkiEzsignfolderID}
      * Retrieve an existing Ezsignfolder
      * 
      * @param pkiEzsignfolderID 
@@ -1945,6 +1994,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * GET /3/object/ezsignfolder/{pkiEzsignfolderID}
      * Retrieve an existing Ezsignfolder
      * 
      * @param pkiEzsignfolderID 
@@ -1985,6 +2035,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * POST /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsignfoldersignerassociations
      * Import an existing Ezsignfoldersignerassociation into this Ezsignfolder
      * 
      * @param pkiEzsignfolderID 
@@ -2017,6 +2068,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * POST /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsignfoldersignerassociations
      * Import an existing Ezsignfoldersignerassociation into this Ezsignfolder
      * 
      * @param pkiEzsignfolderID 
@@ -2060,6 +2112,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * POST /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage
      * Import an Ezsigntemplatepackage in the Ezsignfolder.
      * This endpoint imports all of the Ezsigntemplates from the Ezsigntemplatepackage into the Ezsignfolder as Ezsigndocuments.  This allows to automatically apply all the Ezsigntemplateformfieldgroups and Ezsigntemplatesignatures on the newly created Ezsigndocuments in a single step.
      * @param pkiEzsignfolderID 
@@ -2092,6 +2145,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * POST /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage
      * Import an Ezsigntemplatepackage in the Ezsignfolder.
      * This endpoint imports all of the Ezsigntemplates from the Ezsigntemplatepackage into the Ezsignfolder as Ezsigndocuments.  This allows to automatically apply all the Ezsigntemplateformfieldgroups and Ezsigntemplatesignatures on the newly created Ezsigndocuments in a single step.
      * @param pkiEzsignfolderID 
@@ -2135,6 +2189,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * POST /1/object/ezsignfolder/{pkiEzsignfolderID}/reorder
      * Reorder Ezsigndocuments in the Ezsignfolder
      * 
      * @param pkiEzsignfolderID 
@@ -2169,6 +2224,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * POST /1/object/ezsignfolder/{pkiEzsignfolderID}/reorder
      * Reorder Ezsigndocuments in the Ezsignfolder
      * 
      * @param pkiEzsignfolderID 
@@ -2215,6 +2271,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * POST /2/object/ezsignfolder/{pkiEzsignfolderID}/reorder
      * Reorder Ezsigndocuments in the Ezsignfolder
      * 
      * @param pkiEzsignfolderID 
@@ -2247,6 +2304,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * POST /2/object/ezsignfolder/{pkiEzsignfolderID}/reorder
      * Reorder Ezsigndocuments in the Ezsignfolder
      * 
      * @param pkiEzsignfolderID 
@@ -2290,6 +2348,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * POST /1/object/ezsignfolder/{pkiEzsignfolderID}/send
      * Send the Ezsignfolder to the signatories for signature
      * 
      * @param pkiEzsignfolderID 
@@ -2324,6 +2383,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * POST /1/object/ezsignfolder/{pkiEzsignfolderID}/send
      * Send the Ezsignfolder to the signatories for signature
      * 
      * @param pkiEzsignfolderID 
@@ -2370,6 +2430,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * POST /3/object/ezsignfolder/{pkiEzsignfolderID}/send
      * Send the Ezsignfolder to the signatories for signature
      * 
      * @param pkiEzsignfolderID 
@@ -2402,6 +2463,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * POST /3/object/ezsignfolder/{pkiEzsignfolderID}/send
      * Send the Ezsignfolder to the signatories for signature
      * 
      * @param pkiEzsignfolderID 
@@ -2445,6 +2507,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * POST /1/object/ezsignfolder/{pkiEzsignfolderID}/unsend
      * Unsend the Ezsignfolder
      * Once an Ezsignfolder has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsignfolder and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on \&quot;Non-completed\&quot; Ezsigndocuments will be lost.
      * @param pkiEzsignfolderID 
@@ -2477,6 +2540,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * POST /1/object/ezsignfolder/{pkiEzsignfolderID}/unsend
      * Unsend the Ezsignfolder
      * Once an Ezsignfolder has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsignfolder and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on \&quot;Non-completed\&quot; Ezsigndocuments will be lost.
      * @param pkiEzsignfolderID 

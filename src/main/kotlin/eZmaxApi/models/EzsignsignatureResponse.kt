@@ -42,6 +42,7 @@ import com.squareup.moshi.JsonClass
  * @param objContactName 
  * @param fkiEzsignsigningreasonID The unique ID of the Ezsignsigningreason
  * @param fkiFontID The unique ID of the Font
+ * @param sCurrencyDescriptionX The description of the Currency in the language of the requester
  * @param sEzsignsigningreasonDescriptionX The description of the Ezsignsigningreason in the language of the requester
  * @param iEzsignsignatureHeight The height of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have an height of 2 inches, you would use \"200\" for the iEzsignsignatureHeight.
  * @param iEzsignsignatureWidth The width of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have a width of 2 inches, you would use \"200\" for the iEzsignsignatureWidth.
@@ -114,6 +115,10 @@ data class EzsignsignatureResponse (
     /* The unique ID of the Font */
     @Json(name = "fkiFontID")
     val fkiFontID: kotlin.Int? = null,
+
+    /* The description of the Currency in the language of the requester */
+    @Json(name = "sCurrencyDescriptionX")
+    val sCurrencyDescriptionX: kotlin.String? = null,
 
     /* The description of the Ezsignsigningreason in the language of the requester */
     @Json(name = "sEzsignsigningreasonDescriptionX")

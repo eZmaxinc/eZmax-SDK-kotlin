@@ -57,6 +57,7 @@ class ObjectEzsigntemplateApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * POST /1/object/ezsigntemplate/{pkiEzsigntemplateID}/copy
      * Copy the Ezsigntemplate
      * 
      * @param pkiEzsigntemplateID 
@@ -89,6 +90,7 @@ class ObjectEzsigntemplateApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * POST /1/object/ezsigntemplate/{pkiEzsigntemplateID}/copy
      * Copy the Ezsigntemplate
      * 
      * @param pkiEzsigntemplateID 
@@ -132,6 +134,7 @@ class ObjectEzsigntemplateApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * POST /3/object/ezsigntemplate
      * Create a new Ezsigntemplate
      * The endpoint allows to create one or many elements at once.
      * @param ezsigntemplateCreateObjectV3Request 
@@ -163,6 +166,7 @@ class ObjectEzsigntemplateApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * POST /3/object/ezsigntemplate
      * Create a new Ezsigntemplate
      * The endpoint allows to create one or many elements at once.
      * @param ezsigntemplateCreateObjectV3Request 
@@ -204,6 +208,7 @@ class ObjectEzsigntemplateApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * DELETE /1/object/ezsigntemplate/{pkiEzsigntemplateID}
      * Delete an existing Ezsigntemplate
      * 
      * @param pkiEzsigntemplateID 
@@ -235,6 +240,7 @@ class ObjectEzsigntemplateApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * DELETE /1/object/ezsigntemplate/{pkiEzsigntemplateID}
      * Delete an existing Ezsigntemplate
      * 
      * @param pkiEzsigntemplateID 
@@ -275,6 +281,7 @@ class ObjectEzsigntemplateApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * PUT /3/object/ezsigntemplate/{pkiEzsigntemplateID}
      * Edit an existing Ezsigntemplate
      * 
      * @param pkiEzsigntemplateID 
@@ -307,6 +314,7 @@ class ObjectEzsigntemplateApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * PUT /3/object/ezsigntemplate/{pkiEzsigntemplateID}
      * Edit an existing Ezsigntemplate
      * 
      * @param pkiEzsigntemplateID 
@@ -385,6 +393,7 @@ class ObjectEzsigntemplateApi(basePath: kotlin.String = defaultBasePath, client:
      }
 
     /**
+     * GET /2/object/ezsigntemplate/getAutocomplete/{sSelector}
      * Retrieve Ezsigntemplates and IDs
      * Get the list of Ezsigntemplate to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezsigntemplates to return
@@ -420,6 +429,7 @@ class ObjectEzsigntemplateApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /2/object/ezsigntemplate/getAutocomplete/{sSelector}
      * Retrieve Ezsigntemplates and IDs
      * Get the list of Ezsigntemplate to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezsigntemplates to return
@@ -519,6 +529,7 @@ class ObjectEzsigntemplateApi(basePath: kotlin.String = defaultBasePath, client:
      }
 
     /**
+     * GET /1/object/ezsigntemplate/getList
      * Retrieve Ezsigntemplate list
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsigntemplateType | Company&lt;br&gt;Team&lt;br&gt;User&lt;br&gt;Usergroup | 
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -554,6 +565,7 @@ class ObjectEzsigntemplateApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /1/object/ezsigntemplate/getList
      * Retrieve Ezsigntemplate list
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsigntemplateType | Company&lt;br&gt;Team&lt;br&gt;User&lt;br&gt;Usergroup | 
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -617,6 +629,7 @@ class ObjectEzsigntemplateApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /3/object/ezsigntemplate/{pkiEzsigntemplateID}
      * Retrieve an existing Ezsigntemplate
      * 
      * @param pkiEzsigntemplateID 
@@ -648,6 +661,7 @@ class ObjectEzsigntemplateApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /3/object/ezsigntemplate/{pkiEzsigntemplateID}
      * Retrieve an existing Ezsigntemplate
      * 
      * @param pkiEzsigntemplateID 

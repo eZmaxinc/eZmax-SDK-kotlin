@@ -52,6 +52,7 @@ class ObjectCorsApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * POST /1/object/cors
      * Create a new Cors
      * The endpoint allows to create one or many elements at once.
      * @param corsCreateObjectV1Request 
@@ -83,6 +84,7 @@ class ObjectCorsApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * POST /1/object/cors
      * Create a new Cors
      * The endpoint allows to create one or many elements at once.
      * @param corsCreateObjectV1Request 
@@ -124,6 +126,7 @@ class ObjectCorsApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * DELETE /1/object/cors/{pkiCorsID}
      * Delete an existing Cors
      * 
      * @param pkiCorsID The unique ID of the Cors
@@ -155,6 +158,7 @@ class ObjectCorsApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * DELETE /1/object/cors/{pkiCorsID}
      * Delete an existing Cors
      * 
      * @param pkiCorsID The unique ID of the Cors
@@ -195,6 +199,7 @@ class ObjectCorsApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * PUT /1/object/cors/{pkiCorsID}
      * Edit an existing Cors
      * 
      * @param pkiCorsID The unique ID of the Cors
@@ -227,6 +232,7 @@ class ObjectCorsApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * PUT /1/object/cors/{pkiCorsID}
      * Edit an existing Cors
      * 
      * @param pkiCorsID The unique ID of the Cors
@@ -270,6 +276,7 @@ class ObjectCorsApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * GET /2/object/cors/{pkiCorsID}
      * Retrieve an existing Cors
      * 
      * @param pkiCorsID The unique ID of the Cors
@@ -301,6 +308,7 @@ class ObjectCorsApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * GET /2/object/cors/{pkiCorsID}
      * Retrieve an existing Cors
      * 
      * @param pkiCorsID The unique ID of the Cors

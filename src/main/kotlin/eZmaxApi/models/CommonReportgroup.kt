@@ -17,6 +17,7 @@ package eZmaxApi.models
 
 import eZmaxApi.models.CommonReport
 import eZmaxApi.models.CommonReportcellstyle
+import eZmaxApi.models.CommonReportgroupParameter
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -26,6 +27,8 @@ import com.squareup.moshi.JsonClass
  *
  * @param aObjReport 
  * @param aObjReportcellstyleCustom 
+ * @param aObjReportgroupParameter 
+ * @param sReportgroupFilename The name of the file
  */
 
 
@@ -35,7 +38,14 @@ data class CommonReportgroup (
     val aObjReport: kotlin.collections.List<CommonReport>,
 
     @Json(name = "a_objReportcellstyleCustom")
-    val aObjReportcellstyleCustom: kotlin.collections.List<CommonReportcellstyle>
+    val aObjReportcellstyleCustom: kotlin.collections.List<CommonReportcellstyle>,
+
+    @Json(name = "a_objReportgroupParameter")
+    val aObjReportgroupParameter: kotlin.collections.List<CommonReportgroupParameter>,
+
+    /* The name of the file */
+    @Json(name = "sReportgroupFilename")
+    val sReportgroupFilename: kotlin.String
 
 ) {
 

@@ -22,7 +22,9 @@ import okhttp3.HttpUrl
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.CustomerCreateObjectV1Request
 import eZmaxApi.models.CustomerCreateObjectV1Response
+import eZmaxApi.models.CustomerGetAutocompleteV2Response
 import eZmaxApi.models.CustomerGetObjectV2Response
+import eZmaxApi.models.HeaderAcceptLanguage
 
 import com.squareup.moshi.Json
 
@@ -49,6 +51,7 @@ class ObjectCustomerApi(basePath: kotlin.String = defaultBasePath, client: Call.
     }
 
     /**
+     * POST /1/object/customer
      * Create a new Customer
      * The endpoint allows to create one or many elements at once.
      * @param customerCreateObjectV1Request 
@@ -80,6 +83,7 @@ class ObjectCustomerApi(basePath: kotlin.String = defaultBasePath, client: Call.
     }
 
     /**
+     * POST /1/object/customer
      * Create a new Customer
      * The endpoint allows to create one or many elements at once.
      * @param customerCreateObjectV1Request 
@@ -121,6 +125,132 @@ class ObjectCustomerApi(basePath: kotlin.String = defaultBasePath, client: Call.
     }
 
     /**
+     * enum for parameter sSelector
+     */
+     enum class SSelectorCustomerGetAutocompleteV2(val value: kotlin.String) {
+         @Json(name = "All") All("All");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
+     }
+
+    /**
+     * enum for parameter eFilterActive
+     */
+     enum class EFilterActiveCustomerGetAutocompleteV2(val value: kotlin.String) {
+         @Json(name = "All") All("All"),
+         @Json(name = "Active") Active("Active"),
+         @Json(name = "Inactive") Inactive("Inactive");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
+     }
+
+    /**
+     * GET /2/object/customer/getAutocomplete/{sSelector}
+     * Retrieve Customers and IDs
+     * Get the list of Customer to be used in a dropdown or autocomplete control.
+     * @param sSelector The type of Customers to return
+     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param sQuery Allow to filter the returned results (optional)
+     * @param acceptLanguage  (optional)
+     * @return CustomerGetAutocompleteV2Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun customerGetAutocompleteV2(sSelector: SSelectorCustomerGetAutocompleteV2, eFilterActive: EFilterActiveCustomerGetAutocompleteV2? = EFilterActiveCustomerGetAutocompleteV2.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderAcceptLanguage? = null) : CustomerGetAutocompleteV2Response {
+        val localVarResponse = customerGetAutocompleteV2WithHttpInfo(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CustomerGetAutocompleteV2Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /2/object/customer/getAutocomplete/{sSelector}
+     * Retrieve Customers and IDs
+     * Get the list of Customer to be used in a dropdown or autocomplete control.
+     * @param sSelector The type of Customers to return
+     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param sQuery Allow to filter the returned results (optional)
+     * @param acceptLanguage  (optional)
+     * @return ApiResponse<CustomerGetAutocompleteV2Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun customerGetAutocompleteV2WithHttpInfo(sSelector: SSelectorCustomerGetAutocompleteV2, eFilterActive: EFilterActiveCustomerGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : ApiResponse<CustomerGetAutocompleteV2Response?> {
+        val localVariableConfig = customerGetAutocompleteV2RequestConfig(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
+
+        return request<Unit, CustomerGetAutocompleteV2Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation customerGetAutocompleteV2
+     *
+     * @param sSelector The type of Customers to return
+     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param sQuery Allow to filter the returned results (optional)
+     * @param acceptLanguage  (optional)
+     * @return RequestConfig
+     */
+    fun customerGetAutocompleteV2RequestConfig(sSelector: SSelectorCustomerGetAutocompleteV2, eFilterActive: EFilterActiveCustomerGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (eFilterActive != null) {
+                    put("eFilterActive", listOf(eFilterActive.value))
+                }
+                if (sQuery != null) {
+                    put("sQuery", listOf(sQuery.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/2/object/customer/getAutocomplete/{sSelector}".replace("{"+"sSelector"+"}", encodeURIComponent(sSelector.value.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /2/object/customer/{pkiCustomerID}
      * Retrieve an existing Customer
      * 
      * @param pkiCustomerID The unique ID of the Customer
@@ -152,6 +282,7 @@ class ObjectCustomerApi(basePath: kotlin.String = defaultBasePath, client: Call.
     }
 
     /**
+     * GET /2/object/customer/{pkiCustomerID}
      * Retrieve an existing Customer
      * 
      * @param pkiCustomerID The unique ID of the Customer

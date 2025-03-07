@@ -24,6 +24,9 @@
 | **dtEzsignfolderSentdate** | **kotlin.String** | The date and time at which the Ezsignfolder was sent the last time. |  [optional] |
 | **dtEzsignfolderDuedate** | **kotlin.String** | The maximum date and time at which the Ezsignfolder can be signed. |  [optional] |
 | **bEzsignformHasdependencies** | **kotlin.Boolean** | Whether the Ezsignform/Ezsignsignatures has dependencies or not |  [optional] |
+| **dtEzsignfolderClose** | **kotlin.String** | The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely. |  [optional] |
+| **dtEzsignfolderArchive** | **kotlin.String** | The date and time at which the Ezsignfolder was archived. |  [optional] |
+| **dtEzsignfolderDispose** | **kotlin.String** | The date and time at which the Ezsignfolder was disposed. |  [optional] |
 | **bEzsignfolderSigner** | **kotlin.Boolean** | Whether the Ezsignfolder has an Ezsignsignatures that need to be signed or an Ezsignformfieldgroups that need to be filled by the current user |  [optional] |
 
 

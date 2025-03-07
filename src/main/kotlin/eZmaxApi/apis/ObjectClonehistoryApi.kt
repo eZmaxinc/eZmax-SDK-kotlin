@@ -85,6 +85,7 @@ class ObjectClonehistoryApi(basePath: kotlin.String = defaultBasePath, client: C
      }
 
     /**
+     * GET /1/object/clonehistory/getList
      * Retrieve Clonehistory list
      * 
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -120,6 +121,7 @@ class ObjectClonehistoryApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * GET /1/object/clonehistory/getList
      * Retrieve Clonehistory list
      * 
      * @param eOrderBy Specify how you want the results to be sorted (optional)

@@ -24,6 +24,8 @@ import com.squareup.moshi.JsonClass
  *
  * @param iReportcellColumnspan The number of Reportcolumns the Reportcell spans
  * @param iReportcellRowspan The number of Reportrows the Reportcell spans
+ * @param sReportcellContent The content of this Reportcell
+ * @param iReportcellColumn Position of the column where it is placed
  */
 
 
@@ -35,7 +37,15 @@ data class CommonReportcell (
 
     /* The number of Reportrows the Reportcell spans */
     @Json(name = "iReportcellRowspan")
-    val iReportcellRowspan: kotlin.Int
+    val iReportcellRowspan: kotlin.Int,
+
+    /* The content of this Reportcell */
+    @Json(name = "sReportcellContent")
+    val sReportcellContent: kotlin.String,
+
+    /* Position of the column where it is placed */
+    @Json(name = "iReportcellColumn")
+    val iReportcellColumn: kotlin.Int
 
 ) {
 

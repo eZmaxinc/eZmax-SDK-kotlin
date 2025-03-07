@@ -46,6 +46,7 @@ class ScimServiceProviderConfigApi(basePath: kotlin.String = defaultBasePath, cl
     }
 
     /**
+     * GET /2/scim/ServiceProviderConfig
      * Get Service Provider Configuration
      * 
      * @return ScimServiceProviderConfig
@@ -76,6 +77,7 @@ class ScimServiceProviderConfigApi(basePath: kotlin.String = defaultBasePath, cl
     }
 
     /**
+     * GET /2/scim/ServiceProviderConfig
      * Get Service Provider Configuration
      * 
      * @return ApiResponse<ScimServiceProviderConfig?>

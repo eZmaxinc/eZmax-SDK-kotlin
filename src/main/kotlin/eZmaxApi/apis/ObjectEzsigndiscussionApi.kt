@@ -50,6 +50,7 @@ class ObjectEzsigndiscussionApi(basePath: kotlin.String = defaultBasePath, clien
     }
 
     /**
+     * POST /1/object/ezsigndiscussion
      * Create a new Ezsigndiscussion
      * The endpoint allows to create one or many elements at once.
      * @param ezsigndiscussionCreateObjectV1Request 
@@ -81,6 +82,7 @@ class ObjectEzsigndiscussionApi(basePath: kotlin.String = defaultBasePath, clien
     }
 
     /**
+     * POST /1/object/ezsigndiscussion
      * Create a new Ezsigndiscussion
      * The endpoint allows to create one or many elements at once.
      * @param ezsigndiscussionCreateObjectV1Request 
@@ -122,6 +124,7 @@ class ObjectEzsigndiscussionApi(basePath: kotlin.String = defaultBasePath, clien
     }
 
     /**
+     * DELETE /1/object/ezsigndiscussion/{pkiEzsigndiscussionID}
      * Delete an existing Ezsigndiscussion
      * 
      * @param pkiEzsigndiscussionID The unique ID of the Ezsigndiscussion
@@ -153,6 +156,7 @@ class ObjectEzsigndiscussionApi(basePath: kotlin.String = defaultBasePath, clien
     }
 
     /**
+     * DELETE /1/object/ezsigndiscussion/{pkiEzsigndiscussionID}
      * Delete an existing Ezsigndiscussion
      * 
      * @param pkiEzsigndiscussionID The unique ID of the Ezsigndiscussion
@@ -193,6 +197,7 @@ class ObjectEzsigndiscussionApi(basePath: kotlin.String = defaultBasePath, clien
     }
 
     /**
+     * GET /2/object/ezsigndiscussion/{pkiEzsigndiscussionID}
      * Retrieve an existing Ezsigndiscussion
      * 
      * @param pkiEzsigndiscussionID The unique ID of the Ezsigndiscussion
@@ -224,6 +229,7 @@ class ObjectEzsigndiscussionApi(basePath: kotlin.String = defaultBasePath, clien
     }
 
     /**
+     * GET /2/object/ezsigndiscussion/{pkiEzsigndiscussionID}
      * Retrieve an existing Ezsigndiscussion
      * 
      * @param pkiEzsigndiscussionID The unique ID of the Ezsigndiscussion

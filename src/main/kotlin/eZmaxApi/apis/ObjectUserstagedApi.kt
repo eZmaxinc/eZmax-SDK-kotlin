@@ -53,6 +53,7 @@ class ObjectUserstagedApi(basePath: kotlin.String = defaultBasePath, client: Cal
     }
 
     /**
+     * POST /1/object/userstaged/{pkiUserstagedID}/createUser
      * Create a User from a Userstaged and then map it
      * Default values will be used while creating the User. If you need to change those values, you should use the route to edit a User.
      * @param pkiUserstagedID 
@@ -85,6 +86,7 @@ class ObjectUserstagedApi(basePath: kotlin.String = defaultBasePath, client: Cal
     }
 
     /**
+     * POST /1/object/userstaged/{pkiUserstagedID}/createUser
      * Create a User from a Userstaged and then map it
      * Default values will be used while creating the User. If you need to change those values, you should use the route to edit a User.
      * @param pkiUserstagedID 
@@ -128,6 +130,7 @@ class ObjectUserstagedApi(basePath: kotlin.String = defaultBasePath, client: Cal
     }
 
     /**
+     * DELETE /1/object/userstaged/{pkiUserstagedID}
      * Delete an existing Userstaged
      * 
      * @param pkiUserstagedID 
@@ -159,6 +162,7 @@ class ObjectUserstagedApi(basePath: kotlin.String = defaultBasePath, client: Cal
     }
 
     /**
+     * DELETE /1/object/userstaged/{pkiUserstagedID}
      * Delete an existing Userstaged
      * 
      * @param pkiUserstagedID 
@@ -224,6 +228,7 @@ class ObjectUserstagedApi(basePath: kotlin.String = defaultBasePath, client: Cal
      }
 
     /**
+     * GET /1/object/userstaged/getList
      * Retrieve Userstaged list
      * 
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -259,6 +264,7 @@ class ObjectUserstagedApi(basePath: kotlin.String = defaultBasePath, client: Cal
     }
 
     /**
+     * GET /1/object/userstaged/getList
      * Retrieve Userstaged list
      * 
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -322,6 +328,7 @@ class ObjectUserstagedApi(basePath: kotlin.String = defaultBasePath, client: Cal
     }
 
     /**
+     * GET /2/object/userstaged/{pkiUserstagedID}
      * Retrieve an existing Userstaged
      * 
      * @param pkiUserstagedID 
@@ -353,6 +360,7 @@ class ObjectUserstagedApi(basePath: kotlin.String = defaultBasePath, client: Cal
     }
 
     /**
+     * GET /2/object/userstaged/{pkiUserstagedID}
      * Retrieve an existing Userstaged
      * 
      * @param pkiUserstagedID 
@@ -393,6 +401,7 @@ class ObjectUserstagedApi(basePath: kotlin.String = defaultBasePath, client: Cal
     }
 
     /**
+     * POST /1/object/userstaged/{pkiUserstagedID}/map
      * Map the Userstaged to an existing user
      * 
      * @param pkiUserstagedID 
@@ -425,6 +434,7 @@ class ObjectUserstagedApi(basePath: kotlin.String = defaultBasePath, client: Cal
     }
 
     /**
+     * POST /1/object/userstaged/{pkiUserstagedID}/map
      * Map the Userstaged to an existing user
      * 
      * @param pkiUserstagedID 

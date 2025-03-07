@@ -64,6 +64,7 @@ class GlobalCustomerApi(basePath: kotlin.String = defaultBasePath, client: Call.
      }
 
     /**
+     * GET /1/customer/{pksCustomerCode}/endpoint
      * Get customer endpoint
      * Retrieve the customer&#39;s specific server endpoint where to send requests. This will help locate the proper region (ie: sInfrastructureregionCode) and the proper environment (ie: sInfrastructureenvironmenttypeDescription) where the customer&#39;s data is stored.
      * @param pksCustomerCode 
@@ -98,6 +99,7 @@ class GlobalCustomerApi(basePath: kotlin.String = defaultBasePath, client: Call.
     }
 
     /**
+     * GET /1/customer/{pksCustomerCode}/endpoint
      * Get customer endpoint
      * Retrieve the customer&#39;s specific server endpoint where to send requests. This will help locate the proper region (ie: sInfrastructureregionCode) and the proper environment (ie: sInfrastructureenvironmenttypeDescription) where the customer&#39;s data is stored.
      * @param pksCustomerCode 

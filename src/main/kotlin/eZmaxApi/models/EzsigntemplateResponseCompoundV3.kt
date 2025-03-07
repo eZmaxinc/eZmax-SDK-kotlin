@@ -16,6 +16,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.CommonAudit
+import eZmaxApi.models.CustomEzsignfoldertypeTemplateResponse
 import eZmaxApi.models.EzsigntemplatedocumentResponse
 import eZmaxApi.models.EzsigntemplatesignerResponseCompound
 import eZmaxApi.models.FieldEEzsigntemplateRecognition
@@ -37,6 +38,7 @@ import com.squareup.moshi.JsonClass
  * @param aObjEzsigntemplatesigner 
  * @param fkiEzsigntemplatedocumentID The unique ID of the Ezsigntemplatedocument
  * @param fkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
+ * @param objEzsignfoldertype 
  * @param fkiEzdoctemplatedocumentID The unique ID of the Ezdoctemplatedocument
  * @param sEzdoctemplatedocumentNameX The name of the Ezdoctemplatedocument in the language of the requester
  * @param sEzsigntemplateExternaldescription The external description of the Ezsigntemplate
@@ -88,6 +90,9 @@ data class EzsigntemplateResponseCompoundV3 (
     /* The unique ID of the Ezsignfoldertype. */
     @Json(name = "fkiEzsignfoldertypeID")
     val fkiEzsignfoldertypeID: kotlin.Int? = null,
+
+    @Json(name = "objEzsignfoldertype")
+    val objEzsignfoldertype: CustomEzsignfoldertypeTemplateResponse? = null,
 
     /* The unique ID of the Ezdoctemplatedocument */
     @Json(name = "fkiEzdoctemplatedocumentID")

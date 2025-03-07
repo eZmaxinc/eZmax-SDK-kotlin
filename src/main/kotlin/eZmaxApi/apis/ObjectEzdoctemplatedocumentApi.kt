@@ -56,6 +56,7 @@ class ObjectEzdoctemplatedocumentApi(basePath: kotlin.String = defaultBasePath, 
     }
 
     /**
+     * POST /1/object/ezdoctemplatedocument
      * Create a new Ezdoctemplatedocument
      * The endpoint allows to create one or many elements at once.
      * @param ezdoctemplatedocumentCreateObjectV1Request 
@@ -87,6 +88,7 @@ class ObjectEzdoctemplatedocumentApi(basePath: kotlin.String = defaultBasePath, 
     }
 
     /**
+     * POST /1/object/ezdoctemplatedocument
      * Create a new Ezdoctemplatedocument
      * The endpoint allows to create one or many elements at once.
      * @param ezdoctemplatedocumentCreateObjectV1Request 
@@ -128,6 +130,7 @@ class ObjectEzdoctemplatedocumentApi(basePath: kotlin.String = defaultBasePath, 
     }
 
     /**
+     * GET /1/object/ezdoctemplatedocument/{pkiEzdoctemplatedocumentID}/download
      * Retrieve the content
      * Using this endpoint, you can retrieve the content of an ezdoctemplatedocument.
      * @param pkiEzdoctemplatedocumentID 
@@ -158,6 +161,7 @@ class ObjectEzdoctemplatedocumentApi(basePath: kotlin.String = defaultBasePath, 
     }
 
     /**
+     * GET /1/object/ezdoctemplatedocument/{pkiEzdoctemplatedocumentID}/download
      * Retrieve the content
      * Using this endpoint, you can retrieve the content of an ezdoctemplatedocument.
      * @param pkiEzdoctemplatedocumentID 
@@ -197,6 +201,7 @@ class ObjectEzdoctemplatedocumentApi(basePath: kotlin.String = defaultBasePath, 
     }
 
     /**
+     * PUT /1/object/ezdoctemplatedocument/{pkiEzdoctemplatedocumentID}
      * Edit an existing Ezdoctemplatedocument
      * 
      * @param pkiEzdoctemplatedocumentID The unique ID of the Ezdoctemplatedocument
@@ -229,6 +234,7 @@ class ObjectEzdoctemplatedocumentApi(basePath: kotlin.String = defaultBasePath, 
     }
 
     /**
+     * PUT /1/object/ezdoctemplatedocument/{pkiEzdoctemplatedocumentID}
      * Edit an existing Ezdoctemplatedocument
      * 
      * @param pkiEzdoctemplatedocumentID The unique ID of the Ezdoctemplatedocument
@@ -328,6 +334,7 @@ class ObjectEzdoctemplatedocumentApi(basePath: kotlin.String = defaultBasePath, 
      }
 
     /**
+     * GET /2/object/ezdoctemplatedocument/getAutocomplete/{sSelector}
      * Retrieve Ezdoctemplatedocuments and IDs
      * Get the list of Ezdoctemplatedocument to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezdoctemplatedocuments to return
@@ -364,6 +371,7 @@ class ObjectEzdoctemplatedocumentApi(basePath: kotlin.String = defaultBasePath, 
     }
 
     /**
+     * GET /2/object/ezdoctemplatedocument/getAutocomplete/{sSelector}
      * Retrieve Ezdoctemplatedocuments and IDs
      * Get the list of Ezdoctemplatedocument to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezdoctemplatedocuments to return
@@ -454,6 +462,7 @@ class ObjectEzdoctemplatedocumentApi(basePath: kotlin.String = defaultBasePath, 
      }
 
     /**
+     * GET /1/object/ezdoctemplatedocument/getList
      * Retrieve Ezdoctemplatedocument list
      * 
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -489,6 +498,7 @@ class ObjectEzdoctemplatedocumentApi(basePath: kotlin.String = defaultBasePath, 
     }
 
     /**
+     * GET /1/object/ezdoctemplatedocument/getList
      * Retrieve Ezdoctemplatedocument list
      * 
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -552,6 +562,7 @@ class ObjectEzdoctemplatedocumentApi(basePath: kotlin.String = defaultBasePath, 
     }
 
     /**
+     * GET /2/object/ezdoctemplatedocument/{pkiEzdoctemplatedocumentID}
      * Retrieve an existing Ezdoctemplatedocument
      * 
      * @param pkiEzdoctemplatedocumentID The unique ID of the Ezdoctemplatedocument
@@ -583,6 +594,7 @@ class ObjectEzdoctemplatedocumentApi(basePath: kotlin.String = defaultBasePath, 
     }
 
     /**
+     * GET /2/object/ezdoctemplatedocument/{pkiEzdoctemplatedocumentID}
      * Retrieve an existing Ezdoctemplatedocument
      * 
      * @param pkiEzdoctemplatedocumentID The unique ID of the Ezdoctemplatedocument
@@ -623,6 +635,7 @@ class ObjectEzdoctemplatedocumentApi(basePath: kotlin.String = defaultBasePath, 
     }
 
     /**
+     * PATCH /1/object/ezdoctemplatedocument/{pkiEzdoctemplatedocumentID}
      * Patch an existing Ezdoctemplatedocument
      * 
      * @param pkiEzdoctemplatedocumentID The unique ID of the Ezdoctemplatedocument
@@ -655,6 +668,7 @@ class ObjectEzdoctemplatedocumentApi(basePath: kotlin.String = defaultBasePath, 
     }
 
     /**
+     * PATCH /1/object/ezdoctemplatedocument/{pkiEzdoctemplatedocumentID}
      * Patch an existing Ezdoctemplatedocument
      * 
      * @param pkiEzdoctemplatedocumentID The unique ID of the Ezdoctemplatedocument

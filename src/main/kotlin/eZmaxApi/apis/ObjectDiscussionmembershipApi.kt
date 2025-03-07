@@ -49,6 +49,7 @@ class ObjectDiscussionmembershipApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * POST /1/object/discussionmembership
      * Create a new Discussionmembership
      * The endpoint allows to create one or many elements at once.
      * @param discussionmembershipCreateObjectV1Request 
@@ -80,6 +81,7 @@ class ObjectDiscussionmembershipApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * POST /1/object/discussionmembership
      * Create a new Discussionmembership
      * The endpoint allows to create one or many elements at once.
      * @param discussionmembershipCreateObjectV1Request 
@@ -121,6 +123,7 @@ class ObjectDiscussionmembershipApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * DELETE /1/object/discussionmembership/{pkiDiscussionmembershipID}
      * Delete an existing Discussionmembership
      * 
      * @param pkiDiscussionmembershipID The unique ID of the Discussionmembership
@@ -152,6 +155,7 @@ class ObjectDiscussionmembershipApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * DELETE /1/object/discussionmembership/{pkiDiscussionmembershipID}
      * Delete an existing Discussionmembership
      * 
      * @param pkiDiscussionmembershipID The unique ID of the Discussionmembership

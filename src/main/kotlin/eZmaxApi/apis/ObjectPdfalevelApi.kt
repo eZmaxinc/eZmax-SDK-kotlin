@@ -81,6 +81,7 @@ class ObjectPdfalevelApi(basePath: kotlin.String = defaultBasePath, client: Call
      }
 
     /**
+     * GET /2/object/pdfalevel/getAutocomplete/{sSelector}
      * Retrieve Pdfalevels and IDs
      * Get the list of Pdfalevel to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Pdfalevels to return
@@ -115,6 +116,7 @@ class ObjectPdfalevelApi(basePath: kotlin.String = defaultBasePath, client: Call
     }
 
     /**
+     * GET /2/object/pdfalevel/getAutocomplete/{sSelector}
      * Retrieve Pdfalevels and IDs
      * Get the list of Pdfalevel to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Pdfalevels to return

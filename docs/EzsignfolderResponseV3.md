@@ -27,6 +27,8 @@
 | **dtEzsignfolderScheduleddispose** | **kotlin.String** | The scheduled date at which the Ezsignfolder should be Disposed. |  [optional] |
 | **eEzsignfolderStep** | [**FieldEEzsignfolderStep**](FieldEEzsignfolderStep.md) |  |  [optional] |
 | **dtEzsignfolderClose** | **kotlin.String** | The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely. |  [optional] |
+| **dtEzsignfolderArchive** | **kotlin.String** | The date and time at which the Ezsignfolder was archived. |  [optional] |
+| **dtEzsignfolderDispose** | **kotlin.String** | The date and time at which the Ezsignfolder was disposed. |  [optional] |
 | **tEzsignfolderMessage** | **kotlin.String** | A custom text message that will be added to the email sent. |  [optional] |
 | **objAudit** | [**CommonAudit**](CommonAudit.md) |  |  [optional] |
 | **sEzsignfolderExternalid** | **kotlin.String** | This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format.  |  [optional] |

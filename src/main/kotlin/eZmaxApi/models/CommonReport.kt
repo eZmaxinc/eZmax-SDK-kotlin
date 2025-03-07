@@ -24,13 +24,23 @@ import com.squareup.moshi.JsonClass
  * A Report containing Reportsections 
  *
  * @param aObjReportsection 
+ * @param bReportPaginate Whether we display pagination in the report
+ * @param sReportTitle The title of this Report
  */
 
 
 data class CommonReport (
 
     @Json(name = "a_objReportsection")
-    val aObjReportsection: kotlin.collections.List<CommonReportsection>
+    val aObjReportsection: kotlin.collections.List<CommonReportsection>,
+
+    /* Whether we display pagination in the report */
+    @Json(name = "bReportPaginate")
+    val bReportPaginate: kotlin.Boolean? = null,
+
+    /* The title of this Report */
+    @Json(name = "sReportTitle")
+    val sReportTitle: kotlin.String? = null
 
 ) {
 

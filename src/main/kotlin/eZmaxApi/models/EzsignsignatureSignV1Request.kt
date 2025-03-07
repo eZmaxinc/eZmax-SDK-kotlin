@@ -16,6 +16,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.CommonFile
+import eZmaxApi.models.CustomCreditcardRequest
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -31,6 +32,7 @@ import com.squareup.moshi.JsonClass
  * @param sAttachmentsRefusalReason The reason of refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**
  * @param sSvg The SVG of the signature.  This can only be set if eEzsignsignatureType is **Signature**_/_**Initials** and **bIsAutomatic** is false
  * @param aObjFile 
+ * @param objCreditcard 
  */
 
 
@@ -65,7 +67,10 @@ data class EzsignsignatureSignV1Request (
     val sSvg: kotlin.String? = null,
 
     @Json(name = "a_objFile")
-    val aObjFile: kotlin.collections.List<CommonFile>? = null
+    val aObjFile: kotlin.collections.List<CommonFile>? = null,
+
+    @Json(name = "objCreditcard")
+    val objCreditcard: CustomCreditcardRequest? = null
 
 ) {
 

@@ -82,6 +82,7 @@ class ObjectGlaccountcontainerApi(basePath: kotlin.String = defaultBasePath, cli
      }
 
     /**
+     * GET /2/object/glaccountcontainer/getAutocomplete/{sSelector}
      * Retrieve Glaccountcontainers and IDs
      * Get the list of Glaccountcontainer to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Glaccountcontainers to return
@@ -116,6 +117,7 @@ class ObjectGlaccountcontainerApi(basePath: kotlin.String = defaultBasePath, cli
     }
 
     /**
+     * GET /2/object/glaccountcontainer/getAutocomplete/{sSelector}
      * Retrieve Glaccountcontainers and IDs
      * Get the list of Glaccountcontainer to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Glaccountcontainers to return

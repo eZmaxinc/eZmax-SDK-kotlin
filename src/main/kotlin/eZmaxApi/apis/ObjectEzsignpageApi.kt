@@ -47,6 +47,7 @@ class ObjectEzsignpageApi(basePath: kotlin.String = defaultBasePath, client: Cal
     }
 
     /**
+     * POST /1/object/ezsignpage/{pkiEzsignpageID}/consult
      * Consult an Ezsignpage
      * 
      * @param pkiEzsignpageID 
@@ -79,6 +80,7 @@ class ObjectEzsignpageApi(basePath: kotlin.String = defaultBasePath, client: Cal
     }
 
     /**
+     * POST /1/object/ezsignpage/{pkiEzsignpageID}/consult
      * Consult an Ezsignpage
      * 
      * @param pkiEzsignpageID 

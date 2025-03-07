@@ -47,6 +47,7 @@ class ObjectNotificationsectionApi(basePath: kotlin.String = defaultBasePath, cl
     }
 
     /**
+     * GET /1/object/notificationsection/{pkiNotificationsectionID}/getNotificationtests
      * Retrieve an existing Notificationsection&#39;s Notificationtests
      * 
      * @param pkiNotificationsectionID 
@@ -79,6 +80,7 @@ class ObjectNotificationsectionApi(basePath: kotlin.String = defaultBasePath, cl
     }
 
     /**
+     * GET /1/object/notificationsection/{pkiNotificationsectionID}/getNotificationtests
      * Retrieve an existing Notificationsection&#39;s Notificationtests
      * 
      * @param pkiNotificationsectionID 

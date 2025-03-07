@@ -50,6 +50,7 @@ class ObjectOtherincomeApi(basePath: kotlin.String = defaultBasePath, client: Ca
     }
 
     /**
+     * GET /1/object/otherincome/{pkiOtherincomeID}/getCommunicationCount
      * Retrieve Communication count
      * 
      * @param pkiOtherincomeID 
@@ -81,6 +82,7 @@ class ObjectOtherincomeApi(basePath: kotlin.String = defaultBasePath, client: Ca
     }
 
     /**
+     * GET /1/object/otherincome/{pkiOtherincomeID}/getCommunicationCount
      * Retrieve Communication count
      * 
      * @param pkiOtherincomeID 
@@ -121,6 +123,7 @@ class ObjectOtherincomeApi(basePath: kotlin.String = defaultBasePath, client: Ca
     }
 
     /**
+     * GET /1/object/otherincome/{pkiOtherincomeID}/getCommunicationList
      * Retrieve Communication list
      * 
      * @param pkiOtherincomeID 
@@ -152,6 +155,7 @@ class ObjectOtherincomeApi(basePath: kotlin.String = defaultBasePath, client: Ca
     }
 
     /**
+     * GET /1/object/otherincome/{pkiOtherincomeID}/getCommunicationList
      * Retrieve Communication list
      * 
      * @param pkiOtherincomeID 
@@ -192,6 +196,7 @@ class ObjectOtherincomeApi(basePath: kotlin.String = defaultBasePath, client: Ca
     }
 
     /**
+     * GET /1/object/otherincome/{pkiOtherincomeID}/getCommunicationrecipients
      * Retrieve Otherincome&#39;s Communicationrecipient
      * 
      * @param pkiOtherincomeID 
@@ -223,6 +228,7 @@ class ObjectOtherincomeApi(basePath: kotlin.String = defaultBasePath, client: Ca
     }
 
     /**
+     * GET /1/object/otherincome/{pkiOtherincomeID}/getCommunicationrecipients
      * Retrieve Otherincome&#39;s Communicationrecipient
      * 
      * @param pkiOtherincomeID 
@@ -263,6 +269,7 @@ class ObjectOtherincomeApi(basePath: kotlin.String = defaultBasePath, client: Ca
     }
 
     /**
+     * GET /1/object/otherincome/{pkiOtherincomeID}/getCommunicationsenders
      * Retrieve Otherincome&#39;s Communicationsender
      * 
      * @param pkiOtherincomeID 
@@ -294,6 +301,7 @@ class ObjectOtherincomeApi(basePath: kotlin.String = defaultBasePath, client: Ca
     }
 
     /**
+     * GET /1/object/otherincome/{pkiOtherincomeID}/getCommunicationsenders
      * Retrieve Otherincome&#39;s Communicationsender
      * 
      * @param pkiOtherincomeID 

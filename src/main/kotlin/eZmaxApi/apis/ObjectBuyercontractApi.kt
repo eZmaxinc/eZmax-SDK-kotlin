@@ -50,6 +50,7 @@ class ObjectBuyercontractApi(basePath: kotlin.String = defaultBasePath, client: 
     }
 
     /**
+     * GET /1/object/buyercontract/{pkiBuyercontractID}/getCommunicationCount
      * Retrieve Communication count
      * 
      * @param pkiBuyercontractID 
@@ -81,6 +82,7 @@ class ObjectBuyercontractApi(basePath: kotlin.String = defaultBasePath, client: 
     }
 
     /**
+     * GET /1/object/buyercontract/{pkiBuyercontractID}/getCommunicationCount
      * Retrieve Communication count
      * 
      * @param pkiBuyercontractID 
@@ -121,6 +123,7 @@ class ObjectBuyercontractApi(basePath: kotlin.String = defaultBasePath, client: 
     }
 
     /**
+     * GET /1/object/buyercontract/{pkiBuyercontractID}/getCommunicationList
      * Retrieve Communication list
      * 
      * @param pkiBuyercontractID 
@@ -152,6 +155,7 @@ class ObjectBuyercontractApi(basePath: kotlin.String = defaultBasePath, client: 
     }
 
     /**
+     * GET /1/object/buyercontract/{pkiBuyercontractID}/getCommunicationList
      * Retrieve Communication list
      * 
      * @param pkiBuyercontractID 
@@ -192,6 +196,7 @@ class ObjectBuyercontractApi(basePath: kotlin.String = defaultBasePath, client: 
     }
 
     /**
+     * GET /1/object/buyercontract/{pkiBuyercontractID}/getCommunicationrecipients
      * Retrieve Buyercontract&#39;s Communicationrecipient
      * 
      * @param pkiBuyercontractID 
@@ -223,6 +228,7 @@ class ObjectBuyercontractApi(basePath: kotlin.String = defaultBasePath, client: 
     }
 
     /**
+     * GET /1/object/buyercontract/{pkiBuyercontractID}/getCommunicationrecipients
      * Retrieve Buyercontract&#39;s Communicationrecipient
      * 
      * @param pkiBuyercontractID 
@@ -263,6 +269,7 @@ class ObjectBuyercontractApi(basePath: kotlin.String = defaultBasePath, client: 
     }
 
     /**
+     * GET /1/object/buyercontract/{pkiBuyercontractID}/getCommunicationsenders
      * Retrieve Buyercontract&#39;s Communicationsender
      * 
      * @param pkiBuyercontractID 
@@ -294,6 +301,7 @@ class ObjectBuyercontractApi(basePath: kotlin.String = defaultBasePath, client: 
     }
 
     /**
+     * GET /1/object/buyercontract/{pkiBuyercontractID}/getCommunicationsenders
      * Retrieve Buyercontract&#39;s Communicationsender
      * 
      * @param pkiBuyercontractID 

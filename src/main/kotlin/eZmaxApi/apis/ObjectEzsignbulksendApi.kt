@@ -61,6 +61,7 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * POST /2/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission
      * Create a new Ezsignbulksendtransmission in the Ezsignbulksend
      * 
      * @param pkiEzsignbulksendID 
@@ -93,6 +94,7 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * POST /2/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission
      * Create a new Ezsignbulksendtransmission in the Ezsignbulksend
      * 
      * @param pkiEzsignbulksendID 
@@ -136,6 +138,7 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * POST /1/object/ezsignbulksend
      * Create a new Ezsignbulksend
      * The endpoint allows to create one or many elements at once.
      * @param ezsignbulksendCreateObjectV1Request 
@@ -167,6 +170,7 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * POST /1/object/ezsignbulksend
      * Create a new Ezsignbulksend
      * The endpoint allows to create one or many elements at once.
      * @param ezsignbulksendCreateObjectV1Request 
@@ -208,6 +212,7 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * DELETE /1/object/ezsignbulksend/{pkiEzsignbulksendID}
      * Delete an existing Ezsignbulksend
      * 
      * @param pkiEzsignbulksendID 
@@ -239,6 +244,7 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * DELETE /1/object/ezsignbulksend/{pkiEzsignbulksendID}
      * Delete an existing Ezsignbulksend
      * 
      * @param pkiEzsignbulksendID 
@@ -279,6 +285,7 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * PUT /1/object/ezsignbulksend/{pkiEzsignbulksendID}
      * Edit an existing Ezsignbulksend
      * 
      * @param pkiEzsignbulksendID 
@@ -311,6 +318,7 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * PUT /1/object/ezsignbulksend/{pkiEzsignbulksendID}
      * Edit an existing Ezsignbulksend
      * 
      * @param pkiEzsignbulksendID 
@@ -371,6 +379,7 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
      }
 
     /**
+     * GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getCsvTemplate
      * Retrieve an existing Ezsignbulksend&#39;s empty Csv template
      * 
      * @param pkiEzsignbulksendID 
@@ -403,6 +412,7 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getCsvTemplate
      * Retrieve an existing Ezsignbulksend&#39;s empty Csv template
      * 
      * @param pkiEzsignbulksendID 
@@ -448,6 +458,7 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignbulksendtransmissions
      * Retrieve an existing Ezsignbulksend&#39;s Ezsignbulksendtransmissions
      * 
      * @param pkiEzsignbulksendID 
@@ -479,6 +490,7 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignbulksendtransmissions
      * Retrieve an existing Ezsignbulksend&#39;s Ezsignbulksendtransmissions
      * 
      * @param pkiEzsignbulksendID 
@@ -519,6 +531,7 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignsignaturesAutomatic
      * Retrieve an existing Ezsignbulksend&#39;s automatic Ezsignsignatures
      * Return the Ezsignsignatures that can be signed by the current user at the current step in the process
      * @param pkiEzsignbulksendID 
@@ -550,6 +563,7 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignsignaturesAutomatic
      * Retrieve an existing Ezsignbulksend&#39;s automatic Ezsignsignatures
      * Return the Ezsignsignatures that can be signed by the current user at the current step in the process
      * @param pkiEzsignbulksendID 
@@ -590,6 +604,7 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getFormsData
      * Retrieve an existing Ezsignbulksend&#39;s forms data
      * 
      * @param pkiEzsignbulksendID 
@@ -621,6 +636,7 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getFormsData
      * Retrieve an existing Ezsignbulksend&#39;s forms data
      * 
      * @param pkiEzsignbulksendID 
@@ -700,6 +716,7 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
      }
 
     /**
+     * GET /1/object/ezsignbulksend/getList
      * Retrieve Ezsignbulksend list
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -735,6 +752,7 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /1/object/ezsignbulksend/getList
      * Retrieve Ezsignbulksend list
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -798,6 +816,7 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /2/object/ezsignbulksend/{pkiEzsignbulksendID}
      * Retrieve an existing Ezsignbulksend
      * 
      * @param pkiEzsignbulksendID 
@@ -829,6 +848,7 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /2/object/ezsignbulksend/{pkiEzsignbulksendID}
      * Retrieve an existing Ezsignbulksend
      * 
      * @param pkiEzsignbulksendID 
@@ -869,6 +889,7 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * POST /1/object/ezsignbulksend/{pkiEzsignbulksendID}/reorder
      * Reorder Ezsignbulksenddocumentmappings in the Ezsignbulksend
      * 
      * @param pkiEzsignbulksendID 
@@ -901,6 +922,7 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * POST /1/object/ezsignbulksend/{pkiEzsignbulksendID}/reorder
      * Reorder Ezsignbulksenddocumentmappings in the Ezsignbulksend
      * 
      * @param pkiEzsignbulksendID 

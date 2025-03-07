@@ -47,6 +47,7 @@ class ScimUsersApi(basePath: kotlin.String = defaultBasePath, client: Call.Facto
     }
 
     /**
+     * POST /2/scim/Users
      * Create a new User
      * 
      * @param scimUser 
@@ -78,6 +79,7 @@ class ScimUsersApi(basePath: kotlin.String = defaultBasePath, client: Call.Facto
     }
 
     /**
+     * POST /2/scim/Users
      * Create a new User
      * 
      * @param scimUser 
@@ -119,6 +121,7 @@ class ScimUsersApi(basePath: kotlin.String = defaultBasePath, client: Call.Facto
     }
 
     /**
+     * DELETE /2/scim/Users/{userId}
      * Delete an existing User
      * 
      * @param userId 
@@ -149,6 +152,7 @@ class ScimUsersApi(basePath: kotlin.String = defaultBasePath, client: Call.Facto
     }
 
     /**
+     * DELETE /2/scim/Users/{userId}
      * Delete an existing User
      * 
      * @param userId 
@@ -187,6 +191,7 @@ class ScimUsersApi(basePath: kotlin.String = defaultBasePath, client: Call.Facto
     }
 
     /**
+     * PUT /2/scim/Users/{userId}
      * Edit an existing User
      * 
      * @param userId 
@@ -219,6 +224,7 @@ class ScimUsersApi(basePath: kotlin.String = defaultBasePath, client: Call.Facto
     }
 
     /**
+     * PUT /2/scim/Users/{userId}
      * Edit an existing User
      * 
      * @param userId 
@@ -262,6 +268,7 @@ class ScimUsersApi(basePath: kotlin.String = defaultBasePath, client: Call.Facto
     }
 
     /**
+     * GET /2/scim/Users
      * Retrieve User list
      * 
      * @param filter Filter expression for searching users (optional)
@@ -293,6 +300,7 @@ class ScimUsersApi(basePath: kotlin.String = defaultBasePath, client: Call.Facto
     }
 
     /**
+     * GET /2/scim/Users
      * Retrieve User list
      * 
      * @param filter Filter expression for searching users (optional)
@@ -338,6 +346,7 @@ class ScimUsersApi(basePath: kotlin.String = defaultBasePath, client: Call.Facto
     }
 
     /**
+     * GET /2/scim/Users/{userId}
      * Retrieve an existing User
      * 
      * @param userId 
@@ -369,6 +378,7 @@ class ScimUsersApi(basePath: kotlin.String = defaultBasePath, client: Call.Facto
     }
 
     /**
+     * GET /2/scim/Users/{userId}
      * Retrieve an existing User
      * 
      * @param userId 

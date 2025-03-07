@@ -52,6 +52,7 @@ class ObjectSubnetApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * POST /1/object/subnet
      * Create a new Subnet
      * The endpoint allows to create one or many elements at once.
      * @param subnetCreateObjectV1Request 
@@ -83,6 +84,7 @@ class ObjectSubnetApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * POST /1/object/subnet
      * Create a new Subnet
      * The endpoint allows to create one or many elements at once.
      * @param subnetCreateObjectV1Request 
@@ -124,6 +126,7 @@ class ObjectSubnetApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * DELETE /1/object/subnet/{pkiSubnetID}
      * Delete an existing Subnet
      * 
      * @param pkiSubnetID The unique ID of the Subnet
@@ -155,6 +158,7 @@ class ObjectSubnetApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * DELETE /1/object/subnet/{pkiSubnetID}
      * Delete an existing Subnet
      * 
      * @param pkiSubnetID The unique ID of the Subnet
@@ -195,6 +199,7 @@ class ObjectSubnetApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * PUT /1/object/subnet/{pkiSubnetID}
      * Edit an existing Subnet
      * 
      * @param pkiSubnetID The unique ID of the Subnet
@@ -227,6 +232,7 @@ class ObjectSubnetApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * PUT /1/object/subnet/{pkiSubnetID}
      * Edit an existing Subnet
      * 
      * @param pkiSubnetID The unique ID of the Subnet
@@ -270,6 +276,7 @@ class ObjectSubnetApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * GET /2/object/subnet/{pkiSubnetID}
      * Retrieve an existing Subnet
      * 
      * @param pkiSubnetID The unique ID of the Subnet
@@ -301,6 +308,7 @@ class ObjectSubnetApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * GET /2/object/subnet/{pkiSubnetID}
      * Retrieve an existing Subnet
      * 
      * @param pkiSubnetID The unique ID of the Subnet

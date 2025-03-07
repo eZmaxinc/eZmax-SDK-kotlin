@@ -51,6 +51,7 @@ class ObjectDiscussionmessageApi(basePath: kotlin.String = defaultBasePath, clie
     }
 
     /**
+     * POST /1/object/discussionmessage
      * Create a new Discussionmessage
      * The endpoint allows to create one or many elements at once.
      * @param discussionmessageCreateObjectV1Request 
@@ -82,6 +83,7 @@ class ObjectDiscussionmessageApi(basePath: kotlin.String = defaultBasePath, clie
     }
 
     /**
+     * POST /1/object/discussionmessage
      * Create a new Discussionmessage
      * The endpoint allows to create one or many elements at once.
      * @param discussionmessageCreateObjectV1Request 
@@ -123,6 +125,7 @@ class ObjectDiscussionmessageApi(basePath: kotlin.String = defaultBasePath, clie
     }
 
     /**
+     * DELETE /1/object/discussionmessage/{pkiDiscussionmessageID}
      * Delete an existing Discussionmessage
      * 
      * @param pkiDiscussionmessageID The unique ID of the Discussionmessage
@@ -154,6 +157,7 @@ class ObjectDiscussionmessageApi(basePath: kotlin.String = defaultBasePath, clie
     }
 
     /**
+     * DELETE /1/object/discussionmessage/{pkiDiscussionmessageID}
      * Delete an existing Discussionmessage
      * 
      * @param pkiDiscussionmessageID The unique ID of the Discussionmessage
@@ -194,6 +198,7 @@ class ObjectDiscussionmessageApi(basePath: kotlin.String = defaultBasePath, clie
     }
 
     /**
+     * PATCH /1/object/discussionmessage/{pkiDiscussionmessageID}
      * Patch an existing Discussionmessage
      * 
      * @param pkiDiscussionmessageID The unique ID of the Discussionmessage
@@ -226,6 +231,7 @@ class ObjectDiscussionmessageApi(basePath: kotlin.String = defaultBasePath, clie
     }
 
     /**
+     * PATCH /1/object/discussionmessage/{pkiDiscussionmessageID}
      * Patch an existing Discussionmessage
      * 
      * @param pkiDiscussionmessageID The unique ID of the Discussionmessage

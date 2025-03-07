@@ -84,6 +84,7 @@ class ObjectDepartmentApi(basePath: kotlin.String = defaultBasePath, client: Cal
      }
 
     /**
+     * GET /2/object/department/getAutocomplete/{sSelector}
      * Retrieve Departments and IDs
      * Get the list of Department to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Departments to return
@@ -118,6 +119,7 @@ class ObjectDepartmentApi(basePath: kotlin.String = defaultBasePath, client: Cal
     }
 
     /**
+     * GET /2/object/department/getAutocomplete/{sSelector}
      * Retrieve Departments and IDs
      * Get the list of Department to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Departments to return

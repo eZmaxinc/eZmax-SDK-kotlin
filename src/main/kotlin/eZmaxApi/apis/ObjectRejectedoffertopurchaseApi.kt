@@ -50,6 +50,7 @@ class ObjectRejectedoffertopurchaseApi(basePath: kotlin.String = defaultBasePath
     }
 
     /**
+     * GET /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationCount
      * Retrieve Communication count
      * 
      * @param pkiRejectedoffertopurchaseID 
@@ -81,6 +82,7 @@ class ObjectRejectedoffertopurchaseApi(basePath: kotlin.String = defaultBasePath
     }
 
     /**
+     * GET /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationCount
      * Retrieve Communication count
      * 
      * @param pkiRejectedoffertopurchaseID 
@@ -121,6 +123,7 @@ class ObjectRejectedoffertopurchaseApi(basePath: kotlin.String = defaultBasePath
     }
 
     /**
+     * GET /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationList
      * Retrieve Communication list
      * 
      * @param pkiRejectedoffertopurchaseID 
@@ -152,6 +155,7 @@ class ObjectRejectedoffertopurchaseApi(basePath: kotlin.String = defaultBasePath
     }
 
     /**
+     * GET /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationList
      * Retrieve Communication list
      * 
      * @param pkiRejectedoffertopurchaseID 
@@ -192,6 +196,7 @@ class ObjectRejectedoffertopurchaseApi(basePath: kotlin.String = defaultBasePath
     }
 
     /**
+     * GET /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationrecipients
      * Retrieve Rejectedoffertopurchase&#39;s Communicationrecipient
      * 
      * @param pkiRejectedoffertopurchaseID 
@@ -223,6 +228,7 @@ class ObjectRejectedoffertopurchaseApi(basePath: kotlin.String = defaultBasePath
     }
 
     /**
+     * GET /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationrecipients
      * Retrieve Rejectedoffertopurchase&#39;s Communicationrecipient
      * 
      * @param pkiRejectedoffertopurchaseID 
@@ -263,6 +269,7 @@ class ObjectRejectedoffertopurchaseApi(basePath: kotlin.String = defaultBasePath
     }
 
     /**
+     * GET /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationsenders
      * Retrieve Rejectedoffertopurchase&#39;s Communicationsender
      * 
      * @param pkiRejectedoffertopurchaseID 
@@ -294,6 +301,7 @@ class ObjectRejectedoffertopurchaseApi(basePath: kotlin.String = defaultBasePath
     }
 
     /**
+     * GET /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationsenders
      * Retrieve Rejectedoffertopurchase&#39;s Communicationsender
      * 
      * @param pkiRejectedoffertopurchaseID 

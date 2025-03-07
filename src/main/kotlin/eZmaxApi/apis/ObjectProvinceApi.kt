@@ -81,6 +81,7 @@ class ObjectProvinceApi(basePath: kotlin.String = defaultBasePath, client: Call.
      }
 
     /**
+     * GET /2/object/province/getAutocomplete/{sSelector}
      * Retrieve Provinces and IDs
      * Get the list of Province to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Provinces to return
@@ -115,6 +116,7 @@ class ObjectProvinceApi(basePath: kotlin.String = defaultBasePath, client: Call.
     }
 
     /**
+     * GET /2/object/province/getAutocomplete/{sSelector}
      * Retrieve Provinces and IDs
      * Get the list of Province to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Provinces to return

@@ -52,6 +52,7 @@ class ObjectEzsigntemplatedocumentpagerecognitionApi(basePath: kotlin.String = d
     }
 
     /**
+     * POST /1/object/ezsigntemplatedocumentpagerecognition
      * Create a new Ezsigntemplatedocumentpagerecognition
      * The endpoint allows to create one or many elements at once.
      * @param ezsigntemplatedocumentpagerecognitionCreateObjectV1Request 
@@ -83,6 +84,7 @@ class ObjectEzsigntemplatedocumentpagerecognitionApi(basePath: kotlin.String = d
     }
 
     /**
+     * POST /1/object/ezsigntemplatedocumentpagerecognition
      * Create a new Ezsigntemplatedocumentpagerecognition
      * The endpoint allows to create one or many elements at once.
      * @param ezsigntemplatedocumentpagerecognitionCreateObjectV1Request 
@@ -124,6 +126,7 @@ class ObjectEzsigntemplatedocumentpagerecognitionApi(basePath: kotlin.String = d
     }
 
     /**
+     * DELETE /1/object/ezsigntemplatedocumentpagerecognition/{pkiEzsigntemplatedocumentpagerecognitionID}
      * Delete an existing Ezsigntemplatedocumentpagerecognition
      * 
      * @param pkiEzsigntemplatedocumentpagerecognitionID The unique ID of the Ezsigntemplatedocumentpagerecognition
@@ -155,6 +158,7 @@ class ObjectEzsigntemplatedocumentpagerecognitionApi(basePath: kotlin.String = d
     }
 
     /**
+     * DELETE /1/object/ezsigntemplatedocumentpagerecognition/{pkiEzsigntemplatedocumentpagerecognitionID}
      * Delete an existing Ezsigntemplatedocumentpagerecognition
      * 
      * @param pkiEzsigntemplatedocumentpagerecognitionID The unique ID of the Ezsigntemplatedocumentpagerecognition
@@ -195,6 +199,7 @@ class ObjectEzsigntemplatedocumentpagerecognitionApi(basePath: kotlin.String = d
     }
 
     /**
+     * PUT /1/object/ezsigntemplatedocumentpagerecognition/{pkiEzsigntemplatedocumentpagerecognitionID}
      * Edit an existing Ezsigntemplatedocumentpagerecognition
      * 
      * @param pkiEzsigntemplatedocumentpagerecognitionID The unique ID of the Ezsigntemplatedocumentpagerecognition
@@ -227,6 +232,7 @@ class ObjectEzsigntemplatedocumentpagerecognitionApi(basePath: kotlin.String = d
     }
 
     /**
+     * PUT /1/object/ezsigntemplatedocumentpagerecognition/{pkiEzsigntemplatedocumentpagerecognitionID}
      * Edit an existing Ezsigntemplatedocumentpagerecognition
      * 
      * @param pkiEzsigntemplatedocumentpagerecognitionID The unique ID of the Ezsigntemplatedocumentpagerecognition
@@ -270,6 +276,7 @@ class ObjectEzsigntemplatedocumentpagerecognitionApi(basePath: kotlin.String = d
     }
 
     /**
+     * GET /2/object/ezsigntemplatedocumentpagerecognition/{pkiEzsigntemplatedocumentpagerecognitionID}
      * Retrieve an existing Ezsigntemplatedocumentpagerecognition
      * 
      * @param pkiEzsigntemplatedocumentpagerecognitionID The unique ID of the Ezsigntemplatedocumentpagerecognition
@@ -301,6 +308,7 @@ class ObjectEzsigntemplatedocumentpagerecognitionApi(basePath: kotlin.String = d
     }
 
     /**
+     * GET /2/object/ezsigntemplatedocumentpagerecognition/{pkiEzsigntemplatedocumentpagerecognitionID}
      * Retrieve an existing Ezsigntemplatedocumentpagerecognition
      * 
      * @param pkiEzsigntemplatedocumentpagerecognitionID The unique ID of the Ezsigntemplatedocumentpagerecognition

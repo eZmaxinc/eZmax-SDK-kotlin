@@ -61,6 +61,7 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: Call.F
     }
 
     /**
+     * POST /2/object/webhook
      * Create a new Webhook
      * The endpoint allows to create one or many elements at once.
      * @param webhookCreateObjectV2Request 
@@ -92,6 +93,7 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: Call.F
     }
 
     /**
+     * POST /2/object/webhook
      * Create a new Webhook
      * The endpoint allows to create one or many elements at once.
      * @param webhookCreateObjectV2Request 
@@ -133,6 +135,7 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: Call.F
     }
 
     /**
+     * DELETE /1/object/webhook/{pkiWebhookID}
      * Delete an existing Webhook
      * 
      * @param pkiWebhookID 
@@ -164,6 +167,7 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: Call.F
     }
 
     /**
+     * DELETE /1/object/webhook/{pkiWebhookID}
      * Delete an existing Webhook
      * 
      * @param pkiWebhookID 
@@ -204,6 +208,7 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: Call.F
     }
 
     /**
+     * PUT /1/object/webhook/{pkiWebhookID}
      * Edit an existing Webhook
      * 
      * @param pkiWebhookID 
@@ -236,6 +241,7 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: Call.F
     }
 
     /**
+     * PUT /1/object/webhook/{pkiWebhookID}
      * Edit an existing Webhook
      * 
      * @param pkiWebhookID 
@@ -296,6 +302,7 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: Call.F
      }
 
     /**
+     * GET /1/object/webhook/{pkiWebhookID}/getHistory
      * Retrieve the logs for recent Webhook calls
      * 
      * @param pkiWebhookID 
@@ -328,6 +335,7 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: Call.F
     }
 
     /**
+     * GET /1/object/webhook/{pkiWebhookID}/getHistory
      * Retrieve the logs for recent Webhook calls
      * 
      * @param pkiWebhookID 
@@ -408,6 +416,7 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: Call.F
      }
 
     /**
+     * GET /1/object/webhook/getList
      * Retrieve Webhook list
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eWebhookModule | Ezsign&lt;br&gt;Management | | eWebhookEzsignevent | DocumentCompleted&lt;br&gt;FolderCompleted | | eWebhookManagementevent | UserCreated |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -443,6 +452,7 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: Call.F
     }
 
     /**
+     * GET /1/object/webhook/getList
      * Retrieve Webhook list
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eWebhookModule | Ezsign&lt;br&gt;Management | | eWebhookEzsignevent | DocumentCompleted&lt;br&gt;FolderCompleted | | eWebhookManagementevent | UserCreated |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -506,6 +516,7 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: Call.F
     }
 
     /**
+     * GET /2/object/webhook/{pkiWebhookID}
      * Retrieve an existing Webhook
      * 
      * @param pkiWebhookID 
@@ -537,6 +548,7 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: Call.F
     }
 
     /**
+     * GET /2/object/webhook/{pkiWebhookID}
      * Retrieve an existing Webhook
      * 
      * @param pkiWebhookID 
@@ -577,6 +589,7 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: Call.F
     }
 
     /**
+     * POST /1/object/webhook/{pkiWebhookID}/regenerateApikey
      * Regenerate the Apikey
      * 
      * @param pkiWebhookID 
@@ -609,6 +622,7 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: Call.F
     }
 
     /**
+     * POST /1/object/webhook/{pkiWebhookID}/regenerateApikey
      * Regenerate the Apikey
      * 
      * @param pkiWebhookID 
@@ -652,6 +666,7 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: Call.F
     }
 
     /**
+     * POST /1/object/webhook/sendWebhook
      * Emit a Webhook event
      * 
      * @param webhookSendWebhookV1Request 
@@ -683,6 +698,7 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: Call.F
     }
 
     /**
+     * POST /1/object/webhook/sendWebhook
      * Emit a Webhook event
      * 
      * @param webhookSendWebhookV1Request 
@@ -724,6 +740,7 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: Call.F
     }
 
     /**
+     * POST /1/object/webhook/{pkiWebhookID}/test
      * Test the Webhook by calling the Url
      * 
      * @param pkiWebhookID 
@@ -756,6 +773,7 @@ class ObjectWebhookApi(basePath: kotlin.String = defaultBasePath, client: Call.F
     }
 
     /**
+     * POST /1/object/webhook/{pkiWebhookID}/test
      * Test the Webhook by calling the Url
      * 
      * @param pkiWebhookID 

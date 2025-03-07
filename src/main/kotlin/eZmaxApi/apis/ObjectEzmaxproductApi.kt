@@ -83,6 +83,7 @@ class ObjectEzmaxproductApi(basePath: kotlin.String = defaultBasePath, client: C
      }
 
     /**
+     * GET /2/object/ezmaxproduct/getAutocomplete/{sSelector}
      * Retrieve Ezmaxproducts and IDs
      * Get the list of Ezmaxproduct to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezmaxproducts to return
@@ -117,6 +118,7 @@ class ObjectEzmaxproductApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * GET /2/object/ezmaxproduct/getAutocomplete/{sSelector}
      * Retrieve Ezmaxproducts and IDs
      * Get the list of Ezmaxproduct to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezmaxproducts to return

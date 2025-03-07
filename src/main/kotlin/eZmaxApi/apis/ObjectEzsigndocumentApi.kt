@@ -69,6 +69,8 @@ import eZmaxApi.models.EzsigndocumentGetWordsPositionsV1Request
 import eZmaxApi.models.EzsigndocumentGetWordsPositionsV1Response
 import eZmaxApi.models.EzsigndocumentPatchObjectV1Request
 import eZmaxApi.models.EzsigndocumentPatchObjectV1Response
+import eZmaxApi.models.EzsigndocumentPrefillEzsignformV1Request
+import eZmaxApi.models.EzsigndocumentPrefillEzsignformV1Response
 import eZmaxApi.models.EzsigndocumentSubmitEzsignformV1Request
 import eZmaxApi.models.EzsigndocumentSubmitEzsignformV1Response
 import eZmaxApi.models.EzsigndocumentUnsendV1Response
@@ -98,6 +100,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate
      * Apply an Ezsigntemplate to the Ezsigndocument.
      * This function is deprecated. Please use *applyEzsigntemplate* instead which is doing the same thing but with a capital \&quot;E\&quot; to normalize the nomenclature.  This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
      * @param pkiEzsigndocumentID 
@@ -132,6 +135,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate
      * Apply an Ezsigntemplate to the Ezsigndocument.
      * This function is deprecated. Please use *applyEzsigntemplate* instead which is doing the same thing but with a capital \&quot;E\&quot; to normalize the nomenclature.  This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
      * @param pkiEzsigndocumentID 
@@ -178,6 +182,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * POST /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate
      * Apply an Ezsigntemplate to the Ezsigndocument.
      * This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
      * @param pkiEzsigndocumentID 
@@ -210,6 +215,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * POST /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate
      * Apply an Ezsigntemplate to the Ezsigndocument.
      * This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
      * @param pkiEzsigndocumentID 
@@ -253,6 +259,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplateglobal
      * Apply an Ezsigntemplateglobal to the Ezsigndocument.
      * This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
      * @param pkiEzsigndocumentID 
@@ -285,6 +292,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplateglobal
      * Apply an Ezsigntemplateglobal to the Ezsigndocument.
      * This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
      * @param pkiEzsigndocumentID 
@@ -328,6 +336,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/createEzsignelementsPositionedByWord
      * Create multiple Ezsignsignatures/Ezsignformfieldgroups
      * Using this endpoint, you can create multiple Ezsignsignatures/Ezsignformfieldgroups positioned by word at the same time.
      * @param pkiEzsigndocumentID 
@@ -360,6 +369,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/createEzsignelementsPositionedByWord
      * Create multiple Ezsignsignatures/Ezsignformfieldgroups
      * Using this endpoint, you can create multiple Ezsignsignatures/Ezsignformfieldgroups positioned by word at the same time.
      * @param pkiEzsigndocumentID 
@@ -403,6 +413,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * POST /1/object/ezsigndocument
      * Create a new Ezsigndocument
      * The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
      * @param ezsigndocumentCreateObjectV1Request 
@@ -436,6 +447,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * POST /1/object/ezsigndocument
      * Create a new Ezsigndocument
      * The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
      * @param ezsigndocumentCreateObjectV1Request 
@@ -480,6 +492,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * POST /2/object/ezsigndocument
      * Create a new Ezsigndocument
      * The endpoint allows to create one or many elements at once.
      * @param ezsigndocumentCreateObjectV2Request 
@@ -513,6 +526,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * POST /2/object/ezsigndocument
      * Create a new Ezsigndocument
      * The endpoint allows to create one or many elements at once.
      * @param ezsigndocumentCreateObjectV2Request 
@@ -557,6 +571,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * POST /3/object/ezsigndocument
      * Create a new Ezsigndocument
      * The endpoint allows to create one or many elements at once.
      * @param ezsigndocumentCreateObjectV3Request 
@@ -588,6 +603,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * POST /3/object/ezsigndocument
      * Create a new Ezsigndocument
      * The endpoint allows to create one or many elements at once.
      * @param ezsigndocumentCreateObjectV3Request 
@@ -629,6 +645,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/declineToSign
      * Decline to sign
      * Decline to sign
      * @param pkiEzsigndocumentID 
@@ -661,6 +678,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/declineToSign
      * Decline to sign
      * Decline to sign
      * @param pkiEzsigndocumentID 
@@ -704,6 +722,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * DELETE /1/object/ezsigndocument/{pkiEzsigndocumentID}
      * Delete an existing Ezsigndocument
      * 
      * @param pkiEzsigndocumentID 
@@ -735,6 +754,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * DELETE /1/object/ezsigndocument/{pkiEzsigndocumentID}
      * Delete an existing Ezsigndocument
      * 
      * @param pkiEzsigndocumentID 
@@ -775,6 +795,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignannotations
      * Edit multiple Ezsignannotations
      * Using this endpoint, you can edit multiple Ezsignannotations at the same time.
      * @param pkiEzsigndocumentID 
@@ -807,6 +828,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignannotations
      * Edit multiple Ezsignannotations
      * Using this endpoint, you can edit multiple Ezsignannotations at the same time.
      * @param pkiEzsigndocumentID 
@@ -850,6 +872,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignformfieldgroups
      * Edit multiple Ezsignformfieldgroups
      * Using this endpoint, you can edit multiple Ezsignformfieldgroups at the same time.
      * @param pkiEzsigndocumentID 
@@ -882,6 +905,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignformfieldgroups
      * Edit multiple Ezsignformfieldgroups
      * Using this endpoint, you can edit multiple Ezsignformfieldgroups at the same time.
      * @param pkiEzsigndocumentID 
@@ -925,6 +949,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures
      * Edit multiple Ezsignsignatures
      * Using this endpoint, you can edit multiple Ezsignsignatures at the same time.
      * @param pkiEzsigndocumentID 
@@ -957,6 +982,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures
      * Edit multiple Ezsignsignatures
      * Using this endpoint, you can edit multiple Ezsignsignatures at the same time.
      * @param pkiEzsigndocumentID 
@@ -1000,6 +1026,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}
      * Edit an existing Ezsigndocument
      * 
      * @param pkiEzsigndocumentID 
@@ -1032,6 +1059,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}
      * Edit an existing Ezsigndocument
      * 
      * @param pkiEzsigndocumentID 
@@ -1075,6 +1103,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/endPrematurely
      * End prematurely
      * End prematurely an Ezsigndocument when some signatures are still required
      * @param pkiEzsigndocumentID 
@@ -1107,6 +1136,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/endPrematurely
      * End prematurely
      * End prematurely an Ezsigndocument when some signatures are still required
      * @param pkiEzsigndocumentID 
@@ -1150,6 +1180,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/extractText
      * Extract text from Ezsigndocument area
      * Extract text from Ezsigndocument area
      * @param pkiEzsigndocumentID 
@@ -1182,6 +1213,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/extractText
      * Extract text from Ezsigndocument area
      * Extract text from Ezsigndocument area
      * @param pkiEzsigndocumentID 
@@ -1225,6 +1257,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/flatten
      * Flatten
      * Flatten an Ezsigndocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
      * @param pkiEzsigndocumentID 
@@ -1257,6 +1290,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/flatten
      * Flatten
      * Flatten an Ezsigndocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
      * @param pkiEzsigndocumentID 
@@ -1300,6 +1334,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements
      * Retrieve actionable elements for the Ezsigndocument
      * Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
      * @param pkiEzsigndocumentID 
@@ -1331,6 +1366,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements
      * Retrieve actionable elements for the Ezsigndocument
      * Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
      * @param pkiEzsigndocumentID 
@@ -1371,6 +1407,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getAttachments
      * Retrieve Ezsigndocument&#39;s Attachments
      * 
      * @param pkiEzsigndocumentID 
@@ -1402,6 +1439,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getAttachments
      * Retrieve Ezsigndocument&#39;s Attachments
      * 
      * @param pkiEzsigndocumentID 
@@ -1442,6 +1480,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getCompletedElements
      * Retrieve completed elements for the Ezsigndocument
      * Return the completed Ezsignsignatures, Ezsignformfieldgroups and Ezsignannotations at the current step in the process
      * @param pkiEzsigndocumentID 
@@ -1473,6 +1512,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getCompletedElements
      * Retrieve completed elements for the Ezsigndocument
      * Return the completed Ezsignsignatures, Ezsignformfieldgroups and Ezsignannotations at the current step in the process
      * @param pkiEzsigndocumentID 
@@ -1533,6 +1573,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
      }
 
     /**
+     * GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getDownloadUrl/{eDocumentType}
      * Retrieve a URL to download documents.
      * This endpoint returns URLs to different files that can be downloaded during the signing process.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
      * @param pkiEzsigndocumentID 
@@ -1565,6 +1606,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getDownloadUrl/{eDocumentType}
      * Retrieve a URL to download documents.
      * This endpoint returns URLs to different files that can be downloaded during the signing process.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
      * @param pkiEzsigndocumentID 
@@ -1607,6 +1649,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignannotations
      * Retrieve an existing Ezsigndocument&#39;s Ezsignannotations
      * 
      * @param pkiEzsigndocumentID 
@@ -1638,6 +1681,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignannotations
      * Retrieve an existing Ezsigndocument&#39;s Ezsignannotations
      * 
      * @param pkiEzsigndocumentID 
@@ -1678,6 +1722,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsigndiscussions
      * Retrieve an existing Ezsigndocument&#39;s Ezsigndiscussions
      * 
      * @param pkiEzsigndocumentID 
@@ -1709,6 +1754,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsigndiscussions
      * Retrieve an existing Ezsigndocument&#39;s Ezsigndiscussions
      * 
      * @param pkiEzsigndocumentID 
@@ -1749,6 +1795,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignformfieldgroups
      * Retrieve an existing Ezsigndocument&#39;s Ezsignformfieldgroups
      * 
      * @param pkiEzsigndocumentID 
@@ -1780,6 +1827,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignformfieldgroups
      * Retrieve an existing Ezsigndocument&#39;s Ezsignformfieldgroups
      * 
      * @param pkiEzsigndocumentID 
@@ -1820,6 +1868,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignpages
      * Retrieve an existing Ezsigndocument&#39;s Ezsignpages
      * 
      * @param pkiEzsigndocumentID 
@@ -1851,6 +1900,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignpages
      * Retrieve an existing Ezsigndocument&#39;s Ezsignpages
      * 
      * @param pkiEzsigndocumentID 
@@ -1891,6 +1941,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignsignaturesAutomatic
      * Retrieve an existing Ezsigndocument&#39;s automatic Ezsignsignatures
      * Return the Ezsignsignatures that can be signed by the current user at the current step in the process
      * @param pkiEzsigndocumentID 
@@ -1922,6 +1973,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignsignaturesAutomatic
      * Retrieve an existing Ezsigndocument&#39;s automatic Ezsignsignatures
      * Return the Ezsignsignatures that can be signed by the current user at the current step in the process
      * @param pkiEzsigndocumentID 
@@ -1962,6 +2014,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignsignatures
      * Retrieve an existing Ezsigndocument&#39;s Ezsignsignatures
      * 
      * @param pkiEzsigndocumentID 
@@ -1993,6 +2046,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignsignatures
      * Retrieve an existing Ezsigndocument&#39;s Ezsignsignatures
      * 
      * @param pkiEzsigndocumentID 
@@ -2033,6 +2087,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getFormData
      * Retrieve an existing Ezsigndocument&#39;s Form Data
      * 
      * @param pkiEzsigndocumentID 
@@ -2064,6 +2119,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getFormData
      * Retrieve an existing Ezsigndocument&#39;s Form Data
      * 
      * @param pkiEzsigndocumentID 
@@ -2104,6 +2160,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /1/object/ezsigndocument/{pkiEzsigndocumentID}
      * Retrieve an existing Ezsigndocument
      * 
      * @param pkiEzsigndocumentID 
@@ -2137,6 +2194,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /1/object/ezsigndocument/{pkiEzsigndocumentID}
      * Retrieve an existing Ezsigndocument
      * 
      * @param pkiEzsigndocumentID 
@@ -2180,6 +2238,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /2/object/ezsigndocument/{pkiEzsigndocumentID}
      * Retrieve an existing Ezsigndocument
      * 
      * @param pkiEzsigndocumentID 
@@ -2211,6 +2270,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /2/object/ezsigndocument/{pkiEzsigndocumentID}
      * Retrieve an existing Ezsigndocument
      * 
      * @param pkiEzsigndocumentID 
@@ -2251,6 +2311,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof
      * Retrieve the temporary proof
      * Retrieve the temporary proof while the Ezsigndocument is being processed since the proof isn&#39;t available until the Ezsigndocument is completed
      * @param pkiEzsigndocumentID 
@@ -2282,6 +2343,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof
      * Retrieve the temporary proof
      * Retrieve the temporary proof while the Ezsigndocument is being processed since the proof isn&#39;t available until the Ezsigndocument is completed
      * @param pkiEzsigndocumentID 
@@ -2322,6 +2384,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
      * Retrieve positions X,Y of given words from a Ezsigndocument
      * 
      * @param pkiEzsigndocumentID 
@@ -2354,6 +2417,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
      * Retrieve positions X,Y of given words from a Ezsigndocument
      * 
      * @param pkiEzsigndocumentID 
@@ -2397,6 +2461,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * PATCH /1/object/ezsigndocument/{pkiEzsigndocumentID}
      * Patch an existing Ezsigndocument
      * 
      * @param pkiEzsigndocumentID 
@@ -2429,6 +2494,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * PATCH /1/object/ezsigndocument/{pkiEzsigndocumentID}
      * Patch an existing Ezsigndocument
      * 
      * @param pkiEzsigndocumentID 
@@ -2472,6 +2538,84 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/prefillEzsignform
+     * Prefill an Ezsignform
+     * Using this endpoint, you can prefill an Ezsignform.
+     * @param pkiEzsigndocumentID 
+     * @param ezsigndocumentPrefillEzsignformV1Request 
+     * @return EzsigndocumentPrefillEzsignformV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsigndocumentPrefillEzsignformV1(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentPrefillEzsignformV1Request: EzsigndocumentPrefillEzsignformV1Request) : EzsigndocumentPrefillEzsignformV1Response {
+        val localVarResponse = ezsigndocumentPrefillEzsignformV1WithHttpInfo(pkiEzsigndocumentID = pkiEzsigndocumentID, ezsigndocumentPrefillEzsignformV1Request = ezsigndocumentPrefillEzsignformV1Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigndocumentPrefillEzsignformV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/prefillEzsignform
+     * Prefill an Ezsignform
+     * Using this endpoint, you can prefill an Ezsignform.
+     * @param pkiEzsigndocumentID 
+     * @param ezsigndocumentPrefillEzsignformV1Request 
+     * @return ApiResponse<EzsigndocumentPrefillEzsignformV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsigndocumentPrefillEzsignformV1WithHttpInfo(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentPrefillEzsignformV1Request: EzsigndocumentPrefillEzsignformV1Request) : ApiResponse<EzsigndocumentPrefillEzsignformV1Response?> {
+        val localVariableConfig = ezsigndocumentPrefillEzsignformV1RequestConfig(pkiEzsigndocumentID = pkiEzsigndocumentID, ezsigndocumentPrefillEzsignformV1Request = ezsigndocumentPrefillEzsignformV1Request)
+
+        return request<EzsigndocumentPrefillEzsignformV1Request, EzsigndocumentPrefillEzsignformV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsigndocumentPrefillEzsignformV1
+     *
+     * @param pkiEzsigndocumentID 
+     * @param ezsigndocumentPrefillEzsignformV1Request 
+     * @return RequestConfig
+     */
+    fun ezsigndocumentPrefillEzsignformV1RequestConfig(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentPrefillEzsignformV1Request: EzsigndocumentPrefillEzsignformV1Request) : RequestConfig<EzsigndocumentPrefillEzsignformV1Request> {
+        val localVariableBody = ezsigndocumentPrefillEzsignformV1Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/prefillEzsignform".replace("{"+"pkiEzsigndocumentID"+"}", encodeURIComponent(pkiEzsigndocumentID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/submitEzsignform
      * Submit the Ezsignform
      * 
      * @param pkiEzsigndocumentID 
@@ -2504,6 +2648,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/submitEzsignform
      * Submit the Ezsignform
      * 
      * @param pkiEzsigndocumentID 
@@ -2547,6 +2692,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/unsend
      * Unsend the Ezsigndocument
      * Once an Ezsigndocument has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsigndocument and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on this Ezsigndocumentswill be lost.
      * @param pkiEzsigndocumentID 
@@ -2579,6 +2725,7 @@ class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/unsend
      * Unsend the Ezsigndocument
      * Once an Ezsigndocument has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsigndocument and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on this Ezsigndocumentswill be lost.
      * @param pkiEzsigndocumentID 

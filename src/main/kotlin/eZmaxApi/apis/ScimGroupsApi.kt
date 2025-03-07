@@ -46,6 +46,7 @@ class ScimGroupsApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * POST /2/scim/Groups
      * Create a new Usergroup
      * 
      * @param scimGroup 
@@ -77,6 +78,7 @@ class ScimGroupsApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * POST /2/scim/Groups
      * Create a new Usergroup
      * 
      * @param scimGroup 
@@ -118,6 +120,7 @@ class ScimGroupsApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * DELETE /2/scim/Groups/{groupId}
      * Delete an existing Usergroup
      * 
      * @param groupId 
@@ -148,6 +151,7 @@ class ScimGroupsApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * DELETE /2/scim/Groups/{groupId}
      * Delete an existing Usergroup
      * 
      * @param groupId 
@@ -186,6 +190,7 @@ class ScimGroupsApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * PUT /2/scim/Groups/{groupId}
      * Edit an existing Usergroup
      * 
      * @param groupId 
@@ -218,6 +223,7 @@ class ScimGroupsApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * PUT /2/scim/Groups/{groupId}
      * Edit an existing Usergroup
      * 
      * @param groupId 
@@ -261,6 +267,7 @@ class ScimGroupsApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * GET /2/scim/Groups
      * Retrieve Usergroup list
      * 
      * @param filter Filter expression for searching groups (optional)
@@ -292,6 +299,7 @@ class ScimGroupsApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * GET /2/scim/Groups
      * Retrieve Usergroup list
      * 
      * @param filter Filter expression for searching groups (optional)
@@ -337,6 +345,7 @@ class ScimGroupsApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * GET /2/scim/Groups/{groupId}
      * Retrieve an existing Usergroup
      * 
      * @param groupId 
@@ -368,6 +377,7 @@ class ScimGroupsApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * GET /2/scim/Groups/{groupId}
      * Retrieve an existing Usergroup
      * 
      * @param groupId 

@@ -82,6 +82,7 @@ class ObjectTimezoneApi(basePath: kotlin.String = defaultBasePath, client: Call.
      }
 
     /**
+     * GET /2/object/timezone/getAutocomplete/{sSelector}
      * Retrieve Timezones and IDs
      * Get the list of Timezone to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Timezones to return
@@ -116,6 +117,7 @@ class ObjectTimezoneApi(basePath: kotlin.String = defaultBasePath, client: Call.
     }
 
     /**
+     * GET /2/object/timezone/getAutocomplete/{sSelector}
      * Retrieve Timezones and IDs
      * Get the list of Timezone to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Timezones to return

@@ -81,6 +81,7 @@ class ObjectCompanyApi(basePath: kotlin.String = defaultBasePath, client: Call.F
      }
 
     /**
+     * GET /2/object/company/getAutocomplete/{sSelector}
      * Retrieve Companys and IDs
      * Get the list of Company to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Companys to return
@@ -115,6 +116,7 @@ class ObjectCompanyApi(basePath: kotlin.String = defaultBasePath, client: Call.F
     }
 
     /**
+     * GET /2/object/company/getAutocomplete/{sSelector}
      * Retrieve Companys and IDs
      * Get the list of Company to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Companys to return

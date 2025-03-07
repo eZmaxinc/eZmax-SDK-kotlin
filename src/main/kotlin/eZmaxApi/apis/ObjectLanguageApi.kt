@@ -81,6 +81,7 @@ class ObjectLanguageApi(basePath: kotlin.String = defaultBasePath, client: Call.
      }
 
     /**
+     * GET /2/object/language/getAutocomplete/{sSelector}
      * Retrieve Languages and IDs
      * Get the list of Language to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Languages to return
@@ -115,6 +116,7 @@ class ObjectLanguageApi(basePath: kotlin.String = defaultBasePath, client: Call.
     }
 
     /**
+     * GET /2/object/language/getAutocomplete/{sSelector}
      * Retrieve Languages and IDs
      * Get the list of Language to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Languages to return

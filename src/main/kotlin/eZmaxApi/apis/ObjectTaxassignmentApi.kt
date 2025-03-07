@@ -82,6 +82,7 @@ class ObjectTaxassignmentApi(basePath: kotlin.String = defaultBasePath, client: 
      }
 
     /**
+     * GET /2/object/taxassignment/getAutocomplete/{sSelector}
      * Retrieve Taxassignments and IDs
      * Get the list of Taxassignment to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Taxassignments to return
@@ -116,6 +117,7 @@ class ObjectTaxassignmentApi(basePath: kotlin.String = defaultBasePath, client: 
     }
 
     /**
+     * GET /2/object/taxassignment/getAutocomplete/{sSelector}
      * Retrieve Taxassignments and IDs
      * Get the list of Taxassignment to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Taxassignments to return

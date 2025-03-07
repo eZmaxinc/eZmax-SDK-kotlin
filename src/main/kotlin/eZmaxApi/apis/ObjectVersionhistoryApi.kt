@@ -47,6 +47,7 @@ class ObjectVersionhistoryApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /2/object/versionhistory/{pkiVersionhistoryID}
      * Retrieve an existing Versionhistory
      * 
      * @param pkiVersionhistoryID 
@@ -78,6 +79,7 @@ class ObjectVersionhistoryApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /2/object/versionhistory/{pkiVersionhistoryID}
      * Retrieve an existing Versionhistory
      * 
      * @param pkiVersionhistoryID 

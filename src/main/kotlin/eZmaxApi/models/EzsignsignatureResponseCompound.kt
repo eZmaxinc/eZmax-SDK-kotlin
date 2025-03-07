@@ -21,6 +21,7 @@ import eZmaxApi.models.CustomTimezoneWithCodeResponse
 import eZmaxApi.models.EnumTextvalidation
 import eZmaxApi.models.EzsignelementdependencyResponseCompound
 import eZmaxApi.models.EzsignsignaturecustomdateResponseCompound
+import eZmaxApi.models.EzsignsignaturepaymentdetailRequestCompound
 import eZmaxApi.models.FieldEEzsignsignatureAttachmentnamesource
 import eZmaxApi.models.FieldEEzsignsignatureConsultationtrigger
 import eZmaxApi.models.FieldEEzsignsignatureDependencyrequirement
@@ -46,6 +47,7 @@ import com.squareup.moshi.JsonClass
  * @param objContactName 
  * @param fkiEzsignsigningreasonID The unique ID of the Ezsignsigningreason
  * @param fkiFontID The unique ID of the Font
+ * @param sCurrencyDescriptionX The description of the Currency in the language of the requester
  * @param sEzsignsigningreasonDescriptionX The description of the Ezsignsigningreason in the language of the requester
  * @param iEzsignsignatureHeight The height of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have an height of 2 inches, you would use \"200\" for the iEzsignsignatureHeight.
  * @param iEzsignsignatureWidth The width of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have a width of 2 inches, you would use \"200\" for the iEzsignsignatureWidth.
@@ -79,6 +81,7 @@ import com.squareup.moshi.JsonClass
  * @param objCreditcardtransaction 
  * @param aObjEzsignelementdependency 
  * @param objTimezone 
+ * @param aObjEzsignsignaturepaymentdetail 
  */
 
 
@@ -125,6 +128,10 @@ data class EzsignsignatureResponseCompound (
     /* The unique ID of the Font */
     @Json(name = "fkiFontID")
     val fkiFontID: kotlin.Int? = null,
+
+    /* The description of the Currency in the language of the requester */
+    @Json(name = "sCurrencyDescriptionX")
+    val sCurrencyDescriptionX: kotlin.String? = null,
 
     /* The description of the Ezsignsigningreason in the language of the requester */
     @Json(name = "sEzsignsigningreasonDescriptionX")
@@ -245,7 +252,10 @@ data class EzsignsignatureResponseCompound (
     val aObjEzsignelementdependency: kotlin.collections.List<EzsignelementdependencyResponseCompound>? = null,
 
     @Json(name = "objTimezone")
-    val objTimezone: CustomTimezoneWithCodeResponse? = null
+    val objTimezone: CustomTimezoneWithCodeResponse? = null,
+
+    @Json(name = "a_objEzsignsignaturepaymentdetail")
+    val aObjEzsignsignaturepaymentdetail: kotlin.collections.List<EzsignsignaturepaymentdetailRequestCompound>? = null
 
 ) {
 

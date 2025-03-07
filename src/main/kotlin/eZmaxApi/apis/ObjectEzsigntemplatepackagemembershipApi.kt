@@ -50,6 +50,7 @@ class ObjectEzsigntemplatepackagemembershipApi(basePath: kotlin.String = default
     }
 
     /**
+     * POST /1/object/ezsigntemplatepackagemembership
      * Create a new Ezsigntemplatepackagemembership
      * The endpoint allows to create one or many elements at once.
      * @param ezsigntemplatepackagemembershipCreateObjectV1Request 
@@ -81,6 +82,7 @@ class ObjectEzsigntemplatepackagemembershipApi(basePath: kotlin.String = default
     }
 
     /**
+     * POST /1/object/ezsigntemplatepackagemembership
      * Create a new Ezsigntemplatepackagemembership
      * The endpoint allows to create one or many elements at once.
      * @param ezsigntemplatepackagemembershipCreateObjectV1Request 
@@ -122,6 +124,7 @@ class ObjectEzsigntemplatepackagemembershipApi(basePath: kotlin.String = default
     }
 
     /**
+     * DELETE /1/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID}
      * Delete an existing Ezsigntemplatepackagemembership
      * 
      * @param pkiEzsigntemplatepackagemembershipID 
@@ -153,6 +156,7 @@ class ObjectEzsigntemplatepackagemembershipApi(basePath: kotlin.String = default
     }
 
     /**
+     * DELETE /1/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID}
      * Delete an existing Ezsigntemplatepackagemembership
      * 
      * @param pkiEzsigntemplatepackagemembershipID 
@@ -193,6 +197,7 @@ class ObjectEzsigntemplatepackagemembershipApi(basePath: kotlin.String = default
     }
 
     /**
+     * GET /2/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID}
      * Retrieve an existing Ezsigntemplatepackagemembership
      * 
      * @param pkiEzsigntemplatepackagemembershipID 
@@ -224,6 +229,7 @@ class ObjectEzsigntemplatepackagemembershipApi(basePath: kotlin.String = default
     }
 
     /**
+     * GET /2/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID}
      * Retrieve an existing Ezsigntemplatepackagemembership
      * 
      * @param pkiEzsigntemplatepackagemembershipID 

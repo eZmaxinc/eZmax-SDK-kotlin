@@ -20,11 +20,6 @@ import okhttp3.Call
 import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommonResponseError
-import eZmaxApi.models.CreditcardmerchantCreateObjectV1Request
-import eZmaxApi.models.CreditcardmerchantCreateObjectV1Response
-import eZmaxApi.models.CreditcardmerchantDeleteObjectV1Response
-import eZmaxApi.models.CreditcardmerchantEditObjectV1Request
-import eZmaxApi.models.CreditcardmerchantEditObjectV1Response
 import eZmaxApi.models.CreditcardmerchantGetAutocompleteV2Response
 import eZmaxApi.models.CreditcardmerchantGetListV1Response
 import eZmaxApi.models.CreditcardmerchantGetObjectV2Response
@@ -52,224 +47,6 @@ class ObjectCreditcardmerchantApi(basePath: kotlin.String = defaultBasePath, cli
         val defaultBasePath: String by lazy {
             System.getProperties().getProperty(ApiClient.baseUrlKey, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
-    }
-
-    /**
-     * Create a new Creditcardmerchant
-     * The endpoint allows to create one or many elements at once.
-     * @param creditcardmerchantCreateObjectV1Request 
-     * @return CreditcardmerchantCreateObjectV1Response
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun creditcardmerchantCreateObjectV1(creditcardmerchantCreateObjectV1Request: CreditcardmerchantCreateObjectV1Request) : CreditcardmerchantCreateObjectV1Response {
-        val localVarResponse = creditcardmerchantCreateObjectV1WithHttpInfo(creditcardmerchantCreateObjectV1Request = creditcardmerchantCreateObjectV1Request)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CreditcardmerchantCreateObjectV1Response
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * Create a new Creditcardmerchant
-     * The endpoint allows to create one or many elements at once.
-     * @param creditcardmerchantCreateObjectV1Request 
-     * @return ApiResponse<CreditcardmerchantCreateObjectV1Response?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    fun creditcardmerchantCreateObjectV1WithHttpInfo(creditcardmerchantCreateObjectV1Request: CreditcardmerchantCreateObjectV1Request) : ApiResponse<CreditcardmerchantCreateObjectV1Response?> {
-        val localVariableConfig = creditcardmerchantCreateObjectV1RequestConfig(creditcardmerchantCreateObjectV1Request = creditcardmerchantCreateObjectV1Request)
-
-        return request<CreditcardmerchantCreateObjectV1Request, CreditcardmerchantCreateObjectV1Response>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation creditcardmerchantCreateObjectV1
-     *
-     * @param creditcardmerchantCreateObjectV1Request 
-     * @return RequestConfig
-     */
-    fun creditcardmerchantCreateObjectV1RequestConfig(creditcardmerchantCreateObjectV1Request: CreditcardmerchantCreateObjectV1Request) : RequestConfig<CreditcardmerchantCreateObjectV1Request> {
-        val localVariableBody = creditcardmerchantCreateObjectV1Request
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Content-Type"] = "application/json"
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.POST,
-            path = "/1/object/creditcardmerchant",
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            requiresAuthentication = true,
-            body = localVariableBody
-        )
-    }
-
-    /**
-     * Delete an existing Creditcardmerchant
-     * 
-     * @param pkiCreditcardmerchantID The unique ID of the Creditcardmerchant
-     * @return CreditcardmerchantDeleteObjectV1Response
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun creditcardmerchantDeleteObjectV1(pkiCreditcardmerchantID: kotlin.Int) : CreditcardmerchantDeleteObjectV1Response {
-        val localVarResponse = creditcardmerchantDeleteObjectV1WithHttpInfo(pkiCreditcardmerchantID = pkiCreditcardmerchantID)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CreditcardmerchantDeleteObjectV1Response
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * Delete an existing Creditcardmerchant
-     * 
-     * @param pkiCreditcardmerchantID The unique ID of the Creditcardmerchant
-     * @return ApiResponse<CreditcardmerchantDeleteObjectV1Response?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    fun creditcardmerchantDeleteObjectV1WithHttpInfo(pkiCreditcardmerchantID: kotlin.Int) : ApiResponse<CreditcardmerchantDeleteObjectV1Response?> {
-        val localVariableConfig = creditcardmerchantDeleteObjectV1RequestConfig(pkiCreditcardmerchantID = pkiCreditcardmerchantID)
-
-        return request<Unit, CreditcardmerchantDeleteObjectV1Response>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation creditcardmerchantDeleteObjectV1
-     *
-     * @param pkiCreditcardmerchantID The unique ID of the Creditcardmerchant
-     * @return RequestConfig
-     */
-    fun creditcardmerchantDeleteObjectV1RequestConfig(pkiCreditcardmerchantID: kotlin.Int) : RequestConfig<Unit> {
-        val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.DELETE,
-            path = "/1/object/creditcardmerchant/{pkiCreditcardmerchantID}".replace("{"+"pkiCreditcardmerchantID"+"}", encodeURIComponent(pkiCreditcardmerchantID.toString())),
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            requiresAuthentication = true,
-            body = localVariableBody
-        )
-    }
-
-    /**
-     * Edit an existing Creditcardmerchant
-     * 
-     * @param pkiCreditcardmerchantID The unique ID of the Creditcardmerchant
-     * @param creditcardmerchantEditObjectV1Request 
-     * @return CreditcardmerchantEditObjectV1Response
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun creditcardmerchantEditObjectV1(pkiCreditcardmerchantID: kotlin.Int, creditcardmerchantEditObjectV1Request: CreditcardmerchantEditObjectV1Request) : CreditcardmerchantEditObjectV1Response {
-        val localVarResponse = creditcardmerchantEditObjectV1WithHttpInfo(pkiCreditcardmerchantID = pkiCreditcardmerchantID, creditcardmerchantEditObjectV1Request = creditcardmerchantEditObjectV1Request)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CreditcardmerchantEditObjectV1Response
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * Edit an existing Creditcardmerchant
-     * 
-     * @param pkiCreditcardmerchantID The unique ID of the Creditcardmerchant
-     * @param creditcardmerchantEditObjectV1Request 
-     * @return ApiResponse<CreditcardmerchantEditObjectV1Response?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    fun creditcardmerchantEditObjectV1WithHttpInfo(pkiCreditcardmerchantID: kotlin.Int, creditcardmerchantEditObjectV1Request: CreditcardmerchantEditObjectV1Request) : ApiResponse<CreditcardmerchantEditObjectV1Response?> {
-        val localVariableConfig = creditcardmerchantEditObjectV1RequestConfig(pkiCreditcardmerchantID = pkiCreditcardmerchantID, creditcardmerchantEditObjectV1Request = creditcardmerchantEditObjectV1Request)
-
-        return request<CreditcardmerchantEditObjectV1Request, CreditcardmerchantEditObjectV1Response>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation creditcardmerchantEditObjectV1
-     *
-     * @param pkiCreditcardmerchantID The unique ID of the Creditcardmerchant
-     * @param creditcardmerchantEditObjectV1Request 
-     * @return RequestConfig
-     */
-    fun creditcardmerchantEditObjectV1RequestConfig(pkiCreditcardmerchantID: kotlin.Int, creditcardmerchantEditObjectV1Request: CreditcardmerchantEditObjectV1Request) : RequestConfig<CreditcardmerchantEditObjectV1Request> {
-        val localVariableBody = creditcardmerchantEditObjectV1Request
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Content-Type"] = "application/json"
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.PUT,
-            path = "/1/object/creditcardmerchant/{pkiCreditcardmerchantID}".replace("{"+"pkiCreditcardmerchantID"+"}", encodeURIComponent(pkiCreditcardmerchantID.toString())),
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            requiresAuthentication = true,
-            body = localVariableBody
-        )
     }
 
     /**
@@ -307,6 +84,7 @@ class ObjectCreditcardmerchantApi(basePath: kotlin.String = defaultBasePath, cli
      }
 
     /**
+     * GET /2/object/creditcardmerchant/getAutocomplete/{sSelector}
      * Retrieve Creditcardmerchants and IDs
      * Get the list of Creditcardmerchant to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Creditcardmerchants to return
@@ -341,6 +119,7 @@ class ObjectCreditcardmerchantApi(basePath: kotlin.String = defaultBasePath, cli
     }
 
     /**
+     * GET /2/object/creditcardmerchant/getAutocomplete/{sSelector}
      * Retrieve Creditcardmerchants and IDs
      * Get the list of Creditcardmerchant to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Creditcardmerchants to return
@@ -429,6 +208,7 @@ class ObjectCreditcardmerchantApi(basePath: kotlin.String = defaultBasePath, cli
      }
 
     /**
+     * GET /1/object/creditcardmerchant/getList
      * Retrieve Creditcardmerchant list
      * 
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -464,6 +244,7 @@ class ObjectCreditcardmerchantApi(basePath: kotlin.String = defaultBasePath, cli
     }
 
     /**
+     * GET /1/object/creditcardmerchant/getList
      * Retrieve Creditcardmerchant list
      * 
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -527,6 +308,7 @@ class ObjectCreditcardmerchantApi(basePath: kotlin.String = defaultBasePath, cli
     }
 
     /**
+     * GET /2/object/creditcardmerchant/{pkiCreditcardmerchantID}
      * Retrieve an existing Creditcardmerchant
      * 
      * @param pkiCreditcardmerchantID The unique ID of the Creditcardmerchant
@@ -558,6 +340,7 @@ class ObjectCreditcardmerchantApi(basePath: kotlin.String = defaultBasePath, cli
     }
 
     /**
+     * GET /2/object/creditcardmerchant/{pkiCreditcardmerchantID}
      * Retrieve an existing Creditcardmerchant
      * 
      * @param pkiCreditcardmerchantID The unique ID of the Creditcardmerchant

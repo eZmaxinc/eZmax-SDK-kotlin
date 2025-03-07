@@ -81,6 +81,7 @@ class ObjectModuleApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
      }
 
     /**
+     * GET /2/object/module/getAutocomplete/{sSelector}
      * Retrieve Modules and IDs
      * Get the list of Module to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Modules to return
@@ -115,6 +116,7 @@ class ObjectModuleApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * GET /2/object/module/getAutocomplete/{sSelector}
      * Retrieve Modules and IDs
      * Get the list of Module to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Modules to return

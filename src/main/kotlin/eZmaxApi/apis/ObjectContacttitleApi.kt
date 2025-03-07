@@ -63,6 +63,7 @@ class ObjectContacttitleApi(basePath: kotlin.String = defaultBasePath, client: C
      }
 
     /**
+     * GET /2/object/contacttitle/getAutocomplete/{sSelector}
      * Retrieve Contacttitles and IDs
      * Get the list of Contacttitle to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Contacttitles to return
@@ -96,6 +97,7 @@ class ObjectContacttitleApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * GET /2/object/contacttitle/getAutocomplete/{sSelector}
      * Retrieve Contacttitles and IDs
      * Get the list of Contacttitle to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Contacttitles to return

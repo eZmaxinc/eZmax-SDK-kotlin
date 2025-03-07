@@ -52,6 +52,7 @@ class ObjectPermissionApi(basePath: kotlin.String = defaultBasePath, client: Cal
     }
 
     /**
+     * POST /1/object/permission
      * Create a new Permission
      * The endpoint allows to create one or many elements at once.
      * @param permissionCreateObjectV1Request 
@@ -83,6 +84,7 @@ class ObjectPermissionApi(basePath: kotlin.String = defaultBasePath, client: Cal
     }
 
     /**
+     * POST /1/object/permission
      * Create a new Permission
      * The endpoint allows to create one or many elements at once.
      * @param permissionCreateObjectV1Request 
@@ -124,6 +126,7 @@ class ObjectPermissionApi(basePath: kotlin.String = defaultBasePath, client: Cal
     }
 
     /**
+     * DELETE /1/object/permission/{pkiPermissionID}
      * Delete an existing Permission
      * 
      * @param pkiPermissionID The unique ID of the Permission
@@ -155,6 +158,7 @@ class ObjectPermissionApi(basePath: kotlin.String = defaultBasePath, client: Cal
     }
 
     /**
+     * DELETE /1/object/permission/{pkiPermissionID}
      * Delete an existing Permission
      * 
      * @param pkiPermissionID The unique ID of the Permission
@@ -195,6 +199,7 @@ class ObjectPermissionApi(basePath: kotlin.String = defaultBasePath, client: Cal
     }
 
     /**
+     * PUT /1/object/permission/{pkiPermissionID}
      * Edit an existing Permission
      * 
      * @param pkiPermissionID The unique ID of the Permission
@@ -227,6 +232,7 @@ class ObjectPermissionApi(basePath: kotlin.String = defaultBasePath, client: Cal
     }
 
     /**
+     * PUT /1/object/permission/{pkiPermissionID}
      * Edit an existing Permission
      * 
      * @param pkiPermissionID The unique ID of the Permission
@@ -270,6 +276,7 @@ class ObjectPermissionApi(basePath: kotlin.String = defaultBasePath, client: Cal
     }
 
     /**
+     * GET /2/object/permission/{pkiPermissionID}
      * Retrieve an existing Permission
      * 
      * @param pkiPermissionID The unique ID of the Permission
@@ -301,6 +308,7 @@ class ObjectPermissionApi(basePath: kotlin.String = defaultBasePath, client: Cal
     }
 
     /**
+     * GET /2/object/permission/{pkiPermissionID}
      * Retrieve an existing Permission
      * 
      * @param pkiPermissionID The unique ID of the Permission

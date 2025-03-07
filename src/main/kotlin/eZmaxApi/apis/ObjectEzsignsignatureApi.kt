@@ -60,6 +60,7 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client
     }
 
     /**
+     * POST /1/object/ezsignsignature
      * Create a new Ezsignsignature
      * The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
      * @param ezsignsignatureCreateObjectV1Request 
@@ -93,6 +94,7 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client
     }
 
     /**
+     * POST /1/object/ezsignsignature
      * Create a new Ezsignsignature
      * The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
      * @param ezsignsignatureCreateObjectV1Request 
@@ -137,6 +139,7 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client
     }
 
     /**
+     * POST /2/object/ezsignsignature
      * Create a new Ezsignsignature
      * The endpoint allows to create one or many elements at once.
      * @param ezsignsignatureCreateObjectV2Request 
@@ -170,6 +173,7 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client
     }
 
     /**
+     * POST /2/object/ezsignsignature
      * Create a new Ezsignsignature
      * The endpoint allows to create one or many elements at once.
      * @param ezsignsignatureCreateObjectV2Request 
@@ -214,6 +218,7 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client
     }
 
     /**
+     * POST /3/object/ezsignsignature
      * Create a new Ezsignsignature
      * The endpoint allows to create one or many elements at once.
      * @param ezsignsignatureCreateObjectV3Request 
@@ -245,6 +250,7 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client
     }
 
     /**
+     * POST /3/object/ezsignsignature
      * Create a new Ezsignsignature
      * The endpoint allows to create one or many elements at once.
      * @param ezsignsignatureCreateObjectV3Request 
@@ -286,6 +292,7 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client
     }
 
     /**
+     * DELETE /1/object/ezsignsignature/{pkiEzsignsignatureID}
      * Delete an existing Ezsignsignature
      * 
      * @param pkiEzsignsignatureID 
@@ -317,6 +324,7 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client
     }
 
     /**
+     * DELETE /1/object/ezsignsignature/{pkiEzsignsignatureID}
      * Delete an existing Ezsignsignature
      * 
      * @param pkiEzsignsignatureID 
@@ -357,6 +365,7 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client
     }
 
     /**
+     * PUT /2/object/ezsignsignature/{pkiEzsignsignatureID}
      * Edit an existing Ezsignsignature
      * 
      * @param pkiEzsignsignatureID 
@@ -389,6 +398,7 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client
     }
 
     /**
+     * PUT /2/object/ezsignsignature/{pkiEzsignsignatureID}
      * Edit an existing Ezsignsignature
      * 
      * @param pkiEzsignsignatureID 
@@ -432,6 +442,7 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client
     }
 
     /**
+     * GET /1/object/ezsignsignature/{pkiEzsignsignatureID}/getEzsignsignatureattachment
      * Retrieve an existing Ezsignsignature&#39;s Ezsignsignatureattachments
      * 
      * @param pkiEzsignsignatureID 
@@ -463,6 +474,7 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client
     }
 
     /**
+     * GET /1/object/ezsignsignature/{pkiEzsignsignatureID}/getEzsignsignatureattachment
      * Retrieve an existing Ezsignsignature&#39;s Ezsignsignatureattachments
      * 
      * @param pkiEzsignsignatureID 
@@ -503,6 +515,7 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client
     }
 
     /**
+     * GET /1/object/ezsignsignature/getEzsignsignaturesAutomatic
      * Retrieve all automatic Ezsignsignatures
      * Return all the Ezsignsignatures that can be signed by the current user
      * @return EzsignsignatureGetEzsignsignaturesAutomaticV1Response
@@ -533,6 +546,7 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client
     }
 
     /**
+     * GET /1/object/ezsignsignature/getEzsignsignaturesAutomatic
      * Retrieve all automatic Ezsignsignatures
      * Return all the Ezsignsignatures that can be signed by the current user
      * @return ApiResponse<EzsignsignatureGetEzsignsignaturesAutomaticV1Response?>
@@ -571,6 +585,7 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client
     }
 
     /**
+     * GET /3/object/ezsignsignature/{pkiEzsignsignatureID}
      * Retrieve an existing Ezsignsignature
      * 
      * @param pkiEzsignsignatureID 
@@ -602,6 +617,7 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client
     }
 
     /**
+     * GET /3/object/ezsignsignature/{pkiEzsignsignatureID}
      * Retrieve an existing Ezsignsignature
      * 
      * @param pkiEzsignsignatureID 
@@ -642,6 +658,7 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client
     }
 
     /**
+     * POST /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign
      * Sign the Ezsignsignature
      * 
      * @param pkiEzsignsignatureID 
@@ -674,6 +691,7 @@ class ObjectEzsignsignatureApi(basePath: kotlin.String = defaultBasePath, client
     }
 
     /**
+     * POST /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign
      * Sign the Ezsignsignature
      * 
      * @param pkiEzsignsignatureID 

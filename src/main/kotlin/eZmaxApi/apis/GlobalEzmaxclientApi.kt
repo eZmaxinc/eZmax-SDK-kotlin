@@ -48,6 +48,7 @@ class GlobalEzmaxclientApi(basePath: kotlin.String = defaultBasePath, client: Ca
     }
 
     /**
+     * GET /1/ezmaxclient/{pksEzmaxclientOs}/version
      * Retrieve the latest version of the Ezmaxclient
      * Retrieve the latest version of the Ezmaxclient that is available on the store.
      * @param pksEzmaxclientOs 
@@ -79,6 +80,7 @@ class GlobalEzmaxclientApi(basePath: kotlin.String = defaultBasePath, client: Ca
     }
 
     /**
+     * GET /1/ezmaxclient/{pksEzmaxclientOs}/version
      * Retrieve the latest version of the Ezmaxclient
      * Retrieve the latest version of the Ezmaxclient that is available on the store.
      * @param pksEzmaxclientOs 

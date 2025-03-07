@@ -15,6 +15,7 @@
 | **objContactName** | [**CustomContactNameResponse**](CustomContactNameResponse.md) |  |  |
 | **fkiEzsignsigningreasonID** | **kotlin.Int** | The unique ID of the Ezsignsigningreason |  [optional] |
 | **fkiFontID** | **kotlin.Int** | The unique ID of the Font |  [optional] |
+| **sCurrencyDescriptionX** | **kotlin.String** | The description of the Currency in the language of the requester |  [optional] |
 | **sEzsignsigningreasonDescriptionX** | **kotlin.String** | The description of the Ezsignsigningreason in the language of the requester |  [optional] |
 | **iEzsignsignatureHeight** | **kotlin.Int** | The height of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have an height of 2 inches, you would use \&quot;200\&quot; for the iEzsignsignatureHeight. |  [optional] |
 | **iEzsignsignatureWidth** | **kotlin.Int** | The width of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have a width of 2 inches, you would use \&quot;200\&quot; for the iEzsignsignatureWidth. |  [optional] |
@@ -46,6 +47,7 @@
 | **aObjEzsignsignaturecustomdate** | [**kotlin.collections.List&lt;EzsignsignaturecustomdateResponseCompoundV2&gt;**](EzsignsignaturecustomdateResponseCompoundV2.md) | An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all. |  [optional] |
 | **objCreditcardtransaction** | [**CustomCreditcardtransactionResponse**](CustomCreditcardtransactionResponse.md) |  |  [optional] |
 | **aObjEzsignelementdependency** | [**kotlin.collections.List&lt;EzsignelementdependencyResponseCompound&gt;**](EzsignelementdependencyResponseCompound.md) |  |  [optional] |
+| **aObjEzsignsignaturepaymentdetail** | [**kotlin.collections.List&lt;EzsignsignaturepaymentdetailResponseCompound&gt;**](EzsignsignaturepaymentdetailResponseCompound.md) |  |  [optional] |
 
 
 

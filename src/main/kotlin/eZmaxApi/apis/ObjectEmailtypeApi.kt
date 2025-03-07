@@ -81,6 +81,7 @@ class ObjectEmailtypeApi(basePath: kotlin.String = defaultBasePath, client: Call
      }
 
     /**
+     * GET /2/object/emailtype/getAutocomplete/{sSelector}
      * Retrieve Emailtypes and IDs
      * Get the list of Emailtype to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Emailtypes to return
@@ -115,6 +116,7 @@ class ObjectEmailtypeApi(basePath: kotlin.String = defaultBasePath, client: Call
     }
 
     /**
+     * GET /2/object/emailtype/getAutocomplete/{sSelector}
      * Retrieve Emailtypes and IDs
      * Get the list of Emailtype to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Emailtypes to return

@@ -44,6 +44,9 @@ import com.squareup.moshi.JsonClass
  * @param dtEzsignfolderSentdate The date and time at which the Ezsignfolder was sent the last time.
  * @param dtEzsignfolderDuedate The maximum date and time at which the Ezsignfolder can be signed.
  * @param bEzsignformHasdependencies Whether the Ezsignform/Ezsignsignatures has dependencies or not
+ * @param dtEzsignfolderClose The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely.
+ * @param dtEzsignfolderArchive The date and time at which the Ezsignfolder was archived.
+ * @param dtEzsignfolderDispose The date and time at which the Ezsignfolder was disposed.
  * @param bEzsignfolderSigner Whether the Ezsignfolder has an Ezsignsignatures that need to be signed or an Ezsignformfieldgroups that need to be filled by the current user
  */
 
@@ -127,6 +130,18 @@ data class EzsignfolderListElement (
     /* Whether the Ezsignform/Ezsignsignatures has dependencies or not */
     @Json(name = "bEzsignformHasdependencies")
     val bEzsignformHasdependencies: kotlin.Boolean? = null,
+
+    /* The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely. */
+    @Json(name = "dtEzsignfolderClose")
+    val dtEzsignfolderClose: kotlin.String? = null,
+
+    /* The date and time at which the Ezsignfolder was archived. */
+    @Json(name = "dtEzsignfolderArchive")
+    val dtEzsignfolderArchive: kotlin.String? = null,
+
+    /* The date and time at which the Ezsignfolder was disposed. */
+    @Json(name = "dtEzsignfolderDispose")
+    val dtEzsignfolderDispose: kotlin.String? = null,
 
     /* Whether the Ezsignfolder has an Ezsignsignatures that need to be signed or an Ezsignformfieldgroups that need to be filled by the current user */
     @Json(name = "bEzsignfolderSigner")

@@ -84,6 +84,7 @@ class ObjectFontApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
      }
 
     /**
+     * GET /2/object/font/getAutocomplete/{sSelector}
      * Retrieve Fonts and IDs
      * Get the list of Font to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Fonts to return
@@ -118,6 +119,7 @@ class ObjectFontApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * GET /2/object/font/getAutocomplete/{sSelector}
      * Retrieve Fonts and IDs
      * Get the list of Font to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Fonts to return

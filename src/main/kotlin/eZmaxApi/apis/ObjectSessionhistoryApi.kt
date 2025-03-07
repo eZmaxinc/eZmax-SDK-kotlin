@@ -83,6 +83,7 @@ class ObjectSessionhistoryApi(basePath: kotlin.String = defaultBasePath, client:
      }
 
     /**
+     * GET /1/object/sessionhistory/getList
      * Retrieve Sessionhistory list
      * 
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -118,6 +119,7 @@ class ObjectSessionhistoryApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /1/object/sessionhistory/getList
      * Retrieve Sessionhistory list
      * 
      * @param eOrderBy Specify how you want the results to be sorted (optional)

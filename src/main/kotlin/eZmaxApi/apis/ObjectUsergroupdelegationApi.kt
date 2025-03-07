@@ -52,6 +52,7 @@ class ObjectUsergroupdelegationApi(basePath: kotlin.String = defaultBasePath, cl
     }
 
     /**
+     * POST /1/object/usergroupdelegation
      * Create a new Usergroupdelegation
      * The endpoint allows to create one or many elements at once.
      * @param usergroupdelegationCreateObjectV1Request 
@@ -83,6 +84,7 @@ class ObjectUsergroupdelegationApi(basePath: kotlin.String = defaultBasePath, cl
     }
 
     /**
+     * POST /1/object/usergroupdelegation
      * Create a new Usergroupdelegation
      * The endpoint allows to create one or many elements at once.
      * @param usergroupdelegationCreateObjectV1Request 
@@ -124,6 +126,7 @@ class ObjectUsergroupdelegationApi(basePath: kotlin.String = defaultBasePath, cl
     }
 
     /**
+     * DELETE /1/object/usergroupdelegation/{pkiUsergroupdelegationID}
      * Delete an existing Usergroupdelegation
      * 
      * @param pkiUsergroupdelegationID The unique ID of the Usergroupdelegation
@@ -155,6 +158,7 @@ class ObjectUsergroupdelegationApi(basePath: kotlin.String = defaultBasePath, cl
     }
 
     /**
+     * DELETE /1/object/usergroupdelegation/{pkiUsergroupdelegationID}
      * Delete an existing Usergroupdelegation
      * 
      * @param pkiUsergroupdelegationID The unique ID of the Usergroupdelegation
@@ -195,6 +199,7 @@ class ObjectUsergroupdelegationApi(basePath: kotlin.String = defaultBasePath, cl
     }
 
     /**
+     * PUT /1/object/usergroupdelegation/{pkiUsergroupdelegationID}
      * Edit an existing Usergroupdelegation
      * 
      * @param pkiUsergroupdelegationID The unique ID of the Usergroupdelegation
@@ -227,6 +232,7 @@ class ObjectUsergroupdelegationApi(basePath: kotlin.String = defaultBasePath, cl
     }
 
     /**
+     * PUT /1/object/usergroupdelegation/{pkiUsergroupdelegationID}
      * Edit an existing Usergroupdelegation
      * 
      * @param pkiUsergroupdelegationID The unique ID of the Usergroupdelegation
@@ -270,6 +276,7 @@ class ObjectUsergroupdelegationApi(basePath: kotlin.String = defaultBasePath, cl
     }
 
     /**
+     * GET /2/object/usergroupdelegation/{pkiUsergroupdelegationID}
      * Retrieve an existing Usergroupdelegation
      * 
      * @param pkiUsergroupdelegationID The unique ID of the Usergroupdelegation
@@ -301,6 +308,7 @@ class ObjectUsergroupdelegationApi(basePath: kotlin.String = defaultBasePath, cl
     }
 
     /**
+     * GET /2/object/usergroupdelegation/{pkiUsergroupdelegationID}
      * Retrieve an existing Usergroupdelegation
      * 
      * @param pkiUsergroupdelegationID The unique ID of the Usergroupdelegation

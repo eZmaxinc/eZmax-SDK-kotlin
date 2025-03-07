@@ -84,6 +84,7 @@ class ObjectPeriodApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
      }
 
     /**
+     * GET /2/object/period/getAutocomplete/{sSelector}
      * Retrieve Periods and IDs
      * Get the list of Period to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Periods to return
@@ -118,6 +119,7 @@ class ObjectPeriodApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * GET /2/object/period/getAutocomplete/{sSelector}
      * Retrieve Periods and IDs
      * Get the list of Period to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Periods to return

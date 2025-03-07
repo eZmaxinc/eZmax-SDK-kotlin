@@ -52,6 +52,7 @@ class ObjectEzsignformfieldgroupApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * POST /1/object/ezsignformfieldgroup
      * Create a new Ezsignformfieldgroup
      * The endpoint allows to create one or many elements at once.
      * @param ezsignformfieldgroupCreateObjectV1Request 
@@ -83,6 +84,7 @@ class ObjectEzsignformfieldgroupApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * POST /1/object/ezsignformfieldgroup
      * Create a new Ezsignformfieldgroup
      * The endpoint allows to create one or many elements at once.
      * @param ezsignformfieldgroupCreateObjectV1Request 
@@ -124,6 +126,7 @@ class ObjectEzsignformfieldgroupApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * DELETE /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}
      * Delete an existing Ezsignformfieldgroup
      * 
      * @param pkiEzsignformfieldgroupID 
@@ -155,6 +158,7 @@ class ObjectEzsignformfieldgroupApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * DELETE /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}
      * Delete an existing Ezsignformfieldgroup
      * 
      * @param pkiEzsignformfieldgroupID 
@@ -195,6 +199,7 @@ class ObjectEzsignformfieldgroupApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * PUT /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}
      * Edit an existing Ezsignformfieldgroup
      * 
      * @param pkiEzsignformfieldgroupID 
@@ -227,6 +232,7 @@ class ObjectEzsignformfieldgroupApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * PUT /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}
      * Edit an existing Ezsignformfieldgroup
      * 
      * @param pkiEzsignformfieldgroupID 
@@ -270,6 +276,7 @@ class ObjectEzsignformfieldgroupApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * GET /2/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}
      * Retrieve an existing Ezsignformfieldgroup
      * 
      * @param pkiEzsignformfieldgroupID 
@@ -301,6 +308,7 @@ class ObjectEzsignformfieldgroupApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * GET /2/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}
      * Retrieve an existing Ezsignformfieldgroup
      * 
      * @param pkiEzsignformfieldgroupID 

@@ -50,6 +50,7 @@ class ObjectEzsignbulksenddocumentmappingApi(basePath: kotlin.String = defaultBa
     }
 
     /**
+     * POST /1/object/ezsignbulksenddocumentmapping
      * Create a new Ezsignbulksenddocumentmapping
      * The endpoint allows to create one or many elements at once.
      * @param ezsignbulksenddocumentmappingCreateObjectV1Request 
@@ -81,6 +82,7 @@ class ObjectEzsignbulksenddocumentmappingApi(basePath: kotlin.String = defaultBa
     }
 
     /**
+     * POST /1/object/ezsignbulksenddocumentmapping
      * Create a new Ezsignbulksenddocumentmapping
      * The endpoint allows to create one or many elements at once.
      * @param ezsignbulksenddocumentmappingCreateObjectV1Request 
@@ -122,6 +124,7 @@ class ObjectEzsignbulksenddocumentmappingApi(basePath: kotlin.String = defaultBa
     }
 
     /**
+     * DELETE /1/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}
      * Delete an existing Ezsignbulksenddocumentmapping
      * 
      * @param pkiEzsignbulksenddocumentmappingID 
@@ -153,6 +156,7 @@ class ObjectEzsignbulksenddocumentmappingApi(basePath: kotlin.String = defaultBa
     }
 
     /**
+     * DELETE /1/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}
      * Delete an existing Ezsignbulksenddocumentmapping
      * 
      * @param pkiEzsignbulksenddocumentmappingID 
@@ -193,6 +197,7 @@ class ObjectEzsignbulksenddocumentmappingApi(basePath: kotlin.String = defaultBa
     }
 
     /**
+     * GET /2/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}
      * Retrieve an existing Ezsignbulksenddocumentmapping
      * 
      * @param pkiEzsignbulksenddocumentmappingID 
@@ -224,6 +229,7 @@ class ObjectEzsignbulksenddocumentmappingApi(basePath: kotlin.String = defaultBa
     }
 
     /**
+     * GET /2/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}
      * Retrieve an existing Ezsignbulksenddocumentmapping
      * 
      * @param pkiEzsignbulksenddocumentmappingID 

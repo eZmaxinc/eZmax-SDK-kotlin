@@ -50,6 +50,7 @@ class ObjectEzsigntemplatepackagesignermembershipApi(basePath: kotlin.String = d
     }
 
     /**
+     * POST /1/object/ezsigntemplatepackagesignermembership
      * Create a new Ezsigntemplatepackagesignermembership
      * The endpoint allows to create one or many elements at once.
      * @param ezsigntemplatepackagesignermembershipCreateObjectV1Request 
@@ -81,6 +82,7 @@ class ObjectEzsigntemplatepackagesignermembershipApi(basePath: kotlin.String = d
     }
 
     /**
+     * POST /1/object/ezsigntemplatepackagesignermembership
      * Create a new Ezsigntemplatepackagesignermembership
      * The endpoint allows to create one or many elements at once.
      * @param ezsigntemplatepackagesignermembershipCreateObjectV1Request 
@@ -122,6 +124,7 @@ class ObjectEzsigntemplatepackagesignermembershipApi(basePath: kotlin.String = d
     }
 
     /**
+     * DELETE /1/object/ezsigntemplatepackagesignermembership/{pkiEzsigntemplatepackagesignermembershipID}
      * Delete an existing Ezsigntemplatepackagesignermembership
      * 
      * @param pkiEzsigntemplatepackagesignermembershipID 
@@ -153,6 +156,7 @@ class ObjectEzsigntemplatepackagesignermembershipApi(basePath: kotlin.String = d
     }
 
     /**
+     * DELETE /1/object/ezsigntemplatepackagesignermembership/{pkiEzsigntemplatepackagesignermembershipID}
      * Delete an existing Ezsigntemplatepackagesignermembership
      * 
      * @param pkiEzsigntemplatepackagesignermembershipID 
@@ -193,6 +197,7 @@ class ObjectEzsigntemplatepackagesignermembershipApi(basePath: kotlin.String = d
     }
 
     /**
+     * GET /2/object/ezsigntemplatepackagesignermembership/{pkiEzsigntemplatepackagesignermembershipID}
      * Retrieve an existing Ezsigntemplatepackagesignermembership
      * 
      * @param pkiEzsigntemplatepackagesignermembershipID 
@@ -224,6 +229,7 @@ class ObjectEzsigntemplatepackagesignermembershipApi(basePath: kotlin.String = d
     }
 
     /**
+     * GET /2/object/ezsigntemplatepackagesignermembership/{pkiEzsigntemplatepackagesignermembershipID}
      * Retrieve an existing Ezsigntemplatepackagesignermembership
      * 
      * @param pkiEzsigntemplatepackagesignermembershipID 

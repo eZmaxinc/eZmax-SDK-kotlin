@@ -47,6 +47,7 @@ class ObjectAttachmentApi(basePath: kotlin.String = defaultBasePath, client: Cal
     }
 
     /**
+     * GET /1/object/attachment/{pkiAttachmentID}/download
      * Retrieve the content
      * Using this endpoint, you can retrieve the content of an attachment.
      * @param pkiAttachmentID 
@@ -77,6 +78,7 @@ class ObjectAttachmentApi(basePath: kotlin.String = defaultBasePath, client: Cal
     }
 
     /**
+     * GET /1/object/attachment/{pkiAttachmentID}/download
      * Retrieve the content
      * Using this endpoint, you can retrieve the content of an attachment.
      * @param pkiAttachmentID 
@@ -116,6 +118,7 @@ class ObjectAttachmentApi(basePath: kotlin.String = defaultBasePath, client: Cal
     }
 
     /**
+     * GET /1/object/attachment/{pkiAttachmentID}/getAttachmentlogs
      * Retrieve the Attachmentlogs
      * Using this endpoint, you can retrieve the Attachmentlogs of an attachment.
      * @param pkiAttachmentID 
@@ -147,6 +150,7 @@ class ObjectAttachmentApi(basePath: kotlin.String = defaultBasePath, client: Cal
     }
 
     /**
+     * GET /1/object/attachment/{pkiAttachmentID}/getAttachmentlogs
      * Retrieve the Attachmentlogs
      * Using this endpoint, you can retrieve the Attachmentlogs of an attachment.
      * @param pkiAttachmentID 

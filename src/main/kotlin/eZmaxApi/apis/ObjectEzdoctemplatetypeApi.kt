@@ -81,6 +81,7 @@ class ObjectEzdoctemplatetypeApi(basePath: kotlin.String = defaultBasePath, clie
      }
 
     /**
+     * GET /2/object/ezdoctemplatetype/getAutocomplete/{sSelector}
      * Retrieve Ezdoctemplatetypes and IDs
      * Get the list of Ezdoctemplatetype to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezdoctemplatetypes to return
@@ -115,6 +116,7 @@ class ObjectEzdoctemplatetypeApi(basePath: kotlin.String = defaultBasePath, clie
     }
 
     /**
+     * GET /2/object/ezdoctemplatetype/getAutocomplete/{sSelector}
      * Retrieve Ezdoctemplatetypes and IDs
      * Get the list of Ezdoctemplatetype to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezdoctemplatetypes to return

@@ -54,6 +54,7 @@ class ObjectEzsignsigningreasonApi(basePath: kotlin.String = defaultBasePath, cl
     }
 
     /**
+     * POST /1/object/ezsignsigningreason
      * Create a new Ezsignsigningreason
      * The endpoint allows to create one or many elements at once.
      * @param ezsignsigningreasonCreateObjectV1Request 
@@ -85,6 +86,7 @@ class ObjectEzsignsigningreasonApi(basePath: kotlin.String = defaultBasePath, cl
     }
 
     /**
+     * POST /1/object/ezsignsigningreason
      * Create a new Ezsignsigningreason
      * The endpoint allows to create one or many elements at once.
      * @param ezsignsigningreasonCreateObjectV1Request 
@@ -126,6 +128,7 @@ class ObjectEzsignsigningreasonApi(basePath: kotlin.String = defaultBasePath, cl
     }
 
     /**
+     * PUT /1/object/ezsignsigningreason/{pkiEzsignsigningreasonID}
      * Edit an existing Ezsignsigningreason
      * 
      * @param pkiEzsignsigningreasonID The unique ID of the Ezsignsigningreason
@@ -158,6 +161,7 @@ class ObjectEzsignsigningreasonApi(basePath: kotlin.String = defaultBasePath, cl
     }
 
     /**
+     * PUT /1/object/ezsignsigningreason/{pkiEzsignsigningreasonID}
      * Edit an existing Ezsignsigningreason
      * 
      * @param pkiEzsignsigningreasonID The unique ID of the Ezsignsigningreason
@@ -236,6 +240,7 @@ class ObjectEzsignsigningreasonApi(basePath: kotlin.String = defaultBasePath, cl
      }
 
     /**
+     * GET /2/object/ezsignsigningreason/getAutocomplete/{sSelector}
      * Retrieve Ezsignsigningreasons and IDs
      * Get the list of Ezsignsigningreason to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezsignsigningreasons to return
@@ -270,6 +275,7 @@ class ObjectEzsignsigningreasonApi(basePath: kotlin.String = defaultBasePath, cl
     }
 
     /**
+     * GET /2/object/ezsignsigningreason/getAutocomplete/{sSelector}
      * Retrieve Ezsignsigningreasons and IDs
      * Get the list of Ezsignsigningreason to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezsignsigningreasons to return
@@ -346,6 +352,7 @@ class ObjectEzsignsigningreasonApi(basePath: kotlin.String = defaultBasePath, cl
      }
 
     /**
+     * GET /1/object/ezsignsigningreason/getList
      * Retrieve Ezsignsigningreason list
      * 
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -381,6 +388,7 @@ class ObjectEzsignsigningreasonApi(basePath: kotlin.String = defaultBasePath, cl
     }
 
     /**
+     * GET /1/object/ezsignsigningreason/getList
      * Retrieve Ezsignsigningreason list
      * 
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -444,6 +452,7 @@ class ObjectEzsignsigningreasonApi(basePath: kotlin.String = defaultBasePath, cl
     }
 
     /**
+     * GET /2/object/ezsignsigningreason/{pkiEzsignsigningreasonID}
      * Retrieve an existing Ezsignsigningreason
      * 
      * @param pkiEzsignsigningreasonID The unique ID of the Ezsignsigningreason
@@ -475,6 +484,7 @@ class ObjectEzsignsigningreasonApi(basePath: kotlin.String = defaultBasePath, cl
     }
 
     /**
+     * GET /2/object/ezsignsigningreason/{pkiEzsignsigningreasonID}
      * Retrieve an existing Ezsignsigningreason
      * 
      * @param pkiEzsignsigningreasonID The unique ID of the Ezsignsigningreason

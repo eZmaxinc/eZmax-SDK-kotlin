@@ -63,6 +63,7 @@ class ObjectModulegroupApi(basePath: kotlin.String = defaultBasePath, client: Ca
      }
 
     /**
+     * GET /1/object/modulegroup/getAll/{eContext}
      * Retrieve all Modulegroups
      * 
      * @param eContext The context of the Modulegroup
@@ -94,6 +95,7 @@ class ObjectModulegroupApi(basePath: kotlin.String = defaultBasePath, client: Ca
     }
 
     /**
+     * GET /1/object/modulegroup/getAll/{eContext}
      * Retrieve all Modulegroups
      * 
      * @param eContext The context of the Modulegroup

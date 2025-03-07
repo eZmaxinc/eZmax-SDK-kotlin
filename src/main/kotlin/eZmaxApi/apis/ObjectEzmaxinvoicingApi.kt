@@ -84,6 +84,7 @@ class ObjectEzmaxinvoicingApi(basePath: kotlin.String = defaultBasePath, client:
      }
 
     /**
+     * GET /2/object/ezmaxinvoicing/getAutocomplete/{sSelector}
      * Retrieve Ezmaxinvoicings and IDs
      * Get the list of Ezmaxinvoicing to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezmaxinvoicings to return
@@ -118,6 +119,7 @@ class ObjectEzmaxinvoicingApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /2/object/ezmaxinvoicing/getAutocomplete/{sSelector}
      * Retrieve Ezmaxinvoicings and IDs
      * Get the list of Ezmaxinvoicing to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezmaxinvoicings to return
@@ -173,6 +175,7 @@ class ObjectEzmaxinvoicingApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /2/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}
      * Retrieve an existing Ezmaxinvoicing
      * 
      * @param pkiEzmaxinvoicingID 
@@ -204,6 +207,7 @@ class ObjectEzmaxinvoicingApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /2/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}
      * Retrieve an existing Ezmaxinvoicing
      * 
      * @param pkiEzmaxinvoicingID 
@@ -244,6 +248,7 @@ class ObjectEzmaxinvoicingApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /1/object/ezmaxinvoicing/getProvisional
      * Retrieve provisional Ezmaxinvoicing
      * 
      * @return EzmaxinvoicingGetProvisionalV1Response
@@ -274,6 +279,7 @@ class ObjectEzmaxinvoicingApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /1/object/ezmaxinvoicing/getProvisional
      * Retrieve provisional Ezmaxinvoicing
      * 
      * @return ApiResponse<EzmaxinvoicingGetProvisionalV1Response?>

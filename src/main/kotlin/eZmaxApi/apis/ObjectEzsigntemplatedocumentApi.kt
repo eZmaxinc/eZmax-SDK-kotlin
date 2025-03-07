@@ -69,6 +69,7 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * POST /1/object/ezsigntemplatedocument
      * Create a new Ezsigntemplatedocument
      * The endpoint allows to create one or many elements at once.
      * @param ezsigntemplatedocumentCreateObjectV1Request 
@@ -100,6 +101,7 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * POST /1/object/ezsigntemplatedocument
      * Create a new Ezsigntemplatedocument
      * The endpoint allows to create one or many elements at once.
      * @param ezsigntemplatedocumentCreateObjectV1Request 
@@ -141,6 +143,7 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * PUT /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplatedocumentpagerecognitions
      * Edit multiple Ezsigntemplatedocumentpagerecognitions
      * Edit multiple Ezsigntemplatedocumentpagerecognitions
      * @param pkiEzsigntemplatedocumentID 
@@ -173,6 +176,7 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * PUT /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplatedocumentpagerecognitions
      * Edit multiple Ezsigntemplatedocumentpagerecognitions
      * Edit multiple Ezsigntemplatedocumentpagerecognitions
      * @param pkiEzsigntemplatedocumentID 
@@ -216,6 +220,7 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * PUT /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplateformfieldgroups
      * Edit multiple Ezsigntemplateformfieldgroups
      * Using this endpoint, you can edit multiple Ezsigntemplateformfieldgroups at the same time.
      * @param pkiEzsigntemplatedocumentID 
@@ -248,6 +253,7 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * PUT /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplateformfieldgroups
      * Edit multiple Ezsigntemplateformfieldgroups
      * Using this endpoint, you can edit multiple Ezsigntemplateformfieldgroups at the same time.
      * @param pkiEzsigntemplatedocumentID 
@@ -291,6 +297,7 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * PUT /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplatesignatures
      * Edit multiple Ezsigntemplatesignatures
      * Using this endpoint, you can edit multiple Ezsigntemplatesignatures at the same time.
      * @param pkiEzsigntemplatedocumentID 
@@ -323,6 +330,7 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * PUT /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplatesignatures
      * Edit multiple Ezsigntemplatesignatures
      * Using this endpoint, you can edit multiple Ezsigntemplatesignatures at the same time.
      * @param pkiEzsigntemplatedocumentID 
@@ -366,6 +374,7 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * PUT /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}
      * Edit an existing Ezsigntemplatedocument
      * 
      * @param pkiEzsigntemplatedocumentID 
@@ -398,6 +407,7 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * PUT /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}
      * Edit an existing Ezsigntemplatedocument
      * 
      * @param pkiEzsigntemplatedocumentID 
@@ -441,6 +451,7 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * POST /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/extractText
      * Extract text from Ezsigntemplatedocument area
      * Extract text from Ezsigntemplatedocument area
      * @param pkiEzsigntemplatedocumentID 
@@ -473,6 +484,7 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * POST /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/extractText
      * Extract text from Ezsigntemplatedocument area
      * Extract text from Ezsigntemplatedocument area
      * @param pkiEzsigntemplatedocumentID 
@@ -516,6 +528,7 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * POST /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/flatten
      * Flatten
      * Flatten an Ezsigntemplatedocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
      * @param pkiEzsigntemplatedocumentID 
@@ -548,6 +561,7 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * POST /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/flatten
      * Flatten
      * Flatten an Ezsigntemplatedocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
      * @param pkiEzsigntemplatedocumentID 
@@ -591,6 +605,7 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * GET /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplatedocumentpagerecognitions
      * Retrieve an existing Ezsigntemplatedocument&#39;s Ezsigntemplatedocumentpagerecognitions
      * 
      * @param pkiEzsigntemplatedocumentID 
@@ -622,6 +637,7 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * GET /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplatedocumentpagerecognitions
      * Retrieve an existing Ezsigntemplatedocument&#39;s Ezsigntemplatedocumentpagerecognitions
      * 
      * @param pkiEzsigntemplatedocumentID 
@@ -662,6 +678,7 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * GET /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplatedocumentpages
      * Retrieve an existing Ezsigntemplatedocument&#39;s Ezsigntemplatedocumentpages
      * 
      * @param pkiEzsigntemplatedocumentID 
@@ -693,6 +710,7 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * GET /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplatedocumentpages
      * Retrieve an existing Ezsigntemplatedocument&#39;s Ezsigntemplatedocumentpages
      * 
      * @param pkiEzsigntemplatedocumentID 
@@ -733,6 +751,7 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * GET /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplateformfieldgroups
      * Retrieve an existing Ezsigntemplatedocument&#39;s Ezsigntemplateformfieldgroups
      * 
      * @param pkiEzsigntemplatedocumentID 
@@ -764,6 +783,7 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * GET /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplateformfieldgroups
      * Retrieve an existing Ezsigntemplatedocument&#39;s Ezsigntemplateformfieldgroups
      * 
      * @param pkiEzsigntemplatedocumentID 
@@ -804,6 +824,7 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * GET /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplatesignatures
      * Retrieve an existing Ezsigntemplatedocument&#39;s Ezsigntemplatesignatures
      * 
      * @param pkiEzsigntemplatedocumentID 
@@ -835,6 +856,7 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * GET /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplatesignatures
      * Retrieve an existing Ezsigntemplatedocument&#39;s Ezsigntemplatesignatures
      * 
      * @param pkiEzsigntemplatedocumentID 
@@ -875,6 +897,7 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * GET /2/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}
      * Retrieve an existing Ezsigntemplatedocument
      * 
      * @param pkiEzsigntemplatedocumentID 
@@ -906,6 +929,7 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * GET /2/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}
      * Retrieve an existing Ezsigntemplatedocument
      * 
      * @param pkiEzsigntemplatedocumentID 
@@ -946,6 +970,7 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * POST /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getWordsPositions
      * Retrieve positions X,Y of given words from a Ezsigntemplatedocument
      * 
      * @param pkiEzsigntemplatedocumentID 
@@ -978,6 +1003,7 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * POST /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getWordsPositions
      * Retrieve positions X,Y of given words from a Ezsigntemplatedocument
      * 
      * @param pkiEzsigntemplatedocumentID 
@@ -1021,6 +1047,7 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * PATCH /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}
      * Patch an existing Ezsigntemplatedocument
      * 
      * @param pkiEzsigntemplatedocumentID 
@@ -1053,6 +1080,7 @@ class ObjectEzsigntemplatedocumentApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * PATCH /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}
      * Patch an existing Ezsigntemplatedocument
      * 
      * @param pkiEzsigntemplatedocumentID 

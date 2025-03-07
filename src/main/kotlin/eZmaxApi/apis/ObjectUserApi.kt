@@ -68,6 +68,7 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * POST /1/object/user
      * Create a new User
      * The endpoint allows to create one or many elements at once.
      * @param userCreateObjectV1Request 
@@ -99,6 +100,7 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * POST /1/object/user
      * Create a new User
      * The endpoint allows to create one or many elements at once.
      * @param userCreateObjectV1Request 
@@ -140,6 +142,7 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * POST /2/object/user
      * Create a new User
      * The endpoint allows to create one or many elements at once.
      * @param userCreateObjectV2Request 
@@ -171,6 +174,7 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * POST /2/object/user
      * Create a new User
      * The endpoint allows to create one or many elements at once.
      * @param userCreateObjectV2Request 
@@ -212,6 +216,7 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * PUT /2/object/user/{pkiUserID}/editColleagues
      * Edit multiple Colleagues
      * Using this endpoint, you can edit multiple Colleagues at the same time.
      * @param pkiUserID 
@@ -244,6 +249,7 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * PUT /2/object/user/{pkiUserID}/editColleagues
      * Edit multiple Colleagues
      * Using this endpoint, you can edit multiple Colleagues at the same time.
      * @param pkiUserID 
@@ -287,6 +293,7 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * PUT /1/object/user/{pkiUserID}
      * Edit an existing User
      * 
      * @param pkiUserID The unique ID of the User
@@ -319,6 +326,7 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * PUT /1/object/user/{pkiUserID}
      * Edit an existing User
      * 
      * @param pkiUserID The unique ID of the User
@@ -362,6 +370,7 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * PUT /1/object/user/{pkiUserID}/editPermissions
      * Edit multiple Permissions
      * Using this endpoint, you can edit multiple Permissions at the same time.
      * @param pkiUserID 
@@ -394,6 +403,7 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * PUT /1/object/user/{pkiUserID}/editPermissions
      * Edit multiple Permissions
      * Using this endpoint, you can edit multiple Permissions at the same time.
      * @param pkiUserID 
@@ -437,6 +447,7 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * GET /1/object/user/{pkiUserID}/getApikeys
      * Retrieve an existing User&#39;s Apikeys
      * 
      * @param pkiUserID 
@@ -468,6 +479,7 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * GET /1/object/user/{pkiUserID}/getApikeys
      * Retrieve an existing User&#39;s Apikeys
      * 
      * @param pkiUserID 
@@ -550,6 +562,7 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
      }
 
     /**
+     * GET /2/object/user/getAutocomplete/{sSelector}
      * Retrieve Users and IDs
      * Get the list of User to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Users to return
@@ -584,6 +597,7 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * GET /2/object/user/getAutocomplete/{sSelector}
      * Retrieve Users and IDs
      * Get the list of User to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Users to return
@@ -639,6 +653,7 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * GET /2/object/user/{pkiUserID}/getColleagues
      * Retrieve an existing User&#39;s Colleagues
      * 
      * @param pkiUserID 
@@ -670,6 +685,7 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * GET /2/object/user/{pkiUserID}/getColleagues
      * Retrieve an existing User&#39;s Colleagues
      * 
      * @param pkiUserID 
@@ -710,6 +726,7 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * GET /1/object/user/{pkiUserID}/getEffectivePermissions
      * Retrieve an existing User&#39;s Effective Permissions
      * Effective Permissions refers to the combination of Permissions held by a User and the Permissions associated with the Usergroups they belong to.
      * @param pkiUserID 
@@ -741,6 +758,7 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * GET /1/object/user/{pkiUserID}/getEffectivePermissions
      * Retrieve an existing User&#39;s Effective Permissions
      * Effective Permissions refers to the combination of Permissions held by a User and the Permissions associated with the Usergroups they belong to.
      * @param pkiUserID 
@@ -816,6 +834,7 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
      }
 
     /**
+     * GET /1/object/user/getList
      * Retrieve User list
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eUserType | AgentBroker&lt;br&gt;Assistant&lt;br&gt;Employee&lt;br&gt;EzsignUser&lt;br&gt;Normal | | eUserOrigin | BuiltIn&lt;br&gt;External | | eUserEzsignaccess | No&lt;br&gt;PaidByOffice&lt;br&gt;PerDocument&lt;br&gt;Prepaid |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -851,6 +870,7 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * GET /1/object/user/getList
      * Retrieve User list
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eUserType | AgentBroker&lt;br&gt;Assistant&lt;br&gt;Employee&lt;br&gt;EzsignUser&lt;br&gt;Normal | | eUserOrigin | BuiltIn&lt;br&gt;External | | eUserEzsignaccess | No&lt;br&gt;PaidByOffice&lt;br&gt;PerDocument&lt;br&gt;Prepaid |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -914,6 +934,7 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * GET /2/object/user/{pkiUserID}
      * Retrieve an existing User
      * 
      * @param pkiUserID The unique ID of the User
@@ -945,6 +966,7 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * GET /2/object/user/{pkiUserID}
      * Retrieve an existing User
      * 
      * @param pkiUserID The unique ID of the User
@@ -985,6 +1007,7 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * GET /1/object/user/{pkiUserID}/getPermissions
      * Retrieve an existing User&#39;s Permissions
      * 
      * @param pkiUserID 
@@ -1016,6 +1039,7 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * GET /1/object/user/{pkiUserID}/getPermissions
      * Retrieve an existing User&#39;s Permissions
      * 
      * @param pkiUserID 
@@ -1056,6 +1080,7 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * GET /1/object/user/{pkiUserID}/getSubnets
      * Retrieve an existing User&#39;s Subnets
      * 
      * @param pkiUserID 
@@ -1087,6 +1112,7 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * GET /1/object/user/{pkiUserID}/getSubnets
      * Retrieve an existing User&#39;s Subnets
      * 
      * @param pkiUserID 
@@ -1127,6 +1153,7 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * GET /1/object/user/{pkiUserID}/getUsergroupexternals
      * Get User&#39;s Usergroupexternals
      * 
      * @param pkiUserID 
@@ -1158,6 +1185,7 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * GET /1/object/user/{pkiUserID}/getUsergroupexternals
      * Get User&#39;s Usergroupexternals
      * 
      * @param pkiUserID 
@@ -1198,6 +1226,7 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * GET /1/object/user/{pkiUserID}/getUsergroups
      * Get User&#39;s Usergroups
      * 
      * @param pkiUserID 
@@ -1229,6 +1258,7 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * GET /1/object/user/{pkiUserID}/getUsergroups
      * Get User&#39;s Usergroups
      * 
      * @param pkiUserID 
@@ -1269,6 +1299,7 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * POST /1/object/user/{pkiUserID}/sendPasswordReset
      * Send password reset
      * Send the password reset email
      * @param pkiUserID 
@@ -1301,6 +1332,7 @@ class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * POST /1/object/user/{pkiUserID}/sendPasswordReset
      * Send password reset
      * Send the password reset email
      * @param pkiUserID 

@@ -13,6 +13,7 @@
 | **fkiEzsigndocumentID** | **kotlin.Int** | The unique ID of the Ezsigndocument |  |
 | **objCreateezsignelementspositionedbyword** | [**CustomCreateEzsignelementsPositionedByWordRequest**](CustomCreateEzsignelementsPositionedByWordRequest.md) |  |  |
 | **pkiEzsignsignatureID** | **kotlin.Int** | The unique ID of the Ezsignsignature |  [optional] |
+| **fkiPaymentgatewayID** | **kotlin.Int** | The unique ID of the Paymentgateway |  [optional] |
 | **iEzsignsignatureWidth** | **kotlin.Int** | The width of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have a width of 2 inches, you would use \&quot;200\&quot; for the iEzsignsignatureWidth. |  [optional] |
 | **iEzsignsignatureHeight** | **kotlin.Int** | The height of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have an height of 2 inches, you would use \&quot;200\&quot; for the iEzsignsignatureHeight. |  [optional] |
 | **tEzsignsignatureTooltip** | **kotlin.String** | A tooltip that will be presented to Ezsignsigner about the Ezsignsignature |  [optional] |

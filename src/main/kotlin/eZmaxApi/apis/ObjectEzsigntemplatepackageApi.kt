@@ -57,6 +57,7 @@ class ObjectEzsigntemplatepackageApi(basePath: kotlin.String = defaultBasePath, 
     }
 
     /**
+     * POST /1/object/ezsigntemplatepackage
      * Create a new Ezsigntemplatepackage
      * The endpoint allows to create one or many elements at once.
      * @param ezsigntemplatepackageCreateObjectV1Request 
@@ -88,6 +89,7 @@ class ObjectEzsigntemplatepackageApi(basePath: kotlin.String = defaultBasePath, 
     }
 
     /**
+     * POST /1/object/ezsigntemplatepackage
      * Create a new Ezsigntemplatepackage
      * The endpoint allows to create one or many elements at once.
      * @param ezsigntemplatepackageCreateObjectV1Request 
@@ -129,6 +131,7 @@ class ObjectEzsigntemplatepackageApi(basePath: kotlin.String = defaultBasePath, 
     }
 
     /**
+     * DELETE /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}
      * Delete an existing Ezsigntemplatepackage
      * 
      * @param pkiEzsigntemplatepackageID 
@@ -160,6 +163,7 @@ class ObjectEzsigntemplatepackageApi(basePath: kotlin.String = defaultBasePath, 
     }
 
     /**
+     * DELETE /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}
      * Delete an existing Ezsigntemplatepackage
      * 
      * @param pkiEzsigntemplatepackageID 
@@ -200,6 +204,7 @@ class ObjectEzsigntemplatepackageApi(basePath: kotlin.String = defaultBasePath, 
     }
 
     /**
+     * PUT /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}/editEzsigntemplatepackagesigners
      * Edit multiple Ezsigntemplatepackagesigners
      * Using this endpoint, you can edit multiple Ezsigntemplatepackagesigners at the same time.
      * @param pkiEzsigntemplatepackageID 
@@ -232,6 +237,7 @@ class ObjectEzsigntemplatepackageApi(basePath: kotlin.String = defaultBasePath, 
     }
 
     /**
+     * PUT /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}/editEzsigntemplatepackagesigners
      * Edit multiple Ezsigntemplatepackagesigners
      * Using this endpoint, you can edit multiple Ezsigntemplatepackagesigners at the same time.
      * @param pkiEzsigntemplatepackageID 
@@ -275,6 +281,7 @@ class ObjectEzsigntemplatepackageApi(basePath: kotlin.String = defaultBasePath, 
     }
 
     /**
+     * PUT /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}
      * Edit an existing Ezsigntemplatepackage
      * 
      * @param pkiEzsigntemplatepackageID 
@@ -307,6 +314,7 @@ class ObjectEzsigntemplatepackageApi(basePath: kotlin.String = defaultBasePath, 
     }
 
     /**
+     * PUT /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}
      * Edit an existing Ezsigntemplatepackage
      * 
      * @param pkiEzsigntemplatepackageID 
@@ -386,6 +394,7 @@ class ObjectEzsigntemplatepackageApi(basePath: kotlin.String = defaultBasePath, 
      }
 
     /**
+     * GET /2/object/ezsigntemplatepackage/getAutocomplete/{sSelector}
      * Retrieve Ezsigntemplatepackages and IDs
      * Get the list of Ezsigntemplatepackage to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezsigntemplatepackages to return
@@ -421,6 +430,7 @@ class ObjectEzsigntemplatepackageApi(basePath: kotlin.String = defaultBasePath, 
     }
 
     /**
+     * GET /2/object/ezsigntemplatepackage/getAutocomplete/{sSelector}
      * Retrieve Ezsigntemplatepackages and IDs
      * Get the list of Ezsigntemplatepackage to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezsigntemplatepackages to return
@@ -516,6 +526,7 @@ class ObjectEzsigntemplatepackageApi(basePath: kotlin.String = defaultBasePath, 
      }
 
     /**
+     * GET /1/object/ezsigntemplatepackage/getList
      * Retrieve Ezsigntemplatepackage list
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsigntemplatepackageType | Company&lt;br&gt;Team&lt;br&gt;User&lt;br&gt;Usergroup |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -551,6 +562,7 @@ class ObjectEzsigntemplatepackageApi(basePath: kotlin.String = defaultBasePath, 
     }
 
     /**
+     * GET /1/object/ezsigntemplatepackage/getList
      * Retrieve Ezsigntemplatepackage list
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsigntemplatepackageType | Company&lt;br&gt;Team&lt;br&gt;User&lt;br&gt;Usergroup |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -614,6 +626,7 @@ class ObjectEzsigntemplatepackageApi(basePath: kotlin.String = defaultBasePath, 
     }
 
     /**
+     * GET /2/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}
      * Retrieve an existing Ezsigntemplatepackage
      * 
      * @param pkiEzsigntemplatepackageID 
@@ -645,6 +658,7 @@ class ObjectEzsigntemplatepackageApi(basePath: kotlin.String = defaultBasePath, 
     }
 
     /**
+     * GET /2/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}
      * Retrieve an existing Ezsigntemplatepackage
      * 
      * @param pkiEzsigntemplatepackageID 

@@ -5,6 +5,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**customerCreateObjectV1**](ObjectCustomerApi.md#customerCreateObjectV1) | **POST** /1/object/customer | Create a new Customer |
+| [**customerGetAutocompleteV2**](ObjectCustomerApi.md#customerGetAutocompleteV2) | **GET** /2/object/customer/getAutocomplete/{sSelector} | Retrieve Customers and IDs |
 | [**customerGetObjectV2**](ObjectCustomerApi.md#customerGetObjectV2) | **GET** /2/object/customer/{pkiCustomerID} | Retrieve an existing Customer |
 
 
@@ -55,6 +56,61 @@ Configure Authorization:
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a id="customerGetAutocompleteV2"></a>
+# **customerGetAutocompleteV2**
+> CustomerGetAutocompleteV2Response customerGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+
+Retrieve Customers and IDs
+
+Get the list of Customer to be used in a dropdown or autocomplete control.
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectCustomerApi()
+val sSelector : kotlin.String = sSelector_example // kotlin.String | The type of Customers to return
+val eFilterActive : kotlin.String = eFilterActive_example // kotlin.String | Specify which results we want to display.
+val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter the returned results
+val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
+try {
+    val result : CustomerGetAutocompleteV2Response = apiInstance.customerGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectCustomerApi#customerGetAutocompleteV2")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectCustomerApi#customerGetAutocompleteV2")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| **sSelector** | **kotlin.String**| The type of Customers to return | [enum: All] |
+| **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive] |
+| **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional] |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
+
+### Return type
+
+[**CustomerGetAutocompleteV2Response**](CustomerGetAutocompleteV2Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a id="customerGetObjectV2"></a>

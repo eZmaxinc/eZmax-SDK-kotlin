@@ -49,6 +49,7 @@ class ObjectSystemconfigurationApi(basePath: kotlin.String = defaultBasePath, cl
     }
 
     /**
+     * PUT /1/object/systemconfiguration/{pkiSystemconfigurationID}
      * Edit an existing Systemconfiguration
      * 
      * @param pkiSystemconfigurationID The unique ID of the Systemconfiguration
@@ -81,6 +82,7 @@ class ObjectSystemconfigurationApi(basePath: kotlin.String = defaultBasePath, cl
     }
 
     /**
+     * PUT /1/object/systemconfiguration/{pkiSystemconfigurationID}
      * Edit an existing Systemconfiguration
      * 
      * @param pkiSystemconfigurationID The unique ID of the Systemconfiguration
@@ -124,6 +126,7 @@ class ObjectSystemconfigurationApi(basePath: kotlin.String = defaultBasePath, cl
     }
 
     /**
+     * GET /2/object/systemconfiguration/{pkiSystemconfigurationID}
      * Retrieve an existing Systemconfiguration
      * 
      * @param pkiSystemconfigurationID The unique ID of the Systemconfiguration
@@ -155,6 +158,7 @@ class ObjectSystemconfigurationApi(basePath: kotlin.String = defaultBasePath, cl
     }
 
     /**
+     * GET /2/object/systemconfiguration/{pkiSystemconfigurationID}
      * Retrieve an existing Systemconfiguration
      * 
      * @param pkiSystemconfigurationID The unique ID of the Systemconfiguration

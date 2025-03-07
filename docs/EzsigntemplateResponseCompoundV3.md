@@ -14,6 +14,7 @@
 | **aObjEzsigntemplatesigner** | [**kotlin.collections.List&lt;EzsigntemplatesignerResponseCompound&gt;**](EzsigntemplatesignerResponseCompound.md) |  |  |
 | **fkiEzsigntemplatedocumentID** | **kotlin.Int** | The unique ID of the Ezsigntemplatedocument |  [optional] |
 | **fkiEzsignfoldertypeID** | **kotlin.Int** | The unique ID of the Ezsignfoldertype. |  [optional] |
+| **objEzsignfoldertype** | [**CustomEzsignfoldertypeTemplateResponse**](CustomEzsignfoldertypeTemplateResponse.md) |  |  [optional] |
 | **fkiEzdoctemplatedocumentID** | **kotlin.Int** | The unique ID of the Ezdoctemplatedocument |  [optional] |
 | **sEzdoctemplatedocumentNameX** | **kotlin.String** | The name of the Ezdoctemplatedocument in the language of the requester |  [optional] |
 | **sEzsigntemplateExternaldescription** | **kotlin.String** | The external description of the Ezsigntemplate |  [optional] |

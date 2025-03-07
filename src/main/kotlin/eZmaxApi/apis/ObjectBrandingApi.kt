@@ -54,6 +54,7 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: Call.
     }
 
     /**
+     * POST /2/object/branding
      * Create a new Branding
      * The endpoint allows to create one or many elements at once.
      * @param brandingCreateObjectV2Request 
@@ -85,6 +86,7 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: Call.
     }
 
     /**
+     * POST /2/object/branding
      * Create a new Branding
      * The endpoint allows to create one or many elements at once.
      * @param brandingCreateObjectV2Request 
@@ -126,6 +128,7 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: Call.
     }
 
     /**
+     * PUT /2/object/branding/{pkiBrandingID}
      * Edit an existing Branding
      * 
      * @param pkiBrandingID 
@@ -158,6 +161,7 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: Call.
     }
 
     /**
+     * PUT /2/object/branding/{pkiBrandingID}
      * Edit an existing Branding
      * 
      * @param pkiBrandingID 
@@ -235,6 +239,7 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: Call.
      }
 
     /**
+     * GET /2/object/branding/getAutocomplete/{sSelector}
      * Retrieve Brandings and IDs
      * Get the list of Branding to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Brandings to return
@@ -269,6 +274,7 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: Call.
     }
 
     /**
+     * GET /2/object/branding/getAutocomplete/{sSelector}
      * Retrieve Brandings and IDs
      * Get the list of Branding to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Brandings to return
@@ -357,6 +363,7 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: Call.
      }
 
     /**
+     * GET /1/object/branding/getList
      * Retrieve Branding list
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eBrandingLogo | Default&lt;br&gt;JPEG&lt;br&gt;PNG | | eBrandingLogointerface | Default&lt;br&gt;JPEG&lt;br&gt;PNG |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -392,6 +399,7 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: Call.
     }
 
     /**
+     * GET /1/object/branding/getList
      * Retrieve Branding list
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eBrandingLogo | Default&lt;br&gt;JPEG&lt;br&gt;PNG | | eBrandingLogointerface | Default&lt;br&gt;JPEG&lt;br&gt;PNG |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -455,6 +463,7 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: Call.
     }
 
     /**
+     * GET /3/object/branding/{pkiBrandingID}
      * Retrieve an existing Branding
      * 
      * @param pkiBrandingID 
@@ -486,6 +495,7 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: Call.
     }
 
     /**
+     * GET /3/object/branding/{pkiBrandingID}
      * Retrieve an existing Branding
      * 
      * @param pkiBrandingID 

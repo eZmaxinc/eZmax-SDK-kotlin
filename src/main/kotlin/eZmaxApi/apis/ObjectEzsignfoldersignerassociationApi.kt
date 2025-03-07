@@ -63,6 +63,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     }
 
     /**
+     * POST /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/createEmbeddedUrl
      * Creates an Url to allow embedded signing
      * This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
      * @param pkiEzsignfoldersignerassociationID 
@@ -95,6 +96,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     }
 
     /**
+     * POST /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/createEmbeddedUrl
      * Creates an Url to allow embedded signing
      * This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
      * @param pkiEzsignfoldersignerassociationID 
@@ -138,6 +140,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     }
 
     /**
+     * POST /1/object/ezsignfoldersignerassociation
      * Create a new Ezsignfoldersignerassociation
      * The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
      * @param ezsignfoldersignerassociationCreateObjectV1Request 
@@ -171,6 +174,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     }
 
     /**
+     * POST /1/object/ezsignfoldersignerassociation
      * Create a new Ezsignfoldersignerassociation
      * The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
      * @param ezsignfoldersignerassociationCreateObjectV1Request 
@@ -215,6 +219,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     }
 
     /**
+     * POST /2/object/ezsignfoldersignerassociation
      * Create a new Ezsignfoldersignerassociation
      * The endpoint allows to create one or many elements at once.
      * @param ezsignfoldersignerassociationCreateObjectV2Request 
@@ -246,6 +251,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     }
 
     /**
+     * POST /2/object/ezsignfoldersignerassociation
      * Create a new Ezsignfoldersignerassociation
      * The endpoint allows to create one or many elements at once.
      * @param ezsignfoldersignerassociationCreateObjectV2Request 
@@ -287,6 +293,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     }
 
     /**
+     * DELETE /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}
      * Delete an existing Ezsignfoldersignerassociation
      * 
      * @param pkiEzsignfoldersignerassociationID 
@@ -318,6 +325,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     }
 
     /**
+     * DELETE /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}
      * Delete an existing Ezsignfoldersignerassociation
      * 
      * @param pkiEzsignfoldersignerassociationID 
@@ -358,6 +366,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     }
 
     /**
+     * PUT /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}
      * Edit an existing Ezsignfoldersignerassociation
      * 
      * @param pkiEzsignfoldersignerassociationID 
@@ -390,6 +399,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     }
 
     /**
+     * PUT /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}
      * Edit an existing Ezsignfoldersignerassociation
      * 
      * @param pkiEzsignfoldersignerassociationID 
@@ -433,6 +443,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     }
 
     /**
+     * POST /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/forceDisconnect
      * Disconnects the Ezsignfoldersignerassociation
      * 
      * @param pkiEzsignfoldersignerassociationID 
@@ -465,6 +476,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     }
 
     /**
+     * POST /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/forceDisconnect
      * Disconnects the Ezsignfoldersignerassociation
      * 
      * @param pkiEzsignfoldersignerassociationID 
@@ -508,6 +520,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     }
 
     /**
+     * GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getInPersonLoginUrl
      * Retrieve a Login Url to allow In-Person signing
      * This endpoint returns a Login Url that can be used in a browser or embedded in an I-Frame to allow in person signing.  The signer Login type must be configured as In-Person.
      * @param pkiEzsignfoldersignerassociationID 
@@ -539,6 +552,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     }
 
     /**
+     * GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getInPersonLoginUrl
      * Retrieve a Login Url to allow In-Person signing
      * This endpoint returns a Login Url that can be used in a browser or embedded in an I-Frame to allow in person signing.  The signer Login type must be configured as In-Person.
      * @param pkiEzsignfoldersignerassociationID 
@@ -579,6 +593,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     }
 
     /**
+     * GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}
      * Retrieve an existing Ezsignfoldersignerassociation
      * 
      * @param pkiEzsignfoldersignerassociationID 
@@ -612,6 +627,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     }
 
     /**
+     * GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}
      * Retrieve an existing Ezsignfoldersignerassociation
      * 
      * @param pkiEzsignfoldersignerassociationID 
@@ -655,6 +671,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     }
 
     /**
+     * GET /2/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}
      * Retrieve an existing Ezsignfoldersignerassociation
      * 
      * @param pkiEzsignfoldersignerassociationID 
@@ -686,6 +703,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     }
 
     /**
+     * GET /2/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}
      * Retrieve an existing Ezsignfoldersignerassociation
      * 
      * @param pkiEzsignfoldersignerassociationID 
@@ -726,6 +744,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     }
 
     /**
+     * PATCH /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}
      * Patch an existing Ezsignfoldersignerassociation
      * 
      * @param pkiEzsignfoldersignerassociationID 
@@ -758,6 +777,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     }
 
     /**
+     * PATCH /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}
      * Patch an existing Ezsignfoldersignerassociation
      * 
      * @param pkiEzsignfoldersignerassociationID 
@@ -801,6 +821,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     }
 
     /**
+     * POST /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/reassign
      * Reassign remaining unsigned signatures and forms
      * Reassign remaining unsigned signatures and forms
      * @param pkiEzsignfoldersignerassociationID 
@@ -833,6 +854,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     }
 
     /**
+     * POST /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/reassign
      * Reassign remaining unsigned signatures and forms
      * Reassign remaining unsigned signatures and forms
      * @param pkiEzsignfoldersignerassociationID 

@@ -47,6 +47,7 @@ class ObjectNotificationtestApi(basePath: kotlin.String = defaultBasePath, clien
     }
 
     /**
+     * GET /1/object/notificationtest/{pkiNotificationtestID}/getElements
      * Retrieve an existing Notificationtest&#39;s Elements
      * 
      * @param pkiNotificationtestID 
@@ -78,6 +79,7 @@ class ObjectNotificationtestApi(basePath: kotlin.String = defaultBasePath, clien
     }
 
     /**
+     * GET /1/object/notificationtest/{pkiNotificationtestID}/getElements
      * Retrieve an existing Notificationtest&#39;s Elements
      * 
      * @param pkiNotificationtestID 

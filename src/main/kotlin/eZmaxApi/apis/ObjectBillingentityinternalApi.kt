@@ -54,6 +54,7 @@ class ObjectBillingentityinternalApi(basePath: kotlin.String = defaultBasePath, 
     }
 
     /**
+     * POST /1/object/billingentityinternal
      * Create a new Billingentityinternal
      * The endpoint allows to create one or many elements at once.
      * @param billingentityinternalCreateObjectV1Request 
@@ -85,6 +86,7 @@ class ObjectBillingentityinternalApi(basePath: kotlin.String = defaultBasePath, 
     }
 
     /**
+     * POST /1/object/billingentityinternal
      * Create a new Billingentityinternal
      * The endpoint allows to create one or many elements at once.
      * @param billingentityinternalCreateObjectV1Request 
@@ -126,6 +128,7 @@ class ObjectBillingentityinternalApi(basePath: kotlin.String = defaultBasePath, 
     }
 
     /**
+     * PUT /1/object/billingentityinternal/{pkiBillingentityinternalID}
      * Edit an existing Billingentityinternal
      * 
      * @param pkiBillingentityinternalID 
@@ -158,6 +161,7 @@ class ObjectBillingentityinternalApi(basePath: kotlin.String = defaultBasePath, 
     }
 
     /**
+     * PUT /1/object/billingentityinternal/{pkiBillingentityinternalID}
      * Edit an existing Billingentityinternal
      * 
      * @param pkiBillingentityinternalID 
@@ -235,6 +239,7 @@ class ObjectBillingentityinternalApi(basePath: kotlin.String = defaultBasePath, 
      }
 
     /**
+     * GET /2/object/billingentityinternal/getAutocomplete/{sSelector}
      * Retrieve Billingentityinternals and IDs
      * Get the list of Billingentityinternal to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Billingentityinternals to return
@@ -269,6 +274,7 @@ class ObjectBillingentityinternalApi(basePath: kotlin.String = defaultBasePath, 
     }
 
     /**
+     * GET /2/object/billingentityinternal/getAutocomplete/{sSelector}
      * Retrieve Billingentityinternals and IDs
      * Get the list of Billingentityinternal to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Billingentityinternals to return
@@ -343,6 +349,7 @@ class ObjectBillingentityinternalApi(basePath: kotlin.String = defaultBasePath, 
      }
 
     /**
+     * GET /1/object/billingentityinternal/getList
      * Retrieve Billingentityinternal list
      * 
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -378,6 +385,7 @@ class ObjectBillingentityinternalApi(basePath: kotlin.String = defaultBasePath, 
     }
 
     /**
+     * GET /1/object/billingentityinternal/getList
      * Retrieve Billingentityinternal list
      * 
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -441,6 +449,7 @@ class ObjectBillingentityinternalApi(basePath: kotlin.String = defaultBasePath, 
     }
 
     /**
+     * GET /2/object/billingentityinternal/{pkiBillingentityinternalID}
      * Retrieve an existing Billingentityinternal
      * 
      * @param pkiBillingentityinternalID 
@@ -472,6 +481,7 @@ class ObjectBillingentityinternalApi(basePath: kotlin.String = defaultBasePath, 
     }
 
     /**
+     * GET /2/object/billingentityinternal/{pkiBillingentityinternalID}
      * Retrieve an existing Billingentityinternal
      * 
      * @param pkiBillingentityinternalID 

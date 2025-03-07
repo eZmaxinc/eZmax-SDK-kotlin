@@ -54,6 +54,7 @@ class ObjectDiscussionApi(basePath: kotlin.String = defaultBasePath, client: Cal
     }
 
     /**
+     * POST /1/object/discussion
      * Create a new Discussion
      * The endpoint allows to create one or many elements at once.
      * @param discussionCreateObjectV1Request 
@@ -85,6 +86,7 @@ class ObjectDiscussionApi(basePath: kotlin.String = defaultBasePath, client: Cal
     }
 
     /**
+     * POST /1/object/discussion
      * Create a new Discussion
      * The endpoint allows to create one or many elements at once.
      * @param discussionCreateObjectV1Request 
@@ -126,6 +128,7 @@ class ObjectDiscussionApi(basePath: kotlin.String = defaultBasePath, client: Cal
     }
 
     /**
+     * DELETE /1/object/discussion/{pkiDiscussionID}
      * Delete an existing Discussion
      * 
      * @param pkiDiscussionID The unique ID of the Discussion
@@ -157,6 +160,7 @@ class ObjectDiscussionApi(basePath: kotlin.String = defaultBasePath, client: Cal
     }
 
     /**
+     * DELETE /1/object/discussion/{pkiDiscussionID}
      * Delete an existing Discussion
      * 
      * @param pkiDiscussionID The unique ID of the Discussion
@@ -197,6 +201,7 @@ class ObjectDiscussionApi(basePath: kotlin.String = defaultBasePath, client: Cal
     }
 
     /**
+     * GET /2/object/discussion/{pkiDiscussionID}
      * Retrieve an existing Discussion
      * 
      * @param pkiDiscussionID The unique ID of the Discussion
@@ -228,6 +233,7 @@ class ObjectDiscussionApi(basePath: kotlin.String = defaultBasePath, client: Cal
     }
 
     /**
+     * GET /2/object/discussion/{pkiDiscussionID}
      * Retrieve an existing Discussion
      * 
      * @param pkiDiscussionID The unique ID of the Discussion
@@ -268,6 +274,7 @@ class ObjectDiscussionApi(basePath: kotlin.String = defaultBasePath, client: Cal
     }
 
     /**
+     * PATCH /1/object/discussion/{pkiDiscussionID}
      * Patch an existing Discussion
      * 
      * @param pkiDiscussionID The unique ID of the Discussion
@@ -300,6 +307,7 @@ class ObjectDiscussionApi(basePath: kotlin.String = defaultBasePath, client: Cal
     }
 
     /**
+     * PATCH /1/object/discussion/{pkiDiscussionID}
      * Patch an existing Discussion
      * 
      * @param pkiDiscussionID The unique ID of the Discussion
@@ -343,6 +351,7 @@ class ObjectDiscussionApi(basePath: kotlin.String = defaultBasePath, client: Cal
     }
 
     /**
+     * POST /1/object/discussion/{pkiDiscussionID}/updateDiscussionreadstatus
      * Update the read status of the discussion
      * 
      * @param pkiDiscussionID 
@@ -375,6 +384,7 @@ class ObjectDiscussionApi(basePath: kotlin.String = defaultBasePath, client: Cal
     }
 
     /**
+     * POST /1/object/discussion/{pkiDiscussionID}/updateDiscussionreadstatus
      * Update the read status of the discussion
      * 
      * @param pkiDiscussionID 

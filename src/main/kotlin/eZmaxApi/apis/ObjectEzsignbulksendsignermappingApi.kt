@@ -50,6 +50,7 @@ class ObjectEzsignbulksendsignermappingApi(basePath: kotlin.String = defaultBase
     }
 
     /**
+     * POST /1/object/ezsignbulksendsignermapping
      * Create a new Ezsignbulksendsignermapping
      * The endpoint allows to create one or many elements at once.
      * @param ezsignbulksendsignermappingCreateObjectV1Request 
@@ -81,6 +82,7 @@ class ObjectEzsignbulksendsignermappingApi(basePath: kotlin.String = defaultBase
     }
 
     /**
+     * POST /1/object/ezsignbulksendsignermapping
      * Create a new Ezsignbulksendsignermapping
      * The endpoint allows to create one or many elements at once.
      * @param ezsignbulksendsignermappingCreateObjectV1Request 
@@ -122,6 +124,7 @@ class ObjectEzsignbulksendsignermappingApi(basePath: kotlin.String = defaultBase
     }
 
     /**
+     * DELETE /1/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}
      * Delete an existing Ezsignbulksendsignermapping
      * 
      * @param pkiEzsignbulksendsignermappingID 
@@ -153,6 +156,7 @@ class ObjectEzsignbulksendsignermappingApi(basePath: kotlin.String = defaultBase
     }
 
     /**
+     * DELETE /1/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}
      * Delete an existing Ezsignbulksendsignermapping
      * 
      * @param pkiEzsignbulksendsignermappingID 
@@ -193,6 +197,7 @@ class ObjectEzsignbulksendsignermappingApi(basePath: kotlin.String = defaultBase
     }
 
     /**
+     * GET /2/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}
      * Retrieve an existing Ezsignbulksendsignermapping
      * 
      * @param pkiEzsignbulksendsignermappingID 
@@ -224,6 +229,7 @@ class ObjectEzsignbulksendsignermappingApi(basePath: kotlin.String = defaultBase
     }
 
     /**
+     * GET /2/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}
      * Retrieve an existing Ezsignbulksendsignermapping
      * 
      * @param pkiEzsignbulksendsignermappingID 

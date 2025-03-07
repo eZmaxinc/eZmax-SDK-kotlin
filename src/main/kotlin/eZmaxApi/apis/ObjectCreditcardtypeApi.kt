@@ -81,6 +81,7 @@ class ObjectCreditcardtypeApi(basePath: kotlin.String = defaultBasePath, client:
      }
 
     /**
+     * GET /2/object/creditcardtype/getAutocomplete/{sSelector}
      * Retrieve Creditcardtypes and IDs
      * Get the list of Creditcardtype to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Creditcardtypes to return
@@ -115,6 +116,7 @@ class ObjectCreditcardtypeApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /2/object/creditcardtype/getAutocomplete/{sSelector}
      * Retrieve Creditcardtypes and IDs
      * Get the list of Creditcardtype to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Creditcardtypes to return

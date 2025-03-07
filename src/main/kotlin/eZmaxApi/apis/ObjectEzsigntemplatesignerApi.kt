@@ -52,6 +52,7 @@ class ObjectEzsigntemplatesignerApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * POST /1/object/ezsigntemplatesigner
      * Create a new Ezsigntemplatesigner
      * The endpoint allows to create one or many elements at once.
      * @param ezsigntemplatesignerCreateObjectV1Request 
@@ -83,6 +84,7 @@ class ObjectEzsigntemplatesignerApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * POST /1/object/ezsigntemplatesigner
      * Create a new Ezsigntemplatesigner
      * The endpoint allows to create one or many elements at once.
      * @param ezsigntemplatesignerCreateObjectV1Request 
@@ -124,6 +126,7 @@ class ObjectEzsigntemplatesignerApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * DELETE /1/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID}
      * Delete an existing Ezsigntemplatesigner
      * 
      * @param pkiEzsigntemplatesignerID 
@@ -155,6 +158,7 @@ class ObjectEzsigntemplatesignerApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * DELETE /1/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID}
      * Delete an existing Ezsigntemplatesigner
      * 
      * @param pkiEzsigntemplatesignerID 
@@ -195,6 +199,7 @@ class ObjectEzsigntemplatesignerApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * PUT /1/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID}
      * Edit an existing Ezsigntemplatesigner
      * 
      * @param pkiEzsigntemplatesignerID 
@@ -227,6 +232,7 @@ class ObjectEzsigntemplatesignerApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * PUT /1/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID}
      * Edit an existing Ezsigntemplatesigner
      * 
      * @param pkiEzsigntemplatesignerID 
@@ -270,6 +276,7 @@ class ObjectEzsigntemplatesignerApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * GET /2/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID}
      * Retrieve an existing Ezsigntemplatesigner
      * 
      * @param pkiEzsigntemplatesignerID 
@@ -301,6 +308,7 @@ class ObjectEzsigntemplatesignerApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * GET /2/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID}
      * Retrieve an existing Ezsigntemplatesigner
      * 
      * @param pkiEzsigntemplatesignerID 

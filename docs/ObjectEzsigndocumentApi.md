@@ -36,6 +36,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**ezsigndocumentGetTemporaryProofV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetTemporaryProofV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof | Retrieve the temporary proof |
 | [**ezsigndocumentGetWordsPositionsV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetWordsPositionsV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions | Retrieve positions X,Y of given words from a Ezsigndocument |
 | [**ezsigndocumentPatchObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentPatchObjectV1) | **PATCH** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Patch an existing Ezsigndocument |
+| [**ezsigndocumentPrefillEzsignformV1**](ObjectEzsigndocumentApi.md#ezsigndocumentPrefillEzsignformV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/prefillEzsignform | Prefill an Ezsignform |
 | [**ezsigndocumentSubmitEzsignformV1**](ObjectEzsigndocumentApi.md#ezsigndocumentSubmitEzsignformV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/submitEzsignform | Submit the Ezsignform |
 | [**ezsigndocumentUnsendV1**](ObjectEzsigndocumentApi.md#ezsigndocumentUnsendV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/unsend | Unsend the Ezsigndocument |
 
@@ -1623,6 +1624,57 @@ try {
 ### Return type
 
 [**EzsigndocumentPatchObjectV1Response**](EzsigndocumentPatchObjectV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a id="ezsigndocumentPrefillEzsignformV1"></a>
+# **ezsigndocumentPrefillEzsignformV1**
+> EzsigndocumentPrefillEzsignformV1Response ezsigndocumentPrefillEzsignformV1(pkiEzsigndocumentID, ezsigndocumentPrefillEzsignformV1Request)
+
+Prefill an Ezsignform
+
+Using this endpoint, you can prefill an Ezsignform.
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsigndocumentApi()
+val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | 
+val ezsigndocumentPrefillEzsignformV1Request : EzsigndocumentPrefillEzsignformV1Request =  // EzsigndocumentPrefillEzsignformV1Request | 
+try {
+    val result : EzsigndocumentPrefillEzsignformV1Response = apiInstance.ezsigndocumentPrefillEzsignformV1(pkiEzsigndocumentID, ezsigndocumentPrefillEzsignformV1Request)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsigndocumentApi#ezsigndocumentPrefillEzsignformV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsigndocumentApi#ezsigndocumentPrefillEzsignformV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **ezsigndocumentPrefillEzsignformV1Request** | [**EzsigndocumentPrefillEzsignformV1Request**](EzsigndocumentPrefillEzsignformV1Request.md)|  | |
+
+### Return type
+
+[**EzsigndocumentPrefillEzsignformV1Response**](EzsigndocumentPrefillEzsignformV1Response.md)
 
 ### Authorization
 

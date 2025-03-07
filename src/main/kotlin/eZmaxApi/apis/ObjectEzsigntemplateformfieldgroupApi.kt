@@ -52,6 +52,7 @@ class ObjectEzsigntemplateformfieldgroupApi(basePath: kotlin.String = defaultBas
     }
 
     /**
+     * POST /1/object/ezsigntemplateformfieldgroup
      * Create a new Ezsigntemplateformfieldgroup
      * The endpoint allows to create one or many elements at once.
      * @param ezsigntemplateformfieldgroupCreateObjectV1Request 
@@ -83,6 +84,7 @@ class ObjectEzsigntemplateformfieldgroupApi(basePath: kotlin.String = defaultBas
     }
 
     /**
+     * POST /1/object/ezsigntemplateformfieldgroup
      * Create a new Ezsigntemplateformfieldgroup
      * The endpoint allows to create one or many elements at once.
      * @param ezsigntemplateformfieldgroupCreateObjectV1Request 
@@ -124,6 +126,7 @@ class ObjectEzsigntemplateformfieldgroupApi(basePath: kotlin.String = defaultBas
     }
 
     /**
+     * DELETE /1/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID}
      * Delete an existing Ezsigntemplateformfieldgroup
      * 
      * @param pkiEzsigntemplateformfieldgroupID 
@@ -155,6 +158,7 @@ class ObjectEzsigntemplateformfieldgroupApi(basePath: kotlin.String = defaultBas
     }
 
     /**
+     * DELETE /1/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID}
      * Delete an existing Ezsigntemplateformfieldgroup
      * 
      * @param pkiEzsigntemplateformfieldgroupID 
@@ -195,6 +199,7 @@ class ObjectEzsigntemplateformfieldgroupApi(basePath: kotlin.String = defaultBas
     }
 
     /**
+     * PUT /1/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID}
      * Edit an existing Ezsigntemplateformfieldgroup
      * 
      * @param pkiEzsigntemplateformfieldgroupID 
@@ -227,6 +232,7 @@ class ObjectEzsigntemplateformfieldgroupApi(basePath: kotlin.String = defaultBas
     }
 
     /**
+     * PUT /1/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID}
      * Edit an existing Ezsigntemplateformfieldgroup
      * 
      * @param pkiEzsigntemplateformfieldgroupID 
@@ -270,6 +276,7 @@ class ObjectEzsigntemplateformfieldgroupApi(basePath: kotlin.String = defaultBas
     }
 
     /**
+     * GET /2/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID}
      * Retrieve an existing Ezsigntemplateformfieldgroup
      * 
      * @param pkiEzsigntemplateformfieldgroupID 
@@ -301,6 +308,7 @@ class ObjectEzsigntemplateformfieldgroupApi(basePath: kotlin.String = defaultBas
     }
 
     /**
+     * GET /2/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID}
      * Retrieve an existing Ezsigntemplateformfieldgroup
      * 
      * @param pkiEzsigntemplateformfieldgroupID 

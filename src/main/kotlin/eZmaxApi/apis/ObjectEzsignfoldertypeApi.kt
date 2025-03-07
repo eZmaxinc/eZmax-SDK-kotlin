@@ -55,6 +55,7 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
     }
 
     /**
+     * POST /3/object/ezsignfoldertype
      * Create a new Ezsignfoldertype
      * The endpoint allows to create one or many elements at once.
      * @param ezsignfoldertypeCreateObjectV3Request 
@@ -86,6 +87,7 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
     }
 
     /**
+     * POST /3/object/ezsignfoldertype
      * Create a new Ezsignfoldertype
      * The endpoint allows to create one or many elements at once.
      * @param ezsignfoldertypeCreateObjectV3Request 
@@ -127,6 +129,7 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
     }
 
     /**
+     * PUT /3/object/ezsignfoldertype/{pkiEzsignfoldertypeID}
      * Edit an existing Ezsignfoldertype
      * 
      * @param pkiEzsignfoldertypeID 
@@ -159,6 +162,7 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
     }
 
     /**
+     * PUT /3/object/ezsignfoldertype/{pkiEzsignfoldertypeID}
      * Edit an existing Ezsignfoldertype
      * 
      * @param pkiEzsignfoldertypeID 
@@ -239,6 +243,7 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
      }
 
     /**
+     * GET /2/object/ezsignfoldertype/getAutocomplete/{sSelector}
      * Retrieve Ezsignfoldertypes and IDs
      * Get the list of Ezsignfoldertype to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezsignfoldertypes to return
@@ -273,6 +278,7 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
     }
 
     /**
+     * GET /2/object/ezsignfoldertype/getAutocomplete/{sSelector}
      * Retrieve Ezsignfoldertypes and IDs
      * Get the list of Ezsignfoldertype to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezsignfoldertypes to return
@@ -351,6 +357,7 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
      }
 
     /**
+     * GET /1/object/ezsignfoldertype/getList
      * Retrieve Ezsignfoldertype list
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -386,6 +393,7 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
     }
 
     /**
+     * GET /1/object/ezsignfoldertype/getList
      * Retrieve Ezsignfoldertype list
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -449,6 +457,7 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
     }
 
     /**
+     * GET /2/object/ezsignfoldertype/{pkiEzsignfoldertypeID}
      * Retrieve an existing Ezsignfoldertype
      * 
      * @param pkiEzsignfoldertypeID 
@@ -482,6 +491,7 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
     }
 
     /**
+     * GET /2/object/ezsignfoldertype/{pkiEzsignfoldertypeID}
      * Retrieve an existing Ezsignfoldertype
      * 
      * @param pkiEzsignfoldertypeID 
@@ -525,6 +535,7 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
     }
 
     /**
+     * GET /4/object/ezsignfoldertype/{pkiEzsignfoldertypeID}
      * Retrieve an existing Ezsignfoldertype
      * 
      * @param pkiEzsignfoldertypeID 
@@ -556,6 +567,7 @@ class ObjectEzsignfoldertypeApi(basePath: kotlin.String = defaultBasePath, clien
     }
 
     /**
+     * GET /4/object/ezsignfoldertype/{pkiEzsignfoldertypeID}
      * Retrieve an existing Ezsignfoldertype
      * 
      * @param pkiEzsignfoldertypeID 

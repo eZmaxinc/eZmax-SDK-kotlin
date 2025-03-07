@@ -12,6 +12,7 @@
 | **sAttachmentsRefusalReason** | **kotlin.String** | The reason of refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation** |  [optional] |
 | **sSvg** | **kotlin.String** | The SVG of the signature.  This can only be set if eEzsignsignatureType is **Signature**_/_**Initials** and **bIsAutomatic** is false |  [optional] |
 | **aObjFile** | [**kotlin.collections.List&lt;CommonFile&gt;**](CommonFile.md) |  |  [optional] |
+| **objCreditcard** | [**CustomCreditcardRequest**](CustomCreditcardRequest.md) |  |  [optional] |
 
 
 <a id="EAttachmentsConfirmationDecision"></a>

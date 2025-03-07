@@ -54,6 +54,7 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ca
     }
 
     /**
+     * POST /1/object/paymentterm
      * Create a new Paymentterm
      * The endpoint allows to create one or many elements at once.
      * @param paymenttermCreateObjectV1Request 
@@ -85,6 +86,7 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ca
     }
 
     /**
+     * POST /1/object/paymentterm
      * Create a new Paymentterm
      * The endpoint allows to create one or many elements at once.
      * @param paymenttermCreateObjectV1Request 
@@ -126,6 +128,7 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ca
     }
 
     /**
+     * PUT /1/object/paymentterm/{pkiPaymenttermID}
      * Edit an existing Paymentterm
      * 
      * @param pkiPaymenttermID 
@@ -158,6 +161,7 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ca
     }
 
     /**
+     * PUT /1/object/paymentterm/{pkiPaymenttermID}
      * Edit an existing Paymentterm
      * 
      * @param pkiPaymenttermID 
@@ -235,6 +239,7 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ca
      }
 
     /**
+     * GET /2/object/paymentterm/getAutocomplete/{sSelector}
      * Retrieve Paymentterms and IDs
      * Get the list of Paymentterm to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Paymentterms to return
@@ -269,6 +274,7 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ca
     }
 
     /**
+     * GET /2/object/paymentterm/getAutocomplete/{sSelector}
      * Retrieve Paymentterms and IDs
      * Get the list of Paymentterm to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Paymentterms to return
@@ -351,6 +357,7 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ca
      }
 
     /**
+     * GET /1/object/paymentterm/getList
      * Retrieve Paymentterm list
      * 
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -386,6 +393,7 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ca
     }
 
     /**
+     * GET /1/object/paymentterm/getList
      * Retrieve Paymentterm list
      * 
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -449,6 +457,7 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ca
     }
 
     /**
+     * GET /2/object/paymentterm/{pkiPaymenttermID}
      * Retrieve an existing Paymentterm
      * 
      * @param pkiPaymenttermID 
@@ -480,6 +489,7 @@ class ObjectPaymenttermApi(basePath: kotlin.String = defaultBasePath, client: Ca
     }
 
     /**
+     * GET /2/object/paymentterm/{pkiPaymenttermID}
      * Retrieve an existing Paymentterm
      * 
      * @param pkiPaymenttermID 

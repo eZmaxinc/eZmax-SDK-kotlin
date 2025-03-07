@@ -18,6 +18,7 @@ package eZmaxApi.models
 import eZmaxApi.models.EnumTextvalidation
 import eZmaxApi.models.EzsignelementdependencyRequestCompound
 import eZmaxApi.models.EzsignsignaturecustomdateRequestCompoundV2
+import eZmaxApi.models.EzsignsignaturepaymentdetailRequestCompound
 import eZmaxApi.models.FieldEEzsignsignatureAttachmentnamesource
 import eZmaxApi.models.FieldEEzsignsignatureConsultationtrigger
 import eZmaxApi.models.FieldEEzsignsignatureDependencyrequirement
@@ -39,6 +40,7 @@ import com.squareup.moshi.JsonClass
  * @param eEzsignsignatureType 
  * @param fkiEzsigndocumentID The unique ID of the Ezsigndocument
  * @param pkiEzsignsignatureID The unique ID of the Ezsignsignature
+ * @param fkiPaymentgatewayID The unique ID of the Paymentgateway
  * @param iEzsignsignatureWidth The width of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have a width of 2 inches, you would use \"200\" for the iEzsignsignatureWidth.
  * @param iEzsignsignatureHeight The height of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have an height of 2 inches, you would use \"200\" for the iEzsignsignatureHeight.
  * @param tEzsignsignatureTooltip A tooltip that will be presented to Ezsignsigner about the Ezsignsignature
@@ -61,6 +63,7 @@ import com.squareup.moshi.JsonClass
  * @param bEzsignsignatureCustomdate Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)
  * @param aObjEzsignsignaturecustomdate An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all.
  * @param aObjEzsignelementdependency 
+ * @param aObjEzsignsignaturepaymentdetail 
  */
 
 
@@ -96,6 +99,10 @@ data class EzsignsignatureRequestCompoundV2 (
     /* The unique ID of the Ezsignsignature */
     @Json(name = "pkiEzsignsignatureID")
     val pkiEzsignsignatureID: kotlin.Int? = null,
+
+    /* The unique ID of the Paymentgateway */
+    @Json(name = "fkiPaymentgatewayID")
+    val fkiPaymentgatewayID: kotlin.Int? = null,
 
     /* The width of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have a width of 2 inches, you would use \"200\" for the iEzsignsignatureWidth. */
     @Json(name = "iEzsignsignatureWidth")
@@ -176,7 +183,10 @@ data class EzsignsignatureRequestCompoundV2 (
     val aObjEzsignsignaturecustomdate: kotlin.collections.List<EzsignsignaturecustomdateRequestCompoundV2>? = null,
 
     @Json(name = "a_objEzsignelementdependency")
-    val aObjEzsignelementdependency: kotlin.collections.List<EzsignelementdependencyRequestCompound>? = null
+    val aObjEzsignelementdependency: kotlin.collections.List<EzsignelementdependencyRequestCompound>? = null,
+
+    @Json(name = "a_objEzsignsignaturepaymentdetail")
+    val aObjEzsignsignaturepaymentdetail: kotlin.collections.List<EzsignsignaturepaymentdetailRequestCompound>? = null
 
 ) {
 

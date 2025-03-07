@@ -50,6 +50,7 @@ class ObjectBillingentityexternalApi(basePath: kotlin.String = defaultBasePath, 
     }
 
     /**
+     * POST /1/object/billingentityexternal/{pkiBillingentityexternalID}/generateFederationToken
      * Generate a federation token
      * 
      * @param pkiBillingentityexternalID 
@@ -82,6 +83,7 @@ class ObjectBillingentityexternalApi(basePath: kotlin.String = defaultBasePath, 
     }
 
     /**
+     * POST /1/object/billingentityexternal/{pkiBillingentityexternalID}/generateFederationToken
      * Generate a federation token
      * 
      * @param pkiBillingentityexternalID 
@@ -159,6 +161,7 @@ class ObjectBillingentityexternalApi(basePath: kotlin.String = defaultBasePath, 
      }
 
     /**
+     * GET /2/object/billingentityexternal/getAutocomplete/{sSelector}
      * Retrieve Billingentityexternals and IDs
      * Get the list of Billingentityexternal to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Billingentityexternals to return
@@ -193,6 +196,7 @@ class ObjectBillingentityexternalApi(basePath: kotlin.String = defaultBasePath, 
     }
 
     /**
+     * GET /2/object/billingentityexternal/getAutocomplete/{sSelector}
      * Retrieve Billingentityexternals and IDs
      * Get the list of Billingentityexternal to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Billingentityexternals to return

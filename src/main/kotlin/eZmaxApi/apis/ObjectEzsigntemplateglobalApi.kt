@@ -83,6 +83,7 @@ class ObjectEzsigntemplateglobalApi(basePath: kotlin.String = defaultBasePath, c
      }
 
     /**
+     * GET /2/object/ezsigntemplateglobal/getAutocomplete/{sSelector}
      * Retrieve Ezsigntemplateglobals and IDs
      * Get the list of Ezsigntemplateglobal to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezsigntemplateglobals to return
@@ -117,6 +118,7 @@ class ObjectEzsigntemplateglobalApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * GET /2/object/ezsigntemplateglobal/getAutocomplete/{sSelector}
      * Retrieve Ezsigntemplateglobals and IDs
      * Get the list of Ezsigntemplateglobal to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezsigntemplateglobals to return
@@ -172,6 +174,7 @@ class ObjectEzsigntemplateglobalApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * GET /2/object/ezsigntemplateglobal/{pkiEzsigntemplateglobalID}
      * Retrieve an existing Ezsigntemplateglobal
      * 
      * @param pkiEzsigntemplateglobalID 
@@ -203,6 +206,7 @@ class ObjectEzsigntemplateglobalApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * GET /2/object/ezsigntemplateglobal/{pkiEzsigntemplateglobalID}
      * Retrieve an existing Ezsigntemplateglobal
      * 
      * @param pkiEzsigntemplateglobalID 

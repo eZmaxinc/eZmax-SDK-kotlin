@@ -12,6 +12,7 @@
 | **eEzsignsignatureType** | [**FieldEEzsignsignatureType**](FieldEEzsignsignatureType.md) |  |  |
 | **fkiEzsigndocumentID** | **kotlin.Int** | The unique ID of the Ezsigndocument |  |
 | **pkiEzsignsignatureID** | **kotlin.Int** | The unique ID of the Ezsignsignature |  [optional] |
+| **fkiPaymentgatewayID** | **kotlin.Int** | The unique ID of the Paymentgateway |  [optional] |
 | **iEzsignsignatureWidth** | **kotlin.Int** | The width of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have a width of 2 inches, you would use \&quot;200\&quot; for the iEzsignsignatureWidth. |  [optional] |
 | **iEzsignsignatureHeight** | **kotlin.Int** | The height of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have an height of 2 inches, you would use \&quot;200\&quot; for the iEzsignsignatureHeight. |  [optional] |
 | **tEzsignsignatureTooltip** | **kotlin.String** | A tooltip that will be presented to Ezsignsigner about the Ezsignsignature |  [optional] |
@@ -34,6 +35,7 @@
 | **bEzsignsignatureCustomdate** | **kotlin.Boolean** | Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**) |  [optional] |
 | **aObjEzsignsignaturecustomdate** | [**kotlin.collections.List&lt;EzsignsignaturecustomdateRequestCompoundV2&gt;**](EzsignsignaturecustomdateRequestCompoundV2.md) | An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all. |  [optional] |
 | **aObjEzsignelementdependency** | [**kotlin.collections.List&lt;EzsignelementdependencyRequestCompound&gt;**](EzsignelementdependencyRequestCompound.md) |  |  [optional] |
+| **aObjEzsignsignaturepaymentdetail** | [**kotlin.collections.List&lt;EzsignsignaturepaymentdetailRequestCompound&gt;**](EzsignsignaturepaymentdetailRequestCompound.md) |  |  [optional] |
 
 
 

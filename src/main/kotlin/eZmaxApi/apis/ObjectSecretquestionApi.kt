@@ -81,6 +81,7 @@ class ObjectSecretquestionApi(basePath: kotlin.String = defaultBasePath, client:
      }
 
     /**
+     * GET /2/object/secretquestion/getAutocomplete/{sSelector}
      * Retrieve Secretquestions and IDs
      * Get the list of Secretquestion to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Secretquestions to return
@@ -115,6 +116,7 @@ class ObjectSecretquestionApi(basePath: kotlin.String = defaultBasePath, client:
     }
 
     /**
+     * GET /2/object/secretquestion/getAutocomplete/{sSelector}
      * Retrieve Secretquestions and IDs
      * Get the list of Secretquestion to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Secretquestions to return

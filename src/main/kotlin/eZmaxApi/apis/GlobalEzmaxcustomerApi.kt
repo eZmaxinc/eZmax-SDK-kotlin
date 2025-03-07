@@ -47,6 +47,7 @@ class GlobalEzmaxcustomerApi(basePath: kotlin.String = defaultBasePath, client: 
     }
 
     /**
+     * GET /1/ezmaxcustomer/{pksEzmaxcustomerCode}/getConfiguration
      * Get ezmaxcustomer configuration
      * Retrieve the ezmaxcustomer&#39;s specific configuration. This will help locate the proper region (ie: sInfrastructureregionCode) and the proper environment (ie: sInfrastructureenvironmenttypeDescription) where the customer&#39;s data is stored.
      * @param pksEzmaxcustomerCode 
@@ -78,6 +79,7 @@ class GlobalEzmaxcustomerApi(basePath: kotlin.String = defaultBasePath, client: 
     }
 
     /**
+     * GET /1/ezmaxcustomer/{pksEzmaxcustomerCode}/getConfiguration
      * Get ezmaxcustomer configuration
      * Retrieve the ezmaxcustomer&#39;s specific configuration. This will help locate the proper region (ie: sInfrastructureregionCode) and the proper environment (ie: sInfrastructureenvironmenttypeDescription) where the customer&#39;s data is stored.
      * @param pksEzmaxcustomerCode 

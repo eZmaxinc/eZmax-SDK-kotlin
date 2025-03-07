@@ -48,6 +48,7 @@ class ObjectFranchisereferalincomeApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * POST /2/object/franchisereferalincome
      * Create a new Franchisereferalincome
      * The endpoint allows to create one or many elements at once.
      * @param franchisereferalincomeCreateObjectV2Request 
@@ -79,6 +80,7 @@ class ObjectFranchisereferalincomeApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * POST /2/object/franchisereferalincome
      * Create a new Franchisereferalincome
      * The endpoint allows to create one or many elements at once.
      * @param franchisereferalincomeCreateObjectV2Request 

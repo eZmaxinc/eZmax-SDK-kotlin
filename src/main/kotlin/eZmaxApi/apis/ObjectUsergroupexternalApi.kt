@@ -57,6 +57,7 @@ class ObjectUsergroupexternalApi(basePath: kotlin.String = defaultBasePath, clie
     }
 
     /**
+     * POST /1/object/usergroupexternal
      * Create a new Usergroupexternal
      * The endpoint allows to create one or many elements at once.
      * @param usergroupexternalCreateObjectV1Request 
@@ -88,6 +89,7 @@ class ObjectUsergroupexternalApi(basePath: kotlin.String = defaultBasePath, clie
     }
 
     /**
+     * POST /1/object/usergroupexternal
      * Create a new Usergroupexternal
      * The endpoint allows to create one or many elements at once.
      * @param usergroupexternalCreateObjectV1Request 
@@ -129,6 +131,7 @@ class ObjectUsergroupexternalApi(basePath: kotlin.String = defaultBasePath, clie
     }
 
     /**
+     * DELETE /1/object/usergroupexternal/{pkiUsergroupexternalID}
      * Delete an existing Usergroupexternal
      * 
      * @param pkiUsergroupexternalID The unique ID of the Usergroupexternal
@@ -160,6 +163,7 @@ class ObjectUsergroupexternalApi(basePath: kotlin.String = defaultBasePath, clie
     }
 
     /**
+     * DELETE /1/object/usergroupexternal/{pkiUsergroupexternalID}
      * Delete an existing Usergroupexternal
      * 
      * @param pkiUsergroupexternalID The unique ID of the Usergroupexternal
@@ -200,6 +204,7 @@ class ObjectUsergroupexternalApi(basePath: kotlin.String = defaultBasePath, clie
     }
 
     /**
+     * PUT /1/object/usergroupexternal/{pkiUsergroupexternalID}
      * Edit an existing Usergroupexternal
      * 
      * @param pkiUsergroupexternalID The unique ID of the Usergroupexternal
@@ -232,6 +237,7 @@ class ObjectUsergroupexternalApi(basePath: kotlin.String = defaultBasePath, clie
     }
 
     /**
+     * PUT /1/object/usergroupexternal/{pkiUsergroupexternalID}
      * Edit an existing Usergroupexternal
      * 
      * @param pkiUsergroupexternalID The unique ID of the Usergroupexternal
@@ -309,6 +315,7 @@ class ObjectUsergroupexternalApi(basePath: kotlin.String = defaultBasePath, clie
      }
 
     /**
+     * GET /2/object/usergroupexternal/getAutocomplete/{sSelector}
      * Retrieve Usergroupexternals and IDs
      * Get the list of Usergroupexternal to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Usergroupexternals to return
@@ -343,6 +350,7 @@ class ObjectUsergroupexternalApi(basePath: kotlin.String = defaultBasePath, clie
     }
 
     /**
+     * GET /2/object/usergroupexternal/getAutocomplete/{sSelector}
      * Retrieve Usergroupexternals and IDs
      * Get the list of Usergroupexternal to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Usergroupexternals to return
@@ -419,6 +427,7 @@ class ObjectUsergroupexternalApi(basePath: kotlin.String = defaultBasePath, clie
      }
 
     /**
+     * GET /1/object/usergroupexternal/getList
      * Retrieve Usergroupexternal list
      * 
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -454,6 +463,7 @@ class ObjectUsergroupexternalApi(basePath: kotlin.String = defaultBasePath, clie
     }
 
     /**
+     * GET /1/object/usergroupexternal/getList
      * Retrieve Usergroupexternal list
      * 
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -517,6 +527,7 @@ class ObjectUsergroupexternalApi(basePath: kotlin.String = defaultBasePath, clie
     }
 
     /**
+     * GET /2/object/usergroupexternal/{pkiUsergroupexternalID}
      * Retrieve an existing Usergroupexternal
      * 
      * @param pkiUsergroupexternalID The unique ID of the Usergroupexternal
@@ -548,6 +559,7 @@ class ObjectUsergroupexternalApi(basePath: kotlin.String = defaultBasePath, clie
     }
 
     /**
+     * GET /2/object/usergroupexternal/{pkiUsergroupexternalID}
      * Retrieve an existing Usergroupexternal
      * 
      * @param pkiUsergroupexternalID The unique ID of the Usergroupexternal
@@ -588,6 +600,7 @@ class ObjectUsergroupexternalApi(basePath: kotlin.String = defaultBasePath, clie
     }
 
     /**
+     * GET /1/object/usergroupexternal/{pkiUsergroupexternalID}/getUsergroupexternalmemberships
      * Retrieve an existing Usergroupexternal&#39;s Usergroupexternalmemberships
      * 
      * @param pkiUsergroupexternalID 
@@ -619,6 +632,7 @@ class ObjectUsergroupexternalApi(basePath: kotlin.String = defaultBasePath, clie
     }
 
     /**
+     * GET /1/object/usergroupexternal/{pkiUsergroupexternalID}/getUsergroupexternalmemberships
      * Retrieve an existing Usergroupexternal&#39;s Usergroupexternalmemberships
      * 
      * @param pkiUsergroupexternalID 
@@ -659,6 +673,7 @@ class ObjectUsergroupexternalApi(basePath: kotlin.String = defaultBasePath, clie
     }
 
     /**
+     * GET /1/object/usergroupexternal/{pkiUsergroupexternalID}/getUsergroups
      * Get Usergroupexternal&#39;s Usergroups
      * 
      * @param pkiUsergroupexternalID 
@@ -690,6 +705,7 @@ class ObjectUsergroupexternalApi(basePath: kotlin.String = defaultBasePath, clie
     }
 
     /**
+     * GET /1/object/usergroupexternal/{pkiUsergroupexternalID}/getUsergroups
      * Get Usergroupexternal&#39;s Usergroups
      * 
      * @param pkiUsergroupexternalID 

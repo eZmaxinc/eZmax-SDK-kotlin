@@ -47,6 +47,7 @@ class ModuleReportApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * GET /1/module/report/getReportFromCache/{sReportgroupCacheID}
      * Retrieve report from cache
      * Retrieve a report that was previously generated and cached
      * @param sReportgroupCacheID 
@@ -78,6 +79,7 @@ class ModuleReportApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * GET /1/module/report/getReportFromCache/{sReportgroupCacheID}
      * Retrieve report from cache
      * Retrieve a report that was previously generated and cached
      * @param sReportgroupCacheID 

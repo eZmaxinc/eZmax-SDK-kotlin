@@ -26,6 +26,7 @@ import com.squareup.moshi.JsonClass
  * @param objReportsubsectionpartHeader 
  * @param objReportsubsectionpartBody 
  * @param objReportsubsectionpartFooter 
+ * @param sReportsubsectionTitle The title of this Reportsubsection
  */
 
 
@@ -38,7 +39,11 @@ data class CommonReportsubsection (
     val objReportsubsectionpartBody: CommonReportsubsectionpart,
 
     @Json(name = "objReportsubsectionpartFooter")
-    val objReportsubsectionpartFooter: CommonReportsubsectionpart
+    val objReportsubsectionpartFooter: CommonReportsubsectionpart,
+
+    /* The title of this Reportsubsection */
+    @Json(name = "sReportsubsectionTitle")
+    val sReportsubsectionTitle: kotlin.String? = null
 
 ) {
 

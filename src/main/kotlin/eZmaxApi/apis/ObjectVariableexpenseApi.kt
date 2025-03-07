@@ -54,6 +54,7 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
     }
 
     /**
+     * POST /1/object/variableexpense
      * Create a new Variableexpense
      * The endpoint allows to create one or many elements at once.
      * @param variableexpenseCreateObjectV1Request 
@@ -85,6 +86,7 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
     }
 
     /**
+     * POST /1/object/variableexpense
      * Create a new Variableexpense
      * The endpoint allows to create one or many elements at once.
      * @param variableexpenseCreateObjectV1Request 
@@ -126,6 +128,7 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
     }
 
     /**
+     * PUT /1/object/variableexpense/{pkiVariableexpenseID}
      * Edit an existing Variableexpense
      * 
      * @param pkiVariableexpenseID 
@@ -158,6 +161,7 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
     }
 
     /**
+     * PUT /1/object/variableexpense/{pkiVariableexpenseID}
      * Edit an existing Variableexpense
      * 
      * @param pkiVariableexpenseID 
@@ -235,6 +239,7 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
      }
 
     /**
+     * GET /2/object/variableexpense/getAutocomplete/{sSelector}
      * Retrieve Variableexpenses and IDs
      * Get the list of Variableexpense to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Variableexpenses to return
@@ -269,6 +274,7 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
     }
 
     /**
+     * GET /2/object/variableexpense/getAutocomplete/{sSelector}
      * Retrieve Variableexpenses and IDs
      * Get the list of Variableexpense to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Variableexpenses to return
@@ -349,6 +355,7 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
      }
 
     /**
+     * GET /1/object/variableexpense/getList
      * Retrieve Variableexpense list
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eVariableexpenseTaxable | Yes&lt;br&gt;No&lt;br&gt;Included |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -384,6 +391,7 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
     }
 
     /**
+     * GET /1/object/variableexpense/getList
      * Retrieve Variableexpense list
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eVariableexpenseTaxable | Yes&lt;br&gt;No&lt;br&gt;Included |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -447,6 +455,7 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
     }
 
     /**
+     * GET /2/object/variableexpense/{pkiVariableexpenseID}
      * Retrieve an existing Variableexpense
      * 
      * @param pkiVariableexpenseID 
@@ -478,6 +487,7 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
     }
 
     /**
+     * GET /2/object/variableexpense/{pkiVariableexpenseID}
      * Retrieve an existing Variableexpense
      * 
      * @param pkiVariableexpenseID 

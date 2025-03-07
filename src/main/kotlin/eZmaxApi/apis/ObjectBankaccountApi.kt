@@ -81,6 +81,7 @@ class ObjectBankaccountApi(basePath: kotlin.String = defaultBasePath, client: Ca
      }
 
     /**
+     * GET /2/object/bankaccount/getAutocomplete/{sSelector}
      * Retrieve Bankaccounts and IDs
      * Get the list of Bankaccount to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Bankaccounts to return
@@ -115,6 +116,7 @@ class ObjectBankaccountApi(basePath: kotlin.String = defaultBasePath, client: Ca
     }
 
     /**
+     * GET /2/object/bankaccount/getAutocomplete/{sSelector}
      * Retrieve Bankaccounts and IDs
      * Get the list of Bankaccount to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Bankaccounts to return

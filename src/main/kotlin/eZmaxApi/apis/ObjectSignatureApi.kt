@@ -53,6 +53,7 @@ class ObjectSignatureApi(basePath: kotlin.String = defaultBasePath, client: Call
     }
 
     /**
+     * POST /1/object/signature
      * Create a new Signature
      * The endpoint allows to create one or many elements at once.
      * @param signatureCreateObjectV1Request 
@@ -84,6 +85,7 @@ class ObjectSignatureApi(basePath: kotlin.String = defaultBasePath, client: Call
     }
 
     /**
+     * POST /1/object/signature
      * Create a new Signature
      * The endpoint allows to create one or many elements at once.
      * @param signatureCreateObjectV1Request 
@@ -125,6 +127,7 @@ class ObjectSignatureApi(basePath: kotlin.String = defaultBasePath, client: Call
     }
 
     /**
+     * DELETE /1/object/signature/{pkiSignatureID}
      * Delete an existing Signature
      * 
      * @param pkiSignatureID The unique ID of the Signature
@@ -156,6 +159,7 @@ class ObjectSignatureApi(basePath: kotlin.String = defaultBasePath, client: Call
     }
 
     /**
+     * DELETE /1/object/signature/{pkiSignatureID}
      * Delete an existing Signature
      * 
      * @param pkiSignatureID The unique ID of the Signature
@@ -196,6 +200,7 @@ class ObjectSignatureApi(basePath: kotlin.String = defaultBasePath, client: Call
     }
 
     /**
+     * PUT /1/object/signature/{pkiSignatureID}
      * Edit an existing Signature
      * 
      * @param pkiSignatureID The unique ID of the Signature
@@ -228,6 +233,7 @@ class ObjectSignatureApi(basePath: kotlin.String = defaultBasePath, client: Call
     }
 
     /**
+     * PUT /1/object/signature/{pkiSignatureID}
      * Edit an existing Signature
      * 
      * @param pkiSignatureID The unique ID of the Signature
@@ -271,6 +277,7 @@ class ObjectSignatureApi(basePath: kotlin.String = defaultBasePath, client: Call
     }
 
     /**
+     * GET /2/object/signature/{pkiSignatureID}
      * Retrieve an existing Signature
      * 
      * @param pkiSignatureID The unique ID of the Signature
@@ -304,6 +311,7 @@ class ObjectSignatureApi(basePath: kotlin.String = defaultBasePath, client: Call
     }
 
     /**
+     * GET /2/object/signature/{pkiSignatureID}
      * Retrieve an existing Signature
      * 
      * @param pkiSignatureID The unique ID of the Signature
@@ -347,6 +355,7 @@ class ObjectSignatureApi(basePath: kotlin.String = defaultBasePath, client: Call
     }
 
     /**
+     * GET /3/object/signature/{pkiSignatureID}
      * Retrieve an existing Signature
      * 
      * @param pkiSignatureID The unique ID of the Signature
@@ -378,6 +387,7 @@ class ObjectSignatureApi(basePath: kotlin.String = defaultBasePath, client: Call
     }
 
     /**
+     * GET /3/object/signature/{pkiSignatureID}
      * Retrieve an existing Signature
      * 
      * @param pkiSignatureID The unique ID of the Signature
@@ -418,6 +428,7 @@ class ObjectSignatureApi(basePath: kotlin.String = defaultBasePath, client: Call
     }
 
     /**
+     * GET /1/object/signature/{pkiSignatureID}/getSVGInitials
      * Retrieve an existing Signature initial SVG
      * 
      * @param pkiSignatureID The unique ID of the Signature
@@ -448,6 +459,7 @@ class ObjectSignatureApi(basePath: kotlin.String = defaultBasePath, client: Call
     }
 
     /**
+     * GET /1/object/signature/{pkiSignatureID}/getSVGInitials
      * Retrieve an existing Signature initial SVG
      * 
      * @param pkiSignatureID The unique ID of the Signature
@@ -487,6 +499,7 @@ class ObjectSignatureApi(basePath: kotlin.String = defaultBasePath, client: Call
     }
 
     /**
+     * GET /1/object/signature/{pkiSignatureID}/getSVGSignature
      * Retrieve an existing Signature SVG
      * 
      * @param pkiSignatureID The unique ID of the Signature
@@ -517,6 +530,7 @@ class ObjectSignatureApi(basePath: kotlin.String = defaultBasePath, client: Call
     }
 
     /**
+     * GET /1/object/signature/{pkiSignatureID}/getSVGSignature
      * Retrieve an existing Signature SVG
      * 
      * @param pkiSignatureID The unique ID of the Signature

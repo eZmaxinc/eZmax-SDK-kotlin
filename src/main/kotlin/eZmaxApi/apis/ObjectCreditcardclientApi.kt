@@ -58,6 +58,7 @@ class ObjectCreditcardclientApi(basePath: kotlin.String = defaultBasePath, clien
     }
 
     /**
+     * POST /1/object/creditcardclient
      * Create a new Creditcardclient
      * The endpoint allows to create one or many elements at once.
      * @param creditcardclientCreateObjectV1Request 
@@ -89,6 +90,7 @@ class ObjectCreditcardclientApi(basePath: kotlin.String = defaultBasePath, clien
     }
 
     /**
+     * POST /1/object/creditcardclient
      * Create a new Creditcardclient
      * The endpoint allows to create one or many elements at once.
      * @param creditcardclientCreateObjectV1Request 
@@ -130,6 +132,7 @@ class ObjectCreditcardclientApi(basePath: kotlin.String = defaultBasePath, clien
     }
 
     /**
+     * DELETE /1/object/creditcardclient/{pkiCreditcardclientID}
      * Delete an existing Creditcardclient
      * 
      * @param pkiCreditcardclientID The unique ID of the Creditcardclient
@@ -161,6 +164,7 @@ class ObjectCreditcardclientApi(basePath: kotlin.String = defaultBasePath, clien
     }
 
     /**
+     * DELETE /1/object/creditcardclient/{pkiCreditcardclientID}
      * Delete an existing Creditcardclient
      * 
      * @param pkiCreditcardclientID The unique ID of the Creditcardclient
@@ -201,6 +205,7 @@ class ObjectCreditcardclientApi(basePath: kotlin.String = defaultBasePath, clien
     }
 
     /**
+     * PUT /1/object/creditcardclient/{pkiCreditcardclientID}
      * Edit an existing Creditcardclient
      * 
      * @param pkiCreditcardclientID The unique ID of the Creditcardclient
@@ -233,6 +238,7 @@ class ObjectCreditcardclientApi(basePath: kotlin.String = defaultBasePath, clien
     }
 
     /**
+     * PUT /1/object/creditcardclient/{pkiCreditcardclientID}
      * Edit an existing Creditcardclient
      * 
      * @param pkiCreditcardclientID The unique ID of the Creditcardclient
@@ -310,6 +316,7 @@ class ObjectCreditcardclientApi(basePath: kotlin.String = defaultBasePath, clien
      }
 
     /**
+     * GET /2/object/creditcardclient/getAutocomplete/{sSelector}
      * Retrieve Creditcardclients and IDs
      * Get the list of Creditcardclient to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Creditcardclients to return
@@ -344,6 +351,7 @@ class ObjectCreditcardclientApi(basePath: kotlin.String = defaultBasePath, clien
     }
 
     /**
+     * GET /2/object/creditcardclient/getAutocomplete/{sSelector}
      * Retrieve Creditcardclients and IDs
      * Get the list of Creditcardclient to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Creditcardclients to return
@@ -434,6 +442,7 @@ class ObjectCreditcardclientApi(basePath: kotlin.String = defaultBasePath, clien
      }
 
     /**
+     * GET /1/object/creditcardclient/getList
      * Retrieve Creditcardclient list
      * 
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -469,6 +478,7 @@ class ObjectCreditcardclientApi(basePath: kotlin.String = defaultBasePath, clien
     }
 
     /**
+     * GET /1/object/creditcardclient/getList
      * Retrieve Creditcardclient list
      * 
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -532,6 +542,7 @@ class ObjectCreditcardclientApi(basePath: kotlin.String = defaultBasePath, clien
     }
 
     /**
+     * GET /2/object/creditcardclient/{pkiCreditcardclientID}
      * Retrieve an existing Creditcardclient
      * 
      * @param pkiCreditcardclientID The unique ID of the Creditcardclient
@@ -563,6 +574,7 @@ class ObjectCreditcardclientApi(basePath: kotlin.String = defaultBasePath, clien
     }
 
     /**
+     * GET /2/object/creditcardclient/{pkiCreditcardclientID}
      * Retrieve an existing Creditcardclient
      * 
      * @param pkiCreditcardclientID The unique ID of the Creditcardclient
@@ -603,6 +615,7 @@ class ObjectCreditcardclientApi(basePath: kotlin.String = defaultBasePath, clien
     }
 
     /**
+     * PATCH /1/object/creditcardclient/{pkiCreditcardclientID}
      * Patch an existing Creditcardclient
      * 
      * @param pkiCreditcardclientID The unique ID of the Creditcardclient
@@ -635,6 +648,7 @@ class ObjectCreditcardclientApi(basePath: kotlin.String = defaultBasePath, clien
     }
 
     /**
+     * PATCH /1/object/creditcardclient/{pkiCreditcardclientID}
      * Patch an existing Creditcardclient
      * 
      * @param pkiCreditcardclientID The unique ID of the Creditcardclient

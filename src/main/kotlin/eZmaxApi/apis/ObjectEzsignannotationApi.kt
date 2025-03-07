@@ -52,6 +52,7 @@ class ObjectEzsignannotationApi(basePath: kotlin.String = defaultBasePath, clien
     }
 
     /**
+     * POST /1/object/ezsignannotation
      * Create a new Ezsignannotation
      * The endpoint allows to create one or many elements at once.
      * @param ezsignannotationCreateObjectV1Request 
@@ -83,6 +84,7 @@ class ObjectEzsignannotationApi(basePath: kotlin.String = defaultBasePath, clien
     }
 
     /**
+     * POST /1/object/ezsignannotation
      * Create a new Ezsignannotation
      * The endpoint allows to create one or many elements at once.
      * @param ezsignannotationCreateObjectV1Request 
@@ -124,6 +126,7 @@ class ObjectEzsignannotationApi(basePath: kotlin.String = defaultBasePath, clien
     }
 
     /**
+     * DELETE /1/object/ezsignannotation/{pkiEzsignannotationID}
      * Delete an existing Ezsignannotation
      * 
      * @param pkiEzsignannotationID 
@@ -155,6 +158,7 @@ class ObjectEzsignannotationApi(basePath: kotlin.String = defaultBasePath, clien
     }
 
     /**
+     * DELETE /1/object/ezsignannotation/{pkiEzsignannotationID}
      * Delete an existing Ezsignannotation
      * 
      * @param pkiEzsignannotationID 
@@ -195,6 +199,7 @@ class ObjectEzsignannotationApi(basePath: kotlin.String = defaultBasePath, clien
     }
 
     /**
+     * PUT /1/object/ezsignannotation/{pkiEzsignannotationID}
      * Edit an existing Ezsignannotation
      * 
      * @param pkiEzsignannotationID 
@@ -227,6 +232,7 @@ class ObjectEzsignannotationApi(basePath: kotlin.String = defaultBasePath, clien
     }
 
     /**
+     * PUT /1/object/ezsignannotation/{pkiEzsignannotationID}
      * Edit an existing Ezsignannotation
      * 
      * @param pkiEzsignannotationID 
@@ -270,6 +276,7 @@ class ObjectEzsignannotationApi(basePath: kotlin.String = defaultBasePath, clien
     }
 
     /**
+     * GET /2/object/ezsignannotation/{pkiEzsignannotationID}
      * Retrieve an existing Ezsignannotation
      * 
      * @param pkiEzsignannotationID 
@@ -301,6 +308,7 @@ class ObjectEzsignannotationApi(basePath: kotlin.String = defaultBasePath, clien
     }
 
     /**
+     * GET /2/object/ezsignannotation/{pkiEzsignannotationID}
      * Retrieve an existing Ezsignannotation
      * 
      * @param pkiEzsignannotationID 

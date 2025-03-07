@@ -52,6 +52,7 @@ class ObjectUsergroupmembershipApi(basePath: kotlin.String = defaultBasePath, cl
     }
 
     /**
+     * POST /1/object/usergroupmembership
      * Create a new Usergroupmembership
      * The endpoint allows to create one or many elements at once.
      * @param usergroupmembershipCreateObjectV1Request 
@@ -83,6 +84,7 @@ class ObjectUsergroupmembershipApi(basePath: kotlin.String = defaultBasePath, cl
     }
 
     /**
+     * POST /1/object/usergroupmembership
      * Create a new Usergroupmembership
      * The endpoint allows to create one or many elements at once.
      * @param usergroupmembershipCreateObjectV1Request 
@@ -124,6 +126,7 @@ class ObjectUsergroupmembershipApi(basePath: kotlin.String = defaultBasePath, cl
     }
 
     /**
+     * DELETE /1/object/usergroupmembership/{pkiUsergroupmembershipID}
      * Delete an existing Usergroupmembership
      * 
      * @param pkiUsergroupmembershipID 
@@ -155,6 +158,7 @@ class ObjectUsergroupmembershipApi(basePath: kotlin.String = defaultBasePath, cl
     }
 
     /**
+     * DELETE /1/object/usergroupmembership/{pkiUsergroupmembershipID}
      * Delete an existing Usergroupmembership
      * 
      * @param pkiUsergroupmembershipID 
@@ -195,6 +199,7 @@ class ObjectUsergroupmembershipApi(basePath: kotlin.String = defaultBasePath, cl
     }
 
     /**
+     * PUT /1/object/usergroupmembership/{pkiUsergroupmembershipID}
      * Edit an existing Usergroupmembership
      * 
      * @param pkiUsergroupmembershipID 
@@ -227,6 +232,7 @@ class ObjectUsergroupmembershipApi(basePath: kotlin.String = defaultBasePath, cl
     }
 
     /**
+     * PUT /1/object/usergroupmembership/{pkiUsergroupmembershipID}
      * Edit an existing Usergroupmembership
      * 
      * @param pkiUsergroupmembershipID 
@@ -270,6 +276,7 @@ class ObjectUsergroupmembershipApi(basePath: kotlin.String = defaultBasePath, cl
     }
 
     /**
+     * GET /2/object/usergroupmembership/{pkiUsergroupmembershipID}
      * Retrieve an existing Usergroupmembership
      * 
      * @param pkiUsergroupmembershipID 
@@ -301,6 +308,7 @@ class ObjectUsergroupmembershipApi(basePath: kotlin.String = defaultBasePath, cl
     }
 
     /**
+     * GET /2/object/usergroupmembership/{pkiUsergroupmembershipID}
      * Retrieve an existing Usergroupmembership
      * 
      * @param pkiUsergroupmembershipID 

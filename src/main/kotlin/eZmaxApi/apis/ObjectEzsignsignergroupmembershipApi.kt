@@ -50,6 +50,7 @@ class ObjectEzsignsignergroupmembershipApi(basePath: kotlin.String = defaultBase
     }
 
     /**
+     * POST /1/object/ezsignsignergroupmembership
      * Create a new Ezsignsignergroupmembership
      * The endpoint allows to create one or many elements at once.
      * @param ezsignsignergroupmembershipCreateObjectV1Request 
@@ -81,6 +82,7 @@ class ObjectEzsignsignergroupmembershipApi(basePath: kotlin.String = defaultBase
     }
 
     /**
+     * POST /1/object/ezsignsignergroupmembership
      * Create a new Ezsignsignergroupmembership
      * The endpoint allows to create one or many elements at once.
      * @param ezsignsignergroupmembershipCreateObjectV1Request 
@@ -122,6 +124,7 @@ class ObjectEzsignsignergroupmembershipApi(basePath: kotlin.String = defaultBase
     }
 
     /**
+     * DELETE /1/object/ezsignsignergroupmembership/{pkiEzsignsignergroupmembershipID}
      * Delete an existing Ezsignsignergroupmembership
      * 
      * @param pkiEzsignsignergroupmembershipID The unique ID of the Ezsignsignergroupmembership
@@ -153,6 +156,7 @@ class ObjectEzsignsignergroupmembershipApi(basePath: kotlin.String = defaultBase
     }
 
     /**
+     * DELETE /1/object/ezsignsignergroupmembership/{pkiEzsignsignergroupmembershipID}
      * Delete an existing Ezsignsignergroupmembership
      * 
      * @param pkiEzsignsignergroupmembershipID The unique ID of the Ezsignsignergroupmembership
@@ -193,6 +197,7 @@ class ObjectEzsignsignergroupmembershipApi(basePath: kotlin.String = defaultBase
     }
 
     /**
+     * GET /2/object/ezsignsignergroupmembership/{pkiEzsignsignergroupmembershipID}
      * Retrieve an existing Ezsignsignergroupmembership
      * 
      * @param pkiEzsignsignergroupmembershipID The unique ID of the Ezsignsignergroupmembership
@@ -224,6 +229,7 @@ class ObjectEzsignsignergroupmembershipApi(basePath: kotlin.String = defaultBase
     }
 
     /**
+     * GET /2/object/ezsignsignergroupmembership/{pkiEzsignsignergroupmembershipID}
      * Retrieve an existing Ezsignsignergroupmembership
      * 
      * @param pkiEzsignsignergroupmembershipID The unique ID of the Ezsignsignergroupmembership

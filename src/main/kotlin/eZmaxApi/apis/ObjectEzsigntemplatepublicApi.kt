@@ -61,6 +61,7 @@ class ObjectEzsigntemplatepublicApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * POST /1/object/ezsigntemplatepublic/createEzsignfolder
      * Create an Ezsignfolder
      * Create an Ezsignfolder
      * @param ezsigntemplatepublicCreateEzsignfolderV1Request 
@@ -92,6 +93,7 @@ class ObjectEzsigntemplatepublicApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * POST /1/object/ezsigntemplatepublic/createEzsignfolder
      * Create an Ezsignfolder
      * Create an Ezsignfolder
      * @param ezsigntemplatepublicCreateEzsignfolderV1Request 
@@ -133,6 +135,7 @@ class ObjectEzsigntemplatepublicApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * POST /1/object/ezsigntemplatepublic
      * Create a new Ezsigntemplatepublic
      * The endpoint allows to create one or many elements at once.
      * @param ezsigntemplatepublicCreateObjectV1Request 
@@ -164,6 +167,7 @@ class ObjectEzsigntemplatepublicApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * POST /1/object/ezsigntemplatepublic
      * Create a new Ezsigntemplatepublic
      * The endpoint allows to create one or many elements at once.
      * @param ezsigntemplatepublicCreateObjectV1Request 
@@ -205,6 +209,7 @@ class ObjectEzsigntemplatepublicApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * DELETE /1/object/ezsigntemplatepublic/{pkiEzsigntemplatepublicID}
      * Delete an existing Ezsigntemplatepublic
      * 
      * @param pkiEzsigntemplatepublicID The unique ID of the Ezsigntemplatepublic
@@ -236,6 +241,7 @@ class ObjectEzsigntemplatepublicApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * DELETE /1/object/ezsigntemplatepublic/{pkiEzsigntemplatepublicID}
      * Delete an existing Ezsigntemplatepublic
      * 
      * @param pkiEzsigntemplatepublicID The unique ID of the Ezsigntemplatepublic
@@ -276,6 +282,7 @@ class ObjectEzsigntemplatepublicApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * PUT /1/object/ezsigntemplatepublic/{pkiEzsigntemplatepublicID}
      * Edit an existing Ezsigntemplatepublic
      * 
      * @param pkiEzsigntemplatepublicID The unique ID of the Ezsigntemplatepublic
@@ -308,6 +315,7 @@ class ObjectEzsigntemplatepublicApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * PUT /1/object/ezsigntemplatepublic/{pkiEzsigntemplatepublicID}
      * Edit an existing Ezsigntemplatepublic
      * 
      * @param pkiEzsigntemplatepublicID The unique ID of the Ezsigntemplatepublic
@@ -351,6 +359,7 @@ class ObjectEzsigntemplatepublicApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * POST /1/object/ezsigntemplatepublic/getEzsigntemplatepublicDetails
      * Retrieve the Ezsigntemplatepublic details
      * Retrieve the Ezsigntemplatepublic details
      * @param ezsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request 
@@ -382,6 +391,7 @@ class ObjectEzsigntemplatepublicApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * POST /1/object/ezsigntemplatepublic/getEzsigntemplatepublicDetails
      * Retrieve the Ezsigntemplatepublic details
      * Retrieve the Ezsigntemplatepublic details
      * @param ezsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request 
@@ -423,6 +433,7 @@ class ObjectEzsigntemplatepublicApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * GET /1/object/ezsigntemplatepublic/{pkiEzsigntemplatepublicID}/getFormsData
      * Retrieve an existing Ezsigntemplatepublic&#39;s forms data
      * 
      * @param pkiEzsigntemplatepublicID 
@@ -454,6 +465,7 @@ class ObjectEzsigntemplatepublicApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * GET /1/object/ezsigntemplatepublic/{pkiEzsigntemplatepublicID}/getFormsData
      * Retrieve an existing Ezsigntemplatepublic&#39;s forms data
      * 
      * @param pkiEzsigntemplatepublicID 
@@ -541,6 +553,7 @@ class ObjectEzsigntemplatepublicApi(basePath: kotlin.String = defaultBasePath, c
      }
 
     /**
+     * GET /1/object/ezsigntemplatepublic/getList
      * Retrieve Ezsigntemplatepublic list
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsigntemplatepublicLimittype | Hour&lt;br&gt;Day&lt;br&gt;Month&lt;br&gt;Total |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -576,6 +589,7 @@ class ObjectEzsigntemplatepublicApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * GET /1/object/ezsigntemplatepublic/getList
      * Retrieve Ezsigntemplatepublic list
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsigntemplatepublicLimittype | Hour&lt;br&gt;Day&lt;br&gt;Month&lt;br&gt;Total |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -639,6 +653,7 @@ class ObjectEzsigntemplatepublicApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * GET /2/object/ezsigntemplatepublic/{pkiEzsigntemplatepublicID}
      * Retrieve an existing Ezsigntemplatepublic
      * 
      * @param pkiEzsigntemplatepublicID The unique ID of the Ezsigntemplatepublic
@@ -670,6 +685,7 @@ class ObjectEzsigntemplatepublicApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * GET /2/object/ezsigntemplatepublic/{pkiEzsigntemplatepublicID}
      * Retrieve an existing Ezsigntemplatepublic
      * 
      * @param pkiEzsigntemplatepublicID The unique ID of the Ezsigntemplatepublic
@@ -710,6 +726,7 @@ class ObjectEzsigntemplatepublicApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * POST /1/object/ezsigntemplatepublic/{pkiEzsigntemplatepublicID}/resetLimitExceededCounter
      * Reset the limit exceeded counter
      * 
      * @param pkiEzsigntemplatepublicID 
@@ -742,6 +759,7 @@ class ObjectEzsigntemplatepublicApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * POST /1/object/ezsigntemplatepublic/{pkiEzsigntemplatepublicID}/resetLimitExceededCounter
      * Reset the limit exceeded counter
      * 
      * @param pkiEzsigntemplatepublicID 
@@ -785,6 +803,7 @@ class ObjectEzsigntemplatepublicApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * POST /1/object/ezsigntemplatepublic/{pkiEzsigntemplatepublicID}/resetUrl
      * Reset the Ezsigntemplatepublic url
      * 
      * @param pkiEzsigntemplatepublicID 
@@ -817,6 +836,7 @@ class ObjectEzsigntemplatepublicApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * POST /1/object/ezsigntemplatepublic/{pkiEzsigntemplatepublicID}/resetUrl
      * Reset the Ezsigntemplatepublic url
      * 
      * @param pkiEzsigntemplatepublicID 

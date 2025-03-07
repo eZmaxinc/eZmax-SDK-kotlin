@@ -9,6 +9,7 @@
 | **eReportsectionHorizontalalignment** | [**EnumHorizontalalignment**](EnumHorizontalalignment.md) |  |  |
 | **iReportsectionColumncount** | **kotlin.Int** | The number of Reportcolumns in the Reportsection |  |
 | **iReportsectionWidth** | **kotlin.Int** | The combined width of all the Reportcolumns in the Reportsection |  |
+| **sReportsectionTitle** | **kotlin.String** | The title of this Reportsection |  [optional] |
 
 
 

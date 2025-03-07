@@ -52,6 +52,7 @@ class ObjectDomainApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * POST /1/object/domain
      * Create a new Domain
      * The endpoint allows to create one or many elements at once.
      * @param domainCreateObjectV1Request 
@@ -83,6 +84,7 @@ class ObjectDomainApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * POST /1/object/domain
      * Create a new Domain
      * The endpoint allows to create one or many elements at once.
      * @param domainCreateObjectV1Request 
@@ -124,6 +126,7 @@ class ObjectDomainApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * DELETE /1/object/domain/{pkiDomainID}
      * Delete an existing Domain
      * 
      * @param pkiDomainID The unique ID of the Domain
@@ -155,6 +158,7 @@ class ObjectDomainApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * DELETE /1/object/domain/{pkiDomainID}
      * Delete an existing Domain
      * 
      * @param pkiDomainID The unique ID of the Domain
@@ -214,6 +218,7 @@ class ObjectDomainApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
      }
 
     /**
+     * GET /1/object/domain/getList
      * Retrieve Domain list
      * 
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -249,6 +254,7 @@ class ObjectDomainApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * GET /1/object/domain/getList
      * Retrieve Domain list
      * 
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -312,6 +318,7 @@ class ObjectDomainApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * GET /2/object/domain/{pkiDomainID}
      * Retrieve an existing Domain
      * 
      * @param pkiDomainID The unique ID of the Domain
@@ -343,6 +350,7 @@ class ObjectDomainApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * GET /2/object/domain/{pkiDomainID}
      * Retrieve an existing Domain
      * 
      * @param pkiDomainID The unique ID of the Domain

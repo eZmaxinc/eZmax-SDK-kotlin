@@ -16,6 +16,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.CommonReportcellstyle
+import eZmaxApi.models.EnumReportdataType
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -25,6 +26,7 @@ import com.squareup.moshi.JsonClass
  *
  * @param objReportcellstyleDefault 
  * @param iReportcolumnWidth The Reportcolumn width in pixels
+ * @param eReportcolumnType 
  */
 
 
@@ -35,7 +37,10 @@ data class CommonReportcolumn (
 
     /* The Reportcolumn width in pixels */
     @Json(name = "iReportcolumnWidth")
-    val iReportcolumnWidth: kotlin.Int
+    val iReportcolumnWidth: kotlin.Int,
+
+    @Json(name = "eReportcolumnType")
+    val eReportcolumnType: EnumReportdataType
 
 ) {
 

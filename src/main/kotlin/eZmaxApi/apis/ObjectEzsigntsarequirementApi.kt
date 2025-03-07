@@ -83,6 +83,7 @@ class ObjectEzsigntsarequirementApi(basePath: kotlin.String = defaultBasePath, c
      }
 
     /**
+     * GET /2/object/ezsigntsarequirement/getAutocomplete/{sSelector}
      * Retrieve Ezsigntsarequirements and IDs
      * Get the list of Ezsigntsarequirement to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezsigntsarequirements to return
@@ -118,6 +119,7 @@ class ObjectEzsigntsarequirementApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * GET /2/object/ezsigntsarequirement/getAutocomplete/{sSelector}
      * Retrieve Ezsigntsarequirements and IDs
      * Get the list of Ezsigntsarequirement to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezsigntsarequirements to return

@@ -49,6 +49,7 @@ class ObjectEzsignbulksendtransmissionApi(basePath: kotlin.String = defaultBaseP
     }
 
     /**
+     * GET /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getCsvErrors
      * Retrieve an existing Ezsignbulksendtransmission&#39;s Csv containing errors
      * 
      * @param pkiEzsignbulksendtransmissionID 
@@ -80,6 +81,7 @@ class ObjectEzsignbulksendtransmissionApi(basePath: kotlin.String = defaultBaseP
     }
 
     /**
+     * GET /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getCsvErrors
      * Retrieve an existing Ezsignbulksendtransmission&#39;s Csv containing errors
      * 
      * @param pkiEzsignbulksendtransmissionID 
@@ -120,6 +122,7 @@ class ObjectEzsignbulksendtransmissionApi(basePath: kotlin.String = defaultBaseP
     }
 
     /**
+     * GET /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getEzsignsignaturesAutomatic
      * Retrieve an existing Ezsignbulksendtransmission&#39;s automatic Ezsignsignatures
      * Return the Ezsignsignatures that can be signed by the current user at the current step in the process
      * @param pkiEzsignbulksendtransmissionID 
@@ -151,6 +154,7 @@ class ObjectEzsignbulksendtransmissionApi(basePath: kotlin.String = defaultBaseP
     }
 
     /**
+     * GET /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getEzsignsignaturesAutomatic
      * Retrieve an existing Ezsignbulksendtransmission&#39;s automatic Ezsignsignatures
      * Return the Ezsignsignatures that can be signed by the current user at the current step in the process
      * @param pkiEzsignbulksendtransmissionID 
@@ -191,6 +195,7 @@ class ObjectEzsignbulksendtransmissionApi(basePath: kotlin.String = defaultBaseP
     }
 
     /**
+     * GET /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getFormsData
      * Retrieve an existing Ezsignbulksendtransmission&#39;s forms data
      * 
      * @param pkiEzsignbulksendtransmissionID 
@@ -222,6 +227,7 @@ class ObjectEzsignbulksendtransmissionApi(basePath: kotlin.String = defaultBaseP
     }
 
     /**
+     * GET /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getFormsData
      * Retrieve an existing Ezsignbulksendtransmission&#39;s forms data
      * 
      * @param pkiEzsignbulksendtransmissionID 
@@ -262,6 +268,7 @@ class ObjectEzsignbulksendtransmissionApi(basePath: kotlin.String = defaultBaseP
     }
 
     /**
+     * GET /2/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}
      * Retrieve an existing Ezsignbulksendtransmission
      * 
      * @param pkiEzsignbulksendtransmissionID 
@@ -293,6 +300,7 @@ class ObjectEzsignbulksendtransmissionApi(basePath: kotlin.String = defaultBaseP
     }
 
     /**
+     * GET /2/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}
      * Retrieve an existing Ezsignbulksendtransmission
      * 
      * @param pkiEzsignbulksendtransmissionID 

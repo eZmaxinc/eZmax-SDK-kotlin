@@ -62,6 +62,7 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * POST /2/object/apikey
      * Create a new Apikey
      * The endpoint allows to create one or many elements at once.
      * @param apikeyCreateObjectV2Request 
@@ -93,6 +94,7 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * POST /2/object/apikey
      * Create a new Apikey
      * The endpoint allows to create one or many elements at once.
      * @param apikeyCreateObjectV2Request 
@@ -134,6 +136,7 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * PUT /1/object/apikey/{pkiApikeyID}
      * Edit an existing Apikey
      * 
      * @param pkiApikeyID The unique ID of the Apikey
@@ -166,6 +169,7 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * PUT /1/object/apikey/{pkiApikeyID}
      * Edit an existing Apikey
      * 
      * @param pkiApikeyID The unique ID of the Apikey
@@ -209,6 +213,7 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * PUT /1/object/apikey/{pkiApikeyID}/editPermissions
      * Edit multiple Permissions
      * Using this endpoint, you can edit multiple Permissions at the same time.
      * @param pkiApikeyID 
@@ -241,6 +246,7 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * PUT /1/object/apikey/{pkiApikeyID}/editPermissions
      * Edit multiple Permissions
      * Using this endpoint, you can edit multiple Permissions at the same time.
      * @param pkiApikeyID 
@@ -284,6 +290,7 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * POST /1/object/apikey/generateDelegatedCredentials
      * Generate a delegated credentials
      * 
      * @param apikeyGenerateDelegatedCredentialsV1Request 
@@ -315,6 +322,7 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * POST /1/object/apikey/generateDelegatedCredentials
      * Generate a delegated credentials
      * 
      * @param apikeyGenerateDelegatedCredentialsV1Request 
@@ -356,6 +364,7 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * GET /1/object/apikey/{pkiApikeyID}/getCors
      * Retrieve an existing Apikey&#39;s cors
      * 
      * @param pkiApikeyID 
@@ -387,6 +396,7 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * GET /1/object/apikey/{pkiApikeyID}/getCors
      * Retrieve an existing Apikey&#39;s cors
      * 
      * @param pkiApikeyID 
@@ -454,6 +464,7 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
      }
 
     /**
+     * GET /1/object/apikey/getList
      * Retrieve Apikey list
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---|
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -489,6 +500,7 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * GET /1/object/apikey/getList
      * Retrieve Apikey list
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---|
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -552,6 +564,7 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * GET /2/object/apikey/{pkiApikeyID}
      * Retrieve an existing Apikey
      * 
      * @param pkiApikeyID The unique ID of the Apikey
@@ -583,6 +596,7 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * GET /2/object/apikey/{pkiApikeyID}
      * Retrieve an existing Apikey
      * 
      * @param pkiApikeyID The unique ID of the Apikey
@@ -623,6 +637,7 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * GET /1/object/apikey/{pkiApikeyID}/getPermissions
      * Retrieve an existing Apikey&#39;s Permissions
      * 
      * @param pkiApikeyID 
@@ -654,6 +669,7 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * GET /1/object/apikey/{pkiApikeyID}/getPermissions
      * Retrieve an existing Apikey&#39;s Permissions
      * 
      * @param pkiApikeyID 
@@ -694,6 +710,7 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * GET /1/object/apikey/{pkiApikeyID}/getSubnets
      * Retrieve an existing Apikey&#39;s subnets
      * 
      * @param pkiApikeyID 
@@ -725,6 +742,7 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * GET /1/object/apikey/{pkiApikeyID}/getSubnets
      * Retrieve an existing Apikey&#39;s subnets
      * 
      * @param pkiApikeyID 
@@ -765,6 +783,7 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * POST /1/object/apikey/{pkiApikeyID}/regenerate
      * Regenerate the Apikey
      * 
      * @param pkiApikeyID 
@@ -797,6 +816,7 @@ class ObjectApikeyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
     }
 
     /**
+     * POST /1/object/apikey/{pkiApikeyID}/regenerate
      * Regenerate the Apikey
      * 
      * @param pkiApikeyID 

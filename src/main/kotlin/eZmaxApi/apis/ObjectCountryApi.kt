@@ -81,6 +81,7 @@ class ObjectCountryApi(basePath: kotlin.String = defaultBasePath, client: Call.F
      }
 
     /**
+     * GET /2/object/country/getAutocomplete/{sSelector}
      * Retrieve Countries and IDs
      * Get the list of Country to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Countries to return
@@ -115,6 +116,7 @@ class ObjectCountryApi(basePath: kotlin.String = defaultBasePath, client: Call.F
     }
 
     /**
+     * GET /2/object/country/getAutocomplete/{sSelector}
      * Retrieve Countries and IDs
      * Get the list of Country to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Countries to return

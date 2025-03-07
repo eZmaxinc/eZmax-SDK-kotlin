@@ -48,6 +48,7 @@ class ObjectCommunicationApi(basePath: kotlin.String = defaultBasePath, client: 
     }
 
     /**
+     * GET /1/object/communication/{pkiCommunicationID}/getCommunicationBody
      * Retrieve the communication body.
      * This endpoint returns the communication body.
      * @param pkiCommunicationID 
@@ -78,6 +79,7 @@ class ObjectCommunicationApi(basePath: kotlin.String = defaultBasePath, client: 
     }
 
     /**
+     * GET /1/object/communication/{pkiCommunicationID}/getCommunicationBody
      * Retrieve the communication body.
      * This endpoint returns the communication body.
      * @param pkiCommunicationID 
@@ -117,6 +119,7 @@ class ObjectCommunicationApi(basePath: kotlin.String = defaultBasePath, client: 
     }
 
     /**
+     * POST /1/object/communication/send
      * Send a new Communication
      * The endpoint allows to send one or many elements at once.
      * @param communicationSendV1Request 
@@ -148,6 +151,7 @@ class ObjectCommunicationApi(basePath: kotlin.String = defaultBasePath, client: 
     }
 
     /**
+     * POST /1/object/communication/send
      * Send a new Communication
      * The endpoint allows to send one or many elements at once.
      * @param communicationSendV1Request 

@@ -50,6 +50,7 @@ class ObjectInscriptiontempApi(basePath: kotlin.String = defaultBasePath, client
     }
 
     /**
+     * GET /1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationCount
      * Retrieve Communication count
      * 
      * @param pkiInscriptiontempID 
@@ -81,6 +82,7 @@ class ObjectInscriptiontempApi(basePath: kotlin.String = defaultBasePath, client
     }
 
     /**
+     * GET /1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationCount
      * Retrieve Communication count
      * 
      * @param pkiInscriptiontempID 
@@ -121,6 +123,7 @@ class ObjectInscriptiontempApi(basePath: kotlin.String = defaultBasePath, client
     }
 
     /**
+     * GET /1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationList
      * Retrieve Communication list
      * 
      * @param pkiInscriptiontempID 
@@ -152,6 +155,7 @@ class ObjectInscriptiontempApi(basePath: kotlin.String = defaultBasePath, client
     }
 
     /**
+     * GET /1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationList
      * Retrieve Communication list
      * 
      * @param pkiInscriptiontempID 
@@ -192,6 +196,7 @@ class ObjectInscriptiontempApi(basePath: kotlin.String = defaultBasePath, client
     }
 
     /**
+     * GET /1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationrecipients
      * Retrieve Inscriptiontemp&#39;s Communicationrecipient
      * 
      * @param pkiInscriptiontempID 
@@ -223,6 +228,7 @@ class ObjectInscriptiontempApi(basePath: kotlin.String = defaultBasePath, client
     }
 
     /**
+     * GET /1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationrecipients
      * Retrieve Inscriptiontemp&#39;s Communicationrecipient
      * 
      * @param pkiInscriptiontempID 
@@ -263,6 +269,7 @@ class ObjectInscriptiontempApi(basePath: kotlin.String = defaultBasePath, client
     }
 
     /**
+     * GET /1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationsenders
      * Retrieve Inscriptiontemp&#39;s Communicationsender
      * 
      * @param pkiInscriptiontempID 
@@ -294,6 +301,7 @@ class ObjectInscriptiontempApi(basePath: kotlin.String = defaultBasePath, client
     }
 
     /**
+     * GET /1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationsenders
      * Retrieve Inscriptiontemp&#39;s Communicationsender
      * 
      * @param pkiInscriptiontempID 

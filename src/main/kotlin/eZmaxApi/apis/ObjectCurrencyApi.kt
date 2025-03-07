@@ -81,6 +81,7 @@ class ObjectCurrencyApi(basePath: kotlin.String = defaultBasePath, client: Call.
      }
 
     /**
+     * GET /2/object/currency/getAutocomplete/{sSelector}
      * Retrieve Currencies and IDs
      * Get the list of Currency to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Currencies to return
@@ -115,6 +116,7 @@ class ObjectCurrencyApi(basePath: kotlin.String = defaultBasePath, client: Call.
     }
 
     /**
+     * GET /2/object/currency/getAutocomplete/{sSelector}
      * Retrieve Currencies and IDs
      * Get the list of Currency to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Currencies to return

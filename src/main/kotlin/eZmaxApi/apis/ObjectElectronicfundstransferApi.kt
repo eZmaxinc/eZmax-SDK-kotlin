@@ -50,6 +50,7 @@ class ObjectElectronicfundstransferApi(basePath: kotlin.String = defaultBasePath
     }
 
     /**
+     * GET /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationCount
      * Retrieve Communication count
      * 
      * @param pkiElectronicfundstransferID 
@@ -81,6 +82,7 @@ class ObjectElectronicfundstransferApi(basePath: kotlin.String = defaultBasePath
     }
 
     /**
+     * GET /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationCount
      * Retrieve Communication count
      * 
      * @param pkiElectronicfundstransferID 
@@ -121,6 +123,7 @@ class ObjectElectronicfundstransferApi(basePath: kotlin.String = defaultBasePath
     }
 
     /**
+     * GET /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationList
      * Retrieve Communication list
      * 
      * @param pkiElectronicfundstransferID 
@@ -152,6 +155,7 @@ class ObjectElectronicfundstransferApi(basePath: kotlin.String = defaultBasePath
     }
 
     /**
+     * GET /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationList
      * Retrieve Communication list
      * 
      * @param pkiElectronicfundstransferID 
@@ -192,6 +196,7 @@ class ObjectElectronicfundstransferApi(basePath: kotlin.String = defaultBasePath
     }
 
     /**
+     * GET /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationrecipients
      * Retrieve Electronicfundstransfer&#39;s Communicationrecipient
      * 
      * @param pkiElectronicfundstransferID 
@@ -223,6 +228,7 @@ class ObjectElectronicfundstransferApi(basePath: kotlin.String = defaultBasePath
     }
 
     /**
+     * GET /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationrecipients
      * Retrieve Electronicfundstransfer&#39;s Communicationrecipient
      * 
      * @param pkiElectronicfundstransferID 
@@ -263,6 +269,7 @@ class ObjectElectronicfundstransferApi(basePath: kotlin.String = defaultBasePath
     }
 
     /**
+     * GET /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationsenders
      * Retrieve Electronicfundstransfer&#39;s Communicationsender
      * 
      * @param pkiElectronicfundstransferID 
@@ -294,6 +301,7 @@ class ObjectElectronicfundstransferApi(basePath: kotlin.String = defaultBasePath
     }
 
     /**
+     * GET /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationsenders
      * Retrieve Electronicfundstransfer&#39;s Communicationsender
      * 
      * @param pkiElectronicfundstransferID 

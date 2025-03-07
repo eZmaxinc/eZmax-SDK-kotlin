@@ -53,6 +53,7 @@ class ObjectActivesessionApi(basePath: kotlin.String = defaultBasePath, client: 
     }
 
     /**
+     * POST /1/object/activesession/generateFederationToken
      * Generate a federation token
      * 
      * @param activesessionGenerateFederationTokenV1Request 
@@ -84,6 +85,7 @@ class ObjectActivesessionApi(basePath: kotlin.String = defaultBasePath, client: 
     }
 
     /**
+     * POST /1/object/activesession/generateFederationToken
      * Generate a federation token
      * 
      * @param activesessionGenerateFederationTokenV1Request 
@@ -125,6 +127,7 @@ class ObjectActivesessionApi(basePath: kotlin.String = defaultBasePath, client: 
     }
 
     /**
+     * GET /1/object/activesession/getCurrent
      * Get Current Activesession
      * Retrieve the details about the current activesession
      * @return ActivesessionGetCurrentV1Response
@@ -157,6 +160,7 @@ class ObjectActivesessionApi(basePath: kotlin.String = defaultBasePath, client: 
     }
 
     /**
+     * GET /1/object/activesession/getCurrent
      * Get Current Activesession
      * Retrieve the details about the current activesession
      * @return ApiResponse<ActivesessionGetCurrentV1Response?>
@@ -198,6 +202,7 @@ class ObjectActivesessionApi(basePath: kotlin.String = defaultBasePath, client: 
     }
 
     /**
+     * GET /2/object/activesession/getCurrent
      * Get Current Activesession
      * Retrieve the details about the current activesession
      * @return ActivesessionGetCurrentV2Response
@@ -228,6 +233,7 @@ class ObjectActivesessionApi(basePath: kotlin.String = defaultBasePath, client: 
     }
 
     /**
+     * GET /2/object/activesession/getCurrent
      * Get Current Activesession
      * Retrieve the details about the current activesession
      * @return ApiResponse<ActivesessionGetCurrentV2Response?>
@@ -305,6 +311,7 @@ class ObjectActivesessionApi(basePath: kotlin.String = defaultBasePath, client: 
      }
 
     /**
+     * GET /1/object/activesession/getList
      * Retrieve Activesession list
      * 
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -340,6 +347,7 @@ class ObjectActivesessionApi(basePath: kotlin.String = defaultBasePath, client: 
     }
 
     /**
+     * GET /1/object/activesession/getList
      * Retrieve Activesession list
      * 
      * @param eOrderBy Specify how you want the results to be sorted (optional)

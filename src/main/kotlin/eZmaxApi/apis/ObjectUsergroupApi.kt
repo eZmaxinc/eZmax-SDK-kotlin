@@ -63,6 +63,7 @@ class ObjectUsergroupApi(basePath: kotlin.String = defaultBasePath, client: Call
     }
 
     /**
+     * POST /1/object/usergroup
      * Create a new Usergroup
      * The endpoint allows to create one or many elements at once.
      * @param usergroupCreateObjectV1Request 
@@ -94,6 +95,7 @@ class ObjectUsergroupApi(basePath: kotlin.String = defaultBasePath, client: Call
     }
 
     /**
+     * POST /1/object/usergroup
      * Create a new Usergroup
      * The endpoint allows to create one or many elements at once.
      * @param usergroupCreateObjectV1Request 
@@ -135,6 +137,7 @@ class ObjectUsergroupApi(basePath: kotlin.String = defaultBasePath, client: Call
     }
 
     /**
+     * PUT /1/object/usergroup/{pkiUsergroupID}
      * Edit an existing Usergroup
      * 
      * @param pkiUsergroupID 
@@ -167,6 +170,7 @@ class ObjectUsergroupApi(basePath: kotlin.String = defaultBasePath, client: Call
     }
 
     /**
+     * PUT /1/object/usergroup/{pkiUsergroupID}
      * Edit an existing Usergroup
      * 
      * @param pkiUsergroupID 
@@ -210,6 +214,7 @@ class ObjectUsergroupApi(basePath: kotlin.String = defaultBasePath, client: Call
     }
 
     /**
+     * PUT /1/object/usergroup/{pkiUsergroupID}/editPermissions
      * Edit multiple Permissions
      * Using this endpoint, you can edit multiple Permissions at the same time.
      * @param pkiUsergroupID 
@@ -242,6 +247,7 @@ class ObjectUsergroupApi(basePath: kotlin.String = defaultBasePath, client: Call
     }
 
     /**
+     * PUT /1/object/usergroup/{pkiUsergroupID}/editPermissions
      * Edit multiple Permissions
      * Using this endpoint, you can edit multiple Permissions at the same time.
      * @param pkiUsergroupID 
@@ -285,6 +291,7 @@ class ObjectUsergroupApi(basePath: kotlin.String = defaultBasePath, client: Call
     }
 
     /**
+     * PUT /1/object/usergroup/{pkiUsergroupID}/editUsergroupdelegations
      * Edit multiple Usergroupdelegations
      * Edit multiple Usergroupdelegations
      * @param pkiUsergroupID 
@@ -317,6 +324,7 @@ class ObjectUsergroupApi(basePath: kotlin.String = defaultBasePath, client: Call
     }
 
     /**
+     * PUT /1/object/usergroup/{pkiUsergroupID}/editUsergroupdelegations
      * Edit multiple Usergroupdelegations
      * Edit multiple Usergroupdelegations
      * @param pkiUsergroupID 
@@ -360,6 +368,7 @@ class ObjectUsergroupApi(basePath: kotlin.String = defaultBasePath, client: Call
     }
 
     /**
+     * PUT /1/object/usergroup/{pkiUsergroupID}/editUsergroupmemberships
      * Edit multiple Usergroupmemberships
      * Using this endpoint, you can edit multiple Usergroupmemberships at the same time.
      * @param pkiUsergroupID 
@@ -392,6 +401,7 @@ class ObjectUsergroupApi(basePath: kotlin.String = defaultBasePath, client: Call
     }
 
     /**
+     * PUT /1/object/usergroup/{pkiUsergroupID}/editUsergroupmemberships
      * Edit multiple Usergroupmemberships
      * Using this endpoint, you can edit multiple Usergroupmemberships at the same time.
      * @param pkiUsergroupID 
@@ -470,6 +480,7 @@ class ObjectUsergroupApi(basePath: kotlin.String = defaultBasePath, client: Call
      }
 
     /**
+     * GET /2/object/usergroup/getAutocomplete/{sSelector}
      * Retrieve Usergroups and IDs
      * Get the list of Usergroup to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Usergroups to return
@@ -504,6 +515,7 @@ class ObjectUsergroupApi(basePath: kotlin.String = defaultBasePath, client: Call
     }
 
     /**
+     * GET /2/object/usergroup/getAutocomplete/{sSelector}
      * Retrieve Usergroups and IDs
      * Get the list of Usergroup to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Usergroups to return
@@ -580,6 +592,7 @@ class ObjectUsergroupApi(basePath: kotlin.String = defaultBasePath, client: Call
      }
 
     /**
+     * GET /1/object/usergroup/getList
      * Retrieve Usergroup list
      * 
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -615,6 +628,7 @@ class ObjectUsergroupApi(basePath: kotlin.String = defaultBasePath, client: Call
     }
 
     /**
+     * GET /1/object/usergroup/getList
      * Retrieve Usergroup list
      * 
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -678,6 +692,7 @@ class ObjectUsergroupApi(basePath: kotlin.String = defaultBasePath, client: Call
     }
 
     /**
+     * GET /2/object/usergroup/{pkiUsergroupID}
      * Retrieve an existing Usergroup
      * 
      * @param pkiUsergroupID 
@@ -709,6 +724,7 @@ class ObjectUsergroupApi(basePath: kotlin.String = defaultBasePath, client: Call
     }
 
     /**
+     * GET /2/object/usergroup/{pkiUsergroupID}
      * Retrieve an existing Usergroup
      * 
      * @param pkiUsergroupID 
@@ -749,6 +765,7 @@ class ObjectUsergroupApi(basePath: kotlin.String = defaultBasePath, client: Call
     }
 
     /**
+     * GET /1/object/usergroup/{pkiUsergroupID}/getPermissions
      * Retrieve an existing Usergroup&#39;s Permissions
      * 
      * @param pkiUsergroupID 
@@ -780,6 +797,7 @@ class ObjectUsergroupApi(basePath: kotlin.String = defaultBasePath, client: Call
     }
 
     /**
+     * GET /1/object/usergroup/{pkiUsergroupID}/getPermissions
      * Retrieve an existing Usergroup&#39;s Permissions
      * 
      * @param pkiUsergroupID 
@@ -820,6 +838,7 @@ class ObjectUsergroupApi(basePath: kotlin.String = defaultBasePath, client: Call
     }
 
     /**
+     * GET /1/object/usergroup/{pkiUsergroupID}/getUsergroupdelegations
      * Retrieve an existing Usergroup&#39;s Usergroupdelegations
      * 
      * @param pkiUsergroupID 
@@ -851,6 +870,7 @@ class ObjectUsergroupApi(basePath: kotlin.String = defaultBasePath, client: Call
     }
 
     /**
+     * GET /1/object/usergroup/{pkiUsergroupID}/getUsergroupdelegations
      * Retrieve an existing Usergroup&#39;s Usergroupdelegations
      * 
      * @param pkiUsergroupID 
@@ -891,6 +911,7 @@ class ObjectUsergroupApi(basePath: kotlin.String = defaultBasePath, client: Call
     }
 
     /**
+     * GET /1/object/usergroup/{pkiUsergroupID}/getUsergroupmemberships
      * Retrieve an existing Usergroup&#39;s Usergroupmemberships
      * 
      * @param pkiUsergroupID 
@@ -922,6 +943,7 @@ class ObjectUsergroupApi(basePath: kotlin.String = defaultBasePath, client: Call
     }
 
     /**
+     * GET /1/object/usergroup/{pkiUsergroupID}/getUsergroupmemberships
      * Retrieve an existing Usergroup&#39;s Usergroupmemberships
      * 
      * @param pkiUsergroupID 

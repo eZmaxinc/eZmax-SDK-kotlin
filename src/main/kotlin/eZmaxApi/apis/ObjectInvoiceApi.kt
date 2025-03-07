@@ -51,6 +51,7 @@ class ObjectInvoiceApi(basePath: kotlin.String = defaultBasePath, client: Call.F
     }
 
     /**
+     * GET /1/object/invoice/{pkiInvoiceID}/getAttachments
      * Retrieve Invoice&#39;s Attachments
      * 
      * @param pkiInvoiceID 
@@ -82,6 +83,7 @@ class ObjectInvoiceApi(basePath: kotlin.String = defaultBasePath, client: Call.F
     }
 
     /**
+     * GET /1/object/invoice/{pkiInvoiceID}/getAttachments
      * Retrieve Invoice&#39;s Attachments
      * 
      * @param pkiInvoiceID 
@@ -122,6 +124,7 @@ class ObjectInvoiceApi(basePath: kotlin.String = defaultBasePath, client: Call.F
     }
 
     /**
+     * GET /1/object/invoice/{pkiInvoiceID}/getCommunicationCount
      * Retrieve Communication count
      * 
      * @param pkiInvoiceID 
@@ -153,6 +156,7 @@ class ObjectInvoiceApi(basePath: kotlin.String = defaultBasePath, client: Call.F
     }
 
     /**
+     * GET /1/object/invoice/{pkiInvoiceID}/getCommunicationCount
      * Retrieve Communication count
      * 
      * @param pkiInvoiceID 
@@ -193,6 +197,7 @@ class ObjectInvoiceApi(basePath: kotlin.String = defaultBasePath, client: Call.F
     }
 
     /**
+     * GET /1/object/invoice/{pkiInvoiceID}/getCommunicationList
      * Retrieve Communication list
      * 
      * @param pkiInvoiceID 
@@ -224,6 +229,7 @@ class ObjectInvoiceApi(basePath: kotlin.String = defaultBasePath, client: Call.F
     }
 
     /**
+     * GET /1/object/invoice/{pkiInvoiceID}/getCommunicationList
      * Retrieve Communication list
      * 
      * @param pkiInvoiceID 
@@ -264,6 +270,7 @@ class ObjectInvoiceApi(basePath: kotlin.String = defaultBasePath, client: Call.F
     }
 
     /**
+     * GET /1/object/invoice/{pkiInvoiceID}/getCommunicationrecipients
      * Retrieve Invoice&#39;s Communicationrecipient
      * 
      * @param pkiInvoiceID 
@@ -295,6 +302,7 @@ class ObjectInvoiceApi(basePath: kotlin.String = defaultBasePath, client: Call.F
     }
 
     /**
+     * GET /1/object/invoice/{pkiInvoiceID}/getCommunicationrecipients
      * Retrieve Invoice&#39;s Communicationrecipient
      * 
      * @param pkiInvoiceID 
@@ -335,6 +343,7 @@ class ObjectInvoiceApi(basePath: kotlin.String = defaultBasePath, client: Call.F
     }
 
     /**
+     * GET /1/object/invoice/{pkiInvoiceID}/getCommunicationsenders
      * Retrieve Invoice&#39;s Communicationsender
      * 
      * @param pkiInvoiceID 
@@ -366,6 +375,7 @@ class ObjectInvoiceApi(basePath: kotlin.String = defaultBasePath, client: Call.F
     }
 
     /**
+     * GET /1/object/invoice/{pkiInvoiceID}/getCommunicationsenders
      * Retrieve Invoice&#39;s Communicationsender
      * 
      * @param pkiInvoiceID 

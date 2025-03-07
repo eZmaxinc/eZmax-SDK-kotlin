@@ -25,6 +25,7 @@ import com.squareup.moshi.JsonClass
  *
  * @param eReportsubsectionpartType The type of the Reportsubsectionpart
  * @param aObjReportrow 
+ * @param aSVariableobjectProperty 
  */
 
 
@@ -35,7 +36,10 @@ data class CommonReportsubsectionpart (
     val eReportsubsectionpartType: CommonReportsubsectionpart.EReportsubsectionpartType,
 
     @Json(name = "a_objReportrow")
-    val aObjReportrow: kotlin.collections.List<CommonReportrow>
+    val aObjReportrow: kotlin.collections.List<CommonReportrow>,
+
+    @Json(name = "a_sVariableobjectProperty")
+    val aSVariableobjectProperty: kotlin.collections.List<kotlin.String>
 
 ) {
 

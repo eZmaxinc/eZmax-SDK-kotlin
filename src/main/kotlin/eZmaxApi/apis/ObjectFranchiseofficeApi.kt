@@ -81,6 +81,7 @@ class ObjectFranchiseofficeApi(basePath: kotlin.String = defaultBasePath, client
      }
 
     /**
+     * GET /2/object/franchiseoffice/getAutocomplete/{sSelector}
      * Retrieve Franchiseoffices and IDs
      * Get the list of Franchiseoffice to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Franchiseoffices to return
@@ -115,6 +116,7 @@ class ObjectFranchiseofficeApi(basePath: kotlin.String = defaultBasePath, client
     }
 
     /**
+     * GET /2/object/franchiseoffice/getAutocomplete/{sSelector}
      * Retrieve Franchiseoffices and IDs
      * Get the list of Franchiseoffice to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Franchiseoffices to return

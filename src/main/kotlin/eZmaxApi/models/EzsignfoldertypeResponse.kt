@@ -67,7 +67,6 @@ import com.squareup.moshi.JsonClass
  * @param bEzsignfoldertypeSendsignedtouser Whether we send an email to User who signed when document is completed
  * @param bEzsignfoldertypeSendattachmentezsignsigner Whether we send the Ezsigndocument in the email to Ezsignsigner
  * @param bEzsignfoldertypeSendproofezsignsigner Whether we send the proof in the email to Ezsignsigner
- * @param bEzsignfoldertypeSendattachmentreceivecopy Whether we send the Ezsigndocument in the email to Ezsignsigner or User when bEzsignfoldersignerassociationReceivecopy = 1
  * @param bEzsignfoldertypeSendattachmentuser Whether we send the Ezsigndocument in the email to User
  * @param bEzsignfoldertypeSendproofuser Whether we send the proof in the email to User
  * @param bEzsignfoldertypeSendproofemail Whether we send the proof in the email to external recipient
@@ -233,10 +232,6 @@ data class EzsignfoldertypeResponse (
     /* Whether we send the proof in the email to Ezsignsigner */
     @Json(name = "bEzsignfoldertypeSendproofezsignsigner")
     val bEzsignfoldertypeSendproofezsignsigner: kotlin.Boolean? = null,
-
-    /* Whether we send the Ezsigndocument in the email to Ezsignsigner or User when bEzsignfoldersignerassociationReceivecopy = 1 */
-    @Json(name = "bEzsignfoldertypeSendattachmentreceivecopy")
-    val bEzsignfoldertypeSendattachmentreceivecopy: kotlin.Boolean? = null,
 
     /* Whether we send the Ezsigndocument in the email to User */
     @Json(name = "bEzsignfoldertypeSendattachmentuser")

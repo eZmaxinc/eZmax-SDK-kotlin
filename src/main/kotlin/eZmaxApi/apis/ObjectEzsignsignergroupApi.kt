@@ -55,6 +55,7 @@ class ObjectEzsignsignergroupApi(basePath: kotlin.String = defaultBasePath, clie
     }
 
     /**
+     * POST /1/object/ezsignsignergroup
      * Create a new Ezsignsignergroup
      * The endpoint allows to create one or many elements at once.
      * @param ezsignsignergroupCreateObjectV1Request 
@@ -86,6 +87,7 @@ class ObjectEzsignsignergroupApi(basePath: kotlin.String = defaultBasePath, clie
     }
 
     /**
+     * POST /1/object/ezsignsignergroup
      * Create a new Ezsignsignergroup
      * The endpoint allows to create one or many elements at once.
      * @param ezsignsignergroupCreateObjectV1Request 
@@ -127,6 +129,7 @@ class ObjectEzsignsignergroupApi(basePath: kotlin.String = defaultBasePath, clie
     }
 
     /**
+     * DELETE /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}
      * Delete an existing Ezsignsignergroup
      * 
      * @param pkiEzsignsignergroupID The unique ID of the Ezsignsignergroup
@@ -158,6 +161,7 @@ class ObjectEzsignsignergroupApi(basePath: kotlin.String = defaultBasePath, clie
     }
 
     /**
+     * DELETE /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}
      * Delete an existing Ezsignsignergroup
      * 
      * @param pkiEzsignsignergroupID The unique ID of the Ezsignsignergroup
@@ -198,6 +202,7 @@ class ObjectEzsignsignergroupApi(basePath: kotlin.String = defaultBasePath, clie
     }
 
     /**
+     * PUT /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}/editEzsignsignergroupmemberships
      * Edit multiple Ezsignsignergroupmemberships
      * Using this endpoint, you can edit multiple Ezsignsignergroupmemberships at the same time.
      * @param pkiEzsignsignergroupID 
@@ -230,6 +235,7 @@ class ObjectEzsignsignergroupApi(basePath: kotlin.String = defaultBasePath, clie
     }
 
     /**
+     * PUT /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}/editEzsignsignergroupmemberships
      * Edit multiple Ezsignsignergroupmemberships
      * Using this endpoint, you can edit multiple Ezsignsignergroupmemberships at the same time.
      * @param pkiEzsignsignergroupID 
@@ -273,6 +279,7 @@ class ObjectEzsignsignergroupApi(basePath: kotlin.String = defaultBasePath, clie
     }
 
     /**
+     * PUT /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}
      * Edit an existing Ezsignsignergroup
      * 
      * @param pkiEzsignsignergroupID The unique ID of the Ezsignsignergroup
@@ -305,6 +312,7 @@ class ObjectEzsignsignergroupApi(basePath: kotlin.String = defaultBasePath, clie
     }
 
     /**
+     * PUT /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}
      * Edit an existing Ezsignsignergroup
      * 
      * @param pkiEzsignsignergroupID The unique ID of the Ezsignsignergroup
@@ -348,6 +356,7 @@ class ObjectEzsignsignergroupApi(basePath: kotlin.String = defaultBasePath, clie
     }
 
     /**
+     * GET /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}/getEzsignsignergroupmemberships
      * Retrieve an existing Ezsignsignergroup&#39;s Ezsignsignergroupmemberships
      * 
      * @param pkiEzsignsignergroupID 
@@ -379,6 +388,7 @@ class ObjectEzsignsignergroupApi(basePath: kotlin.String = defaultBasePath, clie
     }
 
     /**
+     * GET /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}/getEzsignsignergroupmemberships
      * Retrieve an existing Ezsignsignergroup&#39;s Ezsignsignergroupmemberships
      * 
      * @param pkiEzsignsignergroupID 
@@ -419,6 +429,7 @@ class ObjectEzsignsignergroupApi(basePath: kotlin.String = defaultBasePath, clie
     }
 
     /**
+     * GET /2/object/ezsignsignergroup/{pkiEzsignsignergroupID}
      * Retrieve an existing Ezsignsignergroup
      * 
      * @param pkiEzsignsignergroupID The unique ID of the Ezsignsignergroup
@@ -450,6 +461,7 @@ class ObjectEzsignsignergroupApi(basePath: kotlin.String = defaultBasePath, clie
     }
 
     /**
+     * GET /2/object/ezsignsignergroup/{pkiEzsignsignergroupID}
      * Retrieve an existing Ezsignsignergroup
      * 
      * @param pkiEzsignsignergroupID The unique ID of the Ezsignsignergroup

@@ -49,6 +49,7 @@ class ObjectEzsignuserApi(basePath: kotlin.String = defaultBasePath, client: Cal
     }
 
     /**
+     * PUT /1/object/ezsignuser/{pkiEzsignuserID}
      * Edit an existing Ezsignuser
      * 
      * @param pkiEzsignuserID The unique ID of the Ezsignuser
@@ -81,6 +82,7 @@ class ObjectEzsignuserApi(basePath: kotlin.String = defaultBasePath, client: Cal
     }
 
     /**
+     * PUT /1/object/ezsignuser/{pkiEzsignuserID}
      * Edit an existing Ezsignuser
      * 
      * @param pkiEzsignuserID The unique ID of the Ezsignuser
@@ -124,6 +126,7 @@ class ObjectEzsignuserApi(basePath: kotlin.String = defaultBasePath, client: Cal
     }
 
     /**
+     * GET /2/object/ezsignuser/{pkiEzsignuserID}
      * Retrieve an existing Ezsignuser
      * 
      * @param pkiEzsignuserID The unique ID of the Ezsignuser
@@ -155,6 +158,7 @@ class ObjectEzsignuserApi(basePath: kotlin.String = defaultBasePath, client: Cal
     }
 
     /**
+     * GET /2/object/ezsignuser/{pkiEzsignuserID}
      * Retrieve an existing Ezsignuser
      * 
      * @param pkiEzsignuserID The unique ID of the Ezsignuser

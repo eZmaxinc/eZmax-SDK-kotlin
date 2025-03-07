@@ -47,6 +47,7 @@ class ModuleUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * POST /1/module/user/createezsignuser
      * Create a new User of type Ezsignuser
      * The endpoint allows to initiate the creation or a user of type Ezsignuser.  The user will be created only once the email verification process will be completed
      * @param userCreateEzsignuserV1Request 
@@ -78,6 +79,7 @@ class ModuleUserApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
     }
 
     /**
+     * POST /1/module/user/createezsignuser
      * Create a new User of type Ezsignuser
      * The endpoint allows to initiate the creation or a user of type Ezsignuser.  The user will be created only once the email verification process will be completed
      * @param userCreateEzsignuserV1Request 

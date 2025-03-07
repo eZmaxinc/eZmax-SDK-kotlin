@@ -30,6 +30,7 @@ import com.squareup.moshi.JsonClass
  * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument
  * @param fkiEzsigntemplateID The unique ID of the Ezsigntemplate
  * @param fkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation
+ * @param fkiEzsignimportdocumentID The unique ID of the Ezsignimportdocument
  * @param eEzsigndocumentFormat Indicates the format of the document.
  * @param sEzsigndocumentBase64 The Base64 encoded binary content of the document.  This field is Required when eEzsigndocumentSource = Base64.
  * @param sEzsigndocumentUrl The url where the document content resides.  This field is Required when eEzsigndocumentSource = Url.
@@ -74,6 +75,10 @@ data class EzsigndocumentRequestCompound (
     @Json(name = "fkiEzsignfoldersignerassociationID")
     val fkiEzsignfoldersignerassociationID: kotlin.Int? = null,
 
+    /* The unique ID of the Ezsignimportdocument */
+    @Json(name = "fkiEzsignimportdocumentID")
+    val fkiEzsignimportdocumentID: kotlin.Int? = null,
+
     /* Indicates the format of the document. */
     @Json(name = "eEzsigndocumentFormat")
     val eEzsigndocumentFormat: EzsigndocumentRequestCompound.EEzsigndocumentFormat? = null,
@@ -107,11 +112,12 @@ data class EzsigndocumentRequestCompound (
     /**
      * Indicates where to look for the document binary content.
      *
-     * Values: Base64,Ezsigntemplate,Url
+     * Values: Base64,Ezsignimportdocument,Ezsigntemplate,Url
      */
     @JsonClass(generateAdapter = false)
     enum class EEzsigndocumentSource(val value: kotlin.String) {
         @Json(name = "Base64") Base64("Base64"),
+        @Json(name = "Ezsignimportdocument") Ezsignimportdocument("Ezsignimportdocument"),
         @Json(name = "Ezsigntemplate") Ezsigntemplate("Ezsigntemplate"),
         @Json(name = "Url") Url("Url");
     }

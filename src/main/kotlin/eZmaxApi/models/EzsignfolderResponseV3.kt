@@ -51,6 +51,8 @@ import com.squareup.moshi.JsonClass
  * @param dtEzsignfolderScheduleddispose The scheduled date at which the Ezsignfolder should be Disposed.
  * @param eEzsignfolderStep 
  * @param dtEzsignfolderClose The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely.
+ * @param dtEzsignfolderArchive The date and time at which the Ezsignfolder was archived.
+ * @param dtEzsignfolderDispose The date and time at which the Ezsignfolder was disposed.
  * @param tEzsignfolderMessage A custom text message that will be added to the email sent.
  * @param objAudit 
  * @param sEzsignfolderExternalid This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
@@ -147,6 +149,14 @@ data class EzsignfolderResponseV3 (
     /* The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely. */
     @Json(name = "dtEzsignfolderClose")
     val dtEzsignfolderClose: kotlin.String? = null,
+
+    /* The date and time at which the Ezsignfolder was archived. */
+    @Json(name = "dtEzsignfolderArchive")
+    val dtEzsignfolderArchive: kotlin.String? = null,
+
+    /* The date and time at which the Ezsignfolder was disposed. */
+    @Json(name = "dtEzsignfolderDispose")
+    val dtEzsignfolderDispose: kotlin.String? = null,
 
     /* A custom text message that will be added to the email sent. */
     @Json(name = "tEzsignfolderMessage")

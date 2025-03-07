@@ -50,6 +50,7 @@ class ObjectInscriptionnotauthenticatedApi(basePath: kotlin.String = defaultBase
     }
 
     /**
+     * GET /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationCount
      * Retrieve Communication count
      * 
      * @param pkiInscriptionnotauthenticatedID 
@@ -81,6 +82,7 @@ class ObjectInscriptionnotauthenticatedApi(basePath: kotlin.String = defaultBase
     }
 
     /**
+     * GET /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationCount
      * Retrieve Communication count
      * 
      * @param pkiInscriptionnotauthenticatedID 
@@ -121,6 +123,7 @@ class ObjectInscriptionnotauthenticatedApi(basePath: kotlin.String = defaultBase
     }
 
     /**
+     * GET /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationList
      * Retrieve Communication list
      * 
      * @param pkiInscriptionnotauthenticatedID 
@@ -152,6 +155,7 @@ class ObjectInscriptionnotauthenticatedApi(basePath: kotlin.String = defaultBase
     }
 
     /**
+     * GET /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationList
      * Retrieve Communication list
      * 
      * @param pkiInscriptionnotauthenticatedID 
@@ -192,6 +196,7 @@ class ObjectInscriptionnotauthenticatedApi(basePath: kotlin.String = defaultBase
     }
 
     /**
+     * GET /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationrecipients
      * Retrieve Inscriptionnotauthenticated&#39;s Communicationrecipient
      * 
      * @param pkiInscriptionnotauthenticatedID 
@@ -223,6 +228,7 @@ class ObjectInscriptionnotauthenticatedApi(basePath: kotlin.String = defaultBase
     }
 
     /**
+     * GET /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationrecipients
      * Retrieve Inscriptionnotauthenticated&#39;s Communicationrecipient
      * 
      * @param pkiInscriptionnotauthenticatedID 
@@ -263,6 +269,7 @@ class ObjectInscriptionnotauthenticatedApi(basePath: kotlin.String = defaultBase
     }
 
     /**
+     * GET /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationsenders
      * Retrieve Inscriptionnotauthenticated&#39;s Communicationsender
      * 
      * @param pkiInscriptionnotauthenticatedID 
@@ -294,6 +301,7 @@ class ObjectInscriptionnotauthenticatedApi(basePath: kotlin.String = defaultBase
     }
 
     /**
+     * GET /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationsenders
      * Retrieve Inscriptionnotauthenticated&#39;s Communicationsender
      * 
      * @param pkiInscriptionnotauthenticatedID 

@@ -12,6 +12,7 @@
 | **pkiEzsigndocumentID** | **kotlin.Int** | The unique ID of the Ezsigndocument |  [optional] |
 | **fkiEzsigntemplateID** | **kotlin.Int** | The unique ID of the Ezsigntemplate |  [optional] |
 | **fkiEzsignfoldersignerassociationID** | **kotlin.Int** | The unique ID of the Ezsignfoldersignerassociation |  [optional] |
+| **fkiEzsignimportdocumentID** | **kotlin.Int** | The unique ID of the Ezsignimportdocument |  [optional] |
 | **eEzsigndocumentFormat** | [**inline**](#EEzsigndocumentFormat) | Indicates the format of the document. |  [optional] |
 | **sEzsigndocumentBase64** | **kotlin.ByteArray** | The Base64 encoded binary content of the document.  This field is Required when eEzsigndocumentSource &#x3D; Base64. |  [optional] |
 | **sEzsigndocumentUrl** | **kotlin.String** | The url where the document content resides.  This field is Required when eEzsigndocumentSource &#x3D; Url. |  [optional] |
@@ -25,7 +26,7 @@
 ## Enum: eEzsigndocumentSource
 | Name | Value |
 | ---- | ----- |
-| eEzsigndocumentSource | Base64, Ezsigntemplate, Url |
+| eEzsigndocumentSource | Base64, Ezsignimportdocument, Ezsigntemplate, Url |
 
 
 <a id="EEzsigndocumentFormat"></a>

@@ -51,6 +51,7 @@ class ObjectInscriptionApi(basePath: kotlin.String = defaultBasePath, client: Ca
     }
 
     /**
+     * GET /1/object/inscription/{pkiInscriptionID}/getAttachments
      * Retrieve Inscription&#39;s Attachments
      * 
      * @param pkiInscriptionID 
@@ -82,6 +83,7 @@ class ObjectInscriptionApi(basePath: kotlin.String = defaultBasePath, client: Ca
     }
 
     /**
+     * GET /1/object/inscription/{pkiInscriptionID}/getAttachments
      * Retrieve Inscription&#39;s Attachments
      * 
      * @param pkiInscriptionID 
@@ -122,6 +124,7 @@ class ObjectInscriptionApi(basePath: kotlin.String = defaultBasePath, client: Ca
     }
 
     /**
+     * GET /1/object/inscription/{pkiInscriptionID}/getCommunicationCount
      * Retrieve Communication count
      * 
      * @param pkiInscriptionID 
@@ -153,6 +156,7 @@ class ObjectInscriptionApi(basePath: kotlin.String = defaultBasePath, client: Ca
     }
 
     /**
+     * GET /1/object/inscription/{pkiInscriptionID}/getCommunicationCount
      * Retrieve Communication count
      * 
      * @param pkiInscriptionID 
@@ -193,6 +197,7 @@ class ObjectInscriptionApi(basePath: kotlin.String = defaultBasePath, client: Ca
     }
 
     /**
+     * GET /1/object/inscription/{pkiInscriptionID}/getCommunicationList
      * Retrieve Communication list
      * 
      * @param pkiInscriptionID 
@@ -224,6 +229,7 @@ class ObjectInscriptionApi(basePath: kotlin.String = defaultBasePath, client: Ca
     }
 
     /**
+     * GET /1/object/inscription/{pkiInscriptionID}/getCommunicationList
      * Retrieve Communication list
      * 
      * @param pkiInscriptionID 
@@ -264,6 +270,7 @@ class ObjectInscriptionApi(basePath: kotlin.String = defaultBasePath, client: Ca
     }
 
     /**
+     * GET /1/object/inscription/{pkiInscriptionID}/getCommunicationrecipients
      * Retrieve Inscription&#39;s Communicationrecipient
      * 
      * @param pkiInscriptionID 
@@ -295,6 +302,7 @@ class ObjectInscriptionApi(basePath: kotlin.String = defaultBasePath, client: Ca
     }
 
     /**
+     * GET /1/object/inscription/{pkiInscriptionID}/getCommunicationrecipients
      * Retrieve Inscription&#39;s Communicationrecipient
      * 
      * @param pkiInscriptionID 
@@ -335,6 +343,7 @@ class ObjectInscriptionApi(basePath: kotlin.String = defaultBasePath, client: Ca
     }
 
     /**
+     * GET /1/object/inscription/{pkiInscriptionID}/getCommunicationsenders
      * Retrieve Inscription&#39;s Communicationsender
      * 
      * @param pkiInscriptionID 
@@ -366,6 +375,7 @@ class ObjectInscriptionApi(basePath: kotlin.String = defaultBasePath, client: Ca
     }
 
     /**
+     * GET /1/object/inscription/{pkiInscriptionID}/getCommunicationsenders
      * Retrieve Inscription&#39;s Communicationsender
      * 
      * @param pkiInscriptionID 

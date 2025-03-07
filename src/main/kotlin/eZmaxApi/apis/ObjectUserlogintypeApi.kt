@@ -83,6 +83,7 @@ class ObjectUserlogintypeApi(basePath: kotlin.String = defaultBasePath, client: 
      }
 
     /**
+     * GET /2/object/userlogintype/getAutocomplete/{sSelector}
      * Retrieve Userlogintypes and IDs
      * Get the list of Userlogintype to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Userlogintypes to return
@@ -118,6 +119,7 @@ class ObjectUserlogintypeApi(basePath: kotlin.String = defaultBasePath, client: 
     }
 
     /**
+     * GET /2/object/userlogintype/getAutocomplete/{sSelector}
      * Retrieve Userlogintypes and IDs
      * Get the list of Userlogintype to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Userlogintypes to return

@@ -30,6 +30,7 @@ import com.squareup.moshi.JsonClass
  * @param eReportsectionHorizontalalignment 
  * @param iReportsectionColumncount The number of Reportcolumns in the Reportsection
  * @param iReportsectionWidth The combined width of all the Reportcolumns in the Reportsection
+ * @param sReportsectionTitle The title of this Reportsection
  */
 
 
@@ -50,7 +51,11 @@ data class CommonReportsection (
 
     /* The combined width of all the Reportcolumns in the Reportsection */
     @Json(name = "iReportsectionWidth")
-    val iReportsectionWidth: kotlin.Int
+    val iReportsectionWidth: kotlin.Int,
+
+    /* The title of this Reportsection */
+    @Json(name = "sReportsectionTitle")
+    val sReportsectionTitle: kotlin.String? = null
 
 ) {
 

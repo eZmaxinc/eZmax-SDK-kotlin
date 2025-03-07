@@ -56,6 +56,7 @@ class ObjectAuthenticationexternalApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * POST /1/object/authenticationexternal
      * Create a new Authenticationexternal
      * The endpoint allows to create one or many elements at once.
      * @param authenticationexternalCreateObjectV1Request 
@@ -87,6 +88,7 @@ class ObjectAuthenticationexternalApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * POST /1/object/authenticationexternal
      * Create a new Authenticationexternal
      * The endpoint allows to create one or many elements at once.
      * @param authenticationexternalCreateObjectV1Request 
@@ -128,6 +130,7 @@ class ObjectAuthenticationexternalApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * DELETE /1/object/authenticationexternal/{pkiAuthenticationexternalID}
      * Delete an existing Authenticationexternal
      * 
      * @param pkiAuthenticationexternalID The unique ID of the Authenticationexternal
@@ -159,6 +162,7 @@ class ObjectAuthenticationexternalApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * DELETE /1/object/authenticationexternal/{pkiAuthenticationexternalID}
      * Delete an existing Authenticationexternal
      * 
      * @param pkiAuthenticationexternalID The unique ID of the Authenticationexternal
@@ -199,6 +203,7 @@ class ObjectAuthenticationexternalApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * PUT /1/object/authenticationexternal/{pkiAuthenticationexternalID}
      * Edit an existing Authenticationexternal
      * 
      * @param pkiAuthenticationexternalID The unique ID of the Authenticationexternal
@@ -231,6 +236,7 @@ class ObjectAuthenticationexternalApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * PUT /1/object/authenticationexternal/{pkiAuthenticationexternalID}
      * Edit an existing Authenticationexternal
      * 
      * @param pkiAuthenticationexternalID The unique ID of the Authenticationexternal
@@ -308,6 +314,7 @@ class ObjectAuthenticationexternalApi(basePath: kotlin.String = defaultBasePath,
      }
 
     /**
+     * GET /2/object/authenticationexternal/getAutocomplete/{sSelector}
      * Retrieve Authenticationexternals and IDs
      * Get the list of Authenticationexternal to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Authenticationexternals to return
@@ -342,6 +349,7 @@ class ObjectAuthenticationexternalApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * GET /2/object/authenticationexternal/getAutocomplete/{sSelector}
      * Retrieve Authenticationexternals and IDs
      * Get the list of Authenticationexternal to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Authenticationexternals to return
@@ -418,6 +426,7 @@ class ObjectAuthenticationexternalApi(basePath: kotlin.String = defaultBasePath,
      }
 
     /**
+     * GET /1/object/authenticationexternal/getList
      * Retrieve Authenticationexternal list
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eAuthenticationexternalType | Salesforce&lt;br&gt;SalesforceSandbox |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -453,6 +462,7 @@ class ObjectAuthenticationexternalApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * GET /1/object/authenticationexternal/getList
      * Retrieve Authenticationexternal list
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eAuthenticationexternalType | Salesforce&lt;br&gt;SalesforceSandbox |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
@@ -516,6 +526,7 @@ class ObjectAuthenticationexternalApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * GET /2/object/authenticationexternal/{pkiAuthenticationexternalID}
      * Retrieve an existing Authenticationexternal
      * 
      * @param pkiAuthenticationexternalID The unique ID of the Authenticationexternal
@@ -547,6 +558,7 @@ class ObjectAuthenticationexternalApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * GET /2/object/authenticationexternal/{pkiAuthenticationexternalID}
      * Retrieve an existing Authenticationexternal
      * 
      * @param pkiAuthenticationexternalID The unique ID of the Authenticationexternal
@@ -587,6 +599,7 @@ class ObjectAuthenticationexternalApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * POST /1/object/authenticationexternal/{pkiAuthenticationexternalID}/resetAuthorization
      * Reset the Authenticationexternal authorization
      * 
      * @param pkiAuthenticationexternalID 
@@ -619,6 +632,7 @@ class ObjectAuthenticationexternalApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
+     * POST /1/object/authenticationexternal/{pkiAuthenticationexternalID}/resetAuthorization
      * Reset the Authenticationexternal authorization
      * 
      * @param pkiAuthenticationexternalID 

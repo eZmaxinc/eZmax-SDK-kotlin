@@ -81,6 +81,7 @@ class ObjectPhonetypeApi(basePath: kotlin.String = defaultBasePath, client: Call
      }
 
     /**
+     * GET /2/object/phonetype/getAutocomplete/{sSelector}
      * Retrieve Phonetypes and IDs
      * Get the list of Phonetype to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Phonetypes to return
@@ -115,6 +116,7 @@ class ObjectPhonetypeApi(basePath: kotlin.String = defaultBasePath, client: Call
     }
 
     /**
+     * GET /2/object/phonetype/getAutocomplete/{sSelector}
      * Retrieve Phonetypes and IDs
      * Get the list of Phonetype to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Phonetypes to return
