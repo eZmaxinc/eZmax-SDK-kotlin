@@ -33,6 +33,7 @@
 | **eUserEzsignprepaid** | [**FieldEUserEzsignprepaid**](FieldEUserEzsignprepaid.md) |  |  [optional] |
 | **bUserEzsigntrial** | **kotlin.Boolean** | Whether the User&#39;s eZsign subscription is a trial |  [optional] |
 | **dtUserEzsignprepaidexpiration** | **kotlin.String** | The eZsign prepaid expiration date |  [optional] |
+| **dtUserNpsrequest** | **kotlin.String** | The date at which the NPS questionnaire will be show |  [optional] |
 | **objUserCloned** | [**ActivesessionResponseCompoundUser**](ActivesessionResponseCompoundUser.md) |  |  [optional] |
 | **objApikey** | [**ActivesessionResponseCompoundApikey**](ActivesessionResponseCompoundApikey.md) |  |  [optional] |
 

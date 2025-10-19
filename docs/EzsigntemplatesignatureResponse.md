@@ -11,6 +11,7 @@
 | **iEzsigntemplatesignatureStep** | **kotlin.Int** | The step when the Ezsigntemplatesigner will be invited to sign |  |
 | **eEzsigntemplatesignatureType** | [**FieldEEzsigntemplatesignatureType**](FieldEEzsigntemplatesignatureType.md) |  |  |
 | **fkiEzsigntemplatesignerIDValidation** | **kotlin.Int** | The unique ID of the Ezsigntemplatesigner |  [optional] |
+| **fkiPaymentgatewayID** | **kotlin.Int** | The unique ID of the Paymentgateway |  [optional] |
 | **bEzsigntemplatesignatureHandwritten** | **kotlin.Boolean** | Whether the Ezsigntemplatesignature must be handwritten or not when eEzsigntemplatesignatureType &#x3D; Signature. |  [optional] |
 | **bEzsigntemplatesignatureReason** | **kotlin.Boolean** | Whether the Ezsigntemplatesignature must include a reason or not when eEzsigntemplatesignatureType &#x3D; Signature. |  [optional] |
 | **eEzsigntemplatesignaturePositioning** | [**FieldEEzsigntemplatesignaturePositioning**](FieldEEzsigntemplatesignaturePositioning.md) |  |  [optional] |
@@ -36,6 +37,8 @@
 | **iEzsigntemplatesignaturePositioningoffsetx** | **kotlin.Int** | The offset X  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates** |  [optional] |
 | **iEzsigntemplatesignaturePositioningoffsety** | **kotlin.Int** | The offset Y  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates** |  [optional] |
 | **eEzsigntemplatesignaturePositioningoccurence** | [**FieldEEzsigntemplatesignaturePositioningoccurence**](FieldEEzsigntemplatesignaturePositioningoccurence.md) |  |  [optional] |
+| **sEzsigntemplatesignatureCreditcardamountdescription** | **kotlin.String** | The description of the Creditcard signature |  [optional] |
+| **dEzsigntemplatesignatureCreditcardamount** | **kotlin.String** | The amount of the Creditcard signature |  [optional] |
 
 
 

@@ -8,6 +8,7 @@
 | **fkiCreditcardmerchantID** | **kotlin.Int** | The unique ID of the Creditcardmerchant |  |
 | **ePaymentgatewayProcessor** | [**FieldEPaymentgatewayProcessor**](FieldEPaymentgatewayProcessor.md) |  |  |
 | **sPaymentgatewayDescriptionX** | **kotlin.String** | The description of the Paymentgateway in the language of the requester |  |
+| **bPaymentgatewayIsactive** | **kotlin.Boolean** | Whether the Paymentgateway is active or not |  |
 
 
 

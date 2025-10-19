@@ -18,6 +18,7 @@ package eZmaxApi.models
 import eZmaxApi.models.FieldEEzsignfoldertypeCompletion
 import eZmaxApi.models.FieldEEzsignfoldertypeDisposal
 import eZmaxApi.models.FieldEEzsignfoldertypeDocumentdependency
+import eZmaxApi.models.FieldEEzsignfoldertypeDocumentmerge
 import eZmaxApi.models.FieldEEzsignfoldertypePdfanoncompliantaction
 import eZmaxApi.models.FieldEEzsignfoldertypePdfarequirement
 import eZmaxApi.models.FieldEEzsignfoldertypePrivacylevel
@@ -57,6 +58,7 @@ import com.squareup.moshi.JsonClass
  * @param aFkiUsergroupIDRestricted 
  * @param aFkiUsergroupIDTemplate 
  * @param eEzsignfoldertypeDocumentdependency 
+ * @param eEzsignfoldertypeDocumentmerge 
  * @param sEmailAddressSigned The email address.
  * @param sEmailAddressSummary The email address.
  * @param eEzsignfoldertypePdfarequirement 
@@ -78,13 +80,18 @@ import com.squareup.moshi.JsonClass
  * @param bEzsignfoldertypeSendsignedtoezsignsigner Whether we send an email to Ezsignsigner  when document is completed
  * @param bEzsignfoldertypeSendsignedtouser Whether we send an email to User who signed when document is completed
  * @param bEzsignfoldertypeSendattachmentezsignsigner Whether we send the Ezsigndocument in the email to Ezsignsigner
+ * @param bEzsignfoldertypeSendsignatureattachmentezsignsigner Whether we send the attachments contained in the Ezsignsignatures in the email to Ezsignsigner
+ * @param bEzsignfoldertypeSendsignatureattachment Whether we send the attachments contained in the Ezsignsignatures in the email to external recipient
  * @param bEzsignfoldertypeSendproofezsignsigner Whether we send the proof in the email to Ezsignsigner
  * @param bEzsignfoldertypeSendattachmentuser Whether we send the Ezsigndocument in the email to User
+ * @param bEzsignfoldertypeSendsignatureattachmentuser Whether we send the attachments contained in the Ezsignsignatures in the email to User
  * @param bEzsignfoldertypeSendproofuser Whether we send the proof in the email to User
  * @param bEzsignfoldertypeSendproofemail Whether we send the proof in the email to external recipient
  * @param bEzsignfoldertypeAllowdownloadattachmentezsignsigner Whether we allow the Ezsigndocument to be downloaded by an Ezsignsigner
+ * @param bEzsignfoldertypeAllowdownloadsignatureattachmentezsignsigner Whether we allow the attachments in the Ezsignsignatures to be downloaded by an Ezsignsigner
  * @param bEzsignfoldertypeAllowdownloadproofezsignsigner Whether we allow the proof to be downloaded by an Ezsignsigner
  * @param bEzsignfoldertypeSendproofreceivealldocument Whether we send the proof to user and Ezsignsigner who receive all documents.
+ * @param bEzsignfoldertypeSendsignatureattachmentreceivealldocument Whether we send the attachments contained in the Ezsignsignatures to user and Ezsignsigner who receive all documents.
  * @param bEzsignfoldertypeSendsignedtofullgroup Whether we send the signed Ezsigndocument to the Usergroup that has acces to all Ezsignfolders
  * @param bEzsignfoldertypeSendsignedtolimitedgroup THIS FIELD WILL BE DELETED. Whether we send the signed Ezsigndocument to the Usergroup that has acces to only their own Ezsignfolders
  * @param bEzsignfoldertypeSendsummarytofullgroup Whether we send the summary to the Usergroup that has acces to all Ezsignfolders
@@ -195,6 +202,9 @@ data class EzsignfoldertypeRequestCompoundV3 (
     @Json(name = "eEzsignfoldertypeDocumentdependency")
     val eEzsignfoldertypeDocumentdependency: FieldEEzsignfoldertypeDocumentdependency? = null,
 
+    @Json(name = "eEzsignfoldertypeDocumentmerge")
+    val eEzsignfoldertypeDocumentmerge: FieldEEzsignfoldertypeDocumentmerge? = FieldEEzsignfoldertypeDocumentmerge.No,
+
     /* The email address. */
     @Json(name = "sEmailAddressSigned")
     val sEmailAddressSigned: kotlin.String? = null,
@@ -277,6 +287,14 @@ data class EzsignfoldertypeRequestCompoundV3 (
     @Json(name = "bEzsignfoldertypeSendattachmentezsignsigner")
     val bEzsignfoldertypeSendattachmentezsignsigner: kotlin.Boolean? = null,
 
+    /* Whether we send the attachments contained in the Ezsignsignatures in the email to Ezsignsigner */
+    @Json(name = "bEzsignfoldertypeSendsignatureattachmentezsignsigner")
+    val bEzsignfoldertypeSendsignatureattachmentezsignsigner: kotlin.Boolean? = null,
+
+    /* Whether we send the attachments contained in the Ezsignsignatures in the email to external recipient */
+    @Json(name = "bEzsignfoldertypeSendsignatureattachment")
+    val bEzsignfoldertypeSendsignatureattachment: kotlin.Boolean? = null,
+
     /* Whether we send the proof in the email to Ezsignsigner */
     @Json(name = "bEzsignfoldertypeSendproofezsignsigner")
     val bEzsignfoldertypeSendproofezsignsigner: kotlin.Boolean? = null,
@@ -284,6 +302,10 @@ data class EzsignfoldertypeRequestCompoundV3 (
     /* Whether we send the Ezsigndocument in the email to User */
     @Json(name = "bEzsignfoldertypeSendattachmentuser")
     val bEzsignfoldertypeSendattachmentuser: kotlin.Boolean? = null,
+
+    /* Whether we send the attachments contained in the Ezsignsignatures in the email to User */
+    @Json(name = "bEzsignfoldertypeSendsignatureattachmentuser")
+    val bEzsignfoldertypeSendsignatureattachmentuser: kotlin.Boolean? = null,
 
     /* Whether we send the proof in the email to User */
     @Json(name = "bEzsignfoldertypeSendproofuser")
@@ -297,6 +319,10 @@ data class EzsignfoldertypeRequestCompoundV3 (
     @Json(name = "bEzsignfoldertypeAllowdownloadattachmentezsignsigner")
     val bEzsignfoldertypeAllowdownloadattachmentezsignsigner: kotlin.Boolean? = null,
 
+    /* Whether we allow the attachments in the Ezsignsignatures to be downloaded by an Ezsignsigner */
+    @Json(name = "bEzsignfoldertypeAllowdownloadsignatureattachmentezsignsigner")
+    val bEzsignfoldertypeAllowdownloadsignatureattachmentezsignsigner: kotlin.Boolean? = null,
+
     /* Whether we allow the proof to be downloaded by an Ezsignsigner */
     @Json(name = "bEzsignfoldertypeAllowdownloadproofezsignsigner")
     val bEzsignfoldertypeAllowdownloadproofezsignsigner: kotlin.Boolean? = null,
@@ -304,6 +330,10 @@ data class EzsignfoldertypeRequestCompoundV3 (
     /* Whether we send the proof to user and Ezsignsigner who receive all documents. */
     @Json(name = "bEzsignfoldertypeSendproofreceivealldocument")
     val bEzsignfoldertypeSendproofreceivealldocument: kotlin.Boolean? = null,
+
+    /* Whether we send the attachments contained in the Ezsignsignatures to user and Ezsignsigner who receive all documents. */
+    @Json(name = "bEzsignfoldertypeSendsignatureattachmentreceivealldocument")
+    val bEzsignfoldertypeSendsignatureattachmentreceivealldocument: kotlin.Boolean? = null,
 
     /* Whether we send the signed Ezsigndocument to the Usergroup that has acces to all Ezsignfolders */
     @Json(name = "bEzsignfoldertypeSendsignedtofullgroup")

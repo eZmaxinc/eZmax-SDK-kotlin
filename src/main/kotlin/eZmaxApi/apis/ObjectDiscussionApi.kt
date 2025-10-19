@@ -20,6 +20,8 @@ import okhttp3.Call
 import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.DiscussionChatV1200Response
+import eZmaxApi.models.DiscussionChatV1Request
 import eZmaxApi.models.DiscussionCreateObjectV1Request
 import eZmaxApi.models.DiscussionCreateObjectV1Response
 import eZmaxApi.models.DiscussionDeleteObjectV1Response
@@ -51,6 +53,79 @@ class ObjectDiscussionApi(basePath: kotlin.String = defaultBasePath, client: Cal
         val defaultBasePath: String by lazy {
             System.getProperties().getProperty(ApiClient.baseUrlKey, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
+    }
+
+    /**
+     * POST /1/object/discussion/chat
+     * Have a Discussion with the AI Chatbot
+     * The endpoint allows to create one or many elements at once.
+     * @param discussionChatV1Request 
+     * @return DiscussionChatV1200Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun discussionChatV1(discussionChatV1Request: DiscussionChatV1Request) : DiscussionChatV1200Response {
+        val localVarResponse = discussionChatV1WithHttpInfo(discussionChatV1Request = discussionChatV1Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as DiscussionChatV1200Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /1/object/discussion/chat
+     * Have a Discussion with the AI Chatbot
+     * The endpoint allows to create one or many elements at once.
+     * @param discussionChatV1Request 
+     * @return ApiResponse<DiscussionChatV1200Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun discussionChatV1WithHttpInfo(discussionChatV1Request: DiscussionChatV1Request) : ApiResponse<DiscussionChatV1200Response?> {
+        val localVariableConfig = discussionChatV1RequestConfig(discussionChatV1Request = discussionChatV1Request)
+
+        return request<DiscussionChatV1Request, DiscussionChatV1200Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation discussionChatV1
+     *
+     * @param discussionChatV1Request 
+     * @return RequestConfig
+     */
+    fun discussionChatV1RequestConfig(discussionChatV1Request: DiscussionChatV1Request) : RequestConfig<DiscussionChatV1Request> {
+        val localVariableBody = discussionChatV1Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/discussion/chat",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
     }
 
     /**

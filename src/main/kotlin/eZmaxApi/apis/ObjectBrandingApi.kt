@@ -243,7 +243,7 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: Call.
      * Retrieve Brandings and IDs
      * Get the list of Branding to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Brandings to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return BrandingGetAutocompleteV2Response
@@ -278,7 +278,7 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: Call.
      * Retrieve Brandings and IDs
      * Get the list of Branding to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Brandings to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return ApiResponse<BrandingGetAutocompleteV2Response?>
@@ -299,7 +299,7 @@ class ObjectBrandingApi(basePath: kotlin.String = defaultBasePath, client: Call.
      * To obtain the request config of the operation brandingGetAutocompleteV2
      *
      * @param sSelector The type of Brandings to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return RequestConfig

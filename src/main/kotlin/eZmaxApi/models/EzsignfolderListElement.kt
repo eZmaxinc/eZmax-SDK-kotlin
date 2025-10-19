@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.FieldEEzsignfolderCompletion
 import eZmaxApi.models.FieldEEzsignfolderStep
 import eZmaxApi.models.FieldEEzsignfoldertypePrivacylevel
 
@@ -30,6 +31,7 @@ import com.squareup.moshi.JsonClass
  * @param sEzsignfoldertypeNameX The name of the Ezsignfoldertype in the language of the requester
  * @param sEzsignfolderDescription The description of the Ezsignfolder
  * @param eEzsignfolderStep 
+ * @param eEzsignfolderCompletion 
  * @param dtCreatedDate The date and time at which the object was created
  * @param iEzsigndocument The total number of Ezsigndocument in the folder
  * @param iEzsigndocumentEdm The total number of Ezsigndocument in the folder that were saved in the edm system
@@ -74,6 +76,9 @@ data class EzsignfolderListElement (
 
     @Json(name = "eEzsignfolderStep")
     val eEzsignfolderStep: FieldEEzsignfolderStep,
+
+    @Json(name = "eEzsignfolderCompletion")
+    val eEzsignfolderCompletion: FieldEEzsignfolderCompletion,
 
     /* The date and time at which the object was created */
     @Json(name = "dtCreatedDate")

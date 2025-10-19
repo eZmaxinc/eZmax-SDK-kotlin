@@ -24,6 +24,8 @@ import eZmaxApi.models.TranqcontractGetCommunicationCountV1Response
 import eZmaxApi.models.TranqcontractGetCommunicationListV1Response
 import eZmaxApi.models.TranqcontractGetCommunicationrecipientsV1Response
 import eZmaxApi.models.TranqcontractGetCommunicationsendersV1Response
+import eZmaxApi.models.TranqcontractImportIntoEDMV1Request
+import eZmaxApi.models.TranqcontractImportIntoEDMV1Response
 
 import com.squareup.moshi.Json
 
@@ -334,6 +336,83 @@ class ObjectTranqcontractApi(basePath: kotlin.String = defaultBasePath, client: 
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/tranqcontract/{pkiTranqcontractID}/getCommunicationsenders".replace("{"+"pkiTranqcontractID"+"}", encodeURIComponent(pkiTranqcontractID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * POST /1/object/tranqcontract/{pkiTranqcontractID}/importIntoEDM
+     * Import attachments into the Tranqcontract
+     * 
+     * @param pkiTranqcontractID 
+     * @param tranqcontractImportIntoEDMV1Request 
+     * @return TranqcontractImportIntoEDMV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun tranqcontractImportIntoEDMV1(pkiTranqcontractID: kotlin.Int, tranqcontractImportIntoEDMV1Request: TranqcontractImportIntoEDMV1Request) : TranqcontractImportIntoEDMV1Response {
+        val localVarResponse = tranqcontractImportIntoEDMV1WithHttpInfo(pkiTranqcontractID = pkiTranqcontractID, tranqcontractImportIntoEDMV1Request = tranqcontractImportIntoEDMV1Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as TranqcontractImportIntoEDMV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /1/object/tranqcontract/{pkiTranqcontractID}/importIntoEDM
+     * Import attachments into the Tranqcontract
+     * 
+     * @param pkiTranqcontractID 
+     * @param tranqcontractImportIntoEDMV1Request 
+     * @return ApiResponse<TranqcontractImportIntoEDMV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun tranqcontractImportIntoEDMV1WithHttpInfo(pkiTranqcontractID: kotlin.Int, tranqcontractImportIntoEDMV1Request: TranqcontractImportIntoEDMV1Request) : ApiResponse<TranqcontractImportIntoEDMV1Response?> {
+        val localVariableConfig = tranqcontractImportIntoEDMV1RequestConfig(pkiTranqcontractID = pkiTranqcontractID, tranqcontractImportIntoEDMV1Request = tranqcontractImportIntoEDMV1Request)
+
+        return request<TranqcontractImportIntoEDMV1Request, TranqcontractImportIntoEDMV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation tranqcontractImportIntoEDMV1
+     *
+     * @param pkiTranqcontractID 
+     * @param tranqcontractImportIntoEDMV1Request 
+     * @return RequestConfig
+     */
+    fun tranqcontractImportIntoEDMV1RequestConfig(pkiTranqcontractID: kotlin.Int, tranqcontractImportIntoEDMV1Request: TranqcontractImportIntoEDMV1Request) : RequestConfig<TranqcontractImportIntoEDMV1Request> {
+        val localVariableBody = tranqcontractImportIntoEDMV1Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/tranqcontract/{pkiTranqcontractID}/importIntoEDM".replace("{"+"pkiTranqcontractID"+"}", encodeURIComponent(pkiTranqcontractID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

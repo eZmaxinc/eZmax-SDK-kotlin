@@ -85,7 +85,7 @@ class ObjectCompanyApi(basePath: kotlin.String = defaultBasePath, client: Call.F
      * Retrieve Companys and IDs
      * Get the list of Company to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Companys to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return CompanyGetAutocompleteV2Response
@@ -120,7 +120,7 @@ class ObjectCompanyApi(basePath: kotlin.String = defaultBasePath, client: Call.F
      * Retrieve Companys and IDs
      * Get the list of Company to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Companys to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return ApiResponse<CompanyGetAutocompleteV2Response?>
@@ -141,7 +141,7 @@ class ObjectCompanyApi(basePath: kotlin.String = defaultBasePath, client: Call.F
      * To obtain the request config of the operation companyGetAutocompleteV2
      *
      * @param sSelector The type of Companys to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return RequestConfig

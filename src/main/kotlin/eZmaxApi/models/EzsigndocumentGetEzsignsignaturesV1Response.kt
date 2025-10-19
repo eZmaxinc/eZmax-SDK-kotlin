@@ -23,7 +23,7 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * Response for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignsignatures
+ * Response for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignsignatures
  *
  * @param objDebugPayload 
  * @param mPayload 

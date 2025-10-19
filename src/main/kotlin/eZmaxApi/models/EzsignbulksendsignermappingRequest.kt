@@ -26,6 +26,7 @@ import com.squareup.moshi.JsonClass
  * @param sEzsignbulksendsignermappingDescription The description of the Ezsignbulksendsignermapping
  * @param pkiEzsignbulksendsignermappingID The unique ID of the Ezsignbulksendsignermapping
  * @param fkiUserID The unique ID of the User
+ * @param bEzsignbulksendsignermappingReceivecopy Whether the Ezsignbulksendsigner will receive a copy or not
  */
 
 
@@ -45,7 +46,11 @@ data class EzsignbulksendsignermappingRequest (
 
     /* The unique ID of the User */
     @Json(name = "fkiUserID")
-    val fkiUserID: kotlin.Int? = null
+    val fkiUserID: kotlin.Int? = null,
+
+    /* Whether the Ezsignbulksendsigner will receive a copy or not */
+    @Json(name = "bEzsignbulksendsignermappingReceivecopy")
+    val bEzsignbulksendsignermappingReceivecopy: kotlin.Boolean? = null
 
 ) {
 

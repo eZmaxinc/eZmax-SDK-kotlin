@@ -23,15 +23,19 @@ import com.squareup.moshi.JsonClass
 /**
  * An Ezsignsignaturepaymentdetail Object and children to create a complete structure
  *
+ * @param fkiGlaccountcontainerID The unique ID of the Glaccountcontainer
  * @param tEzsignsignaturepaymentdetailDescription A description for the Ezsignsignaturepaymentdetail.
  * @param dEzsignsignaturepaymentdetailAmount The amount of the for the Ezsignsignaturepaymentdetail
  * @param eEzsignsignaturepaymentdetailTaxable 
  * @param pkiEzsignsignaturepaymentdetailID The unique ID of the Ezsignsignaturepaymentdetail
- * @param fkiGlaccountcontainerID The unique ID of the Glaccountcontainer
  */
 
 
 data class EzsignsignaturepaymentdetailRequestCompound (
+
+    /* The unique ID of the Glaccountcontainer */
+    @Json(name = "fkiGlaccountcontainerID")
+    val fkiGlaccountcontainerID: kotlin.Int,
 
     /* A description for the Ezsignsignaturepaymentdetail. */
     @Json(name = "tEzsignsignaturepaymentdetailDescription")
@@ -46,11 +50,7 @@ data class EzsignsignaturepaymentdetailRequestCompound (
 
     /* The unique ID of the Ezsignsignaturepaymentdetail */
     @Json(name = "pkiEzsignsignaturepaymentdetailID")
-    val pkiEzsignsignaturepaymentdetailID: kotlin.Int? = null,
-
-    /* The unique ID of the Glaccountcontainer */
-    @Json(name = "fkiGlaccountcontainerID")
-    val fkiGlaccountcontainerID: kotlin.Int? = null
+    val pkiEzsignsignaturepaymentdetailID: kotlin.Int? = null
 
 ) {
 

@@ -88,7 +88,7 @@ class ObjectEzsigntsarequirementApi(basePath: kotlin.String = defaultBasePath, c
      * Get the list of Ezsigntsarequirement to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezsigntsarequirements to return
      * @param fkiEzsignfoldertypeID  (optional)
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return EzsigntsarequirementGetAutocompleteV2Response
@@ -124,7 +124,7 @@ class ObjectEzsigntsarequirementApi(basePath: kotlin.String = defaultBasePath, c
      * Get the list of Ezsigntsarequirement to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezsigntsarequirements to return
      * @param fkiEzsignfoldertypeID  (optional)
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return ApiResponse<EzsigntsarequirementGetAutocompleteV2Response?>
@@ -146,7 +146,7 @@ class ObjectEzsigntsarequirementApi(basePath: kotlin.String = defaultBasePath, c
      *
      * @param sSelector The type of Ezsigntsarequirements to return
      * @param fkiEzsignfoldertypeID  (optional)
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return RequestConfig

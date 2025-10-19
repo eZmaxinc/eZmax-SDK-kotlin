@@ -85,7 +85,7 @@ class ObjectCreditcardtypeApi(basePath: kotlin.String = defaultBasePath, client:
      * Retrieve Creditcardtypes and IDs
      * Get the list of Creditcardtype to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Creditcardtypes to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return CreditcardtypeGetAutocompleteV2Response
@@ -120,7 +120,7 @@ class ObjectCreditcardtypeApi(basePath: kotlin.String = defaultBasePath, client:
      * Retrieve Creditcardtypes and IDs
      * Get the list of Creditcardtype to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Creditcardtypes to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return ApiResponse<CreditcardtypeGetAutocompleteV2Response?>
@@ -141,7 +141,7 @@ class ObjectCreditcardtypeApi(basePath: kotlin.String = defaultBasePath, client:
      * To obtain the request config of the operation creditcardtypeGetAutocompleteV2
      *
      * @param sSelector The type of Creditcardtypes to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return RequestConfig

@@ -15,7 +15,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.CommonReportcolumn
 import eZmaxApi.models.CommonReportsubsection
 import eZmaxApi.models.EnumHorizontalalignment
 
@@ -26,10 +25,7 @@ import com.squareup.moshi.JsonClass
  * A section in a Report. Each Reportsection shares Reportcolumns disposition with all its Reportsubsection 
  *
  * @param aObjReportsubsection 
- * @param aObjReportcolumn 
  * @param eReportsectionHorizontalalignment 
- * @param iReportsectionColumncount The number of Reportcolumns in the Reportsection
- * @param iReportsectionWidth The combined width of all the Reportcolumns in the Reportsection
  * @param sReportsectionTitle The title of this Reportsection
  */
 
@@ -39,19 +35,8 @@ data class CommonReportsection (
     @Json(name = "a_objReportsubsection")
     val aObjReportsubsection: kotlin.collections.List<CommonReportsubsection>,
 
-    @Json(name = "a_objReportcolumn")
-    val aObjReportcolumn: kotlin.collections.List<CommonReportcolumn>,
-
     @Json(name = "eReportsectionHorizontalalignment")
     val eReportsectionHorizontalalignment: EnumHorizontalalignment,
-
-    /* The number of Reportcolumns in the Reportsection */
-    @Json(name = "iReportsectionColumncount")
-    val iReportsectionColumncount: kotlin.Int,
-
-    /* The combined width of all the Reportcolumns in the Reportsection */
-    @Json(name = "iReportsectionWidth")
-    val iReportsectionWidth: kotlin.Int,
 
     /* The title of this Reportsection */
     @Json(name = "sReportsectionTitle")

@@ -33,7 +33,7 @@ import com.squareup.moshi.JsonClass
  * @param eAttachmentPrivacy 
  * @param eAttachmentType 
  * @param iAttachmentSize The size of the Attachment
- * @param sAttachmentMD5 The md5 of the Attachment
+ * @param sAttachmentMD5 The MD5 of the Attachment
  * @param bAttachmentDeleted Whether if it's deleted
  * @param bAttachmentValid Whether if it's valid
  * @param eAttachmentVerified 
@@ -114,7 +114,7 @@ data class AttachmentResponseCompound (
     @Json(name = "iAttachmentSize")
     val iAttachmentSize: kotlin.Int,
 
-    /* The md5 of the Attachment */
+    /* The MD5 of the Attachment */
     @Json(name = "sAttachmentMD5")
     val sAttachmentMD5: kotlin.String,
 

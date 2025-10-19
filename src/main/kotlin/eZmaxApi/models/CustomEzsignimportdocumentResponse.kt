@@ -24,6 +24,8 @@ import com.squareup.moshi.JsonClass
  *
  * @param pkiEzsignimportdocumentID The unique ID of the Ezsignimportdocument
  * @param sEzsignimportdocumentName The name of the Ezsignimportdocument
+ * @param fkiEzsigntemplateglobalID The unique ID of the Ezsigntemplateglobal
+ * @param sEzsigntemplateglobalDescription The description of the Ezsigntemplate
  * @param fkiEzsignfolderID The unique ID of the Ezsignfolder
  * @param sEzsignfolderDescription The description of the Ezsignfolder
  */
@@ -38,6 +40,14 @@ data class CustomEzsignimportdocumentResponse (
     /* The name of the Ezsignimportdocument */
     @Json(name = "sEzsignimportdocumentName")
     val sEzsignimportdocumentName: kotlin.String,
+
+    /* The unique ID of the Ezsigntemplateglobal */
+    @Json(name = "fkiEzsigntemplateglobalID")
+    val fkiEzsigntemplateglobalID: kotlin.Int? = null,
+
+    /* The description of the Ezsigntemplate */
+    @Json(name = "sEzsigntemplateglobalDescription")
+    val sEzsigntemplateglobalDescription: kotlin.String? = null,
 
     /* The unique ID of the Ezsignfolder */
     @Json(name = "fkiEzsignfolderID")

@@ -15,7 +15,10 @@
 | **objContactName** | [**CustomContactNameResponse**](CustomContactNameResponse.md) |  |  |
 | **fkiEzsignsigningreasonID** | **kotlin.Int** | The unique ID of the Ezsignsigningreason |  [optional] |
 | **fkiFontID** | **kotlin.Int** | The unique ID of the Font |  [optional] |
+| **fkiPaymentgatewayID** | **kotlin.Int** | The unique ID of the Paymentgateway |  [optional] |
 | **sCurrencyDescriptionX** | **kotlin.String** | The description of the Currency in the language of the requester |  [optional] |
+| **dEzsignsignatureCreditcardamount** | **kotlin.String** | The amount of the Creditcard signature |  [optional] |
+| **sEzsignsignatureCreditcardamountdescription** | **kotlin.String** | The description of the Creditcard signature |  [optional] |
 | **sEzsignsigningreasonDescriptionX** | **kotlin.String** | The description of the Ezsignsigningreason in the language of the requester |  [optional] |
 | **iEzsignsignatureHeight** | **kotlin.Int** | The height of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have an height of 2 inches, you would use \&quot;200\&quot; for the iEzsignsignatureHeight. |  [optional] |
 | **iEzsignsignatureWidth** | **kotlin.Int** | The width of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have a width of 2 inches, you would use \&quot;200\&quot; for the iEzsignsignatureWidth. |  [optional] |

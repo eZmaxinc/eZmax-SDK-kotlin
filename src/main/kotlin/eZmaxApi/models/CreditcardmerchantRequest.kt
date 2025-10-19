@@ -22,7 +22,8 @@ import com.squareup.moshi.JsonClass
 /**
  * A Creditcardmerchant Object
  *
- * @param fkiBankaccountID The unique ID of the Bankaccount
+ * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
+ * @param fkiCurrencyID The unique ID of the Currency.
  * @param bCreditcardmerchantDenyvisa Whether if visa are denied
  * @param bCreditcardmerchantDenymastercard Whether if mastercard are denied
  * @param bCreditcardmerchantDenyamex Whether if amex are denied
@@ -30,16 +31,20 @@ import com.squareup.moshi.JsonClass
  * @param sCreditcardmerchantDescription The description of the Creditcardmerchant
  * @param sCreditcardmerchantStoreid The storeid of the Creditcardmerchant
  * @param pkiCreditcardmerchantID The unique ID of the Creditcardmerchant
- * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
+ * @param fkiBankaccountID The unique ID of the Bankaccount
  * @param sCreditcardmerchantApitoken The apitoken of the Creditcardmerchant
  */
 
 
 data class CreditcardmerchantRequest (
 
-    /* The unique ID of the Bankaccount */
-    @Json(name = "fkiBankaccountID")
-    val fkiBankaccountID: kotlin.Int,
+    /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| */
+    @Json(name = "fkiLanguageID")
+    val fkiLanguageID: kotlin.Int,
+
+    /* The unique ID of the Currency. */
+    @Json(name = "fkiCurrencyID")
+    val fkiCurrencyID: kotlin.Int,
 
     /* Whether if visa are denied */
     @Json(name = "bCreditcardmerchantDenyvisa")
@@ -69,9 +74,9 @@ data class CreditcardmerchantRequest (
     @Json(name = "pkiCreditcardmerchantID")
     val pkiCreditcardmerchantID: kotlin.Int? = null,
 
-    /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| */
-    @Json(name = "fkiLanguageID")
-    val fkiLanguageID: kotlin.Int? = null,
+    /* The unique ID of the Bankaccount */
+    @Json(name = "fkiBankaccountID")
+    val fkiBankaccountID: kotlin.Int? = null,
 
     /* The apitoken of the Creditcardmerchant */
     @Json(name = "sCreditcardmerchantApitoken")

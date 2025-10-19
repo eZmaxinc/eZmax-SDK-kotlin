@@ -32,6 +32,8 @@ import com.squareup.moshi.JsonClass
  * @param eBrandingAlignlogo 
  * @param iBrandingColor The primary color. This is a RGB color converted into integer
  * @param bBrandingIsactive Whether the Branding is active or not
+ * @param fkiDomainID The unique ID of the Domain
+ * @param sDomainName The name of the Domain
  * @param fkiEmailID The unique ID of the Email
  * @param sBrandingName The name of the Branding  This value will only be set if you wish to overwrite the default name. If you want to keep the default name, leave this property empty
  * @param sEmailAddress The email address.
@@ -64,6 +66,14 @@ data class BrandingResponseV3 (
     /* Whether the Branding is active or not */
     @Json(name = "bBrandingIsactive")
     val bBrandingIsactive: kotlin.Boolean,
+
+    /* The unique ID of the Domain */
+    @Json(name = "fkiDomainID")
+    val fkiDomainID: kotlin.Int? = null,
+
+    /* The name of the Domain */
+    @Json(name = "sDomainName")
+    val sDomainName: kotlin.String? = null,
 
     /* The unique ID of the Email */
     @Json(name = "fkiEmailID")

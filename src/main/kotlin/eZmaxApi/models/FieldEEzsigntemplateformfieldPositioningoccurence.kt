@@ -22,14 +22,11 @@ import com.squareup.moshi.JsonClass
 /**
  * The occurence of the pattern to add the Ezsigntemplateformfield  This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates**
  *
- * Values: All,First,Last
+ * Values: First,Last
  */
 
 @JsonClass(generateAdapter = false)
 enum class FieldEEzsigntemplateformfieldPositioningoccurence(val value: kotlin.String) {
-
-    @Json(name = "All")
-    All("All"),
 
     @Json(name = "First")
     First("First"),

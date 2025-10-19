@@ -88,7 +88,7 @@ class ObjectPeriodApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
      * Retrieve Periods and IDs
      * Get the list of Period to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Periods to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return PeriodGetAutocompleteV2Response
@@ -123,7 +123,7 @@ class ObjectPeriodApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
      * Retrieve Periods and IDs
      * Get the list of Period to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Periods to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return ApiResponse<PeriodGetAutocompleteV2Response?>
@@ -144,7 +144,7 @@ class ObjectPeriodApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
      * To obtain the request config of the operation periodGetAutocompleteV2
      *
      * @param sSelector The type of Periods to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return RequestConfig

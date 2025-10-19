@@ -52,6 +52,7 @@ class ObjectUserlogintypeApi(basePath: kotlin.String = defaultBasePath, client: 
      enum class SSelectorUserlogintypeGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "All") All("All"),
          @Json(name = "Ezsignfoldertype") Ezsignfoldertype("Ezsignfoldertype"),
+         @Json(name = "EzsignfoldertypeReassign") EzsignfoldertypeReassign("EzsignfoldertypeReassign"),
          @Json(name = "Ezsigntemplatepublic") Ezsigntemplatepublic("Ezsigntemplatepublic");
 
         /**
@@ -88,7 +89,7 @@ class ObjectUserlogintypeApi(basePath: kotlin.String = defaultBasePath, client: 
      * Get the list of Userlogintype to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Userlogintypes to return
      * @param fkiEzsignfoldertypeID  (optional)
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return UserlogintypeGetAutocompleteV2Response
@@ -124,7 +125,7 @@ class ObjectUserlogintypeApi(basePath: kotlin.String = defaultBasePath, client: 
      * Get the list of Userlogintype to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Userlogintypes to return
      * @param fkiEzsignfoldertypeID  (optional)
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return ApiResponse<UserlogintypeGetAutocompleteV2Response?>
@@ -146,7 +147,7 @@ class ObjectUserlogintypeApi(basePath: kotlin.String = defaultBasePath, client: 
      *
      * @param sSelector The type of Userlogintypes to return
      * @param fkiEzsignfoldertypeID  (optional)
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return RequestConfig

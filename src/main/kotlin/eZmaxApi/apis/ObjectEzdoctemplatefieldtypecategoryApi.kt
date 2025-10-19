@@ -85,7 +85,7 @@ class ObjectEzdoctemplatefieldtypecategoryApi(basePath: kotlin.String = defaultB
      * Retrieve Ezdoctemplatefieldtypecategorys and IDs
      * Get the list of Ezdoctemplatefieldtypecategory to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezdoctemplatefieldtypecategorys to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return EzdoctemplatefieldtypecategoryGetAutocompleteV2Response
@@ -120,7 +120,7 @@ class ObjectEzdoctemplatefieldtypecategoryApi(basePath: kotlin.String = defaultB
      * Retrieve Ezdoctemplatefieldtypecategorys and IDs
      * Get the list of Ezdoctemplatefieldtypecategory to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezdoctemplatefieldtypecategorys to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return ApiResponse<EzdoctemplatefieldtypecategoryGetAutocompleteV2Response?>
@@ -141,7 +141,7 @@ class ObjectEzdoctemplatefieldtypecategoryApi(basePath: kotlin.String = defaultB
      * To obtain the request config of the operation ezdoctemplatefieldtypecategoryGetAutocompleteV2
      *
      * @param sSelector The type of Ezdoctemplatefieldtypecategorys to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return RequestConfig

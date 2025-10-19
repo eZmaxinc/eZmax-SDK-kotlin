@@ -10,7 +10,7 @@
 | **eAttachmentPrivacy** | [**FieldEAttachmentPrivacy**](FieldEAttachmentPrivacy.md) |  |  |
 | **eAttachmentType** | [**FieldEAttachmentType**](FieldEAttachmentType.md) |  |  |
 | **iAttachmentSize** | **kotlin.Int** | The size of the Attachment |  |
-| **sAttachmentMD5** | **kotlin.String** | The md5 of the Attachment |  |
+| **sAttachmentMD5** | **kotlin.String** | The MD5 of the Attachment |  |
 | **bAttachmentDeleted** | **kotlin.Boolean** | Whether if it&#39;s deleted |  |
 | **bAttachmentValid** | **kotlin.Boolean** | Whether if it&#39;s valid |  |
 | **eAttachmentVerified** | [**FieldEAttachmentVerified**](FieldEAttachmentVerified.md) |  |  |

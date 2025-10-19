@@ -317,7 +317,7 @@ class ObjectSupplyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
      * Retrieve Supplys and IDs
      * Get the list of Supply to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Supplys to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return SupplyGetAutocompleteV2Response
@@ -352,7 +352,7 @@ class ObjectSupplyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
      * Retrieve Supplys and IDs
      * Get the list of Supply to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Supplys to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return ApiResponse<SupplyGetAutocompleteV2Response?>
@@ -373,7 +373,7 @@ class ObjectSupplyApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
      * To obtain the request config of the operation supplyGetAutocompleteV2
      *
      * @param sSelector The type of Supplys to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return RequestConfig

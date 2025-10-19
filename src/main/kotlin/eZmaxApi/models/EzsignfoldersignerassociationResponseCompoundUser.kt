@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.FieldEUserType
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -27,6 +28,7 @@ import com.squareup.moshi.JsonClass
  * @param sUserFirstname The first name of the user
  * @param sUserLastname The last name of the user
  * @param sEmailAddress The email address.
+ * @param eUserType 
  */
 
 
@@ -50,7 +52,10 @@ data class EzsignfoldersignerassociationResponseCompoundUser (
 
     /* The email address. */
     @Json(name = "sEmailAddress")
-    val sEmailAddress: kotlin.String
+    val sEmailAddress: kotlin.String,
+
+    @Json(name = "eUserType")
+    val eUserType: FieldEUserType
 
 ) {
 

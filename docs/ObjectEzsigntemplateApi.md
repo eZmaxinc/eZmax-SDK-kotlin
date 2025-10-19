@@ -247,7 +247,7 @@ try {
 
 ### Parameters
 | **sSelector** | **kotlin.String**| The type of Ezsigntemplates to return | [enum: All, Ezsigntemplatepublic] |
-| **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive] |
+| **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to EFilterActive.Active] [enum: All, Active, Inactive] |
 | **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional] |
 | **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
 | Name | Type | Description  | Notes |

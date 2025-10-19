@@ -36,6 +36,7 @@ import eZmaxApi.models.EzsignfolderEditObjectV3Request
 import eZmaxApi.models.EzsignfolderEditObjectV3Response
 import eZmaxApi.models.EzsignfolderEndPrematurelyV1Response
 import eZmaxApi.models.EzsignfolderGetActionableElementsV1Response
+import eZmaxApi.models.EzsignfolderGetActionableElementsV2Response
 import eZmaxApi.models.EzsignfolderGetAttachmentCountV1Response
 import eZmaxApi.models.EzsignfolderGetAttachmentsV1Response
 import eZmaxApi.models.EzsignfolderGetCommunicationCountV1Response
@@ -43,6 +44,7 @@ import eZmaxApi.models.EzsignfolderGetCommunicationListV1Response
 import eZmaxApi.models.EzsignfolderGetCommunicationrecipientsV1Response
 import eZmaxApi.models.EzsignfolderGetCommunicationsendersV1Response
 import eZmaxApi.models.EzsignfolderGetEzsigndocumentsV1Response
+import eZmaxApi.models.EzsignfolderGetEzsigndocumentsV2Response
 import eZmaxApi.models.EzsignfolderGetEzsignfoldersignerassociationsV1Response
 import eZmaxApi.models.EzsignfolderGetEzsignsignaturesAutomaticV1Response
 import eZmaxApi.models.EzsignfolderGetFormsDataV1Response
@@ -54,6 +56,8 @@ import eZmaxApi.models.EzsignfolderImportEzsignfoldersignerassociationsV1Request
 import eZmaxApi.models.EzsignfolderImportEzsignfoldersignerassociationsV1Response
 import eZmaxApi.models.EzsignfolderImportEzsigntemplatepackageV1Request
 import eZmaxApi.models.EzsignfolderImportEzsigntemplatepackageV1Response
+import eZmaxApi.models.EzsignfolderImportEzsigntemplatepackageV2Request
+import eZmaxApi.models.EzsignfolderImportEzsigntemplatepackageV2Response
 import eZmaxApi.models.EzsignfolderReorderV1Request
 import eZmaxApi.models.EzsignfolderReorderV1Response
 import eZmaxApi.models.EzsignfolderReorderV2Request
@@ -856,7 +860,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     /**
      * GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements
      * Retrieve actionable elements for the Ezsignfolder
-     * Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+     * Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process.    Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
      * @param pkiEzsignfolderID 
      * @return EzsignfolderGetActionableElementsV1Response
      * @throws IllegalStateException If the request is not correctly configured
@@ -867,7 +871,9 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsignfolderGetActionableElementsV1(pkiEzsignfolderID: kotlin.Int) : EzsignfolderGetActionableElementsV1Response {
+        @Suppress("DEPRECATION")
         val localVarResponse = ezsignfolderGetActionableElementsV1WithHttpInfo(pkiEzsignfolderID = pkiEzsignfolderID)
 
         return when (localVarResponse.responseType) {
@@ -888,7 +894,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     /**
      * GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements
      * Retrieve actionable elements for the Ezsignfolder
-     * Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+     * Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process.    Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
      * @param pkiEzsignfolderID 
      * @return ApiResponse<EzsignfolderGetActionableElementsV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
@@ -896,7 +902,9 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsignfolderGetActionableElementsV1WithHttpInfo(pkiEzsignfolderID: kotlin.Int) : ApiResponse<EzsignfolderGetActionableElementsV1Response?> {
+        @Suppress("DEPRECATION")
         val localVariableConfig = ezsignfolderGetActionableElementsV1RequestConfig(pkiEzsignfolderID = pkiEzsignfolderID)
 
         return request<Unit, EzsignfolderGetActionableElementsV1Response>(
@@ -910,6 +918,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
      * @param pkiEzsignfolderID 
      * @return RequestConfig
      */
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsignfolderGetActionableElementsV1RequestConfig(pkiEzsignfolderID: kotlin.Int) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
@@ -919,6 +928,79 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements".replace("{"+"pkiEzsignfolderID"+"}", encodeURIComponent(pkiEzsignfolderID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /2/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements
+     * Retrieve actionable elements for the Ezsignfolder
+     * Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+     * @param pkiEzsignfolderID 
+     * @return EzsignfolderGetActionableElementsV2Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignfolderGetActionableElementsV2(pkiEzsignfolderID: kotlin.Int) : EzsignfolderGetActionableElementsV2Response {
+        val localVarResponse = ezsignfolderGetActionableElementsV2WithHttpInfo(pkiEzsignfolderID = pkiEzsignfolderID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfolderGetActionableElementsV2Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /2/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements
+     * Retrieve actionable elements for the Ezsignfolder
+     * Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+     * @param pkiEzsignfolderID 
+     * @return ApiResponse<EzsignfolderGetActionableElementsV2Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignfolderGetActionableElementsV2WithHttpInfo(pkiEzsignfolderID: kotlin.Int) : ApiResponse<EzsignfolderGetActionableElementsV2Response?> {
+        val localVariableConfig = ezsignfolderGetActionableElementsV2RequestConfig(pkiEzsignfolderID = pkiEzsignfolderID)
+
+        return request<Unit, EzsignfolderGetActionableElementsV2Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsignfolderGetActionableElementsV2
+     *
+     * @param pkiEzsignfolderID 
+     * @return RequestConfig
+     */
+    fun ezsignfolderGetActionableElementsV2RequestConfig(pkiEzsignfolderID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/2/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements".replace("{"+"pkiEzsignfolderID"+"}", encodeURIComponent(pkiEzsignfolderID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,
@@ -1367,7 +1449,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     /**
      * GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments
      * Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
-     * 
+     * Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
      * @param pkiEzsignfolderID 
      * @return EzsignfolderGetEzsigndocumentsV1Response
      * @throws IllegalStateException If the request is not correctly configured
@@ -1378,7 +1460,9 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsignfolderGetEzsigndocumentsV1(pkiEzsignfolderID: kotlin.Int) : EzsignfolderGetEzsigndocumentsV1Response {
+        @Suppress("DEPRECATION")
         val localVarResponse = ezsignfolderGetEzsigndocumentsV1WithHttpInfo(pkiEzsignfolderID = pkiEzsignfolderID)
 
         return when (localVarResponse.responseType) {
@@ -1399,7 +1483,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
     /**
      * GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments
      * Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
-     * 
+     * Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
      * @param pkiEzsignfolderID 
      * @return ApiResponse<EzsignfolderGetEzsigndocumentsV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
@@ -1407,7 +1491,9 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsignfolderGetEzsigndocumentsV1WithHttpInfo(pkiEzsignfolderID: kotlin.Int) : ApiResponse<EzsignfolderGetEzsigndocumentsV1Response?> {
+        @Suppress("DEPRECATION")
         val localVariableConfig = ezsignfolderGetEzsigndocumentsV1RequestConfig(pkiEzsignfolderID = pkiEzsignfolderID)
 
         return request<Unit, EzsignfolderGetEzsigndocumentsV1Response>(
@@ -1421,6 +1507,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
      * @param pkiEzsignfolderID 
      * @return RequestConfig
      */
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsignfolderGetEzsigndocumentsV1RequestConfig(pkiEzsignfolderID: kotlin.Int) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
@@ -1430,6 +1517,79 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments".replace("{"+"pkiEzsignfolderID"+"}", encodeURIComponent(pkiEzsignfolderID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /2/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments
+     * Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
+     * 
+     * @param pkiEzsignfolderID 
+     * @return EzsignfolderGetEzsigndocumentsV2Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignfolderGetEzsigndocumentsV2(pkiEzsignfolderID: kotlin.Int) : EzsignfolderGetEzsigndocumentsV2Response {
+        val localVarResponse = ezsignfolderGetEzsigndocumentsV2WithHttpInfo(pkiEzsignfolderID = pkiEzsignfolderID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfolderGetEzsigndocumentsV2Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /2/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments
+     * Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
+     * 
+     * @param pkiEzsignfolderID 
+     * @return ApiResponse<EzsignfolderGetEzsigndocumentsV2Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignfolderGetEzsigndocumentsV2WithHttpInfo(pkiEzsignfolderID: kotlin.Int) : ApiResponse<EzsignfolderGetEzsigndocumentsV2Response?> {
+        val localVariableConfig = ezsignfolderGetEzsigndocumentsV2RequestConfig(pkiEzsignfolderID = pkiEzsignfolderID)
+
+        return request<Unit, EzsignfolderGetEzsigndocumentsV2Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsignfolderGetEzsigndocumentsV2
+     *
+     * @param pkiEzsignfolderID 
+     * @return RequestConfig
+     */
+    fun ezsignfolderGetEzsigndocumentsV2RequestConfig(pkiEzsignfolderID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/2/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments".replace("{"+"pkiEzsignfolderID"+"}", encodeURIComponent(pkiEzsignfolderID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,
@@ -1672,6 +1832,8 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
          @Json(name = "sEzsignfoldertypeNameX_DESC") sEzsignfoldertypeNameX_DESC("sEzsignfoldertypeNameX_DESC"),
          @Json(name = "eEzsignfolderStep_ASC") eEzsignfolderStep_ASC("eEzsignfolderStep_ASC"),
          @Json(name = "eEzsignfolderStep_DESC") eEzsignfolderStep_DESC("eEzsignfolderStep_DESC"),
+         @Json(name = "eEzsignfolderCompletion_ASC") eEzsignfolderCompletion_ASC("eEzsignfolderCompletion_ASC"),
+         @Json(name = "eEzsignfolderCompletion_DESC") eEzsignfolderCompletion_DESC("eEzsignfolderCompletion_DESC"),
          @Json(name = "dtEzsignfolderSentdate_ASC") dtEzsignfolderSentdate_ASC("dtEzsignfolderSentdate_ASC"),
          @Json(name = "dtEzsignfolderSentdate_DESC") dtEzsignfolderSentdate_DESC("dtEzsignfolderSentdate_DESC"),
          @Json(name = "dtEzsignfolderDuedate_ASC") dtEzsignfolderDuedate_ASC("dtEzsignfolderDuedate_ASC"),
@@ -2113,8 +2275,8 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
 
     /**
      * POST /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage
-     * Import an Ezsigntemplatepackage in the Ezsignfolder.
-     * This endpoint imports all of the Ezsigntemplates from the Ezsigntemplatepackage into the Ezsignfolder as Ezsigndocuments.  This allows to automatically apply all the Ezsigntemplateformfieldgroups and Ezsigntemplatesignatures on the newly created Ezsigndocuments in a single step.
+     * Import an Ezsigntemplatepackage in the Ezsignfolder
+     * This endpoint imports all of the Ezsigntemplates from the Ezsigntemplatepackage into the Ezsignfolder as Ezsigndocuments.  This allows to automatically apply all the Ezsigntemplateformfieldgroups and Ezsigntemplatesignatures on the newly created Ezsigndocuments in a single step.  Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
      * @param pkiEzsignfolderID 
      * @param ezsignfolderImportEzsigntemplatepackageV1Request 
      * @return EzsignfolderImportEzsigntemplatepackageV1Response
@@ -2126,7 +2288,9 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsignfolderImportEzsigntemplatepackageV1(pkiEzsignfolderID: kotlin.Int, ezsignfolderImportEzsigntemplatepackageV1Request: EzsignfolderImportEzsigntemplatepackageV1Request) : EzsignfolderImportEzsigntemplatepackageV1Response {
+        @Suppress("DEPRECATION")
         val localVarResponse = ezsignfolderImportEzsigntemplatepackageV1WithHttpInfo(pkiEzsignfolderID = pkiEzsignfolderID, ezsignfolderImportEzsigntemplatepackageV1Request = ezsignfolderImportEzsigntemplatepackageV1Request)
 
         return when (localVarResponse.responseType) {
@@ -2146,8 +2310,8 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
 
     /**
      * POST /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage
-     * Import an Ezsigntemplatepackage in the Ezsignfolder.
-     * This endpoint imports all of the Ezsigntemplates from the Ezsigntemplatepackage into the Ezsignfolder as Ezsigndocuments.  This allows to automatically apply all the Ezsigntemplateformfieldgroups and Ezsigntemplatesignatures on the newly created Ezsigndocuments in a single step.
+     * Import an Ezsigntemplatepackage in the Ezsignfolder
+     * This endpoint imports all of the Ezsigntemplates from the Ezsigntemplatepackage into the Ezsignfolder as Ezsigndocuments.  This allows to automatically apply all the Ezsigntemplateformfieldgroups and Ezsigntemplatesignatures on the newly created Ezsigndocuments in a single step.  Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
      * @param pkiEzsignfolderID 
      * @param ezsignfolderImportEzsigntemplatepackageV1Request 
      * @return ApiResponse<EzsignfolderImportEzsigntemplatepackageV1Response?>
@@ -2156,7 +2320,9 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsignfolderImportEzsigntemplatepackageV1WithHttpInfo(pkiEzsignfolderID: kotlin.Int, ezsignfolderImportEzsigntemplatepackageV1Request: EzsignfolderImportEzsigntemplatepackageV1Request) : ApiResponse<EzsignfolderImportEzsigntemplatepackageV1Response?> {
+        @Suppress("DEPRECATION")
         val localVariableConfig = ezsignfolderImportEzsigntemplatepackageV1RequestConfig(pkiEzsignfolderID = pkiEzsignfolderID, ezsignfolderImportEzsigntemplatepackageV1Request = ezsignfolderImportEzsigntemplatepackageV1Request)
 
         return request<EzsignfolderImportEzsigntemplatepackageV1Request, EzsignfolderImportEzsigntemplatepackageV1Response>(
@@ -2171,6 +2337,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
      * @param ezsignfolderImportEzsigntemplatepackageV1Request 
      * @return RequestConfig
      */
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsignfolderImportEzsigntemplatepackageV1RequestConfig(pkiEzsignfolderID: kotlin.Int, ezsignfolderImportEzsigntemplatepackageV1Request: EzsignfolderImportEzsigntemplatepackageV1Request) : RequestConfig<EzsignfolderImportEzsigntemplatepackageV1Request> {
         val localVariableBody = ezsignfolderImportEzsigntemplatepackageV1Request
         val localVariableQuery: MultiValueMap = mutableMapOf()
@@ -2181,6 +2348,83 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage".replace("{"+"pkiEzsignfolderID"+"}", encodeURIComponent(pkiEzsignfolderID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * POST /2/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage
+     * Import an Ezsigntemplatepackage in the Ezsignfolder
+     * This endpoint imports all of the Ezsigntemplates from the Ezsigntemplatepackage into the Ezsignfolder as Ezsigndocuments.  This allows to automatically apply all the Ezsigntemplateformfieldgroups and Ezsigntemplatesignatures on the newly created Ezsigndocuments in a single step.
+     * @param pkiEzsignfolderID 
+     * @param ezsignfolderImportEzsigntemplatepackageV2Request 
+     * @return EzsignfolderImportEzsigntemplatepackageV2Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignfolderImportEzsigntemplatepackageV2(pkiEzsignfolderID: kotlin.Int, ezsignfolderImportEzsigntemplatepackageV2Request: EzsignfolderImportEzsigntemplatepackageV2Request) : EzsignfolderImportEzsigntemplatepackageV2Response {
+        val localVarResponse = ezsignfolderImportEzsigntemplatepackageV2WithHttpInfo(pkiEzsignfolderID = pkiEzsignfolderID, ezsignfolderImportEzsigntemplatepackageV2Request = ezsignfolderImportEzsigntemplatepackageV2Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfolderImportEzsigntemplatepackageV2Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /2/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage
+     * Import an Ezsigntemplatepackage in the Ezsignfolder
+     * This endpoint imports all of the Ezsigntemplates from the Ezsigntemplatepackage into the Ezsignfolder as Ezsigndocuments.  This allows to automatically apply all the Ezsigntemplateformfieldgroups and Ezsigntemplatesignatures on the newly created Ezsigndocuments in a single step.
+     * @param pkiEzsignfolderID 
+     * @param ezsignfolderImportEzsigntemplatepackageV2Request 
+     * @return ApiResponse<EzsignfolderImportEzsigntemplatepackageV2Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignfolderImportEzsigntemplatepackageV2WithHttpInfo(pkiEzsignfolderID: kotlin.Int, ezsignfolderImportEzsigntemplatepackageV2Request: EzsignfolderImportEzsigntemplatepackageV2Request) : ApiResponse<EzsignfolderImportEzsigntemplatepackageV2Response?> {
+        val localVariableConfig = ezsignfolderImportEzsigntemplatepackageV2RequestConfig(pkiEzsignfolderID = pkiEzsignfolderID, ezsignfolderImportEzsigntemplatepackageV2Request = ezsignfolderImportEzsigntemplatepackageV2Request)
+
+        return request<EzsignfolderImportEzsigntemplatepackageV2Request, EzsignfolderImportEzsigntemplatepackageV2Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsignfolderImportEzsigntemplatepackageV2
+     *
+     * @param pkiEzsignfolderID 
+     * @param ezsignfolderImportEzsigntemplatepackageV2Request 
+     * @return RequestConfig
+     */
+    fun ezsignfolderImportEzsigntemplatepackageV2RequestConfig(pkiEzsignfolderID: kotlin.Int, ezsignfolderImportEzsigntemplatepackageV2Request: EzsignfolderImportEzsigntemplatepackageV2Request) : RequestConfig<EzsignfolderImportEzsigntemplatepackageV2Request> {
+        val localVariableBody = ezsignfolderImportEzsigntemplatepackageV2Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/2/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage".replace("{"+"pkiEzsignfolderID"+"}", encodeURIComponent(pkiEzsignfolderID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

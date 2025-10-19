@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.CommonReportcolumn
 import eZmaxApi.models.CommonReportsubsectionpart
 
 import com.squareup.moshi.Json
@@ -23,6 +24,9 @@ import com.squareup.moshi.JsonClass
 /**
  * A Subsection in a Reportsection. It contains 3 Reportsubsectionparts (Header, Body and Footer) 
  *
+ * @param aObjReportcolumn 
+ * @param iReportsubsectionColumncount The number of Reportcolumns in the Reportsection
+ * @param iReportsubsectionWidth The combined width of all the Reportcolumns in the Reportsection
  * @param objReportsubsectionpartHeader 
  * @param objReportsubsectionpartBody 
  * @param objReportsubsectionpartFooter 
@@ -31,6 +35,17 @@ import com.squareup.moshi.JsonClass
 
 
 data class CommonReportsubsection (
+
+    @Json(name = "a_objReportcolumn")
+    val aObjReportcolumn: kotlin.collections.List<CommonReportcolumn>,
+
+    /* The number of Reportcolumns in the Reportsection */
+    @Json(name = "iReportsubsectionColumncount")
+    val iReportsubsectionColumncount: kotlin.Int,
+
+    /* The combined width of all the Reportcolumns in the Reportsection */
+    @Json(name = "iReportsubsectionWidth")
+    val iReportsubsectionWidth: kotlin.Int,
 
     @Json(name = "objReportsubsectionpartHeader")
     val objReportsubsectionpartHeader: CommonReportsubsectionpart,

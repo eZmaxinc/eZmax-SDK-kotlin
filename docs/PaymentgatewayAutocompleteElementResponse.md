@@ -6,7 +6,7 @@
 | ------------ | ------------- | ------------- | ------------- |
 | **pkiPaymentgatewayID** | **kotlin.Int** | The unique ID of the Paymentgateway |  |
 | **sPaymentgatewayDescriptionX** | **kotlin.String** | The description of the Paymentgateway in the language of the requester |  |
-| **bPaymentgatewayIsactive** | **kotlin.Boolean** | Whether the Currency is active or not |  |
+| **bPaymentgatewayIsactive** | **kotlin.Boolean** | Whether the Paymentgateway is active or not |  |
 
 
 

@@ -22,25 +22,30 @@ import com.squareup.moshi.JsonClass
 /**
  * A form Signer Object in the context of an Ezsignfoldertransmissions
  *
+ * @param fkiUserID The unique ID of the User
  * @param sContactFirstname The First name of the contact
  * @param sContactLastname The Last name of the contact
- * @param fkiUserID The unique ID of the User
+ * @param sEzsignsignergroupDescriptionX The Description of the Ezsignsignergroup in the language of the requester
  */
 
 
 data class CustomEzsignfoldertransmissionSignerResponse (
 
+    /* The unique ID of the User */
+    @Json(name = "fkiUserID")
+    val fkiUserID: kotlin.Int? = null,
+
     /* The First name of the contact */
     @Json(name = "sContactFirstname")
-    val sContactFirstname: kotlin.String,
+    val sContactFirstname: kotlin.String? = null,
 
     /* The Last name of the contact */
     @Json(name = "sContactLastname")
-    val sContactLastname: kotlin.String,
+    val sContactLastname: kotlin.String? = null,
 
-    /* The unique ID of the User */
-    @Json(name = "fkiUserID")
-    val fkiUserID: kotlin.Int? = null
+    /* The Description of the Ezsignsignergroup in the language of the requester */
+    @Json(name = "sEzsignsignergroupDescriptionX")
+    val sEzsignsignergroupDescriptionX: kotlin.String? = null
 
 ) {
 

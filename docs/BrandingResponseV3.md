@@ -11,6 +11,8 @@
 | **eBrandingAlignlogo** | [**FieldEBrandingAlignlogo**](FieldEBrandingAlignlogo.md) |  |  |
 | **iBrandingColor** | **kotlin.Int** | The primary color. This is a RGB color converted into integer |  |
 | **bBrandingIsactive** | **kotlin.Boolean** | Whether the Branding is active or not |  |
+| **fkiDomainID** | **kotlin.Int** | The unique ID of the Domain |  [optional] |
+| **sDomainName** | **kotlin.String** | The name of the Domain |  [optional] |
 | **fkiEmailID** | **kotlin.Int** | The unique ID of the Email |  [optional] |
 | **sBrandingName** | **kotlin.String** | The name of the Branding  This value will only be set if you wish to overwrite the default name. If you want to keep the default name, leave this property empty |  [optional] |
 | **sEmailAddress** | **kotlin.String** | The email address. |  [optional] |

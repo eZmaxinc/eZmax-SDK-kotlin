@@ -63,6 +63,7 @@ import com.squareup.moshi.JsonClass
  * @param eUserEzsignprepaid 
  * @param bUserEzsigntrial Whether the User's eZsign subscription is a trial
  * @param dtUserEzsignprepaidexpiration The eZsign prepaid expiration date
+ * @param dtUserNpsrequest The date at which the NPS questionnaire will be show
  * @param objUserCloned 
  * @param objApikey 
  */
@@ -174,6 +175,10 @@ data class ActivesessionGetCurrentV1ResponseMPayload (
     /* The eZsign prepaid expiration date */
     @Json(name = "dtUserEzsignprepaidexpiration")
     val dtUserEzsignprepaidexpiration: kotlin.String? = null,
+
+    /* The date at which the NPS questionnaire will be show */
+    @Json(name = "dtUserNpsrequest")
+    val dtUserNpsrequest: kotlin.String? = null,
 
     @Json(name = "objUserCloned")
     val objUserCloned: ActivesessionResponseCompoundUser? = null,

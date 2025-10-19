@@ -45,6 +45,7 @@ import com.squareup.moshi.JsonClass
  * @param sWebhookSecret The Secret for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey.
  * @param sAuthenticationexternalDescription The description of the Authenticationexternal
  * @param sWebhookEvent The concatenated string to describe the Webhook event
+ * @param sWebhookAuthentificationexternalerror Error message when token renewal failed or is not configured. Only if an Authenticationexternal is set.
  * @param aObjWebhookheader 
  */
 
@@ -118,6 +119,10 @@ data class WebhookResponseCompound (
     /* The concatenated string to describe the Webhook event */
     @Json(name = "sWebhookEvent")
     val sWebhookEvent: kotlin.String? = null,
+
+    /* Error message when token renewal failed or is not configured. Only if an Authenticationexternal is set. */
+    @Json(name = "sWebhookAuthentificationexternalerror")
+    val sWebhookAuthentificationexternalerror: kotlin.String? = null,
 
     @Json(name = "a_objWebhookheader")
     val aObjWebhookheader: kotlin.collections.List<WebhookheaderResponseCompound>? = null

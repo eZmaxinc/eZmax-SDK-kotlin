@@ -22,7 +22,7 @@ import com.squareup.moshi.JsonClass
 /**
  * Type of data in column
  *
- * Values: Date,Money,Number,Percentage,Period,String
+ * Values: Date,FileSize,Integer,Money,Number,Percentage,PercentageInt,Period,String
  */
 
 @JsonClass(generateAdapter = false)
@@ -30,6 +30,12 @@ enum class EnumReportdataType(val value: kotlin.String) {
 
     @Json(name = "Date")
     Date("Date"),
+
+    @Json(name = "FileSize")
+    FileSize("FileSize"),
+
+    @Json(name = "Integer")
+    Integer("Integer"),
 
     @Json(name = "Money")
     Money("Money"),
@@ -39,6 +45,9 @@ enum class EnumReportdataType(val value: kotlin.String) {
 
     @Json(name = "Percentage")
     Percentage("Percentage"),
+
+    @Json(name = "PercentageInt")
+    PercentageInt("PercentageInt"),
 
     @Json(name = "Period")
     Period("Period"),

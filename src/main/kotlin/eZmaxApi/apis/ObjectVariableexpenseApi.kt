@@ -243,7 +243,7 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
      * Retrieve Variableexpenses and IDs
      * Get the list of Variableexpense to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Variableexpenses to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return VariableexpenseGetAutocompleteV2Response
@@ -278,7 +278,7 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
      * Retrieve Variableexpenses and IDs
      * Get the list of Variableexpense to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Variableexpenses to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return ApiResponse<VariableexpenseGetAutocompleteV2Response?>
@@ -299,7 +299,7 @@ class ObjectVariableexpenseApi(basePath: kotlin.String = defaultBasePath, client
      * To obtain the request config of the operation variableexpenseGetAutocompleteV2
      *
      * @param sSelector The type of Variableexpenses to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return RequestConfig

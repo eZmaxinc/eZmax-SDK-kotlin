@@ -16,6 +16,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.CommonReportcell
+import eZmaxApi.models.CommonReportcellstylecustom
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -26,6 +27,7 @@ import com.squareup.moshi.JsonClass
  * @param aObjReportcell 
  * @param objVariableobject A Variable object without predefined property names
  * @param iReportrowHeight The reportrow height in pixels
+ * @param objReportcellstyleCustom 
  */
 
 
@@ -40,7 +42,10 @@ data class CommonReportrow (
 
     /* The reportrow height in pixels */
     @Json(name = "iReportrowHeight")
-    val iReportrowHeight: kotlin.Int
+    val iReportrowHeight: kotlin.Int,
+
+    @Json(name = "objReportcellstyleCustom")
+    val objReportcellstyleCustom: CommonReportcellstylecustom? = null
 
 ) {
 

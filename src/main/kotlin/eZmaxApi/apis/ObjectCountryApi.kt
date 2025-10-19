@@ -85,7 +85,7 @@ class ObjectCountryApi(basePath: kotlin.String = defaultBasePath, client: Call.F
      * Retrieve Countries and IDs
      * Get the list of Country to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Countries to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return CountryGetAutocompleteV2Response
@@ -120,7 +120,7 @@ class ObjectCountryApi(basePath: kotlin.String = defaultBasePath, client: Call.F
      * Retrieve Countries and IDs
      * Get the list of Country to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Countries to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return ApiResponse<CountryGetAutocompleteV2Response?>
@@ -141,7 +141,7 @@ class ObjectCountryApi(basePath: kotlin.String = defaultBasePath, client: Call.F
      * To obtain the request config of the operation countryGetAutocompleteV2
      *
      * @param sSelector The type of Countries to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return RequestConfig

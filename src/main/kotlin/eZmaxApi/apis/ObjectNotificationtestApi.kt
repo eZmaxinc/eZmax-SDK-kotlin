@@ -21,6 +21,7 @@ import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.NotificationtestGetElementsV1Response
+import eZmaxApi.models.NotificationtestGetElementsV2Response
 
 import com.squareup.moshi.Json
 
@@ -60,7 +61,9 @@ class ObjectNotificationtestApi(basePath: kotlin.String = defaultBasePath, clien
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun notificationtestGetElementsV1(pkiNotificationtestID: kotlin.Int) : NotificationtestGetElementsV1Response {
+        @Suppress("DEPRECATION")
         val localVarResponse = notificationtestGetElementsV1WithHttpInfo(pkiNotificationtestID = pkiNotificationtestID)
 
         return when (localVarResponse.responseType) {
@@ -89,7 +92,9 @@ class ObjectNotificationtestApi(basePath: kotlin.String = defaultBasePath, clien
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun notificationtestGetElementsV1WithHttpInfo(pkiNotificationtestID: kotlin.Int) : ApiResponse<NotificationtestGetElementsV1Response?> {
+        @Suppress("DEPRECATION")
         val localVariableConfig = notificationtestGetElementsV1RequestConfig(pkiNotificationtestID = pkiNotificationtestID)
 
         return request<Unit, NotificationtestGetElementsV1Response>(
@@ -103,6 +108,7 @@ class ObjectNotificationtestApi(basePath: kotlin.String = defaultBasePath, clien
      * @param pkiNotificationtestID 
      * @return RequestConfig
      */
+    @Deprecated(message = "This operation is deprecated.")
     fun notificationtestGetElementsV1RequestConfig(pkiNotificationtestID: kotlin.Int) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
@@ -112,6 +118,79 @@ class ObjectNotificationtestApi(basePath: kotlin.String = defaultBasePath, clien
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/notificationtest/{pkiNotificationtestID}/getElements".replace("{"+"pkiNotificationtestID"+"}", encodeURIComponent(pkiNotificationtestID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /2/object/notificationtest/{pkiNotificationtestID}/getElements
+     * Retrieve an existing Notificationtest&#39;s Elements
+     * 
+     * @param pkiNotificationtestID 
+     * @return NotificationtestGetElementsV2Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun notificationtestGetElementsV2(pkiNotificationtestID: kotlin.Int) : NotificationtestGetElementsV2Response {
+        val localVarResponse = notificationtestGetElementsV2WithHttpInfo(pkiNotificationtestID = pkiNotificationtestID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as NotificationtestGetElementsV2Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /2/object/notificationtest/{pkiNotificationtestID}/getElements
+     * Retrieve an existing Notificationtest&#39;s Elements
+     * 
+     * @param pkiNotificationtestID 
+     * @return ApiResponse<NotificationtestGetElementsV2Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun notificationtestGetElementsV2WithHttpInfo(pkiNotificationtestID: kotlin.Int) : ApiResponse<NotificationtestGetElementsV2Response?> {
+        val localVariableConfig = notificationtestGetElementsV2RequestConfig(pkiNotificationtestID = pkiNotificationtestID)
+
+        return request<Unit, NotificationtestGetElementsV2Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation notificationtestGetElementsV2
+     *
+     * @param pkiNotificationtestID 
+     * @return RequestConfig
+     */
+    fun notificationtestGetElementsV2RequestConfig(pkiNotificationtestID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/2/object/notificationtest/{pkiNotificationtestID}/getElements".replace("{"+"pkiNotificationtestID"+"}", encodeURIComponent(pkiNotificationtestID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

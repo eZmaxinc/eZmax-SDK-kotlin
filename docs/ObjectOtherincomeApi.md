@@ -8,6 +8,8 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**otherincomeGetCommunicationListV1**](ObjectOtherincomeApi.md#otherincomeGetCommunicationListV1) | **GET** /1/object/otherincome/{pkiOtherincomeID}/getCommunicationList | Retrieve Communication list |
 | [**otherincomeGetCommunicationrecipientsV1**](ObjectOtherincomeApi.md#otherincomeGetCommunicationrecipientsV1) | **GET** /1/object/otherincome/{pkiOtherincomeID}/getCommunicationrecipients | Retrieve Otherincome&#39;s Communicationrecipient |
 | [**otherincomeGetCommunicationsendersV1**](ObjectOtherincomeApi.md#otherincomeGetCommunicationsendersV1) | **GET** /1/object/otherincome/{pkiOtherincomeID}/getCommunicationsenders | Retrieve Otherincome&#39;s Communicationsender |
+| [**otherincomeGetListV1**](ObjectOtherincomeApi.md#otherincomeGetListV1) | **GET** /1/object/otherincome/getList | Retrieve Otherincome list |
+| [**otherincomeImportIntoEDMV1**](ObjectOtherincomeApi.md#otherincomeImportIntoEDMV1) | **POST** /1/object/otherincome/{pkiOtherincomeID}/importIntoEDM | Import attachments into the Otherincome |
 
 
 <a id="otherincomeGetCommunicationCountV1"></a>
@@ -204,5 +206,113 @@ Configure Authorization:
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="otherincomeGetListV1"></a>
+# **otherincomeGetListV1**
+> OtherincomeGetListV1Response otherincomeGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+
+Retrieve Otherincome list
+
+Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eOtherincomeRemunerationtype | Dollars&lt;br&gt;DollarsTaxesIncluded |
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectOtherincomeApi()
+val eOrderBy : kotlin.String = eOrderBy_example // kotlin.String | Specify how you want the results to be sorted
+val iRowMax : kotlin.Int = 56 // kotlin.Int | 
+val iRowOffset : kotlin.Int = 56 // kotlin.Int | 
+val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
+val sFilter : kotlin.String = sFilter_example // kotlin.String | 
+try {
+    val result : OtherincomeGetListV1Response = apiInstance.otherincomeGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectOtherincomeApi#otherincomeGetListV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectOtherincomeApi#otherincomeGetListV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiOtherincomeID_ASC, pkiOtherincomeID_DESC, fkiOtherincometypeID_ASC, fkiOtherincometypeID_DESC, sOtherincometypeDescriptionX_ASC, sOtherincometypeDescriptionX_DESC, sOtherincomeDescription_ASC, sOtherincomeDescription_DESC, eOtherincomeRemunerationtype_ASC, eOtherincomeRemunerationtype_DESC, dOtherincomeRemunerationsubtotal_ASC, dOtherincomeRemunerationsubtotal_DESC, dOtherincomeRemunerationtaxes_ASC, dOtherincomeRemunerationtaxes_DESC, dOtherincomeRemunerationtotal_ASC, dOtherincomeRemunerationtotal_DESC, dtOtherincomePaid_ASC, dtOtherincomePaid_DESC, bOtherincomeIsactive_ASC, bOtherincomeIsactive_DESC] |
+| **iRowMax** | **kotlin.Int**|  | [optional] |
+| **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0] |
+| **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sFilter** | **kotlin.String**|  | [optional] |
+
+### Return type
+
+[**OtherincomeGetListV1Response**](OtherincomeGetListV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="otherincomeImportIntoEDMV1"></a>
+# **otherincomeImportIntoEDMV1**
+> OtherincomeImportIntoEDMV1Response otherincomeImportIntoEDMV1(pkiOtherincomeID, otherincomeImportIntoEDMV1Request)
+
+Import attachments into the Otherincome
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectOtherincomeApi()
+val pkiOtherincomeID : kotlin.Int = 56 // kotlin.Int | 
+val otherincomeImportIntoEDMV1Request : OtherincomeImportIntoEDMV1Request =  // OtherincomeImportIntoEDMV1Request | 
+try {
+    val result : OtherincomeImportIntoEDMV1Response = apiInstance.otherincomeImportIntoEDMV1(pkiOtherincomeID, otherincomeImportIntoEDMV1Request)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectOtherincomeApi#otherincomeImportIntoEDMV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectOtherincomeApi#otherincomeImportIntoEDMV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| **pkiOtherincomeID** | **kotlin.Int**|  | |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **otherincomeImportIntoEDMV1Request** | [**OtherincomeImportIntoEDMV1Request**](OtherincomeImportIntoEDMV1Request.md)|  | |
+
+### Return type
+
+[**OtherincomeImportIntoEDMV1Response**](OtherincomeImportIntoEDMV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 

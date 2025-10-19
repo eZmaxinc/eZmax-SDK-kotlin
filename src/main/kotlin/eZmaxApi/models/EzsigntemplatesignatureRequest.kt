@@ -38,6 +38,7 @@ import com.squareup.moshi.JsonClass
  * @param eEzsigntemplatesignatureType 
  * @param pkiEzsigntemplatesignatureID The unique ID of the Ezsigntemplatesignature
  * @param fkiEzsigntemplatesignerIDValidation The unique ID of the Ezsigntemplatesigner
+ * @param fkiPaymentgatewayID The unique ID of the Paymentgateway
  * @param bEzsigntemplatesignatureHandwritten Whether the Ezsigntemplatesignature must be handwritten or not when eEzsigntemplatesignatureType = Signature.
  * @param bEzsigntemplatesignatureReason Whether the Ezsigntemplatesignature must include a reason or not when eEzsigntemplatesignatureType = Signature.
  * @param eEzsigntemplatesignaturePositioning 
@@ -63,6 +64,8 @@ import com.squareup.moshi.JsonClass
  * @param iEzsigntemplatesignaturePositioningoffsetx The offset X  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**
  * @param iEzsigntemplatesignaturePositioningoffsety The offset Y  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**
  * @param eEzsigntemplatesignaturePositioningoccurence 
+ * @param sEzsigntemplatesignatureCreditcardamountdescription The description of the Creditcard signature
+ * @param dEzsigntemplatesignatureCreditcardamount The amount of the Creditcard signature
  */
 
 
@@ -94,6 +97,10 @@ data class EzsigntemplatesignatureRequest (
     /* The unique ID of the Ezsigntemplatesigner */
     @Json(name = "fkiEzsigntemplatesignerIDValidation")
     val fkiEzsigntemplatesignerIDValidation: kotlin.Int? = null,
+
+    /* The unique ID of the Paymentgateway */
+    @Json(name = "fkiPaymentgatewayID")
+    val fkiPaymentgatewayID: kotlin.Int? = null,
 
     /* Whether the Ezsigntemplatesignature must be handwritten or not when eEzsigntemplatesignatureType = Signature. */
     @Json(name = "bEzsigntemplatesignatureHandwritten")
@@ -185,7 +192,15 @@ data class EzsigntemplatesignatureRequest (
     val iEzsigntemplatesignaturePositioningoffsety: kotlin.Int? = null,
 
     @Json(name = "eEzsigntemplatesignaturePositioningoccurence")
-    val eEzsigntemplatesignaturePositioningoccurence: FieldEEzsigntemplatesignaturePositioningoccurence? = null
+    val eEzsigntemplatesignaturePositioningoccurence: FieldEEzsigntemplatesignaturePositioningoccurence? = null,
+
+    /* The description of the Creditcard signature */
+    @Json(name = "sEzsigntemplatesignatureCreditcardamountdescription")
+    val sEzsigntemplatesignatureCreditcardamountdescription: kotlin.String? = null,
+
+    /* The amount of the Creditcard signature */
+    @Json(name = "dEzsigntemplatesignatureCreditcardamount")
+    val dEzsigntemplatesignatureCreditcardamount: kotlin.String? = null
 
 ) {
 

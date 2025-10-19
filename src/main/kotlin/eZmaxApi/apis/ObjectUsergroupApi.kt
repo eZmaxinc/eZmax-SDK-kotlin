@@ -484,7 +484,7 @@ class ObjectUsergroupApi(basePath: kotlin.String = defaultBasePath, client: Call
      * Retrieve Usergroups and IDs
      * Get the list of Usergroup to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Usergroups to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return UsergroupGetAutocompleteV2Response
@@ -519,7 +519,7 @@ class ObjectUsergroupApi(basePath: kotlin.String = defaultBasePath, client: Call
      * Retrieve Usergroups and IDs
      * Get the list of Usergroup to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Usergroups to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return ApiResponse<UsergroupGetAutocompleteV2Response?>
@@ -540,7 +540,7 @@ class ObjectUsergroupApi(basePath: kotlin.String = defaultBasePath, client: Call
      * To obtain the request config of the operation usergroupGetAutocompleteV2
      *
      * @param sSelector The type of Usergroups to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return RequestConfig

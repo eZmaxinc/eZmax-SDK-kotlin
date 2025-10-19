@@ -32,6 +32,8 @@
 | **sEzsignsignatureTextvalidationcustommessage** | **kotlin.String** | Description of validation rule. Show by signatory. |  [optional] |
 | **sEzsignsignatureRegexp** | **kotlin.String** | A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom** |  [optional] |
 | **eEzsignsignatureDependencyrequirement** | [**FieldEEzsignsignatureDependencyrequirement**](FieldEEzsignsignatureDependencyrequirement.md) |  |  [optional] |
+| **sEzsignsignatureCreditcardamountdescription** | **kotlin.String** | The description of the Creditcard signature |  [optional] |
+| **dEzsignsignatureCreditcardamount** | **kotlin.String** | The amount of the Creditcard signature |  [optional] |
 
 
 

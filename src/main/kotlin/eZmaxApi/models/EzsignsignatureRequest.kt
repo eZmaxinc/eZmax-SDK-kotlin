@@ -57,6 +57,8 @@ import com.squareup.moshi.JsonClass
  * @param sEzsignsignatureTextvalidationcustommessage Description of validation rule. Show by signatory.
  * @param sEzsignsignatureRegexp A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom**
  * @param eEzsignsignatureDependencyrequirement 
+ * @param sEzsignsignatureCreditcardamountdescription The description of the Creditcard signature
+ * @param dEzsignsignatureCreditcardamount The amount of the Creditcard signature
  */
 
 
@@ -165,7 +167,15 @@ data class EzsignsignatureRequest (
     val sEzsignsignatureRegexp: kotlin.String? = null,
 
     @Json(name = "eEzsignsignatureDependencyrequirement")
-    val eEzsignsignatureDependencyrequirement: FieldEEzsignsignatureDependencyrequirement? = null
+    val eEzsignsignatureDependencyrequirement: FieldEEzsignsignatureDependencyrequirement? = null,
+
+    /* The description of the Creditcard signature */
+    @Json(name = "sEzsignsignatureCreditcardamountdescription")
+    val sEzsignsignatureCreditcardamountdescription: kotlin.String? = null,
+
+    /* The amount of the Creditcard signature */
+    @Json(name = "dEzsignsignatureCreditcardamount")
+    val dEzsignsignatureCreditcardamount: kotlin.String? = null
 
 ) {
 

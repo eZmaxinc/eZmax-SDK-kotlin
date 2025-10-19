@@ -49,7 +49,7 @@ class ObjectCommunicationApi(basePath: kotlin.String = defaultBasePath, client: 
 
     /**
      * GET /1/object/communication/{pkiCommunicationID}/getCommunicationBody
-     * Retrieve the communication body.
+     * Retrieve the communication body
      * This endpoint returns the communication body.
      * @param pkiCommunicationID 
      * @return void
@@ -80,7 +80,7 @@ class ObjectCommunicationApi(basePath: kotlin.String = defaultBasePath, client: 
 
     /**
      * GET /1/object/communication/{pkiCommunicationID}/getCommunicationBody
-     * Retrieve the communication body.
+     * Retrieve the communication body
      * This endpoint returns the communication body.
      * @param pkiCommunicationID 
      * @return ApiResponse<Unit?>

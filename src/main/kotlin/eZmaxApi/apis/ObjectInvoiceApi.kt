@@ -25,6 +25,8 @@ import eZmaxApi.models.InvoiceGetCommunicationCountV1Response
 import eZmaxApi.models.InvoiceGetCommunicationListV1Response
 import eZmaxApi.models.InvoiceGetCommunicationrecipientsV1Response
 import eZmaxApi.models.InvoiceGetCommunicationsendersV1Response
+import eZmaxApi.models.InvoiceImportIntoEDMV1Request
+import eZmaxApi.models.InvoiceImportIntoEDMV1Response
 
 import com.squareup.moshi.Json
 
@@ -408,6 +410,83 @@ class ObjectInvoiceApi(basePath: kotlin.String = defaultBasePath, client: Call.F
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/invoice/{pkiInvoiceID}/getCommunicationsenders".replace("{"+"pkiInvoiceID"+"}", encodeURIComponent(pkiInvoiceID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * POST /1/object/invoice/{pkiInvoiceID}/importIntoEDM
+     * Import attachments into the Invoice
+     * 
+     * @param pkiInvoiceID 
+     * @param invoiceImportIntoEDMV1Request 
+     * @return InvoiceImportIntoEDMV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun invoiceImportIntoEDMV1(pkiInvoiceID: kotlin.Int, invoiceImportIntoEDMV1Request: InvoiceImportIntoEDMV1Request) : InvoiceImportIntoEDMV1Response {
+        val localVarResponse = invoiceImportIntoEDMV1WithHttpInfo(pkiInvoiceID = pkiInvoiceID, invoiceImportIntoEDMV1Request = invoiceImportIntoEDMV1Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as InvoiceImportIntoEDMV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /1/object/invoice/{pkiInvoiceID}/importIntoEDM
+     * Import attachments into the Invoice
+     * 
+     * @param pkiInvoiceID 
+     * @param invoiceImportIntoEDMV1Request 
+     * @return ApiResponse<InvoiceImportIntoEDMV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun invoiceImportIntoEDMV1WithHttpInfo(pkiInvoiceID: kotlin.Int, invoiceImportIntoEDMV1Request: InvoiceImportIntoEDMV1Request) : ApiResponse<InvoiceImportIntoEDMV1Response?> {
+        val localVariableConfig = invoiceImportIntoEDMV1RequestConfig(pkiInvoiceID = pkiInvoiceID, invoiceImportIntoEDMV1Request = invoiceImportIntoEDMV1Request)
+
+        return request<InvoiceImportIntoEDMV1Request, InvoiceImportIntoEDMV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation invoiceImportIntoEDMV1
+     *
+     * @param pkiInvoiceID 
+     * @param invoiceImportIntoEDMV1Request 
+     * @return RequestConfig
+     */
+    fun invoiceImportIntoEDMV1RequestConfig(pkiInvoiceID: kotlin.Int, invoiceImportIntoEDMV1Request: InvoiceImportIntoEDMV1Request) : RequestConfig<InvoiceImportIntoEDMV1Request> {
+        val localVariableBody = invoiceImportIntoEDMV1Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/invoice/{pkiInvoiceID}/importIntoEDM".replace("{"+"pkiInvoiceID"+"}", encodeURIComponent(pkiInvoiceID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

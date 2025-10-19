@@ -29,7 +29,7 @@ import com.squareup.moshi.JsonClass
 enum class FieldEVersionhistoryUsertype(val value: kotlin.String) {
 
     @Json(name = "")
-    (""),
+    _(""),
 
     @Json(name = "AgentBroker")
     AgentBroker("AgentBroker"),

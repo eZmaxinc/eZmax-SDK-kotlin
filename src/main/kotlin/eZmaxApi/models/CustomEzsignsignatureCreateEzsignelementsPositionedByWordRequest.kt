@@ -19,6 +19,7 @@ import eZmaxApi.models.CustomCreateEzsignelementsPositionedByWordRequest
 import eZmaxApi.models.EnumTextvalidation
 import eZmaxApi.models.EzsignelementdependencyRequestCompound
 import eZmaxApi.models.EzsignsignaturecustomdateRequestCompound
+import eZmaxApi.models.EzsignsignaturepaymentdetailRequestCompound
 import eZmaxApi.models.FieldEEzsignsignatureAttachmentnamesource
 import eZmaxApi.models.FieldEEzsignsignatureConsultationtrigger
 import eZmaxApi.models.FieldEEzsignsignatureDependencyrequirement
@@ -61,9 +62,12 @@ import com.squareup.moshi.JsonClass
  * @param sEzsignsignatureTextvalidationcustommessage Description of validation rule. Show by signatory.
  * @param sEzsignsignatureRegexp A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom**
  * @param eEzsignsignatureDependencyrequirement 
+ * @param sEzsignsignatureCreditcardamountdescription The description of the Creditcard signature
+ * @param dEzsignsignatureCreditcardamount The amount of the Creditcard signature
  * @param bEzsignsignatureCustomdate Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)
  * @param aObjEzsignsignaturecustomdate An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all.
  * @param aObjEzsignelementdependency 
+ * @param aObjEzsignsignaturepaymentdetail 
  */
 
 
@@ -177,6 +181,14 @@ data class CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest (
     @Json(name = "eEzsignsignatureDependencyrequirement")
     val eEzsignsignatureDependencyrequirement: FieldEEzsignsignatureDependencyrequirement? = null,
 
+    /* The description of the Creditcard signature */
+    @Json(name = "sEzsignsignatureCreditcardamountdescription")
+    val sEzsignsignatureCreditcardamountdescription: kotlin.String? = null,
+
+    /* The amount of the Creditcard signature */
+    @Json(name = "dEzsignsignatureCreditcardamount")
+    val dEzsignsignatureCreditcardamount: kotlin.String? = null,
+
     /* Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**) */
     @Json(name = "bEzsignsignatureCustomdate")
     val bEzsignsignatureCustomdate: kotlin.Boolean? = null,
@@ -186,7 +198,10 @@ data class CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest (
     val aObjEzsignsignaturecustomdate: kotlin.collections.List<EzsignsignaturecustomdateRequestCompound>? = null,
 
     @Json(name = "a_objEzsignelementdependency")
-    val aObjEzsignelementdependency: kotlin.collections.List<EzsignelementdependencyRequestCompound>? = null
+    val aObjEzsignelementdependency: kotlin.collections.List<EzsignelementdependencyRequestCompound>? = null,
+
+    @Json(name = "a_objEzsignsignaturepaymentdetail")
+    val aObjEzsignsignaturepaymentdetail: kotlin.collections.List<EzsignsignaturepaymentdetailRequestCompound>? = null
 
 ) {
 

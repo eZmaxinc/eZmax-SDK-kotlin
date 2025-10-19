@@ -4,11 +4,67 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**ezsignbulksendtransmissionGetBatchFileV1**](ObjectEzsignbulksendtransmissionApi.md#ezsignbulksendtransmissionGetBatchFileV1) | **GET** /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getBatchFile | Retrieve file to download documents in batch |
 | [**ezsignbulksendtransmissionGetCsvErrorsV1**](ObjectEzsignbulksendtransmissionApi.md#ezsignbulksendtransmissionGetCsvErrorsV1) | **GET** /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getCsvErrors | Retrieve an existing Ezsignbulksendtransmission&#39;s Csv containing errors |
 | [**ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1**](ObjectEzsignbulksendtransmissionApi.md#ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1) | **GET** /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getEzsignsignaturesAutomatic | Retrieve an existing Ezsignbulksendtransmission&#39;s automatic Ezsignsignatures |
 | [**ezsignbulksendtransmissionGetFormsDataV1**](ObjectEzsignbulksendtransmissionApi.md#ezsignbulksendtransmissionGetFormsDataV1) | **GET** /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getFormsData | Retrieve an existing Ezsignbulksendtransmission&#39;s forms data |
 | [**ezsignbulksendtransmissionGetObjectV2**](ObjectEzsignbulksendtransmissionApi.md#ezsignbulksendtransmissionGetObjectV2) | **GET** /2/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID} | Retrieve an existing Ezsignbulksendtransmission |
 
+
+<a id="ezsignbulksendtransmissionGetBatchFileV1"></a>
+# **ezsignbulksendtransmissionGetBatchFileV1**
+> java.io.File ezsignbulksendtransmissionGetBatchFileV1(pkiEzsignbulksendtransmissionID, bIncludeSigned, bIncludeAttachment, bIncludeProofdocument, bIncludeProof)
+
+Retrieve file to download documents in batch
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsignbulksendtransmissionApi()
+val pkiEzsignbulksendtransmissionID : kotlin.Int = 56 // kotlin.Int | 
+val bIncludeSigned : kotlin.Boolean = true // kotlin.Boolean | Include final document once all signatures were applied
+val bIncludeAttachment : kotlin.Boolean = true // kotlin.Boolean | Include attached files in signatures
+val bIncludeProofdocument : kotlin.Boolean = true // kotlin.Boolean | Include the evidence report
+val bIncludeProof : kotlin.Boolean = true // kotlin.Boolean | include the complete evidence archive including all of the above and more
+try {
+    val result : java.io.File = apiInstance.ezsignbulksendtransmissionGetBatchFileV1(pkiEzsignbulksendtransmissionID, bIncludeSigned, bIncludeAttachment, bIncludeProofdocument, bIncludeProof)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsignbulksendtransmissionApi#ezsignbulksendtransmissionGetBatchFileV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsignbulksendtransmissionApi#ezsignbulksendtransmissionGetBatchFileV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| **pkiEzsignbulksendtransmissionID** | **kotlin.Int**|  | |
+| **bIncludeSigned** | **kotlin.Boolean**| Include final document once all signatures were applied | [optional] |
+| **bIncludeAttachment** | **kotlin.Boolean**| Include attached files in signatures | [optional] |
+| **bIncludeProofdocument** | **kotlin.Boolean**| Include the evidence report | [optional] |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **bIncludeProof** | **kotlin.Boolean**| include the complete evidence archive including all of the above and more | [optional] |
+
+### Return type
+
+[**java.io.File**](java.io.File.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 <a id="ezsignbulksendtransmissionGetCsvErrorsV1"></a>
 # **ezsignbulksendtransmissionGetCsvErrorsV1**

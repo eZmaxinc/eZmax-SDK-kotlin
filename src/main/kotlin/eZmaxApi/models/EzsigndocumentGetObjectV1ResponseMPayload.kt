@@ -55,6 +55,7 @@ import com.squareup.moshi.JsonClass
  * @param sEzsigndocumentMD5signed MD5 Hash of the final PDF Document after all signatures were applied to it.
  * @param bEzsigndocumentEzsignform If the Ezsigndocument contains an Ezsignform or not
  * @param bEzsigndocumentHassignedsignatures If the Ezsigndocument contains signed signatures (From internal or external sources)
+ * @param bEzsigndocumentSendtoged Whether the Ezsigndocument was copied to EDM
  * @param objAudit 
  * @param sEzsigndocumentExternalid This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
  * @param aObjEzsigndocumentdependency 
@@ -171,6 +172,10 @@ data class EzsigndocumentGetObjectV1ResponseMPayload (
     /* If the Ezsigndocument contains signed signatures (From internal or external sources) */
     @Json(name = "bEzsigndocumentHassignedsignatures")
     val bEzsigndocumentHassignedsignatures: kotlin.Boolean? = null,
+
+    /* Whether the Ezsigndocument was copied to EDM */
+    @Json(name = "bEzsigndocumentSendtoged")
+    val bEzsigndocumentSendtoged: kotlin.Boolean? = null,
 
     @Json(name = "objAudit")
     val objAudit: CommonAudit? = null,

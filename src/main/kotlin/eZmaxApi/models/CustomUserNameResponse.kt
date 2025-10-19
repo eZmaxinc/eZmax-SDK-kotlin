@@ -24,6 +24,8 @@ import com.squareup.moshi.JsonClass
  *
  * @param sUserLastname The last name of the user
  * @param sUserFirstname The first name of the user
+ * @param sContacttitleNameX The name of the Contacttitle in the language of the requester
+ * @param sUserJobtitle The job title of the user
  */
 
 
@@ -35,7 +37,15 @@ data class CustomUserNameResponse (
 
     /* The first name of the user */
     @Json(name = "sUserFirstname")
-    val sUserFirstname: kotlin.String
+    val sUserFirstname: kotlin.String,
+
+    /* The name of the Contacttitle in the language of the requester */
+    @Json(name = "sContacttitleNameX")
+    val sContacttitleNameX: kotlin.String? = null,
+
+    /* The job title of the user */
+    @Json(name = "sUserJobtitle")
+    val sUserJobtitle: kotlin.String? = null
 
 ) {
 

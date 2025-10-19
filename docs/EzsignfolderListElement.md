@@ -10,6 +10,7 @@
 | **sEzsignfoldertypeNameX** | **kotlin.String** | The name of the Ezsignfoldertype in the language of the requester |  |
 | **sEzsignfolderDescription** | **kotlin.String** | The description of the Ezsignfolder |  |
 | **eEzsignfolderStep** | [**FieldEEzsignfolderStep**](FieldEEzsignfolderStep.md) |  |  |
+| **eEzsignfolderCompletion** | [**FieldEEzsignfolderCompletion**](FieldEEzsignfolderCompletion.md) |  |  |
 | **dtCreatedDate** | **kotlin.String** | The date and time at which the object was created |  |
 | **iEzsigndocument** | **kotlin.Int** | The total number of Ezsigndocument in the folder |  |
 | **iEzsigndocumentEdm** | **kotlin.Int** | The total number of Ezsigndocument in the folder that were saved in the edm system |  |

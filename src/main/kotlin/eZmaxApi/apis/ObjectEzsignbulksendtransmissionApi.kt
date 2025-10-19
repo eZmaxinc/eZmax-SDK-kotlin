@@ -49,6 +49,105 @@ class ObjectEzsignbulksendtransmissionApi(basePath: kotlin.String = defaultBaseP
     }
 
     /**
+     * GET /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getBatchFile
+     * Retrieve file to download documents in batch
+     * 
+     * @param pkiEzsignbulksendtransmissionID 
+     * @param bIncludeSigned Include final document once all signatures were applied (optional)
+     * @param bIncludeAttachment Include attached files in signatures (optional)
+     * @param bIncludeProofdocument Include the evidence report (optional)
+     * @param bIncludeProof include the complete evidence archive including all of the above and more (optional)
+     * @return java.io.File
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignbulksendtransmissionGetBatchFileV1(pkiEzsignbulksendtransmissionID: kotlin.Int, bIncludeSigned: kotlin.Boolean? = null, bIncludeAttachment: kotlin.Boolean? = null, bIncludeProofdocument: kotlin.Boolean? = null, bIncludeProof: kotlin.Boolean? = null) : java.io.File {
+        val localVarResponse = ezsignbulksendtransmissionGetBatchFileV1WithHttpInfo(pkiEzsignbulksendtransmissionID = pkiEzsignbulksendtransmissionID, bIncludeSigned = bIncludeSigned, bIncludeAttachment = bIncludeAttachment, bIncludeProofdocument = bIncludeProofdocument, bIncludeProof = bIncludeProof)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as java.io.File
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getBatchFile
+     * Retrieve file to download documents in batch
+     * 
+     * @param pkiEzsignbulksendtransmissionID 
+     * @param bIncludeSigned Include final document once all signatures were applied (optional)
+     * @param bIncludeAttachment Include attached files in signatures (optional)
+     * @param bIncludeProofdocument Include the evidence report (optional)
+     * @param bIncludeProof include the complete evidence archive including all of the above and more (optional)
+     * @return ApiResponse<java.io.File?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignbulksendtransmissionGetBatchFileV1WithHttpInfo(pkiEzsignbulksendtransmissionID: kotlin.Int, bIncludeSigned: kotlin.Boolean?, bIncludeAttachment: kotlin.Boolean?, bIncludeProofdocument: kotlin.Boolean?, bIncludeProof: kotlin.Boolean?) : ApiResponse<java.io.File?> {
+        val localVariableConfig = ezsignbulksendtransmissionGetBatchFileV1RequestConfig(pkiEzsignbulksendtransmissionID = pkiEzsignbulksendtransmissionID, bIncludeSigned = bIncludeSigned, bIncludeAttachment = bIncludeAttachment, bIncludeProofdocument = bIncludeProofdocument, bIncludeProof = bIncludeProof)
+
+        return request<Unit, java.io.File>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsignbulksendtransmissionGetBatchFileV1
+     *
+     * @param pkiEzsignbulksendtransmissionID 
+     * @param bIncludeSigned Include final document once all signatures were applied (optional)
+     * @param bIncludeAttachment Include attached files in signatures (optional)
+     * @param bIncludeProofdocument Include the evidence report (optional)
+     * @param bIncludeProof include the complete evidence archive including all of the above and more (optional)
+     * @return RequestConfig
+     */
+    fun ezsignbulksendtransmissionGetBatchFileV1RequestConfig(pkiEzsignbulksendtransmissionID: kotlin.Int, bIncludeSigned: kotlin.Boolean?, bIncludeAttachment: kotlin.Boolean?, bIncludeProofdocument: kotlin.Boolean?, bIncludeProof: kotlin.Boolean?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (bIncludeSigned != null) {
+                    put("bIncludeSigned", listOf(bIncludeSigned.toString()))
+                }
+                if (bIncludeAttachment != null) {
+                    put("bIncludeAttachment", listOf(bIncludeAttachment.toString()))
+                }
+                if (bIncludeProofdocument != null) {
+                    put("bIncludeProofdocument", listOf(bIncludeProofdocument.toString()))
+                }
+                if (bIncludeProof != null) {
+                    put("bIncludeProof", listOf(bIncludeProof.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getBatchFile".replace("{"+"pkiEzsignbulksendtransmissionID"+"}", encodeURIComponent(pkiEzsignbulksendtransmissionID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
      * GET /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getCsvErrors
      * Retrieve an existing Ezsignbulksendtransmission&#39;s Csv containing errors
      * 

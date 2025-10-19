@@ -9,6 +9,7 @@
 | **sUserFirstname** | **kotlin.String** | The first name of the user |  |
 | **sUserLastname** | **kotlin.String** | The last name of the user |  |
 | **sEmailAddress** | **kotlin.String** | The email address. |  |
+| **eUserType** | [**FieldEUserType**](FieldEUserType.md) |  |  |
 
 
 

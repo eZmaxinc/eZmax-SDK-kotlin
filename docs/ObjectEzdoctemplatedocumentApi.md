@@ -199,9 +199,9 @@ try {
 
 ### Parameters
 | **sSelector** | **kotlin.String**| The type of Ezdoctemplatedocuments to return | [enum: All, Ezsignfolder, Ezsignfoldersignerassociations] |
-| **eType** | **kotlin.String**| The type of Ezdoctemplatedocument | [default to CompanyEzsignfoldertype] [enum: User, Company, Ezsignfoldertype, CompanyUser, CompanyEzsignfoldertype] |
+| **eType** | **kotlin.String**| The type of Ezdoctemplatedocument | [default to EType.CompanyEzsignfoldertype] [enum: User, Company, Ezsignfoldertype, CompanyUser, CompanyEzsignfoldertype] |
 | **fkiEzsignfoldertypeID** | **kotlin.String**| Specify which fkiEzsignfoldertypeID we want to display. only used when eType &#x3D; Ezsignfoldertype | [optional] |
-| **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive] |
+| **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to EFilterActive.Active] [enum: All, Active, Inactive] |
 | **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional] |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |

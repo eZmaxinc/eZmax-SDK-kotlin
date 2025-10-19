@@ -39,8 +39,8 @@ try {
 ```
 
 ### Parameters
-| **sSelector** | **kotlin.String**| The type of Glaccountcontainers to return | [enum: All, Supply] |
-| **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive] |
+| **sSelector** | **kotlin.String**| The type of Glaccountcontainers to return | [enum: All, AllWithoutSubsidiary, Supply] |
+| **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to EFilterActive.Active] [enum: All, Active, Inactive] |
 | **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional] |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |

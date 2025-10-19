@@ -27,7 +27,7 @@ import com.squareup.moshi.JsonClass
  *
  * @param pkiVersionhistoryID The unique ID of the Versionhistory
  * @param objVersionhistoryDetail 
- * @param dtVersionhistoryDate The date  at which the Versionhistory was published or should be published
+ * @param dtVersionhistoryDate The date at which the Versionhistory was published or should be published
  * @param eVersionhistoryType 
  * @param bVersionhistoryDraft Whether the Versionhistory is published or still a draft
  * @param fkiModuleID The unique ID of the Module
@@ -35,7 +35,7 @@ import com.squareup.moshi.JsonClass
  * @param sModuleNameX The Name of the Module in the language of the requester
  * @param sModulesectionNameX The Name of the Modulesection in the language of the requester
  * @param eVersionhistoryUsertype 
- * @param dtVersionhistoryDateend The date  at which the Versionhistory will no longer be visible
+ * @param dtVersionhistoryDateend The date at which the Versionhistory will no longer be visible
  */
 
 
@@ -48,7 +48,7 @@ data class VersionhistoryResponseCompound (
     @Json(name = "objVersionhistoryDetail")
     val objVersionhistoryDetail: MultilingualVersionhistoryDetail,
 
-    /* The date  at which the Versionhistory was published or should be published */
+    /* The date at which the Versionhistory was published or should be published */
     @Json(name = "dtVersionhistoryDate")
     val dtVersionhistoryDate: kotlin.String,
 
@@ -78,7 +78,7 @@ data class VersionhistoryResponseCompound (
     @Json(name = "eVersionhistoryUsertype")
     val eVersionhistoryUsertype: FieldEVersionhistoryUsertype? = null,
 
-    /* The date  at which the Versionhistory will no longer be visible */
+    /* The date at which the Versionhistory will no longer be visible */
     @Json(name = "dtVersionhistoryDateend")
     val dtVersionhistoryDateend: kotlin.String? = null
 

@@ -24,6 +24,7 @@
 | **sWebhookSecret** | **kotlin.String** | The Secret for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey. |  [optional] |
 | **sAuthenticationexternalDescription** | **kotlin.String** | The description of the Authenticationexternal |  [optional] |
 | **sWebhookEvent** | **kotlin.String** | The concatenated string to describe the Webhook event |  [optional] |
+| **sWebhookAuthentificationexternalerror** | **kotlin.String** | Error message when token renewal failed or is not configured. Only if an Authenticationexternal is set. |  [optional] |
 | **aObjWebhookheader** | [**kotlin.collections.List&lt;WebhookheaderResponseCompound&gt;**](WebhookheaderResponseCompound.md) |  |  [optional] |
 | **eWebhookEmittype** | [**inline**](#EWebhookEmittype) | Wheter the webhook received is a manual test or a real event |  [optional] |
 

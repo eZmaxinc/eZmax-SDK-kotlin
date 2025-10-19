@@ -85,7 +85,7 @@ class ObjectBankaccountApi(basePath: kotlin.String = defaultBasePath, client: Ca
      * Retrieve Bankaccounts and IDs
      * Get the list of Bankaccount to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Bankaccounts to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return BankaccountGetAutocompleteV2Response
@@ -120,7 +120,7 @@ class ObjectBankaccountApi(basePath: kotlin.String = defaultBasePath, client: Ca
      * Retrieve Bankaccounts and IDs
      * Get the list of Bankaccount to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Bankaccounts to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return ApiResponse<BankaccountGetAutocompleteV2Response?>
@@ -141,7 +141,7 @@ class ObjectBankaccountApi(basePath: kotlin.String = defaultBasePath, client: Ca
      * To obtain the request config of the operation bankaccountGetAutocompleteV2
      *
      * @param sSelector The type of Bankaccounts to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return RequestConfig

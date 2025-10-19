@@ -8,6 +8,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**tranqcontractGetCommunicationListV1**](ObjectTranqcontractApi.md#tranqcontractGetCommunicationListV1) | **GET** /1/object/tranqcontract/{pkiTranqcontractID}/getCommunicationList | Retrieve Communication list |
 | [**tranqcontractGetCommunicationrecipientsV1**](ObjectTranqcontractApi.md#tranqcontractGetCommunicationrecipientsV1) | **GET** /1/object/tranqcontract/{pkiTranqcontractID}/getCommunicationrecipients | Retrieve Tranqcontract&#39;s Communicationrecipient |
 | [**tranqcontractGetCommunicationsendersV1**](ObjectTranqcontractApi.md#tranqcontractGetCommunicationsendersV1) | **GET** /1/object/tranqcontract/{pkiTranqcontractID}/getCommunicationsenders | Retrieve Tranqcontract&#39;s Communicationsender |
+| [**tranqcontractImportIntoEDMV1**](ObjectTranqcontractApi.md#tranqcontractImportIntoEDMV1) | **POST** /1/object/tranqcontract/{pkiTranqcontractID}/importIntoEDM | Import attachments into the Tranqcontract |
 
 
 <a id="tranqcontractGetCommunicationCountV1"></a>
@@ -204,5 +205,56 @@ Configure Authorization:
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="tranqcontractImportIntoEDMV1"></a>
+# **tranqcontractImportIntoEDMV1**
+> TranqcontractImportIntoEDMV1Response tranqcontractImportIntoEDMV1(pkiTranqcontractID, tranqcontractImportIntoEDMV1Request)
+
+Import attachments into the Tranqcontract
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectTranqcontractApi()
+val pkiTranqcontractID : kotlin.Int = 56 // kotlin.Int | 
+val tranqcontractImportIntoEDMV1Request : TranqcontractImportIntoEDMV1Request =  // TranqcontractImportIntoEDMV1Request | 
+try {
+    val result : TranqcontractImportIntoEDMV1Response = apiInstance.tranqcontractImportIntoEDMV1(pkiTranqcontractID, tranqcontractImportIntoEDMV1Request)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectTranqcontractApi#tranqcontractImportIntoEDMV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectTranqcontractApi#tranqcontractImportIntoEDMV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| **pkiTranqcontractID** | **kotlin.Int**|  | |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **tranqcontractImportIntoEDMV1Request** | [**TranqcontractImportIntoEDMV1Request**](TranqcontractImportIntoEDMV1Request.md)|  | |
+
+### Return type
+
+[**TranqcontractImportIntoEDMV1Response**](TranqcontractImportIntoEDMV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 

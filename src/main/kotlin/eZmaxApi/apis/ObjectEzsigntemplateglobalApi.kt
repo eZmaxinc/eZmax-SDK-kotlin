@@ -87,7 +87,7 @@ class ObjectEzsigntemplateglobalApi(basePath: kotlin.String = defaultBasePath, c
      * Retrieve Ezsigntemplateglobals and IDs
      * Get the list of Ezsigntemplateglobal to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezsigntemplateglobals to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return EzsigntemplateglobalGetAutocompleteV2Response
@@ -122,7 +122,7 @@ class ObjectEzsigntemplateglobalApi(basePath: kotlin.String = defaultBasePath, c
      * Retrieve Ezsigntemplateglobals and IDs
      * Get the list of Ezsigntemplateglobal to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezsigntemplateglobals to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return ApiResponse<EzsigntemplateglobalGetAutocompleteV2Response?>
@@ -143,7 +143,7 @@ class ObjectEzsigntemplateglobalApi(basePath: kotlin.String = defaultBasePath, c
      * To obtain the request config of the operation ezsigntemplateglobalGetAutocompleteV2
      *
      * @param sSelector The type of Ezsigntemplateglobals to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return RequestConfig

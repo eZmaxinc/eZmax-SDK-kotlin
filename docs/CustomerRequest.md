@@ -52,6 +52,7 @@
 | **bCustomerUnsubscribeinfo** | **kotlin.Boolean** | Whether if it&#39;s an unsubscribeinfo |  |
 | **tCustomerComment** | **kotlin.String** | The comment of the Customer |  |
 | **pkiCustomerID** | **kotlin.Int** | The unique ID of the Customer. |  [optional] |
+| **sCustomerNote** | **kotlin.String** | A note for the Customer |  [optional] |
 | **efkiUserID** | **kotlin.Int** | The unique ID of the User |  [optional] |
 | **efksCustomerCode** | **kotlin.String** | The code of the Customer |  [optional] |
 | **IMPORTID** | **kotlin.String** |  |  [optional] |

@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.FieldEEzsignfoldertypeDocumentmerge
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -39,6 +40,7 @@ import com.squareup.moshi.JsonClass
  * @param iEzsignfoldertypeDeadlinedays The number of days to get all Ezsignsignatures
  * @param iEzsignfoldertypeFontsizeannotation Font size for annotations
  * @param iEzsignfoldertypeFontsizeformfield Font size for form fields
+ * @param eEzsignfoldertypeDocumentmerge 
  */
 
 
@@ -110,7 +112,10 @@ data class CustomEzsignfoldertypeResponse (
 
     /* Font size for form fields */
     @Json(name = "iEzsignfoldertypeFontsizeformfield")
-    val iEzsignfoldertypeFontsizeformfield: kotlin.Int? = null
+    val iEzsignfoldertypeFontsizeformfield: kotlin.Int? = null,
+
+    @Json(name = "eEzsignfoldertypeDocumentmerge")
+    val eEzsignfoldertypeDocumentmerge: FieldEEzsignfoldertypeDocumentmerge? = FieldEEzsignfoldertypeDocumentmerge.No
 
 ) {
 

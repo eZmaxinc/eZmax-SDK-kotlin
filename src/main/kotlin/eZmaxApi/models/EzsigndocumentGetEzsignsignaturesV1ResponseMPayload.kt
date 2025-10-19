@@ -21,7 +21,7 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignsignatures
+ * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignsignatures
  *
  * @param aObjEzsignsignature 
  */

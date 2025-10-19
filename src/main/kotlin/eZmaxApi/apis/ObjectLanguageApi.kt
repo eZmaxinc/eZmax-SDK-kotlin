@@ -85,7 +85,7 @@ class ObjectLanguageApi(basePath: kotlin.String = defaultBasePath, client: Call.
      * Retrieve Languages and IDs
      * Get the list of Language to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Languages to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return LanguageGetAutocompleteV2Response
@@ -120,7 +120,7 @@ class ObjectLanguageApi(basePath: kotlin.String = defaultBasePath, client: Call.
      * Retrieve Languages and IDs
      * Get the list of Language to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Languages to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return ApiResponse<LanguageGetAutocompleteV2Response?>
@@ -141,7 +141,7 @@ class ObjectLanguageApi(basePath: kotlin.String = defaultBasePath, client: Call.
      * To obtain the request config of the operation languageGetAutocompleteV2
      *
      * @param sSelector The type of Languages to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return RequestConfig

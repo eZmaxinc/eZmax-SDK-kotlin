@@ -27,6 +27,7 @@ import com.squareup.moshi.JsonClass
  * @param fkiCreditcardmerchantID The unique ID of the Creditcardmerchant
  * @param ePaymentgatewayProcessor 
  * @param sPaymentgatewayDescriptionX The description of the Paymentgateway in the language of the requester
+ * @param bPaymentgatewayIsactive Whether the Paymentgateway is active or not
  */
 
 
@@ -45,7 +46,11 @@ data class PaymentgatewayListElement (
 
     /* The description of the Paymentgateway in the language of the requester */
     @Json(name = "sPaymentgatewayDescriptionX")
-    val sPaymentgatewayDescriptionX: kotlin.String
+    val sPaymentgatewayDescriptionX: kotlin.String,
+
+    /* Whether the Paymentgateway is active or not */
+    @Json(name = "bPaymentgatewayIsactive")
+    val bPaymentgatewayIsactive: kotlin.Boolean
 
 ) {
 

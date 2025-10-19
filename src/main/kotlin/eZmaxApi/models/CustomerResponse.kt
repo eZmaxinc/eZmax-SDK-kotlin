@@ -72,6 +72,7 @@ import com.squareup.moshi.JsonClass
  * @param bCustomerBlackcopycarbon Whether if it's an blackcopycarbon
  * @param bCustomerUnsubscribeinfo Whether if it's an unsubscribeinfo
  * @param tCustomerComment The comment of the Customer
+ * @param sCustomerNote A note for the Customer
  * @param efkiUserID The unique ID of the User
  * @param efksCustomerCode The code of the Customer
  * @param IMPORTID 
@@ -269,6 +270,10 @@ data class CustomerResponse (
     /* The comment of the Customer */
     @Json(name = "tCustomerComment")
     val tCustomerComment: kotlin.String,
+
+    /* A note for the Customer */
+    @Json(name = "sCustomerNote")
+    val sCustomerNote: kotlin.String? = null,
 
     /* The unique ID of the User */
     @Json(name = "efkiUserID")

@@ -85,7 +85,7 @@ class ObjectEzdoctemplatetypeApi(basePath: kotlin.String = defaultBasePath, clie
      * Retrieve Ezdoctemplatetypes and IDs
      * Get the list of Ezdoctemplatetype to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezdoctemplatetypes to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return EzdoctemplatetypeGetAutocompleteV2Response
@@ -120,7 +120,7 @@ class ObjectEzdoctemplatetypeApi(basePath: kotlin.String = defaultBasePath, clie
      * Retrieve Ezdoctemplatetypes and IDs
      * Get the list of Ezdoctemplatetype to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezdoctemplatetypes to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return ApiResponse<EzdoctemplatetypeGetAutocompleteV2Response?>
@@ -141,7 +141,7 @@ class ObjectEzdoctemplatetypeApi(basePath: kotlin.String = defaultBasePath, clie
      * To obtain the request config of the operation ezdoctemplatetypeGetAutocompleteV2
      *
      * @param sSelector The type of Ezdoctemplatetypes to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return RequestConfig

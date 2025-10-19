@@ -31,6 +31,7 @@
 | **aFkiUsergroupIDRestricted** | **kotlin.collections.List&lt;kotlin.Int&gt;** |  |  [optional] |
 | **aFkiUsergroupIDTemplate** | **kotlin.collections.List&lt;kotlin.Int&gt;** |  |  [optional] |
 | **eEzsignfoldertypeDocumentdependency** | [**FieldEEzsignfoldertypeDocumentdependency**](FieldEEzsignfoldertypeDocumentdependency.md) |  |  [optional] |
+| **eEzsignfoldertypeDocumentmerge** | [**FieldEEzsignfoldertypeDocumentmerge**](FieldEEzsignfoldertypeDocumentmerge.md) |  |  [optional] |
 | **sEmailAddressSigned** | **kotlin.String** | The email address. |  [optional] |
 | **sEmailAddressSummary** | **kotlin.String** | The email address. |  [optional] |
 | **eEzsignfoldertypePdfarequirement** | [**FieldEEzsignfoldertypePdfarequirement**](FieldEEzsignfoldertypePdfarequirement.md) |  |  [optional] |
@@ -52,13 +53,18 @@
 | **bEzsignfoldertypeSendsignedtoezsignsigner** | **kotlin.Boolean** | Whether we send an email to Ezsignsigner  when document is completed |  [optional] |
 | **bEzsignfoldertypeSendsignedtouser** | **kotlin.Boolean** | Whether we send an email to User who signed when document is completed |  [optional] |
 | **bEzsignfoldertypeSendattachmentezsignsigner** | **kotlin.Boolean** | Whether we send the Ezsigndocument in the email to Ezsignsigner |  [optional] |
+| **bEzsignfoldertypeSendsignatureattachmentezsignsigner** | **kotlin.Boolean** | Whether we send the attachments contained in the Ezsignsignatures in the email to Ezsignsigner |  [optional] |
+| **bEzsignfoldertypeSendsignatureattachment** | **kotlin.Boolean** | Whether we send the attachments contained in the Ezsignsignatures in the email to external recipient |  [optional] |
 | **bEzsignfoldertypeSendproofezsignsigner** | **kotlin.Boolean** | Whether we send the proof in the email to Ezsignsigner |  [optional] |
 | **bEzsignfoldertypeSendattachmentuser** | **kotlin.Boolean** | Whether we send the Ezsigndocument in the email to User |  [optional] |
+| **bEzsignfoldertypeSendsignatureattachmentuser** | **kotlin.Boolean** | Whether we send the attachments contained in the Ezsignsignatures in the email to User |  [optional] |
 | **bEzsignfoldertypeSendproofuser** | **kotlin.Boolean** | Whether we send the proof in the email to User |  [optional] |
 | **bEzsignfoldertypeSendproofemail** | **kotlin.Boolean** | Whether we send the proof in the email to external recipient |  [optional] |
 | **bEzsignfoldertypeAllowdownloadattachmentezsignsigner** | **kotlin.Boolean** | Whether we allow the Ezsigndocument to be downloaded by an Ezsignsigner |  [optional] |
+| **bEzsignfoldertypeAllowdownloadsignatureattachmentezsignsigner** | **kotlin.Boolean** | Whether we allow the attachments in the Ezsignsignatures to be downloaded by an Ezsignsigner |  [optional] |
 | **bEzsignfoldertypeAllowdownloadproofezsignsigner** | **kotlin.Boolean** | Whether we allow the proof to be downloaded by an Ezsignsigner |  [optional] |
 | **bEzsignfoldertypeSendproofreceivealldocument** | **kotlin.Boolean** | Whether we send the proof to user and Ezsignsigner who receive all documents. |  [optional] |
+| **bEzsignfoldertypeSendsignatureattachmentreceivealldocument** | **kotlin.Boolean** | Whether we send the attachments contained in the Ezsignsignatures to user and Ezsignsigner who receive all documents. |  [optional] |
 | **bEzsignfoldertypeSendsignedtofullgroup** | **kotlin.Boolean** | Whether we send the signed Ezsigndocument to the Usergroup that has acces to all Ezsignfolders |  [optional] |
 | **bEzsignfoldertypeSendsignedtolimitedgroup** | **kotlin.Boolean** | THIS FIELD WILL BE DELETED. Whether we send the signed Ezsigndocument to the Usergroup that has acces to only their own Ezsignfolders |  [optional] |
 | **bEzsignfoldertypeSendsummarytofullgroup** | **kotlin.Boolean** | Whether we send the summary to the Usergroup that has acces to all Ezsignfolders |  [optional] |

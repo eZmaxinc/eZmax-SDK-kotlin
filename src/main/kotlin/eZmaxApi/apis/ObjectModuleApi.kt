@@ -85,7 +85,7 @@ class ObjectModuleApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
      * Retrieve Modules and IDs
      * Get the list of Module to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Modules to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return ModuleGetAutocompleteV2Response
@@ -120,7 +120,7 @@ class ObjectModuleApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
      * Retrieve Modules and IDs
      * Get the list of Module to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Modules to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return ApiResponse<ModuleGetAutocompleteV2Response?>
@@ -141,7 +141,7 @@ class ObjectModuleApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
      * To obtain the request config of the operation moduleGetAutocompleteV2
      *
      * @param sSelector The type of Modules to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return RequestConfig

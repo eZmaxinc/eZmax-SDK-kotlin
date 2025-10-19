@@ -20,10 +20,14 @@ import okhttp3.Call
 import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.HeaderAcceptLanguage
 import eZmaxApi.models.InscriptiontempGetCommunicationCountV1Response
 import eZmaxApi.models.InscriptiontempGetCommunicationListV1Response
 import eZmaxApi.models.InscriptiontempGetCommunicationrecipientsV1Response
 import eZmaxApi.models.InscriptiontempGetCommunicationsendersV1Response
+import eZmaxApi.models.InscriptiontempGetListV1Response
+import eZmaxApi.models.InscriptiontempImportIntoEDMV1Request
+import eZmaxApi.models.InscriptiontempImportIntoEDMV1Response
 
 import com.squareup.moshi.Json
 
@@ -334,6 +338,212 @@ class ObjectInscriptiontempApi(basePath: kotlin.String = defaultBasePath, client
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationsenders".replace("{"+"pkiInscriptiontempID"+"}", encodeURIComponent(pkiInscriptiontempID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * enum for parameter eOrderBy
+     */
+     enum class EOrderByInscriptiontempGetListV1(val value: kotlin.String) {
+         @Json(name = "pkiInscriptiontempID_ASC") pkiInscriptiontempID_ASC("pkiInscriptiontempID_ASC"),
+         @Json(name = "pkiInscriptiontempID_DESC") pkiInscriptiontempID_DESC("pkiInscriptiontempID_DESC"),
+         @Json(name = "eInscriptiontempStatus_ASC") eInscriptiontempStatus_ASC("eInscriptiontempStatus_ASC"),
+         @Json(name = "eInscriptiontempStatus_DESC") eInscriptiontempStatus_DESC("eInscriptiontempStatus_DESC"),
+         @Json(name = "sInscriptiontempMLS_ASC") sInscriptiontempMLS_ASC("sInscriptiontempMLS_ASC"),
+         @Json(name = "sInscriptiontempMLS_DESC") sInscriptiontempMLS_DESC("sInscriptiontempMLS_DESC"),
+         @Json(name = "sInscriptiontempDescription_ASC") sInscriptiontempDescription_ASC("sInscriptiontempDescription_ASC"),
+         @Json(name = "sInscriptiontempDescription_DESC") sInscriptiontempDescription_DESC("sInscriptiontempDescription_DESC"),
+         @Json(name = "bInscriptiontempIsactive_ASC") bInscriptiontempIsactive_ASC("bInscriptiontempIsactive_ASC"),
+         @Json(name = "bInscriptiontempIsactive_DESC") bInscriptiontempIsactive_DESC("bInscriptiontempIsactive_DESC"),
+         @Json(name = "dtCreatedDate_ASC") dtCreatedDate_ASC("dtCreatedDate_ASC"),
+         @Json(name = "dtCreatedDate_DESC") dtCreatedDate_DESC("dtCreatedDate_DESC"),
+         @Json(name = "dtModifiedDate_ASC") dtModifiedDate_ASC("dtModifiedDate_ASC"),
+         @Json(name = "dtModifiedDate_DESC") dtModifiedDate_DESC("dtModifiedDate_DESC");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
+     }
+
+    /**
+     * GET /1/object/inscriptiontemp/getList
+     * Retrieve Inscriptiontemp list
+     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eInscriptiontempStatus | Imported&lt;br&gt;Processed&lt;br&gt;Modified |
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return InscriptiontempGetListV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun inscriptiontempGetListV1(eOrderBy: EOrderByInscriptiontempGetListV1? = null, iRowMax: kotlin.Int? = null, iRowOffset: kotlin.Int? = 0, acceptLanguage: HeaderAcceptLanguage? = null, sFilter: kotlin.String? = null) : InscriptiontempGetListV1Response {
+        val localVarResponse = inscriptiontempGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as InscriptiontempGetListV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/inscriptiontemp/getList
+     * Retrieve Inscriptiontemp list
+     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eInscriptiontempStatus | Imported&lt;br&gt;Processed&lt;br&gt;Modified |
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return ApiResponse<InscriptiontempGetListV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun inscriptiontempGetListV1WithHttpInfo(eOrderBy: EOrderByInscriptiontempGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : ApiResponse<InscriptiontempGetListV1Response?> {
+        val localVariableConfig = inscriptiontempGetListV1RequestConfig(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
+
+        return request<Unit, InscriptiontempGetListV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation inscriptiontempGetListV1
+     *
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return RequestConfig
+     */
+    fun inscriptiontempGetListV1RequestConfig(eOrderBy: EOrderByInscriptiontempGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (eOrderBy != null) {
+                    put("eOrderBy", listOf(eOrderBy.value))
+                }
+                if (iRowMax != null) {
+                    put("iRowMax", listOf(iRowMax.toString()))
+                }
+                if (iRowOffset != null) {
+                    put("iRowOffset", listOf(iRowOffset.toString()))
+                }
+                if (sFilter != null) {
+                    put("sFilter", listOf(sFilter.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/inscriptiontemp/getList",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * POST /1/object/inscriptiontemp/{pkiInscriptiontempID}/importIntoEDM
+     * Import attachments into the Inscriptiontemp
+     * 
+     * @param pkiInscriptiontempID 
+     * @param inscriptiontempImportIntoEDMV1Request 
+     * @return InscriptiontempImportIntoEDMV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun inscriptiontempImportIntoEDMV1(pkiInscriptiontempID: kotlin.Int, inscriptiontempImportIntoEDMV1Request: InscriptiontempImportIntoEDMV1Request) : InscriptiontempImportIntoEDMV1Response {
+        val localVarResponse = inscriptiontempImportIntoEDMV1WithHttpInfo(pkiInscriptiontempID = pkiInscriptiontempID, inscriptiontempImportIntoEDMV1Request = inscriptiontempImportIntoEDMV1Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as InscriptiontempImportIntoEDMV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /1/object/inscriptiontemp/{pkiInscriptiontempID}/importIntoEDM
+     * Import attachments into the Inscriptiontemp
+     * 
+     * @param pkiInscriptiontempID 
+     * @param inscriptiontempImportIntoEDMV1Request 
+     * @return ApiResponse<InscriptiontempImportIntoEDMV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun inscriptiontempImportIntoEDMV1WithHttpInfo(pkiInscriptiontempID: kotlin.Int, inscriptiontempImportIntoEDMV1Request: InscriptiontempImportIntoEDMV1Request) : ApiResponse<InscriptiontempImportIntoEDMV1Response?> {
+        val localVariableConfig = inscriptiontempImportIntoEDMV1RequestConfig(pkiInscriptiontempID = pkiInscriptiontempID, inscriptiontempImportIntoEDMV1Request = inscriptiontempImportIntoEDMV1Request)
+
+        return request<InscriptiontempImportIntoEDMV1Request, InscriptiontempImportIntoEDMV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation inscriptiontempImportIntoEDMV1
+     *
+     * @param pkiInscriptiontempID 
+     * @param inscriptiontempImportIntoEDMV1Request 
+     * @return RequestConfig
+     */
+    fun inscriptiontempImportIntoEDMV1RequestConfig(pkiInscriptiontempID: kotlin.Int, inscriptiontempImportIntoEDMV1Request: InscriptiontempImportIntoEDMV1Request) : RequestConfig<InscriptiontempImportIntoEDMV1Request> {
+        val localVariableBody = inscriptiontempImportIntoEDMV1Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/inscriptiontemp/{pkiInscriptiontempID}/importIntoEDM".replace("{"+"pkiInscriptiontempID"+"}", encodeURIComponent(pkiInscriptiontempID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

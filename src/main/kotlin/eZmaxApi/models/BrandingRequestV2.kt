@@ -30,6 +30,7 @@ import com.squareup.moshi.JsonClass
  * @param iBrandingColor The primary color. This is a RGB color converted into integer
  * @param bBrandingIsactive Whether the Branding is active or not
  * @param pkiBrandingID The unique ID of the Branding
+ * @param fkiDomainID The unique ID of the Domain
  * @param eBrandingAlignlogo 
  * @param sBrandingBase64 The Base64 encoded binary content of the branding logo. This need to match image type selected in eBrandingLogo if you supply an image. If you select 'Default', the logo will be deleted and the default one will be used.
  * @param sBrandingName The name of the Branding  This value will only be set if you wish to overwrite the default name. If you want to keep the default name, leave this property empty
@@ -56,6 +57,10 @@ data class BrandingRequestV2 (
     /* The unique ID of the Branding */
     @Json(name = "pkiBrandingID")
     val pkiBrandingID: kotlin.Int? = null,
+
+    /* The unique ID of the Domain */
+    @Json(name = "fkiDomainID")
+    val fkiDomainID: kotlin.Int? = null,
 
     @Json(name = "eBrandingAlignlogo")
     val eBrandingAlignlogo: FieldEBrandingAlignlogo? = null,

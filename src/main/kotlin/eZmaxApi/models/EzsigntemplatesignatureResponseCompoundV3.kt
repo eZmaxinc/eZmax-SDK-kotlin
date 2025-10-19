@@ -18,6 +18,7 @@ package eZmaxApi.models
 import eZmaxApi.models.EnumTextvalidation
 import eZmaxApi.models.EzsigntemplateelementdependencyResponseCompound
 import eZmaxApi.models.EzsigntemplatesignaturecustomdateResponseCompoundV2
+import eZmaxApi.models.EzsigntemplatesignaturepaymentdetailResponseCompound
 import eZmaxApi.models.FieldEEzsigntemplatesignatureAttachmentnamesource
 import eZmaxApi.models.FieldEEzsigntemplatesignatureConsultationtrigger
 import eZmaxApi.models.FieldEEzsigntemplatesignatureDependencyrequirement
@@ -40,6 +41,7 @@ import com.squareup.moshi.JsonClass
  * @param iEzsigntemplatesignatureStep The step when the Ezsigntemplatesigner will be invited to sign
  * @param eEzsigntemplatesignatureType 
  * @param fkiEzsigntemplatesignerIDValidation The unique ID of the Ezsigntemplatesigner
+ * @param fkiPaymentgatewayID The unique ID of the Paymentgateway
  * @param bEzsigntemplatesignatureHandwritten Whether the Ezsigntemplatesignature must be handwritten or not when eEzsigntemplatesignatureType = Signature.
  * @param bEzsigntemplatesignatureReason Whether the Ezsigntemplatesignature must include a reason or not when eEzsigntemplatesignatureType = Signature.
  * @param eEzsigntemplatesignaturePositioning 
@@ -65,9 +67,12 @@ import com.squareup.moshi.JsonClass
  * @param iEzsigntemplatesignaturePositioningoffsetx The offset X  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**
  * @param iEzsigntemplatesignaturePositioningoffsety The offset Y  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**
  * @param eEzsigntemplatesignaturePositioningoccurence 
+ * @param sEzsigntemplatesignatureCreditcardamountdescription The description of the Creditcard signature
+ * @param dEzsigntemplatesignatureCreditcardamount The amount of the Creditcard signature
  * @param bEzsigntemplatesignatureCustomdate Whether the Ezsigntemplatesignature has a custom date format or not. (Only possible when eEzsigntemplatesignatureType is **Name** or **Handwritten**)
  * @param aObjEzsigntemplatesignaturecustomdate An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsigntemplatesignatureCustomdate is true.  Use an empty array if you don't want to have a date at all.
  * @param aObjEzsigntemplateelementdependency 
+ * @param aObjEzsigntemplatesignaturepaymentdetail 
  */
 
 
@@ -99,6 +104,10 @@ data class EzsigntemplatesignatureResponseCompoundV3 (
     /* The unique ID of the Ezsigntemplatesigner */
     @Json(name = "fkiEzsigntemplatesignerIDValidation")
     val fkiEzsigntemplatesignerIDValidation: kotlin.Int? = null,
+
+    /* The unique ID of the Paymentgateway */
+    @Json(name = "fkiPaymentgatewayID")
+    val fkiPaymentgatewayID: kotlin.Int? = null,
 
     /* Whether the Ezsigntemplatesignature must be handwritten or not when eEzsigntemplatesignatureType = Signature. */
     @Json(name = "bEzsigntemplatesignatureHandwritten")
@@ -192,6 +201,14 @@ data class EzsigntemplatesignatureResponseCompoundV3 (
     @Json(name = "eEzsigntemplatesignaturePositioningoccurence")
     val eEzsigntemplatesignaturePositioningoccurence: FieldEEzsigntemplatesignaturePositioningoccurence? = null,
 
+    /* The description of the Creditcard signature */
+    @Json(name = "sEzsigntemplatesignatureCreditcardamountdescription")
+    val sEzsigntemplatesignatureCreditcardamountdescription: kotlin.String? = null,
+
+    /* The amount of the Creditcard signature */
+    @Json(name = "dEzsigntemplatesignatureCreditcardamount")
+    val dEzsigntemplatesignatureCreditcardamount: kotlin.String? = null,
+
     /* Whether the Ezsigntemplatesignature has a custom date format or not. (Only possible when eEzsigntemplatesignatureType is **Name** or **Handwritten**) */
     @Json(name = "bEzsigntemplatesignatureCustomdate")
     val bEzsigntemplatesignatureCustomdate: kotlin.Boolean? = null,
@@ -201,7 +218,10 @@ data class EzsigntemplatesignatureResponseCompoundV3 (
     val aObjEzsigntemplatesignaturecustomdate: kotlin.collections.List<EzsigntemplatesignaturecustomdateResponseCompoundV2>? = null,
 
     @Json(name = "a_objEzsigntemplateelementdependency")
-    val aObjEzsigntemplateelementdependency: kotlin.collections.List<EzsigntemplateelementdependencyResponseCompound>? = null
+    val aObjEzsigntemplateelementdependency: kotlin.collections.List<EzsigntemplateelementdependencyResponseCompound>? = null,
+
+    @Json(name = "a_objEzsigntemplatesignaturepaymentdetail")
+    val aObjEzsigntemplatesignaturepaymentdetail: kotlin.collections.List<EzsigntemplatesignaturepaymentdetailResponseCompound>? = null
 
 ) {
 

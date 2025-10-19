@@ -51,6 +51,7 @@ class ObjectGlaccountcontainerApi(basePath: kotlin.String = defaultBasePath, cli
      */
      enum class SSelectorGlaccountcontainerGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "All") All("All"),
+         @Json(name = "AllWithoutSubsidiary") AllWithoutSubsidiary("AllWithoutSubsidiary"),
          @Json(name = "Supply") Supply("Supply");
 
         /**
@@ -86,7 +87,7 @@ class ObjectGlaccountcontainerApi(basePath: kotlin.String = defaultBasePath, cli
      * Retrieve Glaccountcontainers and IDs
      * Get the list of Glaccountcontainer to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Glaccountcontainers to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return GlaccountcontainerGetAutocompleteV2Response
@@ -121,7 +122,7 @@ class ObjectGlaccountcontainerApi(basePath: kotlin.String = defaultBasePath, cli
      * Retrieve Glaccountcontainers and IDs
      * Get the list of Glaccountcontainer to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Glaccountcontainers to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return ApiResponse<GlaccountcontainerGetAutocompleteV2Response?>
@@ -142,7 +143,7 @@ class ObjectGlaccountcontainerApi(basePath: kotlin.String = defaultBasePath, cli
      * To obtain the request config of the operation glaccountcontainerGetAutocompleteV2
      *
      * @param sSelector The type of Glaccountcontainers to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return RequestConfig

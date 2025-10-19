@@ -24,6 +24,8 @@ import eZmaxApi.models.ElectronicfundstransferGetCommunicationCountV1Response
 import eZmaxApi.models.ElectronicfundstransferGetCommunicationListV1Response
 import eZmaxApi.models.ElectronicfundstransferGetCommunicationrecipientsV1Response
 import eZmaxApi.models.ElectronicfundstransferGetCommunicationsendersV1Response
+import eZmaxApi.models.ElectronicfundstransferImportIntoEDMV1Request
+import eZmaxApi.models.ElectronicfundstransferImportIntoEDMV1Response
 
 import com.squareup.moshi.Json
 
@@ -334,6 +336,83 @@ class ObjectElectronicfundstransferApi(basePath: kotlin.String = defaultBasePath
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationsenders".replace("{"+"pkiElectronicfundstransferID"+"}", encodeURIComponent(pkiElectronicfundstransferID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * POST /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/importIntoEDM
+     * Import attachments into the Electronicfundstransfer
+     * 
+     * @param pkiElectronicfundstransferID 
+     * @param electronicfundstransferImportIntoEDMV1Request 
+     * @return ElectronicfundstransferImportIntoEDMV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun electronicfundstransferImportIntoEDMV1(pkiElectronicfundstransferID: kotlin.Int, electronicfundstransferImportIntoEDMV1Request: ElectronicfundstransferImportIntoEDMV1Request) : ElectronicfundstransferImportIntoEDMV1Response {
+        val localVarResponse = electronicfundstransferImportIntoEDMV1WithHttpInfo(pkiElectronicfundstransferID = pkiElectronicfundstransferID, electronicfundstransferImportIntoEDMV1Request = electronicfundstransferImportIntoEDMV1Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ElectronicfundstransferImportIntoEDMV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/importIntoEDM
+     * Import attachments into the Electronicfundstransfer
+     * 
+     * @param pkiElectronicfundstransferID 
+     * @param electronicfundstransferImportIntoEDMV1Request 
+     * @return ApiResponse<ElectronicfundstransferImportIntoEDMV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun electronicfundstransferImportIntoEDMV1WithHttpInfo(pkiElectronicfundstransferID: kotlin.Int, electronicfundstransferImportIntoEDMV1Request: ElectronicfundstransferImportIntoEDMV1Request) : ApiResponse<ElectronicfundstransferImportIntoEDMV1Response?> {
+        val localVariableConfig = electronicfundstransferImportIntoEDMV1RequestConfig(pkiElectronicfundstransferID = pkiElectronicfundstransferID, electronicfundstransferImportIntoEDMV1Request = electronicfundstransferImportIntoEDMV1Request)
+
+        return request<ElectronicfundstransferImportIntoEDMV1Request, ElectronicfundstransferImportIntoEDMV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation electronicfundstransferImportIntoEDMV1
+     *
+     * @param pkiElectronicfundstransferID 
+     * @param electronicfundstransferImportIntoEDMV1Request 
+     * @return RequestConfig
+     */
+    fun electronicfundstransferImportIntoEDMV1RequestConfig(pkiElectronicfundstransferID: kotlin.Int, electronicfundstransferImportIntoEDMV1Request: ElectronicfundstransferImportIntoEDMV1Request) : RequestConfig<ElectronicfundstransferImportIntoEDMV1Request> {
+        val localVariableBody = electronicfundstransferImportIntoEDMV1Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/importIntoEDM".replace("{"+"pkiElectronicfundstransferID"+"}", encodeURIComponent(pkiElectronicfundstransferID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

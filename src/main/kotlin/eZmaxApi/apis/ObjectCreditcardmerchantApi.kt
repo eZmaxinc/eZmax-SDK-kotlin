@@ -88,7 +88,7 @@ class ObjectCreditcardmerchantApi(basePath: kotlin.String = defaultBasePath, cli
      * Retrieve Creditcardmerchants and IDs
      * Get the list of Creditcardmerchant to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Creditcardmerchants to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return CreditcardmerchantGetAutocompleteV2Response
@@ -123,7 +123,7 @@ class ObjectCreditcardmerchantApi(basePath: kotlin.String = defaultBasePath, cli
      * Retrieve Creditcardmerchants and IDs
      * Get the list of Creditcardmerchant to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Creditcardmerchants to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return ApiResponse<CreditcardmerchantGetAutocompleteV2Response?>
@@ -144,7 +144,7 @@ class ObjectCreditcardmerchantApi(basePath: kotlin.String = defaultBasePath, cli
      * To obtain the request config of the operation creditcardmerchantGetAutocompleteV2
      *
      * @param sSelector The type of Creditcardmerchants to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return RequestConfig

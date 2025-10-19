@@ -86,7 +86,7 @@ class ObjectTaxassignmentApi(basePath: kotlin.String = defaultBasePath, client: 
      * Retrieve Taxassignments and IDs
      * Get the list of Taxassignment to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Taxassignments to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return TaxassignmentGetAutocompleteV2Response
@@ -121,7 +121,7 @@ class ObjectTaxassignmentApi(basePath: kotlin.String = defaultBasePath, client: 
      * Retrieve Taxassignments and IDs
      * Get the list of Taxassignment to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Taxassignments to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return ApiResponse<TaxassignmentGetAutocompleteV2Response?>
@@ -142,7 +142,7 @@ class ObjectTaxassignmentApi(basePath: kotlin.String = defaultBasePath, client: 
      * To obtain the request config of the operation taxassignmentGetAutocompleteV2
      *
      * @param sSelector The type of Taxassignments to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return RequestConfig

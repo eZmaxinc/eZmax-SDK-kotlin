@@ -40,9 +40,9 @@ try {
 ```
 
 ### Parameters
-| **sSelector** | **kotlin.String**| The type of Userlogintypes to return | [enum: All, Ezsignfoldertype, Ezsigntemplatepublic] |
+| **sSelector** | **kotlin.String**| The type of Userlogintypes to return | [enum: All, Ezsignfoldertype, EzsignfoldertypeReassign, Ezsigntemplatepublic] |
 | **fkiEzsignfoldertypeID** | **kotlin.Int**|  | [optional] |
-| **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive] |
+| **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to EFilterActive.Active] [enum: All, Active, Inactive] |
 | **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional] |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |

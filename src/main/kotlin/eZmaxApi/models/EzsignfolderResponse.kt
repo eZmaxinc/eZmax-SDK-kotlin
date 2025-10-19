@@ -18,6 +18,7 @@ package eZmaxApi.models
 import eZmaxApi.models.CommonAudit
 import eZmaxApi.models.CustomEzsignfoldertypeResponse
 import eZmaxApi.models.FieldEEzsignfolderCompletion
+import eZmaxApi.models.FieldEEzsignfolderMessageorder
 import eZmaxApi.models.FieldEEzsignfolderSendreminderfrequency
 import eZmaxApi.models.FieldEEzsignfolderStep
 
@@ -49,6 +50,7 @@ import com.squareup.moshi.JsonClass
  * @param dtEzsignfolderScheduledarchive The scheduled date and time at which the Ezsignfolder should be archived.
  * @param dtEzsignfolderScheduleddispose The scheduled date at which the Ezsignfolder should be Disposed.
  * @param eEzsignfolderStep 
+ * @param eEzsignfolderMessageorder 
  * @param dtEzsignfolderClose The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely.
  * @param tEzsignfolderMessage A custom text message that will be added to the email sent.
  * @param objAudit 
@@ -142,6 +144,9 @@ data class EzsignfolderResponse (
 
     @Json(name = "eEzsignfolderStep")
     val eEzsignfolderStep: FieldEEzsignfolderStep? = null,
+
+    @Json(name = "eEzsignfolderMessageorder")
+    val eEzsignfolderMessageorder: FieldEEzsignfolderMessageorder? = FieldEEzsignfolderMessageorder.GlobalFirst,
 
     /* The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely. */
     @Json(name = "dtEzsignfolderClose")

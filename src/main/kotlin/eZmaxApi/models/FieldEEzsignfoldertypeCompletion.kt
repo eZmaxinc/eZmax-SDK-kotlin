@@ -20,9 +20,9 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * Indicates if the Ezsigndocument is completed when all signatures of this Ezsigndocument were applied or when all signatures of all Ezsigndocument  were applied
+ * Indicates if the Ezsigndocument is completed when all signatures of this Ezsigndocument were applied or when all signatures of all Ezsigndocument were applied. When eEzsignfoldertypeCompletion equals PerEzsignfolderStepSync, the document steps are synchronized. All documents move to a new step when all forms or signatures from the previous step have been completed for all documents.
  *
- * Values: PerEzsigndocument,PerEzsignfolder
+ * Values: PerEzsigndocument,PerEzsignfolder,PerEzsignfolderStepSync
  */
 
 @JsonClass(generateAdapter = false)
@@ -32,7 +32,10 @@ enum class FieldEEzsignfoldertypeCompletion(val value: kotlin.String) {
     PerEzsigndocument("PerEzsigndocument"),
 
     @Json(name = "PerEzsignfolder")
-    PerEzsignfolder("PerEzsignfolder");
+    PerEzsignfolder("PerEzsignfolder"),
+
+    @Json(name = "PerEzsignfolderStepSync")
+    PerEzsignfolderStepSync("PerEzsignfolderStepSync");
 
     /**
      * Override [toString()] to avoid using the enum variable name as the value, and instead use

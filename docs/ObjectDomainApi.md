@@ -6,6 +6,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | ------------- | ------------- | ------------- |
 | [**domainCreateObjectV1**](ObjectDomainApi.md#domainCreateObjectV1) | **POST** /1/object/domain | Create a new Domain |
 | [**domainDeleteObjectV1**](ObjectDomainApi.md#domainDeleteObjectV1) | **DELETE** /1/object/domain/{pkiDomainID} | Delete an existing Domain |
+| [**domainGetAutocompleteV2**](ObjectDomainApi.md#domainGetAutocompleteV2) | **GET** /2/object/domain/getAutocomplete/{sSelector} | Retrieve Domain and IDs |
 | [**domainGetListV1**](ObjectDomainApi.md#domainGetListV1) | **GET** /1/object/domain/getList | Retrieve Domain list |
 | [**domainGetObjectV2**](ObjectDomainApi.md#domainGetObjectV2) | **GET** /2/object/domain/{pkiDomainID} | Retrieve an existing Domain |
 
@@ -95,6 +96,61 @@ try {
 ### Return type
 
 [**DomainDeleteObjectV1Response**](DomainDeleteObjectV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="domainGetAutocompleteV2"></a>
+# **domainGetAutocompleteV2**
+> DomainGetAutocompleteV2Response domainGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+
+Retrieve Domain and IDs
+
+Get the list of Domains to be used in a dropdown or autocomplete control.
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectDomainApi()
+val sSelector : kotlin.String = sSelector_example // kotlin.String | The type of Domain to return
+val eFilterActive : kotlin.String = eFilterActive_example // kotlin.String | Specify which results we want to display.
+val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter the returned results
+val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
+try {
+    val result : DomainGetAutocompleteV2Response = apiInstance.domainGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectDomainApi#domainGetAutocompleteV2")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectDomainApi#domainGetAutocompleteV2")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| **sSelector** | **kotlin.String**| The type of Domain to return | [enum: All, ValidEmail] |
+| **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to EFilterActive.Active] [enum: All, Active, Inactive] |
+| **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional] |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
+
+### Return type
+
+[**DomainGetAutocompleteV2Response**](DomainGetAutocompleteV2Response.md)
 
 ### Authorization
 

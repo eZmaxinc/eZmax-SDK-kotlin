@@ -85,7 +85,7 @@ class ObjectEmailtypeApi(basePath: kotlin.String = defaultBasePath, client: Call
      * Retrieve Emailtypes and IDs
      * Get the list of Emailtype to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Emailtypes to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return EmailtypeGetAutocompleteV2Response
@@ -120,7 +120,7 @@ class ObjectEmailtypeApi(basePath: kotlin.String = defaultBasePath, client: Call
      * Retrieve Emailtypes and IDs
      * Get the list of Emailtype to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Emailtypes to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return ApiResponse<EmailtypeGetAutocompleteV2Response?>
@@ -141,7 +141,7 @@ class ObjectEmailtypeApi(basePath: kotlin.String = defaultBasePath, client: Call
      * To obtain the request config of the operation emailtypeGetAutocompleteV2
      *
      * @param sSelector The type of Emailtypes to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return RequestConfig

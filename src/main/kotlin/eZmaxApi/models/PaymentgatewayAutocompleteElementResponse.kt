@@ -24,7 +24,7 @@ import com.squareup.moshi.JsonClass
  *
  * @param pkiPaymentgatewayID The unique ID of the Paymentgateway
  * @param sPaymentgatewayDescriptionX The description of the Paymentgateway in the language of the requester
- * @param bPaymentgatewayIsactive Whether the Currency is active or not
+ * @param bPaymentgatewayIsactive Whether the Paymentgateway is active or not
  */
 
 
@@ -38,7 +38,7 @@ data class PaymentgatewayAutocompleteElementResponse (
     @Json(name = "sPaymentgatewayDescriptionX")
     val sPaymentgatewayDescriptionX: kotlin.String,
 
-    /* Whether the Currency is active or not */
+    /* Whether the Paymentgateway is active or not */
     @Json(name = "bPaymentgatewayIsactive")
     val bPaymentgatewayIsactive: kotlin.Boolean
 

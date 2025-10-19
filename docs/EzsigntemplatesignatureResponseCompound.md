@@ -11,6 +11,7 @@
 | **iEzsigntemplatesignatureStep** | **kotlin.Int** | The step when the Ezsigntemplatesigner will be invited to sign |  |
 | **eEzsigntemplatesignatureType** | [**FieldEEzsigntemplatesignatureType**](FieldEEzsigntemplatesignatureType.md) |  |  |
 | **fkiEzsigntemplatesignerIDValidation** | **kotlin.Int** | The unique ID of the Ezsigntemplatesigner |  [optional] |
+| **fkiPaymentgatewayID** | **kotlin.Int** | The unique ID of the Paymentgateway |  [optional] |
 | **bEzsigntemplatesignatureHandwritten** | **kotlin.Boolean** | Whether the Ezsigntemplatesignature must be handwritten or not when eEzsigntemplatesignatureType &#x3D; Signature. |  [optional] |
 | **bEzsigntemplatesignatureReason** | **kotlin.Boolean** | Whether the Ezsigntemplatesignature must include a reason or not when eEzsigntemplatesignatureType &#x3D; Signature. |  [optional] |
 | **eEzsigntemplatesignaturePositioning** | [**FieldEEzsigntemplatesignaturePositioning**](FieldEEzsigntemplatesignaturePositioning.md) |  |  [optional] |
@@ -36,9 +37,12 @@
 | **iEzsigntemplatesignaturePositioningoffsetx** | **kotlin.Int** | The offset X  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates** |  [optional] |
 | **iEzsigntemplatesignaturePositioningoffsety** | **kotlin.Int** | The offset Y  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates** |  [optional] |
 | **eEzsigntemplatesignaturePositioningoccurence** | [**FieldEEzsigntemplatesignaturePositioningoccurence**](FieldEEzsigntemplatesignaturePositioningoccurence.md) |  |  [optional] |
+| **sEzsigntemplatesignatureCreditcardamountdescription** | **kotlin.String** | The description of the Creditcard signature |  [optional] |
+| **dEzsigntemplatesignatureCreditcardamount** | **kotlin.String** | The amount of the Creditcard signature |  [optional] |
 | **bEzsigntemplatesignatureCustomdate** | **kotlin.Boolean** | Whether the Ezsigntemplatesignature has a custom date format or not. (Only possible when eEzsigntemplatesignatureType is **Name** or **Handwritten**) |  [optional] |
 | **aObjEzsigntemplatesignaturecustomdate** | [**kotlin.collections.List&lt;EzsigntemplatesignaturecustomdateResponseCompound&gt;**](EzsigntemplatesignaturecustomdateResponseCompound.md) | An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsigntemplatesignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all. |  [optional] |
 | **aObjEzsigntemplateelementdependency** | [**kotlin.collections.List&lt;EzsigntemplateelementdependencyResponseCompound&gt;**](EzsigntemplateelementdependencyResponseCompound.md) |  |  [optional] |
+| **aObjEzsigntemplatesignaturepaymentdetail** | [**kotlin.collections.List&lt;EzsigntemplatesignaturepaymentdetailResponseCompound&gt;**](EzsigntemplatesignaturepaymentdetailResponseCompound.md) |  |  [optional] |
 
 
 

@@ -244,7 +244,7 @@ class ObjectEzsignsigningreasonApi(basePath: kotlin.String = defaultBasePath, cl
      * Retrieve Ezsignsigningreasons and IDs
      * Get the list of Ezsignsigningreason to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezsignsigningreasons to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return EzsignsigningreasonGetAutocompleteV2Response
@@ -279,7 +279,7 @@ class ObjectEzsignsigningreasonApi(basePath: kotlin.String = defaultBasePath, cl
      * Retrieve Ezsignsigningreasons and IDs
      * Get the list of Ezsignsigningreason to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezsignsigningreasons to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return ApiResponse<EzsignsigningreasonGetAutocompleteV2Response?>
@@ -300,7 +300,7 @@ class ObjectEzsignsigningreasonApi(basePath: kotlin.String = defaultBasePath, cl
      * To obtain the request config of the operation ezsignsigningreasonGetAutocompleteV2
      *
      * @param sSelector The type of Ezsignsigningreasons to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return RequestConfig

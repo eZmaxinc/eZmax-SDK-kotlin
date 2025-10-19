@@ -88,7 +88,7 @@ class ObjectFontApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
      * Retrieve Fonts and IDs
      * Get the list of Font to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Fonts to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return FontGetAutocompleteV2Response
@@ -123,7 +123,7 @@ class ObjectFontApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
      * Retrieve Fonts and IDs
      * Get the list of Font to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Fonts to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return ApiResponse<FontGetAutocompleteV2Response?>
@@ -144,7 +144,7 @@ class ObjectFontApi(basePath: kotlin.String = defaultBasePath, client: Call.Fact
      * To obtain the request config of the operation fontGetAutocompleteV2
      *
      * @param sSelector The type of Fonts to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return RequestConfig

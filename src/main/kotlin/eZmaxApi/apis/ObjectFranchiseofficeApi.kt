@@ -85,7 +85,7 @@ class ObjectFranchiseofficeApi(basePath: kotlin.String = defaultBasePath, client
      * Retrieve Franchiseoffices and IDs
      * Get the list of Franchiseoffice to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Franchiseoffices to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return FranchiseofficeGetAutocompleteV2Response
@@ -120,7 +120,7 @@ class ObjectFranchiseofficeApi(basePath: kotlin.String = defaultBasePath, client
      * Retrieve Franchiseoffices and IDs
      * Get the list of Franchiseoffice to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Franchiseoffices to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return ApiResponse<FranchiseofficeGetAutocompleteV2Response?>
@@ -141,7 +141,7 @@ class ObjectFranchiseofficeApi(basePath: kotlin.String = defaultBasePath, client
      * To obtain the request config of the operation franchiseofficeGetAutocompleteV2
      *
      * @param sSelector The type of Franchiseoffices to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return RequestConfig

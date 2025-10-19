@@ -23,16 +23,18 @@ import com.squareup.moshi.JsonClass
  * A Creditcardmerchant Object
  *
  * @param pkiCreditcardmerchantID The unique ID of the Creditcardmerchant
- * @param fkiBankaccountID The unique ID of the Bankaccount
+ * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
+ * @param sLanguageNameX The Name of the Language in the language of the requester
+ * @param fkiCurrencyID The unique ID of the Currency.
+ * @param sCurrencyDescriptionX The description of the Currency in the language of the requester
  * @param bCreditcardmerchantDenyvisa Whether if visa are denied
  * @param bCreditcardmerchantDenymastercard Whether if mastercard are denied
  * @param bCreditcardmerchantDenyamex Whether if amex are denied
  * @param bCreditcardmerchantIsactive Whether the creditcardmerchant is active or not
  * @param sCreditcardmerchantDescription The description of the Creditcardmerchant
  * @param sCreditcardmerchantStoreid The storeid of the Creditcardmerchant
+ * @param fkiBankaccountID The unique ID of the Bankaccount
  * @param sBankaccountBankname The name of the bank
- * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
- * @param sLanguageNameX The Name of the Language in the language of the requester
  */
 
 
@@ -42,9 +44,21 @@ data class CreditcardmerchantResponseCompound (
     @Json(name = "pkiCreditcardmerchantID")
     val pkiCreditcardmerchantID: kotlin.Int,
 
-    /* The unique ID of the Bankaccount */
-    @Json(name = "fkiBankaccountID")
-    val fkiBankaccountID: kotlin.Int,
+    /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| */
+    @Json(name = "fkiLanguageID")
+    val fkiLanguageID: kotlin.Int,
+
+    /* The Name of the Language in the language of the requester */
+    @Json(name = "sLanguageNameX")
+    val sLanguageNameX: kotlin.String,
+
+    /* The unique ID of the Currency. */
+    @Json(name = "fkiCurrencyID")
+    val fkiCurrencyID: kotlin.Int,
+
+    /* The description of the Currency in the language of the requester */
+    @Json(name = "sCurrencyDescriptionX")
+    val sCurrencyDescriptionX: kotlin.String,
 
     /* Whether if visa are denied */
     @Json(name = "bCreditcardmerchantDenyvisa")
@@ -70,17 +84,13 @@ data class CreditcardmerchantResponseCompound (
     @Json(name = "sCreditcardmerchantStoreid")
     val sCreditcardmerchantStoreid: kotlin.String,
 
+    /* The unique ID of the Bankaccount */
+    @Json(name = "fkiBankaccountID")
+    val fkiBankaccountID: kotlin.Int? = null,
+
     /* The name of the bank */
     @Json(name = "sBankaccountBankname")
-    val sBankaccountBankname: kotlin.String? = null,
-
-    /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| */
-    @Json(name = "fkiLanguageID")
-    val fkiLanguageID: kotlin.Int? = null,
-
-    /* The Name of the Language in the language of the requester */
-    @Json(name = "sLanguageNameX")
-    val sLanguageNameX: kotlin.String? = null
+    val sBankaccountBankname: kotlin.String? = null
 
 ) {
 

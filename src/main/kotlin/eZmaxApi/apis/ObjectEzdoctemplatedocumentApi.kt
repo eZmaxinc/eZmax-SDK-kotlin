@@ -338,9 +338,9 @@ class ObjectEzdoctemplatedocumentApi(basePath: kotlin.String = defaultBasePath, 
      * Retrieve Ezdoctemplatedocuments and IDs
      * Get the list of Ezdoctemplatedocument to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezdoctemplatedocuments to return
-     * @param eType The type of Ezdoctemplatedocument (default to CompanyEzsignfoldertype)
+     * @param eType The type of Ezdoctemplatedocument (default to EType.CompanyEzsignfoldertype)
      * @param fkiEzsignfoldertypeID Specify which fkiEzsignfoldertypeID we want to display. only used when eType &#x3D; Ezsignfoldertype (optional)
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return EzdoctemplatedocumentGetAutocompleteV2Response
@@ -375,9 +375,9 @@ class ObjectEzdoctemplatedocumentApi(basePath: kotlin.String = defaultBasePath, 
      * Retrieve Ezdoctemplatedocuments and IDs
      * Get the list of Ezdoctemplatedocument to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezdoctemplatedocuments to return
-     * @param eType The type of Ezdoctemplatedocument (default to CompanyEzsignfoldertype)
+     * @param eType The type of Ezdoctemplatedocument (default to EType.CompanyEzsignfoldertype)
      * @param fkiEzsignfoldertypeID Specify which fkiEzsignfoldertypeID we want to display. only used when eType &#x3D; Ezsignfoldertype (optional)
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return ApiResponse<EzdoctemplatedocumentGetAutocompleteV2Response?>
@@ -398,9 +398,9 @@ class ObjectEzdoctemplatedocumentApi(basePath: kotlin.String = defaultBasePath, 
      * To obtain the request config of the operation ezdoctemplatedocumentGetAutocompleteV2
      *
      * @param sSelector The type of Ezdoctemplatedocuments to return
-     * @param eType The type of Ezdoctemplatedocument (default to CompanyEzsignfoldertype)
+     * @param eType The type of Ezdoctemplatedocument (default to EType.CompanyEzsignfoldertype)
      * @param fkiEzsignfoldertypeID Specify which fkiEzsignfoldertypeID we want to display. only used when eType &#x3D; Ezsignfoldertype (optional)
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return RequestConfig

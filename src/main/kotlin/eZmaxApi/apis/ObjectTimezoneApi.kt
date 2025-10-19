@@ -86,7 +86,7 @@ class ObjectTimezoneApi(basePath: kotlin.String = defaultBasePath, client: Call.
      * Retrieve Timezones and IDs
      * Get the list of Timezone to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Timezones to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return TimezoneGetAutocompleteV2Response
@@ -121,7 +121,7 @@ class ObjectTimezoneApi(basePath: kotlin.String = defaultBasePath, client: Call.
      * Retrieve Timezones and IDs
      * Get the list of Timezone to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Timezones to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return ApiResponse<TimezoneGetAutocompleteV2Response?>
@@ -142,7 +142,7 @@ class ObjectTimezoneApi(basePath: kotlin.String = defaultBasePath, client: Call.
      * To obtain the request config of the operation timezoneGetAutocompleteV2
      *
      * @param sSelector The type of Timezones to return
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return RequestConfig

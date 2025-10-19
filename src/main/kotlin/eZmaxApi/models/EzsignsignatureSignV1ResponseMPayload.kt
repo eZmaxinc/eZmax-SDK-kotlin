@@ -15,6 +15,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.CustomCreditcardtransactionResponse
 import eZmaxApi.models.CustomTimezoneWithCodeResponse
 
 import com.squareup.moshi.Json
@@ -25,6 +26,7 @@ import com.squareup.moshi.JsonClass
  *
  * @param dtEzsignsignatureDateInFolderTimezone The date the Ezsignsignature was signed in folder's timezone
  * @param objTimezone 
+ * @param objCreditcardtransaction 
  */
 
 
@@ -35,7 +37,10 @@ data class EzsignsignatureSignV1ResponseMPayload (
     val dtEzsignsignatureDateInFolderTimezone: kotlin.String,
 
     @Json(name = "objTimezone")
-    val objTimezone: CustomTimezoneWithCodeResponse? = null
+    val objTimezone: CustomTimezoneWithCodeResponse? = null,
+
+    @Json(name = "objCreditcardtransaction")
+    val objCreditcardtransaction: CustomCreditcardtransactionResponse? = null
 
 ) {
 

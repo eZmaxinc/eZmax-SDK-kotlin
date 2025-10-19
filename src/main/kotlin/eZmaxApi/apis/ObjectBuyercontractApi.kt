@@ -23,7 +23,11 @@ import eZmaxApi.models.BuyercontractGetCommunicationCountV1Response
 import eZmaxApi.models.BuyercontractGetCommunicationListV1Response
 import eZmaxApi.models.BuyercontractGetCommunicationrecipientsV1Response
 import eZmaxApi.models.BuyercontractGetCommunicationsendersV1Response
+import eZmaxApi.models.BuyercontractGetListV1Response
+import eZmaxApi.models.BuyercontractImportIntoEDMV1Request
+import eZmaxApi.models.BuyercontractImportIntoEDMV1Response
 import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.HeaderAcceptLanguage
 
 import com.squareup.moshi.Json
 
@@ -334,6 +338,218 @@ class ObjectBuyercontractApi(basePath: kotlin.String = defaultBasePath, client: 
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/buyercontract/{pkiBuyercontractID}/getCommunicationsenders".replace("{"+"pkiBuyercontractID"+"}", encodeURIComponent(pkiBuyercontractID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * enum for parameter eOrderBy
+     */
+     enum class EOrderByBuyercontractGetListV1(val value: kotlin.String) {
+         @Json(name = "pkiBuyercontractID_ASC") pkiBuyercontractID_ASC("pkiBuyercontractID_ASC"),
+         @Json(name = "pkiBuyercontractID_DESC") pkiBuyercontractID_DESC("pkiBuyercontractID_DESC"),
+         @Json(name = "fkiInscriptiontypeID_ASC") fkiInscriptiontypeID_ASC("fkiInscriptiontypeID_ASC"),
+         @Json(name = "fkiInscriptiontypeID_DESC") fkiInscriptiontypeID_DESC("fkiInscriptiontypeID_DESC"),
+         @Json(name = "sInscriptiontypeNameX_ASC") sInscriptiontypeNameX_ASC("sInscriptiontypeNameX_ASC"),
+         @Json(name = "sInscriptiontypeNameX_DESC") sInscriptiontypeNameX_DESC("sInscriptiontypeNameX_DESC"),
+         @Json(name = "eBuyercontractStep_ASC") eBuyercontractStep_ASC("eBuyercontractStep_ASC"),
+         @Json(name = "eBuyercontractStep_DESC") eBuyercontractStep_DESC("eBuyercontractStep_DESC"),
+         @Json(name = "dBuyercontractMinimumprice_ASC") dBuyercontractMinimumprice_ASC("dBuyercontractMinimumprice_ASC"),
+         @Json(name = "dBuyercontractMinimumprice_DESC") dBuyercontractMinimumprice_DESC("dBuyercontractMinimumprice_DESC"),
+         @Json(name = "dBuyercontractMaximumprice_ASC") dBuyercontractMaximumprice_ASC("dBuyercontractMaximumprice_ASC"),
+         @Json(name = "dBuyercontractMaximumprice_DESC") dBuyercontractMaximumprice_DESC("dBuyercontractMaximumprice_DESC"),
+         @Json(name = "eBuyercontractType_ASC") eBuyercontractType_ASC("eBuyercontractType_ASC"),
+         @Json(name = "eBuyercontractType_DESC") eBuyercontractType_DESC("eBuyercontractType_DESC"),
+         @Json(name = "dtBuyercontractDate_ASC") dtBuyercontractDate_ASC("dtBuyercontractDate_ASC"),
+         @Json(name = "dtBuyercontractDate_DESC") dtBuyercontractDate_DESC("dtBuyercontractDate_DESC"),
+         @Json(name = "dtBuyercontractExpirationdate_ASC") dtBuyercontractExpirationdate_ASC("dtBuyercontractExpirationdate_ASC"),
+         @Json(name = "dtBuyercontractExpirationdate_DESC") dtBuyercontractExpirationdate_DESC("dtBuyercontractExpirationdate_DESC"),
+         @Json(name = "bBuyercontractIsactive_ASC") bBuyercontractIsactive_ASC("bBuyercontractIsactive_ASC"),
+         @Json(name = "bBuyercontractIsactive_DESC") bBuyercontractIsactive_DESC("bBuyercontractIsactive_DESC");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
+     }
+
+    /**
+     * GET /1/object/buyercontract/getList
+     * Retrieve Buyercontract list
+     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eBuyercontractStep | Imported&lt;br&gt;Active&lt;br&gt;Modified&lt;br&gt;ContractEnded&lt;br&gt;ExpiredContract&lt;br&gt;Bought | | eBuyercontractType | Rent&lt;br&gt;Sale&lt;br&gt;RentOrSale |
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return BuyercontractGetListV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun buyercontractGetListV1(eOrderBy: EOrderByBuyercontractGetListV1? = null, iRowMax: kotlin.Int? = null, iRowOffset: kotlin.Int? = 0, acceptLanguage: HeaderAcceptLanguage? = null, sFilter: kotlin.String? = null) : BuyercontractGetListV1Response {
+        val localVarResponse = buyercontractGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as BuyercontractGetListV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/buyercontract/getList
+     * Retrieve Buyercontract list
+     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eBuyercontractStep | Imported&lt;br&gt;Active&lt;br&gt;Modified&lt;br&gt;ContractEnded&lt;br&gt;ExpiredContract&lt;br&gt;Bought | | eBuyercontractType | Rent&lt;br&gt;Sale&lt;br&gt;RentOrSale |
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return ApiResponse<BuyercontractGetListV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun buyercontractGetListV1WithHttpInfo(eOrderBy: EOrderByBuyercontractGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : ApiResponse<BuyercontractGetListV1Response?> {
+        val localVariableConfig = buyercontractGetListV1RequestConfig(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
+
+        return request<Unit, BuyercontractGetListV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation buyercontractGetListV1
+     *
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return RequestConfig
+     */
+    fun buyercontractGetListV1RequestConfig(eOrderBy: EOrderByBuyercontractGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (eOrderBy != null) {
+                    put("eOrderBy", listOf(eOrderBy.value))
+                }
+                if (iRowMax != null) {
+                    put("iRowMax", listOf(iRowMax.toString()))
+                }
+                if (iRowOffset != null) {
+                    put("iRowOffset", listOf(iRowOffset.toString()))
+                }
+                if (sFilter != null) {
+                    put("sFilter", listOf(sFilter.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/buyercontract/getList",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * POST /1/object/buyercontract/{pkiBuyercontractID}/importIntoEDM
+     * Import attachments into the Buyercontract
+     * 
+     * @param pkiBuyercontractID 
+     * @param buyercontractImportIntoEDMV1Request 
+     * @return BuyercontractImportIntoEDMV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun buyercontractImportIntoEDMV1(pkiBuyercontractID: kotlin.Int, buyercontractImportIntoEDMV1Request: BuyercontractImportIntoEDMV1Request) : BuyercontractImportIntoEDMV1Response {
+        val localVarResponse = buyercontractImportIntoEDMV1WithHttpInfo(pkiBuyercontractID = pkiBuyercontractID, buyercontractImportIntoEDMV1Request = buyercontractImportIntoEDMV1Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as BuyercontractImportIntoEDMV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /1/object/buyercontract/{pkiBuyercontractID}/importIntoEDM
+     * Import attachments into the Buyercontract
+     * 
+     * @param pkiBuyercontractID 
+     * @param buyercontractImportIntoEDMV1Request 
+     * @return ApiResponse<BuyercontractImportIntoEDMV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun buyercontractImportIntoEDMV1WithHttpInfo(pkiBuyercontractID: kotlin.Int, buyercontractImportIntoEDMV1Request: BuyercontractImportIntoEDMV1Request) : ApiResponse<BuyercontractImportIntoEDMV1Response?> {
+        val localVariableConfig = buyercontractImportIntoEDMV1RequestConfig(pkiBuyercontractID = pkiBuyercontractID, buyercontractImportIntoEDMV1Request = buyercontractImportIntoEDMV1Request)
+
+        return request<BuyercontractImportIntoEDMV1Request, BuyercontractImportIntoEDMV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation buyercontractImportIntoEDMV1
+     *
+     * @param pkiBuyercontractID 
+     * @param buyercontractImportIntoEDMV1Request 
+     * @return RequestConfig
+     */
+    fun buyercontractImportIntoEDMV1RequestConfig(pkiBuyercontractID: kotlin.Int, buyercontractImportIntoEDMV1Request: BuyercontractImportIntoEDMV1Request) : RequestConfig<BuyercontractImportIntoEDMV1Request> {
+        val localVariableBody = buyercontractImportIntoEDMV1Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/buyercontract/{pkiBuyercontractID}/importIntoEDM".replace("{"+"pkiBuyercontractID"+"}", encodeURIComponent(pkiBuyercontractID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,
