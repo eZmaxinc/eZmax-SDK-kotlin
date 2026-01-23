@@ -25,6 +25,7 @@ import com.squareup.moshi.JsonClass
  * @param pkiCustomerID The unique ID of the Customer.
  * @param fkiDepartmentID The unique ID of the Department
  * @param sCustomerName The name of the Customer
+ * @param sCustomerCode The code of the Customer
  * @param bCustomerIsactive Whether the customer is active or not
  */
 
@@ -42,6 +43,10 @@ data class CustomerAutocompleteElementResponse (
     /* The name of the Customer */
     @Json(name = "sCustomerName")
     val sCustomerName: kotlin.String,
+
+    /* The code of the Customer */
+    @Json(name = "sCustomerCode")
+    val sCustomerCode: kotlin.String,
 
     /* Whether the customer is active or not */
     @Json(name = "bCustomerIsactive")

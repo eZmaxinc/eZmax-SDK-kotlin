@@ -30,6 +30,8 @@ import com.squareup.moshi.JsonClass
  *
  * @param pkiSystemconfigurationID The unique ID of the Systemconfiguration
  * @param fkiSystemconfigurationtypeID The unique ID of the Systemconfigurationtype
+ * @param fkiTimezoneIDDefault The unique ID of the Timezone
+ * @param sTimezoneNameDefault The description of the Timezone
  * @param sSystemconfigurationtypeDescriptionX The description of the Systemconfigurationtype in the language of the requester
  * @param eSystemconfigurationNewexternaluseraction 
  * @param eSystemconfigurationLanguage1 
@@ -45,6 +47,7 @@ import com.squareup.moshi.JsonClass
  * @param dtSystemconfigurationReadonlyexpirationstart The start date where the system will be in read only
  * @param dtSystemconfigurationReadonlyexpirationend The end date where the system will be in read only
  * @param objBranding 
+ * @param iSystemconfigurationEzsignreminderhoursend The hour we will send the eZsign reminders
  */
 
 
@@ -57,6 +60,14 @@ data class SystemconfigurationResponse (
     /* The unique ID of the Systemconfigurationtype */
     @Json(name = "fkiSystemconfigurationtypeID")
     val fkiSystemconfigurationtypeID: kotlin.Int,
+
+    /* The unique ID of the Timezone */
+    @Json(name = "fkiTimezoneIDDefault")
+    val fkiTimezoneIDDefault: kotlin.Int,
+
+    /* The description of the Timezone */
+    @Json(name = "sTimezoneNameDefault")
+    val sTimezoneNameDefault: kotlin.String,
 
     /* The description of the Systemconfigurationtype in the language of the requester */
     @Json(name = "sSystemconfigurationtypeDescriptionX")
@@ -111,7 +122,11 @@ data class SystemconfigurationResponse (
     val dtSystemconfigurationReadonlyexpirationend: kotlin.String? = null,
 
     @Json(name = "objBranding")
-    val objBranding: CustomBrandingResponse? = null
+    val objBranding: CustomBrandingResponse? = null,
+
+    /* The hour we will send the eZsign reminders */
+    @Json(name = "iSystemconfigurationEzsignreminderhoursend")
+    val iSystemconfigurationEzsignreminderhoursend: kotlin.Int? = null
 
 ) {
 

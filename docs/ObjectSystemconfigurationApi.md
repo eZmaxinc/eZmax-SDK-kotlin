@@ -4,13 +4,13 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**systemconfigurationEditObjectV1**](ObjectSystemconfigurationApi.md#systemconfigurationEditObjectV1) | **PUT** /1/object/systemconfiguration/{pkiSystemconfigurationID} | Edit an existing Systemconfiguration |
+| [**systemconfigurationEditObjectV2**](ObjectSystemconfigurationApi.md#systemconfigurationEditObjectV2) | **PUT** /2/object/systemconfiguration/{pkiSystemconfigurationID} | Edit an existing Systemconfiguration |
 | [**systemconfigurationGetObjectV2**](ObjectSystemconfigurationApi.md#systemconfigurationGetObjectV2) | **GET** /2/object/systemconfiguration/{pkiSystemconfigurationID} | Retrieve an existing Systemconfiguration |
 
 
-<a id="systemconfigurationEditObjectV1"></a>
-# **systemconfigurationEditObjectV1**
-> SystemconfigurationEditObjectV1Response systemconfigurationEditObjectV1(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request)
+<a id="systemconfigurationEditObjectV2"></a>
+# **systemconfigurationEditObjectV2**
+> SystemconfigurationEditObjectV2Response systemconfigurationEditObjectV2(pkiSystemconfigurationID, systemconfigurationEditObjectV2Request)
 
 Edit an existing Systemconfiguration
 
@@ -24,15 +24,15 @@ Edit an existing Systemconfiguration
 
 val apiInstance = ObjectSystemconfigurationApi()
 val pkiSystemconfigurationID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Systemconfiguration
-val systemconfigurationEditObjectV1Request : SystemconfigurationEditObjectV1Request =  // SystemconfigurationEditObjectV1Request | 
+val systemconfigurationEditObjectV2Request : SystemconfigurationEditObjectV2Request =  // SystemconfigurationEditObjectV2Request | 
 try {
-    val result : SystemconfigurationEditObjectV1Response = apiInstance.systemconfigurationEditObjectV1(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request)
+    val result : SystemconfigurationEditObjectV2Response = apiInstance.systemconfigurationEditObjectV2(pkiSystemconfigurationID, systemconfigurationEditObjectV2Request)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling ObjectSystemconfigurationApi#systemconfigurationEditObjectV1")
+    println("4xx response calling ObjectSystemconfigurationApi#systemconfigurationEditObjectV2")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling ObjectSystemconfigurationApi#systemconfigurationEditObjectV1")
+    println("5xx response calling ObjectSystemconfigurationApi#systemconfigurationEditObjectV2")
     e.printStackTrace()
 }
 ```
@@ -41,11 +41,11 @@ try {
 | **pkiSystemconfigurationID** | **kotlin.Int**| The unique ID of the Systemconfiguration | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **systemconfigurationEditObjectV1Request** | [**SystemconfigurationEditObjectV1Request**](SystemconfigurationEditObjectV1Request.md)|  | |
+| **systemconfigurationEditObjectV2Request** | [**SystemconfigurationEditObjectV2Request**](SystemconfigurationEditObjectV2Request.md)|  | |
 
 ### Return type
 
-[**SystemconfigurationEditObjectV1Response**](SystemconfigurationEditObjectV1Response.md)
+[**SystemconfigurationEditObjectV2Response**](SystemconfigurationEditObjectV2Response.md)
 
 ### Authorization
 

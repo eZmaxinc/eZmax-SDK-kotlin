@@ -25,11 +25,8 @@ import eZmaxApi.models.EzsigntemplatesignatureCreateObjectV2Response
 import eZmaxApi.models.EzsigntemplatesignatureCreateObjectV3Request
 import eZmaxApi.models.EzsigntemplatesignatureCreateObjectV3Response
 import eZmaxApi.models.EzsigntemplatesignatureDeleteObjectV1Response
-import eZmaxApi.models.EzsigntemplatesignatureEditObjectV2Request
-import eZmaxApi.models.EzsigntemplatesignatureEditObjectV2Response
 import eZmaxApi.models.EzsigntemplatesignatureEditObjectV3Request
 import eZmaxApi.models.EzsigntemplatesignatureEditObjectV3Response
-import eZmaxApi.models.EzsigntemplatesignatureGetObjectV3Response
 import eZmaxApi.models.EzsigntemplatesignatureGetObjectV4Response
 
 import com.squareup.moshi.Json
@@ -48,7 +45,7 @@ import eZmaxApi.infrastructure.ResponseType
 import eZmaxApi.infrastructure.Success
 import eZmaxApi.infrastructure.toMultiValue
 
-class ObjectEzsigntemplatesignatureApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
+open class ObjectEzsigntemplatesignatureApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
@@ -283,88 +280,6 @@ class ObjectEzsigntemplatesignatureApi(basePath: kotlin.String = defaultBasePath
     }
 
     /**
-     * PUT /2/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}
-     * Edit an existing Ezsigntemplatesignature
-     * Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
-     * @param pkiEzsigntemplatesignatureID 
-     * @param ezsigntemplatesignatureEditObjectV2Request 
-     * @return EzsigntemplatesignatureEditObjectV2Response
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    @Deprecated(message = "This operation is deprecated.")
-    fun ezsigntemplatesignatureEditObjectV2(pkiEzsigntemplatesignatureID: kotlin.Int, ezsigntemplatesignatureEditObjectV2Request: EzsigntemplatesignatureEditObjectV2Request) : EzsigntemplatesignatureEditObjectV2Response {
-        @Suppress("DEPRECATION")
-        val localVarResponse = ezsigntemplatesignatureEditObjectV2WithHttpInfo(pkiEzsigntemplatesignatureID = pkiEzsigntemplatesignatureID, ezsigntemplatesignatureEditObjectV2Request = ezsigntemplatesignatureEditObjectV2Request)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigntemplatesignatureEditObjectV2Response
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * PUT /2/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}
-     * Edit an existing Ezsigntemplatesignature
-     * Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
-     * @param pkiEzsigntemplatesignatureID 
-     * @param ezsigntemplatesignatureEditObjectV2Request 
-     * @return ApiResponse<EzsigntemplatesignatureEditObjectV2Response?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    @Deprecated(message = "This operation is deprecated.")
-    fun ezsigntemplatesignatureEditObjectV2WithHttpInfo(pkiEzsigntemplatesignatureID: kotlin.Int, ezsigntemplatesignatureEditObjectV2Request: EzsigntemplatesignatureEditObjectV2Request) : ApiResponse<EzsigntemplatesignatureEditObjectV2Response?> {
-        @Suppress("DEPRECATION")
-        val localVariableConfig = ezsigntemplatesignatureEditObjectV2RequestConfig(pkiEzsigntemplatesignatureID = pkiEzsigntemplatesignatureID, ezsigntemplatesignatureEditObjectV2Request = ezsigntemplatesignatureEditObjectV2Request)
-
-        return request<EzsigntemplatesignatureEditObjectV2Request, EzsigntemplatesignatureEditObjectV2Response>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation ezsigntemplatesignatureEditObjectV2
-     *
-     * @param pkiEzsigntemplatesignatureID 
-     * @param ezsigntemplatesignatureEditObjectV2Request 
-     * @return RequestConfig
-     */
-    @Deprecated(message = "This operation is deprecated.")
-    fun ezsigntemplatesignatureEditObjectV2RequestConfig(pkiEzsigntemplatesignatureID: kotlin.Int, ezsigntemplatesignatureEditObjectV2Request: EzsigntemplatesignatureEditObjectV2Request) : RequestConfig<EzsigntemplatesignatureEditObjectV2Request> {
-        val localVariableBody = ezsigntemplatesignatureEditObjectV2Request
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Content-Type"] = "application/json"
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.PUT,
-            path = "/2/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}".replace("{"+"pkiEzsigntemplatesignatureID"+"}", encodeURIComponent(pkiEzsigntemplatesignatureID.toString())),
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            requiresAuthentication = true,
-            body = localVariableBody
-        )
-    }
-
-    /**
      * PUT /3/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}
      * Edit an existing Ezsigntemplatesignature
      * 
@@ -433,84 +348,6 @@ class ObjectEzsigntemplatesignatureApi(basePath: kotlin.String = defaultBasePath
 
         return RequestConfig(
             method = RequestMethod.PUT,
-            path = "/3/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}".replace("{"+"pkiEzsigntemplatesignatureID"+"}", encodeURIComponent(pkiEzsigntemplatesignatureID.toString())),
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            requiresAuthentication = true,
-            body = localVariableBody
-        )
-    }
-
-    /**
-     * GET /3/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}
-     * Retrieve an existing Ezsigntemplatesignature
-     * Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
-     * @param pkiEzsigntemplatesignatureID 
-     * @return EzsigntemplatesignatureGetObjectV3Response
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    @Deprecated(message = "This operation is deprecated.")
-    fun ezsigntemplatesignatureGetObjectV3(pkiEzsigntemplatesignatureID: kotlin.Int) : EzsigntemplatesignatureGetObjectV3Response {
-        @Suppress("DEPRECATION")
-        val localVarResponse = ezsigntemplatesignatureGetObjectV3WithHttpInfo(pkiEzsigntemplatesignatureID = pkiEzsigntemplatesignatureID)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsigntemplatesignatureGetObjectV3Response
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * GET /3/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}
-     * Retrieve an existing Ezsigntemplatesignature
-     * Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
-     * @param pkiEzsigntemplatesignatureID 
-     * @return ApiResponse<EzsigntemplatesignatureGetObjectV3Response?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    @Deprecated(message = "This operation is deprecated.")
-    fun ezsigntemplatesignatureGetObjectV3WithHttpInfo(pkiEzsigntemplatesignatureID: kotlin.Int) : ApiResponse<EzsigntemplatesignatureGetObjectV3Response?> {
-        @Suppress("DEPRECATION")
-        val localVariableConfig = ezsigntemplatesignatureGetObjectV3RequestConfig(pkiEzsigntemplatesignatureID = pkiEzsigntemplatesignatureID)
-
-        return request<Unit, EzsigntemplatesignatureGetObjectV3Response>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation ezsigntemplatesignatureGetObjectV3
-     *
-     * @param pkiEzsigntemplatesignatureID 
-     * @return RequestConfig
-     */
-    @Deprecated(message = "This operation is deprecated.")
-    fun ezsigntemplatesignatureGetObjectV3RequestConfig(pkiEzsigntemplatesignatureID: kotlin.Int) : RequestConfig<Unit> {
-        val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.GET,
             path = "/3/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}".replace("{"+"pkiEzsigntemplatesignatureID"+"}", encodeURIComponent(pkiEzsigntemplatesignatureID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,

@@ -27,6 +27,7 @@ import com.squareup.moshi.JsonClass
  * @param aObjReportsubsection 
  * @param eReportsectionHorizontalalignment 
  * @param sReportsectionTitle The title of this Reportsection
+ * @param sReportsectionTabname The name of tab in excel version
  */
 
 
@@ -40,7 +41,11 @@ data class CommonReportsection (
 
     /* The title of this Reportsection */
     @Json(name = "sReportsectionTitle")
-    val sReportsectionTitle: kotlin.String? = null
+    val sReportsectionTitle: kotlin.String? = null,
+
+    /* The name of tab in excel version */
+    @Json(name = "sReportsectionTabname")
+    val sReportsectionTabname: kotlin.String? = null
 
 ) {
 

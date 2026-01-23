@@ -37,6 +37,7 @@ import eZmaxApi.models.EzsignfolderEditObjectV3Response
 import eZmaxApi.models.EzsignfolderEndPrematurelyV1Response
 import eZmaxApi.models.EzsignfolderGetActionableElementsV1Response
 import eZmaxApi.models.EzsignfolderGetActionableElementsV2Response
+import eZmaxApi.models.EzsignfolderGetActionableElementsV3Response
 import eZmaxApi.models.EzsignfolderGetAttachmentCountV1Response
 import eZmaxApi.models.EzsignfolderGetAttachmentsV1Response
 import eZmaxApi.models.EzsignfolderGetCommunicationCountV1Response
@@ -58,8 +59,6 @@ import eZmaxApi.models.EzsignfolderImportEzsigntemplatepackageV1Request
 import eZmaxApi.models.EzsignfolderImportEzsigntemplatepackageV1Response
 import eZmaxApi.models.EzsignfolderImportEzsigntemplatepackageV2Request
 import eZmaxApi.models.EzsignfolderImportEzsigntemplatepackageV2Response
-import eZmaxApi.models.EzsignfolderReorderV1Request
-import eZmaxApi.models.EzsignfolderReorderV1Response
 import eZmaxApi.models.EzsignfolderReorderV2Request
 import eZmaxApi.models.EzsignfolderReorderV2Response
 import eZmaxApi.models.EzsignfolderSendV1Request
@@ -85,7 +84,7 @@ import eZmaxApi.infrastructure.ResponseType
 import eZmaxApi.infrastructure.Success
 import eZmaxApi.infrastructure.toMultiValue
 
-class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
+open class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
@@ -949,7 +948,9 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsignfolderGetActionableElementsV2(pkiEzsignfolderID: kotlin.Int) : EzsignfolderGetActionableElementsV2Response {
+        @Suppress("DEPRECATION")
         val localVarResponse = ezsignfolderGetActionableElementsV2WithHttpInfo(pkiEzsignfolderID = pkiEzsignfolderID)
 
         return when (localVarResponse.responseType) {
@@ -978,7 +979,9 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsignfolderGetActionableElementsV2WithHttpInfo(pkiEzsignfolderID: kotlin.Int) : ApiResponse<EzsignfolderGetActionableElementsV2Response?> {
+        @Suppress("DEPRECATION")
         val localVariableConfig = ezsignfolderGetActionableElementsV2RequestConfig(pkiEzsignfolderID = pkiEzsignfolderID)
 
         return request<Unit, EzsignfolderGetActionableElementsV2Response>(
@@ -992,6 +995,7 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
      * @param pkiEzsignfolderID 
      * @return RequestConfig
      */
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsignfolderGetActionableElementsV2RequestConfig(pkiEzsignfolderID: kotlin.Int) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
@@ -1001,6 +1005,79 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/2/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements".replace("{"+"pkiEzsignfolderID"+"}", encodeURIComponent(pkiEzsignfolderID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /3/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements
+     * Retrieve actionable elements for the Ezsignfolder
+     * Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+     * @param pkiEzsignfolderID 
+     * @return EzsignfolderGetActionableElementsV3Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignfolderGetActionableElementsV3(pkiEzsignfolderID: kotlin.Int) : EzsignfolderGetActionableElementsV3Response {
+        val localVarResponse = ezsignfolderGetActionableElementsV3WithHttpInfo(pkiEzsignfolderID = pkiEzsignfolderID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfolderGetActionableElementsV3Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /3/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements
+     * Retrieve actionable elements for the Ezsignfolder
+     * Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+     * @param pkiEzsignfolderID 
+     * @return ApiResponse<EzsignfolderGetActionableElementsV3Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignfolderGetActionableElementsV3WithHttpInfo(pkiEzsignfolderID: kotlin.Int) : ApiResponse<EzsignfolderGetActionableElementsV3Response?> {
+        val localVariableConfig = ezsignfolderGetActionableElementsV3RequestConfig(pkiEzsignfolderID = pkiEzsignfolderID)
+
+        return request<Unit, EzsignfolderGetActionableElementsV3Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsignfolderGetActionableElementsV3
+     *
+     * @param pkiEzsignfolderID 
+     * @return RequestConfig
+     */
+    fun ezsignfolderGetActionableElementsV3RequestConfig(pkiEzsignfolderID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/3/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements".replace("{"+"pkiEzsignfolderID"+"}", encodeURIComponent(pkiEzsignfolderID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,
@@ -2425,88 +2502,6 @@ class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, client: C
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/2/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage".replace("{"+"pkiEzsignfolderID"+"}", encodeURIComponent(pkiEzsignfolderID.toString())),
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            requiresAuthentication = true,
-            body = localVariableBody
-        )
-    }
-
-    /**
-     * POST /1/object/ezsignfolder/{pkiEzsignfolderID}/reorder
-     * Reorder Ezsigndocuments in the Ezsignfolder
-     * 
-     * @param pkiEzsignfolderID 
-     * @param ezsignfolderReorderV1Request 
-     * @return EzsignfolderReorderV1Response
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    @Deprecated(message = "This operation is deprecated.")
-    fun ezsignfolderReorderV1(pkiEzsignfolderID: kotlin.Int, ezsignfolderReorderV1Request: EzsignfolderReorderV1Request) : EzsignfolderReorderV1Response {
-        @Suppress("DEPRECATION")
-        val localVarResponse = ezsignfolderReorderV1WithHttpInfo(pkiEzsignfolderID = pkiEzsignfolderID, ezsignfolderReorderV1Request = ezsignfolderReorderV1Request)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfolderReorderV1Response
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * POST /1/object/ezsignfolder/{pkiEzsignfolderID}/reorder
-     * Reorder Ezsigndocuments in the Ezsignfolder
-     * 
-     * @param pkiEzsignfolderID 
-     * @param ezsignfolderReorderV1Request 
-     * @return ApiResponse<EzsignfolderReorderV1Response?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    @Deprecated(message = "This operation is deprecated.")
-    fun ezsignfolderReorderV1WithHttpInfo(pkiEzsignfolderID: kotlin.Int, ezsignfolderReorderV1Request: EzsignfolderReorderV1Request) : ApiResponse<EzsignfolderReorderV1Response?> {
-        @Suppress("DEPRECATION")
-        val localVariableConfig = ezsignfolderReorderV1RequestConfig(pkiEzsignfolderID = pkiEzsignfolderID, ezsignfolderReorderV1Request = ezsignfolderReorderV1Request)
-
-        return request<EzsignfolderReorderV1Request, EzsignfolderReorderV1Response>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation ezsignfolderReorderV1
-     *
-     * @param pkiEzsignfolderID 
-     * @param ezsignfolderReorderV1Request 
-     * @return RequestConfig
-     */
-    @Deprecated(message = "This operation is deprecated.")
-    fun ezsignfolderReorderV1RequestConfig(pkiEzsignfolderID: kotlin.Int, ezsignfolderReorderV1Request: EzsignfolderReorderV1Request) : RequestConfig<EzsignfolderReorderV1Request> {
-        val localVariableBody = ezsignfolderReorderV1Request
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Content-Type"] = "application/json"
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.POST,
-            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/reorder".replace("{"+"pkiEzsignfolderID"+"}", encodeURIComponent(pkiEzsignfolderID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

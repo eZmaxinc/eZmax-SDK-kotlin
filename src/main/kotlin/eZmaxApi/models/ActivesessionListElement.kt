@@ -24,16 +24,16 @@ import com.squareup.moshi.JsonClass
  *
  * @param pkiActivesessionID The unique ID of the Activesession
  * @param fkiUserID The unique ID of the User
- * @param fkiComputerID The unique ID of the Computer
  * @param fkiCompanyID The unique ID of the Company
  * @param fkiDepartmentID The unique ID of the Department
  * @param sCompanyNameX The Name of the Company in the language of the requester
  * @param sDepartmentNameX The Name of the Department in the language of the requester
  * @param sActivesessionLoginname The loginname of the Activesession
- * @param sComputerDescription The description of the Computer
  * @param dtActivesessionFirsthit The first hit of the Activesession
  * @param dtActivesessionLasthit The last hit of the Activesession
  * @param sActivesessionIP Represent an IP address.
+ * @param fkiComputerID The unique ID of the Computer
+ * @param sComputerDescription The description of the Computer
  */
 
 
@@ -46,10 +46,6 @@ data class ActivesessionListElement (
     /* The unique ID of the User */
     @Json(name = "fkiUserID")
     val fkiUserID: kotlin.Int,
-
-    /* The unique ID of the Computer */
-    @Json(name = "fkiComputerID")
-    val fkiComputerID: kotlin.Int,
 
     /* The unique ID of the Company */
     @Json(name = "fkiCompanyID")
@@ -71,10 +67,6 @@ data class ActivesessionListElement (
     @Json(name = "sActivesessionLoginname")
     val sActivesessionLoginname: kotlin.String,
 
-    /* The description of the Computer */
-    @Json(name = "sComputerDescription")
-    val sComputerDescription: kotlin.String,
-
     /* The first hit of the Activesession */
     @Json(name = "dtActivesessionFirsthit")
     val dtActivesessionFirsthit: kotlin.String,
@@ -85,7 +77,15 @@ data class ActivesessionListElement (
 
     /* Represent an IP address. */
     @Json(name = "sActivesessionIP")
-    val sActivesessionIP: kotlin.String
+    val sActivesessionIP: kotlin.String,
+
+    /* The unique ID of the Computer */
+    @Json(name = "fkiComputerID")
+    val fkiComputerID: kotlin.Int? = null,
+
+    /* The description of the Computer */
+    @Json(name = "sComputerDescription")
+    val sComputerDescription: kotlin.String? = null
 
 ) {
 

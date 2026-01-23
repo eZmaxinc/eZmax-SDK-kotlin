@@ -47,7 +47,7 @@ import eZmaxApi.infrastructure.ResponseType
 import eZmaxApi.infrastructure.Success
 import eZmaxApi.infrastructure.toMultiValue
 
-class ObjectDiscussionApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
+open class ObjectDiscussionApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {

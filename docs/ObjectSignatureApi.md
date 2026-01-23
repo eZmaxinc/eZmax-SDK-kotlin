@@ -7,7 +7,6 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**signatureCreateObjectV1**](ObjectSignatureApi.md#signatureCreateObjectV1) | **POST** /1/object/signature | Create a new Signature |
 | [**signatureDeleteObjectV1**](ObjectSignatureApi.md#signatureDeleteObjectV1) | **DELETE** /1/object/signature/{pkiSignatureID} | Delete an existing Signature |
 | [**signatureEditObjectV1**](ObjectSignatureApi.md#signatureEditObjectV1) | **PUT** /1/object/signature/{pkiSignatureID} | Edit an existing Signature |
-| [**signatureGetObjectV2**](ObjectSignatureApi.md#signatureGetObjectV2) | **GET** /2/object/signature/{pkiSignatureID} | Retrieve an existing Signature |
 | [**signatureGetObjectV3**](ObjectSignatureApi.md#signatureGetObjectV3) | **GET** /3/object/signature/{pkiSignatureID} | Retrieve an existing Signature |
 | [**signatureGetSVGInitialsV1**](ObjectSignatureApi.md#signatureGetSVGInitialsV1) | **GET** /1/object/signature/{pkiSignatureID}/getSVGInitials | Retrieve an existing Signature initial SVG |
 | [**signatureGetSVGSignatureV1**](ObjectSignatureApi.md#signatureGetSVGSignatureV1) | **GET** /1/object/signature/{pkiSignatureID}/getSVGSignature | Retrieve an existing Signature SVG |
@@ -160,55 +159,6 @@ Configure Authorization:
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a id="signatureGetObjectV2"></a>
-# **signatureGetObjectV2**
-> SignatureGetObjectV2Response signatureGetObjectV2(pkiSignatureID)
-
-Retrieve an existing Signature
-
-
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectSignatureApi()
-val pkiSignatureID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Signature
-try {
-    val result : SignatureGetObjectV2Response = apiInstance.signatureGetObjectV2(pkiSignatureID)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectSignatureApi#signatureGetObjectV2")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectSignatureApi#signatureGetObjectV2")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pkiSignatureID** | **kotlin.Int**| The unique ID of the Signature | |
-
-### Return type
-
-[**SignatureGetObjectV2Response**](SignatureGetObjectV2Response.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a id="signatureGetObjectV3"></a>

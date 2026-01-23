@@ -20,7 +20,6 @@ import okhttp3.Call
 import okhttp3.HttpUrl
 
 import eZmaxApi.models.HeaderAcceptLanguage
-import eZmaxApi.models.InscriptionchecklistGetAutocompleteV2Response
 import eZmaxApi.models.InscriptionchecklistGetAutocompleteV3Response
 
 import com.squareup.moshi.Json
@@ -39,177 +38,12 @@ import eZmaxApi.infrastructure.ResponseType
 import eZmaxApi.infrastructure.Success
 import eZmaxApi.infrastructure.toMultiValue
 
-class ObjectInscriptionchecklistApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
+open class ObjectInscriptionchecklistApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
             System.getProperties().getProperty(ApiClient.baseUrlKey, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
-    }
-
-    /**
-     * enum for parameter sSelector
-     */
-     enum class SSelectorInscriptionchecklistGetAutocompleteV2(val value: kotlin.String) {
-         @Json(name = "All") All("All");
-
-        /**
-         * Override [toString()] to avoid using the enum variable name as the value, and instead use
-         * the actual value defined in the API spec file.
-         *
-         * This solves a problem when the variable name and its value are different, and ensures that
-         * the client sends the correct enum values to the server always.
-         */
-        override fun toString(): kotlin.String = "$value"
-     }
-
-    /**
-     * enum for parameter eType
-     */
-     enum class ETypeInscriptionchecklistGetAutocompleteV2(val value: kotlin.String) {
-         @Json(name = "Buyercontract") Buyercontract("Buyercontract"),
-         @Json(name = "Inscription") Inscription("Inscription"),
-         @Json(name = "Inscriptionnotauthenticated") Inscriptionnotauthenticated("Inscriptionnotauthenticated"),
-         @Json(name = "Inscriptiontemp") Inscriptiontemp("Inscriptiontemp"),
-         @Json(name = "Agent") Agent("Agent"),
-         @Json(name = "Broker") Broker("Broker"),
-         @Json(name = "Otherincome") Otherincome("Otherincome"),
-         @Json(name = "Rejectedoffertopurchase") Rejectedoffertopurchase("Rejectedoffertopurchase");
-
-        /**
-         * Override [toString()] to avoid using the enum variable name as the value, and instead use
-         * the actual value defined in the API spec file.
-         *
-         * This solves a problem when the variable name and its value are different, and ensures that
-         * the client sends the correct enum values to the server always.
-         */
-        override fun toString(): kotlin.String = "$value"
-     }
-
-    /**
-     * enum for parameter eFilterActive
-     */
-     enum class EFilterActiveInscriptionchecklistGetAutocompleteV2(val value: kotlin.String) {
-         @Json(name = "All") All("All"),
-         @Json(name = "Active") Active("Active"),
-         @Json(name = "Inactive") Inactive("Inactive");
-
-        /**
-         * Override [toString()] to avoid using the enum variable name as the value, and instead use
-         * the actual value defined in the API spec file.
-         *
-         * This solves a problem when the variable name and its value are different, and ensures that
-         * the client sends the correct enum values to the server always.
-         */
-        override fun toString(): kotlin.String = "$value"
-     }
-
-    /**
-     * GET /2/object/inscriptionchecklist/getAutocomplete/{sSelector}
-     * Retrieve Inscriptionchecklists and IDs
-     * Get the list of Inscriptionchecklist to be used in a dropdown or autocomplete control.
-     * @param sSelector The type of Inscriptionchecklist to return
-     * @param fkiID Specify which fkiID we want to display. (optional)
-     * @param eType The type of Inscriptionchecklist (optional)
-     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
-     * @param sQuery Allow to filter the returned results (optional)
-     * @param acceptLanguage  (optional)
-     * @return InscriptionchecklistGetAutocompleteV2Response
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    @Deprecated(message = "This operation is deprecated.")
-    fun inscriptionchecklistGetAutocompleteV2(sSelector: SSelectorInscriptionchecklistGetAutocompleteV2, fkiID: kotlin.String? = null, eType: ETypeInscriptionchecklistGetAutocompleteV2? = null, eFilterActive: EFilterActiveInscriptionchecklistGetAutocompleteV2? = EFilterActiveInscriptionchecklistGetAutocompleteV2.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderAcceptLanguage? = null) : InscriptionchecklistGetAutocompleteV2Response {
-        @Suppress("DEPRECATION")
-        val localVarResponse = inscriptionchecklistGetAutocompleteV2WithHttpInfo(sSelector = sSelector, fkiID = fkiID, eType = eType, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as InscriptionchecklistGetAutocompleteV2Response
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * GET /2/object/inscriptionchecklist/getAutocomplete/{sSelector}
-     * Retrieve Inscriptionchecklists and IDs
-     * Get the list of Inscriptionchecklist to be used in a dropdown or autocomplete control.
-     * @param sSelector The type of Inscriptionchecklist to return
-     * @param fkiID Specify which fkiID we want to display. (optional)
-     * @param eType The type of Inscriptionchecklist (optional)
-     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
-     * @param sQuery Allow to filter the returned results (optional)
-     * @param acceptLanguage  (optional)
-     * @return ApiResponse<InscriptionchecklistGetAutocompleteV2Response?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    @Deprecated(message = "This operation is deprecated.")
-    fun inscriptionchecklistGetAutocompleteV2WithHttpInfo(sSelector: SSelectorInscriptionchecklistGetAutocompleteV2, fkiID: kotlin.String?, eType: ETypeInscriptionchecklistGetAutocompleteV2?, eFilterActive: EFilterActiveInscriptionchecklistGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : ApiResponse<InscriptionchecklistGetAutocompleteV2Response?> {
-        @Suppress("DEPRECATION")
-        val localVariableConfig = inscriptionchecklistGetAutocompleteV2RequestConfig(sSelector = sSelector, fkiID = fkiID, eType = eType, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
-
-        return request<Unit, InscriptionchecklistGetAutocompleteV2Response>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation inscriptionchecklistGetAutocompleteV2
-     *
-     * @param sSelector The type of Inscriptionchecklist to return
-     * @param fkiID Specify which fkiID we want to display. (optional)
-     * @param eType The type of Inscriptionchecklist (optional)
-     * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
-     * @param sQuery Allow to filter the returned results (optional)
-     * @param acceptLanguage  (optional)
-     * @return RequestConfig
-     */
-    @Deprecated(message = "This operation is deprecated.")
-    fun inscriptionchecklistGetAutocompleteV2RequestConfig(sSelector: SSelectorInscriptionchecklistGetAutocompleteV2, fkiID: kotlin.String?, eType: ETypeInscriptionchecklistGetAutocompleteV2?, eFilterActive: EFilterActiveInscriptionchecklistGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : RequestConfig<Unit> {
-        val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
-            .apply {
-                if (fkiID != null) {
-                    put("fkiID", listOf(fkiID.toString()))
-                }
-                if (eType != null) {
-                    put("eType", listOf(eType.value))
-                }
-                if (eFilterActive != null) {
-                    put("eFilterActive", listOf(eFilterActive.value))
-                }
-                if (sQuery != null) {
-                    put("sQuery", listOf(sQuery.toString()))
-                }
-            }
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.GET,
-            path = "/2/object/inscriptionchecklist/getAutocomplete/{sSelector}".replace("{"+"sSelector"+"}", encodeURIComponent(sSelector.value.toString())),
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            requiresAuthentication = true,
-            body = localVariableBody
-        )
     }
 
     /**

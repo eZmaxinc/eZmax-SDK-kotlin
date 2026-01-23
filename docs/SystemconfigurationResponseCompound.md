@@ -6,6 +6,8 @@
 | ------------ | ------------- | ------------- | ------------- |
 | **pkiSystemconfigurationID** | **kotlin.Int** | The unique ID of the Systemconfiguration |  |
 | **fkiSystemconfigurationtypeID** | **kotlin.Int** | The unique ID of the Systemconfigurationtype |  |
+| **fkiTimezoneIDDefault** | **kotlin.Int** | The unique ID of the Timezone |  |
+| **sTimezoneNameDefault** | **kotlin.String** | The description of the Timezone |  |
 | **sSystemconfigurationtypeDescriptionX** | **kotlin.String** | The description of the Systemconfigurationtype in the language of the requester |  |
 | **eSystemconfigurationNewexternaluseraction** | [**FieldESystemconfigurationNewexternaluseraction**](FieldESystemconfigurationNewexternaluseraction.md) |  |  |
 | **eSystemconfigurationLanguage1** | [**FieldESystemconfigurationLanguage1**](FieldESystemconfigurationLanguage1.md) |  |  |
@@ -21,6 +23,7 @@
 | **dtSystemconfigurationReadonlyexpirationstart** | **kotlin.String** | The start date where the system will be in read only |  [optional] |
 | **dtSystemconfigurationReadonlyexpirationend** | **kotlin.String** | The end date where the system will be in read only |  [optional] |
 | **objBranding** | [**CustomBrandingResponse**](CustomBrandingResponse.md) |  |  [optional] |
+| **iSystemconfigurationEzsignreminderhoursend** | **kotlin.Int** | The hour we will send the eZsign reminders |  [optional] |
 
 
 

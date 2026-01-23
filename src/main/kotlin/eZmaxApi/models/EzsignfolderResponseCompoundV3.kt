@@ -21,6 +21,7 @@ import eZmaxApi.models.CustomEzsignfoldertypeResponse
 import eZmaxApi.models.CustomTimezoneWithCodeResponse
 import eZmaxApi.models.FieldEEzsignfolderCompletion
 import eZmaxApi.models.FieldEEzsignfolderDocumentdependency
+import eZmaxApi.models.FieldEEzsignfolderMessageorder
 import eZmaxApi.models.FieldEEzsignfolderStep
 
 import com.squareup.moshi.Json
@@ -55,6 +56,7 @@ import com.squareup.moshi.JsonClass
  * @param dtEzsignfolderArchive The date and time at which the Ezsignfolder was archived.
  * @param dtEzsignfolderDispose The date and time at which the Ezsignfolder was disposed.
  * @param tEzsignfolderMessage A custom text message that will be added to the email sent.
+ * @param eEzsignfolderMessageorder 
  * @param objAudit 
  * @param sEzsignfolderExternalid This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
  * @param eEzsignfolderAccess 
@@ -163,6 +165,9 @@ data class EzsignfolderResponseCompoundV3 (
     /* A custom text message that will be added to the email sent. */
     @Json(name = "tEzsignfolderMessage")
     val tEzsignfolderMessage: kotlin.String? = null,
+
+    @Json(name = "eEzsignfolderMessageorder")
+    val eEzsignfolderMessageorder: FieldEEzsignfolderMessageorder? = FieldEEzsignfolderMessageorder.GlobalFirst,
 
     @Json(name = "objAudit")
     val objAudit: CommonAudit? = null,

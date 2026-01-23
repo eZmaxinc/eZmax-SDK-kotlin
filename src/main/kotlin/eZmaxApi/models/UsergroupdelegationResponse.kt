@@ -28,6 +28,7 @@ import com.squareup.moshi.JsonClass
  * @param sUserFirstname The first name of the user
  * @param sUserLastname The last name of the user
  * @param sUserLoginname The login name of the User.
+ * @param bUserIsactive Whether the User is active or not
  * @param sUsergroupNameX The Name of the Usergroup in the language of the requester
  * @param sEmailAddress The email address.
  */
@@ -58,6 +59,10 @@ data class UsergroupdelegationResponse (
     /* The login name of the User. */
     @Json(name = "sUserLoginname")
     val sUserLoginname: kotlin.String,
+
+    /* Whether the User is active or not */
+    @Json(name = "bUserIsactive")
+    val bUserIsactive: kotlin.Boolean,
 
     /* The Name of the Usergroup in the language of the requester */
     @Json(name = "sUsergroupNameX")

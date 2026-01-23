@@ -26,6 +26,8 @@ import eZmaxApi.models.FieldEEzsignsignatureAttachmentnamesource
 import eZmaxApi.models.FieldEEzsignsignatureConsultationtrigger
 import eZmaxApi.models.FieldEEzsignsignatureDependencyrequirement
 import eZmaxApi.models.FieldEEzsignsignatureFont
+import eZmaxApi.models.FieldEEzsignsignatureSignaturepad
+import eZmaxApi.models.FieldEEzsignsignatureSignaturepadrequired
 import eZmaxApi.models.FieldEEzsignsignatureTooltipposition
 import eZmaxApi.models.FieldEEzsignsignatureType
 import eZmaxApi.models.SignatureResponseCompound
@@ -51,10 +53,13 @@ import com.squareup.moshi.JsonClass
  * @param sCurrencyDescriptionX The description of the Currency in the language of the requester
  * @param dEzsignsignatureCreditcardamount The amount of the Creditcard signature
  * @param sEzsignsignatureCreditcardamountdescription The description of the Creditcard signature
+ * @param bEzsignsignatureCreditcardcustomamount Whether we can enter a custom amount while signing an Ezsignsignature 'Creditcard' or not
  * @param sEzsignsigningreasonDescriptionX The description of the Ezsignsigningreason in the language of the requester
  * @param iEzsignsignatureHeight The height of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have an height of 2 inches, you would use \"200\" for the iEzsignsignatureHeight.
  * @param iEzsignsignatureWidth The width of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have a width of 2 inches, you would use \"200\" for the iEzsignsignatureWidth.
  * @param iEzsignsignatureStepadjusted The step when the Ezsignsigner will be invited to sign
+ * @param eEzsignsignatureSignaturepad 
+ * @param eEzsignsignatureSignaturepadrequired 
  * @param tEzsignsignatureTooltip A tooltip that will be presented to Ezsignsigner about the Ezsignsignature
  * @param eEzsignsignatureTooltipposition 
  * @param eEzsignsignatureFont 
@@ -148,6 +153,10 @@ data class EzsignsignatureResponseCompound (
     @Json(name = "sEzsignsignatureCreditcardamountdescription")
     val sEzsignsignatureCreditcardamountdescription: kotlin.String? = null,
 
+    /* Whether we can enter a custom amount while signing an Ezsignsignature 'Creditcard' or not */
+    @Json(name = "bEzsignsignatureCreditcardcustomamount")
+    val bEzsignsignatureCreditcardcustomamount: kotlin.Boolean? = null,
+
     /* The description of the Ezsignsigningreason in the language of the requester */
     @Json(name = "sEzsignsigningreasonDescriptionX")
     val sEzsignsigningreasonDescriptionX: kotlin.String? = null,
@@ -163,6 +172,12 @@ data class EzsignsignatureResponseCompound (
     /* The step when the Ezsignsigner will be invited to sign */
     @Json(name = "iEzsignsignatureStepadjusted")
     val iEzsignsignatureStepadjusted: kotlin.Int? = null,
+
+    @Json(name = "eEzsignsignatureSignaturepad")
+    val eEzsignsignatureSignaturepad: FieldEEzsignsignatureSignaturepad? = null,
+
+    @Json(name = "eEzsignsignatureSignaturepadrequired")
+    val eEzsignsignatureSignaturepadrequired: FieldEEzsignsignatureSignaturepadrequired? = null,
 
     /* A tooltip that will be presented to Ezsignsigner about the Ezsignsignature */
     @Json(name = "tEzsignsignatureTooltip")

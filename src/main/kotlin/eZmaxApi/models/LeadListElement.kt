@@ -30,6 +30,7 @@ import com.squareup.moshi.JsonClass
  * @param dtLeadExpiration The expiration of the Lead
  * @param bLeadIsactive Whether the lead is active or not
  * @param sLeadCode The code of the Lead
+ * @param sLeadContacts The contacts' name of the Lead
  */
 
 
@@ -60,7 +61,11 @@ data class LeadListElement (
 
     /* The code of the Lead */
     @Json(name = "sLeadCode")
-    val sLeadCode: kotlin.String
+    val sLeadCode: kotlin.String,
+
+    /* The contacts' name of the Lead */
+    @Json(name = "sLeadContacts")
+    val sLeadContacts: kotlin.String? = null
 
 ) {
 

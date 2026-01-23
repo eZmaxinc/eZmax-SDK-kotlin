@@ -49,7 +49,7 @@ import eZmaxApi.infrastructure.ResponseType
 import eZmaxApi.infrastructure.Success
 import eZmaxApi.infrastructure.toMultiValue
 
-class ObjectCreditcardclientApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
+open class ObjectCreditcardclientApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
@@ -418,6 +418,8 @@ class ObjectCreditcardclientApi(basePath: kotlin.String = defaultBasePath, clien
          @Json(name = "fkiCreditcardtypeID_DESC") fkiCreditcardtypeID_DESC("fkiCreditcardtypeID_DESC"),
          @Json(name = "bCreditcardclientrelationIsdefault_ASC") bCreditcardclientrelationIsdefault_ASC("bCreditcardclientrelationIsdefault_ASC"),
          @Json(name = "bCreditcardclientrelationIsdefault_DESC") bCreditcardclientrelationIsdefault_DESC("bCreditcardclientrelationIsdefault_DESC"),
+         @Json(name = "bCreditcardclientLegacy_ASC") bCreditcardclientLegacy_ASC("bCreditcardclientLegacy_ASC"),
+         @Json(name = "bCreditcardclientLegacy_DESC") bCreditcardclientLegacy_DESC("bCreditcardclientLegacy_DESC"),
          @Json(name = "sCreditcardclientDescription_ASC") sCreditcardclientDescription_ASC("sCreditcardclientDescription_ASC"),
          @Json(name = "sCreditcardclientDescription_DESC") sCreditcardclientDescription_DESC("sCreditcardclientDescription_DESC"),
          @Json(name = "bCreditcardclientIsactive_ASC") bCreditcardclientIsactive_ASC("bCreditcardclientIsactive_ASC"),

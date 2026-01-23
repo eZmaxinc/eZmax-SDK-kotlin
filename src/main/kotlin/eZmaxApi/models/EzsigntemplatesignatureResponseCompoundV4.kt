@@ -25,6 +25,8 @@ import eZmaxApi.models.FieldEEzsigntemplatesignatureDependencyrequirement
 import eZmaxApi.models.FieldEEzsigntemplatesignatureFont
 import eZmaxApi.models.FieldEEzsigntemplatesignaturePositioning
 import eZmaxApi.models.FieldEEzsigntemplatesignaturePositioningoccurence
+import eZmaxApi.models.FieldEEzsigntemplatesignatureSignaturepad
+import eZmaxApi.models.FieldEEzsigntemplatesignatureSignaturepadrequired
 import eZmaxApi.models.FieldEEzsigntemplatesignatureTooltipposition
 import eZmaxApi.models.FieldEEzsigntemplatesignatureType
 
@@ -49,6 +51,8 @@ import com.squareup.moshi.JsonClass
  * @param iEzsigntemplatesignatureY The Y coordinate (Vertical) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.
  * @param iEzsigntemplatesignatureWidth The width of the Ezsigntemplatesignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsigntemplatesignature to have a width of 2 inches, you would use \"200\" for the iEzsigntemplatesignatureWidth.
  * @param iEzsigntemplatesignatureHeight The height of the Ezsigntemplatesignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsigntemplatesignature to have an height of 2 inches, you would use \"200\" for the iEzsigntemplatesignatureHeight.
+ * @param eEzsigntemplatesignatureSignaturepad 
+ * @param eEzsigntemplatesignatureSignaturepadrequired 
  * @param eEzsigntemplatesignatureConsultationtrigger 
  * @param tEzsigntemplatesignatureTooltip A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplatesignature
  * @param eEzsigntemplatesignatureTooltipposition 
@@ -135,6 +139,12 @@ data class EzsigntemplatesignatureResponseCompoundV4 (
     /* The height of the Ezsigntemplatesignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsigntemplatesignature to have an height of 2 inches, you would use \"200\" for the iEzsigntemplatesignatureHeight. */
     @Json(name = "iEzsigntemplatesignatureHeight")
     val iEzsigntemplatesignatureHeight: kotlin.Int? = null,
+
+    @Json(name = "eEzsigntemplatesignatureSignaturepad")
+    val eEzsigntemplatesignatureSignaturepad: FieldEEzsigntemplatesignatureSignaturepad? = null,
+
+    @Json(name = "eEzsigntemplatesignatureSignaturepadrequired")
+    val eEzsigntemplatesignatureSignaturepadrequired: FieldEEzsigntemplatesignatureSignaturepadrequired? = null,
 
     @Json(name = "eEzsigntemplatesignatureConsultationtrigger")
     val eEzsigntemplatesignatureConsultationtrigger: FieldEEzsigntemplatesignatureConsultationtrigger? = null,

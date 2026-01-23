@@ -25,7 +25,6 @@ import com.squareup.moshi.JsonClass
  * @param fkiEzsignfolderID The unique ID of the Ezsignfolder
  * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
  * @param eEzsigndocumentSource Indicates where to look for the document binary content.
- * @param dtEzsigndocumentDuedate The maximum date and time at which the Ezsigndocument can be signed.
  * @param sEzsigndocumentName The name of the document that will be presented to Ezsignfoldersignerassociations
  * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument
  * @param fkiEzsigntemplateID The unique ID of the Ezsigntemplate
@@ -37,6 +36,7 @@ import com.squareup.moshi.JsonClass
  * @param bEzsigndocumentForcerepair Try to repair the document or flatten it if it cannot be used for electronic signature. 
  * @param sEzsigndocumentPassword If the source document is password protected, the password to open/modify it.
  * @param eEzsigndocumentForm If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**  **Discard** removes the form from the document.  **Flatten** prints the form values in the document.
+ * @param dtEzsigndocumentDuedate The maximum date and time at which the Ezsigndocument can be signed.
  * @param sEzsigndocumentExternalid This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
  */
 
@@ -54,10 +54,6 @@ data class EzsigndocumentRequestCompound (
     /* Indicates where to look for the document binary content. */
     @Json(name = "eEzsigndocumentSource")
     val eEzsigndocumentSource: EzsigndocumentRequestCompound.EEzsigndocumentSource,
-
-    /* The maximum date and time at which the Ezsigndocument can be signed. */
-    @Json(name = "dtEzsigndocumentDuedate")
-    val dtEzsigndocumentDuedate: kotlin.String,
 
     /* The name of the document that will be presented to Ezsignfoldersignerassociations */
     @Json(name = "sEzsigndocumentName")
@@ -102,6 +98,10 @@ data class EzsigndocumentRequestCompound (
     /* If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**  **Discard** removes the form from the document.  **Flatten** prints the form values in the document. */
     @Json(name = "eEzsigndocumentForm")
     val eEzsigndocumentForm: EzsigndocumentRequestCompound.EEzsigndocumentForm? = null,
+
+    /* The maximum date and time at which the Ezsigndocument can be signed. */
+    @Json(name = "dtEzsigndocumentDuedate")
+    val dtEzsigndocumentDuedate: kotlin.String? = null,
 
     /* This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format.  */
     @Json(name = "sEzsigndocumentExternalid")

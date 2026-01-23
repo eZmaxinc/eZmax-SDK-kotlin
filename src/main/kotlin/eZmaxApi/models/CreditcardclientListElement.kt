@@ -26,6 +26,7 @@ import com.squareup.moshi.JsonClass
  * @param fkiCreditcarddetailID The unique ID of the Creditcarddetail
  * @param fkiCreditcardtypeID The unique ID of the Creditcardtype
  * @param bCreditcardclientrelationIsdefault Whether if it's the creditcardclient is the default one
+ * @param bCreditcardclientLegacy Whether the Creditcardclient is legacy or not
  * @param sCreditcardclientDescription The description of the Creditcardclient
  * @param bCreditcardclientAllowedcompanypayment Whether if it's an allowedagencypayment
  * @param bCreditcardclientAllowedtranquillit Whether if it's an allowedtranquillit
@@ -52,6 +53,10 @@ data class CreditcardclientListElement (
     /* Whether if it's the creditcardclient is the default one */
     @Json(name = "bCreditcardclientrelationIsdefault")
     val bCreditcardclientrelationIsdefault: kotlin.Boolean,
+
+    /* Whether the Creditcardclient is legacy or not */
+    @Json(name = "bCreditcardclientLegacy")
+    val bCreditcardclientLegacy: kotlin.Boolean,
 
     /* The description of the Creditcardclient */
     @Json(name = "sCreditcardclientDescription")

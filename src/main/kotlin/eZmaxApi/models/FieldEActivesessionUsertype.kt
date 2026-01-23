@@ -22,7 +22,7 @@ import com.squareup.moshi.JsonClass
 /**
  * The Type of User for the Activesession
  *
- * Values: AgentBroker,Assistant,EzsignSigner,EzsignUser,Normal
+ * Values: AgentBroker,Assistant,Employee,EzsignSigner,EzsignUser,Normal
  */
 
 @JsonClass(generateAdapter = false)
@@ -33,6 +33,9 @@ enum class FieldEActivesessionUsertype(val value: kotlin.String) {
 
     @Json(name = "Assistant")
     Assistant("Assistant"),
+
+    @Json(name = "Employee")
+    Employee("Employee"),
 
     @Json(name = "EzsignSigner")
     EzsignSigner("EzsignSigner"),

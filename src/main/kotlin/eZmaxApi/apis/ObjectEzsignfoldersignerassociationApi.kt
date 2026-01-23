@@ -20,8 +20,6 @@ import okhttp3.Call
 import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommonResponseError
-import eZmaxApi.models.EzsignfoldersignerassociationCreateEmbeddedUrlV1Request
-import eZmaxApi.models.EzsignfoldersignerassociationCreateEmbeddedUrlV1Response
 import eZmaxApi.models.EzsignfoldersignerassociationCreateEmbeddedUrlV2Request
 import eZmaxApi.models.EzsignfoldersignerassociationCreateEmbeddedUrlV2Response
 import eZmaxApi.models.EzsignfoldersignerassociationCreateObjectV1Request
@@ -56,7 +54,7 @@ import eZmaxApi.infrastructure.ResponseType
 import eZmaxApi.infrastructure.Success
 import eZmaxApi.infrastructure.toMultiValue
 
-class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
+open class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
@@ -65,86 +63,9 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     }
 
     /**
-     * POST /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/createEmbeddedUrl
-     * Creates an Url to allow embedded signing
-     * This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
-     * @param pkiEzsignfoldersignerassociationID 
-     * @param ezsignfoldersignerassociationCreateEmbeddedUrlV1Request 
-     * @return EzsignfoldersignerassociationCreateEmbeddedUrlV1Response
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignfoldersignerassociationCreateEmbeddedUrlV1(pkiEzsignfoldersignerassociationID: kotlin.Int, ezsignfoldersignerassociationCreateEmbeddedUrlV1Request: EzsignfoldersignerassociationCreateEmbeddedUrlV1Request) : EzsignfoldersignerassociationCreateEmbeddedUrlV1Response {
-        val localVarResponse = ezsignfoldersignerassociationCreateEmbeddedUrlV1WithHttpInfo(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationCreateEmbeddedUrlV1Request = ezsignfoldersignerassociationCreateEmbeddedUrlV1Request)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfoldersignerassociationCreateEmbeddedUrlV1Response
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * POST /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/createEmbeddedUrl
-     * Creates an Url to allow embedded signing
-     * This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
-     * @param pkiEzsignfoldersignerassociationID 
-     * @param ezsignfoldersignerassociationCreateEmbeddedUrlV1Request 
-     * @return ApiResponse<EzsignfoldersignerassociationCreateEmbeddedUrlV1Response?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignfoldersignerassociationCreateEmbeddedUrlV1WithHttpInfo(pkiEzsignfoldersignerassociationID: kotlin.Int, ezsignfoldersignerassociationCreateEmbeddedUrlV1Request: EzsignfoldersignerassociationCreateEmbeddedUrlV1Request) : ApiResponse<EzsignfoldersignerassociationCreateEmbeddedUrlV1Response?> {
-        val localVariableConfig = ezsignfoldersignerassociationCreateEmbeddedUrlV1RequestConfig(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationCreateEmbeddedUrlV1Request = ezsignfoldersignerassociationCreateEmbeddedUrlV1Request)
-
-        return request<EzsignfoldersignerassociationCreateEmbeddedUrlV1Request, EzsignfoldersignerassociationCreateEmbeddedUrlV1Response>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation ezsignfoldersignerassociationCreateEmbeddedUrlV1
-     *
-     * @param pkiEzsignfoldersignerassociationID 
-     * @param ezsignfoldersignerassociationCreateEmbeddedUrlV1Request 
-     * @return RequestConfig
-     */
-    fun ezsignfoldersignerassociationCreateEmbeddedUrlV1RequestConfig(pkiEzsignfoldersignerassociationID: kotlin.Int, ezsignfoldersignerassociationCreateEmbeddedUrlV1Request: EzsignfoldersignerassociationCreateEmbeddedUrlV1Request) : RequestConfig<EzsignfoldersignerassociationCreateEmbeddedUrlV1Request> {
-        val localVariableBody = ezsignfoldersignerassociationCreateEmbeddedUrlV1Request
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Content-Type"] = "application/json"
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.POST,
-            path = "/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/createEmbeddedUrl".replace("{"+"pkiEzsignfoldersignerassociationID"+"}", encodeURIComponent(pkiEzsignfoldersignerassociationID.toString())),
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            requiresAuthentication = true,
-            body = localVariableBody
-        )
-    }
-
-    /**
      * POST /2/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/createEmbeddedUrl
      * Creates an Url to allow embedded signing
-     * This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
+     * This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.  ### Iframe Communication (postMessage)  If the signing page is embedded in an &#x60;iframe&#x60;, the application sends events to the parent window via &#x60;window.postMessage&#x60;.  The message structure is defined as follows:  &#x60;&#x60;&#x60;json {   \&quot;source\&quot;: \&quot;ezsign\&quot;,   \&quot;type\&quot;: \&quot;eEzsignEvent\&quot;,   \&quot;payload\&quot;: \&quot;CompletedEzsignfolder\&quot; } &#x60;&#x60;&#x60;  * **source**: Always &#x60;&#39;ezsign&#39;&#x60;. * **type**: Always &#x60;&#39;eEzsignEvent&#39;&#x60;. * **payload**: Corresponds to the **eEzsignEvent** values listed in the table above (e.g., &#x60;SessionTimeout&#x60;, &#x60;CompletedStep&#x60;, etc.).  #### Example listener  &#x60;&#x60;&#x60;javascript window.addEventListener(&#39;message&#39;, (event) &#x3D;&gt; {     const { source, type, payload } &#x3D; event.data;         if (source &#x3D;&#x3D;&#x3D; &#39;ezsign&#39; &amp;&amp; type &#x3D;&#x3D;&#x3D; &#39;eEzsignEvent&#39;) {         console.log(&#39;Event received:&#39;, payload);     } }); &#x60;&#x60;&#x60; 
      * @param pkiEzsignfoldersignerassociationID 
      * @param ezsignfoldersignerassociationCreateEmbeddedUrlV2Request 
      * @return EzsignfoldersignerassociationCreateEmbeddedUrlV2Response
@@ -177,7 +98,7 @@ class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defaultBa
     /**
      * POST /2/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/createEmbeddedUrl
      * Creates an Url to allow embedded signing
-     * This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
+     * This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.  ### Iframe Communication (postMessage)  If the signing page is embedded in an &#x60;iframe&#x60;, the application sends events to the parent window via &#x60;window.postMessage&#x60;.  The message structure is defined as follows:  &#x60;&#x60;&#x60;json {   \&quot;source\&quot;: \&quot;ezsign\&quot;,   \&quot;type\&quot;: \&quot;eEzsignEvent\&quot;,   \&quot;payload\&quot;: \&quot;CompletedEzsignfolder\&quot; } &#x60;&#x60;&#x60;  * **source**: Always &#x60;&#39;ezsign&#39;&#x60;. * **type**: Always &#x60;&#39;eEzsignEvent&#39;&#x60;. * **payload**: Corresponds to the **eEzsignEvent** values listed in the table above (e.g., &#x60;SessionTimeout&#x60;, &#x60;CompletedStep&#x60;, etc.).  #### Example listener  &#x60;&#x60;&#x60;javascript window.addEventListener(&#39;message&#39;, (event) &#x3D;&gt; {     const { source, type, payload } &#x3D; event.data;         if (source &#x3D;&#x3D;&#x3D; &#39;ezsign&#39; &amp;&amp; type &#x3D;&#x3D;&#x3D; &#39;eEzsignEvent&#39;) {         console.log(&#39;Event received:&#39;, payload);     } }); &#x60;&#x60;&#x60; 
      * @param pkiEzsignfoldersignerassociationID 
      * @param ezsignfoldersignerassociationCreateEmbeddedUrlV2Request 
      * @return ApiResponse<EzsignfoldersignerassociationCreateEmbeddedUrlV2Response?>

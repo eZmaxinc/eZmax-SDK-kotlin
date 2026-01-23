@@ -13,6 +13,7 @@
 | **sUserLastname** | **kotlin.String** | The last name of the user |  [optional] |
 | **sUserLoginname** | **kotlin.String** | The login name of the User. |  [optional] |
 | **sEmailAddress** | **kotlin.String** | The email address. |  [optional] |
+| **bUserIsactive** | **kotlin.Boolean** | Whether the User is active or not |  [optional] |
 | **sUsergroupexternalName** | **kotlin.String** | The name of the Usergroupexternal |  [optional] |
 
 

@@ -4,68 +4,8 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**inscriptionchecklistGetAutocompleteV2**](ObjectInscriptionchecklistApi.md#inscriptionchecklistGetAutocompleteV2) | **GET** /2/object/inscriptionchecklist/getAutocomplete/{sSelector} | Retrieve Inscriptionchecklists and IDs |
 | [**inscriptionchecklistGetAutocompleteV3**](ObjectInscriptionchecklistApi.md#inscriptionchecklistGetAutocompleteV3) | **GET** /3/object/inscriptionchecklist/getAutocomplete/{sSelector} | Retrieve Inscriptionchecklists and IDs |
 
-
-<a id="inscriptionchecklistGetAutocompleteV2"></a>
-# **inscriptionchecklistGetAutocompleteV2**
-> InscriptionchecklistGetAutocompleteV2Response inscriptionchecklistGetAutocompleteV2(sSelector, fkiID, eType, eFilterActive, sQuery, acceptLanguage)
-
-Retrieve Inscriptionchecklists and IDs
-
-Get the list of Inscriptionchecklist to be used in a dropdown or autocomplete control.
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectInscriptionchecklistApi()
-val sSelector : kotlin.String = sSelector_example // kotlin.String | The type of Inscriptionchecklist to return
-val fkiID : kotlin.String = fkiID_example // kotlin.String | Specify which fkiID we want to display.
-val eType : kotlin.String = eType_example // kotlin.String | The type of Inscriptionchecklist
-val eFilterActive : kotlin.String = eFilterActive_example // kotlin.String | Specify which results we want to display.
-val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter the returned results
-val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
-try {
-    val result : InscriptionchecklistGetAutocompleteV2Response = apiInstance.inscriptionchecklistGetAutocompleteV2(sSelector, fkiID, eType, eFilterActive, sQuery, acceptLanguage)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectInscriptionchecklistApi#inscriptionchecklistGetAutocompleteV2")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectInscriptionchecklistApi#inscriptionchecklistGetAutocompleteV2")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-| **sSelector** | **kotlin.String**| The type of Inscriptionchecklist to return | [enum: All] |
-| **fkiID** | **kotlin.String**| Specify which fkiID we want to display. | [optional] |
-| **eType** | **kotlin.String**| The type of Inscriptionchecklist | [optional] [enum: Buyercontract, Inscription, Inscriptionnotauthenticated, Inscriptiontemp, Agent, Broker, Otherincome, Rejectedoffertopurchase] |
-| **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to EFilterActive.Active] [enum: All, Active, Inactive] |
-| **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional] |
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
-
-### Return type
-
-[**InscriptionchecklistGetAutocompleteV2Response**](InscriptionchecklistGetAutocompleteV2Response.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
 
 <a id="inscriptionchecklistGetAutocompleteV3"></a>
 # **inscriptionchecklistGetAutocompleteV3**

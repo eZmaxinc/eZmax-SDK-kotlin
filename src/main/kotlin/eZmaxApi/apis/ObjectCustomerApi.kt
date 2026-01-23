@@ -20,10 +20,7 @@ import okhttp3.Call
 import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommonResponseError
-import eZmaxApi.models.CustomerCreateObjectV1Request
-import eZmaxApi.models.CustomerCreateObjectV1Response
 import eZmaxApi.models.CustomerGetAutocompleteV2Response
-import eZmaxApi.models.CustomerGetListV1Response
 import eZmaxApi.models.CustomerGetObjectV2Response
 import eZmaxApi.models.CustomerImportIntoEDMV1Request
 import eZmaxApi.models.CustomerImportIntoEDMV1Response
@@ -45,86 +42,12 @@ import eZmaxApi.infrastructure.ResponseType
 import eZmaxApi.infrastructure.Success
 import eZmaxApi.infrastructure.toMultiValue
 
-class ObjectCustomerApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
+open class ObjectCustomerApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
             System.getProperties().getProperty(ApiClient.baseUrlKey, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
-    }
-
-    /**
-     * POST /1/object/customer
-     * Create a new Customer
-     * The endpoint allows to create one or many elements at once.
-     * @param customerCreateObjectV1Request 
-     * @return CustomerCreateObjectV1Response
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun customerCreateObjectV1(customerCreateObjectV1Request: CustomerCreateObjectV1Request) : CustomerCreateObjectV1Response {
-        val localVarResponse = customerCreateObjectV1WithHttpInfo(customerCreateObjectV1Request = customerCreateObjectV1Request)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CustomerCreateObjectV1Response
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * POST /1/object/customer
-     * Create a new Customer
-     * The endpoint allows to create one or many elements at once.
-     * @param customerCreateObjectV1Request 
-     * @return ApiResponse<CustomerCreateObjectV1Response?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    fun customerCreateObjectV1WithHttpInfo(customerCreateObjectV1Request: CustomerCreateObjectV1Request) : ApiResponse<CustomerCreateObjectV1Response?> {
-        val localVariableConfig = customerCreateObjectV1RequestConfig(customerCreateObjectV1Request = customerCreateObjectV1Request)
-
-        return request<CustomerCreateObjectV1Request, CustomerCreateObjectV1Response>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation customerCreateObjectV1
-     *
-     * @param customerCreateObjectV1Request 
-     * @return RequestConfig
-     */
-    fun customerCreateObjectV1RequestConfig(customerCreateObjectV1Request: CustomerCreateObjectV1Request) : RequestConfig<CustomerCreateObjectV1Request> {
-        val localVariableBody = customerCreateObjectV1Request
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Content-Type"] = "application/json"
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.POST,
-            path = "/1/object/customer",
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            requiresAuthentication = true,
-            body = localVariableBody
-        )
     }
 
     /**
@@ -253,149 +176,6 @@ class ObjectCustomerApi(basePath: kotlin.String = defaultBasePath, client: Call.
     }
 
     /**
-     * enum for parameter eOrderBy
-     */
-     enum class EOrderByCustomerGetListV1(val value: kotlin.String) {
-         @Json(name = "pkiCustomerID_ASC") pkiCustomerID_ASC("pkiCustomerID_ASC"),
-         @Json(name = "pkiCustomerID_DESC") pkiCustomerID_DESC("pkiCustomerID_DESC"),
-         @Json(name = "sCustomerName_ASC") sCustomerName_ASC("sCustomerName_ASC"),
-         @Json(name = "sCustomerName_DESC") sCustomerName_DESC("sCustomerName_DESC"),
-         @Json(name = "sCustomerNote_ASC") sCustomerNote_ASC("sCustomerNote_ASC"),
-         @Json(name = "sCustomerNote_DESC") sCustomerNote_DESC("sCustomerNote_DESC"),
-         @Json(name = "sCustomerCode_ASC") sCustomerCode_ASC("sCustomerCode_ASC"),
-         @Json(name = "sCustomerCode_DESC") sCustomerCode_DESC("sCustomerCode_DESC"),
-         @Json(name = "bCustomerIsactive_ASC") bCustomerIsactive_ASC("bCustomerIsactive_ASC"),
-         @Json(name = "bCustomerIsactive_DESC") bCustomerIsactive_DESC("bCustomerIsactive_DESC"),
-         @Json(name = "sPhoneE164_ASC") sPhoneE164_ASC("sPhoneE164_ASC"),
-         @Json(name = "sPhoneE164_DESC") sPhoneE164_DESC("sPhoneE164_DESC"),
-         @Json(name = "sEmailAddress_ASC") sEmailAddress_ASC("sEmailAddress_ASC"),
-         @Json(name = "sEmailAddress_DESC") sEmailAddress_DESC("sEmailAddress_DESC"),
-         @Json(name = "sAddressCivic_ASC") sAddressCivic_ASC("sAddressCivic_ASC"),
-         @Json(name = "sAddressCivic_DESC") sAddressCivic_DESC("sAddressCivic_DESC"),
-         @Json(name = "sAddressStreet_ASC") sAddressStreet_ASC("sAddressStreet_ASC"),
-         @Json(name = "sAddressStreet_DESC") sAddressStreet_DESC("sAddressStreet_DESC"),
-         @Json(name = "sAddressSuite_ASC") sAddressSuite_ASC("sAddressSuite_ASC"),
-         @Json(name = "sAddressSuite_DESC") sAddressSuite_DESC("sAddressSuite_DESC"),
-         @Json(name = "sAddressCity_ASC") sAddressCity_ASC("sAddressCity_ASC"),
-         @Json(name = "sAddressCity_DESC") sAddressCity_DESC("sAddressCity_DESC"),
-         @Json(name = "sAddressZip_ASC") sAddressZip_ASC("sAddressZip_ASC"),
-         @Json(name = "sAddressZip_DESC") sAddressZip_DESC("sAddressZip_DESC"),
-         @Json(name = "sProvinceNameX_ASC") sProvinceNameX_ASC("sProvinceNameX_ASC"),
-         @Json(name = "sProvinceNameX_DESC") sProvinceNameX_DESC("sProvinceNameX_DESC"),
-         @Json(name = "sCountryNameX_ASC") sCountryNameX_ASC("sCountryNameX_ASC"),
-         @Json(name = "sCountryNameX_DESC") sCountryNameX_DESC("sCountryNameX_DESC");
-
-        /**
-         * Override [toString()] to avoid using the enum variable name as the value, and instead use
-         * the actual value defined in the API spec file.
-         *
-         * This solves a problem when the variable name and its value are different, and ensures that
-         * the client sends the correct enum values to the server always.
-         */
-        override fun toString(): kotlin.String = "$value"
-     }
-
-    /**
-     * GET /1/object/customer/getList
-     * Retrieve Customer list
-     * 
-     * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional)
-     * @param iRowOffset  (optional, default to 0)
-     * @param acceptLanguage  (optional)
-     * @param sFilter  (optional)
-     * @return CustomerGetListV1Response
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun customerGetListV1(eOrderBy: EOrderByCustomerGetListV1? = null, iRowMax: kotlin.Int? = null, iRowOffset: kotlin.Int? = 0, acceptLanguage: HeaderAcceptLanguage? = null, sFilter: kotlin.String? = null) : CustomerGetListV1Response {
-        val localVarResponse = customerGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CustomerGetListV1Response
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * GET /1/object/customer/getList
-     * Retrieve Customer list
-     * 
-     * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional)
-     * @param iRowOffset  (optional, default to 0)
-     * @param acceptLanguage  (optional)
-     * @param sFilter  (optional)
-     * @return ApiResponse<CustomerGetListV1Response?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    fun customerGetListV1WithHttpInfo(eOrderBy: EOrderByCustomerGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : ApiResponse<CustomerGetListV1Response?> {
-        val localVariableConfig = customerGetListV1RequestConfig(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
-
-        return request<Unit, CustomerGetListV1Response>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation customerGetListV1
-     *
-     * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional)
-     * @param iRowOffset  (optional, default to 0)
-     * @param acceptLanguage  (optional)
-     * @param sFilter  (optional)
-     * @return RequestConfig
-     */
-    fun customerGetListV1RequestConfig(eOrderBy: EOrderByCustomerGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
-        val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
-            .apply {
-                if (eOrderBy != null) {
-                    put("eOrderBy", listOf(eOrderBy.value))
-                }
-                if (iRowMax != null) {
-                    put("iRowMax", listOf(iRowMax.toString()))
-                }
-                if (iRowOffset != null) {
-                    put("iRowOffset", listOf(iRowOffset.toString()))
-                }
-                if (sFilter != null) {
-                    put("sFilter", listOf(sFilter.toString()))
-                }
-            }
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.GET,
-            path = "/1/object/customer/getList",
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            requiresAuthentication = true,
-            body = localVariableBody
-        )
-    }
-
-    /**
      * GET /2/object/customer/{pkiCustomerID}
      * Retrieve an existing Customer
      * 
@@ -470,7 +250,7 @@ class ObjectCustomerApi(basePath: kotlin.String = defaultBasePath, client: Call.
 
     /**
      * POST /1/object/customer/{pkiCustomerID}/importIntoEDM
-     * Import attachments into the Buyercontract
+     * Import attachments into the Customer
      * 
      * @param pkiCustomerID 
      * @param customerImportIntoEDMV1Request 
@@ -503,7 +283,7 @@ class ObjectCustomerApi(basePath: kotlin.String = defaultBasePath, client: Call.
 
     /**
      * POST /1/object/customer/{pkiCustomerID}/importIntoEDM
-     * Import attachments into the Buyercontract
+     * Import attachments into the Customer
      * 
      * @param pkiCustomerID 
      * @param customerImportIntoEDMV1Request 

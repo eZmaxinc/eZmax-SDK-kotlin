@@ -31,6 +31,7 @@ import com.squareup.moshi.JsonClass
  * @param sUserLastname The last name of the user
  * @param sUserLoginname The login name of the User.
  * @param sEmailAddress The email address.
+ * @param bUserIsactive Whether the User is active or not
  * @param sUsergroupexternalName The name of the Usergroupexternal
  */
 
@@ -72,6 +73,10 @@ data class UsergroupmembershipResponse (
     /* The email address. */
     @Json(name = "sEmailAddress")
     val sEmailAddress: kotlin.String? = null,
+
+    /* Whether the User is active or not */
+    @Json(name = "bUserIsactive")
+    val bUserIsactive: kotlin.Boolean? = null,
 
     /* The name of the Usergroupexternal */
     @Json(name = "sUsergroupexternalName")

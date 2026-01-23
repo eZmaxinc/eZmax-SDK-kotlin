@@ -16,6 +16,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**ezsigndocumentDeleteObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentDeleteObjectV1) | **DELETE** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Delete an existing Ezsigndocument |
 | [**ezsigndocumentEditEzsignannotationsV1**](ObjectEzsigndocumentApi.md#ezsigndocumentEditEzsignannotationsV1) | **PUT** /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignannotations | Edit multiple Ezsignannotations |
 | [**ezsigndocumentEditEzsignformfieldgroupsV1**](ObjectEzsigndocumentApi.md#ezsigndocumentEditEzsignformfieldgroupsV1) | **PUT** /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignformfieldgroups | Edit multiple Ezsignformfieldgroups |
+| [**ezsigndocumentEditEzsignformfieldgroupsV2**](ObjectEzsigndocumentApi.md#ezsigndocumentEditEzsignformfieldgroupsV2) | **PUT** /2/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignformfieldgroups | Edit multiple Ezsignformfieldgroups |
 | [**ezsigndocumentEditEzsignsignaturesV1**](ObjectEzsigndocumentApi.md#ezsigndocumentEditEzsignsignaturesV1) | **PUT** /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures | Edit multiple Ezsignsignatures |
 | [**ezsigndocumentEditEzsignsignaturesV2**](ObjectEzsigndocumentApi.md#ezsigndocumentEditEzsignsignaturesV2) | **PUT** /2/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures | Edit multiple Ezsignsignatures |
 | [**ezsigndocumentEditObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentEditObjectV1) | **PUT** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Edit an existing Ezsigndocument |
@@ -24,6 +25,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**ezsigndocumentFlattenV1**](ObjectEzsigndocumentApi.md#ezsigndocumentFlattenV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/flatten | Flatten |
 | [**ezsigndocumentGetActionableElementsV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetActionableElementsV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements | Retrieve actionable elements for the Ezsigndocument |
 | [**ezsigndocumentGetActionableElementsV2**](ObjectEzsigndocumentApi.md#ezsigndocumentGetActionableElementsV2) | **GET** /2/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements | Retrieve actionable elements for the Ezsigndocument |
+| [**ezsigndocumentGetActionableElementsV3**](ObjectEzsigndocumentApi.md#ezsigndocumentGetActionableElementsV3) | **GET** /3/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements | Retrieve actionable elements for the Ezsigndocument |
 | [**ezsigndocumentGetAttachmentsV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetAttachmentsV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getAttachments | Retrieve Ezsigndocument&#39;s Attachments |
 | [**ezsigndocumentGetCompletedElementsV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetCompletedElementsV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getCompletedElements | Retrieve completed elements for the Ezsigndocument |
 | [**ezsigndocumentGetCompletedElementsV2**](ObjectEzsigndocumentApi.md#ezsigndocumentGetCompletedElementsV2) | **GET** /2/object/ezsigndocument/{pkiEzsigndocumentID}/getCompletedElements | Retrieve completed elements for the Ezsigndocument |
@@ -651,6 +653,57 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a id="ezsigndocumentEditEzsignformfieldgroupsV2"></a>
+# **ezsigndocumentEditEzsignformfieldgroupsV2**
+> EzsigndocumentEditEzsignformfieldgroupsV2Response ezsigndocumentEditEzsignformfieldgroupsV2(pkiEzsigndocumentID, ezsigndocumentEditEzsignformfieldgroupsV2Request)
+
+Edit multiple Ezsignformfieldgroups
+
+Using this endpoint, you can edit multiple Ezsignformfieldgroups at the same time.
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsigndocumentApi()
+val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | 
+val ezsigndocumentEditEzsignformfieldgroupsV2Request : EzsigndocumentEditEzsignformfieldgroupsV2Request =  // EzsigndocumentEditEzsignformfieldgroupsV2Request | 
+try {
+    val result : EzsigndocumentEditEzsignformfieldgroupsV2Response = apiInstance.ezsigndocumentEditEzsignformfieldgroupsV2(pkiEzsigndocumentID, ezsigndocumentEditEzsignformfieldgroupsV2Request)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsigndocumentApi#ezsigndocumentEditEzsignformfieldgroupsV2")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsigndocumentApi#ezsigndocumentEditEzsignformfieldgroupsV2")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **ezsigndocumentEditEzsignformfieldgroupsV2Request** | [**EzsigndocumentEditEzsignformfieldgroupsV2Request**](EzsigndocumentEditEzsignformfieldgroupsV2Request.md)|  | |
+
+### Return type
+
+[**EzsigndocumentEditEzsignformfieldgroupsV2Response**](EzsigndocumentEditEzsignformfieldgroupsV2Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a id="ezsigndocumentEditEzsignsignaturesV1"></a>
 # **ezsigndocumentEditEzsignsignaturesV1**
 > EzsigndocumentEditEzsignsignaturesV1Response ezsigndocumentEditEzsignsignaturesV1(pkiEzsigndocumentID, ezsigndocumentEditEzsignsignaturesV1Request)
@@ -1042,6 +1095,55 @@ try {
 ### Return type
 
 [**EzsigndocumentGetActionableElementsV2Response**](EzsigndocumentGetActionableElementsV2Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="ezsigndocumentGetActionableElementsV3"></a>
+# **ezsigndocumentGetActionableElementsV3**
+> EzsigndocumentGetActionableElementsV3Response ezsigndocumentGetActionableElementsV3(pkiEzsigndocumentID)
+
+Retrieve actionable elements for the Ezsigndocument
+
+Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsigndocumentApi()
+val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : EzsigndocumentGetActionableElementsV3Response = apiInstance.ezsigndocumentGetActionableElementsV3(pkiEzsigndocumentID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsigndocumentApi#ezsigndocumentGetActionableElementsV3")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsigndocumentApi#ezsigndocumentGetActionableElementsV3")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**EzsigndocumentGetActionableElementsV3Response**](EzsigndocumentGetActionableElementsV3Response.md)
 
 ### Authorization
 

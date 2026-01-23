@@ -8,6 +8,7 @@
 | **fkiCreditcarddetailID** | **kotlin.Int** | The unique ID of the Creditcarddetail |  |
 | **fkiCreditcardtypeID** | **kotlin.Int** | The unique ID of the Creditcardtype |  |
 | **bCreditcardclientrelationIsdefault** | **kotlin.Boolean** | Whether if it&#39;s the creditcardclient is the default one |  |
+| **bCreditcardclientLegacy** | **kotlin.Boolean** | Whether the Creditcardclient is legacy or not |  |
 | **sCreditcardclientDescription** | **kotlin.String** | The description of the Creditcardclient |  |
 | **bCreditcardclientAllowedcompanypayment** | **kotlin.Boolean** | Whether if it&#39;s an allowedagencypayment |  |
 | **bCreditcardclientAllowedtranquillit** | **kotlin.Boolean** | Whether if it&#39;s an allowedtranquillit |  |

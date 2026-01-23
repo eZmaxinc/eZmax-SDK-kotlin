@@ -23,6 +23,8 @@ import eZmaxApi.models.FieldEEzsignsignatureAttachmentnamesource
 import eZmaxApi.models.FieldEEzsignsignatureConsultationtrigger
 import eZmaxApi.models.FieldEEzsignsignatureDependencyrequirement
 import eZmaxApi.models.FieldEEzsignsignatureFont
+import eZmaxApi.models.FieldEEzsignsignatureSignaturepad
+import eZmaxApi.models.FieldEEzsignsignatureSignaturepadrequired
 import eZmaxApi.models.FieldEEzsignsignatureTooltipposition
 import eZmaxApi.models.FieldEEzsignsignatureType
 
@@ -43,6 +45,8 @@ import com.squareup.moshi.JsonClass
  * @param fkiPaymentgatewayID The unique ID of the Paymentgateway
  * @param iEzsignsignatureWidth The width of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have a width of 2 inches, you would use \"200\" for the iEzsignsignatureWidth.
  * @param iEzsignsignatureHeight The height of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have an height of 2 inches, you would use \"200\" for the iEzsignsignatureHeight.
+ * @param eEzsignsignatureSignaturepad 
+ * @param eEzsignsignatureSignaturepadrequired 
  * @param tEzsignsignatureTooltip A tooltip that will be presented to Ezsignsigner about the Ezsignsignature
  * @param eEzsignsignatureTooltipposition 
  * @param eEzsignsignatureFont 
@@ -62,6 +66,7 @@ import com.squareup.moshi.JsonClass
  * @param eEzsignsignatureDependencyrequirement 
  * @param sEzsignsignatureCreditcardamountdescription The description of the Creditcard signature
  * @param dEzsignsignatureCreditcardamount The amount of the Creditcard signature
+ * @param bEzsignsignatureCreditcardcustomamount Whether we can enter a custom amount while signing an Ezsignsignature 'Creditcard' or not
  * @param bEzsignsignatureCustomdate Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)
  * @param aObjEzsignsignaturecustomdate An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all.
  * @param aObjEzsignelementdependency 
@@ -113,6 +118,12 @@ data class EzsignsignatureRequestCompoundV2 (
     /* The height of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have an height of 2 inches, you would use \"200\" for the iEzsignsignatureHeight. */
     @Json(name = "iEzsignsignatureHeight")
     val iEzsignsignatureHeight: kotlin.Int? = null,
+
+    @Json(name = "eEzsignsignatureSignaturepad")
+    val eEzsignsignatureSignaturepad: FieldEEzsignsignatureSignaturepad? = null,
+
+    @Json(name = "eEzsignsignatureSignaturepadrequired")
+    val eEzsignsignatureSignaturepadrequired: FieldEEzsignsignatureSignaturepadrequired? = null,
 
     /* A tooltip that will be presented to Ezsignsigner about the Ezsignsignature */
     @Json(name = "tEzsignsignatureTooltip")
@@ -183,6 +194,10 @@ data class EzsignsignatureRequestCompoundV2 (
     /* The amount of the Creditcard signature */
     @Json(name = "dEzsignsignatureCreditcardamount")
     val dEzsignsignatureCreditcardamount: kotlin.String? = null,
+
+    /* Whether we can enter a custom amount while signing an Ezsignsignature 'Creditcard' or not */
+    @Json(name = "bEzsignsignatureCreditcardcustomamount")
+    val bEzsignsignatureCreditcardcustomamount: kotlin.Boolean? = null,
 
     /* Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**) */
     @Json(name = "bEzsignsignatureCustomdate")

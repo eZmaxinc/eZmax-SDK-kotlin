@@ -27,8 +27,6 @@ import eZmaxApi.models.EzsignbulksendCreateObjectV1Response
 import eZmaxApi.models.EzsignbulksendCreateObjectV2Request
 import eZmaxApi.models.EzsignbulksendCreateObjectV2Response
 import eZmaxApi.models.EzsignbulksendDeleteObjectV1Response
-import eZmaxApi.models.EzsignbulksendEditObjectV1Request
-import eZmaxApi.models.EzsignbulksendEditObjectV1Response
 import eZmaxApi.models.EzsignbulksendEditObjectV2Request
 import eZmaxApi.models.EzsignbulksendEditObjectV2Response
 import eZmaxApi.models.EzsignbulksendGetEzsignbulksendtransmissionsV1Response
@@ -57,7 +55,7 @@ import eZmaxApi.infrastructure.ResponseType
 import eZmaxApi.infrastructure.Success
 import eZmaxApi.infrastructure.toMultiValue
 
-class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
+open class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
@@ -360,88 +358,6 @@ class ObjectEzsignbulksendApi(basePath: kotlin.String = defaultBasePath, client:
 
         return RequestConfig(
             method = RequestMethod.DELETE,
-            path = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}".replace("{"+"pkiEzsignbulksendID"+"}", encodeURIComponent(pkiEzsignbulksendID.toString())),
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            requiresAuthentication = true,
-            body = localVariableBody
-        )
-    }
-
-    /**
-     * PUT /1/object/ezsignbulksend/{pkiEzsignbulksendID}
-     * Edit an existing Ezsignbulksend
-     * 
-     * @param pkiEzsignbulksendID 
-     * @param ezsignbulksendEditObjectV1Request 
-     * @return EzsignbulksendEditObjectV1Response
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    @Deprecated(message = "This operation is deprecated.")
-    fun ezsignbulksendEditObjectV1(pkiEzsignbulksendID: kotlin.Int, ezsignbulksendEditObjectV1Request: EzsignbulksendEditObjectV1Request) : EzsignbulksendEditObjectV1Response {
-        @Suppress("DEPRECATION")
-        val localVarResponse = ezsignbulksendEditObjectV1WithHttpInfo(pkiEzsignbulksendID = pkiEzsignbulksendID, ezsignbulksendEditObjectV1Request = ezsignbulksendEditObjectV1Request)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignbulksendEditObjectV1Response
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * PUT /1/object/ezsignbulksend/{pkiEzsignbulksendID}
-     * Edit an existing Ezsignbulksend
-     * 
-     * @param pkiEzsignbulksendID 
-     * @param ezsignbulksendEditObjectV1Request 
-     * @return ApiResponse<EzsignbulksendEditObjectV1Response?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    @Deprecated(message = "This operation is deprecated.")
-    fun ezsignbulksendEditObjectV1WithHttpInfo(pkiEzsignbulksendID: kotlin.Int, ezsignbulksendEditObjectV1Request: EzsignbulksendEditObjectV1Request) : ApiResponse<EzsignbulksendEditObjectV1Response?> {
-        @Suppress("DEPRECATION")
-        val localVariableConfig = ezsignbulksendEditObjectV1RequestConfig(pkiEzsignbulksendID = pkiEzsignbulksendID, ezsignbulksendEditObjectV1Request = ezsignbulksendEditObjectV1Request)
-
-        return request<EzsignbulksendEditObjectV1Request, EzsignbulksendEditObjectV1Response>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation ezsignbulksendEditObjectV1
-     *
-     * @param pkiEzsignbulksendID 
-     * @param ezsignbulksendEditObjectV1Request 
-     * @return RequestConfig
-     */
-    @Deprecated(message = "This operation is deprecated.")
-    fun ezsignbulksendEditObjectV1RequestConfig(pkiEzsignbulksendID: kotlin.Int, ezsignbulksendEditObjectV1Request: EzsignbulksendEditObjectV1Request) : RequestConfig<EzsignbulksendEditObjectV1Request> {
-        val localVariableBody = ezsignbulksendEditObjectV1Request
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Content-Type"] = "application/json"
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.PUT,
             path = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}".replace("{"+"pkiEzsignbulksendID"+"}", encodeURIComponent(pkiEzsignbulksendID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,

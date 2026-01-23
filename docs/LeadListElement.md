@@ -11,6 +11,7 @@
 | **dtLeadExpiration** | **kotlin.String** | The expiration of the Lead |  |
 | **bLeadIsactive** | **kotlin.Boolean** | Whether the lead is active or not |  |
 | **sLeadCode** | **kotlin.String** | The code of the Lead |  |
+| **sLeadContacts** | **kotlin.String** | The contacts&#39; name of the Lead |  [optional] |
 
 
 
