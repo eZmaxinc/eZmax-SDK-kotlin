@@ -44,6 +44,7 @@ import com.squareup.moshi.JsonClass
  * @param bSystemconfigurationEzsignpaidbyoffice Whether if Ezsign is paid by the company or not
  * @param bSystemconfigurationHascreditcardmerchant Whether there is a creditcard merchant configured or not
  * @param bSystemconfigurationIsdisposalactive Whether is Disposal processus is active or not
+ * @param bSystemconfigurationAllowcomplexcreditcardsignature Whether is the system allows to have a complex creditcard signature
  * @param dtSystemconfigurationReadonlyexpirationstart The start date where the system will be in read only
  * @param dtSystemconfigurationReadonlyexpirationend The end date where the system will be in read only
  * @param objBranding 
@@ -112,6 +113,10 @@ data class SystemconfigurationResponseCompound (
     /* Whether is Disposal processus is active or not */
     @Json(name = "bSystemconfigurationIsdisposalactive")
     val bSystemconfigurationIsdisposalactive: kotlin.Boolean? = null,
+
+    /* Whether is the system allows to have a complex creditcard signature */
+    @Json(name = "bSystemconfigurationAllowcomplexcreditcardsignature")
+    val bSystemconfigurationAllowcomplexcreditcardsignature: kotlin.Boolean? = null,
 
     /* The start date where the system will be in read only */
     @Json(name = "dtSystemconfigurationReadonlyexpirationstart")

@@ -170,11 +170,30 @@ open class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, clie
     }
 
     /**
+     * enum for parameter accept
+     */
+     enum class AcceptEzsignfolderBatchDownloadV1(val value: kotlin.String) {
+         @Json(name = "application/json") applicationSlashJson("application/json"),
+         @Json(name = "application/zip") applicationSlashZip("application/zip"),
+         @Json(name = "application/pdf") applicationSlashPdf("application/pdf");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
+     }
+
+    /**
      * POST /1/object/ezsignfolder/{pkiEzsignfolderID}/batchDownload
      * Download multiples files from an Ezsignfolder
      * 
      * @param pkiEzsignfolderID 
      * @param ezsignfolderBatchDownloadV1Request 
+     * @param accept Test csharp (optional)
      * @return java.io.File
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -184,8 +203,8 @@ open class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, clie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun ezsignfolderBatchDownloadV1(pkiEzsignfolderID: kotlin.Int, ezsignfolderBatchDownloadV1Request: EzsignfolderBatchDownloadV1Request) : java.io.File {
-        val localVarResponse = ezsignfolderBatchDownloadV1WithHttpInfo(pkiEzsignfolderID = pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request = ezsignfolderBatchDownloadV1Request)
+    fun ezsignfolderBatchDownloadV1(pkiEzsignfolderID: kotlin.Int, ezsignfolderBatchDownloadV1Request: EzsignfolderBatchDownloadV1Request, accept: AcceptEzsignfolderBatchDownloadV1? = null) : java.io.File {
+        val localVarResponse = ezsignfolderBatchDownloadV1WithHttpInfo(pkiEzsignfolderID = pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request = ezsignfolderBatchDownloadV1Request, accept = accept)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as java.io.File
@@ -208,14 +227,15 @@ open class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, clie
      * 
      * @param pkiEzsignfolderID 
      * @param ezsignfolderBatchDownloadV1Request 
+     * @param accept Test csharp (optional)
      * @return ApiResponse<java.io.File?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun ezsignfolderBatchDownloadV1WithHttpInfo(pkiEzsignfolderID: kotlin.Int, ezsignfolderBatchDownloadV1Request: EzsignfolderBatchDownloadV1Request) : ApiResponse<java.io.File?> {
-        val localVariableConfig = ezsignfolderBatchDownloadV1RequestConfig(pkiEzsignfolderID = pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request = ezsignfolderBatchDownloadV1Request)
+    fun ezsignfolderBatchDownloadV1WithHttpInfo(pkiEzsignfolderID: kotlin.Int, ezsignfolderBatchDownloadV1Request: EzsignfolderBatchDownloadV1Request, accept: AcceptEzsignfolderBatchDownloadV1?) : ApiResponse<java.io.File?> {
+        val localVariableConfig = ezsignfolderBatchDownloadV1RequestConfig(pkiEzsignfolderID = pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request = ezsignfolderBatchDownloadV1Request, accept = accept)
 
         return request<EzsignfolderBatchDownloadV1Request, java.io.File>(
             localVariableConfig
@@ -227,12 +247,14 @@ open class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, clie
      *
      * @param pkiEzsignfolderID 
      * @param ezsignfolderBatchDownloadV1Request 
+     * @param accept Test csharp (optional)
      * @return RequestConfig
      */
-    fun ezsignfolderBatchDownloadV1RequestConfig(pkiEzsignfolderID: kotlin.Int, ezsignfolderBatchDownloadV1Request: EzsignfolderBatchDownloadV1Request) : RequestConfig<EzsignfolderBatchDownloadV1Request> {
+    fun ezsignfolderBatchDownloadV1RequestConfig(pkiEzsignfolderID: kotlin.Int, ezsignfolderBatchDownloadV1Request: EzsignfolderBatchDownloadV1Request, accept: AcceptEzsignfolderBatchDownloadV1?) : RequestConfig<EzsignfolderBatchDownloadV1Request> {
         val localVariableBody = ezsignfolderBatchDownloadV1Request
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        accept?.apply { localVariableHeaders["Accept"] = this.toString() }
         localVariableHeaders["Content-Type"] = "application/json"
         localVariableHeaders["Accept"] = "application/json"
 

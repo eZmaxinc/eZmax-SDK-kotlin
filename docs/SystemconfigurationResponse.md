@@ -20,6 +20,7 @@
 | **bSystemconfigurationEzsignpaidbyoffice** | **kotlin.Boolean** | Whether if Ezsign is paid by the company or not |  [optional] |
 | **bSystemconfigurationHascreditcardmerchant** | **kotlin.Boolean** | Whether there is a creditcard merchant configured or not |  [optional] |
 | **bSystemconfigurationIsdisposalactive** | **kotlin.Boolean** | Whether is Disposal processus is active or not |  [optional] |
+| **bSystemconfigurationAllowcomplexcreditcardsignature** | **kotlin.Boolean** | Whether is the system allows to have a complex creditcard signature |  [optional] |
 | **dtSystemconfigurationReadonlyexpirationstart** | **kotlin.String** | The start date where the system will be in read only |  [optional] |
 | **dtSystemconfigurationReadonlyexpirationend** | **kotlin.String** | The end date where the system will be in read only |  [optional] |
 | **objBranding** | [**CustomBrandingResponse**](CustomBrandingResponse.md) |  |  [optional] |

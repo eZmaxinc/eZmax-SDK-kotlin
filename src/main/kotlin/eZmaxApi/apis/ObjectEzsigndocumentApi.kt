@@ -979,7 +979,9 @@ open class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, cl
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsigndocumentEditEzsignformfieldgroupsV1(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentEditEzsignformfieldgroupsV1Request: EzsigndocumentEditEzsignformfieldgroupsV1Request) : EzsigndocumentEditEzsignformfieldgroupsV1Response {
+        @Suppress("DEPRECATION")
         val localVarResponse = ezsigndocumentEditEzsignformfieldgroupsV1WithHttpInfo(pkiEzsigndocumentID = pkiEzsigndocumentID, ezsigndocumentEditEzsignformfieldgroupsV1Request = ezsigndocumentEditEzsignformfieldgroupsV1Request)
 
         return when (localVarResponse.responseType) {
@@ -1009,7 +1011,9 @@ open class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, cl
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsigndocumentEditEzsignformfieldgroupsV1WithHttpInfo(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentEditEzsignformfieldgroupsV1Request: EzsigndocumentEditEzsignformfieldgroupsV1Request) : ApiResponse<EzsigndocumentEditEzsignformfieldgroupsV1Response?> {
+        @Suppress("DEPRECATION")
         val localVariableConfig = ezsigndocumentEditEzsignformfieldgroupsV1RequestConfig(pkiEzsigndocumentID = pkiEzsigndocumentID, ezsigndocumentEditEzsignformfieldgroupsV1Request = ezsigndocumentEditEzsignformfieldgroupsV1Request)
 
         return request<EzsigndocumentEditEzsignformfieldgroupsV1Request, EzsigndocumentEditEzsignformfieldgroupsV1Response>(
@@ -1024,6 +1028,7 @@ open class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, cl
      * @param ezsigndocumentEditEzsignformfieldgroupsV1Request 
      * @return RequestConfig
      */
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsigndocumentEditEzsignformfieldgroupsV1RequestConfig(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentEditEzsignformfieldgroupsV1Request: EzsigndocumentEditEzsignformfieldgroupsV1Request) : RequestConfig<EzsigndocumentEditEzsignformfieldgroupsV1Request> {
         val localVariableBody = ezsigndocumentEditEzsignformfieldgroupsV1Request
         val localVariableQuery: MultiValueMap = mutableMapOf()
@@ -1056,9 +1061,7 @@ open class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, cl
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    @Deprecated(message = "This operation is deprecated.")
     fun ezsigndocumentEditEzsignformfieldgroupsV2(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentEditEzsignformfieldgroupsV2Request: EzsigndocumentEditEzsignformfieldgroupsV2Request) : EzsigndocumentEditEzsignformfieldgroupsV2Response {
-        @Suppress("DEPRECATION")
         val localVarResponse = ezsigndocumentEditEzsignformfieldgroupsV2WithHttpInfo(pkiEzsigndocumentID = pkiEzsigndocumentID, ezsigndocumentEditEzsignformfieldgroupsV2Request = ezsigndocumentEditEzsignformfieldgroupsV2Request)
 
         return when (localVarResponse.responseType) {
@@ -1088,9 +1091,7 @@ open class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, cl
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    @Deprecated(message = "This operation is deprecated.")
     fun ezsigndocumentEditEzsignformfieldgroupsV2WithHttpInfo(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentEditEzsignformfieldgroupsV2Request: EzsigndocumentEditEzsignformfieldgroupsV2Request) : ApiResponse<EzsigndocumentEditEzsignformfieldgroupsV2Response?> {
-        @Suppress("DEPRECATION")
         val localVariableConfig = ezsigndocumentEditEzsignformfieldgroupsV2RequestConfig(pkiEzsigndocumentID = pkiEzsigndocumentID, ezsigndocumentEditEzsignformfieldgroupsV2Request = ezsigndocumentEditEzsignformfieldgroupsV2Request)
 
         return request<EzsigndocumentEditEzsignformfieldgroupsV2Request, EzsigndocumentEditEzsignformfieldgroupsV2Response>(
@@ -1105,7 +1106,6 @@ open class ObjectEzsigndocumentApi(basePath: kotlin.String = defaultBasePath, cl
      * @param ezsigndocumentEditEzsignformfieldgroupsV2Request 
      * @return RequestConfig
      */
-    @Deprecated(message = "This operation is deprecated.")
     fun ezsigndocumentEditEzsignformfieldgroupsV2RequestConfig(pkiEzsigndocumentID: kotlin.Int, ezsigndocumentEditEzsignformfieldgroupsV2Request: EzsigndocumentEditEzsignformfieldgroupsV2Request) : RequestConfig<EzsigndocumentEditEzsignformfieldgroupsV2Request> {
         val localVariableBody = ezsigndocumentEditEzsignformfieldgroupsV2Request
         val localVariableQuery: MultiValueMap = mutableMapOf()

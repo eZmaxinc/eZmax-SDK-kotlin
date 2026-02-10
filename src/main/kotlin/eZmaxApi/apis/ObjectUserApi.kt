@@ -81,7 +81,9 @@ open class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun userCreateObjectV1(userCreateObjectV1Request: UserCreateObjectV1Request) : UserCreateObjectV1Response {
+        @Suppress("DEPRECATION")
         val localVarResponse = userCreateObjectV1WithHttpInfo(userCreateObjectV1Request = userCreateObjectV1Request)
 
         return when (localVarResponse.responseType) {
@@ -110,7 +112,9 @@ open class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun userCreateObjectV1WithHttpInfo(userCreateObjectV1Request: UserCreateObjectV1Request) : ApiResponse<UserCreateObjectV1Response?> {
+        @Suppress("DEPRECATION")
         val localVariableConfig = userCreateObjectV1RequestConfig(userCreateObjectV1Request = userCreateObjectV1Request)
 
         return request<UserCreateObjectV1Request, UserCreateObjectV1Response>(
@@ -124,6 +128,7 @@ open class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call
      * @param userCreateObjectV1Request 
      * @return RequestConfig
      */
+    @Deprecated(message = "This operation is deprecated.")
     fun userCreateObjectV1RequestConfig(userCreateObjectV1Request: UserCreateObjectV1Request) : RequestConfig<UserCreateObjectV1Request> {
         val localVariableBody = userCreateObjectV1Request
         val localVariableQuery: MultiValueMap = mutableMapOf()
