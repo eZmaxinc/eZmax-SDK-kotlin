@@ -94,7 +94,7 @@ Configure Authorization:
 
 <a id="ezsignfolderBatchDownloadV1"></a>
 # **ezsignfolderBatchDownloadV1**
-> java.io.File ezsignfolderBatchDownloadV1(pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request, accept)
+> java.io.File ezsignfolderBatchDownloadV1(pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request)
 
 Download multiples files from an Ezsignfolder
 
@@ -107,9 +107,8 @@ Download multiples files from an Ezsignfolder
 val apiInstance = ObjectEzsignfolderApi()
 val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
 val ezsignfolderBatchDownloadV1Request : EzsignfolderBatchDownloadV1Request =  // EzsignfolderBatchDownloadV1Request | 
-val accept : kotlin.String = accept_example // kotlin.String | Test csharp
 try {
-    val result : java.io.File = apiInstance.ezsignfolderBatchDownloadV1(pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request, accept)
+    val result : java.io.File = apiInstance.ezsignfolderBatchDownloadV1(pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectEzsignfolderApi#ezsignfolderBatchDownloadV1")
@@ -122,10 +121,9 @@ try {
 
 ### Parameters
 | **pkiEzsignfolderID** | **kotlin.Int**|  | |
-| **ezsignfolderBatchDownloadV1Request** | [**EzsignfolderBatchDownloadV1Request**](EzsignfolderBatchDownloadV1Request.md)|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **accept** | **kotlin.String**| Test csharp | [optional] [enum: application/json, application/zip, application/pdf] |
+| **ezsignfolderBatchDownloadV1Request** | [**EzsignfolderBatchDownloadV1Request**](EzsignfolderBatchDownloadV1Request.md)|  | |
 
 ### Return type
 
