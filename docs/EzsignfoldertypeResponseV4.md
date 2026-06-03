@@ -7,6 +7,7 @@
 | **pkiEzsignfoldertypeID** | **kotlin.Int** | The unique ID of the Ezsignfoldertype. |  |
 | **objEzsignfoldertypeName** | [**MultilingualEzsignfoldertypeName**](MultilingualEzsignfoldertypeName.md) |  |  |
 | **fkiBrandingID** | **kotlin.Int** | The unique ID of the Branding |  |
+| **eEzsignfoldertypeSignaturedatedisplay** | [**FieldEEzsignfoldertypeSignaturedatedisplay**](FieldEEzsignfoldertypeSignaturedatedisplay.md) |  |  |
 | **sBrandingDescriptionX** | **kotlin.String** | The Description of the Branding in the language of the requester |  |
 | **eEzsignfoldertypePrivacylevel** | [**FieldEEzsignfoldertypePrivacylevel**](FieldEEzsignfoldertypePrivacylevel.md) |  |  |
 | **iEzsignfoldertypeArchivaldays** | **kotlin.Int** | The number of days before the archival of Ezsignfolders created using this Ezsignfoldertype |  |
@@ -28,6 +29,7 @@
 | **fkiFontIDFormfield** | **kotlin.Int** | The unique ID of the Font |  [optional] |
 | **fkiFontIDSignature** | **kotlin.Int** | The unique ID of the Font |  [optional] |
 | **fkiPdfalevelIDConvert** | **kotlin.Int** | The unique ID of the Pdfalevel |  [optional] |
+| **sEzsignfoldertypeSignaturedatecustomformat** | **kotlin.String** | The custom date format to use  You can use the codes below and they will be replaced at signature time. Text values like month and day names will be rendered in the proper language. Other text will be left as-is.  The codes examples below are based on the following datetime: Thursday, January 6, 2022 at 08:07:09 EST  For example, the format \&quot;Signature date: {MM}/{DD}/{YYYY} {hh}:{mm}\&quot; would become \&quot;Signature date: 01/06/2022 08:07\&quot;  **Year**  | Code | Example | | - | - | | {YYYY} | 2022 | | {YY} | 22 |  **Month**  | Code | Example | | - | - | | {MonthCapitalize} | Janvier | | {Month} | janvier | | {MM} | 01 | | {M} | 1 |  **Day**  | Code | Example | | - | - | | {DayCapitalize} | Jeudi | | {Day} | jeudi | | {DD} | 06 | | {D} | 6 |  **Hour**  | Code | Example | | - | - | | {hh} | 08 |  **Minute**  | Code | Example | | - | - | | {mm} | 07 |  **Second**  | Code | Example | | - | - | | {ss} | 09 |        **Timezone**  | Code | Example | | - | - | | {Z} | EST |       **Time**  | Code | Example | | - | - | | {Time} | 08:07:09 |   | {TimeZ} | 08:07:09 EST |     **Date**  | Code | Example | | - | - | | {Date} | 2022-01-06 |   | {DateText} | 1er Janvier 2022 |  **Full**  | Code | Example | | - | - | | {DateTime} | 2022-01-06 08:07:09 |   | {DateTimeZ} | 2022-01-06 08:07:09 EST |  |  [optional] |
 | **eEzsignfoldertypeDocumentdependency** | [**FieldEEzsignfoldertypeDocumentdependency**](FieldEEzsignfoldertypeDocumentdependency.md) |  |  [optional] |
 | **sBillingentityinternalDescriptionX** | **kotlin.String** | The description of the Billingentityinternal in the language of the requester |  [optional] |
 | **sEzsigntsarequirementDescriptionX** | **kotlin.String** | The description of the Ezsigntsarequirement in the language of the requester |  [optional] |
@@ -38,7 +40,7 @@
 | **eEzsignfoldertypeDocumentmerge** | [**FieldEEzsignfoldertypeDocumentmerge**](FieldEEzsignfoldertypeDocumentmerge.md) |  |  [optional] |
 | **iEzsignfoldertypeFontsizeannotation** | **kotlin.Int** | Font size for annotations |  [optional] |
 | **iEzsignfoldertypeFontsizeformfield** | **kotlin.Int** | Font size for form fields |  [optional] |
-| **iEzsignfoldertypeSendreminderfirstdays** | **kotlin.Int** | The number of days before the the first reminder sending |  [optional] |
+| **iEzsignfoldertypeSendreminderfirstdays** | **kotlin.Int** | The number of days before the first reminder sending |  [optional] |
 | **iEzsignfoldertypeSendreminderotherdays** | **kotlin.Int** | The number of days after the first reminder sending |  [optional] |
 | **iEzsignfoldertypeDisposaldays** | **kotlin.Int** | The number of days after the archival before the disposal of the Ezsignfolder |  [optional] |
 | **bEzsignfoldertypePrematurelyendautomatically** | **kotlin.Boolean** | Wheter if document will be ended prematurely after Ezsignfolder expires. |  [optional] |
@@ -50,6 +52,10 @@
 | **bEzsignfoldertypeReassignezsignsigner** | **kotlin.Boolean** | Wheter if Reassignment of signature is allowed by a signatory to another signatory or not |  [optional] |
 | **bEzsignfoldertypeReassignuser** | **kotlin.Boolean** | Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not |  [optional] |
 | **bEzsignfoldertypeReassigngroup** | **kotlin.Boolean** | Wheter if Reassignment of signatures of the groups to which the user belongs is authorized by a user to himself |  [optional] |
+| **bEzsignfoldertypeSenddocumentmergetoemail** | **kotlin.Boolean** | Whether we send the merged documents in the email to external recipient |  [optional] |
+| **bEzsignfoldertypeSenddocumentmergetoezsignsigner** | **kotlin.Boolean** | Whether we send the merged documents in the email to Ezsignsigner |  [optional] |
+| **bEzsignfoldertypeSenddocumentmergetoreceivealldocument** | **kotlin.Boolean** | Whether we send the merged documents in the email to user and Ezsignsigner who receive all documents. |  [optional] |
+| **bEzsignfoldertypeSenddocumentmergetouser** | **kotlin.Boolean** | Whether we send the merged documents in the email to User |  [optional] |
 | **bEzsignfoldertypeSendsignedtoezsignsigner** | **kotlin.Boolean** | Whether we send an email to Ezsignsigner  when document is completed |  [optional] |
 | **bEzsignfoldertypeSendsignedtouser** | **kotlin.Boolean** | Whether we send an email to User who signed when document is completed |  [optional] |
 | **bEzsignfoldertypeSendattachmentezsignsigner** | **kotlin.Boolean** | Whether we send the Ezsigndocument in the email to Ezsignsigner |  [optional] |

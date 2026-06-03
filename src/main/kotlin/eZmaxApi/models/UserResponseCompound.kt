@@ -8,9 +8,17 @@
 
 @file:Suppress(
     "ArrayInDataClass",
+    "DuplicatedCode",
     "EnumEntryName",
     "RemoveRedundantQualifierName",
-    "UnusedImport"
+    "RemoveRedundantCallsOfConversionMethods",
+    "REDUNDANT_CALL_OF_CONVERSION_METHOD",
+    "RedundantUnitReturnType",
+    "RemoveEmptyClassBody",
+    "UnnecessaryVariable",
+    "UnusedImport",
+    "UnnecessaryVariable",
+    "unused"
 )
 
 package eZmaxApi.models
@@ -55,18 +63,21 @@ import com.squareup.moshi.JsonClass
  * @param fkiBrokerID The unique ID of the Broker.
  * @param fkiAssistantID The unique ID of the Assistant.
  * @param fkiEmployeeID The unique ID of the Employee.
+ * @param fkiEzmaxpartnerID The unique ID of the Ezmaxpartner
  * @param objPhoneHome 
  * @param objPhoneSMS 
- * @param fkiSecretquestionID The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father's middle name| |15|Your mother's maiden name| |16|Name of your eldest child| |17|Your spouse's middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat's name| |22|Date of Birth (YYYY-MM-DD)| |22|Secret Code| |22|Your reference code|
+ * @param fkiSecretquestionID The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father's middle name| |15|Your mother's maiden name| |16|Name of your eldest child| |17|Your spouse's middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat's name| |22|Date of Birth (YYYY-MM-DD)| |23|Secret Code| |24|Your reference code| |25|What are the last 4 digits of your SIN| |26|What is your postal code| |27|What is your employee number| |28|What is your manager’s first name| |29|What is your file number| |30|What is your client/member number| |31|What is your license number| |32|What are the last 4 digits of your phone number| |33|What is your student number|
  * @param fkiModuleIDForm The unique ID of the Module
  * @param sModuleNameX The Name of the Module in the language of the requester
  * @param sUserJobtitle The job title of the user
  * @param dtUserLastlogondate The last logon date of the User
  * @param dtUserPasswordchanged The date at which the User's password was last changed
  * @param dtUserEzsignprepaidexpiration The eZsign prepaid expiration date
+ * @param bUserSuspended Whether the User is suspended or not
  * @param bUserValidatebyadministration Whether if the transactions in which the User is implicated must be validated by administrative personnel or not
  * @param bUserValidatebydirector Whether if the transactions in which the User is implicated must be validated by a director or not
  * @param bUserAttachmentautoverified Whether if Attachments uploaded by the User must be validated or not
+ * @param bUserEzsigntemplaterolegrouping Whether we group or not the Ezsigntemplate roles
  */
 
 
@@ -170,13 +181,17 @@ data class UserResponseCompound (
     @Json(name = "fkiEmployeeID")
     val fkiEmployeeID: kotlin.Int? = null,
 
+    /* The unique ID of the Ezmaxpartner */
+    @Json(name = "fkiEzmaxpartnerID")
+    val fkiEzmaxpartnerID: kotlin.Int? = null,
+
     @Json(name = "objPhoneHome")
     val objPhoneHome: PhoneResponseCompound? = null,
 
     @Json(name = "objPhoneSMS")
     val objPhoneSMS: PhoneResponseCompound? = null,
 
-    /* The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father's middle name| |15|Your mother's maiden name| |16|Name of your eldest child| |17|Your spouse's middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat's name| |22|Date of Birth (YYYY-MM-DD)| |22|Secret Code| |22|Your reference code| */
+    /* The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father's middle name| |15|Your mother's maiden name| |16|Name of your eldest child| |17|Your spouse's middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat's name| |22|Date of Birth (YYYY-MM-DD)| |23|Secret Code| |24|Your reference code| |25|What are the last 4 digits of your SIN| |26|What is your postal code| |27|What is your employee number| |28|What is your manager’s first name| |29|What is your file number| |30|What is your client/member number| |31|What is your license number| |32|What are the last 4 digits of your phone number| |33|What is your student number| */
     @Json(name = "fkiSecretquestionID")
     val fkiSecretquestionID: kotlin.Int? = null,
 
@@ -204,6 +219,10 @@ data class UserResponseCompound (
     @Json(name = "dtUserEzsignprepaidexpiration")
     val dtUserEzsignprepaidexpiration: kotlin.String? = null,
 
+    /* Whether the User is suspended or not */
+    @Json(name = "bUserSuspended")
+    val bUserSuspended: kotlin.Boolean? = null,
+
     /* Whether if the transactions in which the User is implicated must be validated by administrative personnel or not */
     @Json(name = "bUserValidatebyadministration")
     val bUserValidatebyadministration: kotlin.Boolean? = null,
@@ -214,7 +233,11 @@ data class UserResponseCompound (
 
     /* Whether if Attachments uploaded by the User must be validated or not */
     @Json(name = "bUserAttachmentautoverified")
-    val bUserAttachmentautoverified: kotlin.Boolean? = null
+    val bUserAttachmentautoverified: kotlin.Boolean? = null,
+
+    /* Whether we group or not the Ezsigntemplate roles */
+    @Json(name = "bUserEzsigntemplaterolegrouping")
+    val bUserEzsigntemplaterolegrouping: kotlin.Boolean? = null
 
 ) {
 

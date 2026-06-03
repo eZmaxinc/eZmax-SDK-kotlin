@@ -8,9 +8,17 @@
 
 @file:Suppress(
     "ArrayInDataClass",
+    "DuplicatedCode",
     "EnumEntryName",
     "RemoveRedundantQualifierName",
-    "UnusedImport"
+    "RemoveRedundantCallsOfConversionMethods",
+    "REDUNDANT_CALL_OF_CONVERSION_METHOD",
+    "RedundantUnitReturnType",
+    "RemoveEmptyClassBody",
+    "UnnecessaryVariable",
+    "UnusedImport",
+    "UnnecessaryVariable",
+    "unused"
 )
 
 package eZmaxApi.models
@@ -65,7 +73,7 @@ import com.squareup.moshi.JsonClass
  * @param eEzsignfoldertypePdfanoncompliantaction 
  * @param iEzsignfoldertypeFontsizeannotation Font size for annotations
  * @param iEzsignfoldertypeFontsizeformfield Font size for form fields
- * @param iEzsignfoldertypeSendreminderfirstdays The number of days before the the first reminder sending
+ * @param iEzsignfoldertypeSendreminderfirstdays The number of days before the first reminder sending
  * @param iEzsignfoldertypeSendreminderotherdays The number of days after the first reminder sending
  * @param iEzsignfoldertypeDisposaldays The number of days after the archival before the disposal of the Ezsignfolder
  * @param bEzsignfoldertypePrematurelyendautomatically Wheter if document will be ended prematurely after Ezsignfolder expires.
@@ -77,6 +85,10 @@ import com.squareup.moshi.JsonClass
  * @param bEzsignfoldertypeReassignezsignsigner Wheter if Reassignment of signature is allowed by a signatory to another signatory or not
  * @param bEzsignfoldertypeReassignuser Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not
  * @param bEzsignfoldertypeReassigngroup Wheter if Reassignment of signatures of the groups to which the user belongs is authorized by a user to himself
+ * @param bEzsignfoldertypeSenddocumentmergetoemail Whether we send the merged documents in the email to external recipient
+ * @param bEzsignfoldertypeSenddocumentmergetoezsignsigner Whether we send the merged documents in the email to Ezsignsigner
+ * @param bEzsignfoldertypeSenddocumentmergetoreceivealldocument Whether we send the merged documents in the email to user and Ezsignsigner who receive all documents.
+ * @param bEzsignfoldertypeSenddocumentmergetouser Whether we send the merged documents in the email to User
  * @param bEzsignfoldertypeSendsignedtoezsignsigner Whether we send an email to Ezsignsigner  when document is completed
  * @param bEzsignfoldertypeSendsignedtouser Whether we send an email to User who signed when document is completed
  * @param bEzsignfoldertypeSendattachmentezsignsigner Whether we send the Ezsigndocument in the email to Ezsignsigner
@@ -225,7 +237,7 @@ data class EzsignfoldertypeRequestV3 (
     @Json(name = "iEzsignfoldertypeFontsizeformfield")
     val iEzsignfoldertypeFontsizeformfield: kotlin.Int? = null,
 
-    /* The number of days before the the first reminder sending */
+    /* The number of days before the first reminder sending */
     @Json(name = "iEzsignfoldertypeSendreminderfirstdays")
     val iEzsignfoldertypeSendreminderfirstdays: kotlin.Int? = null,
 
@@ -272,6 +284,22 @@ data class EzsignfoldertypeRequestV3 (
     /* Wheter if Reassignment of signatures of the groups to which the user belongs is authorized by a user to himself */
     @Json(name = "bEzsignfoldertypeReassigngroup")
     val bEzsignfoldertypeReassigngroup: kotlin.Boolean? = null,
+
+    /* Whether we send the merged documents in the email to external recipient */
+    @Json(name = "bEzsignfoldertypeSenddocumentmergetoemail")
+    val bEzsignfoldertypeSenddocumentmergetoemail: kotlin.Boolean? = null,
+
+    /* Whether we send the merged documents in the email to Ezsignsigner */
+    @Json(name = "bEzsignfoldertypeSenddocumentmergetoezsignsigner")
+    val bEzsignfoldertypeSenddocumentmergetoezsignsigner: kotlin.Boolean? = null,
+
+    /* Whether we send the merged documents in the email to user and Ezsignsigner who receive all documents. */
+    @Json(name = "bEzsignfoldertypeSenddocumentmergetoreceivealldocument")
+    val bEzsignfoldertypeSenddocumentmergetoreceivealldocument: kotlin.Boolean? = null,
+
+    /* Whether we send the merged documents in the email to User */
+    @Json(name = "bEzsignfoldertypeSenddocumentmergetouser")
+    val bEzsignfoldertypeSenddocumentmergetouser: kotlin.Boolean? = null,
 
     /* Whether we send an email to Ezsignsigner  when document is completed */
     @Json(name = "bEzsignfoldertypeSendsignedtoezsignsigner")

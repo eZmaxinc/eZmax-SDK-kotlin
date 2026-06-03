@@ -38,7 +38,7 @@
 | **eEzsignfoldertypePdfanoncompliantaction** | [**FieldEEzsignfoldertypePdfanoncompliantaction**](FieldEEzsignfoldertypePdfanoncompliantaction.md) |  |  [optional] |
 | **iEzsignfoldertypeFontsizeannotation** | **kotlin.Int** | Font size for annotations |  [optional] |
 | **iEzsignfoldertypeFontsizeformfield** | **kotlin.Int** | Font size for form fields |  [optional] |
-| **iEzsignfoldertypeSendreminderfirstdays** | **kotlin.Int** | The number of days before the the first reminder sending |  [optional] |
+| **iEzsignfoldertypeSendreminderfirstdays** | **kotlin.Int** | The number of days before the first reminder sending |  [optional] |
 | **iEzsignfoldertypeSendreminderotherdays** | **kotlin.Int** | The number of days after the first reminder sending |  [optional] |
 | **iEzsignfoldertypeDisposaldays** | **kotlin.Int** | The number of days after the archival before the disposal of the Ezsignfolder |  [optional] |
 | **bEzsignfoldertypePrematurelyendautomatically** | **kotlin.Boolean** | Wheter if document will be ended prematurely after Ezsignfolder expires. |  [optional] |
@@ -50,6 +50,10 @@
 | **bEzsignfoldertypeReassignezsignsigner** | **kotlin.Boolean** | Wheter if Reassignment of signature is allowed by a signatory to another signatory or not |  [optional] |
 | **bEzsignfoldertypeReassignuser** | **kotlin.Boolean** | Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not |  [optional] |
 | **bEzsignfoldertypeReassigngroup** | **kotlin.Boolean** | Wheter if Reassignment of signatures of the groups to which the user belongs is authorized by a user to himself |  [optional] |
+| **bEzsignfoldertypeSenddocumentmergetoemail** | **kotlin.Boolean** | Whether we send the merged documents in the email to external recipient |  [optional] |
+| **bEzsignfoldertypeSenddocumentmergetoezsignsigner** | **kotlin.Boolean** | Whether we send the merged documents in the email to Ezsignsigner |  [optional] |
+| **bEzsignfoldertypeSenddocumentmergetoreceivealldocument** | **kotlin.Boolean** | Whether we send the merged documents in the email to user and Ezsignsigner who receive all documents. |  [optional] |
+| **bEzsignfoldertypeSenddocumentmergetouser** | **kotlin.Boolean** | Whether we send the merged documents in the email to User |  [optional] |
 | **bEzsignfoldertypeSendsignedtoezsignsigner** | **kotlin.Boolean** | Whether we send an email to Ezsignsigner  when document is completed |  [optional] |
 | **bEzsignfoldertypeSendsignedtouser** | **kotlin.Boolean** | Whether we send an email to User who signed when document is completed |  [optional] |
 | **bEzsignfoldertypeSendattachmentezsignsigner** | **kotlin.Boolean** | Whether we send the Ezsigndocument in the email to Ezsignsigner |  [optional] |

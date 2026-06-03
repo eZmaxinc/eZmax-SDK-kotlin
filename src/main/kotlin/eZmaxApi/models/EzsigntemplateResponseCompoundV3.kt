@@ -8,15 +8,24 @@
 
 @file:Suppress(
     "ArrayInDataClass",
+    "DuplicatedCode",
     "EnumEntryName",
     "RemoveRedundantQualifierName",
-    "UnusedImport"
+    "RemoveRedundantCallsOfConversionMethods",
+    "REDUNDANT_CALL_OF_CONVERSION_METHOD",
+    "RedundantUnitReturnType",
+    "RemoveEmptyClassBody",
+    "UnnecessaryVariable",
+    "UnusedImport",
+    "UnnecessaryVariable",
+    "unused"
 )
 
 package eZmaxApi.models
 
 import eZmaxApi.models.CommonAudit
 import eZmaxApi.models.CustomEzsignfoldertypeTemplateResponse
+import eZmaxApi.models.EzsigntemplateannotationResponseCompound
 import eZmaxApi.models.EzsigntemplatedocumentResponse
 import eZmaxApi.models.EzsigntemplatesignerResponseCompound
 import eZmaxApi.models.FieldEEzsigntemplateRecognition
@@ -48,6 +57,7 @@ import com.squareup.moshi.JsonClass
  * @param sEzsignfoldertypeNameX The name of the Ezsignfoldertype in the language of the requester
  * @param eEzsigntemplateType 
  * @param objEzsigntemplatedocument 
+ * @param aObjEzsigntemplateannotation 
  */
 
 
@@ -125,7 +135,10 @@ data class EzsigntemplateResponseCompoundV3 (
     val eEzsigntemplateType: FieldEEzsigntemplateType? = null,
 
     @Json(name = "objEzsigntemplatedocument")
-    val objEzsigntemplatedocument: EzsigntemplatedocumentResponse? = null
+    val objEzsigntemplatedocument: EzsigntemplatedocumentResponse? = null,
+
+    @Json(name = "a_objEzsigntemplateannotation")
+    val aObjEzsigntemplateannotation: kotlin.collections.List<EzsigntemplateannotationResponseCompound>? = null
 
 ) {
 

@@ -8,9 +8,17 @@
 
 @file:Suppress(
     "ArrayInDataClass",
+    "DuplicatedCode",
     "EnumEntryName",
     "RemoveRedundantQualifierName",
-    "UnusedImport"
+    "RemoveRedundantCallsOfConversionMethods",
+    "REDUNDANT_CALL_OF_CONVERSION_METHOD",
+    "RedundantUnitReturnType",
+    "RemoveEmptyClassBody",
+    "UnnecessaryVariable",
+    "UnusedImport",
+    "UnnecessaryVariable",
+    "unused"
 )
 
 package eZmaxApi.models
@@ -43,7 +51,7 @@ import com.squareup.moshi.JsonClass
  * @param tEzsignfolderNote Note about the Ezsignfolder
  * @param bEzsignfolderIsdisposable If the Ezsigndocument can be disposed
  * @param eEzsignfolderSendreminderfrequency 
- * @param iEzsignfolderSendreminderfirstdays The number of days before the the first reminder sending
+ * @param iEzsignfolderSendreminderfirstdays The number of days before the first reminder sending
  * @param iEzsignfolderSendreminderotherdays The number of days after the first reminder sending
  * @param dtEzsignfolderDelayedsenddate The date and time at which the Ezsignfolder will be sent in the future.
  * @param dtEzsignfolderDuedate The maximum date and time at which the Ezsignfolder can be signed.
@@ -116,7 +124,7 @@ data class EzsignfolderGetObjectV1ResponseMPayload (
     @Deprecated(message = "This property is deprecated.")
     val eEzsignfolderSendreminderfrequency: FieldEEzsignfolderSendreminderfrequency? = null,
 
-    /* The number of days before the the first reminder sending */
+    /* The number of days before the first reminder sending */
     @Json(name = "iEzsignfolderSendreminderfirstdays")
     val iEzsignfolderSendreminderfirstdays: kotlin.Int? = null,
 

@@ -8,9 +8,17 @@
 
 @file:Suppress(
     "ArrayInDataClass",
+    "DuplicatedCode",
     "EnumEntryName",
     "RemoveRedundantQualifierName",
-    "UnusedImport"
+    "RemoveRedundantCallsOfConversionMethods",
+    "REDUNDANT_CALL_OF_CONVERSION_METHOD",
+    "RedundantUnitReturnType",
+    "RemoveEmptyClassBody",
+    "UnnecessaryVariable",
+    "UnusedImport",
+    "UnnecessaryVariable",
+    "unused"
 )
 
 package eZmaxApi.models
@@ -23,6 +31,7 @@ import eZmaxApi.models.FieldEEzsignfoldertypeDocumentmerge
 import eZmaxApi.models.FieldEEzsignfoldertypePdfanoncompliantaction
 import eZmaxApi.models.FieldEEzsignfoldertypePdfarequirement
 import eZmaxApi.models.FieldEEzsignfoldertypePrivacylevel
+import eZmaxApi.models.FieldEEzsignfoldertypeSignaturedatedisplay
 import eZmaxApi.models.FieldEEzsignfoldertypeSigneraccess
 import eZmaxApi.models.MultilingualEzsignfoldertypeName
 import eZmaxApi.models.UsergroupResponse
@@ -37,6 +46,7 @@ import com.squareup.moshi.JsonClass
  * @param pkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
  * @param objEzsignfoldertypeName 
  * @param fkiBrandingID The unique ID of the Branding
+ * @param eEzsignfoldertypeSignaturedatedisplay 
  * @param sBrandingDescriptionX The Description of the Branding in the language of the requester
  * @param eEzsignfoldertypePrivacylevel 
  * @param iEzsignfoldertypeArchivaldays The number of days before the archival of Ezsignfolders created using this Ezsignfoldertype
@@ -58,6 +68,7 @@ import com.squareup.moshi.JsonClass
  * @param fkiFontIDFormfield The unique ID of the Font
  * @param fkiFontIDSignature The unique ID of the Font
  * @param fkiPdfalevelIDConvert The unique ID of the Pdfalevel
+ * @param sEzsignfoldertypeSignaturedatecustomformat The custom date format to use  You can use the codes below and they will be replaced at signature time. Text values like month and day names will be rendered in the proper language. Other text will be left as-is.  The codes examples below are based on the following datetime: Thursday, January 6, 2022 at 08:07:09 EST  For example, the format \"Signature date: {MM}/{DD}/{YYYY} {hh}:{mm}\" would become \"Signature date: 01/06/2022 08:07\"  **Year**  | Code | Example | | - | - | | {YYYY} | 2022 | | {YY} | 22 |  **Month**  | Code | Example | | - | - | | {MonthCapitalize} | Janvier | | {Month} | janvier | | {MM} | 01 | | {M} | 1 |  **Day**  | Code | Example | | - | - | | {DayCapitalize} | Jeudi | | {Day} | jeudi | | {DD} | 06 | | {D} | 6 |  **Hour**  | Code | Example | | - | - | | {hh} | 08 |  **Minute**  | Code | Example | | - | - | | {mm} | 07 |  **Second**  | Code | Example | | - | - | | {ss} | 09 |        **Timezone**  | Code | Example | | - | - | | {Z} | EST |       **Time**  | Code | Example | | - | - | | {Time} | 08:07:09 |   | {TimeZ} | 08:07:09 EST |     **Date**  | Code | Example | | - | - | | {Date} | 2022-01-06 |   | {DateText} | 1er Janvier 2022 |  **Full**  | Code | Example | | - | - | | {DateTime} | 2022-01-06 08:07:09 |   | {DateTimeZ} | 2022-01-06 08:07:09 EST | 
  * @param eEzsignfoldertypeDocumentdependency 
  * @param sBillingentityinternalDescriptionX The description of the Billingentityinternal in the language of the requester
  * @param sEzsigntsarequirementDescriptionX The description of the Ezsigntsarequirement in the language of the requester
@@ -68,7 +79,7 @@ import com.squareup.moshi.JsonClass
  * @param eEzsignfoldertypeDocumentmerge 
  * @param iEzsignfoldertypeFontsizeannotation Font size for annotations
  * @param iEzsignfoldertypeFontsizeformfield Font size for form fields
- * @param iEzsignfoldertypeSendreminderfirstdays The number of days before the the first reminder sending
+ * @param iEzsignfoldertypeSendreminderfirstdays The number of days before the first reminder sending
  * @param iEzsignfoldertypeSendreminderotherdays The number of days after the first reminder sending
  * @param iEzsignfoldertypeDisposaldays The number of days after the archival before the disposal of the Ezsignfolder
  * @param bEzsignfoldertypePrematurelyendautomatically Wheter if document will be ended prematurely after Ezsignfolder expires.
@@ -80,6 +91,10 @@ import com.squareup.moshi.JsonClass
  * @param bEzsignfoldertypeReassignezsignsigner Wheter if Reassignment of signature is allowed by a signatory to another signatory or not
  * @param bEzsignfoldertypeReassignuser Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not
  * @param bEzsignfoldertypeReassigngroup Wheter if Reassignment of signatures of the groups to which the user belongs is authorized by a user to himself
+ * @param bEzsignfoldertypeSenddocumentmergetoemail Whether we send the merged documents in the email to external recipient
+ * @param bEzsignfoldertypeSenddocumentmergetoezsignsigner Whether we send the merged documents in the email to Ezsignsigner
+ * @param bEzsignfoldertypeSenddocumentmergetoreceivealldocument Whether we send the merged documents in the email to user and Ezsignsigner who receive all documents.
+ * @param bEzsignfoldertypeSenddocumentmergetouser Whether we send the merged documents in the email to User
  * @param bEzsignfoldertypeSendsignedtoezsignsigner Whether we send an email to Ezsignsigner  when document is completed
  * @param bEzsignfoldertypeSendsignedtouser Whether we send an email to User who signed when document is completed
  * @param bEzsignfoldertypeSendattachmentezsignsigner Whether we send the Ezsigndocument in the email to Ezsignsigner
@@ -121,6 +136,9 @@ data class EzsignfoldertypeResponseCompoundV4 (
     /* The unique ID of the Branding */
     @Json(name = "fkiBrandingID")
     val fkiBrandingID: kotlin.Int,
+
+    @Json(name = "eEzsignfoldertypeSignaturedatedisplay")
+    val eEzsignfoldertypeSignaturedatedisplay: FieldEEzsignfoldertypeSignaturedatedisplay,
 
     /* The Description of the Branding in the language of the requester */
     @Json(name = "sBrandingDescriptionX")
@@ -201,6 +219,10 @@ data class EzsignfoldertypeResponseCompoundV4 (
     @Json(name = "fkiPdfalevelIDConvert")
     val fkiPdfalevelIDConvert: kotlin.Int? = null,
 
+    /* The custom date format to use  You can use the codes below and they will be replaced at signature time. Text values like month and day names will be rendered in the proper language. Other text will be left as-is.  The codes examples below are based on the following datetime: Thursday, January 6, 2022 at 08:07:09 EST  For example, the format \"Signature date: {MM}/{DD}/{YYYY} {hh}:{mm}\" would become \"Signature date: 01/06/2022 08:07\"  **Year**  | Code | Example | | - | - | | {YYYY} | 2022 | | {YY} | 22 |  **Month**  | Code | Example | | - | - | | {MonthCapitalize} | Janvier | | {Month} | janvier | | {MM} | 01 | | {M} | 1 |  **Day**  | Code | Example | | - | - | | {DayCapitalize} | Jeudi | | {Day} | jeudi | | {DD} | 06 | | {D} | 6 |  **Hour**  | Code | Example | | - | - | | {hh} | 08 |  **Minute**  | Code | Example | | - | - | | {mm} | 07 |  **Second**  | Code | Example | | - | - | | {ss} | 09 |        **Timezone**  | Code | Example | | - | - | | {Z} | EST |       **Time**  | Code | Example | | - | - | | {Time} | 08:07:09 |   | {TimeZ} | 08:07:09 EST |     **Date**  | Code | Example | | - | - | | {Date} | 2022-01-06 |   | {DateText} | 1er Janvier 2022 |  **Full**  | Code | Example | | - | - | | {DateTime} | 2022-01-06 08:07:09 |   | {DateTimeZ} | 2022-01-06 08:07:09 EST |  */
+    @Json(name = "sEzsignfoldertypeSignaturedatecustomformat")
+    val sEzsignfoldertypeSignaturedatecustomformat: kotlin.String? = null,
+
     @Json(name = "eEzsignfoldertypeDocumentdependency")
     val eEzsignfoldertypeDocumentdependency: FieldEEzsignfoldertypeDocumentdependency? = null,
 
@@ -237,7 +259,7 @@ data class EzsignfoldertypeResponseCompoundV4 (
     @Json(name = "iEzsignfoldertypeFontsizeformfield")
     val iEzsignfoldertypeFontsizeformfield: kotlin.Int? = null,
 
-    /* The number of days before the the first reminder sending */
+    /* The number of days before the first reminder sending */
     @Json(name = "iEzsignfoldertypeSendreminderfirstdays")
     val iEzsignfoldertypeSendreminderfirstdays: kotlin.Int? = null,
 
@@ -284,6 +306,22 @@ data class EzsignfoldertypeResponseCompoundV4 (
     /* Wheter if Reassignment of signatures of the groups to which the user belongs is authorized by a user to himself */
     @Json(name = "bEzsignfoldertypeReassigngroup")
     val bEzsignfoldertypeReassigngroup: kotlin.Boolean? = null,
+
+    /* Whether we send the merged documents in the email to external recipient */
+    @Json(name = "bEzsignfoldertypeSenddocumentmergetoemail")
+    val bEzsignfoldertypeSenddocumentmergetoemail: kotlin.Boolean? = null,
+
+    /* Whether we send the merged documents in the email to Ezsignsigner */
+    @Json(name = "bEzsignfoldertypeSenddocumentmergetoezsignsigner")
+    val bEzsignfoldertypeSenddocumentmergetoezsignsigner: kotlin.Boolean? = null,
+
+    /* Whether we send the merged documents in the email to user and Ezsignsigner who receive all documents. */
+    @Json(name = "bEzsignfoldertypeSenddocumentmergetoreceivealldocument")
+    val bEzsignfoldertypeSenddocumentmergetoreceivealldocument: kotlin.Boolean? = null,
+
+    /* Whether we send the merged documents in the email to User */
+    @Json(name = "bEzsignfoldertypeSenddocumentmergetouser")
+    val bEzsignfoldertypeSenddocumentmergetouser: kotlin.Boolean? = null,
 
     /* Whether we send an email to Ezsignsigner  when document is completed */
     @Json(name = "bEzsignfoldertypeSendsignedtoezsignsigner")

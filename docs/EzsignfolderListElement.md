@@ -6,6 +6,7 @@
 | ------------ | ------------- | ------------- | ------------- |
 | **pkiEzsignfolderID** | **kotlin.Int** | The unique ID of the Ezsignfolder |  |
 | **fkiEzsignfoldertypeID** | **kotlin.Int** | The unique ID of the Ezsignfoldertype. |  |
+| **eEzsignfolderSource** | [**FieldEEzsignfolderSource**](FieldEEzsignfolderSource.md) |  |  |
 | **eEzsignfoldertypePrivacylevel** | [**FieldEEzsignfoldertypePrivacylevel**](FieldEEzsignfoldertypePrivacylevel.md) |  |  |
 | **sEzsignfoldertypeNameX** | **kotlin.String** | The name of the Ezsignfoldertype in the language of the requester |  |
 | **sEzsignfolderDescription** | **kotlin.String** | The description of the Ezsignfolder |  |
@@ -21,6 +22,12 @@
 | **dEzsignfolderCompletedpercentage** | **kotlin.String** | Percentage of Ezsignform/Ezsignsignatures has completed |  |
 | **dEzsignfolderFormcompletedpercentage** | **kotlin.String** | Percentage of Ezsignform has completed |  |
 | **dEzsignfolderSignaturecompletedpercentage** | **kotlin.String** | Percentage of Ezsignsignatures has signed |  |
+| **fkiEzsignbulksendID** | **kotlin.Int** | The unique ID of the Ezsignbulksend |  [optional] |
+| **sEzsignbulksendDescription** | **kotlin.String** | The description of the Ezsignbulksend |  [optional] |
+| **fkiEzsignbulksendtransmissionID** | **kotlin.Int** | The unique ID of the Ezsignbulksendtransmission |  [optional] |
+| **sEzsignbulksendtransmissionDescription** | **kotlin.String** | The description of the Ezsignbulksendtransmission |  [optional] |
+| **fkiEzsigntemplatepublicID** | **kotlin.Int** | The unique ID of the Ezsigntemplatepublic |  [optional] |
+| **sEzsigntemplatepublicDescription** | **kotlin.String** | The description of the Ezsigntemplatepublic |  [optional] |
 | **dtEzsignfolderDelayedsenddate** | **kotlin.String** | The date and time at which the Ezsignfolder will be sent in the future. |  [optional] |
 | **dtEzsignfolderSentdate** | **kotlin.String** | The date and time at which the Ezsignfolder was sent the last time. |  [optional] |
 | **dtEzsignfolderDuedate** | **kotlin.String** | The maximum date and time at which the Ezsignfolder can be signed. |  [optional] |
@@ -29,6 +36,7 @@
 | **dtEzsignfolderArchive** | **kotlin.String** | The date and time at which the Ezsignfolder was archived. |  [optional] |
 | **dtEzsignfolderDispose** | **kotlin.String** | The date and time at which the Ezsignfolder was disposed. |  [optional] |
 | **bEzsignfolderSigner** | **kotlin.Boolean** | Whether the Ezsignfolder has an Ezsignsignatures that need to be signed or an Ezsignformfieldgroups that need to be filled by the current user |  [optional] |
+| **bEzsignfolderIsmyown** | **kotlin.Boolean** | Whether the Ezsignfolder is my own or not |  [optional] |
 
 
 

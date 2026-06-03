@@ -6,7 +6,9 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | ------------- | ------------- | ------------- |
 | [**ezsigndocumentApplyEzsigntemplateV1**](ObjectEzsigndocumentApi.md#ezsigndocumentApplyEzsigntemplateV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate | Apply an Ezsigntemplate to the Ezsigndocument |
 | [**ezsigndocumentApplyEzsigntemplateV2**](ObjectEzsigndocumentApi.md#ezsigndocumentApplyEzsigntemplateV2) | **POST** /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate | Apply an Ezsigntemplate to the Ezsigndocument |
+| [**ezsigndocumentApplyEzsigntemplateV3**](ObjectEzsigndocumentApi.md#ezsigndocumentApplyEzsigntemplateV3) | **POST** /3/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate | Apply an Ezsigntemplate to the Ezsigndocument |
 | [**ezsigndocumentApplyEzsigntemplateglobalV1**](ObjectEzsigndocumentApi.md#ezsigndocumentApplyEzsigntemplateglobalV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplateglobal | Apply an Ezsigntemplateglobal to the Ezsigndocument |
+| [**ezsigndocumentApplyEzsigntemplateglobalV2**](ObjectEzsigndocumentApi.md#ezsigndocumentApplyEzsigntemplateglobalV2) | **POST** /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplateglobal | Apply an Ezsigntemplateglobal to the Ezsigndocument |
 | [**ezsigndocumentCreateEzsignelementsPositionedByWordV1**](ObjectEzsigndocumentApi.md#ezsigndocumentCreateEzsignelementsPositionedByWordV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/createEzsignelementsPositionedByWord | Create multiple Ezsignsignatures/Ezsignformfieldgroups |
 | [**ezsigndocumentCreateEzsignelementsPositionedByWordV2**](ObjectEzsigndocumentApi.md#ezsigndocumentCreateEzsignelementsPositionedByWordV2) | **POST** /2/object/ezsigndocument/{pkiEzsigndocumentID}/createEzsignelementsPositionedByWord | Create multiple Ezsignsignatures/Ezsignformfieldgroups |
 | [**ezsigndocumentCreateObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentCreateObjectV1) | **POST** /1/object/ezsigndocument | Create a new Ezsigndocument |
@@ -151,6 +153,57 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a id="ezsigndocumentApplyEzsigntemplateV3"></a>
+# **ezsigndocumentApplyEzsigntemplateV3**
+> EzsigndocumentApplyEzsigntemplateV3Response ezsigndocumentApplyEzsigntemplateV3(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV3Request)
+
+Apply an Ezsigntemplate to the Ezsigndocument
+
+This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsigndocumentApi()
+val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | 
+val ezsigndocumentApplyEzsigntemplateV3Request : EzsigndocumentApplyEzsigntemplateV3Request =  // EzsigndocumentApplyEzsigntemplateV3Request | 
+try {
+    val result : EzsigndocumentApplyEzsigntemplateV3Response = apiInstance.ezsigndocumentApplyEzsigntemplateV3(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV3Request)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsigndocumentApi#ezsigndocumentApplyEzsigntemplateV3")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsigndocumentApi#ezsigndocumentApplyEzsigntemplateV3")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **ezsigndocumentApplyEzsigntemplateV3Request** | [**EzsigndocumentApplyEzsigntemplateV3Request**](EzsigndocumentApplyEzsigntemplateV3Request.md)|  | |
+
+### Return type
+
+[**EzsigndocumentApplyEzsigntemplateV3Response**](EzsigndocumentApplyEzsigntemplateV3Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a id="ezsigndocumentApplyEzsigntemplateglobalV1"></a>
 # **ezsigndocumentApplyEzsigntemplateglobalV1**
 > EzsigndocumentApplyEzsigntemplateglobalV1Response ezsigndocumentApplyEzsigntemplateglobalV1(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateglobalV1Request)
@@ -189,6 +242,57 @@ try {
 ### Return type
 
 [**EzsigndocumentApplyEzsigntemplateglobalV1Response**](EzsigndocumentApplyEzsigntemplateglobalV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a id="ezsigndocumentApplyEzsigntemplateglobalV2"></a>
+# **ezsigndocumentApplyEzsigntemplateglobalV2**
+> EzsigndocumentApplyEzsigntemplateglobalV2Response ezsigndocumentApplyEzsigntemplateglobalV2(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateglobalV2Request)
+
+Apply an Ezsigntemplateglobal to the Ezsigndocument
+
+This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsigndocumentApi()
+val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | 
+val ezsigndocumentApplyEzsigntemplateglobalV2Request : EzsigndocumentApplyEzsigntemplateglobalV2Request =  // EzsigndocumentApplyEzsigntemplateglobalV2Request | 
+try {
+    val result : EzsigndocumentApplyEzsigntemplateglobalV2Response = apiInstance.ezsigndocumentApplyEzsigntemplateglobalV2(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateglobalV2Request)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsigndocumentApi#ezsigndocumentApplyEzsigntemplateglobalV2")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsigndocumentApi#ezsigndocumentApplyEzsigntemplateglobalV2")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **ezsigndocumentApplyEzsigntemplateglobalV2Request** | [**EzsigndocumentApplyEzsigntemplateglobalV2Request**](EzsigndocumentApplyEzsigntemplateglobalV2Request.md)|  | |
+
+### Return type
+
+[**EzsigndocumentApplyEzsigntemplateglobalV2Response**](EzsigndocumentApplyEzsigntemplateglobalV2Response.md)
 
 ### Authorization
 

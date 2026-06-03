@@ -8,9 +8,17 @@
 
 @file:Suppress(
     "ArrayInDataClass",
+    "DuplicatedCode",
     "EnumEntryName",
     "RemoveRedundantQualifierName",
-    "UnusedImport"
+    "RemoveRedundantCallsOfConversionMethods",
+    "REDUNDANT_CALL_OF_CONVERSION_METHOD",
+    "RedundantUnitReturnType",
+    "RemoveEmptyClassBody",
+    "UnnecessaryVariable",
+    "UnusedImport",
+    "UnnecessaryVariable",
+    "unused"
 )
 
 package eZmaxApi.models
@@ -22,7 +30,7 @@ import com.squareup.moshi.JsonClass
 /**
  * A Realestateboard AutocompleteElement Response
  *
- * @param pkiRealestateboardID The unique ID of the Activesession
+ * @param pkiRealestateboardID The unique ID of the Realestateboard
  * @param sProvinceNameX The name of the Province in the language of the requester
  * @param sRealestateboardNameX The name of the Realestateboard
  * @param bRealestateboardIsactive Whether the Agenttype is active or not
@@ -31,7 +39,7 @@ import com.squareup.moshi.JsonClass
 
 data class RealestateboardAutocompleteElementResponse (
 
-    /* The unique ID of the Activesession */
+    /* The unique ID of the Realestateboard */
     @Json(name = "pkiRealestateboardID")
     val pkiRealestateboardID: kotlin.Int,
 

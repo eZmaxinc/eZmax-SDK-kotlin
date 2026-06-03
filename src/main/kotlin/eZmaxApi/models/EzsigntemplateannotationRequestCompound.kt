@@ -8,9 +8,17 @@
 
 @file:Suppress(
     "ArrayInDataClass",
+    "DuplicatedCode",
     "EnumEntryName",
     "RemoveRedundantQualifierName",
-    "UnusedImport"
+    "RemoveRedundantCallsOfConversionMethods",
+    "REDUNDANT_CALL_OF_CONVERSION_METHOD",
+    "RedundantUnitReturnType",
+    "RemoveEmptyClassBody",
+    "UnnecessaryVariable",
+    "UnusedImport",
+    "UnnecessaryVariable",
+    "unused"
 )
 
 package eZmaxApi.models
@@ -18,6 +26,7 @@ package eZmaxApi.models
 import eZmaxApi.models.FieldEEzsigntemplateannotationHorizontalalignment
 import eZmaxApi.models.FieldEEzsigntemplateannotationType
 import eZmaxApi.models.FieldEEzsigntemplateannotationVerticalalignment
+import eZmaxApi.models.TextstylestaticRequestCompound
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -25,8 +34,7 @@ import com.squareup.moshi.JsonClass
 /**
  * A Ezsigntemplateannotation Object and children
  *
- * @param fkiEzsigntemplatedocumentpageID The unique ID of the Ezsigntemplatedocumentpage
- * @param fkiTextstylestaticID The unique ID of the Textstylestatic
+ * @param fkiEzsigntemplatedocumentID The unique ID of the Ezsigntemplatedocument
  * @param eEzsigntemplateannotationHorizontalalignment 
  * @param eEzsigntemplateannotationVerticalalignment 
  * @param eEzsigntemplateannotationType 
@@ -34,22 +42,20 @@ import com.squareup.moshi.JsonClass
  * @param iEzsigntemplateannotationY The y of the Ezsigntemplateannotation
  * @param iEzsigntemplateannotationWidth The width of the Ezsigntemplateannotation
  * @param iEzsigntemplateannotationHeight The height of the Ezsigntemplateannotation
+ * @param iEzsigntemplatedocumentpagePagenumber The page number in the Ezsigntemplatedocument
  * @param sEzsigntemplateannotationDescription The description of the Ezsigntemplateannotation
  * @param sEzsigntemplateannotationDefaulttext The defaulttext of the Ezsigntemplateannotation
- * @param sEzsigntemplateannotationnDropdownvalues The ndropdownvalues of the Ezsigntemplateannotation
+ * @param sEzsigntemplateannotationDropdownvalues The ndropdownvalues of the Ezsigntemplateannotation
  * @param pkiEzsigntemplateannotationID The unique ID of the Ezsigntemplateannotation
+ * @param objTextstylestatic 
  */
 
 
 data class EzsigntemplateannotationRequestCompound (
 
-    /* The unique ID of the Ezsigntemplatedocumentpage */
-    @Json(name = "fkiEzsigntemplatedocumentpageID")
-    val fkiEzsigntemplatedocumentpageID: kotlin.Int,
-
-    /* The unique ID of the Textstylestatic */
-    @Json(name = "fkiTextstylestaticID")
-    val fkiTextstylestaticID: kotlin.Int,
+    /* The unique ID of the Ezsigntemplatedocument */
+    @Json(name = "fkiEzsigntemplatedocumentID")
+    val fkiEzsigntemplatedocumentID: kotlin.Int,
 
     @Json(name = "eEzsigntemplateannotationHorizontalalignment")
     val eEzsigntemplateannotationHorizontalalignment: FieldEEzsigntemplateannotationHorizontalalignment,
@@ -76,6 +82,10 @@ data class EzsigntemplateannotationRequestCompound (
     @Json(name = "iEzsigntemplateannotationHeight")
     val iEzsigntemplateannotationHeight: kotlin.Int,
 
+    /* The page number in the Ezsigntemplatedocument */
+    @Json(name = "iEzsigntemplatedocumentpagePagenumber")
+    val iEzsigntemplatedocumentpagePagenumber: kotlin.Int,
+
     /* The description of the Ezsigntemplateannotation */
     @Json(name = "sEzsigntemplateannotationDescription")
     val sEzsigntemplateannotationDescription: kotlin.String,
@@ -85,12 +95,15 @@ data class EzsigntemplateannotationRequestCompound (
     val sEzsigntemplateannotationDefaulttext: kotlin.String,
 
     /* The ndropdownvalues of the Ezsigntemplateannotation */
-    @Json(name = "sEzsigntemplateannotationnDropdownvalues")
-    val sEzsigntemplateannotationnDropdownvalues: kotlin.String,
+    @Json(name = "sEzsigntemplateannotationDropdownvalues")
+    val sEzsigntemplateannotationDropdownvalues: kotlin.String,
 
     /* The unique ID of the Ezsigntemplateannotation */
     @Json(name = "pkiEzsigntemplateannotationID")
-    val pkiEzsigntemplateannotationID: kotlin.Int? = null
+    val pkiEzsigntemplateannotationID: kotlin.Int? = null,
+
+    @Json(name = "objTextstylestatic")
+    val objTextstylestatic: TextstylestaticRequestCompound? = null
 
 ) {
 

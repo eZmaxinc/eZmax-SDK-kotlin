@@ -8,9 +8,17 @@
 
 @file:Suppress(
     "ArrayInDataClass",
+    "DuplicatedCode",
     "EnumEntryName",
     "RemoveRedundantQualifierName",
-    "UnusedImport"
+    "RemoveRedundantCallsOfConversionMethods",
+    "REDUNDANT_CALL_OF_CONVERSION_METHOD",
+    "RedundantUnitReturnType",
+    "RemoveEmptyClassBody",
+    "UnnecessaryVariable",
+    "UnusedImport",
+    "UnnecessaryVariable",
+    "unused"
 )
 
 package eZmaxApi.models
@@ -43,7 +51,7 @@ import com.squareup.moshi.JsonClass
  * @param sEzsigntsarequirementDescriptionX The description of the Ezsigntsarequirement in the language of the requester
  * @param tEzsignfolderNote Note about the Ezsignfolder
  * @param bEzsignfolderIsdisposable If the Ezsigndocument can be disposed
- * @param iEzsignfolderSendreminderfirstdays The number of days before the the first reminder sending
+ * @param iEzsignfolderSendreminderfirstdays The number of days before the first reminder sending
  * @param iEzsignfolderSendreminderotherdays The number of days after the first reminder sending
  * @param dtEzsignfolderDelayedsenddate The date and time at which the Ezsignfolder will be sent in the future.
  * @param dtEzsignfolderDuedate The maximum date and time at which the Ezsignfolder can be signed.
@@ -51,6 +59,7 @@ import com.squareup.moshi.JsonClass
  * @param dtEzsignfolderScheduledarchive The scheduled date and time at which the Ezsignfolder should be archived.
  * @param dtEzsignfolderScheduleddispose The scheduled date at which the Ezsignfolder should be Disposed.
  * @param eEzsignfolderStep 
+ * @param iEzsignfolderStepcurrent The current step of the ezsignfolder when eEzsignfolderCompletion = 'PerEzsignfolderStepSync'
  * @param dtEzsignfolderClose The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely.
  * @param dtEzsignfolderArchive The date and time at which the Ezsignfolder was archived.
  * @param dtEzsignfolderDispose The date and time at which the Ezsignfolder was disposed.
@@ -117,7 +126,7 @@ data class EzsignfolderResponseV3 (
     @Json(name = "bEzsignfolderIsdisposable")
     val bEzsignfolderIsdisposable: kotlin.Boolean? = null,
 
-    /* The number of days before the the first reminder sending */
+    /* The number of days before the first reminder sending */
     @Json(name = "iEzsignfolderSendreminderfirstdays")
     val iEzsignfolderSendreminderfirstdays: kotlin.Int? = null,
 
@@ -147,6 +156,10 @@ data class EzsignfolderResponseV3 (
 
     @Json(name = "eEzsignfolderStep")
     val eEzsignfolderStep: FieldEEzsignfolderStep? = null,
+
+    /* The current step of the ezsignfolder when eEzsignfolderCompletion = 'PerEzsignfolderStepSync' */
+    @Json(name = "iEzsignfolderStepcurrent")
+    val iEzsignfolderStepcurrent: kotlin.Int? = null,
 
     /* The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely. */
     @Json(name = "dtEzsignfolderClose")

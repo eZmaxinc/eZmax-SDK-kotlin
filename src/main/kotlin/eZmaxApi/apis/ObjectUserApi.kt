@@ -8,9 +8,17 @@
 
 @file:Suppress(
     "ArrayInDataClass",
+    "DuplicatedCode",
     "EnumEntryName",
     "RemoveRedundantQualifierName",
-    "UnusedImport"
+    "RemoveRedundantCallsOfConversionMethods",
+    "REDUNDANT_CALL_OF_CONVERSION_METHOD",
+    "RedundantUnitReturnType",
+    "RemoveEmptyClassBody",
+    "UnnecessaryVariable",
+    "UnusedImport",
+    "UnnecessaryVariable",
+    "unused"
 )
 
 package eZmaxApi.apis
@@ -35,12 +43,15 @@ import eZmaxApi.models.UserGetApikeysV1Response
 import eZmaxApi.models.UserGetAutocompleteV2Response
 import eZmaxApi.models.UserGetColleaguesV2Response
 import eZmaxApi.models.UserGetEffectivePermissionsV1Response
+import eZmaxApi.models.UserGetEzmaxcustomeruserV1Response
 import eZmaxApi.models.UserGetListV1Response
 import eZmaxApi.models.UserGetObjectV2Response
 import eZmaxApi.models.UserGetPermissionsV1Response
 import eZmaxApi.models.UserGetSubnetsV1Response
 import eZmaxApi.models.UserGetUsergroupexternalsV1Response
 import eZmaxApi.models.UserGetUsergroupsV1Response
+import eZmaxApi.models.UserImpersonateV1Request
+import eZmaxApi.models.UserImpersonateV1Response
 import eZmaxApi.models.UserSendPasswordResetV1Response
 
 import com.squareup.moshi.Json
@@ -63,7 +74,7 @@ open class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
-            System.getProperties().getProperty(ApiClient.baseUrlKey, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
+            System.getProperties().getProperty(ApiClient.BASE_URL_KEY, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
     }
 
@@ -529,6 +540,7 @@ open class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call
      */
      enum class SSelectorUserGetAutocompleteV2(val value: kotlin.String) {
          @Json(name = "AgentBrokerAssistant") AgentBrokerAssistant("AgentBrokerAssistant"),
+         @Json(name = "AgentBrokerEmployeeEzsignUserNormalWithoutEzmaxpartner") AgentBrokerEmployeeEzsignUserNormalWithoutEzmaxpartner("AgentBrokerEmployeeEzsignUserNormalWithoutEzmaxpartner"),
          @Json(name = "AgentBrokerEmployeeEzsignUserNormal") AgentBrokerEmployeeEzsignUserNormal("AgentBrokerEmployeeEzsignUserNormal"),
          @Json(name = "AgentBrokerEmployeeNormalBuiltIn") AgentBrokerEmployeeNormalBuiltIn("AgentBrokerEmployeeNormalBuiltIn"),
          @Json(name = "AgentBrokerEzsignuserNormal") AgentBrokerEzsignuserNormal("AgentBrokerEzsignuserNormal"),
@@ -804,6 +816,79 @@ open class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call
     }
 
     /**
+     * GET /1/object/user/{pkiUserID}/getEzmaxcustomeruser
+     * Returns the Ezmaxcustomeruser for the User
+     * Returns the Ezmaxcustomeruser for the User
+     * @param pkiUserID 
+     * @return UserGetEzmaxcustomeruserV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun userGetEzmaxcustomeruserV1(pkiUserID: kotlin.Int) : UserGetEzmaxcustomeruserV1Response {
+        val localVarResponse = userGetEzmaxcustomeruserV1WithHttpInfo(pkiUserID = pkiUserID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as UserGetEzmaxcustomeruserV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/user/{pkiUserID}/getEzmaxcustomeruser
+     * Returns the Ezmaxcustomeruser for the User
+     * Returns the Ezmaxcustomeruser for the User
+     * @param pkiUserID 
+     * @return ApiResponse<UserGetEzmaxcustomeruserV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun userGetEzmaxcustomeruserV1WithHttpInfo(pkiUserID: kotlin.Int) : ApiResponse<UserGetEzmaxcustomeruserV1Response?> {
+        val localVariableConfig = userGetEzmaxcustomeruserV1RequestConfig(pkiUserID = pkiUserID)
+
+        return request<Unit, UserGetEzmaxcustomeruserV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation userGetEzmaxcustomeruserV1
+     *
+     * @param pkiUserID 
+     * @return RequestConfig
+     */
+    fun userGetEzmaxcustomeruserV1RequestConfig(pkiUserID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/user/{pkiUserID}/getEzmaxcustomeruser".replace("{"+"pkiUserID"+"}", encodeURIComponent(pkiUserID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
      * enum for parameter eOrderBy
      */
      enum class EOrderByUserGetListV1(val value: kotlin.String) {
@@ -826,7 +911,9 @@ open class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call
          @Json(name = "dtUserEzsignprepaidexpiration_ASC") dtUserEzsignprepaidexpiration_ASC("dtUserEzsignprepaidexpiration_ASC"),
          @Json(name = "dtUserEzsignprepaidexpiration_DESC") dtUserEzsignprepaidexpiration_DESC("dtUserEzsignprepaidexpiration_DESC"),
          @Json(name = "sEmailAddress_ASC") sEmailAddress_ASC("sEmailAddress_ASC"),
-         @Json(name = "sEmailAddress_DESC") sEmailAddress_DESC("sEmailAddress_DESC");
+         @Json(name = "sEmailAddress_DESC") sEmailAddress_DESC("sEmailAddress_DESC"),
+         @Json(name = "bUserSuspended_ASC") bUserSuspended_ASC("bUserSuspended_ASC"),
+         @Json(name = "bUserSuspended_DESC") bUserSuspended_DESC("bUserSuspended_DESC");
 
         /**
          * Override [toString()] to avoid using the enum variable name as the value, and instead use
@@ -1296,6 +1383,83 @@ open class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/user/{pkiUserID}/getUsergroups".replace("{"+"pkiUserID"+"}", encodeURIComponent(pkiUserID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * POST /1/object/user/{pkiUserID}/impersonate
+     * Impersonate the user
+     * Using this endpoint, you can impersonate the user.
+     * @param pkiUserID 
+     * @param userImpersonateV1Request 
+     * @return UserImpersonateV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun userImpersonateV1(pkiUserID: kotlin.Int, userImpersonateV1Request: UserImpersonateV1Request) : UserImpersonateV1Response {
+        val localVarResponse = userImpersonateV1WithHttpInfo(pkiUserID = pkiUserID, userImpersonateV1Request = userImpersonateV1Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as UserImpersonateV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /1/object/user/{pkiUserID}/impersonate
+     * Impersonate the user
+     * Using this endpoint, you can impersonate the user.
+     * @param pkiUserID 
+     * @param userImpersonateV1Request 
+     * @return ApiResponse<UserImpersonateV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun userImpersonateV1WithHttpInfo(pkiUserID: kotlin.Int, userImpersonateV1Request: UserImpersonateV1Request) : ApiResponse<UserImpersonateV1Response?> {
+        val localVariableConfig = userImpersonateV1RequestConfig(pkiUserID = pkiUserID, userImpersonateV1Request = userImpersonateV1Request)
+
+        return request<UserImpersonateV1Request, UserImpersonateV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation userImpersonateV1
+     *
+     * @param pkiUserID 
+     * @param userImpersonateV1Request 
+     * @return RequestConfig
+     */
+    fun userImpersonateV1RequestConfig(pkiUserID: kotlin.Int, userImpersonateV1Request: UserImpersonateV1Request) : RequestConfig<UserImpersonateV1Request> {
+        val localVariableBody = userImpersonateV1Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/user/{pkiUserID}/impersonate".replace("{"+"pkiUserID"+"}", encodeURIComponent(pkiUserID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

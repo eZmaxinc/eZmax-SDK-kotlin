@@ -4,7 +4,6 @@
 ## Properties
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **pkiWebhookID** | **kotlin.Int** | The unique ID of the Webhook |  |
 | **sWebhookDescription** | **kotlin.String** | The description of the Webhook |  |
 | **eWebhookModule** | [**FieldEWebhookModule**](FieldEWebhookModule.md) |  |  |
 | **sWebhookUrl** | **kotlin.String** | The URL of the Webhook callback |  |
@@ -12,7 +11,7 @@
 | **bWebhookIsactive** | **kotlin.Boolean** | Whether the Webhook is active or not |  |
 | **bWebhookIssigned** | **kotlin.Boolean** | Whether the requests will be signed or not |  |
 | **bWebhookSkipsslvalidation** | **kotlin.Boolean** | Wheter the server&#39;s SSL certificate should be validated or not. Not recommended to skip for production use |  |
-| **objAudit** | [**CommonAudit**](CommonAudit.md) |  |  |
+| **pkiWebhookID** | **kotlin.Int** | The unique ID of the Webhook |  [optional] |
 | **fkiAuthenticationexternalID** | **kotlin.Int** | The unique ID of the Authenticationexternal |  [optional] |
 | **fkiEzsignfoldertypeID** | **kotlin.Int** | The unique ID of the Ezsignfoldertype. |  [optional] |
 | **sEzsignfoldertypeNameX** | **kotlin.String** | The name of the Ezsignfoldertype in the language of the requester |  [optional] |
@@ -21,6 +20,7 @@
 | **sWebhookApikey** | **kotlin.String** | The Apikey for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey. |  [optional] |
 | **sWebhookSecret** | **kotlin.String** | The Secret for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey. |  [optional] |
 | **sAuthenticationexternalDescription** | **kotlin.String** | The description of the Authenticationexternal |  [optional] |
+| **objAudit** | [**CommonAudit**](CommonAudit.md) |  |  [optional] |
 | **sWebhookEvent** | **kotlin.String** | The concatenated string to describe the Webhook event |  [optional] |
 | **sWebhookAuthentificationexternalerror** | **kotlin.String** | Error message when token renewal failed or is not configured. Only if an Authenticationexternal is set. |  [optional] |
 | **aObjWebhookheader** | [**kotlin.collections.List&lt;WebhookheaderResponseCompound&gt;**](WebhookheaderResponseCompound.md) |  |  [optional] |

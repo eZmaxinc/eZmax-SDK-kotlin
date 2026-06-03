@@ -8,14 +8,23 @@
 
 @file:Suppress(
     "ArrayInDataClass",
+    "DuplicatedCode",
     "EnumEntryName",
     "RemoveRedundantQualifierName",
-    "UnusedImport"
+    "RemoveRedundantCallsOfConversionMethods",
+    "REDUNDANT_CALL_OF_CONVERSION_METHOD",
+    "RedundantUnitReturnType",
+    "RemoveEmptyClassBody",
+    "UnnecessaryVariable",
+    "UnusedImport",
+    "UnnecessaryVariable",
+    "unused"
 )
 
 package eZmaxApi.models
 
 import eZmaxApi.models.FieldEEzsignfolderCompletion
+import eZmaxApi.models.FieldEEzsignfolderSource
 import eZmaxApi.models.FieldEEzsignfolderStep
 import eZmaxApi.models.FieldEEzsignfoldertypePrivacylevel
 
@@ -27,6 +36,7 @@ import com.squareup.moshi.JsonClass
  *
  * @param pkiEzsignfolderID The unique ID of the Ezsignfolder
  * @param fkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
+ * @param eEzsignfolderSource 
  * @param eEzsignfoldertypePrivacylevel 
  * @param sEzsignfoldertypeNameX The name of the Ezsignfoldertype in the language of the requester
  * @param sEzsignfolderDescription The description of the Ezsignfolder
@@ -42,6 +52,12 @@ import com.squareup.moshi.JsonClass
  * @param dEzsignfolderCompletedpercentage Percentage of Ezsignform/Ezsignsignatures has completed
  * @param dEzsignfolderFormcompletedpercentage Percentage of Ezsignform has completed
  * @param dEzsignfolderSignaturecompletedpercentage Percentage of Ezsignsignatures has signed
+ * @param fkiEzsignbulksendID The unique ID of the Ezsignbulksend
+ * @param sEzsignbulksendDescription The description of the Ezsignbulksend
+ * @param fkiEzsignbulksendtransmissionID The unique ID of the Ezsignbulksendtransmission
+ * @param sEzsignbulksendtransmissionDescription The description of the Ezsignbulksendtransmission
+ * @param fkiEzsigntemplatepublicID The unique ID of the Ezsigntemplatepublic
+ * @param sEzsigntemplatepublicDescription The description of the Ezsigntemplatepublic
  * @param dtEzsignfolderDelayedsenddate The date and time at which the Ezsignfolder will be sent in the future.
  * @param dtEzsignfolderSentdate The date and time at which the Ezsignfolder was sent the last time.
  * @param dtEzsignfolderDuedate The maximum date and time at which the Ezsignfolder can be signed.
@@ -50,6 +66,7 @@ import com.squareup.moshi.JsonClass
  * @param dtEzsignfolderArchive The date and time at which the Ezsignfolder was archived.
  * @param dtEzsignfolderDispose The date and time at which the Ezsignfolder was disposed.
  * @param bEzsignfolderSigner Whether the Ezsignfolder has an Ezsignsignatures that need to be signed or an Ezsignformfieldgroups that need to be filled by the current user
+ * @param bEzsignfolderIsmyown Whether the Ezsignfolder is my own or not
  */
 
 
@@ -62,6 +79,9 @@ data class EzsignfolderListElement (
     /* The unique ID of the Ezsignfoldertype. */
     @Json(name = "fkiEzsignfoldertypeID")
     val fkiEzsignfoldertypeID: kotlin.Int,
+
+    @Json(name = "eEzsignfolderSource")
+    val eEzsignfolderSource: FieldEEzsignfolderSource,
 
     @Json(name = "eEzsignfoldertypePrivacylevel")
     val eEzsignfoldertypePrivacylevel: FieldEEzsignfoldertypePrivacylevel,
@@ -120,6 +140,30 @@ data class EzsignfolderListElement (
     @Json(name = "dEzsignfolderSignaturecompletedpercentage")
     val dEzsignfolderSignaturecompletedpercentage: kotlin.String,
 
+    /* The unique ID of the Ezsignbulksend */
+    @Json(name = "fkiEzsignbulksendID")
+    val fkiEzsignbulksendID: kotlin.Int? = null,
+
+    /* The description of the Ezsignbulksend */
+    @Json(name = "sEzsignbulksendDescription")
+    val sEzsignbulksendDescription: kotlin.String? = null,
+
+    /* The unique ID of the Ezsignbulksendtransmission */
+    @Json(name = "fkiEzsignbulksendtransmissionID")
+    val fkiEzsignbulksendtransmissionID: kotlin.Int? = null,
+
+    /* The description of the Ezsignbulksendtransmission */
+    @Json(name = "sEzsignbulksendtransmissionDescription")
+    val sEzsignbulksendtransmissionDescription: kotlin.String? = null,
+
+    /* The unique ID of the Ezsigntemplatepublic */
+    @Json(name = "fkiEzsigntemplatepublicID")
+    val fkiEzsigntemplatepublicID: kotlin.Int? = null,
+
+    /* The description of the Ezsigntemplatepublic */
+    @Json(name = "sEzsigntemplatepublicDescription")
+    val sEzsigntemplatepublicDescription: kotlin.String? = null,
+
     /* The date and time at which the Ezsignfolder will be sent in the future. */
     @Json(name = "dtEzsignfolderDelayedsenddate")
     val dtEzsignfolderDelayedsenddate: kotlin.String? = null,
@@ -150,7 +194,11 @@ data class EzsignfolderListElement (
 
     /* Whether the Ezsignfolder has an Ezsignsignatures that need to be signed or an Ezsignformfieldgroups that need to be filled by the current user */
     @Json(name = "bEzsignfolderSigner")
-    val bEzsignfolderSigner: kotlin.Boolean? = null
+    val bEzsignfolderSigner: kotlin.Boolean? = null,
+
+    /* Whether the Ezsignfolder is my own or not */
+    @Json(name = "bEzsignfolderIsmyown")
+    val bEzsignfolderIsmyown: kotlin.Boolean? = null
 
 ) {
 

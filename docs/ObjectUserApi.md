@@ -13,12 +13,14 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**userGetAutocompleteV2**](ObjectUserApi.md#userGetAutocompleteV2) | **GET** /2/object/user/getAutocomplete/{sSelector} | Retrieve Users and IDs |
 | [**userGetColleaguesV2**](ObjectUserApi.md#userGetColleaguesV2) | **GET** /2/object/user/{pkiUserID}/getColleagues | Retrieve an existing User&#39;s Colleagues |
 | [**userGetEffectivePermissionsV1**](ObjectUserApi.md#userGetEffectivePermissionsV1) | **GET** /1/object/user/{pkiUserID}/getEffectivePermissions | Retrieve an existing User&#39;s Effective Permissions |
+| [**userGetEzmaxcustomeruserV1**](ObjectUserApi.md#userGetEzmaxcustomeruserV1) | **GET** /1/object/user/{pkiUserID}/getEzmaxcustomeruser | Returns the Ezmaxcustomeruser for the User |
 | [**userGetListV1**](ObjectUserApi.md#userGetListV1) | **GET** /1/object/user/getList | Retrieve User list |
 | [**userGetObjectV2**](ObjectUserApi.md#userGetObjectV2) | **GET** /2/object/user/{pkiUserID} | Retrieve an existing User |
 | [**userGetPermissionsV1**](ObjectUserApi.md#userGetPermissionsV1) | **GET** /1/object/user/{pkiUserID}/getPermissions | Retrieve an existing User&#39;s Permissions |
 | [**userGetSubnetsV1**](ObjectUserApi.md#userGetSubnetsV1) | **GET** /1/object/user/{pkiUserID}/getSubnets | Retrieve an existing User&#39;s Subnets |
 | [**userGetUsergroupexternalsV1**](ObjectUserApi.md#userGetUsergroupexternalsV1) | **GET** /1/object/user/{pkiUserID}/getUsergroupexternals | Get User&#39;s Usergroupexternals |
 | [**userGetUsergroupsV1**](ObjectUserApi.md#userGetUsergroupsV1) | **GET** /1/object/user/{pkiUserID}/getUsergroups | Get User&#39;s Usergroups |
+| [**userImpersonateV1**](ObjectUserApi.md#userImpersonateV1) | **POST** /1/object/user/{pkiUserID}/impersonate | Impersonate the user |
 | [**userSendPasswordResetV1**](ObjectUserApi.md#userSendPasswordResetV1) | **POST** /1/object/user/{pkiUserID}/sendPasswordReset | Send password reset |
 
 
@@ -352,7 +354,7 @@ try {
 ```
 
 ### Parameters
-| **sSelector** | **kotlin.String**| The type of Users to return | [enum: AgentBrokerAssistant, AgentBrokerEmployeeEzsignUserNormal, AgentBrokerEmployeeNormalBuiltIn, AgentBrokerEzsignuserNormal, ClonableUsers, EzsignuserBuiltIn, Ezsignuser, Normal, UsergroupDelegated] |
+| **sSelector** | **kotlin.String**| The type of Users to return | [enum: AgentBrokerAssistant, AgentBrokerEmployeeEzsignUserNormalWithoutEzmaxpartner, AgentBrokerEmployeeEzsignUserNormal, AgentBrokerEmployeeNormalBuiltIn, AgentBrokerEzsignuserNormal, ClonableUsers, EzsignuserBuiltIn, Ezsignuser, Normal, UsergroupDelegated] |
 | **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to EFilterActive.Active] [enum: All, Active, Inactive] |
 | **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional] |
 | Name | Type | Description  | Notes |
@@ -471,6 +473,55 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+<a id="userGetEzmaxcustomeruserV1"></a>
+# **userGetEzmaxcustomeruserV1**
+> UserGetEzmaxcustomeruserV1Response userGetEzmaxcustomeruserV1(pkiUserID)
+
+Returns the Ezmaxcustomeruser for the User
+
+Returns the Ezmaxcustomeruser for the User
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectUserApi()
+val pkiUserID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : UserGetEzmaxcustomeruserV1Response = apiInstance.userGetEzmaxcustomeruserV1(pkiUserID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectUserApi#userGetEzmaxcustomeruserV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectUserApi#userGetEzmaxcustomeruserV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiUserID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**UserGetEzmaxcustomeruserV1Response**](UserGetEzmaxcustomeruserV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
 <a id="userGetListV1"></a>
 # **userGetListV1**
 > UserGetListV1Response userGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
@@ -504,7 +555,7 @@ try {
 ```
 
 ### Parameters
-| **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiUserID_ASC, pkiUserID_DESC, sUserFirstname_ASC, sUserFirstname_DESC, sUserLastname_ASC, sUserLastname_DESC, sUserLoginname_ASC, sUserLoginname_DESC, bUserIsactive_ASC, bUserIsactive_DESC, eUserType_ASC, eUserType_DESC, eUserOrigin_ASC, eUserOrigin_DESC, eUserEzsignaccess_ASC, eUserEzsignaccess_DESC, dtUserEzsignprepaidexpiration_ASC, dtUserEzsignprepaidexpiration_DESC, sEmailAddress_ASC, sEmailAddress_DESC] |
+| **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiUserID_ASC, pkiUserID_DESC, sUserFirstname_ASC, sUserFirstname_DESC, sUserLastname_ASC, sUserLastname_DESC, sUserLoginname_ASC, sUserLoginname_DESC, bUserIsactive_ASC, bUserIsactive_DESC, eUserType_ASC, eUserType_DESC, eUserOrigin_ASC, eUserOrigin_DESC, eUserEzsignaccess_ASC, eUserEzsignaccess_DESC, dtUserEzsignprepaidexpiration_ASC, dtUserEzsignprepaidexpiration_DESC, sEmailAddress_ASC, sEmailAddress_DESC, bUserSuspended_ASC, bUserSuspended_DESC] |
 | **iRowMax** | **kotlin.Int**|  | [optional] |
 | **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0] |
 | **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
@@ -763,6 +814,57 @@ Configure Authorization:
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="userImpersonateV1"></a>
+# **userImpersonateV1**
+> UserImpersonateV1Response userImpersonateV1(pkiUserID, userImpersonateV1Request)
+
+Impersonate the user
+
+Using this endpoint, you can impersonate the user.
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectUserApi()
+val pkiUserID : kotlin.Int = 56 // kotlin.Int | 
+val userImpersonateV1Request : UserImpersonateV1Request =  // UserImpersonateV1Request | 
+try {
+    val result : UserImpersonateV1Response = apiInstance.userImpersonateV1(pkiUserID, userImpersonateV1Request)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectUserApi#userImpersonateV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectUserApi#userImpersonateV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| **pkiUserID** | **kotlin.Int**|  | |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userImpersonateV1Request** | [**UserImpersonateV1Request**](UserImpersonateV1Request.md)|  | |
+
+### Return type
+
+[**UserImpersonateV1Response**](UserImpersonateV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a id="userSendPasswordResetV1"></a>

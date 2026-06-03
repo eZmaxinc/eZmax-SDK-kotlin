@@ -13,6 +13,7 @@
 | **eUserOrigin** | [**FieldEUserOrigin**](FieldEUserOrigin.md) |  |  |
 | **eUserEzsignaccess** | [**FieldEUserEzsignaccess**](FieldEUserEzsignaccess.md) |  |  |
 | **sEmailAddress** | **kotlin.String** | The email address. |  |
+| **bUserSuspended** | **kotlin.Boolean** | Whether the User is suspended or not |  [optional] |
 | **dtUserEzsignprepaidexpiration** | **kotlin.String** | The eZsign prepaid expiration date |  [optional] |
 | **sUserJobtitle** | **kotlin.String** | The job title of the user |  [optional] |
 

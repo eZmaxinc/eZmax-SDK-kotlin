@@ -32,5 +32,7 @@
 
     * `ForcedLogoff` (value: `"ForcedLogoff"`)
 
+    * `Suspended` (value: `"Suspended"`)
+
 
 

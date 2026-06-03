@@ -21,6 +21,7 @@
 | **sEzsignfoldertypeNameX** | **kotlin.String** | The name of the Ezsignfoldertype in the language of the requester |  [optional] |
 | **eEzsigntemplateType** | [**FieldEEzsigntemplateType**](FieldEEzsigntemplateType.md) |  |  [optional] |
 | **objEzsigntemplatedocument** | [**EzsigntemplatedocumentResponse**](EzsigntemplatedocumentResponse.md) |  |  [optional] |
+| **aObjEzsigntemplateannotation** | [**kotlin.collections.List&lt;EzsigntemplateannotationResponseCompound&gt;**](EzsigntemplateannotationResponseCompound.md) |  |  [optional] |
 
 
 

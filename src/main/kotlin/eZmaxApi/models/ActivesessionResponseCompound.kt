@@ -8,9 +8,17 @@
 
 @file:Suppress(
     "ArrayInDataClass",
+    "DuplicatedCode",
     "EnumEntryName",
     "RemoveRedundantQualifierName",
-    "UnusedImport"
+    "RemoveRedundantCallsOfConversionMethods",
+    "REDUNDANT_CALL_OF_CONVERSION_METHOD",
+    "RedundantUnitReturnType",
+    "RemoveEmptyClassBody",
+    "UnnecessaryVariable",
+    "UnusedImport",
+    "UnnecessaryVariable",
+    "unused"
 )
 
 package eZmaxApi.models
@@ -62,10 +70,12 @@ import com.squareup.moshi.JsonClass
  * @param eSystemconfigurationEzsignofficeplan 
  * @param eUserEzsignprepaid 
  * @param bUserEzsigntrial Whether the User's eZsign subscription is a trial
+ * @param bUserEzsigntemplaterolegrouping Whether we group or not the Ezsigntemplate roles
  * @param dtUserEzsignprepaidexpiration The eZsign prepaid expiration date
  * @param dtUserNpsrequest The date at which the NPS questionnaire will be show
  * @param objUserCloned 
  * @param objApikey 
+ * @param bActivesessionMaillinglistrequest If you need to ask which mailing lists this user wants to subscribe to
  */
 
 
@@ -172,6 +182,10 @@ data class ActivesessionResponseCompound (
     @Json(name = "bUserEzsigntrial")
     val bUserEzsigntrial: kotlin.Boolean? = null,
 
+    /* Whether we group or not the Ezsigntemplate roles */
+    @Json(name = "bUserEzsigntemplaterolegrouping")
+    val bUserEzsigntemplaterolegrouping: kotlin.Boolean? = null,
+
     /* The eZsign prepaid expiration date */
     @Json(name = "dtUserEzsignprepaidexpiration")
     val dtUserEzsignprepaidexpiration: kotlin.String? = null,
@@ -184,7 +198,11 @@ data class ActivesessionResponseCompound (
     val objUserCloned: ActivesessionResponseCompoundUser? = null,
 
     @Json(name = "objApikey")
-    val objApikey: ActivesessionResponseCompoundApikey? = null
+    val objApikey: ActivesessionResponseCompoundApikey? = null,
+
+    /* If you need to ask which mailing lists this user wants to subscribe to */
+    @Json(name = "bActivesessionMaillinglistrequest")
+    val bActivesessionMaillinglistrequest: kotlin.Boolean? = null
 
 ) {
 

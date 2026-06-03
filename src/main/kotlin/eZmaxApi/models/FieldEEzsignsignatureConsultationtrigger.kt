@@ -8,9 +8,17 @@
 
 @file:Suppress(
     "ArrayInDataClass",
+    "DuplicatedCode",
     "EnumEntryName",
     "RemoveRedundantQualifierName",
-    "UnusedImport"
+    "RemoveRedundantCallsOfConversionMethods",
+    "REDUNDANT_CALL_OF_CONVERSION_METHOD",
+    "RedundantUnitReturnType",
+    "RemoveEmptyClassBody",
+    "UnnecessaryVariable",
+    "UnusedImport",
+    "UnnecessaryVariable",
+    "unused"
 )
 
 package eZmaxApi.models
@@ -20,9 +28,9 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * Indicates when the “consultation” type signature must be signed.  1. **Automatic** When the document is displayed . 2. **Manual** The user must indicate that he has viewed the document.
+ * Indicates when the “consultation” type signature must be signed.  1. **Automatic** When the document is displayed . 2. **Manual** The user must indicate that he has viewed the document. 3. **Optional** The user can view the document, but they are not required to do so. Same as **Automatic** when user view the document.
  *
- * Values: Automatic,Manual
+ * Values: Automatic,Manual,Optional
  */
 
 @JsonClass(generateAdapter = false)
@@ -32,7 +40,10 @@ enum class FieldEEzsignsignatureConsultationtrigger(val value: kotlin.String) {
     Automatic("Automatic"),
 
     @Json(name = "Manual")
-    Manual("Manual");
+    Manual("Manual"),
+
+    @Json(name = "Optional")
+    Optional("Optional");
 
     /**
      * Override [toString()] to avoid using the enum variable name as the value, and instead use
@@ -54,7 +65,7 @@ enum class FieldEEzsignsignatureConsultationtrigger(val value: kotlin.String) {
          */
         fun decode(data: kotlin.Any?): FieldEEzsignsignatureConsultationtrigger? = data?.let {
           val normalizedData = "$it".lowercase()
-          values().firstOrNull { value ->
+          entries.firstOrNull { value ->
             it == value || normalizedData == "$value".lowercase()
           }
         }

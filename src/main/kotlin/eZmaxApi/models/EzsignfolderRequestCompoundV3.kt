@@ -8,9 +8,17 @@
 
 @file:Suppress(
     "ArrayInDataClass",
+    "DuplicatedCode",
     "EnumEntryName",
     "RemoveRedundantQualifierName",
-    "UnusedImport"
+    "RemoveRedundantCallsOfConversionMethods",
+    "REDUNDANT_CALL_OF_CONVERSION_METHOD",
+    "RedundantUnitReturnType",
+    "RemoveEmptyClassBody",
+    "UnnecessaryVariable",
+    "UnusedImport",
+    "UnnecessaryVariable",
+    "unused"
 )
 
 package eZmaxApi.models
@@ -25,7 +33,7 @@ import com.squareup.moshi.JsonClass
  *
  * @param fkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
  * @param sEzsignfolderDescription The description of the Ezsignfolder
- * @param iEzsignfolderSendreminderfirstdays The number of days before the the first reminder sending
+ * @param iEzsignfolderSendreminderfirstdays The number of days before the first reminder sending
  * @param iEzsignfolderSendreminderotherdays The number of days after the first reminder sending
  * @param pkiEzsignfolderID The unique ID of the Ezsignfolder
  * @param fkiTimezoneID The unique ID of the Timezone
@@ -47,7 +55,7 @@ data class EzsignfolderRequestCompoundV3 (
     @Json(name = "sEzsignfolderDescription")
     val sEzsignfolderDescription: kotlin.String,
 
-    /* The number of days before the the first reminder sending */
+    /* The number of days before the first reminder sending */
     @Json(name = "iEzsignfolderSendreminderfirstdays")
     val iEzsignfolderSendreminderfirstdays: kotlin.Int,
 

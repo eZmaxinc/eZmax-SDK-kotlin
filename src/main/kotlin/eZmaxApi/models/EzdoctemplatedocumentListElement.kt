@@ -8,9 +8,17 @@
 
 @file:Suppress(
     "ArrayInDataClass",
+    "DuplicatedCode",
     "EnumEntryName",
     "RemoveRedundantQualifierName",
-    "UnusedImport"
+    "RemoveRedundantCallsOfConversionMethods",
+    "REDUNDANT_CALL_OF_CONVERSION_METHOD",
+    "RedundantUnitReturnType",
+    "RemoveEmptyClassBody",
+    "UnnecessaryVariable",
+    "UnusedImport",
+    "UnnecessaryVariable",
+    "unused"
 )
 
 package eZmaxApi.models
@@ -26,10 +34,10 @@ import com.squareup.moshi.JsonClass
  * @param pkiEzdoctemplatedocumentID The unique ID of the Ezdoctemplatedocument
  * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
  * @param fkiEzdoctemplatetypeID The unique ID of the Ezdoctemplatetype
- * @param fkiEzdoctemplatefieldtypecategoryID The unique ID of the Ezdoctemplatefieldtypecategory
  * @param bEzdoctemplatedocumentIsactive Whether the ezdoctemplatedocument is active or not
  * @param sEzdoctemplatedocumentNameX The name of the Ezdoctemplatedocument in the language of the requester
  * @param fkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
+ * @param fkiEzdoctemplatefieldtypecategoryID The unique ID of the Ezdoctemplatefieldtypecategory
  * @param sEzsignfoldertypeNameX The name of the Ezsignfoldertype in the language of the requester
  * @param sEzdoctemplatetypeDescriptionX The description of the Ezdoctemplatetype in the language of the requester
  * @param sEzdoctemplatefieldtypecategoryDescriptionX The description of the Ezdoctemplatefieldtypecategory in the language of the requester
@@ -51,10 +59,6 @@ data class EzdoctemplatedocumentListElement (
     @Json(name = "fkiEzdoctemplatetypeID")
     val fkiEzdoctemplatetypeID: kotlin.Int,
 
-    /* The unique ID of the Ezdoctemplatefieldtypecategory */
-    @Json(name = "fkiEzdoctemplatefieldtypecategoryID")
-    val fkiEzdoctemplatefieldtypecategoryID: kotlin.Int,
-
     /* Whether the ezdoctemplatedocument is active or not */
     @Json(name = "bEzdoctemplatedocumentIsactive")
     val bEzdoctemplatedocumentIsactive: kotlin.Boolean,
@@ -66,6 +70,10 @@ data class EzdoctemplatedocumentListElement (
     /* The unique ID of the Ezsignfoldertype. */
     @Json(name = "fkiEzsignfoldertypeID")
     val fkiEzsignfoldertypeID: kotlin.Int? = null,
+
+    /* The unique ID of the Ezdoctemplatefieldtypecategory */
+    @Json(name = "fkiEzdoctemplatefieldtypecategoryID")
+    val fkiEzdoctemplatefieldtypecategoryID: kotlin.Int? = null,
 
     /* The name of the Ezsignfoldertype in the language of the requester */
     @Json(name = "sEzsignfoldertypeNameX")

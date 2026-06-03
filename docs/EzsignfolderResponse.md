@@ -18,7 +18,7 @@
 | **tEzsignfolderNote** | **kotlin.String** | Note about the Ezsignfolder |  [optional] |
 | **bEzsignfolderIsdisposable** | **kotlin.Boolean** | If the Ezsigndocument can be disposed |  [optional] |
 | **eEzsignfolderSendreminderfrequency** | [**FieldEEzsignfolderSendreminderfrequency**](FieldEEzsignfolderSendreminderfrequency.md) |  |  [optional] |
-| **iEzsignfolderSendreminderfirstdays** | **kotlin.Int** | The number of days before the the first reminder sending |  [optional] |
+| **iEzsignfolderSendreminderfirstdays** | **kotlin.Int** | The number of days before the first reminder sending |  [optional] |
 | **iEzsignfolderSendreminderotherdays** | **kotlin.Int** | The number of days after the first reminder sending |  [optional] |
 | **dtEzsignfolderDelayedsenddate** | **kotlin.String** | The date and time at which the Ezsignfolder will be sent in the future. |  [optional] |
 | **dtEzsignfolderDuedate** | **kotlin.String** | The maximum date and time at which the Ezsignfolder can be signed. |  [optional] |

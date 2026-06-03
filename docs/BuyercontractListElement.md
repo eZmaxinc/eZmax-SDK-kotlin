@@ -15,6 +15,7 @@
 | **bBuyercontractIsactive** | **kotlin.Boolean** | Whether the buyercontract is active or not |  |
 | **sBuyercontractBrokers** | **kotlin.String** | The brokers&#39; name of the Buyercontract |  |
 | **sBuyercontractBuyers** | **kotlin.String** | The buyers&#39; name of the Buyercontract |  |
+| **sBuyercontractContract** | **kotlin.String** | The number of the Buyercontract |  [optional] |
 | **dtBuyercontractExpirationdate** | **kotlin.String** | The expirationdate of the Buyercontract |  [optional] |
 
 

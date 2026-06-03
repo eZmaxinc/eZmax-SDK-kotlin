@@ -6,7 +6,7 @@
 | ------------ | ------------- | ------------- | ------------- |
 | **fkiEzsignfoldertypeID** | **kotlin.Int** | The unique ID of the Ezsignfoldertype. |  |
 | **sEzsignfolderDescription** | **kotlin.String** | The description of the Ezsignfolder |  |
-| **iEzsignfolderSendreminderfirstdays** | **kotlin.Int** | The number of days before the the first reminder sending |  |
+| **iEzsignfolderSendreminderfirstdays** | **kotlin.Int** | The number of days before the first reminder sending |  |
 | **iEzsignfolderSendreminderotherdays** | **kotlin.Int** | The number of days after the first reminder sending |  |
 | **pkiEzsignfolderID** | **kotlin.Int** | The unique ID of the Ezsignfolder |  [optional] |
 | **fkiTimezoneID** | **kotlin.Int** | The unique ID of the Timezone |  [optional] |

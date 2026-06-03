@@ -8,9 +8,17 @@
 
 @file:Suppress(
     "ArrayInDataClass",
+    "DuplicatedCode",
     "EnumEntryName",
     "RemoveRedundantQualifierName",
-    "UnusedImport"
+    "RemoveRedundantCallsOfConversionMethods",
+    "REDUNDANT_CALL_OF_CONVERSION_METHOD",
+    "RedundantUnitReturnType",
+    "RemoveEmptyClassBody",
+    "UnnecessaryVariable",
+    "UnusedImport",
+    "UnnecessaryVariable",
+    "unused"
 )
 
 package eZmaxApi.models
@@ -23,10 +31,10 @@ import com.squareup.moshi.JsonClass
  * A Custom Discussionconfiguration Object
  *
  * @param bDiscussionconfigurationCompletehistorywhenadded If the added Discussionmembership will have access to the entire history or not
- * @param bDiscussionconfigurationCreateallowed If the the creation of the Discussion is allowed or not
- * @param bDiscussionconfigurationDeleteallowed If the the destruction of the Discussion is allowed or not
- * @param bDiscussionconfigurationDeletediscussionmessageallowed If the the destruction of the Discussionmessage is allowed or not
- * @param bDiscussionconfigurationEditdiscussionmessageallowed If the the creation of the Discussionmessage is allowed or not
+ * @param bDiscussionconfigurationCreateallowed If the creation of the Discussion is allowed or not
+ * @param bDiscussionconfigurationDeleteallowed If the destruction of the Discussion is allowed or not
+ * @param bDiscussionconfigurationDeletediscussionmessageallowed If the destruction of the Discussionmessage is allowed or not
+ * @param bDiscussionconfigurationEditdiscussionmessageallowed If the creation of the Discussionmessage is allowed or not
  */
 
 
@@ -36,19 +44,19 @@ data class CustomDiscussionconfigurationResponse (
     @Json(name = "bDiscussionconfigurationCompletehistorywhenadded")
     val bDiscussionconfigurationCompletehistorywhenadded: kotlin.Boolean,
 
-    /* If the the creation of the Discussion is allowed or not */
+    /* If the creation of the Discussion is allowed or not */
     @Json(name = "bDiscussionconfigurationCreateallowed")
     val bDiscussionconfigurationCreateallowed: kotlin.Boolean,
 
-    /* If the the destruction of the Discussion is allowed or not */
+    /* If the destruction of the Discussion is allowed or not */
     @Json(name = "bDiscussionconfigurationDeleteallowed")
     val bDiscussionconfigurationDeleteallowed: kotlin.Boolean,
 
-    /* If the the destruction of the Discussionmessage is allowed or not */
+    /* If the destruction of the Discussionmessage is allowed or not */
     @Json(name = "bDiscussionconfigurationDeletediscussionmessageallowed")
     val bDiscussionconfigurationDeletediscussionmessageallowed: kotlin.Boolean,
 
-    /* If the the creation of the Discussionmessage is allowed or not */
+    /* If the creation of the Discussionmessage is allowed or not */
     @Json(name = "bDiscussionconfigurationEditdiscussionmessageallowed")
     val bDiscussionconfigurationEditdiscussionmessageallowed: kotlin.Boolean
 

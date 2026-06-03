@@ -8,9 +8,17 @@
 
 @file:Suppress(
     "ArrayInDataClass",
+    "DuplicatedCode",
     "EnumEntryName",
     "RemoveRedundantQualifierName",
-    "UnusedImport"
+    "RemoveRedundantCallsOfConversionMethods",
+    "REDUNDANT_CALL_OF_CONVERSION_METHOD",
+    "RedundantUnitReturnType",
+    "RemoveEmptyClassBody",
+    "UnnecessaryVariable",
+    "UnusedImport",
+    "UnnecessaryVariable",
+    "unused"
 )
 
 package eZmaxApi.apis
@@ -52,7 +60,7 @@ open class ObjectEzsigntemplateApi(basePath: kotlin.String = defaultBasePath, cl
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
-            System.getProperties().getProperty(ApiClient.baseUrlKey, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
+            System.getProperties().getProperty(ApiClient.BASE_URL_KEY, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
     }
 
@@ -495,8 +503,6 @@ open class ObjectEzsigntemplateApi(basePath: kotlin.String = defaultBasePath, cl
      enum class EOrderByEzsigntemplateGetListV1(val value: kotlin.String) {
          @Json(name = "pkiEzsigntemplateID_ASC") pkiEzsigntemplateID_ASC("pkiEzsigntemplateID_ASC"),
          @Json(name = "pkiEzsigntemplateID_DESC") pkiEzsigntemplateID_DESC("pkiEzsigntemplateID_DESC"),
-         @Json(name = "fkiTeamID_ASC") fkiTeamID_ASC("fkiTeamID_ASC"),
-         @Json(name = "fkiTeamID_DESC") fkiTeamID_DESC("fkiTeamID_DESC"),
          @Json(name = "fkiEzsignfoldertypeID_ASC") fkiEzsignfoldertypeID_ASC("fkiEzsignfoldertypeID_ASC"),
          @Json(name = "fkiEzsignfoldertypeID_DESC") fkiEzsignfoldertypeID_DESC("fkiEzsignfoldertypeID_DESC"),
          @Json(name = "fkiUserIDOwner_ASC") fkiUserIDOwner_ASC("fkiUserIDOwner_ASC"),
@@ -507,8 +513,6 @@ open class ObjectEzsigntemplateApi(basePath: kotlin.String = defaultBasePath, cl
          @Json(name = "eEzsigntemplateType_DESC") eEzsigntemplateType_DESC("eEzsigntemplateType_DESC"),
          @Json(name = "sEzsigntemplateDescription_ASC") sEzsigntemplateDescription_ASC("sEzsigntemplateDescription_ASC"),
          @Json(name = "sEzsigntemplateDescription_DESC") sEzsigntemplateDescription_DESC("sEzsigntemplateDescription_DESC"),
-         @Json(name = "sEzsigntemplatedocumentDescription_ASC") sEzsigntemplatedocumentDescription_ASC("sEzsigntemplatedocumentDescription_ASC"),
-         @Json(name = "sEzsigntemplatedocumentDescription_DESC") sEzsigntemplatedocumentDescription_DESC("sEzsigntemplatedocumentDescription_DESC"),
          @Json(name = "iEzsigntemplatedocumentPagetotal_ASC") iEzsigntemplatedocumentPagetotal_ASC("iEzsigntemplatedocumentPagetotal_ASC"),
          @Json(name = "iEzsigntemplatedocumentPagetotal_DESC") iEzsigntemplatedocumentPagetotal_DESC("iEzsigntemplatedocumentPagetotal_DESC"),
          @Json(name = "iEzsigntemplateSignaturetotal_ASC") iEzsigntemplateSignaturetotal_ASC("iEzsigntemplateSignaturetotal_ASC"),

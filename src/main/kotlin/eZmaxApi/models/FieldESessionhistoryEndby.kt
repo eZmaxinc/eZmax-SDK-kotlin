@@ -8,9 +8,17 @@
 
 @file:Suppress(
     "ArrayInDataClass",
+    "DuplicatedCode",
     "EnumEntryName",
     "RemoveRedundantQualifierName",
-    "UnusedImport"
+    "RemoveRedundantCallsOfConversionMethods",
+    "REDUNDANT_CALL_OF_CONVERSION_METHOD",
+    "RedundantUnitReturnType",
+    "RemoveEmptyClassBody",
+    "UnnecessaryVariable",
+    "UnusedImport",
+    "UnnecessaryVariable",
+    "unused"
 )
 
 package eZmaxApi.models
@@ -22,7 +30,7 @@ import com.squareup.moshi.JsonClass
 /**
  * The Type of the Sessionhistory
  *
- * Values: Decryption,Hack,Expired,Hijack,DoubleLogon,Garbage,Logoff,BadAuth,Locked,Inactive,InvalidUser,BadUserType,BadIP,ForcedLogoff
+ * Values: Decryption,Hack,Expired,Hijack,DoubleLogon,Garbage,Logoff,BadAuth,Locked,Inactive,InvalidUser,BadUserType,BadIP,ForcedLogoff,Suspended
  */
 
 @JsonClass(generateAdapter = false)
@@ -68,7 +76,10 @@ enum class FieldESessionhistoryEndby(val value: kotlin.String) {
     BadIP("BadIP"),
 
     @Json(name = "ForcedLogoff")
-    ForcedLogoff("ForcedLogoff");
+    ForcedLogoff("ForcedLogoff"),
+
+    @Json(name = "Suspended")
+    Suspended("Suspended");
 
     /**
      * Override [toString()] to avoid using the enum variable name as the value, and instead use
@@ -90,7 +101,7 @@ enum class FieldESessionhistoryEndby(val value: kotlin.String) {
          */
         fun decode(data: kotlin.Any?): FieldESessionhistoryEndby? = data?.let {
           val normalizedData = "$it".lowercase()
-          values().firstOrNull { value ->
+          entries.firstOrNull { value ->
             it == value || normalizedData == "$value".lowercase()
           }
         }

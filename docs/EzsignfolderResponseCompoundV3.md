@@ -18,7 +18,7 @@
 | **sEzsigntsarequirementDescriptionX** | **kotlin.String** | The description of the Ezsigntsarequirement in the language of the requester |  [optional] |
 | **tEzsignfolderNote** | **kotlin.String** | Note about the Ezsignfolder |  [optional] |
 | **bEzsignfolderIsdisposable** | **kotlin.Boolean** | If the Ezsigndocument can be disposed |  [optional] |
-| **iEzsignfolderSendreminderfirstdays** | **kotlin.Int** | The number of days before the the first reminder sending |  [optional] |
+| **iEzsignfolderSendreminderfirstdays** | **kotlin.Int** | The number of days before the first reminder sending |  [optional] |
 | **iEzsignfolderSendreminderotherdays** | **kotlin.Int** | The number of days after the first reminder sending |  [optional] |
 | **dtEzsignfolderDelayedsenddate** | **kotlin.String** | The date and time at which the Ezsignfolder will be sent in the future. |  [optional] |
 | **dtEzsignfolderDuedate** | **kotlin.String** | The maximum date and time at which the Ezsignfolder can be signed. |  [optional] |
@@ -26,6 +26,7 @@
 | **dtEzsignfolderScheduledarchive** | **kotlin.String** | The scheduled date and time at which the Ezsignfolder should be archived. |  [optional] |
 | **dtEzsignfolderScheduleddispose** | **kotlin.String** | The scheduled date at which the Ezsignfolder should be Disposed. |  [optional] |
 | **eEzsignfolderStep** | [**FieldEEzsignfolderStep**](FieldEEzsignfolderStep.md) |  |  [optional] |
+| **iEzsignfolderStepcurrent** | **kotlin.Int** | The current step of the ezsignfolder when eEzsignfolderCompletion &#x3D; &#39;PerEzsignfolderStepSync&#39; |  [optional] |
 | **dtEzsignfolderClose** | **kotlin.String** | The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely. |  [optional] |
 | **dtEzsignfolderArchive** | **kotlin.String** | The date and time at which the Ezsignfolder was archived. |  [optional] |
 | **dtEzsignfolderDispose** | **kotlin.String** | The date and time at which the Ezsignfolder was disposed. |  [optional] |

@@ -16,6 +16,7 @@
 | **aObjEzsigntemplateglobalsigner** | [**kotlin.collections.List&lt;EzsigntemplateglobalsignerResponseCompound&gt;**](EzsigntemplateglobalsignerResponseCompound.md) |  |  |
 | **sModuleNameX** | **kotlin.String** | The Name of the Module in the language of the requester |  [optional] |
 | **objEzsigntemplateglobaldocument** | [**EzsigntemplateglobaldocumentResponse**](EzsigntemplateglobaldocumentResponse.md) |  |  [optional] |
+| **aObjEzsigntemplateglobalannotation** | [**kotlin.collections.List&lt;EzsigntemplateglobalannotationResponseCompound&gt;**](EzsigntemplateglobalannotationResponseCompound.md) |  |  [optional] |
 
 
 

@@ -5,7 +5,9 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**ezsignfoldertypeCreateObjectV3**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeCreateObjectV3) | **POST** /3/object/ezsignfoldertype | Create a new Ezsignfoldertype |
+| [**ezsignfoldertypeCreateObjectV4**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeCreateObjectV4) | **POST** /4/object/ezsignfoldertype | Create a new Ezsignfoldertype |
 | [**ezsignfoldertypeEditObjectV3**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeEditObjectV3) | **PUT** /3/object/ezsignfoldertype/{pkiEzsignfoldertypeID} | Edit an existing Ezsignfoldertype |
+| [**ezsignfoldertypeEditObjectV4**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeEditObjectV4) | **PUT** /4/object/ezsignfoldertype/{pkiEzsignfoldertypeID} | Edit an existing Ezsignfoldertype |
 | [**ezsignfoldertypeGetAutocompleteV2**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeGetAutocompleteV2) | **GET** /2/object/ezsignfoldertype/getAutocomplete/{sSelector} | Retrieve Ezsignfoldertypes and IDs |
 | [**ezsignfoldertypeGetListV1**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeGetListV1) | **GET** /1/object/ezsignfoldertype/getList | Retrieve Ezsignfoldertype list |
 | [**ezsignfoldertypeGetObjectV2**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeGetObjectV2) | **GET** /2/object/ezsignfoldertype/{pkiEzsignfoldertypeID} | Retrieve an existing Ezsignfoldertype |
@@ -61,6 +63,55 @@ Configure Authorization:
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a id="ezsignfoldertypeCreateObjectV4"></a>
+# **ezsignfoldertypeCreateObjectV4**
+> EzsignfoldertypeCreateObjectV4Response ezsignfoldertypeCreateObjectV4(ezsignfoldertypeCreateObjectV4Request)
+
+Create a new Ezsignfoldertype
+
+The endpoint allows to create one or many elements at once.
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsignfoldertypeApi()
+val ezsignfoldertypeCreateObjectV4Request : EzsignfoldertypeCreateObjectV4Request =  // EzsignfoldertypeCreateObjectV4Request | 
+try {
+    val result : EzsignfoldertypeCreateObjectV4Response = apiInstance.ezsignfoldertypeCreateObjectV4(ezsignfoldertypeCreateObjectV4Request)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsignfoldertypeApi#ezsignfoldertypeCreateObjectV4")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsignfoldertypeApi#ezsignfoldertypeCreateObjectV4")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **ezsignfoldertypeCreateObjectV4Request** | [**EzsignfoldertypeCreateObjectV4Request**](EzsignfoldertypeCreateObjectV4Request.md)|  | |
+
+### Return type
+
+[**EzsignfoldertypeCreateObjectV4Response**](EzsignfoldertypeCreateObjectV4Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a id="ezsignfoldertypeEditObjectV3"></a>
 # **ezsignfoldertypeEditObjectV3**
 > EzsignfoldertypeEditObjectV3Response ezsignfoldertypeEditObjectV3(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV3Request)
@@ -99,6 +150,57 @@ try {
 ### Return type
 
 [**EzsignfoldertypeEditObjectV3Response**](EzsignfoldertypeEditObjectV3Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a id="ezsignfoldertypeEditObjectV4"></a>
+# **ezsignfoldertypeEditObjectV4**
+> EzsignfoldertypeEditObjectV4Response ezsignfoldertypeEditObjectV4(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV4Request)
+
+Edit an existing Ezsignfoldertype
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsignfoldertypeApi()
+val pkiEzsignfoldertypeID : kotlin.Int = 56 // kotlin.Int | 
+val ezsignfoldertypeEditObjectV4Request : EzsignfoldertypeEditObjectV4Request =  // EzsignfoldertypeEditObjectV4Request | 
+try {
+    val result : EzsignfoldertypeEditObjectV4Response = apiInstance.ezsignfoldertypeEditObjectV4(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV4Request)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsignfoldertypeApi#ezsignfoldertypeEditObjectV4")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsignfoldertypeApi#ezsignfoldertypeEditObjectV4")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| **pkiEzsignfoldertypeID** | **kotlin.Int**|  | |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **ezsignfoldertypeEditObjectV4Request** | [**EzsignfoldertypeEditObjectV4Request**](EzsignfoldertypeEditObjectV4Request.md)|  | |
+
+### Return type
+
+[**EzsignfoldertypeEditObjectV4Response**](EzsignfoldertypeEditObjectV4Response.md)
 
 ### Authorization
 

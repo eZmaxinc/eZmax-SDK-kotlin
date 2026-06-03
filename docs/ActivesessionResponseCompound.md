@@ -32,10 +32,12 @@
 | **eSystemconfigurationEzsignofficeplan** | [**FieldESystemconfigurationEzsignofficeplan**](FieldESystemconfigurationEzsignofficeplan.md) |  |  [optional] |
 | **eUserEzsignprepaid** | [**FieldEUserEzsignprepaid**](FieldEUserEzsignprepaid.md) |  |  [optional] |
 | **bUserEzsigntrial** | **kotlin.Boolean** | Whether the User&#39;s eZsign subscription is a trial |  [optional] |
+| **bUserEzsigntemplaterolegrouping** | **kotlin.Boolean** | Whether we group or not the Ezsigntemplate roles |  [optional] |
 | **dtUserEzsignprepaidexpiration** | **kotlin.String** | The eZsign prepaid expiration date |  [optional] |
 | **dtUserNpsrequest** | **kotlin.String** | The date at which the NPS questionnaire will be show |  [optional] |
 | **objUserCloned** | [**ActivesessionResponseCompoundUser**](ActivesessionResponseCompoundUser.md) |  |  [optional] |
 | **objApikey** | [**ActivesessionResponseCompoundApikey**](ActivesessionResponseCompoundApikey.md) |  |  [optional] |
+| **bActivesessionMaillinglistrequest** | **kotlin.Boolean** | If you need to ask which mailing lists this user wants to subscribe to |  [optional] |
 
 
 

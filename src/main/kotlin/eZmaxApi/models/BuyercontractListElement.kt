@@ -8,9 +8,17 @@
 
 @file:Suppress(
     "ArrayInDataClass",
+    "DuplicatedCode",
     "EnumEntryName",
     "RemoveRedundantQualifierName",
-    "UnusedImport"
+    "RemoveRedundantCallsOfConversionMethods",
+    "REDUNDANT_CALL_OF_CONVERSION_METHOD",
+    "RedundantUnitReturnType",
+    "RemoveEmptyClassBody",
+    "UnnecessaryVariable",
+    "UnusedImport",
+    "UnnecessaryVariable",
+    "unused"
 )
 
 package eZmaxApi.models
@@ -35,6 +43,7 @@ import com.squareup.moshi.JsonClass
  * @param bBuyercontractIsactive Whether the buyercontract is active or not
  * @param sBuyercontractBrokers The brokers' name of the Buyercontract
  * @param sBuyercontractBuyers The buyers' name of the Buyercontract
+ * @param sBuyercontractContract The number of the Buyercontract
  * @param dtBuyercontractExpirationdate The expirationdate of the Buyercontract
  */
 
@@ -82,6 +91,10 @@ data class BuyercontractListElement (
     /* The buyers' name of the Buyercontract */
     @Json(name = "sBuyercontractBuyers")
     val sBuyercontractBuyers: kotlin.String,
+
+    /* The number of the Buyercontract */
+    @Json(name = "sBuyercontractContract")
+    val sBuyercontractContract: kotlin.String? = null,
 
     /* The expirationdate of the Buyercontract */
     @Json(name = "dtBuyercontractExpirationdate")

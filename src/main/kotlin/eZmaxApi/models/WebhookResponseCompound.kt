@@ -8,9 +8,17 @@
 
 @file:Suppress(
     "ArrayInDataClass",
+    "DuplicatedCode",
     "EnumEntryName",
     "RemoveRedundantQualifierName",
-    "UnusedImport"
+    "RemoveRedundantCallsOfConversionMethods",
+    "REDUNDANT_CALL_OF_CONVERSION_METHOD",
+    "RedundantUnitReturnType",
+    "RemoveEmptyClassBody",
+    "UnnecessaryVariable",
+    "UnusedImport",
+    "UnnecessaryVariable",
+    "unused"
 )
 
 package eZmaxApi.models
@@ -27,7 +35,6 @@ import com.squareup.moshi.JsonClass
 /**
  * A Webhook Object
  *
- * @param pkiWebhookID The unique ID of the Webhook
  * @param sWebhookDescription The description of the Webhook
  * @param eWebhookModule 
  * @param sWebhookUrl The URL of the Webhook callback
@@ -35,7 +42,7 @@ import com.squareup.moshi.JsonClass
  * @param bWebhookIsactive Whether the Webhook is active or not
  * @param bWebhookIssigned Whether the requests will be signed or not
  * @param bWebhookSkipsslvalidation Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use
- * @param objAudit 
+ * @param pkiWebhookID The unique ID of the Webhook
  * @param fkiAuthenticationexternalID The unique ID of the Authenticationexternal
  * @param fkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
  * @param sEzsignfoldertypeNameX The name of the Ezsignfoldertype in the language of the requester
@@ -44,6 +51,7 @@ import com.squareup.moshi.JsonClass
  * @param sWebhookApikey The Apikey for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey.
  * @param sWebhookSecret The Secret for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey.
  * @param sAuthenticationexternalDescription The description of the Authenticationexternal
+ * @param objAudit 
  * @param sWebhookEvent The concatenated string to describe the Webhook event
  * @param sWebhookAuthentificationexternalerror Error message when token renewal failed or is not configured. Only if an Authenticationexternal is set.
  * @param aObjWebhookheader 
@@ -51,10 +59,6 @@ import com.squareup.moshi.JsonClass
 
 
 data class WebhookResponseCompound (
-
-    /* The unique ID of the Webhook */
-    @Json(name = "pkiWebhookID")
-    val pkiWebhookID: kotlin.Int,
 
     /* The description of the Webhook */
     @Json(name = "sWebhookDescription")
@@ -83,8 +87,9 @@ data class WebhookResponseCompound (
     @Json(name = "bWebhookSkipsslvalidation")
     val bWebhookSkipsslvalidation: kotlin.Boolean,
 
-    @Json(name = "objAudit")
-    val objAudit: CommonAudit,
+    /* The unique ID of the Webhook */
+    @Json(name = "pkiWebhookID")
+    val pkiWebhookID: kotlin.Int? = null,
 
     /* The unique ID of the Authenticationexternal */
     @Json(name = "fkiAuthenticationexternalID")
@@ -115,6 +120,9 @@ data class WebhookResponseCompound (
     /* The description of the Authenticationexternal */
     @Json(name = "sAuthenticationexternalDescription")
     val sAuthenticationexternalDescription: kotlin.String? = null,
+
+    @Json(name = "objAudit")
+    val objAudit: CommonAudit? = null,
 
     /* The concatenated string to describe the Webhook event */
     @Json(name = "sWebhookEvent")

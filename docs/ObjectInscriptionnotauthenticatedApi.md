@@ -4,13 +4,66 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1**](ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1) | **POST** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/fillInscriptionnotauthenticatedcondition | Fills the Inscriptionnotauthenticatedcondition in the Inscriptionnotauthenticated |
 | [**inscriptionnotauthenticatedGetCommunicationCountV1**](ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedGetCommunicationCountV1) | **GET** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationCount | Retrieve Communication count |
 | [**inscriptionnotauthenticatedGetCommunicationListV1**](ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedGetCommunicationListV1) | **GET** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationList | Retrieve Communication list |
 | [**inscriptionnotauthenticatedGetCommunicationrecipientsV1**](ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedGetCommunicationrecipientsV1) | **GET** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationrecipients | Retrieve Inscriptionnotauthenticated&#39;s Communicationrecipient |
 | [**inscriptionnotauthenticatedGetCommunicationsendersV1**](ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedGetCommunicationsendersV1) | **GET** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationsenders | Retrieve Inscriptionnotauthenticated&#39;s Communicationsender |
+| [**inscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1**](ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1) | **GET** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getInscriptionnotauthenticatedconditions | Retrieve Inscriptionnotauthenticated conditions |
 | [**inscriptionnotauthenticatedGetListV1**](ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedGetListV1) | **GET** /1/object/inscriptionnotauthenticated/getList | Retrieve Inscriptionnotauthenticated list |
 | [**inscriptionnotauthenticatedImportIntoEDMV1**](ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedImportIntoEDMV1) | **POST** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/importIntoEDM | Import attachments into the Inscriptionnotauthenticated |
 
+
+<a id="inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1"></a>
+# **inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1**
+> InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Response inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1(pkiInscriptionnotauthenticatedID, inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request)
+
+Fills the Inscriptionnotauthenticatedcondition in the Inscriptionnotauthenticated
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectInscriptionnotauthenticatedApi()
+val pkiInscriptionnotauthenticatedID : kotlin.Int = 56 // kotlin.Int | 
+val inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request : InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request =  // InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request | 
+try {
+    val result : InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Response = apiInstance.inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1(pkiInscriptionnotauthenticatedID, inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectInscriptionnotauthenticatedApi#inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectInscriptionnotauthenticatedApi#inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| **pkiInscriptionnotauthenticatedID** | **kotlin.Int**|  | |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request** | [**InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request**](InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request.md)|  | |
+
+### Return type
+
+[**InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Response**](InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 <a id="inscriptionnotauthenticatedGetCommunicationCountV1"></a>
 # **inscriptionnotauthenticatedGetCommunicationCountV1**
@@ -195,6 +248,55 @@ try {
 ### Return type
 
 [**InscriptionnotauthenticatedGetCommunicationsendersV1Response**](InscriptionnotauthenticatedGetCommunicationsendersV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="inscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1"></a>
+# **inscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1**
+> InscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1Response inscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1(pkiInscriptionnotauthenticatedID)
+
+Retrieve Inscriptionnotauthenticated conditions
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectInscriptionnotauthenticatedApi()
+val pkiInscriptionnotauthenticatedID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : InscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1Response = apiInstance.inscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1(pkiInscriptionnotauthenticatedID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectInscriptionnotauthenticatedApi#inscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectInscriptionnotauthenticatedApi#inscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiInscriptionnotauthenticatedID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**InscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1Response**](InscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1Response.md)
 
 ### Authorization
 

@@ -8,13 +8,22 @@
 
 @file:Suppress(
     "ArrayInDataClass",
+    "DuplicatedCode",
     "EnumEntryName",
     "RemoveRedundantQualifierName",
-    "UnusedImport"
+    "RemoveRedundantCallsOfConversionMethods",
+    "REDUNDANT_CALL_OF_CONVERSION_METHOD",
+    "RedundantUnitReturnType",
+    "RemoveEmptyClassBody",
+    "UnnecessaryVariable",
+    "UnusedImport",
+    "UnnecessaryVariable",
+    "unused"
 )
 
 package eZmaxApi.models
 
+import eZmaxApi.models.FieldEEzsigntemplateglobaldocumentAcceptationtype
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -24,6 +33,7 @@ import com.squareup.moshi.JsonClass
  *
  * @param pkiEzsigntemplateglobaldocumentID The unique ID of the Ezsigntemplateglobaldocument
  * @param sEzsigntemplateglobaldocumentName The name of the Ezsigntemplateglobaldocument.
+ * @param eEzsigntemplateglobaldocumentAcceptationtype 
  * @param iEzsigntemplateglobaldocumentPagetotal The number of pages in the Ezsigntemplateglobaldocument.
  * @param iEzsigntemplateglobaldocumentSignaturetotal The number of total signatures in the Ezsigntemplateglobal.
  */
@@ -38,6 +48,9 @@ data class EzsigntemplateglobaldocumentResponse (
     /* The name of the Ezsigntemplateglobaldocument. */
     @Json(name = "sEzsigntemplateglobaldocumentName")
     val sEzsigntemplateglobaldocumentName: kotlin.String,
+
+    @Json(name = "eEzsigntemplateglobaldocumentAcceptationtype")
+    val eEzsigntemplateglobaldocumentAcceptationtype: FieldEEzsigntemplateglobaldocumentAcceptationtype,
 
     /* The number of pages in the Ezsigntemplateglobaldocument. */
     @Json(name = "iEzsigntemplateglobaldocumentPagetotal")

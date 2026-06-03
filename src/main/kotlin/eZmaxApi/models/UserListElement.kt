@@ -8,9 +8,17 @@
 
 @file:Suppress(
     "ArrayInDataClass",
+    "DuplicatedCode",
     "EnumEntryName",
     "RemoveRedundantQualifierName",
-    "UnusedImport"
+    "RemoveRedundantCallsOfConversionMethods",
+    "REDUNDANT_CALL_OF_CONVERSION_METHOD",
+    "RedundantUnitReturnType",
+    "RemoveEmptyClassBody",
+    "UnnecessaryVariable",
+    "UnusedImport",
+    "UnnecessaryVariable",
+    "unused"
 )
 
 package eZmaxApi.models
@@ -34,6 +42,7 @@ import com.squareup.moshi.JsonClass
  * @param eUserOrigin 
  * @param eUserEzsignaccess 
  * @param sEmailAddress The email address.
+ * @param bUserSuspended Whether the User is suspended or not
  * @param dtUserEzsignprepaidexpiration The eZsign prepaid expiration date
  * @param sUserJobtitle The job title of the user
  */
@@ -73,6 +82,10 @@ data class UserListElement (
     /* The email address. */
     @Json(name = "sEmailAddress")
     val sEmailAddress: kotlin.String,
+
+    /* Whether the User is suspended or not */
+    @Json(name = "bUserSuspended")
+    val bUserSuspended: kotlin.Boolean? = null,
 
     /* The eZsign prepaid expiration date */
     @Json(name = "dtUserEzsignprepaidexpiration")

@@ -8,13 +8,22 @@
 
 @file:Suppress(
     "ArrayInDataClass",
+    "DuplicatedCode",
     "EnumEntryName",
     "RemoveRedundantQualifierName",
-    "UnusedImport"
+    "RemoveRedundantCallsOfConversionMethods",
+    "REDUNDANT_CALL_OF_CONVERSION_METHOD",
+    "RedundantUnitReturnType",
+    "RemoveEmptyClassBody",
+    "UnnecessaryVariable",
+    "UnusedImport",
+    "UnnecessaryVariable",
+    "unused"
 )
 
 package eZmaxApi.models
 
+import eZmaxApi.models.EzsigntemplateglobalannotationResponseCompound
 import eZmaxApi.models.EzsigntemplateglobaldocumentResponse
 import eZmaxApi.models.EzsigntemplateglobalsignerResponseCompound
 import eZmaxApi.models.FieldEEzsigntemplateglobalModule
@@ -38,6 +47,7 @@ import com.squareup.moshi.JsonClass
  * @param aObjEzsigntemplateglobalsigner 
  * @param sModuleNameX The Name of the Module in the language of the requester
  * @param objEzsigntemplateglobaldocument 
+ * @param aObjEzsigntemplateglobalannotation 
  */
 
 
@@ -85,7 +95,10 @@ data class EzsigntemplateglobalResponseCompound (
     val sModuleNameX: kotlin.String? = null,
 
     @Json(name = "objEzsigntemplateglobaldocument")
-    val objEzsigntemplateglobaldocument: EzsigntemplateglobaldocumentResponse? = null
+    val objEzsigntemplateglobaldocument: EzsigntemplateglobaldocumentResponse? = null,
+
+    @Json(name = "a_objEzsigntemplateglobalannotation")
+    val aObjEzsigntemplateglobalannotation: kotlin.collections.List<EzsigntemplateglobalannotationResponseCompound>? = null
 
 ) {
 

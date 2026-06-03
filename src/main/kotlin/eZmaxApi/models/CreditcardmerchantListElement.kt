@@ -8,9 +8,17 @@
 
 @file:Suppress(
     "ArrayInDataClass",
+    "DuplicatedCode",
     "EnumEntryName",
     "RemoveRedundantQualifierName",
-    "UnusedImport"
+    "RemoveRedundantCallsOfConversionMethods",
+    "REDUNDANT_CALL_OF_CONVERSION_METHOD",
+    "RedundantUnitReturnType",
+    "RemoveEmptyClassBody",
+    "UnnecessaryVariable",
+    "UnusedImport",
+    "UnnecessaryVariable",
+    "unused"
 )
 
 package eZmaxApi.models
@@ -23,13 +31,13 @@ import com.squareup.moshi.JsonClass
  * A Creditcardmerchant List Element
  *
  * @param pkiCreditcardmerchantID The unique ID of the Creditcardmerchant
- * @param fkiBankaccountID The unique ID of the Bankaccount
  * @param bCreditcardmerchantDenyvisa Whether if visa are denied
  * @param bCreditcardmerchantDenymastercard Whether if mastercard are denied
  * @param bCreditcardmerchantDenyamex Whether if amex are denied
  * @param bCreditcardmerchantIsactive Whether the creditcardmerchant is active or not
  * @param sCreditcardmerchantDescription The description of the Creditcardmerchant
  * @param sCreditcardmerchantStoreid The storeid of the Creditcardmerchant
+ * @param fkiBankaccountID The unique ID of the Bankaccount
  * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
  */
 
@@ -39,10 +47,6 @@ data class CreditcardmerchantListElement (
     /* The unique ID of the Creditcardmerchant */
     @Json(name = "pkiCreditcardmerchantID")
     val pkiCreditcardmerchantID: kotlin.Int,
-
-    /* The unique ID of the Bankaccount */
-    @Json(name = "fkiBankaccountID")
-    val fkiBankaccountID: kotlin.Int,
 
     /* Whether if visa are denied */
     @Json(name = "bCreditcardmerchantDenyvisa")
@@ -67,6 +71,10 @@ data class CreditcardmerchantListElement (
     /* The storeid of the Creditcardmerchant */
     @Json(name = "sCreditcardmerchantStoreid")
     val sCreditcardmerchantStoreid: kotlin.String,
+
+    /* The unique ID of the Bankaccount */
+    @Json(name = "fkiBankaccountID")
+    val fkiBankaccountID: kotlin.Int? = null,
 
     /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| */
     @Json(name = "fkiLanguageID")
