@@ -1822,10 +1822,7 @@ docs/ScimServiceProviderConfig.md
 docs/ScimServiceProviderConfigApi.md
 docs/ScimServiceProviderConfigBulk.md
 docs/ScimServiceProviderConfigChangePassword.md
-docs/ScimServiceProviderConfigEtag.md
 docs/ScimServiceProviderConfigFilter.md
-docs/ScimServiceProviderConfigPatch.md
-docs/ScimServiceProviderConfigSort.md
 docs/ScimUser.md
 docs/ScimUserList.md
 docs/ScimUsersApi.md
@@ -3979,10 +3976,7 @@ src/main/kotlin/eZmaxApi/models/ScimGroupMember.kt
 src/main/kotlin/eZmaxApi/models/ScimServiceProviderConfig.kt
 src/main/kotlin/eZmaxApi/models/ScimServiceProviderConfigBulk.kt
 src/main/kotlin/eZmaxApi/models/ScimServiceProviderConfigChangePassword.kt
-src/main/kotlin/eZmaxApi/models/ScimServiceProviderConfigEtag.kt
 src/main/kotlin/eZmaxApi/models/ScimServiceProviderConfigFilter.kt
-src/main/kotlin/eZmaxApi/models/ScimServiceProviderConfigPatch.kt
-src/main/kotlin/eZmaxApi/models/ScimServiceProviderConfigSort.kt
 src/main/kotlin/eZmaxApi/models/ScimUser.kt
 src/main/kotlin/eZmaxApi/models/ScimUserList.kt
 src/main/kotlin/eZmaxApi/models/SecretquestionAutocompleteElementResponse.kt

@@ -39,6 +39,7 @@ import com.squareup.moshi.JsonClass
  * @param objContactName 
  * @param bApikeyIsactive Whether the apikey is active or not
  * @param objAudit 
+ * @param fkiEzmaxpartnerproductstageID The unique ID of the Ezmaxpartnerproductstage
  * @param sApikeyApikey The Apikey for the API key.  This will be hidden if we are not creating or regenerating the Apikey.
  * @param sApikeySecret The Secret for the API key.  This will be hidden if we are not creating or regenerating the Apikey.
  * @param bApikeyIssigned Whether the apikey is signed or not
@@ -67,6 +68,10 @@ data class ApikeyResponseCompound (
 
     @Json(name = "objAudit")
     val objAudit: CommonAudit,
+
+    /* The unique ID of the Ezmaxpartnerproductstage */
+    @Json(name = "fkiEzmaxpartnerproductstageID")
+    val fkiEzmaxpartnerproductstageID: kotlin.Int? = null,
 
     /* The Apikey for the API key.  This will be hidden if we are not creating or regenerating the Apikey. */
     @Json(name = "sApikeyApikey")

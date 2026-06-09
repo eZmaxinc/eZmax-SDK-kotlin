@@ -49,8 +49,14 @@ try {
 ### Authorization
 
 
-Configure Bearer:
-    ApiClient.accessToken = ""
+Configure Bearer statically:
+```kotlin
+ApiClient.accessToken = ""
+```
+Configure Bearer dynamically:
+```kotlin
+apiInstance.accessTokenProvider = { "" }
+```
 
 ### HTTP request headers
 
@@ -94,8 +100,14 @@ null (empty response body)
 ### Authorization
 
 
-Configure Bearer:
-    ApiClient.accessToken = ""
+Configure Bearer statically:
+```kotlin
+ApiClient.accessToken = ""
+```
+Configure Bearer dynamically:
+```kotlin
+apiInstance.accessTokenProvider = { "" }
+```
 
 ### HTTP request headers
 
@@ -142,8 +154,14 @@ try {
 ### Authorization
 
 
-Configure Bearer:
-    ApiClient.accessToken = ""
+Configure Bearer statically:
+```kotlin
+ApiClient.accessToken = ""
+```
+Configure Bearer dynamically:
+```kotlin
+apiInstance.accessTokenProvider = { "" }
+```
 
 ### HTTP request headers
 
@@ -188,8 +206,14 @@ try {
 ### Authorization
 
 
-Configure Bearer:
-    ApiClient.accessToken = ""
+Configure Bearer statically:
+```kotlin
+ApiClient.accessToken = ""
+```
+Configure Bearer dynamically:
+```kotlin
+apiInstance.accessTokenProvider = { "" }
+```
 
 ### HTTP request headers
 
@@ -234,8 +258,14 @@ try {
 ### Authorization
 
 
-Configure Bearer:
-    ApiClient.accessToken = ""
+Configure Bearer statically:
+```kotlin
+ApiClient.accessToken = ""
+```
+Configure Bearer dynamically:
+```kotlin
+apiInstance.accessTokenProvider = { "" }
+```
 
 ### HTTP request headers
 
