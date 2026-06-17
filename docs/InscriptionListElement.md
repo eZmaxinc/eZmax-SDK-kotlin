@@ -16,7 +16,10 @@
 | **iInscriptionnotauthenticatedCanceled** | **kotlin.Int** | The numbre of inscriptionnotauthenticated was canceled in this Inscription |  |
 | **bAllowedCopyintoinscriptionedm** | **kotlin.Boolean** | Whether we are allowed to copy into the Inscription EDM |  |
 | **pkiInscriptionnotauthenticatedID** | **kotlin.Int** | The unique ID of the Inscriptionnotauthenticated. |  [optional] |
+| **fkiBuyercontractID** | **kotlin.Int** | The unique ID of the Buyercontract |  [optional] |
+| **sBuyercontractContract** | **kotlin.String** | The number of the Buyercontract |  [optional] |
 | **sInscriptionMLS** | **kotlin.String** | The mls of the Inscription |  [optional] |
+| **sInscriptionContract** | **kotlin.String** | The sale contract number |  [optional] |
 | **dtInscriptionDate** | **kotlin.String** | The date of the Inscription |  [optional] |
 | **dtInscriptionExpirationdate** | **kotlin.String** | The expirationdate of the Inscription |  [optional] |
 | **dtInscriptionNotarydate** | **kotlin.String** | The notarydate of the Inscription |  [optional] |

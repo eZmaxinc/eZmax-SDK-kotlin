@@ -46,6 +46,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 | Class | Method | HTTP request | Description |
 | ------------ | ------------- | ------------- | ------------- |
+| *DocumentationEzmaxpartnerApi* | [**documentationSubscribeV1**](docs/DocumentationEzmaxpartnerApi.md#documentationsubscribev1) | **POST** /1/documentation/subscribe | Subscribe to an Ezmaxparnerproductstage |
 | *GlobalCustomerApi* | [**globalCustomerGetEndpointV1**](docs/GlobalCustomerApi.md#globalcustomergetendpointv1) | **GET** /1/customer/{pksCustomerCode}/endpoint | Get customer endpoint |
 | *GlobalEzmaxclientApi* | [**globalEzmaxclientVersionV1**](docs/GlobalEzmaxclientApi.md#globalezmaxclientversionv1) | **GET** /1/ezmaxclient/{pksEzmaxclientOs}/version | Retrieve the latest version of the Ezmaxclient |
 | *GlobalEzmaxcustomerApi* | [**globalEzmaxcustomerGetConfigurationV1**](docs/GlobalEzmaxcustomerApi.md#globalezmaxcustomergetconfigurationv1) | **GET** /1/ezmaxcustomer/{pksEzmaxcustomerCode}/getConfiguration | Get ezmaxcustomer configuration |
@@ -224,6 +225,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | *ObjectEzsigndocumentApi* | [**ezsigndocumentEndPrematurelyV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentendprematurelyv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/endPrematurely | End prematurely |
 | *ObjectEzsigndocumentApi* | [**ezsigndocumentExtractTextV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentextracttextv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/extractText | Extract text from Ezsigndocument area |
 | *ObjectEzsigndocumentApi* | [**ezsigndocumentFlattenV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentflattenv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/flatten | Flatten |
+| *ObjectEzsigndocumentApi* | [**ezsigndocumentGetActionableElementsForSignerV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentgetactionableelementsforsignerv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElementsForSigner | Retrieve actionable elements of a user for the Ezsigndocument |
 | *ObjectEzsigndocumentApi* | [**ezsigndocumentGetActionableElementsV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentgetactionableelementsv1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements | Retrieve actionable elements for the Ezsigndocument |
 | *ObjectEzsigndocumentApi* | [**ezsigndocumentGetActionableElementsV2**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentgetactionableelementsv2) | **GET** /2/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements | Retrieve actionable elements for the Ezsigndocument |
 | *ObjectEzsigndocumentApi* | [**ezsigndocumentGetActionableElementsV3**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentgetactionableelementsv3) | **GET** /3/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements | Retrieve actionable elements for the Ezsigndocument |
@@ -259,6 +261,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | *ObjectEzsignfolderApi* | [**ezsignfolderDuplicateV1**](docs/ObjectEzsignfolderApi.md#ezsignfolderduplicatev1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/duplicate | Duplicate the Ezsignfolder |
 | *ObjectEzsignfolderApi* | [**ezsignfolderEditObjectV3**](docs/ObjectEzsignfolderApi.md#ezsignfoldereditobjectv3) | **PUT** /3/object/ezsignfolder/{pkiEzsignfolderID} | Edit an existing Ezsignfolder |
 | *ObjectEzsignfolderApi* | [**ezsignfolderEndPrematurelyV1**](docs/ObjectEzsignfolderApi.md#ezsignfolderendprematurelyv1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/endPrematurely | End prematurely |
+| *ObjectEzsignfolderApi* | [**ezsignfolderGetActionableElementsForSignerV1**](docs/ObjectEzsignfolderApi.md#ezsignfoldergetactionableelementsforsignerv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElementsForSigner | Retrieve actionable elements of a user for the Ezsignfolder |
 | *ObjectEzsignfolderApi* | [**ezsignfolderGetActionableElementsV1**](docs/ObjectEzsignfolderApi.md#ezsignfoldergetactionableelementsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements | Retrieve actionable elements for the Ezsignfolder |
 | *ObjectEzsignfolderApi* | [**ezsignfolderGetActionableElementsV2**](docs/ObjectEzsignfolderApi.md#ezsignfoldergetactionableelementsv2) | **GET** /2/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements | Retrieve actionable elements for the Ezsignfolder |
 | *ObjectEzsignfolderApi* | [**ezsignfolderGetActionableElementsV3**](docs/ObjectEzsignfolderApi.md#ezsignfoldergetactionableelementsv3) | **GET** /3/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements | Retrieve actionable elements for the Ezsignfolder |
@@ -934,6 +937,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.CustomEzmaxinvoicingEzsigndocumentResponse](docs/CustomEzmaxinvoicingEzsigndocumentResponse.md)
  - [eZmaxApi.models.CustomEzmaxinvoicingEzsignfolderResponse](docs/CustomEzmaxinvoicingEzsignfolderResponse.md)
  - [eZmaxApi.models.CustomEzmaxpartnerListElement](docs/CustomEzmaxpartnerListElement.md)
+ - [eZmaxApi.models.CustomEzmaxpartnerproductSubscribe](docs/CustomEzmaxpartnerproductSubscribe.md)
  - [eZmaxApi.models.CustomEzmaxpricingResponse](docs/CustomEzmaxpricingResponse.md)
  - [eZmaxApi.models.CustomEzsigndocumentDuplicateRequest](docs/CustomEzsigndocumentDuplicateRequest.md)
  - [eZmaxApi.models.CustomEzsigndocumentEzsignsignaturesAutomaticResponse](docs/CustomEzsigndocumentEzsignsignaturesAutomaticResponse.md)
@@ -1026,6 +1030,8 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.DiscussionmessageRequestPatch](docs/DiscussionmessageRequestPatch.md)
  - [eZmaxApi.models.DiscussionmessageResponse](docs/DiscussionmessageResponse.md)
  - [eZmaxApi.models.DiscussionmessageResponseCompound](docs/DiscussionmessageResponseCompound.md)
+ - [eZmaxApi.models.DocumentationSubscribeV1Request](docs/DocumentationSubscribeV1Request.md)
+ - [eZmaxApi.models.DocumentationSubscribeV1Response](docs/DocumentationSubscribeV1Response.md)
  - [eZmaxApi.models.DomainAutocompleteElementResponse](docs/DomainAutocompleteElementResponse.md)
  - [eZmaxApi.models.DomainCreateObjectV1Request](docs/DomainCreateObjectV1Request.md)
  - [eZmaxApi.models.DomainCreateObjectV1Response](docs/DomainCreateObjectV1Response.md)
@@ -1284,6 +1290,8 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.EzsigndocumentExtractTextV1Response](docs/EzsigndocumentExtractTextV1Response.md)
  - [eZmaxApi.models.EzsigndocumentExtractTextV1ResponseMPayload](docs/EzsigndocumentExtractTextV1ResponseMPayload.md)
  - [eZmaxApi.models.EzsigndocumentFlattenV1Response](docs/EzsigndocumentFlattenV1Response.md)
+ - [eZmaxApi.models.EzsigndocumentGetActionableElementsForSignerV1Response](docs/EzsigndocumentGetActionableElementsForSignerV1Response.md)
+ - [eZmaxApi.models.EzsigndocumentGetActionableElementsForSignerV1ResponseMPayload](docs/EzsigndocumentGetActionableElementsForSignerV1ResponseMPayload.md)
  - [eZmaxApi.models.EzsigndocumentGetActionableElementsV1Response](docs/EzsigndocumentGetActionableElementsV1Response.md)
  - [eZmaxApi.models.EzsigndocumentGetActionableElementsV1ResponseMPayload](docs/EzsigndocumentGetActionableElementsV1ResponseMPayload.md)
  - [eZmaxApi.models.EzsigndocumentGetActionableElementsV2Response](docs/EzsigndocumentGetActionableElementsV2Response.md)
@@ -1368,6 +1376,8 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.EzsignfolderEditObjectV3Request](docs/EzsignfolderEditObjectV3Request.md)
  - [eZmaxApi.models.EzsignfolderEditObjectV3Response](docs/EzsignfolderEditObjectV3Response.md)
  - [eZmaxApi.models.EzsignfolderEndPrematurelyV1Response](docs/EzsignfolderEndPrematurelyV1Response.md)
+ - [eZmaxApi.models.EzsignfolderGetActionableElementsForSignerV1Response](docs/EzsignfolderGetActionableElementsForSignerV1Response.md)
+ - [eZmaxApi.models.EzsignfolderGetActionableElementsForSignerV1ResponseMPayload](docs/EzsignfolderGetActionableElementsForSignerV1ResponseMPayload.md)
  - [eZmaxApi.models.EzsignfolderGetActionableElementsV1Response](docs/EzsignfolderGetActionableElementsV1Response.md)
  - [eZmaxApi.models.EzsignfolderGetActionableElementsV1ResponseMPayload](docs/EzsignfolderGetActionableElementsV1ResponseMPayload.md)
  - [eZmaxApi.models.EzsignfolderGetActionableElementsV2Response](docs/EzsignfolderGetActionableElementsV2Response.md)
@@ -2559,6 +2569,8 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.WebhookDeleteObjectV1Response](docs/WebhookDeleteObjectV1Response.md)
  - [eZmaxApi.models.WebhookEditObjectV1Request](docs/WebhookEditObjectV1Request.md)
  - [eZmaxApi.models.WebhookEditObjectV1Response](docs/WebhookEditObjectV1Response.md)
+ - [eZmaxApi.models.WebhookEzmaxpartnerproductSubscribe](docs/WebhookEzmaxpartnerproductSubscribe.md)
+ - [eZmaxApi.models.WebhookEzmaxpartnerproductUnsubscribe](docs/WebhookEzmaxpartnerproductUnsubscribe.md)
  - [eZmaxApi.models.WebhookEzsignDocumentCompleted](docs/WebhookEzsignDocumentCompleted.md)
  - [eZmaxApi.models.WebhookEzsignDocumentFormCompleted](docs/WebhookEzsignDocumentFormCompleted.md)
  - [eZmaxApi.models.WebhookEzsignDocumentUnsent](docs/WebhookEzsignDocumentUnsent.md)

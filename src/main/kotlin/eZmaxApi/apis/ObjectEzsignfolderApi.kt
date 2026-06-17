@@ -45,6 +45,7 @@ import eZmaxApi.models.EzsignfolderDuplicateV1Response
 import eZmaxApi.models.EzsignfolderEditObjectV3Request
 import eZmaxApi.models.EzsignfolderEditObjectV3Response
 import eZmaxApi.models.EzsignfolderEndPrematurelyV1Response
+import eZmaxApi.models.EzsignfolderGetActionableElementsForSignerV1Response
 import eZmaxApi.models.EzsignfolderGetActionableElementsV1Response
 import eZmaxApi.models.EzsignfolderGetActionableElementsV2Response
 import eZmaxApi.models.EzsignfolderGetActionableElementsV3Response
@@ -941,6 +942,114 @@ open class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, clie
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/endPrematurely".replace("{"+"pkiEzsignfolderID"+"}", encodeURIComponent(pkiEzsignfolderID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * enum for parameter eSignerType
+     */
+     enum class ESignerTypeEzsignfolderGetActionableElementsForSignerV1(val value: kotlin.String) {
+         @Json(name = "Ezsignsigner") Ezsignsigner("Ezsignsigner"),
+         @Json(name = "User") User("User");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
+     }
+
+    /**
+     * GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElementsForSigner
+     * Retrieve actionable elements of a user for the Ezsignfolder
+     * Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by an user at the current step in the process
+     * @param pkiEzsignfolderID 
+     * @param eSignerType 
+     * @param fkiEzsignsignerID  (optional)
+     * @param fkiUserID  (optional)
+     * @return EzsignfolderGetActionableElementsForSignerV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignfolderGetActionableElementsForSignerV1(pkiEzsignfolderID: kotlin.Int, eSignerType: ESignerTypeEzsignfolderGetActionableElementsForSignerV1, fkiEzsignsignerID: kotlin.Int? = null, fkiUserID: kotlin.Int? = null) : EzsignfolderGetActionableElementsForSignerV1Response {
+        val localVarResponse = ezsignfolderGetActionableElementsForSignerV1WithHttpInfo(pkiEzsignfolderID = pkiEzsignfolderID, eSignerType = eSignerType, fkiEzsignsignerID = fkiEzsignsignerID, fkiUserID = fkiUserID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfolderGetActionableElementsForSignerV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElementsForSigner
+     * Retrieve actionable elements of a user for the Ezsignfolder
+     * Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by an user at the current step in the process
+     * @param pkiEzsignfolderID 
+     * @param eSignerType 
+     * @param fkiEzsignsignerID  (optional)
+     * @param fkiUserID  (optional)
+     * @return ApiResponse<EzsignfolderGetActionableElementsForSignerV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignfolderGetActionableElementsForSignerV1WithHttpInfo(pkiEzsignfolderID: kotlin.Int, eSignerType: ESignerTypeEzsignfolderGetActionableElementsForSignerV1, fkiEzsignsignerID: kotlin.Int?, fkiUserID: kotlin.Int?) : ApiResponse<EzsignfolderGetActionableElementsForSignerV1Response?> {
+        val localVariableConfig = ezsignfolderGetActionableElementsForSignerV1RequestConfig(pkiEzsignfolderID = pkiEzsignfolderID, eSignerType = eSignerType, fkiEzsignsignerID = fkiEzsignsignerID, fkiUserID = fkiUserID)
+
+        return request<Unit, EzsignfolderGetActionableElementsForSignerV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsignfolderGetActionableElementsForSignerV1
+     *
+     * @param pkiEzsignfolderID 
+     * @param eSignerType 
+     * @param fkiEzsignsignerID  (optional)
+     * @param fkiUserID  (optional)
+     * @return RequestConfig
+     */
+    fun ezsignfolderGetActionableElementsForSignerV1RequestConfig(pkiEzsignfolderID: kotlin.Int, eSignerType: ESignerTypeEzsignfolderGetActionableElementsForSignerV1, fkiEzsignsignerID: kotlin.Int?, fkiUserID: kotlin.Int?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                put("eSignerType", listOf(eSignerType.value))
+                if (fkiEzsignsignerID != null) {
+                    put("fkiEzsignsignerID", listOf(fkiEzsignsignerID.toString()))
+                }
+                if (fkiUserID != null) {
+                    put("fkiUserID", listOf(fkiUserID.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElementsForSigner".replace("{"+"pkiEzsignfolderID"+"}", encodeURIComponent(pkiEzsignfolderID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

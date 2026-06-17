@@ -42,7 +42,10 @@ import com.squareup.moshi.JsonClass
  * @param bInscriptionArchived Whether the inscription is archived or not
  * @param sInscriptionnotauthenticatedOffertopurchasenumber The Offer to purchase number
  * @param pkiInscriptionnotauthenticatedID The unique ID of the Inscriptionnotauthenticated.
+ * @param fkiBuyercontractID The unique ID of the Buyercontract
+ * @param sBuyercontractContract The number of the Buyercontract
  * @param sInscriptionMLS The mls of the Inscription
+ * @param sInscriptionContract The sale contract number
  * @param dtInscriptionDate The date of the Inscription
  * @param dtInscriptionExpirationdate The expirationdate of the Inscription
  * @param dtInscriptionNotarydate The notarydate of the Inscription
@@ -109,9 +112,21 @@ data class InscriptionnotauthenticatedListElement (
     @Json(name = "pkiInscriptionnotauthenticatedID")
     val pkiInscriptionnotauthenticatedID: kotlin.Int? = null,
 
+    /* The unique ID of the Buyercontract */
+    @Json(name = "fkiBuyercontractID")
+    val fkiBuyercontractID: kotlin.Int? = null,
+
+    /* The number of the Buyercontract */
+    @Json(name = "sBuyercontractContract")
+    val sBuyercontractContract: kotlin.String? = null,
+
     /* The mls of the Inscription */
     @Json(name = "sInscriptionMLS")
     val sInscriptionMLS: kotlin.String? = null,
+
+    /* The sale contract number */
+    @Json(name = "sInscriptionContract")
+    val sInscriptionContract: kotlin.String? = null,
 
     /* The date of the Inscription */
     @Json(name = "dtInscriptionDate")

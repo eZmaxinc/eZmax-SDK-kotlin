@@ -25,6 +25,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**ezsigndocumentEndPrematurelyV1**](ObjectEzsigndocumentApi.md#ezsigndocumentEndPrematurelyV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/endPrematurely | End prematurely |
 | [**ezsigndocumentExtractTextV1**](ObjectEzsigndocumentApi.md#ezsigndocumentExtractTextV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/extractText | Extract text from Ezsigndocument area |
 | [**ezsigndocumentFlattenV1**](ObjectEzsigndocumentApi.md#ezsigndocumentFlattenV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/flatten | Flatten |
+| [**ezsigndocumentGetActionableElementsForSignerV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetActionableElementsForSignerV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElementsForSigner | Retrieve actionable elements of a user for the Ezsigndocument |
 | [**ezsigndocumentGetActionableElementsV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetActionableElementsV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements | Retrieve actionable elements for the Ezsigndocument |
 | [**ezsigndocumentGetActionableElementsV2**](ObjectEzsigndocumentApi.md#ezsigndocumentGetActionableElementsV2) | **GET** /2/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements | Retrieve actionable elements for the Ezsigndocument |
 | [**ezsigndocumentGetActionableElementsV3**](ObjectEzsigndocumentApi.md#ezsigndocumentGetActionableElementsV3) | **GET** /3/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements | Retrieve actionable elements for the Ezsigndocument |
@@ -1112,6 +1113,61 @@ Configure Authorization:
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a id="ezsigndocumentGetActionableElementsForSignerV1"></a>
+# **ezsigndocumentGetActionableElementsForSignerV1**
+> EzsigndocumentGetActionableElementsForSignerV1Response ezsigndocumentGetActionableElementsForSignerV1(pkiEzsigndocumentID, eSignerType, fkiEzsignsignerID, fkiUserID)
+
+Retrieve actionable elements of a user for the Ezsigndocument
+
+Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by a user at the current step in the process
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsigndocumentApi()
+val pkiEzsigndocumentID : kotlin.Int = 56 // kotlin.Int | 
+val eSignerType : kotlin.String = eSignerType_example // kotlin.String | 
+val fkiEzsignsignerID : kotlin.Int = 56 // kotlin.Int | 
+val fkiUserID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : EzsigndocumentGetActionableElementsForSignerV1Response = apiInstance.ezsigndocumentGetActionableElementsForSignerV1(pkiEzsigndocumentID, eSignerType, fkiEzsignsignerID, fkiUserID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsigndocumentApi#ezsigndocumentGetActionableElementsForSignerV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsigndocumentApi#ezsigndocumentGetActionableElementsForSignerV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
+| **eSignerType** | **kotlin.String**|  | [enum: Ezsignsigner, User] |
+| **fkiEzsignsignerID** | **kotlin.Int**|  | [optional] |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **fkiUserID** | **kotlin.Int**|  | [optional] |
+
+### Return type
+
+[**EzsigndocumentGetActionableElementsForSignerV1Response**](EzsigndocumentGetActionableElementsForSignerV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a id="ezsigndocumentGetActionableElementsV1"></a>

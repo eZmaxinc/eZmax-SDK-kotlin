@@ -28,17 +28,17 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * Request for POST /1/object/user/{pkiUserID}/impersonate
+ * Request for POST /1/module/ezmaxmaillinglist/subscribe
  *
- * @param iExpirationMinutes The number of minute before key is no longer active
+ * @param sExternalID 
  */
 
 
-data class UserImpersonateV1Request (
+data class DocumentationSubscribeV1Response (
 
-    /* The number of minute before key is no longer active */
-    @Json(name = "iExpirationMinutes")
-    val iExpirationMinutes: kotlin.Int
+    /*  */
+    @Json(name = "sExternalID")
+    val sExternalID: kotlin.String
 
 ) {
 

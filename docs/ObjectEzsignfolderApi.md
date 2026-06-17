@@ -15,6 +15,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**ezsignfolderDuplicateV1**](ObjectEzsignfolderApi.md#ezsignfolderDuplicateV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/duplicate | Duplicate the Ezsignfolder |
 | [**ezsignfolderEditObjectV3**](ObjectEzsignfolderApi.md#ezsignfolderEditObjectV3) | **PUT** /3/object/ezsignfolder/{pkiEzsignfolderID} | Edit an existing Ezsignfolder |
 | [**ezsignfolderEndPrematurelyV1**](ObjectEzsignfolderApi.md#ezsignfolderEndPrematurelyV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/endPrematurely | End prematurely |
+| [**ezsignfolderGetActionableElementsForSignerV1**](ObjectEzsignfolderApi.md#ezsignfolderGetActionableElementsForSignerV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElementsForSigner | Retrieve actionable elements of a user for the Ezsignfolder |
 | [**ezsignfolderGetActionableElementsV1**](ObjectEzsignfolderApi.md#ezsignfolderGetActionableElementsV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements | Retrieve actionable elements for the Ezsignfolder |
 | [**ezsignfolderGetActionableElementsV2**](ObjectEzsignfolderApi.md#ezsignfolderGetActionableElementsV2) | **GET** /2/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements | Retrieve actionable elements for the Ezsignfolder |
 | [**ezsignfolderGetActionableElementsV3**](ObjectEzsignfolderApi.md#ezsignfolderGetActionableElementsV3) | **GET** /3/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements | Retrieve actionable elements for the Ezsignfolder |
@@ -591,6 +592,61 @@ Configure Authorization:
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a id="ezsignfolderGetActionableElementsForSignerV1"></a>
+# **ezsignfolderGetActionableElementsForSignerV1**
+> EzsignfolderGetActionableElementsForSignerV1Response ezsignfolderGetActionableElementsForSignerV1(pkiEzsignfolderID, eSignerType, fkiEzsignsignerID, fkiUserID)
+
+Retrieve actionable elements of a user for the Ezsignfolder
+
+Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by an user at the current step in the process
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsignfolderApi()
+val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
+val eSignerType : kotlin.String = eSignerType_example // kotlin.String | 
+val fkiEzsignsignerID : kotlin.Int = 56 // kotlin.Int | 
+val fkiUserID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : EzsignfolderGetActionableElementsForSignerV1Response = apiInstance.ezsignfolderGetActionableElementsForSignerV1(pkiEzsignfolderID, eSignerType, fkiEzsignsignerID, fkiUserID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsignfolderApi#ezsignfolderGetActionableElementsForSignerV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsignfolderApi#ezsignfolderGetActionableElementsForSignerV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| **pkiEzsignfolderID** | **kotlin.Int**|  | |
+| **eSignerType** | **kotlin.String**|  | [enum: Ezsignsigner, User] |
+| **fkiEzsignsignerID** | **kotlin.Int**|  | [optional] |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **fkiUserID** | **kotlin.Int**|  | [optional] |
+
+### Return type
+
+[**EzsignfolderGetActionableElementsForSignerV1Response**](EzsignfolderGetActionableElementsForSignerV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a id="ezsignfolderGetActionableElementsV1"></a>

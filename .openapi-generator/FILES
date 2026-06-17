@@ -324,6 +324,7 @@ docs/CustomEzmaxcustomeruserResponse.md
 docs/CustomEzmaxinvoicingEzsigndocumentResponse.md
 docs/CustomEzmaxinvoicingEzsignfolderResponse.md
 docs/CustomEzmaxpartnerListElement.md
+docs/CustomEzmaxpartnerproductSubscribe.md
 docs/CustomEzmaxpricingResponse.md
 docs/CustomEzsigndocumentDuplicateRequest.md
 docs/CustomEzsigndocumentEzsignsignaturesAutomaticResponse.md
@@ -416,6 +417,9 @@ docs/DiscussionmessageRequestCompound.md
 docs/DiscussionmessageRequestPatch.md
 docs/DiscussionmessageResponse.md
 docs/DiscussionmessageResponseCompound.md
+docs/DocumentationEzmaxpartnerApi.md
+docs/DocumentationSubscribeV1Request.md
+docs/DocumentationSubscribeV1Response.md
 docs/DomainAutocompleteElementResponse.md
 docs/DomainCreateObjectV1Request.md
 docs/DomainCreateObjectV1Response.md
@@ -674,6 +678,8 @@ docs/EzsigndocumentExtractTextV1Request.md
 docs/EzsigndocumentExtractTextV1Response.md
 docs/EzsigndocumentExtractTextV1ResponseMPayload.md
 docs/EzsigndocumentFlattenV1Response.md
+docs/EzsigndocumentGetActionableElementsForSignerV1Response.md
+docs/EzsigndocumentGetActionableElementsForSignerV1ResponseMPayload.md
 docs/EzsigndocumentGetActionableElementsV1Response.md
 docs/EzsigndocumentGetActionableElementsV1ResponseMPayload.md
 docs/EzsigndocumentGetActionableElementsV2Response.md
@@ -758,6 +764,8 @@ docs/EzsignfolderDuplicateV1ResponseMPayload.md
 docs/EzsignfolderEditObjectV3Request.md
 docs/EzsignfolderEditObjectV3Response.md
 docs/EzsignfolderEndPrematurelyV1Response.md
+docs/EzsignfolderGetActionableElementsForSignerV1Response.md
+docs/EzsignfolderGetActionableElementsForSignerV1ResponseMPayload.md
 docs/EzsignfolderGetActionableElementsV1Response.md
 docs/EzsignfolderGetActionableElementsV1ResponseMPayload.md
 docs/EzsignfolderGetActionableElementsV2Response.md
@@ -2088,6 +2096,8 @@ docs/WebhookCreateObjectV2ResponseMPayload.md
 docs/WebhookDeleteObjectV1Response.md
 docs/WebhookEditObjectV1Request.md
 docs/WebhookEditObjectV1Response.md
+docs/WebhookEzmaxpartnerproductSubscribe.md
+docs/WebhookEzmaxpartnerproductUnsubscribe.md
 docs/WebhookEzsignDocumentCompleted.md
 docs/WebhookEzsignDocumentFormCompleted.md
 docs/WebhookEzsignDocumentUnsent.md
@@ -2137,6 +2147,7 @@ gradle/wrapper/gradle-wrapper.properties
 gradlew
 gradlew.bat
 settings.gradle
+src/main/kotlin/eZmaxApi/apis/DocumentationEzmaxpartnerApi.kt
 src/main/kotlin/eZmaxApi/apis/GlobalCustomerApi.kt
 src/main/kotlin/eZmaxApi/apis/GlobalEzmaxclientApi.kt
 src/main/kotlin/eZmaxApi/apis/GlobalEzmaxcustomerApi.kt
@@ -2616,6 +2627,7 @@ src/main/kotlin/eZmaxApi/models/CustomEzmaxcustomeruserResponse.kt
 src/main/kotlin/eZmaxApi/models/CustomEzmaxinvoicingEzsigndocumentResponse.kt
 src/main/kotlin/eZmaxApi/models/CustomEzmaxinvoicingEzsignfolderResponse.kt
 src/main/kotlin/eZmaxApi/models/CustomEzmaxpartnerListElement.kt
+src/main/kotlin/eZmaxApi/models/CustomEzmaxpartnerproductSubscribe.kt
 src/main/kotlin/eZmaxApi/models/CustomEzmaxpricingResponse.kt
 src/main/kotlin/eZmaxApi/models/CustomEzsigndocumentDuplicateRequest.kt
 src/main/kotlin/eZmaxApi/models/CustomEzsigndocumentEzsignsignaturesAutomaticResponse.kt
@@ -2708,6 +2720,8 @@ src/main/kotlin/eZmaxApi/models/DiscussionmessageRequestCompound.kt
 src/main/kotlin/eZmaxApi/models/DiscussionmessageRequestPatch.kt
 src/main/kotlin/eZmaxApi/models/DiscussionmessageResponse.kt
 src/main/kotlin/eZmaxApi/models/DiscussionmessageResponseCompound.kt
+src/main/kotlin/eZmaxApi/models/DocumentationSubscribeV1Request.kt
+src/main/kotlin/eZmaxApi/models/DocumentationSubscribeV1Response.kt
 src/main/kotlin/eZmaxApi/models/DomainAutocompleteElementResponse.kt
 src/main/kotlin/eZmaxApi/models/DomainCreateObjectV1Request.kt
 src/main/kotlin/eZmaxApi/models/DomainCreateObjectV1Response.kt
@@ -2966,6 +2980,8 @@ src/main/kotlin/eZmaxApi/models/EzsigndocumentExtractTextV1Request.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentExtractTextV1Response.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentExtractTextV1ResponseMPayload.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentFlattenV1Response.kt
+src/main/kotlin/eZmaxApi/models/EzsigndocumentGetActionableElementsForSignerV1Response.kt
+src/main/kotlin/eZmaxApi/models/EzsigndocumentGetActionableElementsForSignerV1ResponseMPayload.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentGetActionableElementsV1Response.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentGetActionableElementsV1ResponseMPayload.kt
 src/main/kotlin/eZmaxApi/models/EzsigndocumentGetActionableElementsV2Response.kt
@@ -3050,6 +3066,8 @@ src/main/kotlin/eZmaxApi/models/EzsignfolderDuplicateV1ResponseMPayload.kt
 src/main/kotlin/eZmaxApi/models/EzsignfolderEditObjectV3Request.kt
 src/main/kotlin/eZmaxApi/models/EzsignfolderEditObjectV3Response.kt
 src/main/kotlin/eZmaxApi/models/EzsignfolderEndPrematurelyV1Response.kt
+src/main/kotlin/eZmaxApi/models/EzsignfolderGetActionableElementsForSignerV1Response.kt
+src/main/kotlin/eZmaxApi/models/EzsignfolderGetActionableElementsForSignerV1ResponseMPayload.kt
 src/main/kotlin/eZmaxApi/models/EzsignfolderGetActionableElementsV1Response.kt
 src/main/kotlin/eZmaxApi/models/EzsignfolderGetActionableElementsV1ResponseMPayload.kt
 src/main/kotlin/eZmaxApi/models/EzsignfolderGetActionableElementsV2Response.kt
@@ -4241,6 +4259,8 @@ src/main/kotlin/eZmaxApi/models/WebhookCreateObjectV2ResponseMPayload.kt
 src/main/kotlin/eZmaxApi/models/WebhookDeleteObjectV1Response.kt
 src/main/kotlin/eZmaxApi/models/WebhookEditObjectV1Request.kt
 src/main/kotlin/eZmaxApi/models/WebhookEditObjectV1Response.kt
+src/main/kotlin/eZmaxApi/models/WebhookEzmaxpartnerproductSubscribe.kt
+src/main/kotlin/eZmaxApi/models/WebhookEzmaxpartnerproductUnsubscribe.kt
 src/main/kotlin/eZmaxApi/models/WebhookEzsignDocumentCompleted.kt
 src/main/kotlin/eZmaxApi/models/WebhookEzsignDocumentFormCompleted.kt
 src/main/kotlin/eZmaxApi/models/WebhookEzsignDocumentUnsent.kt

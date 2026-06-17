@@ -15,7 +15,10 @@
 | **bInscriptionArchived** | **kotlin.Boolean** | Whether the inscription is archived or not |  |
 | **sInscriptionnotauthenticatedOffertopurchasenumber** | **kotlin.String** | The Offer to purchase number |  |
 | **pkiInscriptionnotauthenticatedID** | **kotlin.Int** | The unique ID of the Inscriptionnotauthenticated. |  [optional] |
+| **fkiBuyercontractID** | **kotlin.Int** | The unique ID of the Buyercontract |  [optional] |
+| **sBuyercontractContract** | **kotlin.String** | The number of the Buyercontract |  [optional] |
 | **sInscriptionMLS** | **kotlin.String** | The mls of the Inscription |  [optional] |
+| **sInscriptionContract** | **kotlin.String** | The sale contract number |  [optional] |
 | **dtInscriptionDate** | **kotlin.String** | The date of the Inscription |  [optional] |
 | **dtInscriptionExpirationdate** | **kotlin.String** | The expirationdate of the Inscription |  [optional] |
 | **dtInscriptionNotarydate** | **kotlin.String** | The notarydate of the Inscription |  [optional] |

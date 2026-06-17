@@ -23,22 +23,27 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.EzsignformfieldgroupResponseCompound
+import eZmaxApi.models.EzsignsignatureResponseCompound
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * Request for POST /1/object/user/{pkiUserID}/impersonate
+ * Payload for GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElementsForSigner
  *
- * @param iExpirationMinutes The number of minute before key is no longer active
+ * @param aObjEzsignsignature 
+ * @param aObjEzsignformfieldgroup 
  */
 
 
-data class UserImpersonateV1Request (
+data class EzsignfolderGetActionableElementsForSignerV1ResponseMPayload (
 
-    /* The number of minute before key is no longer active */
-    @Json(name = "iExpirationMinutes")
-    val iExpirationMinutes: kotlin.Int
+    @Json(name = "a_objEzsignsignature")
+    val aObjEzsignsignature: kotlin.collections.List<EzsignsignatureResponseCompound>,
+
+    @Json(name = "a_objEzsignformfieldgroup")
+    val aObjEzsignformfieldgroup: kotlin.collections.List<EzsignformfieldgroupResponseCompound>
 
 ) {
 
