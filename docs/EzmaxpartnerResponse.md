@@ -12,6 +12,7 @@
 | **objEzmaxpartnerPhoneE164** | [**MultilingualEzmaxpartnerPhoneE164**](MultilingualEzmaxpartnerPhoneE164.md) |  |  |
 | **objEzmaxpartnerShortdescription** | [**MultilingualEzmaxpartnerShortdescription**](MultilingualEzmaxpartnerShortdescription.md) |  |  |
 | **objEzmaxpartnerUrl** | [**MultilingualEzmaxpartnerUrl**](MultilingualEzmaxpartnerUrl.md) |  |  |
+| **objEzmaxpartnerLogourl** | [**MultilingualEzmaxpartnerLogourl**](MultilingualEzmaxpartnerLogourl.md) |  |  |
 | **bEzmaxpartnerIsactive** | **kotlin.Boolean** | Whether the Ezmaxpartner is active or not |  [optional] |
 
 

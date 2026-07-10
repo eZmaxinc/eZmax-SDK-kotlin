@@ -28,6 +28,7 @@
 | **dtInscriptionnotauthenticatedTransactiondateReal** | **kotlin.String** | The transactiondatereal of the Inscriptionnotauthenticated |  [optional] |
 | **bInscriptionnotauthenticatedConditional** | **kotlin.Boolean** | Whether the inscriptionnotauthenticated is conditional |  [optional] |
 | **bInscriptionnotauthenticatedIsactive** | **kotlin.Boolean** | Whether the inscriptionnotauthenticated is active or not |  [optional] |
+| **bInscriptionnotauthenticatedDraft** | **kotlin.Boolean** | Whether the inscriptionnotauthenticated is a draft or not |  [optional] |
 | **sAddressCivic** | **kotlin.String** | The Civic number. |  [optional] |
 | **sAddressStreet** | **kotlin.String** | The Street Name |  [optional] |
 | **sAddressSuite** | **kotlin.String** | The Suite or appartment number |  [optional] |

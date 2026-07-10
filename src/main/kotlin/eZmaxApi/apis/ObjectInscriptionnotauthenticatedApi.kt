@@ -37,6 +37,7 @@ import eZmaxApi.models.InscriptionnotauthenticatedGetCommunicationrecipientsV1Re
 import eZmaxApi.models.InscriptionnotauthenticatedGetCommunicationsendersV1Response
 import eZmaxApi.models.InscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1Response
 import eZmaxApi.models.InscriptionnotauthenticatedGetListV1Response
+import eZmaxApi.models.InscriptionnotauthenticatedGetObjectV2Response
 import eZmaxApi.models.InscriptionnotauthenticatedImportIntoEDMV1Request
 import eZmaxApi.models.InscriptionnotauthenticatedImportIntoEDMV1Response
 
@@ -548,6 +549,8 @@ open class ObjectInscriptionnotauthenticatedApi(basePath: kotlin.String = defaul
          @Json(name = "bInscriptionnotauthenticatedConditional_DESC") bInscriptionnotauthenticatedConditional_DESC("bInscriptionnotauthenticatedConditional_DESC"),
          @Json(name = "bInscriptionnotauthenticatedIsactive_ASC") bInscriptionnotauthenticatedIsactive_ASC("bInscriptionnotauthenticatedIsactive_ASC"),
          @Json(name = "bInscriptionnotauthenticatedIsactive_DESC") bInscriptionnotauthenticatedIsactive_DESC("bInscriptionnotauthenticatedIsactive_DESC"),
+         @Json(name = "bInscriptionnotauthenticatedDraft_ASC") bInscriptionnotauthenticatedDraft_ASC("bInscriptionnotauthenticatedDraft_ASC"),
+         @Json(name = "bInscriptionnotauthenticatedDraft_DESC") bInscriptionnotauthenticatedDraft_DESC("bInscriptionnotauthenticatedDraft_DESC"),
          @Json(name = "sAddressCivic_ASC") sAddressCivic_ASC("sAddressCivic_ASC"),
          @Json(name = "sAddressCivic_DESC") sAddressCivic_DESC("sAddressCivic_DESC"),
          @Json(name = "sAddressStreet_ASC") sAddressStreet_ASC("sAddressStreet_ASC"),
@@ -670,6 +673,79 @@ open class ObjectInscriptionnotauthenticatedApi(basePath: kotlin.String = defaul
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/inscriptionnotauthenticated/getList",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /2/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}
+     * Retrieve an existing Inscriptionnotauthenticated
+     * 
+     * @param pkiInscriptionnotauthenticatedID The unique ID of the Inscriptionnotauthenticated
+     * @return InscriptionnotauthenticatedGetObjectV2Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun inscriptionnotauthenticatedGetObjectV2(pkiInscriptionnotauthenticatedID: kotlin.Int) : InscriptionnotauthenticatedGetObjectV2Response {
+        val localVarResponse = inscriptionnotauthenticatedGetObjectV2WithHttpInfo(pkiInscriptionnotauthenticatedID = pkiInscriptionnotauthenticatedID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as InscriptionnotauthenticatedGetObjectV2Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /2/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}
+     * Retrieve an existing Inscriptionnotauthenticated
+     * 
+     * @param pkiInscriptionnotauthenticatedID The unique ID of the Inscriptionnotauthenticated
+     * @return ApiResponse<InscriptionnotauthenticatedGetObjectV2Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun inscriptionnotauthenticatedGetObjectV2WithHttpInfo(pkiInscriptionnotauthenticatedID: kotlin.Int) : ApiResponse<InscriptionnotauthenticatedGetObjectV2Response?> {
+        val localVariableConfig = inscriptionnotauthenticatedGetObjectV2RequestConfig(pkiInscriptionnotauthenticatedID = pkiInscriptionnotauthenticatedID)
+
+        return request<Unit, InscriptionnotauthenticatedGetObjectV2Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation inscriptionnotauthenticatedGetObjectV2
+     *
+     * @param pkiInscriptionnotauthenticatedID The unique ID of the Inscriptionnotauthenticated
+     * @return RequestConfig
+     */
+    fun inscriptionnotauthenticatedGetObjectV2RequestConfig(pkiInscriptionnotauthenticatedID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/2/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}".replace("{"+"pkiInscriptionnotauthenticatedID"+"}", encodeURIComponent(pkiInscriptionnotauthenticatedID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

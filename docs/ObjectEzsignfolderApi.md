@@ -29,6 +29,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**ezsignfolderGetEzsigndocumentsV1**](ObjectEzsignfolderApi.md#ezsignfolderGetEzsigndocumentsV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments |
 | [**ezsignfolderGetEzsigndocumentsV2**](ObjectEzsignfolderApi.md#ezsignfolderGetEzsigndocumentsV2) | **GET** /2/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments |
 | [**ezsignfolderGetEzsignfoldersignerassociationsV1**](ObjectEzsignfolderApi.md#ezsignfolderGetEzsignfoldersignerassociationsV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations | Retrieve an existing Ezsignfolder&#39;s Ezsignfoldersignerassociations |
+| [**ezsignfolderGetEzsignfoldersignerassociationsV2**](ObjectEzsignfolderApi.md#ezsignfolderGetEzsignfoldersignerassociationsV2) | **GET** /2/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations | Retrieve an existing Ezsignfolder&#39;s Ezsignfoldersignerassociations |
 | [**ezsignfolderGetEzsignformfieldgroupsV1**](ObjectEzsignfolderApi.md#ezsignfolderGetEzsignformfieldgroupsV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignformfieldgroups | Retrieve an existing Ezsignfolder&#39;s Ezsignformfieldgroups |
 | [**ezsignfolderGetEzsignsignaturesAutomaticV1**](ObjectEzsignfolderApi.md#ezsignfolderGetEzsignsignaturesAutomaticV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignsignaturesAutomatic | Retrieve an existing Ezsignfolder&#39;s automatic Ezsignsignatures |
 | [**ezsignfolderGetEzsignsignaturesV1**](ObjectEzsignfolderApi.md#ezsignfolderGetEzsignsignaturesV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignsignatures | Retrieve an existing Ezsignfolder&#39;s Ezsignsignatures |
@@ -1273,6 +1274,55 @@ try {
 ### Return type
 
 [**EzsignfolderGetEzsignfoldersignerassociationsV1Response**](EzsignfolderGetEzsignfoldersignerassociationsV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="ezsignfolderGetEzsignfoldersignerassociationsV2"></a>
+# **ezsignfolderGetEzsignfoldersignerassociationsV2**
+> EzsignfolderGetEzsignfoldersignerassociationsV2Response ezsignfolderGetEzsignfoldersignerassociationsV2(pkiEzsignfolderID)
+
+Retrieve an existing Ezsignfolder&#39;s Ezsignfoldersignerassociations
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsignfolderApi()
+val pkiEzsignfolderID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : EzsignfolderGetEzsignfoldersignerassociationsV2Response = apiInstance.ezsignfolderGetEzsignfoldersignerassociationsV2(pkiEzsignfolderID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsignfolderApi#ezsignfolderGetEzsignfoldersignerassociationsV2")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsignfolderApi#ezsignfolderGetEzsignfoldersignerassociationsV2")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsignfolderID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**EzsignfolderGetEzsignfoldersignerassociationsV2Response**](EzsignfolderGetEzsignfoldersignerassociationsV2Response.md)
 
 ### Authorization
 

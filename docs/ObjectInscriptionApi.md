@@ -9,7 +9,9 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**inscriptionGetCommunicationListV1**](ObjectInscriptionApi.md#inscriptionGetCommunicationListV1) | **GET** /1/object/inscription/{pkiInscriptionID}/getCommunicationList | Retrieve Communication list |
 | [**inscriptionGetCommunicationrecipientsV1**](ObjectInscriptionApi.md#inscriptionGetCommunicationrecipientsV1) | **GET** /1/object/inscription/{pkiInscriptionID}/getCommunicationrecipients | Retrieve Inscription&#39;s Communicationrecipient |
 | [**inscriptionGetCommunicationsendersV1**](ObjectInscriptionApi.md#inscriptionGetCommunicationsendersV1) | **GET** /1/object/inscription/{pkiInscriptionID}/getCommunicationsenders | Retrieve Inscription&#39;s Communicationsender |
+| [**inscriptionGetInscriptionnotauthenticatedsV1**](ObjectInscriptionApi.md#inscriptionGetInscriptionnotauthenticatedsV1) | **GET** /1/object/inscription/{pkiInscriptionID}/getInscriptionnotauthenticateds | Retrieve Inscriptionnotauthenticated list |
 | [**inscriptionGetListV1**](ObjectInscriptionApi.md#inscriptionGetListV1) | **GET** /1/object/inscription/getList | Retrieve Inscription list |
+| [**inscriptionGetObjectV2**](ObjectInscriptionApi.md#inscriptionGetObjectV2) | **GET** /2/object/inscription/{pkiInscriptionID} | Retrieve an existing Inscription |
 | [**inscriptionImportIntoEDMV1**](ObjectInscriptionApi.md#inscriptionImportIntoEDMV1) | **POST** /1/object/inscription/{pkiInscriptionID}/importIntoEDM | Import attachments into the Inscription |
 | [**inscriptionPrepareFilesTransferV1**](ObjectInscriptionApi.md#inscriptionPrepareFilesTransferV1) | **POST** /1/object/inscription/{pkiInscriptionID}/prepareFilesTransfer | Prepares file transfer into EDM |
 
@@ -259,6 +261,53 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+<a id="inscriptionGetInscriptionnotauthenticatedsV1"></a>
+# **inscriptionGetInscriptionnotauthenticatedsV1**
+> InscriptionGetInscriptionnotauthenticatedsV1Response inscriptionGetInscriptionnotauthenticatedsV1(pkiInscriptionID)
+
+Retrieve Inscriptionnotauthenticated list
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectInscriptionApi()
+val pkiInscriptionID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : InscriptionGetInscriptionnotauthenticatedsV1Response = apiInstance.inscriptionGetInscriptionnotauthenticatedsV1(pkiInscriptionID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectInscriptionApi#inscriptionGetInscriptionnotauthenticatedsV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectInscriptionApi#inscriptionGetInscriptionnotauthenticatedsV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiInscriptionID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**InscriptionGetInscriptionnotauthenticatedsV1Response**](InscriptionGetInscriptionnotauthenticatedsV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
 <a id="inscriptionGetListV1"></a>
 # **inscriptionGetListV1**
 > InscriptionGetListV1Response inscriptionGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
@@ -303,6 +352,55 @@ try {
 ### Return type
 
 [**InscriptionGetListV1Response**](InscriptionGetListV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="inscriptionGetObjectV2"></a>
+# **inscriptionGetObjectV2**
+> InscriptionGetObjectV2Response inscriptionGetObjectV2(pkiInscriptionID)
+
+Retrieve an existing Inscription
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectInscriptionApi()
+val pkiInscriptionID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Inscription
+try {
+    val result : InscriptionGetObjectV2Response = apiInstance.inscriptionGetObjectV2(pkiInscriptionID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectInscriptionApi#inscriptionGetObjectV2")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectInscriptionApi#inscriptionGetObjectV2")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiInscriptionID** | **kotlin.Int**| The unique ID of the Inscription | |
+
+### Return type
+
+[**InscriptionGetObjectV2Response**](InscriptionGetObjectV2Response.md)
 
 ### Authorization
 

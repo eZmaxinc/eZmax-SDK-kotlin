@@ -15,6 +15,7 @@
 | **fkiAuthenticationexternalID** | **kotlin.Int** | The unique ID of the Authenticationexternal |  [optional] |
 | **fkiEzsignfoldertypeID** | **kotlin.Int** | The unique ID of the Ezsignfoldertype. |  [optional] |
 | **sEzsignfoldertypeNameX** | **kotlin.String** | The name of the Ezsignfoldertype in the language of the requester |  [optional] |
+| **eWebhookEzmaxpartnerevent** | [**FieldEWebhookEzmaxpartnerevent**](FieldEWebhookEzmaxpartnerevent.md) |  |  [optional] |
 | **eWebhookEzsignevent** | [**FieldEWebhookEzsignevent**](FieldEWebhookEzsignevent.md) |  |  [optional] |
 | **eWebhookManagementevent** | [**FieldEWebhookManagementevent**](FieldEWebhookManagementevent.md) |  |  [optional] |
 | **sWebhookApikey** | **kotlin.String** | The Apikey for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey. |  [optional] |

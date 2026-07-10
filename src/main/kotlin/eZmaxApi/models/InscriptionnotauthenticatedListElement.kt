@@ -55,6 +55,7 @@ import com.squareup.moshi.JsonClass
  * @param dtInscriptionnotauthenticatedTransactiondateReal The transactiondatereal of the Inscriptionnotauthenticated
  * @param bInscriptionnotauthenticatedConditional Whether the inscriptionnotauthenticated is conditional
  * @param bInscriptionnotauthenticatedIsactive Whether the inscriptionnotauthenticated is active or not
+ * @param bInscriptionnotauthenticatedDraft Whether the inscriptionnotauthenticated is a draft or not
  * @param sAddressCivic The Civic number.
  * @param sAddressStreet The Street Name
  * @param sAddressSuite The Suite or appartment number
@@ -163,6 +164,10 @@ data class InscriptionnotauthenticatedListElement (
     /* Whether the inscriptionnotauthenticated is active or not */
     @Json(name = "bInscriptionnotauthenticatedIsactive")
     val bInscriptionnotauthenticatedIsactive: kotlin.Boolean? = null,
+
+    /* Whether the inscriptionnotauthenticated is a draft or not */
+    @Json(name = "bInscriptionnotauthenticatedDraft")
+    val bInscriptionnotauthenticatedDraft: kotlin.Boolean? = null,
 
     /* The Civic number. */
     @Json(name = "sAddressCivic")

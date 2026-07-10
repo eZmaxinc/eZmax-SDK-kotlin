@@ -30,11 +30,14 @@ import com.squareup.moshi.JsonClass
 /**
  * The module for the Webhook
  *
- * Values: Ezsign,Management
+ * Values: Ezmaxpartner,Ezsign,Management
  */
 
 @JsonClass(generateAdapter = false)
 enum class FieldEWebhookModule(val value: kotlin.String) {
+
+    @Json(name = "Ezmaxpartner")
+    Ezmaxpartner("Ezmaxpartner"),
 
     @Json(name = "Ezsign")
     Ezsign("Ezsign"),

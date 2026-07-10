@@ -24,6 +24,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.CommonAudit
+import eZmaxApi.models.FieldEWebhookEzmaxpartnerevent
 import eZmaxApi.models.FieldEWebhookEzsignevent
 import eZmaxApi.models.FieldEWebhookManagementevent
 import eZmaxApi.models.FieldEWebhookModule
@@ -46,6 +47,7 @@ import com.squareup.moshi.JsonClass
  * @param fkiAuthenticationexternalID The unique ID of the Authenticationexternal
  * @param fkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
  * @param sEzsignfoldertypeNameX The name of the Ezsignfoldertype in the language of the requester
+ * @param eWebhookEzmaxpartnerevent 
  * @param eWebhookEzsignevent 
  * @param eWebhookManagementevent 
  * @param sWebhookApikey The Apikey for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey.
@@ -102,6 +104,9 @@ data class WebhookResponseCompound (
     /* The name of the Ezsignfoldertype in the language of the requester */
     @Json(name = "sEzsignfoldertypeNameX")
     val sEzsignfoldertypeNameX: kotlin.String? = null,
+
+    @Json(name = "eWebhookEzmaxpartnerevent")
+    val eWebhookEzmaxpartnerevent: FieldEWebhookEzmaxpartnerevent? = null,
 
     @Json(name = "eWebhookEzsignevent")
     val eWebhookEzsignevent: FieldEWebhookEzsignevent? = null,

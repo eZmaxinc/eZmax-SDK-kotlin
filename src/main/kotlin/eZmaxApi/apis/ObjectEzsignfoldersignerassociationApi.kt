@@ -36,13 +36,18 @@ import eZmaxApi.models.EzsignfoldersignerassociationCreateObjectV1Request
 import eZmaxApi.models.EzsignfoldersignerassociationCreateObjectV1Response
 import eZmaxApi.models.EzsignfoldersignerassociationCreateObjectV2Request
 import eZmaxApi.models.EzsignfoldersignerassociationCreateObjectV2Response
+import eZmaxApi.models.EzsignfoldersignerassociationCreateObjectV3Request
+import eZmaxApi.models.EzsignfoldersignerassociationCreateObjectV3Response
 import eZmaxApi.models.EzsignfoldersignerassociationDeleteObjectV1Response
 import eZmaxApi.models.EzsignfoldersignerassociationEditObjectV1Request
 import eZmaxApi.models.EzsignfoldersignerassociationEditObjectV1Response
+import eZmaxApi.models.EzsignfoldersignerassociationEditObjectV2Request
+import eZmaxApi.models.EzsignfoldersignerassociationEditObjectV2Response
 import eZmaxApi.models.EzsignfoldersignerassociationForceDisconnectV1Response
 import eZmaxApi.models.EzsignfoldersignerassociationGetInPersonLoginUrlV1Response
 import eZmaxApi.models.EzsignfoldersignerassociationGetObjectV1Response
 import eZmaxApi.models.EzsignfoldersignerassociationGetObjectV2Response
+import eZmaxApi.models.EzsignfoldersignerassociationGetObjectV3Response
 import eZmaxApi.models.EzsignfoldersignerassociationPatchObjectV1Request
 import eZmaxApi.models.EzsignfoldersignerassociationPatchObjectV1Response
 import eZmaxApi.models.EzsignfoldersignerassociationReassignV1Request
@@ -324,7 +329,9 @@ open class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defa
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsignfoldersignerassociationCreateObjectV2(ezsignfoldersignerassociationCreateObjectV2Request: EzsignfoldersignerassociationCreateObjectV2Request) : EzsignfoldersignerassociationCreateObjectV2Response {
+        @Suppress("DEPRECATION")
         val localVarResponse = ezsignfoldersignerassociationCreateObjectV2WithHttpInfo(ezsignfoldersignerassociationCreateObjectV2Request = ezsignfoldersignerassociationCreateObjectV2Request)
 
         return when (localVarResponse.responseType) {
@@ -353,7 +360,9 @@ open class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defa
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsignfoldersignerassociationCreateObjectV2WithHttpInfo(ezsignfoldersignerassociationCreateObjectV2Request: EzsignfoldersignerassociationCreateObjectV2Request) : ApiResponse<EzsignfoldersignerassociationCreateObjectV2Response?> {
+        @Suppress("DEPRECATION")
         val localVariableConfig = ezsignfoldersignerassociationCreateObjectV2RequestConfig(ezsignfoldersignerassociationCreateObjectV2Request = ezsignfoldersignerassociationCreateObjectV2Request)
 
         return request<EzsignfoldersignerassociationCreateObjectV2Request, EzsignfoldersignerassociationCreateObjectV2Response>(
@@ -367,6 +376,7 @@ open class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defa
      * @param ezsignfoldersignerassociationCreateObjectV2Request 
      * @return RequestConfig
      */
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsignfoldersignerassociationCreateObjectV2RequestConfig(ezsignfoldersignerassociationCreateObjectV2Request: EzsignfoldersignerassociationCreateObjectV2Request) : RequestConfig<EzsignfoldersignerassociationCreateObjectV2Request> {
         val localVariableBody = ezsignfoldersignerassociationCreateObjectV2Request
         val localVariableQuery: MultiValueMap = mutableMapOf()
@@ -377,6 +387,80 @@ open class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defa
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/2/object/ezsignfoldersignerassociation",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * POST /3/object/ezsignfoldersignerassociation
+     * Create a new Ezsignfoldersignerassociation
+     * The endpoint allows to create one or many elements at once.
+     * @param ezsignfoldersignerassociationCreateObjectV3Request 
+     * @return EzsignfoldersignerassociationCreateObjectV3Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignfoldersignerassociationCreateObjectV3(ezsignfoldersignerassociationCreateObjectV3Request: EzsignfoldersignerassociationCreateObjectV3Request) : EzsignfoldersignerassociationCreateObjectV3Response {
+        val localVarResponse = ezsignfoldersignerassociationCreateObjectV3WithHttpInfo(ezsignfoldersignerassociationCreateObjectV3Request = ezsignfoldersignerassociationCreateObjectV3Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfoldersignerassociationCreateObjectV3Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /3/object/ezsignfoldersignerassociation
+     * Create a new Ezsignfoldersignerassociation
+     * The endpoint allows to create one or many elements at once.
+     * @param ezsignfoldersignerassociationCreateObjectV3Request 
+     * @return ApiResponse<EzsignfoldersignerassociationCreateObjectV3Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignfoldersignerassociationCreateObjectV3WithHttpInfo(ezsignfoldersignerassociationCreateObjectV3Request: EzsignfoldersignerassociationCreateObjectV3Request) : ApiResponse<EzsignfoldersignerassociationCreateObjectV3Response?> {
+        val localVariableConfig = ezsignfoldersignerassociationCreateObjectV3RequestConfig(ezsignfoldersignerassociationCreateObjectV3Request = ezsignfoldersignerassociationCreateObjectV3Request)
+
+        return request<EzsignfoldersignerassociationCreateObjectV3Request, EzsignfoldersignerassociationCreateObjectV3Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsignfoldersignerassociationCreateObjectV3
+     *
+     * @param ezsignfoldersignerassociationCreateObjectV3Request 
+     * @return RequestConfig
+     */
+    fun ezsignfoldersignerassociationCreateObjectV3RequestConfig(ezsignfoldersignerassociationCreateObjectV3Request: EzsignfoldersignerassociationCreateObjectV3Request) : RequestConfig<EzsignfoldersignerassociationCreateObjectV3Request> {
+        val localVariableBody = ezsignfoldersignerassociationCreateObjectV3Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/3/object/ezsignfoldersignerassociation",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,
@@ -472,7 +556,9 @@ open class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defa
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsignfoldersignerassociationEditObjectV1(pkiEzsignfoldersignerassociationID: kotlin.Int, ezsignfoldersignerassociationEditObjectV1Request: EzsignfoldersignerassociationEditObjectV1Request) : EzsignfoldersignerassociationEditObjectV1Response {
+        @Suppress("DEPRECATION")
         val localVarResponse = ezsignfoldersignerassociationEditObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationEditObjectV1Request = ezsignfoldersignerassociationEditObjectV1Request)
 
         return when (localVarResponse.responseType) {
@@ -502,7 +588,9 @@ open class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defa
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsignfoldersignerassociationEditObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID: kotlin.Int, ezsignfoldersignerassociationEditObjectV1Request: EzsignfoldersignerassociationEditObjectV1Request) : ApiResponse<EzsignfoldersignerassociationEditObjectV1Response?> {
+        @Suppress("DEPRECATION")
         val localVariableConfig = ezsignfoldersignerassociationEditObjectV1RequestConfig(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationEditObjectV1Request = ezsignfoldersignerassociationEditObjectV1Request)
 
         return request<EzsignfoldersignerassociationEditObjectV1Request, EzsignfoldersignerassociationEditObjectV1Response>(
@@ -517,6 +605,7 @@ open class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defa
      * @param ezsignfoldersignerassociationEditObjectV1Request 
      * @return RequestConfig
      */
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsignfoldersignerassociationEditObjectV1RequestConfig(pkiEzsignfoldersignerassociationID: kotlin.Int, ezsignfoldersignerassociationEditObjectV1Request: EzsignfoldersignerassociationEditObjectV1Request) : RequestConfig<EzsignfoldersignerassociationEditObjectV1Request> {
         val localVariableBody = ezsignfoldersignerassociationEditObjectV1Request
         val localVariableQuery: MultiValueMap = mutableMapOf()
@@ -527,6 +616,83 @@ open class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defa
         return RequestConfig(
             method = RequestMethod.PUT,
             path = "/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}".replace("{"+"pkiEzsignfoldersignerassociationID"+"}", encodeURIComponent(pkiEzsignfoldersignerassociationID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * PUT /2/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}
+     * Edit an existing Ezsignfoldersignerassociation
+     * 
+     * @param pkiEzsignfoldersignerassociationID 
+     * @param ezsignfoldersignerassociationEditObjectV2Request 
+     * @return EzsignfoldersignerassociationEditObjectV2Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignfoldersignerassociationEditObjectV2(pkiEzsignfoldersignerassociationID: kotlin.Int, ezsignfoldersignerassociationEditObjectV2Request: EzsignfoldersignerassociationEditObjectV2Request) : EzsignfoldersignerassociationEditObjectV2Response {
+        val localVarResponse = ezsignfoldersignerassociationEditObjectV2WithHttpInfo(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationEditObjectV2Request = ezsignfoldersignerassociationEditObjectV2Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfoldersignerassociationEditObjectV2Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * PUT /2/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}
+     * Edit an existing Ezsignfoldersignerassociation
+     * 
+     * @param pkiEzsignfoldersignerassociationID 
+     * @param ezsignfoldersignerassociationEditObjectV2Request 
+     * @return ApiResponse<EzsignfoldersignerassociationEditObjectV2Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignfoldersignerassociationEditObjectV2WithHttpInfo(pkiEzsignfoldersignerassociationID: kotlin.Int, ezsignfoldersignerassociationEditObjectV2Request: EzsignfoldersignerassociationEditObjectV2Request) : ApiResponse<EzsignfoldersignerassociationEditObjectV2Response?> {
+        val localVariableConfig = ezsignfoldersignerassociationEditObjectV2RequestConfig(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationEditObjectV2Request = ezsignfoldersignerassociationEditObjectV2Request)
+
+        return request<EzsignfoldersignerassociationEditObjectV2Request, EzsignfoldersignerassociationEditObjectV2Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsignfoldersignerassociationEditObjectV2
+     *
+     * @param pkiEzsignfoldersignerassociationID 
+     * @param ezsignfoldersignerassociationEditObjectV2Request 
+     * @return RequestConfig
+     */
+    fun ezsignfoldersignerassociationEditObjectV2RequestConfig(pkiEzsignfoldersignerassociationID: kotlin.Int, ezsignfoldersignerassociationEditObjectV2Request: EzsignfoldersignerassociationEditObjectV2Request) : RequestConfig<EzsignfoldersignerassociationEditObjectV2Request> {
+        val localVariableBody = ezsignfoldersignerassociationEditObjectV2Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.PUT,
+            path = "/2/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}".replace("{"+"pkiEzsignfoldersignerassociationID"+"}", encodeURIComponent(pkiEzsignfoldersignerassociationID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,
@@ -776,7 +942,9 @@ open class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defa
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsignfoldersignerassociationGetObjectV2(pkiEzsignfoldersignerassociationID: kotlin.Int) : EzsignfoldersignerassociationGetObjectV2Response {
+        @Suppress("DEPRECATION")
         val localVarResponse = ezsignfoldersignerassociationGetObjectV2WithHttpInfo(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID)
 
         return when (localVarResponse.responseType) {
@@ -805,7 +973,9 @@ open class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defa
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsignfoldersignerassociationGetObjectV2WithHttpInfo(pkiEzsignfoldersignerassociationID: kotlin.Int) : ApiResponse<EzsignfoldersignerassociationGetObjectV2Response?> {
+        @Suppress("DEPRECATION")
         val localVariableConfig = ezsignfoldersignerassociationGetObjectV2RequestConfig(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID)
 
         return request<Unit, EzsignfoldersignerassociationGetObjectV2Response>(
@@ -819,6 +989,7 @@ open class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defa
      * @param pkiEzsignfoldersignerassociationID 
      * @return RequestConfig
      */
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsignfoldersignerassociationGetObjectV2RequestConfig(pkiEzsignfoldersignerassociationID: kotlin.Int) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
@@ -828,6 +999,79 @@ open class ObjectEzsignfoldersignerassociationApi(basePath: kotlin.String = defa
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/2/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}".replace("{"+"pkiEzsignfoldersignerassociationID"+"}", encodeURIComponent(pkiEzsignfoldersignerassociationID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /3/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}
+     * Retrieve an existing Ezsignfoldersignerassociation
+     * 
+     * @param pkiEzsignfoldersignerassociationID 
+     * @return EzsignfoldersignerassociationGetObjectV3Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignfoldersignerassociationGetObjectV3(pkiEzsignfoldersignerassociationID: kotlin.Int) : EzsignfoldersignerassociationGetObjectV3Response {
+        val localVarResponse = ezsignfoldersignerassociationGetObjectV3WithHttpInfo(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfoldersignerassociationGetObjectV3Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /3/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}
+     * Retrieve an existing Ezsignfoldersignerassociation
+     * 
+     * @param pkiEzsignfoldersignerassociationID 
+     * @return ApiResponse<EzsignfoldersignerassociationGetObjectV3Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignfoldersignerassociationGetObjectV3WithHttpInfo(pkiEzsignfoldersignerassociationID: kotlin.Int) : ApiResponse<EzsignfoldersignerassociationGetObjectV3Response?> {
+        val localVariableConfig = ezsignfoldersignerassociationGetObjectV3RequestConfig(pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID)
+
+        return request<Unit, EzsignfoldersignerassociationGetObjectV3Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsignfoldersignerassociationGetObjectV3
+     *
+     * @param pkiEzsignfoldersignerassociationID 
+     * @return RequestConfig
+     */
+    fun ezsignfoldersignerassociationGetObjectV3RequestConfig(pkiEzsignfoldersignerassociationID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/3/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}".replace("{"+"pkiEzsignfoldersignerassociationID"+"}", encodeURIComponent(pkiEzsignfoldersignerassociationID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

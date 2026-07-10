@@ -27,6 +27,7 @@ import eZmaxApi.models.FieldEEzmaxpartnerCustomdevelopment
 import eZmaxApi.models.MultilingualEzmaxpartnerAddress
 import eZmaxApi.models.MultilingualEzmaxpartnerDescription
 import eZmaxApi.models.MultilingualEzmaxpartnerEmailaddress
+import eZmaxApi.models.MultilingualEzmaxpartnerLogourl
 import eZmaxApi.models.MultilingualEzmaxpartnerName
 import eZmaxApi.models.MultilingualEzmaxpartnerPhoneE164
 import eZmaxApi.models.MultilingualEzmaxpartnerShortdescription
@@ -46,6 +47,7 @@ import com.squareup.moshi.JsonClass
  * @param objEzmaxpartnerPhoneE164 
  * @param objEzmaxpartnerShortdescription 
  * @param objEzmaxpartnerUrl 
+ * @param objEzmaxpartnerLogourl 
  * @param bEzmaxpartnerIsactive Whether the Ezmaxpartner is active or not
  */
 
@@ -75,6 +77,9 @@ data class EzmaxpartnerResponse (
 
     @Json(name = "objEzmaxpartnerUrl")
     val objEzmaxpartnerUrl: MultilingualEzmaxpartnerUrl,
+
+    @Json(name = "objEzmaxpartnerLogourl")
+    val objEzmaxpartnerLogourl: MultilingualEzmaxpartnerLogourl,
 
     /* Whether the Ezmaxpartner is active or not */
     @Json(name = "bEzmaxpartnerIsactive")
