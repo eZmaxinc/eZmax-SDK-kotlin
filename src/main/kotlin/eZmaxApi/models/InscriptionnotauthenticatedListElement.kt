@@ -24,6 +24,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.FieldEInscriptionStep
+import eZmaxApi.models.FieldEInscriptionType
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -34,13 +35,19 @@ import com.squareup.moshi.JsonClass
  * @param pkiInscriptionID The unique ID of the Inscription.
  * @param fkiInscriptiontypeID The unique ID of the Inscriptiontype
  * @param sInscriptiontypeNameX The name of the Inscriptiontype in the language of the requester
+ * @param fkiInscriptionbuildingtypeID The unique ID of the Inscriptionbuildingtype
+ * @param sInscriptionbuildingtypeNameX The name of the Inscriptionbuildingtype in the language of the requester
+ * @param fkiInscriptioncategoryID The unique ID of the Inscriptioncategory
+ * @param sInscriptioncategoryNameX The name of the Inscriptioncategory in the language of the requester
  * @param eInscriptionStep 
+ * @param eInscriptionType 
  * @param sInscriptionCivicend The civicend of the Inscription
  * @param dInscriptionSaleprice The saleprice of the Inscription
  * @param dInscriptionRentprice The rentprice of the Inscription
  * @param bInscriptionIsactive Whether the inscription is active or not
  * @param bInscriptionArchived Whether the inscription is archived or not
  * @param sInscriptionnotauthenticatedOffertopurchasenumber The Offer to purchase number
+ * @param iInscriptionUnit The unit of the Inscription
  * @param pkiInscriptionnotauthenticatedID The unique ID of the Inscriptionnotauthenticated.
  * @param fkiBuyercontractID The unique ID of the Buyercontract
  * @param sBuyercontractContract The number of the Buyercontract
@@ -82,8 +89,27 @@ data class InscriptionnotauthenticatedListElement (
     @Json(name = "sInscriptiontypeNameX")
     val sInscriptiontypeNameX: kotlin.String,
 
+    /* The unique ID of the Inscriptionbuildingtype */
+    @Json(name = "fkiInscriptionbuildingtypeID")
+    val fkiInscriptionbuildingtypeID: kotlin.Int,
+
+    /* The name of the Inscriptionbuildingtype in the language of the requester */
+    @Json(name = "sInscriptionbuildingtypeNameX")
+    val sInscriptionbuildingtypeNameX: kotlin.String,
+
+    /* The unique ID of the Inscriptioncategory */
+    @Json(name = "fkiInscriptioncategoryID")
+    val fkiInscriptioncategoryID: kotlin.Int,
+
+    /* The name of the Inscriptioncategory in the language of the requester */
+    @Json(name = "sInscriptioncategoryNameX")
+    val sInscriptioncategoryNameX: kotlin.String,
+
     @Json(name = "eInscriptionStep")
     val eInscriptionStep: FieldEInscriptionStep,
+
+    @Json(name = "eInscriptionType")
+    val eInscriptionType: FieldEInscriptionType,
 
     /* The civicend of the Inscription */
     @Json(name = "sInscriptionCivicend")
@@ -108,6 +134,10 @@ data class InscriptionnotauthenticatedListElement (
     /* The Offer to purchase number */
     @Json(name = "sInscriptionnotauthenticatedOffertopurchasenumber")
     val sInscriptionnotauthenticatedOffertopurchasenumber: kotlin.String,
+
+    /* The unit of the Inscription */
+    @Json(name = "iInscriptionUnit")
+    val iInscriptionUnit: kotlin.Int,
 
     /* The unique ID of the Inscriptionnotauthenticated. */
     @Json(name = "pkiInscriptionnotauthenticatedID")

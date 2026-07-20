@@ -14,6 +14,7 @@
 | **bWebhookIssigned** | **kotlin.Boolean** | Whether the requests will be signed or not |  |
 | **eWebhookEzsignevent** | [**FieldEWebhookEzsignevent**](FieldEWebhookEzsignevent.md) |  |  [optional] |
 | **eWebhookManagementevent** | [**FieldEWebhookManagementevent**](FieldEWebhookManagementevent.md) |  |  [optional] |
+| **eWebhookRealestateevent** | [**FieldEWebhookRealestateevent**](FieldEWebhookRealestateevent.md) |  |  [optional] |
 
 
 

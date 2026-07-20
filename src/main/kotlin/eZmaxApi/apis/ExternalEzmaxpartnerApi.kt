@@ -46,7 +46,7 @@ import eZmaxApi.infrastructure.ResponseType
 import eZmaxApi.infrastructure.Success
 import eZmaxApi.infrastructure.toMultiValue
 
-open class DocumentationEzmaxpartnerApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
+open class ExternalEzmaxpartnerApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
@@ -55,7 +55,7 @@ open class DocumentationEzmaxpartnerApi(basePath: kotlin.String = defaultBasePat
     }
 
     /**
-     * POST /1/documentation/subscribe
+     * POST /1/external/ezmaxpartner/subscribe
      * Subscribe to an Ezmaxparnerproductstage
      * Subscribe to an Ezmaxparnerproductstage
      * @param documentationSubscribeV1Request 
@@ -68,8 +68,8 @@ open class DocumentationEzmaxpartnerApi(basePath: kotlin.String = defaultBasePat
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun documentationSubscribeV1(documentationSubscribeV1Request: DocumentationSubscribeV1Request) : DocumentationSubscribeV1Response {
-        val localVarResponse = documentationSubscribeV1WithHttpInfo(documentationSubscribeV1Request = documentationSubscribeV1Request)
+    fun externalpartnerSubscribeV1(documentationSubscribeV1Request: DocumentationSubscribeV1Request) : DocumentationSubscribeV1Response {
+        val localVarResponse = externalpartnerSubscribeV1WithHttpInfo(documentationSubscribeV1Request = documentationSubscribeV1Request)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as DocumentationSubscribeV1Response
@@ -87,7 +87,7 @@ open class DocumentationEzmaxpartnerApi(basePath: kotlin.String = defaultBasePat
     }
 
     /**
-     * POST /1/documentation/subscribe
+     * POST /1/external/ezmaxpartner/subscribe
      * Subscribe to an Ezmaxparnerproductstage
      * Subscribe to an Ezmaxparnerproductstage
      * @param documentationSubscribeV1Request 
@@ -97,8 +97,8 @@ open class DocumentationEzmaxpartnerApi(basePath: kotlin.String = defaultBasePat
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun documentationSubscribeV1WithHttpInfo(documentationSubscribeV1Request: DocumentationSubscribeV1Request) : ApiResponse<DocumentationSubscribeV1Response?> {
-        val localVariableConfig = documentationSubscribeV1RequestConfig(documentationSubscribeV1Request = documentationSubscribeV1Request)
+    fun externalpartnerSubscribeV1WithHttpInfo(documentationSubscribeV1Request: DocumentationSubscribeV1Request) : ApiResponse<DocumentationSubscribeV1Response?> {
+        val localVariableConfig = externalpartnerSubscribeV1RequestConfig(documentationSubscribeV1Request = documentationSubscribeV1Request)
 
         return request<DocumentationSubscribeV1Request, DocumentationSubscribeV1Response>(
             localVariableConfig
@@ -106,12 +106,12 @@ open class DocumentationEzmaxpartnerApi(basePath: kotlin.String = defaultBasePat
     }
 
     /**
-     * To obtain the request config of the operation documentationSubscribeV1
+     * To obtain the request config of the operation externalpartnerSubscribeV1
      *
      * @param documentationSubscribeV1Request 
      * @return RequestConfig
      */
-    fun documentationSubscribeV1RequestConfig(documentationSubscribeV1Request: DocumentationSubscribeV1Request) : RequestConfig<DocumentationSubscribeV1Request> {
+    fun externalpartnerSubscribeV1RequestConfig(documentationSubscribeV1Request: DocumentationSubscribeV1Request) : RequestConfig<DocumentationSubscribeV1Request> {
         val localVariableBody = documentationSubscribeV1Request
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
@@ -120,7 +120,7 @@ open class DocumentationEzmaxpartnerApi(basePath: kotlin.String = defaultBasePat
 
         return RequestConfig(
             method = RequestMethod.POST,
-            path = "/1/documentation/subscribe",
+            path = "/1/external/ezmaxpartner/subscribe",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

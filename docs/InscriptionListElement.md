@@ -7,13 +7,19 @@
 | **pkiInscriptionID** | **kotlin.Int** | The unique ID of the Inscription. |  |
 | **fkiInscriptiontypeID** | **kotlin.Int** | The unique ID of the Inscriptiontype |  |
 | **sInscriptiontypeNameX** | **kotlin.String** | The name of the Inscriptiontype in the language of the requester |  |
+| **fkiInscriptionbuildingtypeID** | **kotlin.Int** | The unique ID of the Inscriptionbuildingtype |  |
+| **sInscriptionbuildingtypeNameX** | **kotlin.String** | The name of the Inscriptionbuildingtype in the language of the requester |  |
+| **fkiInscriptioncategoryID** | **kotlin.Int** | The unique ID of the Inscriptioncategory |  |
+| **sInscriptioncategoryNameX** | **kotlin.String** | The name of the Inscriptioncategory in the language of the requester |  |
 | **eInscriptionStep** | [**FieldEInscriptionStep**](FieldEInscriptionStep.md) |  |  |
+| **eInscriptionType** | [**FieldEInscriptionType**](FieldEInscriptionType.md) |  |  |
 | **sInscriptionCivicend** | **kotlin.String** | The civicend of the Inscription |  |
 | **dInscriptionSaleprice** | **kotlin.String** | The saleprice of the Inscription |  |
 | **dInscriptionRentprice** | **kotlin.String** | The rentprice of the Inscription |  |
 | **bInscriptionIsactive** | **kotlin.Boolean** | Whether the inscription is active or not |  |
 | **bInscriptionArchived** | **kotlin.Boolean** | Whether the inscription is archived or not |  |
 | **iInscriptionnotauthenticatedCanceled** | **kotlin.Int** | The numbre of inscriptionnotauthenticated was canceled in this Inscription |  |
+| **iInscriptionUnit** | **kotlin.Int** | The unit of the Inscription |  |
 | **bAllowedCopyintoinscriptionedm** | **kotlin.Boolean** | Whether we are allowed to copy into the Inscription EDM |  |
 | **pkiInscriptionnotauthenticatedID** | **kotlin.Int** | The unique ID of the Inscriptionnotauthenticated. |  [optional] |
 | **fkiBuyercontractID** | **kotlin.Int** | The unique ID of the Buyercontract |  [optional] |

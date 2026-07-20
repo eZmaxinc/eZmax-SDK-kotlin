@@ -51,6 +51,7 @@ import com.squareup.moshi.JsonClass
  * @param fkiPaymentgatewayID The unique ID of the Paymentgateway
  * @param bEzsigntemplatesignatureHandwritten Whether the Ezsigntemplatesignature must be handwritten or not when eEzsigntemplatesignatureType = Signature.
  * @param bEzsigntemplatesignatureReason Whether the Ezsigntemplatesignature must include a reason or not when eEzsigntemplatesignatureType = Signature.
+ * @param bEzsigntemplatesignatureCreditcardcustomamount Whether we can enter a custom amount while signing an Ezsigntemplatesignature 'Creditcard' or not
  * @param eEzsigntemplatesignaturePositioning 
  * @param iEzsigntemplatesignatureX The X coordinate (Horizontal) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 2 inches from the left border of the page, you would use \"200\" for the X coordinate.
  * @param iEzsigntemplatesignatureY The Y coordinate (Vertical) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.
@@ -121,6 +122,10 @@ data class EzsigntemplatesignatureResponse (
     /* Whether the Ezsigntemplatesignature must include a reason or not when eEzsigntemplatesignatureType = Signature. */
     @Json(name = "bEzsigntemplatesignatureReason")
     val bEzsigntemplatesignatureReason: kotlin.Boolean? = null,
+
+    /* Whether we can enter a custom amount while signing an Ezsigntemplatesignature 'Creditcard' or not */
+    @Json(name = "bEzsigntemplatesignatureCreditcardcustomamount")
+    val bEzsigntemplatesignatureCreditcardcustomamount: kotlin.Boolean? = null,
 
     @Json(name = "eEzsigntemplatesignaturePositioning")
     val eEzsigntemplatesignaturePositioning: FieldEEzsigntemplatesignaturePositioning? = null,

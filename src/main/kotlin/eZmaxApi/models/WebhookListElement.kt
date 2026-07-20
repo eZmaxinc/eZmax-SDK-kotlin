@@ -26,6 +26,7 @@ package eZmaxApi.models
 import eZmaxApi.models.FieldEWebhookEzsignevent
 import eZmaxApi.models.FieldEWebhookManagementevent
 import eZmaxApi.models.FieldEWebhookModule
+import eZmaxApi.models.FieldEWebhookRealestateevent
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -43,6 +44,7 @@ import com.squareup.moshi.JsonClass
  * @param bWebhookIssigned Whether the requests will be signed or not
  * @param eWebhookEzsignevent 
  * @param eWebhookManagementevent 
+ * @param eWebhookRealestateevent 
  */
 
 
@@ -83,7 +85,10 @@ data class WebhookListElement (
     val eWebhookEzsignevent: FieldEWebhookEzsignevent? = null,
 
     @Json(name = "eWebhookManagementevent")
-    val eWebhookManagementevent: FieldEWebhookManagementevent? = null
+    val eWebhookManagementevent: FieldEWebhookManagementevent? = null,
+
+    @Json(name = "eWebhookRealestateevent")
+    val eWebhookRealestateevent: FieldEWebhookRealestateevent? = null
 
 ) {
 

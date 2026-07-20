@@ -16,6 +16,7 @@
 | **iAgentLongdistancecode** | **kotlin.Int** | The longdistancecode of the Agent |  |
 | **iAgentBannernumber** | **kotlin.Int** | The bannernumber of the Agent |  |
 | **sAgentRealestateassociationlicense** | **kotlin.String** | The realestateassociationlicense of the Agent |  |
+| **eAgentSchedule** | [**FieldEAgentSchedule**](FieldEAgentSchedule.md) |  |  |
 | **bAgentTranquillit** | **kotlin.Boolean** | Whether if it&#39;s an tranquillit |  |
 | **bAgentResidentiallicense** | **kotlin.Boolean** | Whether if it&#39;s an residentiallicense |  |
 | **bAgentCommerciallicense** | **kotlin.Boolean** | Whether if it&#39;s an commerciallicense |  |

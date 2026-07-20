@@ -23,6 +23,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.FieldEAgentSchedule
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -42,6 +43,7 @@ import com.squareup.moshi.JsonClass
  * @param iAgentLongdistancecode The longdistancecode of the Agent
  * @param iAgentBannernumber The bannernumber of the Agent
  * @param sAgentRealestateassociationlicense The realestateassociationlicense of the Agent
+ * @param eAgentSchedule 
  * @param bAgentTranquillit Whether if it's an tranquillit
  * @param bAgentResidentiallicense Whether if it's an residentiallicense
  * @param bAgentCommerciallicense Whether if it's an commerciallicense
@@ -125,6 +127,9 @@ data class AgentListElement (
     /* The realestateassociationlicense of the Agent */
     @Json(name = "sAgentRealestateassociationlicense")
     val sAgentRealestateassociationlicense: kotlin.String,
+
+    @Json(name = "eAgentSchedule")
+    val eAgentSchedule: FieldEAgentSchedule,
 
     /* Whether if it's an tranquillit */
     @Json(name = "bAgentTranquillit")

@@ -26,6 +26,7 @@ package eZmaxApi.models
 import eZmaxApi.models.CustomEWebhookEzsignevent
 import eZmaxApi.models.FieldEWebhookManagementevent
 import eZmaxApi.models.FieldEWebhookModule
+import eZmaxApi.models.FieldEWebhookRealestateevent
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -36,6 +37,7 @@ import com.squareup.moshi.JsonClass
  * @param eWebhookModule 
  * @param eWebhookEzsignevent 
  * @param eWebhookManagementevent 
+ * @param eWebhookRealestateevent 
  * @param fkiEzsignfolderID The unique ID of the Ezsignfolder
  * @param fkiEzsigndocumentID The unique ID of the Ezsigndocument
  * @param fkiEzsignsignerID The unique ID of the Ezsignsigner
@@ -54,6 +56,9 @@ data class WebhookSendWebhookV1Request (
 
     @Json(name = "eWebhookManagementevent")
     val eWebhookManagementevent: FieldEWebhookManagementevent? = null,
+
+    @Json(name = "eWebhookRealestateevent")
+    val eWebhookRealestateevent: FieldEWebhookRealestateevent? = null,
 
     /* The unique ID of the Ezsignfolder */
     @Json(name = "fkiEzsignfolderID")

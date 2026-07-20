@@ -28,25 +28,25 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * The module for the Webhook
+ * The realestateevent of the Webhook
  *
- * Values: Ezmaxpartner,Ezsign,Management,Realestate
+ * Values: InscriptionCreated,InscriptionModified,InscriptionnotauthenticatedCreated,InscriptionnotauthenticatedModified
  */
 
 @JsonClass(generateAdapter = false)
-enum class FieldEWebhookModule(val value: kotlin.String) {
+enum class FieldEWebhookRealestateevent(val value: kotlin.String) {
 
-    @Json(name = "Ezmaxpartner")
-    Ezmaxpartner("Ezmaxpartner"),
+    @Json(name = "InscriptionCreated")
+    InscriptionCreated("InscriptionCreated"),
 
-    @Json(name = "Ezsign")
-    Ezsign("Ezsign"),
+    @Json(name = "InscriptionModified")
+    InscriptionModified("InscriptionModified"),
 
-    @Json(name = "Management")
-    Management("Management"),
+    @Json(name = "InscriptionnotauthenticatedCreated")
+    InscriptionnotauthenticatedCreated("InscriptionnotauthenticatedCreated"),
 
-    @Json(name = "Realestate")
-    Realestate("Realestate");
+    @Json(name = "InscriptionnotauthenticatedModified")
+    InscriptionnotauthenticatedModified("InscriptionnotauthenticatedModified");
 
     /**
      * Override [toString()] to avoid using the enum variable name as the value, and instead use
@@ -61,12 +61,12 @@ enum class FieldEWebhookModule(val value: kotlin.String) {
         /**
          * Converts the provided [data] to a [String] on success, null otherwise.
          */
-        fun encode(data: kotlin.Any?): kotlin.String? = if (data is FieldEWebhookModule) "$data" else null
+        fun encode(data: kotlin.Any?): kotlin.String? = if (data is FieldEWebhookRealestateevent) "$data" else null
 
         /**
-         * Returns a valid [FieldEWebhookModule] for [data], null otherwise.
+         * Returns a valid [FieldEWebhookRealestateevent] for [data], null otherwise.
          */
-        fun decode(data: kotlin.Any?): FieldEWebhookModule? = data?.let {
+        fun decode(data: kotlin.Any?): FieldEWebhookRealestateevent? = data?.let {
           val normalizedData = "$it".lowercase()
           entries.firstOrNull { value ->
             it == value || normalizedData == "$value".lowercase()

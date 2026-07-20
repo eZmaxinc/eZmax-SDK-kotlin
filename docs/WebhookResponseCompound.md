@@ -18,6 +18,7 @@
 | **eWebhookEzmaxpartnerevent** | [**FieldEWebhookEzmaxpartnerevent**](FieldEWebhookEzmaxpartnerevent.md) |  |  [optional] |
 | **eWebhookEzsignevent** | [**FieldEWebhookEzsignevent**](FieldEWebhookEzsignevent.md) |  |  [optional] |
 | **eWebhookManagementevent** | [**FieldEWebhookManagementevent**](FieldEWebhookManagementevent.md) |  |  [optional] |
+| **eWebhookRealestateevent** | [**FieldEWebhookRealestateevent**](FieldEWebhookRealestateevent.md) |  |  [optional] |
 | **sWebhookApikey** | **kotlin.String** | The Apikey for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey. |  [optional] |
 | **sWebhookSecret** | **kotlin.String** | The Secret for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey. |  [optional] |
 | **sAuthenticationexternalDescription** | **kotlin.String** | The description of the Authenticationexternal |  [optional] |

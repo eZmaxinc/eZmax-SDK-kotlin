@@ -28,25 +28,19 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * The module for the Webhook
+ * Agent schedule type.
  *
- * Values: Ezmaxpartner,Ezsign,Management,Realestate
+ * Values: FullMinusTime,PartMinusTime
  */
 
 @JsonClass(generateAdapter = false)
-enum class FieldEWebhookModule(val value: kotlin.String) {
+enum class FieldEAgentSchedule(val value: kotlin.String) {
 
-    @Json(name = "Ezmaxpartner")
-    Ezmaxpartner("Ezmaxpartner"),
+    @Json(name = "Full-time")
+    FullMinusTime("Full-time"),
 
-    @Json(name = "Ezsign")
-    Ezsign("Ezsign"),
-
-    @Json(name = "Management")
-    Management("Management"),
-
-    @Json(name = "Realestate")
-    Realestate("Realestate");
+    @Json(name = "Part-time")
+    PartMinusTime("Part-time");
 
     /**
      * Override [toString()] to avoid using the enum variable name as the value, and instead use
@@ -61,12 +55,12 @@ enum class FieldEWebhookModule(val value: kotlin.String) {
         /**
          * Converts the provided [data] to a [String] on success, null otherwise.
          */
-        fun encode(data: kotlin.Any?): kotlin.String? = if (data is FieldEWebhookModule) "$data" else null
+        fun encode(data: kotlin.Any?): kotlin.String? = if (data is FieldEAgentSchedule) "$data" else null
 
         /**
-         * Returns a valid [FieldEWebhookModule] for [data], null otherwise.
+         * Returns a valid [FieldEAgentSchedule] for [data], null otherwise.
          */
-        fun decode(data: kotlin.Any?): FieldEWebhookModule? = data?.let {
+        fun decode(data: kotlin.Any?): FieldEAgentSchedule? = data?.let {
           val normalizedData = "$it".lowercase()
           entries.firstOrNull { value ->
             it == value || normalizedData == "$value".lowercase()

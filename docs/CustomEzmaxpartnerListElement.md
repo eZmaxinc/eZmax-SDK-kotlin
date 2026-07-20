@@ -11,6 +11,7 @@
 | **sEzmaxpartnerNameX** | **kotlin.String** | The name of the Ezmaxpartner in the language of the requester |  |
 | **sEzmaxpartnerPhoneE164X** | **kotlin.String** | A phone number in E.164 Format |  |
 | **sEzmaxpartnerUrlX** | **kotlin.String** | The url of the Ezmaxpartner website in the language of the requester |  |
+| **objEzmaxpartnerLogourl** | [**MultilingualEzmaxpartnerLogourl**](MultilingualEzmaxpartnerLogourl.md) |  |  |
 
 
 

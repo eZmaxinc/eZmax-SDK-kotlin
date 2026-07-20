@@ -418,7 +418,6 @@ docs/DiscussionmessageRequestCompound.md
 docs/DiscussionmessageRequestPatch.md
 docs/DiscussionmessageResponse.md
 docs/DiscussionmessageResponseCompound.md
-docs/DocumentationEzmaxpartnerApi.md
 docs/DocumentationSubscribeV1Request.md
 docs/DocumentationSubscribeV1Response.md
 docs/DomainAutocompleteElementResponse.md
@@ -467,6 +466,7 @@ docs/EnumHorizontalalignment.md
 docs/EnumReportdataType.md
 docs/EnumTextvalidation.md
 docs/EnumVerticalalignment.md
+docs/ExternalEzmaxpartnerApi.md
 docs/ExternalbrokerImportIntoEDMV1Request.md
 docs/ExternalbrokerImportIntoEDMV1Response.md
 docs/ExternalbrokerImportIntoEDMV1ResponseMPayload.md
@@ -1308,6 +1308,7 @@ docs/FieldEActivesessionOrigin.md
 docs/FieldEActivesessionRealestateinprogress.md
 docs/FieldEActivesessionUsertype.md
 docs/FieldEActivesessionWeekdaystart.md
+docs/FieldEAgentSchedule.md
 docs/FieldEAttachmentDocumenttype.md
 docs/FieldEAttachmentPrivacy.md
 docs/FieldEAttachmentType.md
@@ -1449,6 +1450,7 @@ docs/FieldEWebhookEzmaxpartnerevent.md
 docs/FieldEWebhookEzsignevent.md
 docs/FieldEWebhookManagementevent.md
 docs/FieldEWebhookModule.md
+docs/FieldEWebhookRealestateevent.md
 docs/FieldEtInscriptionnotauthenticatedMortgagetype.md
 docs/FieldPksEzmaxclientOs.md
 docs/FontAutocompleteElementResponse.md
@@ -1866,7 +1868,10 @@ docs/ScimServiceProviderConfig.md
 docs/ScimServiceProviderConfigApi.md
 docs/ScimServiceProviderConfigBulk.md
 docs/ScimServiceProviderConfigChangePassword.md
+docs/ScimServiceProviderConfigEtag.md
 docs/ScimServiceProviderConfigFilter.md
+docs/ScimServiceProviderConfigPatch.md
+docs/ScimServiceProviderConfigSort.md
 docs/ScimUser.md
 docs/ScimUserList.md
 docs/ScimUsersApi.md
@@ -2151,6 +2156,10 @@ docs/WebhookGetListV1ResponseMPayload.md
 docs/WebhookGetObjectV2Response.md
 docs/WebhookGetObjectV2ResponseMPayload.md
 docs/WebhookListElement.md
+docs/WebhookRealestateInscriptionCreated.md
+docs/WebhookRealestateInscriptionModified.md
+docs/WebhookRealestateInscriptionnotauthenticatedCreated.md
+docs/WebhookRealestateInscriptionnotauthenticatedModified.md
 docs/WebhookRegenerateApikeyV1Request.md
 docs/WebhookRegenerateApikeyV1Response.md
 docs/WebhookRegenerateApikeyV1ResponseMPayload.md
@@ -2183,7 +2192,7 @@ gradle/wrapper/gradle-wrapper.properties
 gradlew
 gradlew.bat
 settings.gradle
-src/main/kotlin/eZmaxApi/apis/DocumentationEzmaxpartnerApi.kt
+src/main/kotlin/eZmaxApi/apis/ExternalEzmaxpartnerApi.kt
 src/main/kotlin/eZmaxApi/apis/GlobalCustomerApi.kt
 src/main/kotlin/eZmaxApi/apis/GlobalEzmaxclientApi.kt
 src/main/kotlin/eZmaxApi/apis/GlobalEzmaxcustomerApi.kt
@@ -3646,6 +3655,7 @@ src/main/kotlin/eZmaxApi/models/FieldEActivesessionOrigin.kt
 src/main/kotlin/eZmaxApi/models/FieldEActivesessionRealestateinprogress.kt
 src/main/kotlin/eZmaxApi/models/FieldEActivesessionUsertype.kt
 src/main/kotlin/eZmaxApi/models/FieldEActivesessionWeekdaystart.kt
+src/main/kotlin/eZmaxApi/models/FieldEAgentSchedule.kt
 src/main/kotlin/eZmaxApi/models/FieldEAttachmentDocumenttype.kt
 src/main/kotlin/eZmaxApi/models/FieldEAttachmentPrivacy.kt
 src/main/kotlin/eZmaxApi/models/FieldEAttachmentType.kt
@@ -3787,6 +3797,7 @@ src/main/kotlin/eZmaxApi/models/FieldEWebhookEzmaxpartnerevent.kt
 src/main/kotlin/eZmaxApi/models/FieldEWebhookEzsignevent.kt
 src/main/kotlin/eZmaxApi/models/FieldEWebhookManagementevent.kt
 src/main/kotlin/eZmaxApi/models/FieldEWebhookModule.kt
+src/main/kotlin/eZmaxApi/models/FieldEWebhookRealestateevent.kt
 src/main/kotlin/eZmaxApi/models/FieldEtInscriptionnotauthenticatedMortgagetype.kt
 src/main/kotlin/eZmaxApi/models/FieldPksEzmaxclientOs.kt
 src/main/kotlin/eZmaxApi/models/FontAutocompleteElementResponse.kt
@@ -4066,7 +4077,10 @@ src/main/kotlin/eZmaxApi/models/ScimGroupMember.kt
 src/main/kotlin/eZmaxApi/models/ScimServiceProviderConfig.kt
 src/main/kotlin/eZmaxApi/models/ScimServiceProviderConfigBulk.kt
 src/main/kotlin/eZmaxApi/models/ScimServiceProviderConfigChangePassword.kt
+src/main/kotlin/eZmaxApi/models/ScimServiceProviderConfigEtag.kt
 src/main/kotlin/eZmaxApi/models/ScimServiceProviderConfigFilter.kt
+src/main/kotlin/eZmaxApi/models/ScimServiceProviderConfigPatch.kt
+src/main/kotlin/eZmaxApi/models/ScimServiceProviderConfigSort.kt
 src/main/kotlin/eZmaxApi/models/ScimUser.kt
 src/main/kotlin/eZmaxApi/models/ScimUserList.kt
 src/main/kotlin/eZmaxApi/models/SecretquestionAutocompleteElementResponse.kt
@@ -4350,6 +4364,10 @@ src/main/kotlin/eZmaxApi/models/WebhookGetListV1ResponseMPayload.kt
 src/main/kotlin/eZmaxApi/models/WebhookGetObjectV2Response.kt
 src/main/kotlin/eZmaxApi/models/WebhookGetObjectV2ResponseMPayload.kt
 src/main/kotlin/eZmaxApi/models/WebhookListElement.kt
+src/main/kotlin/eZmaxApi/models/WebhookRealestateInscriptionCreated.kt
+src/main/kotlin/eZmaxApi/models/WebhookRealestateInscriptionModified.kt
+src/main/kotlin/eZmaxApi/models/WebhookRealestateInscriptionnotauthenticatedCreated.kt
+src/main/kotlin/eZmaxApi/models/WebhookRealestateInscriptionnotauthenticatedModified.kt
 src/main/kotlin/eZmaxApi/models/WebhookRegenerateApikeyV1Request.kt
 src/main/kotlin/eZmaxApi/models/WebhookRegenerateApikeyV1Response.kt
 src/main/kotlin/eZmaxApi/models/WebhookRegenerateApikeyV1ResponseMPayload.kt

@@ -28,6 +28,7 @@ import eZmaxApi.models.FieldEWebhookEzmaxpartnerevent
 import eZmaxApi.models.FieldEWebhookEzsignevent
 import eZmaxApi.models.FieldEWebhookManagementevent
 import eZmaxApi.models.FieldEWebhookModule
+import eZmaxApi.models.FieldEWebhookRealestateevent
 import eZmaxApi.models.WebhookheaderResponseCompound
 
 import com.squareup.moshi.Json
@@ -52,6 +53,7 @@ import com.squareup.moshi.JsonClass
  * @param eWebhookEzmaxpartnerevent 
  * @param eWebhookEzsignevent 
  * @param eWebhookManagementevent 
+ * @param eWebhookRealestateevent 
  * @param sWebhookApikey The Apikey for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey.
  * @param sWebhookSecret The Secret for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey.
  * @param sAuthenticationexternalDescription The description of the Authenticationexternal
@@ -126,6 +128,9 @@ data class CustomWebhookResponse (
 
     @Json(name = "eWebhookManagementevent")
     val eWebhookManagementevent: FieldEWebhookManagementevent? = null,
+
+    @Json(name = "eWebhookRealestateevent")
+    val eWebhookRealestateevent: FieldEWebhookRealestateevent? = null,
 
     /* The Apikey for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey. */
     @Json(name = "sWebhookApikey")

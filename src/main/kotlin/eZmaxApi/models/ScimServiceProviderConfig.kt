@@ -26,7 +26,10 @@ package eZmaxApi.models
 import eZmaxApi.models.ScimAuthenticationScheme
 import eZmaxApi.models.ScimServiceProviderConfigBulk
 import eZmaxApi.models.ScimServiceProviderConfigChangePassword
+import eZmaxApi.models.ScimServiceProviderConfigEtag
 import eZmaxApi.models.ScimServiceProviderConfigFilter
+import eZmaxApi.models.ScimServiceProviderConfigPatch
+import eZmaxApi.models.ScimServiceProviderConfigSort
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -62,16 +65,16 @@ data class ScimServiceProviderConfig (
     val documentationUri: kotlin.String,
 
     @Json(name = "etag")
-    val etag: ScimServiceProviderConfigChangePassword,
+    val etag: ScimServiceProviderConfigEtag,
 
     @Json(name = "filter")
     val filter: ScimServiceProviderConfigFilter,
 
     @Json(name = "patch")
-    val patch: ScimServiceProviderConfigChangePassword,
+    val patch: ScimServiceProviderConfigPatch,
 
     @Json(name = "sort")
-    val sort: ScimServiceProviderConfigChangePassword
+    val sort: ScimServiceProviderConfigSort
 
 ) {
 

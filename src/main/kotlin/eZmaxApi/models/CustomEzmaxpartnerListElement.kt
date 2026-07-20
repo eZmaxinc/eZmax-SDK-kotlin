@@ -23,6 +23,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.MultilingualEzmaxpartnerLogourl
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -37,6 +38,7 @@ import com.squareup.moshi.JsonClass
  * @param sEzmaxpartnerNameX The name of the Ezmaxpartner in the language of the requester
  * @param sEzmaxpartnerPhoneE164X A phone number in E.164 Format
  * @param sEzmaxpartnerUrlX The url of the Ezmaxpartner website in the language of the requester
+ * @param objEzmaxpartnerLogourl 
  */
 
 
@@ -68,7 +70,10 @@ data class CustomEzmaxpartnerListElement (
 
     /* The url of the Ezmaxpartner website in the language of the requester */
     @Json(name = "sEzmaxpartnerUrlX")
-    val sEzmaxpartnerUrlX: kotlin.String
+    val sEzmaxpartnerUrlX: kotlin.String,
+
+    @Json(name = "objEzmaxpartnerLogourl")
+    val objEzmaxpartnerLogourl: MultilingualEzmaxpartnerLogourl
 
 ) {
 
