@@ -418,8 +418,6 @@ docs/DiscussionmessageRequestCompound.md
 docs/DiscussionmessageRequestPatch.md
 docs/DiscussionmessageResponse.md
 docs/DiscussionmessageResponseCompound.md
-docs/DocumentationSubscribeV1Request.md
-docs/DocumentationSubscribeV1Response.md
 docs/DomainAutocompleteElementResponse.md
 docs/DomainCreateObjectV1Request.md
 docs/DomainCreateObjectV1Response.md
@@ -540,6 +538,8 @@ docs/EzmaxpartnerGetObjectV2Response.md
 docs/EzmaxpartnerGetObjectV2ResponseMPayload.md
 docs/EzmaxpartnerResponse.md
 docs/EzmaxpartnerResponseCompound.md
+docs/EzmaxpartnerSubscribeV1Request.md
+docs/EzmaxpartnerSubscribeV1Response.md
 docs/EzmaxproductAutocompleteElementResponse.md
 docs/EzmaxproductGetAutocompleteV2Response.md
 docs/EzmaxproductGetAutocompleteV2ResponseMPayload.md
@@ -2766,8 +2766,6 @@ src/main/kotlin/eZmaxApi/models/DiscussionmessageRequestCompound.kt
 src/main/kotlin/eZmaxApi/models/DiscussionmessageRequestPatch.kt
 src/main/kotlin/eZmaxApi/models/DiscussionmessageResponse.kt
 src/main/kotlin/eZmaxApi/models/DiscussionmessageResponseCompound.kt
-src/main/kotlin/eZmaxApi/models/DocumentationSubscribeV1Request.kt
-src/main/kotlin/eZmaxApi/models/DocumentationSubscribeV1Response.kt
 src/main/kotlin/eZmaxApi/models/DomainAutocompleteElementResponse.kt
 src/main/kotlin/eZmaxApi/models/DomainCreateObjectV1Request.kt
 src/main/kotlin/eZmaxApi/models/DomainCreateObjectV1Response.kt
@@ -2887,6 +2885,8 @@ src/main/kotlin/eZmaxApi/models/EzmaxpartnerGetObjectV2Response.kt
 src/main/kotlin/eZmaxApi/models/EzmaxpartnerGetObjectV2ResponseMPayload.kt
 src/main/kotlin/eZmaxApi/models/EzmaxpartnerResponse.kt
 src/main/kotlin/eZmaxApi/models/EzmaxpartnerResponseCompound.kt
+src/main/kotlin/eZmaxApi/models/EzmaxpartnerSubscribeV1Request.kt
+src/main/kotlin/eZmaxApi/models/EzmaxpartnerSubscribeV1Response.kt
 src/main/kotlin/eZmaxApi/models/EzmaxproductAutocompleteElementResponse.kt
 src/main/kotlin/eZmaxApi/models/EzmaxproductGetAutocompleteV2Response.kt
 src/main/kotlin/eZmaxApi/models/EzmaxproductGetAutocompleteV2ResponseMPayload.kt

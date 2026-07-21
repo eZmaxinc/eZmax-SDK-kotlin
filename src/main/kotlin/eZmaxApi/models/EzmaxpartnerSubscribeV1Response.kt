@@ -34,7 +34,7 @@ import com.squareup.moshi.JsonClass
  */
 
 
-data class DocumentationSubscribeV1Response (
+data class EzmaxpartnerSubscribeV1Response (
 
     /*  */
     @Json(name = "sExternalID")

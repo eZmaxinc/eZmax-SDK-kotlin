@@ -59,7 +59,7 @@ import com.squareup.moshi.JsonClass
  */
 
 
-data class DocumentationSubscribeV1Request (
+data class EzmaxpartnerSubscribeV1Request (
 
     /* The Ezmaxcustomer code */
     @Json(name = "pksEzmaxcustomerCode")

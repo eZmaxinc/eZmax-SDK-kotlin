@@ -1,5 +1,5 @@
 
-# DocumentationSubscribeV1Response
+# EzmaxpartnerSubscribeV1Response
 
 ## Properties
 | Name | Type | Description | Notes |

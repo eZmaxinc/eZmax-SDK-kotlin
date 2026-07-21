@@ -27,8 +27,8 @@ import java.io.IOException
 import okhttp3.Call
 import okhttp3.HttpUrl
 
-import eZmaxApi.models.DocumentationSubscribeV1Request
-import eZmaxApi.models.DocumentationSubscribeV1Response
+import eZmaxApi.models.EzmaxpartnerSubscribeV1Request
+import eZmaxApi.models.EzmaxpartnerSubscribeV1Response
 
 import com.squareup.moshi.Json
 
@@ -58,8 +58,8 @@ open class ExternalEzmaxpartnerApi(basePath: kotlin.String = defaultBasePath, cl
      * POST /1/external/ezmaxpartner/subscribe
      * Subscribe to an Ezmaxparnerproductstage
      * Subscribe to an Ezmaxparnerproductstage
-     * @param documentationSubscribeV1Request 
-     * @return DocumentationSubscribeV1Response
+     * @param ezmaxpartnerSubscribeV1Request 
+     * @return EzmaxpartnerSubscribeV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -68,11 +68,11 @@ open class ExternalEzmaxpartnerApi(basePath: kotlin.String = defaultBasePath, cl
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun externalpartnerSubscribeV1(documentationSubscribeV1Request: DocumentationSubscribeV1Request) : DocumentationSubscribeV1Response {
-        val localVarResponse = externalpartnerSubscribeV1WithHttpInfo(documentationSubscribeV1Request = documentationSubscribeV1Request)
+    fun ezmaxpartnerSubscribeV1(ezmaxpartnerSubscribeV1Request: EzmaxpartnerSubscribeV1Request) : EzmaxpartnerSubscribeV1Response {
+        val localVarResponse = ezmaxpartnerSubscribeV1WithHttpInfo(ezmaxpartnerSubscribeV1Request = ezmaxpartnerSubscribeV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as DocumentationSubscribeV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzmaxpartnerSubscribeV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -90,29 +90,29 @@ open class ExternalEzmaxpartnerApi(basePath: kotlin.String = defaultBasePath, cl
      * POST /1/external/ezmaxpartner/subscribe
      * Subscribe to an Ezmaxparnerproductstage
      * Subscribe to an Ezmaxparnerproductstage
-     * @param documentationSubscribeV1Request 
-     * @return ApiResponse<DocumentationSubscribeV1Response?>
+     * @param ezmaxpartnerSubscribeV1Request 
+     * @return ApiResponse<EzmaxpartnerSubscribeV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun externalpartnerSubscribeV1WithHttpInfo(documentationSubscribeV1Request: DocumentationSubscribeV1Request) : ApiResponse<DocumentationSubscribeV1Response?> {
-        val localVariableConfig = externalpartnerSubscribeV1RequestConfig(documentationSubscribeV1Request = documentationSubscribeV1Request)
+    fun ezmaxpartnerSubscribeV1WithHttpInfo(ezmaxpartnerSubscribeV1Request: EzmaxpartnerSubscribeV1Request) : ApiResponse<EzmaxpartnerSubscribeV1Response?> {
+        val localVariableConfig = ezmaxpartnerSubscribeV1RequestConfig(ezmaxpartnerSubscribeV1Request = ezmaxpartnerSubscribeV1Request)
 
-        return request<DocumentationSubscribeV1Request, DocumentationSubscribeV1Response>(
+        return request<EzmaxpartnerSubscribeV1Request, EzmaxpartnerSubscribeV1Response>(
             localVariableConfig
         )
     }
 
     /**
-     * To obtain the request config of the operation externalpartnerSubscribeV1
+     * To obtain the request config of the operation ezmaxpartnerSubscribeV1
      *
-     * @param documentationSubscribeV1Request 
+     * @param ezmaxpartnerSubscribeV1Request 
      * @return RequestConfig
      */
-    fun externalpartnerSubscribeV1RequestConfig(documentationSubscribeV1Request: DocumentationSubscribeV1Request) : RequestConfig<DocumentationSubscribeV1Request> {
-        val localVariableBody = documentationSubscribeV1Request
+    fun ezmaxpartnerSubscribeV1RequestConfig(ezmaxpartnerSubscribeV1Request: EzmaxpartnerSubscribeV1Request) : RequestConfig<EzmaxpartnerSubscribeV1Request> {
+        val localVariableBody = ezmaxpartnerSubscribeV1Request
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Content-Type"] = "application/json"

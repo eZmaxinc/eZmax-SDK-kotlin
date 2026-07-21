@@ -46,7 +46,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 | Class | Method | HTTP request | Description |
 | ------------ | ------------- | ------------- | ------------- |
-| *ExternalEzmaxpartnerApi* | [**externalpartnerSubscribeV1**](docs/ExternalEzmaxpartnerApi.md#externalpartnersubscribev1) | **POST** /1/external/ezmaxpartner/subscribe | Subscribe to an Ezmaxparnerproductstage |
+| *ExternalEzmaxpartnerApi* | [**ezmaxpartnerSubscribeV1**](docs/ExternalEzmaxpartnerApi.md#ezmaxpartnersubscribev1) | **POST** /1/external/ezmaxpartner/subscribe | Subscribe to an Ezmaxparnerproductstage |
 | *GlobalCustomerApi* | [**globalCustomerGetEndpointV1**](docs/GlobalCustomerApi.md#globalcustomergetendpointv1) | **GET** /1/customer/{pksCustomerCode}/endpoint | Get customer endpoint |
 | *GlobalEzmaxclientApi* | [**globalEzmaxclientVersionV1**](docs/GlobalEzmaxclientApi.md#globalezmaxclientversionv1) | **GET** /1/ezmaxclient/{pksEzmaxclientOs}/version | Retrieve the latest version of the Ezmaxclient |
 | *GlobalEzmaxcustomerApi* | [**globalEzmaxcustomerGetConfigurationV1**](docs/GlobalEzmaxcustomerApi.md#globalezmaxcustomergetconfigurationv1) | **GET** /1/ezmaxcustomer/{pksEzmaxcustomerCode}/getConfiguration | Get ezmaxcustomer configuration |
@@ -1038,8 +1038,6 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.DiscussionmessageRequestPatch](docs/DiscussionmessageRequestPatch.md)
  - [eZmaxApi.models.DiscussionmessageResponse](docs/DiscussionmessageResponse.md)
  - [eZmaxApi.models.DiscussionmessageResponseCompound](docs/DiscussionmessageResponseCompound.md)
- - [eZmaxApi.models.DocumentationSubscribeV1Request](docs/DocumentationSubscribeV1Request.md)
- - [eZmaxApi.models.DocumentationSubscribeV1Response](docs/DocumentationSubscribeV1Response.md)
  - [eZmaxApi.models.DomainAutocompleteElementResponse](docs/DomainAutocompleteElementResponse.md)
  - [eZmaxApi.models.DomainCreateObjectV1Request](docs/DomainCreateObjectV1Request.md)
  - [eZmaxApi.models.DomainCreateObjectV1Response](docs/DomainCreateObjectV1Response.md)
@@ -1159,6 +1157,8 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.EzmaxpartnerGetObjectV2ResponseMPayload](docs/EzmaxpartnerGetObjectV2ResponseMPayload.md)
  - [eZmaxApi.models.EzmaxpartnerResponse](docs/EzmaxpartnerResponse.md)
  - [eZmaxApi.models.EzmaxpartnerResponseCompound](docs/EzmaxpartnerResponseCompound.md)
+ - [eZmaxApi.models.EzmaxpartnerSubscribeV1Request](docs/EzmaxpartnerSubscribeV1Request.md)
+ - [eZmaxApi.models.EzmaxpartnerSubscribeV1Response](docs/EzmaxpartnerSubscribeV1Response.md)
  - [eZmaxApi.models.EzmaxproductAutocompleteElementResponse](docs/EzmaxproductAutocompleteElementResponse.md)
  - [eZmaxApi.models.EzmaxproductGetAutocompleteV2Response](docs/EzmaxproductGetAutocompleteV2Response.md)
  - [eZmaxApi.models.EzmaxproductGetAutocompleteV2ResponseMPayload](docs/EzmaxproductGetAutocompleteV2ResponseMPayload.md)
