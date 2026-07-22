@@ -1494,6 +1494,7 @@ docs/InscriptionGetCommunicationrecipientsV1ResponseMPayload.md
 docs/InscriptionGetCommunicationsendersV1Response.md
 docs/InscriptionGetCommunicationsendersV1ResponseMPayload.md
 docs/InscriptionGetInscriptionnotauthenticatedsV1Response.md
+docs/InscriptionGetInscriptionnotauthenticatedsV1ResponseMPayload.md
 docs/InscriptionGetListV1Response.md
 docs/InscriptionGetListV1ResponseMPayload.md
 docs/InscriptionGetObjectV2Response.md
@@ -3838,6 +3839,7 @@ src/main/kotlin/eZmaxApi/models/InscriptionGetCommunicationrecipientsV1ResponseM
 src/main/kotlin/eZmaxApi/models/InscriptionGetCommunicationsendersV1Response.kt
 src/main/kotlin/eZmaxApi/models/InscriptionGetCommunicationsendersV1ResponseMPayload.kt
 src/main/kotlin/eZmaxApi/models/InscriptionGetInscriptionnotauthenticatedsV1Response.kt
+src/main/kotlin/eZmaxApi/models/InscriptionGetInscriptionnotauthenticatedsV1ResponseMPayload.kt
 src/main/kotlin/eZmaxApi/models/InscriptionGetListV1Response.kt
 src/main/kotlin/eZmaxApi/models/InscriptionGetListV1ResponseMPayload.kt
 src/main/kotlin/eZmaxApi/models/InscriptionGetObjectV2Response.kt

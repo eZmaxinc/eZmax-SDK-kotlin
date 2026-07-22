@@ -433,7 +433,7 @@ open class ObjectInscriptionApi(basePath: kotlin.String = defaultBasePath, clien
 
     /**
      * GET /1/object/inscription/{pkiInscriptionID}/getInscriptionnotauthenticateds
-     * Retrieve Inscriptionnotauthenticated list
+     * Retrieve Inscription&#39;s Inscriptionnotauthenticated
      * 
      * @param pkiInscriptionID 
      * @return InscriptionGetInscriptionnotauthenticatedsV1Response
@@ -465,7 +465,7 @@ open class ObjectInscriptionApi(basePath: kotlin.String = defaultBasePath, clien
 
     /**
      * GET /1/object/inscription/{pkiInscriptionID}/getInscriptionnotauthenticateds
-     * Retrieve Inscriptionnotauthenticated list
+     * Retrieve Inscription&#39;s Inscriptionnotauthenticated
      * 
      * @param pkiInscriptionID 
      * @return ApiResponse<InscriptionGetInscriptionnotauthenticatedsV1Response?>

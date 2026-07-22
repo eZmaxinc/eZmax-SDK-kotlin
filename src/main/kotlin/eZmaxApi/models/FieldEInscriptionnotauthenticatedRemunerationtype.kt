@@ -28,7 +28,7 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * The remunerationtype of the Inscriptionnotauthenticated
+ * The type of remuneration of the Inscriptionnotauthenticated
  *
  * Values: Percentage,PercentageTaxesIncluded,Dollars,DollarsTaxesIncluded
  */

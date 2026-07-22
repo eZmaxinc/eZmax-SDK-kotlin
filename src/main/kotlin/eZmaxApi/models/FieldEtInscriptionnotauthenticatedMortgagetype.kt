@@ -28,7 +28,7 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * The mortgagetype of the Inscriptionnotauthenticated
+ * The type of mortgage of the Inscriptionnotauthenticated
  *
  * Values: ,Cash,Assumption,WithoutAgent,Institution,Agent,Broker
  */

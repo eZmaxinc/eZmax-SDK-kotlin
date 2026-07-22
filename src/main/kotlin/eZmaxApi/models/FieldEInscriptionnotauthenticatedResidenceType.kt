@@ -28,7 +28,7 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * The residencetype of the Inscriptionnotauthenticated
+ * The residence type of the Inscriptionnotauthenticated
  *
  * Values: Principal,Secondary
  */

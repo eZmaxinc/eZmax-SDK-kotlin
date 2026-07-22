@@ -41,28 +41,28 @@ import com.squareup.moshi.JsonClass
  * @param sInscriptioncategoryNameX The name of the Inscriptioncategory in the language of the requester
  * @param eInscriptionStep 
  * @param eInscriptionType 
- * @param sInscriptionCivicend The civicend of the Inscription
+ * @param sInscriptionCivicend The address civic end of the Inscription
  * @param dInscriptionSaleprice The saleprice of the Inscription
- * @param dInscriptionRentprice The rentprice of the Inscription
+ * @param dInscriptionRentprice The rent price of the Inscription
  * @param bInscriptionIsactive Whether the inscription is active or not
  * @param bInscriptionArchived Whether the inscription is archived or not
- * @param sInscriptionnotauthenticatedOffertopurchasenumber The Offer to purchase number
- * @param iInscriptionUnit The unit of the Inscription
+ * @param sInscriptionnotauthenticatedOffertopurchasenumber The offer to purchase number of the Inscriptionnotauthenticated
+ * @param iInscriptionUnit The number of unit for the Inscription
  * @param pkiInscriptionnotauthenticatedID The unique ID of the Inscriptionnotauthenticated.
  * @param fkiBuyercontractID The unique ID of the Buyercontract
  * @param sBuyercontractContract The number of the Buyercontract
  * @param sInscriptionMLS The mls of the Inscription
  * @param sInscriptionContract The sale contract number
  * @param dtInscriptionDate The date of the Inscription
- * @param dtInscriptionExpirationdate The expirationdate of the Inscription
- * @param dtInscriptionNotarydate The notarydate of the Inscription
+ * @param dtInscriptionExpirationdate The expiration date of the Inscription
+ * @param dtInscriptionNotarydate The notary date of the Inscription
  * @param bInscriptionInspection Whether the inscription can be acces by an inspector
- * @param dtInscriptionnotauthenticatedNotaryscheduledate The notaryscheduledate of the Inscriptionnotauthenticated
- * @param dtInscriptionnotauthenticatedTransactiondate The transactiondate of the Inscriptionnotauthenticated
- * @param dtInscriptionnotauthenticatedTransactiondateReal The transactiondatereal of the Inscriptionnotauthenticated
+ * @param dtInscriptionnotauthenticatedNotaryscheduledate The notary schedule date of the Inscriptionnotauthenticated
+ * @param dtInscriptionnotauthenticatedTransactiondate The transaction date of the Inscriptionnotauthenticated
+ * @param dtInscriptionnotauthenticatedTransactiondateReal The real transactiondate of the Inscriptionnotauthenticated
  * @param bInscriptionnotauthenticatedConditional Whether the inscriptionnotauthenticated is conditional
  * @param bInscriptionnotauthenticatedIsactive Whether the inscriptionnotauthenticated is active or not
- * @param bInscriptionnotauthenticatedDraft Whether the inscriptionnotauthenticated is a draft or not
+ * @param bInscriptionnotauthenticatedDraft Whether the Inscriptionnotauthenticated is a draft or not
  * @param sAddressCivic The Civic number.
  * @param sAddressStreet The Street Name
  * @param sAddressSuite The Suite or appartment number
@@ -111,7 +111,7 @@ data class InscriptionnotauthenticatedListElement (
     @Json(name = "eInscriptionType")
     val eInscriptionType: FieldEInscriptionType,
 
-    /* The civicend of the Inscription */
+    /* The address civic end of the Inscription */
     @Json(name = "sInscriptionCivicend")
     val sInscriptionCivicend: kotlin.String,
 
@@ -119,7 +119,7 @@ data class InscriptionnotauthenticatedListElement (
     @Json(name = "dInscriptionSaleprice")
     val dInscriptionSaleprice: kotlin.String,
 
-    /* The rentprice of the Inscription */
+    /* The rent price of the Inscription */
     @Json(name = "dInscriptionRentprice")
     val dInscriptionRentprice: kotlin.String,
 
@@ -131,11 +131,11 @@ data class InscriptionnotauthenticatedListElement (
     @Json(name = "bInscriptionArchived")
     val bInscriptionArchived: kotlin.Boolean,
 
-    /* The Offer to purchase number */
+    /* The offer to purchase number of the Inscriptionnotauthenticated */
     @Json(name = "sInscriptionnotauthenticatedOffertopurchasenumber")
     val sInscriptionnotauthenticatedOffertopurchasenumber: kotlin.String,
 
-    /* The unit of the Inscription */
+    /* The number of unit for the Inscription */
     @Json(name = "iInscriptionUnit")
     val iInscriptionUnit: kotlin.Int,
 
@@ -163,11 +163,11 @@ data class InscriptionnotauthenticatedListElement (
     @Json(name = "dtInscriptionDate")
     val dtInscriptionDate: kotlin.String? = null,
 
-    /* The expirationdate of the Inscription */
+    /* The expiration date of the Inscription */
     @Json(name = "dtInscriptionExpirationdate")
     val dtInscriptionExpirationdate: kotlin.String? = null,
 
-    /* The notarydate of the Inscription */
+    /* The notary date of the Inscription */
     @Json(name = "dtInscriptionNotarydate")
     val dtInscriptionNotarydate: kotlin.String? = null,
 
@@ -175,15 +175,15 @@ data class InscriptionnotauthenticatedListElement (
     @Json(name = "bInscriptionInspection")
     val bInscriptionInspection: kotlin.Boolean? = null,
 
-    /* The notaryscheduledate of the Inscriptionnotauthenticated */
+    /* The notary schedule date of the Inscriptionnotauthenticated */
     @Json(name = "dtInscriptionnotauthenticatedNotaryscheduledate")
     val dtInscriptionnotauthenticatedNotaryscheduledate: kotlin.String? = null,
 
-    /* The transactiondate of the Inscriptionnotauthenticated */
+    /* The transaction date of the Inscriptionnotauthenticated */
     @Json(name = "dtInscriptionnotauthenticatedTransactiondate")
     val dtInscriptionnotauthenticatedTransactiondate: kotlin.String? = null,
 
-    /* The transactiondatereal of the Inscriptionnotauthenticated */
+    /* The real transactiondate of the Inscriptionnotauthenticated */
     @Json(name = "dtInscriptionnotauthenticatedTransactiondateReal")
     val dtInscriptionnotauthenticatedTransactiondateReal: kotlin.String? = null,
 
@@ -195,7 +195,7 @@ data class InscriptionnotauthenticatedListElement (
     @Json(name = "bInscriptionnotauthenticatedIsactive")
     val bInscriptionnotauthenticatedIsactive: kotlin.Boolean? = null,
 
-    /* Whether the inscriptionnotauthenticated is a draft or not */
+    /* Whether the Inscriptionnotauthenticated is a draft or not */
     @Json(name = "bInscriptionnotauthenticatedDraft")
     val bInscriptionnotauthenticatedDraft: kotlin.Boolean? = null,
 

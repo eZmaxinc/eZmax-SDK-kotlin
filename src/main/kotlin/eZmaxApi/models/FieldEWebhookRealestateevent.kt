@@ -28,7 +28,7 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * The realestateevent of the Webhook
+ * The Realestateevent of the Webhook
  *
  * Values: InscriptionCreated,InscriptionModified,InscriptionnotauthenticatedCreated,InscriptionnotauthenticatedModified
  */

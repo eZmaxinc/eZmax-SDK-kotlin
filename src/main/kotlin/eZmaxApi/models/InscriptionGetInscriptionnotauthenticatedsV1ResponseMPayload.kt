@@ -23,9 +23,7 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.CommonResponseObjDebug
-import eZmaxApi.models.CommonResponseObjDebugPayload
-import eZmaxApi.models.InscriptionGetInscriptionnotauthenticatedsV1ResponseMPayload
+import eZmaxApi.models.InscriptionnotauthenticatedResponseCompound
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -33,22 +31,14 @@ import com.squareup.moshi.JsonClass
 /**
  * Response for GET /1/object/inscription/{pkiInscriptionID}/getInscriptionnotauthenticateds
  *
- * @param objDebugPayload 
- * @param mPayload 
- * @param objDebug 
+ * @param aObjInscriptionnotauthenticated 
  */
 
 
-data class InscriptionGetInscriptionnotauthenticatedsV1Response (
+data class InscriptionGetInscriptionnotauthenticatedsV1ResponseMPayload (
 
-    @Json(name = "objDebugPayload")
-    val objDebugPayload: CommonResponseObjDebugPayload,
-
-    @Json(name = "mPayload")
-    val mPayload: InscriptionGetInscriptionnotauthenticatedsV1ResponseMPayload,
-
-    @Json(name = "objDebug")
-    val objDebug: CommonResponseObjDebug? = null
+    @Json(name = "a_objInscriptionnotauthenticated")
+    val aObjInscriptionnotauthenticated: kotlin.collections.List<InscriptionnotauthenticatedResponseCompound>
 
 ) {
 

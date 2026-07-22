@@ -32,7 +32,7 @@ import com.squareup.moshi.JsonClass
  * Request for POST /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/fillInscriptionnotauthenticatedcondition
  *
  * @param aObjInscriptionnotauthenticatedcondition 
- * @param dtInscriptionnotauthenticatedTransactiondateReal The transactiondatereal of the Inscriptionnotauthenticated
+ * @param dtInscriptionnotauthenticatedTransactiondateReal The real transactiondate of the Inscriptionnotauthenticated
  */
 
 
@@ -41,7 +41,7 @@ data class InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1
     @Json(name = "a_objInscriptionnotauthenticatedcondition")
     val aObjInscriptionnotauthenticatedcondition: kotlin.collections.List<CustomInscriptionnotauthenticatedconditionRequest>,
 
-    /* The transactiondatereal of the Inscriptionnotauthenticated */
+    /* The real transactiondate of the Inscriptionnotauthenticated */
     @Json(name = "dtInscriptionnotauthenticatedTransactiondateReal")
     val dtInscriptionnotauthenticatedTransactiondateReal: kotlin.String? = null
 

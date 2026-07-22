@@ -13,13 +13,13 @@
 | **sInscriptioncategoryNameX** | **kotlin.String** | The name of the Inscriptioncategory in the language of the requester |  |
 | **eInscriptionStep** | [**FieldEInscriptionStep**](FieldEInscriptionStep.md) |  |  |
 | **eInscriptionType** | [**FieldEInscriptionType**](FieldEInscriptionType.md) |  |  |
-| **sInscriptionCivicend** | **kotlin.String** | The civicend of the Inscription |  |
+| **sInscriptionCivicend** | **kotlin.String** | The address civic end of the Inscription |  |
 | **dInscriptionSaleprice** | **kotlin.String** | The saleprice of the Inscription |  |
-| **dInscriptionRentprice** | **kotlin.String** | The rentprice of the Inscription |  |
+| **dInscriptionRentprice** | **kotlin.String** | The rent price of the Inscription |  |
 | **bInscriptionIsactive** | **kotlin.Boolean** | Whether the inscription is active or not |  |
 | **bInscriptionArchived** | **kotlin.Boolean** | Whether the inscription is archived or not |  |
 | **iInscriptionnotauthenticatedCanceled** | **kotlin.Int** | The numbre of inscriptionnotauthenticated was canceled in this Inscription |  |
-| **iInscriptionUnit** | **kotlin.Int** | The unit of the Inscription |  |
+| **iInscriptionUnit** | **kotlin.Int** | The number of unit for the Inscription |  |
 | **bAllowedCopyintoinscriptionedm** | **kotlin.Boolean** | Whether we are allowed to copy into the Inscription EDM |  |
 | **pkiInscriptionnotauthenticatedID** | **kotlin.Int** | The unique ID of the Inscriptionnotauthenticated. |  [optional] |
 | **fkiBuyercontractID** | **kotlin.Int** | The unique ID of the Buyercontract |  [optional] |
@@ -27,12 +27,12 @@
 | **sInscriptionMLS** | **kotlin.String** | The mls of the Inscription |  [optional] |
 | **sInscriptionContract** | **kotlin.String** | The sale contract number |  [optional] |
 | **dtInscriptionDate** | **kotlin.String** | The date of the Inscription |  [optional] |
-| **dtInscriptionExpirationdate** | **kotlin.String** | The expirationdate of the Inscription |  [optional] |
-| **dtInscriptionNotarydate** | **kotlin.String** | The notarydate of the Inscription |  [optional] |
+| **dtInscriptionExpirationdate** | **kotlin.String** | The expiration date of the Inscription |  [optional] |
+| **dtInscriptionNotarydate** | **kotlin.String** | The notary date of the Inscription |  [optional] |
 | **bInscriptionInspection** | **kotlin.Boolean** | Whether the inscription can be acces by an inspector |  [optional] |
-| **dtInscriptionnotauthenticatedNotaryscheduledate** | **kotlin.String** | The notaryscheduledate of the Inscriptionnotauthenticated |  [optional] |
-| **dtInscriptionnotauthenticatedTransactiondate** | **kotlin.String** | The transactiondate of the Inscriptionnotauthenticated |  [optional] |
-| **dtInscriptionnotauthenticatedTransactiondateReal** | **kotlin.String** | The transactiondatereal of the Inscriptionnotauthenticated |  [optional] |
+| **dtInscriptionnotauthenticatedNotaryscheduledate** | **kotlin.String** | The notary schedule date of the Inscriptionnotauthenticated |  [optional] |
+| **dtInscriptionnotauthenticatedTransactiondate** | **kotlin.String** | The transaction date of the Inscriptionnotauthenticated |  [optional] |
+| **dtInscriptionnotauthenticatedTransactiondateReal** | **kotlin.String** | The real transactiondate of the Inscriptionnotauthenticated |  [optional] |
 | **bInscriptionnotauthenticatedConditional** | **kotlin.Boolean** | Whether the inscriptionnotauthenticated is conditional |  [optional] |
 | **bInscriptionnotauthenticatedIsactive** | **kotlin.Boolean** | Whether the inscriptionnotauthenticated is active or not |  [optional] |
 | **sAddressCivic** | **kotlin.String** | The Civic number. |  [optional] |

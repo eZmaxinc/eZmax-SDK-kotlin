@@ -35,7 +35,7 @@ import com.squareup.moshi.JsonClass
  *
  * @param objWebhook 
  * @param aObjAttempt An array containing details of previous attempts that were made to deliver the message. The array is empty if it's the first attempt.
- * @param objEzmaxpartnerproduct 
+ * @param objInscription 
  */
 
 
@@ -48,8 +48,8 @@ data class WebhookRealestateInscriptionCreated (
     @Json(name = "a_objAttempt")
     val aObjAttempt: kotlin.collections.List<AttemptResponseCompound>,
 
-    @Json(name = "objEzmaxpartnerproduct")
-    val objEzmaxpartnerproduct: InscriptionResponse
+    @Json(name = "objInscription")
+    val objInscription: InscriptionResponse
 
 ) {
 

@@ -23,6 +23,8 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.AddressResponseCompound
+import eZmaxApi.models.CommonAudit
 import eZmaxApi.models.FieldEInscriptionRemunerationinscriptorsellertype
 import eZmaxApi.models.FieldEInscriptionRemunerationreferencetype
 import eZmaxApi.models.FieldEInscriptionRemunerationtotaltype
@@ -38,8 +40,6 @@ import com.squareup.moshi.JsonClass
  * A Inscription Object
  *
  * @param pkiInscriptionID The unique ID of the Inscription.
- * @param fkiCompanyID The unique ID of the Company
- * @param fkiDepartmentID The unique ID of the Department
  * @param fkiRealestateboardID The unique ID of the Realestateboard
  * @param fkiAddressID The unique ID of the Address
  * @param fkiInscriptionbuildingtypeID The unique ID of the Inscriptionbuildingtype
@@ -47,51 +47,52 @@ import com.squareup.moshi.JsonClass
  * @param fkiInscriptioncategoryID The unique ID of the Inscriptioncategory
  * @param eInscriptionStep 
  * @param eInscriptionResidenceType 
- * @param sInscriptionCivicend The civicend of the Inscription
- * @param sInscriptionMLS The mls of the Inscription
+ * @param sInscriptionCivicend The address civic end of the Inscription
  * @param sInscriptionContract The sale contract number
- * @param iInscriptionSellerdeclaration The sellerdeclaration of the Inscription
+ * @param iInscriptionSellerdeclaration The seller declaration number of the Inscription
  * @param eInscriptionType 
- * @param dInscriptionInitialsaleprice The initialsaleprice of the Inscription
+ * @param dInscriptionInitialsaleprice The initial sale price of the Inscription
  * @param dInscriptionSaleprice The saleprice of the Inscription
- * @param dInscriptionRentprice The rentprice of the Inscription
+ * @param dInscriptionRentprice The rent price of the Inscription
  * @param eInscriptionRemunerationtype 
  * @param eInscriptionRemunerationinscriptorsellertype 
  * @param eInscriptionRemunerationreferencetype 
  * @param eInscriptionRemunerationtotaltype 
- * @param dInscriptionRemuneration The remuneration of the Inscription
- * @param dInscriptionRemunerationinscriptorseller The remunerationinscriptorseller of the Inscription
- * @param dInscriptionRemunerationreference The remunerationreference of the Inscription
- * @param dInscriptionRemunerationtotal The remunerationtotal of the Inscription
- * @param dInscriptionMortgagesold The mortgagesold of the Inscription
- * @param dtInscriptionDate The date of the Inscription
- * @param dtInscriptionCancellationdate The cancellationdate of the Inscription
- * @param dtInscriptionInitialexpirationdate The initialexpirationdate of the Inscription
- * @param dtInscriptionExpirationdate The expirationdate of the Inscription
- * @param dtInscriptionNotarydate The notarydate of the Inscription
- * @param dtInscriptionNotaryentereddate The notaryentereddate of the Inscription
+ * @param dInscriptionRemuneration The remuneration amount of the Inscription
+ * @param dInscriptionRemunerationinscriptorseller The remuneration amount for the inscriptor or seller of the Inscription
+ * @param dInscriptionRemunerationreference The remuneration amount for the reference of the Inscription
+ * @param dInscriptionRemunerationtotal The remuneration amount total of the Inscription
+ * @param dInscriptionMortgagesold The balande for the mortgage of the Inscription
  * @param tInscriptionCadastre The cadastre of the Inscription
  * @param bInscriptionReference Whether if it's an reference
  * @param bInscriptionInspection Whether the inscription can be acces by an inspector
  * @param bInscriptionIsactive Whether the inscription is active or not
- * @param tInscriptionChecklistnote The checklistnote of the Inscription
+ * @param tInscriptionChecklistnote The checklist note of the Inscription
  * @param bInscriptionNew Whether if it's an new
  * @param bInscriptionHomeowner Whether if it's an homeowner
  * @param bInscriptionArchived Whether the inscription is archived or not
  * @param bInscriptionLitigation Whether if it's an litigation
  * @param bInscriptionRepossession Whether if it's an repossession
- * @param bInscriptionIssolicitation Whether if it's an issolicitation
- * @param bInscriptionSalebyowner Whether if it's an salebyowner
- * @param bInscriptionSoldwithoutlegalwarranty Whether if it's an soldwithoutlegalwarranty
- * @param iInscriptionConstructionyear The constructionyear of the Inscription
- * @param iInscriptionUnit The unit of the Inscription
- * @param sCompanyNameX The Name of the Company in the language of the requester
+ * @param bInscriptionIssolicitation Whether if it's a solicitation
+ * @param bInscriptionSalebyowner Whether if it's a sale by the owner
+ * @param bInscriptionSoldwithoutlegalwarranty Whether if it's sold without the legal warranty
+ * @param iInscriptionConstructionyear The construction year of the Inscription
+ * @param iInscriptionUnit The number of unit for the Inscription
+ * @param fkiDepartmentID The unique ID of the Department
  * @param sDepartmentNameX The Name of the Department in the language of the requester
  * @param sRealestateboardNameX The name of the Realestateboard
- * @param sAddress The complete address in a single line
+ * @param objAddress 
  * @param sInscriptionbuildingtypeNameX The name of the Inscriptionbuildingtype in the language of the requester
  * @param sInscriptiontypeNameX The name of the Inscriptiontype in the language of the requester
  * @param sInscriptioncategoryNameX The name of the Inscriptioncategory in the language of the requester
+ * @param sInscriptionMLS The mls of the Inscription
+ * @param dtInscriptionDate The date of the Inscription
+ * @param dtInscriptionCancellationdate The cancellation date of the Inscription
+ * @param dtInscriptionInitialexpirationdate The initial expiration date of the Inscription
+ * @param dtInscriptionExpirationdate The expiration date of the Inscription
+ * @param dtInscriptionNotarydate The notary date of the Inscription
+ * @param dtInscriptionNotaryentereddate The notary entered date of the Inscription
+ * @param objAudit 
  */
 
 
@@ -100,14 +101,6 @@ data class InscriptionResponse (
     /* The unique ID of the Inscription. */
     @Json(name = "pkiInscriptionID")
     val pkiInscriptionID: kotlin.Int,
-
-    /* The unique ID of the Company */
-    @Json(name = "fkiCompanyID")
-    val fkiCompanyID: kotlin.Int,
-
-    /* The unique ID of the Department */
-    @Json(name = "fkiDepartmentID")
-    val fkiDepartmentID: kotlin.Int,
 
     /* The unique ID of the Realestateboard */
     @Json(name = "fkiRealestateboardID")
@@ -135,26 +128,22 @@ data class InscriptionResponse (
     @Json(name = "eInscriptionResidenceType")
     val eInscriptionResidenceType: FieldEInscriptionResidenceType,
 
-    /* The civicend of the Inscription */
+    /* The address civic end of the Inscription */
     @Json(name = "sInscriptionCivicend")
     val sInscriptionCivicend: kotlin.String,
-
-    /* The mls of the Inscription */
-    @Json(name = "sInscriptionMLS")
-    val sInscriptionMLS: kotlin.String,
 
     /* The sale contract number */
     @Json(name = "sInscriptionContract")
     val sInscriptionContract: kotlin.String,
 
-    /* The sellerdeclaration of the Inscription */
+    /* The seller declaration number of the Inscription */
     @Json(name = "iInscriptionSellerdeclaration")
     val iInscriptionSellerdeclaration: kotlin.Int,
 
     @Json(name = "eInscriptionType")
     val eInscriptionType: FieldEInscriptionType,
 
-    /* The initialsaleprice of the Inscription */
+    /* The initial sale price of the Inscription */
     @Json(name = "dInscriptionInitialsaleprice")
     val dInscriptionInitialsaleprice: kotlin.String,
 
@@ -162,7 +151,7 @@ data class InscriptionResponse (
     @Json(name = "dInscriptionSaleprice")
     val dInscriptionSaleprice: kotlin.String,
 
-    /* The rentprice of the Inscription */
+    /* The rent price of the Inscription */
     @Json(name = "dInscriptionRentprice")
     val dInscriptionRentprice: kotlin.String,
 
@@ -178,49 +167,25 @@ data class InscriptionResponse (
     @Json(name = "eInscriptionRemunerationtotaltype")
     val eInscriptionRemunerationtotaltype: FieldEInscriptionRemunerationtotaltype,
 
-    /* The remuneration of the Inscription */
+    /* The remuneration amount of the Inscription */
     @Json(name = "dInscriptionRemuneration")
     val dInscriptionRemuneration: kotlin.String,
 
-    /* The remunerationinscriptorseller of the Inscription */
+    /* The remuneration amount for the inscriptor or seller of the Inscription */
     @Json(name = "dInscriptionRemunerationinscriptorseller")
     val dInscriptionRemunerationinscriptorseller: kotlin.String,
 
-    /* The remunerationreference of the Inscription */
+    /* The remuneration amount for the reference of the Inscription */
     @Json(name = "dInscriptionRemunerationreference")
     val dInscriptionRemunerationreference: kotlin.String,
 
-    /* The remunerationtotal of the Inscription */
+    /* The remuneration amount total of the Inscription */
     @Json(name = "dInscriptionRemunerationtotal")
     val dInscriptionRemunerationtotal: kotlin.String,
 
-    /* The mortgagesold of the Inscription */
+    /* The balande for the mortgage of the Inscription */
     @Json(name = "dInscriptionMortgagesold")
     val dInscriptionMortgagesold: kotlin.String,
-
-    /* The date of the Inscription */
-    @Json(name = "dtInscriptionDate")
-    val dtInscriptionDate: kotlin.String,
-
-    /* The cancellationdate of the Inscription */
-    @Json(name = "dtInscriptionCancellationdate")
-    val dtInscriptionCancellationdate: kotlin.String,
-
-    /* The initialexpirationdate of the Inscription */
-    @Json(name = "dtInscriptionInitialexpirationdate")
-    val dtInscriptionInitialexpirationdate: kotlin.String,
-
-    /* The expirationdate of the Inscription */
-    @Json(name = "dtInscriptionExpirationdate")
-    val dtInscriptionExpirationdate: kotlin.String,
-
-    /* The notarydate of the Inscription */
-    @Json(name = "dtInscriptionNotarydate")
-    val dtInscriptionNotarydate: kotlin.String,
-
-    /* The notaryentereddate of the Inscription */
-    @Json(name = "dtInscriptionNotaryentereddate")
-    val dtInscriptionNotaryentereddate: kotlin.String,
 
     /* The cadastre of the Inscription */
     @Json(name = "tInscriptionCadastre")
@@ -238,7 +203,7 @@ data class InscriptionResponse (
     @Json(name = "bInscriptionIsactive")
     val bInscriptionIsactive: kotlin.Boolean,
 
-    /* The checklistnote of the Inscription */
+    /* The checklist note of the Inscription */
     @Json(name = "tInscriptionChecklistnote")
     val tInscriptionChecklistnote: kotlin.String,
 
@@ -262,29 +227,29 @@ data class InscriptionResponse (
     @Json(name = "bInscriptionRepossession")
     val bInscriptionRepossession: kotlin.Boolean,
 
-    /* Whether if it's an issolicitation */
+    /* Whether if it's a solicitation */
     @Json(name = "bInscriptionIssolicitation")
     val bInscriptionIssolicitation: kotlin.Boolean,
 
-    /* Whether if it's an salebyowner */
+    /* Whether if it's a sale by the owner */
     @Json(name = "bInscriptionSalebyowner")
     val bInscriptionSalebyowner: kotlin.Boolean,
 
-    /* Whether if it's an soldwithoutlegalwarranty */
+    /* Whether if it's sold without the legal warranty */
     @Json(name = "bInscriptionSoldwithoutlegalwarranty")
     val bInscriptionSoldwithoutlegalwarranty: kotlin.Boolean,
 
-    /* The constructionyear of the Inscription */
+    /* The construction year of the Inscription */
     @Json(name = "iInscriptionConstructionyear")
     val iInscriptionConstructionyear: kotlin.Int,
 
-    /* The unit of the Inscription */
+    /* The number of unit for the Inscription */
     @Json(name = "iInscriptionUnit")
     val iInscriptionUnit: kotlin.Int,
 
-    /* The Name of the Company in the language of the requester */
-    @Json(name = "sCompanyNameX")
-    val sCompanyNameX: kotlin.String? = null,
+    /* The unique ID of the Department */
+    @Json(name = "fkiDepartmentID")
+    val fkiDepartmentID: kotlin.Int? = null,
 
     /* The Name of the Department in the language of the requester */
     @Json(name = "sDepartmentNameX")
@@ -294,9 +259,8 @@ data class InscriptionResponse (
     @Json(name = "sRealestateboardNameX")
     val sRealestateboardNameX: kotlin.String? = null,
 
-    /* The complete address in a single line */
-    @Json(name = "sAddress")
-    val sAddress: kotlin.String? = null,
+    @Json(name = "objAddress")
+    val objAddress: AddressResponseCompound? = null,
 
     /* The name of the Inscriptionbuildingtype in the language of the requester */
     @Json(name = "sInscriptionbuildingtypeNameX")
@@ -308,7 +272,38 @@ data class InscriptionResponse (
 
     /* The name of the Inscriptioncategory in the language of the requester */
     @Json(name = "sInscriptioncategoryNameX")
-    val sInscriptioncategoryNameX: kotlin.String? = null
+    val sInscriptioncategoryNameX: kotlin.String? = null,
+
+    /* The mls of the Inscription */
+    @Json(name = "sInscriptionMLS")
+    val sInscriptionMLS: kotlin.String? = null,
+
+    /* The date of the Inscription */
+    @Json(name = "dtInscriptionDate")
+    val dtInscriptionDate: kotlin.String? = null,
+
+    /* The cancellation date of the Inscription */
+    @Json(name = "dtInscriptionCancellationdate")
+    val dtInscriptionCancellationdate: kotlin.String? = null,
+
+    /* The initial expiration date of the Inscription */
+    @Json(name = "dtInscriptionInitialexpirationdate")
+    val dtInscriptionInitialexpirationdate: kotlin.String? = null,
+
+    /* The expiration date of the Inscription */
+    @Json(name = "dtInscriptionExpirationdate")
+    val dtInscriptionExpirationdate: kotlin.String? = null,
+
+    /* The notary date of the Inscription */
+    @Json(name = "dtInscriptionNotarydate")
+    val dtInscriptionNotarydate: kotlin.String? = null,
+
+    /* The notary entered date of the Inscription */
+    @Json(name = "dtInscriptionNotaryentereddate")
+    val dtInscriptionNotaryentereddate: kotlin.String? = null,
+
+    @Json(name = "objAudit")
+    val objAudit: CommonAudit? = null
 
 ) {
 

@@ -35,46 +35,44 @@ import com.squareup.moshi.JsonClass
  * A Inscriptionnotauthenticated Object
  *
  * @param pkiInscriptionnotauthenticatedID The unique ID of the Inscriptionnotauthenticated.
- * @param fkiCompanyID The unique ID of the Company
  * @param fkiInscriptionID The unique ID of the Inscription.
- * @param fkiDepartmentID The unique ID of the Department
- * @param fkiFinancialinstitutionID The unique ID of the Financialinstitution
- * @param fkiBuyercontractID The unique ID of the Buyercontract
- * @param fkiMortgagesupplierID The unique ID of the Mortgagesupplier
  * @param fkiTaxassignmentID The unique ID of the Taxassignment.  Valid values:  |Value|Description| |-|-| |1|No tax| |2|GST| |3|HST (ON)| |4|HST (NB)| |5|HST (NS)| |6|HST (NL)| |7|HST (PE)| |8|GST + QST (QC)| |9|GST + QST (QC) Non-Recoverable| |10|GST + PST (BC)| |11|GST + PST (SK)| |12|GST + RST (MB)| |13|GST + PST (BC) Non-Recoverable| |14|GST + PST (SK) Non-Recoverable| |15|GST + RST (MB) Non-Recoverable|
- * @param dtInscriptionnotauthenticatedTransactiondate The transactiondate of the Inscriptionnotauthenticated
- * @param dtInscriptionnotauthenticatedTransactiondateReal The transactiondatereal of the Inscriptionnotauthenticated
- * @param dtInscriptionnotauthenticatedDepositdate The depositdate of the Inscriptionnotauthenticated
  * @param eInscriptionnotauthenticatedType 
- * @param dInscriptionnotauthenticatedMortgageloan The mortgageloan of the Inscriptionnotauthenticated
+ * @param dInscriptionnotauthenticatedMortgageloan The amount of the mortgage loan of the Inscriptionnotauthenticated
  * @param etInscriptionnotauthenticatedMortgagetype 
- * @param dInscriptionnotauthenticatedTransactionprice The transactionprice of the Inscriptionnotauthenticated
+ * @param dInscriptionnotauthenticatedTransactionprice The transaction price of the Inscriptionnotauthenticated
  * @param eInscriptionnotauthenticatedRemunerationtype 
- * @param dInscriptionnotauthenticatedRemuneration The remuneration of the Inscriptionnotauthenticated
- * @param dInscriptionnotauthenticatedRemunerationsubtotal The remunerationsubtotal of the Inscriptionnotauthenticated
- * @param dInscriptionnotauthenticatedRemunerationtotal The remunerationtotal of the Inscriptionnotauthenticated
- * @param dtInscriptionnotauthenticatedCancellationdate The cancellationdate of the Inscriptionnotauthenticated
- * @param dtInscriptionnotauthenticatedPossessiondate The possessiondate of the Inscriptionnotauthenticated
- * @param sInscriptionnotauthenticatedOffertopurchasenumber The Offer to purchase number
- * @param dtInscriptionnotauthenticatedNotaryscheduledate The notaryscheduledate of the Inscriptionnotauthenticated
- * @param dtInscriptionnotauthenticatedFinancingscheduledate The financingscheduledate of the Inscriptionnotauthenticated
+ * @param dInscriptionnotauthenticatedRemuneration The amount for the remuneration of the Inscriptionnotauthenticated
+ * @param dInscriptionnotauthenticatedRemunerationsubtotal The subtotal for the remuneration of the Inscriptionnotauthenticated
+ * @param dInscriptionnotauthenticatedRemunerationtotal The total for the remuneration of the Inscriptionnotauthenticated
+ * @param sInscriptionnotauthenticatedOffertopurchasenumber The offer to purchase number of the Inscriptionnotauthenticated
  * @param bInscriptionnotauthenticatedConditional Whether the inscriptionnotauthenticated is conditional
- * @param bInscriptionnotauthenticatedMortgageisreferenced Whether if it's an mortgageisreferenced
- * @param bInscriptionnotauthenticatedHomeowner Whether if it's an homeowner
+ * @param bInscriptionnotauthenticatedMortgageisreferenced Whether if the mortgage is referenced
+ * @param bInscriptionnotauthenticatedHomeowner Whether if it's an home owner
  * @param tInscriptionnotauthenticatedConditions The conditions of the Inscriptionnotauthenticated
- * @param dtInscriptionnotauthenticatedConditiondeadlinedate The conditiondeadlinedate of the Inscriptionnotauthenticated
  * @param iInscriptionnotauthenticatedOrder The order of the Inscriptionnotauthenticated
  * @param bInscriptionnotauthenticatedIsactive Whether the inscriptionnotauthenticated is active or not
  * @param eInscriptionnotauthenticatedResidenceType 
- * @param tInscriptionnotauthenticatedChecklistnote The checklistnote of the Inscriptionnotauthenticated
- * @param dInscriptionnotauthenticatedSelleronlyretribution The selleronlyretribution of the Inscriptionnotauthenticated
- * @param bInscriptionnotauthenticatedDraft Whether the inscriptionnotauthenticated is a draft or not
- * @param sCompanyNameX The Name of the Company in the language of the requester
+ * @param tInscriptionnotauthenticatedChecklistnote The checklist note of the Inscriptionnotauthenticated
+ * @param dInscriptionnotauthenticatedSelleronlyretribution The amount retribution for the seller only of the Inscriptionnotauthenticated
+ * @param bInscriptionnotauthenticatedDraft Whether the Inscriptionnotauthenticated is a draft or not
+ * @param fkiDepartmentID The unique ID of the Department
  * @param sDepartmentNameX The Name of the Department in the language of the requester
+ * @param fkiFinancialinstitutionID The unique ID of the Financialinstitution
  * @param sFinancialinstitutionNameX The name of the Financialinstitution in the language of the requester
+ * @param fkiBuyercontractID The unique ID of the Buyercontract
  * @param sBuyercontractContract The number of the Buyercontract
+ * @param fkiMortgagesupplierID The unique ID of the Mortgagesupplier
  * @param sMortgagesupplierNameX The name of the Mortagesupplier in the language of the requester
  * @param sTaxassignmentDescriptionX The description of the Taxassignment  in the language of the requester
+ * @param dtInscriptionnotauthenticatedTransactiondate The transaction date of the Inscriptionnotauthenticated
+ * @param dtInscriptionnotauthenticatedTransactiondateReal The real transactiondate of the Inscriptionnotauthenticated
+ * @param dtInscriptionnotauthenticatedDepositdate The deposit date of the Inscriptionnotauthenticated
+ * @param dtInscriptionnotauthenticatedCancellationdate The cancellation date of the Inscriptionnotauthenticated
+ * @param dtInscriptionnotauthenticatedPossessiondate The possession date of the Inscriptionnotauthenticated
+ * @param dtInscriptionnotauthenticatedNotaryscheduledate The notary schedule date of the Inscriptionnotauthenticated
+ * @param dtInscriptionnotauthenticatedFinancingscheduledate The financing schedule date of the Inscriptionnotauthenticated
+ * @param dtInscriptionnotauthenticatedConditiondeadlinedate The condition deadline date of the Inscriptionnotauthenticated
  */
 
 
@@ -84,114 +82,62 @@ data class InscriptionnotauthenticatedResponseCompound (
     @Json(name = "pkiInscriptionnotauthenticatedID")
     val pkiInscriptionnotauthenticatedID: kotlin.Int,
 
-    /* The unique ID of the Company */
-    @Json(name = "fkiCompanyID")
-    val fkiCompanyID: kotlin.Int,
-
     /* The unique ID of the Inscription. */
     @Json(name = "fkiInscriptionID")
     val fkiInscriptionID: kotlin.Int,
-
-    /* The unique ID of the Department */
-    @Json(name = "fkiDepartmentID")
-    val fkiDepartmentID: kotlin.Int,
-
-    /* The unique ID of the Financialinstitution */
-    @Json(name = "fkiFinancialinstitutionID")
-    val fkiFinancialinstitutionID: kotlin.Int,
-
-    /* The unique ID of the Buyercontract */
-    @Json(name = "fkiBuyercontractID")
-    val fkiBuyercontractID: kotlin.Int,
-
-    /* The unique ID of the Mortgagesupplier */
-    @Json(name = "fkiMortgagesupplierID")
-    val fkiMortgagesupplierID: kotlin.Int,
 
     /* The unique ID of the Taxassignment.  Valid values:  |Value|Description| |-|-| |1|No tax| |2|GST| |3|HST (ON)| |4|HST (NB)| |5|HST (NS)| |6|HST (NL)| |7|HST (PE)| |8|GST + QST (QC)| |9|GST + QST (QC) Non-Recoverable| |10|GST + PST (BC)| |11|GST + PST (SK)| |12|GST + RST (MB)| |13|GST + PST (BC) Non-Recoverable| |14|GST + PST (SK) Non-Recoverable| |15|GST + RST (MB) Non-Recoverable| */
     @Json(name = "fkiTaxassignmentID")
     val fkiTaxassignmentID: kotlin.Int,
 
-    /* The transactiondate of the Inscriptionnotauthenticated */
-    @Json(name = "dtInscriptionnotauthenticatedTransactiondate")
-    val dtInscriptionnotauthenticatedTransactiondate: kotlin.String,
-
-    /* The transactiondatereal of the Inscriptionnotauthenticated */
-    @Json(name = "dtInscriptionnotauthenticatedTransactiondateReal")
-    val dtInscriptionnotauthenticatedTransactiondateReal: kotlin.String,
-
-    /* The depositdate of the Inscriptionnotauthenticated */
-    @Json(name = "dtInscriptionnotauthenticatedDepositdate")
-    val dtInscriptionnotauthenticatedDepositdate: kotlin.String,
-
     @Json(name = "eInscriptionnotauthenticatedType")
     val eInscriptionnotauthenticatedType: FieldEInscriptionnotauthenticatedType,
 
-    /* The mortgageloan of the Inscriptionnotauthenticated */
+    /* The amount of the mortgage loan of the Inscriptionnotauthenticated */
     @Json(name = "dInscriptionnotauthenticatedMortgageloan")
     val dInscriptionnotauthenticatedMortgageloan: kotlin.String,
 
     @Json(name = "etInscriptionnotauthenticatedMortgagetype")
     val etInscriptionnotauthenticatedMortgagetype: FieldEtInscriptionnotauthenticatedMortgagetype,
 
-    /* The transactionprice of the Inscriptionnotauthenticated */
+    /* The transaction price of the Inscriptionnotauthenticated */
     @Json(name = "dInscriptionnotauthenticatedTransactionprice")
     val dInscriptionnotauthenticatedTransactionprice: kotlin.String,
 
     @Json(name = "eInscriptionnotauthenticatedRemunerationtype")
     val eInscriptionnotauthenticatedRemunerationtype: FieldEInscriptionnotauthenticatedRemunerationtype,
 
-    /* The remuneration of the Inscriptionnotauthenticated */
+    /* The amount for the remuneration of the Inscriptionnotauthenticated */
     @Json(name = "dInscriptionnotauthenticatedRemuneration")
     val dInscriptionnotauthenticatedRemuneration: kotlin.String,
 
-    /* The remunerationsubtotal of the Inscriptionnotauthenticated */
+    /* The subtotal for the remuneration of the Inscriptionnotauthenticated */
     @Json(name = "dInscriptionnotauthenticatedRemunerationsubtotal")
     val dInscriptionnotauthenticatedRemunerationsubtotal: kotlin.String,
 
-    /* The remunerationtotal of the Inscriptionnotauthenticated */
+    /* The total for the remuneration of the Inscriptionnotauthenticated */
     @Json(name = "dInscriptionnotauthenticatedRemunerationtotal")
     val dInscriptionnotauthenticatedRemunerationtotal: kotlin.String,
 
-    /* The cancellationdate of the Inscriptionnotauthenticated */
-    @Json(name = "dtInscriptionnotauthenticatedCancellationdate")
-    val dtInscriptionnotauthenticatedCancellationdate: kotlin.String,
-
-    /* The possessiondate of the Inscriptionnotauthenticated */
-    @Json(name = "dtInscriptionnotauthenticatedPossessiondate")
-    val dtInscriptionnotauthenticatedPossessiondate: kotlin.String,
-
-    /* The Offer to purchase number */
+    /* The offer to purchase number of the Inscriptionnotauthenticated */
     @Json(name = "sInscriptionnotauthenticatedOffertopurchasenumber")
     val sInscriptionnotauthenticatedOffertopurchasenumber: kotlin.String,
-
-    /* The notaryscheduledate of the Inscriptionnotauthenticated */
-    @Json(name = "dtInscriptionnotauthenticatedNotaryscheduledate")
-    val dtInscriptionnotauthenticatedNotaryscheduledate: kotlin.String,
-
-    /* The financingscheduledate of the Inscriptionnotauthenticated */
-    @Json(name = "dtInscriptionnotauthenticatedFinancingscheduledate")
-    val dtInscriptionnotauthenticatedFinancingscheduledate: kotlin.String,
 
     /* Whether the inscriptionnotauthenticated is conditional */
     @Json(name = "bInscriptionnotauthenticatedConditional")
     val bInscriptionnotauthenticatedConditional: kotlin.Boolean,
 
-    /* Whether if it's an mortgageisreferenced */
+    /* Whether if the mortgage is referenced */
     @Json(name = "bInscriptionnotauthenticatedMortgageisreferenced")
     val bInscriptionnotauthenticatedMortgageisreferenced: kotlin.Boolean,
 
-    /* Whether if it's an homeowner */
+    /* Whether if it's an home owner */
     @Json(name = "bInscriptionnotauthenticatedHomeowner")
     val bInscriptionnotauthenticatedHomeowner: kotlin.Boolean,
 
     /* The conditions of the Inscriptionnotauthenticated */
     @Json(name = "tInscriptionnotauthenticatedConditions")
     val tInscriptionnotauthenticatedConditions: kotlin.String,
-
-    /* The conditiondeadlinedate of the Inscriptionnotauthenticated */
-    @Json(name = "dtInscriptionnotauthenticatedConditiondeadlinedate")
-    val dtInscriptionnotauthenticatedConditiondeadlinedate: kotlin.String,
 
     /* The order of the Inscriptionnotauthenticated */
     @Json(name = "iInscriptionnotauthenticatedOrder")
@@ -204,33 +150,45 @@ data class InscriptionnotauthenticatedResponseCompound (
     @Json(name = "eInscriptionnotauthenticatedResidenceType")
     val eInscriptionnotauthenticatedResidenceType: FieldEInscriptionnotauthenticatedResidenceType,
 
-    /* The checklistnote of the Inscriptionnotauthenticated */
+    /* The checklist note of the Inscriptionnotauthenticated */
     @Json(name = "tInscriptionnotauthenticatedChecklistnote")
     val tInscriptionnotauthenticatedChecklistnote: kotlin.String,
 
-    /* The selleronlyretribution of the Inscriptionnotauthenticated */
+    /* The amount retribution for the seller only of the Inscriptionnotauthenticated */
     @Json(name = "dInscriptionnotauthenticatedSelleronlyretribution")
     val dInscriptionnotauthenticatedSelleronlyretribution: kotlin.String,
 
-    /* Whether the inscriptionnotauthenticated is a draft or not */
+    /* Whether the Inscriptionnotauthenticated is a draft or not */
     @Json(name = "bInscriptionnotauthenticatedDraft")
     val bInscriptionnotauthenticatedDraft: kotlin.Boolean,
 
-    /* The Name of the Company in the language of the requester */
-    @Json(name = "sCompanyNameX")
-    val sCompanyNameX: kotlin.String? = null,
+    /* The unique ID of the Department */
+    @Json(name = "fkiDepartmentID")
+    val fkiDepartmentID: kotlin.Int? = null,
 
     /* The Name of the Department in the language of the requester */
     @Json(name = "sDepartmentNameX")
     val sDepartmentNameX: kotlin.String? = null,
 
+    /* The unique ID of the Financialinstitution */
+    @Json(name = "fkiFinancialinstitutionID")
+    val fkiFinancialinstitutionID: kotlin.Int? = null,
+
     /* The name of the Financialinstitution in the language of the requester */
     @Json(name = "sFinancialinstitutionNameX")
     val sFinancialinstitutionNameX: kotlin.String? = null,
 
+    /* The unique ID of the Buyercontract */
+    @Json(name = "fkiBuyercontractID")
+    val fkiBuyercontractID: kotlin.Int? = null,
+
     /* The number of the Buyercontract */
     @Json(name = "sBuyercontractContract")
     val sBuyercontractContract: kotlin.String? = null,
+
+    /* The unique ID of the Mortgagesupplier */
+    @Json(name = "fkiMortgagesupplierID")
+    val fkiMortgagesupplierID: kotlin.Int? = null,
 
     /* The name of the Mortagesupplier in the language of the requester */
     @Json(name = "sMortgagesupplierNameX")
@@ -238,7 +196,39 @@ data class InscriptionnotauthenticatedResponseCompound (
 
     /* The description of the Taxassignment  in the language of the requester */
     @Json(name = "sTaxassignmentDescriptionX")
-    val sTaxassignmentDescriptionX: kotlin.String? = null
+    val sTaxassignmentDescriptionX: kotlin.String? = null,
+
+    /* The transaction date of the Inscriptionnotauthenticated */
+    @Json(name = "dtInscriptionnotauthenticatedTransactiondate")
+    val dtInscriptionnotauthenticatedTransactiondate: kotlin.String? = null,
+
+    /* The real transactiondate of the Inscriptionnotauthenticated */
+    @Json(name = "dtInscriptionnotauthenticatedTransactiondateReal")
+    val dtInscriptionnotauthenticatedTransactiondateReal: kotlin.String? = null,
+
+    /* The deposit date of the Inscriptionnotauthenticated */
+    @Json(name = "dtInscriptionnotauthenticatedDepositdate")
+    val dtInscriptionnotauthenticatedDepositdate: kotlin.String? = null,
+
+    /* The cancellation date of the Inscriptionnotauthenticated */
+    @Json(name = "dtInscriptionnotauthenticatedCancellationdate")
+    val dtInscriptionnotauthenticatedCancellationdate: kotlin.String? = null,
+
+    /* The possession date of the Inscriptionnotauthenticated */
+    @Json(name = "dtInscriptionnotauthenticatedPossessiondate")
+    val dtInscriptionnotauthenticatedPossessiondate: kotlin.String? = null,
+
+    /* The notary schedule date of the Inscriptionnotauthenticated */
+    @Json(name = "dtInscriptionnotauthenticatedNotaryscheduledate")
+    val dtInscriptionnotauthenticatedNotaryscheduledate: kotlin.String? = null,
+
+    /* The financing schedule date of the Inscriptionnotauthenticated */
+    @Json(name = "dtInscriptionnotauthenticatedFinancingscheduledate")
+    val dtInscriptionnotauthenticatedFinancingscheduledate: kotlin.String? = null,
+
+    /* The condition deadline date of the Inscriptionnotauthenticated */
+    @Json(name = "dtInscriptionnotauthenticatedConditiondeadlinedate")
+    val dtInscriptionnotauthenticatedConditiondeadlinedate: kotlin.String? = null
 
 ) {
 
