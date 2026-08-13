@@ -35,6 +35,7 @@ import com.squareup.moshi.JsonClass
  * @param aFkiEzsignfoldersignerassociationID 
  * @param aObjEzsigndocument 
  * @param tEzsignfolderNote Note about the Ezsignfolder
+ * @param bKeepenteredvalues Whether we keep the entered values or not in the Ezsignform
  */
 
 
@@ -52,7 +53,11 @@ data class EzsignfolderDuplicateV1Request (
 
     /* Note about the Ezsignfolder */
     @Json(name = "tEzsignfolderNote")
-    val tEzsignfolderNote: kotlin.String? = null
+    val tEzsignfolderNote: kotlin.String? = null,
+
+    /* Whether we keep the entered values or not in the Ezsignform */
+    @Json(name = "bKeepenteredvalues")
+    val bKeepenteredvalues: kotlin.Boolean? = true
 
 ) {
 

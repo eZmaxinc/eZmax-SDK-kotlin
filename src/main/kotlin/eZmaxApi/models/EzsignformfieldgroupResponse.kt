@@ -51,6 +51,7 @@ import com.squareup.moshi.JsonClass
  * @param sEzsignformfieldgroupTextvalidationcustommessage Description of validation rule. Show by signatory.
  * @param tEzsignformfieldgroupTooltip A tooltip that will be presented to Ezsignsigner about the Ezsignformfieldgroup
  * @param eEzsignformfieldgroupTooltipposition 
+ * @param dtEzsignformfieldgroupCompleted The date the Ezsignformfieldgroup was completed.
  */
 
 
@@ -119,7 +120,11 @@ data class EzsignformfieldgroupResponse (
     val tEzsignformfieldgroupTooltip: kotlin.String? = null,
 
     @Json(name = "eEzsignformfieldgroupTooltipposition")
-    val eEzsignformfieldgroupTooltipposition: FieldEEzsignformfieldgroupTooltipposition? = null
+    val eEzsignformfieldgroupTooltipposition: FieldEEzsignformfieldgroupTooltipposition? = null,
+
+    /* The date the Ezsignformfieldgroup was completed. */
+    @Json(name = "dtEzsignformfieldgroupCompleted")
+    val dtEzsignformfieldgroupCompleted: kotlin.String? = null
 
 ) {
 

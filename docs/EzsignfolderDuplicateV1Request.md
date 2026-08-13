@@ -8,6 +8,7 @@
 | **aFkiEzsignfoldersignerassociationID** | **kotlin.collections.List&lt;kotlin.Int&gt;** |  |  |
 | **aObjEzsigndocument** | [**kotlin.collections.List&lt;CustomEzsigndocumentDuplicateRequest&gt;**](CustomEzsigndocumentDuplicateRequest.md) |  |  |
 | **tEzsignfolderNote** | **kotlin.String** | Note about the Ezsignfolder |  [optional] |
+| **bKeepenteredvalues** | **kotlin.Boolean** | Whether we keep the entered values or not in the Ezsignform |  [optional] |
 
 
 

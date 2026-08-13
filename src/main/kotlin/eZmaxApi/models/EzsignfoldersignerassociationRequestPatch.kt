@@ -23,6 +23,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.FieldEEzsignfoldersignerassociationRole
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -30,11 +31,15 @@ import com.squareup.moshi.JsonClass
 /**
  * An Ezsignfoldersignerassociation Object
  *
+ * @param eEzsignfoldersignerassociationRole 
  * @param tEzsignfoldersignerassociationMessage A custom text message that will be added to the email sent.
  */
 
 
 data class EzsignfoldersignerassociationRequestPatch (
+
+    @Json(name = "eEzsignfoldersignerassociationRole")
+    val eEzsignfoldersignerassociationRole: FieldEEzsignfoldersignerassociationRole? = null,
 
     /* A custom text message that will be added to the email sent. */
     @Json(name = "tEzsignfoldersignerassociationMessage")

@@ -36,9 +36,9 @@ import com.squareup.moshi.JsonClass
  * @param objWebhook 
  * @param aObjAttempt An array containing details of previous attempts that were made to deliver the message. The array is empty if it's the first attempt.
  * @param objEzmaxpartnerproduct 
- * @param sExternalID 
  * @param sApikeyApikey 
  * @param sApikeySecret 
+ * @param sExternalID 
  */
 
 
@@ -54,14 +54,14 @@ data class WebhookEzmaxpartnerproductSubscribe (
     @Json(name = "objEzmaxpartnerproduct")
     val objEzmaxpartnerproduct: CustomEzmaxpartnerproductSubscribe,
 
-    @Json(name = "sExternalID")
-    val sExternalID: kotlin.String? = null,
-
     @Json(name = "sApikeyApikey")
-    val sApikeyApikey: kotlin.String? = null,
+    val sApikeyApikey: kotlin.String,
 
     @Json(name = "sApikeySecret")
-    val sApikeySecret: kotlin.String? = null
+    val sApikeySecret: kotlin.String,
+
+    @Json(name = "sExternalID")
+    val sExternalID: kotlin.String? = null
 
 ) {
 

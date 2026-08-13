@@ -4,7 +4,7 @@
 ## Properties
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **sExternalID** | **kotlin.String** |  |  |
+| **sExternalID** | **kotlin.String** |  |  [optional] |
 
 
 

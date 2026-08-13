@@ -7,6 +7,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**ezsigntemplatepackagemembershipCreateObjectV1**](ObjectEzsigntemplatepackagemembershipApi.md#ezsigntemplatepackagemembershipCreateObjectV1) | **POST** /1/object/ezsigntemplatepackagemembership | Create a new Ezsigntemplatepackagemembership |
 | [**ezsigntemplatepackagemembershipDeleteObjectV1**](ObjectEzsigntemplatepackagemembershipApi.md#ezsigntemplatepackagemembershipDeleteObjectV1) | **DELETE** /1/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID} | Delete an existing Ezsigntemplatepackagemembership |
 | [**ezsigntemplatepackagemembershipGetObjectV2**](ObjectEzsigntemplatepackagemembershipApi.md#ezsigntemplatepackagemembershipGetObjectV2) | **GET** /2/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID} | Retrieve an existing Ezsigntemplatepackagemembership |
+| [**ezsigntemplatepackagemembershipGetObjectV3**](ObjectEzsigntemplatepackagemembershipApi.md#ezsigntemplatepackagemembershipGetObjectV3) | **GET** /3/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID} | Retrieve an existing Ezsigntemplatepackagemembership |
 
 
 <a id="ezsigntemplatepackagemembershipCreateObjectV1"></a>
@@ -143,6 +144,55 @@ try {
 ### Return type
 
 [**EzsigntemplatepackagemembershipGetObjectV2Response**](EzsigntemplatepackagemembershipGetObjectV2Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="ezsigntemplatepackagemembershipGetObjectV3"></a>
+# **ezsigntemplatepackagemembershipGetObjectV3**
+> EzsigntemplatepackagemembershipGetObjectV3Response ezsigntemplatepackagemembershipGetObjectV3(pkiEzsigntemplatepackagemembershipID)
+
+Retrieve an existing Ezsigntemplatepackagemembership
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEzsigntemplatepackagemembershipApi()
+val pkiEzsigntemplatepackagemembershipID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : EzsigntemplatepackagemembershipGetObjectV3Response = apiInstance.ezsigntemplatepackagemembershipGetObjectV3(pkiEzsigntemplatepackagemembershipID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEzsigntemplatepackagemembershipApi#ezsigntemplatepackagemembershipGetObjectV3")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEzsigntemplatepackagemembershipApi#ezsigntemplatepackagemembershipGetObjectV3")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsigntemplatepackagemembershipID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**EzsigntemplatepackagemembershipGetObjectV3Response**](EzsigntemplatepackagemembershipGetObjectV3Response.md)
 
 ### Authorization
 

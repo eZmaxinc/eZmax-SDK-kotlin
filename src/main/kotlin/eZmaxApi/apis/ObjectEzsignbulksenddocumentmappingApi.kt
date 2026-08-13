@@ -32,6 +32,7 @@ import eZmaxApi.models.EzsignbulksenddocumentmappingCreateObjectV1Request
 import eZmaxApi.models.EzsignbulksenddocumentmappingCreateObjectV1Response
 import eZmaxApi.models.EzsignbulksenddocumentmappingDeleteObjectV1Response
 import eZmaxApi.models.EzsignbulksenddocumentmappingGetObjectV2Response
+import eZmaxApi.models.EzsignbulksenddocumentmappingGetObjectV3Response
 
 import com.squareup.moshi.Json
 
@@ -218,7 +219,9 @@ open class ObjectEzsignbulksenddocumentmappingApi(basePath: kotlin.String = defa
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsignbulksenddocumentmappingGetObjectV2(pkiEzsignbulksenddocumentmappingID: kotlin.Int) : EzsignbulksenddocumentmappingGetObjectV2Response {
+        @Suppress("DEPRECATION")
         val localVarResponse = ezsignbulksenddocumentmappingGetObjectV2WithHttpInfo(pkiEzsignbulksenddocumentmappingID = pkiEzsignbulksenddocumentmappingID)
 
         return when (localVarResponse.responseType) {
@@ -247,7 +250,9 @@ open class ObjectEzsignbulksenddocumentmappingApi(basePath: kotlin.String = defa
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsignbulksenddocumentmappingGetObjectV2WithHttpInfo(pkiEzsignbulksenddocumentmappingID: kotlin.Int) : ApiResponse<EzsignbulksenddocumentmappingGetObjectV2Response?> {
+        @Suppress("DEPRECATION")
         val localVariableConfig = ezsignbulksenddocumentmappingGetObjectV2RequestConfig(pkiEzsignbulksenddocumentmappingID = pkiEzsignbulksenddocumentmappingID)
 
         return request<Unit, EzsignbulksenddocumentmappingGetObjectV2Response>(
@@ -261,6 +266,7 @@ open class ObjectEzsignbulksenddocumentmappingApi(basePath: kotlin.String = defa
      * @param pkiEzsignbulksenddocumentmappingID 
      * @return RequestConfig
      */
+    @Deprecated(message = "This operation is deprecated.")
     fun ezsignbulksenddocumentmappingGetObjectV2RequestConfig(pkiEzsignbulksenddocumentmappingID: kotlin.Int) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
@@ -270,6 +276,79 @@ open class ObjectEzsignbulksenddocumentmappingApi(basePath: kotlin.String = defa
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/2/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}".replace("{"+"pkiEzsignbulksenddocumentmappingID"+"}", encodeURIComponent(pkiEzsignbulksenddocumentmappingID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /3/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}
+     * Retrieve an existing Ezsignbulksenddocumentmapping
+     * 
+     * @param pkiEzsignbulksenddocumentmappingID 
+     * @return EzsignbulksenddocumentmappingGetObjectV3Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignbulksenddocumentmappingGetObjectV3(pkiEzsignbulksenddocumentmappingID: kotlin.Int) : EzsignbulksenddocumentmappingGetObjectV3Response {
+        val localVarResponse = ezsignbulksenddocumentmappingGetObjectV3WithHttpInfo(pkiEzsignbulksenddocumentmappingID = pkiEzsignbulksenddocumentmappingID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignbulksenddocumentmappingGetObjectV3Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /3/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}
+     * Retrieve an existing Ezsignbulksenddocumentmapping
+     * 
+     * @param pkiEzsignbulksenddocumentmappingID 
+     * @return ApiResponse<EzsignbulksenddocumentmappingGetObjectV3Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignbulksenddocumentmappingGetObjectV3WithHttpInfo(pkiEzsignbulksenddocumentmappingID: kotlin.Int) : ApiResponse<EzsignbulksenddocumentmappingGetObjectV3Response?> {
+        val localVariableConfig = ezsignbulksenddocumentmappingGetObjectV3RequestConfig(pkiEzsignbulksenddocumentmappingID = pkiEzsignbulksenddocumentmappingID)
+
+        return request<Unit, EzsignbulksenddocumentmappingGetObjectV3Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsignbulksenddocumentmappingGetObjectV3
+     *
+     * @param pkiEzsignbulksenddocumentmappingID 
+     * @return RequestConfig
+     */
+    fun ezsignbulksenddocumentmappingGetObjectV3RequestConfig(pkiEzsignbulksenddocumentmappingID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/3/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}".replace("{"+"pkiEzsignbulksenddocumentmappingID"+"}", encodeURIComponent(pkiEzsignbulksenddocumentmappingID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

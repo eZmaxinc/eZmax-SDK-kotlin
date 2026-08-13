@@ -63,83 +63,83 @@ data class CustomEzmaxpartnerproductSubscribe (
 
     /* The Ezmaxcustomer code */
     @Json(name = "pksEzmaxcustomerCode")
-    val pksEzmaxcustomerCode: kotlin.String? = null,
+    val pksEzmaxcustomerCode: kotlin.String,
 
     /* The environment type Description */
     @Json(name = "sInfrastructureenvironmenttypeDescription")
-    val sInfrastructureenvironmenttypeDescription: kotlin.String? = null,
+    val sInfrastructureenvironmenttypeDescription: kotlin.String,
 
     /* The Name of the Company in French */
     @Json(name = "sCompanyName1")
-    val sCompanyName1: kotlin.String? = null,
+    val sCompanyName1: kotlin.String,
 
     /* The Name of the Company in English */
     @Json(name = "sCompanyName2")
-    val sCompanyName2: kotlin.String? = null,
+    val sCompanyName2: kotlin.String,
 
     /* The unique ID of the Systemconfigurationtype */
     @Json(name = "fkiSystemconfigurationtypeID")
-    val fkiSystemconfigurationtypeID: kotlin.Int? = null,
+    val fkiSystemconfigurationtypeID: kotlin.Int,
 
     /* The description of the Systemconfigurationtype in the language of the requester */
     @Json(name = "sSystemconfigurationtypeDescription1")
-    val sSystemconfigurationtypeDescription1: kotlin.String? = null,
+    val sSystemconfigurationtypeDescription1: kotlin.String,
 
     /* The description of the Systemconfigurationtype in the language of the requester */
     @Json(name = "sSystemconfigurationtypeDescription2")
-    val sSystemconfigurationtypeDescription2: kotlin.String? = null,
+    val sSystemconfigurationtypeDescription2: kotlin.String,
 
     /* The unique ID of the Ezmaxpartner */
     @Json(name = "fkiEzmaxpartnerID")
-    val fkiEzmaxpartnerID: kotlin.Int? = null,
+    val fkiEzmaxpartnerID: kotlin.Int,
 
     /* The name of the Ezmaxpartner in french */
     @Json(name = "sEzmaxpartnerName1")
-    val sEzmaxpartnerName1: kotlin.String? = null,
+    val sEzmaxpartnerName1: kotlin.String,
 
     /* The name of the Ezmaxpartner in english */
     @Json(name = "sEzmaxpartnerName2")
-    val sEzmaxpartnerName2: kotlin.String? = null,
+    val sEzmaxpartnerName2: kotlin.String,
 
     /* The unique ID of the Ezmaxpartnerproduct */
     @Json(name = "fkiEzmaxpartnerproductID")
-    val fkiEzmaxpartnerproductID: kotlin.Int? = null,
+    val fkiEzmaxpartnerproductID: kotlin.Int,
 
     /* The name1 of the Ezmaxpartnerproduct */
     @Json(name = "sEzmaxpartnerproductName1")
-    val sEzmaxpartnerproductName1: kotlin.String? = null,
+    val sEzmaxpartnerproductName1: kotlin.String,
 
     /* The name2 of the Ezmaxpartnerproduct */
     @Json(name = "sEzmaxpartnerproductName2")
-    val sEzmaxpartnerproductName2: kotlin.String? = null,
+    val sEzmaxpartnerproductName2: kotlin.String,
 
     /* The unique ID of the Ezmaxpartnerproductstage */
     @Json(name = "fkiEzmaxpartnerproductstageID")
-    val fkiEzmaxpartnerproductstageID: kotlin.Int? = null,
+    val fkiEzmaxpartnerproductstageID: kotlin.Int,
 
     /* The code of the sEzmaxpartnerproductstage */
     @Json(name = "sEzmaxpartnerproductstageCode")
-    val sEzmaxpartnerproductstageCode: kotlin.String? = null,
+    val sEzmaxpartnerproductstageCode: kotlin.String,
 
     /* The login name of the User. */
     @Json(name = "sUserLoginName")
-    val sUserLoginName: kotlin.String? = null,
+    val sUserLoginName: kotlin.String,
 
     /* The first name of the user */
     @Json(name = "sUserFirstName")
-    val sUserFirstName: kotlin.String? = null,
+    val sUserFirstName: kotlin.String,
 
     /* The last name of the user */
     @Json(name = "sUserLastName")
-    val sUserLastName: kotlin.String? = null,
+    val sUserLastName: kotlin.String,
 
     /* The unique ID of the User */
     @Json(name = "fkiUserID")
-    val fkiUserID: kotlin.Int? = null,
+    val fkiUserID: kotlin.Int,
 
     /* The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| */
     @Json(name = "fkiLanguageID")
-    val fkiLanguageID: kotlin.Int? = null,
+    val fkiLanguageID: kotlin.Int,
 
     @Json(name = "objAddress")
     val objAddress: AddressRequestCompound? = null,

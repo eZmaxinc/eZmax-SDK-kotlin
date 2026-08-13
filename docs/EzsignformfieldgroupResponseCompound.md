@@ -23,6 +23,7 @@
 | **sEzsignformfieldgroupTextvalidationcustommessage** | **kotlin.String** | Description of validation rule. Show by signatory. |  [optional] |
 | **tEzsignformfieldgroupTooltip** | **kotlin.String** | A tooltip that will be presented to Ezsignsigner about the Ezsignformfieldgroup |  [optional] |
 | **eEzsignformfieldgroupTooltipposition** | [**FieldEEzsignformfieldgroupTooltipposition**](FieldEEzsignformfieldgroupTooltipposition.md) |  |  [optional] |
+| **dtEzsignformfieldgroupCompleted** | **kotlin.String** | The date the Ezsignformfieldgroup was completed. |  [optional] |
 | **aObjDropdownElement** | [**kotlin.collections.List&lt;CustomDropdownElementResponseCompound&gt;**](CustomDropdownElementResponseCompound.md) |  |  [optional] |
 
 

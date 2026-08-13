@@ -565,8 +565,6 @@ open class ObjectInscriptionnotauthenticatedApi(basePath: kotlin.String = defaul
          @Json(name = "sProvinceNameX_DESC") sProvinceNameX_DESC("sProvinceNameX_DESC"),
          @Json(name = "sCountryNameX_ASC") sCountryNameX_ASC("sCountryNameX_ASC"),
          @Json(name = "sCountryNameX_DESC") sCountryNameX_DESC("sCountryNameX_DESC"),
-         @Json(name = "iInscriptionnotauthenticatedCanceled_ASC") iInscriptionnotauthenticatedCanceled_ASC("iInscriptionnotauthenticatedCanceled_ASC"),
-         @Json(name = "iInscriptionnotauthenticatedCanceled_DESC") iInscriptionnotauthenticatedCanceled_DESC("iInscriptionnotauthenticatedCanceled_DESC"),
          @Json(name = "sInscriptionnotauthenticatedOffertopurchasenumber_ASC") sInscriptionnotauthenticatedOffertopurchasenumber_ASC("sInscriptionnotauthenticatedOffertopurchasenumber_ASC"),
          @Json(name = "sInscriptionnotauthenticatedOffertopurchasenumber_DESC") sInscriptionnotauthenticatedOffertopurchasenumber_DESC("sInscriptionnotauthenticatedOffertopurchasenumber_DESC");
 

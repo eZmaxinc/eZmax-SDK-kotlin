@@ -36,9 +36,8 @@ import com.squareup.moshi.JsonClass
 
 data class EzmaxpartnerSubscribeV1Response (
 
-    /*  */
     @Json(name = "sExternalID")
-    val sExternalID: kotlin.String
+    val sExternalID: kotlin.String? = null
 
 ) {
 
