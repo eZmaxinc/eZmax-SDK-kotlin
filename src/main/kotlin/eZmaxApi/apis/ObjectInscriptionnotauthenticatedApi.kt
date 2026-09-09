@@ -29,8 +29,10 @@ import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.HeaderAcceptLanguage
+import eZmaxApi.models.InscriptionnotauthenticatedBatchDownloadV1Request
 import eZmaxApi.models.InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request
 import eZmaxApi.models.InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Response
+import eZmaxApi.models.InscriptionnotauthenticatedGetAttachmentsV1Response
 import eZmaxApi.models.InscriptionnotauthenticatedGetCommunicationCountV1Response
 import eZmaxApi.models.InscriptionnotauthenticatedGetCommunicationListV1Response
 import eZmaxApi.models.InscriptionnotauthenticatedGetCommunicationrecipientsV1Response
@@ -63,6 +65,83 @@ open class ObjectInscriptionnotauthenticatedApi(basePath: kotlin.String = defaul
         val defaultBasePath: String by lazy {
             System.getProperties().getProperty(ApiClient.BASE_URL_KEY, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
+    }
+
+    /**
+     * POST /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/batchDownload
+     * Download multiples attachments from a Inscriptionnotauthenticated
+     * 
+     * @param pkiInscriptionnotauthenticatedID 
+     * @param inscriptionnotauthenticatedBatchDownloadV1Request 
+     * @return java.io.File
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun inscriptionnotauthenticatedBatchDownloadV1(pkiInscriptionnotauthenticatedID: kotlin.Int, inscriptionnotauthenticatedBatchDownloadV1Request: InscriptionnotauthenticatedBatchDownloadV1Request) : java.io.File {
+        val localVarResponse = inscriptionnotauthenticatedBatchDownloadV1WithHttpInfo(pkiInscriptionnotauthenticatedID = pkiInscriptionnotauthenticatedID, inscriptionnotauthenticatedBatchDownloadV1Request = inscriptionnotauthenticatedBatchDownloadV1Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as java.io.File
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/batchDownload
+     * Download multiples attachments from a Inscriptionnotauthenticated
+     * 
+     * @param pkiInscriptionnotauthenticatedID 
+     * @param inscriptionnotauthenticatedBatchDownloadV1Request 
+     * @return ApiResponse<java.io.File?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun inscriptionnotauthenticatedBatchDownloadV1WithHttpInfo(pkiInscriptionnotauthenticatedID: kotlin.Int, inscriptionnotauthenticatedBatchDownloadV1Request: InscriptionnotauthenticatedBatchDownloadV1Request) : ApiResponse<java.io.File?> {
+        val localVariableConfig = inscriptionnotauthenticatedBatchDownloadV1RequestConfig(pkiInscriptionnotauthenticatedID = pkiInscriptionnotauthenticatedID, inscriptionnotauthenticatedBatchDownloadV1Request = inscriptionnotauthenticatedBatchDownloadV1Request)
+
+        return request<InscriptionnotauthenticatedBatchDownloadV1Request, java.io.File>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation inscriptionnotauthenticatedBatchDownloadV1
+     *
+     * @param pkiInscriptionnotauthenticatedID 
+     * @param inscriptionnotauthenticatedBatchDownloadV1Request 
+     * @return RequestConfig
+     */
+    fun inscriptionnotauthenticatedBatchDownloadV1RequestConfig(pkiInscriptionnotauthenticatedID: kotlin.Int, inscriptionnotauthenticatedBatchDownloadV1Request: InscriptionnotauthenticatedBatchDownloadV1Request) : RequestConfig<InscriptionnotauthenticatedBatchDownloadV1Request> {
+        val localVariableBody = inscriptionnotauthenticatedBatchDownloadV1Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/batchDownload".replace("{"+"pkiInscriptionnotauthenticatedID"+"}", encodeURIComponent(pkiInscriptionnotauthenticatedID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
     }
 
     /**
@@ -135,6 +214,79 @@ open class ObjectInscriptionnotauthenticatedApi(basePath: kotlin.String = defaul
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/fillInscriptionnotauthenticatedcondition".replace("{"+"pkiInscriptionnotauthenticatedID"+"}", encodeURIComponent(pkiInscriptionnotauthenticatedID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getAttachments
+     * Retrieve Inscriptionnotauthenticated&#39;s attachments
+     * 
+     * @param pkiInscriptionnotauthenticatedID 
+     * @return InscriptionnotauthenticatedGetAttachmentsV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun inscriptionnotauthenticatedGetAttachmentsV1(pkiInscriptionnotauthenticatedID: kotlin.Int) : InscriptionnotauthenticatedGetAttachmentsV1Response {
+        val localVarResponse = inscriptionnotauthenticatedGetAttachmentsV1WithHttpInfo(pkiInscriptionnotauthenticatedID = pkiInscriptionnotauthenticatedID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as InscriptionnotauthenticatedGetAttachmentsV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getAttachments
+     * Retrieve Inscriptionnotauthenticated&#39;s attachments
+     * 
+     * @param pkiInscriptionnotauthenticatedID 
+     * @return ApiResponse<InscriptionnotauthenticatedGetAttachmentsV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun inscriptionnotauthenticatedGetAttachmentsV1WithHttpInfo(pkiInscriptionnotauthenticatedID: kotlin.Int) : ApiResponse<InscriptionnotauthenticatedGetAttachmentsV1Response?> {
+        val localVariableConfig = inscriptionnotauthenticatedGetAttachmentsV1RequestConfig(pkiInscriptionnotauthenticatedID = pkiInscriptionnotauthenticatedID)
+
+        return request<Unit, InscriptionnotauthenticatedGetAttachmentsV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation inscriptionnotauthenticatedGetAttachmentsV1
+     *
+     * @param pkiInscriptionnotauthenticatedID 
+     * @return RequestConfig
+     */
+    fun inscriptionnotauthenticatedGetAttachmentsV1RequestConfig(pkiInscriptionnotauthenticatedID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getAttachments".replace("{"+"pkiInscriptionnotauthenticatedID"+"}", encodeURIComponent(pkiInscriptionnotauthenticatedID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,
@@ -665,8 +817,8 @@ open class ObjectInscriptionnotauthenticatedApi(basePath: kotlin.String = defaul
                 }
             }
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
         localVariableHeaders["Accept"] = "application/json"
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
 
         return RequestConfig(
             method = RequestMethod.GET,

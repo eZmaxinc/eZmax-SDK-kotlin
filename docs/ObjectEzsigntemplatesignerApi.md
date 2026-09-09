@@ -190,9 +190,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsigntemplatesignerID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsigntemplatesignerID** | **kotlin.Int**|  | |
 | **ezsigntemplatesignerEditObjectV1Request** | [**EzsigntemplatesignerEditObjectV1Request**](EzsigntemplatesignerEditObjectV1Request.md)|  | |
 
 ### Return type
@@ -241,9 +241,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsigntemplatesignerID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsigntemplatesignerID** | **kotlin.Int**|  | |
 | **ezsigntemplatesignerEditObjectV2Request** | [**EzsigntemplatesignerEditObjectV2Request**](EzsigntemplatesignerEditObjectV2Request.md)|  | |
 
 ### Return type

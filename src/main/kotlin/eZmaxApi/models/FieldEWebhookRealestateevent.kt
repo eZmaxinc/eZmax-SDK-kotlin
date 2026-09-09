@@ -30,11 +30,17 @@ import com.squareup.moshi.JsonClass
 /**
  * The Realestateevent of the Webhook
  *
- * Values: InscriptionCreated,InscriptionModified,InscriptionnotauthenticatedCreated,InscriptionnotauthenticatedModified
+ * Values: BuyercontractCreated,BuyercontractModified,InscriptionCreated,InscriptionModified,InscriptionnotauthenticatedCreated,InscriptionnotauthenticatedModified
  */
 
 @JsonClass(generateAdapter = false)
 enum class FieldEWebhookRealestateevent(val value: kotlin.String) {
+
+    @Json(name = "BuyercontractCreated")
+    BuyercontractCreated("BuyercontractCreated"),
+
+    @Json(name = "BuyercontractModified")
+    BuyercontractModified("BuyercontractModified"),
 
     @Json(name = "InscriptionCreated")
     InscriptionCreated("InscriptionCreated"),

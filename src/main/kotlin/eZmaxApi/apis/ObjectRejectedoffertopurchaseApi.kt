@@ -29,6 +29,8 @@ import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.HeaderAcceptLanguage
+import eZmaxApi.models.RejectedoffertopurchaseBatchDownloadV1Request
+import eZmaxApi.models.RejectedoffertopurchaseGetAttachmentsV1Response
 import eZmaxApi.models.RejectedoffertopurchaseGetCommunicationCountV1Response
 import eZmaxApi.models.RejectedoffertopurchaseGetCommunicationListV1Response
 import eZmaxApi.models.RejectedoffertopurchaseGetCommunicationrecipientsV1Response
@@ -59,6 +61,156 @@ open class ObjectRejectedoffertopurchaseApi(basePath: kotlin.String = defaultBas
         val defaultBasePath: String by lazy {
             System.getProperties().getProperty(ApiClient.BASE_URL_KEY, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
+    }
+
+    /**
+     * POST /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/batchDownload
+     * Download multiples attachments from a Rejectedoffertopurchase
+     * 
+     * @param pkiRejectedoffertopurchaseID 
+     * @param rejectedoffertopurchaseBatchDownloadV1Request 
+     * @return java.io.File
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun rejectedoffertopurchaseBatchDownloadV1(pkiRejectedoffertopurchaseID: kotlin.Int, rejectedoffertopurchaseBatchDownloadV1Request: RejectedoffertopurchaseBatchDownloadV1Request) : java.io.File {
+        val localVarResponse = rejectedoffertopurchaseBatchDownloadV1WithHttpInfo(pkiRejectedoffertopurchaseID = pkiRejectedoffertopurchaseID, rejectedoffertopurchaseBatchDownloadV1Request = rejectedoffertopurchaseBatchDownloadV1Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as java.io.File
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/batchDownload
+     * Download multiples attachments from a Rejectedoffertopurchase
+     * 
+     * @param pkiRejectedoffertopurchaseID 
+     * @param rejectedoffertopurchaseBatchDownloadV1Request 
+     * @return ApiResponse<java.io.File?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun rejectedoffertopurchaseBatchDownloadV1WithHttpInfo(pkiRejectedoffertopurchaseID: kotlin.Int, rejectedoffertopurchaseBatchDownloadV1Request: RejectedoffertopurchaseBatchDownloadV1Request) : ApiResponse<java.io.File?> {
+        val localVariableConfig = rejectedoffertopurchaseBatchDownloadV1RequestConfig(pkiRejectedoffertopurchaseID = pkiRejectedoffertopurchaseID, rejectedoffertopurchaseBatchDownloadV1Request = rejectedoffertopurchaseBatchDownloadV1Request)
+
+        return request<RejectedoffertopurchaseBatchDownloadV1Request, java.io.File>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation rejectedoffertopurchaseBatchDownloadV1
+     *
+     * @param pkiRejectedoffertopurchaseID 
+     * @param rejectedoffertopurchaseBatchDownloadV1Request 
+     * @return RequestConfig
+     */
+    fun rejectedoffertopurchaseBatchDownloadV1RequestConfig(pkiRejectedoffertopurchaseID: kotlin.Int, rejectedoffertopurchaseBatchDownloadV1Request: RejectedoffertopurchaseBatchDownloadV1Request) : RequestConfig<RejectedoffertopurchaseBatchDownloadV1Request> {
+        val localVariableBody = rejectedoffertopurchaseBatchDownloadV1Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/batchDownload".replace("{"+"pkiRejectedoffertopurchaseID"+"}", encodeURIComponent(pkiRejectedoffertopurchaseID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getAttachments
+     * Retrieve Rejectedoffertopurchase&#39;s attachments
+     * 
+     * @param pkiRejectedoffertopurchaseID 
+     * @return RejectedoffertopurchaseGetAttachmentsV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun rejectedoffertopurchaseGetAttachmentsV1(pkiRejectedoffertopurchaseID: kotlin.Int) : RejectedoffertopurchaseGetAttachmentsV1Response {
+        val localVarResponse = rejectedoffertopurchaseGetAttachmentsV1WithHttpInfo(pkiRejectedoffertopurchaseID = pkiRejectedoffertopurchaseID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as RejectedoffertopurchaseGetAttachmentsV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getAttachments
+     * Retrieve Rejectedoffertopurchase&#39;s attachments
+     * 
+     * @param pkiRejectedoffertopurchaseID 
+     * @return ApiResponse<RejectedoffertopurchaseGetAttachmentsV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun rejectedoffertopurchaseGetAttachmentsV1WithHttpInfo(pkiRejectedoffertopurchaseID: kotlin.Int) : ApiResponse<RejectedoffertopurchaseGetAttachmentsV1Response?> {
+        val localVariableConfig = rejectedoffertopurchaseGetAttachmentsV1RequestConfig(pkiRejectedoffertopurchaseID = pkiRejectedoffertopurchaseID)
+
+        return request<Unit, RejectedoffertopurchaseGetAttachmentsV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation rejectedoffertopurchaseGetAttachmentsV1
+     *
+     * @param pkiRejectedoffertopurchaseID 
+     * @return RequestConfig
+     */
+    fun rejectedoffertopurchaseGetAttachmentsV1RequestConfig(pkiRejectedoffertopurchaseID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getAttachments".replace("{"+"pkiRejectedoffertopurchaseID"+"}", encodeURIComponent(pkiRejectedoffertopurchaseID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
     }
 
     /**
@@ -481,8 +633,8 @@ open class ObjectRejectedoffertopurchaseApi(basePath: kotlin.String = defaultBas
                 }
             }
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
         localVariableHeaders["Accept"] = "application/json"
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
 
         return RequestConfig(
             method = RequestMethod.GET,

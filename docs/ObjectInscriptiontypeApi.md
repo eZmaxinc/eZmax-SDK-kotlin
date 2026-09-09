@@ -38,10 +38,10 @@ try {
 ```
 
 ### Parameters
-| **sSelector** | **kotlin.String**| The type of Inscriptiontypes to return | [enum: All] |
-| **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional] |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **sSelector** | **kotlin.String**| The type of Inscriptiontypes to return | [enum: All] |
+| **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional] |
 | **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
 
 ### Return type

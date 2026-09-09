@@ -40,12 +40,12 @@ try {
 ```
 
 ### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
 | **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiEzmaxmaillinglistID_ASC, pkiEzmaxmaillinglistID_DESC, sEzmaxmaillinglistNameX_ASC, sEzmaxmaillinglistNameX_DESC, sEzmaxmaillinglistDescriptionX_ASC, sEzmaxmaillinglistDescriptionX_DESC] |
 | **iRowMax** | **kotlin.Int**|  | [optional] |
 | **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0] |
 | **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
 | **sFilter** | **kotlin.String**|  | [optional] |
 
 ### Return type

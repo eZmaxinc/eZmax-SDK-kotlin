@@ -27,7 +27,12 @@ import java.io.IOException
 import okhttp3.Call
 import okhttp3.HttpUrl
 
+import eZmaxApi.models.BankaccountBatchDownloadV1Request
+import eZmaxApi.models.BankaccountGetAttachmentsV1Response
 import eZmaxApi.models.BankaccountGetAutocompleteV2Response
+import eZmaxApi.models.BankaccountImportIntoEDMV1Request
+import eZmaxApi.models.BankaccountImportIntoEDMV1Response
+import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.HeaderAcceptLanguage
 
 import com.squareup.moshi.Json
@@ -52,6 +57,156 @@ open class ObjectBankaccountApi(basePath: kotlin.String = defaultBasePath, clien
         val defaultBasePath: String by lazy {
             System.getProperties().getProperty(ApiClient.BASE_URL_KEY, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
+    }
+
+    /**
+     * POST /1/object/bankaccount/{pkiBankaccountID}/batchDownload
+     * Download multiples attachments from a Bankaccount
+     * 
+     * @param pkiBankaccountID 
+     * @param bankaccountBatchDownloadV1Request 
+     * @return java.io.File
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun bankaccountBatchDownloadV1(pkiBankaccountID: kotlin.Int, bankaccountBatchDownloadV1Request: BankaccountBatchDownloadV1Request) : java.io.File {
+        val localVarResponse = bankaccountBatchDownloadV1WithHttpInfo(pkiBankaccountID = pkiBankaccountID, bankaccountBatchDownloadV1Request = bankaccountBatchDownloadV1Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as java.io.File
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /1/object/bankaccount/{pkiBankaccountID}/batchDownload
+     * Download multiples attachments from a Bankaccount
+     * 
+     * @param pkiBankaccountID 
+     * @param bankaccountBatchDownloadV1Request 
+     * @return ApiResponse<java.io.File?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun bankaccountBatchDownloadV1WithHttpInfo(pkiBankaccountID: kotlin.Int, bankaccountBatchDownloadV1Request: BankaccountBatchDownloadV1Request) : ApiResponse<java.io.File?> {
+        val localVariableConfig = bankaccountBatchDownloadV1RequestConfig(pkiBankaccountID = pkiBankaccountID, bankaccountBatchDownloadV1Request = bankaccountBatchDownloadV1Request)
+
+        return request<BankaccountBatchDownloadV1Request, java.io.File>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation bankaccountBatchDownloadV1
+     *
+     * @param pkiBankaccountID 
+     * @param bankaccountBatchDownloadV1Request 
+     * @return RequestConfig
+     */
+    fun bankaccountBatchDownloadV1RequestConfig(pkiBankaccountID: kotlin.Int, bankaccountBatchDownloadV1Request: BankaccountBatchDownloadV1Request) : RequestConfig<BankaccountBatchDownloadV1Request> {
+        val localVariableBody = bankaccountBatchDownloadV1Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/bankaccount/{pkiBankaccountID}/batchDownload".replace("{"+"pkiBankaccountID"+"}", encodeURIComponent(pkiBankaccountID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/bankaccount/{pkiBankaccountID}/getAttachments
+     * Retrieve Bankaccount&#39;s attachments
+     * 
+     * @param pkiBankaccountID 
+     * @return BankaccountGetAttachmentsV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun bankaccountGetAttachmentsV1(pkiBankaccountID: kotlin.Int) : BankaccountGetAttachmentsV1Response {
+        val localVarResponse = bankaccountGetAttachmentsV1WithHttpInfo(pkiBankaccountID = pkiBankaccountID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as BankaccountGetAttachmentsV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/bankaccount/{pkiBankaccountID}/getAttachments
+     * Retrieve Bankaccount&#39;s attachments
+     * 
+     * @param pkiBankaccountID 
+     * @return ApiResponse<BankaccountGetAttachmentsV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun bankaccountGetAttachmentsV1WithHttpInfo(pkiBankaccountID: kotlin.Int) : ApiResponse<BankaccountGetAttachmentsV1Response?> {
+        val localVariableConfig = bankaccountGetAttachmentsV1RequestConfig(pkiBankaccountID = pkiBankaccountID)
+
+        return request<Unit, BankaccountGetAttachmentsV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation bankaccountGetAttachmentsV1
+     *
+     * @param pkiBankaccountID 
+     * @return RequestConfig
+     */
+    fun bankaccountGetAttachmentsV1RequestConfig(pkiBankaccountID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/bankaccount/{pkiBankaccountID}/getAttachments".replace("{"+"pkiBankaccountID"+"}", encodeURIComponent(pkiBankaccountID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
     }
 
     /**
@@ -166,12 +321,89 @@ open class ObjectBankaccountApi(basePath: kotlin.String = defaultBasePath, clien
                 }
             }
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
         localVariableHeaders["Accept"] = "application/json"
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
 
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/2/object/bankaccount/getAutocomplete/{sSelector}".replace("{"+"sSelector"+"}", encodeURIComponent(sSelector.value.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * POST /1/object/bankaccount/{pkiBankaccountID}/importIntoEDM
+     * Import attachments into the Bankaccount
+     * 
+     * @param pkiBankaccountID 
+     * @param bankaccountImportIntoEDMV1Request 
+     * @return BankaccountImportIntoEDMV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun bankaccountImportIntoEDMV1(pkiBankaccountID: kotlin.Int, bankaccountImportIntoEDMV1Request: BankaccountImportIntoEDMV1Request) : BankaccountImportIntoEDMV1Response {
+        val localVarResponse = bankaccountImportIntoEDMV1WithHttpInfo(pkiBankaccountID = pkiBankaccountID, bankaccountImportIntoEDMV1Request = bankaccountImportIntoEDMV1Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as BankaccountImportIntoEDMV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /1/object/bankaccount/{pkiBankaccountID}/importIntoEDM
+     * Import attachments into the Bankaccount
+     * 
+     * @param pkiBankaccountID 
+     * @param bankaccountImportIntoEDMV1Request 
+     * @return ApiResponse<BankaccountImportIntoEDMV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun bankaccountImportIntoEDMV1WithHttpInfo(pkiBankaccountID: kotlin.Int, bankaccountImportIntoEDMV1Request: BankaccountImportIntoEDMV1Request) : ApiResponse<BankaccountImportIntoEDMV1Response?> {
+        val localVariableConfig = bankaccountImportIntoEDMV1RequestConfig(pkiBankaccountID = pkiBankaccountID, bankaccountImportIntoEDMV1Request = bankaccountImportIntoEDMV1Request)
+
+        return request<BankaccountImportIntoEDMV1Request, BankaccountImportIntoEDMV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation bankaccountImportIntoEDMV1
+     *
+     * @param pkiBankaccountID 
+     * @param bankaccountImportIntoEDMV1Request 
+     * @return RequestConfig
+     */
+    fun bankaccountImportIntoEDMV1RequestConfig(pkiBankaccountID: kotlin.Int, bankaccountImportIntoEDMV1Request: BankaccountImportIntoEDMV1Request) : RequestConfig<BankaccountImportIntoEDMV1Request> {
+        val localVariableBody = bankaccountImportIntoEDMV1Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/bankaccount/{pkiBankaccountID}/importIntoEDM".replace("{"+"pkiBankaccountID"+"}", encodeURIComponent(pkiBankaccountID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

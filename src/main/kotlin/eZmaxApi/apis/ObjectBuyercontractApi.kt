@@ -27,6 +27,8 @@ import java.io.IOException
 import okhttp3.Call
 import okhttp3.HttpUrl
 
+import eZmaxApi.models.BuyercontractBatchDownloadV1Request
+import eZmaxApi.models.BuyercontractGetAttachmentsV1Response
 import eZmaxApi.models.BuyercontractGetCommunicationCountV1Response
 import eZmaxApi.models.BuyercontractGetCommunicationListV1Response
 import eZmaxApi.models.BuyercontractGetCommunicationrecipientsV1Response
@@ -59,6 +61,156 @@ open class ObjectBuyercontractApi(basePath: kotlin.String = defaultBasePath, cli
         val defaultBasePath: String by lazy {
             System.getProperties().getProperty(ApiClient.BASE_URL_KEY, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
+    }
+
+    /**
+     * POST /1/object/buyercontract/{pkiBuyercontractID}/batchDownload
+     * Download multiples attachments from a Buyercontract
+     * 
+     * @param pkiBuyercontractID 
+     * @param buyercontractBatchDownloadV1Request 
+     * @return java.io.File
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun buyercontractBatchDownloadV1(pkiBuyercontractID: kotlin.Int, buyercontractBatchDownloadV1Request: BuyercontractBatchDownloadV1Request) : java.io.File {
+        val localVarResponse = buyercontractBatchDownloadV1WithHttpInfo(pkiBuyercontractID = pkiBuyercontractID, buyercontractBatchDownloadV1Request = buyercontractBatchDownloadV1Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as java.io.File
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /1/object/buyercontract/{pkiBuyercontractID}/batchDownload
+     * Download multiples attachments from a Buyercontract
+     * 
+     * @param pkiBuyercontractID 
+     * @param buyercontractBatchDownloadV1Request 
+     * @return ApiResponse<java.io.File?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun buyercontractBatchDownloadV1WithHttpInfo(pkiBuyercontractID: kotlin.Int, buyercontractBatchDownloadV1Request: BuyercontractBatchDownloadV1Request) : ApiResponse<java.io.File?> {
+        val localVariableConfig = buyercontractBatchDownloadV1RequestConfig(pkiBuyercontractID = pkiBuyercontractID, buyercontractBatchDownloadV1Request = buyercontractBatchDownloadV1Request)
+
+        return request<BuyercontractBatchDownloadV1Request, java.io.File>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation buyercontractBatchDownloadV1
+     *
+     * @param pkiBuyercontractID 
+     * @param buyercontractBatchDownloadV1Request 
+     * @return RequestConfig
+     */
+    fun buyercontractBatchDownloadV1RequestConfig(pkiBuyercontractID: kotlin.Int, buyercontractBatchDownloadV1Request: BuyercontractBatchDownloadV1Request) : RequestConfig<BuyercontractBatchDownloadV1Request> {
+        val localVariableBody = buyercontractBatchDownloadV1Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/buyercontract/{pkiBuyercontractID}/batchDownload".replace("{"+"pkiBuyercontractID"+"}", encodeURIComponent(pkiBuyercontractID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/buyercontract/{pkiBuyercontractID}/getAttachments
+     * Retrieve Buyercontract&#39;s attachments
+     * 
+     * @param pkiBuyercontractID 
+     * @return BuyercontractGetAttachmentsV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun buyercontractGetAttachmentsV1(pkiBuyercontractID: kotlin.Int) : BuyercontractGetAttachmentsV1Response {
+        val localVarResponse = buyercontractGetAttachmentsV1WithHttpInfo(pkiBuyercontractID = pkiBuyercontractID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as BuyercontractGetAttachmentsV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/buyercontract/{pkiBuyercontractID}/getAttachments
+     * Retrieve Buyercontract&#39;s attachments
+     * 
+     * @param pkiBuyercontractID 
+     * @return ApiResponse<BuyercontractGetAttachmentsV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun buyercontractGetAttachmentsV1WithHttpInfo(pkiBuyercontractID: kotlin.Int) : ApiResponse<BuyercontractGetAttachmentsV1Response?> {
+        val localVariableConfig = buyercontractGetAttachmentsV1RequestConfig(pkiBuyercontractID = pkiBuyercontractID)
+
+        return request<Unit, BuyercontractGetAttachmentsV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation buyercontractGetAttachmentsV1
+     *
+     * @param pkiBuyercontractID 
+     * @return RequestConfig
+     */
+    fun buyercontractGetAttachmentsV1RequestConfig(pkiBuyercontractID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/buyercontract/{pkiBuyercontractID}/getAttachments".replace("{"+"pkiBuyercontractID"+"}", encodeURIComponent(pkiBuyercontractID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
     }
 
     /**
@@ -475,8 +627,8 @@ open class ObjectBuyercontractApi(basePath: kotlin.String = defaultBasePath, cli
                 }
             }
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
         localVariableHeaders["Accept"] = "application/json"
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
 
         return RequestConfig(
             method = RequestMethod.GET,

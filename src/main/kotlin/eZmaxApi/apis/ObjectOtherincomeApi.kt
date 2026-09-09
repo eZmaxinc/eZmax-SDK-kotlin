@@ -29,6 +29,8 @@ import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.HeaderAcceptLanguage
+import eZmaxApi.models.OtherincomeBatchDownloadV1Request
+import eZmaxApi.models.OtherincomeGetAttachmentsV1Response
 import eZmaxApi.models.OtherincomeGetCommunicationCountV1Response
 import eZmaxApi.models.OtherincomeGetCommunicationListV1Response
 import eZmaxApi.models.OtherincomeGetCommunicationrecipientsV1Response
@@ -59,6 +61,156 @@ open class ObjectOtherincomeApi(basePath: kotlin.String = defaultBasePath, clien
         val defaultBasePath: String by lazy {
             System.getProperties().getProperty(ApiClient.BASE_URL_KEY, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
+    }
+
+    /**
+     * POST /1/object/otherincome/{pkiOtherincomeID}/batchDownload
+     * Download multiples attachments from a Otherincome
+     * 
+     * @param pkiOtherincomeID 
+     * @param otherincomeBatchDownloadV1Request 
+     * @return java.io.File
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun otherincomeBatchDownloadV1(pkiOtherincomeID: kotlin.Int, otherincomeBatchDownloadV1Request: OtherincomeBatchDownloadV1Request) : java.io.File {
+        val localVarResponse = otherincomeBatchDownloadV1WithHttpInfo(pkiOtherincomeID = pkiOtherincomeID, otherincomeBatchDownloadV1Request = otherincomeBatchDownloadV1Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as java.io.File
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /1/object/otherincome/{pkiOtherincomeID}/batchDownload
+     * Download multiples attachments from a Otherincome
+     * 
+     * @param pkiOtherincomeID 
+     * @param otherincomeBatchDownloadV1Request 
+     * @return ApiResponse<java.io.File?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun otherincomeBatchDownloadV1WithHttpInfo(pkiOtherincomeID: kotlin.Int, otherincomeBatchDownloadV1Request: OtherincomeBatchDownloadV1Request) : ApiResponse<java.io.File?> {
+        val localVariableConfig = otherincomeBatchDownloadV1RequestConfig(pkiOtherincomeID = pkiOtherincomeID, otherincomeBatchDownloadV1Request = otherincomeBatchDownloadV1Request)
+
+        return request<OtherincomeBatchDownloadV1Request, java.io.File>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation otherincomeBatchDownloadV1
+     *
+     * @param pkiOtherincomeID 
+     * @param otherincomeBatchDownloadV1Request 
+     * @return RequestConfig
+     */
+    fun otherincomeBatchDownloadV1RequestConfig(pkiOtherincomeID: kotlin.Int, otherincomeBatchDownloadV1Request: OtherincomeBatchDownloadV1Request) : RequestConfig<OtherincomeBatchDownloadV1Request> {
+        val localVariableBody = otherincomeBatchDownloadV1Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/otherincome/{pkiOtherincomeID}/batchDownload".replace("{"+"pkiOtherincomeID"+"}", encodeURIComponent(pkiOtherincomeID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/otherincome/{pkiOtherincomeID}/getAttachments
+     * Retrieve Otherincome&#39;s attachments
+     * 
+     * @param pkiOtherincomeID 
+     * @return OtherincomeGetAttachmentsV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun otherincomeGetAttachmentsV1(pkiOtherincomeID: kotlin.Int) : OtherincomeGetAttachmentsV1Response {
+        val localVarResponse = otherincomeGetAttachmentsV1WithHttpInfo(pkiOtherincomeID = pkiOtherincomeID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as OtherincomeGetAttachmentsV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/otherincome/{pkiOtherincomeID}/getAttachments
+     * Retrieve Otherincome&#39;s attachments
+     * 
+     * @param pkiOtherincomeID 
+     * @return ApiResponse<OtherincomeGetAttachmentsV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun otherincomeGetAttachmentsV1WithHttpInfo(pkiOtherincomeID: kotlin.Int) : ApiResponse<OtherincomeGetAttachmentsV1Response?> {
+        val localVariableConfig = otherincomeGetAttachmentsV1RequestConfig(pkiOtherincomeID = pkiOtherincomeID)
+
+        return request<Unit, OtherincomeGetAttachmentsV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation otherincomeGetAttachmentsV1
+     *
+     * @param pkiOtherincomeID 
+     * @return RequestConfig
+     */
+    fun otherincomeGetAttachmentsV1RequestConfig(pkiOtherincomeID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/otherincome/{pkiOtherincomeID}/getAttachments".replace("{"+"pkiOtherincomeID"+"}", encodeURIComponent(pkiOtherincomeID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
     }
 
     /**
@@ -475,8 +627,8 @@ open class ObjectOtherincomeApi(basePath: kotlin.String = defaultBasePath, clien
                 }
             }
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
         localVariableHeaders["Accept"] = "application/json"
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
 
         return RequestConfig(
             method = RequestMethod.GET,

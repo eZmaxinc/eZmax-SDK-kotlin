@@ -138,9 +138,9 @@ try {
 ```
 
 ### Parameters
-| **pkiUsergroupmembershipID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiUsergroupmembershipID** | **kotlin.Int**|  | |
 | **usergroupmembershipEditObjectV1Request** | [**UsergroupmembershipEditObjectV1Request**](UsergroupmembershipEditObjectV1Request.md)|  | |
 
 ### Return type

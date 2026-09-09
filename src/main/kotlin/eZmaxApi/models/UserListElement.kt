@@ -42,6 +42,8 @@ import com.squareup.moshi.JsonClass
  * @param eUserOrigin 
  * @param eUserEzsignaccess 
  * @param sEmailAddress The email address.
+ * @param fkiAgentID The unique ID of the Agent.
+ * @param fkiBrokerID The unique ID of the Broker.
  * @param bUserSuspended Whether the User is suspended or not
  * @param dtUserEzsignprepaidexpiration The eZsign prepaid expiration date
  * @param sUserJobtitle The job title of the user
@@ -82,6 +84,14 @@ data class UserListElement (
     /* The email address. */
     @Json(name = "sEmailAddress")
     val sEmailAddress: kotlin.String,
+
+    /* The unique ID of the Agent. */
+    @Json(name = "fkiAgentID")
+    val fkiAgentID: kotlin.Int? = null,
+
+    /* The unique ID of the Broker. */
+    @Json(name = "fkiBrokerID")
+    val fkiBrokerID: kotlin.Int? = null,
 
     /* Whether the User is suspended or not */
     @Json(name = "bUserSuspended")

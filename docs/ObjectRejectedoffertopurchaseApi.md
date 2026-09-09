@@ -4,6 +4,8 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**rejectedoffertopurchaseBatchDownloadV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseBatchDownloadV1) | **POST** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/batchDownload | Download multiples attachments from a Rejectedoffertopurchase |
+| [**rejectedoffertopurchaseGetAttachmentsV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseGetAttachmentsV1) | **GET** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getAttachments | Retrieve Rejectedoffertopurchase&#39;s attachments |
 | [**rejectedoffertopurchaseGetCommunicationCountV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseGetCommunicationCountV1) | **GET** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationCount | Retrieve Communication count |
 | [**rejectedoffertopurchaseGetCommunicationListV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseGetCommunicationListV1) | **GET** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationList | Retrieve Communication list |
 | [**rejectedoffertopurchaseGetCommunicationrecipientsV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseGetCommunicationrecipientsV1) | **GET** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationrecipients | Retrieve Rejectedoffertopurchase&#39;s Communicationrecipient |
@@ -11,6 +13,102 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**rejectedoffertopurchaseGetListV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseGetListV1) | **GET** /1/object/rejectedoffertopurchase/getList | Retrieve Rejectedoffertopurchase list |
 | [**rejectedoffertopurchaseImportIntoEDMV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseImportIntoEDMV1) | **POST** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/importIntoEDM | Import attachments into the Rejectedoffertopurchase |
 
+
+<a id="rejectedoffertopurchaseBatchDownloadV1"></a>
+# **rejectedoffertopurchaseBatchDownloadV1**
+> java.io.File rejectedoffertopurchaseBatchDownloadV1(pkiRejectedoffertopurchaseID, rejectedoffertopurchaseBatchDownloadV1Request)
+
+Download multiples attachments from a Rejectedoffertopurchase
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectRejectedoffertopurchaseApi()
+val pkiRejectedoffertopurchaseID : kotlin.Int = 56 // kotlin.Int | 
+val rejectedoffertopurchaseBatchDownloadV1Request : RejectedoffertopurchaseBatchDownloadV1Request =  // RejectedoffertopurchaseBatchDownloadV1Request | 
+try {
+    val result : java.io.File = apiInstance.rejectedoffertopurchaseBatchDownloadV1(pkiRejectedoffertopurchaseID, rejectedoffertopurchaseBatchDownloadV1Request)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectRejectedoffertopurchaseApi#rejectedoffertopurchaseBatchDownloadV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectRejectedoffertopurchaseApi#rejectedoffertopurchaseBatchDownloadV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiRejectedoffertopurchaseID** | **kotlin.Int**|  | |
+| **rejectedoffertopurchaseBatchDownloadV1Request** | [**RejectedoffertopurchaseBatchDownloadV1Request**](RejectedoffertopurchaseBatchDownloadV1Request.md)|  | |
+
+### Return type
+
+[**java.io.File**](java.io.File.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a id="rejectedoffertopurchaseGetAttachmentsV1"></a>
+# **rejectedoffertopurchaseGetAttachmentsV1**
+> RejectedoffertopurchaseGetAttachmentsV1Response rejectedoffertopurchaseGetAttachmentsV1(pkiRejectedoffertopurchaseID)
+
+Retrieve Rejectedoffertopurchase&#39;s attachments
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectRejectedoffertopurchaseApi()
+val pkiRejectedoffertopurchaseID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : RejectedoffertopurchaseGetAttachmentsV1Response = apiInstance.rejectedoffertopurchaseGetAttachmentsV1(pkiRejectedoffertopurchaseID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectRejectedoffertopurchaseApi#rejectedoffertopurchaseGetAttachmentsV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectRejectedoffertopurchaseApi#rejectedoffertopurchaseGetAttachmentsV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiRejectedoffertopurchaseID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**RejectedoffertopurchaseGetAttachmentsV1Response**](RejectedoffertopurchaseGetAttachmentsV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 <a id="rejectedoffertopurchaseGetCommunicationCountV1"></a>
 # **rejectedoffertopurchaseGetCommunicationCountV1**
@@ -241,12 +339,12 @@ try {
 ```
 
 ### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
 | **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiRejectedoffertopurchaseID_ASC, pkiRejectedoffertopurchaseID_DESC, sRejectedoffertopurchaseNumber_ASC, sRejectedoffertopurchaseNumber_DESC, dtRejectedoffertopurchaseDate_ASC, dtRejectedoffertopurchaseDate_DESC, bRejectedoffertopurchaseIsactive_ASC, bRejectedoffertopurchaseIsactive_DESC, bRejectedoffertopurchaseLinkedtoinscription_ASC, bRejectedoffertopurchaseLinkedtoinscription_DESC, dtCreatedDate_ASC, dtCreatedDate_DESC, sAddressCivic_ASC, sAddressCivic_DESC, sAddressStreet_ASC, sAddressStreet_DESC, sAddressSuite_ASC, sAddressSuite_DESC, sAddressCity_ASC, sAddressCity_DESC, sAddressZip_ASC, sAddressZip_DESC, sProvinceNameX_ASC, sProvinceNameX_DESC, sCountryNameX_ASC, sCountryNameX_DESC] |
 | **iRowMax** | **kotlin.Int**|  | [optional] |
 | **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0] |
 | **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
 | **sFilter** | **kotlin.String**|  | [optional] |
 
 ### Return type
@@ -295,9 +393,9 @@ try {
 ```
 
 ### Parameters
-| **pkiRejectedoffertopurchaseID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiRejectedoffertopurchaseID** | **kotlin.Int**|  | |
 | **rejectedoffertopurchaseImportIntoEDMV1Request** | [**RejectedoffertopurchaseImportIntoEDMV1Request**](RejectedoffertopurchaseImportIntoEDMV1Request.md)|  | |
 
 ### Return type

@@ -37,9 +37,9 @@ try {
 ```
 
 ### Parameters
-| **pkiNotificationsectionID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiNotificationsectionID** | **kotlin.Int**|  | |
 | **bShowHidden** | **kotlin.Boolean**| Whether or not to return the hidden Notificationtests | |
 
 ### Return type

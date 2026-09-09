@@ -42,12 +42,12 @@ try {
 ```
 
 ### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
 | **pkiEzsignbulksendtransmissionID** | **kotlin.Int**|  | |
 | **bIncludeSigned** | **kotlin.Boolean**| Include final document once all signatures were applied | [optional] |
 | **bIncludeAttachment** | **kotlin.Boolean**| Include attached files in signatures | [optional] |
 | **bIncludeProofdocument** | **kotlin.Boolean**| Include the evidence report | [optional] |
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
 | **bIncludeProof** | **kotlin.Boolean**| include the complete evidence archive including all of the above and more | [optional] |
 
 ### Return type

@@ -6,6 +6,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | ------------- | ------------- | ------------- |
 | [**attachmentDownloadV1**](ObjectAttachmentApi.md#attachmentDownloadV1) | **GET** /1/object/attachment/{pkiAttachmentID}/download | Retrieve the content |
 | [**attachmentGetAttachmentlogsV1**](ObjectAttachmentApi.md#attachmentGetAttachmentlogsV1) | **GET** /1/object/attachment/{pkiAttachmentID}/getAttachmentlogs | Retrieve the Attachmentlogs |
+| [**attachmentRenameV1**](ObjectAttachmentApi.md#attachmentRenameV1) | **POST** /1/object/attachment/{pkiAttachmentID}/rename | Rename an Attachment |
 
 
 <a id="attachmentDownloadV1"></a>
@@ -106,5 +107,56 @@ Configure Authorization:
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="attachmentRenameV1"></a>
+# **attachmentRenameV1**
+> AttachmentRenameV1Response attachmentRenameV1(pkiAttachmentID, attachmentRenameV1Request)
+
+Rename an Attachment
+
+The endpoint allows to change the attachment&#39;s file name and category.
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectAttachmentApi()
+val pkiAttachmentID : kotlin.Int = 56 // kotlin.Int | 
+val attachmentRenameV1Request : AttachmentRenameV1Request =  // AttachmentRenameV1Request | 
+try {
+    val result : AttachmentRenameV1Response = apiInstance.attachmentRenameV1(pkiAttachmentID, attachmentRenameV1Request)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectAttachmentApi#attachmentRenameV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectAttachmentApi#attachmentRenameV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiAttachmentID** | **kotlin.Int**|  | |
+| **attachmentRenameV1Request** | [**AttachmentRenameV1Request**](AttachmentRenameV1Request.md)|  | |
+
+### Return type
+
+[**AttachmentRenameV1Response**](AttachmentRenameV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 

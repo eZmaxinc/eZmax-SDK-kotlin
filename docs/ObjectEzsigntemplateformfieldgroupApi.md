@@ -138,9 +138,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsigntemplateformfieldgroupID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsigntemplateformfieldgroupID** | **kotlin.Int**|  | |
 | **ezsigntemplateformfieldgroupEditObjectV1Request** | [**EzsigntemplateformfieldgroupEditObjectV1Request**](EzsigntemplateformfieldgroupEditObjectV1Request.md)|  | |
 
 ### Return type

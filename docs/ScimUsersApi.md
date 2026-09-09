@@ -142,9 +142,9 @@ try {
 ```
 
 ### Parameters
-| **userId** | **kotlin.String**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **userId** | **kotlin.String**|  | |
 | **scimUser** | [**ScimUser**](ScimUser.md)|  | |
 
 ### Return type

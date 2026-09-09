@@ -193,9 +193,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsigntemplatepublicID** | **kotlin.Int**| The unique ID of the Ezsigntemplatepublic | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsigntemplatepublicID** | **kotlin.Int**| The unique ID of the Ezsigntemplatepublic | |
 | **ezsigntemplatepublicEditObjectV1Request** | [**EzsigntemplatepublicEditObjectV1Request**](EzsigntemplatepublicEditObjectV1Request.md)|  | |
 
 ### Return type
@@ -345,12 +345,12 @@ try {
 ```
 
 ### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
 | **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiEzsigntemplatepublicID_ASC, pkiEzsigntemplatepublicID_DESC, fkiEzsignfoldertypeID_ASC, fkiEzsignfoldertypeID_DESC, sEzsignfoldertypeNameX_ASC, sEzsignfoldertypeNameX_DESC, fkiUserlogintypeID_ASC, fkiUserlogintypeID_DESC, fkiEzsigntemplateID_ASC, fkiEzsigntemplateID_DESC, fkiEzsigntemplatepackageID_ASC, fkiEzsigntemplatepackageID_DESC, sEzsigntemplatepublicDescription_ASC, sEzsigntemplatepublicDescription_DESC, bEzsigntemplatepublicIsactive_ASC, bEzsigntemplatepublicIsactive_DESC, tEzsigntemplatepublicNote_ASC, tEzsigntemplatepublicNote_DESC, eEzsigntemplatepublicLimittype_ASC, eEzsigntemplatepublicLimittype_DESC, iEzsigntemplatepublicLimit_ASC, iEzsigntemplatepublicLimit_DESC, iEzsigntemplatepublicLimitexceeded_ASC, iEzsigntemplatepublicLimitexceeded_DESC, dtEzsigntemplatepublicLimitexceededsince_ASC, dtEzsigntemplatepublicLimitexceededsince_DESC, iEzsignfolder_ASC, iEzsignfolder_DESC, iEzsigndocument_ASC, iEzsigndocument_DESC, sEzsigntemplatepublicEzsigntemplatedescription_ASC, sEzsigntemplatepublicEzsigntemplatedescription_DESC] |
 | **iRowMax** | **kotlin.Int**|  | [optional] |
 | **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0] |
 | **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
 | **sFilter** | **kotlin.String**|  | [optional] |
 
 ### Return type
@@ -448,9 +448,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsigntemplatepublicID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsigntemplatepublicID** | **kotlin.Int**|  | |
 | **body** | **kotlin.Any**|  | |
 
 ### Return type
@@ -499,9 +499,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsigntemplatepublicID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsigntemplatepublicID** | **kotlin.Int**|  | |
 | **body** | **kotlin.Any**|  | |
 
 ### Return type

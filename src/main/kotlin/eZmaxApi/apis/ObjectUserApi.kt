@@ -656,8 +656,8 @@ open class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call
                 }
             }
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
         localVariableHeaders["Accept"] = "application/json"
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
 
         return RequestConfig(
             method = RequestMethod.GET,
@@ -894,6 +894,10 @@ open class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call
      enum class EOrderByUserGetListV1(val value: kotlin.String) {
          @Json(name = "pkiUserID_ASC") pkiUserID_ASC("pkiUserID_ASC"),
          @Json(name = "pkiUserID_DESC") pkiUserID_DESC("pkiUserID_DESC"),
+         @Json(name = "fkiAgentID_ASC") fkiAgentID_ASC("fkiAgentID_ASC"),
+         @Json(name = "fkiAgentID_DESC") fkiAgentID_DESC("fkiAgentID_DESC"),
+         @Json(name = "fkiBrokerID_ASC") fkiBrokerID_ASC("fkiBrokerID_ASC"),
+         @Json(name = "fkiBrokerID_DESC") fkiBrokerID_DESC("fkiBrokerID_DESC"),
          @Json(name = "sUserFirstname_ASC") sUserFirstname_ASC("sUserFirstname_ASC"),
          @Json(name = "sUserFirstname_DESC") sUserFirstname_DESC("sUserFirstname_DESC"),
          @Json(name = "sUserLastname_ASC") sUserLastname_ASC("sUserLastname_ASC"),
@@ -1012,8 +1016,8 @@ open class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call
                 }
             }
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
         localVariableHeaders["Accept"] = "application/json"
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
 
         return RequestConfig(
             method = RequestMethod.GET,

@@ -140,9 +140,9 @@ try {
 ```
 
 ### Parameters
-| **pkiSignatureID** | **kotlin.Int**| The unique ID of the Signature | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiSignatureID** | **kotlin.Int**| The unique ID of the Signature | |
 | **signatureEditObjectV1Request** | [**SignatureEditObjectV1Request**](SignatureEditObjectV1Request.md)|  | |
 
 ### Return type

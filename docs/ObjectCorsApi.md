@@ -138,9 +138,9 @@ try {
 ```
 
 ### Parameters
-| **pkiCorsID** | **kotlin.Int**| The unique ID of the Cors | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiCorsID** | **kotlin.Int**| The unique ID of the Cors | |
 | **corsEditObjectV1Request** | [**CorsEditObjectV1Request**](CorsEditObjectV1Request.md)|  | |
 
 ### Return type

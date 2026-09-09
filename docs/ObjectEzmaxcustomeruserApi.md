@@ -37,9 +37,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzmaxcustomeruserID** | **kotlin.Int**| The unique ID of the Ezmaxcustomeruser | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzmaxcustomeruserID** | **kotlin.Int**| The unique ID of the Ezmaxcustomeruser | |
 | **ezmaxcustomeruserPatchObjectV1Request** | [**EzmaxcustomeruserPatchObjectV1Request**](EzmaxcustomeruserPatchObjectV1Request.md)|  | |
 
 ### Return type

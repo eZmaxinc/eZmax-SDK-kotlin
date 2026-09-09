@@ -137,9 +137,9 @@ try {
 ```
 
 ### Parameters
-| **pkiDiscussionmessageID** | **kotlin.Int**| The unique ID of the Discussionmessage | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiDiscussionmessageID** | **kotlin.Int**| The unique ID of the Discussionmessage | |
 | **discussionmessagePatchObjectV1Request** | [**DiscussionmessagePatchObjectV1Request**](DiscussionmessagePatchObjectV1Request.md)|  | |
 
 ### Return type

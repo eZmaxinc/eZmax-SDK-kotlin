@@ -138,9 +138,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsignannotationID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsignannotationID** | **kotlin.Int**|  | |
 | **ezsignannotationEditObjectV1Request** | [**EzsignannotationEditObjectV1Request**](EzsignannotationEditObjectV1Request.md)|  | |
 
 ### Return type

@@ -143,9 +143,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzdoctemplatedocumentID** | **kotlin.Int**| The unique ID of the Ezdoctemplatedocument | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzdoctemplatedocumentID** | **kotlin.Int**| The unique ID of the Ezdoctemplatedocument | |
 | **ezdoctemplatedocumentEditObjectV1Request** | [**EzdoctemplatedocumentEditObjectV1Request**](EzdoctemplatedocumentEditObjectV1Request.md)|  | |
 
 ### Return type
@@ -198,13 +198,13 @@ try {
 ```
 
 ### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
 | **sSelector** | **kotlin.String**| The type of Ezdoctemplatedocuments to return | [enum: All, Ezsignfolder, Ezsignfoldersignerassociations] |
 | **eType** | **kotlin.String**| The type of Ezdoctemplatedocument | [default to EType.CompanyEzsignfoldertype] [enum: User, Company, Ezsignfoldertype, CompanyUser, CompanyEzsignfoldertype] |
 | **fkiEzsignfoldertypeID** | **kotlin.String**| Specify which fkiEzsignfoldertypeID we want to display. only used when eType &#x3D; Ezsignfoldertype | [optional] |
 | **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to EFilterActive.Active] [enum: All, Active, Inactive] |
 | **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional] |
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
 | **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
 
 ### Return type
@@ -256,12 +256,12 @@ try {
 ```
 
 ### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
 | **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiEzdoctemplatedocumentID_ASC, pkiEzdoctemplatedocumentID_DESC, fkiLanguageID_ASC, fkiLanguageID_DESC, fkiEzdoctemplatetypeID_ASC, fkiEzdoctemplatetypeID_DESC, fkiEzdoctemplatefieldtypecategoryID_ASC, fkiEzdoctemplatefieldtypecategoryID_DESC, bEzdoctemplatedocumentIsactive_ASC, bEzdoctemplatedocumentIsactive_DESC, sEzdoctemplatedocumentNameX_ASC, sEzdoctemplatedocumentNameX_DESC] |
 | **iRowMax** | **kotlin.Int**|  | [optional] |
 | **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0] |
 | **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
 | **sFilter** | **kotlin.String**|  | [optional] |
 
 ### Return type
@@ -359,9 +359,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzdoctemplatedocumentID** | **kotlin.Int**| The unique ID of the Ezdoctemplatedocument | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzdoctemplatedocumentID** | **kotlin.Int**| The unique ID of the Ezdoctemplatedocument | |
 | **ezdoctemplatedocumentPatchObjectV1Request** | [**EzdoctemplatedocumentPatchObjectV1Request**](EzdoctemplatedocumentPatchObjectV1Request.md)|  | |
 
 ### Return type

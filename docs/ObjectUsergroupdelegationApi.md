@@ -138,9 +138,9 @@ try {
 ```
 
 ### Parameters
-| **pkiUsergroupdelegationID** | **kotlin.Int**| The unique ID of the Usergroupdelegation | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiUsergroupdelegationID** | **kotlin.Int**| The unique ID of the Usergroupdelegation | |
 | **usergroupdelegationEditObjectV1Request** | [**UsergroupdelegationEditObjectV1Request**](UsergroupdelegationEditObjectV1Request.md)|  | |
 
 ### Return type

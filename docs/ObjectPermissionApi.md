@@ -138,9 +138,9 @@ try {
 ```
 
 ### Parameters
-| **pkiPermissionID** | **kotlin.Int**| The unique ID of the Permission | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiPermissionID** | **kotlin.Int**| The unique ID of the Permission | |
 | **permissionEditObjectV1Request** | [**PermissionEditObjectV1Request**](PermissionEditObjectV1Request.md)|  | |
 
 ### Return type

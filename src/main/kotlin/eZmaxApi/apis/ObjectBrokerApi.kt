@@ -27,6 +27,8 @@ import java.io.IOException
 import okhttp3.Call
 import okhttp3.HttpUrl
 
+import eZmaxApi.models.BrokerBatchDownloadV1Request
+import eZmaxApi.models.BrokerGetAttachmentsV1Response
 import eZmaxApi.models.BrokerGetAutocompleteV2Response
 import eZmaxApi.models.BrokerGetListV1Response
 import eZmaxApi.models.BrokerImportIntoEDMV1Request
@@ -56,6 +58,156 @@ open class ObjectBrokerApi(basePath: kotlin.String = defaultBasePath, client: Ca
         val defaultBasePath: String by lazy {
             System.getProperties().getProperty(ApiClient.BASE_URL_KEY, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
+    }
+
+    /**
+     * POST /1/object/broker/{pkiBrokerID}/batchDownload
+     * Download multiples attachments from a Broker
+     * 
+     * @param pkiBrokerID 
+     * @param brokerBatchDownloadV1Request 
+     * @return java.io.File
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun brokerBatchDownloadV1(pkiBrokerID: kotlin.Int, brokerBatchDownloadV1Request: BrokerBatchDownloadV1Request) : java.io.File {
+        val localVarResponse = brokerBatchDownloadV1WithHttpInfo(pkiBrokerID = pkiBrokerID, brokerBatchDownloadV1Request = brokerBatchDownloadV1Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as java.io.File
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /1/object/broker/{pkiBrokerID}/batchDownload
+     * Download multiples attachments from a Broker
+     * 
+     * @param pkiBrokerID 
+     * @param brokerBatchDownloadV1Request 
+     * @return ApiResponse<java.io.File?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun brokerBatchDownloadV1WithHttpInfo(pkiBrokerID: kotlin.Int, brokerBatchDownloadV1Request: BrokerBatchDownloadV1Request) : ApiResponse<java.io.File?> {
+        val localVariableConfig = brokerBatchDownloadV1RequestConfig(pkiBrokerID = pkiBrokerID, brokerBatchDownloadV1Request = brokerBatchDownloadV1Request)
+
+        return request<BrokerBatchDownloadV1Request, java.io.File>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation brokerBatchDownloadV1
+     *
+     * @param pkiBrokerID 
+     * @param brokerBatchDownloadV1Request 
+     * @return RequestConfig
+     */
+    fun brokerBatchDownloadV1RequestConfig(pkiBrokerID: kotlin.Int, brokerBatchDownloadV1Request: BrokerBatchDownloadV1Request) : RequestConfig<BrokerBatchDownloadV1Request> {
+        val localVariableBody = brokerBatchDownloadV1Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/broker/{pkiBrokerID}/batchDownload".replace("{"+"pkiBrokerID"+"}", encodeURIComponent(pkiBrokerID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/broker/{pkiBrokerID}/getAttachments
+     * Retrieve Broker&#39;s attachments
+     * 
+     * @param pkiBrokerID 
+     * @return BrokerGetAttachmentsV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun brokerGetAttachmentsV1(pkiBrokerID: kotlin.Int) : BrokerGetAttachmentsV1Response {
+        val localVarResponse = brokerGetAttachmentsV1WithHttpInfo(pkiBrokerID = pkiBrokerID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as BrokerGetAttachmentsV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/broker/{pkiBrokerID}/getAttachments
+     * Retrieve Broker&#39;s attachments
+     * 
+     * @param pkiBrokerID 
+     * @return ApiResponse<BrokerGetAttachmentsV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun brokerGetAttachmentsV1WithHttpInfo(pkiBrokerID: kotlin.Int) : ApiResponse<BrokerGetAttachmentsV1Response?> {
+        val localVariableConfig = brokerGetAttachmentsV1RequestConfig(pkiBrokerID = pkiBrokerID)
+
+        return request<Unit, BrokerGetAttachmentsV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation brokerGetAttachmentsV1
+     *
+     * @param pkiBrokerID 
+     * @return RequestConfig
+     */
+    fun brokerGetAttachmentsV1RequestConfig(pkiBrokerID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/broker/{pkiBrokerID}/getAttachments".replace("{"+"pkiBrokerID"+"}", encodeURIComponent(pkiBrokerID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
     }
 
     /**
@@ -170,8 +322,8 @@ open class ObjectBrokerApi(basePath: kotlin.String = defaultBasePath, client: Ca
                 }
             }
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
         localVariableHeaders["Accept"] = "application/json"
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
 
         return RequestConfig(
             method = RequestMethod.GET,
@@ -353,8 +505,8 @@ open class ObjectBrokerApi(basePath: kotlin.String = defaultBasePath, client: Ca
                 }
             }
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
         localVariableHeaders["Accept"] = "application/json"
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
 
         return RequestConfig(
             method = RequestMethod.GET,

@@ -38,9 +38,9 @@ try {
 ```
 
 ### Parameters
-| **pkiSystemconfigurationID** | **kotlin.Int**| The unique ID of the Systemconfiguration | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiSystemconfigurationID** | **kotlin.Int**| The unique ID of the Systemconfiguration | |
 | **systemconfigurationEditObjectV2Request** | [**SystemconfigurationEditObjectV2Request**](SystemconfigurationEditObjectV2Request.md)|  | |
 
 ### Return type

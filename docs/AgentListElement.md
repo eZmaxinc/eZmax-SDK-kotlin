@@ -28,8 +28,9 @@
 | **fkiAgentincorporationID** | **kotlin.Int** | The unique ID of the Agentincorporation. |  [optional] |
 | **sAgentincorporationName** | **kotlin.String** | The name of the Agentincorporation |  [optional] |
 | **sRealestateboardnumberNumber** | **kotlin.String** | The number of the Realestateboardnumber |  [optional] |
-| **dtAgentHiredate** | **kotlin.String** | The hiredate of the Agent |  [optional] |
-| **dtAgentLeavedate** | **kotlin.String** | The leavedate of the Agent |  [optional] |
+| **dtAgentPermitexpiration** | **kotlin.String** | The expiration date of permit of the Agent |  [optional] |
+| **dtAgentHiredate** | **kotlin.String** | The hire date of the Agent |  [optional] |
+| **dtAgentLeavedate** | **kotlin.String** | The leave date of the Agent |  [optional] |
 | **dtAgentContractdate** | **kotlin.String** | The contract date of the Agent |  [optional] |
 | **dtAgentTransferdate** | **kotlin.String** | The transfer date of the Agent |  [optional] |
 | **dtAgentSenioritydate** | **kotlin.String** | The seniority date of the Agent |  [optional] |

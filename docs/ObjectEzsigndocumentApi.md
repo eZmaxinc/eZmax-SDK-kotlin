@@ -82,9 +82,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | **ezsigndocumentApplyEzsigntemplateV1Request** | [**EzsigndocumentApplyEzsigntemplateV1Request**](EzsigndocumentApplyEzsigntemplateV1Request.md)|  | |
 
 ### Return type
@@ -133,9 +133,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | **ezsigndocumentApplyEzsigntemplateV2Request** | [**EzsigndocumentApplyEzsigntemplateV2Request**](EzsigndocumentApplyEzsigntemplateV2Request.md)|  | |
 
 ### Return type
@@ -184,9 +184,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | **ezsigndocumentApplyEzsigntemplateV3Request** | [**EzsigndocumentApplyEzsigntemplateV3Request**](EzsigndocumentApplyEzsigntemplateV3Request.md)|  | |
 
 ### Return type
@@ -235,9 +235,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | **ezsigndocumentApplyEzsigntemplateglobalV1Request** | [**EzsigndocumentApplyEzsigntemplateglobalV1Request**](EzsigndocumentApplyEzsigntemplateglobalV1Request.md)|  | |
 
 ### Return type
@@ -286,9 +286,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | **ezsigndocumentApplyEzsigntemplateglobalV2Request** | [**EzsigndocumentApplyEzsigntemplateglobalV2Request**](EzsigndocumentApplyEzsigntemplateglobalV2Request.md)|  | |
 
 ### Return type
@@ -337,9 +337,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | **ezsigndocumentCreateEzsignelementsPositionedByWordV1Request** | [**EzsigndocumentCreateEzsignelementsPositionedByWordV1Request**](EzsigndocumentCreateEzsignelementsPositionedByWordV1Request.md)|  | |
 
 ### Return type
@@ -388,9 +388,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | **ezsigndocumentCreateEzsignelementsPositionedByWordV2Request** | [**EzsigndocumentCreateEzsignelementsPositionedByWordV2Request**](EzsigndocumentCreateEzsignelementsPositionedByWordV2Request.md)|  | |
 
 ### Return type
@@ -586,9 +586,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | **ezsigndocumentDeclineToSignV1Request** | [**EzsigndocumentDeclineToSignV1Request**](EzsigndocumentDeclineToSignV1Request.md)|  | |
 
 ### Return type
@@ -686,9 +686,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | **ezsigndocumentEditEzsignannotationsV1Request** | [**EzsigndocumentEditEzsignannotationsV1Request**](EzsigndocumentEditEzsignannotationsV1Request.md)|  | |
 
 ### Return type
@@ -737,9 +737,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | **ezsigndocumentEditEzsignformfieldgroupsV1Request** | [**EzsigndocumentEditEzsignformfieldgroupsV1Request**](EzsigndocumentEditEzsignformfieldgroupsV1Request.md)|  | |
 
 ### Return type
@@ -788,9 +788,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | **ezsigndocumentEditEzsignformfieldgroupsV2Request** | [**EzsigndocumentEditEzsignformfieldgroupsV2Request**](EzsigndocumentEditEzsignformfieldgroupsV2Request.md)|  | |
 
 ### Return type
@@ -839,9 +839,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | **ezsigndocumentEditEzsignsignaturesV1Request** | [**EzsigndocumentEditEzsignsignaturesV1Request**](EzsigndocumentEditEzsignsignaturesV1Request.md)|  | |
 
 ### Return type
@@ -890,9 +890,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | **ezsigndocumentEditEzsignsignaturesV2Request** | [**EzsigndocumentEditEzsignsignaturesV2Request**](EzsigndocumentEditEzsignsignaturesV2Request.md)|  | |
 
 ### Return type
@@ -941,9 +941,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | **ezsigndocumentEditObjectV1Request** | [**EzsigndocumentEditObjectV1Request**](EzsigndocumentEditObjectV1Request.md)|  | |
 
 ### Return type
@@ -992,9 +992,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | **body** | **kotlin.Any**|  | |
 
 ### Return type
@@ -1043,9 +1043,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | **ezsigndocumentExtractTextV1Request** | [**EzsigndocumentExtractTextV1Request**](EzsigndocumentExtractTextV1Request.md)|  | |
 
 ### Return type
@@ -1094,9 +1094,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | **body** | **kotlin.Any**|  | |
 
 ### Return type
@@ -1147,11 +1147,11 @@ try {
 ```
 
 ### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
 | **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | **eSignerType** | **kotlin.String**|  | [enum: Ezsignsigner, User] |
 | **fkiEzsignsignerID** | **kotlin.Int**|  | [optional] |
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
 | **fkiUserID** | **kotlin.Int**|  | [optional] |
 
 ### Return type
@@ -1494,9 +1494,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | **eDocumentType** | **kotlin.String**| The type of document to retrieve.  1. **original** Is the original document before any repair or conversion were applied. **Initial** Is the initial document after initial signature were applied. 2. **SignatureReady** Is the version containing the annotations/form to show the signer. 3. **Signed** Is the final document once all signatures were applied in current document if eEzsignfolderCompletion is PerEzsigndocument.&lt;br&gt;     Is the final document once all signatures were applied in all documents if eEzsignfolderCompletion is PerEzsignfolder. 4. **Proofdocument** Is the evidence report. 5. **Proof** Is the complete evidence archive including all of the above and more.  | [enum: Original, Initial, SignatureReady, Signed, Proof, Proofdocument] |
 
 ### Return type
@@ -2133,9 +2133,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | **ezsigndocumentGetWordsPositionsV1Request** | [**EzsigndocumentGetWordsPositionsV1Request**](EzsigndocumentGetWordsPositionsV1Request.md)|  | |
 
 ### Return type
@@ -2184,9 +2184,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | **ezsigndocumentPatchObjectV1Request** | [**EzsigndocumentPatchObjectV1Request**](EzsigndocumentPatchObjectV1Request.md)|  | |
 
 ### Return type
@@ -2235,9 +2235,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | **ezsigndocumentPrefillEzsignformV1Request** | [**EzsigndocumentPrefillEzsignformV1Request**](EzsigndocumentPrefillEzsignformV1Request.md)|  | |
 
 ### Return type
@@ -2286,9 +2286,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | **ezsigndocumentSubmitEzsignformV1Request** | [**EzsigndocumentSubmitEzsignformV1Request**](EzsigndocumentSubmitEzsignformV1Request.md)|  | |
 
 ### Return type
@@ -2313,7 +2313,7 @@ Configure Authorization:
 
 Unsend the Ezsigndocument
 
-Once an Ezsigndocument has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsigndocument and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on this Ezsigndocumentswill be lost.
+Once an Ezsigndocument has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsigndocument and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  âš ï¸ Warning: Any signature previously made by signatories on this Ezsigndocumentswill be lost.
 
 ### Example
 ```kotlin
@@ -2337,9 +2337,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsigndocumentID** | **kotlin.Int**|  | |
 | **body** | **kotlin.Any**|  | |
 
 ### Return type

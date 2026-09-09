@@ -13,6 +13,8 @@
 | **eUserOrigin** | [**FieldEUserOrigin**](FieldEUserOrigin.md) |  |  |
 | **eUserEzsignaccess** | [**FieldEUserEzsignaccess**](FieldEUserEzsignaccess.md) |  |  |
 | **sEmailAddress** | **kotlin.String** | The email address. |  |
+| **fkiAgentID** | **kotlin.Int** | The unique ID of the Agent. |  [optional] |
+| **fkiBrokerID** | **kotlin.Int** | The unique ID of the Broker. |  [optional] |
 | **bUserSuspended** | **kotlin.Boolean** | Whether the User is suspended or not |  [optional] |
 | **dtUserEzsignprepaidexpiration** | **kotlin.String** | The eZsign prepaid expiration date |  [optional] |
 | **sUserJobtitle** | **kotlin.String** | The job title of the user |  [optional] |

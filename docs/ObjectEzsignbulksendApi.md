@@ -49,9 +49,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsignbulksendID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsignbulksendID** | **kotlin.Int**|  | |
 | **ezsignbulksendCreateEzsignbulksendtransmissionV2Request** | [**EzsignbulksendCreateEzsignbulksendtransmissionV2Request**](EzsignbulksendCreateEzsignbulksendtransmissionV2Request.md)|  | |
 
 ### Return type
@@ -247,9 +247,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsignbulksendID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsignbulksendID** | **kotlin.Int**|  | |
 | **ezsignbulksendEditObjectV2Request** | [**EzsignbulksendEditObjectV2Request**](EzsignbulksendEditObjectV2Request.md)|  | |
 
 ### Return type
@@ -299,12 +299,12 @@ try {
 ```
 
 ### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
 | **pkiEzsignbulksendID** | **kotlin.Int**|  | |
 | **bIncludeSigned** | **kotlin.Boolean**| Include final document once all signatures were applied | [optional] |
 | **bIncludeAttachment** | **kotlin.Boolean**| Include attached files in signatures | [optional] |
 | **bIncludeProofdocument** | **kotlin.Boolean**| Include the evidence report | [optional] |
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
 | **bIncludeProof** | **kotlin.Boolean**| include the complete evidence archive including all of the above and more | [optional] |
 
 ### Return type
@@ -353,9 +353,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsignbulksendID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsignbulksendID** | **kotlin.Int**|  | |
 | **eCsvSeparator** | **kotlin.String**| Separator that will be used to separate fields | [enum: Comma, Semicolon] |
 
 ### Return type
@@ -554,12 +554,12 @@ try {
 ```
 
 ### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
 | **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiEzsignbulksendID_ASC, pkiEzsignbulksendID_DESC, fkiEzsignfoldertypeID_ASC, fkiEzsignfoldertypeID_DESC, sEzsignbulksendDescription_ASC, sEzsignbulksendDescription_DESC, sEzsignfoldertypeNameX_ASC, sEzsignfoldertypeNameX_DESC, eEzsignfoldertypePrivacylevel_ASC, eEzsignfoldertypePrivacylevel_DESC, bEzsignbulksendNeedvalidation_ASC, bEzsignbulksendNeedvalidation_DESC, iEzsignbulksendtransmission_ASC, iEzsignbulksendtransmission_DESC, iEzsignfolder_ASC, iEzsignfolder_DESC, iEzsigndocument_ASC, iEzsigndocument_DESC, iEzsignsignature_ASC, iEzsignsignature_DESC, iEzsignsignatureSigned_ASC, iEzsignsignatureSigned_DESC, bEzsignbulksendIsactive_ASC, bEzsignbulksendIsactive_DESC] |
 | **iRowMax** | **kotlin.Int**|  | [optional] |
 | **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0] |
 | **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
 | **sFilter** | **kotlin.String**|  | [optional] |
 
 ### Return type
@@ -753,9 +753,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsignbulksendID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsignbulksendID** | **kotlin.Int**|  | |
 | **ezsignbulksendReorderV1Request** | [**EzsignbulksendReorderV1Request**](EzsignbulksendReorderV1Request.md)|  | |
 
 ### Return type

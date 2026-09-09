@@ -36,15 +36,15 @@ import com.squareup.moshi.JsonClass
  * @param fkiInscriptiontypeID The unique ID of the Inscriptiontype
  * @param sInscriptiontypeNameX The name of the Inscriptiontype in the language of the requester
  * @param eBuyercontractStep 
- * @param dBuyercontractMinimumprice The minimumprice of the Buyercontract
- * @param dBuyercontractMaximumprice The maximumprice of the Buyercontract
+ * @param dBuyercontractMinimumprice The minimum price of the Buyercontract
+ * @param dBuyercontractMaximumprice The maximum price of the Buyercontract
  * @param eBuyercontractType 
  * @param dtBuyercontractDate The date of the Buyercontract
  * @param bBuyercontractIsactive Whether the buyercontract is active or not
  * @param sBuyercontractBrokers The brokers' name of the Buyercontract
  * @param sBuyercontractBuyers The buyers' name of the Buyercontract
  * @param sBuyercontractContract The number of the Buyercontract
- * @param dtBuyercontractExpirationdate The expirationdate of the Buyercontract
+ * @param dtBuyercontractExpirationdate The expiration date of the Buyercontract
  */
 
 
@@ -65,11 +65,11 @@ data class BuyercontractListElement (
     @Json(name = "eBuyercontractStep")
     val eBuyercontractStep: FieldEBuyercontractStep,
 
-    /* The minimumprice of the Buyercontract */
+    /* The minimum price of the Buyercontract */
     @Json(name = "dBuyercontractMinimumprice")
     val dBuyercontractMinimumprice: kotlin.String,
 
-    /* The maximumprice of the Buyercontract */
+    /* The maximum price of the Buyercontract */
     @Json(name = "dBuyercontractMaximumprice")
     val dBuyercontractMaximumprice: kotlin.String,
 
@@ -96,7 +96,7 @@ data class BuyercontractListElement (
     @Json(name = "sBuyercontractContract")
     val sBuyercontractContract: kotlin.String? = null,
 
-    /* The expirationdate of the Buyercontract */
+    /* The expiration date of the Buyercontract */
     @Json(name = "dtBuyercontractExpirationdate")
     val dtBuyercontractExpirationdate: kotlin.String? = null
 

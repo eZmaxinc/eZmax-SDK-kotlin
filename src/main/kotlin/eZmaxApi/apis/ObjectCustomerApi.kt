@@ -28,6 +28,8 @@ import okhttp3.Call
 import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.CustomerBatchDownloadV1Request
+import eZmaxApi.models.CustomerGetAttachmentsV1Response
 import eZmaxApi.models.CustomerGetAutocompleteV2Response
 import eZmaxApi.models.CustomerGetObjectV2Response
 import eZmaxApi.models.CustomerImportIntoEDMV1Request
@@ -56,6 +58,156 @@ open class ObjectCustomerApi(basePath: kotlin.String = defaultBasePath, client: 
         val defaultBasePath: String by lazy {
             System.getProperties().getProperty(ApiClient.BASE_URL_KEY, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
+    }
+
+    /**
+     * POST /1/object/customer/{pkiCustomerID}/batchDownload
+     * Download multiples attachments from a Customer
+     * 
+     * @param pkiCustomerID 
+     * @param customerBatchDownloadV1Request 
+     * @return java.io.File
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun customerBatchDownloadV1(pkiCustomerID: kotlin.Int, customerBatchDownloadV1Request: CustomerBatchDownloadV1Request) : java.io.File {
+        val localVarResponse = customerBatchDownloadV1WithHttpInfo(pkiCustomerID = pkiCustomerID, customerBatchDownloadV1Request = customerBatchDownloadV1Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as java.io.File
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /1/object/customer/{pkiCustomerID}/batchDownload
+     * Download multiples attachments from a Customer
+     * 
+     * @param pkiCustomerID 
+     * @param customerBatchDownloadV1Request 
+     * @return ApiResponse<java.io.File?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun customerBatchDownloadV1WithHttpInfo(pkiCustomerID: kotlin.Int, customerBatchDownloadV1Request: CustomerBatchDownloadV1Request) : ApiResponse<java.io.File?> {
+        val localVariableConfig = customerBatchDownloadV1RequestConfig(pkiCustomerID = pkiCustomerID, customerBatchDownloadV1Request = customerBatchDownloadV1Request)
+
+        return request<CustomerBatchDownloadV1Request, java.io.File>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation customerBatchDownloadV1
+     *
+     * @param pkiCustomerID 
+     * @param customerBatchDownloadV1Request 
+     * @return RequestConfig
+     */
+    fun customerBatchDownloadV1RequestConfig(pkiCustomerID: kotlin.Int, customerBatchDownloadV1Request: CustomerBatchDownloadV1Request) : RequestConfig<CustomerBatchDownloadV1Request> {
+        val localVariableBody = customerBatchDownloadV1Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/customer/{pkiCustomerID}/batchDownload".replace("{"+"pkiCustomerID"+"}", encodeURIComponent(pkiCustomerID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/customer/{pkiCustomerID}/getAttachments
+     * Retrieve Customer&#39;s attachments
+     * 
+     * @param pkiCustomerID 
+     * @return CustomerGetAttachmentsV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun customerGetAttachmentsV1(pkiCustomerID: kotlin.Int) : CustomerGetAttachmentsV1Response {
+        val localVarResponse = customerGetAttachmentsV1WithHttpInfo(pkiCustomerID = pkiCustomerID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CustomerGetAttachmentsV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/customer/{pkiCustomerID}/getAttachments
+     * Retrieve Customer&#39;s attachments
+     * 
+     * @param pkiCustomerID 
+     * @return ApiResponse<CustomerGetAttachmentsV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun customerGetAttachmentsV1WithHttpInfo(pkiCustomerID: kotlin.Int) : ApiResponse<CustomerGetAttachmentsV1Response?> {
+        val localVariableConfig = customerGetAttachmentsV1RequestConfig(pkiCustomerID = pkiCustomerID)
+
+        return request<Unit, CustomerGetAttachmentsV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation customerGetAttachmentsV1
+     *
+     * @param pkiCustomerID 
+     * @return RequestConfig
+     */
+    fun customerGetAttachmentsV1RequestConfig(pkiCustomerID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/customer/{pkiCustomerID}/getAttachments".replace("{"+"pkiCustomerID"+"}", encodeURIComponent(pkiCustomerID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
     }
 
     /**
@@ -170,8 +322,8 @@ open class ObjectCustomerApi(basePath: kotlin.String = defaultBasePath, client: 
                 }
             }
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
         localVariableHeaders["Accept"] = "application/json"
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
 
         return RequestConfig(
             method = RequestMethod.GET,

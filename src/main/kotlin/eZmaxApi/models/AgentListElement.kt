@@ -55,8 +55,9 @@ import com.squareup.moshi.JsonClass
  * @param fkiAgentincorporationID The unique ID of the Agentincorporation.
  * @param sAgentincorporationName The name of the Agentincorporation
  * @param sRealestateboardnumberNumber The number of the Realestateboardnumber
- * @param dtAgentHiredate The hiredate of the Agent
- * @param dtAgentLeavedate The leavedate of the Agent
+ * @param dtAgentPermitexpiration The expiration date of permit of the Agent
+ * @param dtAgentHiredate The hire date of the Agent
+ * @param dtAgentLeavedate The leave date of the Agent
  * @param dtAgentContractdate The contract date of the Agent
  * @param dtAgentTransferdate The transfer date of the Agent
  * @param dtAgentSenioritydate The seniority date of the Agent
@@ -175,11 +176,15 @@ data class AgentListElement (
     @Json(name = "sRealestateboardnumberNumber")
     val sRealestateboardnumberNumber: kotlin.String? = null,
 
-    /* The hiredate of the Agent */
+    /* The expiration date of permit of the Agent */
+    @Json(name = "dtAgentPermitexpiration")
+    val dtAgentPermitexpiration: kotlin.String? = null,
+
+    /* The hire date of the Agent */
     @Json(name = "dtAgentHiredate")
     val dtAgentHiredate: kotlin.String? = null,
 
-    /* The leavedate of the Agent */
+    /* The leave date of the Agent */
     @Json(name = "dtAgentLeavedate")
     val dtAgentLeavedate: kotlin.String? = null,
 

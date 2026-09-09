@@ -39,12 +39,12 @@ try {
 ```
 
 ### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
 | **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiEzmaxpartnerID_ASC, pkiEzmaxpartnerID_DESC, sEzmaxpartnerAddressX_ASC, sEzmaxpartnerAddressX_DESC, sEzmaxpartnerEmailaddressX_ASC, sEzmaxpartnerEmailaddressX_DESC, sEzmaxpartnerShortdescriptionX_ASC, sEzmaxpartnerShortdescriptionX_DESC, sEzmaxpartnerNameX_ASC, sEzmaxpartnerNameX_DESC, sEzmaxpartnerPhoneE164X_ASC, sEzmaxpartnerPhoneE164X_DESC, sEzmaxpartnerUrlX_ASC, sEzmaxpartnerUrlX_DESC] |
 | **iRowMax** | **kotlin.Int**|  | [optional] |
 | **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0] |
 | **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
 | **sFilter** | **kotlin.String**|  | [optional] |
 
 ### Return type

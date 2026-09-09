@@ -141,9 +141,9 @@ try {
 ```
 
 ### Parameters
-| **pkiCreditcardclientID** | **kotlin.Int**| The unique ID of the Creditcardclient | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiCreditcardclientID** | **kotlin.Int**| The unique ID of the Creditcardclient | |
 | **creditcardclientEditObjectV1Request** | [**CreditcardclientEditObjectV1Request**](CreditcardclientEditObjectV1Request.md)|  | |
 
 ### Return type
@@ -194,11 +194,11 @@ try {
 ```
 
 ### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
 | **sSelector** | **kotlin.String**| The type of Creditcardclients to return | [enum: All] |
 | **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to EFilterActive.Active] [enum: All, Active, Inactive] |
 | **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional] |
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
 | **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
 
 ### Return type
@@ -250,12 +250,12 @@ try {
 ```
 
 ### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
 | **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiCreditcardclientID_ASC, pkiCreditcardclientID_DESC, fkiCreditcarddetailID_ASC, fkiCreditcarddetailID_DESC, fkiCreditcardtypeID_ASC, fkiCreditcardtypeID_DESC, bCreditcardclientrelationIsdefault_ASC, bCreditcardclientrelationIsdefault_DESC, bCreditcardclientLegacy_ASC, bCreditcardclientLegacy_DESC, sCreditcardclientDescription_ASC, sCreditcardclientDescription_DESC, bCreditcardclientIsactive_ASC, bCreditcardclientIsactive_DESC, bCreditcardclientAllowedagencypayment_ASC, bCreditcardclientAllowedagencypayment_DESC, bCreditcardclientAllowedtranquillit_ASC, bCreditcardclientAllowedtranquillit_DESC, iCreditcarddetailExpirationmonth_ASC, iCreditcarddetailExpirationmonth_DESC, iCreditcarddetailExpirationyear_ASC, iCreditcarddetailExpirationyear_DESC] |
 | **iRowMax** | **kotlin.Int**|  | [optional] |
 | **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0] |
 | **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
 | **sFilter** | **kotlin.String**|  | [optional] |
 
 ### Return type
@@ -353,9 +353,9 @@ try {
 ```
 
 ### Parameters
-| **pkiCreditcardclientID** | **kotlin.Int**| The unique ID of the Creditcardclient | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiCreditcardclientID** | **kotlin.Int**| The unique ID of the Creditcardclient | |
 | **creditcardclientPatchObjectV1Request** | [**CreditcardclientPatchObjectV1Request**](CreditcardclientPatchObjectV1Request.md)|  | |
 
 ### Return type

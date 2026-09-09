@@ -140,9 +140,9 @@ try {
 ```
 
 ### Parameters
-| **pkiSupplyID** | **kotlin.Int**| The unique ID of the Supply | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiSupplyID** | **kotlin.Int**| The unique ID of the Supply | |
 | **supplyEditObjectV1Request** | [**SupplyEditObjectV1Request**](SupplyEditObjectV1Request.md)|  | |
 
 ### Return type
@@ -193,11 +193,11 @@ try {
 ```
 
 ### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
 | **sSelector** | **kotlin.String**| The type of Supplys to return | [enum: All] |
 | **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to EFilterActive.Active] [enum: All, Active, Inactive] |
 | **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional] |
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
 | **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
 
 ### Return type
@@ -249,12 +249,12 @@ try {
 ```
 
 ### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
 | **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiSupplyID_ASC, pkiSupplyID_DESC, fkiGlaccountID_ASC, fkiGlaccountID_DESC, fkiGlaccountcontainerID_ASC, fkiGlaccountcontainerID_DESC, fkiVariableexpenseID_ASC, fkiVariableexpenseID_DESC, sSupplyCode_ASC, sSupplyCode_DESC, sSupplyDescriptionX_ASC, sSupplyDescriptionX_DESC, dSupplyUnitprice_ASC, dSupplyUnitprice_DESC, bSupplyIsactive_ASC, bSupplyIsactive_DESC, bSupplyVariableprice_ASC, bSupplyVariableprice_DESC] |
 | **iRowMax** | **kotlin.Int**|  | [optional] |
 | **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0] |
 | **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
 | **sFilter** | **kotlin.String**|  | [optional] |
 
 ### Return type

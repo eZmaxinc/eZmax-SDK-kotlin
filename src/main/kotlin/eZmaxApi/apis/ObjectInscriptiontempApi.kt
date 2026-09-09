@@ -29,6 +29,8 @@ import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.HeaderAcceptLanguage
+import eZmaxApi.models.InscriptiontempBatchDownloadV1Request
+import eZmaxApi.models.InscriptiontempGetAttachmentsV1Response
 import eZmaxApi.models.InscriptiontempGetCommunicationCountV1Response
 import eZmaxApi.models.InscriptiontempGetCommunicationListV1Response
 import eZmaxApi.models.InscriptiontempGetCommunicationrecipientsV1Response
@@ -59,6 +61,156 @@ open class ObjectInscriptiontempApi(basePath: kotlin.String = defaultBasePath, c
         val defaultBasePath: String by lazy {
             System.getProperties().getProperty(ApiClient.BASE_URL_KEY, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
+    }
+
+    /**
+     * POST /1/object/inscriptiontemp/{pkiInscriptiontempID}/batchDownload
+     * Download multiples attachments from a Inscriptiontemp
+     * 
+     * @param pkiInscriptiontempID 
+     * @param inscriptiontempBatchDownloadV1Request 
+     * @return java.io.File
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun inscriptiontempBatchDownloadV1(pkiInscriptiontempID: kotlin.Int, inscriptiontempBatchDownloadV1Request: InscriptiontempBatchDownloadV1Request) : java.io.File {
+        val localVarResponse = inscriptiontempBatchDownloadV1WithHttpInfo(pkiInscriptiontempID = pkiInscriptiontempID, inscriptiontempBatchDownloadV1Request = inscriptiontempBatchDownloadV1Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as java.io.File
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /1/object/inscriptiontemp/{pkiInscriptiontempID}/batchDownload
+     * Download multiples attachments from a Inscriptiontemp
+     * 
+     * @param pkiInscriptiontempID 
+     * @param inscriptiontempBatchDownloadV1Request 
+     * @return ApiResponse<java.io.File?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun inscriptiontempBatchDownloadV1WithHttpInfo(pkiInscriptiontempID: kotlin.Int, inscriptiontempBatchDownloadV1Request: InscriptiontempBatchDownloadV1Request) : ApiResponse<java.io.File?> {
+        val localVariableConfig = inscriptiontempBatchDownloadV1RequestConfig(pkiInscriptiontempID = pkiInscriptiontempID, inscriptiontempBatchDownloadV1Request = inscriptiontempBatchDownloadV1Request)
+
+        return request<InscriptiontempBatchDownloadV1Request, java.io.File>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation inscriptiontempBatchDownloadV1
+     *
+     * @param pkiInscriptiontempID 
+     * @param inscriptiontempBatchDownloadV1Request 
+     * @return RequestConfig
+     */
+    fun inscriptiontempBatchDownloadV1RequestConfig(pkiInscriptiontempID: kotlin.Int, inscriptiontempBatchDownloadV1Request: InscriptiontempBatchDownloadV1Request) : RequestConfig<InscriptiontempBatchDownloadV1Request> {
+        val localVariableBody = inscriptiontempBatchDownloadV1Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/inscriptiontemp/{pkiInscriptiontempID}/batchDownload".replace("{"+"pkiInscriptiontempID"+"}", encodeURIComponent(pkiInscriptiontempID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/inscriptiontemp/{pkiInscriptiontempID}/getAttachments
+     * Retrieve Inscriptiontemp&#39;s attachments
+     * 
+     * @param pkiInscriptiontempID 
+     * @return InscriptiontempGetAttachmentsV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun inscriptiontempGetAttachmentsV1(pkiInscriptiontempID: kotlin.Int) : InscriptiontempGetAttachmentsV1Response {
+        val localVarResponse = inscriptiontempGetAttachmentsV1WithHttpInfo(pkiInscriptiontempID = pkiInscriptiontempID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as InscriptiontempGetAttachmentsV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/inscriptiontemp/{pkiInscriptiontempID}/getAttachments
+     * Retrieve Inscriptiontemp&#39;s attachments
+     * 
+     * @param pkiInscriptiontempID 
+     * @return ApiResponse<InscriptiontempGetAttachmentsV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun inscriptiontempGetAttachmentsV1WithHttpInfo(pkiInscriptiontempID: kotlin.Int) : ApiResponse<InscriptiontempGetAttachmentsV1Response?> {
+        val localVariableConfig = inscriptiontempGetAttachmentsV1RequestConfig(pkiInscriptiontempID = pkiInscriptiontempID)
+
+        return request<Unit, InscriptiontempGetAttachmentsV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation inscriptiontempGetAttachmentsV1
+     *
+     * @param pkiInscriptiontempID 
+     * @return RequestConfig
+     */
+    fun inscriptiontempGetAttachmentsV1RequestConfig(pkiInscriptiontempID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/inscriptiontemp/{pkiInscriptiontempID}/getAttachments".replace("{"+"pkiInscriptiontempID"+"}", encodeURIComponent(pkiInscriptiontempID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
     }
 
     /**
@@ -469,8 +621,8 @@ open class ObjectInscriptiontempApi(basePath: kotlin.String = defaultBasePath, c
                 }
             }
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
         localVariableHeaders["Accept"] = "application/json"
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
 
         return RequestConfig(
             method = RequestMethod.GET,

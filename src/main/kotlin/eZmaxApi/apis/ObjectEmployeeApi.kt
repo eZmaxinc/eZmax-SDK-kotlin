@@ -28,6 +28,8 @@ import okhttp3.Call
 import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.EmployeeBatchDownloadV1Request
+import eZmaxApi.models.EmployeeGetAttachmentsV1Response
 import eZmaxApi.models.EmployeeGetListV1Response
 import eZmaxApi.models.EmployeeImportIntoEDMV1Request
 import eZmaxApi.models.EmployeeImportIntoEDMV1Response
@@ -55,6 +57,156 @@ open class ObjectEmployeeApi(basePath: kotlin.String = defaultBasePath, client: 
         val defaultBasePath: String by lazy {
             System.getProperties().getProperty(ApiClient.BASE_URL_KEY, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
+    }
+
+    /**
+     * POST /1/object/employee/{pkiEmployeeID}/batchDownload
+     * Download multiples attachments from a Employee
+     * 
+     * @param pkiEmployeeID 
+     * @param employeeBatchDownloadV1Request 
+     * @return java.io.File
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun employeeBatchDownloadV1(pkiEmployeeID: kotlin.Int, employeeBatchDownloadV1Request: EmployeeBatchDownloadV1Request) : java.io.File {
+        val localVarResponse = employeeBatchDownloadV1WithHttpInfo(pkiEmployeeID = pkiEmployeeID, employeeBatchDownloadV1Request = employeeBatchDownloadV1Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as java.io.File
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /1/object/employee/{pkiEmployeeID}/batchDownload
+     * Download multiples attachments from a Employee
+     * 
+     * @param pkiEmployeeID 
+     * @param employeeBatchDownloadV1Request 
+     * @return ApiResponse<java.io.File?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun employeeBatchDownloadV1WithHttpInfo(pkiEmployeeID: kotlin.Int, employeeBatchDownloadV1Request: EmployeeBatchDownloadV1Request) : ApiResponse<java.io.File?> {
+        val localVariableConfig = employeeBatchDownloadV1RequestConfig(pkiEmployeeID = pkiEmployeeID, employeeBatchDownloadV1Request = employeeBatchDownloadV1Request)
+
+        return request<EmployeeBatchDownloadV1Request, java.io.File>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation employeeBatchDownloadV1
+     *
+     * @param pkiEmployeeID 
+     * @param employeeBatchDownloadV1Request 
+     * @return RequestConfig
+     */
+    fun employeeBatchDownloadV1RequestConfig(pkiEmployeeID: kotlin.Int, employeeBatchDownloadV1Request: EmployeeBatchDownloadV1Request) : RequestConfig<EmployeeBatchDownloadV1Request> {
+        val localVariableBody = employeeBatchDownloadV1Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/employee/{pkiEmployeeID}/batchDownload".replace("{"+"pkiEmployeeID"+"}", encodeURIComponent(pkiEmployeeID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/employee/{pkiEmployeeID}/getAttachments
+     * Retrieve Employee&#39;s attachments
+     * 
+     * @param pkiEmployeeID 
+     * @return EmployeeGetAttachmentsV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun employeeGetAttachmentsV1(pkiEmployeeID: kotlin.Int) : EmployeeGetAttachmentsV1Response {
+        val localVarResponse = employeeGetAttachmentsV1WithHttpInfo(pkiEmployeeID = pkiEmployeeID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EmployeeGetAttachmentsV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/employee/{pkiEmployeeID}/getAttachments
+     * Retrieve Employee&#39;s attachments
+     * 
+     * @param pkiEmployeeID 
+     * @return ApiResponse<EmployeeGetAttachmentsV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun employeeGetAttachmentsV1WithHttpInfo(pkiEmployeeID: kotlin.Int) : ApiResponse<EmployeeGetAttachmentsV1Response?> {
+        val localVariableConfig = employeeGetAttachmentsV1RequestConfig(pkiEmployeeID = pkiEmployeeID)
+
+        return request<Unit, EmployeeGetAttachmentsV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation employeeGetAttachmentsV1
+     *
+     * @param pkiEmployeeID 
+     * @return RequestConfig
+     */
+    fun employeeGetAttachmentsV1RequestConfig(pkiEmployeeID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/employee/{pkiEmployeeID}/getAttachments".replace("{"+"pkiEmployeeID"+"}", encodeURIComponent(pkiEmployeeID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
     }
 
     /**
@@ -197,8 +349,8 @@ open class ObjectEmployeeApi(basePath: kotlin.String = defaultBasePath, client: 
                 }
             }
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
         localVariableHeaders["Accept"] = "application/json"
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
 
         return RequestConfig(
             method = RequestMethod.GET,

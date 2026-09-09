@@ -30,7 +30,7 @@ import com.squareup.moshi.JsonClass
 /**
  * The role of the Ezsignfoldersignerassociation.  1. **CC** receive a copy of all documents. 2. **Signer** sign document. 3. **SignerAndCC** sign document and receive a copy of all documents.
  *
- * Values: CC,Signer,SignerAndCC
+ * Values: CC,CCDeleted,Signer,SignerAndCC
  */
 
 @JsonClass(generateAdapter = false)
@@ -38,6 +38,9 @@ enum class FieldEEzsignfoldersignerassociationRole(val value: kotlin.String) {
 
     @Json(name = "CC")
     CC("CC"),
+
+    @Json(name = "CCDeleted")
+    CCDeleted("CCDeleted"),
 
     @Json(name = "Signer")
     Signer("Signer"),

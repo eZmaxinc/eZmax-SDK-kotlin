@@ -38,9 +38,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsignuserID** | **kotlin.Int**| The unique ID of the Ezsignuser | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsignuserID** | **kotlin.Int**| The unique ID of the Ezsignuser | |
 | **ezsignuserEditObjectV1Request** | [**EzsignuserEditObjectV1Request**](EzsignuserEditObjectV1Request.md)|  | |
 
 ### Return type

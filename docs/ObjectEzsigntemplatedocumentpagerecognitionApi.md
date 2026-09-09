@@ -138,9 +138,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsigntemplatedocumentpagerecognitionID** | **kotlin.Int**| The unique ID of the Ezsigntemplatedocumentpagerecognition | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsigntemplatedocumentpagerecognitionID** | **kotlin.Int**| The unique ID of the Ezsigntemplatedocumentpagerecognition | |
 | **ezsigntemplatedocumentpagerecognitionEditObjectV1Request** | [**EzsigntemplatedocumentpagerecognitionEditObjectV1Request**](EzsigntemplatedocumentpagerecognitionEditObjectV1Request.md)|  | |
 
 ### Return type

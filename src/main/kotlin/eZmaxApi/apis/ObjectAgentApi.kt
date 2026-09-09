@@ -27,6 +27,8 @@ import java.io.IOException
 import okhttp3.Call
 import okhttp3.HttpUrl
 
+import eZmaxApi.models.AgentBatchDownloadV1Request
+import eZmaxApi.models.AgentGetAttachmentsV1Response
 import eZmaxApi.models.AgentGetAutocompleteV2Response
 import eZmaxApi.models.AgentGetListV1Response
 import eZmaxApi.models.AgentImportIntoEDMV1Request
@@ -56,6 +58,156 @@ open class ObjectAgentApi(basePath: kotlin.String = defaultBasePath, client: Cal
         val defaultBasePath: String by lazy {
             System.getProperties().getProperty(ApiClient.BASE_URL_KEY, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
+    }
+
+    /**
+     * POST /1/object/agent/{pkiAgentID}/batchDownload
+     * Download multiples attachments from a Agent
+     * 
+     * @param pkiAgentID 
+     * @param agentBatchDownloadV1Request 
+     * @return java.io.File
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun agentBatchDownloadV1(pkiAgentID: kotlin.Int, agentBatchDownloadV1Request: AgentBatchDownloadV1Request) : java.io.File {
+        val localVarResponse = agentBatchDownloadV1WithHttpInfo(pkiAgentID = pkiAgentID, agentBatchDownloadV1Request = agentBatchDownloadV1Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as java.io.File
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /1/object/agent/{pkiAgentID}/batchDownload
+     * Download multiples attachments from a Agent
+     * 
+     * @param pkiAgentID 
+     * @param agentBatchDownloadV1Request 
+     * @return ApiResponse<java.io.File?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun agentBatchDownloadV1WithHttpInfo(pkiAgentID: kotlin.Int, agentBatchDownloadV1Request: AgentBatchDownloadV1Request) : ApiResponse<java.io.File?> {
+        val localVariableConfig = agentBatchDownloadV1RequestConfig(pkiAgentID = pkiAgentID, agentBatchDownloadV1Request = agentBatchDownloadV1Request)
+
+        return request<AgentBatchDownloadV1Request, java.io.File>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation agentBatchDownloadV1
+     *
+     * @param pkiAgentID 
+     * @param agentBatchDownloadV1Request 
+     * @return RequestConfig
+     */
+    fun agentBatchDownloadV1RequestConfig(pkiAgentID: kotlin.Int, agentBatchDownloadV1Request: AgentBatchDownloadV1Request) : RequestConfig<AgentBatchDownloadV1Request> {
+        val localVariableBody = agentBatchDownloadV1Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/agent/{pkiAgentID}/batchDownload".replace("{"+"pkiAgentID"+"}", encodeURIComponent(pkiAgentID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/agent/{pkiAgentID}/getAttachments
+     * Retrieve Agent&#39;s attachments
+     * 
+     * @param pkiAgentID 
+     * @return AgentGetAttachmentsV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun agentGetAttachmentsV1(pkiAgentID: kotlin.Int) : AgentGetAttachmentsV1Response {
+        val localVarResponse = agentGetAttachmentsV1WithHttpInfo(pkiAgentID = pkiAgentID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as AgentGetAttachmentsV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/agent/{pkiAgentID}/getAttachments
+     * Retrieve Agent&#39;s attachments
+     * 
+     * @param pkiAgentID 
+     * @return ApiResponse<AgentGetAttachmentsV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun agentGetAttachmentsV1WithHttpInfo(pkiAgentID: kotlin.Int) : ApiResponse<AgentGetAttachmentsV1Response?> {
+        val localVariableConfig = agentGetAttachmentsV1RequestConfig(pkiAgentID = pkiAgentID)
+
+        return request<Unit, AgentGetAttachmentsV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation agentGetAttachmentsV1
+     *
+     * @param pkiAgentID 
+     * @return RequestConfig
+     */
+    fun agentGetAttachmentsV1RequestConfig(pkiAgentID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/agent/{pkiAgentID}/getAttachments".replace("{"+"pkiAgentID"+"}", encodeURIComponent(pkiAgentID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
     }
 
     /**
@@ -170,8 +322,8 @@ open class ObjectAgentApi(basePath: kotlin.String = defaultBasePath, client: Cal
                 }
             }
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
         localVariableHeaders["Accept"] = "application/json"
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
 
         return RequestConfig(
             method = RequestMethod.GET,
@@ -217,6 +369,8 @@ open class ObjectAgentApi(basePath: kotlin.String = defaultBasePath, client: Cal
          @Json(name = "iAgentBannernumber_DESC") iAgentBannernumber_DESC("iAgentBannernumber_DESC"),
          @Json(name = "sAgentRealestateassociationlicense_ASC") sAgentRealestateassociationlicense_ASC("sAgentRealestateassociationlicense_ASC"),
          @Json(name = "sAgentRealestateassociationlicense_DESC") sAgentRealestateassociationlicense_DESC("sAgentRealestateassociationlicense_DESC"),
+         @Json(name = "dtAgentPermitexpiration_ASC") dtAgentPermitexpiration_ASC("dtAgentPermitexpiration_ASC"),
+         @Json(name = "dtAgentPermitexpiration_DESC") dtAgentPermitexpiration_DESC("dtAgentPermitexpiration_DESC"),
          @Json(name = "dtAgentHiredate_ASC") dtAgentHiredate_ASC("dtAgentHiredate_ASC"),
          @Json(name = "dtAgentHiredate_DESC") dtAgentHiredate_DESC("dtAgentHiredate_DESC"),
          @Json(name = "dtAgentLeavedate_ASC") dtAgentLeavedate_ASC("dtAgentLeavedate_ASC"),
@@ -357,8 +511,8 @@ open class ObjectAgentApi(basePath: kotlin.String = defaultBasePath, client: Cal
                 }
             }
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
         localVariableHeaders["Accept"] = "application/json"
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
 
         return RequestConfig(
             method = RequestMethod.GET,

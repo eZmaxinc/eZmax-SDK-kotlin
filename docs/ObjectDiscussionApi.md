@@ -238,9 +238,9 @@ try {
 ```
 
 ### Parameters
-| **pkiDiscussionID** | **kotlin.Int**| The unique ID of the Discussion | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiDiscussionID** | **kotlin.Int**| The unique ID of the Discussion | |
 | **discussionPatchObjectV1Request** | [**DiscussionPatchObjectV1Request**](DiscussionPatchObjectV1Request.md)|  | |
 
 ### Return type
@@ -287,9 +287,9 @@ try {
 ```
 
 ### Parameters
-| **pkiDiscussionID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiDiscussionID** | **kotlin.Int**|  | |
 | **discussionUpdateDiscussionreadstatusV1Request** | [**DiscussionUpdateDiscussionreadstatusV1Request**](DiscussionUpdateDiscussionreadstatusV1Request.md)|  | |
 
 ### Return type

@@ -4,6 +4,8 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**inscriptiontempBatchDownloadV1**](ObjectInscriptiontempApi.md#inscriptiontempBatchDownloadV1) | **POST** /1/object/inscriptiontemp/{pkiInscriptiontempID}/batchDownload | Download multiples attachments from a Inscriptiontemp |
+| [**inscriptiontempGetAttachmentsV1**](ObjectInscriptiontempApi.md#inscriptiontempGetAttachmentsV1) | **GET** /1/object/inscriptiontemp/{pkiInscriptiontempID}/getAttachments | Retrieve Inscriptiontemp&#39;s attachments |
 | [**inscriptiontempGetCommunicationCountV1**](ObjectInscriptiontempApi.md#inscriptiontempGetCommunicationCountV1) | **GET** /1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationCount | Retrieve Communication count |
 | [**inscriptiontempGetCommunicationListV1**](ObjectInscriptiontempApi.md#inscriptiontempGetCommunicationListV1) | **GET** /1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationList | Retrieve Communication list |
 | [**inscriptiontempGetCommunicationrecipientsV1**](ObjectInscriptiontempApi.md#inscriptiontempGetCommunicationrecipientsV1) | **GET** /1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationrecipients | Retrieve Inscriptiontemp&#39;s Communicationrecipient |
@@ -11,6 +13,102 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**inscriptiontempGetListV1**](ObjectInscriptiontempApi.md#inscriptiontempGetListV1) | **GET** /1/object/inscriptiontemp/getList | Retrieve Inscriptiontemp list |
 | [**inscriptiontempImportIntoEDMV1**](ObjectInscriptiontempApi.md#inscriptiontempImportIntoEDMV1) | **POST** /1/object/inscriptiontemp/{pkiInscriptiontempID}/importIntoEDM | Import attachments into the Inscriptiontemp |
 
+
+<a id="inscriptiontempBatchDownloadV1"></a>
+# **inscriptiontempBatchDownloadV1**
+> java.io.File inscriptiontempBatchDownloadV1(pkiInscriptiontempID, inscriptiontempBatchDownloadV1Request)
+
+Download multiples attachments from a Inscriptiontemp
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectInscriptiontempApi()
+val pkiInscriptiontempID : kotlin.Int = 56 // kotlin.Int | 
+val inscriptiontempBatchDownloadV1Request : InscriptiontempBatchDownloadV1Request =  // InscriptiontempBatchDownloadV1Request | 
+try {
+    val result : java.io.File = apiInstance.inscriptiontempBatchDownloadV1(pkiInscriptiontempID, inscriptiontempBatchDownloadV1Request)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectInscriptiontempApi#inscriptiontempBatchDownloadV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectInscriptiontempApi#inscriptiontempBatchDownloadV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiInscriptiontempID** | **kotlin.Int**|  | |
+| **inscriptiontempBatchDownloadV1Request** | [**InscriptiontempBatchDownloadV1Request**](InscriptiontempBatchDownloadV1Request.md)|  | |
+
+### Return type
+
+[**java.io.File**](java.io.File.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a id="inscriptiontempGetAttachmentsV1"></a>
+# **inscriptiontempGetAttachmentsV1**
+> InscriptiontempGetAttachmentsV1Response inscriptiontempGetAttachmentsV1(pkiInscriptiontempID)
+
+Retrieve Inscriptiontemp&#39;s attachments
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectInscriptiontempApi()
+val pkiInscriptiontempID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : InscriptiontempGetAttachmentsV1Response = apiInstance.inscriptiontempGetAttachmentsV1(pkiInscriptiontempID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectInscriptiontempApi#inscriptiontempGetAttachmentsV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectInscriptiontempApi#inscriptiontempGetAttachmentsV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiInscriptiontempID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**InscriptiontempGetAttachmentsV1Response**](InscriptiontempGetAttachmentsV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 <a id="inscriptiontempGetCommunicationCountV1"></a>
 # **inscriptiontempGetCommunicationCountV1**
@@ -241,12 +339,12 @@ try {
 ```
 
 ### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
 | **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiInscriptiontempID_ASC, pkiInscriptiontempID_DESC, eInscriptiontempStatus_ASC, eInscriptiontempStatus_DESC, sInscriptiontempMLS_ASC, sInscriptiontempMLS_DESC, sInscriptiontempDescription_ASC, sInscriptiontempDescription_DESC, bInscriptiontempIsactive_ASC, bInscriptiontempIsactive_DESC, dtCreatedDate_ASC, dtCreatedDate_DESC, dtModifiedDate_ASC, dtModifiedDate_DESC] |
 | **iRowMax** | **kotlin.Int**|  | [optional] |
 | **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0] |
 | **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
 | **sFilter** | **kotlin.String**|  | [optional] |
 
 ### Return type
@@ -295,9 +393,9 @@ try {
 ```
 
 ### Parameters
-| **pkiInscriptiontempID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiInscriptiontempID** | **kotlin.Int**|  | |
 | **inscriptiontempImportIntoEDMV1Request** | [**InscriptiontempImportIntoEDMV1Request**](InscriptiontempImportIntoEDMV1Request.md)|  | |
 
 ### Return type

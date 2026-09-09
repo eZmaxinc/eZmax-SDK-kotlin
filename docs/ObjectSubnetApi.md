@@ -138,9 +138,9 @@ try {
 ```
 
 ### Parameters
-| **pkiSubnetID** | **kotlin.Int**| The unique ID of the Subnet | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiSubnetID** | **kotlin.Int**| The unique ID of the Subnet | |
 | **subnetEditObjectV1Request** | [**SubnetEditObjectV1Request**](SubnetEditObjectV1Request.md)|  | |
 
 ### Return type

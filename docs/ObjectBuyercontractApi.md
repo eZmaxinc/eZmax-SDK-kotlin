@@ -4,6 +4,8 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**buyercontractBatchDownloadV1**](ObjectBuyercontractApi.md#buyercontractBatchDownloadV1) | **POST** /1/object/buyercontract/{pkiBuyercontractID}/batchDownload | Download multiples attachments from a Buyercontract |
+| [**buyercontractGetAttachmentsV1**](ObjectBuyercontractApi.md#buyercontractGetAttachmentsV1) | **GET** /1/object/buyercontract/{pkiBuyercontractID}/getAttachments | Retrieve Buyercontract&#39;s attachments |
 | [**buyercontractGetCommunicationCountV1**](ObjectBuyercontractApi.md#buyercontractGetCommunicationCountV1) | **GET** /1/object/buyercontract/{pkiBuyercontractID}/getCommunicationCount | Retrieve Communication count |
 | [**buyercontractGetCommunicationListV1**](ObjectBuyercontractApi.md#buyercontractGetCommunicationListV1) | **GET** /1/object/buyercontract/{pkiBuyercontractID}/getCommunicationList | Retrieve Communication list |
 | [**buyercontractGetCommunicationrecipientsV1**](ObjectBuyercontractApi.md#buyercontractGetCommunicationrecipientsV1) | **GET** /1/object/buyercontract/{pkiBuyercontractID}/getCommunicationrecipients | Retrieve Buyercontract&#39;s Communicationrecipient |
@@ -11,6 +13,102 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**buyercontractGetListV1**](ObjectBuyercontractApi.md#buyercontractGetListV1) | **GET** /1/object/buyercontract/getList | Retrieve Buyercontract list |
 | [**buyercontractImportIntoEDMV1**](ObjectBuyercontractApi.md#buyercontractImportIntoEDMV1) | **POST** /1/object/buyercontract/{pkiBuyercontractID}/importIntoEDM | Import attachments into the Buyercontract |
 
+
+<a id="buyercontractBatchDownloadV1"></a>
+# **buyercontractBatchDownloadV1**
+> java.io.File buyercontractBatchDownloadV1(pkiBuyercontractID, buyercontractBatchDownloadV1Request)
+
+Download multiples attachments from a Buyercontract
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectBuyercontractApi()
+val pkiBuyercontractID : kotlin.Int = 56 // kotlin.Int | 
+val buyercontractBatchDownloadV1Request : BuyercontractBatchDownloadV1Request =  // BuyercontractBatchDownloadV1Request | 
+try {
+    val result : java.io.File = apiInstance.buyercontractBatchDownloadV1(pkiBuyercontractID, buyercontractBatchDownloadV1Request)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectBuyercontractApi#buyercontractBatchDownloadV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectBuyercontractApi#buyercontractBatchDownloadV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiBuyercontractID** | **kotlin.Int**|  | |
+| **buyercontractBatchDownloadV1Request** | [**BuyercontractBatchDownloadV1Request**](BuyercontractBatchDownloadV1Request.md)|  | |
+
+### Return type
+
+[**java.io.File**](java.io.File.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a id="buyercontractGetAttachmentsV1"></a>
+# **buyercontractGetAttachmentsV1**
+> BuyercontractGetAttachmentsV1Response buyercontractGetAttachmentsV1(pkiBuyercontractID)
+
+Retrieve Buyercontract&#39;s attachments
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectBuyercontractApi()
+val pkiBuyercontractID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : BuyercontractGetAttachmentsV1Response = apiInstance.buyercontractGetAttachmentsV1(pkiBuyercontractID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectBuyercontractApi#buyercontractGetAttachmentsV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectBuyercontractApi#buyercontractGetAttachmentsV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiBuyercontractID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**BuyercontractGetAttachmentsV1Response**](BuyercontractGetAttachmentsV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 <a id="buyercontractGetCommunicationCountV1"></a>
 # **buyercontractGetCommunicationCountV1**
@@ -241,12 +339,12 @@ try {
 ```
 
 ### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
 | **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiBuyercontractID_ASC, pkiBuyercontractID_DESC, fkiInscriptiontypeID_ASC, fkiInscriptiontypeID_DESC, sInscriptiontypeNameX_ASC, sInscriptiontypeNameX_DESC, eBuyercontractStep_ASC, eBuyercontractStep_DESC, dBuyercontractMinimumprice_ASC, dBuyercontractMinimumprice_DESC, dBuyercontractMaximumprice_ASC, dBuyercontractMaximumprice_DESC, eBuyercontractType_ASC, eBuyercontractType_DESC, dtBuyercontractDate_ASC, dtBuyercontractDate_DESC, dtBuyercontractExpirationdate_ASC, dtBuyercontractExpirationdate_DESC, bBuyercontractIsactive_ASC, bBuyercontractIsactive_DESC] |
 | **iRowMax** | **kotlin.Int**|  | [optional] |
 | **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0] |
 | **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
 | **sFilter** | **kotlin.String**|  | [optional] |
 
 ### Return type
@@ -295,9 +393,9 @@ try {
 ```
 
 ### Parameters
-| **pkiBuyercontractID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiBuyercontractID** | **kotlin.Int**|  | |
 | **buyercontractImportIntoEDMV1Request** | [**BuyercontractImportIntoEDMV1Request**](BuyercontractImportIntoEDMV1Request.md)|  | |
 
 ### Return type

@@ -37,9 +37,9 @@ try {
 ```
 
 ### Parameters
-| **pksCustomerCode** | **kotlin.String**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pksCustomerCode** | **kotlin.String**|  | |
 | **sInfrastructureproductCode** | **kotlin.String**| The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed | [optional] [enum: appcluster01, ezsignuser] |
 
 ### Return type

@@ -140,9 +140,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsignsignergroupID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsignsignergroupID** | **kotlin.Int**|  | |
 | **ezsignsignergroupEditEzsignsignergroupmembershipsV1Request** | [**EzsignsignergroupEditEzsignsignergroupmembershipsV1Request**](EzsignsignergroupEditEzsignsignergroupmembershipsV1Request.md)|  | |
 
 ### Return type
@@ -191,9 +191,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsignsignergroupID** | **kotlin.Int**| The unique ID of the Ezsignsignergroup | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsignsignergroupID** | **kotlin.Int**| The unique ID of the Ezsignsignergroup | |
 | **ezsignsignergroupEditObjectV1Request** | [**EzsignsignergroupEditObjectV1Request**](EzsignsignergroupEditObjectV1Request.md)|  | |
 
 ### Return type

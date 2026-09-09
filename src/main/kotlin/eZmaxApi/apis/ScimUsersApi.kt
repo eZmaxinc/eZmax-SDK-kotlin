@@ -188,6 +188,7 @@ open class ScimUsersApi(basePath: kotlin.String = defaultBasePath, client: Call.
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         
+
         return RequestConfig(
             method = RequestMethod.DELETE,
             path = "/2/scim/Users/{userId}".replace("{"+"userId"+"}", encodeURIComponent(userId.toString())),

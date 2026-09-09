@@ -291,9 +291,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsignsignatureID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsignsignatureID** | **kotlin.Int**|  | |
 | **ezsignsignatureEditObjectV3Request** | [**EzsignsignatureEditObjectV3Request**](EzsignsignatureEditObjectV3Request.md)|  | |
 
 ### Return type
@@ -484,9 +484,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsignsignatureID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsignsignatureID** | **kotlin.Int**|  | |
 | **ezsignsignatureSignV1Request** | [**EzsignsignatureSignV1Request**](EzsignsignatureSignV1Request.md)|  | |
 
 ### Return type

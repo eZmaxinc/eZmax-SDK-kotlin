@@ -187,6 +187,7 @@ open class ScimGroupsApi(basePath: kotlin.String = defaultBasePath, client: Call
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         
+
         return RequestConfig(
             method = RequestMethod.DELETE,
             path = "/2/scim/Groups/{groupId}".replace("{"+"groupId"+"}", encodeURIComponent(groupId.toString())),

@@ -126,6 +126,7 @@ open class ObjectDiscussionApi(basePath: kotlin.String = defaultBasePath, client
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Content-Type"] = "application/json"
         
+
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/discussion/chat",

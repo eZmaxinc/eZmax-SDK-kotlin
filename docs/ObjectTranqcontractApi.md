@@ -237,9 +237,9 @@ try {
 ```
 
 ### Parameters
-| **pkiTranqcontractID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiTranqcontractID** | **kotlin.Int**|  | |
 | **tranqcontractImportIntoEDMV1Request** | [**TranqcontractImportIntoEDMV1Request**](TranqcontractImportIntoEDMV1Request.md)|  | |
 
 ### Return type

@@ -28,6 +28,7 @@ import okhttp3.Call
 import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.InvoiceBatchDownloadV1Request
 import eZmaxApi.models.InvoiceGetAttachmentsV1Response
 import eZmaxApi.models.InvoiceGetCommunicationCountV1Response
 import eZmaxApi.models.InvoiceGetCommunicationListV1Response
@@ -58,6 +59,83 @@ open class ObjectInvoiceApi(basePath: kotlin.String = defaultBasePath, client: C
         val defaultBasePath: String by lazy {
             System.getProperties().getProperty(ApiClient.BASE_URL_KEY, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
+    }
+
+    /**
+     * POST /1/object/invoice/{pkiInvoiceID}/batchDownload
+     * Download multiples attachments from an Invoice
+     * 
+     * @param pkiInvoiceID 
+     * @param invoiceBatchDownloadV1Request 
+     * @return java.io.File
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun invoiceBatchDownloadV1(pkiInvoiceID: kotlin.Int, invoiceBatchDownloadV1Request: InvoiceBatchDownloadV1Request) : java.io.File {
+        val localVarResponse = invoiceBatchDownloadV1WithHttpInfo(pkiInvoiceID = pkiInvoiceID, invoiceBatchDownloadV1Request = invoiceBatchDownloadV1Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as java.io.File
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /1/object/invoice/{pkiInvoiceID}/batchDownload
+     * Download multiples attachments from an Invoice
+     * 
+     * @param pkiInvoiceID 
+     * @param invoiceBatchDownloadV1Request 
+     * @return ApiResponse<java.io.File?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun invoiceBatchDownloadV1WithHttpInfo(pkiInvoiceID: kotlin.Int, invoiceBatchDownloadV1Request: InvoiceBatchDownloadV1Request) : ApiResponse<java.io.File?> {
+        val localVariableConfig = invoiceBatchDownloadV1RequestConfig(pkiInvoiceID = pkiInvoiceID, invoiceBatchDownloadV1Request = invoiceBatchDownloadV1Request)
+
+        return request<InvoiceBatchDownloadV1Request, java.io.File>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation invoiceBatchDownloadV1
+     *
+     * @param pkiInvoiceID 
+     * @param invoiceBatchDownloadV1Request 
+     * @return RequestConfig
+     */
+    fun invoiceBatchDownloadV1RequestConfig(pkiInvoiceID: kotlin.Int, invoiceBatchDownloadV1Request: InvoiceBatchDownloadV1Request) : RequestConfig<InvoiceBatchDownloadV1Request> {
+        val localVariableBody = invoiceBatchDownloadV1Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/invoice/{pkiInvoiceID}/batchDownload".replace("{"+"pkiInvoiceID"+"}", encodeURIComponent(pkiInvoiceID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
     }
 
     /**

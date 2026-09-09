@@ -78,9 +78,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsignfolderID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsignfolderID** | **kotlin.Int**|  | |
 | **body** | **kotlin.Any**|  | |
 
 ### Return type
@@ -127,9 +127,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsignfolderID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsignfolderID** | **kotlin.Int**|  | |
 | **ezsignfolderBatchDownloadV1Request** | [**EzsignfolderBatchDownloadV1Request**](EzsignfolderBatchDownloadV1Request.md)|  | |
 
 ### Return type
@@ -421,9 +421,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsignfolderID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsignfolderID** | **kotlin.Int**|  | |
 | **body** | **kotlin.Any**|  | |
 
 ### Return type
@@ -472,9 +472,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsignfolderID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsignfolderID** | **kotlin.Int**|  | |
 | **ezsignfolderDuplicateV1Request** | [**EzsignfolderDuplicateV1Request**](EzsignfolderDuplicateV1Request.md)|  | |
 
 ### Return type
@@ -523,9 +523,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsignfolderID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsignfolderID** | **kotlin.Int**|  | |
 | **ezsignfolderEditObjectV3Request** | [**EzsignfolderEditObjectV3Request**](EzsignfolderEditObjectV3Request.md)|  | |
 
 ### Return type
@@ -574,9 +574,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsignfolderID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsignfolderID** | **kotlin.Int**|  | |
 | **body** | **kotlin.Any**|  | |
 
 ### Return type
@@ -627,11 +627,11 @@ try {
 ```
 
 ### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
 | **pkiEzsignfolderID** | **kotlin.Int**|  | |
 | **eSignerType** | **kotlin.String**|  | [enum: Ezsignsigner, User] |
 | **fkiEzsignsignerID** | **kotlin.Int**|  | [optional] |
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
 | **fkiUserID** | **kotlin.Int**|  | [optional] |
 
 ### Return type
@@ -1565,12 +1565,12 @@ try {
 ```
 
 ### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
 | **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiEzsignfolderID_ASC, pkiEzsignfolderID_DESC, sEzsignfolderDescription_ASC, sEzsignfolderDescription_DESC, dtCreatedDate_ASC, dtCreatedDate_DESC, fkiEzsignfoldertypeID_ASC, fkiEzsignfoldertypeID_DESC, sEzsignfoldertypeNameX_ASC, sEzsignfoldertypeNameX_DESC, eEzsignfolderStep_ASC, eEzsignfolderStep_DESC, eEzsignfolderCompletion_ASC, eEzsignfolderCompletion_DESC, dtEzsignfolderSentdate_ASC, dtEzsignfolderSentdate_DESC, dtEzsignfolderDuedate_ASC, dtEzsignfolderDuedate_DESC, iEzsigndocument_ASC, iEzsigndocument_DESC, iEzsigndocumentEdm_ASC, iEzsigndocumentEdm_DESC, iEzsignsignature_ASC, iEzsignsignature_DESC, iEzsignsignatureSigned_ASC, iEzsignsignatureSigned_DESC, iEzsignformfieldgroup_ASC, iEzsignformfieldgroup_DESC, iEzsignformfieldgroupCompleted_ASC, iEzsignformfieldgroupCompleted_DESC, dEzsignfolderCompletedpercentage_ASC, dEzsignfolderCompletedpercentage_DESC, dEzsignfolderFormcompletedpercentage_ASC, dEzsignfolderFormcompletedpercentage_DESC, dEzsignfolderSignaturecompletedpercentage_ASC, dEzsignfolderSignaturecompletedpercentage_DESC] |
 | **iRowMax** | **kotlin.Int**|  | [optional] |
 | **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0] |
 | **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
 | **sFilter** | **kotlin.String**|  | [optional] |
 
 ### Return type
@@ -1764,9 +1764,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsignfolderID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsignfolderID** | **kotlin.Int**|  | |
 | **ezsignfolderImportEzsignfoldersignerassociationsV1Request** | [**EzsignfolderImportEzsignfoldersignerassociationsV1Request**](EzsignfolderImportEzsignfoldersignerassociationsV1Request.md)|  | |
 
 ### Return type
@@ -1815,9 +1815,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsignfolderID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsignfolderID** | **kotlin.Int**|  | |
 | **ezsignfolderImportEzsigntemplatepackageV1Request** | [**EzsignfolderImportEzsigntemplatepackageV1Request**](EzsignfolderImportEzsigntemplatepackageV1Request.md)|  | |
 
 ### Return type
@@ -1866,9 +1866,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsignfolderID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsignfolderID** | **kotlin.Int**|  | |
 | **ezsignfolderImportEzsigntemplatepackageV2Request** | [**EzsignfolderImportEzsigntemplatepackageV2Request**](EzsignfolderImportEzsigntemplatepackageV2Request.md)|  | |
 
 ### Return type
@@ -1917,9 +1917,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsignfolderID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsignfolderID** | **kotlin.Int**|  | |
 | **ezsignfolderImportEzsigntemplatepackageV3Request** | [**EzsignfolderImportEzsigntemplatepackageV3Request**](EzsignfolderImportEzsigntemplatepackageV3Request.md)|  | |
 
 ### Return type
@@ -1966,9 +1966,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsignfolderID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsignfolderID** | **kotlin.Int**|  | |
 | **ezsignfolderReorderV2Request** | [**EzsignfolderReorderV2Request**](EzsignfolderReorderV2Request.md)|  | |
 
 ### Return type
@@ -2017,9 +2017,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsignfolderID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsignfolderID** | **kotlin.Int**|  | |
 | **ezsignfolderSendV1Request** | [**EzsignfolderSendV1Request**](EzsignfolderSendV1Request.md)|  | |
 
 ### Return type
@@ -2068,9 +2068,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsignfolderID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsignfolderID** | **kotlin.Int**|  | |
 | **ezsignfolderSendV3Request** | [**EzsignfolderSendV3Request**](EzsignfolderSendV3Request.md)|  | |
 
 ### Return type
@@ -2095,7 +2095,7 @@ Configure Authorization:
 
 Unsend the Ezsignfolder
 
-Once an Ezsignfolder has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsignfolder and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on \&quot;Non-completed\&quot; Ezsigndocuments will be lost.
+Once an Ezsignfolder has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsignfolder and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  âš ï¸ Warning: Any signature previously made by signatories on \&quot;Non-completed\&quot; Ezsigndocuments will be lost.
 
 ### Example
 ```kotlin
@@ -2119,9 +2119,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsignfolderID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsignfolderID** | **kotlin.Int**|  | |
 | **body** | **kotlin.Any**|  | |
 
 ### Return type

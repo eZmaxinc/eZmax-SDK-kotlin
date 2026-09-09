@@ -485,8 +485,8 @@ open class ObjectEzsigntemplateApi(basePath: kotlin.String = defaultBasePath, cl
                 }
             }
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
         localVariableHeaders["Accept"] = "application/json"
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
 
         return RequestConfig(
             method = RequestMethod.GET,
@@ -519,9 +519,7 @@ open class ObjectEzsigntemplateApi(basePath: kotlin.String = defaultBasePath, cl
          @Json(name = "iEzsigntemplateSignaturetotal_ASC") iEzsigntemplateSignaturetotal_ASC("iEzsigntemplateSignaturetotal_ASC"),
          @Json(name = "iEzsigntemplateSignaturetotal_DESC") iEzsigntemplateSignaturetotal_DESC("iEzsigntemplateSignaturetotal_DESC"),
          @Json(name = "sEzsignfoldertypeNameX_ASC") sEzsignfoldertypeNameX_ASC("sEzsignfoldertypeNameX_ASC"),
-         @Json(name = "sEzsignfoldertypeNameX_DESC") sEzsignfoldertypeNameX_DESC("sEzsignfoldertypeNameX_DESC"),
-         @Json(name = "eEzsigntemplateType_ASC") eEzsigntemplateType_ASC2("eEzsigntemplateType_ASC"),
-         @Json(name = "eEzsigntemplateType_DESC") eEzsigntemplateType_DESC2("eEzsigntemplateType_DESC");
+         @Json(name = "sEzsignfoldertypeNameX_DESC") sEzsignfoldertypeNameX_DESC("sEzsignfoldertypeNameX_DESC");
 
         /**
          * Override [toString()] to avoid using the enum variable name as the value, and instead use
@@ -620,8 +618,8 @@ open class ObjectEzsigntemplateApi(basePath: kotlin.String = defaultBasePath, cl
                 }
             }
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
         localVariableHeaders["Accept"] = "application/json"
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
 
         return RequestConfig(
             method = RequestMethod.GET,

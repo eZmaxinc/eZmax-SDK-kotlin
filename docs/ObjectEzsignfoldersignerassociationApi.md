@@ -51,9 +51,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsignfoldersignerassociationID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsignfoldersignerassociationID** | **kotlin.Int**|  | |
 | **ezsignfoldersignerassociationCreateEmbeddedUrlV1Request** | [**EzsignfoldersignerassociationCreateEmbeddedUrlV1Request**](EzsignfoldersignerassociationCreateEmbeddedUrlV1Request.md)|  | |
 
 ### Return type
@@ -102,9 +102,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsignfoldersignerassociationID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsignfoldersignerassociationID** | **kotlin.Int**|  | |
 | **ezsignfoldersignerassociationCreateEmbeddedUrlV2Request** | [**EzsignfoldersignerassociationCreateEmbeddedUrlV2Request**](EzsignfoldersignerassociationCreateEmbeddedUrlV2Request.md)|  | |
 
 ### Return type
@@ -349,9 +349,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsignfoldersignerassociationID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsignfoldersignerassociationID** | **kotlin.Int**|  | |
 | **ezsignfoldersignerassociationEditObjectV1Request** | [**EzsignfoldersignerassociationEditObjectV1Request**](EzsignfoldersignerassociationEditObjectV1Request.md)|  | |
 
 ### Return type
@@ -400,9 +400,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsignfoldersignerassociationID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsignfoldersignerassociationID** | **kotlin.Int**|  | |
 | **ezsignfoldersignerassociationEditObjectV2Request** | [**EzsignfoldersignerassociationEditObjectV2Request**](EzsignfoldersignerassociationEditObjectV2Request.md)|  | |
 
 ### Return type
@@ -451,9 +451,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsignfoldersignerassociationID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsignfoldersignerassociationID** | **kotlin.Int**|  | |
 | **body** | **kotlin.Any**|  | |
 
 ### Return type
@@ -696,9 +696,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsignfoldersignerassociationID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsignfoldersignerassociationID** | **kotlin.Int**|  | |
 | **ezsignfoldersignerassociationPatchObjectV1Request** | [**EzsignfoldersignerassociationPatchObjectV1Request**](EzsignfoldersignerassociationPatchObjectV1Request.md)|  | |
 
 ### Return type
@@ -747,9 +747,9 @@ try {
 ```
 
 ### Parameters
-| **pkiEzsignfoldersignerassociationID** | **kotlin.Int**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pkiEzsignfoldersignerassociationID** | **kotlin.Int**|  | |
 | **ezsignfoldersignerassociationReassignV1Request** | [**EzsignfoldersignerassociationReassignV1Request**](EzsignfoldersignerassociationReassignV1Request.md)|  | |
 
 ### Return type

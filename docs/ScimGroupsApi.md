@@ -142,9 +142,9 @@ try {
 ```
 
 ### Parameters
-| **groupId** | **kotlin.String**|  | |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **groupId** | **kotlin.String**|  | |
 | **scimGroup** | [**ScimGroup**](ScimGroup.md)|  | |
 
 ### Return type
