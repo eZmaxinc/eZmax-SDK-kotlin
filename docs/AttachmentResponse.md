@@ -7,6 +7,7 @@
 | **pkiAttachmentID** | **kotlin.Int** | The unique ID of the Attachment. |  |
 | **eAttachmentDocumenttype** | [**FieldEAttachmentDocumenttype**](FieldEAttachmentDocumenttype.md) |  |  |
 | **sAttachmentName** | **kotlin.String** | The name of the Attachment |  |
+| **sAttachmentCategory** | **kotlin.String** | The attachment category |  |
 | **eAttachmentPrivacy** | [**FieldEAttachmentPrivacy**](FieldEAttachmentPrivacy.md) |  |  |
 | **eAttachmentType** | [**FieldEAttachmentType**](FieldEAttachmentType.md) |  |  |
 | **iAttachmentSize** | **kotlin.Int** | The size of the Attachment |  |

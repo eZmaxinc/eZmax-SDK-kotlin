@@ -38,6 +38,7 @@ import com.squareup.moshi.JsonClass
  * @param pkiAttachmentID The unique ID of the Attachment.
  * @param eAttachmentDocumenttype 
  * @param sAttachmentName The name of the Attachment
+ * @param sAttachmentCategory The attachment category
  * @param eAttachmentPrivacy 
  * @param eAttachmentType 
  * @param iAttachmentSize The size of the Attachment
@@ -111,6 +112,10 @@ data class AttachmentResponseCompound (
     /* The name of the Attachment */
     @Json(name = "sAttachmentName")
     val sAttachmentName: kotlin.String,
+
+    /* The attachment category */
+    @Json(name = "sAttachmentCategory")
+    val sAttachmentCategory: kotlin.String,
 
     @Json(name = "eAttachmentPrivacy")
     val eAttachmentPrivacy: FieldEAttachmentPrivacy,

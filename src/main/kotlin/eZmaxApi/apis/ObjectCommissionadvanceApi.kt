@@ -29,6 +29,10 @@ import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommissionadvanceBatchDownloadV1Request
 import eZmaxApi.models.CommissionadvanceGetAttachmentsV1Response
+import eZmaxApi.models.CommissionadvanceGetCommunicationCountV1Response
+import eZmaxApi.models.CommissionadvanceGetCommunicationListV1Response
+import eZmaxApi.models.CommissionadvanceGetCommunicationrecipientsV1Response
+import eZmaxApi.models.CommissionadvanceGetCommunicationsendersV1Response
 import eZmaxApi.models.CommissionadvanceImportIntoEDMV1Request
 import eZmaxApi.models.CommissionadvanceImportIntoEDMV1Response
 import eZmaxApi.models.CommonResponseError
@@ -200,6 +204,298 @@ open class ObjectCommissionadvanceApi(basePath: kotlin.String = defaultBasePath,
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/commissionadvance/{pkiCommissionadvanceID}/getAttachments".replace("{"+"pkiCommissionadvanceID"+"}", encodeURIComponent(pkiCommissionadvanceID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationCount
+     * Retrieve Communication count
+     * 
+     * @param pkiCommissionadvanceID 
+     * @return CommissionadvanceGetCommunicationCountV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun commissionadvanceGetCommunicationCountV1(pkiCommissionadvanceID: kotlin.Int) : CommissionadvanceGetCommunicationCountV1Response {
+        val localVarResponse = commissionadvanceGetCommunicationCountV1WithHttpInfo(pkiCommissionadvanceID = pkiCommissionadvanceID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommissionadvanceGetCommunicationCountV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationCount
+     * Retrieve Communication count
+     * 
+     * @param pkiCommissionadvanceID 
+     * @return ApiResponse<CommissionadvanceGetCommunicationCountV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun commissionadvanceGetCommunicationCountV1WithHttpInfo(pkiCommissionadvanceID: kotlin.Int) : ApiResponse<CommissionadvanceGetCommunicationCountV1Response?> {
+        val localVariableConfig = commissionadvanceGetCommunicationCountV1RequestConfig(pkiCommissionadvanceID = pkiCommissionadvanceID)
+
+        return request<Unit, CommissionadvanceGetCommunicationCountV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation commissionadvanceGetCommunicationCountV1
+     *
+     * @param pkiCommissionadvanceID 
+     * @return RequestConfig
+     */
+    fun commissionadvanceGetCommunicationCountV1RequestConfig(pkiCommissionadvanceID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationCount".replace("{"+"pkiCommissionadvanceID"+"}", encodeURIComponent(pkiCommissionadvanceID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationList
+     * Retrieve Communication list
+     * 
+     * @param pkiCommissionadvanceID 
+     * @return CommissionadvanceGetCommunicationListV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun commissionadvanceGetCommunicationListV1(pkiCommissionadvanceID: kotlin.Int) : CommissionadvanceGetCommunicationListV1Response {
+        val localVarResponse = commissionadvanceGetCommunicationListV1WithHttpInfo(pkiCommissionadvanceID = pkiCommissionadvanceID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommissionadvanceGetCommunicationListV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationList
+     * Retrieve Communication list
+     * 
+     * @param pkiCommissionadvanceID 
+     * @return ApiResponse<CommissionadvanceGetCommunicationListV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun commissionadvanceGetCommunicationListV1WithHttpInfo(pkiCommissionadvanceID: kotlin.Int) : ApiResponse<CommissionadvanceGetCommunicationListV1Response?> {
+        val localVariableConfig = commissionadvanceGetCommunicationListV1RequestConfig(pkiCommissionadvanceID = pkiCommissionadvanceID)
+
+        return request<Unit, CommissionadvanceGetCommunicationListV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation commissionadvanceGetCommunicationListV1
+     *
+     * @param pkiCommissionadvanceID 
+     * @return RequestConfig
+     */
+    fun commissionadvanceGetCommunicationListV1RequestConfig(pkiCommissionadvanceID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationList".replace("{"+"pkiCommissionadvanceID"+"}", encodeURIComponent(pkiCommissionadvanceID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationrecipients
+     * Retrieve Communication recipients
+     * 
+     * @param pkiCommissionadvanceID 
+     * @return CommissionadvanceGetCommunicationrecipientsV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun commissionadvanceGetCommunicationrecipientsV1(pkiCommissionadvanceID: kotlin.Int) : CommissionadvanceGetCommunicationrecipientsV1Response {
+        val localVarResponse = commissionadvanceGetCommunicationrecipientsV1WithHttpInfo(pkiCommissionadvanceID = pkiCommissionadvanceID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommissionadvanceGetCommunicationrecipientsV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationrecipients
+     * Retrieve Communication recipients
+     * 
+     * @param pkiCommissionadvanceID 
+     * @return ApiResponse<CommissionadvanceGetCommunicationrecipientsV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun commissionadvanceGetCommunicationrecipientsV1WithHttpInfo(pkiCommissionadvanceID: kotlin.Int) : ApiResponse<CommissionadvanceGetCommunicationrecipientsV1Response?> {
+        val localVariableConfig = commissionadvanceGetCommunicationrecipientsV1RequestConfig(pkiCommissionadvanceID = pkiCommissionadvanceID)
+
+        return request<Unit, CommissionadvanceGetCommunicationrecipientsV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation commissionadvanceGetCommunicationrecipientsV1
+     *
+     * @param pkiCommissionadvanceID 
+     * @return RequestConfig
+     */
+    fun commissionadvanceGetCommunicationrecipientsV1RequestConfig(pkiCommissionadvanceID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationrecipients".replace("{"+"pkiCommissionadvanceID"+"}", encodeURIComponent(pkiCommissionadvanceID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationsenders
+     * Retrieve Communication senders
+     * 
+     * @param pkiCommissionadvanceID 
+     * @return CommissionadvanceGetCommunicationsendersV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun commissionadvanceGetCommunicationsendersV1(pkiCommissionadvanceID: kotlin.Int) : CommissionadvanceGetCommunicationsendersV1Response {
+        val localVarResponse = commissionadvanceGetCommunicationsendersV1WithHttpInfo(pkiCommissionadvanceID = pkiCommissionadvanceID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommissionadvanceGetCommunicationsendersV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationsenders
+     * Retrieve Communication senders
+     * 
+     * @param pkiCommissionadvanceID 
+     * @return ApiResponse<CommissionadvanceGetCommunicationsendersV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun commissionadvanceGetCommunicationsendersV1WithHttpInfo(pkiCommissionadvanceID: kotlin.Int) : ApiResponse<CommissionadvanceGetCommunicationsendersV1Response?> {
+        val localVariableConfig = commissionadvanceGetCommunicationsendersV1RequestConfig(pkiCommissionadvanceID = pkiCommissionadvanceID)
+
+        return request<Unit, CommissionadvanceGetCommunicationsendersV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation commissionadvanceGetCommunicationsendersV1
+     *
+     * @param pkiCommissionadvanceID 
+     * @return RequestConfig
+     */
+    fun commissionadvanceGetCommunicationsendersV1RequestConfig(pkiCommissionadvanceID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationsenders".replace("{"+"pkiCommissionadvanceID"+"}", encodeURIComponent(pkiCommissionadvanceID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

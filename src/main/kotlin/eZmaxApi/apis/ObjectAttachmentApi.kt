@@ -27,9 +27,14 @@ import java.io.IOException
 import okhttp3.Call
 import okhttp3.HttpUrl
 
+import eZmaxApi.models.AttachmentDeleteV1Response
 import eZmaxApi.models.AttachmentGetAttachmentlogsV1Response
 import eZmaxApi.models.AttachmentRenameV1Request
 import eZmaxApi.models.AttachmentRenameV1Response
+import eZmaxApi.models.AttachmentRestoreV1Request
+import eZmaxApi.models.AttachmentRestoreV1Response
+import eZmaxApi.models.AttachmentValidateV1Request
+import eZmaxApi.models.AttachmentValidateV1Response
 import eZmaxApi.models.CommonResponseError
 
 import com.squareup.moshi.Json
@@ -54,6 +59,83 @@ open class ObjectAttachmentApi(basePath: kotlin.String = defaultBasePath, client
         val defaultBasePath: String by lazy {
             System.getProperties().getProperty(ApiClient.BASE_URL_KEY, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
+    }
+
+    /**
+     * POST /1/object/attachment/{pkiAttachmentID}/delete
+     * Delete an existing attachment
+     * Te endpoint allows to delete an attachment.
+     * @param pkiAttachmentID 
+     * @param body 
+     * @return AttachmentDeleteV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun attachmentDeleteV1(pkiAttachmentID: kotlin.Int, body: kotlin.Any) : AttachmentDeleteV1Response {
+        val localVarResponse = attachmentDeleteV1WithHttpInfo(pkiAttachmentID = pkiAttachmentID, body = body)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as AttachmentDeleteV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /1/object/attachment/{pkiAttachmentID}/delete
+     * Delete an existing attachment
+     * Te endpoint allows to delete an attachment.
+     * @param pkiAttachmentID 
+     * @param body 
+     * @return ApiResponse<AttachmentDeleteV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun attachmentDeleteV1WithHttpInfo(pkiAttachmentID: kotlin.Int, body: kotlin.Any) : ApiResponse<AttachmentDeleteV1Response?> {
+        val localVariableConfig = attachmentDeleteV1RequestConfig(pkiAttachmentID = pkiAttachmentID, body = body)
+
+        return request<kotlin.Any, AttachmentDeleteV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation attachmentDeleteV1
+     *
+     * @param pkiAttachmentID 
+     * @param body 
+     * @return RequestConfig
+     */
+    fun attachmentDeleteV1RequestConfig(pkiAttachmentID: kotlin.Int, body: kotlin.Any) : RequestConfig<kotlin.Any> {
+        val localVariableBody = body
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/attachment/{pkiAttachmentID}/delete".replace("{"+"pkiAttachmentID"+"}", encodeURIComponent(pkiAttachmentID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
     }
 
     /**
@@ -202,7 +284,7 @@ open class ObjectAttachmentApi(basePath: kotlin.String = defaultBasePath, client
 
     /**
      * POST /1/object/attachment/{pkiAttachmentID}/rename
-     * Rename an Attachment
+     * Rename an attachment
      * The endpoint allows to change the attachment&#39;s file name and category.
      * @param pkiAttachmentID 
      * @param attachmentRenameV1Request 
@@ -235,7 +317,7 @@ open class ObjectAttachmentApi(basePath: kotlin.String = defaultBasePath, client
 
     /**
      * POST /1/object/attachment/{pkiAttachmentID}/rename
-     * Rename an Attachment
+     * Rename an attachment
      * The endpoint allows to change the attachment&#39;s file name and category.
      * @param pkiAttachmentID 
      * @param attachmentRenameV1Request 
@@ -270,6 +352,160 @@ open class ObjectAttachmentApi(basePath: kotlin.String = defaultBasePath, client
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/attachment/{pkiAttachmentID}/rename".replace("{"+"pkiAttachmentID"+"}", encodeURIComponent(pkiAttachmentID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * POST /1/object/attachment/{pkiAttachmentID}/restore
+     * Restore a deleted attachment
+     * The endpoints allows to restore a previously deleted attachment.
+     * @param pkiAttachmentID 
+     * @param attachmentRestoreV1Request 
+     * @return AttachmentRestoreV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun attachmentRestoreV1(pkiAttachmentID: kotlin.Int, attachmentRestoreV1Request: AttachmentRestoreV1Request) : AttachmentRestoreV1Response {
+        val localVarResponse = attachmentRestoreV1WithHttpInfo(pkiAttachmentID = pkiAttachmentID, attachmentRestoreV1Request = attachmentRestoreV1Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as AttachmentRestoreV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /1/object/attachment/{pkiAttachmentID}/restore
+     * Restore a deleted attachment
+     * The endpoints allows to restore a previously deleted attachment.
+     * @param pkiAttachmentID 
+     * @param attachmentRestoreV1Request 
+     * @return ApiResponse<AttachmentRestoreV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun attachmentRestoreV1WithHttpInfo(pkiAttachmentID: kotlin.Int, attachmentRestoreV1Request: AttachmentRestoreV1Request) : ApiResponse<AttachmentRestoreV1Response?> {
+        val localVariableConfig = attachmentRestoreV1RequestConfig(pkiAttachmentID = pkiAttachmentID, attachmentRestoreV1Request = attachmentRestoreV1Request)
+
+        return request<AttachmentRestoreV1Request, AttachmentRestoreV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation attachmentRestoreV1
+     *
+     * @param pkiAttachmentID 
+     * @param attachmentRestoreV1Request 
+     * @return RequestConfig
+     */
+    fun attachmentRestoreV1RequestConfig(pkiAttachmentID: kotlin.Int, attachmentRestoreV1Request: AttachmentRestoreV1Request) : RequestConfig<AttachmentRestoreV1Request> {
+        val localVariableBody = attachmentRestoreV1Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/attachment/{pkiAttachmentID}/restore".replace("{"+"pkiAttachmentID"+"}", encodeURIComponent(pkiAttachmentID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * PATCH /1/object/attachment/{pkiAttachmentID}/validate
+     * Validate an existing attachment
+     * This endpoint allows to validate or reject an attachment.
+     * @param pkiAttachmentID 
+     * @param attachmentValidateV1Request 
+     * @return AttachmentValidateV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun attachmentValidateV1(pkiAttachmentID: kotlin.Int, attachmentValidateV1Request: AttachmentValidateV1Request) : AttachmentValidateV1Response {
+        val localVarResponse = attachmentValidateV1WithHttpInfo(pkiAttachmentID = pkiAttachmentID, attachmentValidateV1Request = attachmentValidateV1Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as AttachmentValidateV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * PATCH /1/object/attachment/{pkiAttachmentID}/validate
+     * Validate an existing attachment
+     * This endpoint allows to validate or reject an attachment.
+     * @param pkiAttachmentID 
+     * @param attachmentValidateV1Request 
+     * @return ApiResponse<AttachmentValidateV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun attachmentValidateV1WithHttpInfo(pkiAttachmentID: kotlin.Int, attachmentValidateV1Request: AttachmentValidateV1Request) : ApiResponse<AttachmentValidateV1Response?> {
+        val localVariableConfig = attachmentValidateV1RequestConfig(pkiAttachmentID = pkiAttachmentID, attachmentValidateV1Request = attachmentValidateV1Request)
+
+        return request<AttachmentValidateV1Request, AttachmentValidateV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation attachmentValidateV1
+     *
+     * @param pkiAttachmentID 
+     * @param attachmentValidateV1Request 
+     * @return RequestConfig
+     */
+    fun attachmentValidateV1RequestConfig(pkiAttachmentID: kotlin.Int, attachmentValidateV1Request: AttachmentValidateV1Request) : RequestConfig<AttachmentValidateV1Request> {
+        val localVariableBody = attachmentValidateV1Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.PATCH,
+            path = "/1/object/attachment/{pkiAttachmentID}/validate".replace("{"+"pkiAttachmentID"+"}", encodeURIComponent(pkiAttachmentID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

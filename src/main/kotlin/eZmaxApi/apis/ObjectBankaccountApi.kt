@@ -30,6 +30,10 @@ import okhttp3.HttpUrl
 import eZmaxApi.models.BankaccountBatchDownloadV1Request
 import eZmaxApi.models.BankaccountGetAttachmentsV1Response
 import eZmaxApi.models.BankaccountGetAutocompleteV2Response
+import eZmaxApi.models.BankaccountGetCommunicationCountV1Response
+import eZmaxApi.models.BankaccountGetCommunicationListV1Response
+import eZmaxApi.models.BankaccountGetCommunicationrecipientsV1Response
+import eZmaxApi.models.BankaccountGetCommunicationsendersV1Response
 import eZmaxApi.models.BankaccountImportIntoEDMV1Request
 import eZmaxApi.models.BankaccountImportIntoEDMV1Response
 import eZmaxApi.models.CommonResponseError
@@ -327,6 +331,298 @@ open class ObjectBankaccountApi(basePath: kotlin.String = defaultBasePath, clien
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/2/object/bankaccount/getAutocomplete/{sSelector}".replace("{"+"sSelector"+"}", encodeURIComponent(sSelector.value.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/bankaccount/{pkiBankaccountID}/getCommunicationCount
+     * Retrieve Communication count
+     * 
+     * @param pkiBankaccountID 
+     * @return BankaccountGetCommunicationCountV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun bankaccountGetCommunicationCountV1(pkiBankaccountID: kotlin.Int) : BankaccountGetCommunicationCountV1Response {
+        val localVarResponse = bankaccountGetCommunicationCountV1WithHttpInfo(pkiBankaccountID = pkiBankaccountID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as BankaccountGetCommunicationCountV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/bankaccount/{pkiBankaccountID}/getCommunicationCount
+     * Retrieve Communication count
+     * 
+     * @param pkiBankaccountID 
+     * @return ApiResponse<BankaccountGetCommunicationCountV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun bankaccountGetCommunicationCountV1WithHttpInfo(pkiBankaccountID: kotlin.Int) : ApiResponse<BankaccountGetCommunicationCountV1Response?> {
+        val localVariableConfig = bankaccountGetCommunicationCountV1RequestConfig(pkiBankaccountID = pkiBankaccountID)
+
+        return request<Unit, BankaccountGetCommunicationCountV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation bankaccountGetCommunicationCountV1
+     *
+     * @param pkiBankaccountID 
+     * @return RequestConfig
+     */
+    fun bankaccountGetCommunicationCountV1RequestConfig(pkiBankaccountID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/bankaccount/{pkiBankaccountID}/getCommunicationCount".replace("{"+"pkiBankaccountID"+"}", encodeURIComponent(pkiBankaccountID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/bankaccount/{pkiBankaccountID}/getCommunicationList
+     * Retrieve Communication list
+     * 
+     * @param pkiBankaccountID 
+     * @return BankaccountGetCommunicationListV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun bankaccountGetCommunicationListV1(pkiBankaccountID: kotlin.Int) : BankaccountGetCommunicationListV1Response {
+        val localVarResponse = bankaccountGetCommunicationListV1WithHttpInfo(pkiBankaccountID = pkiBankaccountID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as BankaccountGetCommunicationListV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/bankaccount/{pkiBankaccountID}/getCommunicationList
+     * Retrieve Communication list
+     * 
+     * @param pkiBankaccountID 
+     * @return ApiResponse<BankaccountGetCommunicationListV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun bankaccountGetCommunicationListV1WithHttpInfo(pkiBankaccountID: kotlin.Int) : ApiResponse<BankaccountGetCommunicationListV1Response?> {
+        val localVariableConfig = bankaccountGetCommunicationListV1RequestConfig(pkiBankaccountID = pkiBankaccountID)
+
+        return request<Unit, BankaccountGetCommunicationListV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation bankaccountGetCommunicationListV1
+     *
+     * @param pkiBankaccountID 
+     * @return RequestConfig
+     */
+    fun bankaccountGetCommunicationListV1RequestConfig(pkiBankaccountID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/bankaccount/{pkiBankaccountID}/getCommunicationList".replace("{"+"pkiBankaccountID"+"}", encodeURIComponent(pkiBankaccountID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/bankaccount/{pkiBankaccountID}/getCommunicationrecipients
+     * Retrieve Communication recipients
+     * 
+     * @param pkiBankaccountID 
+     * @return BankaccountGetCommunicationrecipientsV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun bankaccountGetCommunicationrecipientsV1(pkiBankaccountID: kotlin.Int) : BankaccountGetCommunicationrecipientsV1Response {
+        val localVarResponse = bankaccountGetCommunicationrecipientsV1WithHttpInfo(pkiBankaccountID = pkiBankaccountID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as BankaccountGetCommunicationrecipientsV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/bankaccount/{pkiBankaccountID}/getCommunicationrecipients
+     * Retrieve Communication recipients
+     * 
+     * @param pkiBankaccountID 
+     * @return ApiResponse<BankaccountGetCommunicationrecipientsV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun bankaccountGetCommunicationrecipientsV1WithHttpInfo(pkiBankaccountID: kotlin.Int) : ApiResponse<BankaccountGetCommunicationrecipientsV1Response?> {
+        val localVariableConfig = bankaccountGetCommunicationrecipientsV1RequestConfig(pkiBankaccountID = pkiBankaccountID)
+
+        return request<Unit, BankaccountGetCommunicationrecipientsV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation bankaccountGetCommunicationrecipientsV1
+     *
+     * @param pkiBankaccountID 
+     * @return RequestConfig
+     */
+    fun bankaccountGetCommunicationrecipientsV1RequestConfig(pkiBankaccountID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/bankaccount/{pkiBankaccountID}/getCommunicationrecipients".replace("{"+"pkiBankaccountID"+"}", encodeURIComponent(pkiBankaccountID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/bankaccount/{pkiBankaccountID}/getCommunicationsenders
+     * Retrieve Communication senders
+     * 
+     * @param pkiBankaccountID 
+     * @return BankaccountGetCommunicationsendersV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun bankaccountGetCommunicationsendersV1(pkiBankaccountID: kotlin.Int) : BankaccountGetCommunicationsendersV1Response {
+        val localVarResponse = bankaccountGetCommunicationsendersV1WithHttpInfo(pkiBankaccountID = pkiBankaccountID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as BankaccountGetCommunicationsendersV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/bankaccount/{pkiBankaccountID}/getCommunicationsenders
+     * Retrieve Communication senders
+     * 
+     * @param pkiBankaccountID 
+     * @return ApiResponse<BankaccountGetCommunicationsendersV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun bankaccountGetCommunicationsendersV1WithHttpInfo(pkiBankaccountID: kotlin.Int) : ApiResponse<BankaccountGetCommunicationsendersV1Response?> {
+        val localVariableConfig = bankaccountGetCommunicationsendersV1RequestConfig(pkiBankaccountID = pkiBankaccountID)
+
+        return request<Unit, BankaccountGetCommunicationsendersV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation bankaccountGetCommunicationsendersV1
+     *
+     * @param pkiBankaccountID 
+     * @return RequestConfig
+     */
+    fun bankaccountGetCommunicationsendersV1RequestConfig(pkiBankaccountID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/bankaccount/{pkiBankaccountID}/getCommunicationsenders".replace("{"+"pkiBankaccountID"+"}", encodeURIComponent(pkiBankaccountID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

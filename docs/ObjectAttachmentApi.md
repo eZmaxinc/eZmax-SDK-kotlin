@@ -4,10 +4,64 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**attachmentDeleteV1**](ObjectAttachmentApi.md#attachmentDeleteV1) | **POST** /1/object/attachment/{pkiAttachmentID}/delete | Delete an existing attachment |
 | [**attachmentDownloadV1**](ObjectAttachmentApi.md#attachmentDownloadV1) | **GET** /1/object/attachment/{pkiAttachmentID}/download | Retrieve the content |
 | [**attachmentGetAttachmentlogsV1**](ObjectAttachmentApi.md#attachmentGetAttachmentlogsV1) | **GET** /1/object/attachment/{pkiAttachmentID}/getAttachmentlogs | Retrieve the Attachmentlogs |
-| [**attachmentRenameV1**](ObjectAttachmentApi.md#attachmentRenameV1) | **POST** /1/object/attachment/{pkiAttachmentID}/rename | Rename an Attachment |
+| [**attachmentRenameV1**](ObjectAttachmentApi.md#attachmentRenameV1) | **POST** /1/object/attachment/{pkiAttachmentID}/rename | Rename an attachment |
+| [**attachmentRestoreV1**](ObjectAttachmentApi.md#attachmentRestoreV1) | **POST** /1/object/attachment/{pkiAttachmentID}/restore | Restore a deleted attachment |
+| [**attachmentValidateV1**](ObjectAttachmentApi.md#attachmentValidateV1) | **PATCH** /1/object/attachment/{pkiAttachmentID}/validate | Validate an existing attachment |
 
+
+<a id="attachmentDeleteV1"></a>
+# **attachmentDeleteV1**
+> AttachmentDeleteV1Response attachmentDeleteV1(pkiAttachmentID, body)
+
+Delete an existing attachment
+
+Te endpoint allows to delete an attachment.
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectAttachmentApi()
+val pkiAttachmentID : kotlin.Int = 56 // kotlin.Int | 
+val body : kotlin.Any = Object // kotlin.Any | 
+try {
+    val result : AttachmentDeleteV1Response = apiInstance.attachmentDeleteV1(pkiAttachmentID, body)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectAttachmentApi#attachmentDeleteV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectAttachmentApi#attachmentDeleteV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiAttachmentID** | **kotlin.Int**|  | |
+| **body** | **kotlin.Any**|  | |
+
+### Return type
+
+[**AttachmentDeleteV1Response**](AttachmentDeleteV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 <a id="attachmentDownloadV1"></a>
 # **attachmentDownloadV1**
@@ -113,7 +167,7 @@ Configure Authorization:
 # **attachmentRenameV1**
 > AttachmentRenameV1Response attachmentRenameV1(pkiAttachmentID, attachmentRenameV1Request)
 
-Rename an Attachment
+Rename an attachment
 
 The endpoint allows to change the attachment&#39;s file name and category.
 
@@ -147,6 +201,108 @@ try {
 ### Return type
 
 [**AttachmentRenameV1Response**](AttachmentRenameV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a id="attachmentRestoreV1"></a>
+# **attachmentRestoreV1**
+> AttachmentRestoreV1Response attachmentRestoreV1(pkiAttachmentID, attachmentRestoreV1Request)
+
+Restore a deleted attachment
+
+The endpoints allows to restore a previously deleted attachment.
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectAttachmentApi()
+val pkiAttachmentID : kotlin.Int = 56 // kotlin.Int | 
+val attachmentRestoreV1Request : AttachmentRestoreV1Request =  // AttachmentRestoreV1Request | 
+try {
+    val result : AttachmentRestoreV1Response = apiInstance.attachmentRestoreV1(pkiAttachmentID, attachmentRestoreV1Request)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectAttachmentApi#attachmentRestoreV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectAttachmentApi#attachmentRestoreV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiAttachmentID** | **kotlin.Int**|  | |
+| **attachmentRestoreV1Request** | [**AttachmentRestoreV1Request**](AttachmentRestoreV1Request.md)|  | |
+
+### Return type
+
+[**AttachmentRestoreV1Response**](AttachmentRestoreV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a id="attachmentValidateV1"></a>
+# **attachmentValidateV1**
+> AttachmentValidateV1Response attachmentValidateV1(pkiAttachmentID, attachmentValidateV1Request)
+
+Validate an existing attachment
+
+This endpoint allows to validate or reject an attachment.
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectAttachmentApi()
+val pkiAttachmentID : kotlin.Int = 56 // kotlin.Int | 
+val attachmentValidateV1Request : AttachmentValidateV1Request =  // AttachmentValidateV1Request | 
+try {
+    val result : AttachmentValidateV1Response = apiInstance.attachmentValidateV1(pkiAttachmentID, attachmentValidateV1Request)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectAttachmentApi#attachmentValidateV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectAttachmentApi#attachmentValidateV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiAttachmentID** | **kotlin.Int**|  | |
+| **attachmentValidateV1Request** | [**AttachmentValidateV1Request**](AttachmentValidateV1Request.md)|  | |
+
+### Return type
+
+[**AttachmentValidateV1Response**](AttachmentValidateV1Response.md)
 
 ### Authorization
 

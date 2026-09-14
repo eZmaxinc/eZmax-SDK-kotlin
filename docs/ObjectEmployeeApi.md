@@ -6,6 +6,10 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | ------------- | ------------- | ------------- |
 | [**employeeBatchDownloadV1**](ObjectEmployeeApi.md#employeeBatchDownloadV1) | **POST** /1/object/employee/{pkiEmployeeID}/batchDownload | Download multiples attachments from a Employee |
 | [**employeeGetAttachmentsV1**](ObjectEmployeeApi.md#employeeGetAttachmentsV1) | **GET** /1/object/employee/{pkiEmployeeID}/getAttachments | Retrieve Employee&#39;s attachments |
+| [**employeeGetCommunicationCountV1**](ObjectEmployeeApi.md#employeeGetCommunicationCountV1) | **GET** /1/object/employee/{pkiEmployeeID}/getCommunicationCount | Retrieve Communication count |
+| [**employeeGetCommunicationListV1**](ObjectEmployeeApi.md#employeeGetCommunicationListV1) | **GET** /1/object/employee/{pkiEmployeeID}/getCommunicationList | Retrieve Communication list |
+| [**employeeGetCommunicationrecipientsV1**](ObjectEmployeeApi.md#employeeGetCommunicationrecipientsV1) | **GET** /1/object/employee/{pkiEmployeeID}/getCommunicationrecipients | Retrieve Communication recipients |
+| [**employeeGetCommunicationsendersV1**](ObjectEmployeeApi.md#employeeGetCommunicationsendersV1) | **GET** /1/object/employee/{pkiEmployeeID}/getCommunicationsenders | Retrieve Communication senders |
 | [**employeeGetListV1**](ObjectEmployeeApi.md#employeeGetListV1) | **GET** /1/object/employee/getList | Retrieve Employee list |
 | [**employeeImportIntoEDMV1**](ObjectEmployeeApi.md#employeeImportIntoEDMV1) | **POST** /1/object/employee/{pkiEmployeeID}/importIntoEDM | Import attachments into the Employee |
 
@@ -93,6 +97,194 @@ try {
 ### Return type
 
 [**EmployeeGetAttachmentsV1Response**](EmployeeGetAttachmentsV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="employeeGetCommunicationCountV1"></a>
+# **employeeGetCommunicationCountV1**
+> EmployeeGetCommunicationCountV1Response employeeGetCommunicationCountV1(pkiEmployeeID)
+
+Retrieve Communication count
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEmployeeApi()
+val pkiEmployeeID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : EmployeeGetCommunicationCountV1Response = apiInstance.employeeGetCommunicationCountV1(pkiEmployeeID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEmployeeApi#employeeGetCommunicationCountV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEmployeeApi#employeeGetCommunicationCountV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiEmployeeID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**EmployeeGetCommunicationCountV1Response**](EmployeeGetCommunicationCountV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="employeeGetCommunicationListV1"></a>
+# **employeeGetCommunicationListV1**
+> EmployeeGetCommunicationListV1Response employeeGetCommunicationListV1(pkiEmployeeID)
+
+Retrieve Communication list
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEmployeeApi()
+val pkiEmployeeID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : EmployeeGetCommunicationListV1Response = apiInstance.employeeGetCommunicationListV1(pkiEmployeeID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEmployeeApi#employeeGetCommunicationListV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEmployeeApi#employeeGetCommunicationListV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiEmployeeID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**EmployeeGetCommunicationListV1Response**](EmployeeGetCommunicationListV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="employeeGetCommunicationrecipientsV1"></a>
+# **employeeGetCommunicationrecipientsV1**
+> EmployeeGetCommunicationrecipientsV1Response employeeGetCommunicationrecipientsV1(pkiEmployeeID)
+
+Retrieve Communication recipients
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEmployeeApi()
+val pkiEmployeeID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : EmployeeGetCommunicationrecipientsV1Response = apiInstance.employeeGetCommunicationrecipientsV1(pkiEmployeeID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEmployeeApi#employeeGetCommunicationrecipientsV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEmployeeApi#employeeGetCommunicationrecipientsV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiEmployeeID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**EmployeeGetCommunicationrecipientsV1Response**](EmployeeGetCommunicationrecipientsV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="employeeGetCommunicationsendersV1"></a>
+# **employeeGetCommunicationsendersV1**
+> EmployeeGetCommunicationsendersV1Response employeeGetCommunicationsendersV1(pkiEmployeeID)
+
+Retrieve Communication senders
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectEmployeeApi()
+val pkiEmployeeID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : EmployeeGetCommunicationsendersV1Response = apiInstance.employeeGetCommunicationsendersV1(pkiEmployeeID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectEmployeeApi#employeeGetCommunicationsendersV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectEmployeeApi#employeeGetCommunicationsendersV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiEmployeeID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**EmployeeGetCommunicationsendersV1Response**](EmployeeGetCommunicationsendersV1Response.md)
 
 ### Authorization
 

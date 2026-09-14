@@ -7,6 +7,10 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**brokerBatchDownloadV1**](ObjectBrokerApi.md#brokerBatchDownloadV1) | **POST** /1/object/broker/{pkiBrokerID}/batchDownload | Download multiples attachments from a Broker |
 | [**brokerGetAttachmentsV1**](ObjectBrokerApi.md#brokerGetAttachmentsV1) | **GET** /1/object/broker/{pkiBrokerID}/getAttachments | Retrieve Broker&#39;s attachments |
 | [**brokerGetAutocompleteV2**](ObjectBrokerApi.md#brokerGetAutocompleteV2) | **GET** /2/object/broker/getAutocomplete/{sSelector} | Retrieve Brokers and IDs |
+| [**brokerGetCommunicationCountV1**](ObjectBrokerApi.md#brokerGetCommunicationCountV1) | **GET** /1/object/broker/{pkiBrokerID}/getCommunicationCount | Retrieve Communication count |
+| [**brokerGetCommunicationListV1**](ObjectBrokerApi.md#brokerGetCommunicationListV1) | **GET** /1/object/broker/{pkiBrokerID}/getCommunicationList | Retrieve Communication list |
+| [**brokerGetCommunicationrecipientsV1**](ObjectBrokerApi.md#brokerGetCommunicationrecipientsV1) | **GET** /1/object/broker/{pkiBrokerID}/getCommunicationrecipients | Retrieve Communication recipients |
+| [**brokerGetCommunicationsendersV1**](ObjectBrokerApi.md#brokerGetCommunicationsendersV1) | **GET** /1/object/broker/{pkiBrokerID}/getCommunicationsenders | Retrieve Communication senders |
 | [**brokerGetListV1**](ObjectBrokerApi.md#brokerGetListV1) | **GET** /1/object/broker/getList | Retrieve Broker list |
 | [**brokerImportIntoEDMV1**](ObjectBrokerApi.md#brokerImportIntoEDMV1) | **POST** /1/object/broker/{pkiBrokerID}/importIntoEDM | Import attachments into the Broker |
 
@@ -149,6 +153,194 @@ try {
 ### Return type
 
 [**BrokerGetAutocompleteV2Response**](BrokerGetAutocompleteV2Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="brokerGetCommunicationCountV1"></a>
+# **brokerGetCommunicationCountV1**
+> BrokerGetCommunicationCountV1Response brokerGetCommunicationCountV1(pkiBrokerID)
+
+Retrieve Communication count
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectBrokerApi()
+val pkiBrokerID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : BrokerGetCommunicationCountV1Response = apiInstance.brokerGetCommunicationCountV1(pkiBrokerID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectBrokerApi#brokerGetCommunicationCountV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectBrokerApi#brokerGetCommunicationCountV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiBrokerID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**BrokerGetCommunicationCountV1Response**](BrokerGetCommunicationCountV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="brokerGetCommunicationListV1"></a>
+# **brokerGetCommunicationListV1**
+> BrokerGetCommunicationListV1Response brokerGetCommunicationListV1(pkiBrokerID)
+
+Retrieve Communication list
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectBrokerApi()
+val pkiBrokerID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : BrokerGetCommunicationListV1Response = apiInstance.brokerGetCommunicationListV1(pkiBrokerID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectBrokerApi#brokerGetCommunicationListV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectBrokerApi#brokerGetCommunicationListV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiBrokerID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**BrokerGetCommunicationListV1Response**](BrokerGetCommunicationListV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="brokerGetCommunicationrecipientsV1"></a>
+# **brokerGetCommunicationrecipientsV1**
+> BrokerGetCommunicationrecipientsV1Response brokerGetCommunicationrecipientsV1(pkiBrokerID)
+
+Retrieve Communication recipients
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectBrokerApi()
+val pkiBrokerID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : BrokerGetCommunicationrecipientsV1Response = apiInstance.brokerGetCommunicationrecipientsV1(pkiBrokerID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectBrokerApi#brokerGetCommunicationrecipientsV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectBrokerApi#brokerGetCommunicationrecipientsV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiBrokerID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**BrokerGetCommunicationrecipientsV1Response**](BrokerGetCommunicationrecipientsV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="brokerGetCommunicationsendersV1"></a>
+# **brokerGetCommunicationsendersV1**
+> BrokerGetCommunicationsendersV1Response brokerGetCommunicationsendersV1(pkiBrokerID)
+
+Retrieve Communication senders
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectBrokerApi()
+val pkiBrokerID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : BrokerGetCommunicationsendersV1Response = apiInstance.brokerGetCommunicationsendersV1(pkiBrokerID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectBrokerApi#brokerGetCommunicationsendersV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectBrokerApi#brokerGetCommunicationsendersV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiBrokerID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**BrokerGetCommunicationsendersV1Response**](BrokerGetCommunicationsendersV1Response.md)
 
 ### Authorization
 

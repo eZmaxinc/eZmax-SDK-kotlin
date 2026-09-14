@@ -7,6 +7,10 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**agentBatchDownloadV1**](ObjectAgentApi.md#agentBatchDownloadV1) | **POST** /1/object/agent/{pkiAgentID}/batchDownload | Download multiples attachments from a Agent |
 | [**agentGetAttachmentsV1**](ObjectAgentApi.md#agentGetAttachmentsV1) | **GET** /1/object/agent/{pkiAgentID}/getAttachments | Retrieve Agent&#39;s attachments |
 | [**agentGetAutocompleteV2**](ObjectAgentApi.md#agentGetAutocompleteV2) | **GET** /2/object/agent/getAutocomplete/{sSelector} | Retrieve Agents and IDs |
+| [**agentGetCommunicationCountV1**](ObjectAgentApi.md#agentGetCommunicationCountV1) | **GET** /1/object/agent/{pkiAgentID}/getCommunicationCount | Retrieve Communication count |
+| [**agentGetCommunicationListV1**](ObjectAgentApi.md#agentGetCommunicationListV1) | **GET** /1/object/agent/{pkiAgentID}/getCommunicationList | Retrieve Communication list |
+| [**agentGetCommunicationrecipientsV1**](ObjectAgentApi.md#agentGetCommunicationrecipientsV1) | **GET** /1/object/agent/{pkiAgentID}/getCommunicationrecipients | Retrieve Communication recipients |
+| [**agentGetCommunicationsendersV1**](ObjectAgentApi.md#agentGetCommunicationsendersV1) | **GET** /1/object/agent/{pkiAgentID}/getCommunicationsenders | Retrieve Communication senders |
 | [**agentGetListV1**](ObjectAgentApi.md#agentGetListV1) | **GET** /1/object/agent/getList | Retrieve Agent list |
 | [**agentImportIntoEDMV1**](ObjectAgentApi.md#agentImportIntoEDMV1) | **POST** /1/object/agent/{pkiAgentID}/importIntoEDM | Import attachments into the Agent |
 
@@ -149,6 +153,194 @@ try {
 ### Return type
 
 [**AgentGetAutocompleteV2Response**](AgentGetAutocompleteV2Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="agentGetCommunicationCountV1"></a>
+# **agentGetCommunicationCountV1**
+> AgentGetCommunicationCountV1Response agentGetCommunicationCountV1(pkiAgentID)
+
+Retrieve Communication count
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectAgentApi()
+val pkiAgentID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : AgentGetCommunicationCountV1Response = apiInstance.agentGetCommunicationCountV1(pkiAgentID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectAgentApi#agentGetCommunicationCountV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectAgentApi#agentGetCommunicationCountV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiAgentID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**AgentGetCommunicationCountV1Response**](AgentGetCommunicationCountV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="agentGetCommunicationListV1"></a>
+# **agentGetCommunicationListV1**
+> AgentGetCommunicationListV1Response agentGetCommunicationListV1(pkiAgentID)
+
+Retrieve Communication list
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectAgentApi()
+val pkiAgentID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : AgentGetCommunicationListV1Response = apiInstance.agentGetCommunicationListV1(pkiAgentID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectAgentApi#agentGetCommunicationListV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectAgentApi#agentGetCommunicationListV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiAgentID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**AgentGetCommunicationListV1Response**](AgentGetCommunicationListV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="agentGetCommunicationrecipientsV1"></a>
+# **agentGetCommunicationrecipientsV1**
+> AgentGetCommunicationrecipientsV1Response agentGetCommunicationrecipientsV1(pkiAgentID)
+
+Retrieve Communication recipients
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectAgentApi()
+val pkiAgentID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : AgentGetCommunicationrecipientsV1Response = apiInstance.agentGetCommunicationrecipientsV1(pkiAgentID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectAgentApi#agentGetCommunicationrecipientsV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectAgentApi#agentGetCommunicationrecipientsV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiAgentID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**AgentGetCommunicationrecipientsV1Response**](AgentGetCommunicationrecipientsV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="agentGetCommunicationsendersV1"></a>
+# **agentGetCommunicationsendersV1**
+> AgentGetCommunicationsendersV1Response agentGetCommunicationsendersV1(pkiAgentID)
+
+Retrieve Communication senders
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectAgentApi()
+val pkiAgentID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : AgentGetCommunicationsendersV1Response = apiInstance.agentGetCommunicationsendersV1(pkiAgentID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectAgentApi#agentGetCommunicationsendersV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectAgentApi#agentGetCommunicationsendersV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiAgentID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**AgentGetCommunicationsendersV1Response**](AgentGetCommunicationsendersV1Response.md)
 
 ### Authorization
 

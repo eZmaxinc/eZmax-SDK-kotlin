@@ -30,6 +30,10 @@ import okhttp3.HttpUrl
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.DeposittransitchequeBatchDownloadV1Request
 import eZmaxApi.models.DeposittransitchequeGetAttachmentsV1Response
+import eZmaxApi.models.DeposittransitchequeGetCommunicationCountV1Response
+import eZmaxApi.models.DeposittransitchequeGetCommunicationListV1Response
+import eZmaxApi.models.DeposittransitchequeGetCommunicationrecipientsV1Response
+import eZmaxApi.models.DeposittransitchequeGetCommunicationsendersV1Response
 import eZmaxApi.models.DeposittransitchequeImportIntoEDMV1Request
 import eZmaxApi.models.DeposittransitchequeImportIntoEDMV1Response
 
@@ -200,6 +204,298 @@ open class ObjectDeposittransitchequeApi(basePath: kotlin.String = defaultBasePa
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getAttachments".replace("{"+"pkiDeposittransitchequeID"+"}", encodeURIComponent(pkiDeposittransitchequeID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationCount
+     * Retrieve Communication count
+     * 
+     * @param pkiDeposittransitchequeID 
+     * @return DeposittransitchequeGetCommunicationCountV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun deposittransitchequeGetCommunicationCountV1(pkiDeposittransitchequeID: kotlin.Int) : DeposittransitchequeGetCommunicationCountV1Response {
+        val localVarResponse = deposittransitchequeGetCommunicationCountV1WithHttpInfo(pkiDeposittransitchequeID = pkiDeposittransitchequeID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as DeposittransitchequeGetCommunicationCountV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationCount
+     * Retrieve Communication count
+     * 
+     * @param pkiDeposittransitchequeID 
+     * @return ApiResponse<DeposittransitchequeGetCommunicationCountV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun deposittransitchequeGetCommunicationCountV1WithHttpInfo(pkiDeposittransitchequeID: kotlin.Int) : ApiResponse<DeposittransitchequeGetCommunicationCountV1Response?> {
+        val localVariableConfig = deposittransitchequeGetCommunicationCountV1RequestConfig(pkiDeposittransitchequeID = pkiDeposittransitchequeID)
+
+        return request<Unit, DeposittransitchequeGetCommunicationCountV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation deposittransitchequeGetCommunicationCountV1
+     *
+     * @param pkiDeposittransitchequeID 
+     * @return RequestConfig
+     */
+    fun deposittransitchequeGetCommunicationCountV1RequestConfig(pkiDeposittransitchequeID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationCount".replace("{"+"pkiDeposittransitchequeID"+"}", encodeURIComponent(pkiDeposittransitchequeID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationList
+     * Retrieve Communication list
+     * 
+     * @param pkiDeposittransitchequeID 
+     * @return DeposittransitchequeGetCommunicationListV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun deposittransitchequeGetCommunicationListV1(pkiDeposittransitchequeID: kotlin.Int) : DeposittransitchequeGetCommunicationListV1Response {
+        val localVarResponse = deposittransitchequeGetCommunicationListV1WithHttpInfo(pkiDeposittransitchequeID = pkiDeposittransitchequeID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as DeposittransitchequeGetCommunicationListV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationList
+     * Retrieve Communication list
+     * 
+     * @param pkiDeposittransitchequeID 
+     * @return ApiResponse<DeposittransitchequeGetCommunicationListV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun deposittransitchequeGetCommunicationListV1WithHttpInfo(pkiDeposittransitchequeID: kotlin.Int) : ApiResponse<DeposittransitchequeGetCommunicationListV1Response?> {
+        val localVariableConfig = deposittransitchequeGetCommunicationListV1RequestConfig(pkiDeposittransitchequeID = pkiDeposittransitchequeID)
+
+        return request<Unit, DeposittransitchequeGetCommunicationListV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation deposittransitchequeGetCommunicationListV1
+     *
+     * @param pkiDeposittransitchequeID 
+     * @return RequestConfig
+     */
+    fun deposittransitchequeGetCommunicationListV1RequestConfig(pkiDeposittransitchequeID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationList".replace("{"+"pkiDeposittransitchequeID"+"}", encodeURIComponent(pkiDeposittransitchequeID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationrecipients
+     * Retrieve Communication recipients
+     * 
+     * @param pkiDeposittransitchequeID 
+     * @return DeposittransitchequeGetCommunicationrecipientsV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun deposittransitchequeGetCommunicationrecipientsV1(pkiDeposittransitchequeID: kotlin.Int) : DeposittransitchequeGetCommunicationrecipientsV1Response {
+        val localVarResponse = deposittransitchequeGetCommunicationrecipientsV1WithHttpInfo(pkiDeposittransitchequeID = pkiDeposittransitchequeID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as DeposittransitchequeGetCommunicationrecipientsV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationrecipients
+     * Retrieve Communication recipients
+     * 
+     * @param pkiDeposittransitchequeID 
+     * @return ApiResponse<DeposittransitchequeGetCommunicationrecipientsV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun deposittransitchequeGetCommunicationrecipientsV1WithHttpInfo(pkiDeposittransitchequeID: kotlin.Int) : ApiResponse<DeposittransitchequeGetCommunicationrecipientsV1Response?> {
+        val localVariableConfig = deposittransitchequeGetCommunicationrecipientsV1RequestConfig(pkiDeposittransitchequeID = pkiDeposittransitchequeID)
+
+        return request<Unit, DeposittransitchequeGetCommunicationrecipientsV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation deposittransitchequeGetCommunicationrecipientsV1
+     *
+     * @param pkiDeposittransitchequeID 
+     * @return RequestConfig
+     */
+    fun deposittransitchequeGetCommunicationrecipientsV1RequestConfig(pkiDeposittransitchequeID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationrecipients".replace("{"+"pkiDeposittransitchequeID"+"}", encodeURIComponent(pkiDeposittransitchequeID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationsenders
+     * Retrieve Communication senders
+     * 
+     * @param pkiDeposittransitchequeID 
+     * @return DeposittransitchequeGetCommunicationsendersV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun deposittransitchequeGetCommunicationsendersV1(pkiDeposittransitchequeID: kotlin.Int) : DeposittransitchequeGetCommunicationsendersV1Response {
+        val localVarResponse = deposittransitchequeGetCommunicationsendersV1WithHttpInfo(pkiDeposittransitchequeID = pkiDeposittransitchequeID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as DeposittransitchequeGetCommunicationsendersV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationsenders
+     * Retrieve Communication senders
+     * 
+     * @param pkiDeposittransitchequeID 
+     * @return ApiResponse<DeposittransitchequeGetCommunicationsendersV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun deposittransitchequeGetCommunicationsendersV1WithHttpInfo(pkiDeposittransitchequeID: kotlin.Int) : ApiResponse<DeposittransitchequeGetCommunicationsendersV1Response?> {
+        val localVariableConfig = deposittransitchequeGetCommunicationsendersV1RequestConfig(pkiDeposittransitchequeID = pkiDeposittransitchequeID)
+
+        return request<Unit, DeposittransitchequeGetCommunicationsendersV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation deposittransitchequeGetCommunicationsendersV1
+     *
+     * @param pkiDeposittransitchequeID 
+     * @return RequestConfig
+     */
+    fun deposittransitchequeGetCommunicationsendersV1RequestConfig(pkiDeposittransitchequeID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationsenders".replace("{"+"pkiDeposittransitchequeID"+"}", encodeURIComponent(pkiDeposittransitchequeID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

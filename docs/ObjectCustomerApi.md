@@ -7,6 +7,10 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**customerBatchDownloadV1**](ObjectCustomerApi.md#customerBatchDownloadV1) | **POST** /1/object/customer/{pkiCustomerID}/batchDownload | Download multiples attachments from a Customer |
 | [**customerGetAttachmentsV1**](ObjectCustomerApi.md#customerGetAttachmentsV1) | **GET** /1/object/customer/{pkiCustomerID}/getAttachments | Retrieve Customer&#39;s attachments |
 | [**customerGetAutocompleteV2**](ObjectCustomerApi.md#customerGetAutocompleteV2) | **GET** /2/object/customer/getAutocomplete/{sSelector} | Retrieve Customers and IDs |
+| [**customerGetCommunicationCountV1**](ObjectCustomerApi.md#customerGetCommunicationCountV1) | **GET** /1/object/customer/{pkiCustomerID}/getCommunicationCount | Retrieve Communication count |
+| [**customerGetCommunicationListV1**](ObjectCustomerApi.md#customerGetCommunicationListV1) | **GET** /1/object/customer/{pkiCustomerID}/getCommunicationList | Retrieve Communication list |
+| [**customerGetCommunicationrecipientsV1**](ObjectCustomerApi.md#customerGetCommunicationrecipientsV1) | **GET** /1/object/customer/{pkiCustomerID}/getCommunicationrecipients | Retrieve Communication recipients |
+| [**customerGetCommunicationsendersV1**](ObjectCustomerApi.md#customerGetCommunicationsendersV1) | **GET** /1/object/customer/{pkiCustomerID}/getCommunicationsenders | Retrieve Communication senders |
 | [**customerGetObjectV2**](ObjectCustomerApi.md#customerGetObjectV2) | **GET** /2/object/customer/{pkiCustomerID} | Retrieve an existing Customer |
 | [**customerImportIntoEDMV1**](ObjectCustomerApi.md#customerImportIntoEDMV1) | **POST** /1/object/customer/{pkiCustomerID}/importIntoEDM | Import attachments into the Customer |
 
@@ -149,6 +153,194 @@ try {
 ### Return type
 
 [**CustomerGetAutocompleteV2Response**](CustomerGetAutocompleteV2Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="customerGetCommunicationCountV1"></a>
+# **customerGetCommunicationCountV1**
+> CustomerGetCommunicationCountV1Response customerGetCommunicationCountV1(pkiCustomerID)
+
+Retrieve Communication count
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectCustomerApi()
+val pkiCustomerID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : CustomerGetCommunicationCountV1Response = apiInstance.customerGetCommunicationCountV1(pkiCustomerID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectCustomerApi#customerGetCommunicationCountV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectCustomerApi#customerGetCommunicationCountV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiCustomerID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**CustomerGetCommunicationCountV1Response**](CustomerGetCommunicationCountV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="customerGetCommunicationListV1"></a>
+# **customerGetCommunicationListV1**
+> CustomerGetCommunicationListV1Response customerGetCommunicationListV1(pkiCustomerID)
+
+Retrieve Communication list
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectCustomerApi()
+val pkiCustomerID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : CustomerGetCommunicationListV1Response = apiInstance.customerGetCommunicationListV1(pkiCustomerID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectCustomerApi#customerGetCommunicationListV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectCustomerApi#customerGetCommunicationListV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiCustomerID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**CustomerGetCommunicationListV1Response**](CustomerGetCommunicationListV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="customerGetCommunicationrecipientsV1"></a>
+# **customerGetCommunicationrecipientsV1**
+> CustomerGetCommunicationrecipientsV1Response customerGetCommunicationrecipientsV1(pkiCustomerID)
+
+Retrieve Communication recipients
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectCustomerApi()
+val pkiCustomerID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : CustomerGetCommunicationrecipientsV1Response = apiInstance.customerGetCommunicationrecipientsV1(pkiCustomerID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectCustomerApi#customerGetCommunicationrecipientsV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectCustomerApi#customerGetCommunicationrecipientsV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiCustomerID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**CustomerGetCommunicationrecipientsV1Response**](CustomerGetCommunicationrecipientsV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="customerGetCommunicationsendersV1"></a>
+# **customerGetCommunicationsendersV1**
+> CustomerGetCommunicationsendersV1Response customerGetCommunicationsendersV1(pkiCustomerID)
+
+Retrieve Communication senders
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectCustomerApi()
+val pkiCustomerID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : CustomerGetCommunicationsendersV1Response = apiInstance.customerGetCommunicationsendersV1(pkiCustomerID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectCustomerApi#customerGetCommunicationsendersV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectCustomerApi#customerGetCommunicationsendersV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiCustomerID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**CustomerGetCommunicationsendersV1Response**](CustomerGetCommunicationsendersV1Response.md)
 
 ### Authorization
 

@@ -30,6 +30,10 @@ import okhttp3.HttpUrl
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.DisclosureBatchDownloadV1Request
 import eZmaxApi.models.DisclosureGetAttachmentsV1Response
+import eZmaxApi.models.DisclosureGetCommunicationCountV1Response
+import eZmaxApi.models.DisclosureGetCommunicationListV1Response
+import eZmaxApi.models.DisclosureGetCommunicationrecipientsV1Response
+import eZmaxApi.models.DisclosureGetCommunicationsendersV1Response
 import eZmaxApi.models.DisclosureImportIntoEDMV1Request
 import eZmaxApi.models.DisclosureImportIntoEDMV1Response
 
@@ -200,6 +204,298 @@ open class ObjectDisclosureApi(basePath: kotlin.String = defaultBasePath, client
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/disclosure/{pkiDisclosureID}/getAttachments".replace("{"+"pkiDisclosureID"+"}", encodeURIComponent(pkiDisclosureID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/disclosure/{pkiDisclosureID}/getCommunicationCount
+     * Retrieve Communication count
+     * 
+     * @param pkiDisclosureID 
+     * @return DisclosureGetCommunicationCountV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun disclosureGetCommunicationCountV1(pkiDisclosureID: kotlin.Int) : DisclosureGetCommunicationCountV1Response {
+        val localVarResponse = disclosureGetCommunicationCountV1WithHttpInfo(pkiDisclosureID = pkiDisclosureID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as DisclosureGetCommunicationCountV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/disclosure/{pkiDisclosureID}/getCommunicationCount
+     * Retrieve Communication count
+     * 
+     * @param pkiDisclosureID 
+     * @return ApiResponse<DisclosureGetCommunicationCountV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun disclosureGetCommunicationCountV1WithHttpInfo(pkiDisclosureID: kotlin.Int) : ApiResponse<DisclosureGetCommunicationCountV1Response?> {
+        val localVariableConfig = disclosureGetCommunicationCountV1RequestConfig(pkiDisclosureID = pkiDisclosureID)
+
+        return request<Unit, DisclosureGetCommunicationCountV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation disclosureGetCommunicationCountV1
+     *
+     * @param pkiDisclosureID 
+     * @return RequestConfig
+     */
+    fun disclosureGetCommunicationCountV1RequestConfig(pkiDisclosureID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/disclosure/{pkiDisclosureID}/getCommunicationCount".replace("{"+"pkiDisclosureID"+"}", encodeURIComponent(pkiDisclosureID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/disclosure/{pkiDisclosureID}/getCommunicationList
+     * Retrieve Communication list
+     * 
+     * @param pkiDisclosureID 
+     * @return DisclosureGetCommunicationListV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun disclosureGetCommunicationListV1(pkiDisclosureID: kotlin.Int) : DisclosureGetCommunicationListV1Response {
+        val localVarResponse = disclosureGetCommunicationListV1WithHttpInfo(pkiDisclosureID = pkiDisclosureID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as DisclosureGetCommunicationListV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/disclosure/{pkiDisclosureID}/getCommunicationList
+     * Retrieve Communication list
+     * 
+     * @param pkiDisclosureID 
+     * @return ApiResponse<DisclosureGetCommunicationListV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun disclosureGetCommunicationListV1WithHttpInfo(pkiDisclosureID: kotlin.Int) : ApiResponse<DisclosureGetCommunicationListV1Response?> {
+        val localVariableConfig = disclosureGetCommunicationListV1RequestConfig(pkiDisclosureID = pkiDisclosureID)
+
+        return request<Unit, DisclosureGetCommunicationListV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation disclosureGetCommunicationListV1
+     *
+     * @param pkiDisclosureID 
+     * @return RequestConfig
+     */
+    fun disclosureGetCommunicationListV1RequestConfig(pkiDisclosureID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/disclosure/{pkiDisclosureID}/getCommunicationList".replace("{"+"pkiDisclosureID"+"}", encodeURIComponent(pkiDisclosureID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/disclosure/{pkiDisclosureID}/getCommunicationrecipients
+     * Retrieve Communication recipients
+     * 
+     * @param pkiDisclosureID 
+     * @return DisclosureGetCommunicationrecipientsV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun disclosureGetCommunicationrecipientsV1(pkiDisclosureID: kotlin.Int) : DisclosureGetCommunicationrecipientsV1Response {
+        val localVarResponse = disclosureGetCommunicationrecipientsV1WithHttpInfo(pkiDisclosureID = pkiDisclosureID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as DisclosureGetCommunicationrecipientsV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/disclosure/{pkiDisclosureID}/getCommunicationrecipients
+     * Retrieve Communication recipients
+     * 
+     * @param pkiDisclosureID 
+     * @return ApiResponse<DisclosureGetCommunicationrecipientsV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun disclosureGetCommunicationrecipientsV1WithHttpInfo(pkiDisclosureID: kotlin.Int) : ApiResponse<DisclosureGetCommunicationrecipientsV1Response?> {
+        val localVariableConfig = disclosureGetCommunicationrecipientsV1RequestConfig(pkiDisclosureID = pkiDisclosureID)
+
+        return request<Unit, DisclosureGetCommunicationrecipientsV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation disclosureGetCommunicationrecipientsV1
+     *
+     * @param pkiDisclosureID 
+     * @return RequestConfig
+     */
+    fun disclosureGetCommunicationrecipientsV1RequestConfig(pkiDisclosureID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/disclosure/{pkiDisclosureID}/getCommunicationrecipients".replace("{"+"pkiDisclosureID"+"}", encodeURIComponent(pkiDisclosureID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/disclosure/{pkiDisclosureID}/getCommunicationsenders
+     * Retrieve Communication senders
+     * 
+     * @param pkiDisclosureID 
+     * @return DisclosureGetCommunicationsendersV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun disclosureGetCommunicationsendersV1(pkiDisclosureID: kotlin.Int) : DisclosureGetCommunicationsendersV1Response {
+        val localVarResponse = disclosureGetCommunicationsendersV1WithHttpInfo(pkiDisclosureID = pkiDisclosureID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as DisclosureGetCommunicationsendersV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/disclosure/{pkiDisclosureID}/getCommunicationsenders
+     * Retrieve Communication senders
+     * 
+     * @param pkiDisclosureID 
+     * @return ApiResponse<DisclosureGetCommunicationsendersV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun disclosureGetCommunicationsendersV1WithHttpInfo(pkiDisclosureID: kotlin.Int) : ApiResponse<DisclosureGetCommunicationsendersV1Response?> {
+        val localVariableConfig = disclosureGetCommunicationsendersV1RequestConfig(pkiDisclosureID = pkiDisclosureID)
+
+        return request<Unit, DisclosureGetCommunicationsendersV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation disclosureGetCommunicationsendersV1
+     *
+     * @param pkiDisclosureID 
+     * @return RequestConfig
+     */
+    fun disclosureGetCommunicationsendersV1RequestConfig(pkiDisclosureID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/disclosure/{pkiDisclosureID}/getCommunicationsenders".replace("{"+"pkiDisclosureID"+"}", encodeURIComponent(pkiDisclosureID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

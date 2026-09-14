@@ -30,6 +30,10 @@ import okhttp3.HttpUrl
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.ExternalbrokerBatchDownloadV1Request
 import eZmaxApi.models.ExternalbrokerGetAttachmentsV1Response
+import eZmaxApi.models.ExternalbrokerGetCommunicationCountV1Response
+import eZmaxApi.models.ExternalbrokerGetCommunicationListV1Response
+import eZmaxApi.models.ExternalbrokerGetCommunicationrecipientsV1Response
+import eZmaxApi.models.ExternalbrokerGetCommunicationsendersV1Response
 import eZmaxApi.models.ExternalbrokerImportIntoEDMV1Request
 import eZmaxApi.models.ExternalbrokerImportIntoEDMV1Response
 
@@ -200,6 +204,298 @@ open class ObjectExternalbrokerApi(basePath: kotlin.String = defaultBasePath, cl
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/externalbroker/{pkiExternalbrokerID}/getAttachments".replace("{"+"pkiExternalbrokerID"+"}", encodeURIComponent(pkiExternalbrokerID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/externalbroker/{pkiExternalbrokerID}/getCommunicationCount
+     * Retrieve Communication count
+     * 
+     * @param pkiExternalbrokerID 
+     * @return ExternalbrokerGetCommunicationCountV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun externalbrokerGetCommunicationCountV1(pkiExternalbrokerID: kotlin.Int) : ExternalbrokerGetCommunicationCountV1Response {
+        val localVarResponse = externalbrokerGetCommunicationCountV1WithHttpInfo(pkiExternalbrokerID = pkiExternalbrokerID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ExternalbrokerGetCommunicationCountV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/externalbroker/{pkiExternalbrokerID}/getCommunicationCount
+     * Retrieve Communication count
+     * 
+     * @param pkiExternalbrokerID 
+     * @return ApiResponse<ExternalbrokerGetCommunicationCountV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun externalbrokerGetCommunicationCountV1WithHttpInfo(pkiExternalbrokerID: kotlin.Int) : ApiResponse<ExternalbrokerGetCommunicationCountV1Response?> {
+        val localVariableConfig = externalbrokerGetCommunicationCountV1RequestConfig(pkiExternalbrokerID = pkiExternalbrokerID)
+
+        return request<Unit, ExternalbrokerGetCommunicationCountV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation externalbrokerGetCommunicationCountV1
+     *
+     * @param pkiExternalbrokerID 
+     * @return RequestConfig
+     */
+    fun externalbrokerGetCommunicationCountV1RequestConfig(pkiExternalbrokerID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/externalbroker/{pkiExternalbrokerID}/getCommunicationCount".replace("{"+"pkiExternalbrokerID"+"}", encodeURIComponent(pkiExternalbrokerID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/externalbroker/{pkiExternalbrokerID}/getCommunicationList
+     * Retrieve Communication list
+     * 
+     * @param pkiExternalbrokerID 
+     * @return ExternalbrokerGetCommunicationListV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun externalbrokerGetCommunicationListV1(pkiExternalbrokerID: kotlin.Int) : ExternalbrokerGetCommunicationListV1Response {
+        val localVarResponse = externalbrokerGetCommunicationListV1WithHttpInfo(pkiExternalbrokerID = pkiExternalbrokerID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ExternalbrokerGetCommunicationListV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/externalbroker/{pkiExternalbrokerID}/getCommunicationList
+     * Retrieve Communication list
+     * 
+     * @param pkiExternalbrokerID 
+     * @return ApiResponse<ExternalbrokerGetCommunicationListV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun externalbrokerGetCommunicationListV1WithHttpInfo(pkiExternalbrokerID: kotlin.Int) : ApiResponse<ExternalbrokerGetCommunicationListV1Response?> {
+        val localVariableConfig = externalbrokerGetCommunicationListV1RequestConfig(pkiExternalbrokerID = pkiExternalbrokerID)
+
+        return request<Unit, ExternalbrokerGetCommunicationListV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation externalbrokerGetCommunicationListV1
+     *
+     * @param pkiExternalbrokerID 
+     * @return RequestConfig
+     */
+    fun externalbrokerGetCommunicationListV1RequestConfig(pkiExternalbrokerID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/externalbroker/{pkiExternalbrokerID}/getCommunicationList".replace("{"+"pkiExternalbrokerID"+"}", encodeURIComponent(pkiExternalbrokerID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/externalbroker/{pkiExternalbrokerID}/getCommunicationrecipients
+     * Retrieve Communication recipients
+     * 
+     * @param pkiExternalbrokerID 
+     * @return ExternalbrokerGetCommunicationrecipientsV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun externalbrokerGetCommunicationrecipientsV1(pkiExternalbrokerID: kotlin.Int) : ExternalbrokerGetCommunicationrecipientsV1Response {
+        val localVarResponse = externalbrokerGetCommunicationrecipientsV1WithHttpInfo(pkiExternalbrokerID = pkiExternalbrokerID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ExternalbrokerGetCommunicationrecipientsV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/externalbroker/{pkiExternalbrokerID}/getCommunicationrecipients
+     * Retrieve Communication recipients
+     * 
+     * @param pkiExternalbrokerID 
+     * @return ApiResponse<ExternalbrokerGetCommunicationrecipientsV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun externalbrokerGetCommunicationrecipientsV1WithHttpInfo(pkiExternalbrokerID: kotlin.Int) : ApiResponse<ExternalbrokerGetCommunicationrecipientsV1Response?> {
+        val localVariableConfig = externalbrokerGetCommunicationrecipientsV1RequestConfig(pkiExternalbrokerID = pkiExternalbrokerID)
+
+        return request<Unit, ExternalbrokerGetCommunicationrecipientsV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation externalbrokerGetCommunicationrecipientsV1
+     *
+     * @param pkiExternalbrokerID 
+     * @return RequestConfig
+     */
+    fun externalbrokerGetCommunicationrecipientsV1RequestConfig(pkiExternalbrokerID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/externalbroker/{pkiExternalbrokerID}/getCommunicationrecipients".replace("{"+"pkiExternalbrokerID"+"}", encodeURIComponent(pkiExternalbrokerID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/externalbroker/{pkiExternalbrokerID}/getCommunicationsenders
+     * Retrieve Communication senders
+     * 
+     * @param pkiExternalbrokerID 
+     * @return ExternalbrokerGetCommunicationsendersV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun externalbrokerGetCommunicationsendersV1(pkiExternalbrokerID: kotlin.Int) : ExternalbrokerGetCommunicationsendersV1Response {
+        val localVarResponse = externalbrokerGetCommunicationsendersV1WithHttpInfo(pkiExternalbrokerID = pkiExternalbrokerID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ExternalbrokerGetCommunicationsendersV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/externalbroker/{pkiExternalbrokerID}/getCommunicationsenders
+     * Retrieve Communication senders
+     * 
+     * @param pkiExternalbrokerID 
+     * @return ApiResponse<ExternalbrokerGetCommunicationsendersV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun externalbrokerGetCommunicationsendersV1WithHttpInfo(pkiExternalbrokerID: kotlin.Int) : ApiResponse<ExternalbrokerGetCommunicationsendersV1Response?> {
+        val localVariableConfig = externalbrokerGetCommunicationsendersV1RequestConfig(pkiExternalbrokerID = pkiExternalbrokerID)
+
+        return request<Unit, ExternalbrokerGetCommunicationsendersV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation externalbrokerGetCommunicationsendersV1
+     *
+     * @param pkiExternalbrokerID 
+     * @return RequestConfig
+     */
+    fun externalbrokerGetCommunicationsendersV1RequestConfig(pkiExternalbrokerID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/externalbroker/{pkiExternalbrokerID}/getCommunicationsenders".replace("{"+"pkiExternalbrokerID"+"}", encodeURIComponent(pkiExternalbrokerID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

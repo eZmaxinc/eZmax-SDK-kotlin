@@ -30,6 +30,10 @@ import okhttp3.HttpUrl
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.EmployeeBatchDownloadV1Request
 import eZmaxApi.models.EmployeeGetAttachmentsV1Response
+import eZmaxApi.models.EmployeeGetCommunicationCountV1Response
+import eZmaxApi.models.EmployeeGetCommunicationListV1Response
+import eZmaxApi.models.EmployeeGetCommunicationrecipientsV1Response
+import eZmaxApi.models.EmployeeGetCommunicationsendersV1Response
 import eZmaxApi.models.EmployeeGetListV1Response
 import eZmaxApi.models.EmployeeImportIntoEDMV1Request
 import eZmaxApi.models.EmployeeImportIntoEDMV1Response
@@ -202,6 +206,298 @@ open class ObjectEmployeeApi(basePath: kotlin.String = defaultBasePath, client: 
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/employee/{pkiEmployeeID}/getAttachments".replace("{"+"pkiEmployeeID"+"}", encodeURIComponent(pkiEmployeeID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/employee/{pkiEmployeeID}/getCommunicationCount
+     * Retrieve Communication count
+     * 
+     * @param pkiEmployeeID 
+     * @return EmployeeGetCommunicationCountV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun employeeGetCommunicationCountV1(pkiEmployeeID: kotlin.Int) : EmployeeGetCommunicationCountV1Response {
+        val localVarResponse = employeeGetCommunicationCountV1WithHttpInfo(pkiEmployeeID = pkiEmployeeID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EmployeeGetCommunicationCountV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/employee/{pkiEmployeeID}/getCommunicationCount
+     * Retrieve Communication count
+     * 
+     * @param pkiEmployeeID 
+     * @return ApiResponse<EmployeeGetCommunicationCountV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun employeeGetCommunicationCountV1WithHttpInfo(pkiEmployeeID: kotlin.Int) : ApiResponse<EmployeeGetCommunicationCountV1Response?> {
+        val localVariableConfig = employeeGetCommunicationCountV1RequestConfig(pkiEmployeeID = pkiEmployeeID)
+
+        return request<Unit, EmployeeGetCommunicationCountV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation employeeGetCommunicationCountV1
+     *
+     * @param pkiEmployeeID 
+     * @return RequestConfig
+     */
+    fun employeeGetCommunicationCountV1RequestConfig(pkiEmployeeID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/employee/{pkiEmployeeID}/getCommunicationCount".replace("{"+"pkiEmployeeID"+"}", encodeURIComponent(pkiEmployeeID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/employee/{pkiEmployeeID}/getCommunicationList
+     * Retrieve Communication list
+     * 
+     * @param pkiEmployeeID 
+     * @return EmployeeGetCommunicationListV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun employeeGetCommunicationListV1(pkiEmployeeID: kotlin.Int) : EmployeeGetCommunicationListV1Response {
+        val localVarResponse = employeeGetCommunicationListV1WithHttpInfo(pkiEmployeeID = pkiEmployeeID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EmployeeGetCommunicationListV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/employee/{pkiEmployeeID}/getCommunicationList
+     * Retrieve Communication list
+     * 
+     * @param pkiEmployeeID 
+     * @return ApiResponse<EmployeeGetCommunicationListV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun employeeGetCommunicationListV1WithHttpInfo(pkiEmployeeID: kotlin.Int) : ApiResponse<EmployeeGetCommunicationListV1Response?> {
+        val localVariableConfig = employeeGetCommunicationListV1RequestConfig(pkiEmployeeID = pkiEmployeeID)
+
+        return request<Unit, EmployeeGetCommunicationListV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation employeeGetCommunicationListV1
+     *
+     * @param pkiEmployeeID 
+     * @return RequestConfig
+     */
+    fun employeeGetCommunicationListV1RequestConfig(pkiEmployeeID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/employee/{pkiEmployeeID}/getCommunicationList".replace("{"+"pkiEmployeeID"+"}", encodeURIComponent(pkiEmployeeID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/employee/{pkiEmployeeID}/getCommunicationrecipients
+     * Retrieve Communication recipients
+     * 
+     * @param pkiEmployeeID 
+     * @return EmployeeGetCommunicationrecipientsV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun employeeGetCommunicationrecipientsV1(pkiEmployeeID: kotlin.Int) : EmployeeGetCommunicationrecipientsV1Response {
+        val localVarResponse = employeeGetCommunicationrecipientsV1WithHttpInfo(pkiEmployeeID = pkiEmployeeID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EmployeeGetCommunicationrecipientsV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/employee/{pkiEmployeeID}/getCommunicationrecipients
+     * Retrieve Communication recipients
+     * 
+     * @param pkiEmployeeID 
+     * @return ApiResponse<EmployeeGetCommunicationrecipientsV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun employeeGetCommunicationrecipientsV1WithHttpInfo(pkiEmployeeID: kotlin.Int) : ApiResponse<EmployeeGetCommunicationrecipientsV1Response?> {
+        val localVariableConfig = employeeGetCommunicationrecipientsV1RequestConfig(pkiEmployeeID = pkiEmployeeID)
+
+        return request<Unit, EmployeeGetCommunicationrecipientsV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation employeeGetCommunicationrecipientsV1
+     *
+     * @param pkiEmployeeID 
+     * @return RequestConfig
+     */
+    fun employeeGetCommunicationrecipientsV1RequestConfig(pkiEmployeeID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/employee/{pkiEmployeeID}/getCommunicationrecipients".replace("{"+"pkiEmployeeID"+"}", encodeURIComponent(pkiEmployeeID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/employee/{pkiEmployeeID}/getCommunicationsenders
+     * Retrieve Communication senders
+     * 
+     * @param pkiEmployeeID 
+     * @return EmployeeGetCommunicationsendersV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun employeeGetCommunicationsendersV1(pkiEmployeeID: kotlin.Int) : EmployeeGetCommunicationsendersV1Response {
+        val localVarResponse = employeeGetCommunicationsendersV1WithHttpInfo(pkiEmployeeID = pkiEmployeeID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EmployeeGetCommunicationsendersV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/employee/{pkiEmployeeID}/getCommunicationsenders
+     * Retrieve Communication senders
+     * 
+     * @param pkiEmployeeID 
+     * @return ApiResponse<EmployeeGetCommunicationsendersV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun employeeGetCommunicationsendersV1WithHttpInfo(pkiEmployeeID: kotlin.Int) : ApiResponse<EmployeeGetCommunicationsendersV1Response?> {
+        val localVariableConfig = employeeGetCommunicationsendersV1RequestConfig(pkiEmployeeID = pkiEmployeeID)
+
+        return request<Unit, EmployeeGetCommunicationsendersV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation employeeGetCommunicationsendersV1
+     *
+     * @param pkiEmployeeID 
+     * @return RequestConfig
+     */
+    fun employeeGetCommunicationsendersV1RequestConfig(pkiEmployeeID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/employee/{pkiEmployeeID}/getCommunicationsenders".replace("{"+"pkiEmployeeID"+"}", encodeURIComponent(pkiEmployeeID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

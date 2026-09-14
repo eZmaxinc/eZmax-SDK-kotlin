@@ -30,6 +30,10 @@ import okhttp3.HttpUrl
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.DepositBatchDownloadV1Request
 import eZmaxApi.models.DepositGetAttachmentsV1Response
+import eZmaxApi.models.DepositGetCommunicationCountV1Response
+import eZmaxApi.models.DepositGetCommunicationListV1Response
+import eZmaxApi.models.DepositGetCommunicationrecipientsV1Response
+import eZmaxApi.models.DepositGetCommunicationsendersV1Response
 import eZmaxApi.models.DepositImportIntoEDMV1Request
 import eZmaxApi.models.DepositImportIntoEDMV1Response
 
@@ -200,6 +204,298 @@ open class ObjectDepositApi(basePath: kotlin.String = defaultBasePath, client: C
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/deposit/{pkiDepositID}/getAttachments".replace("{"+"pkiDepositID"+"}", encodeURIComponent(pkiDepositID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/deposit/{pkiDepositID}/getCommunicationCount
+     * Retrieve Communication count
+     * 
+     * @param pkiDepositID 
+     * @return DepositGetCommunicationCountV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun depositGetCommunicationCountV1(pkiDepositID: kotlin.Int) : DepositGetCommunicationCountV1Response {
+        val localVarResponse = depositGetCommunicationCountV1WithHttpInfo(pkiDepositID = pkiDepositID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as DepositGetCommunicationCountV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/deposit/{pkiDepositID}/getCommunicationCount
+     * Retrieve Communication count
+     * 
+     * @param pkiDepositID 
+     * @return ApiResponse<DepositGetCommunicationCountV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun depositGetCommunicationCountV1WithHttpInfo(pkiDepositID: kotlin.Int) : ApiResponse<DepositGetCommunicationCountV1Response?> {
+        val localVariableConfig = depositGetCommunicationCountV1RequestConfig(pkiDepositID = pkiDepositID)
+
+        return request<Unit, DepositGetCommunicationCountV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation depositGetCommunicationCountV1
+     *
+     * @param pkiDepositID 
+     * @return RequestConfig
+     */
+    fun depositGetCommunicationCountV1RequestConfig(pkiDepositID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/deposit/{pkiDepositID}/getCommunicationCount".replace("{"+"pkiDepositID"+"}", encodeURIComponent(pkiDepositID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/deposit/{pkiDepositID}/getCommunicationList
+     * Retrieve Communication list
+     * 
+     * @param pkiDepositID 
+     * @return DepositGetCommunicationListV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun depositGetCommunicationListV1(pkiDepositID: kotlin.Int) : DepositGetCommunicationListV1Response {
+        val localVarResponse = depositGetCommunicationListV1WithHttpInfo(pkiDepositID = pkiDepositID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as DepositGetCommunicationListV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/deposit/{pkiDepositID}/getCommunicationList
+     * Retrieve Communication list
+     * 
+     * @param pkiDepositID 
+     * @return ApiResponse<DepositGetCommunicationListV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun depositGetCommunicationListV1WithHttpInfo(pkiDepositID: kotlin.Int) : ApiResponse<DepositGetCommunicationListV1Response?> {
+        val localVariableConfig = depositGetCommunicationListV1RequestConfig(pkiDepositID = pkiDepositID)
+
+        return request<Unit, DepositGetCommunicationListV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation depositGetCommunicationListV1
+     *
+     * @param pkiDepositID 
+     * @return RequestConfig
+     */
+    fun depositGetCommunicationListV1RequestConfig(pkiDepositID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/deposit/{pkiDepositID}/getCommunicationList".replace("{"+"pkiDepositID"+"}", encodeURIComponent(pkiDepositID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/deposit/{pkiDepositID}/getCommunicationrecipients
+     * Retrieve Communication recipients
+     * 
+     * @param pkiDepositID 
+     * @return DepositGetCommunicationrecipientsV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun depositGetCommunicationrecipientsV1(pkiDepositID: kotlin.Int) : DepositGetCommunicationrecipientsV1Response {
+        val localVarResponse = depositGetCommunicationrecipientsV1WithHttpInfo(pkiDepositID = pkiDepositID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as DepositGetCommunicationrecipientsV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/deposit/{pkiDepositID}/getCommunicationrecipients
+     * Retrieve Communication recipients
+     * 
+     * @param pkiDepositID 
+     * @return ApiResponse<DepositGetCommunicationrecipientsV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun depositGetCommunicationrecipientsV1WithHttpInfo(pkiDepositID: kotlin.Int) : ApiResponse<DepositGetCommunicationrecipientsV1Response?> {
+        val localVariableConfig = depositGetCommunicationrecipientsV1RequestConfig(pkiDepositID = pkiDepositID)
+
+        return request<Unit, DepositGetCommunicationrecipientsV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation depositGetCommunicationrecipientsV1
+     *
+     * @param pkiDepositID 
+     * @return RequestConfig
+     */
+    fun depositGetCommunicationrecipientsV1RequestConfig(pkiDepositID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/deposit/{pkiDepositID}/getCommunicationrecipients".replace("{"+"pkiDepositID"+"}", encodeURIComponent(pkiDepositID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/deposit/{pkiDepositID}/getCommunicationsenders
+     * Retrieve Communication senders
+     * 
+     * @param pkiDepositID 
+     * @return DepositGetCommunicationsendersV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun depositGetCommunicationsendersV1(pkiDepositID: kotlin.Int) : DepositGetCommunicationsendersV1Response {
+        val localVarResponse = depositGetCommunicationsendersV1WithHttpInfo(pkiDepositID = pkiDepositID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as DepositGetCommunicationsendersV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/deposit/{pkiDepositID}/getCommunicationsenders
+     * Retrieve Communication senders
+     * 
+     * @param pkiDepositID 
+     * @return ApiResponse<DepositGetCommunicationsendersV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun depositGetCommunicationsendersV1WithHttpInfo(pkiDepositID: kotlin.Int) : ApiResponse<DepositGetCommunicationsendersV1Response?> {
+        val localVariableConfig = depositGetCommunicationsendersV1RequestConfig(pkiDepositID = pkiDepositID)
+
+        return request<Unit, DepositGetCommunicationsendersV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation depositGetCommunicationsendersV1
+     *
+     * @param pkiDepositID 
+     * @return RequestConfig
+     */
+    fun depositGetCommunicationsendersV1RequestConfig(pkiDepositID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/deposit/{pkiDepositID}/getCommunicationsenders".replace("{"+"pkiDepositID"+"}", encodeURIComponent(pkiDepositID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,
