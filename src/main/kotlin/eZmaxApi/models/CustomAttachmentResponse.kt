@@ -87,7 +87,8 @@ import com.squareup.moshi.JsonClass
  * @param fkiSupplierID The unique ID of the Supplier.
  * @param fkiTranqcontractID The unique ID of the Tranqcontract
  * @param fkiTemplateID The unique ID of the Template
- * @param fkiInscriptionchecklistID The unique ID of the Inscriptionchecklist
+ * @param fkiDocumenttypechecklistID The unique ID of the Documenttypechecklist
+ * @param sDocumenttypeNameX The name of the Documenttype in the language of the requester
  * @param fkiFolderID The unique ID of the Folder
  * @param fkiRejectedoffertopurchaseID The unique ID of the Rejectedoffertopurchase
  * @param fkiDisclosureID The unique ID of the Disclosure
@@ -307,9 +308,13 @@ data class CustomAttachmentResponse (
     @Json(name = "fkiTemplateID")
     val fkiTemplateID: kotlin.Int? = null,
 
-    /* The unique ID of the Inscriptionchecklist */
-    @Json(name = "fkiInscriptionchecklistID")
-    val fkiInscriptionchecklistID: kotlin.Int? = null,
+    /* The unique ID of the Documenttypechecklist */
+    @Json(name = "fkiDocumenttypechecklistID")
+    val fkiDocumenttypechecklistID: kotlin.Int? = null,
+
+    /* The name of the Documenttype in the language of the requester */
+    @Json(name = "sDocumenttypeNameX")
+    val sDocumenttypeNameX: kotlin.String? = null,
 
     /* The unique ID of the Folder */
     @Json(name = "fkiFolderID")

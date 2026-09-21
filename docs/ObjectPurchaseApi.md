@@ -6,6 +6,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | ------------- | ------------- | ------------- |
 | [**purchaseBatchDownloadV1**](ObjectPurchaseApi.md#purchaseBatchDownloadV1) | **POST** /1/object/purchase/{pkiPurchaseID}/batchDownload | Download multiples attachments from a Purchase |
 | [**purchaseGetAttachmentsV1**](ObjectPurchaseApi.md#purchaseGetAttachmentsV1) | **GET** /1/object/purchase/{pkiPurchaseID}/getAttachments | Retrieve Purchase&#39;s attachments |
+| [**purchaseGetListV1**](ObjectPurchaseApi.md#purchaseGetListV1) | **GET** /1/object/purchase/getList | Retrieve Purchase list |
 | [**purchaseImportIntoEDMV1**](ObjectPurchaseApi.md#purchaseImportIntoEDMV1) | **POST** /1/object/purchase/{pkiPurchaseID}/importIntoEDM | Import attachments into the Purchase |
 
 
@@ -92,6 +93,63 @@ try {
 ### Return type
 
 [**PurchaseGetAttachmentsV1Response**](PurchaseGetAttachmentsV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="purchaseGetListV1"></a>
+# **purchaseGetListV1**
+> PurchaseGetListV1Response purchaseGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+
+Retrieve Purchase list
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectPurchaseApi()
+val eOrderBy : kotlin.String = eOrderBy_example // kotlin.String | Specify how you want the results to be sorted
+val iRowMax : kotlin.Int = 56 // kotlin.Int | 
+val iRowOffset : kotlin.Int = 56 // kotlin.Int | 
+val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
+val sFilter : kotlin.String = sFilter_example // kotlin.String | 
+try {
+    val result : PurchaseGetListV1Response = apiInstance.purchaseGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectPurchaseApi#purchaseGetListV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectPurchaseApi#purchaseGetListV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiPurchaseID_ASC, pkiPurchaseID_DESC, fkiFranchiseofficeID_ASC, fkiFranchiseofficeID_DESC, fkiSupplierID_ASC, fkiSupplierID_DESC, fkiPeriodID_ASC, fkiPeriodID_DESC, sPurchaseBillnumber_ASC, sPurchaseBillnumber_DESC, dtPurchaseDate_ASC, dtPurchaseDate_DESC, dtPurchasePaydate_ASC, dtPurchasePaydate_DESC, dPurchaseTotal_ASC, dPurchaseTotal_DESC, bPurchaseIsfinanced_ASC, bPurchaseIsfinanced_DESC, bPurchaseIspaid_ASC, bPurchaseIspaid_DESC, sFranchiseagenceName_ASC, sFranchiseagenceName_DESC, iFranchiseofficeCode_ASC, iFranchiseofficeCode_DESC, sSupplierName_ASC, sSupplierName_DESC] |
+| **iRowMax** | **kotlin.Int**|  | [optional] |
+| **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0] |
+| **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
+| **sFilter** | **kotlin.String**|  | [optional] |
+
+### Return type
+
+[**PurchaseGetListV1Response**](PurchaseGetListV1Response.md)
 
 ### Authorization
 

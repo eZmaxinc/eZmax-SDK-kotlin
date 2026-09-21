@@ -10,6 +10,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**deposittransitchequeGetCommunicationListV1**](ObjectDeposittransitchequeApi.md#deposittransitchequeGetCommunicationListV1) | **GET** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationList | Retrieve Communication list |
 | [**deposittransitchequeGetCommunicationrecipientsV1**](ObjectDeposittransitchequeApi.md#deposittransitchequeGetCommunicationrecipientsV1) | **GET** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationrecipients | Retrieve Communication recipients |
 | [**deposittransitchequeGetCommunicationsendersV1**](ObjectDeposittransitchequeApi.md#deposittransitchequeGetCommunicationsendersV1) | **GET** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationsenders | Retrieve Communication senders |
+| [**deposittransitchequeGetListV1**](ObjectDeposittransitchequeApi.md#deposittransitchequeGetListV1) | **GET** /1/object/deposittransitcheque/getList | Retrieve Deposittransitcheque list |
 | [**deposittransitchequeImportIntoEDMV1**](ObjectDeposittransitchequeApi.md#deposittransitchequeImportIntoEDMV1) | **POST** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/importIntoEDM | Import attachments into the Deposittransitcheque |
 
 
@@ -284,6 +285,63 @@ try {
 ### Return type
 
 [**DeposittransitchequeGetCommunicationsendersV1Response**](DeposittransitchequeGetCommunicationsendersV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="deposittransitchequeGetListV1"></a>
+# **deposittransitchequeGetListV1**
+> DeposittransitchequeGetListV1Response deposittransitchequeGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+
+Retrieve Deposittransitcheque list
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectDeposittransitchequeApi()
+val eOrderBy : kotlin.String = eOrderBy_example // kotlin.String | Specify how you want the results to be sorted
+val iRowMax : kotlin.Int = 56 // kotlin.Int | 
+val iRowOffset : kotlin.Int = 56 // kotlin.Int | 
+val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
+val sFilter : kotlin.String = sFilter_example // kotlin.String | 
+try {
+    val result : DeposittransitchequeGetListV1Response = apiInstance.deposittransitchequeGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectDeposittransitchequeApi#deposittransitchequeGetListV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectDeposittransitchequeApi#deposittransitchequeGetListV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiDeposittransitchequeID_ASC, pkiDeposittransitchequeID_DESC, fkiBankaccountID_ASC, fkiBankaccountID_DESC, fkiDepositID_ASC, fkiDepositID_DESC, sDeposittransitchequeNumber_ASC, sDeposittransitchequeNumber_DESC, dtDeposittransitchequeDate_ASC, dtDeposittransitchequeDate_DESC, dDeposittransitchequeAmount_ASC, dDeposittransitchequeAmount_DESC, sBankaccountBankname_ASC, sBankaccountBankname_DESC, sPeriodYYYYMM_ASC, sPeriodYYYYMM_DESC, sCustomerName_ASC, sCustomerName_DESC] |
+| **iRowMax** | **kotlin.Int**|  | [optional] |
+| **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0] |
+| **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
+| **sFilter** | **kotlin.String**|  | [optional] |
+
+### Return type
+
+[**DeposittransitchequeGetListV1Response**](DeposittransitchequeGetListV1Response.md)
 
 ### Authorization
 

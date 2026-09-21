@@ -28,8 +28,10 @@ import okhttp3.Call
 import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.HeaderAcceptLanguage
 import eZmaxApi.models.PurchaseBatchDownloadV1Request
 import eZmaxApi.models.PurchaseGetAttachmentsV1Response
+import eZmaxApi.models.PurchaseGetListV1Response
 import eZmaxApi.models.PurchaseImportIntoEDMV1Request
 import eZmaxApi.models.PurchaseImportIntoEDMV1Response
 
@@ -200,6 +202,147 @@ open class ObjectPurchaseApi(basePath: kotlin.String = defaultBasePath, client: 
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/purchase/{pkiPurchaseID}/getAttachments".replace("{"+"pkiPurchaseID"+"}", encodeURIComponent(pkiPurchaseID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * enum for parameter eOrderBy
+     */
+     enum class EOrderByPurchaseGetListV1(val value: kotlin.String) {
+         @Json(name = "pkiPurchaseID_ASC") pkiPurchaseID_ASC("pkiPurchaseID_ASC"),
+         @Json(name = "pkiPurchaseID_DESC") pkiPurchaseID_DESC("pkiPurchaseID_DESC"),
+         @Json(name = "fkiFranchiseofficeID_ASC") fkiFranchiseofficeID_ASC("fkiFranchiseofficeID_ASC"),
+         @Json(name = "fkiFranchiseofficeID_DESC") fkiFranchiseofficeID_DESC("fkiFranchiseofficeID_DESC"),
+         @Json(name = "fkiSupplierID_ASC") fkiSupplierID_ASC("fkiSupplierID_ASC"),
+         @Json(name = "fkiSupplierID_DESC") fkiSupplierID_DESC("fkiSupplierID_DESC"),
+         @Json(name = "fkiPeriodID_ASC") fkiPeriodID_ASC("fkiPeriodID_ASC"),
+         @Json(name = "fkiPeriodID_DESC") fkiPeriodID_DESC("fkiPeriodID_DESC"),
+         @Json(name = "sPurchaseBillnumber_ASC") sPurchaseBillnumber_ASC("sPurchaseBillnumber_ASC"),
+         @Json(name = "sPurchaseBillnumber_DESC") sPurchaseBillnumber_DESC("sPurchaseBillnumber_DESC"),
+         @Json(name = "dtPurchaseDate_ASC") dtPurchaseDate_ASC("dtPurchaseDate_ASC"),
+         @Json(name = "dtPurchaseDate_DESC") dtPurchaseDate_DESC("dtPurchaseDate_DESC"),
+         @Json(name = "dtPurchasePaydate_ASC") dtPurchasePaydate_ASC("dtPurchasePaydate_ASC"),
+         @Json(name = "dtPurchasePaydate_DESC") dtPurchasePaydate_DESC("dtPurchasePaydate_DESC"),
+         @Json(name = "dPurchaseTotal_ASC") dPurchaseTotal_ASC("dPurchaseTotal_ASC"),
+         @Json(name = "dPurchaseTotal_DESC") dPurchaseTotal_DESC("dPurchaseTotal_DESC"),
+         @Json(name = "bPurchaseIsfinanced_ASC") bPurchaseIsfinanced_ASC("bPurchaseIsfinanced_ASC"),
+         @Json(name = "bPurchaseIsfinanced_DESC") bPurchaseIsfinanced_DESC("bPurchaseIsfinanced_DESC"),
+         @Json(name = "bPurchaseIspaid_ASC") bPurchaseIspaid_ASC("bPurchaseIspaid_ASC"),
+         @Json(name = "bPurchaseIspaid_DESC") bPurchaseIspaid_DESC("bPurchaseIspaid_DESC"),
+         @Json(name = "sFranchiseagenceName_ASC") sFranchiseagenceName_ASC("sFranchiseagenceName_ASC"),
+         @Json(name = "sFranchiseagenceName_DESC") sFranchiseagenceName_DESC("sFranchiseagenceName_DESC"),
+         @Json(name = "iFranchiseofficeCode_ASC") iFranchiseofficeCode_ASC("iFranchiseofficeCode_ASC"),
+         @Json(name = "iFranchiseofficeCode_DESC") iFranchiseofficeCode_DESC("iFranchiseofficeCode_DESC"),
+         @Json(name = "sSupplierName_ASC") sSupplierName_ASC("sSupplierName_ASC"),
+         @Json(name = "sSupplierName_DESC") sSupplierName_DESC("sSupplierName_DESC");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
+     }
+
+    /**
+     * GET /1/object/purchase/getList
+     * Retrieve Purchase list
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return PurchaseGetListV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun purchaseGetListV1(eOrderBy: EOrderByPurchaseGetListV1? = null, iRowMax: kotlin.Int? = null, iRowOffset: kotlin.Int? = 0, acceptLanguage: HeaderAcceptLanguage? = null, sFilter: kotlin.String? = null) : PurchaseGetListV1Response {
+        val localVarResponse = purchaseGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as PurchaseGetListV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/purchase/getList
+     * Retrieve Purchase list
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return ApiResponse<PurchaseGetListV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun purchaseGetListV1WithHttpInfo(eOrderBy: EOrderByPurchaseGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : ApiResponse<PurchaseGetListV1Response?> {
+        val localVariableConfig = purchaseGetListV1RequestConfig(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
+
+        return request<Unit, PurchaseGetListV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation purchaseGetListV1
+     *
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return RequestConfig
+     */
+    fun purchaseGetListV1RequestConfig(eOrderBy: EOrderByPurchaseGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (eOrderBy != null) {
+                    put("eOrderBy", listOf(eOrderBy.value))
+                }
+                if (iRowMax != null) {
+                    put("iRowMax", listOf(iRowMax.toString()))
+                }
+                if (iRowOffset != null) {
+                    put("iRowOffset", listOf(iRowOffset.toString()))
+                }
+                if (sFilter != null) {
+                    put("sFilter", listOf(sFilter.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/purchase/getList",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

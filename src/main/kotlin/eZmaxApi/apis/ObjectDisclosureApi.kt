@@ -34,8 +34,10 @@ import eZmaxApi.models.DisclosureGetCommunicationCountV1Response
 import eZmaxApi.models.DisclosureGetCommunicationListV1Response
 import eZmaxApi.models.DisclosureGetCommunicationrecipientsV1Response
 import eZmaxApi.models.DisclosureGetCommunicationsendersV1Response
+import eZmaxApi.models.DisclosureGetListV1Response
 import eZmaxApi.models.DisclosureImportIntoEDMV1Request
 import eZmaxApi.models.DisclosureImportIntoEDMV1Response
+import eZmaxApi.models.HeaderAcceptLanguage
 
 import com.squareup.moshi.Json
 
@@ -496,6 +498,147 @@ open class ObjectDisclosureApi(basePath: kotlin.String = defaultBasePath, client
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/disclosure/{pkiDisclosureID}/getCommunicationsenders".replace("{"+"pkiDisclosureID"+"}", encodeURIComponent(pkiDisclosureID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * enum for parameter eOrderBy
+     */
+     enum class EOrderByDisclosureGetListV1(val value: kotlin.String) {
+         @Json(name = "pkiDisclosureID_ASC") pkiDisclosureID_ASC("pkiDisclosureID_ASC"),
+         @Json(name = "pkiDisclosureID_DESC") pkiDisclosureID_DESC("pkiDisclosureID_DESC"),
+         @Json(name = "fkiAgentID_ASC") fkiAgentID_ASC("fkiAgentID_ASC"),
+         @Json(name = "fkiAgentID_DESC") fkiAgentID_DESC("fkiAgentID_DESC"),
+         @Json(name = "fkiBrokerID_ASC") fkiBrokerID_ASC("fkiBrokerID_ASC"),
+         @Json(name = "fkiBrokerID_DESC") fkiBrokerID_DESC("fkiBrokerID_DESC"),
+         @Json(name = "eDisclosureInteresttype_ASC") eDisclosureInteresttype_ASC("eDisclosureInteresttype_ASC"),
+         @Json(name = "eDisclosureInteresttype_DESC") eDisclosureInteresttype_DESC("eDisclosureInteresttype_DESC"),
+         @Json(name = "sDisclosureRelation_ASC") sDisclosureRelation_ASC("sDisclosureRelation_ASC"),
+         @Json(name = "sDisclosureRelation_DESC") sDisclosureRelation_DESC("sDisclosureRelation_DESC"),
+         @Json(name = "dtDisclosureRedactiondate_ASC") dtDisclosureRedactiondate_ASC("dtDisclosureRedactiondate_ASC"),
+         @Json(name = "dtDisclosureRedactiondate_DESC") dtDisclosureRedactiondate_DESC("dtDisclosureRedactiondate_DESC"),
+         @Json(name = "dtDisclosureAcceptationdate_ASC") dtDisclosureAcceptationdate_ASC("dtDisclosureAcceptationdate_ASC"),
+         @Json(name = "dtDisclosureAcceptationdate_DESC") dtDisclosureAcceptationdate_DESC("dtDisclosureAcceptationdate_DESC"),
+         @Json(name = "dtDisclosureReceptiondate_ASC") dtDisclosureReceptiondate_ASC("dtDisclosureReceptiondate_ASC"),
+         @Json(name = "dtDisclosureReceptiondate_DESC") dtDisclosureReceptiondate_DESC("dtDisclosureReceptiondate_DESC"),
+         @Json(name = "bDisclosureIsactive_ASC") bDisclosureIsactive_ASC("bDisclosureIsactive_ASC"),
+         @Json(name = "bDisclosureIsactive_DESC") bDisclosureIsactive_DESC("bDisclosureIsactive_DESC"),
+         @Json(name = "sDisclosureNumber_ASC") sDisclosureNumber_ASC("sDisclosureNumber_ASC"),
+         @Json(name = "sDisclosureNumber_DESC") sDisclosureNumber_DESC("sDisclosureNumber_DESC"),
+         @Json(name = "sContactFirstname_ASC") sContactFirstname_ASC("sContactFirstname_ASC"),
+         @Json(name = "sContactFirstname_DESC") sContactFirstname_DESC("sContactFirstname_DESC"),
+         @Json(name = "sContactLastname_ASC") sContactLastname_ASC("sContactLastname_ASC"),
+         @Json(name = "sContactLastname_DESC") sContactLastname_DESC("sContactLastname_DESC"),
+         @Json(name = "sBrokerName_ASC") sBrokerName_ASC("sBrokerName_ASC"),
+         @Json(name = "sBrokerName_DESC") sBrokerName_DESC("sBrokerName_DESC");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
+     }
+
+    /**
+     * GET /1/object/disclosure/getList
+     * Retrieve Disclosure list
+     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eDisclosureInteresttype | Direct&lt;br&gt;Indirect |
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return DisclosureGetListV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun disclosureGetListV1(eOrderBy: EOrderByDisclosureGetListV1? = null, iRowMax: kotlin.Int? = null, iRowOffset: kotlin.Int? = 0, acceptLanguage: HeaderAcceptLanguage? = null, sFilter: kotlin.String? = null) : DisclosureGetListV1Response {
+        val localVarResponse = disclosureGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as DisclosureGetListV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/disclosure/getList
+     * Retrieve Disclosure list
+     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eDisclosureInteresttype | Direct&lt;br&gt;Indirect |
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return ApiResponse<DisclosureGetListV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun disclosureGetListV1WithHttpInfo(eOrderBy: EOrderByDisclosureGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : ApiResponse<DisclosureGetListV1Response?> {
+        val localVariableConfig = disclosureGetListV1RequestConfig(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
+
+        return request<Unit, DisclosureGetListV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation disclosureGetListV1
+     *
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return RequestConfig
+     */
+    fun disclosureGetListV1RequestConfig(eOrderBy: EOrderByDisclosureGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (eOrderBy != null) {
+                    put("eOrderBy", listOf(eOrderBy.value))
+                }
+                if (iRowMax != null) {
+                    put("iRowMax", listOf(iRowMax.toString()))
+                }
+                if (iRowOffset != null) {
+                    put("iRowOffset", listOf(iRowOffset.toString()))
+                }
+                if (sFilter != null) {
+                    put("sFilter", listOf(sFilter.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/disclosure/getList",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

@@ -28,8 +28,14 @@ import okhttp3.Call
 import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.HeaderAcceptLanguage
 import eZmaxApi.models.OfficetaxreportBatchDownloadV1Request
 import eZmaxApi.models.OfficetaxreportGetAttachmentsV1Response
+import eZmaxApi.models.OfficetaxreportGetCommunicationCountV1Response
+import eZmaxApi.models.OfficetaxreportGetCommunicationListV1Response
+import eZmaxApi.models.OfficetaxreportGetCommunicationrecipientsV1Response
+import eZmaxApi.models.OfficetaxreportGetCommunicationsendersV1Response
+import eZmaxApi.models.OfficetaxreportGetListV1Response
 import eZmaxApi.models.OfficetaxreportImportIntoEDMV1Request
 import eZmaxApi.models.OfficetaxreportImportIntoEDMV1Response
 
@@ -200,6 +206,423 @@ open class ObjectOfficetaxreportApi(basePath: kotlin.String = defaultBasePath, c
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/officetaxreport/{pkiOfficetaxreportID}/getAttachments".replace("{"+"pkiOfficetaxreportID"+"}", encodeURIComponent(pkiOfficetaxreportID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/officetaxreport/{pkiOfficetaxreportID}/getCommunicationCount
+     * Retrieve Communication count
+     * 
+     * @param pkiOfficetaxreportID 
+     * @return OfficetaxreportGetCommunicationCountV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun officetaxreportGetCommunicationCountV1(pkiOfficetaxreportID: kotlin.Int) : OfficetaxreportGetCommunicationCountV1Response {
+        val localVarResponse = officetaxreportGetCommunicationCountV1WithHttpInfo(pkiOfficetaxreportID = pkiOfficetaxreportID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as OfficetaxreportGetCommunicationCountV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/officetaxreport/{pkiOfficetaxreportID}/getCommunicationCount
+     * Retrieve Communication count
+     * 
+     * @param pkiOfficetaxreportID 
+     * @return ApiResponse<OfficetaxreportGetCommunicationCountV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun officetaxreportGetCommunicationCountV1WithHttpInfo(pkiOfficetaxreportID: kotlin.Int) : ApiResponse<OfficetaxreportGetCommunicationCountV1Response?> {
+        val localVariableConfig = officetaxreportGetCommunicationCountV1RequestConfig(pkiOfficetaxreportID = pkiOfficetaxreportID)
+
+        return request<Unit, OfficetaxreportGetCommunicationCountV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation officetaxreportGetCommunicationCountV1
+     *
+     * @param pkiOfficetaxreportID 
+     * @return RequestConfig
+     */
+    fun officetaxreportGetCommunicationCountV1RequestConfig(pkiOfficetaxreportID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/officetaxreport/{pkiOfficetaxreportID}/getCommunicationCount".replace("{"+"pkiOfficetaxreportID"+"}", encodeURIComponent(pkiOfficetaxreportID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/officetaxreport/{pkiOfficetaxreportID}/getCommunicationList
+     * Retrieve Communication list
+     * 
+     * @param pkiOfficetaxreportID 
+     * @return OfficetaxreportGetCommunicationListV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun officetaxreportGetCommunicationListV1(pkiOfficetaxreportID: kotlin.Int) : OfficetaxreportGetCommunicationListV1Response {
+        val localVarResponse = officetaxreportGetCommunicationListV1WithHttpInfo(pkiOfficetaxreportID = pkiOfficetaxreportID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as OfficetaxreportGetCommunicationListV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/officetaxreport/{pkiOfficetaxreportID}/getCommunicationList
+     * Retrieve Communication list
+     * 
+     * @param pkiOfficetaxreportID 
+     * @return ApiResponse<OfficetaxreportGetCommunicationListV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun officetaxreportGetCommunicationListV1WithHttpInfo(pkiOfficetaxreportID: kotlin.Int) : ApiResponse<OfficetaxreportGetCommunicationListV1Response?> {
+        val localVariableConfig = officetaxreportGetCommunicationListV1RequestConfig(pkiOfficetaxreportID = pkiOfficetaxreportID)
+
+        return request<Unit, OfficetaxreportGetCommunicationListV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation officetaxreportGetCommunicationListV1
+     *
+     * @param pkiOfficetaxreportID 
+     * @return RequestConfig
+     */
+    fun officetaxreportGetCommunicationListV1RequestConfig(pkiOfficetaxreportID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/officetaxreport/{pkiOfficetaxreportID}/getCommunicationList".replace("{"+"pkiOfficetaxreportID"+"}", encodeURIComponent(pkiOfficetaxreportID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/officetaxreport/{pkiOfficetaxreportID}/getCommunicationrecipients
+     * Retrieve Communication recipients
+     * 
+     * @param pkiOfficetaxreportID 
+     * @return OfficetaxreportGetCommunicationrecipientsV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun officetaxreportGetCommunicationrecipientsV1(pkiOfficetaxreportID: kotlin.Int) : OfficetaxreportGetCommunicationrecipientsV1Response {
+        val localVarResponse = officetaxreportGetCommunicationrecipientsV1WithHttpInfo(pkiOfficetaxreportID = pkiOfficetaxreportID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as OfficetaxreportGetCommunicationrecipientsV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/officetaxreport/{pkiOfficetaxreportID}/getCommunicationrecipients
+     * Retrieve Communication recipients
+     * 
+     * @param pkiOfficetaxreportID 
+     * @return ApiResponse<OfficetaxreportGetCommunicationrecipientsV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun officetaxreportGetCommunicationrecipientsV1WithHttpInfo(pkiOfficetaxreportID: kotlin.Int) : ApiResponse<OfficetaxreportGetCommunicationrecipientsV1Response?> {
+        val localVariableConfig = officetaxreportGetCommunicationrecipientsV1RequestConfig(pkiOfficetaxreportID = pkiOfficetaxreportID)
+
+        return request<Unit, OfficetaxreportGetCommunicationrecipientsV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation officetaxreportGetCommunicationrecipientsV1
+     *
+     * @param pkiOfficetaxreportID 
+     * @return RequestConfig
+     */
+    fun officetaxreportGetCommunicationrecipientsV1RequestConfig(pkiOfficetaxreportID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/officetaxreport/{pkiOfficetaxreportID}/getCommunicationrecipients".replace("{"+"pkiOfficetaxreportID"+"}", encodeURIComponent(pkiOfficetaxreportID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/officetaxreport/{pkiOfficetaxreportID}/getCommunicationsenders
+     * Retrieve Communication senders
+     * 
+     * @param pkiOfficetaxreportID 
+     * @return OfficetaxreportGetCommunicationsendersV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun officetaxreportGetCommunicationsendersV1(pkiOfficetaxreportID: kotlin.Int) : OfficetaxreportGetCommunicationsendersV1Response {
+        val localVarResponse = officetaxreportGetCommunicationsendersV1WithHttpInfo(pkiOfficetaxreportID = pkiOfficetaxreportID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as OfficetaxreportGetCommunicationsendersV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/officetaxreport/{pkiOfficetaxreportID}/getCommunicationsenders
+     * Retrieve Communication senders
+     * 
+     * @param pkiOfficetaxreportID 
+     * @return ApiResponse<OfficetaxreportGetCommunicationsendersV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun officetaxreportGetCommunicationsendersV1WithHttpInfo(pkiOfficetaxreportID: kotlin.Int) : ApiResponse<OfficetaxreportGetCommunicationsendersV1Response?> {
+        val localVariableConfig = officetaxreportGetCommunicationsendersV1RequestConfig(pkiOfficetaxreportID = pkiOfficetaxreportID)
+
+        return request<Unit, OfficetaxreportGetCommunicationsendersV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation officetaxreportGetCommunicationsendersV1
+     *
+     * @param pkiOfficetaxreportID 
+     * @return RequestConfig
+     */
+    fun officetaxreportGetCommunicationsendersV1RequestConfig(pkiOfficetaxreportID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/officetaxreport/{pkiOfficetaxreportID}/getCommunicationsenders".replace("{"+"pkiOfficetaxreportID"+"}", encodeURIComponent(pkiOfficetaxreportID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * enum for parameter eOrderBy
+     */
+     enum class EOrderByOfficetaxreportGetListV1(val value: kotlin.String) {
+         @Json(name = "pkiOfficetaxreportID_ASC") pkiOfficetaxreportID_ASC("pkiOfficetaxreportID_ASC"),
+         @Json(name = "pkiOfficetaxreportID_DESC") pkiOfficetaxreportID_DESC("pkiOfficetaxreportID_DESC"),
+         @Json(name = "fkiPeriodID_ASC") fkiPeriodID_ASC("fkiPeriodID_ASC"),
+         @Json(name = "fkiPeriodID_DESC") fkiPeriodID_DESC("fkiPeriodID_DESC"),
+         @Json(name = "sPeriodYYYYMM_ASC") sPeriodYYYYMM_ASC("sPeriodYYYYMM_ASC"),
+         @Json(name = "sPeriodYYYYMM_DESC") sPeriodYYYYMM_DESC("sPeriodYYYYMM_DESC"),
+         @Json(name = "sUserLoginname_ASC") sUserLoginname_ASC("sUserLoginname_ASC"),
+         @Json(name = "sUserLoginname_DESC") sUserLoginname_DESC("sUserLoginname_DESC"),
+         @Json(name = "dtCreatedDate_ASC") dtCreatedDate_ASC("dtCreatedDate_ASC"),
+         @Json(name = "dtCreatedDate_DESC") dtCreatedDate_DESC("dtCreatedDate_DESC");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
+     }
+
+    /**
+     * GET /1/object/officetaxreport/getList
+     * Retrieve Officetaxreport list
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return OfficetaxreportGetListV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun officetaxreportGetListV1(eOrderBy: EOrderByOfficetaxreportGetListV1? = null, iRowMax: kotlin.Int? = null, iRowOffset: kotlin.Int? = 0, acceptLanguage: HeaderAcceptLanguage? = null, sFilter: kotlin.String? = null) : OfficetaxreportGetListV1Response {
+        val localVarResponse = officetaxreportGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as OfficetaxreportGetListV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/officetaxreport/getList
+     * Retrieve Officetaxreport list
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return ApiResponse<OfficetaxreportGetListV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun officetaxreportGetListV1WithHttpInfo(eOrderBy: EOrderByOfficetaxreportGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : ApiResponse<OfficetaxreportGetListV1Response?> {
+        val localVariableConfig = officetaxreportGetListV1RequestConfig(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
+
+        return request<Unit, OfficetaxreportGetListV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation officetaxreportGetListV1
+     *
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return RequestConfig
+     */
+    fun officetaxreportGetListV1RequestConfig(eOrderBy: EOrderByOfficetaxreportGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (eOrderBy != null) {
+                    put("eOrderBy", listOf(eOrderBy.value))
+                }
+                if (iRowMax != null) {
+                    put("iRowMax", listOf(iRowMax.toString()))
+                }
+                if (iRowOffset != null) {
+                    put("iRowOffset", listOf(iRowOffset.toString()))
+                }
+                if (sFilter != null) {
+                    put("sFilter", listOf(sFilter.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/officetaxreport/getList",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

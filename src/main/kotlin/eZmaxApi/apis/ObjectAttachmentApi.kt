@@ -28,7 +28,11 @@ import okhttp3.Call
 import okhttp3.HttpUrl
 
 import eZmaxApi.models.AttachmentDeleteV1Response
+import eZmaxApi.models.AttachmentDocumentTypeV1Request
+import eZmaxApi.models.AttachmentDocumentTypeV1Response
 import eZmaxApi.models.AttachmentGetAttachmentlogsV1Response
+import eZmaxApi.models.AttachmentPrivacyV1Request
+import eZmaxApi.models.AttachmentPrivacyV1Response
 import eZmaxApi.models.AttachmentRenameV1Request
 import eZmaxApi.models.AttachmentRenameV1Response
 import eZmaxApi.models.AttachmentRestoreV1Request
@@ -131,6 +135,83 @@ open class ObjectAttachmentApi(basePath: kotlin.String = defaultBasePath, client
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/attachment/{pkiAttachmentID}/delete".replace("{"+"pkiAttachmentID"+"}", encodeURIComponent(pkiAttachmentID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * POST /1/object/attachment/{pkiAttachmentID}/documentType
+     * Change attachment document type
+     * The endpoint allows to change the checklist document type for an attachment.
+     * @param pkiAttachmentID 
+     * @param attachmentDocumentTypeV1Request 
+     * @return AttachmentDocumentTypeV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun attachmentDocumentTypeV1(pkiAttachmentID: kotlin.Int, attachmentDocumentTypeV1Request: AttachmentDocumentTypeV1Request) : AttachmentDocumentTypeV1Response {
+        val localVarResponse = attachmentDocumentTypeV1WithHttpInfo(pkiAttachmentID = pkiAttachmentID, attachmentDocumentTypeV1Request = attachmentDocumentTypeV1Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as AttachmentDocumentTypeV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /1/object/attachment/{pkiAttachmentID}/documentType
+     * Change attachment document type
+     * The endpoint allows to change the checklist document type for an attachment.
+     * @param pkiAttachmentID 
+     * @param attachmentDocumentTypeV1Request 
+     * @return ApiResponse<AttachmentDocumentTypeV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun attachmentDocumentTypeV1WithHttpInfo(pkiAttachmentID: kotlin.Int, attachmentDocumentTypeV1Request: AttachmentDocumentTypeV1Request) : ApiResponse<AttachmentDocumentTypeV1Response?> {
+        val localVariableConfig = attachmentDocumentTypeV1RequestConfig(pkiAttachmentID = pkiAttachmentID, attachmentDocumentTypeV1Request = attachmentDocumentTypeV1Request)
+
+        return request<AttachmentDocumentTypeV1Request, AttachmentDocumentTypeV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation attachmentDocumentTypeV1
+     *
+     * @param pkiAttachmentID 
+     * @param attachmentDocumentTypeV1Request 
+     * @return RequestConfig
+     */
+    fun attachmentDocumentTypeV1RequestConfig(pkiAttachmentID: kotlin.Int, attachmentDocumentTypeV1Request: AttachmentDocumentTypeV1Request) : RequestConfig<AttachmentDocumentTypeV1Request> {
+        val localVariableBody = attachmentDocumentTypeV1Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/attachment/{pkiAttachmentID}/documentType".replace("{"+"pkiAttachmentID"+"}", encodeURIComponent(pkiAttachmentID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,
@@ -275,6 +356,83 @@ open class ObjectAttachmentApi(basePath: kotlin.String = defaultBasePath, client
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/attachment/{pkiAttachmentID}/getAttachmentlogs".replace("{"+"pkiAttachmentID"+"}", encodeURIComponent(pkiAttachmentID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * POST /1/object/attachment/{pkiAttachmentID}/privacy
+     * Change the attachment privacy
+     * The endpoint allows to change an attachment&#39;s access privacy.
+     * @param pkiAttachmentID 
+     * @param attachmentPrivacyV1Request 
+     * @return AttachmentPrivacyV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun attachmentPrivacyV1(pkiAttachmentID: kotlin.Int, attachmentPrivacyV1Request: AttachmentPrivacyV1Request) : AttachmentPrivacyV1Response {
+        val localVarResponse = attachmentPrivacyV1WithHttpInfo(pkiAttachmentID = pkiAttachmentID, attachmentPrivacyV1Request = attachmentPrivacyV1Request)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as AttachmentPrivacyV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /1/object/attachment/{pkiAttachmentID}/privacy
+     * Change the attachment privacy
+     * The endpoint allows to change an attachment&#39;s access privacy.
+     * @param pkiAttachmentID 
+     * @param attachmentPrivacyV1Request 
+     * @return ApiResponse<AttachmentPrivacyV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun attachmentPrivacyV1WithHttpInfo(pkiAttachmentID: kotlin.Int, attachmentPrivacyV1Request: AttachmentPrivacyV1Request) : ApiResponse<AttachmentPrivacyV1Response?> {
+        val localVariableConfig = attachmentPrivacyV1RequestConfig(pkiAttachmentID = pkiAttachmentID, attachmentPrivacyV1Request = attachmentPrivacyV1Request)
+
+        return request<AttachmentPrivacyV1Request, AttachmentPrivacyV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation attachmentPrivacyV1
+     *
+     * @param pkiAttachmentID 
+     * @param attachmentPrivacyV1Request 
+     * @return RequestConfig
+     */
+    fun attachmentPrivacyV1RequestConfig(pkiAttachmentID: kotlin.Int, attachmentPrivacyV1Request: AttachmentPrivacyV1Request) : RequestConfig<AttachmentPrivacyV1Request> {
+        val localVariableBody = attachmentPrivacyV1Request
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/attachment/{pkiAttachmentID}/privacy".replace("{"+"pkiAttachmentID"+"}", encodeURIComponent(pkiAttachmentID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,
@@ -437,7 +595,7 @@ open class ObjectAttachmentApi(basePath: kotlin.String = defaultBasePath, client
     }
 
     /**
-     * PATCH /1/object/attachment/{pkiAttachmentID}/validate
+     * POST /1/object/attachment/{pkiAttachmentID}/validate
      * Validate an existing attachment
      * This endpoint allows to validate or reject an attachment.
      * @param pkiAttachmentID 
@@ -470,7 +628,7 @@ open class ObjectAttachmentApi(basePath: kotlin.String = defaultBasePath, client
     }
 
     /**
-     * PATCH /1/object/attachment/{pkiAttachmentID}/validate
+     * POST /1/object/attachment/{pkiAttachmentID}/validate
      * Validate an existing attachment
      * This endpoint allows to validate or reject an attachment.
      * @param pkiAttachmentID 
@@ -504,7 +662,7 @@ open class ObjectAttachmentApi(basePath: kotlin.String = defaultBasePath, client
         localVariableHeaders["Accept"] = "application/json"
 
         return RequestConfig(
-            method = RequestMethod.PATCH,
+            method = RequestMethod.POST,
             path = "/1/object/attachment/{pkiAttachmentID}/validate".replace("{"+"pkiAttachmentID"+"}", encodeURIComponent(pkiAttachmentID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,

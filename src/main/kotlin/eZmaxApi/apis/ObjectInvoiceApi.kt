@@ -28,12 +28,14 @@ import okhttp3.Call
 import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.HeaderAcceptLanguage
 import eZmaxApi.models.InvoiceBatchDownloadV1Request
 import eZmaxApi.models.InvoiceGetAttachmentsV1Response
 import eZmaxApi.models.InvoiceGetCommunicationCountV1Response
 import eZmaxApi.models.InvoiceGetCommunicationListV1Response
 import eZmaxApi.models.InvoiceGetCommunicationrecipientsV1Response
 import eZmaxApi.models.InvoiceGetCommunicationsendersV1Response
+import eZmaxApi.models.InvoiceGetListV1Response
 import eZmaxApi.models.InvoiceImportIntoEDMV1Request
 import eZmaxApi.models.InvoiceImportIntoEDMV1Response
 
@@ -496,6 +498,149 @@ open class ObjectInvoiceApi(basePath: kotlin.String = defaultBasePath, client: C
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/invoice/{pkiInvoiceID}/getCommunicationsenders".replace("{"+"pkiInvoiceID"+"}", encodeURIComponent(pkiInvoiceID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * enum for parameter eOrderBy
+     */
+     enum class EOrderByInvoiceGetListV1(val value: kotlin.String) {
+         @Json(name = "pkiInvoiceID_ASC") pkiInvoiceID_ASC("pkiInvoiceID_ASC"),
+         @Json(name = "pkiInvoiceID_DESC") pkiInvoiceID_DESC("pkiInvoiceID_DESC"),
+         @Json(name = "fkiAgentID_ASC") fkiAgentID_ASC("fkiAgentID_ASC"),
+         @Json(name = "fkiAgentID_DESC") fkiAgentID_DESC("fkiAgentID_DESC"),
+         @Json(name = "fkiBrokerID_ASC") fkiBrokerID_ASC("fkiBrokerID_ASC"),
+         @Json(name = "fkiBrokerID_DESC") fkiBrokerID_DESC("fkiBrokerID_DESC"),
+         @Json(name = "fkiCustomerID_ASC") fkiCustomerID_ASC("fkiCustomerID_ASC"),
+         @Json(name = "fkiCustomerID_DESC") fkiCustomerID_DESC("fkiCustomerID_DESC"),
+         @Json(name = "fkiPeriodID_ASC") fkiPeriodID_ASC("fkiPeriodID_ASC"),
+         @Json(name = "fkiPeriodID_DESC") fkiPeriodID_DESC("fkiPeriodID_DESC"),
+         @Json(name = "sPeriodYYYYMM_ASC") sPeriodYYYYMM_ASC("sPeriodYYYYMM_ASC"),
+         @Json(name = "sPeriodYYYYMM_DESC") sPeriodYYYYMM_DESC("sPeriodYYYYMM_DESC"),
+         @Json(name = "bInvoiceIspaid_ASC") bInvoiceIspaid_ASC("bInvoiceIspaid_ASC"),
+         @Json(name = "bInvoiceIspaid_DESC") bInvoiceIspaid_DESC("bInvoiceIspaid_DESC"),
+         @Json(name = "dInvoiceTotal_ASC") dInvoiceTotal_ASC("dInvoiceTotal_ASC"),
+         @Json(name = "dInvoiceTotal_DESC") dInvoiceTotal_DESC("dInvoiceTotal_DESC"),
+         @Json(name = "dInvoicePaid_ASC") dInvoicePaid_ASC("dInvoicePaid_ASC"),
+         @Json(name = "dInvoicePaid_DESC") dInvoicePaid_DESC("dInvoicePaid_DESC"),
+         @Json(name = "dInvoiceBalance_ASC") dInvoiceBalance_ASC("dInvoiceBalance_ASC"),
+         @Json(name = "dInvoiceBalance_DESC") dInvoiceBalance_DESC("dInvoiceBalance_DESC"),
+         @Json(name = "dtInvoiceDate_ASC") dtInvoiceDate_ASC("dtInvoiceDate_ASC"),
+         @Json(name = "dtInvoiceDate_DESC") dtInvoiceDate_DESC("dtInvoiceDate_DESC"),
+         @Json(name = "eInvoiceType_ASC") eInvoiceType_ASC("eInvoiceType_ASC"),
+         @Json(name = "eInvoiceType_DESC") eInvoiceType_DESC("eInvoiceType_DESC"),
+         @Json(name = "sInvoiceNumber_ASC") sInvoiceNumber_ASC("sInvoiceNumber_ASC"),
+         @Json(name = "sInvoiceNumber_DESC") sInvoiceNumber_DESC("sInvoiceNumber_DESC"),
+         @Json(name = "sInvoiceRecipient_ASC") sInvoiceRecipient_ASC("sInvoiceRecipient_ASC"),
+         @Json(name = "sInvoiceRecipient_DESC") sInvoiceRecipient_DESC("sInvoiceRecipient_DESC");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
+     }
+
+    /**
+     * GET /1/object/invoice/getList
+     * Retrieve Invoice list
+     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eInvoiceType | Commission&lt;br&gt;CommissionAdvance&lt;br&gt;Financed&lt;br&gt;Manual&lt;br&gt;Monthly |
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return InvoiceGetListV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun invoiceGetListV1(eOrderBy: EOrderByInvoiceGetListV1? = null, iRowMax: kotlin.Int? = null, iRowOffset: kotlin.Int? = 0, acceptLanguage: HeaderAcceptLanguage? = null, sFilter: kotlin.String? = null) : InvoiceGetListV1Response {
+        val localVarResponse = invoiceGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as InvoiceGetListV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/invoice/getList
+     * Retrieve Invoice list
+     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eInvoiceType | Commission&lt;br&gt;CommissionAdvance&lt;br&gt;Financed&lt;br&gt;Manual&lt;br&gt;Monthly |
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return ApiResponse<InvoiceGetListV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun invoiceGetListV1WithHttpInfo(eOrderBy: EOrderByInvoiceGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : ApiResponse<InvoiceGetListV1Response?> {
+        val localVariableConfig = invoiceGetListV1RequestConfig(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
+
+        return request<Unit, InvoiceGetListV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation invoiceGetListV1
+     *
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return RequestConfig
+     */
+    fun invoiceGetListV1RequestConfig(eOrderBy: EOrderByInvoiceGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (eOrderBy != null) {
+                    put("eOrderBy", listOf(eOrderBy.value))
+                }
+                if (iRowMax != null) {
+                    put("iRowMax", listOf(iRowMax.toString()))
+                }
+                if (iRowOffset != null) {
+                    put("iRowOffset", listOf(iRowOffset.toString()))
+                }
+                if (sFilter != null) {
+                    put("sFilter", listOf(sFilter.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/invoice/getList",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

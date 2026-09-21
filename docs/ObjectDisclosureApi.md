@@ -10,6 +10,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**disclosureGetCommunicationListV1**](ObjectDisclosureApi.md#disclosureGetCommunicationListV1) | **GET** /1/object/disclosure/{pkiDisclosureID}/getCommunicationList | Retrieve Communication list |
 | [**disclosureGetCommunicationrecipientsV1**](ObjectDisclosureApi.md#disclosureGetCommunicationrecipientsV1) | **GET** /1/object/disclosure/{pkiDisclosureID}/getCommunicationrecipients | Retrieve Communication recipients |
 | [**disclosureGetCommunicationsendersV1**](ObjectDisclosureApi.md#disclosureGetCommunicationsendersV1) | **GET** /1/object/disclosure/{pkiDisclosureID}/getCommunicationsenders | Retrieve Communication senders |
+| [**disclosureGetListV1**](ObjectDisclosureApi.md#disclosureGetListV1) | **GET** /1/object/disclosure/getList | Retrieve Disclosure list |
 | [**disclosureImportIntoEDMV1**](ObjectDisclosureApi.md#disclosureImportIntoEDMV1) | **POST** /1/object/disclosure/{pkiDisclosureID}/importIntoEDM | Import attachments into the Disclosure |
 
 
@@ -284,6 +285,63 @@ try {
 ### Return type
 
 [**DisclosureGetCommunicationsendersV1Response**](DisclosureGetCommunicationsendersV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="disclosureGetListV1"></a>
+# **disclosureGetListV1**
+> DisclosureGetListV1Response disclosureGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+
+Retrieve Disclosure list
+
+Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eDisclosureInteresttype | Direct&lt;br&gt;Indirect |
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectDisclosureApi()
+val eOrderBy : kotlin.String = eOrderBy_example // kotlin.String | Specify how you want the results to be sorted
+val iRowMax : kotlin.Int = 56 // kotlin.Int | 
+val iRowOffset : kotlin.Int = 56 // kotlin.Int | 
+val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
+val sFilter : kotlin.String = sFilter_example // kotlin.String | 
+try {
+    val result : DisclosureGetListV1Response = apiInstance.disclosureGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectDisclosureApi#disclosureGetListV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectDisclosureApi#disclosureGetListV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiDisclosureID_ASC, pkiDisclosureID_DESC, fkiAgentID_ASC, fkiAgentID_DESC, fkiBrokerID_ASC, fkiBrokerID_DESC, eDisclosureInteresttype_ASC, eDisclosureInteresttype_DESC, sDisclosureRelation_ASC, sDisclosureRelation_DESC, dtDisclosureRedactiondate_ASC, dtDisclosureRedactiondate_DESC, dtDisclosureAcceptationdate_ASC, dtDisclosureAcceptationdate_DESC, dtDisclosureReceptiondate_ASC, dtDisclosureReceptiondate_DESC, bDisclosureIsactive_ASC, bDisclosureIsactive_DESC, sDisclosureNumber_ASC, sDisclosureNumber_DESC, sContactFirstname_ASC, sContactFirstname_DESC, sContactLastname_ASC, sContactLastname_DESC, sBrokerName_ASC, sBrokerName_DESC] |
+| **iRowMax** | **kotlin.Int**|  | [optional] |
+| **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0] |
+| **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
+| **sFilter** | **kotlin.String**|  | [optional] |
+
+### Return type
+
+[**DisclosureGetListV1Response**](DisclosureGetListV1Response.md)
 
 ### Authorization
 

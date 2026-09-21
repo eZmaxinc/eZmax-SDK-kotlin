@@ -11,6 +11,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**bankaccountGetCommunicationListV1**](ObjectBankaccountApi.md#bankaccountGetCommunicationListV1) | **GET** /1/object/bankaccount/{pkiBankaccountID}/getCommunicationList | Retrieve Communication list |
 | [**bankaccountGetCommunicationrecipientsV1**](ObjectBankaccountApi.md#bankaccountGetCommunicationrecipientsV1) | **GET** /1/object/bankaccount/{pkiBankaccountID}/getCommunicationrecipients | Retrieve Communication recipients |
 | [**bankaccountGetCommunicationsendersV1**](ObjectBankaccountApi.md#bankaccountGetCommunicationsendersV1) | **GET** /1/object/bankaccount/{pkiBankaccountID}/getCommunicationsenders | Retrieve Communication senders |
+| [**bankaccountGetListV1**](ObjectBankaccountApi.md#bankaccountGetListV1) | **GET** /1/object/bankaccount/getList | Retrieve Bankaccount list |
 | [**bankaccountImportIntoEDMV1**](ObjectBankaccountApi.md#bankaccountImportIntoEDMV1) | **POST** /1/object/bankaccount/{pkiBankaccountID}/importIntoEDM | Import attachments into the Bankaccount |
 
 
@@ -340,6 +341,63 @@ try {
 ### Return type
 
 [**BankaccountGetCommunicationsendersV1Response**](BankaccountGetCommunicationsendersV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="bankaccountGetListV1"></a>
+# **bankaccountGetListV1**
+> BankaccountGetListV1Response bankaccountGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+
+Retrieve Bankaccount list
+
+Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eBankaccountType | Chequing&lt;br&gt;Trust |
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectBankaccountApi()
+val eOrderBy : kotlin.String = eOrderBy_example // kotlin.String | Specify how you want the results to be sorted
+val iRowMax : kotlin.Int = 56 // kotlin.Int | 
+val iRowOffset : kotlin.Int = 56 // kotlin.Int | 
+val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
+val sFilter : kotlin.String = sFilter_example // kotlin.String | 
+try {
+    val result : BankaccountGetListV1Response = apiInstance.bankaccountGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectBankaccountApi#bankaccountGetListV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectBankaccountApi#bankaccountGetListV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiBankaccountID_ASC, pkiBankaccountID_DESC, sBankaccountBankname_ASC, sBankaccountBankname_DESC, sBankaccountTransit_ASC, sBankaccountTransit_DESC, sBankaccountInstitution_ASC, sBankaccountInstitution_DESC, sBankaccountAccount_ASC, sBankaccountAccount_DESC, sBankaccountNumber_ASC, sBankaccountNumber_DESC, eBankaccountType_ASC, eBankaccountType_DESC, bBankaccountCommissionprocessing_ASC, bBankaccountCommissionprocessing_DESC, bBankaccountIsactive_ASC, bBankaccountIsactive_DESC, iGlaccountCode_ASC, iGlaccountCode_DESC, sGlaccountDescriptionX_ASC, sGlaccountDescriptionX_DESC] |
+| **iRowMax** | **kotlin.Int**|  | [optional] |
+| **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0] |
+| **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
+| **sFilter** | **kotlin.String**|  | [optional] |
+
+### Return type
+
+[**BankaccountGetListV1Response**](BankaccountGetListV1Response.md)
 
 ### Authorization
 

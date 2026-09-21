@@ -34,6 +34,7 @@ import eZmaxApi.models.BankaccountGetCommunicationCountV1Response
 import eZmaxApi.models.BankaccountGetCommunicationListV1Response
 import eZmaxApi.models.BankaccountGetCommunicationrecipientsV1Response
 import eZmaxApi.models.BankaccountGetCommunicationsendersV1Response
+import eZmaxApi.models.BankaccountGetListV1Response
 import eZmaxApi.models.BankaccountImportIntoEDMV1Request
 import eZmaxApi.models.BankaccountImportIntoEDMV1Response
 import eZmaxApi.models.CommonResponseError
@@ -623,6 +624,143 @@ open class ObjectBankaccountApi(basePath: kotlin.String = defaultBasePath, clien
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/bankaccount/{pkiBankaccountID}/getCommunicationsenders".replace("{"+"pkiBankaccountID"+"}", encodeURIComponent(pkiBankaccountID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * enum for parameter eOrderBy
+     */
+     enum class EOrderByBankaccountGetListV1(val value: kotlin.String) {
+         @Json(name = "pkiBankaccountID_ASC") pkiBankaccountID_ASC("pkiBankaccountID_ASC"),
+         @Json(name = "pkiBankaccountID_DESC") pkiBankaccountID_DESC("pkiBankaccountID_DESC"),
+         @Json(name = "sBankaccountBankname_ASC") sBankaccountBankname_ASC("sBankaccountBankname_ASC"),
+         @Json(name = "sBankaccountBankname_DESC") sBankaccountBankname_DESC("sBankaccountBankname_DESC"),
+         @Json(name = "sBankaccountTransit_ASC") sBankaccountTransit_ASC("sBankaccountTransit_ASC"),
+         @Json(name = "sBankaccountTransit_DESC") sBankaccountTransit_DESC("sBankaccountTransit_DESC"),
+         @Json(name = "sBankaccountInstitution_ASC") sBankaccountInstitution_ASC("sBankaccountInstitution_ASC"),
+         @Json(name = "sBankaccountInstitution_DESC") sBankaccountInstitution_DESC("sBankaccountInstitution_DESC"),
+         @Json(name = "sBankaccountAccount_ASC") sBankaccountAccount_ASC("sBankaccountAccount_ASC"),
+         @Json(name = "sBankaccountAccount_DESC") sBankaccountAccount_DESC("sBankaccountAccount_DESC"),
+         @Json(name = "sBankaccountNumber_ASC") sBankaccountNumber_ASC("sBankaccountNumber_ASC"),
+         @Json(name = "sBankaccountNumber_DESC") sBankaccountNumber_DESC("sBankaccountNumber_DESC"),
+         @Json(name = "eBankaccountType_ASC") eBankaccountType_ASC("eBankaccountType_ASC"),
+         @Json(name = "eBankaccountType_DESC") eBankaccountType_DESC("eBankaccountType_DESC"),
+         @Json(name = "bBankaccountCommissionprocessing_ASC") bBankaccountCommissionprocessing_ASC("bBankaccountCommissionprocessing_ASC"),
+         @Json(name = "bBankaccountCommissionprocessing_DESC") bBankaccountCommissionprocessing_DESC("bBankaccountCommissionprocessing_DESC"),
+         @Json(name = "bBankaccountIsactive_ASC") bBankaccountIsactive_ASC("bBankaccountIsactive_ASC"),
+         @Json(name = "bBankaccountIsactive_DESC") bBankaccountIsactive_DESC("bBankaccountIsactive_DESC"),
+         @Json(name = "iGlaccountCode_ASC") iGlaccountCode_ASC("iGlaccountCode_ASC"),
+         @Json(name = "iGlaccountCode_DESC") iGlaccountCode_DESC("iGlaccountCode_DESC"),
+         @Json(name = "sGlaccountDescriptionX_ASC") sGlaccountDescriptionX_ASC("sGlaccountDescriptionX_ASC"),
+         @Json(name = "sGlaccountDescriptionX_DESC") sGlaccountDescriptionX_DESC("sGlaccountDescriptionX_DESC");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
+     }
+
+    /**
+     * GET /1/object/bankaccount/getList
+     * Retrieve Bankaccount list
+     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eBankaccountType | Chequing&lt;br&gt;Trust |
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return BankaccountGetListV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun bankaccountGetListV1(eOrderBy: EOrderByBankaccountGetListV1? = null, iRowMax: kotlin.Int? = null, iRowOffset: kotlin.Int? = 0, acceptLanguage: HeaderAcceptLanguage? = null, sFilter: kotlin.String? = null) : BankaccountGetListV1Response {
+        val localVarResponse = bankaccountGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as BankaccountGetListV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/bankaccount/getList
+     * Retrieve Bankaccount list
+     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eBankaccountType | Chequing&lt;br&gt;Trust |
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return ApiResponse<BankaccountGetListV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun bankaccountGetListV1WithHttpInfo(eOrderBy: EOrderByBankaccountGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : ApiResponse<BankaccountGetListV1Response?> {
+        val localVariableConfig = bankaccountGetListV1RequestConfig(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
+
+        return request<Unit, BankaccountGetListV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation bankaccountGetListV1
+     *
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return RequestConfig
+     */
+    fun bankaccountGetListV1RequestConfig(eOrderBy: EOrderByBankaccountGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (eOrderBy != null) {
+                    put("eOrderBy", listOf(eOrderBy.value))
+                }
+                if (iRowMax != null) {
+                    put("iRowMax", listOf(iRowMax.toString()))
+                }
+                if (iRowOffset != null) {
+                    put("iRowOffset", listOf(iRowOffset.toString()))
+                }
+                if (sFilter != null) {
+                    put("sFilter", listOf(sFilter.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/bankaccount/getList",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

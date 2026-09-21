@@ -29,16 +29,41 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * Request for PATCH /1/object/attachment/{pkiAttachmentID}/validate
+ * Request for POST /1/object/attachment/{pkiAttachmentID}/validate
  *
  * @param eAttachmentVerified 
+ * @param fkiAttachmentrejectreasonID The unique ID of the Attachmentrejectreason
+ * @param tAttachmentRejectioncomment The rejectioncomment of the Attachment
+ * @param aSNotificationEmailAddress A list of email addresses to send a rejection notification to.
+ * @param tNotificationMessage The email body to send to the notification recipients.
+ * @param bNotificationIncludeAttachment Should a copy of the attachment be included in the email.
  */
 
 
 data class AttachmentValidateV1Request (
 
     @Json(name = "eAttachmentVerified")
-    val eAttachmentVerified: FieldEAttachmentVerified
+    val eAttachmentVerified: FieldEAttachmentVerified,
+
+    /* The unique ID of the Attachmentrejectreason */
+    @Json(name = "fkiAttachmentrejectreasonID")
+    val fkiAttachmentrejectreasonID: kotlin.Int? = null,
+
+    /* The rejectioncomment of the Attachment */
+    @Json(name = "tAttachmentRejectioncomment")
+    val tAttachmentRejectioncomment: kotlin.String? = null,
+
+    /* A list of email addresses to send a rejection notification to. */
+    @Json(name = "a_sNotificationEmailAddress")
+    val aSNotificationEmailAddress: kotlin.collections.Set<kotlin.String>? = null,
+
+    /* The email body to send to the notification recipients. */
+    @Json(name = "tNotificationMessage")
+    val tNotificationMessage: kotlin.String? = null,
+
+    /* Should a copy of the attachment be included in the email. */
+    @Json(name = "bNotificationIncludeAttachment")
+    val bNotificationIncludeAttachment: kotlin.Boolean? = null
 
 ) {
 

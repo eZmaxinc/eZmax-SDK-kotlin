@@ -28,8 +28,10 @@ import okhttp3.Call
 import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.HeaderAcceptLanguage
 import eZmaxApi.models.SalaryBatchDownloadV1Request
 import eZmaxApi.models.SalaryGetAttachmentsV1Response
+import eZmaxApi.models.SalaryGetListV1Response
 import eZmaxApi.models.SalaryImportIntoEDMV1Request
 import eZmaxApi.models.SalaryImportIntoEDMV1Response
 
@@ -200,6 +202,151 @@ open class ObjectSalaryApi(basePath: kotlin.String = defaultBasePath, client: Ca
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/salary/{pkiSalaryID}/getAttachments".replace("{"+"pkiSalaryID"+"}", encodeURIComponent(pkiSalaryID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * enum for parameter eOrderBy
+     */
+     enum class EOrderBySalaryGetListV1(val value: kotlin.String) {
+         @Json(name = "pkiSalaryID_ASC") pkiSalaryID_ASC("pkiSalaryID_ASC"),
+         @Json(name = "pkiSalaryID_DESC") pkiSalaryID_DESC("pkiSalaryID_DESC"),
+         @Json(name = "fkiPeriodID_ASC") fkiPeriodID_ASC("fkiPeriodID_ASC"),
+         @Json(name = "fkiPeriodID_DESC") fkiPeriodID_DESC("fkiPeriodID_DESC"),
+         @Json(name = "fkiUSerIDCreated_ASC") fkiUSerIDCreated_ASC("fkiUSerIDCreated_ASC"),
+         @Json(name = "fkiUSerIDCreated_DESC") fkiUSerIDCreated_DESC("fkiUSerIDCreated_DESC"),
+         @Json(name = "fkiSalaryperiodID_ASC") fkiSalaryperiodID_ASC("fkiSalaryperiodID_ASC"),
+         @Json(name = "fkiSalaryperiodID_DESC") fkiSalaryperiodID_DESC("fkiSalaryperiodID_DESC"),
+         @Json(name = "dtSalaryPaymentdate_ASC") dtSalaryPaymentdate_ASC("dtSalaryPaymentdate_ASC"),
+         @Json(name = "dtSalaryPaymentdate_DESC") dtSalaryPaymentdate_DESC("dtSalaryPaymentdate_DESC"),
+         @Json(name = "sSalaryperiod_ASC") sSalaryperiod_ASC("sSalaryperiod_ASC"),
+         @Json(name = "sSalaryperiod_DESC") sSalaryperiod_DESC("sSalaryperiod_DESC"),
+         @Json(name = "sPeriodYYYYMM_ASC") sPeriodYYYYMM_ASC("sPeriodYYYYMM_ASC"),
+         @Json(name = "sPeriodYYYYMM_DESC") sPeriodYYYYMM_DESC("sPeriodYYYYMM_DESC"),
+         @Json(name = "iSalarypreparationCount_ASC") iSalarypreparationCount_ASC("iSalarypreparationCount_ASC"),
+         @Json(name = "iSalarypreparationCount_DESC") iSalarypreparationCount_DESC("iSalarypreparationCount_DESC"),
+         @Json(name = "dSalarypreparationTotal_ASC") dSalarypreparationTotal_ASC("dSalarypreparationTotal_ASC"),
+         @Json(name = "dSalarypreparationTotal_DESC") dSalarypreparationTotal_DESC("dSalarypreparationTotal_DESC"),
+         @Json(name = "dtSalaryperiodStart_ASC") dtSalaryperiodStart_ASC("dtSalaryperiodStart_ASC"),
+         @Json(name = "dtSalaryperiodStart_DESC") dtSalaryperiodStart_DESC("dtSalaryperiodStart_DESC"),
+         @Json(name = "dtSalaryperiodEnd_ASC") dtSalaryperiodEnd_ASC("dtSalaryperiodEnd_ASC"),
+         @Json(name = "dtSalaryperiodEnd_DESC") dtSalaryperiodEnd_DESC("dtSalaryperiodEnd_DESC"),
+         @Json(name = "sUserLoginname_ASC") sUserLoginname_ASC("sUserLoginname_ASC"),
+         @Json(name = "sUserLoginname_DESC") sUserLoginname_DESC("sUserLoginname_DESC"),
+         @Json(name = "dtCreatedDate_ASC") dtCreatedDate_ASC("dtCreatedDate_ASC"),
+         @Json(name = "dtCreatedDate_DESC") dtCreatedDate_DESC("dtCreatedDate_DESC"),
+         @Json(name = "bSalarypreparationIspaid_ASC") bSalarypreparationIspaid_ASC("bSalarypreparationIspaid_ASC"),
+         @Json(name = "bSalarypreparationIspaid_DESC") bSalarypreparationIspaid_DESC("bSalarypreparationIspaid_DESC"),
+         @Json(name = "iSalaryperiodgroupYear_ASC") iSalaryperiodgroupYear_ASC("iSalaryperiodgroupYear_ASC"),
+         @Json(name = "iSalaryperiodgroupYear_DESC") iSalaryperiodgroupYear_DESC("iSalaryperiodgroupYear_DESC");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
+     }
+
+    /**
+     * GET /1/object/salary/getList
+     * Retrieve Salary list
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return SalaryGetListV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun salaryGetListV1(eOrderBy: EOrderBySalaryGetListV1? = null, iRowMax: kotlin.Int? = null, iRowOffset: kotlin.Int? = 0, acceptLanguage: HeaderAcceptLanguage? = null, sFilter: kotlin.String? = null) : SalaryGetListV1Response {
+        val localVarResponse = salaryGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as SalaryGetListV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/salary/getList
+     * Retrieve Salary list
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return ApiResponse<SalaryGetListV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun salaryGetListV1WithHttpInfo(eOrderBy: EOrderBySalaryGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : ApiResponse<SalaryGetListV1Response?> {
+        val localVariableConfig = salaryGetListV1RequestConfig(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
+
+        return request<Unit, SalaryGetListV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation salaryGetListV1
+     *
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return RequestConfig
+     */
+    fun salaryGetListV1RequestConfig(eOrderBy: EOrderBySalaryGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (eOrderBy != null) {
+                    put("eOrderBy", listOf(eOrderBy.value))
+                }
+                if (iRowMax != null) {
+                    put("iRowMax", listOf(iRowMax.toString()))
+                }
+                if (iRowOffset != null) {
+                    put("iRowOffset", listOf(iRowOffset.toString()))
+                }
+                if (sFilter != null) {
+                    put("sFilter", listOf(sFilter.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/salary/getList",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

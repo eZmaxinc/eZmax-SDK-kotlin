@@ -34,8 +34,10 @@ import eZmaxApi.models.DeposittransitchequeGetCommunicationCountV1Response
 import eZmaxApi.models.DeposittransitchequeGetCommunicationListV1Response
 import eZmaxApi.models.DeposittransitchequeGetCommunicationrecipientsV1Response
 import eZmaxApi.models.DeposittransitchequeGetCommunicationsendersV1Response
+import eZmaxApi.models.DeposittransitchequeGetListV1Response
 import eZmaxApi.models.DeposittransitchequeImportIntoEDMV1Request
 import eZmaxApi.models.DeposittransitchequeImportIntoEDMV1Response
+import eZmaxApi.models.HeaderAcceptLanguage
 
 import com.squareup.moshi.Json
 
@@ -496,6 +498,139 @@ open class ObjectDeposittransitchequeApi(basePath: kotlin.String = defaultBasePa
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationsenders".replace("{"+"pkiDeposittransitchequeID"+"}", encodeURIComponent(pkiDeposittransitchequeID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * enum for parameter eOrderBy
+     */
+     enum class EOrderByDeposittransitchequeGetListV1(val value: kotlin.String) {
+         @Json(name = "pkiDeposittransitchequeID_ASC") pkiDeposittransitchequeID_ASC("pkiDeposittransitchequeID_ASC"),
+         @Json(name = "pkiDeposittransitchequeID_DESC") pkiDeposittransitchequeID_DESC("pkiDeposittransitchequeID_DESC"),
+         @Json(name = "fkiBankaccountID_ASC") fkiBankaccountID_ASC("fkiBankaccountID_ASC"),
+         @Json(name = "fkiBankaccountID_DESC") fkiBankaccountID_DESC("fkiBankaccountID_DESC"),
+         @Json(name = "fkiDepositID_ASC") fkiDepositID_ASC("fkiDepositID_ASC"),
+         @Json(name = "fkiDepositID_DESC") fkiDepositID_DESC("fkiDepositID_DESC"),
+         @Json(name = "sDeposittransitchequeNumber_ASC") sDeposittransitchequeNumber_ASC("sDeposittransitchequeNumber_ASC"),
+         @Json(name = "sDeposittransitchequeNumber_DESC") sDeposittransitchequeNumber_DESC("sDeposittransitchequeNumber_DESC"),
+         @Json(name = "dtDeposittransitchequeDate_ASC") dtDeposittransitchequeDate_ASC("dtDeposittransitchequeDate_ASC"),
+         @Json(name = "dtDeposittransitchequeDate_DESC") dtDeposittransitchequeDate_DESC("dtDeposittransitchequeDate_DESC"),
+         @Json(name = "dDeposittransitchequeAmount_ASC") dDeposittransitchequeAmount_ASC("dDeposittransitchequeAmount_ASC"),
+         @Json(name = "dDeposittransitchequeAmount_DESC") dDeposittransitchequeAmount_DESC("dDeposittransitchequeAmount_DESC"),
+         @Json(name = "sBankaccountBankname_ASC") sBankaccountBankname_ASC("sBankaccountBankname_ASC"),
+         @Json(name = "sBankaccountBankname_DESC") sBankaccountBankname_DESC("sBankaccountBankname_DESC"),
+         @Json(name = "sPeriodYYYYMM_ASC") sPeriodYYYYMM_ASC("sPeriodYYYYMM_ASC"),
+         @Json(name = "sPeriodYYYYMM_DESC") sPeriodYYYYMM_DESC("sPeriodYYYYMM_DESC"),
+         @Json(name = "sCustomerName_ASC") sCustomerName_ASC("sCustomerName_ASC"),
+         @Json(name = "sCustomerName_DESC") sCustomerName_DESC("sCustomerName_DESC");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
+     }
+
+    /**
+     * GET /1/object/deposittransitcheque/getList
+     * Retrieve Deposittransitcheque list
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return DeposittransitchequeGetListV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun deposittransitchequeGetListV1(eOrderBy: EOrderByDeposittransitchequeGetListV1? = null, iRowMax: kotlin.Int? = null, iRowOffset: kotlin.Int? = 0, acceptLanguage: HeaderAcceptLanguage? = null, sFilter: kotlin.String? = null) : DeposittransitchequeGetListV1Response {
+        val localVarResponse = deposittransitchequeGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as DeposittransitchequeGetListV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/deposittransitcheque/getList
+     * Retrieve Deposittransitcheque list
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return ApiResponse<DeposittransitchequeGetListV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun deposittransitchequeGetListV1WithHttpInfo(eOrderBy: EOrderByDeposittransitchequeGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : ApiResponse<DeposittransitchequeGetListV1Response?> {
+        val localVariableConfig = deposittransitchequeGetListV1RequestConfig(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
+
+        return request<Unit, DeposittransitchequeGetListV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation deposittransitchequeGetListV1
+     *
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return RequestConfig
+     */
+    fun deposittransitchequeGetListV1RequestConfig(eOrderBy: EOrderByDeposittransitchequeGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (eOrderBy != null) {
+                    put("eOrderBy", listOf(eOrderBy.value))
+                }
+                if (iRowMax != null) {
+                    put("iRowMax", listOf(iRowMax.toString()))
+                }
+                if (iRowOffset != null) {
+                    put("iRowOffset", listOf(iRowOffset.toString()))
+                }
+                if (sFilter != null) {
+                    put("sFilter", listOf(sFilter.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/deposittransitcheque/getList",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

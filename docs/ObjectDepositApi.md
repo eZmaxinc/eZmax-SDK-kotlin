@@ -10,6 +10,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**depositGetCommunicationListV1**](ObjectDepositApi.md#depositGetCommunicationListV1) | **GET** /1/object/deposit/{pkiDepositID}/getCommunicationList | Retrieve Communication list |
 | [**depositGetCommunicationrecipientsV1**](ObjectDepositApi.md#depositGetCommunicationrecipientsV1) | **GET** /1/object/deposit/{pkiDepositID}/getCommunicationrecipients | Retrieve Communication recipients |
 | [**depositGetCommunicationsendersV1**](ObjectDepositApi.md#depositGetCommunicationsendersV1) | **GET** /1/object/deposit/{pkiDepositID}/getCommunicationsenders | Retrieve Communication senders |
+| [**depositGetListV1**](ObjectDepositApi.md#depositGetListV1) | **GET** /1/object/deposit/getList | Retrieve Deposit list |
 | [**depositImportIntoEDMV1**](ObjectDepositApi.md#depositImportIntoEDMV1) | **POST** /1/object/deposit/{pkiDepositID}/importIntoEDM | Import attachments into the Deposit |
 
 
@@ -284,6 +285,63 @@ try {
 ### Return type
 
 [**DepositGetCommunicationsendersV1Response**](DepositGetCommunicationsendersV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="depositGetListV1"></a>
+# **depositGetListV1**
+> DepositGetListV1Response depositGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+
+Retrieve Deposit list
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectDepositApi()
+val eOrderBy : kotlin.String = eOrderBy_example // kotlin.String | Specify how you want the results to be sorted
+val iRowMax : kotlin.Int = 56 // kotlin.Int | 
+val iRowOffset : kotlin.Int = 56 // kotlin.Int | 
+val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
+val sFilter : kotlin.String = sFilter_example // kotlin.String | 
+try {
+    val result : DepositGetListV1Response = apiInstance.depositGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectDepositApi#depositGetListV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectDepositApi#depositGetListV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **eOrderBy** | **kotlin.String**| Specify how you want the results to be sorted | [optional] [enum: pkiDepositID_ASC, pkiDepositID_DESC, fkiPeriodID_ASC, fkiPeriodID_DESC, fkiBankaccountID_ASC, fkiBankaccountID_DESC, fkiUserIDCreated_ASC, fkiUserIDCreated_DESC, sDepositNumber_ASC, sDepositNumber_DESC, dtDepositDate_ASC, dtDepositDate_DESC, dDepositTotal_ASC, dDepositTotal_DESC, dtCreatedDate_ASC, dtCreatedDate_DESC, bDepositDraft_ASC, bDepositDraft_DESC, bDepositReconciled_ASC, bDepositReconciled_DESC, fkiReconciliationID_ASC, fkiReconciliationID_DESC, sBankaccountBankname_ASC, sBankaccountBankname_DESC, sPeriodYYYYMM_ASC, sPeriodYYYYMM_DESC, sUserLoginname_ASC, sUserLoginname_DESC] |
+| **iRowMax** | **kotlin.Int**|  | [optional] |
+| **iRowOffset** | **kotlin.Int**|  | [optional] [default to 0] |
+| **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
+| **sFilter** | **kotlin.String**|  | [optional] |
+
+### Return type
+
+[**DepositGetListV1Response**](DepositGetListV1Response.md)
 
 ### Authorization
 

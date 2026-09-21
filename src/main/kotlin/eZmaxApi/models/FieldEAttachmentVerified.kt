@@ -30,7 +30,7 @@ import com.squareup.moshi.JsonClass
 /**
  * The verified of the Attachment
  *
- * Values: No,Yes,Rejected
+ * Values: No,Yes,Rejected,Pending
  */
 
 @JsonClass(generateAdapter = false)
@@ -43,7 +43,10 @@ enum class FieldEAttachmentVerified(val value: kotlin.String) {
     Yes("Yes"),
 
     @Json(name = "Rejected")
-    Rejected("Rejected");
+    Rejected("Rejected"),
+
+    @Json(name = "Pending")
+    Pending("Pending");
 
     /**
      * Override [toString()] to avoid using the enum variable name as the value, and instead use

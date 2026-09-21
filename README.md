@@ -85,11 +85,14 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | *ObjectApikeyApi* | [**apikeyGetSubnetsV1**](docs/ObjectApikeyApi.md#apikeygetsubnetsv1) | **GET** /1/object/apikey/{pkiApikeyID}/getSubnets | Retrieve an existing Apikey's subnets |
 | *ObjectApikeyApi* | [**apikeyRegenerateV1**](docs/ObjectApikeyApi.md#apikeyregeneratev1) | **POST** /1/object/apikey/{pkiApikeyID}/regenerate | Regenerate the Apikey |
 | *ObjectAttachmentApi* | [**attachmentDeleteV1**](docs/ObjectAttachmentApi.md#attachmentdeletev1) | **POST** /1/object/attachment/{pkiAttachmentID}/delete | Delete an existing attachment |
+| *ObjectAttachmentApi* | [**attachmentDocumentTypeV1**](docs/ObjectAttachmentApi.md#attachmentdocumenttypev1) | **POST** /1/object/attachment/{pkiAttachmentID}/documentType | Change attachment document type |
 | *ObjectAttachmentApi* | [**attachmentDownloadV1**](docs/ObjectAttachmentApi.md#attachmentdownloadv1) | **GET** /1/object/attachment/{pkiAttachmentID}/download | Retrieve the content |
 | *ObjectAttachmentApi* | [**attachmentGetAttachmentlogsV1**](docs/ObjectAttachmentApi.md#attachmentgetattachmentlogsv1) | **GET** /1/object/attachment/{pkiAttachmentID}/getAttachmentlogs | Retrieve the Attachmentlogs |
+| *ObjectAttachmentApi* | [**attachmentPrivacyV1**](docs/ObjectAttachmentApi.md#attachmentprivacyv1) | **POST** /1/object/attachment/{pkiAttachmentID}/privacy | Change the attachment privacy |
 | *ObjectAttachmentApi* | [**attachmentRenameV1**](docs/ObjectAttachmentApi.md#attachmentrenamev1) | **POST** /1/object/attachment/{pkiAttachmentID}/rename | Rename an attachment |
 | *ObjectAttachmentApi* | [**attachmentRestoreV1**](docs/ObjectAttachmentApi.md#attachmentrestorev1) | **POST** /1/object/attachment/{pkiAttachmentID}/restore | Restore a deleted attachment |
-| *ObjectAttachmentApi* | [**attachmentValidateV1**](docs/ObjectAttachmentApi.md#attachmentvalidatev1) | **PATCH** /1/object/attachment/{pkiAttachmentID}/validate | Validate an existing attachment |
+| *ObjectAttachmentApi* | [**attachmentValidateV1**](docs/ObjectAttachmentApi.md#attachmentvalidatev1) | **POST** /1/object/attachment/{pkiAttachmentID}/validate | Validate an existing attachment |
+| *ObjectAttachmentrejectreasonApi* | [**attachmentrejectreasonGetAutocompleteV2**](docs/ObjectAttachmentrejectreasonApi.md#attachmentrejectreasongetautocompletev2) | **GET** /2/object/attachmentrejectreason/getAutocomplete/{sSelector} | Retrieve Attachmentrejectreasons and IDs |
 | *ObjectAuthenticationexternalApi* | [**authenticationexternalCreateObjectV1**](docs/ObjectAuthenticationexternalApi.md#authenticationexternalcreateobjectv1) | **POST** /1/object/authenticationexternal | Create a new Authenticationexternal |
 | *ObjectAuthenticationexternalApi* | [**authenticationexternalDeleteObjectV1**](docs/ObjectAuthenticationexternalApi.md#authenticationexternaldeleteobjectv1) | **DELETE** /1/object/authenticationexternal/{pkiAuthenticationexternalID} | Delete an existing Authenticationexternal |
 | *ObjectAuthenticationexternalApi* | [**authenticationexternalEditObjectV1**](docs/ObjectAuthenticationexternalApi.md#authenticationexternaleditobjectv1) | **PUT** /1/object/authenticationexternal/{pkiAuthenticationexternalID} | Edit an existing Authenticationexternal |
@@ -104,6 +107,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | *ObjectBankaccountApi* | [**bankaccountGetCommunicationListV1**](docs/ObjectBankaccountApi.md#bankaccountgetcommunicationlistv1) | **GET** /1/object/bankaccount/{pkiBankaccountID}/getCommunicationList | Retrieve Communication list |
 | *ObjectBankaccountApi* | [**bankaccountGetCommunicationrecipientsV1**](docs/ObjectBankaccountApi.md#bankaccountgetcommunicationrecipientsv1) | **GET** /1/object/bankaccount/{pkiBankaccountID}/getCommunicationrecipients | Retrieve Communication recipients |
 | *ObjectBankaccountApi* | [**bankaccountGetCommunicationsendersV1**](docs/ObjectBankaccountApi.md#bankaccountgetcommunicationsendersv1) | **GET** /1/object/bankaccount/{pkiBankaccountID}/getCommunicationsenders | Retrieve Communication senders |
+| *ObjectBankaccountApi* | [**bankaccountGetListV1**](docs/ObjectBankaccountApi.md#bankaccountgetlistv1) | **GET** /1/object/bankaccount/getList | Retrieve Bankaccount list |
 | *ObjectBankaccountApi* | [**bankaccountImportIntoEDMV1**](docs/ObjectBankaccountApi.md#bankaccountimportintoedmv1) | **POST** /1/object/bankaccount/{pkiBankaccountID}/importIntoEDM | Import attachments into the Bankaccount |
 | *ObjectBillingentityexternalApi* | [**billingentityexternalGenerateFederationTokenV1**](docs/ObjectBillingentityexternalApi.md#billingentityexternalgeneratefederationtokenv1) | **POST** /1/object/billingentityexternal/{pkiBillingentityexternalID}/generateFederationToken | Generate a federation token |
 | *ObjectBillingentityexternalApi* | [**billingentityexternalGetAutocompleteV2**](docs/ObjectBillingentityexternalApi.md#billingentityexternalgetautocompletev2) | **GET** /2/object/billingentityexternal/getAutocomplete/{sSelector} | Retrieve Billingentityexternals and IDs |
@@ -180,6 +184,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | *ObjectDepositApi* | [**depositGetCommunicationListV1**](docs/ObjectDepositApi.md#depositgetcommunicationlistv1) | **GET** /1/object/deposit/{pkiDepositID}/getCommunicationList | Retrieve Communication list |
 | *ObjectDepositApi* | [**depositGetCommunicationrecipientsV1**](docs/ObjectDepositApi.md#depositgetcommunicationrecipientsv1) | **GET** /1/object/deposit/{pkiDepositID}/getCommunicationrecipients | Retrieve Communication recipients |
 | *ObjectDepositApi* | [**depositGetCommunicationsendersV1**](docs/ObjectDepositApi.md#depositgetcommunicationsendersv1) | **GET** /1/object/deposit/{pkiDepositID}/getCommunicationsenders | Retrieve Communication senders |
+| *ObjectDepositApi* | [**depositGetListV1**](docs/ObjectDepositApi.md#depositgetlistv1) | **GET** /1/object/deposit/getList | Retrieve Deposit list |
 | *ObjectDepositApi* | [**depositImportIntoEDMV1**](docs/ObjectDepositApi.md#depositimportintoedmv1) | **POST** /1/object/deposit/{pkiDepositID}/importIntoEDM | Import attachments into the Deposit |
 | *ObjectDeposittransitchequeApi* | [**deposittransitchequeBatchDownloadV1**](docs/ObjectDeposittransitchequeApi.md#deposittransitchequebatchdownloadv1) | **POST** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/batchDownload | Download multiples attachments from a Deposittransitcheque |
 | *ObjectDeposittransitchequeApi* | [**deposittransitchequeGetAttachmentsV1**](docs/ObjectDeposittransitchequeApi.md#deposittransitchequegetattachmentsv1) | **GET** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getAttachments | Retrieve Deposittransitcheque's attachments |
@@ -187,6 +192,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | *ObjectDeposittransitchequeApi* | [**deposittransitchequeGetCommunicationListV1**](docs/ObjectDeposittransitchequeApi.md#deposittransitchequegetcommunicationlistv1) | **GET** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationList | Retrieve Communication list |
 | *ObjectDeposittransitchequeApi* | [**deposittransitchequeGetCommunicationrecipientsV1**](docs/ObjectDeposittransitchequeApi.md#deposittransitchequegetcommunicationrecipientsv1) | **GET** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationrecipients | Retrieve Communication recipients |
 | *ObjectDeposittransitchequeApi* | [**deposittransitchequeGetCommunicationsendersV1**](docs/ObjectDeposittransitchequeApi.md#deposittransitchequegetcommunicationsendersv1) | **GET** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationsenders | Retrieve Communication senders |
+| *ObjectDeposittransitchequeApi* | [**deposittransitchequeGetListV1**](docs/ObjectDeposittransitchequeApi.md#deposittransitchequegetlistv1) | **GET** /1/object/deposittransitcheque/getList | Retrieve Deposittransitcheque list |
 | *ObjectDeposittransitchequeApi* | [**deposittransitchequeImportIntoEDMV1**](docs/ObjectDeposittransitchequeApi.md#deposittransitchequeimportintoedmv1) | **POST** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/importIntoEDM | Import attachments into the Deposittransitcheque |
 | *ObjectDisclosureApi* | [**disclosureBatchDownloadV1**](docs/ObjectDisclosureApi.md#disclosurebatchdownloadv1) | **POST** /1/object/disclosure/{pkiDisclosureID}/batchDownload | Download multiples attachments from a Disclosure |
 | *ObjectDisclosureApi* | [**disclosureGetAttachmentsV1**](docs/ObjectDisclosureApi.md#disclosuregetattachmentsv1) | **GET** /1/object/disclosure/{pkiDisclosureID}/getAttachments | Retrieve Disclosure's attachments |
@@ -194,6 +200,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | *ObjectDisclosureApi* | [**disclosureGetCommunicationListV1**](docs/ObjectDisclosureApi.md#disclosuregetcommunicationlistv1) | **GET** /1/object/disclosure/{pkiDisclosureID}/getCommunicationList | Retrieve Communication list |
 | *ObjectDisclosureApi* | [**disclosureGetCommunicationrecipientsV1**](docs/ObjectDisclosureApi.md#disclosuregetcommunicationrecipientsv1) | **GET** /1/object/disclosure/{pkiDisclosureID}/getCommunicationrecipients | Retrieve Communication recipients |
 | *ObjectDisclosureApi* | [**disclosureGetCommunicationsendersV1**](docs/ObjectDisclosureApi.md#disclosuregetcommunicationsendersv1) | **GET** /1/object/disclosure/{pkiDisclosureID}/getCommunicationsenders | Retrieve Communication senders |
+| *ObjectDisclosureApi* | [**disclosureGetListV1**](docs/ObjectDisclosureApi.md#disclosuregetlistv1) | **GET** /1/object/disclosure/getList | Retrieve Disclosure list |
 | *ObjectDisclosureApi* | [**disclosureImportIntoEDMV1**](docs/ObjectDisclosureApi.md#disclosureimportintoedmv1) | **POST** /1/object/disclosure/{pkiDisclosureID}/importIntoEDM | Import attachments into the Disclosure |
 | *ObjectDiscussionApi* | [**discussionChatV1**](docs/ObjectDiscussionApi.md#discussionchatv1) | **POST** /1/object/discussion/chat | Have a Discussion with the AI Chatbot |
 | *ObjectDiscussionApi* | [**discussionCreateObjectV1**](docs/ObjectDiscussionApi.md#discussioncreateobjectv1) | **POST** /1/object/discussion | Create a new Discussion |
@@ -523,6 +530,10 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | *ObjectEzsignuserApi* | [**ezsignuserGetObjectV2**](docs/ObjectEzsignuserApi.md#ezsignusergetobjectv2) | **GET** /2/object/ezsignuser/{pkiEzsignuserID} | Retrieve an existing Ezsignuser |
 | *ObjectFolderApi* | [**folderBatchDownloadV1**](docs/ObjectFolderApi.md#folderbatchdownloadv1) | **POST** /1/object/folder/{pkiFolderID}/batchDownload | Download multiples attachments from an Folder |
 | *ObjectFolderApi* | [**folderGetAttachmentsV1**](docs/ObjectFolderApi.md#foldergetattachmentsv1) | **GET** /1/object/folder/{pkiFolderID}/getAttachments | Retrieve Folder's attachments |
+| *ObjectFolderApi* | [**folderGetCommunicationCountV1**](docs/ObjectFolderApi.md#foldergetcommunicationcountv1) | **GET** /1/object/folder/{pkiFolderID}/getCommunicationCount | Retrieve Communication count |
+| *ObjectFolderApi* | [**folderGetCommunicationListV1**](docs/ObjectFolderApi.md#foldergetcommunicationlistv1) | **GET** /1/object/folder/{pkiFolderID}/getCommunicationList | Retrieve Communication list |
+| *ObjectFolderApi* | [**folderGetCommunicationrecipientsV1**](docs/ObjectFolderApi.md#foldergetcommunicationrecipientsv1) | **GET** /1/object/folder/{pkiFolderID}/getCommunicationrecipients | Retrieve Communication recipients |
+| *ObjectFolderApi* | [**folderGetCommunicationsendersV1**](docs/ObjectFolderApi.md#foldergetcommunicationsendersv1) | **GET** /1/object/folder/{pkiFolderID}/getCommunicationsenders | Retrieve Communication senders |
 | *ObjectFolderApi* | [**folderImportIntoEDMV1**](docs/ObjectFolderApi.md#folderimportintoedmv1) | **POST** /1/object/folder/{pkiFolderID}/importIntoEDM | Import attachments into the Folder |
 | *ObjectFontApi* | [**fontGetAutocompleteV2**](docs/ObjectFontApi.md#fontgetautocompletev2) | **GET** /2/object/font/getAutocomplete/{sSelector} | Retrieve Fonts and IDs |
 | *ObjectFranchisebrokerApi* | [**franchisebrokerGetAutocompleteV2**](docs/ObjectFranchisebrokerApi.md#franchisebrokergetautocompletev2) | **GET** /2/object/franchisebroker/getAutocomplete/{sSelector} | Retrieve Franchisebrokers and IDs |
@@ -569,10 +580,15 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | *ObjectInvoiceApi* | [**invoiceGetCommunicationListV1**](docs/ObjectInvoiceApi.md#invoicegetcommunicationlistv1) | **GET** /1/object/invoice/{pkiInvoiceID}/getCommunicationList | Retrieve Communication list |
 | *ObjectInvoiceApi* | [**invoiceGetCommunicationrecipientsV1**](docs/ObjectInvoiceApi.md#invoicegetcommunicationrecipientsv1) | **GET** /1/object/invoice/{pkiInvoiceID}/getCommunicationrecipients | Retrieve Invoice's Communicationrecipient |
 | *ObjectInvoiceApi* | [**invoiceGetCommunicationsendersV1**](docs/ObjectInvoiceApi.md#invoicegetcommunicationsendersv1) | **GET** /1/object/invoice/{pkiInvoiceID}/getCommunicationsenders | Retrieve Invoice's Communicationsender |
+| *ObjectInvoiceApi* | [**invoiceGetListV1**](docs/ObjectInvoiceApi.md#invoicegetlistv1) | **GET** /1/object/invoice/getList | Retrieve Invoice list |
 | *ObjectInvoiceApi* | [**invoiceImportIntoEDMV1**](docs/ObjectInvoiceApi.md#invoiceimportintoedmv1) | **POST** /1/object/invoice/{pkiInvoiceID}/importIntoEDM | Import attachments into the Invoice |
 | *ObjectLanguageApi* | [**languageGetAutocompleteV2**](docs/ObjectLanguageApi.md#languagegetautocompletev2) | **GET** /2/object/language/getAutocomplete/{sSelector} | Retrieve Languages and IDs |
 | *ObjectLeadApi* | [**leadBatchDownloadV1**](docs/ObjectLeadApi.md#leadbatchdownloadv1) | **POST** /1/object/lead/{pkiLeadID}/batchDownload | Download multiples attachments from a Lead |
 | *ObjectLeadApi* | [**leadGetAttachmentsV1**](docs/ObjectLeadApi.md#leadgetattachmentsv1) | **GET** /1/object/lead/{pkiLeadID}/getAttachments | Retrieve Lead's attachments |
+| *ObjectLeadApi* | [**leadGetCommunicationCountV1**](docs/ObjectLeadApi.md#leadgetcommunicationcountv1) | **GET** /1/object/lead/{pkiLeadID}/getCommunicationCount | Retrieve Communication count |
+| *ObjectLeadApi* | [**leadGetCommunicationListV1**](docs/ObjectLeadApi.md#leadgetcommunicationlistv1) | **GET** /1/object/lead/{pkiLeadID}/getCommunicationList | Retrieve Communication list |
+| *ObjectLeadApi* | [**leadGetCommunicationrecipientsV1**](docs/ObjectLeadApi.md#leadgetcommunicationrecipientsv1) | **GET** /1/object/lead/{pkiLeadID}/getCommunicationrecipients | Retrieve Communication recipients |
+| *ObjectLeadApi* | [**leadGetCommunicationsendersV1**](docs/ObjectLeadApi.md#leadgetcommunicationsendersv1) | **GET** /1/object/lead/{pkiLeadID}/getCommunicationsenders | Retrieve Communication senders |
 | *ObjectLeadApi* | [**leadGetListV1**](docs/ObjectLeadApi.md#leadgetlistv1) | **GET** /1/object/lead/getList | Retrieve Lead list |
 | *ObjectLeadApi* | [**leadImportIntoEDMV1**](docs/ObjectLeadApi.md#leadimportintoedmv1) | **POST** /1/object/lead/{pkiLeadID}/importIntoEDM | Import attachments into the Lead |
 | *ObjectLeadsourceApi* | [**leadsourceGetAutocompleteV2**](docs/ObjectLeadsourceApi.md#leadsourcegetautocompletev2) | **GET** /2/object/leadsource/getAutocomplete/{sSelector} | Retrieve Leadsources and IDs |
@@ -580,11 +596,21 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | *ObjectModulegroupApi* | [**modulegroupGetAllV1**](docs/ObjectModulegroupApi.md#modulegroupgetallv1) | **GET** /1/object/modulegroup/getAll/{eContext} | Retrieve all Modulegroups |
 | *ObjectNotaryApi* | [**notaryBatchDownloadV1**](docs/ObjectNotaryApi.md#notarybatchdownloadv1) | **POST** /1/object/notary/{pkiNotaryID}/batchDownload | Download multiples attachments from a Notary |
 | *ObjectNotaryApi* | [**notaryGetAttachmentsV1**](docs/ObjectNotaryApi.md#notarygetattachmentsv1) | **GET** /1/object/notary/{pkiNotaryID}/getAttachments | Retrieve Notary's attachments |
+| *ObjectNotaryApi* | [**notaryGetCommunicationCountV1**](docs/ObjectNotaryApi.md#notarygetcommunicationcountv1) | **GET** /1/object/notary/{pkiNotaryID}/getCommunicationCount | Retrieve Communication count |
+| *ObjectNotaryApi* | [**notaryGetCommunicationListV1**](docs/ObjectNotaryApi.md#notarygetcommunicationlistv1) | **GET** /1/object/notary/{pkiNotaryID}/getCommunicationList | Retrieve Communication list |
+| *ObjectNotaryApi* | [**notaryGetCommunicationrecipientsV1**](docs/ObjectNotaryApi.md#notarygetcommunicationrecipientsv1) | **GET** /1/object/notary/{pkiNotaryID}/getCommunicationrecipients | Retrieve Communication recipients |
+| *ObjectNotaryApi* | [**notaryGetCommunicationsendersV1**](docs/ObjectNotaryApi.md#notarygetcommunicationsendersv1) | **GET** /1/object/notary/{pkiNotaryID}/getCommunicationsenders | Retrieve Communication senders |
+| *ObjectNotaryApi* | [**notaryGetListV1**](docs/ObjectNotaryApi.md#notarygetlistv1) | **GET** /1/object/notary/getList | Retrieve Notary list |
 | *ObjectNotaryApi* | [**notaryImportIntoEDMV1**](docs/ObjectNotaryApi.md#notaryimportintoedmv1) | **POST** /1/object/notary/{pkiNotaryID}/importIntoEDM | Import attachments into the Notary |
 | *ObjectNotificationsectionApi* | [**notificationsectionGetNotificationtestsV1**](docs/ObjectNotificationsectionApi.md#notificationsectiongetnotificationtestsv1) | **GET** /1/object/notificationsection/{pkiNotificationsectionID}/getNotificationtests | Retrieve an existing Notificationsection's Notificationtests |
 | *ObjectNotificationtestApi* | [**notificationtestGetElementsV2**](docs/ObjectNotificationtestApi.md#notificationtestgetelementsv2) | **GET** /2/object/notificationtest/{pkiNotificationtestID}/getElements | Retrieve an existing Notificationtest's Elements |
 | *ObjectOfficetaxreportApi* | [**officetaxreportBatchDownloadV1**](docs/ObjectOfficetaxreportApi.md#officetaxreportbatchdownloadv1) | **POST** /1/object/officetaxreport/{pkiOfficetaxreportID}/batchDownload | Download multiples attachments from an Officetaxreport |
 | *ObjectOfficetaxreportApi* | [**officetaxreportGetAttachmentsV1**](docs/ObjectOfficetaxreportApi.md#officetaxreportgetattachmentsv1) | **GET** /1/object/officetaxreport/{pkiOfficetaxreportID}/getAttachments | Retrieve Officetaxreport's attachments |
+| *ObjectOfficetaxreportApi* | [**officetaxreportGetCommunicationCountV1**](docs/ObjectOfficetaxreportApi.md#officetaxreportgetcommunicationcountv1) | **GET** /1/object/officetaxreport/{pkiOfficetaxreportID}/getCommunicationCount | Retrieve Communication count |
+| *ObjectOfficetaxreportApi* | [**officetaxreportGetCommunicationListV1**](docs/ObjectOfficetaxreportApi.md#officetaxreportgetcommunicationlistv1) | **GET** /1/object/officetaxreport/{pkiOfficetaxreportID}/getCommunicationList | Retrieve Communication list |
+| *ObjectOfficetaxreportApi* | [**officetaxreportGetCommunicationrecipientsV1**](docs/ObjectOfficetaxreportApi.md#officetaxreportgetcommunicationrecipientsv1) | **GET** /1/object/officetaxreport/{pkiOfficetaxreportID}/getCommunicationrecipients | Retrieve Communication recipients |
+| *ObjectOfficetaxreportApi* | [**officetaxreportGetCommunicationsendersV1**](docs/ObjectOfficetaxreportApi.md#officetaxreportgetcommunicationsendersv1) | **GET** /1/object/officetaxreport/{pkiOfficetaxreportID}/getCommunicationsenders | Retrieve Communication senders |
+| *ObjectOfficetaxreportApi* | [**officetaxreportGetListV1**](docs/ObjectOfficetaxreportApi.md#officetaxreportgetlistv1) | **GET** /1/object/officetaxreport/getList | Retrieve Officetaxreport list |
 | *ObjectOfficetaxreportApi* | [**officetaxreportImportIntoEDMV1**](docs/ObjectOfficetaxreportApi.md#officetaxreportimportintoedmv1) | **POST** /1/object/officetaxreport/{pkiOfficetaxreportID}/importIntoEDM | Import attachments into the Officetaxreport |
 | *ObjectOtherincomeApi* | [**otherincomeBatchDownloadV1**](docs/ObjectOtherincomeApi.md#otherincomebatchdownloadv1) | **POST** /1/object/otherincome/{pkiOtherincomeID}/batchDownload | Download multiples attachments from a Otherincome |
 | *ObjectOtherincomeApi* | [**otherincomeGetAttachmentsV1**](docs/ObjectOtherincomeApi.md#otherincomegetattachmentsv1) | **GET** /1/object/otherincome/{pkiOtherincomeID}/getAttachments | Retrieve Otherincome's attachments |
@@ -619,6 +645,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | *ObjectProvinceApi* | [**provinceGetAutocompleteV2**](docs/ObjectProvinceApi.md#provincegetautocompletev2) | **GET** /2/object/province/getAutocomplete/{sSelector} | Retrieve Provinces and IDs |
 | *ObjectPurchaseApi* | [**purchaseBatchDownloadV1**](docs/ObjectPurchaseApi.md#purchasebatchdownloadv1) | **POST** /1/object/purchase/{pkiPurchaseID}/batchDownload | Download multiples attachments from a Purchase |
 | *ObjectPurchaseApi* | [**purchaseGetAttachmentsV1**](docs/ObjectPurchaseApi.md#purchasegetattachmentsv1) | **GET** /1/object/purchase/{pkiPurchaseID}/getAttachments | Retrieve Purchase's attachments |
+| *ObjectPurchaseApi* | [**purchaseGetListV1**](docs/ObjectPurchaseApi.md#purchasegetlistv1) | **GET** /1/object/purchase/getList | Retrieve Purchase list |
 | *ObjectPurchaseApi* | [**purchaseImportIntoEDMV1**](docs/ObjectPurchaseApi.md#purchaseimportintoedmv1) | **POST** /1/object/purchase/{pkiPurchaseID}/importIntoEDM | Import attachments into the Purchase |
 | *ObjectRealestateassociationApi* | [**realestateassociationGetAutocompleteV2**](docs/ObjectRealestateassociationApi.md#realestateassociationgetautocompletev2) | **GET** /2/object/realestateassociation/getAutocomplete/{sSelector} | Retrieve Realestateassociations and IDs |
 | *ObjectRealestateboardApi* | [**realestateboardGetAutocompleteV2**](docs/ObjectRealestateboardApi.md#realestateboardgetautocompletev2) | **GET** /2/object/realestateboard/getAutocomplete/{sSelector} | Retrieve Realestateboards and IDs |
@@ -635,6 +662,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | *ObjectRejectedoffertopurchaseApi* | [**rejectedoffertopurchaseImportIntoEDMV1**](docs/ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseimportintoedmv1) | **POST** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/importIntoEDM | Import attachments into the Rejectedoffertopurchase |
 | *ObjectSalaryApi* | [**salaryBatchDownloadV1**](docs/ObjectSalaryApi.md#salarybatchdownloadv1) | **POST** /1/object/salary/{pkiSalaryID}/batchDownload | Download multiples attachments from a Reconciliation |
 | *ObjectSalaryApi* | [**salaryGetAttachmentsV1**](docs/ObjectSalaryApi.md#salarygetattachmentsv1) | **GET** /1/object/salary/{pkiSalaryID}/getAttachments | Retrieve Salary's attachments |
+| *ObjectSalaryApi* | [**salaryGetListV1**](docs/ObjectSalaryApi.md#salarygetlistv1) | **GET** /1/object/salary/getList | Retrieve Salary list |
 | *ObjectSalaryApi* | [**salaryImportIntoEDMV1**](docs/ObjectSalaryApi.md#salaryimportintoedmv1) | **POST** /1/object/salary/{pkiSalaryID}/importIntoEDM | Import attachments into the Salary |
 | *ObjectSecretquestionApi* | [**secretquestionGetAutocompleteV2**](docs/ObjectSecretquestionApi.md#secretquestiongetautocompletev2) | **GET** /2/object/secretquestion/getAutocomplete/{sSelector} | Retrieve Secretquestions and IDs |
 | *ObjectSessionhistoryApi* | [**sessionhistoryGetListV1**](docs/ObjectSessionhistoryApi.md#sessionhistorygetlistv1) | **GET** /1/object/sessionhistory/getList | Retrieve Sessionhistory list |
@@ -836,8 +864,14 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.ApikeyResponseCompound](docs/ApikeyResponseCompound.md)
  - [eZmaxApi.models.AttachmentDeleteV1Response](docs/AttachmentDeleteV1Response.md)
  - [eZmaxApi.models.AttachmentDeleteV1ResponseMPayload](docs/AttachmentDeleteV1ResponseMPayload.md)
+ - [eZmaxApi.models.AttachmentDocumentTypeV1Request](docs/AttachmentDocumentTypeV1Request.md)
+ - [eZmaxApi.models.AttachmentDocumentTypeV1Response](docs/AttachmentDocumentTypeV1Response.md)
+ - [eZmaxApi.models.AttachmentDocumentTypeV1ResponseMPayload](docs/AttachmentDocumentTypeV1ResponseMPayload.md)
  - [eZmaxApi.models.AttachmentGetAttachmentlogsV1Response](docs/AttachmentGetAttachmentlogsV1Response.md)
  - [eZmaxApi.models.AttachmentGetAttachmentlogsV1ResponseMPayload](docs/AttachmentGetAttachmentlogsV1ResponseMPayload.md)
+ - [eZmaxApi.models.AttachmentPrivacyV1Request](docs/AttachmentPrivacyV1Request.md)
+ - [eZmaxApi.models.AttachmentPrivacyV1Response](docs/AttachmentPrivacyV1Response.md)
+ - [eZmaxApi.models.AttachmentPrivacyV1ResponseMPayload](docs/AttachmentPrivacyV1ResponseMPayload.md)
  - [eZmaxApi.models.AttachmentRenameV1Request](docs/AttachmentRenameV1Request.md)
  - [eZmaxApi.models.AttachmentRenameV1Response](docs/AttachmentRenameV1Response.md)
  - [eZmaxApi.models.AttachmentRenameV1ResponseMPayload](docs/AttachmentRenameV1ResponseMPayload.md)
@@ -851,6 +885,9 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.AttachmentValidateV1ResponseMPayload](docs/AttachmentValidateV1ResponseMPayload.md)
  - [eZmaxApi.models.AttachmentlogResponse](docs/AttachmentlogResponse.md)
  - [eZmaxApi.models.AttachmentlogResponseCompound](docs/AttachmentlogResponseCompound.md)
+ - [eZmaxApi.models.AttachmentrejectreasonAutocompleteElementResponse](docs/AttachmentrejectreasonAutocompleteElementResponse.md)
+ - [eZmaxApi.models.AttachmentrejectreasonGetAutocompleteV2Response](docs/AttachmentrejectreasonGetAutocompleteV2Response.md)
+ - [eZmaxApi.models.AttachmentrejectreasonGetAutocompleteV2ResponseMPayload](docs/AttachmentrejectreasonGetAutocompleteV2ResponseMPayload.md)
  - [eZmaxApi.models.AttemptResponse](docs/AttemptResponse.md)
  - [eZmaxApi.models.AttemptResponseCompound](docs/AttemptResponseCompound.md)
  - [eZmaxApi.models.AuthenticationexternalAutocompleteElementResponse](docs/AuthenticationexternalAutocompleteElementResponse.md)
@@ -886,9 +923,12 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.BankaccountGetCommunicationrecipientsV1ResponseMPayload](docs/BankaccountGetCommunicationrecipientsV1ResponseMPayload.md)
  - [eZmaxApi.models.BankaccountGetCommunicationsendersV1Response](docs/BankaccountGetCommunicationsendersV1Response.md)
  - [eZmaxApi.models.BankaccountGetCommunicationsendersV1ResponseMPayload](docs/BankaccountGetCommunicationsendersV1ResponseMPayload.md)
+ - [eZmaxApi.models.BankaccountGetListV1Response](docs/BankaccountGetListV1Response.md)
+ - [eZmaxApi.models.BankaccountGetListV1ResponseMPayload](docs/BankaccountGetListV1ResponseMPayload.md)
  - [eZmaxApi.models.BankaccountImportIntoEDMV1Request](docs/BankaccountImportIntoEDMV1Request.md)
  - [eZmaxApi.models.BankaccountImportIntoEDMV1Response](docs/BankaccountImportIntoEDMV1Response.md)
  - [eZmaxApi.models.BankaccountImportIntoEDMV1ResponseMPayload](docs/BankaccountImportIntoEDMV1ResponseMPayload.md)
+ - [eZmaxApi.models.BankaccountListElement](docs/BankaccountListElement.md)
  - [eZmaxApi.models.BillingentityexternalAutocompleteElementResponse](docs/BillingentityexternalAutocompleteElementResponse.md)
  - [eZmaxApi.models.BillingentityexternalGenerateFederationTokenV1Request](docs/BillingentityexternalGenerateFederationTokenV1Request.md)
  - [eZmaxApi.models.BillingentityexternalGenerateFederationTokenV1Response](docs/BillingentityexternalGenerateFederationTokenV1Response.md)
@@ -1232,9 +1272,12 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.DepositGetCommunicationrecipientsV1ResponseMPayload](docs/DepositGetCommunicationrecipientsV1ResponseMPayload.md)
  - [eZmaxApi.models.DepositGetCommunicationsendersV1Response](docs/DepositGetCommunicationsendersV1Response.md)
  - [eZmaxApi.models.DepositGetCommunicationsendersV1ResponseMPayload](docs/DepositGetCommunicationsendersV1ResponseMPayload.md)
+ - [eZmaxApi.models.DepositGetListV1Response](docs/DepositGetListV1Response.md)
+ - [eZmaxApi.models.DepositGetListV1ResponseMPayload](docs/DepositGetListV1ResponseMPayload.md)
  - [eZmaxApi.models.DepositImportIntoEDMV1Request](docs/DepositImportIntoEDMV1Request.md)
  - [eZmaxApi.models.DepositImportIntoEDMV1Response](docs/DepositImportIntoEDMV1Response.md)
  - [eZmaxApi.models.DepositImportIntoEDMV1ResponseMPayload](docs/DepositImportIntoEDMV1ResponseMPayload.md)
+ - [eZmaxApi.models.DepositListElement](docs/DepositListElement.md)
  - [eZmaxApi.models.DeposittransitchequeBatchDownloadV1Request](docs/DeposittransitchequeBatchDownloadV1Request.md)
  - [eZmaxApi.models.DeposittransitchequeGetAttachmentsV1Response](docs/DeposittransitchequeGetAttachmentsV1Response.md)
  - [eZmaxApi.models.DeposittransitchequeGetAttachmentsV1ResponseMPayload](docs/DeposittransitchequeGetAttachmentsV1ResponseMPayload.md)
@@ -1246,9 +1289,12 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.DeposittransitchequeGetCommunicationrecipientsV1ResponseMPayload](docs/DeposittransitchequeGetCommunicationrecipientsV1ResponseMPayload.md)
  - [eZmaxApi.models.DeposittransitchequeGetCommunicationsendersV1Response](docs/DeposittransitchequeGetCommunicationsendersV1Response.md)
  - [eZmaxApi.models.DeposittransitchequeGetCommunicationsendersV1ResponseMPayload](docs/DeposittransitchequeGetCommunicationsendersV1ResponseMPayload.md)
+ - [eZmaxApi.models.DeposittransitchequeGetListV1Response](docs/DeposittransitchequeGetListV1Response.md)
+ - [eZmaxApi.models.DeposittransitchequeGetListV1ResponseMPayload](docs/DeposittransitchequeGetListV1ResponseMPayload.md)
  - [eZmaxApi.models.DeposittransitchequeImportIntoEDMV1Request](docs/DeposittransitchequeImportIntoEDMV1Request.md)
  - [eZmaxApi.models.DeposittransitchequeImportIntoEDMV1Response](docs/DeposittransitchequeImportIntoEDMV1Response.md)
  - [eZmaxApi.models.DeposittransitchequeImportIntoEDMV1ResponseMPayload](docs/DeposittransitchequeImportIntoEDMV1ResponseMPayload.md)
+ - [eZmaxApi.models.DeposittransitchequeListElement](docs/DeposittransitchequeListElement.md)
  - [eZmaxApi.models.DisclosureBatchDownloadV1Request](docs/DisclosureBatchDownloadV1Request.md)
  - [eZmaxApi.models.DisclosureGetAttachmentsV1Response](docs/DisclosureGetAttachmentsV1Response.md)
  - [eZmaxApi.models.DisclosureGetAttachmentsV1ResponseMPayload](docs/DisclosureGetAttachmentsV1ResponseMPayload.md)
@@ -1260,9 +1306,12 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.DisclosureGetCommunicationrecipientsV1ResponseMPayload](docs/DisclosureGetCommunicationrecipientsV1ResponseMPayload.md)
  - [eZmaxApi.models.DisclosureGetCommunicationsendersV1Response](docs/DisclosureGetCommunicationsendersV1Response.md)
  - [eZmaxApi.models.DisclosureGetCommunicationsendersV1ResponseMPayload](docs/DisclosureGetCommunicationsendersV1ResponseMPayload.md)
+ - [eZmaxApi.models.DisclosureGetListV1Response](docs/DisclosureGetListV1Response.md)
+ - [eZmaxApi.models.DisclosureGetListV1ResponseMPayload](docs/DisclosureGetListV1ResponseMPayload.md)
  - [eZmaxApi.models.DisclosureImportIntoEDMV1Request](docs/DisclosureImportIntoEDMV1Request.md)
  - [eZmaxApi.models.DisclosureImportIntoEDMV1Response](docs/DisclosureImportIntoEDMV1Response.md)
  - [eZmaxApi.models.DisclosureImportIntoEDMV1ResponseMPayload](docs/DisclosureImportIntoEDMV1ResponseMPayload.md)
+ - [eZmaxApi.models.DisclosureListElement](docs/DisclosureListElement.md)
  - [eZmaxApi.models.DiscussionChatV1200Response](docs/DiscussionChatV1200Response.md)
  - [eZmaxApi.models.DiscussionChatV1Request](docs/DiscussionChatV1Request.md)
  - [eZmaxApi.models.DiscussionCreateObjectV1Request](docs/DiscussionCreateObjectV1Request.md)
@@ -2272,6 +2321,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.FieldEAttachmentVerified](docs/FieldEAttachmentVerified.md)
  - [eZmaxApi.models.FieldEAttachmentlogType](docs/FieldEAttachmentlogType.md)
  - [eZmaxApi.models.FieldEAuthenticationexternalType](docs/FieldEAuthenticationexternalType.md)
+ - [eZmaxApi.models.FieldEBankaccountType](docs/FieldEBankaccountType.md)
  - [eZmaxApi.models.FieldEBrandingAlignlogo](docs/FieldEBrandingAlignlogo.md)
  - [eZmaxApi.models.FieldEBrandingLogo](docs/FieldEBrandingLogo.md)
  - [eZmaxApi.models.FieldEBuyercontractRemunerationtype](docs/FieldEBuyercontractRemunerationtype.md)
@@ -2290,6 +2340,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.FieldECreditcardtypeCodename](docs/FieldECreditcardtypeCodename.md)
  - [eZmaxApi.models.FieldECustomerMarketingcorrespondence](docs/FieldECustomerMarketingcorrespondence.md)
  - [eZmaxApi.models.FieldECustomerType](docs/FieldECustomerType.md)
+ - [eZmaxApi.models.FieldEDisclosureInteresttype](docs/FieldEDisclosureInteresttype.md)
  - [eZmaxApi.models.FieldEDiscussionRobot](docs/FieldEDiscussionRobot.md)
  - [eZmaxApi.models.FieldEDiscussionmessageStatus](docs/FieldEDiscussionmessageStatus.md)
  - [eZmaxApi.models.FieldEErrorCode](docs/FieldEErrorCode.md)
@@ -2385,6 +2436,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.FieldEInscriptionnotauthenticatedResidenceType](docs/FieldEInscriptionnotauthenticatedResidenceType.md)
  - [eZmaxApi.models.FieldEInscriptionnotauthenticatedType](docs/FieldEInscriptionnotauthenticatedType.md)
  - [eZmaxApi.models.FieldEInscriptiontempStatus](docs/FieldEInscriptiontempStatus.md)
+ - [eZmaxApi.models.FieldEInvoiceType](docs/FieldEInvoiceType.md)
  - [eZmaxApi.models.FieldELeadStatus](docs/FieldELeadStatus.md)
  - [eZmaxApi.models.FieldENotificationpreferenceStatus](docs/FieldENotificationpreferenceStatus.md)
  - [eZmaxApi.models.FieldEOtherincomeRemunerationtype](docs/FieldEOtherincomeRemunerationtype.md)
@@ -2417,6 +2469,14 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.FolderBatchDownloadV1Request](docs/FolderBatchDownloadV1Request.md)
  - [eZmaxApi.models.FolderGetAttachmentsV1Response](docs/FolderGetAttachmentsV1Response.md)
  - [eZmaxApi.models.FolderGetAttachmentsV1ResponseMPayload](docs/FolderGetAttachmentsV1ResponseMPayload.md)
+ - [eZmaxApi.models.FolderGetCommunicationCountV1Response](docs/FolderGetCommunicationCountV1Response.md)
+ - [eZmaxApi.models.FolderGetCommunicationCountV1ResponseMPayload](docs/FolderGetCommunicationCountV1ResponseMPayload.md)
+ - [eZmaxApi.models.FolderGetCommunicationListV1Response](docs/FolderGetCommunicationListV1Response.md)
+ - [eZmaxApi.models.FolderGetCommunicationListV1ResponseMPayload](docs/FolderGetCommunicationListV1ResponseMPayload.md)
+ - [eZmaxApi.models.FolderGetCommunicationrecipientsV1Response](docs/FolderGetCommunicationrecipientsV1Response.md)
+ - [eZmaxApi.models.FolderGetCommunicationrecipientsV1ResponseMPayload](docs/FolderGetCommunicationrecipientsV1ResponseMPayload.md)
+ - [eZmaxApi.models.FolderGetCommunicationsendersV1Response](docs/FolderGetCommunicationsendersV1Response.md)
+ - [eZmaxApi.models.FolderGetCommunicationsendersV1ResponseMPayload](docs/FolderGetCommunicationsendersV1ResponseMPayload.md)
  - [eZmaxApi.models.FolderImportIntoEDMV1Request](docs/FolderImportIntoEDMV1Request.md)
  - [eZmaxApi.models.FolderImportIntoEDMV1Response](docs/FolderImportIntoEDMV1Response.md)
  - [eZmaxApi.models.FolderImportIntoEDMV1ResponseMPayload](docs/FolderImportIntoEDMV1ResponseMPayload.md)
@@ -2534,15 +2594,26 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.InvoiceGetCommunicationrecipientsV1ResponseMPayload](docs/InvoiceGetCommunicationrecipientsV1ResponseMPayload.md)
  - [eZmaxApi.models.InvoiceGetCommunicationsendersV1Response](docs/InvoiceGetCommunicationsendersV1Response.md)
  - [eZmaxApi.models.InvoiceGetCommunicationsendersV1ResponseMPayload](docs/InvoiceGetCommunicationsendersV1ResponseMPayload.md)
+ - [eZmaxApi.models.InvoiceGetListV1Response](docs/InvoiceGetListV1Response.md)
+ - [eZmaxApi.models.InvoiceGetListV1ResponseMPayload](docs/InvoiceGetListV1ResponseMPayload.md)
  - [eZmaxApi.models.InvoiceImportIntoEDMV1Request](docs/InvoiceImportIntoEDMV1Request.md)
  - [eZmaxApi.models.InvoiceImportIntoEDMV1Response](docs/InvoiceImportIntoEDMV1Response.md)
  - [eZmaxApi.models.InvoiceImportIntoEDMV1ResponseMPayload](docs/InvoiceImportIntoEDMV1ResponseMPayload.md)
+ - [eZmaxApi.models.InvoiceListElement](docs/InvoiceListElement.md)
  - [eZmaxApi.models.LanguageAutocompleteElementResponse](docs/LanguageAutocompleteElementResponse.md)
  - [eZmaxApi.models.LanguageGetAutocompleteV2Response](docs/LanguageGetAutocompleteV2Response.md)
  - [eZmaxApi.models.LanguageGetAutocompleteV2ResponseMPayload](docs/LanguageGetAutocompleteV2ResponseMPayload.md)
  - [eZmaxApi.models.LeadBatchDownloadV1Request](docs/LeadBatchDownloadV1Request.md)
  - [eZmaxApi.models.LeadGetAttachmentsV1Response](docs/LeadGetAttachmentsV1Response.md)
  - [eZmaxApi.models.LeadGetAttachmentsV1ResponseMPayload](docs/LeadGetAttachmentsV1ResponseMPayload.md)
+ - [eZmaxApi.models.LeadGetCommunicationCountV1Response](docs/LeadGetCommunicationCountV1Response.md)
+ - [eZmaxApi.models.LeadGetCommunicationCountV1ResponseMPayload](docs/LeadGetCommunicationCountV1ResponseMPayload.md)
+ - [eZmaxApi.models.LeadGetCommunicationListV1Response](docs/LeadGetCommunicationListV1Response.md)
+ - [eZmaxApi.models.LeadGetCommunicationListV1ResponseMPayload](docs/LeadGetCommunicationListV1ResponseMPayload.md)
+ - [eZmaxApi.models.LeadGetCommunicationrecipientsV1Response](docs/LeadGetCommunicationrecipientsV1Response.md)
+ - [eZmaxApi.models.LeadGetCommunicationrecipientsV1ResponseMPayload](docs/LeadGetCommunicationrecipientsV1ResponseMPayload.md)
+ - [eZmaxApi.models.LeadGetCommunicationsendersV1Response](docs/LeadGetCommunicationsendersV1Response.md)
+ - [eZmaxApi.models.LeadGetCommunicationsendersV1ResponseMPayload](docs/LeadGetCommunicationsendersV1ResponseMPayload.md)
  - [eZmaxApi.models.LeadGetListV1Response](docs/LeadGetListV1Response.md)
  - [eZmaxApi.models.LeadGetListV1ResponseMPayload](docs/LeadGetListV1ResponseMPayload.md)
  - [eZmaxApi.models.LeadImportIntoEDMV1Request](docs/LeadImportIntoEDMV1Request.md)
@@ -2595,9 +2666,20 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.NotaryBatchDownloadV1Request](docs/NotaryBatchDownloadV1Request.md)
  - [eZmaxApi.models.NotaryGetAttachmentsV1Response](docs/NotaryGetAttachmentsV1Response.md)
  - [eZmaxApi.models.NotaryGetAttachmentsV1ResponseMPayload](docs/NotaryGetAttachmentsV1ResponseMPayload.md)
+ - [eZmaxApi.models.NotaryGetCommunicationCountV1Response](docs/NotaryGetCommunicationCountV1Response.md)
+ - [eZmaxApi.models.NotaryGetCommunicationCountV1ResponseMPayload](docs/NotaryGetCommunicationCountV1ResponseMPayload.md)
+ - [eZmaxApi.models.NotaryGetCommunicationListV1Response](docs/NotaryGetCommunicationListV1Response.md)
+ - [eZmaxApi.models.NotaryGetCommunicationListV1ResponseMPayload](docs/NotaryGetCommunicationListV1ResponseMPayload.md)
+ - [eZmaxApi.models.NotaryGetCommunicationrecipientsV1Response](docs/NotaryGetCommunicationrecipientsV1Response.md)
+ - [eZmaxApi.models.NotaryGetCommunicationrecipientsV1ResponseMPayload](docs/NotaryGetCommunicationrecipientsV1ResponseMPayload.md)
+ - [eZmaxApi.models.NotaryGetCommunicationsendersV1Response](docs/NotaryGetCommunicationsendersV1Response.md)
+ - [eZmaxApi.models.NotaryGetCommunicationsendersV1ResponseMPayload](docs/NotaryGetCommunicationsendersV1ResponseMPayload.md)
+ - [eZmaxApi.models.NotaryGetListV1Response](docs/NotaryGetListV1Response.md)
+ - [eZmaxApi.models.NotaryGetListV1ResponseMPayload](docs/NotaryGetListV1ResponseMPayload.md)
  - [eZmaxApi.models.NotaryImportIntoEDMV1Request](docs/NotaryImportIntoEDMV1Request.md)
  - [eZmaxApi.models.NotaryImportIntoEDMV1Response](docs/NotaryImportIntoEDMV1Response.md)
  - [eZmaxApi.models.NotaryImportIntoEDMV1ResponseMPayload](docs/NotaryImportIntoEDMV1ResponseMPayload.md)
+ - [eZmaxApi.models.NotaryListElement](docs/NotaryListElement.md)
  - [eZmaxApi.models.NotificationsectionGetNotificationtestsV1Response](docs/NotificationsectionGetNotificationtestsV1Response.md)
  - [eZmaxApi.models.NotificationsectionGetNotificationtestsV1ResponseMPayload](docs/NotificationsectionGetNotificationtestsV1ResponseMPayload.md)
  - [eZmaxApi.models.NotificationsubsectionResponse](docs/NotificationsubsectionResponse.md)
@@ -2607,9 +2689,20 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.OfficetaxreportBatchDownloadV1Request](docs/OfficetaxreportBatchDownloadV1Request.md)
  - [eZmaxApi.models.OfficetaxreportGetAttachmentsV1Response](docs/OfficetaxreportGetAttachmentsV1Response.md)
  - [eZmaxApi.models.OfficetaxreportGetAttachmentsV1ResponseMPayload](docs/OfficetaxreportGetAttachmentsV1ResponseMPayload.md)
+ - [eZmaxApi.models.OfficetaxreportGetCommunicationCountV1Response](docs/OfficetaxreportGetCommunicationCountV1Response.md)
+ - [eZmaxApi.models.OfficetaxreportGetCommunicationCountV1ResponseMPayload](docs/OfficetaxreportGetCommunicationCountV1ResponseMPayload.md)
+ - [eZmaxApi.models.OfficetaxreportGetCommunicationListV1Response](docs/OfficetaxreportGetCommunicationListV1Response.md)
+ - [eZmaxApi.models.OfficetaxreportGetCommunicationListV1ResponseMPayload](docs/OfficetaxreportGetCommunicationListV1ResponseMPayload.md)
+ - [eZmaxApi.models.OfficetaxreportGetCommunicationrecipientsV1Response](docs/OfficetaxreportGetCommunicationrecipientsV1Response.md)
+ - [eZmaxApi.models.OfficetaxreportGetCommunicationrecipientsV1ResponseMPayload](docs/OfficetaxreportGetCommunicationrecipientsV1ResponseMPayload.md)
+ - [eZmaxApi.models.OfficetaxreportGetCommunicationsendersV1Response](docs/OfficetaxreportGetCommunicationsendersV1Response.md)
+ - [eZmaxApi.models.OfficetaxreportGetCommunicationsendersV1ResponseMPayload](docs/OfficetaxreportGetCommunicationsendersV1ResponseMPayload.md)
+ - [eZmaxApi.models.OfficetaxreportGetListV1Response](docs/OfficetaxreportGetListV1Response.md)
+ - [eZmaxApi.models.OfficetaxreportGetListV1ResponseMPayload](docs/OfficetaxreportGetListV1ResponseMPayload.md)
  - [eZmaxApi.models.OfficetaxreportImportIntoEDMV1Request](docs/OfficetaxreportImportIntoEDMV1Request.md)
  - [eZmaxApi.models.OfficetaxreportImportIntoEDMV1Response](docs/OfficetaxreportImportIntoEDMV1Response.md)
  - [eZmaxApi.models.OfficetaxreportImportIntoEDMV1ResponseMPayload](docs/OfficetaxreportImportIntoEDMV1ResponseMPayload.md)
+ - [eZmaxApi.models.OfficetaxreportListElement](docs/OfficetaxreportListElement.md)
  - [eZmaxApi.models.OtherincomeBatchDownloadV1Request](docs/OtherincomeBatchDownloadV1Request.md)
  - [eZmaxApi.models.OtherincomeGetAttachmentsV1Response](docs/OtherincomeGetAttachmentsV1Response.md)
  - [eZmaxApi.models.OtherincomeGetAttachmentsV1ResponseMPayload](docs/OtherincomeGetAttachmentsV1ResponseMPayload.md)
@@ -2706,9 +2799,12 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.PurchaseBatchDownloadV1Request](docs/PurchaseBatchDownloadV1Request.md)
  - [eZmaxApi.models.PurchaseGetAttachmentsV1Response](docs/PurchaseGetAttachmentsV1Response.md)
  - [eZmaxApi.models.PurchaseGetAttachmentsV1ResponseMPayload](docs/PurchaseGetAttachmentsV1ResponseMPayload.md)
+ - [eZmaxApi.models.PurchaseGetListV1Response](docs/PurchaseGetListV1Response.md)
+ - [eZmaxApi.models.PurchaseGetListV1ResponseMPayload](docs/PurchaseGetListV1ResponseMPayload.md)
  - [eZmaxApi.models.PurchaseImportIntoEDMV1Request](docs/PurchaseImportIntoEDMV1Request.md)
  - [eZmaxApi.models.PurchaseImportIntoEDMV1Response](docs/PurchaseImportIntoEDMV1Response.md)
  - [eZmaxApi.models.PurchaseImportIntoEDMV1ResponseMPayload](docs/PurchaseImportIntoEDMV1ResponseMPayload.md)
+ - [eZmaxApi.models.PurchaseListElement](docs/PurchaseListElement.md)
  - [eZmaxApi.models.RealestateassociationAutocompleteElementResponse](docs/RealestateassociationAutocompleteElementResponse.md)
  - [eZmaxApi.models.RealestateassociationGetAutocompleteV2Response](docs/RealestateassociationGetAutocompleteV2Response.md)
  - [eZmaxApi.models.RealestateassociationGetAutocompleteV2ResponseMPayload](docs/RealestateassociationGetAutocompleteV2ResponseMPayload.md)
@@ -2741,9 +2837,12 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.SalaryBatchDownloadV1Request](docs/SalaryBatchDownloadV1Request.md)
  - [eZmaxApi.models.SalaryGetAttachmentsV1Response](docs/SalaryGetAttachmentsV1Response.md)
  - [eZmaxApi.models.SalaryGetAttachmentsV1ResponseMPayload](docs/SalaryGetAttachmentsV1ResponseMPayload.md)
+ - [eZmaxApi.models.SalaryGetListV1Response](docs/SalaryGetListV1Response.md)
+ - [eZmaxApi.models.SalaryGetListV1ResponseMPayload](docs/SalaryGetListV1ResponseMPayload.md)
  - [eZmaxApi.models.SalaryImportIntoEDMV1Request](docs/SalaryImportIntoEDMV1Request.md)
  - [eZmaxApi.models.SalaryImportIntoEDMV1Response](docs/SalaryImportIntoEDMV1Response.md)
  - [eZmaxApi.models.SalaryImportIntoEDMV1ResponseMPayload](docs/SalaryImportIntoEDMV1ResponseMPayload.md)
+ - [eZmaxApi.models.SalaryListElement](docs/SalaryListElement.md)
  - [eZmaxApi.models.ScimAuthenticationScheme](docs/ScimAuthenticationScheme.md)
  - [eZmaxApi.models.ScimEmail](docs/ScimEmail.md)
  - [eZmaxApi.models.ScimGroup](docs/ScimGroup.md)

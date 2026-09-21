@@ -28,8 +28,14 @@ import okhttp3.Call
 import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.HeaderAcceptLanguage
 import eZmaxApi.models.NotaryBatchDownloadV1Request
 import eZmaxApi.models.NotaryGetAttachmentsV1Response
+import eZmaxApi.models.NotaryGetCommunicationCountV1Response
+import eZmaxApi.models.NotaryGetCommunicationListV1Response
+import eZmaxApi.models.NotaryGetCommunicationrecipientsV1Response
+import eZmaxApi.models.NotaryGetCommunicationsendersV1Response
+import eZmaxApi.models.NotaryGetListV1Response
 import eZmaxApi.models.NotaryImportIntoEDMV1Request
 import eZmaxApi.models.NotaryImportIntoEDMV1Response
 
@@ -200,6 +206,443 @@ open class ObjectNotaryApi(basePath: kotlin.String = defaultBasePath, client: Ca
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/notary/{pkiNotaryID}/getAttachments".replace("{"+"pkiNotaryID"+"}", encodeURIComponent(pkiNotaryID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/notary/{pkiNotaryID}/getCommunicationCount
+     * Retrieve Communication count
+     * 
+     * @param pkiNotaryID 
+     * @return NotaryGetCommunicationCountV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun notaryGetCommunicationCountV1(pkiNotaryID: kotlin.Int) : NotaryGetCommunicationCountV1Response {
+        val localVarResponse = notaryGetCommunicationCountV1WithHttpInfo(pkiNotaryID = pkiNotaryID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as NotaryGetCommunicationCountV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/notary/{pkiNotaryID}/getCommunicationCount
+     * Retrieve Communication count
+     * 
+     * @param pkiNotaryID 
+     * @return ApiResponse<NotaryGetCommunicationCountV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun notaryGetCommunicationCountV1WithHttpInfo(pkiNotaryID: kotlin.Int) : ApiResponse<NotaryGetCommunicationCountV1Response?> {
+        val localVariableConfig = notaryGetCommunicationCountV1RequestConfig(pkiNotaryID = pkiNotaryID)
+
+        return request<Unit, NotaryGetCommunicationCountV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation notaryGetCommunicationCountV1
+     *
+     * @param pkiNotaryID 
+     * @return RequestConfig
+     */
+    fun notaryGetCommunicationCountV1RequestConfig(pkiNotaryID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/notary/{pkiNotaryID}/getCommunicationCount".replace("{"+"pkiNotaryID"+"}", encodeURIComponent(pkiNotaryID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/notary/{pkiNotaryID}/getCommunicationList
+     * Retrieve Communication list
+     * 
+     * @param pkiNotaryID 
+     * @return NotaryGetCommunicationListV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun notaryGetCommunicationListV1(pkiNotaryID: kotlin.Int) : NotaryGetCommunicationListV1Response {
+        val localVarResponse = notaryGetCommunicationListV1WithHttpInfo(pkiNotaryID = pkiNotaryID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as NotaryGetCommunicationListV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/notary/{pkiNotaryID}/getCommunicationList
+     * Retrieve Communication list
+     * 
+     * @param pkiNotaryID 
+     * @return ApiResponse<NotaryGetCommunicationListV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun notaryGetCommunicationListV1WithHttpInfo(pkiNotaryID: kotlin.Int) : ApiResponse<NotaryGetCommunicationListV1Response?> {
+        val localVariableConfig = notaryGetCommunicationListV1RequestConfig(pkiNotaryID = pkiNotaryID)
+
+        return request<Unit, NotaryGetCommunicationListV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation notaryGetCommunicationListV1
+     *
+     * @param pkiNotaryID 
+     * @return RequestConfig
+     */
+    fun notaryGetCommunicationListV1RequestConfig(pkiNotaryID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/notary/{pkiNotaryID}/getCommunicationList".replace("{"+"pkiNotaryID"+"}", encodeURIComponent(pkiNotaryID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/notary/{pkiNotaryID}/getCommunicationrecipients
+     * Retrieve Communication recipients
+     * 
+     * @param pkiNotaryID 
+     * @return NotaryGetCommunicationrecipientsV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun notaryGetCommunicationrecipientsV1(pkiNotaryID: kotlin.Int) : NotaryGetCommunicationrecipientsV1Response {
+        val localVarResponse = notaryGetCommunicationrecipientsV1WithHttpInfo(pkiNotaryID = pkiNotaryID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as NotaryGetCommunicationrecipientsV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/notary/{pkiNotaryID}/getCommunicationrecipients
+     * Retrieve Communication recipients
+     * 
+     * @param pkiNotaryID 
+     * @return ApiResponse<NotaryGetCommunicationrecipientsV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun notaryGetCommunicationrecipientsV1WithHttpInfo(pkiNotaryID: kotlin.Int) : ApiResponse<NotaryGetCommunicationrecipientsV1Response?> {
+        val localVariableConfig = notaryGetCommunicationrecipientsV1RequestConfig(pkiNotaryID = pkiNotaryID)
+
+        return request<Unit, NotaryGetCommunicationrecipientsV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation notaryGetCommunicationrecipientsV1
+     *
+     * @param pkiNotaryID 
+     * @return RequestConfig
+     */
+    fun notaryGetCommunicationrecipientsV1RequestConfig(pkiNotaryID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/notary/{pkiNotaryID}/getCommunicationrecipients".replace("{"+"pkiNotaryID"+"}", encodeURIComponent(pkiNotaryID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/notary/{pkiNotaryID}/getCommunicationsenders
+     * Retrieve Communication senders
+     * 
+     * @param pkiNotaryID 
+     * @return NotaryGetCommunicationsendersV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun notaryGetCommunicationsendersV1(pkiNotaryID: kotlin.Int) : NotaryGetCommunicationsendersV1Response {
+        val localVarResponse = notaryGetCommunicationsendersV1WithHttpInfo(pkiNotaryID = pkiNotaryID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as NotaryGetCommunicationsendersV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/notary/{pkiNotaryID}/getCommunicationsenders
+     * Retrieve Communication senders
+     * 
+     * @param pkiNotaryID 
+     * @return ApiResponse<NotaryGetCommunicationsendersV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun notaryGetCommunicationsendersV1WithHttpInfo(pkiNotaryID: kotlin.Int) : ApiResponse<NotaryGetCommunicationsendersV1Response?> {
+        val localVariableConfig = notaryGetCommunicationsendersV1RequestConfig(pkiNotaryID = pkiNotaryID)
+
+        return request<Unit, NotaryGetCommunicationsendersV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation notaryGetCommunicationsendersV1
+     *
+     * @param pkiNotaryID 
+     * @return RequestConfig
+     */
+    fun notaryGetCommunicationsendersV1RequestConfig(pkiNotaryID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/notary/{pkiNotaryID}/getCommunicationsenders".replace("{"+"pkiNotaryID"+"}", encodeURIComponent(pkiNotaryID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * enum for parameter eOrderBy
+     */
+     enum class EOrderByNotaryGetListV1(val value: kotlin.String) {
+         @Json(name = "pkiNotaryID_ASC") pkiNotaryID_ASC("pkiNotaryID_ASC"),
+         @Json(name = "pkiNotaryID_DESC") pkiNotaryID_DESC("pkiNotaryID_DESC"),
+         @Json(name = "fkiPaymentmethodID_ASC") fkiPaymentmethodID_ASC("fkiPaymentmethodID_ASC"),
+         @Json(name = "fkiPaymentmethodID_DESC") fkiPaymentmethodID_DESC("fkiPaymentmethodID_DESC"),
+         @Json(name = "fkiProvinceID_ASC") fkiProvinceID_ASC("fkiProvinceID_ASC"),
+         @Json(name = "fkiProvinceID_DESC") fkiProvinceID_DESC("fkiProvinceID_DESC"),
+         @Json(name = "fkiCountryID_ASC") fkiCountryID_ASC("fkiCountryID_ASC"),
+         @Json(name = "fkiCountryID_DESC") fkiCountryID_DESC("fkiCountryID_DESC"),
+         @Json(name = "sContactLastname_ASC") sContactLastname_ASC("sContactLastname_ASC"),
+         @Json(name = "sContactLastname_DESC") sContactLastname_DESC("sContactLastname_DESC"),
+         @Json(name = "sContactFirstname_ASC") sContactFirstname_ASC("sContactFirstname_ASC"),
+         @Json(name = "sContactFirstname_DESC") sContactFirstname_DESC("sContactFirstname_DESC"),
+         @Json(name = "sContactCompany_ASC") sContactCompany_ASC("sContactCompany_ASC"),
+         @Json(name = "sContactCompany_DESC") sContactCompany_DESC("sContactCompany_DESC"),
+         @Json(name = "sAddressCivic_ASC") sAddressCivic_ASC("sAddressCivic_ASC"),
+         @Json(name = "sAddressCivic_DESC") sAddressCivic_DESC("sAddressCivic_DESC"),
+         @Json(name = "sAddressStreet_ASC") sAddressStreet_ASC("sAddressStreet_ASC"),
+         @Json(name = "sAddressStreet_DESC") sAddressStreet_DESC("sAddressStreet_DESC"),
+         @Json(name = "sAddressSuite_ASC") sAddressSuite_ASC("sAddressSuite_ASC"),
+         @Json(name = "sAddressSuite_DESC") sAddressSuite_DESC("sAddressSuite_DESC"),
+         @Json(name = "sAddressCity_ASC") sAddressCity_ASC("sAddressCity_ASC"),
+         @Json(name = "sAddressCity_DESC") sAddressCity_DESC("sAddressCity_DESC"),
+         @Json(name = "sPhoneE164_ASC") sPhoneE164_ASC("sPhoneE164_ASC"),
+         @Json(name = "sPhoneE164_DESC") sPhoneE164_DESC("sPhoneE164_DESC"),
+         @Json(name = "sPaymentmethodDescriptionX_ASC") sPaymentmethodDescriptionX_ASC("sPaymentmethodDescriptionX_ASC"),
+         @Json(name = "sPaymentmethodDescriptionX_DESC") sPaymentmethodDescriptionX_DESC("sPaymentmethodDescriptionX_DESC"),
+         @Json(name = "sProvinceNameX_ASC") sProvinceNameX_ASC("sProvinceNameX_ASC"),
+         @Json(name = "sProvinceNameX_DESC") sProvinceNameX_DESC("sProvinceNameX_DESC"),
+         @Json(name = "sCountryNameX_ASC") sCountryNameX_ASC("sCountryNameX_ASC"),
+         @Json(name = "sCountryNameX_DESC") sCountryNameX_DESC("sCountryNameX_DESC");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
+     }
+
+    /**
+     * GET /1/object/notary/getList
+     * Retrieve Notary list
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return NotaryGetListV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun notaryGetListV1(eOrderBy: EOrderByNotaryGetListV1? = null, iRowMax: kotlin.Int? = null, iRowOffset: kotlin.Int? = 0, acceptLanguage: HeaderAcceptLanguage? = null, sFilter: kotlin.String? = null) : NotaryGetListV1Response {
+        val localVarResponse = notaryGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as NotaryGetListV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/notary/getList
+     * Retrieve Notary list
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return ApiResponse<NotaryGetListV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun notaryGetListV1WithHttpInfo(eOrderBy: EOrderByNotaryGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : ApiResponse<NotaryGetListV1Response?> {
+        val localVariableConfig = notaryGetListV1RequestConfig(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
+
+        return request<Unit, NotaryGetListV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation notaryGetListV1
+     *
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return RequestConfig
+     */
+    fun notaryGetListV1RequestConfig(eOrderBy: EOrderByNotaryGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (eOrderBy != null) {
+                    put("eOrderBy", listOf(eOrderBy.value))
+                }
+                if (iRowMax != null) {
+                    put("iRowMax", listOf(iRowMax.toString()))
+                }
+                if (iRowOffset != null) {
+                    put("iRowOffset", listOf(iRowOffset.toString()))
+                }
+                if (sFilter != null) {
+                    put("sFilter", listOf(sFilter.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/notary/getList",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

@@ -55,7 +55,8 @@
 | **fkiSupplierID** | **kotlin.Int** | The unique ID of the Supplier. |  [optional] |
 | **fkiTranqcontractID** | **kotlin.Int** | The unique ID of the Tranqcontract |  [optional] |
 | **fkiTemplateID** | **kotlin.Int** | The unique ID of the Template |  [optional] |
-| **fkiInscriptionchecklistID** | **kotlin.Int** | The unique ID of the Inscriptionchecklist |  [optional] |
+| **fkiDocumenttypechecklistID** | **kotlin.Int** | The unique ID of the Documenttypechecklist |  [optional] |
+| **sDocumenttypeNameX** | **kotlin.String** | The name of the Documenttype in the language of the requester |  [optional] |
 | **fkiFolderID** | **kotlin.Int** | The unique ID of the Folder |  [optional] |
 | **fkiRejectedoffertopurchaseID** | **kotlin.Int** | The unique ID of the Rejectedoffertopurchase |  [optional] |
 | **fkiDisclosureID** | **kotlin.Int** | The unique ID of the Disclosure |  [optional] |

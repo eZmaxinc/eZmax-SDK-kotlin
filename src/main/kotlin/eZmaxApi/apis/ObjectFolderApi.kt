@@ -30,6 +30,10 @@ import okhttp3.HttpUrl
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.FolderBatchDownloadV1Request
 import eZmaxApi.models.FolderGetAttachmentsV1Response
+import eZmaxApi.models.FolderGetCommunicationCountV1Response
+import eZmaxApi.models.FolderGetCommunicationListV1Response
+import eZmaxApi.models.FolderGetCommunicationrecipientsV1Response
+import eZmaxApi.models.FolderGetCommunicationsendersV1Response
 import eZmaxApi.models.FolderImportIntoEDMV1Request
 import eZmaxApi.models.FolderImportIntoEDMV1Response
 
@@ -200,6 +204,298 @@ open class ObjectFolderApi(basePath: kotlin.String = defaultBasePath, client: Ca
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/folder/{pkiFolderID}/getAttachments".replace("{"+"pkiFolderID"+"}", encodeURIComponent(pkiFolderID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/folder/{pkiFolderID}/getCommunicationCount
+     * Retrieve Communication count
+     * 
+     * @param pkiFolderID 
+     * @return FolderGetCommunicationCountV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun folderGetCommunicationCountV1(pkiFolderID: kotlin.Int) : FolderGetCommunicationCountV1Response {
+        val localVarResponse = folderGetCommunicationCountV1WithHttpInfo(pkiFolderID = pkiFolderID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as FolderGetCommunicationCountV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/folder/{pkiFolderID}/getCommunicationCount
+     * Retrieve Communication count
+     * 
+     * @param pkiFolderID 
+     * @return ApiResponse<FolderGetCommunicationCountV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun folderGetCommunicationCountV1WithHttpInfo(pkiFolderID: kotlin.Int) : ApiResponse<FolderGetCommunicationCountV1Response?> {
+        val localVariableConfig = folderGetCommunicationCountV1RequestConfig(pkiFolderID = pkiFolderID)
+
+        return request<Unit, FolderGetCommunicationCountV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation folderGetCommunicationCountV1
+     *
+     * @param pkiFolderID 
+     * @return RequestConfig
+     */
+    fun folderGetCommunicationCountV1RequestConfig(pkiFolderID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/folder/{pkiFolderID}/getCommunicationCount".replace("{"+"pkiFolderID"+"}", encodeURIComponent(pkiFolderID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/folder/{pkiFolderID}/getCommunicationList
+     * Retrieve Communication list
+     * 
+     * @param pkiFolderID 
+     * @return FolderGetCommunicationListV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun folderGetCommunicationListV1(pkiFolderID: kotlin.Int) : FolderGetCommunicationListV1Response {
+        val localVarResponse = folderGetCommunicationListV1WithHttpInfo(pkiFolderID = pkiFolderID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as FolderGetCommunicationListV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/folder/{pkiFolderID}/getCommunicationList
+     * Retrieve Communication list
+     * 
+     * @param pkiFolderID 
+     * @return ApiResponse<FolderGetCommunicationListV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun folderGetCommunicationListV1WithHttpInfo(pkiFolderID: kotlin.Int) : ApiResponse<FolderGetCommunicationListV1Response?> {
+        val localVariableConfig = folderGetCommunicationListV1RequestConfig(pkiFolderID = pkiFolderID)
+
+        return request<Unit, FolderGetCommunicationListV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation folderGetCommunicationListV1
+     *
+     * @param pkiFolderID 
+     * @return RequestConfig
+     */
+    fun folderGetCommunicationListV1RequestConfig(pkiFolderID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/folder/{pkiFolderID}/getCommunicationList".replace("{"+"pkiFolderID"+"}", encodeURIComponent(pkiFolderID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/folder/{pkiFolderID}/getCommunicationrecipients
+     * Retrieve Communication recipients
+     * 
+     * @param pkiFolderID 
+     * @return FolderGetCommunicationrecipientsV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun folderGetCommunicationrecipientsV1(pkiFolderID: kotlin.Int) : FolderGetCommunicationrecipientsV1Response {
+        val localVarResponse = folderGetCommunicationrecipientsV1WithHttpInfo(pkiFolderID = pkiFolderID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as FolderGetCommunicationrecipientsV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/folder/{pkiFolderID}/getCommunicationrecipients
+     * Retrieve Communication recipients
+     * 
+     * @param pkiFolderID 
+     * @return ApiResponse<FolderGetCommunicationrecipientsV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun folderGetCommunicationrecipientsV1WithHttpInfo(pkiFolderID: kotlin.Int) : ApiResponse<FolderGetCommunicationrecipientsV1Response?> {
+        val localVariableConfig = folderGetCommunicationrecipientsV1RequestConfig(pkiFolderID = pkiFolderID)
+
+        return request<Unit, FolderGetCommunicationrecipientsV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation folderGetCommunicationrecipientsV1
+     *
+     * @param pkiFolderID 
+     * @return RequestConfig
+     */
+    fun folderGetCommunicationrecipientsV1RequestConfig(pkiFolderID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/folder/{pkiFolderID}/getCommunicationrecipients".replace("{"+"pkiFolderID"+"}", encodeURIComponent(pkiFolderID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/folder/{pkiFolderID}/getCommunicationsenders
+     * Retrieve Communication senders
+     * 
+     * @param pkiFolderID 
+     * @return FolderGetCommunicationsendersV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun folderGetCommunicationsendersV1(pkiFolderID: kotlin.Int) : FolderGetCommunicationsendersV1Response {
+        val localVarResponse = folderGetCommunicationsendersV1WithHttpInfo(pkiFolderID = pkiFolderID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as FolderGetCommunicationsendersV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/folder/{pkiFolderID}/getCommunicationsenders
+     * Retrieve Communication senders
+     * 
+     * @param pkiFolderID 
+     * @return ApiResponse<FolderGetCommunicationsendersV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun folderGetCommunicationsendersV1WithHttpInfo(pkiFolderID: kotlin.Int) : ApiResponse<FolderGetCommunicationsendersV1Response?> {
+        val localVariableConfig = folderGetCommunicationsendersV1RequestConfig(pkiFolderID = pkiFolderID)
+
+        return request<Unit, FolderGetCommunicationsendersV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation folderGetCommunicationsendersV1
+     *
+     * @param pkiFolderID 
+     * @return RequestConfig
+     */
+    fun folderGetCommunicationsendersV1RequestConfig(pkiFolderID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/folder/{pkiFolderID}/getCommunicationsenders".replace("{"+"pkiFolderID"+"}", encodeURIComponent(pkiFolderID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

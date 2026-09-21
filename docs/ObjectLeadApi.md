@@ -6,6 +6,10 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | ------------- | ------------- | ------------- |
 | [**leadBatchDownloadV1**](ObjectLeadApi.md#leadBatchDownloadV1) | **POST** /1/object/lead/{pkiLeadID}/batchDownload | Download multiples attachments from a Lead |
 | [**leadGetAttachmentsV1**](ObjectLeadApi.md#leadGetAttachmentsV1) | **GET** /1/object/lead/{pkiLeadID}/getAttachments | Retrieve Lead&#39;s attachments |
+| [**leadGetCommunicationCountV1**](ObjectLeadApi.md#leadGetCommunicationCountV1) | **GET** /1/object/lead/{pkiLeadID}/getCommunicationCount | Retrieve Communication count |
+| [**leadGetCommunicationListV1**](ObjectLeadApi.md#leadGetCommunicationListV1) | **GET** /1/object/lead/{pkiLeadID}/getCommunicationList | Retrieve Communication list |
+| [**leadGetCommunicationrecipientsV1**](ObjectLeadApi.md#leadGetCommunicationrecipientsV1) | **GET** /1/object/lead/{pkiLeadID}/getCommunicationrecipients | Retrieve Communication recipients |
+| [**leadGetCommunicationsendersV1**](ObjectLeadApi.md#leadGetCommunicationsendersV1) | **GET** /1/object/lead/{pkiLeadID}/getCommunicationsenders | Retrieve Communication senders |
 | [**leadGetListV1**](ObjectLeadApi.md#leadGetListV1) | **GET** /1/object/lead/getList | Retrieve Lead list |
 | [**leadImportIntoEDMV1**](ObjectLeadApi.md#leadImportIntoEDMV1) | **POST** /1/object/lead/{pkiLeadID}/importIntoEDM | Import attachments into the Lead |
 
@@ -93,6 +97,194 @@ try {
 ### Return type
 
 [**LeadGetAttachmentsV1Response**](LeadGetAttachmentsV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="leadGetCommunicationCountV1"></a>
+# **leadGetCommunicationCountV1**
+> LeadGetCommunicationCountV1Response leadGetCommunicationCountV1(pkiLeadID)
+
+Retrieve Communication count
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectLeadApi()
+val pkiLeadID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : LeadGetCommunicationCountV1Response = apiInstance.leadGetCommunicationCountV1(pkiLeadID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectLeadApi#leadGetCommunicationCountV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectLeadApi#leadGetCommunicationCountV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiLeadID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**LeadGetCommunicationCountV1Response**](LeadGetCommunicationCountV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="leadGetCommunicationListV1"></a>
+# **leadGetCommunicationListV1**
+> LeadGetCommunicationListV1Response leadGetCommunicationListV1(pkiLeadID)
+
+Retrieve Communication list
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectLeadApi()
+val pkiLeadID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : LeadGetCommunicationListV1Response = apiInstance.leadGetCommunicationListV1(pkiLeadID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectLeadApi#leadGetCommunicationListV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectLeadApi#leadGetCommunicationListV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiLeadID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**LeadGetCommunicationListV1Response**](LeadGetCommunicationListV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="leadGetCommunicationrecipientsV1"></a>
+# **leadGetCommunicationrecipientsV1**
+> LeadGetCommunicationrecipientsV1Response leadGetCommunicationrecipientsV1(pkiLeadID)
+
+Retrieve Communication recipients
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectLeadApi()
+val pkiLeadID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : LeadGetCommunicationrecipientsV1Response = apiInstance.leadGetCommunicationrecipientsV1(pkiLeadID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectLeadApi#leadGetCommunicationrecipientsV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectLeadApi#leadGetCommunicationrecipientsV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiLeadID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**LeadGetCommunicationrecipientsV1Response**](LeadGetCommunicationrecipientsV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="leadGetCommunicationsendersV1"></a>
+# **leadGetCommunicationsendersV1**
+> LeadGetCommunicationsendersV1Response leadGetCommunicationsendersV1(pkiLeadID)
+
+Retrieve Communication senders
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectLeadApi()
+val pkiLeadID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : LeadGetCommunicationsendersV1Response = apiInstance.leadGetCommunicationsendersV1(pkiLeadID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectLeadApi#leadGetCommunicationsendersV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectLeadApi#leadGetCommunicationsendersV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiLeadID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**LeadGetCommunicationsendersV1Response**](LeadGetCommunicationsendersV1Response.md)
 
 ### Authorization
 

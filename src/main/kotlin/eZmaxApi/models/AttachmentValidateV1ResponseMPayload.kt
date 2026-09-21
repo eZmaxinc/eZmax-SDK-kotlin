@@ -28,7 +28,7 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * Response for PATCH /1/object/attachment/{pkiAttachmentID}/validate
+ * Response for POST /1/object/attachment/{pkiAttachmentID}/validate
  *
  * @param pkiAttachmentID The unique ID of the Attachment.
  */

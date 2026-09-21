@@ -34,8 +34,10 @@ import eZmaxApi.models.DepositGetCommunicationCountV1Response
 import eZmaxApi.models.DepositGetCommunicationListV1Response
 import eZmaxApi.models.DepositGetCommunicationrecipientsV1Response
 import eZmaxApi.models.DepositGetCommunicationsendersV1Response
+import eZmaxApi.models.DepositGetListV1Response
 import eZmaxApi.models.DepositImportIntoEDMV1Request
 import eZmaxApi.models.DepositImportIntoEDMV1Response
+import eZmaxApi.models.HeaderAcceptLanguage
 
 import com.squareup.moshi.Json
 
@@ -496,6 +498,149 @@ open class ObjectDepositApi(basePath: kotlin.String = defaultBasePath, client: C
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/deposit/{pkiDepositID}/getCommunicationsenders".replace("{"+"pkiDepositID"+"}", encodeURIComponent(pkiDepositID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * enum for parameter eOrderBy
+     */
+     enum class EOrderByDepositGetListV1(val value: kotlin.String) {
+         @Json(name = "pkiDepositID_ASC") pkiDepositID_ASC("pkiDepositID_ASC"),
+         @Json(name = "pkiDepositID_DESC") pkiDepositID_DESC("pkiDepositID_DESC"),
+         @Json(name = "fkiPeriodID_ASC") fkiPeriodID_ASC("fkiPeriodID_ASC"),
+         @Json(name = "fkiPeriodID_DESC") fkiPeriodID_DESC("fkiPeriodID_DESC"),
+         @Json(name = "fkiBankaccountID_ASC") fkiBankaccountID_ASC("fkiBankaccountID_ASC"),
+         @Json(name = "fkiBankaccountID_DESC") fkiBankaccountID_DESC("fkiBankaccountID_DESC"),
+         @Json(name = "fkiUserIDCreated_ASC") fkiUserIDCreated_ASC("fkiUserIDCreated_ASC"),
+         @Json(name = "fkiUserIDCreated_DESC") fkiUserIDCreated_DESC("fkiUserIDCreated_DESC"),
+         @Json(name = "sDepositNumber_ASC") sDepositNumber_ASC("sDepositNumber_ASC"),
+         @Json(name = "sDepositNumber_DESC") sDepositNumber_DESC("sDepositNumber_DESC"),
+         @Json(name = "dtDepositDate_ASC") dtDepositDate_ASC("dtDepositDate_ASC"),
+         @Json(name = "dtDepositDate_DESC") dtDepositDate_DESC("dtDepositDate_DESC"),
+         @Json(name = "dDepositTotal_ASC") dDepositTotal_ASC("dDepositTotal_ASC"),
+         @Json(name = "dDepositTotal_DESC") dDepositTotal_DESC("dDepositTotal_DESC"),
+         @Json(name = "dtCreatedDate_ASC") dtCreatedDate_ASC("dtCreatedDate_ASC"),
+         @Json(name = "dtCreatedDate_DESC") dtCreatedDate_DESC("dtCreatedDate_DESC"),
+         @Json(name = "bDepositDraft_ASC") bDepositDraft_ASC("bDepositDraft_ASC"),
+         @Json(name = "bDepositDraft_DESC") bDepositDraft_DESC("bDepositDraft_DESC"),
+         @Json(name = "bDepositReconciled_ASC") bDepositReconciled_ASC("bDepositReconciled_ASC"),
+         @Json(name = "bDepositReconciled_DESC") bDepositReconciled_DESC("bDepositReconciled_DESC"),
+         @Json(name = "fkiReconciliationID_ASC") fkiReconciliationID_ASC("fkiReconciliationID_ASC"),
+         @Json(name = "fkiReconciliationID_DESC") fkiReconciliationID_DESC("fkiReconciliationID_DESC"),
+         @Json(name = "sBankaccountBankname_ASC") sBankaccountBankname_ASC("sBankaccountBankname_ASC"),
+         @Json(name = "sBankaccountBankname_DESC") sBankaccountBankname_DESC("sBankaccountBankname_DESC"),
+         @Json(name = "sPeriodYYYYMM_ASC") sPeriodYYYYMM_ASC("sPeriodYYYYMM_ASC"),
+         @Json(name = "sPeriodYYYYMM_DESC") sPeriodYYYYMM_DESC("sPeriodYYYYMM_DESC"),
+         @Json(name = "sUserLoginname_ASC") sUserLoginname_ASC("sUserLoginname_ASC"),
+         @Json(name = "sUserLoginname_DESC") sUserLoginname_DESC("sUserLoginname_DESC");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
+     }
+
+    /**
+     * GET /1/object/deposit/getList
+     * Retrieve Deposit list
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return DepositGetListV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun depositGetListV1(eOrderBy: EOrderByDepositGetListV1? = null, iRowMax: kotlin.Int? = null, iRowOffset: kotlin.Int? = 0, acceptLanguage: HeaderAcceptLanguage? = null, sFilter: kotlin.String? = null) : DepositGetListV1Response {
+        val localVarResponse = depositGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as DepositGetListV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/deposit/getList
+     * Retrieve Deposit list
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return ApiResponse<DepositGetListV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun depositGetListV1WithHttpInfo(eOrderBy: EOrderByDepositGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : ApiResponse<DepositGetListV1Response?> {
+        val localVariableConfig = depositGetListV1RequestConfig(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
+
+        return request<Unit, DepositGetListV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation depositGetListV1
+     *
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return RequestConfig
+     */
+    fun depositGetListV1RequestConfig(eOrderBy: EOrderByDepositGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (eOrderBy != null) {
+                    put("eOrderBy", listOf(eOrderBy.value))
+                }
+                if (iRowMax != null) {
+                    put("iRowMax", listOf(iRowMax.toString()))
+                }
+                if (iRowOffset != null) {
+                    put("iRowOffset", listOf(iRowOffset.toString()))
+                }
+                if (sFilter != null) {
+                    put("sFilter", listOf(sFilter.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/deposit/getList",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,
