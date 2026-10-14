@@ -34,6 +34,7 @@ import com.squareup.moshi.JsonClass
  * @param fkiBuyercontractID The unique ID of the Buyercontract
  * @param fkiEzsignfolderID The unique ID of the Ezsignfolder
  * @param fkiInscriptionID The unique ID of the Inscription.
+ * @param fkiInscriptionnotauthenticatedID The unique ID of the Inscriptionnotauthenticated.
  * @param fkiInscriptiontempID The unique ID of the Inscriptiontemp
  * @param fkiInvoiceID The unique ID of the Invoice.
  * @param fkiOtherincomeID The unique ID of the Otherincome
@@ -59,6 +60,10 @@ data class CommunicationreferenceRequestCompound (
     /* The unique ID of the Inscription. */
     @Json(name = "fkiInscriptionID")
     val fkiInscriptionID: kotlin.Int? = null,
+
+    /* The unique ID of the Inscriptionnotauthenticated. */
+    @Json(name = "fkiInscriptionnotauthenticatedID")
+    val fkiInscriptionnotauthenticatedID: kotlin.Int? = null,
 
     /* The unique ID of the Inscriptiontemp */
     @Json(name = "fkiInscriptiontempID")

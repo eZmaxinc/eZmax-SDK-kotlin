@@ -34,41 +34,24 @@ import com.squareup.moshi.JsonClass
  *
  * @param pkiCustomerID The unique ID of the Customer.
  * @param fkiCompanyID The unique ID of the Company
- * @param fkiCustomergroupID The unique ID of the Customergroup
  * @param sCustomerName The name of the Customer
  * @param fkiContactinformationsID The unique ID of the Contactinformations
  * @param fkiContactcontainerID The unique ID of the Contactcontainer
- * @param fkiImageID The unique ID of the Image
  * @param fkiGlaccountcontainerID The unique ID of the Glaccountcontainer
  * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
  * @param fkiDepartmentID The unique ID of the Department
  * @param fkiPaymentmethodID The unique ID of the Paymentmethod
- * @param fkiElectronicfundstransferbankaccountID The unique ID of the Electronicfundstransferbankaccount
- * @param fkiElectronicfundstransferbankaccountIDDirectdebit The unique ID of the Electronicfundstransferbankaccount
  * @param fkiSendingmethodID The unique ID of the Sendingmethod
  * @param fkiTaxassignmentID The unique ID of the Taxassignment.  Valid values:  |Value|Description| |-|-| |1|No tax| |2|GST| |3|HST (ON)| |4|HST (NB)| |5|HST (NS)| |6|HST (NL)| |7|HST (PE)| |8|GST + QST (QC)| |9|GST + QST (QC) Non-Recoverable| |10|GST + PST (BC)| |11|GST + PST (SK)| |12|GST + RST (MB)| |13|GST + PST (BC) Non-Recoverable| |14|GST + PST (SK) Non-Recoverable| |15|GST + RST (MB) Non-Recoverable|
  * @param fkiAttendancestatusID The unique ID of the Attendancestatus
- * @param fkiAgentIDVariableexpensechargeto The unique ID of the Agent.
- * @param fkiBrokerIDVariableexpensechargeto The unique ID of the Broker.
- * @param fkiCustomerIDVariableexpensechargeto The unique ID of the Customer.
- * @param fkiGlaccountcontainerIDVariableexpensechargeto The unique ID of the Glaccountcontainer
- * @param fkiAgentIDSupplychargechargeto The unique ID of the Agent.
- * @param fkiBrokerIDSupplychargechargeto The unique ID of the Broker.
- * @param fkiCustomerIDSupplychargechargeto The unique ID of the Customer.
- * @param fkiGlaccountcontainerIDSupplychargechargeto The unique ID of the Glaccountcontainer
- * @param fkiInvoicealternatelogoID The unique ID of the Invoicealternatelogo
- * @param fkiSynchronizationlinkserverID The unique ID of the Synchronizationlinkserver
  * @param sCustomerCode The code of the Customer
- * @param dCustomerFulltimeequivalent The fulltimeequivalent of the Customer
  * @param iCustomerPhotocopiercode The photocopiercode of the Customer
  * @param iCustomerLongdistancecode The longdistancecode of the Customer
  * @param iCustomerTimewindowstart The timewindowstart of the Customer
  * @param iCustomerTimewindowend The timewindowend of the Customer
  * @param dCustomerMinimumchargeableinterests The minimumchargeableinterests of the Customer
- * @param dtCustomerBirthdate The birthdate of the Customer
  * @param dtCustomerTransfer The transfer of the Customer
  * @param dtCustomerTransferappointment The transferappointment of the Customer
- * @param dtCustomerTransfersurvey The transfersurvey of the Customer
  * @param bCustomerIsactive Whether the customer is active or not
  * @param bCustomerVariableexpensefinanced Whether if it's an variableexpensefinanced
  * @param bCustomerVariableexpensefinancedtaxes Whether if it's an variableexpensefinancedtaxes
@@ -80,9 +63,26 @@ import com.squareup.moshi.JsonClass
  * @param bCustomerBlackcopycarbon Whether if it's an blackcopycarbon
  * @param bCustomerUnsubscribeinfo Whether if it's an unsubscribeinfo
  * @param tCustomerComment The comment of the Customer
+ * @param fkiCustomergroupID The unique ID of the Customergroup
  * @param sCustomerNote A note for the Customer
+ * @param fkiImageID The unique ID of the Image
+ * @param fkiElectronicfundstransferbankaccountID The unique ID of the Electronicfundstransferbankaccount
+ * @param fkiElectronicfundstransferbankaccountIDDirectdebit The unique ID of the Electronicfundstransferbankaccount
+ * @param fkiAgentIDVariableexpensechargeto The unique ID of the Agent.
+ * @param fkiBrokerIDVariableexpensechargeto The unique ID of the Broker.
+ * @param fkiCustomerIDVariableexpensechargeto The unique ID of the Customer.
+ * @param fkiGlaccountcontainerIDVariableexpensechargeto The unique ID of the Glaccountcontainer
+ * @param fkiAgentIDSupplychargechargeto The unique ID of the Agent.
+ * @param fkiBrokerIDSupplychargechargeto The unique ID of the Broker.
+ * @param fkiCustomerIDSupplychargechargeto The unique ID of the Customer.
+ * @param fkiGlaccountcontainerIDSupplychargechargeto The unique ID of the Glaccountcontainer
+ * @param fkiInvoicealternatelogoID The unique ID of the Invoicealternatelogo
+ * @param fkiSynchronizationlinkserverID The unique ID of the Synchronizationlinkserver
  * @param efkiUserID The unique ID of the User
  * @param efksCustomerCode The code of the Customer
+ * @param dCustomerFulltimeequivalent The fulltimeequivalent of the Customer
+ * @param dtCustomerBirthdate The birthdate of the Customer
+ * @param dtCustomerTransfersurvey The transfersurvey of the Customer
  * @param IMPORTID 
  */
 
@@ -97,10 +97,6 @@ data class CustomerResponseCompound (
     @Json(name = "fkiCompanyID")
     val fkiCompanyID: kotlin.Int,
 
-    /* The unique ID of the Customergroup */
-    @Json(name = "fkiCustomergroupID")
-    val fkiCustomergroupID: kotlin.Int,
-
     /* The name of the Customer */
     @Json(name = "sCustomerName")
     val sCustomerName: kotlin.String,
@@ -112,10 +108,6 @@ data class CustomerResponseCompound (
     /* The unique ID of the Contactcontainer */
     @Json(name = "fkiContactcontainerID")
     val fkiContactcontainerID: kotlin.Int,
-
-    /* The unique ID of the Image */
-    @Json(name = "fkiImageID")
-    val fkiImageID: kotlin.Int,
 
     /* The unique ID of the Glaccountcontainer */
     @Json(name = "fkiGlaccountcontainerID")
@@ -133,14 +125,6 @@ data class CustomerResponseCompound (
     @Json(name = "fkiPaymentmethodID")
     val fkiPaymentmethodID: kotlin.Int,
 
-    /* The unique ID of the Electronicfundstransferbankaccount */
-    @Json(name = "fkiElectronicfundstransferbankaccountID")
-    val fkiElectronicfundstransferbankaccountID: kotlin.Int,
-
-    /* The unique ID of the Electronicfundstransferbankaccount */
-    @Json(name = "fkiElectronicfundstransferbankaccountIDDirectdebit")
-    val fkiElectronicfundstransferbankaccountIDDirectdebit: kotlin.Int,
-
     /* The unique ID of the Sendingmethod */
     @Json(name = "fkiSendingmethodID")
     val fkiSendingmethodID: kotlin.Int,
@@ -153,53 +137,9 @@ data class CustomerResponseCompound (
     @Json(name = "fkiAttendancestatusID")
     val fkiAttendancestatusID: kotlin.Int,
 
-    /* The unique ID of the Agent. */
-    @Json(name = "fkiAgentIDVariableexpensechargeto")
-    val fkiAgentIDVariableexpensechargeto: kotlin.Int,
-
-    /* The unique ID of the Broker. */
-    @Json(name = "fkiBrokerIDVariableexpensechargeto")
-    val fkiBrokerIDVariableexpensechargeto: kotlin.Int,
-
-    /* The unique ID of the Customer. */
-    @Json(name = "fkiCustomerIDVariableexpensechargeto")
-    val fkiCustomerIDVariableexpensechargeto: kotlin.Int,
-
-    /* The unique ID of the Glaccountcontainer */
-    @Json(name = "fkiGlaccountcontainerIDVariableexpensechargeto")
-    val fkiGlaccountcontainerIDVariableexpensechargeto: kotlin.Int,
-
-    /* The unique ID of the Agent. */
-    @Json(name = "fkiAgentIDSupplychargechargeto")
-    val fkiAgentIDSupplychargechargeto: kotlin.Int,
-
-    /* The unique ID of the Broker. */
-    @Json(name = "fkiBrokerIDSupplychargechargeto")
-    val fkiBrokerIDSupplychargechargeto: kotlin.Int,
-
-    /* The unique ID of the Customer. */
-    @Json(name = "fkiCustomerIDSupplychargechargeto")
-    val fkiCustomerIDSupplychargechargeto: kotlin.Int,
-
-    /* The unique ID of the Glaccountcontainer */
-    @Json(name = "fkiGlaccountcontainerIDSupplychargechargeto")
-    val fkiGlaccountcontainerIDSupplychargechargeto: kotlin.Int,
-
-    /* The unique ID of the Invoicealternatelogo */
-    @Json(name = "fkiInvoicealternatelogoID")
-    val fkiInvoicealternatelogoID: kotlin.Int,
-
-    /* The unique ID of the Synchronizationlinkserver */
-    @Json(name = "fkiSynchronizationlinkserverID")
-    val fkiSynchronizationlinkserverID: kotlin.Int,
-
     /* The code of the Customer */
     @Json(name = "sCustomerCode")
     val sCustomerCode: kotlin.String,
-
-    /* The fulltimeequivalent of the Customer */
-    @Json(name = "dCustomerFulltimeequivalent")
-    val dCustomerFulltimeequivalent: kotlin.String,
 
     /* The photocopiercode of the Customer */
     @Json(name = "iCustomerPhotocopiercode")
@@ -221,10 +161,6 @@ data class CustomerResponseCompound (
     @Json(name = "dCustomerMinimumchargeableinterests")
     val dCustomerMinimumchargeableinterests: kotlin.String,
 
-    /* The birthdate of the Customer */
-    @Json(name = "dtCustomerBirthdate")
-    val dtCustomerBirthdate: kotlin.String,
-
     /* The transfer of the Customer */
     @Json(name = "dtCustomerTransfer")
     val dtCustomerTransfer: kotlin.String,
@@ -232,10 +168,6 @@ data class CustomerResponseCompound (
     /* The transferappointment of the Customer */
     @Json(name = "dtCustomerTransferappointment")
     val dtCustomerTransferappointment: kotlin.String,
-
-    /* The transfersurvey of the Customer */
-    @Json(name = "dtCustomerTransfersurvey")
-    val dtCustomerTransfersurvey: kotlin.String,
 
     /* Whether the customer is active or not */
     @Json(name = "bCustomerIsactive")
@@ -279,9 +211,65 @@ data class CustomerResponseCompound (
     @Json(name = "tCustomerComment")
     val tCustomerComment: kotlin.String,
 
+    /* The unique ID of the Customergroup */
+    @Json(name = "fkiCustomergroupID")
+    val fkiCustomergroupID: kotlin.Int? = null,
+
     /* A note for the Customer */
     @Json(name = "sCustomerNote")
     val sCustomerNote: kotlin.String? = null,
+
+    /* The unique ID of the Image */
+    @Json(name = "fkiImageID")
+    val fkiImageID: kotlin.Int? = null,
+
+    /* The unique ID of the Electronicfundstransferbankaccount */
+    @Json(name = "fkiElectronicfundstransferbankaccountID")
+    val fkiElectronicfundstransferbankaccountID: kotlin.Int? = null,
+
+    /* The unique ID of the Electronicfundstransferbankaccount */
+    @Json(name = "fkiElectronicfundstransferbankaccountIDDirectdebit")
+    val fkiElectronicfundstransferbankaccountIDDirectdebit: kotlin.Int? = null,
+
+    /* The unique ID of the Agent. */
+    @Json(name = "fkiAgentIDVariableexpensechargeto")
+    val fkiAgentIDVariableexpensechargeto: kotlin.Int? = null,
+
+    /* The unique ID of the Broker. */
+    @Json(name = "fkiBrokerIDVariableexpensechargeto")
+    val fkiBrokerIDVariableexpensechargeto: kotlin.Int? = null,
+
+    /* The unique ID of the Customer. */
+    @Json(name = "fkiCustomerIDVariableexpensechargeto")
+    val fkiCustomerIDVariableexpensechargeto: kotlin.Int? = null,
+
+    /* The unique ID of the Glaccountcontainer */
+    @Json(name = "fkiGlaccountcontainerIDVariableexpensechargeto")
+    val fkiGlaccountcontainerIDVariableexpensechargeto: kotlin.Int? = null,
+
+    /* The unique ID of the Agent. */
+    @Json(name = "fkiAgentIDSupplychargechargeto")
+    val fkiAgentIDSupplychargechargeto: kotlin.Int? = null,
+
+    /* The unique ID of the Broker. */
+    @Json(name = "fkiBrokerIDSupplychargechargeto")
+    val fkiBrokerIDSupplychargechargeto: kotlin.Int? = null,
+
+    /* The unique ID of the Customer. */
+    @Json(name = "fkiCustomerIDSupplychargechargeto")
+    val fkiCustomerIDSupplychargechargeto: kotlin.Int? = null,
+
+    /* The unique ID of the Glaccountcontainer */
+    @Json(name = "fkiGlaccountcontainerIDSupplychargechargeto")
+    val fkiGlaccountcontainerIDSupplychargechargeto: kotlin.Int? = null,
+
+    /* The unique ID of the Invoicealternatelogo */
+    @Json(name = "fkiInvoicealternatelogoID")
+    val fkiInvoicealternatelogoID: kotlin.Int? = null,
+
+    /* The unique ID of the Synchronizationlinkserver */
+    @Json(name = "fkiSynchronizationlinkserverID")
+    val fkiSynchronizationlinkserverID: kotlin.Int? = null,
 
     /* The unique ID of the User */
     @Json(name = "efkiUserID")
@@ -290,6 +278,18 @@ data class CustomerResponseCompound (
     /* The code of the Customer */
     @Json(name = "efksCustomerCode")
     val efksCustomerCode: kotlin.String? = null,
+
+    /* The fulltimeequivalent of the Customer */
+    @Json(name = "dCustomerFulltimeequivalent")
+    val dCustomerFulltimeequivalent: kotlin.String? = null,
+
+    /* The birthdate of the Customer */
+    @Json(name = "dtCustomerBirthdate")
+    val dtCustomerBirthdate: kotlin.String? = null,
+
+    /* The transfersurvey of the Customer */
+    @Json(name = "dtCustomerTransfersurvey")
+    val dtCustomerTransfersurvey: kotlin.String? = null,
 
     @Json(name = "IMPORTID")
     val IMPORTID: kotlin.String? = null

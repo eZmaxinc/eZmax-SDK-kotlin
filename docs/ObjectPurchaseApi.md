@@ -6,6 +6,10 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | ------------- | ------------- | ------------- |
 | [**purchaseBatchDownloadV1**](ObjectPurchaseApi.md#purchaseBatchDownloadV1) | **POST** /1/object/purchase/{pkiPurchaseID}/batchDownload | Download multiples attachments from a Purchase |
 | [**purchaseGetAttachmentsV1**](ObjectPurchaseApi.md#purchaseGetAttachmentsV1) | **GET** /1/object/purchase/{pkiPurchaseID}/getAttachments | Retrieve Purchase&#39;s attachments |
+| [**purchaseGetCommunicationCountV1**](ObjectPurchaseApi.md#purchaseGetCommunicationCountV1) | **GET** /1/object/purchase/{pkiPurchaseID}/getCommunicationCount | Retrieve Communication count |
+| [**purchaseGetCommunicationListV1**](ObjectPurchaseApi.md#purchaseGetCommunicationListV1) | **GET** /1/object/purchase/{pkiPurchaseID}/getCommunicationList | Retrieve Communication list |
+| [**purchaseGetCommunicationrecipientsV1**](ObjectPurchaseApi.md#purchaseGetCommunicationrecipientsV1) | **GET** /1/object/purchase/{pkiPurchaseID}/getCommunicationrecipients | Retrieve Communication recipients |
+| [**purchaseGetCommunicationsendersV1**](ObjectPurchaseApi.md#purchaseGetCommunicationsendersV1) | **GET** /1/object/purchase/{pkiPurchaseID}/getCommunicationsenders | Retrieve Communication senders |
 | [**purchaseGetListV1**](ObjectPurchaseApi.md#purchaseGetListV1) | **GET** /1/object/purchase/getList | Retrieve Purchase list |
 | [**purchaseImportIntoEDMV1**](ObjectPurchaseApi.md#purchaseImportIntoEDMV1) | **POST** /1/object/purchase/{pkiPurchaseID}/importIntoEDM | Import attachments into the Purchase |
 
@@ -93,6 +97,194 @@ try {
 ### Return type
 
 [**PurchaseGetAttachmentsV1Response**](PurchaseGetAttachmentsV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="purchaseGetCommunicationCountV1"></a>
+# **purchaseGetCommunicationCountV1**
+> PurchaseGetCommunicationCountV1Response purchaseGetCommunicationCountV1(pkiPurchaseID)
+
+Retrieve Communication count
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectPurchaseApi()
+val pkiPurchaseID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : PurchaseGetCommunicationCountV1Response = apiInstance.purchaseGetCommunicationCountV1(pkiPurchaseID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectPurchaseApi#purchaseGetCommunicationCountV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectPurchaseApi#purchaseGetCommunicationCountV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiPurchaseID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**PurchaseGetCommunicationCountV1Response**](PurchaseGetCommunicationCountV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="purchaseGetCommunicationListV1"></a>
+# **purchaseGetCommunicationListV1**
+> PurchaseGetCommunicationListV1Response purchaseGetCommunicationListV1(pkiPurchaseID)
+
+Retrieve Communication list
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectPurchaseApi()
+val pkiPurchaseID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : PurchaseGetCommunicationListV1Response = apiInstance.purchaseGetCommunicationListV1(pkiPurchaseID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectPurchaseApi#purchaseGetCommunicationListV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectPurchaseApi#purchaseGetCommunicationListV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiPurchaseID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**PurchaseGetCommunicationListV1Response**](PurchaseGetCommunicationListV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="purchaseGetCommunicationrecipientsV1"></a>
+# **purchaseGetCommunicationrecipientsV1**
+> PurchaseGetCommunicationrecipientsV1Response purchaseGetCommunicationrecipientsV1(pkiPurchaseID)
+
+Retrieve Communication recipients
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectPurchaseApi()
+val pkiPurchaseID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : PurchaseGetCommunicationrecipientsV1Response = apiInstance.purchaseGetCommunicationrecipientsV1(pkiPurchaseID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectPurchaseApi#purchaseGetCommunicationrecipientsV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectPurchaseApi#purchaseGetCommunicationrecipientsV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiPurchaseID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**PurchaseGetCommunicationrecipientsV1Response**](PurchaseGetCommunicationrecipientsV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="purchaseGetCommunicationsendersV1"></a>
+# **purchaseGetCommunicationsendersV1**
+> PurchaseGetCommunicationsendersV1Response purchaseGetCommunicationsendersV1(pkiPurchaseID)
+
+Retrieve Communication senders
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectPurchaseApi()
+val pkiPurchaseID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : PurchaseGetCommunicationsendersV1Response = apiInstance.purchaseGetCommunicationsendersV1(pkiPurchaseID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectPurchaseApi#purchaseGetCommunicationsendersV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectPurchaseApi#purchaseGetCommunicationsendersV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiPurchaseID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**PurchaseGetCommunicationsendersV1Response**](PurchaseGetCommunicationsendersV1Response.md)
 
 ### Authorization
 

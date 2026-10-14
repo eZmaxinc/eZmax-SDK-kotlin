@@ -544,6 +544,7 @@ open class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call
          @Json(name = "AgentBrokerEmployeeEzsignUserNormal") AgentBrokerEmployeeEzsignUserNormal("AgentBrokerEmployeeEzsignUserNormal"),
          @Json(name = "AgentBrokerEmployeeNormalBuiltIn") AgentBrokerEmployeeNormalBuiltIn("AgentBrokerEmployeeNormalBuiltIn"),
          @Json(name = "AgentBrokerEzsignuserNormal") AgentBrokerEzsignuserNormal("AgentBrokerEzsignuserNormal"),
+         @Json(name = "AttachmentSpecificUser") AttachmentSpecificUser("AttachmentSpecificUser"),
          @Json(name = "ClonableUsers") ClonableUsers("ClonableUsers"),
          @Json(name = "EzsignuserBuiltIn") EzsignuserBuiltIn("EzsignuserBuiltIn"),
          @Json(name = "Ezsignuser") Ezsignuser("Ezsignuser"),
@@ -584,6 +585,7 @@ open class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call
      * Get the list of User to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Users to return
      * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
+     * @param fkiAttachmentID Specify for which fkiAttachmentID we want to find users for. Only used when sSelector is AttachmentSpecificUser. (optional)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return UserGetAutocompleteV2Response
@@ -595,8 +597,8 @@ open class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun userGetAutocompleteV2(sSelector: SSelectorUserGetAutocompleteV2, eFilterActive: EFilterActiveUserGetAutocompleteV2? = EFilterActiveUserGetAutocompleteV2.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderAcceptLanguage? = null) : UserGetAutocompleteV2Response {
-        val localVarResponse = userGetAutocompleteV2WithHttpInfo(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
+    fun userGetAutocompleteV2(sSelector: SSelectorUserGetAutocompleteV2, eFilterActive: EFilterActiveUserGetAutocompleteV2? = EFilterActiveUserGetAutocompleteV2.Active, fkiAttachmentID: kotlin.String? = null, sQuery: kotlin.String? = null, acceptLanguage: HeaderAcceptLanguage? = null) : UserGetAutocompleteV2Response {
+        val localVarResponse = userGetAutocompleteV2WithHttpInfo(sSelector = sSelector, eFilterActive = eFilterActive, fkiAttachmentID = fkiAttachmentID, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as UserGetAutocompleteV2Response
@@ -619,6 +621,7 @@ open class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call
      * Get the list of User to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Users to return
      * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
+     * @param fkiAttachmentID Specify for which fkiAttachmentID we want to find users for. Only used when sSelector is AttachmentSpecificUser. (optional)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return ApiResponse<UserGetAutocompleteV2Response?>
@@ -627,8 +630,8 @@ open class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun userGetAutocompleteV2WithHttpInfo(sSelector: SSelectorUserGetAutocompleteV2, eFilterActive: EFilterActiveUserGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : ApiResponse<UserGetAutocompleteV2Response?> {
-        val localVariableConfig = userGetAutocompleteV2RequestConfig(sSelector = sSelector, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
+    fun userGetAutocompleteV2WithHttpInfo(sSelector: SSelectorUserGetAutocompleteV2, eFilterActive: EFilterActiveUserGetAutocompleteV2?, fkiAttachmentID: kotlin.String?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : ApiResponse<UserGetAutocompleteV2Response?> {
+        val localVariableConfig = userGetAutocompleteV2RequestConfig(sSelector = sSelector, eFilterActive = eFilterActive, fkiAttachmentID = fkiAttachmentID, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return request<Unit, UserGetAutocompleteV2Response>(
             localVariableConfig
@@ -640,16 +643,20 @@ open class ObjectUserApi(basePath: kotlin.String = defaultBasePath, client: Call
      *
      * @param sSelector The type of Users to return
      * @param eFilterActive Specify which results we want to display. (optional, default to EFilterActive.Active)
+     * @param fkiAttachmentID Specify for which fkiAttachmentID we want to find users for. Only used when sSelector is AttachmentSpecificUser. (optional)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return RequestConfig
      */
-    fun userGetAutocompleteV2RequestConfig(sSelector: SSelectorUserGetAutocompleteV2, eFilterActive: EFilterActiveUserGetAutocompleteV2?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : RequestConfig<Unit> {
+    fun userGetAutocompleteV2RequestConfig(sSelector: SSelectorUserGetAutocompleteV2, eFilterActive: EFilterActiveUserGetAutocompleteV2?, fkiAttachmentID: kotlin.String?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
                 if (eFilterActive != null) {
                     put("eFilterActive", listOf(eFilterActive.value))
+                }
+                if (fkiAttachmentID != null) {
+                    put("fkiAttachmentID", listOf(fkiAttachmentID.toString()))
                 }
                 if (sQuery != null) {
                     put("sQuery", listOf(sQuery.toString()))

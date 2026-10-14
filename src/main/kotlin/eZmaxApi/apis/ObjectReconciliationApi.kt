@@ -30,6 +30,10 @@ import okhttp3.HttpUrl
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.ReconciliationBatchDownloadV1Request
 import eZmaxApi.models.ReconciliationGetAttachmentsV1Response
+import eZmaxApi.models.ReconciliationGetCommunicationCountV1Response
+import eZmaxApi.models.ReconciliationGetCommunicationListV1Response
+import eZmaxApi.models.ReconciliationGetCommunicationrecipientsV1Response
+import eZmaxApi.models.ReconciliationGetCommunicationsendersV1Response
 import eZmaxApi.models.ReconciliationImportIntoEDMV1Request
 import eZmaxApi.models.ReconciliationImportIntoEDMV1Response
 
@@ -200,6 +204,298 @@ open class ObjectReconciliationApi(basePath: kotlin.String = defaultBasePath, cl
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/reconciliation/{pkiReconciliationID}/getAttachments".replace("{"+"pkiReconciliationID"+"}", encodeURIComponent(pkiReconciliationID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/reconciliation/{pkiReconciliationID}/getCommunicationCount
+     * Retrieve Communication count
+     * 
+     * @param pkiReconciliationID 
+     * @return ReconciliationGetCommunicationCountV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun reconciliationGetCommunicationCountV1(pkiReconciliationID: kotlin.Int) : ReconciliationGetCommunicationCountV1Response {
+        val localVarResponse = reconciliationGetCommunicationCountV1WithHttpInfo(pkiReconciliationID = pkiReconciliationID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ReconciliationGetCommunicationCountV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/reconciliation/{pkiReconciliationID}/getCommunicationCount
+     * Retrieve Communication count
+     * 
+     * @param pkiReconciliationID 
+     * @return ApiResponse<ReconciliationGetCommunicationCountV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun reconciliationGetCommunicationCountV1WithHttpInfo(pkiReconciliationID: kotlin.Int) : ApiResponse<ReconciliationGetCommunicationCountV1Response?> {
+        val localVariableConfig = reconciliationGetCommunicationCountV1RequestConfig(pkiReconciliationID = pkiReconciliationID)
+
+        return request<Unit, ReconciliationGetCommunicationCountV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation reconciliationGetCommunicationCountV1
+     *
+     * @param pkiReconciliationID 
+     * @return RequestConfig
+     */
+    fun reconciliationGetCommunicationCountV1RequestConfig(pkiReconciliationID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/reconciliation/{pkiReconciliationID}/getCommunicationCount".replace("{"+"pkiReconciliationID"+"}", encodeURIComponent(pkiReconciliationID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/reconciliation/{pkiReconciliationID}/getCommunicationList
+     * Retrieve Communication list
+     * 
+     * @param pkiReconciliationID 
+     * @return ReconciliationGetCommunicationListV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun reconciliationGetCommunicationListV1(pkiReconciliationID: kotlin.Int) : ReconciliationGetCommunicationListV1Response {
+        val localVarResponse = reconciliationGetCommunicationListV1WithHttpInfo(pkiReconciliationID = pkiReconciliationID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ReconciliationGetCommunicationListV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/reconciliation/{pkiReconciliationID}/getCommunicationList
+     * Retrieve Communication list
+     * 
+     * @param pkiReconciliationID 
+     * @return ApiResponse<ReconciliationGetCommunicationListV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun reconciliationGetCommunicationListV1WithHttpInfo(pkiReconciliationID: kotlin.Int) : ApiResponse<ReconciliationGetCommunicationListV1Response?> {
+        val localVariableConfig = reconciliationGetCommunicationListV1RequestConfig(pkiReconciliationID = pkiReconciliationID)
+
+        return request<Unit, ReconciliationGetCommunicationListV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation reconciliationGetCommunicationListV1
+     *
+     * @param pkiReconciliationID 
+     * @return RequestConfig
+     */
+    fun reconciliationGetCommunicationListV1RequestConfig(pkiReconciliationID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/reconciliation/{pkiReconciliationID}/getCommunicationList".replace("{"+"pkiReconciliationID"+"}", encodeURIComponent(pkiReconciliationID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/reconciliation/{pkiReconciliationID}/getCommunicationrecipients
+     * Retrieve Communication recipients
+     * 
+     * @param pkiReconciliationID 
+     * @return ReconciliationGetCommunicationrecipientsV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun reconciliationGetCommunicationrecipientsV1(pkiReconciliationID: kotlin.Int) : ReconciliationGetCommunicationrecipientsV1Response {
+        val localVarResponse = reconciliationGetCommunicationrecipientsV1WithHttpInfo(pkiReconciliationID = pkiReconciliationID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ReconciliationGetCommunicationrecipientsV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/reconciliation/{pkiReconciliationID}/getCommunicationrecipients
+     * Retrieve Communication recipients
+     * 
+     * @param pkiReconciliationID 
+     * @return ApiResponse<ReconciliationGetCommunicationrecipientsV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun reconciliationGetCommunicationrecipientsV1WithHttpInfo(pkiReconciliationID: kotlin.Int) : ApiResponse<ReconciliationGetCommunicationrecipientsV1Response?> {
+        val localVariableConfig = reconciliationGetCommunicationrecipientsV1RequestConfig(pkiReconciliationID = pkiReconciliationID)
+
+        return request<Unit, ReconciliationGetCommunicationrecipientsV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation reconciliationGetCommunicationrecipientsV1
+     *
+     * @param pkiReconciliationID 
+     * @return RequestConfig
+     */
+    fun reconciliationGetCommunicationrecipientsV1RequestConfig(pkiReconciliationID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/reconciliation/{pkiReconciliationID}/getCommunicationrecipients".replace("{"+"pkiReconciliationID"+"}", encodeURIComponent(pkiReconciliationID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/reconciliation/{pkiReconciliationID}/getCommunicationsenders
+     * Retrieve Communication senders
+     * 
+     * @param pkiReconciliationID 
+     * @return ReconciliationGetCommunicationsendersV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun reconciliationGetCommunicationsendersV1(pkiReconciliationID: kotlin.Int) : ReconciliationGetCommunicationsendersV1Response {
+        val localVarResponse = reconciliationGetCommunicationsendersV1WithHttpInfo(pkiReconciliationID = pkiReconciliationID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ReconciliationGetCommunicationsendersV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/reconciliation/{pkiReconciliationID}/getCommunicationsenders
+     * Retrieve Communication senders
+     * 
+     * @param pkiReconciliationID 
+     * @return ApiResponse<ReconciliationGetCommunicationsendersV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun reconciliationGetCommunicationsendersV1WithHttpInfo(pkiReconciliationID: kotlin.Int) : ApiResponse<ReconciliationGetCommunicationsendersV1Response?> {
+        val localVariableConfig = reconciliationGetCommunicationsendersV1RequestConfig(pkiReconciliationID = pkiReconciliationID)
+
+        return request<Unit, ReconciliationGetCommunicationsendersV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation reconciliationGetCommunicationsendersV1
+     *
+     * @param pkiReconciliationID 
+     * @return RequestConfig
+     */
+    fun reconciliationGetCommunicationsendersV1RequestConfig(pkiReconciliationID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/reconciliation/{pkiReconciliationID}/getCommunicationsenders".replace("{"+"pkiReconciliationID"+"}", encodeURIComponent(pkiReconciliationID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

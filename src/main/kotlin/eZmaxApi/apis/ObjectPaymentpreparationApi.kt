@@ -30,6 +30,10 @@ import okhttp3.HttpUrl
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.PaymentpreparationBatchDownloadV1Request
 import eZmaxApi.models.PaymentpreparationGetAttachmentsV1Response
+import eZmaxApi.models.PaymentpreparationGetCommunicationCountV1Response
+import eZmaxApi.models.PaymentpreparationGetCommunicationListV1Response
+import eZmaxApi.models.PaymentpreparationGetCommunicationrecipientsV1Response
+import eZmaxApi.models.PaymentpreparationGetCommunicationsendersV1Response
 import eZmaxApi.models.PaymentpreparationImportIntoEDMV1Request
 import eZmaxApi.models.PaymentpreparationImportIntoEDMV1Response
 
@@ -200,6 +204,298 @@ open class ObjectPaymentpreparationApi(basePath: kotlin.String = defaultBasePath
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/paymentpreparation/{pkiPaymentpreparationID}/getAttachments".replace("{"+"pkiPaymentpreparationID"+"}", encodeURIComponent(pkiPaymentpreparationID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/paymentpreparation/{pkiPaymentpreparationID}/getCommunicationCount
+     * Retrieve Communication count
+     * 
+     * @param pkiPaymentpreparationID 
+     * @return PaymentpreparationGetCommunicationCountV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun paymentpreparationGetCommunicationCountV1(pkiPaymentpreparationID: kotlin.Int) : PaymentpreparationGetCommunicationCountV1Response {
+        val localVarResponse = paymentpreparationGetCommunicationCountV1WithHttpInfo(pkiPaymentpreparationID = pkiPaymentpreparationID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as PaymentpreparationGetCommunicationCountV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/paymentpreparation/{pkiPaymentpreparationID}/getCommunicationCount
+     * Retrieve Communication count
+     * 
+     * @param pkiPaymentpreparationID 
+     * @return ApiResponse<PaymentpreparationGetCommunicationCountV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun paymentpreparationGetCommunicationCountV1WithHttpInfo(pkiPaymentpreparationID: kotlin.Int) : ApiResponse<PaymentpreparationGetCommunicationCountV1Response?> {
+        val localVariableConfig = paymentpreparationGetCommunicationCountV1RequestConfig(pkiPaymentpreparationID = pkiPaymentpreparationID)
+
+        return request<Unit, PaymentpreparationGetCommunicationCountV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation paymentpreparationGetCommunicationCountV1
+     *
+     * @param pkiPaymentpreparationID 
+     * @return RequestConfig
+     */
+    fun paymentpreparationGetCommunicationCountV1RequestConfig(pkiPaymentpreparationID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/paymentpreparation/{pkiPaymentpreparationID}/getCommunicationCount".replace("{"+"pkiPaymentpreparationID"+"}", encodeURIComponent(pkiPaymentpreparationID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/paymentpreparation/{pkiPaymentpreparationID}/getCommunicationList
+     * Retrieve Communication list
+     * 
+     * @param pkiPaymentpreparationID 
+     * @return PaymentpreparationGetCommunicationListV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun paymentpreparationGetCommunicationListV1(pkiPaymentpreparationID: kotlin.Int) : PaymentpreparationGetCommunicationListV1Response {
+        val localVarResponse = paymentpreparationGetCommunicationListV1WithHttpInfo(pkiPaymentpreparationID = pkiPaymentpreparationID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as PaymentpreparationGetCommunicationListV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/paymentpreparation/{pkiPaymentpreparationID}/getCommunicationList
+     * Retrieve Communication list
+     * 
+     * @param pkiPaymentpreparationID 
+     * @return ApiResponse<PaymentpreparationGetCommunicationListV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun paymentpreparationGetCommunicationListV1WithHttpInfo(pkiPaymentpreparationID: kotlin.Int) : ApiResponse<PaymentpreparationGetCommunicationListV1Response?> {
+        val localVariableConfig = paymentpreparationGetCommunicationListV1RequestConfig(pkiPaymentpreparationID = pkiPaymentpreparationID)
+
+        return request<Unit, PaymentpreparationGetCommunicationListV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation paymentpreparationGetCommunicationListV1
+     *
+     * @param pkiPaymentpreparationID 
+     * @return RequestConfig
+     */
+    fun paymentpreparationGetCommunicationListV1RequestConfig(pkiPaymentpreparationID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/paymentpreparation/{pkiPaymentpreparationID}/getCommunicationList".replace("{"+"pkiPaymentpreparationID"+"}", encodeURIComponent(pkiPaymentpreparationID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/paymentpreparation/{pkiPaymentpreparationID}/getCommunicationrecipients
+     * Retrieve Communication recipients
+     * 
+     * @param pkiPaymentpreparationID 
+     * @return PaymentpreparationGetCommunicationrecipientsV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun paymentpreparationGetCommunicationrecipientsV1(pkiPaymentpreparationID: kotlin.Int) : PaymentpreparationGetCommunicationrecipientsV1Response {
+        val localVarResponse = paymentpreparationGetCommunicationrecipientsV1WithHttpInfo(pkiPaymentpreparationID = pkiPaymentpreparationID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as PaymentpreparationGetCommunicationrecipientsV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/paymentpreparation/{pkiPaymentpreparationID}/getCommunicationrecipients
+     * Retrieve Communication recipients
+     * 
+     * @param pkiPaymentpreparationID 
+     * @return ApiResponse<PaymentpreparationGetCommunicationrecipientsV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun paymentpreparationGetCommunicationrecipientsV1WithHttpInfo(pkiPaymentpreparationID: kotlin.Int) : ApiResponse<PaymentpreparationGetCommunicationrecipientsV1Response?> {
+        val localVariableConfig = paymentpreparationGetCommunicationrecipientsV1RequestConfig(pkiPaymentpreparationID = pkiPaymentpreparationID)
+
+        return request<Unit, PaymentpreparationGetCommunicationrecipientsV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation paymentpreparationGetCommunicationrecipientsV1
+     *
+     * @param pkiPaymentpreparationID 
+     * @return RequestConfig
+     */
+    fun paymentpreparationGetCommunicationrecipientsV1RequestConfig(pkiPaymentpreparationID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/paymentpreparation/{pkiPaymentpreparationID}/getCommunicationrecipients".replace("{"+"pkiPaymentpreparationID"+"}", encodeURIComponent(pkiPaymentpreparationID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/paymentpreparation/{pkiPaymentpreparationID}/getCommunicationsenders
+     * Retrieve Communication senders
+     * 
+     * @param pkiPaymentpreparationID 
+     * @return PaymentpreparationGetCommunicationsendersV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun paymentpreparationGetCommunicationsendersV1(pkiPaymentpreparationID: kotlin.Int) : PaymentpreparationGetCommunicationsendersV1Response {
+        val localVarResponse = paymentpreparationGetCommunicationsendersV1WithHttpInfo(pkiPaymentpreparationID = pkiPaymentpreparationID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as PaymentpreparationGetCommunicationsendersV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/paymentpreparation/{pkiPaymentpreparationID}/getCommunicationsenders
+     * Retrieve Communication senders
+     * 
+     * @param pkiPaymentpreparationID 
+     * @return ApiResponse<PaymentpreparationGetCommunicationsendersV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun paymentpreparationGetCommunicationsendersV1WithHttpInfo(pkiPaymentpreparationID: kotlin.Int) : ApiResponse<PaymentpreparationGetCommunicationsendersV1Response?> {
+        val localVariableConfig = paymentpreparationGetCommunicationsendersV1RequestConfig(pkiPaymentpreparationID = pkiPaymentpreparationID)
+
+        return request<Unit, PaymentpreparationGetCommunicationsendersV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation paymentpreparationGetCommunicationsendersV1
+     *
+     * @param pkiPaymentpreparationID 
+     * @return RequestConfig
+     */
+    fun paymentpreparationGetCommunicationsendersV1RequestConfig(pkiPaymentpreparationID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/paymentpreparation/{pkiPaymentpreparationID}/getCommunicationsenders".replace("{"+"pkiPaymentpreparationID"+"}", encodeURIComponent(pkiPaymentpreparationID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

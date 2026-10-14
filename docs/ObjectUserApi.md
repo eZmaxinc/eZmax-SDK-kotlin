@@ -324,7 +324,7 @@ Configure Authorization:
 
 <a id="userGetAutocompleteV2"></a>
 # **userGetAutocompleteV2**
-> UserGetAutocompleteV2Response userGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+> UserGetAutocompleteV2Response userGetAutocompleteV2(sSelector, eFilterActive, fkiAttachmentID, sQuery, acceptLanguage)
 
 Retrieve Users and IDs
 
@@ -339,10 +339,11 @@ Get the list of User to be used in a dropdown or autocomplete control.
 val apiInstance = ObjectUserApi()
 val sSelector : kotlin.String = sSelector_example // kotlin.String | The type of Users to return
 val eFilterActive : kotlin.String = eFilterActive_example // kotlin.String | Specify which results we want to display.
+val fkiAttachmentID : kotlin.String = fkiAttachmentID_example // kotlin.String | Specify for which fkiAttachmentID we want to find users for. Only used when sSelector is AttachmentSpecificUser.
 val sQuery : kotlin.String = sQuery_example // kotlin.String | Allow to filter the returned results
 val acceptLanguage : HeaderAcceptLanguage =  // HeaderAcceptLanguage | 
 try {
-    val result : UserGetAutocompleteV2Response = apiInstance.userGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+    val result : UserGetAutocompleteV2Response = apiInstance.userGetAutocompleteV2(sSelector, eFilterActive, fkiAttachmentID, sQuery, acceptLanguage)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ObjectUserApi#userGetAutocompleteV2")
@@ -356,8 +357,9 @@ try {
 ### Parameters
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **sSelector** | **kotlin.String**| The type of Users to return | [enum: AgentBrokerAssistant, AgentBrokerEmployeeEzsignUserNormalWithoutEzmaxpartner, AgentBrokerEmployeeEzsignUserNormal, AgentBrokerEmployeeNormalBuiltIn, AgentBrokerEzsignuserNormal, ClonableUsers, EzsignuserBuiltIn, Ezsignuser, Normal, UsergroupDelegated] |
+| **sSelector** | **kotlin.String**| The type of Users to return | [enum: AgentBrokerAssistant, AgentBrokerEmployeeEzsignUserNormalWithoutEzmaxpartner, AgentBrokerEmployeeEzsignUserNormal, AgentBrokerEmployeeNormalBuiltIn, AgentBrokerEzsignuserNormal, AttachmentSpecificUser, ClonableUsers, EzsignuserBuiltIn, Ezsignuser, Normal, UsergroupDelegated] |
 | **eFilterActive** | **kotlin.String**| Specify which results we want to display. | [optional] [default to EFilterActive.Active] [enum: All, Active, Inactive] |
+| **fkiAttachmentID** | **kotlin.String**| Specify for which fkiAttachmentID we want to find users for. Only used when sSelector is AttachmentSpecificUser. | [optional] |
 | **sQuery** | **kotlin.String**| Allow to filter the returned results | [optional] |
 | **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
 

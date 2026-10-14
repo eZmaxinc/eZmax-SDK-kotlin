@@ -23,6 +23,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.CustomAttachmentImportIntoEDMResponse
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -30,14 +31,14 @@ import com.squareup.moshi.JsonClass
 /**
  * Payload for POST /1/object/invoice/{pkiInvoiceID}/importIntoEDM
  *
- * @param aPkiAttachmentID 
+ * @param aObjAttachment 
  */
 
 
 data class InvoiceImportIntoEDMV1ResponseMPayload (
 
-    @Json(name = "a_pkiAttachmentID")
-    val aPkiAttachmentID: kotlin.collections.List<kotlin.Int>
+    @Json(name = "a_objAttachment")
+    val aObjAttachment: kotlin.collections.List<CustomAttachmentImportIntoEDMResponse>
 
 ) {
 

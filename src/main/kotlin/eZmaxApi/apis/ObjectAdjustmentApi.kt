@@ -33,9 +33,11 @@ import eZmaxApi.models.AdjustmentGetCommunicationCountV1Response
 import eZmaxApi.models.AdjustmentGetCommunicationListV1Response
 import eZmaxApi.models.AdjustmentGetCommunicationrecipientsV1Response
 import eZmaxApi.models.AdjustmentGetCommunicationsendersV1Response
+import eZmaxApi.models.AdjustmentGetListV1Response
 import eZmaxApi.models.AdjustmentImportIntoEDMV1Request
 import eZmaxApi.models.AdjustmentImportIntoEDMV1Response
 import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.HeaderAcceptLanguage
 
 import com.squareup.moshi.Json
 
@@ -496,6 +498,141 @@ open class ObjectAdjustmentApi(basePath: kotlin.String = defaultBasePath, client
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/adjustment/{pkiAdjustmentID}/getCommunicationsenders".replace("{"+"pkiAdjustmentID"+"}", encodeURIComponent(pkiAdjustmentID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * enum for parameter eOrderBy
+     */
+     enum class EOrderByAdjustmentGetListV1(val value: kotlin.String) {
+         @Json(name = "pkiAdjustmentID_ASC") pkiAdjustmentID_ASC("pkiAdjustmentID_ASC"),
+         @Json(name = "pkiAdjustmentID_DESC") pkiAdjustmentID_DESC("pkiAdjustmentID_DESC"),
+         @Json(name = "fkiPeriodID_ASC") fkiPeriodID_ASC("fkiPeriodID_ASC"),
+         @Json(name = "fkiPeriodID_DESC") fkiPeriodID_DESC("fkiPeriodID_DESC"),
+         @Json(name = "sPeriodYYYYMM_ASC") sPeriodYYYYMM_ASC("sPeriodYYYYMM_ASC"),
+         @Json(name = "sPeriodYYYYMM_DESC") sPeriodYYYYMM_DESC("sPeriodYYYYMM_DESC"),
+         @Json(name = "fkiUserIDCreated_ASC") fkiUserIDCreated_ASC("fkiUserIDCreated_ASC"),
+         @Json(name = "fkiUserIDCreated_DESC") fkiUserIDCreated_DESC("fkiUserIDCreated_DESC"),
+         @Json(name = "sUserLoginname_ASC") sUserLoginname_ASC("sUserLoginname_ASC"),
+         @Json(name = "sUserLoginname_DESC") sUserLoginname_DESC("sUserLoginname_DESC"),
+         @Json(name = "dtAdjustmentDate_ASC") dtAdjustmentDate_ASC("dtAdjustmentDate_ASC"),
+         @Json(name = "dtAdjustmentDate_DESC") dtAdjustmentDate_DESC("dtAdjustmentDate_DESC"),
+         @Json(name = "sAdjustmentNumber_ASC") sAdjustmentNumber_ASC("sAdjustmentNumber_ASC"),
+         @Json(name = "sAdjustmentNumber_DESC") sAdjustmentNumber_DESC("sAdjustmentNumber_DESC"),
+         @Json(name = "sAdjustmentComment_ASC") sAdjustmentComment_ASC("sAdjustmentComment_ASC"),
+         @Json(name = "sAdjustmentComment_DESC") sAdjustmentComment_DESC("sAdjustmentComment_DESC"),
+         @Json(name = "dAdjustmentTotaldebit_ASC") dAdjustmentTotaldebit_ASC("dAdjustmentTotaldebit_ASC"),
+         @Json(name = "dAdjustmentTotaldebit_DESC") dAdjustmentTotaldebit_DESC("dAdjustmentTotaldebit_DESC"),
+         @Json(name = "dAdjustmentTotalcredit_ASC") dAdjustmentTotalcredit_ASC("dAdjustmentTotalcredit_ASC"),
+         @Json(name = "dAdjustmentTotalcredit_DESC") dAdjustmentTotalcredit_DESC("dAdjustmentTotalcredit_DESC");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
+     }
+
+    /**
+     * GET /1/object/adjustment/getList
+     * Retrieve Adjustment list
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return AdjustmentGetListV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun adjustmentGetListV1(eOrderBy: EOrderByAdjustmentGetListV1? = null, iRowMax: kotlin.Int? = null, iRowOffset: kotlin.Int? = 0, acceptLanguage: HeaderAcceptLanguage? = null, sFilter: kotlin.String? = null) : AdjustmentGetListV1Response {
+        val localVarResponse = adjustmentGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as AdjustmentGetListV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/adjustment/getList
+     * Retrieve Adjustment list
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return ApiResponse<AdjustmentGetListV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun adjustmentGetListV1WithHttpInfo(eOrderBy: EOrderByAdjustmentGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : ApiResponse<AdjustmentGetListV1Response?> {
+        val localVariableConfig = adjustmentGetListV1RequestConfig(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
+
+        return request<Unit, AdjustmentGetListV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation adjustmentGetListV1
+     *
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return RequestConfig
+     */
+    fun adjustmentGetListV1RequestConfig(eOrderBy: EOrderByAdjustmentGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (eOrderBy != null) {
+                    put("eOrderBy", listOf(eOrderBy.value))
+                }
+                if (iRowMax != null) {
+                    put("iRowMax", listOf(iRowMax.toString()))
+                }
+                if (iRowOffset != null) {
+                    put("iRowOffset", listOf(iRowOffset.toString()))
+                }
+                if (sFilter != null) {
+                    put("sFilter", listOf(sFilter.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/adjustment/getList",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

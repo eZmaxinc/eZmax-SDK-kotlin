@@ -8,6 +8,7 @@
 | **fkiBuyercontractID** | **kotlin.Int** | The unique ID of the Buyercontract |  [optional] |
 | **fkiEzsignfolderID** | **kotlin.Int** | The unique ID of the Ezsignfolder |  [optional] |
 | **fkiInscriptionID** | **kotlin.Int** | The unique ID of the Inscription. |  [optional] |
+| **fkiInscriptionnotauthenticatedID** | **kotlin.Int** | The unique ID of the Inscriptionnotauthenticated. |  [optional] |
 | **fkiInscriptiontempID** | **kotlin.Int** | The unique ID of the Inscriptiontemp |  [optional] |
 | **fkiInvoiceID** | **kotlin.Int** | The unique ID of the Invoice. |  [optional] |
 | **fkiOtherincomeID** | **kotlin.Int** | The unique ID of the Otherincome |  [optional] |

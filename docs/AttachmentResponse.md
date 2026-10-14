@@ -63,6 +63,7 @@
 | **fkiReconciliationID** | **kotlin.Int** | The unique ID of the Reconciliation |  [optional] |
 | **fkiEzsigndocumentIDReference** | **kotlin.Int** | The unique ID of the Ezsigndocument |  [optional] |
 | **fkiUserIDSpecific** | **kotlin.Int** | The unique ID of the User |  [optional] |
+| **objUserSpecific** | [**CustomUserNameResponse**](CustomUserNameResponse.md) |  |  [optional] |
 | **iAttachmentEDMmoduleflag** | **kotlin.Int** | The edmmoduleflag of the Attachment |  [optional] |
 | **tAttachmentRejectioncomment** | **kotlin.String** | The rejectioncomment of the Attachment |  [optional] |
 | **fkiUserIDOwner** | **kotlin.Int** | The unique ID of the User |  [optional] |

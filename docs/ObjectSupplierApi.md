@@ -6,6 +6,10 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | ------------- | ------------- | ------------- |
 | [**supplierBatchDownloadV1**](ObjectSupplierApi.md#supplierBatchDownloadV1) | **POST** /1/object/supplier/{pkiSupplierID}/batchDownload | Download multiples attachments from a Supplier |
 | [**supplierGetAttachmentsV1**](ObjectSupplierApi.md#supplierGetAttachmentsV1) | **GET** /1/object/supplier/{pkiSupplierID}/getAttachments | Retrieve Supplier&#39;s attachments |
+| [**supplierGetCommunicationCountV1**](ObjectSupplierApi.md#supplierGetCommunicationCountV1) | **GET** /1/object/supplier/{pkiSupplierID}/getCommunicationCount | Retrieve Communication count |
+| [**supplierGetCommunicationListV1**](ObjectSupplierApi.md#supplierGetCommunicationListV1) | **GET** /1/object/supplier/{pkiSupplierID}/getCommunicationList | Retrieve Communication list |
+| [**supplierGetCommunicationrecipientsV1**](ObjectSupplierApi.md#supplierGetCommunicationrecipientsV1) | **GET** /1/object/supplier/{pkiSupplierID}/getCommunicationrecipients | Retrieve Communication recipients |
+| [**supplierGetCommunicationsendersV1**](ObjectSupplierApi.md#supplierGetCommunicationsendersV1) | **GET** /1/object/supplier/{pkiSupplierID}/getCommunicationsenders | Retrieve Communication senders |
 | [**supplierGetListV1**](ObjectSupplierApi.md#supplierGetListV1) | **GET** /1/object/supplier/getList | Retrieve Supplier list |
 | [**supplierImportIntoEDMV1**](ObjectSupplierApi.md#supplierImportIntoEDMV1) | **POST** /1/object/supplier/{pkiSupplierID}/importIntoEDM | Import attachments into the Supplier |
 
@@ -93,6 +97,194 @@ try {
 ### Return type
 
 [**SupplierGetAttachmentsV1Response**](SupplierGetAttachmentsV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="supplierGetCommunicationCountV1"></a>
+# **supplierGetCommunicationCountV1**
+> SupplierGetCommunicationCountV1Response supplierGetCommunicationCountV1(pkiSupplierID)
+
+Retrieve Communication count
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectSupplierApi()
+val pkiSupplierID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : SupplierGetCommunicationCountV1Response = apiInstance.supplierGetCommunicationCountV1(pkiSupplierID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectSupplierApi#supplierGetCommunicationCountV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectSupplierApi#supplierGetCommunicationCountV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiSupplierID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**SupplierGetCommunicationCountV1Response**](SupplierGetCommunicationCountV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="supplierGetCommunicationListV1"></a>
+# **supplierGetCommunicationListV1**
+> SupplierGetCommunicationListV1Response supplierGetCommunicationListV1(pkiSupplierID)
+
+Retrieve Communication list
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectSupplierApi()
+val pkiSupplierID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : SupplierGetCommunicationListV1Response = apiInstance.supplierGetCommunicationListV1(pkiSupplierID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectSupplierApi#supplierGetCommunicationListV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectSupplierApi#supplierGetCommunicationListV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiSupplierID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**SupplierGetCommunicationListV1Response**](SupplierGetCommunicationListV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="supplierGetCommunicationrecipientsV1"></a>
+# **supplierGetCommunicationrecipientsV1**
+> SupplierGetCommunicationrecipientsV1Response supplierGetCommunicationrecipientsV1(pkiSupplierID)
+
+Retrieve Communication recipients
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectSupplierApi()
+val pkiSupplierID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : SupplierGetCommunicationrecipientsV1Response = apiInstance.supplierGetCommunicationrecipientsV1(pkiSupplierID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectSupplierApi#supplierGetCommunicationrecipientsV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectSupplierApi#supplierGetCommunicationrecipientsV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiSupplierID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**SupplierGetCommunicationrecipientsV1Response**](SupplierGetCommunicationrecipientsV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="supplierGetCommunicationsendersV1"></a>
+# **supplierGetCommunicationsendersV1**
+> SupplierGetCommunicationsendersV1Response supplierGetCommunicationsendersV1(pkiSupplierID)
+
+Retrieve Communication senders
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectSupplierApi()
+val pkiSupplierID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : SupplierGetCommunicationsendersV1Response = apiInstance.supplierGetCommunicationsendersV1(pkiSupplierID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectSupplierApi#supplierGetCommunicationsendersV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectSupplierApi#supplierGetCommunicationsendersV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiSupplierID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**SupplierGetCommunicationsendersV1Response**](SupplierGetCommunicationsendersV1Response.md)
 
 ### Authorization
 

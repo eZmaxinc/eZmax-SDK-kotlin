@@ -31,6 +31,10 @@ import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.HeaderAcceptLanguage
 import eZmaxApi.models.SalaryBatchDownloadV1Request
 import eZmaxApi.models.SalaryGetAttachmentsV1Response
+import eZmaxApi.models.SalaryGetCommunicationCountV1Response
+import eZmaxApi.models.SalaryGetCommunicationListV1Response
+import eZmaxApi.models.SalaryGetCommunicationrecipientsV1Response
+import eZmaxApi.models.SalaryGetCommunicationsendersV1Response
 import eZmaxApi.models.SalaryGetListV1Response
 import eZmaxApi.models.SalaryImportIntoEDMV1Request
 import eZmaxApi.models.SalaryImportIntoEDMV1Response
@@ -202,6 +206,298 @@ open class ObjectSalaryApi(basePath: kotlin.String = defaultBasePath, client: Ca
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/salary/{pkiSalaryID}/getAttachments".replace("{"+"pkiSalaryID"+"}", encodeURIComponent(pkiSalaryID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/salary/{pkiSalaryID}/getCommunicationCount
+     * Retrieve Communication count
+     * 
+     * @param pkiSalaryID 
+     * @return SalaryGetCommunicationCountV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun salaryGetCommunicationCountV1(pkiSalaryID: kotlin.Int) : SalaryGetCommunicationCountV1Response {
+        val localVarResponse = salaryGetCommunicationCountV1WithHttpInfo(pkiSalaryID = pkiSalaryID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as SalaryGetCommunicationCountV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/salary/{pkiSalaryID}/getCommunicationCount
+     * Retrieve Communication count
+     * 
+     * @param pkiSalaryID 
+     * @return ApiResponse<SalaryGetCommunicationCountV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun salaryGetCommunicationCountV1WithHttpInfo(pkiSalaryID: kotlin.Int) : ApiResponse<SalaryGetCommunicationCountV1Response?> {
+        val localVariableConfig = salaryGetCommunicationCountV1RequestConfig(pkiSalaryID = pkiSalaryID)
+
+        return request<Unit, SalaryGetCommunicationCountV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation salaryGetCommunicationCountV1
+     *
+     * @param pkiSalaryID 
+     * @return RequestConfig
+     */
+    fun salaryGetCommunicationCountV1RequestConfig(pkiSalaryID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/salary/{pkiSalaryID}/getCommunicationCount".replace("{"+"pkiSalaryID"+"}", encodeURIComponent(pkiSalaryID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/salary/{pkiSalaryID}/getCommunicationList
+     * Retrieve Communication list
+     * 
+     * @param pkiSalaryID 
+     * @return SalaryGetCommunicationListV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun salaryGetCommunicationListV1(pkiSalaryID: kotlin.Int) : SalaryGetCommunicationListV1Response {
+        val localVarResponse = salaryGetCommunicationListV1WithHttpInfo(pkiSalaryID = pkiSalaryID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as SalaryGetCommunicationListV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/salary/{pkiSalaryID}/getCommunicationList
+     * Retrieve Communication list
+     * 
+     * @param pkiSalaryID 
+     * @return ApiResponse<SalaryGetCommunicationListV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun salaryGetCommunicationListV1WithHttpInfo(pkiSalaryID: kotlin.Int) : ApiResponse<SalaryGetCommunicationListV1Response?> {
+        val localVariableConfig = salaryGetCommunicationListV1RequestConfig(pkiSalaryID = pkiSalaryID)
+
+        return request<Unit, SalaryGetCommunicationListV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation salaryGetCommunicationListV1
+     *
+     * @param pkiSalaryID 
+     * @return RequestConfig
+     */
+    fun salaryGetCommunicationListV1RequestConfig(pkiSalaryID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/salary/{pkiSalaryID}/getCommunicationList".replace("{"+"pkiSalaryID"+"}", encodeURIComponent(pkiSalaryID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/salary/{pkiSalaryID}/getCommunicationrecipients
+     * Retrieve Communication recipients
+     * 
+     * @param pkiSalaryID 
+     * @return SalaryGetCommunicationrecipientsV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun salaryGetCommunicationrecipientsV1(pkiSalaryID: kotlin.Int) : SalaryGetCommunicationrecipientsV1Response {
+        val localVarResponse = salaryGetCommunicationrecipientsV1WithHttpInfo(pkiSalaryID = pkiSalaryID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as SalaryGetCommunicationrecipientsV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/salary/{pkiSalaryID}/getCommunicationrecipients
+     * Retrieve Communication recipients
+     * 
+     * @param pkiSalaryID 
+     * @return ApiResponse<SalaryGetCommunicationrecipientsV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun salaryGetCommunicationrecipientsV1WithHttpInfo(pkiSalaryID: kotlin.Int) : ApiResponse<SalaryGetCommunicationrecipientsV1Response?> {
+        val localVariableConfig = salaryGetCommunicationrecipientsV1RequestConfig(pkiSalaryID = pkiSalaryID)
+
+        return request<Unit, SalaryGetCommunicationrecipientsV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation salaryGetCommunicationrecipientsV1
+     *
+     * @param pkiSalaryID 
+     * @return RequestConfig
+     */
+    fun salaryGetCommunicationrecipientsV1RequestConfig(pkiSalaryID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/salary/{pkiSalaryID}/getCommunicationrecipients".replace("{"+"pkiSalaryID"+"}", encodeURIComponent(pkiSalaryID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * GET /1/object/salary/{pkiSalaryID}/getCommunicationsenders
+     * Retrieve Communication senders
+     * 
+     * @param pkiSalaryID 
+     * @return SalaryGetCommunicationsendersV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun salaryGetCommunicationsendersV1(pkiSalaryID: kotlin.Int) : SalaryGetCommunicationsendersV1Response {
+        val localVarResponse = salaryGetCommunicationsendersV1WithHttpInfo(pkiSalaryID = pkiSalaryID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as SalaryGetCommunicationsendersV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/salary/{pkiSalaryID}/getCommunicationsenders
+     * Retrieve Communication senders
+     * 
+     * @param pkiSalaryID 
+     * @return ApiResponse<SalaryGetCommunicationsendersV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun salaryGetCommunicationsendersV1WithHttpInfo(pkiSalaryID: kotlin.Int) : ApiResponse<SalaryGetCommunicationsendersV1Response?> {
+        val localVariableConfig = salaryGetCommunicationsendersV1RequestConfig(pkiSalaryID = pkiSalaryID)
+
+        return request<Unit, SalaryGetCommunicationsendersV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation salaryGetCommunicationsendersV1
+     *
+     * @param pkiSalaryID 
+     * @return RequestConfig
+     */
+    fun salaryGetCommunicationsendersV1RequestConfig(pkiSalaryID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/salary/{pkiSalaryID}/getCommunicationsenders".replace("{"+"pkiSalaryID"+"}", encodeURIComponent(pkiSalaryID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

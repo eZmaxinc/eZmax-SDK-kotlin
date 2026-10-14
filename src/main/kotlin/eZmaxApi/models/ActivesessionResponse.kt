@@ -41,7 +41,9 @@ import com.squareup.moshi.JsonClass
  * @param eActivesessionOrigin 
  * @param eActivesessionWeekdaystart 
  * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
+ * @param fkiCompanyID The unique ID of the Company
  * @param sCompanyNameX The Name of the Company in the language of the requester
+ * @param fkiDepartmentID The unique ID of the Department
  * @param sDepartmentNameX The Name of the Department in the language of the requester
  * @param bActivesessionDebug Whether the active session is in debug or not
  * @param bActivesessionIssuperadmin Whether the active session is superadmin or not
@@ -74,9 +76,17 @@ data class ActivesessionResponse (
     @Json(name = "fkiLanguageID")
     val fkiLanguageID: kotlin.Int,
 
+    /* The unique ID of the Company */
+    @Json(name = "fkiCompanyID")
+    val fkiCompanyID: kotlin.Int,
+
     /* The Name of the Company in the language of the requester */
     @Json(name = "sCompanyNameX")
     val sCompanyNameX: kotlin.String,
+
+    /* The unique ID of the Department */
+    @Json(name = "fkiDepartmentID")
+    val fkiDepartmentID: kotlin.Int,
 
     /* The Name of the Department in the language of the requester */
     @Json(name = "sDepartmentNameX")

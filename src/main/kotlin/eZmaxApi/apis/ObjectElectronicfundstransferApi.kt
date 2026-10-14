@@ -34,8 +34,10 @@ import eZmaxApi.models.ElectronicfundstransferGetCommunicationCountV1Response
 import eZmaxApi.models.ElectronicfundstransferGetCommunicationListV1Response
 import eZmaxApi.models.ElectronicfundstransferGetCommunicationrecipientsV1Response
 import eZmaxApi.models.ElectronicfundstransferGetCommunicationsendersV1Response
+import eZmaxApi.models.ElectronicfundstransferGetListV1Response
 import eZmaxApi.models.ElectronicfundstransferImportIntoEDMV1Request
 import eZmaxApi.models.ElectronicfundstransferImportIntoEDMV1Response
+import eZmaxApi.models.HeaderAcceptLanguage
 
 import com.squareup.moshi.Json
 
@@ -496,6 +498,139 @@ open class ObjectElectronicfundstransferApi(basePath: kotlin.String = defaultBas
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationsenders".replace("{"+"pkiElectronicfundstransferID"+"}", encodeURIComponent(pkiElectronicfundstransferID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * enum for parameter eOrderBy
+     */
+     enum class EOrderByElectronicfundstransferGetListV1(val value: kotlin.String) {
+         @Json(name = "pkiElectronicfundstransferID_ASC") pkiElectronicfundstransferID_ASC("pkiElectronicfundstransferID_ASC"),
+         @Json(name = "pkiElectronicfundstransferID_DESC") pkiElectronicfundstransferID_DESC("pkiElectronicfundstransferID_DESC"),
+         @Json(name = "fkiPaymentmethodID_ASC") fkiPaymentmethodID_ASC("fkiPaymentmethodID_ASC"),
+         @Json(name = "fkiPaymentmethodID_DESC") fkiPaymentmethodID_DESC("fkiPaymentmethodID_DESC"),
+         @Json(name = "fkiUserIDCreated_ASC") fkiUserIDCreated_ASC("fkiUserIDCreated_ASC"),
+         @Json(name = "fkiUserIDCreated_DESC") fkiUserIDCreated_DESC("fkiUserIDCreated_DESC"),
+         @Json(name = "sPaymentmethodDescriptionX_ASC") sPaymentmethodDescriptionX_ASC("sPaymentmethodDescriptionX_ASC"),
+         @Json(name = "sPaymentmethodDescriptionX_DESC") sPaymentmethodDescriptionX_DESC("sPaymentmethodDescriptionX_DESC"),
+         @Json(name = "sUserLoginnameCreated_ASC") sUserLoginnameCreated_ASC("sUserLoginnameCreated_ASC"),
+         @Json(name = "sUserLoginnameCreated_DESC") sUserLoginnameCreated_DESC("sUserLoginnameCreated_DESC"),
+         @Json(name = "iElectronicfundstransferNumber_ASC") iElectronicfundstransferNumber_ASC("iElectronicfundstransferNumber_ASC"),
+         @Json(name = "iElectronicfundstransferNumber_DESC") iElectronicfundstransferNumber_DESC("iElectronicfundstransferNumber_DESC"),
+         @Json(name = "dtElectronicfundstransferDate_ASC") dtElectronicfundstransferDate_ASC("dtElectronicfundstransferDate_ASC"),
+         @Json(name = "dtElectronicfundstransferDate_DESC") dtElectronicfundstransferDate_DESC("dtElectronicfundstransferDate_DESC"),
+         @Json(name = "iElectronicfundstransferTransactioncount_ASC") iElectronicfundstransferTransactioncount_ASC("iElectronicfundstransferTransactioncount_ASC"),
+         @Json(name = "iElectronicfundstransferTransactioncount_DESC") iElectronicfundstransferTransactioncount_DESC("iElectronicfundstransferTransactioncount_DESC"),
+         @Json(name = "dElectronicfundstransferAmountvisible_ASC") dElectronicfundstransferAmountvisible_ASC("dElectronicfundstransferAmountvisible_ASC"),
+         @Json(name = "dElectronicfundstransferAmountvisible_DESC") dElectronicfundstransferAmountvisible_DESC("dElectronicfundstransferAmountvisible_DESC");
+
+        /**
+         * Override [toString()] to avoid using the enum variable name as the value, and instead use
+         * the actual value defined in the API spec file.
+         *
+         * This solves a problem when the variable name and its value are different, and ensures that
+         * the client sends the correct enum values to the server always.
+         */
+        override fun toString(): kotlin.String = "$value"
+     }
+
+    /**
+     * GET /1/object/electronicfundstransfer/getList
+     * Retrieve Electronicfundstransfer list
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return ElectronicfundstransferGetListV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun electronicfundstransferGetListV1(eOrderBy: EOrderByElectronicfundstransferGetListV1? = null, iRowMax: kotlin.Int? = null, iRowOffset: kotlin.Int? = 0, acceptLanguage: HeaderAcceptLanguage? = null, sFilter: kotlin.String? = null) : ElectronicfundstransferGetListV1Response {
+        val localVarResponse = electronicfundstransferGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ElectronicfundstransferGetListV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/electronicfundstransfer/getList
+     * Retrieve Electronicfundstransfer list
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return ApiResponse<ElectronicfundstransferGetListV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun electronicfundstransferGetListV1WithHttpInfo(eOrderBy: EOrderByElectronicfundstransferGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : ApiResponse<ElectronicfundstransferGetListV1Response?> {
+        val localVariableConfig = electronicfundstransferGetListV1RequestConfig(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
+
+        return request<Unit, ElectronicfundstransferGetListV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation electronicfundstransferGetListV1
+     *
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return RequestConfig
+     */
+    fun electronicfundstransferGetListV1RequestConfig(eOrderBy: EOrderByElectronicfundstransferGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
+            .apply {
+                if (eOrderBy != null) {
+                    put("eOrderBy", listOf(eOrderBy.value))
+                }
+                if (iRowMax != null) {
+                    put("iRowMax", listOf(iRowMax.toString()))
+                }
+                if (iRowOffset != null) {
+                    put("iRowOffset", listOf(iRowOffset.toString()))
+                }
+                if (sFilter != null) {
+                    put("sFilter", listOf(sFilter.toString()))
+                }
+            }
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/electronicfundstransfer/getList",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

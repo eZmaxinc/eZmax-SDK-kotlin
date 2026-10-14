@@ -6,6 +6,10 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | ------------- | ------------- | ------------- |
 | [**salaryBatchDownloadV1**](ObjectSalaryApi.md#salaryBatchDownloadV1) | **POST** /1/object/salary/{pkiSalaryID}/batchDownload | Download multiples attachments from a Reconciliation |
 | [**salaryGetAttachmentsV1**](ObjectSalaryApi.md#salaryGetAttachmentsV1) | **GET** /1/object/salary/{pkiSalaryID}/getAttachments | Retrieve Salary&#39;s attachments |
+| [**salaryGetCommunicationCountV1**](ObjectSalaryApi.md#salaryGetCommunicationCountV1) | **GET** /1/object/salary/{pkiSalaryID}/getCommunicationCount | Retrieve Communication count |
+| [**salaryGetCommunicationListV1**](ObjectSalaryApi.md#salaryGetCommunicationListV1) | **GET** /1/object/salary/{pkiSalaryID}/getCommunicationList | Retrieve Communication list |
+| [**salaryGetCommunicationrecipientsV1**](ObjectSalaryApi.md#salaryGetCommunicationrecipientsV1) | **GET** /1/object/salary/{pkiSalaryID}/getCommunicationrecipients | Retrieve Communication recipients |
+| [**salaryGetCommunicationsendersV1**](ObjectSalaryApi.md#salaryGetCommunicationsendersV1) | **GET** /1/object/salary/{pkiSalaryID}/getCommunicationsenders | Retrieve Communication senders |
 | [**salaryGetListV1**](ObjectSalaryApi.md#salaryGetListV1) | **GET** /1/object/salary/getList | Retrieve Salary list |
 | [**salaryImportIntoEDMV1**](ObjectSalaryApi.md#salaryImportIntoEDMV1) | **POST** /1/object/salary/{pkiSalaryID}/importIntoEDM | Import attachments into the Salary |
 
@@ -93,6 +97,194 @@ try {
 ### Return type
 
 [**SalaryGetAttachmentsV1Response**](SalaryGetAttachmentsV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="salaryGetCommunicationCountV1"></a>
+# **salaryGetCommunicationCountV1**
+> SalaryGetCommunicationCountV1Response salaryGetCommunicationCountV1(pkiSalaryID)
+
+Retrieve Communication count
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectSalaryApi()
+val pkiSalaryID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : SalaryGetCommunicationCountV1Response = apiInstance.salaryGetCommunicationCountV1(pkiSalaryID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectSalaryApi#salaryGetCommunicationCountV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectSalaryApi#salaryGetCommunicationCountV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiSalaryID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**SalaryGetCommunicationCountV1Response**](SalaryGetCommunicationCountV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="salaryGetCommunicationListV1"></a>
+# **salaryGetCommunicationListV1**
+> SalaryGetCommunicationListV1Response salaryGetCommunicationListV1(pkiSalaryID)
+
+Retrieve Communication list
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectSalaryApi()
+val pkiSalaryID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : SalaryGetCommunicationListV1Response = apiInstance.salaryGetCommunicationListV1(pkiSalaryID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectSalaryApi#salaryGetCommunicationListV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectSalaryApi#salaryGetCommunicationListV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiSalaryID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**SalaryGetCommunicationListV1Response**](SalaryGetCommunicationListV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="salaryGetCommunicationrecipientsV1"></a>
+# **salaryGetCommunicationrecipientsV1**
+> SalaryGetCommunicationrecipientsV1Response salaryGetCommunicationrecipientsV1(pkiSalaryID)
+
+Retrieve Communication recipients
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectSalaryApi()
+val pkiSalaryID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : SalaryGetCommunicationrecipientsV1Response = apiInstance.salaryGetCommunicationrecipientsV1(pkiSalaryID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectSalaryApi#salaryGetCommunicationrecipientsV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectSalaryApi#salaryGetCommunicationrecipientsV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiSalaryID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**SalaryGetCommunicationrecipientsV1Response**](SalaryGetCommunicationrecipientsV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a id="salaryGetCommunicationsendersV1"></a>
+# **salaryGetCommunicationsendersV1**
+> SalaryGetCommunicationsendersV1Response salaryGetCommunicationsendersV1(pkiSalaryID)
+
+Retrieve Communication senders
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectSalaryApi()
+val pkiSalaryID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : SalaryGetCommunicationsendersV1Response = apiInstance.salaryGetCommunicationsendersV1(pkiSalaryID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectSalaryApi#salaryGetCommunicationsendersV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectSalaryApi#salaryGetCommunicationsendersV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiSalaryID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**SalaryGetCommunicationsendersV1Response**](SalaryGetCommunicationsendersV1Response.md)
 
 ### Authorization
 

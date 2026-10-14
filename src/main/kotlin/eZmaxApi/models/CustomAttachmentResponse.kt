@@ -25,6 +25,7 @@ package eZmaxApi.models
 
 import eZmaxApi.models.AttachmentResponseCompound
 import eZmaxApi.models.CommonAudit
+import eZmaxApi.models.CustomUserNameResponse
 import eZmaxApi.models.FieldEAttachmentDocumenttype
 import eZmaxApi.models.FieldEAttachmentPrivacy
 import eZmaxApi.models.FieldEAttachmentType
@@ -95,6 +96,7 @@ import com.squareup.moshi.JsonClass
  * @param fkiReconciliationID The unique ID of the Reconciliation
  * @param fkiEzsigndocumentIDReference The unique ID of the Ezsigndocument
  * @param fkiUserIDSpecific The unique ID of the User
+ * @param objUserSpecific 
  * @param iAttachmentEDMmoduleflag The edmmoduleflag of the Attachment
  * @param tAttachmentRejectioncomment The rejectioncomment of the Attachment
  * @param fkiUserIDOwner The unique ID of the User
@@ -339,6 +341,9 @@ data class CustomAttachmentResponse (
     /* The unique ID of the User */
     @Json(name = "fkiUserIDSpecific")
     val fkiUserIDSpecific: kotlin.Int? = null,
+
+    @Json(name = "objUserSpecific")
+    val objUserSpecific: CustomUserNameResponse? = null,
 
     /* The edmmoduleflag of the Attachment */
     @Json(name = "iAttachmentEDMmoduleflag")
