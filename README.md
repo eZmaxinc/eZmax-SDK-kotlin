@@ -215,6 +215,17 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | *ObjectDiscussionmessageApi* | [**discussionmessageCreateObjectV1**](docs/ObjectDiscussionmessageApi.md#discussionmessagecreateobjectv1) | **POST** /1/object/discussionmessage | Create a new Discussionmessage |
 | *ObjectDiscussionmessageApi* | [**discussionmessageDeleteObjectV1**](docs/ObjectDiscussionmessageApi.md#discussionmessagedeleteobjectv1) | **DELETE** /1/object/discussionmessage/{pkiDiscussionmessageID} | Delete an existing Discussionmessage |
 | *ObjectDiscussionmessageApi* | [**discussionmessagePatchObjectV1**](docs/ObjectDiscussionmessageApi.md#discussionmessagepatchobjectv1) | **PATCH** /1/object/discussionmessage/{pkiDiscussionmessageID} | Patch an existing Discussionmessage |
+| *ObjectDocumenttypeApi* | [**documenttypeCreateObjectV1**](docs/ObjectDocumenttypeApi.md#documenttypecreateobjectv1) | **POST** /1/object/documenttype | Create a new Documenttype |
+| *ObjectDocumenttypeApi* | [**documenttypeDeleteObjectV1**](docs/ObjectDocumenttypeApi.md#documenttypedeleteobjectv1) | **DELETE** /1/object/documenttype/{pkiDocumenttypeID} | Delete an existing Documenttype |
+| *ObjectDocumenttypeApi* | [**documenttypeEditObjectV1**](docs/ObjectDocumenttypeApi.md#documenttypeeditobjectv1) | **PUT** /1/object/documenttype/{pkiDocumenttypeID} | Edit an existing Documenttype |
+| *ObjectDocumenttypeApi* | [**documenttypeGetAutocompleteV2**](docs/ObjectDocumenttypeApi.md#documenttypegetautocompletev2) | **GET** /2/object/documenttype/getAutocomplete/{sSelector} | Retrieve Documenttypes and IDs |
+| *ObjectDocumenttypeApi* | [**documenttypeGetListV1**](docs/ObjectDocumenttypeApi.md#documenttypegetlistv1) | **GET** /1/object/documenttype/getList | Retrieve Documenttype list |
+| *ObjectDocumenttypeApi* | [**documenttypeGetObjectV2**](docs/ObjectDocumenttypeApi.md#documenttypegetobjectv2) | **GET** /2/object/documenttype/{pkiDocumenttypeID} | Retrieve an existing Documenttype |
+| *ObjectDocumenttypechecklistApi* | [**documenttypechecklistCreateObjectV1**](docs/ObjectDocumenttypechecklistApi.md#documenttypechecklistcreateobjectv1) | **POST** /1/object/documenttypechecklist | Create a new Documenttypechecklist |
+| *ObjectDocumenttypechecklistApi* | [**documenttypechecklistDeleteObjectV1**](docs/ObjectDocumenttypechecklistApi.md#documenttypechecklistdeleteobjectv1) | **DELETE** /1/object/documenttypechecklist/{pkiDocumenttypechecklistID} | Delete an existing Documenttypechecklist |
+| *ObjectDocumenttypechecklistApi* | [**documenttypechecklistEditObjectV1**](docs/ObjectDocumenttypechecklistApi.md#documenttypechecklisteditobjectv1) | **PUT** /1/object/documenttypechecklist/{pkiDocumenttypechecklistID} | Edit an existing Documenttypechecklist |
+| *ObjectDocumenttypechecklistApi* | [**documenttypechecklistGetListV1**](docs/ObjectDocumenttypechecklistApi.md#documenttypechecklistgetlistv1) | **GET** /1/object/documenttypechecklist/getList | Retrieve Documenttypechecklist list |
+| *ObjectDocumenttypechecklistApi* | [**documenttypechecklistGetObjectV2**](docs/ObjectDocumenttypechecklistApi.md#documenttypechecklistgetobjectv2) | **GET** /2/object/documenttypechecklist/{pkiDocumenttypechecklistID} | Retrieve an existing Documenttypechecklist |
 | *ObjectDomainApi* | [**domainCreateObjectV1**](docs/ObjectDomainApi.md#domaincreateobjectv1) | **POST** /1/object/domain | Create a new Domain |
 | *ObjectDomainApi* | [**domainDeleteObjectV1**](docs/ObjectDomainApi.md#domaindeleteobjectv1) | **DELETE** /1/object/domain/{pkiDomainID} | Delete an existing Domain |
 | *ObjectDomainApi* | [**domainGetAutocompleteV2**](docs/ObjectDomainApi.md#domaingetautocompletev2) | **GET** /2/object/domain/getAutocomplete/{sSelector} | Retrieve Domain and IDs |
@@ -1378,6 +1389,39 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.DiscussionmessageRequestPatch](docs/DiscussionmessageRequestPatch.md)
  - [eZmaxApi.models.DiscussionmessageResponse](docs/DiscussionmessageResponse.md)
  - [eZmaxApi.models.DiscussionmessageResponseCompound](docs/DiscussionmessageResponseCompound.md)
+ - [eZmaxApi.models.DocumenttypeAutocompleteElementResponse](docs/DocumenttypeAutocompleteElementResponse.md)
+ - [eZmaxApi.models.DocumenttypeCreateObjectV1Request](docs/DocumenttypeCreateObjectV1Request.md)
+ - [eZmaxApi.models.DocumenttypeCreateObjectV1Response](docs/DocumenttypeCreateObjectV1Response.md)
+ - [eZmaxApi.models.DocumenttypeCreateObjectV1ResponseMPayload](docs/DocumenttypeCreateObjectV1ResponseMPayload.md)
+ - [eZmaxApi.models.DocumenttypeDeleteObjectV1Response](docs/DocumenttypeDeleteObjectV1Response.md)
+ - [eZmaxApi.models.DocumenttypeEditObjectV1Request](docs/DocumenttypeEditObjectV1Request.md)
+ - [eZmaxApi.models.DocumenttypeEditObjectV1Response](docs/DocumenttypeEditObjectV1Response.md)
+ - [eZmaxApi.models.DocumenttypeGetAutocompleteV2Response](docs/DocumenttypeGetAutocompleteV2Response.md)
+ - [eZmaxApi.models.DocumenttypeGetAutocompleteV2ResponseMPayload](docs/DocumenttypeGetAutocompleteV2ResponseMPayload.md)
+ - [eZmaxApi.models.DocumenttypeGetListV1Response](docs/DocumenttypeGetListV1Response.md)
+ - [eZmaxApi.models.DocumenttypeGetListV1ResponseMPayload](docs/DocumenttypeGetListV1ResponseMPayload.md)
+ - [eZmaxApi.models.DocumenttypeGetObjectV2Response](docs/DocumenttypeGetObjectV2Response.md)
+ - [eZmaxApi.models.DocumenttypeGetObjectV2ResponseMPayload](docs/DocumenttypeGetObjectV2ResponseMPayload.md)
+ - [eZmaxApi.models.DocumenttypeListElement](docs/DocumenttypeListElement.md)
+ - [eZmaxApi.models.DocumenttypeRequest](docs/DocumenttypeRequest.md)
+ - [eZmaxApi.models.DocumenttypeRequestCompound](docs/DocumenttypeRequestCompound.md)
+ - [eZmaxApi.models.DocumenttypeResponse](docs/DocumenttypeResponse.md)
+ - [eZmaxApi.models.DocumenttypeResponseCompound](docs/DocumenttypeResponseCompound.md)
+ - [eZmaxApi.models.DocumenttypechecklistCreateObjectV1Request](docs/DocumenttypechecklistCreateObjectV1Request.md)
+ - [eZmaxApi.models.DocumenttypechecklistCreateObjectV1Response](docs/DocumenttypechecklistCreateObjectV1Response.md)
+ - [eZmaxApi.models.DocumenttypechecklistCreateObjectV1ResponseMPayload](docs/DocumenttypechecklistCreateObjectV1ResponseMPayload.md)
+ - [eZmaxApi.models.DocumenttypechecklistDeleteObjectV1Response](docs/DocumenttypechecklistDeleteObjectV1Response.md)
+ - [eZmaxApi.models.DocumenttypechecklistEditObjectV1Request](docs/DocumenttypechecklistEditObjectV1Request.md)
+ - [eZmaxApi.models.DocumenttypechecklistEditObjectV1Response](docs/DocumenttypechecklistEditObjectV1Response.md)
+ - [eZmaxApi.models.DocumenttypechecklistGetListV1Response](docs/DocumenttypechecklistGetListV1Response.md)
+ - [eZmaxApi.models.DocumenttypechecklistGetListV1ResponseMPayload](docs/DocumenttypechecklistGetListV1ResponseMPayload.md)
+ - [eZmaxApi.models.DocumenttypechecklistGetObjectV2Response](docs/DocumenttypechecklistGetObjectV2Response.md)
+ - [eZmaxApi.models.DocumenttypechecklistGetObjectV2ResponseMPayload](docs/DocumenttypechecklistGetObjectV2ResponseMPayload.md)
+ - [eZmaxApi.models.DocumenttypechecklistListElement](docs/DocumenttypechecklistListElement.md)
+ - [eZmaxApi.models.DocumenttypechecklistRequest](docs/DocumenttypechecklistRequest.md)
+ - [eZmaxApi.models.DocumenttypechecklistRequestCompound](docs/DocumenttypechecklistRequestCompound.md)
+ - [eZmaxApi.models.DocumenttypechecklistResponse](docs/DocumenttypechecklistResponse.md)
+ - [eZmaxApi.models.DocumenttypechecklistResponseCompound](docs/DocumenttypechecklistResponseCompound.md)
  - [eZmaxApi.models.DomainAutocompleteElementResponse](docs/DomainAutocompleteElementResponse.md)
  - [eZmaxApi.models.DomainCreateObjectV1Request](docs/DomainCreateObjectV1Request.md)
  - [eZmaxApi.models.DomainCreateObjectV1Response](docs/DomainCreateObjectV1Response.md)
@@ -2380,6 +2424,14 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.FieldEDisclosureInteresttype](docs/FieldEDisclosureInteresttype.md)
  - [eZmaxApi.models.FieldEDiscussionRobot](docs/FieldEDiscussionRobot.md)
  - [eZmaxApi.models.FieldEDiscussionmessageStatus](docs/FieldEDiscussionmessageStatus.md)
+ - [eZmaxApi.models.FieldEDocumenttypeEzcom](docs/FieldEDocumenttypeEzcom.md)
+ - [eZmaxApi.models.FieldEDocumenttypePrivacydefault](docs/FieldEDocumenttypePrivacydefault.md)
+ - [eZmaxApi.models.FieldEDocumenttypeRepossession](docs/FieldEDocumenttypeRepossession.md)
+ - [eZmaxApi.models.FieldEDocumenttypeSalebyowner](docs/FieldEDocumenttypeSalebyowner.md)
+ - [eZmaxApi.models.FieldEDocumenttypeSaledisplaybyrole](docs/FieldEDocumenttypeSaledisplaybyrole.md)
+ - [eZmaxApi.models.FieldEDocumenttypeStatusdefault](docs/FieldEDocumenttypeStatusdefault.md)
+ - [eZmaxApi.models.FieldEDocumenttypeTransactiontype](docs/FieldEDocumenttypeTransactiontype.md)
+ - [eZmaxApi.models.FieldEDocumenttypechecklistStatus](docs/FieldEDocumenttypechecklistStatus.md)
  - [eZmaxApi.models.FieldEErrorCode](docs/FieldEErrorCode.md)
  - [eZmaxApi.models.FieldEEzdoctemplatedocumentPrivacylevel](docs/FieldEEzdoctemplatedocumentPrivacylevel.md)
  - [eZmaxApi.models.FieldEEzmaxinvoicingPaymenttype](docs/FieldEEzmaxinvoicingPaymenttype.md)
@@ -2674,6 +2726,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.MultilingualApikeyDescription](docs/MultilingualApikeyDescription.md)
  - [eZmaxApi.models.MultilingualBillingentityinternalDescription](docs/MultilingualBillingentityinternalDescription.md)
  - [eZmaxApi.models.MultilingualBrandingDescription](docs/MultilingualBrandingDescription.md)
+ - [eZmaxApi.models.MultilingualDocumenttypeName](docs/MultilingualDocumenttypeName.md)
  - [eZmaxApi.models.MultilingualEzdoctemplatedocumentName](docs/MultilingualEzdoctemplatedocumentName.md)
  - [eZmaxApi.models.MultilingualEzmaxcustomerCompany](docs/MultilingualEzmaxcustomerCompany.md)
  - [eZmaxApi.models.MultilingualEzmaxcustomerNote](docs/MultilingualEzmaxcustomerNote.md)
