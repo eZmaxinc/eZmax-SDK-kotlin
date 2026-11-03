@@ -35,9 +35,9 @@ import com.squareup.moshi.JsonClass
  * A Ezsigntemplateglobalannotation Object
  *
  * @param pkiEzsigntemplateglobalannotationID The unique ID of the Ezsigntemplateglobalannotation
- * @param eEzsigntemplateglobalannotationHorizontalalignment 
- * @param eEzsigntemplateglobalannotationVerticalalignment 
- * @param eEzsigntemplateglobalannotationType 
+ * @param eEzsigntemplateglobalannotationHorizontalalignment
+ * @param eEzsigntemplateglobalannotationVerticalalignment
+ * @param eEzsigntemplateglobalannotationType
  * @param iEzsigntemplateglobalannotationX The x of the Ezsigntemplateglobalannotation
  * @param iEzsigntemplateglobalannotationY The y of the Ezsigntemplateglobalannotation
  * @param iEzsigntemplateglobalannotationWidth The width of the Ezsigntemplateglobalannotation
@@ -47,7 +47,7 @@ import com.squareup.moshi.JsonClass
  * @param sEzsigntemplateglobalannotationDefaulttext The defaulttext of the Ezsigntemplateglobalannotation
  * @param sEzsigntemplateglobalannotationDropdownvalues The dropdownvalues of the Ezsigntemplateglobalannotation
  * @param fkiTextstylestaticID The unique ID of the Textstylestatic
- * @param objTextstylestatic 
+ * @param objTextstylestatic
  */
 
 

@@ -34,10 +34,10 @@ import com.squareup.moshi.JsonClass
  *
  * @param fkiContacttitleID The unique ID of the Contacttitle.  Valid values:  |Value|Description| |-|-| |1|Ms.| |2|Mr.| |4|(Blank)| |5|Me (For Notaries)|
  * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
- * @param eContactType 
+ * @param eContactType
  * @param sContactFirstname The First name of the contact
  * @param sContactLastname The Last name of the contact
- * @param objContactinformations 
+ * @param objContactinformations
  * @param sContactCompany The Company name of the contact
  * @param dtContactBirthdate The Birth Date of the contact
  * @param sContactOccupation The occupation of the Contact

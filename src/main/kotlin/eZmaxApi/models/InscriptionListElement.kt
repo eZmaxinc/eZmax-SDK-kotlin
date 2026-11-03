@@ -39,8 +39,8 @@ import com.squareup.moshi.JsonClass
  * @param sInscriptionbuildingtypeNameX The name of the Inscriptionbuildingtype in the language of the requester
  * @param fkiInscriptioncategoryID The unique ID of the Inscriptioncategory
  * @param sInscriptioncategoryNameX The name of the Inscriptioncategory in the language of the requester
- * @param eInscriptionStep 
- * @param eInscriptionType 
+ * @param eInscriptionStep
+ * @param eInscriptionType
  * @param sInscriptionCivicend The address civic end of the Inscription
  * @param dInscriptionSaleprice The saleprice of the Inscription
  * @param dInscriptionRentprice The rent price of the Inscription

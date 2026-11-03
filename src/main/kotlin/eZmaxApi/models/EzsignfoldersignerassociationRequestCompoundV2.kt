@@ -33,12 +33,12 @@ import com.squareup.moshi.JsonClass
  * An Ezsignfoldersignerassociation Object and children to create a complete structure
  *
  * @param fkiEzsignfolderID The unique ID of the Ezsignfolder
- * @param eEzsignfoldersignerassociationRole 
+ * @param eEzsignfoldersignerassociationRole
  * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation
  * @param fkiUserID The unique ID of the User
  * @param fkiEzsignsignergroupID The unique ID of the Ezsignsignergroup
  * @param tEzsignfoldersignerassociationMessage A custom text message that will be added to the email sent.
- * @param objEzsignsigner 
+ * @param objEzsignsigner
  */
 
 

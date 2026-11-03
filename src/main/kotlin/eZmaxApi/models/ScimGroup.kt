@@ -29,11 +29,9 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * 
- *
  * @param displayName The Name of the Usergroup in the language of the requester
- * @param id 
- * @param members 
+ * @param id
+ * @param members
  */
 
 

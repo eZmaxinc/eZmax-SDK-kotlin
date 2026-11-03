@@ -32,10 +32,10 @@ import com.squareup.moshi.JsonClass
 /**
  * A row in a Reportsubsectionpart 
  *
- * @param aObjReportcell 
+ * @param aObjReportcell
  * @param objVariableobject A Variable object without predefined property names
  * @param iReportrowHeight The reportrow height in pixels
- * @param objReportcellstyleCustom 
+ * @param objReportcellstyleCustom
  */
 
 

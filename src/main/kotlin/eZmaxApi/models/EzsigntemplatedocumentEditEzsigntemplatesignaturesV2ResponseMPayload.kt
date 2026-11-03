@@ -30,7 +30,7 @@ import com.squareup.moshi.JsonClass
 /**
  * Payload for PUT /2/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplatesignatures
  *
- * @param aPkiEzsigntemplatesignatureID 
+ * @param aPkiEzsigntemplatesignatureID
  */
 
 

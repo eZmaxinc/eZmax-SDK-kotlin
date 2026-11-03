@@ -34,10 +34,10 @@ import com.squareup.moshi.JsonClass
  *
  * @param pkiDiscussionmessageID The unique ID of the Discussionmessage
  * @param fkiDiscussionID The unique ID of the Discussion
- * @param eDiscussionmessageStatus 
+ * @param eDiscussionmessageStatus
  * @param tDiscussionmessageContent The content of the Discussionmessage
  * @param sDiscussionmessageCreatorname The name the creator of the Discussionmessage.
- * @param objAudit 
+ * @param objAudit
  * @param fkiDiscussionmembershipID The unique ID of the Discussionmembership
  * @param fkiDiscussionmembershipIDActionrequired The unique ID of the Discussionmembership
  * @param sDiscussionmessageActionrequiredname The name the Actionrequired of the Discussionmessage.

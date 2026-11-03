@@ -33,7 +33,7 @@ import com.squareup.moshi.JsonClass
  * Generic Error Message
  *
  * @param sErrorMessage The message giving details about the error
- * @param eErrorCode 
+ * @param eErrorCode
  * @param aObjEzsignformfielderror 
  * @param aSErrorMessagedetail More error message detail
  */

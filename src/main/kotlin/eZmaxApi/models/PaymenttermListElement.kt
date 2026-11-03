@@ -33,7 +33,7 @@ import com.squareup.moshi.JsonClass
  *
  * @param pkiPaymenttermID The unique ID of the Paymentterm
  * @param sPaymenttermCode The code of the Paymentterm
- * @param ePaymenttermType 
+ * @param ePaymenttermType
  * @param iPaymenttermDay The day of the Paymentterm
  * @param sPaymenttermDescriptionX The description of the Paymentterm in the language of the requester
  * @param bPaymenttermIsactive Whether the Paymentterm is active or not

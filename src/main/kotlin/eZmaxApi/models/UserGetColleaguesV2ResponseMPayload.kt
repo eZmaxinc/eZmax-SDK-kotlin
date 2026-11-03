@@ -31,8 +31,8 @@ import com.squareup.moshi.JsonClass
 /**
  * Response for GET /2/object/user/{pkiUserID}/getColleagues
  *
- * @param aObjColleague 
- * @param aObjColleagueClonable 
+ * @param aObjColleague
+ * @param aObjColleagueClonable
  */
 
 

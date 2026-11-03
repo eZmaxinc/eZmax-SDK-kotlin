@@ -32,8 +32,8 @@ import com.squareup.moshi.JsonClass
 /**
  * Response for POST /2/object/ezsignfolder/{pkiEzsignfolderID}/reorder
  *
- * @param objDebugPayload 
- * @param objDebug 
+ * @param objDebugPayload
+ * @param objDebug
  */
 
 

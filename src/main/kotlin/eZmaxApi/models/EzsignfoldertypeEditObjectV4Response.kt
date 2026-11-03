@@ -32,8 +32,8 @@ import com.squareup.moshi.JsonClass
 /**
  * Response for PUT /4/object/ezsignfoldertype/{pkiEzsignfoldertypeID}
  *
- * @param objDebugPayload 
- * @param objDebug 
+ * @param objDebugPayload
+ * @param objDebug
  */
 
 

@@ -33,7 +33,7 @@ import com.squareup.moshi.JsonClass
  *
  * @param pkiModulegroupID The unique ID of the Modulegroup
  * @param sModulegroupNameX The name of the Modulegroup in the language of the requester
- * @param aObjModule 
+ * @param aObjModule
  */
 
 

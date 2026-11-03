@@ -35,8 +35,8 @@ import com.squareup.moshi.JsonClass
  * @param sCreditcardtransactionISOcode The ISO code
  * @param sCreditcardtransactionResponsecode The response code
  * @param sCreditcardtransactionResponseterminalmessage The terminal response message
- * @param eCreditcardtransactionAvsresult 
- * @param eCreditcardtransactionCvdresult 
+ * @param eCreditcardtransactionAvsresult
+ * @param eCreditcardtransactionCvdresult
  */
 
 

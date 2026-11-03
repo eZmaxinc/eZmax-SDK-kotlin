@@ -32,8 +32,8 @@ import com.squareup.moshi.JsonClass
 /**
  * A Custom Communicationattachment Object
  *
- * @param objCommunicationattachment 
- * @param objCommunicationexternalattachment 
+ * @param objCommunicationattachment
+ * @param objCommunicationexternalattachment
  */
 
 

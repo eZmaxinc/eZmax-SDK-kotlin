@@ -31,7 +31,7 @@ import com.squareup.moshi.JsonClass
 /**
  * Payload for GET /1/object/activesession/getCurrent
  *
- * @param objActivesession 
+ * @param objActivesession
  */
 
 

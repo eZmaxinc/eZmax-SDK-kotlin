@@ -37,8 +37,8 @@ import com.squareup.moshi.JsonClass
  * @param iEzsignbulksenddocumentmappingOrder The order in which the Ezsigntemplate or Ezsigntemplatepackage will be presented to the signatory in the Ezsignfolder.
  * @param fkiEzsigntemplatepackageID The unique ID of the Ezsigntemplatepackage
  * @param fkiEzsigntemplateID The unique ID of the Ezsigntemplate
- * @param objEzsigntemplate 
- * @param objEzsigntemplatepackage 
+ * @param objEzsigntemplate
+ * @param objEzsigntemplatepackage
  */
 
 

@@ -41,21 +41,21 @@ import com.squareup.moshi.JsonClass
  * @param fkiTimezoneIDDefault The unique ID of the Timezone
  * @param sTimezoneNameDefault The description of the Timezone
  * @param sSystemconfigurationtypeDescriptionX The description of the Systemconfigurationtype in the language of the requester
- * @param eSystemconfigurationNewexternaluseraction 
- * @param eSystemconfigurationLanguage1 
- * @param eSystemconfigurationLanguage2 
+ * @param eSystemconfigurationNewexternaluseraction
+ * @param eSystemconfigurationLanguage1
+ * @param eSystemconfigurationLanguage2
  * @param bSystemconfigurationEzsignpersonnal Whether if we allow the creation of personal files in eZsign
  * @param bSystemconfigurationSspr Whether if we allow SSPR
  * @param fkiBrandingID The unique ID of the Branding
- * @param eSystemconfigurationEzsign 
- * @param eSystemconfigurationEzsignofficeplan 
+ * @param eSystemconfigurationEzsign
+ * @param eSystemconfigurationEzsignofficeplan
  * @param bSystemconfigurationEzsignpaidbyoffice Whether if Ezsign is paid by the company or not
  * @param bSystemconfigurationHascreditcardmerchant Whether there is a creditcard merchant configured or not
  * @param bSystemconfigurationIsdisposalactive Whether is Disposal processus is active or not
  * @param bSystemconfigurationAllowcomplexcreditcardsignature Whether is the system allows to have a complex creditcard signature
  * @param dtSystemconfigurationReadonlyexpirationstart The start date where the system will be in read only
  * @param dtSystemconfigurationReadonlyexpirationend The end date where the system will be in read only
- * @param objBranding 
+ * @param objBranding
  * @param iSystemconfigurationEzsignreminderhoursend The hour we will send the eZsign reminders
  */
 

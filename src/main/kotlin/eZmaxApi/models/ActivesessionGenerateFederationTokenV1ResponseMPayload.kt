@@ -31,7 +31,7 @@ import com.squareup.moshi.JsonClass
 /**
  * Payload for POST /1/object/activesession/generateFederationToken
  *
- * @param objApikeyfederation 
+ * @param objApikeyfederation
  * @param sEzmaxcustomercodeUrl The url of the server the Ezmaxcustomer is located
  */
 

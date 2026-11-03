@@ -31,7 +31,7 @@ import com.squareup.moshi.JsonClass
 /**
  * Response for GET /1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationList
  *
- * @param aObjCommunication 
+ * @param aObjCommunication
  */
 
 

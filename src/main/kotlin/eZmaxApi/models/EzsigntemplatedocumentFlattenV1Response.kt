@@ -32,8 +32,8 @@ import com.squareup.moshi.JsonClass
 /**
  * Response for POST /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocument}/flatten
  *
- * @param objDebugPayload 
- * @param objDebug 
+ * @param objDebugPayload
+ * @param objDebug
  */
 
 

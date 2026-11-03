@@ -45,10 +45,10 @@ import com.squareup.moshi.JsonClass
  * @param bEzsignformfieldAutocomplete Whether the Ezsignformfield allows the use of the autocomplete of the browser.  This can only be set if eEzsignformfieldgroupType is **Text**
  * @param bEzsignformfieldSelected Whether the Ezsignformfield is selected or not by default.  This can only be set if eEzsignformfieldgroupType is **Checkbox** or **Radio**
  * @param sEzsignformfieldEnteredvalue This is the value enterred for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is **Dropdown**, **Text** or **Textarea**
- * @param eEzsignformfieldDependencyrequirement 
- * @param eEzsignformfieldHorizontalalignment 
- * @param objTextstylestatic 
- * @param aObjEzsignelementdependency 
+ * @param eEzsignformfieldDependencyrequirement
+ * @param eEzsignformfieldHorizontalalignment
+ * @param objTextstylestatic
+ * @param aObjEzsignelementdependency
  */
 
 

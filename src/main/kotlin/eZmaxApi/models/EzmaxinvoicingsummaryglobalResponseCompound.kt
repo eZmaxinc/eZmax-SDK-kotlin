@@ -50,7 +50,7 @@ import com.squareup.moshi.JsonClass
  * @param dEzmaxinvoicingsummaryglobalRepresentative The amount of commission for the representative
  * @param dEzmaxinvoicingsummaryglobalPartner The amount of commission for the partner
  * @param dEzmaxinvoicingsummaryglobalNet The net amount of the Ezmaxinvoicingsummaryglobal
- * @param aObjEzmaxinvoicingcommission 
+ * @param aObjEzmaxinvoicingcommission
  */
 
 

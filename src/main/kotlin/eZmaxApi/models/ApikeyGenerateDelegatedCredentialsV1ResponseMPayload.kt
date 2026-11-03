@@ -31,7 +31,7 @@ import com.squareup.moshi.JsonClass
 /**
  * Payload for POST /1/object/apikey/generateDelegatedCredentials
  *
- * @param objApikey 
+ * @param objApikey
  */
 
 

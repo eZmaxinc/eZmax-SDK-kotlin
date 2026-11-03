@@ -30,7 +30,7 @@ import com.squareup.moshi.JsonClass
 /**
  * Request for POST /1/object/agent/{pkiAgentID}/batchDownload
  *
- * @param aPkiAttachmentID 
+ * @param aPkiAttachmentID
  */
 
 

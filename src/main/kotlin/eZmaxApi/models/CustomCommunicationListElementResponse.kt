@@ -35,9 +35,9 @@ import com.squareup.moshi.JsonClass
  *
  * @param pkiCommunicationID The unique ID of the Communication.
  * @param dtCreatedDate The date and time at which the object was created
- * @param eCommunicationDirection 
- * @param eCommunicationImportance 
- * @param eCommunicationType 
+ * @param eCommunicationDirection
+ * @param eCommunicationImportance
+ * @param eCommunicationType
  * @param iCommunicationrecipientCount The count of Communicationrecipient
  * @param sCommunicationSubject The subject of the Communication
  * @param sCommunicationSender The sender name of the Communication

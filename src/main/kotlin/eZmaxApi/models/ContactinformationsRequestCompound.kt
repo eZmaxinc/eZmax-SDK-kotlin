@@ -38,10 +38,10 @@ import com.squareup.moshi.JsonClass
  * @param iPhoneDefault The index in the a_objPhone array (zero based index) representing the Phone object that should become the default one.  You can leave the value to 0 if the array is empty.
  * @param iEmailDefault The index in the a_objEmail array (zero based index) representing the Email object that should become the default one.  You can leave the value to 0 if the array is empty.
  * @param iWebsiteDefault The index in the a_objWebsite array (zero based index) representing the Website object that should become the default one.  You can leave the value to 0 if the array is empty.
- * @param aObjAddress 
- * @param aObjPhone 
- * @param aObjEmail 
- * @param aObjWebsite 
+ * @param aObjAddress
+ * @param aObjPhone
+ * @param aObjEmail
+ * @param aObjWebsite
  */
 
 

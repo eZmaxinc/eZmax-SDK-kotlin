@@ -36,7 +36,7 @@ import com.squareup.moshi.JsonClass
  * @param bCreditcardclientAllowedcompanypayment Whether if it's an allowedagencypayment
  * @param bCreditcardclientAllowedezsign Whether if it's an allowedroyallepageprotection
  * @param bCreditcardclientAllowedtranquillit Whether if it's an allowedtranquillit
- * @param objCreditcarddetail 
+ * @param objCreditcarddetail
  * @param sCreditcardclientCVV The creditcard card CVV
  * @param pkiCreditcardclientID The unique ID of the Creditcardclient
  * @param fksCreditcardtokenID The creditcard token identifier

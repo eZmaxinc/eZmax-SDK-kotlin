@@ -38,9 +38,9 @@ import com.squareup.moshi.JsonClass
  * @param sUserLastname The last name of the user
  * @param sUserLoginname The login name of the User.
  * @param bUserIsactive Whether the User is active or not
- * @param eUserType 
- * @param eUserOrigin 
- * @param eUserEzsignaccess 
+ * @param eUserType
+ * @param eUserOrigin
+ * @param eUserEzsignaccess
  * @param sEmailAddress The email address.
  * @param fkiAgentID The unique ID of the Agent.
  * @param fkiBrokerID The unique ID of the Broker.

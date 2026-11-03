@@ -32,7 +32,7 @@ import com.squareup.moshi.JsonClass
  *
  * @param pkiAttachmentIDSource The unique ID of the Attachment.
  * @param pkiAttachmentIDNew The unique ID of the Attachment.
- * @param eAttachmentStatus 
+ * @param eAttachmentStatus
  * @param bAllowOverwrite Whether we allow or not the file overwrite
  */
 
@@ -57,8 +57,6 @@ data class CustomAttachmentImportIntoEDMResponse (
 ) {
 
     /**
-     * 
-     *
      * Values: Accepted,FileExists,Forbidden,Overwrite
      */
     @JsonClass(generateAdapter = false)

@@ -33,9 +33,9 @@ import com.squareup.moshi.JsonClass
 /**
  * Response for GET /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getAttachments
  *
- * @param objDebugPayload 
- * @param mPayload 
- * @param objDebug 
+ * @param objDebugPayload
+ * @param mPayload
+ * @param objDebug
  */
 
 

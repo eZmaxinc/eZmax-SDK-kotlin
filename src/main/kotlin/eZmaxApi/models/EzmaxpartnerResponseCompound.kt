@@ -39,15 +39,15 @@ import com.squareup.moshi.JsonClass
 /**
  * Payload for GET /1/object/activesession/getCurrent
  *
- * @param eEzmaxpartnerCustomdevelopment 
- * @param objEzmaxpartnerAddress 
- * @param objEzmaxpartnerDescription 
- * @param objEzmaxpartnerEmailaddress 
- * @param objEzmaxpartnerName 
- * @param objEzmaxpartnerPhoneE164 
- * @param objEzmaxpartnerShortdescription 
- * @param objEzmaxpartnerUrl 
- * @param objEzmaxpartnerLogourl 
+ * @param eEzmaxpartnerCustomdevelopment
+ * @param objEzmaxpartnerAddress
+ * @param objEzmaxpartnerDescription
+ * @param objEzmaxpartnerEmailaddress
+ * @param objEzmaxpartnerName
+ * @param objEzmaxpartnerPhoneE164
+ * @param objEzmaxpartnerShortdescription
+ * @param objEzmaxpartnerUrl
+ * @param objEzmaxpartnerLogourl
  * @param bEzmaxpartnerIsactive Whether the Ezmaxpartner is active or not
  */
 

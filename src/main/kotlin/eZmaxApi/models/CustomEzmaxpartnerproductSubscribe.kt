@@ -53,9 +53,9 @@ import com.squareup.moshi.JsonClass
  * @param sUserLastName The last name of the user
  * @param fkiUserID The unique ID of the User
  * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
- * @param objAddress 
- * @param objphone 
- * @param objEmail 
+ * @param objAddress
+ * @param objphone
+ * @param objEmail
  */
 
 

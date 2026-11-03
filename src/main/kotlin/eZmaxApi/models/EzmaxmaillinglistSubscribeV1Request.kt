@@ -30,7 +30,7 @@ import com.squareup.moshi.JsonClass
 /**
  * Request for POST /1/module/ezmaxmaillinglist/subscribe
  *
- * @param aPkiEzmaxmaillinglistID 
+ * @param aPkiEzmaxmaillinglistID
  */
 
 

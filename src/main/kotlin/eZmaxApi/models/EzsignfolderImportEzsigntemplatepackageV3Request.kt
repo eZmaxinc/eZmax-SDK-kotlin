@@ -33,9 +33,9 @@ import com.squareup.moshi.JsonClass
  *
  * @param fkiEzsigntemplatepackageID The unique ID of the Ezsigntemplatepackage
  * @param dtEzsigndocumentDuedate The maximum date and time at which the Ezsigndocument can be signed.
- * @param aObjImportEzsigntemplatepackageRelation 
- * @param aSEzsigntemplateannotationDescription 
- * @param aSEzsigntemplateannotationDefaulttext 
+ * @param aObjImportEzsigntemplatepackageRelation
+ * @param aSEzsigntemplateannotationDescription
+ * @param aSEzsigntemplateannotationDefaulttext
  */
 
 

@@ -33,9 +33,9 @@ import com.squareup.moshi.JsonClass
 /**
  * Response for GET /2/object/glaccount/getAutocomplete
  *
- * @param objDebugPayload 
- * @param mPayload 
- * @param objDebug 
+ * @param objDebugPayload
+ * @param mPayload
+ * @param objDebug
  */
 
 

@@ -34,7 +34,7 @@ import com.squareup.moshi.JsonClass
  * @param pkiNotificationsubsectionID The unique ID of the Notificationsubsection
  * @param fkiNotificationsectionID The unique ID of the Notificationsection
  * @param sNotificationsubsectionNameX The name of the Notificationsubsection in the language of the requester
- * @param objNotificationsubsectionName 
+ * @param objNotificationsubsectionName
  * @param sNotificationsectionNameX The name of the Notificationsection in the language of the requester
  */
 

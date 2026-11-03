@@ -33,8 +33,8 @@ import com.squareup.moshi.JsonClass
  * A Ezsigntemplatedocumentpagerecognition Object
  *
  * @param fkiEzsigntemplatedocumentpageID The unique ID of the Ezsigntemplatedocumentpage
- * @param eEzsigntemplatedocumentpagerecognitionOperator 
- * @param eEzsigntemplatedocumentpagerecognitionSection 
+ * @param eEzsigntemplatedocumentpagerecognitionOperator
+ * @param eEzsigntemplatedocumentpagerecognitionSection
  * @param tEzsigntemplatedocumentpagerecognitionText The text of the Ezsigntemplatedocumentpagerecognition
  * @param pkiEzsigntemplatedocumentpagerecognitionID The unique ID of the Ezsigntemplatedocumentpagerecognition
  * @param iEzsigntemplatedocumentpagerecognitionSimilarpercentage The similarpercentage of the Ezsigntemplatedocumentpagerecognition

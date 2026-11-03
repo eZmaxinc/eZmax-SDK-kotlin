@@ -42,16 +42,16 @@ import com.squareup.moshi.JsonClass
  * @param sEzsigntemplatepublicReferenceid The referenceid of the Ezsigntemplatepublic
  * @param bEzsigntemplatepublicIsactive Whether the ezsigntemplatepublic is active or not
  * @param tEzsigntemplatepublicNote The note of the Ezsigntemplatepublic
- * @param eEzsigntemplatepublicLimittype 
+ * @param eEzsigntemplatepublicLimittype
  * @param iEzsigntemplatepublicLimit The limit of the Ezsigntemplatepublic
  * @param iEzsigntemplatepublicLimitexceeded The limitexceeded of the Ezsigntemplatepublic
  * @param dtEzsigntemplatepublicLimitexceededsince The limitexceededsince of the Ezsigntemplatepublic
  * @param sEzsigntemplatepublicUrl The url of the Ezsigntemplatepublic  You can add these value as query parameters to prefill the corresponding role  |Parameter|Description| |-|-| |sEzsigntemplatesignerDescription|The role to fill| |sContactFirstname|The contact firstname| |sContactLastname|The contact lastname| |sEmailAddress|The contact email| |sPhoneE164|The contact phone number| |sPhoneE164Cell|The contact cell phone number|
  * @param sEzsigntemplatepublicEzsigntemplatedescription The Ezsigntemplate/Ezsigntemplatepackage description
- * @param aObjEzsignfolderezsigntemplatepublic 
+ * @param aObjEzsignfolderezsigntemplatepublic
  * @param fkiEzsigntemplateID The unique ID of the Ezsigntemplate
  * @param fkiEzsigntemplatepackageID The unique ID of the Ezsigntemplatepackage
- * @param objAudit 
+ * @param objAudit
  */
 
 

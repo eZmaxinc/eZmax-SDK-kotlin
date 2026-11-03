@@ -35,16 +35,14 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * 
- *
  * @param authenticationSchemes A multi-valued complex type that specifies supported authentication scheme properties.
- * @param bulk 
- * @param changePassword 
+ * @param bulk
+ * @param changePassword
  * @param documentationUri An HTTP-addressable URL pointing to the service provider's human-consumable help documentation
- * @param etag 
- * @param filter 
- * @param patch 
- * @param sort 
+ * @param etag
+ * @param filter
+ * @param patch
+ * @param sort
  */
 
 

@@ -32,7 +32,7 @@ import com.squareup.moshi.JsonClass
  * A Ezsignfoldersignerassociationstatus Object and children to create a complete structure
  *
  * @param fkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation
- * @param aObjEzsignsignaturestatus 
+ * @param aObjEzsignsignaturestatus
  * @param sEzsignfoldersignerassociationstatusLastname The last name of the Ezsignsigner
  * @param sEzsignfoldersignerassociationstatusFirstname The first name of the Ezsignsigner
  * @param sEzsignfoldersignerassociationstatusDescriptionX The description of the Ezsignsigner

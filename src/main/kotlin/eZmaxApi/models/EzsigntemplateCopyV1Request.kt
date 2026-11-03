@@ -30,7 +30,7 @@ import com.squareup.moshi.JsonClass
 /**
  * Request for POST /1/object/ezsigntemplate/{pkiEzsigntemplateID}/copy
  *
- * @param aFkiEzsignfoldertypeID 
+ * @param aFkiEzsignfoldertypeID
  * @param bCopyCompany Whether we shall copy the Ezsigntemplate as a company Ezsigntemplate
  * @param bCopyUser Whether we shall copy the Ezsigntemplate as a user Ezsigntemplate
  */

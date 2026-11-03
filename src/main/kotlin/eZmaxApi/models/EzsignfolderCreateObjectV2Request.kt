@@ -31,7 +31,7 @@ import com.squareup.moshi.JsonClass
 /**
  * Request for POST /2/object/ezsignfolder
  *
- * @param aObjEzsignfolder 
+ * @param aObjEzsignfolder
  */
 
 

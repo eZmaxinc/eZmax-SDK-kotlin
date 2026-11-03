@@ -32,8 +32,8 @@ import com.squareup.moshi.JsonClass
 /**
  * Payload for GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements
  *
- * @param aObjEzsignsignature 
- * @param aObjEzsignformfieldgroup 
+ * @param aObjEzsignsignature
+ * @param aObjEzsignformfieldgroup
  */
 
 

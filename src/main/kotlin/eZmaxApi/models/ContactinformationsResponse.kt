@@ -36,16 +36,16 @@ import com.squareup.moshi.JsonClass
  * A Contactinformations Object
  *
  * @param pkiContactinformationsID The unique ID of the Contactinformations
- * @param eContactinformationsType 
+ * @param eContactinformationsType
  * @param fkiAddressIDDefault The unique ID of the Address
  * @param fkiPhoneIDDefault The unique ID of the Phone.
  * @param fkiEmailIDDefault The unique ID of the Email
  * @param fkiWebsiteIDDefault The unique ID of the Website Default
  * @param sContactinformationsUrl The url of the Contactinformations
- * @param objAddressDefault 
- * @param objPhoneDefault 
- * @param objEmailDefault 
- * @param objWebsiteDefault 
+ * @param objAddressDefault
+ * @param objPhoneDefault
+ * @param objEmailDefault
+ * @param objWebsiteDefault
  */
 
 

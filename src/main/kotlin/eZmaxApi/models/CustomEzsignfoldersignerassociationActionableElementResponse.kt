@@ -41,9 +41,9 @@ import com.squareup.moshi.JsonClass
  * @param bEzsignfoldersignerassociationAllowsigninginperson If the Ezsignfoldersignerassociation is allowed to sign in person or not
  * @param bEzsignfoldersignerassociationHasactionableelementsCurrent Indicates if the Ezsignfoldersignerassociation has actionable elements in the current step
  * @param bEzsignfoldersignerassociationHasactionableelementsFuture Indicates if the Ezsignfoldersignerassociation has actionable elements in a future step
- * @param objEzsignsignergroup 
- * @param objUser 
- * @param objEzsignsigner 
+ * @param objEzsignsignergroup
+ * @param objUser
+ * @param objEzsignsigner
  */
 
 

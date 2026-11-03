@@ -31,7 +31,7 @@ import com.squareup.moshi.JsonClass
 /**
  * Request for POST /2/object/branding
  *
- * @param aObjBranding 
+ * @param aObjBranding
  */
 
 

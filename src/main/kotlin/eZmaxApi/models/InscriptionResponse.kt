@@ -45,19 +45,19 @@ import com.squareup.moshi.JsonClass
  * @param fkiInscriptionbuildingtypeID The unique ID of the Inscriptionbuildingtype
  * @param fkiInscriptiontypeID The unique ID of the Inscriptiontype
  * @param fkiInscriptioncategoryID The unique ID of the Inscriptioncategory
- * @param eInscriptionStep 
- * @param eInscriptionResidenceType 
+ * @param eInscriptionStep
+ * @param eInscriptionResidenceType
  * @param sInscriptionCivicend The address civic end of the Inscription
  * @param sInscriptionContract The sale contract number
  * @param iInscriptionSellerdeclaration The seller declaration number of the Inscription
- * @param eInscriptionType 
+ * @param eInscriptionType
  * @param dInscriptionInitialsaleprice The initial sale price of the Inscription
  * @param dInscriptionSaleprice The saleprice of the Inscription
  * @param dInscriptionRentprice The rent price of the Inscription
- * @param eInscriptionRemunerationtype 
- * @param eInscriptionRemunerationinscriptorsellertype 
- * @param eInscriptionRemunerationreferencetype 
- * @param eInscriptionRemunerationtotaltype 
+ * @param eInscriptionRemunerationtype
+ * @param eInscriptionRemunerationinscriptorsellertype
+ * @param eInscriptionRemunerationreferencetype
+ * @param eInscriptionRemunerationtotaltype
  * @param dInscriptionRemuneration The remuneration amount of the Inscription
  * @param dInscriptionRemunerationinscriptorseller The remuneration amount for the inscriptor or seller of the Inscription
  * @param dInscriptionRemunerationreference The remuneration amount for the reference of the Inscription
@@ -81,7 +81,7 @@ import com.squareup.moshi.JsonClass
  * @param fkiDepartmentID The unique ID of the Department
  * @param sDepartmentNameX The Name of the Department in the language of the requester
  * @param sRealestateboardNameX The name of the Realestateboard
- * @param objAddress 
+ * @param objAddress
  * @param sInscriptionbuildingtypeNameX The name of the Inscriptionbuildingtype in the language of the requester
  * @param sInscriptiontypeNameX The name of the Inscriptiontype in the language of the requester
  * @param sInscriptioncategoryNameX The name of the Inscriptioncategory in the language of the requester
@@ -92,7 +92,7 @@ import com.squareup.moshi.JsonClass
  * @param dtInscriptionExpirationdate The expiration date of the Inscription
  * @param dtInscriptionNotarydate The notary date of the Inscription
  * @param dtInscriptionNotaryentereddate The notary entered date of the Inscription
- * @param objAudit 
+ * @param objAudit
  */
 
 

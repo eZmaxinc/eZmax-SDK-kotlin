@@ -31,7 +31,7 @@ import com.squareup.moshi.JsonClass
  * An EzmaxinvoicingEzsigndocument object containing information about the Ezmaxinvoicing for an Ezsigndocument
  *
  * @param fkiEzsignfolderID The unique ID of the Ezsignfolder
- * @param sName 
+ * @param sName
  * @param sEzsignfolderDescription The description of the Ezsignfolder
  * @param sEzsigndocumentName The name of the document that will be presented to Ezsignfoldersignerassociations
  * @param bEzsignfolderAllowed Whether you have access to the Ezsignfolder or not

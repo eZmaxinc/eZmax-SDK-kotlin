@@ -47,22 +47,22 @@ import com.squareup.moshi.JsonClass
  * @param sSystemconfigurationtypeDescriptionX The description of the Systemconfigurationtype in the language of the requester
  * @param yyyymmEzmaxinvoicing The YYYYMM period of the Ezmaxinvoicing
  * @param iEzmaxinvoicingDays The number of days invoiced
- * @param eEzmaxinvoicingPaymenttype 
+ * @param eEzmaxinvoicingPaymenttype
  * @param dEzmaxinvoicingRebatepaymenttype The percentage of rebate depending of the payment type
  * @param iEzmaxinvoicingContractlength The length of the contract in years
  * @param dEzmaxinvoicingRebatecontractlength The percentage of rebate depending of the contract length
  * @param bEzmaxinvoicingRebateEzsignallagents Whether the rebate for eZsign is for all agents
- * @param objEzmaxinvoicingcontract 
- * @param objEzmaxpricing 
- * @param aObjEzmaxinvoicingsummaryglobal 
- * @param aObjEzmaxinvoicingsummaryexternal 
- * @param aObjEzmaxinvoicingsummaryinternal 
- * @param aObjEzmaxinvoicingagent 
- * @param aObjEzmaxinvoicinguser 
- * @param aObjEzmaxinvoicingezsignfolder 
- * @param aObjEzmaxinvoicingezsigndocument 
+ * @param objEzmaxinvoicingcontract
+ * @param objEzmaxpricing
+ * @param aObjEzmaxinvoicingsummaryglobal
+ * @param aObjEzmaxinvoicingsummaryexternal
+ * @param aObjEzmaxinvoicingsummaryinternal
+ * @param aObjEzmaxinvoicingagent
+ * @param aObjEzmaxinvoicinguser
+ * @param aObjEzmaxinvoicingezsignfolder
+ * @param aObjEzmaxinvoicingezsigndocument
  * @param pkiEzmaxinvoicingID The unique ID of the Ezmaxinvoicing
- * @param objAudit 
+ * @param objAudit
  */
 
 

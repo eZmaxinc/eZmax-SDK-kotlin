@@ -30,7 +30,7 @@ import com.squareup.moshi.JsonClass
 /**
  * Payload for POST /1/object/ezsignfolder/{pkiEzsignfolder}/importEzsignfoldersignerassociations
  *
- * @param aPkiEzsignfoldersignerassociationID 
+ * @param aPkiEzsignfoldersignerassociationID
  */
 
 

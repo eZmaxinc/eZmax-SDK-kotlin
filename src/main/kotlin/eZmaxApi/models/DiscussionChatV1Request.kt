@@ -31,7 +31,7 @@ import com.squareup.moshi.JsonClass
 /**
  * Request for POST /1/object/discussion/chat
  *
- * @param eDiscussionRobot 
+ * @param eDiscussionRobot
  * @param tDiscussionMessage The Message of the Discussion
  * @param fkiDiscussionID The unique ID of the Discussion
  */

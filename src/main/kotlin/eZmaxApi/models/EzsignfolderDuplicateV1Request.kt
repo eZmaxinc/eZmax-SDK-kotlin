@@ -32,8 +32,8 @@ import com.squareup.moshi.JsonClass
  * 
  *
  * @param sEzsignfolderDescription The description of the Ezsignfolder
- * @param aFkiEzsignfoldersignerassociationID 
- * @param aObjEzsigndocument 
+ * @param aFkiEzsignfoldersignerassociationID
+ * @param aObjEzsigndocument
  * @param tEzsignfolderNote Note about the Ezsignfolder
  * @param bKeepenteredvalues Whether we keep the entered values or not in the Ezsignform
  */

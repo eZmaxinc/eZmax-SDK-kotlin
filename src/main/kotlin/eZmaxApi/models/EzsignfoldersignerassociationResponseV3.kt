@@ -34,7 +34,7 @@ import com.squareup.moshi.JsonClass
  * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation
  * @param fkiEzsignfolderID The unique ID of the Ezsignfolder
  * @param bEzsignfoldersignerassociationDelayedsend If this flag is true the signatory is part of a delayed send.
- * @param eEzsignfoldersignerassociationRole 
+ * @param eEzsignfoldersignerassociationRole
  * @param tEzsignfoldersignerassociationMessage A custom text message that will be added to the email sent.
  * @param bEzsignfoldersignerassociationAllowsigninginperson If the Ezsignfoldersignerassociation is allowed to sign in person or not
  */

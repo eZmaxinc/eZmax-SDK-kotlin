@@ -31,8 +31,8 @@ import com.squareup.moshi.JsonClass
  * Request for POST /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate
  *
  * @param fkiEzsigntemplateID The unique ID of the Ezsigntemplate
- * @param aSEzsigntemplatesigner 
- * @param aPkiEzsignfoldersignerassociationID 
+ * @param aSEzsigntemplatesigner
+ * @param aPkiEzsignfoldersignerassociationID
  */
 
 

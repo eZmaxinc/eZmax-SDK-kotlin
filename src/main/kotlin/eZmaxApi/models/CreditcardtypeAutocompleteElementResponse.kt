@@ -33,7 +33,7 @@ import com.squareup.moshi.JsonClass
  *
  * @param sCreditcardtypeName The name of the Creditcardtype
  * @param pkiCreditcardtypeID The unique ID of the Creditcardtype
- * @param eCreditcardtypeCodename 
+ * @param eCreditcardtypeCodename
  */
 
 

@@ -38,10 +38,10 @@ import com.squareup.moshi.JsonClass
  * @param bDiscussionClosed Whether if it's an closed
  * @param iDiscussionmessageCount The count of Attachment.
  * @param iDiscussionmessageCountunread The count of Attachment.
- * @param aObjDiscussionmembership 
- * @param aObjDiscussionmessage 
+ * @param aObjDiscussionmembership
+ * @param aObjDiscussionmessage
  * @param dtDiscussionLastread The date the Discussion was last read
- * @param objDiscussionconfiguration 
+ * @param objDiscussionconfiguration
  */
 
 

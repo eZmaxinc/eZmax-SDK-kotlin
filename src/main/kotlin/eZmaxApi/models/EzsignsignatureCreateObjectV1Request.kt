@@ -32,8 +32,8 @@ import com.squareup.moshi.JsonClass
 /**
  * Request for POST /1/object/ezsignsignature
  *
- * @param objEzsignsignature 
- * @param objEzsignsignatureCompound 
+ * @param objEzsignsignature
+ * @param objEzsignsignatureCompound
  */
 
 

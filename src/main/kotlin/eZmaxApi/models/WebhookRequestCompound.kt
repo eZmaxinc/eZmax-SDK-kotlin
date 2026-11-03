@@ -36,7 +36,7 @@ import com.squareup.moshi.JsonClass
  * A Webhook Object and children
  *
  * @param sWebhookDescription The description of the Webhook
- * @param eWebhookModule 
+ * @param eWebhookModule
  * @param sWebhookUrl The URL of the Webhook callback
  * @param sWebhookEmailfailed The email that will receive the Webhook in case all attempts fail
  * @param bWebhookIsactive Whether the Webhook is active or not
@@ -44,11 +44,11 @@ import com.squareup.moshi.JsonClass
  * @param pkiWebhookID The unique ID of the Webhook
  * @param fkiAuthenticationexternalID The unique ID of the Authenticationexternal
  * @param fkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
- * @param eWebhookEzsignevent 
- * @param eWebhookManagementevent 
- * @param eWebhookRealestateevent 
+ * @param eWebhookEzsignevent
+ * @param eWebhookManagementevent
+ * @param eWebhookRealestateevent
  * @param bWebhookIssigned Whether the requests will be signed or not
- * @param aObjWebhookheader 
+ * @param aObjWebhookheader
  */
 
 

@@ -34,7 +34,7 @@ import com.squareup.moshi.JsonClass
  * @param pkiLeadID The unique ID of the Lead
  * @param fkiLeadsourceID The unique ID of the Leadsource
  * @param sLeadsourceNameX The name of the Leadsource in the language of the requester
- * @param eLeadStatus 
+ * @param eLeadStatus
  * @param dtLeadExpiration The expiration of the Lead
  * @param bLeadIsactive Whether the lead is active or not
  * @param sLeadCode The code of the Lead

@@ -34,7 +34,7 @@ import com.squareup.moshi.JsonClass
  * @param eAttachmentSource The source of the Attachment
  * @param sAttachmentName The name of the Attachment
  * @param sAttachmentCategory The attachment category
- * @param eAttachmentPrivacy 
+ * @param eAttachmentPrivacy
  * @param fkiAttachmentID The unique ID of the Attachment.
  * @param fkiInscriptionchecklistID The unique ID of the Inscriptionchecklist
  * @param sAttachmentUrl The url of the file to import

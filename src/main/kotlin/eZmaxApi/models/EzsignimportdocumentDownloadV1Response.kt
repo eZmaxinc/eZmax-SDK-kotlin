@@ -32,9 +32,9 @@ import com.squareup.moshi.JsonClass
 /**
  * Response for GET /1/object/ezsignimportdocument/{pkiEzsignimportdocumentID}/download
  *
- * @param objDebugPayload 
+ * @param objDebugPayload
  * @param mPayload Response for GET /1/object/ezsignimportdocument/{pkiEzsignimportdocumentID}/download
- * @param objDebug 
+ * @param objDebug
  */
 
 

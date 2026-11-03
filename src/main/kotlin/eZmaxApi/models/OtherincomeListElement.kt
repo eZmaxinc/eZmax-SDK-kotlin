@@ -35,7 +35,7 @@ import com.squareup.moshi.JsonClass
  * @param fkiOtherincometypeID The unique ID of the Otherincometype
  * @param sOtherincometypeDescriptionX The description of the Otherincometype in the language of the requester
  * @param sOtherincomeDescription The description of the Otherincome
- * @param eOtherincomeRemunerationtype 
+ * @param eOtherincomeRemunerationtype
  * @param dOtherincomeRemunerationsubtotal The remuneration subtotal of the Otherincome
  * @param dtOtherincomePaid The paid of the Otherincome
  * @param bOtherincomeIsactive Whether the otherincome is active or not

@@ -37,7 +37,7 @@ import com.squareup.moshi.JsonClass
  * @param sModuleNameX The Name of the Module in the language of the requester
  * @param bModuleRegistered Whether the Module is registered or not
  * @param bModuleRegisteredapi Whether the Module is registered or not for api use
- * @param aObjModulesection 
+ * @param aObjModulesection
  */
 
 

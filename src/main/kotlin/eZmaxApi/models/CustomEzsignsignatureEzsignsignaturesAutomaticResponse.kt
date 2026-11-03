@@ -32,7 +32,7 @@ import com.squareup.moshi.JsonClass
  * An Ezsignsignature Object in the context of an EzsignsignaturesAutomatic path
  *
  * @param pkiEzsignsignatureID The unique ID of the Ezsignsignature
- * @param eEzsignsignatureType 
+ * @param eEzsignsignatureType
  * @param iEzsignpagePagenumber The page number in the Ezsigndocument
  */
 

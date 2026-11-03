@@ -31,7 +31,7 @@ import com.squareup.moshi.JsonClass
 /**
  * Response for GET /1/object/purchase/{pkiPurchaseID}/getCommunicationsenders
  *
- * @param aObjCommunicationsenders 
+ * @param aObjCommunicationsenders
  */
 
 

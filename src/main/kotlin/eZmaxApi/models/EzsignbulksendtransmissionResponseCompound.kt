@@ -36,8 +36,8 @@ import com.squareup.moshi.JsonClass
  * @param fkiEzsignbulksendID The unique ID of the Ezsignbulksend
  * @param sEzsignbulksendtransmissionDescription The description of the Ezsignbulksendtransmission
  * @param iEzsignbulksendtransmissionErrors The number of errors during the Ezsignbulksendtransmission
- * @param objAudit 
- * @param aObjEzsignfoldertransmission 
+ * @param objAudit
+ * @param aObjEzsignfoldertransmission
  */
 
 

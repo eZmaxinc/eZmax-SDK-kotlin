@@ -39,7 +39,7 @@ import com.squareup.moshi.JsonClass
  * @param fkiEzmaxinvoicingsummaryglobalID The unique ID of the Ezmaxinvoicingsummaryglobal
  * @param fkiEzmaxpartnerID The unique ID of the Ezmaxpartner
  * @param fkiEzmaxrepresentativeID The unique ID of the Ezmaxrepresentative
- * @param objContactName 
+ * @param objContactName
  */
 
 

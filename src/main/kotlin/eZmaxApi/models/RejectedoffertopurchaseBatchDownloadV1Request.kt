@@ -30,7 +30,7 @@ import com.squareup.moshi.JsonClass
 /**
  * Request for POST /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/batchDownload
  *
- * @param aPkiAttachmentID 
+ * @param aPkiAttachmentID
  */
 
 

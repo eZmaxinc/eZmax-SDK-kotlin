@@ -33,7 +33,7 @@ import com.squareup.moshi.JsonClass
  *
  * @param pkiEzsigntemplateglobaldocumentID The unique ID of the Ezsigntemplateglobaldocument
  * @param sEzsigntemplateglobaldocumentName The name of the Ezsigntemplateglobaldocument.
- * @param eEzsigntemplateglobaldocumentAcceptationtype 
+ * @param eEzsigntemplateglobaldocumentAcceptationtype
  * @param iEzsigntemplateglobaldocumentPagetotal The number of pages in the Ezsigntemplateglobaldocument.
  * @param iEzsigntemplateglobaldocumentSignaturetotal The number of total signatures in the Ezsigntemplateglobal.
  */

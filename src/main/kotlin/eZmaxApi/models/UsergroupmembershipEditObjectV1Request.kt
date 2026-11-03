@@ -31,7 +31,7 @@ import com.squareup.moshi.JsonClass
 /**
  * Request for PUT /1/object/usergroupmembership/{pkiUsergroupmembershipID}
  *
- * @param objUsergroupmembership 
+ * @param objUsergroupmembership
  */
 
 

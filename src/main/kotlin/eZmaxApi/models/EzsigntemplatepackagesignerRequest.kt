@@ -38,7 +38,7 @@ import com.squareup.moshi.JsonClass
  * @param fkiUserID The unique ID of the User
  * @param fkiUsergroupID The unique ID of the Usergroup
  * @param bEzsigntemplatepackagesignerReceivecopy If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document.
- * @param eEzsigntemplatepackagesignerMapping 
+ * @param eEzsigntemplatepackagesignerMapping
  */
 
 

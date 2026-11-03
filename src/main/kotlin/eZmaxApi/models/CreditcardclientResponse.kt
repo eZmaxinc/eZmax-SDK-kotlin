@@ -37,7 +37,7 @@ import com.squareup.moshi.JsonClass
  * @param sCreditcardclientDescription The description of the Creditcardclient
  * @param bCreditcardclientAllowedcompanypayment Whether if it's an allowedagencypayment
  * @param bCreditcardclientAllowedtranquillit Whether if it's an allowedtranquillit
- * @param objCreditcarddetail 
+ * @param objCreditcarddetail
  */
 
 

@@ -38,7 +38,7 @@ import com.squareup.moshi.JsonClass
  * A Webhook Object
  *
  * @param sWebhookDescription The description of the Webhook
- * @param eWebhookModule 
+ * @param eWebhookModule
  * @param sWebhookUrl The URL of the Webhook callback
  * @param sWebhookEmailfailed The email that will receive the Webhook in case all attempts fail
  * @param bWebhookIsactive Whether the Webhook is active or not
@@ -48,17 +48,17 @@ import com.squareup.moshi.JsonClass
  * @param fkiAuthenticationexternalID The unique ID of the Authenticationexternal
  * @param fkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
  * @param sEzsignfoldertypeNameX The name of the Ezsignfoldertype in the language of the requester
- * @param eWebhookEzmaxpartnerevent 
- * @param eWebhookEzsignevent 
- * @param eWebhookManagementevent 
- * @param eWebhookRealestateevent 
+ * @param eWebhookEzmaxpartnerevent
+ * @param eWebhookEzsignevent
+ * @param eWebhookManagementevent
+ * @param eWebhookRealestateevent
  * @param sWebhookApikey The Apikey for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey.
  * @param sWebhookSecret The Secret for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey.
  * @param sAuthenticationexternalDescription The description of the Authenticationexternal
- * @param objAudit 
+ * @param objAudit
  * @param sWebhookEvent The concatenated string to describe the Webhook event
  * @param sWebhookAuthentificationexternalerror Error message when token renewal failed or is not configured. Only if an Authenticationexternal is set.
- * @param aObjWebhookheader 
+ * @param aObjWebhookheader
  */
 
 

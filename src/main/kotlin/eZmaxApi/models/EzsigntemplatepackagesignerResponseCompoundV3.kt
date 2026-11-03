@@ -39,8 +39,8 @@ import com.squareup.moshi.JsonClass
  * @param fkiUserID The unique ID of the User
  * @param fkiUsergroupID The unique ID of the Usergroup
  * @param sEzdoctemplatedocumentNameX The name of the Ezdoctemplatedocument in the language of the requester
- * @param eEzsigntemplatepackagesignerRole 
- * @param eEzsigntemplatepackagesignerMapping 
+ * @param eEzsigntemplatepackagesignerRole
+ * @param eEzsigntemplatepackagesignerMapping
  * @param sUserName The description of the User in the language of the requester
  * @param sUsergroupNameX The Name of the Usergroup in the language of the requester
  */

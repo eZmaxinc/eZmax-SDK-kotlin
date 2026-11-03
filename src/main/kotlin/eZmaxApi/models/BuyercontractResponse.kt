@@ -35,16 +35,16 @@ import com.squareup.moshi.JsonClass
  *
  * @param pkiBuyercontractID The unique ID of the Buyercontract
  * @param fkiInscriptiontypeID The unique ID of the Inscriptiontype
- * @param eBuyercontractStep 
+ * @param eBuyercontractStep
  * @param dBuyercontractMinimumprice The minimum price of the Buyercontract
  * @param dBuyercontractMaximumprice The maximum price of the Buyercontract
- * @param eBuyercontractType 
+ * @param eBuyercontractType
  * @param dtBuyercontractDate The date of the Buyercontract
  * @param bBuyercontractIsactive Whether the buyercontract is active or not
  * @param sBuyercontractContract The number of the Buyercontract
  * @param dtBuyercontractExpirationdate The expiration date of the Buyercontract
  * @param dBuyercontractRemuneration The remuneration of the Buyercontract
- * @param eBuyercontractRemunerationtype 
+ * @param eBuyercontractRemunerationtype
  * @param bBuyercontractLitigation Whether if it's an litigation
  */
 

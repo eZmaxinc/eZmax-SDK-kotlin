@@ -33,8 +33,8 @@ import com.squareup.moshi.JsonClass
  * Response for POST /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign
  *
  * @param dtEzsignsignatureDateInFolderTimezone The date the Ezsignsignature was signed in folder's timezone
- * @param objTimezone 
- * @param objCreditcardtransaction 
+ * @param objTimezone
+ * @param objCreditcardtransaction
  */
 
 

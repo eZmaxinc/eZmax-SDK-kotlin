@@ -32,8 +32,8 @@ import com.squareup.moshi.JsonClass
 /**
  * Response for GET /1/object/attachment/{pkiAttachmentID}/download
  *
- * @param objDebugPayload 
- * @param objDebug 
+ * @param objDebugPayload
+ * @param objDebug
  */
 
 

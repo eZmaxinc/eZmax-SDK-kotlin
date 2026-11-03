@@ -40,7 +40,7 @@ import com.squareup.moshi.JsonClass
  * @param bBankaccountIsactive Whether the Bankaccount is active or not
  * @param iGlaccountCode The Code of the Glaccount
  * @param sGlaccountDescriptionX The Description for the Glaccount in the language of the requester
- * @param eBankaccountType 
+ * @param eBankaccountType
  * @param bBankaccountCommissionprocessing Whether if it's an commissionprocessing
  */
 

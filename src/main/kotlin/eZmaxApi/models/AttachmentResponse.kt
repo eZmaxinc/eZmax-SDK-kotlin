@@ -37,16 +37,16 @@ import com.squareup.moshi.JsonClass
  * An Attachment Object
  *
  * @param pkiAttachmentID The unique ID of the Attachment.
- * @param eAttachmentDocumenttype 
+ * @param eAttachmentDocumenttype
  * @param sAttachmentName The name of the Attachment
  * @param sAttachmentCategory The attachment category
- * @param eAttachmentPrivacy 
- * @param eAttachmentType 
+ * @param eAttachmentPrivacy
+ * @param eAttachmentType
  * @param iAttachmentSize The size of the Attachment
  * @param sAttachmentMD5 The MD5 of the Attachment
  * @param bAttachmentDeleted Whether if it's deleted
  * @param bAttachmentValid Whether if it's valid
- * @param eAttachmentVerified 
+ * @param eAttachmentVerified
  * @param fkiComputerID The unique ID of the Computer
  * @param fkiAdjustmentID The unique ID of the Adjustment
  * @param fkiAgentID The unique ID of the Agent.
@@ -95,11 +95,11 @@ import com.squareup.moshi.JsonClass
  * @param fkiReconciliationID The unique ID of the Reconciliation
  * @param fkiEzsigndocumentIDReference The unique ID of the Ezsigndocument
  * @param fkiUserIDSpecific The unique ID of the User
- * @param objUserSpecific 
+ * @param objUserSpecific
  * @param iAttachmentEDMmoduleflag The edmmoduleflag of the Attachment
  * @param tAttachmentRejectioncomment The rejectioncomment of the Attachment
  * @param fkiUserIDOwner The unique ID of the User
- * @param objAudit 
+ * @param objAudit
  */
 
 

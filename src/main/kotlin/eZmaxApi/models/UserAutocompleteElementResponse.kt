@@ -31,7 +31,7 @@ import com.squareup.moshi.JsonClass
 /**
  * A User AutocompleteElement Response
  *
- * @param eUserType 
+ * @param eUserType
  * @param sUserName The description of the User in the language of the requester
  * @param pkiUserID The unique ID of the User
  * @param bUserIsactive Whether the User is active or not

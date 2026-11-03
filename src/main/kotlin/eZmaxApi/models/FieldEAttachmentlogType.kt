@@ -30,7 +30,7 @@ import com.squareup.moshi.JsonClass
 /**
  * The Type for the Attachmentlog
  *
- * Values: AutoValidation,CopyFrom,CopyTo,CopyToEzsign,CreateByEzsign,Download,Deleted,Destroyed,Email,EmailCC,EmailCCI,Fax,ImportedFromExternalSystem,ImportedFromEZA,ImportedFromFaltour,ImportedFromLonewolf,ImportedFromProspects,Move,OpenFromEmail,Purged,Reject,Rename,Restore,Scanned,SendToGED,UnvalidatedBy,Upload,ValidatedBy,VetinfoUpload
+ * Values: AutoValidation,CopyFrom,CopyTo,CopyToEzsign,CreateByEzsign,Download,Deleted,Destroyed,Email,EmailCC,EmailCCI,Fax,ImportedFromExternalSystem,ImportedFromEZA,ImportedFromFaltour,ImportedFromLonewolf,ImportedFromProspects,Move,OpenFromEmail,Pending,Purged,Reject,Rename,Restore,Scanned,SendToGED,UnvalidatedBy,Upload,ValidatedBy,VetinfoUpload
  */
 
 @JsonClass(generateAdapter = false)
@@ -92,6 +92,9 @@ enum class FieldEAttachmentlogType(val value: kotlin.String) {
 
     @Json(name = "OpenFromEmail")
     OpenFromEmail("OpenFromEmail"),
+
+    @Json(name = "Pending")
+    Pending("Pending"),
 
     @Json(name = "Purged")
     Purged("Purged"),

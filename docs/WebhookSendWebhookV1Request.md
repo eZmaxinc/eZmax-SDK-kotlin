@@ -6,6 +6,7 @@
 | ------------ | ------------- | ------------- | ------------- |
 | **eWebhookModule** | [**FieldEWebhookModule**](FieldEWebhookModule.md) |  |  |
 | **eWebhookEzsignevent** | [**CustomEWebhookEzsignevent**](CustomEWebhookEzsignevent.md) |  |  [optional] |
+| **eWebhookEzmaxpartnerevent** | [**FieldEWebhookEzmaxpartnerevent**](FieldEWebhookEzmaxpartnerevent.md) |  |  [optional] |
 | **eWebhookManagementevent** | [**FieldEWebhookManagementevent**](FieldEWebhookManagementevent.md) |  |  [optional] |
 | **eWebhookRealestateevent** | [**FieldEWebhookRealestateevent**](FieldEWebhookRealestateevent.md) |  |  [optional] |
 | **fkiEzsignfolderID** | **kotlin.Int** | The unique ID of the Ezsignfolder |  [optional] |

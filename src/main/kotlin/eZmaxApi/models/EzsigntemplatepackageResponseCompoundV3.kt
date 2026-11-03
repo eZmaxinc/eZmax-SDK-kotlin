@@ -42,8 +42,8 @@ import com.squareup.moshi.JsonClass
  * @param bEzsigntemplatepackageIsactive Whether the Ezsigntemplatepackage is active or not
  * @param sEzsignfoldertypeNameX The name of the Ezsignfoldertype in the language of the requester
  * @param bEzsigntemplatepackageEditallowed Whether the Ezsigntemplatepackage if allowed to edit or not
- * @param aObjEzsigntemplatepackagesigner 
- * @param aObjEzsigntemplatepackagemembership 
+ * @param aObjEzsigntemplatepackagesigner
+ * @param aObjEzsigntemplatepackagemembership
  * @param fkiEzdoctemplatedocumentID The unique ID of the Ezdoctemplatedocument
  * @param sEzdoctemplatedocumentNameX The name of the Ezdoctemplatedocument in the language of the requester
  */

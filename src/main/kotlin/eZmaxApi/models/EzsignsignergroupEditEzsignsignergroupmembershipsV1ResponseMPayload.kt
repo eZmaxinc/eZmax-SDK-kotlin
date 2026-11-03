@@ -30,7 +30,7 @@ import com.squareup.moshi.JsonClass
 /**
  * Response for PUT /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}/editEzsignsignergroupmemberships
  *
- * @param aPkiEzsignsignergroupmembershipID 
+ * @param aPkiEzsignsignergroupmembershipID
  */
 
 

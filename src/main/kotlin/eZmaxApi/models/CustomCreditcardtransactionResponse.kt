@@ -31,7 +31,7 @@ import com.squareup.moshi.JsonClass
 /**
  * A custom Creditcardtransaction Object
  *
- * @param eCreditcardtypeCodename 
+ * @param eCreditcardtypeCodename
  * @param dCreditcardtransactionAmount The amount of the Creditcardtransaction
  * @param sCreditcardtransactionPartiallydecryptednumber The partially decrypted credit card number used in the Creditcardtransaction
  * @param sCreditcardtransactionReferencenumber The reference number on the creditcard service for the Creditcardtransaction

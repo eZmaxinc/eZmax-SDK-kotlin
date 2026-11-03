@@ -31,7 +31,7 @@ import com.squareup.moshi.JsonClass
 /**
  * A Ezsigntemplatepackage AutocompleteElement Response
  *
- * @param eEzsignfoldertypePrivacylevel 
+ * @param eEzsignfoldertypePrivacylevel
  * @param sEzsigntemplatepackageDescription The description of the Ezsigntemplatepackage
  * @param pkiEzsigntemplatepackageID The unique ID of the Ezsigntemplatepackage
  * @param bEzsigntemplatepackageIsactive Whether the Ezsigntemplatepackage is active or not

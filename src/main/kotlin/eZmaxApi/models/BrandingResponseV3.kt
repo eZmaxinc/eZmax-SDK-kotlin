@@ -34,10 +34,10 @@ import com.squareup.moshi.JsonClass
  * A Branding Object
  *
  * @param pkiBrandingID The unique ID of the Branding
- * @param objBrandingDescription 
+ * @param objBrandingDescription
  * @param sBrandingDescriptionX The Description of the Branding in the language of the requester
- * @param eBrandingLogo 
- * @param eBrandingAlignlogo 
+ * @param eBrandingLogo
+ * @param eBrandingAlignlogo
  * @param iBrandingColor The primary color. This is a RGB color converted into integer
  * @param bBrandingIsactive Whether the Branding is active or not
  * @param fkiDomainID The unique ID of the Domain

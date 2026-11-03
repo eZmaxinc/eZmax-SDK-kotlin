@@ -37,8 +37,8 @@ import com.squareup.moshi.JsonClass
  * @param sPhoneE164 A phone number in E.164 Format
  * @param sPhoneExtension The extension of the phone number.  The extension is the \"123\" section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers
  * @param sPhoneE164Cell A phone number in E.164 Format
- * @param sPhoneNumber 
- * @param sPhoneNumberCell 
+ * @param sPhoneNumber
+ * @param sPhoneNumberCell
  */
 
 

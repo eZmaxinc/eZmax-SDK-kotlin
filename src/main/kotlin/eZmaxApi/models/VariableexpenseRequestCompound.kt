@@ -33,8 +33,8 @@ import com.squareup.moshi.JsonClass
  * A Variableexpense Object and children
  *
  * @param sVariableexpenseCode The code of the Variableexpense
- * @param objVariableexpenseDescription 
- * @param eVariableexpenseTaxable 
+ * @param objVariableexpenseDescription
+ * @param eVariableexpenseTaxable
  * @param bVariableexpenseIsactive Whether the variableexpense is active or not
  * @param pkiVariableexpenseID The unique ID of the Variableexpense
  */

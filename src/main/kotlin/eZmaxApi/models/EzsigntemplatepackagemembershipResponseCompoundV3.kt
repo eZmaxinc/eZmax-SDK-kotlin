@@ -36,8 +36,8 @@ import com.squareup.moshi.JsonClass
  * @param fkiEzsigntemplatepackageID The unique ID of the Ezsigntemplatepackage
  * @param fkiEzsigntemplateID The unique ID of the Ezsigntemplate
  * @param iEzsigntemplatepackagemembershipOrder The order in which the Ezsigntemplate will be imported when using an Ezsigntemplatepackage.
- * @param objEzsigntemplate 
- * @param aObjEzsigntemplatepackagesignermembership 
+ * @param objEzsigntemplate
+ * @param aObjEzsigntemplatepackagesignermembership
  */
 
 

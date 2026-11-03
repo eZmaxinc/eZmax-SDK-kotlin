@@ -5,12 +5,12 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**attachmentDeleteV1**](ObjectAttachmentApi.md#attachmentDeleteV1) | **POST** /1/object/attachment/{pkiAttachmentID}/delete | Delete an existing attachment |
-| [**attachmentDocumentTypeV1**](ObjectAttachmentApi.md#attachmentDocumentTypeV1) | **POST** /1/object/attachment/{pkiAttachmentID}/documentType | Change attachment document type |
 | [**attachmentDownloadV1**](ObjectAttachmentApi.md#attachmentDownloadV1) | **GET** /1/object/attachment/{pkiAttachmentID}/download | Retrieve the content |
 | [**attachmentGetAttachmentlogsV1**](ObjectAttachmentApi.md#attachmentGetAttachmentlogsV1) | **GET** /1/object/attachment/{pkiAttachmentID}/getAttachmentlogs | Retrieve the Attachmentlogs |
-| [**attachmentPrivacyV1**](ObjectAttachmentApi.md#attachmentPrivacyV1) | **POST** /1/object/attachment/{pkiAttachmentID}/privacy | Change the attachment privacy |
 | [**attachmentRenameV1**](ObjectAttachmentApi.md#attachmentRenameV1) | **POST** /1/object/attachment/{pkiAttachmentID}/rename | Rename an attachment |
 | [**attachmentRestoreV1**](ObjectAttachmentApi.md#attachmentRestoreV1) | **POST** /1/object/attachment/{pkiAttachmentID}/restore | Restore a deleted attachment |
+| [**attachmentSetDocumentTypeV1**](ObjectAttachmentApi.md#attachmentSetDocumentTypeV1) | **POST** /1/object/attachment/{pkiAttachmentID}/setDocumentType | Change attachment document type |
+| [**attachmentSetPrivacyV1**](ObjectAttachmentApi.md#attachmentSetPrivacyV1) | **POST** /1/object/attachment/{pkiAttachmentID}/setPrivacy | Change the attachment privacy |
 | [**attachmentValidateV1**](ObjectAttachmentApi.md#attachmentValidateV1) | **POST** /1/object/attachment/{pkiAttachmentID}/validate | Validate an existing attachment |
 
 
@@ -52,57 +52,6 @@ try {
 ### Return type
 
 [**AttachmentDeleteV1Response**](AttachmentDeleteV1Response.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a id="attachmentDocumentTypeV1"></a>
-# **attachmentDocumentTypeV1**
-> AttachmentDocumentTypeV1Response attachmentDocumentTypeV1(pkiAttachmentID, attachmentDocumentTypeV1Request)
-
-Change attachment document type
-
-The endpoint allows to change the checklist document type for an attachment.
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectAttachmentApi()
-val pkiAttachmentID : kotlin.Int = 56 // kotlin.Int | 
-val attachmentDocumentTypeV1Request : AttachmentDocumentTypeV1Request =  // AttachmentDocumentTypeV1Request | 
-try {
-    val result : AttachmentDocumentTypeV1Response = apiInstance.attachmentDocumentTypeV1(pkiAttachmentID, attachmentDocumentTypeV1Request)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectAttachmentApi#attachmentDocumentTypeV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectAttachmentApi#attachmentDocumentTypeV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pkiAttachmentID** | **kotlin.Int**|  | |
-| **attachmentDocumentTypeV1Request** | [**AttachmentDocumentTypeV1Request**](AttachmentDocumentTypeV1Request.md)|  | |
-
-### Return type
-
-[**AttachmentDocumentTypeV1Response**](AttachmentDocumentTypeV1Response.md)
 
 ### Authorization
 
@@ -216,57 +165,6 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a id="attachmentPrivacyV1"></a>
-# **attachmentPrivacyV1**
-> AttachmentPrivacyV1Response attachmentPrivacyV1(pkiAttachmentID, attachmentPrivacyV1Request)
-
-Change the attachment privacy
-
-The endpoint allows to change an attachment&#39;s access privacy.
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectAttachmentApi()
-val pkiAttachmentID : kotlin.Int = 56 // kotlin.Int | 
-val attachmentPrivacyV1Request : AttachmentPrivacyV1Request =  // AttachmentPrivacyV1Request | 
-try {
-    val result : AttachmentPrivacyV1Response = apiInstance.attachmentPrivacyV1(pkiAttachmentID, attachmentPrivacyV1Request)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectAttachmentApi#attachmentPrivacyV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectAttachmentApi#attachmentPrivacyV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pkiAttachmentID** | **kotlin.Int**|  | |
-| **attachmentPrivacyV1Request** | [**AttachmentPrivacyV1Request**](AttachmentPrivacyV1Request.md)|  | |
-
-### Return type
-
-[**AttachmentPrivacyV1Response**](AttachmentPrivacyV1Response.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
 <a id="attachmentRenameV1"></a>
 # **attachmentRenameV1**
 > AttachmentRenameV1Response attachmentRenameV1(pkiAttachmentID, attachmentRenameV1Request)
@@ -356,6 +254,108 @@ try {
 ### Return type
 
 [**AttachmentRestoreV1Response**](AttachmentRestoreV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a id="attachmentSetDocumentTypeV1"></a>
+# **attachmentSetDocumentTypeV1**
+> AttachmentSetDocumentTypeV1Response attachmentSetDocumentTypeV1(pkiAttachmentID, attachmentSetDocumentTypeV1Request)
+
+Change attachment document type
+
+The endpoint allows to change the checklist document type for an attachment.
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectAttachmentApi()
+val pkiAttachmentID : kotlin.Int = 56 // kotlin.Int | 
+val attachmentSetDocumentTypeV1Request : AttachmentSetDocumentTypeV1Request =  // AttachmentSetDocumentTypeV1Request | 
+try {
+    val result : AttachmentSetDocumentTypeV1Response = apiInstance.attachmentSetDocumentTypeV1(pkiAttachmentID, attachmentSetDocumentTypeV1Request)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectAttachmentApi#attachmentSetDocumentTypeV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectAttachmentApi#attachmentSetDocumentTypeV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiAttachmentID** | **kotlin.Int**|  | |
+| **attachmentSetDocumentTypeV1Request** | [**AttachmentSetDocumentTypeV1Request**](AttachmentSetDocumentTypeV1Request.md)|  | |
+
+### Return type
+
+[**AttachmentSetDocumentTypeV1Response**](AttachmentSetDocumentTypeV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a id="attachmentSetPrivacyV1"></a>
+# **attachmentSetPrivacyV1**
+> AttachmentSetPrivacyV1Response attachmentSetPrivacyV1(pkiAttachmentID, attachmentSetPrivacyV1Request)
+
+Change the attachment privacy
+
+The endpoint allows to change an attachment&#39;s access privacy.
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectAttachmentApi()
+val pkiAttachmentID : kotlin.Int = 56 // kotlin.Int | 
+val attachmentSetPrivacyV1Request : AttachmentSetPrivacyV1Request =  // AttachmentSetPrivacyV1Request | 
+try {
+    val result : AttachmentSetPrivacyV1Response = apiInstance.attachmentSetPrivacyV1(pkiAttachmentID, attachmentSetPrivacyV1Request)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectAttachmentApi#attachmentSetPrivacyV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectAttachmentApi#attachmentSetPrivacyV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiAttachmentID** | **kotlin.Int**|  | |
+| **attachmentSetPrivacyV1Request** | [**AttachmentSetPrivacyV1Request**](AttachmentSetPrivacyV1Request.md)|  | |
+
+### Return type
+
+[**AttachmentSetPrivacyV1Response**](AttachmentSetPrivacyV1Response.md)
 
 ### Authorization
 

@@ -31,7 +31,7 @@ import com.squareup.moshi.JsonClass
 /**
  * Request for POST /1/object/usergroupexternal
  *
- * @param aObjUsergroupexternal 
+ * @param aObjUsergroupexternal
  */
 
 

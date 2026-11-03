@@ -35,7 +35,7 @@ import com.squareup.moshi.JsonClass
  * @param iEzsigndiscussionPagenumber The page number in the Ezsigndocument for the Ezsigndiscussion
  * @param iEzsigndiscussionX The x of the Ezsigndiscussion
  * @param iEzsigndiscussionY The y of the Ezsigndiscussion
- * @param objDiscussion 
+ * @param objDiscussion
  * @param pkiEzsigndiscussionID The unique ID of the Ezsigndiscussion
  */
 

@@ -37,7 +37,7 @@ import com.squareup.moshi.JsonClass
  * @param bDomainValiddkim Whether the DKIM is valid or not
  * @param bDomainValidmailfrom Whether the mail from is valid or not
  * @param bDomainValidcustomer Whether the customer has access to it or not
- * @param objAudit 
+ * @param objAudit
  * @param aObjDnsrecord 
  */
 

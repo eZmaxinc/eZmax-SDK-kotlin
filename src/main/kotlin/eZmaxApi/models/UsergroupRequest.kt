@@ -32,9 +32,9 @@ import com.squareup.moshi.JsonClass
 /**
  * A Usergroup Object
  *
- * @param objUsergroupName 
+ * @param objUsergroupName
  * @param pkiUsergroupID The unique ID of the Usergroup
- * @param objEmail 
+ * @param objEmail
  */
 
 

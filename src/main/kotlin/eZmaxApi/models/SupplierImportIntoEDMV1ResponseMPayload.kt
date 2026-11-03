@@ -31,7 +31,7 @@ import com.squareup.moshi.JsonClass
 /**
  * Payload for POST /1/object/supplier/{pkiSupplierID}/importIntoEDM
  *
- * @param aObjAttachment 
+ * @param aObjAttachment
  */
 
 

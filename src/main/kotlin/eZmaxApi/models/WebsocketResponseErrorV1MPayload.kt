@@ -32,7 +32,7 @@ import com.squareup.moshi.JsonClass
  * Payload for Websocket Error V1
  *
  * @param sErrorMessage The message giving details about the error
- * @param eErrorCode 
+ * @param eErrorCode
  */
 
 

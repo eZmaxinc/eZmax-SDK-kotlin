@@ -30,8 +30,8 @@ import com.squareup.moshi.JsonClass
 /**
  * Payload for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/createEzsignelementsPositionedByWord
  *
- * @param aPkiEzsignsignatureID 
- * @param aPkiEzsignformfieldgroupID 
+ * @param aPkiEzsignsignatureID
+ * @param aPkiEzsignformfieldgroupID
  */
 
 

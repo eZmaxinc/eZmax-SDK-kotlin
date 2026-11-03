@@ -32,9 +32,9 @@ import com.squareup.moshi.JsonClass
 /**
  * A column in a Reportsection 
  *
- * @param objReportcellstyleDefault 
+ * @param objReportcellstyleDefault
  * @param iReportcolumnWidth The Reportcolumn width in pixels
- * @param eReportcolumnType 
+ * @param eReportcolumnType
  */
 
 

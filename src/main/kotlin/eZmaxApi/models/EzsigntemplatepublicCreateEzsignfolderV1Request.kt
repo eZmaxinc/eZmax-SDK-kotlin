@@ -33,7 +33,7 @@ import com.squareup.moshi.JsonClass
  *
  * @param pksEzmaxcustomerCode The Ezmaxcustomer code
  * @param sEzsigntemplatepublicReferenceid The referenceid of the Ezsigntemplatepublic
- * @param aSEzsigntemplatesignerDescription 
+ * @param aSEzsigntemplatesignerDescription
  * @param aObjEzsignsigner 
  */
 

@@ -31,7 +31,7 @@ import com.squareup.moshi.JsonClass
 /**
  * Request for POST /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/fillInscriptionnotauthenticatedcondition
  *
- * @param aObjInscriptionnotauthenticatedcondition 
+ * @param aObjInscriptionnotauthenticatedcondition
  * @param dtInscriptionnotauthenticatedTransactiondateReal The real transactiondate of the Inscriptionnotauthenticated
  */
 

@@ -34,7 +34,7 @@ import com.squareup.moshi.JsonClass
  * @param pkiCommunicationexternalrecipientID The unique ID of the Communicationexternalrecipient
  * @param sEmailAddress The email address.
  * @param sPhoneE164 A phone number in E.164 Format
- * @param eCommunicationexternalrecipientType 
+ * @param eCommunicationexternalrecipientType
  * @param sCommunicationexternalrecipientName The name of the Communicationexternalrecipient
  */
 

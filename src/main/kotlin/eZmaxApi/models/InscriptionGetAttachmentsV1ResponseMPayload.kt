@@ -31,7 +31,7 @@ import com.squareup.moshi.JsonClass
 /**
  * Response for GET /1/object/inscription/{pkiInscriptionID}/getAttachments
  *
- * @param aObjAttachmentdocumenttype 
+ * @param aObjAttachmentdocumenttype
  */
 
 

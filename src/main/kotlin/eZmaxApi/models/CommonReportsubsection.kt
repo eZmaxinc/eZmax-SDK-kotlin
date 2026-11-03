@@ -32,12 +32,12 @@ import com.squareup.moshi.JsonClass
 /**
  * A Subsection in a Reportsection. It contains 3 Reportsubsectionparts (Header, Body and Footer) 
  *
- * @param aObjReportcolumn 
+ * @param aObjReportcolumn
  * @param iReportsubsectionColumncount The number of Reportcolumns in the Reportsection
  * @param iReportsubsectionWidth The combined width of all the Reportcolumns in the Reportsection
- * @param objReportsubsectionpartHeader 
- * @param objReportsubsectionpartBody 
- * @param objReportsubsectionpartFooter 
+ * @param objReportsubsectionpartHeader
+ * @param objReportsubsectionpartBody
+ * @param objReportsubsectionpartFooter
  * @param sReportsubsectionTitle The title of this Reportsubsection
  */
 

@@ -34,8 +34,8 @@ import com.squareup.moshi.JsonClass
  *
  * @param pkiEzsignuserID The unique ID of the Ezsignuser
  * @param fkiContactID The unique ID of the Contact
- * @param objContact 
- * @param objAudit 
+ * @param objContact
+ * @param objAudit
  */
 
 

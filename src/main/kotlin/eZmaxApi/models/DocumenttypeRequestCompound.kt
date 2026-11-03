@@ -23,6 +23,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.ComputedEDocumenttypeStep
 import eZmaxApi.models.FieldEDocumenttypeEzcom
 import eZmaxApi.models.FieldEDocumenttypePrivacydefault
 import eZmaxApi.models.FieldEDocumenttypeRepossession
@@ -38,7 +39,8 @@ import com.squareup.moshi.JsonClass
 /**
  * A Documenttype Object and children
  *
- * @param objDocumenttypeName 
+ * @param objDocumenttypeName
+ * @param eDocumenttypeStep
  * @param sDocumenttypeDefaultfilename The defaultfilename of the Documenttype
  * @param bDocumenttypeShowagent Whether if it's an showagent
  * @param bDocumenttypeIsactive Whether the documenttype is active or not
@@ -53,14 +55,15 @@ import com.squareup.moshi.JsonClass
  * @param bDocumenttypeForeclosedsale Whether if it's an foreclosedsale
  * @param bDocumenttypeCommercialfunding Whether if it's an commercialfunding
  * @param bDocumenttypeCanafe Whether if it's an canafe
- * @param eDocumenttypeEzcom 
- * @param eDocumenttypePrivacydefault 
- * @param eDocumenttypeStatusdefault 
- * @param eDocumenttypeSalebyowner 
- * @param eDocumenttypeSaledisplaybyrole 
- * @param eDocumenttypeTransactiontype 
- * @param eDocumenttypeRepossession 
+ * @param eDocumenttypePrivacydefault
+ * @param eDocumenttypeStatusdefault
+ * @param eDocumenttypeSalebyowner
+ * @param eDocumenttypeSaledisplaybyrole
+ * @param eDocumenttypeTransactiontype
+ * @param eDocumenttypeRepossession
+ * @param aFkiInscriptiontypeID
  * @param pkiDocumenttypeID The unique ID of the Documenttype
+ * @param eDocumenttypeEzcom
  */
 
 
@@ -68,6 +71,9 @@ data class DocumenttypeRequestCompound (
 
     @Json(name = "objDocumenttypeName")
     val objDocumenttypeName: MultilingualDocumenttypeName,
+
+    @Json(name = "eDocumenttypeStep")
+    val eDocumenttypeStep: ComputedEDocumenttypeStep,
 
     /* The defaultfilename of the Documenttype */
     @Json(name = "sDocumenttypeDefaultfilename")
@@ -125,9 +131,6 @@ data class DocumenttypeRequestCompound (
     @Json(name = "bDocumenttypeCanafe")
     val bDocumenttypeCanafe: kotlin.Boolean,
 
-    @Json(name = "eDocumenttypeEzcom")
-    val eDocumenttypeEzcom: FieldEDocumenttypeEzcom,
-
     @Json(name = "eDocumenttypePrivacydefault")
     val eDocumenttypePrivacydefault: FieldEDocumenttypePrivacydefault,
 
@@ -146,9 +149,15 @@ data class DocumenttypeRequestCompound (
     @Json(name = "eDocumenttypeRepossession")
     val eDocumenttypeRepossession: FieldEDocumenttypeRepossession,
 
+    @Json(name = "a_fkiInscriptiontypeID")
+    val aFkiInscriptiontypeID: kotlin.collections.List<kotlin.Int>,
+
     /* The unique ID of the Documenttype */
     @Json(name = "pkiDocumenttypeID")
-    val pkiDocumenttypeID: kotlin.Int? = null
+    val pkiDocumenttypeID: kotlin.Int? = null,
+
+    @Json(name = "eDocumenttypeEzcom")
+    val eDocumenttypeEzcom: FieldEDocumenttypeEzcom? = null
 
 ) {
 

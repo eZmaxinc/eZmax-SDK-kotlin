@@ -33,7 +33,7 @@ import com.squareup.moshi.JsonClass
  *
  * @param eWebsocketMessagetype The Type of message
  * @param sWebsocketChannel The Channel on which to route the websocket message
- * @param mPayload 
+ * @param mPayload
  */
 
 

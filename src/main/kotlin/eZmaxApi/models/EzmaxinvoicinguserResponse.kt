@@ -37,7 +37,7 @@ import com.squareup.moshi.JsonClass
  * @param iEzmaxinvoicinguserEzsigndocument The number of ezsign documents
  * @param bEzmaxinvoicinguserEzsignaccount Whether there is an eZsign account
  * @param bEzmaxinvoicinguserBillableezsign Whether it is billable for eZsign
- * @param eEzmaxinvoicinguserVariationezsign 
+ * @param eEzmaxinvoicinguserVariationezsign
  * @param pkiEzmaxinvoicinguserID The unique ID of the Ezmaxinvoicinguser
  * @param fkiEzmaxinvoicingID The unique ID of the Ezmaxinvoicing
  */

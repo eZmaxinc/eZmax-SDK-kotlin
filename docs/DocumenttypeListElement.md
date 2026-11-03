@@ -20,13 +20,13 @@
 | **bDocumenttypeForeclosedsale** | **kotlin.Boolean** | Whether if it&#39;s an foreclosedsale |  |
 | **bDocumenttypeCommercialfunding** | **kotlin.Boolean** | Whether if it&#39;s an commercialfunding |  |
 | **bDocumenttypeCanafe** | **kotlin.Boolean** | Whether if it&#39;s an canafe |  |
-| **eDocumenttypeEzcom** | [**FieldEDocumenttypeEzcom**](FieldEDocumenttypeEzcom.md) |  |  |
 | **eDocumenttypePrivacydefault** | [**FieldEDocumenttypePrivacydefault**](FieldEDocumenttypePrivacydefault.md) |  |  |
 | **eDocumenttypeStatusdefault** | [**FieldEDocumenttypeStatusdefault**](FieldEDocumenttypeStatusdefault.md) |  |  |
 | **eDocumenttypeSalebyowner** | [**FieldEDocumenttypeSalebyowner**](FieldEDocumenttypeSalebyowner.md) |  |  |
 | **eDocumenttypeSaledisplaybyrole** | [**FieldEDocumenttypeSaledisplaybyrole**](FieldEDocumenttypeSaledisplaybyrole.md) |  |  |
 | **eDocumenttypeTransactiontype** | [**FieldEDocumenttypeTransactiontype**](FieldEDocumenttypeTransactiontype.md) |  |  |
 | **eDocumenttypeRepossession** | [**FieldEDocumenttypeRepossession**](FieldEDocumenttypeRepossession.md) |  |  |
+| **eDocumenttypeEzcom** | [**FieldEDocumenttypeEzcom**](FieldEDocumenttypeEzcom.md) |  |  [optional] |
 
 
 

@@ -42,6 +42,8 @@
 
     * `OpenFromEmail` (value: `"OpenFromEmail"`)
 
+    * `Pending` (value: `"Pending"`)
+
     * `Purged` (value: `"Purged"`)
 
     * `Reject` (value: `"Reject"`)

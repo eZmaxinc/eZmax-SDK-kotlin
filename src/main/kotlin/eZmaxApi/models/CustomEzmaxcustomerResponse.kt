@@ -33,7 +33,7 @@ import com.squareup.moshi.JsonClass
  *
  * @param fksEzmaxcustomerCode The Ezmaxcustomer code
  * @param fkiSystemconfigurationtypeID The unique ID of the Systemconfigurationtype
- * @param objEzmaxcustomerCompany 
+ * @param objEzmaxcustomerCompany
  */
 
 

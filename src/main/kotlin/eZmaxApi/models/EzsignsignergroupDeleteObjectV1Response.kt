@@ -32,8 +32,8 @@ import com.squareup.moshi.JsonClass
 /**
  * Response for DELETE /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}
  *
- * @param objDebugPayload 
- * @param objDebug 
+ * @param objDebugPayload
+ * @param objDebug
  */
 
 

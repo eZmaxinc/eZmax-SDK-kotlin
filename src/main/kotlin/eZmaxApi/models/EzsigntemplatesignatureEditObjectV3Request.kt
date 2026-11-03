@@ -31,7 +31,7 @@ import com.squareup.moshi.JsonClass
 /**
  * Request for PUT /3/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}
  *
- * @param objEzsigntemplatesignature 
+ * @param objEzsigntemplatesignature
  */
 
 

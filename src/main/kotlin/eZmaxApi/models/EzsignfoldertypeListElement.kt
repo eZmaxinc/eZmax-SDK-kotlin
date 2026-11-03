@@ -32,7 +32,7 @@ import com.squareup.moshi.JsonClass
  * An Ezsignfoldertype List Element
  *
  * @param pkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
- * @param eEzsignfoldertypePrivacylevel 
+ * @param eEzsignfoldertypePrivacylevel
  * @param sEzsignfoldertypeNameX The name of the Ezsignfoldertype in the language of the requester
  * @param bEzsignfoldertypeIsactive Whether the Ezsignfoldertype is active or not
  */

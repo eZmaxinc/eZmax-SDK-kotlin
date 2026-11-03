@@ -34,9 +34,9 @@ import com.squareup.moshi.JsonClass
  *
  * @param fkiAttachmentID The unique ID of the Attachment.
  * @param fkiUserID The unique ID of the User
- * @param objUser 
+ * @param objUser
  * @param dtAttachmentlogDatetime The created date
- * @param eAttachmentlogType 
+ * @param eAttachmentlogType
  * @param sAttachmentlogDetail The additionnal detail
  */
 

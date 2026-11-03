@@ -32,8 +32,8 @@ import com.squareup.moshi.JsonClass
 /**
  * A section in a Report. Each Reportsection shares Reportcolumns disposition with all its Reportsubsection 
  *
- * @param aObjReportsubsection 
- * @param eReportsectionHorizontalalignment 
+ * @param aObjReportsubsection
+ * @param eReportsectionHorizontalalignment
  * @param sReportsectionTitle The title of this Reportsection
  * @param sReportsectionTabname The name of tab in excel version
  */

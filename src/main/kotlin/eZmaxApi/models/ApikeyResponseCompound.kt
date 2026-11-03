@@ -35,10 +35,10 @@ import com.squareup.moshi.JsonClass
  *
  * @param pkiApikeyID The unique ID of the Apikey
  * @param fkiUserID The unique ID of the User
- * @param objApikeyDescription 
- * @param objContactName 
+ * @param objApikeyDescription
+ * @param objContactName
  * @param bApikeyIsactive Whether the apikey is active or not
- * @param objAudit 
+ * @param objAudit
  * @param fkiEzmaxpartnerproductstageID The unique ID of the Ezmaxpartnerproductstage
  * @param sApikeyApikey The Apikey for the API key.  This will be hidden if we are not creating or regenerating the Apikey.
  * @param sApikeySecret The Secret for the API key.  This will be hidden if we are not creating or regenerating the Apikey.

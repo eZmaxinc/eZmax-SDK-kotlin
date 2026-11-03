@@ -31,7 +31,7 @@ import com.squareup.moshi.JsonClass
 /**
  * Request for PUT /1/object/apikey/{pkiApikeyID}/editPermissions
  *
- * @param aObjPermission 
+ * @param aObjPermission
  */
 
 

@@ -33,9 +33,9 @@ import com.squareup.moshi.JsonClass
 /**
  * Response for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
  *
- * @param objDebugPayload 
+ * @param objDebugPayload
  * @param mPayload Payload for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
- * @param objDebug 
+ * @param objDebug
  */
 
 

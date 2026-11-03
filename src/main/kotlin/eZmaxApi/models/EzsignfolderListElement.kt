@@ -36,12 +36,12 @@ import com.squareup.moshi.JsonClass
  *
  * @param pkiEzsignfolderID The unique ID of the Ezsignfolder
  * @param fkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
- * @param eEzsignfolderSource 
- * @param eEzsignfoldertypePrivacylevel 
+ * @param eEzsignfolderSource
+ * @param eEzsignfoldertypePrivacylevel
  * @param sEzsignfoldertypeNameX The name of the Ezsignfoldertype in the language of the requester
  * @param sEzsignfolderDescription The description of the Ezsignfolder
- * @param eEzsignfolderStep 
- * @param eEzsignfolderCompletion 
+ * @param eEzsignfolderStep
+ * @param eEzsignfolderCompletion
  * @param dtCreatedDate The date and time at which the object was created
  * @param iEzsigndocument The total number of Ezsigndocument in the folder
  * @param iEzsigndocumentEdm The total number of Ezsigndocument in the folder that were saved in the edm system

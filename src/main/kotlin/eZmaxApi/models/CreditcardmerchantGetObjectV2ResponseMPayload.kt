@@ -31,7 +31,7 @@ import com.squareup.moshi.JsonClass
 /**
  * Payload for GET /2/object/creditcardmerchant/{pkiCreditcardmerchantID}
  *
- * @param objCreditcardmerchant 
+ * @param objCreditcardmerchant
  */
 
 

@@ -40,8 +40,8 @@ import com.squareup.moshi.JsonClass
  * @param eAttachmentsConfirmationDecision Whether the attachment are accepted or refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**
  * @param sAttachmentsRefusalReason The reason of refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**
  * @param sSvg The SVG of the signature.  This can only be set if eEzsignsignatureType is **Signature**_/_**Initials** and **bIsAutomatic** is false
- * @param aObjFile 
- * @param objCreditcard 
+ * @param aObjFile
+ * @param objCreditcard
  */
 
 

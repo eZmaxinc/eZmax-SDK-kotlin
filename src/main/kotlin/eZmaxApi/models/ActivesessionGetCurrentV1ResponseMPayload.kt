@@ -42,9 +42,9 @@ import com.squareup.moshi.JsonClass
 /**
  * Payload for GET /1/object/activesession/getCurrent
  *
- * @param eActivesessionUsertype 
- * @param eActivesessionOrigin 
- * @param eActivesessionWeekdaystart 
+ * @param eActivesessionUsertype
+ * @param eActivesessionOrigin
+ * @param eActivesessionWeekdaystart
  * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
  * @param fkiCompanyID The unique ID of the Company
  * @param sCompanyNameX The Name of the Company in the language of the requester
@@ -52,31 +52,31 @@ import com.squareup.moshi.JsonClass
  * @param sDepartmentNameX The Name of the Department in the language of the requester
  * @param bActivesessionDebug Whether the active session is in debug or not
  * @param bActivesessionIssuperadmin Whether the active session is superadmin or not
- * @param eActivesessionEzsignaccess 
+ * @param eActivesessionEzsignaccess
  * @param pksCustomerCode The customer code assigned to your account
  * @param fkiSystemconfigurationtypeID The unique ID of the Systemconfigurationtype
- * @param eUserEzsignaccess 
+ * @param eUserEzsignaccess
  * @param aPkiPermissionID An array of permissions granted to the user or api key
- * @param objUserReal 
+ * @param objUserReal
  * @param aEModuleInternalname An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key.
  * @param bActivesessionAttachment Can access attachment when we clone a user
  * @param bActivesessionCanafe Can access canafe when we clone a user
  * @param bActivesessionFinancial Can access financial element when we clone a user
  * @param bActivesessionRealestatecompleted Can access closed realestate folders when we clone a user
- * @param eActivesessionEzsign 
- * @param eActivesessionEzsignprepaid 
- * @param eActivesessionRealestateinprogress 
+ * @param eActivesessionEzsign
+ * @param eActivesessionEzsignprepaid
+ * @param eActivesessionRealestateinprogress
  * @param fkiSignatureID The unique ID of the Signature
  * @param fkiEzsignuserID The unique ID of the Ezsignuser
  * @param bSystemconfigurationEzsignpaidbyoffice Whether if Ezsign is paid by the company or not
- * @param eSystemconfigurationEzsignofficeplan 
- * @param eUserEzsignprepaid 
+ * @param eSystemconfigurationEzsignofficeplan
+ * @param eUserEzsignprepaid
  * @param bUserEzsigntrial Whether the User's eZsign subscription is a trial
  * @param bUserEzsigntemplaterolegrouping Whether we group or not the Ezsigntemplate roles
  * @param dtUserEzsignprepaidexpiration The eZsign prepaid expiration date
  * @param dtUserNpsrequest The date at which the NPS questionnaire will be show
- * @param objUserCloned 
- * @param objApikey 
+ * @param objUserCloned
+ * @param objApikey
  * @param bActivesessionMaillinglistrequest If you need to ask which mailing lists this user wants to subscribe to
  */
 

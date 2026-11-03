@@ -32,8 +32,8 @@ import com.squareup.moshi.JsonClass
 /**
  * Response for POST /1/object/webhook/sendWebhook
  *
- * @param objDebugPayload 
- * @param objDebug 
+ * @param objDebugPayload
+ * @param objDebug
  */
 
 

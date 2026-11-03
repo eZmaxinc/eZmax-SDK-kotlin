@@ -33,9 +33,9 @@ import com.squareup.moshi.JsonClass
  * Generic Error Message
  *
  * @param sErrorMessage The message giving details about the error
- * @param eErrorCode 
+ * @param eErrorCode
  * @param aSErrorMessagedetail More error message detail
- * @param objCreditcardtransactionresponse 
+ * @param objCreditcardtransactionresponse
  */
 
 

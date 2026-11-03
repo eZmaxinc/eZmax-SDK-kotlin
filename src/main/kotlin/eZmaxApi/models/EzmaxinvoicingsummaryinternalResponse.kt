@@ -31,7 +31,7 @@ import com.squareup.moshi.JsonClass
 /**
  * A Ezmaxinvoicingsummaryinternal Object
  *
- * @param objEzmaxinvoicingsummaryinternalDescription 
+ * @param objEzmaxinvoicingsummaryinternalDescription
  * @param sEzmaxinvoicingsummaryinternalDescriptionX The Ezmaxinvoicingsummaryinternal description in the language of the requester
  * @param fkiBillingentityinternalID The unique ID of the Billingentityinternal.
  * @param sBillingentityinternalDescriptionX The description of the Billingentityinternal in the language of the requester

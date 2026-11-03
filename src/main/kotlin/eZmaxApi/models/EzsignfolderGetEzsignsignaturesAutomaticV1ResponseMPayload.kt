@@ -33,7 +33,7 @@ import com.squareup.moshi.JsonClass
  * Payload for GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignsignaturesAutomatic
  *
  * @param aEEzsignsignatureType All eEzsignsignatureType contained in the response
- * @param aObjEzsignfolder 
+ * @param aObjEzsignfolder
  */
 
 

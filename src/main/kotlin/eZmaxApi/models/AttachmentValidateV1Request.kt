@@ -31,7 +31,7 @@ import com.squareup.moshi.JsonClass
 /**
  * Request for POST /1/object/attachment/{pkiAttachmentID}/validate
  *
- * @param eAttachmentVerified 
+ * @param eAttachmentVerified
  * @param fkiAttachmentrejectreasonID The unique ID of the Attachmentrejectreason
  * @param tAttachmentRejectioncomment The rejectioncomment of the Attachment
  * @param aSNotificationEmailAddress A list of email addresses to send a rejection notification to.

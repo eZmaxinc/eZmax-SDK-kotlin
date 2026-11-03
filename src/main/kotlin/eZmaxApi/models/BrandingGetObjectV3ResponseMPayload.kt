@@ -31,7 +31,7 @@ import com.squareup.moshi.JsonClass
 /**
  * Payload for GET /3/object/branding/{pkiBrandingID}
  *
- * @param objBranding 
+ * @param objBranding
  */
 
 

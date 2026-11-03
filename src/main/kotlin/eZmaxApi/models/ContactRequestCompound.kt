@@ -36,7 +36,7 @@ import com.squareup.moshi.JsonClass
  * @param sContactFirstname The First name of the contact
  * @param sContactLastname The Last name of the contact
  * @param sContactCompany The Company name of the contact
- * @param objContactinformations 
+ * @param objContactinformations
  * @param dtContactBirthdate The Birth Date of the contact
  */
 

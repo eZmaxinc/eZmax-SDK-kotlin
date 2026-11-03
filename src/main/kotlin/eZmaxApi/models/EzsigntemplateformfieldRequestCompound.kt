@@ -41,20 +41,20 @@ import com.squareup.moshi.JsonClass
  * @param iEzsigntemplateformfieldWidth The Width of the Ezsigntemplateformfield in pixels calculated at 100 DPI
  * @param iEzsigntemplateformfieldHeight The Height of the Ezsigntemplateformfield in pixels calculated at 100 DPI 
  * @param pkiEzsigntemplateformfieldID The unique ID of the Ezsigntemplateformfield
- * @param eEzsigntemplateformfieldPositioning 
+ * @param eEzsigntemplateformfieldPositioning
  * @param sEzsigntemplateformfieldValue The value for the Ezsigntemplateformfield
  * @param iEzsigntemplateformfieldX The X coordinate (Horizontal) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 2 inches from the left border of the page, you would use \"200\" for the X coordinate.
  * @param iEzsigntemplateformfieldY The Y coordinate (Vertical) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.
  * @param bEzsigntemplateformfieldAutocomplete Whether the Ezsigntemplateformfield allows the use of the autocomplete of the browser.  This can only be set if eEzsigntemplateformfieldgroupType is **Text**
  * @param bEzsigntemplateformfieldSelected Whether the Ezsigntemplateformfield is selected or not by default.  This can only be set if eEzsigntemplateformfieldgroupType is **Checkbox** or **Radio**
- * @param eEzsigntemplateformfieldDependencyrequirement 
+ * @param eEzsigntemplateformfieldDependencyrequirement
  * @param sEzsigntemplateformfieldPositioningpattern The string pattern to search for the positioning. **This is not a regexp**  This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates**
  * @param iEzsigntemplateformfieldPositioningoffsetx The offset X  This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates**
  * @param iEzsigntemplateformfieldPositioningoffsety The offset Y  This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates**
- * @param eEzsigntemplateformfieldPositioningoccurence 
- * @param eEzsigntemplateformfieldHorizontalalignment 
- * @param objTextstylestatic 
- * @param aObjEzsigntemplateelementdependency 
+ * @param eEzsigntemplateformfieldPositioningoccurence
+ * @param eEzsigntemplateformfieldHorizontalalignment
+ * @param objTextstylestatic
+ * @param aObjEzsigntemplateelementdependency
  */
 
 

@@ -34,7 +34,7 @@ import com.squareup.moshi.JsonClass
  * @param fkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation
  * @param sContactFirstname The First name of the contact
  * @param sContactLastname The Last name of the contact
- * @param aObjEzsignformfieldgroup 
+ * @param aObjEzsignformfieldgroup
  * @param fkiUserID The unique ID of the User
  */
 

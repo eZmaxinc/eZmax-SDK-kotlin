@@ -32,7 +32,7 @@ import com.squareup.moshi.JsonClass
  * A Notificationtest Object
  *
  * @param pkiNotificationtestID The unique ID of the Notificationtest
- * @param objNotificationtestName 
+ * @param objNotificationtestName
  * @param fkiNotificationsubsectionID The unique ID of the Notificationsubsection
  * @param sNotificationtestFunction The function name of the Notificationtest
  * @param sNotificationtestNameX The name of the Notificationtest in the language of the requester

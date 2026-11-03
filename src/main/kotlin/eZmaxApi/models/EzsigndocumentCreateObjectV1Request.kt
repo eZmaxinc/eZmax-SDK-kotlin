@@ -32,8 +32,8 @@ import com.squareup.moshi.JsonClass
 /**
  * Request for POST /1/object/ezsigndocument
  *
- * @param objEzsigndocument 
- * @param objEzsigndocumentCompound 
+ * @param objEzsigndocument
+ * @param objEzsigndocumentCompound
  */
 
 

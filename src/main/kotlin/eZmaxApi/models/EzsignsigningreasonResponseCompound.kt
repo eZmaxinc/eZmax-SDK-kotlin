@@ -32,7 +32,7 @@ import com.squareup.moshi.JsonClass
  * A Ezsignsigningreason Object
  *
  * @param pkiEzsignsigningreasonID The unique ID of the Ezsignsigningreason
- * @param objEzsignsigningreasonDescription 
+ * @param objEzsignsigningreasonDescription
  * @param bEzsignsigningreasonIsactive Whether the ezsignsigningreason is active or not
  */
 

@@ -48,7 +48,7 @@ import com.squareup.moshi.JsonClass
  * @param iEzsignfoldertypeDeadlinedays The number of days to get all Ezsignsignatures
  * @param iEzsignfoldertypeFontsizeannotation Font size for annotations
  * @param iEzsignfoldertypeFontsizeformfield Font size for form fields
- * @param eEzsignfoldertypeDocumentmerge 
+ * @param eEzsignfoldertypeDocumentmerge
  */
 
 

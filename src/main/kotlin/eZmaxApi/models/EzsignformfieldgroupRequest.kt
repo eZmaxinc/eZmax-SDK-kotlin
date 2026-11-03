@@ -35,22 +35,22 @@ import com.squareup.moshi.JsonClass
  * An Ezsignformfieldgroup Object
  *
  * @param fkiEzsigndocumentID The unique ID of the Ezsigndocument
- * @param eEzsignformfieldgroupType 
+ * @param eEzsignformfieldgroupType
  * @param sEzsignformfieldgroupLabel The Label for the Ezsignformfieldgroup
  * @param iEzsignformfieldgroupStep The step when the Ezsignsigner will be invited to fill the form fields
  * @param iEzsignformfieldgroupFilledmin The minimum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup
  * @param iEzsignformfieldgroupFilledmax The maximum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup
  * @param bEzsignformfieldgroupReadonly Whether the Ezsignformfieldgroup is read only or not.
  * @param pkiEzsignformfieldgroupID The unique ID of the Ezsignformfieldgroup
- * @param eEzsignformfieldgroupSignerrequirement 
+ * @param eEzsignformfieldgroupSignerrequirement
  * @param sEzsignformfieldgroupDefaultvalue The default value for the Ezsignformfieldgroup  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | ------------------------- | ------------ | ------------ | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sCompany} | Company name | eZmax Solutions Inc. | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 |
  * @param iEzsignformfieldgroupMaxlength The maximum length for the value in the Ezsignformfieldgroup  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**
  * @param bEzsignformfieldgroupEncrypted Whether the Ezsignformfieldgroup is encrypted in the database or not. Encrypted values are not displayed on the Ezsigndocument. This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**
  * @param sEzsignformfieldgroupRegexp A regular expression to indicate what values are acceptable for the Ezsignformfieldgroup.  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**
  * @param sEzsignformfieldgroupTextvalidationcustommessage Description of validation rule. Show by signatory.
  * @param tEzsignformfieldgroupTooltip A tooltip that will be presented to Ezsignsigner about the Ezsignformfieldgroup
- * @param eEzsignformfieldgroupTooltipposition 
- * @param eEzsignformfieldgroupTextvalidation 
+ * @param eEzsignformfieldgroupTooltipposition
+ * @param eEzsignformfieldgroupTextvalidation
  */
 
 

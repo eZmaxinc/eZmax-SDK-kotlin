@@ -45,7 +45,7 @@ import com.squareup.moshi.JsonClass
  * @param fkiUserID The unique ID of the User
  * @param fkiMailboxsharedID The unique ID of the Mailboxshared
  * @param fkiPhonelinesharedID The unique ID of the Phonelineshared
- * @param eCommunicationrecipientType 
+ * @param eCommunicationrecipientType
  */
 
 

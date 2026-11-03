@@ -40,14 +40,14 @@ import com.squareup.moshi.JsonClass
  * @param fkiModuleID The unique ID of the Module
  * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
  * @param sLanguageNameX The Name of the Language in the language of the requester
- * @param eEzsigntemplateglobalModule 
- * @param eEzsigntemplateglobalSupplier 
+ * @param eEzsigntemplateglobalModule
+ * @param eEzsigntemplateglobalSupplier
  * @param sEzsigntemplateglobalCode The Code of the Ezsigntemplateglobal
  * @param sEzsigntemplateglobalDescription The description of the Ezsigntemplate
- * @param aObjEzsigntemplateglobalsigner 
+ * @param aObjEzsigntemplateglobalsigner
  * @param sModuleNameX The Name of the Module in the language of the requester
- * @param objEzsigntemplateglobaldocument 
- * @param aObjEzsigntemplateglobalannotation 
+ * @param objEzsigntemplateglobaldocument
+ * @param aObjEzsigntemplateglobalannotation
  */
 
 

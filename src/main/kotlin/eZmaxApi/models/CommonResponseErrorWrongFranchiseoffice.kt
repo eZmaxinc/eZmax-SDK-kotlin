@@ -32,7 +32,7 @@ import com.squareup.moshi.JsonClass
  * Error Message when a Franchisebroker is not in this Franchiseoffice.
  *
  * @param sErrorMessage The message giving details about the error
- * @param eErrorCode 
+ * @param eErrorCode
  * @param fkiFranchiseagenceID The unique ID of the Franchiseagence
  * @param sFranchiseagenceName The name of the Franchiseagence
  * @param fkiFranchiseofficeID The unique ID of the Franchisereoffice

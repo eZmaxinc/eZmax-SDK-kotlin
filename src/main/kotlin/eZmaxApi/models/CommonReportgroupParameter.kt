@@ -32,7 +32,7 @@ import com.squareup.moshi.JsonClass
  *
  * @param sReportgroupParameterName The Reportparameter name
  * @param sReportgroupParameterValue The Reportparameter value
- * @param aSReportgroupParameterValue 
+ * @param aSReportgroupParameterValue
  */
 
 

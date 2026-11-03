@@ -31,7 +31,7 @@ import com.squareup.moshi.JsonClass
 /**
  * A Report containing Reportsections 
  *
- * @param aObjReportsection 
+ * @param aObjReportsection
  * @param bReportPaginate Whether we display pagination in the report
  * @param sReportTitle The title of this Report
  */

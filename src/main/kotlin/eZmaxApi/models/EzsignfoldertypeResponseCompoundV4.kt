@@ -44,14 +44,14 @@ import com.squareup.moshi.JsonClass
  * A Ezsignfoldertype Object
  *
  * @param pkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
- * @param objEzsignfoldertypeName 
+ * @param objEzsignfoldertypeName
  * @param fkiBrandingID The unique ID of the Branding
- * @param eEzsignfoldertypeSignaturedatedisplay 
+ * @param eEzsignfoldertypeSignaturedatedisplay
  * @param sBrandingDescriptionX The Description of the Branding in the language of the requester
- * @param eEzsignfoldertypePrivacylevel 
+ * @param eEzsignfoldertypePrivacylevel
  * @param iEzsignfoldertypeArchivaldays The number of days before the archival of Ezsignfolders created using this Ezsignfoldertype
- * @param eEzsignfoldertypeDisposal 
- * @param eEzsignfoldertypeCompletion 
+ * @param eEzsignfoldertypeDisposal
+ * @param eEzsignfoldertypeCompletion
  * @param iEzsignfoldertypeDeadlinedays The number of days to get all Ezsignsignatures
  * @param bEzsignfoldertypeSendsignedtodocumentowner Whether we send the signed Ezsigndocument to the Ezsigndocument's owner
  * @param bEzsignfoldertypeSendsignedtofolderowner Whether we send the signed Ezsigndocument to the Ezsignfolder's owner
@@ -60,8 +60,8 @@ import com.squareup.moshi.JsonClass
  * @param bEzsignfoldertypeSendsummarytofolderowner Whether we send the summary to the Ezsignfolder's owner
  * @param bEzsignfoldertypeSendsummarytocolleague Whether we send the summary to the colleagues
  * @param bEzsignfoldertypeIsactive Whether the Ezsignfoldertype is active or not
- * @param aObjUserlogintype 
- * @param objAudit 
+ * @param aObjUserlogintype
+ * @param objAudit
  * @param fkiBillingentityinternalID The unique ID of the Billingentityinternal.
  * @param fkiEzsigntsarequirementID The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server's time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server's time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|
  * @param fkiFontIDAnnotation The unique ID of the Font
@@ -69,14 +69,14 @@ import com.squareup.moshi.JsonClass
  * @param fkiFontIDSignature The unique ID of the Font
  * @param fkiPdfalevelIDConvert The unique ID of the Pdfalevel
  * @param sEzsignfoldertypeSignaturedatecustomformat The custom date format to use  You can use the codes below and they will be replaced at signature time. Text values like month and day names will be rendered in the proper language. Other text will be left as-is.  The codes examples below are based on the following datetime: Thursday, January 6, 2022 at 08:07:09 EST  For example, the format \"Signature date: {MM}/{DD}/{YYYY} {hh}:{mm}\" would become \"Signature date: 01/06/2022 08:07\"  **Year**  | Code | Example | | - | - | | {YYYY} | 2022 | | {YY} | 22 |  **Month**  | Code | Example | | - | - | | {MonthCapitalize} | Janvier | | {Month} | janvier | | {MM} | 01 | | {M} | 1 |  **Day**  | Code | Example | | - | - | | {DayCapitalize} | Jeudi | | {Day} | jeudi | | {DD} | 06 | | {D} | 6 |  **Hour**  | Code | Example | | - | - | | {hh} | 08 |  **Minute**  | Code | Example | | - | - | | {mm} | 07 |  **Second**  | Code | Example | | - | - | | {ss} | 09 |        **Timezone**  | Code | Example | | - | - | | {Z} | EST |       **Time**  | Code | Example | | - | - | | {Time} | 08:07:09 |   | {TimeZ} | 08:07:09 EST |     **Date**  | Code | Example | | - | - | | {Date} | 2022-01-06 |   | {DateText} | 1er Janvier 2022 |  **Full**  | Code | Example | | - | - | | {DateTime} | 2022-01-06 08:07:09 |   | {DateTimeZ} | 2022-01-06 08:07:09 EST | 
- * @param eEzsignfoldertypeDocumentdependency 
+ * @param eEzsignfoldertypeDocumentdependency
  * @param sBillingentityinternalDescriptionX The description of the Billingentityinternal in the language of the requester
  * @param sEzsigntsarequirementDescriptionX The description of the Ezsigntsarequirement in the language of the requester
  * @param sEmailAddressSigned The email address.
  * @param sEmailAddressSummary The email address.
- * @param eEzsignfoldertypePdfarequirement 
- * @param eEzsignfoldertypePdfanoncompliantaction 
- * @param eEzsignfoldertypeDocumentmerge 
+ * @param eEzsignfoldertypePdfarequirement
+ * @param eEzsignfoldertypePdfanoncompliantaction
+ * @param eEzsignfoldertypeDocumentmerge
  * @param iEzsignfoldertypeFontsizeannotation Font size for annotations
  * @param iEzsignfoldertypeFontsizeformfield Font size for form fields
  * @param iEzsignfoldertypeSendreminderfirstdays The number of days before the first reminder sending
@@ -114,13 +114,13 @@ import com.squareup.moshi.JsonClass
  * @param bEzsignfoldertypeSendsignedtolimitedgroup THIS FIELD WILL BE DELETED. Whether we send the signed Ezsigndocument to the Usergroup that has acces to only their own Ezsignfolders
  * @param bEzsignfoldertypeSendsummarytofullgroup Whether we send the summary to the Usergroup that has acces to all Ezsignfolders
  * @param bEzsignfoldertypeSendsummarytolimitedgroup Whether we send the summary to the Usergroup that has acces to only their own Ezsignfolders
- * @param eEzsignfoldertypeSigneraccess 
- * @param aFkiPdfalevelID 
- * @param aObjUsergroupAll 
- * @param aObjUsergroupRestricted 
- * @param aObjUsergroupTemplate 
- * @param aFkiUserIDSigned 
- * @param aFkiUserIDSummary 
+ * @param eEzsignfoldertypeSigneraccess
+ * @param aFkiPdfalevelID
+ * @param aObjUsergroupAll
+ * @param aObjUsergroupRestricted
+ * @param aObjUsergroupTemplate
+ * @param aFkiUserIDSigned
+ * @param aFkiUserIDSummary
  */
 
 

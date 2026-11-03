@@ -31,7 +31,7 @@ import com.squareup.moshi.JsonClass
 /**
  * An Ezsignfoldersignerassociation Object
  *
- * @param eEzsignfoldersignerassociationRole 
+ * @param eEzsignfoldersignerassociationRole
  * @param tEzsignfoldersignerassociationMessage A custom text message that will be added to the email sent.
  */
 

@@ -35,7 +35,7 @@ import com.squareup.moshi.JsonClass
  * @param fkiModuleID The unique ID of the Module
  * @param sModulesectionInternalname The Internal name of the Module section.
  * @param sModulesectionNameX The Name of the Modulesection in the language of the requester
- * @param aObjPermission 
+ * @param aObjPermission
  */
 
 

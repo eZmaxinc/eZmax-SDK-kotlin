@@ -31,7 +31,7 @@ import com.squareup.moshi.JsonClass
 /**
  * Payload for POST /3/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage
  *
- * @param aObjEzsigndocument 
+ * @param aObjEzsigndocument
  */
 
 

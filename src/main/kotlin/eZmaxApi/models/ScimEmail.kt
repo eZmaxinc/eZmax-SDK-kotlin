@@ -28,10 +28,8 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * 
- *
  * @param `value` The email address.
- * @param primary 
+ * @param primary
  */
 
 

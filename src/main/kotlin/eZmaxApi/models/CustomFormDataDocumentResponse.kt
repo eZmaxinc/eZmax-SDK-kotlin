@@ -35,7 +35,7 @@ import com.squareup.moshi.JsonClass
  * @param fkiEzsignfolderID The unique ID of the Ezsignfolder
  * @param sEzsigndocumentName The name of the document that will be presented to Ezsignfoldersignerassociations
  * @param dtModifiedDate The date and time at which the object was last modified
- * @param aObjFormDataSigner 
+ * @param aObjFormDataSigner
  */
 
 

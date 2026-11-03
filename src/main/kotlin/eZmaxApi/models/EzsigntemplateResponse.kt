@@ -37,7 +37,7 @@ import com.squareup.moshi.JsonClass
  * @param sLanguageNameX The Name of the Language in the language of the requester
  * @param sEzsigntemplateDescription The description of the Ezsigntemplate
  * @param bEzsigntemplateAdminonly Whether the Ezsigntemplate can be accessed by admin users only (eUserType=Normal)
- * @param objAudit 
+ * @param objAudit
  * @param bEzsigntemplateEditallowed Whether the Ezsigntemplate if allowed to edit or not
  * @param fkiEzsigntemplatedocumentID The unique ID of the Ezsigntemplatedocument
  * @param fkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
@@ -46,7 +46,7 @@ import com.squareup.moshi.JsonClass
  * @param tEzsigntemplateComment The comment of the Ezsigntemplate
  * @param sEzsigntemplateFilenamepattern The filename pattern of the Ezsigntemplate
  * @param sEzsignfoldertypeNameX The name of the Ezsignfoldertype in the language of the requester
- * @param eEzsigntemplateType 
+ * @param eEzsigntemplateType
  */
 
 

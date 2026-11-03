@@ -32,14 +32,14 @@ import com.squareup.moshi.JsonClass
 /**
  * An Ezsignelementdependency Object and children to create a complete structure
  *
- * @param eEzsignelementdependencyValidation 
+ * @param eEzsignelementdependencyValidation
  * @param pkiEzsignelementdependencyID The unique ID of the Ezsignelementdependency
  * @param fkiEzsignformfieldIDValidation The unique ID of the Ezsignformfield
  * @param fkiEzsignformfieldgroupIDValidation The unique ID of the Ezsignformfieldgroup
  * @param sEzsignelementdependencyEzsignformfieldgrouplabel The Label for the Ezsignformfieldgroup
  * @param sEzsignelementdependencyEzsignformfieldlabel The Label for the Ezsignformfield
  * @param bEzsignelementdependencySelected Whether if it's selected or not when using eEzsignelementdependencyValidation = Selected
- * @param eEzsignelementdependencyOperator 
+ * @param eEzsignelementdependencyOperator
  * @param sEzsignelementdependencyValue The value of the Ezsignelementdependency
  */
 

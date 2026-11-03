@@ -32,8 +32,8 @@ import com.squareup.moshi.JsonClass
  * A part in the Reportsubsection 
  *
  * @param eReportsubsectionpartType The type of the Reportsubsectionpart
- * @param aObjReportrow 
- * @param aSVariableobjectProperty 
+ * @param aObjReportrow
+ * @param aSVariableobjectProperty
  */
 
 

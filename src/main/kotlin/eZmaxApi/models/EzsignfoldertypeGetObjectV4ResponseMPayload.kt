@@ -31,7 +31,7 @@ import com.squareup.moshi.JsonClass
 /**
  * Payload for GET /4/object/ezsignfoldertype/{pkiEzsignfoldertypeID}
  *
- * @param objEzsignfoldertype 
+ * @param objEzsignfoldertype
  */
 
 

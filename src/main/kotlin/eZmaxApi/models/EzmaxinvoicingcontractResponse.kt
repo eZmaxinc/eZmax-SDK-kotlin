@@ -33,14 +33,14 @@ import com.squareup.moshi.JsonClass
  * A Ezmaxinvoicingcontract Object
  *
  * @param pkiEzmaxinvoicingcontractID The unique ID of the Ezmaxinvoicingcontract
- * @param eEzmaxinvoicingcontractPaymenttype 
+ * @param eEzmaxinvoicingcontractPaymenttype
  * @param iEzmaxinvoicingcontractLength The length in years of the Ezmaxinvoicingcontract
  * @param dtEzmaxinvoicingcontractStart The start date of the Ezmaxinvoicingcontract
  * @param dtEzmaxinvoicingcontractEnd The end date of the Ezmaxinvoicingcontract
  * @param dEzmaxinvoicingcontractLicense The price of the license
  * @param dEzmaxinvoicingcontract121qa The price for 121QA
  * @param bEzmaxinvoicingcontractEzsignallagents Whether eZsign is for all agents
- * @param objAudit 
+ * @param objAudit
  */
 
 

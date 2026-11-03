@@ -33,7 +33,7 @@ import com.squareup.moshi.JsonClass
  *
  * @param pkiAuthenticationexternalID The unique ID of the Authenticationexternal
  * @param sAuthenticationexternalDescription The description of the Authenticationexternal
- * @param eAuthenticationexternalType 
+ * @param eAuthenticationexternalType
  * @param bAuthenticationexternalConnected Whether the Authenticationexternal has been connected or not
  */
 

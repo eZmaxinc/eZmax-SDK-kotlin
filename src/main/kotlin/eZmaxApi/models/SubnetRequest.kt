@@ -31,7 +31,7 @@ import com.squareup.moshi.JsonClass
 /**
  * A Subnet Object
  *
- * @param objSubnetDescription 
+ * @param objSubnetDescription
  * @param iSubnetNetwork The network of the Subnet in integer form. For example 8.8.8.0 would be 134744064
  * @param iSubnetMask The mask of the Subnet  in integer form. For example 255.255.255.0 would be 4294967040
  * @param pkiSubnetID The unique ID of the Subnet

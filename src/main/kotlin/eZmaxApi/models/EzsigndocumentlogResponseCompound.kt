@@ -32,7 +32,7 @@ import com.squareup.moshi.JsonClass
  * An Ezsigndocumentlog Object and children to create a complete structure
  *
  * @param dtEzsigndocumentlogDatetime The date and time at which the event was logged
- * @param eEzsigndocumentlogType 
+ * @param eEzsigndocumentlogType
  * @param sEzsigndocumentlogDetail The detail of the Ezsigndocumentlog
  * @param sEzsigndocumentlogLastname The last name of the User or Ezsignsigner
  * @param sEzsigndocumentlogFirstname The first name of the User or Ezsignsigner

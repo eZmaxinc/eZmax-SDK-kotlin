@@ -32,7 +32,7 @@ import com.squareup.moshi.JsonClass
  * Generic Error Message
  *
  * @param sErrorMessage The message giving details about the error
- * @param eErrorCode 
+ * @param eErrorCode
  * @param aSErrorMessagedetail More error message detail
  * @param sTemporaryFileUrl The Temporary File Url of the document that was uploaded. That url can be reused instead of uploading the file again.
  */

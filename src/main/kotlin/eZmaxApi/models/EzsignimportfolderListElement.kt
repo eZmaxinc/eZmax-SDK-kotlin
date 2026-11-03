@@ -37,7 +37,7 @@ import com.squareup.moshi.JsonClass
  * @param dtModifiedDate The date and time at which the object was last modified
  * @param iTotalEzsignimportdocument The count of Ezsignimportdocument.
  * @param iTotalEzsignimportdocumentNotImported The count of Ezsignimportdocument not imported in an Ezsignfolder.
- * @param eEzsignimportfolderStatus 
+ * @param eEzsignimportfolderStatus
  */
 
 

@@ -33,9 +33,9 @@ import com.squareup.moshi.JsonClass
 /**
  * Response for PUT /2/object/user/{pkiUserID}/editColleagues
  *
- * @param objDebugPayload 
- * @param mPayload 
- * @param objDebug 
+ * @param objDebugPayload
+ * @param mPayload
+ * @param objDebug
  */
 
 

@@ -37,19 +37,19 @@ import com.squareup.moshi.JsonClass
  * An Ezsignfolder Object
  *
  * @param pkiEzsignfolderID The unique ID of the Ezsignfolder
- * @param eEzsignfolderCompletion 
+ * @param eEzsignfolderCompletion
  * @param sEzsignfolderDescription The description of the Ezsignfolder
  * @param fkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
- * @param objEzsignfoldertype 
+ * @param objEzsignfoldertype
  * @param fkiTimezoneID The unique ID of the Timezone
- * @param sEzsignfoldertypeNameX 
+ * @param sEzsignfoldertypeNameX
  * @param fkiBillingentityinternalID The unique ID of the Billingentityinternal.
  * @param sBillingentityinternalDescriptionX The description of the Billingentityinternal in the language of the requester
  * @param fkiEzsigntsarequirementID The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server's time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server's time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|
  * @param sEzsigntsarequirementDescriptionX The description of the Ezsigntsarequirement in the language of the requester
  * @param tEzsignfolderNote Note about the Ezsignfolder
  * @param bEzsignfolderIsdisposable If the Ezsigndocument can be disposed
- * @param eEzsignfolderSendreminderfrequency 
+ * @param eEzsignfolderSendreminderfrequency
  * @param iEzsignfolderSendreminderfirstdays The number of days before the first reminder sending
  * @param iEzsignfolderSendreminderotherdays The number of days after the first reminder sending
  * @param dtEzsignfolderDelayedsenddate The date and time at which the Ezsignfolder will be sent in the future.
@@ -57,11 +57,11 @@ import com.squareup.moshi.JsonClass
  * @param dtEzsignfolderSentdate The date and time at which the Ezsignfolder was sent the last time.
  * @param dtEzsignfolderScheduledarchive The scheduled date and time at which the Ezsignfolder should be archived.
  * @param dtEzsignfolderScheduleddispose The scheduled date at which the Ezsignfolder should be Disposed.
- * @param eEzsignfolderStep 
- * @param eEzsignfolderMessageorder 
+ * @param eEzsignfolderStep
+ * @param eEzsignfolderMessageorder
  * @param dtEzsignfolderClose The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely.
  * @param tEzsignfolderMessage A custom text message that will be added to the email sent.
- * @param objAudit 
+ * @param objAudit
  * @param sEzsignfolderExternalid This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
  */
 

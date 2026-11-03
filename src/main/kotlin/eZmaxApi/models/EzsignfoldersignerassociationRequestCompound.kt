@@ -37,7 +37,7 @@ import com.squareup.moshi.JsonClass
  * @param fkiEzsignsignergroupID The unique ID of the Ezsignsignergroup
  * @param bEzsignfoldersignerassociationReceivecopy If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document.
  * @param tEzsignfoldersignerassociationMessage A custom text message that will be added to the email sent.
- * @param objEzsignsigner 
+ * @param objEzsignsigner
  */
 
 

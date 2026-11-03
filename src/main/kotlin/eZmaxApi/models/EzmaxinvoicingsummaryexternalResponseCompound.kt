@@ -34,7 +34,7 @@ import com.squareup.moshi.JsonClass
  * @param fkiBillingentityexternalID The unique ID of the Billingentityexternal
  * @param sBillingentityexternalDescription The description of the Billingentityexternal
  * @param sEzmaxinvoicingsummaryexternalDescription The description of the Ezmaxinvoicingsummaryexternal
- * @param aObjEzmaxinvoicingsummaryexternaldetail 
+ * @param aObjEzmaxinvoicingsummaryexternaldetail
  * @param pkiEzmaxinvoicingsummaryexternalID The unique ID of the Ezmaxinvoicingsummaryexternal
  * @param fkiEzmaxinvoicingID The unique ID of the Ezmaxinvoicing
  */

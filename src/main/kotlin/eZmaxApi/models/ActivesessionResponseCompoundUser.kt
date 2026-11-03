@@ -36,7 +36,7 @@ import com.squareup.moshi.JsonClass
  * @param sUserFirstname The first name of the user
  * @param sUserLastname The last name of the user
  * @param bUserAddmeinezsignfolder Whether if I want to automatically add myself during the creation of Ezsignfolder of which I am the owner
- * @param eUserEzsignsendreminderfrequency 
+ * @param eUserEzsignsendreminderfrequency
  * @param iUserInterfacecolor The int32 representation of the interface color. For example, RGB color #39435B would be 3752795
  * @param bUserInterfacedark Whether to use a dark mode interface
  * @param iUserListresult The number of rows to return by default in lists

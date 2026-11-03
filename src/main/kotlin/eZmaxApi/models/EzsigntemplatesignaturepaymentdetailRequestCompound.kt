@@ -34,7 +34,7 @@ import com.squareup.moshi.JsonClass
  * @param fkiGlaccountcontainerID The unique ID of the Glaccountcontainer
  * @param tEzsigntemplatesignaturepaymentdetailDescription A description for the Ezsignsignaturepaymentdetail.
  * @param dEzsigntemplatesignaturepaymentdetailAmount The amount of the for the Ezsignsignaturepaymentdetail
- * @param eEzsigntemplatesignaturepaymentdetailTaxable 
+ * @param eEzsigntemplatesignaturepaymentdetailTaxable
  * @param pkiEzsigntemplatesignaturepaymentdetailID The unique ID of the Ezsignsignaturepaymentdetail
  */
 

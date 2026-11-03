@@ -30,7 +30,7 @@ import com.squareup.moshi.JsonClass
 /**
  * Payload for PUT /1/object/usergroup/{pkiUsergroupID}/editPermissions
  *
- * @param aPkiPermissionID 
+ * @param aPkiPermissionID
  */
 
 

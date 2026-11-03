@@ -31,7 +31,7 @@ import com.squareup.moshi.JsonClass
 /**
  * Payload for GET /2/object/domain/{pkiDomainID}
  *
- * @param objDomain 
+ * @param objDomain
  */
 
 

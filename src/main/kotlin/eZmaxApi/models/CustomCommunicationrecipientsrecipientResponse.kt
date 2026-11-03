@@ -33,8 +33,8 @@ import com.squareup.moshi.JsonClass
 /**
  * Generic AutocompleteElement Response
  *
- * @param eCommunicationrecipientsrecipientObjecttype 
- * @param objContactName 
+ * @param eCommunicationrecipientsrecipientObjecttype
+ * @param objContactName
  * @param fkiAgentID The unique ID of the Agent.
  * @param fkiBrokerID The unique ID of the Broker.
  * @param fkiContactID The unique ID of the Contact
@@ -50,9 +50,9 @@ import com.squareup.moshi.JsonClass
  * @param fkiNotaryID The unique ID of the Notary.
  * @param fkiRewardmemberID The unique ID of the Rewardmember.
  * @param fkiSupplierID The unique ID of the Supplier.
- * @param objEmail 
- * @param objPhoneFax 
- * @param objPhoneSMS 
+ * @param objEmail
+ * @param objPhoneFax
+ * @param objPhoneSMS
  */
 
 
@@ -136,8 +136,6 @@ data class CustomCommunicationrecipientsrecipientResponse (
 ) {
 
     /**
-     * 
-     *
      * Values: Agent,Agentincorporation,Assistant,Broker,Contact,Customer,Employee,Externalbroker,Ezcomagent,Ezcomcompany,Ezsignsigner,Franchiseoffice,Notary,Rewardmember,Supplier,User
      */
     @JsonClass(generateAdapter = false)

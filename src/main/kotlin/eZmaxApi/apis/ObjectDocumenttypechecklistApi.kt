@@ -28,14 +28,9 @@ import okhttp3.Call
 import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommonResponseError
-import eZmaxApi.models.DocumenttypechecklistCreateObjectV1Request
-import eZmaxApi.models.DocumenttypechecklistCreateObjectV1Response
 import eZmaxApi.models.DocumenttypechecklistDeleteObjectV1Response
-import eZmaxApi.models.DocumenttypechecklistEditObjectV1Request
-import eZmaxApi.models.DocumenttypechecklistEditObjectV1Response
-import eZmaxApi.models.DocumenttypechecklistGetListV1Response
-import eZmaxApi.models.DocumenttypechecklistGetObjectV2Response
-import eZmaxApi.models.HeaderAcceptLanguage
+import eZmaxApi.models.DocumenttypechecklistPatchObjectV1Request
+import eZmaxApi.models.DocumenttypechecklistPatchObjectV1Response
 
 import com.squareup.moshi.Json
 
@@ -59,80 +54,6 @@ open class ObjectDocumenttypechecklistApi(basePath: kotlin.String = defaultBaseP
         val defaultBasePath: String by lazy {
             System.getProperties().getProperty(ApiClient.BASE_URL_KEY, "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest")
         }
-    }
-
-    /**
-     * POST /1/object/documenttypechecklist
-     * Create a new Documenttypechecklist
-     * The endpoint allows to create one or many elements at once.
-     * @param documenttypechecklistCreateObjectV1Request 
-     * @return DocumenttypechecklistCreateObjectV1Response
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun documenttypechecklistCreateObjectV1(documenttypechecklistCreateObjectV1Request: DocumenttypechecklistCreateObjectV1Request) : DocumenttypechecklistCreateObjectV1Response {
-        val localVarResponse = documenttypechecklistCreateObjectV1WithHttpInfo(documenttypechecklistCreateObjectV1Request = documenttypechecklistCreateObjectV1Request)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as DocumenttypechecklistCreateObjectV1Response
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * POST /1/object/documenttypechecklist
-     * Create a new Documenttypechecklist
-     * The endpoint allows to create one or many elements at once.
-     * @param documenttypechecklistCreateObjectV1Request 
-     * @return ApiResponse<DocumenttypechecklistCreateObjectV1Response?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    fun documenttypechecklistCreateObjectV1WithHttpInfo(documenttypechecklistCreateObjectV1Request: DocumenttypechecklistCreateObjectV1Request) : ApiResponse<DocumenttypechecklistCreateObjectV1Response?> {
-        val localVariableConfig = documenttypechecklistCreateObjectV1RequestConfig(documenttypechecklistCreateObjectV1Request = documenttypechecklistCreateObjectV1Request)
-
-        return request<DocumenttypechecklistCreateObjectV1Request, DocumenttypechecklistCreateObjectV1Response>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation documenttypechecklistCreateObjectV1
-     *
-     * @param documenttypechecklistCreateObjectV1Request 
-     * @return RequestConfig
-     */
-    fun documenttypechecklistCreateObjectV1RequestConfig(documenttypechecklistCreateObjectV1Request: DocumenttypechecklistCreateObjectV1Request) : RequestConfig<DocumenttypechecklistCreateObjectV1Request> {
-        val localVariableBody = documenttypechecklistCreateObjectV1Request
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Content-Type"] = "application/json"
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.POST,
-            path = "/1/object/documenttypechecklist",
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            requiresAuthentication = true,
-            body = localVariableBody
-        )
     }
 
     /**
@@ -209,12 +130,12 @@ open class ObjectDocumenttypechecklistApi(basePath: kotlin.String = defaultBaseP
     }
 
     /**
-     * PUT /1/object/documenttypechecklist/{pkiDocumenttypechecklistID}
-     * Edit an existing Documenttypechecklist
+     * PATCH /1/object/documenttypechecklist/{pkiDocumenttypechecklistID}
+     * Patch an existing Documenttypechecklist
      * 
      * @param pkiDocumenttypechecklistID The unique ID of the Documenttypechecklist
-     * @param documenttypechecklistEditObjectV1Request 
-     * @return DocumenttypechecklistEditObjectV1Response
+     * @param documenttypechecklistPatchObjectV1Request 
+     * @return DocumenttypechecklistPatchObjectV1Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -223,11 +144,11 @@ open class ObjectDocumenttypechecklistApi(basePath: kotlin.String = defaultBaseP
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun documenttypechecklistEditObjectV1(pkiDocumenttypechecklistID: kotlin.Int, documenttypechecklistEditObjectV1Request: DocumenttypechecklistEditObjectV1Request) : DocumenttypechecklistEditObjectV1Response {
-        val localVarResponse = documenttypechecklistEditObjectV1WithHttpInfo(pkiDocumenttypechecklistID = pkiDocumenttypechecklistID, documenttypechecklistEditObjectV1Request = documenttypechecklistEditObjectV1Request)
+    fun documenttypechecklistPatchObjectV1(pkiDocumenttypechecklistID: kotlin.Int, documenttypechecklistPatchObjectV1Request: DocumenttypechecklistPatchObjectV1Request) : DocumenttypechecklistPatchObjectV1Response {
+        val localVarResponse = documenttypechecklistPatchObjectV1WithHttpInfo(pkiDocumenttypechecklistID = pkiDocumenttypechecklistID, documenttypechecklistPatchObjectV1Request = documenttypechecklistPatchObjectV1Request)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as DocumenttypechecklistEditObjectV1Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as DocumenttypechecklistPatchObjectV1Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -242,238 +163,42 @@ open class ObjectDocumenttypechecklistApi(basePath: kotlin.String = defaultBaseP
     }
 
     /**
-     * PUT /1/object/documenttypechecklist/{pkiDocumenttypechecklistID}
-     * Edit an existing Documenttypechecklist
+     * PATCH /1/object/documenttypechecklist/{pkiDocumenttypechecklistID}
+     * Patch an existing Documenttypechecklist
      * 
      * @param pkiDocumenttypechecklistID The unique ID of the Documenttypechecklist
-     * @param documenttypechecklistEditObjectV1Request 
-     * @return ApiResponse<DocumenttypechecklistEditObjectV1Response?>
+     * @param documenttypechecklistPatchObjectV1Request 
+     * @return ApiResponse<DocumenttypechecklistPatchObjectV1Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun documenttypechecklistEditObjectV1WithHttpInfo(pkiDocumenttypechecklistID: kotlin.Int, documenttypechecklistEditObjectV1Request: DocumenttypechecklistEditObjectV1Request) : ApiResponse<DocumenttypechecklistEditObjectV1Response?> {
-        val localVariableConfig = documenttypechecklistEditObjectV1RequestConfig(pkiDocumenttypechecklistID = pkiDocumenttypechecklistID, documenttypechecklistEditObjectV1Request = documenttypechecklistEditObjectV1Request)
+    fun documenttypechecklistPatchObjectV1WithHttpInfo(pkiDocumenttypechecklistID: kotlin.Int, documenttypechecklistPatchObjectV1Request: DocumenttypechecklistPatchObjectV1Request) : ApiResponse<DocumenttypechecklistPatchObjectV1Response?> {
+        val localVariableConfig = documenttypechecklistPatchObjectV1RequestConfig(pkiDocumenttypechecklistID = pkiDocumenttypechecklistID, documenttypechecklistPatchObjectV1Request = documenttypechecklistPatchObjectV1Request)
 
-        return request<DocumenttypechecklistEditObjectV1Request, DocumenttypechecklistEditObjectV1Response>(
+        return request<DocumenttypechecklistPatchObjectV1Request, DocumenttypechecklistPatchObjectV1Response>(
             localVariableConfig
         )
     }
 
     /**
-     * To obtain the request config of the operation documenttypechecklistEditObjectV1
+     * To obtain the request config of the operation documenttypechecklistPatchObjectV1
      *
      * @param pkiDocumenttypechecklistID The unique ID of the Documenttypechecklist
-     * @param documenttypechecklistEditObjectV1Request 
+     * @param documenttypechecklistPatchObjectV1Request 
      * @return RequestConfig
      */
-    fun documenttypechecklistEditObjectV1RequestConfig(pkiDocumenttypechecklistID: kotlin.Int, documenttypechecklistEditObjectV1Request: DocumenttypechecklistEditObjectV1Request) : RequestConfig<DocumenttypechecklistEditObjectV1Request> {
-        val localVariableBody = documenttypechecklistEditObjectV1Request
+    fun documenttypechecklistPatchObjectV1RequestConfig(pkiDocumenttypechecklistID: kotlin.Int, documenttypechecklistPatchObjectV1Request: DocumenttypechecklistPatchObjectV1Request) : RequestConfig<DocumenttypechecklistPatchObjectV1Request> {
+        val localVariableBody = documenttypechecklistPatchObjectV1Request
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         localVariableHeaders["Content-Type"] = "application/json"
         localVariableHeaders["Accept"] = "application/json"
 
         return RequestConfig(
-            method = RequestMethod.PUT,
+            method = RequestMethod.PATCH,
             path = "/1/object/documenttypechecklist/{pkiDocumenttypechecklistID}".replace("{"+"pkiDocumenttypechecklistID"+"}", encodeURIComponent(pkiDocumenttypechecklistID.toString())),
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            requiresAuthentication = true,
-            body = localVariableBody
-        )
-    }
-
-    /**
-     * enum for parameter eOrderBy
-     */
-     enum class EOrderByDocumenttypechecklistGetListV1(val value: kotlin.String) {
-         @Json(name = "pkiDocumenttypechecklistID_ASC") pkiDocumenttypechecklistID_ASC("pkiDocumenttypechecklistID_ASC"),
-         @Json(name = "pkiDocumenttypechecklistID_DESC") pkiDocumenttypechecklistID_DESC("pkiDocumenttypechecklistID_DESC"),
-         @Json(name = "fkiDocumenttypeID_ASC") fkiDocumenttypeID_ASC("fkiDocumenttypeID_ASC"),
-         @Json(name = "fkiDocumenttypeID_DESC") fkiDocumenttypeID_DESC("fkiDocumenttypeID_DESC"),
-         @Json(name = "eDocumenttypechecklistStatus_ASC") eDocumenttypechecklistStatus_ASC("eDocumenttypechecklistStatus_ASC"),
-         @Json(name = "eDocumenttypechecklistStatus_DESC") eDocumenttypechecklistStatus_DESC("eDocumenttypechecklistStatus_DESC"),
-         @Json(name = "tDocumenttypechecklistComment_ASC") tDocumenttypechecklistComment_ASC("tDocumenttypechecklistComment_ASC"),
-         @Json(name = "tDocumenttypechecklistComment_DESC") tDocumenttypechecklistComment_DESC("tDocumenttypechecklistComment_DESC");
-
-        /**
-         * Override [toString()] to avoid using the enum variable name as the value, and instead use
-         * the actual value defined in the API spec file.
-         *
-         * This solves a problem when the variable name and its value are different, and ensures that
-         * the client sends the correct enum values to the server always.
-         */
-        override fun toString(): kotlin.String = "$value"
-     }
-
-    /**
-     * GET /1/object/documenttypechecklist/getList
-     * Retrieve Documenttypechecklist list
-     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eDocumenttypechecklistStatus | Not required&lt;br&gt;Required&lt;br&gt;Filed&lt;br&gt;Justified |
-     * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional)
-     * @param iRowOffset  (optional, default to 0)
-     * @param acceptLanguage  (optional)
-     * @param sFilter  (optional)
-     * @return DocumenttypechecklistGetListV1Response
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun documenttypechecklistGetListV1(eOrderBy: EOrderByDocumenttypechecklistGetListV1? = null, iRowMax: kotlin.Int? = null, iRowOffset: kotlin.Int? = 0, acceptLanguage: HeaderAcceptLanguage? = null, sFilter: kotlin.String? = null) : DocumenttypechecklistGetListV1Response {
-        val localVarResponse = documenttypechecklistGetListV1WithHttpInfo(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as DocumenttypechecklistGetListV1Response
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * GET /1/object/documenttypechecklist/getList
-     * Retrieve Documenttypechecklist list
-     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eDocumenttypechecklistStatus | Not required&lt;br&gt;Required&lt;br&gt;Filed&lt;br&gt;Justified |
-     * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional)
-     * @param iRowOffset  (optional, default to 0)
-     * @param acceptLanguage  (optional)
-     * @param sFilter  (optional)
-     * @return ApiResponse<DocumenttypechecklistGetListV1Response?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    fun documenttypechecklistGetListV1WithHttpInfo(eOrderBy: EOrderByDocumenttypechecklistGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : ApiResponse<DocumenttypechecklistGetListV1Response?> {
-        val localVariableConfig = documenttypechecklistGetListV1RequestConfig(eOrderBy = eOrderBy, iRowMax = iRowMax, iRowOffset = iRowOffset, acceptLanguage = acceptLanguage, sFilter = sFilter)
-
-        return request<Unit, DocumenttypechecklistGetListV1Response>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation documenttypechecklistGetListV1
-     *
-     * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional)
-     * @param iRowOffset  (optional, default to 0)
-     * @param acceptLanguage  (optional)
-     * @param sFilter  (optional)
-     * @return RequestConfig
-     */
-    fun documenttypechecklistGetListV1RequestConfig(eOrderBy: EOrderByDocumenttypechecklistGetListV1?, iRowMax: kotlin.Int?, iRowOffset: kotlin.Int?, acceptLanguage: HeaderAcceptLanguage?, sFilter: kotlin.String?) : RequestConfig<Unit> {
-        val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
-            .apply {
-                if (eOrderBy != null) {
-                    put("eOrderBy", listOf(eOrderBy.value))
-                }
-                if (iRowMax != null) {
-                    put("iRowMax", listOf(iRowMax.toString()))
-                }
-                if (iRowOffset != null) {
-                    put("iRowOffset", listOf(iRowOffset.toString()))
-                }
-                if (sFilter != null) {
-                    put("sFilter", listOf(sFilter.toString()))
-                }
-            }
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Accept"] = "application/json"
-        acceptLanguage?.apply { localVariableHeaders["Accept-Language"] = this.toString() }
-
-        return RequestConfig(
-            method = RequestMethod.GET,
-            path = "/1/object/documenttypechecklist/getList",
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            requiresAuthentication = true,
-            body = localVariableBody
-        )
-    }
-
-    /**
-     * GET /2/object/documenttypechecklist/{pkiDocumenttypechecklistID}
-     * Retrieve an existing Documenttypechecklist
-     * 
-     * @param pkiDocumenttypechecklistID The unique ID of the Documenttypechecklist
-     * @return DocumenttypechecklistGetObjectV2Response
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun documenttypechecklistGetObjectV2(pkiDocumenttypechecklistID: kotlin.Int) : DocumenttypechecklistGetObjectV2Response {
-        val localVarResponse = documenttypechecklistGetObjectV2WithHttpInfo(pkiDocumenttypechecklistID = pkiDocumenttypechecklistID)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as DocumenttypechecklistGetObjectV2Response
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * GET /2/object/documenttypechecklist/{pkiDocumenttypechecklistID}
-     * Retrieve an existing Documenttypechecklist
-     * 
-     * @param pkiDocumenttypechecklistID The unique ID of the Documenttypechecklist
-     * @return ApiResponse<DocumenttypechecklistGetObjectV2Response?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    fun documenttypechecklistGetObjectV2WithHttpInfo(pkiDocumenttypechecklistID: kotlin.Int) : ApiResponse<DocumenttypechecklistGetObjectV2Response?> {
-        val localVariableConfig = documenttypechecklistGetObjectV2RequestConfig(pkiDocumenttypechecklistID = pkiDocumenttypechecklistID)
-
-        return request<Unit, DocumenttypechecklistGetObjectV2Response>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation documenttypechecklistGetObjectV2
-     *
-     * @param pkiDocumenttypechecklistID The unique ID of the Documenttypechecklist
-     * @return RequestConfig
-     */
-    fun documenttypechecklistGetObjectV2RequestConfig(pkiDocumenttypechecklistID: kotlin.Int) : RequestConfig<Unit> {
-        val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.GET,
-            path = "/2/object/documenttypechecklist/{pkiDocumenttypechecklistID}".replace("{"+"pkiDocumenttypechecklistID"+"}", encodeURIComponent(pkiDocumenttypechecklistID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

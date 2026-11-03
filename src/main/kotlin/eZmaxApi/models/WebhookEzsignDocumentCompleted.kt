@@ -33,9 +33,9 @@ import com.squareup.moshi.JsonClass
 /**
  * This is the base Webhook object
  *
- * @param objWebhook 
+ * @param objWebhook
  * @param aObjAttempt An array containing details of previous attempts that were made to deliver the message. The array is empty if it's the first attempt.
- * @param objEzsigndocument 
+ * @param objEzsigndocument
  */
 
 

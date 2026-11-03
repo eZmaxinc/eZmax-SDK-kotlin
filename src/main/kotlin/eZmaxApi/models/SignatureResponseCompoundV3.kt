@@ -33,7 +33,7 @@ import com.squareup.moshi.JsonClass
  *
  * @param pkiSignatureID The unique ID of the Signature
  * @param fkiFontID The unique ID of the Font
- * @param eSignaturePreference 
+ * @param eSignaturePreference
  * @param bSignatureSvg Whether the signature has a SVG or not
  * @param bSignatureSvginitials Whether the initials has a SVG or not
  */

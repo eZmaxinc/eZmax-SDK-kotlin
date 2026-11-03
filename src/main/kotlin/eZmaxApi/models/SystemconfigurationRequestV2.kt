@@ -34,15 +34,15 @@ import com.squareup.moshi.JsonClass
 /**
  * A Systemconfiguration Object
  *
- * @param eSystemconfigurationNewexternaluseraction 
- * @param eSystemconfigurationLanguage1 
- * @param eSystemconfigurationLanguage2 
+ * @param eSystemconfigurationNewexternaluseraction
+ * @param eSystemconfigurationLanguage1
+ * @param eSystemconfigurationLanguage2
  * @param bSystemconfigurationEzsignpersonnal Whether if we allow the creation of personal files in eZsign
  * @param bSystemconfigurationSspr Whether if we allow SSPR
  * @param iSystemconfigurationEzsignreminderhoursend The hour we will send the eZsign reminders
  * @param pkiSystemconfigurationID The unique ID of the Systemconfiguration
  * @param fkiBrandingID The unique ID of the Branding
- * @param eSystemconfigurationEzsignofficeplan 
+ * @param eSystemconfigurationEzsignofficeplan
  * @param bSystemconfigurationEzsignpaidbyoffice Whether if Ezsign is paid by the company or not
  * @param dtSystemconfigurationReadonlyexpirationstart The start date where the system will be in read only
  * @param dtSystemconfigurationReadonlyexpirationend The end date where the system will be in read only

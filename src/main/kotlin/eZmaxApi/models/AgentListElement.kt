@@ -43,7 +43,7 @@ import com.squareup.moshi.JsonClass
  * @param iAgentLongdistancecode The longdistancecode of the Agent
  * @param iAgentBannernumber The bannernumber of the Agent
  * @param sAgentRealestateassociationlicense The realestateassociationlicense of the Agent
- * @param eAgentSchedule 
+ * @param eAgentSchedule
  * @param bAgentTranquillit Whether if it's an tranquillit
  * @param bAgentResidentiallicense Whether if it's an residentiallicense
  * @param bAgentCommerciallicense Whether if it's an commerciallicense

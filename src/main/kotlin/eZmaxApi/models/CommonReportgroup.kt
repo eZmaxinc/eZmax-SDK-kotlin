@@ -33,9 +33,9 @@ import com.squareup.moshi.JsonClass
 /**
  * A group of reports  Each Reportgroup is for a specific recipient or for a specific context.
  *
- * @param aObjReport 
- * @param aObjReportcellstyleCustom 
- * @param aObjReportgroupParameter 
+ * @param aObjReport
+ * @param aObjReportcellstyleCustom
+ * @param aObjReportgroupParameter
  * @param sReportgroupFilename The name of the file
  */
 

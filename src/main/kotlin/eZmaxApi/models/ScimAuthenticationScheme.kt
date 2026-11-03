@@ -28,8 +28,6 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * 
- *
  * @param description A description of the authentication scheme.
  * @param name The common authentication scheme name
  * @param type The authentication scheme.

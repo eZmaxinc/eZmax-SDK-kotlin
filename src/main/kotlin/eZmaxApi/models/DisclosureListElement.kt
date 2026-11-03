@@ -32,7 +32,7 @@ import com.squareup.moshi.JsonClass
  * A Disclosure List Element
  *
  * @param pkiDisclosureID The unique ID of the Disclosure
- * @param eDisclosureInteresttype 
+ * @param eDisclosureInteresttype
  * @param sDisclosureRelation The relation of the Disclosure
  * @param dtDisclosureRedactiondate The redactiondate of the Disclosure
  * @param dtDisclosureAcceptationdate The acceptationdate of the Disclosure

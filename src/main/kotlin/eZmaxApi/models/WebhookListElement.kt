@@ -39,12 +39,12 @@ import com.squareup.moshi.JsonClass
  * @param sWebhookUrl The URL of the Webhook callback
  * @param sWebhookEvent The concatenated string to describe the Webhook event
  * @param sWebhookEmailfailed The email that will receive the Webhook in case all attempts fail
- * @param eWebhookModule 
+ * @param eWebhookModule
  * @param bWebhookIsactive Whether the Webhook is active or not
  * @param bWebhookIssigned Whether the requests will be signed or not
- * @param eWebhookEzsignevent 
- * @param eWebhookManagementevent 
- * @param eWebhookRealestateevent 
+ * @param eWebhookEzsignevent
+ * @param eWebhookManagementevent
+ * @param eWebhookRealestateevent
  */
 
 

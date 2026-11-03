@@ -33,9 +33,9 @@ import com.squareup.moshi.JsonClass
 /**
  * Response for POST /1/object/ezsigndocument/{pkiEzsigndocument}/applyEzsigntemplateglobal
  *
- * @param objDebugPayload 
- * @param objDebug 
- * @param aObjWarning 
+ * @param objDebugPayload
+ * @param objDebug
+ * @param aObjWarning
  */
 
 

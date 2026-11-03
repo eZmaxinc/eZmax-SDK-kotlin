@@ -32,7 +32,7 @@ import com.squareup.moshi.JsonClass
  * Generic CommunicationrecipientsGroup Response
  *
  * @param sCommunicationrecipientsgroupLabel The label for the Communicationrecipientsgroup
- * @param aObjCommunicationrecipientsrecipient 
+ * @param aObjCommunicationrecipientsrecipient
  */
 
 

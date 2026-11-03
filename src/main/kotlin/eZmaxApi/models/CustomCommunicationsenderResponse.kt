@@ -33,16 +33,16 @@ import com.squareup.moshi.JsonClass
 /**
  * Generic Communicationsender Response
  *
- * @param eCommunicationsenderObjecttype 
- * @param objContactName 
+ * @param eCommunicationsenderObjecttype
+ * @param objContactName
  * @param fkiAgentID The unique ID of the Agent.
  * @param fkiBrokerID The unique ID of the Broker.
  * @param fkiUserID The unique ID of the User
  * @param fkiMailboxsharedID The unique ID of the Mailboxshared
  * @param fkiPhonelinesharedID The unique ID of the Phonelineshared
- * @param objEmail 
- * @param objPhoneFax 
- * @param objPhoneSMS 
+ * @param objEmail
+ * @param objPhoneFax
+ * @param objPhoneSMS
  */
 
 
@@ -86,8 +86,6 @@ data class CustomCommunicationsenderResponse (
 ) {
 
     /**
-     * 
-     *
      * Values: Agent,Broker,User,Mailboxshared,Phonelineshared
      */
     @JsonClass(generateAdapter = false)

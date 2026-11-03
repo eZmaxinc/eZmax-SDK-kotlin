@@ -32,7 +32,7 @@ import com.squareup.moshi.JsonClass
  * A Signature Object and children
  *
  * @param fkiFontID The unique ID of the Font
- * @param eSignaturePreference 
+ * @param eSignaturePreference
  * @param pkiSignatureID The unique ID of the Signature
  * @param tSignatureSvg The svg of the Signature
  * @param tSignatureSvginitials The svg of the Initials

@@ -31,7 +31,7 @@ import com.squareup.moshi.JsonClass
 /**
  * Payload for POST /1/report/xxx/xxx and and /1/module/report/getReportFromCache
  *
- * @param objReportgroup 
+ * @param objReportgroup
  */
 
 

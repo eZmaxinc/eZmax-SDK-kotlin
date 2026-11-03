@@ -37,7 +37,7 @@ import com.squareup.moshi.JsonClass
  * @param dInvoiceTotal The total of the Invoice
  * @param dInvoicePaid The paid of the Invoice
  * @param dtInvoiceDate The date of the Invoice
- * @param eInvoiceType 
+ * @param eInvoiceType
  * @param fkiAgentID The unique ID of the Agent.
  * @param fkiBrokerID The unique ID of the Broker.
  * @param fkiCustomerID The unique ID of the Customer.

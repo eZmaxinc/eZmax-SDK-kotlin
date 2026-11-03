@@ -33,9 +33,9 @@ import com.squareup.moshi.JsonClass
  * A Usergroup Object
  *
  * @param pkiUsergroupID The unique ID of the Usergroup
- * @param objUsergroupName 
+ * @param objUsergroupName
  * @param sUsergroupNameX The Name of the Usergroup in the language of the requester
- * @param objEmail 
+ * @param objEmail
  */
 
 

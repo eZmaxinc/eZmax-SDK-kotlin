@@ -33,9 +33,9 @@ import com.squareup.moshi.JsonClass
  * A Paymentterm Object and children
  *
  * @param sPaymenttermCode The code of the Paymentterm
- * @param ePaymenttermType 
+ * @param ePaymenttermType
  * @param iPaymenttermDay The day of the Paymentterm
- * @param objPaymenttermDescription 
+ * @param objPaymenttermDescription
  * @param bPaymenttermIsactive Whether the Paymentterm is active or not
  * @param pkiPaymenttermID The unique ID of the Paymentterm
  */

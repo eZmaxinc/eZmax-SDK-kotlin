@@ -36,7 +36,7 @@ import com.squareup.moshi.JsonClass
  * @param sEzsigntemplatepublicDescription The description of the Ezsigntemplatepublic
  * @param bEzsigntemplatepublicIsactive Whether the ezsigntemplatepublic is active or not
  * @param tEzsigntemplatepublicNote The note of the Ezsigntemplatepublic
- * @param eEzsigntemplatepublicLimittype 
+ * @param eEzsigntemplatepublicLimittype
  * @param iEzsigntemplatepublicLimit The limit of the Ezsigntemplatepublic
  * @param pkiEzsigntemplatepublicID The unique ID of the Ezsigntemplatepublic
  * @param fkiEzsigntemplateID The unique ID of the Ezsigntemplate

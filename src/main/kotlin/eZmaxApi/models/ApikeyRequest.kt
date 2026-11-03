@@ -32,7 +32,7 @@ import com.squareup.moshi.JsonClass
  * An Apikey Object
  *
  * @param fkiUserID The unique ID of the User
- * @param objApikeyDescription 
+ * @param objApikeyDescription
  * @param pkiApikeyID The unique ID of the Apikey
  * @param bApikeyIsactive Whether the apikey is active or not
  * @param bApikeyIssigned Whether the apikey is signed or not

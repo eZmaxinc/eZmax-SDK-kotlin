@@ -33,12 +33,12 @@ import com.squareup.moshi.JsonClass
 /**
  * Request for POST /1/object/communication
  *
- * @param eCommunicationType 
+ * @param eCommunicationType
  * @param tCommunicationBody The Body of the Communication
  * @param bCommunicationPrivate Whether the Communication is private or not
  * @param pkiCommunicationID The unique ID of the Communication.
- * @param eCommunicationImportance 
- * @param objCommunicationsender 
+ * @param eCommunicationImportance
+ * @param objCommunicationsender
  * @param sCommunicationSubject The subject of the Communication
  * @param eCommunicationAttachmenttype How the attachment should be included in the email.   Only used if eCommunicationType is **Email**
  * @param iCommunicationAttachmentlinkexpiration The number of days before the attachment link expired.   Only used if eCommunicationType is **Email** and eCommunicationattachmentType is **Link**

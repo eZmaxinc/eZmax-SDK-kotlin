@@ -37,13 +37,13 @@ import com.squareup.moshi.JsonClass
  * A Ezsignfoldertype Object
  *
  * @param pkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
- * @param objEzsignfoldertypeName 
+ * @param objEzsignfoldertypeName
  * @param fkiBrandingID The unique ID of the Branding
  * @param sBrandingDescriptionX The Description of the Branding in the language of the requester
- * @param eEzsignfoldertypePrivacylevel 
+ * @param eEzsignfoldertypePrivacylevel
  * @param iEzsignfoldertypeArchivaldays The number of days before the archival of Ezsignfolders created using this Ezsignfoldertype
- * @param eEzsignfoldertypeDisposal 
- * @param eEzsignfoldertypeCompletion 
+ * @param eEzsignfoldertypeDisposal
+ * @param eEzsignfoldertypeCompletion
  * @param iEzsignfoldertypeDeadlinedays The number of days to get all Ezsignsignatures
  * @param bEzsignfoldertypeSendsignedtodocumentowner Whether we send the signed Ezsigndocument to the Ezsigndocument's owner
  * @param bEzsignfoldertypeSendsignedtofolderowner Whether we send the signed Ezsigndocument to the Ezsignfolder's owner
@@ -63,7 +63,7 @@ import com.squareup.moshi.JsonClass
  * @param sEmailAddressSummary The email address.
  * @param sUsergroupNameX The Name of the Usergroup in the language of the requester
  * @param sUsergroupNameXRestricted The Name of the Usergroup in the language of the requester
- * @param eEzsignfoldertypeSendreminderfrequency 
+ * @param eEzsignfoldertypeSendreminderfrequency
  * @param iEzsignfoldertypeDisposaldays The number of days after the archival before the disposal of the Ezsignfolder
  * @param bEzsignfoldertypeAutomaticsignature Whether we allow the automatic signature by an User
  * @param bEzsignfoldertypeDelegate Wheter if delegation of signature is allowed to another user or not

@@ -5,7 +5,6 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**documenttypeCreateObjectV1**](ObjectDocumenttypeApi.md#documenttypeCreateObjectV1) | **POST** /1/object/documenttype | Create a new Documenttype |
-| [**documenttypeDeleteObjectV1**](ObjectDocumenttypeApi.md#documenttypeDeleteObjectV1) | **DELETE** /1/object/documenttype/{pkiDocumenttypeID} | Delete an existing Documenttype |
 | [**documenttypeEditObjectV1**](ObjectDocumenttypeApi.md#documenttypeEditObjectV1) | **PUT** /1/object/documenttype/{pkiDocumenttypeID} | Edit an existing Documenttype |
 | [**documenttypeGetAutocompleteV2**](ObjectDocumenttypeApi.md#documenttypeGetAutocompleteV2) | **GET** /2/object/documenttype/getAutocomplete/{sSelector} | Retrieve Documenttypes and IDs |
 | [**documenttypeGetListV1**](ObjectDocumenttypeApi.md#documenttypeGetListV1) | **GET** /1/object/documenttype/getList | Retrieve Documenttype list |
@@ -59,55 +58,6 @@ Configure Authorization:
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a id="documenttypeDeleteObjectV1"></a>
-# **documenttypeDeleteObjectV1**
-> DocumenttypeDeleteObjectV1Response documenttypeDeleteObjectV1(pkiDocumenttypeID)
-
-Delete an existing Documenttype
-
-
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectDocumenttypeApi()
-val pkiDocumenttypeID : kotlin.Int = 56 // kotlin.Int | The unique ID of the Documenttype
-try {
-    val result : DocumenttypeDeleteObjectV1Response = apiInstance.documenttypeDeleteObjectV1(pkiDocumenttypeID)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectDocumenttypeApi#documenttypeDeleteObjectV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectDocumenttypeApi#documenttypeDeleteObjectV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pkiDocumenttypeID** | **kotlin.Int**| The unique ID of the Documenttype | |
-
-### Return type
-
-[**DocumenttypeDeleteObjectV1Response**](DocumenttypeDeleteObjectV1Response.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a id="documenttypeEditObjectV1"></a>

@@ -33,13 +33,13 @@ import com.squareup.moshi.JsonClass
  * An Ezsigntemplateelementdependency Object
  *
  * @param pkiEzsigntemplateelementdependencyID The unique ID of the Ezsigntemplateelementdependency
- * @param eEzsigntemplateelementdependencyValidation 
+ * @param eEzsigntemplateelementdependencyValidation
  * @param fkiEzsigntemplateformfieldID The unique ID of the Ezsigntemplateformfield
  * @param fkiEzsigntemplatesignatureID The unique ID of the Ezsigntemplatesignature
  * @param fkiEzsigntemplateformfieldIDValidation The unique ID of the Ezsigntemplateformfield
  * @param fkiEzsigntemplateformfieldgroupIDValidation The unique ID of the Ezsigntemplateformfieldgroup
  * @param bEzsigntemplateelementdependencySelected Whether if it's selected or not when using eEzsigntemplateelementdependencyValidation = Selected
- * @param eEzsigntemplateelementdependencyOperator 
+ * @param eEzsigntemplateelementdependencyOperator
  * @param sEzsigntemplateelementdependencyValue The value of the Ezsignelementdependency
  */
 

@@ -41,7 +41,7 @@ import com.squareup.moshi.JsonClass
  * @param sEzsigntemplatepublicReferenceid The referenceid of the Ezsigntemplatepublic
  * @param bEzsigntemplatepublicIsactive Whether the ezsigntemplatepublic is active or not
  * @param tEzsigntemplatepublicNote The note of the Ezsigntemplatepublic
- * @param eEzsigntemplatepublicLimittype 
+ * @param eEzsigntemplatepublicLimittype
  * @param iEzsigntemplatepublicLimit The limit of the Ezsigntemplatepublic
  * @param iEzsigntemplatepublicLimitexceeded The limitexceeded of the Ezsigntemplatepublic
  * @param dtEzsigntemplatepublicLimitexceededsince The limitexceededsince of the Ezsigntemplatepublic
@@ -49,7 +49,7 @@ import com.squareup.moshi.JsonClass
  * @param sEzsigntemplatepublicEzsigntemplatedescription The Ezsigntemplate/Ezsigntemplatepackage description
  * @param fkiEzsigntemplateID The unique ID of the Ezsigntemplate
  * @param fkiEzsigntemplatepackageID The unique ID of the Ezsigntemplatepackage
- * @param objAudit 
+ * @param objAudit
  */
 
 

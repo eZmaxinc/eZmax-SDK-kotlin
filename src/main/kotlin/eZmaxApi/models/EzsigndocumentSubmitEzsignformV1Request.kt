@@ -32,7 +32,7 @@ import com.squareup.moshi.JsonClass
  * Request for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/submitEzsignform
  *
  * @param bEzsignformIsdraft Whether the Ezsignform submitted is a draft or not.
- * @param aObjEzsignformfieldgroup 
+ * @param aObjEzsignformfieldgroup
  */
 
 

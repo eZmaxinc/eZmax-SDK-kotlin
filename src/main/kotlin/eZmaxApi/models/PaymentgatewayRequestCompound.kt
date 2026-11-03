@@ -33,10 +33,10 @@ import com.squareup.moshi.JsonClass
 /**
  * A Paymentgateway Object and children
  *
- * @param ePaymentgatewayProcessor 
- * @param objPaymentgatewayDescription 
+ * @param ePaymentgatewayProcessor
+ * @param objPaymentgatewayDescription
  * @param pkiPaymentgatewayID The unique ID of the Paymentgateway
- * @param objCreditcardmerchant 
+ * @param objCreditcardmerchant
  */
 
 

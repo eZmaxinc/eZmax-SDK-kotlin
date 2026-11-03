@@ -39,7 +39,7 @@ import com.squareup.moshi.JsonClass
  * @param fkiEzsignfolderID The unique ID of the Ezsignfolder
  * @param dtEzsigndocumentDuedate The maximum date and time at which the Ezsigndocument can be signed.
  * @param sEzsigndocumentName The name of the document that will be presented to Ezsignfoldersignerassociations
- * @param eEzsigndocumentStep 
+ * @param eEzsigndocumentStep
  * @param iEzsigndocumentOrder The order in which the Ezsigndocument will be presented to the signatory in the Ezsignfolder.
  * @param iEzsigndocumentPagetotal The number of pages in the Ezsigndocument.
  * @param iEzsigndocumentSignaturesigned The number of signatures that were signed in the document.
@@ -47,12 +47,12 @@ import com.squareup.moshi.JsonClass
  * @param iEzsigndocumentFormfieldtotal The number of total Ezsignformfield that were requested in the Ezsigndocument.
  * @param iEzsigndocumentEzsignsignatureattachmenttotal The number of Ezsigndocumentattachment total
  * @param iEzsigndocumentEzsigndiscussiontotal The total number of Ezsigndiscussions
- * @param eEzsigndocumentSteptype 
+ * @param eEzsigndocumentSteptype
  * @param iEzsigndocumentStepformtotal The total number of steps in the form filling phase
  * @param iEzsigndocumentStepformcurrent The current step in the form filling phase
  * @param iEzsigndocumentStepsignaturetotal The total number of steps in the signature filling phase
  * @param iEzsigndocumentStepsignatureCurrent The current step in the signature phase
- * @param aObjEzsignfoldersignerassociationstatus 
+ * @param aObjEzsignfoldersignerassociationstatus
  * @param fkiEzsignfoldersignerassociationIDDeclinedtosign The unique ID of the Ezsignfoldersignerassociation
  * @param dtEzsignformCompleted The date and time at which the Ezsignform has been completed.
  * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
@@ -64,9 +64,9 @@ import com.squareup.moshi.JsonClass
  * @param bEzsigndocumentEzsignform If the Ezsigndocument contains an Ezsignform or not
  * @param bEzsigndocumentHassignedsignatures If the Ezsigndocument contains signed signatures (From internal or external sources)
  * @param bEzsigndocumentSendtoged Whether the Ezsigndocument was copied to EDM
- * @param objAudit 
+ * @param objAudit
  * @param sEzsigndocumentExternalid This field can be used to store an External ID from the client's system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
- * @param aObjEzsigndocumentdependency 
+ * @param aObjEzsigndocumentdependency
  */
 
 

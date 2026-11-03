@@ -31,7 +31,7 @@ import com.squareup.moshi.JsonClass
 /**
  * Request for PUT /2/object/systemconfiguration/{pkiSystemconfigurationID}
  *
- * @param objSystemconfiguration 
+ * @param objSystemconfiguration
  */
 
 

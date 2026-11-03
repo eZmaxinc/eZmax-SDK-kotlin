@@ -31,7 +31,7 @@ import com.squareup.moshi.JsonClass
 /**
  * Response for POST /1/object/webhook/{pkiWebhookID}/regenerateApikey
  *
- * @param objWebhook 
+ * @param objWebhook
  */
 
 

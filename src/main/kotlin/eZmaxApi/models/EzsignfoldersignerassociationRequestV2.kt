@@ -32,7 +32,7 @@ import com.squareup.moshi.JsonClass
  * An Ezsignfoldersignerassociation Object
  *
  * @param fkiEzsignfolderID The unique ID of the Ezsignfolder
- * @param eEzsignfoldersignerassociationRole 
+ * @param eEzsignfoldersignerassociationRole
  * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation
  * @param fkiUserID The unique ID of the User
  * @param fkiEzsignsignergroupID The unique ID of the Ezsignsignergroup

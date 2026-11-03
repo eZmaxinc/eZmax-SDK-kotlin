@@ -34,15 +34,15 @@ import com.squareup.moshi.JsonClass
  * A Versionhistory Object
  *
  * @param pkiVersionhistoryID The unique ID of the Versionhistory
- * @param objVersionhistoryDetail 
+ * @param objVersionhistoryDetail
  * @param dtVersionhistoryDate The date at which the Versionhistory was published or should be published
- * @param eVersionhistoryType 
+ * @param eVersionhistoryType
  * @param bVersionhistoryDraft Whether the Versionhistory is published or still a draft
  * @param fkiModuleID The unique ID of the Module
  * @param fkiModulesectionID The unique ID of the Modulesection
  * @param sModuleNameX The Name of the Module in the language of the requester
  * @param sModulesectionNameX The Name of the Modulesection in the language of the requester
- * @param eVersionhistoryUsertype 
+ * @param eVersionhistoryUsertype
  * @param dtVersionhistoryDateend The date at which the Versionhistory will no longer be visible
  */
 

@@ -41,7 +41,7 @@ import com.squareup.moshi.JsonClass
  * @param sEzsignfoldertypeNameX The name of the Ezsignfoldertype in the language of the requester
  * @param sEzdoctemplatetypeDescriptionX The description of the Ezdoctemplatetype in the language of the requester
  * @param sEzdoctemplatefieldtypecategoryDescriptionX The description of the Ezdoctemplatefieldtypecategory in the language of the requester
- * @param eEzdoctemplatedocumentPrivacylevel 
+ * @param eEzdoctemplatedocumentPrivacylevel
  */
 
 

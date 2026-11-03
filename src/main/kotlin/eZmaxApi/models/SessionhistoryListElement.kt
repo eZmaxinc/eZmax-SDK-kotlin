@@ -34,7 +34,7 @@ import com.squareup.moshi.JsonClass
  * @param pkiSessionhistoryID The unique ID of the Sessionhistory
  * @param dtSessionhistoryFirsthit The first hit of the Sessionhistory
  * @param dtSessionhistoryLasthit The last hit of the Sessionhistory
- * @param eSessionhistoryEndby 
+ * @param eSessionhistoryEndby
  * @param sSessionhistoryDuration The duration of the session
  * @param sSessionhistoryIP Represent an IP address.
  * @param fkiComputerID The unique ID of the Computer

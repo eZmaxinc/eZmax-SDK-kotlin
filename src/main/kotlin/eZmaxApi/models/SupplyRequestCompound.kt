@@ -33,7 +33,7 @@ import com.squareup.moshi.JsonClass
  *
  * @param fkiVariableexpenseID The unique ID of the Variableexpense
  * @param sSupplyCode The code of the Supply
- * @param objSupplyDescription 
+ * @param objSupplyDescription
  * @param dSupplyUnitprice The unit price of the Supply
  * @param bSupplyIsactive Whether the supply is active or not
  * @param bSupplyVariableprice Whether if the price is variable

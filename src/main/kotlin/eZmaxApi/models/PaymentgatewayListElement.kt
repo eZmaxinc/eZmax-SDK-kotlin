@@ -33,7 +33,7 @@ import com.squareup.moshi.JsonClass
  *
  * @param pkiPaymentgatewayID The unique ID of the Paymentgateway
  * @param fkiCreditcardmerchantID The unique ID of the Creditcardmerchant
- * @param ePaymentgatewayProcessor 
+ * @param ePaymentgatewayProcessor
  * @param sPaymentgatewayDescriptionX The description of the Paymentgateway in the language of the requester
  * @param bPaymentgatewayIsactive Whether the Paymentgateway is active or not
  */

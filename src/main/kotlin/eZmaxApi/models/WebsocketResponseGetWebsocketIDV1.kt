@@ -32,7 +32,7 @@ import com.squareup.moshi.JsonClass
  * Response for Websocket GetWebsocketID V1
  *
  * @param eWebsocketMessagetype The Type of message
- * @param mPayload 
+ * @param mPayload
  */
 
 

@@ -38,8 +38,8 @@ import com.squareup.moshi.JsonClass
  * @param fkiUserID The unique ID of the User
  * @param fkiUsergroupID The unique ID of the Usergroup
  * @param fkiEzdoctemplatedocumentID The unique ID of the Ezdoctemplatedocument
- * @param eEzsigntemplatesignerRole 
- * @param eEzsigntemplatesignerMapping 
+ * @param eEzsigntemplatesignerRole
+ * @param eEzsigntemplatesignerMapping
  */
 
 

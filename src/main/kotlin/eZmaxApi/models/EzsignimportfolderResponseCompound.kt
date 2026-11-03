@@ -33,7 +33,7 @@ import com.squareup.moshi.JsonClass
  *
  * @param pkiEzsignimportfolderID The unique ID of the Ezsignimportfolder
  * @param sEzsignimportfolderName The name of the Ezsignimportfolder
- * @param aObjEzsignimportdocument 
+ * @param aObjEzsignimportdocument
  */
 
 

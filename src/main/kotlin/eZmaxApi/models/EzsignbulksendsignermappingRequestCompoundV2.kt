@@ -35,7 +35,7 @@ import com.squareup.moshi.JsonClass
  * @param sEzsignbulksendsignermappingDescription The description of the Ezsignbulksendsignermapping
  * @param pkiEzsignbulksendsignermappingID The unique ID of the Ezsignbulksendsignermapping
  * @param fkiUserID The unique ID of the User
- * @param eEzsignbulksendsignermappingRole 
+ * @param eEzsignbulksendsignermappingRole
  */
 
 

@@ -35,13 +35,13 @@ import com.squareup.moshi.JsonClass
  * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
  * @param sEzsigntemplateDescription The description of the Ezsigntemplate
  * @param bEzsigntemplateAdminonly Whether the Ezsigntemplate can be accessed by admin users only (eUserType=Normal)
- * @param eEzsigntemplateType 
+ * @param eEzsigntemplateType
  * @param pkiEzsigntemplateID The unique ID of the Ezsigntemplate
  * @param fkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
  * @param fkiEzdoctemplatedocumentID The unique ID of the Ezdoctemplatedocument
  * @param sEzsigntemplateExternaldescription The external description of the Ezsigntemplate
  * @param tEzsigntemplateComment The comment of the Ezsigntemplate
- * @param eEzsigntemplateRecognition 
+ * @param eEzsigntemplateRecognition
  * @param sEzsigntemplateFilenameregexp The filename regexp of the Ezsigntemplate.
  */
 

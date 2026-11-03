@@ -31,7 +31,7 @@ import com.squareup.moshi.JsonClass
 /**
  * A Ezsignfoldertype AutocompleteElement Response
  *
- * @param eEzsignfoldertypePrivacylevel 
+ * @param eEzsignfoldertypePrivacylevel
  * @param sEzsignfoldertypeNameX The name of the Ezsignfoldertype in the language of the requester
  * @param pkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
  * @param bEzsignfoldertypeIsactive Whether the Ezsignfoldertype is active or not

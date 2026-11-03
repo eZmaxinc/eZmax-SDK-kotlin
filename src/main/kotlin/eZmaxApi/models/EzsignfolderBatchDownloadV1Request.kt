@@ -30,7 +30,7 @@ import com.squareup.moshi.JsonClass
 /**
  * Request for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/batchDownload
  *
- * @param aPkiEzsigndocumentID 
+ * @param aPkiEzsigndocumentID
  * @param aEDocumentType The type of document to retrieve.  1. **Signed** Is the final document once all signatures were applied. 2. **Proofdocument** Is the evidence report. 3. **Proof** Is the complete evidence archive including all of the above and more.
  */
 

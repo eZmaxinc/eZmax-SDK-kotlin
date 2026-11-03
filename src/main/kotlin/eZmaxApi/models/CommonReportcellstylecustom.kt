@@ -38,10 +38,10 @@ import com.squareup.moshi.JsonClass
  * @param bReportcellstyleBorderbottom Whether there is a border at the bottom of the Reportcell
  * @param bReportcellstyleBorderleft Whether there is a border at the left of the Reportcell
  * @param bReportcellstyleBorderright Whether there is a border at the right of the Reportcell
- * @param eReportcellHorizontalalignment 
- * @param eReportcellVerticalalignment 
- * @param eReportcellFontweight 
- * @param eReportcellFontunderline 
+ * @param eReportcellHorizontalalignment
+ * @param eReportcellVerticalalignment
+ * @param eReportcellFontweight
+ * @param eReportcellFontunderline
  */
 
 

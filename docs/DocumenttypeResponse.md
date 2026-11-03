@@ -6,10 +6,12 @@
 | ------------ | ------------- | ------------- | ------------- |
 | **pkiDocumenttypeID** | **kotlin.Int** | The unique ID of the Documenttype |  |
 | **objDocumenttypeName** | [**MultilingualDocumenttypeName**](MultilingualDocumenttypeName.md) |  |  |
+| **eDocumenttypeStep** | [**ComputedEDocumenttypeStep**](ComputedEDocumenttypeStep.md) |  |  |
 | **sDocumenttypeDefaultfilename** | **kotlin.String** | The defaultfilename of the Documenttype |  |
 | **bDocumenttypeShowagent** | **kotlin.Boolean** | Whether if it&#39;s an showagent |  |
 | **bDocumenttypeIsactive** | **kotlin.Boolean** | Whether the documenttype is active or not |  |
 | **bDocumenttypeIsrequired** | **kotlin.Boolean** | Whether if it&#39;s an isrequired |  |
+| **aFkiInscriptiontypeID** | **kotlin.collections.List&lt;kotlin.Int&gt;** |  |  |
 | **bDocumenttypeSale** | **kotlin.Boolean** | Whether if it&#39;s an sale |  [optional] |
 | **bDocumenttypeRental** | **kotlin.Boolean** | Whether if it&#39;s an rental |  [optional] |
 | **bDocumenttypeReference** | **kotlin.Boolean** | Whether if it&#39;s an reference |  [optional] |

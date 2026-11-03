@@ -35,7 +35,7 @@ import com.squareup.moshi.JsonClass
  * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
  * @param sEzsigntemplateDescription The description of the Ezsigntemplate
  * @param bEzsigntemplateIncomplete Indicate the Ezsigntemplate is incomplete and cannot be used
- * @param eEzsigntemplateType 
+ * @param eEzsigntemplateType
  * @param fkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
  * @param iEzsigntemplatedocumentPagetotal The number of pages in the Ezsigntemplatedocument.
  * @param iEzsigntemplateSignaturetotal The number of total signatures in the Ezsigntemplate.

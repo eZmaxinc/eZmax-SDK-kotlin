@@ -32,8 +32,8 @@ import com.squareup.moshi.JsonClass
 /**
  * All API response will inherit this based Response
  *
- * @param objDebugPayload 
- * @param objDebug 
+ * @param objDebugPayload
+ * @param objDebug
  */
 
 

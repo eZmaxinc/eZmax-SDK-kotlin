@@ -31,7 +31,7 @@ import com.squareup.moshi.JsonClass
 /**
  * Payload for GET /1/object/webhook/{pkiWebhookID}/getHistory
  *
- * @param aObjWebhooklog 
+ * @param aObjWebhooklog
  */
 
 

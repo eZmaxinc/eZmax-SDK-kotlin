@@ -33,7 +33,7 @@ import com.squareup.moshi.JsonClass
  *
  * @param fkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
  * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
- * @param eEzsignbulksendEzsignformfieldorder 
+ * @param eEzsignbulksendEzsignformfieldorder
  * @param sEzsignbulksendDescription The description of the Ezsignbulksend
  * @param tEzsignbulksendNote Note about the Ezsignbulksend
  * @param bEzsignbulksendNeedvalidation Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation

@@ -31,10 +31,10 @@ import com.squareup.moshi.JsonClass
  * Request for POST /3/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate
  *
  * @param fkiEzsigntemplateID The unique ID of the Ezsigntemplate
- * @param aSEzsigntemplatesigner 
- * @param aFkiEzsignfoldersignerassociationID 
- * @param aSEzsigntemplateannotationDescription 
- * @param aSEzsigntemplateannotationDefaulttext 
+ * @param aSEzsigntemplatesigner
+ * @param aFkiEzsignfoldersignerassociationID
+ * @param aSEzsigntemplateannotationDescription
+ * @param aSEzsigntemplateannotationDefaulttext
  */
 
 

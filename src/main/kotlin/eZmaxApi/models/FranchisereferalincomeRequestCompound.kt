@@ -43,9 +43,9 @@ import com.squareup.moshi.JsonClass
  * @param tFranchisereferalincomeComment Comment about the transaction
  * @param fkiFranchiseofficeID The unique ID of the Franchisereoffice
  * @param sFranchisereferalincomeRemoteid 
- * @param aObjContact 
+ * @param aObjContact
  * @param pkiFranchisereferalincomeID The unique ID of the Franchisereferalincome
- * @param objAddress 
+ * @param objAddress
  */
 
 

@@ -32,7 +32,7 @@ import com.squareup.moshi.JsonClass
  * A Inscriptiontemp List Element
  *
  * @param pkiInscriptiontempID The unique ID of the Inscriptiontemp
- * @param eInscriptiontempStatus 
+ * @param eInscriptiontempStatus
  * @param sInscriptiontempDescription The description of the Inscriptiontemp
  * @param bInscriptiontempIsactive Whether the inscriptiontemp is active or not
  * @param dtCreatedDate The date and time at which the object was created

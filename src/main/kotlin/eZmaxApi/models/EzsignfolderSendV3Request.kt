@@ -31,9 +31,9 @@ import com.squareup.moshi.JsonClass
 /**
  * Request for POST /3/object/ezsignfolder/{pkiEzsignfolderID}/send
  *
- * @param aFkiEzsignfoldersignerassociationID 
+ * @param aFkiEzsignfoldersignerassociationID
  * @param tEzsignfolderMessage A custom text message that will be added to the email sent.
- * @param eEzsignfolderMessageorder 
+ * @param eEzsignfolderMessageorder
  * @param dtEzsignfolderDelayedsenddate The date and time at which the Ezsignfolder will be sent in the future.
  */
 

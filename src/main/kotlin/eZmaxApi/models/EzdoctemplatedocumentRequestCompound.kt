@@ -35,11 +35,11 @@ import com.squareup.moshi.JsonClass
  * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
  * @param fkiEzdoctemplatetypeID The unique ID of the Ezdoctemplatetype
  * @param bEzdoctemplatedocumentIsactive Whether the ezdoctemplatedocument is active or not
- * @param objEzdoctemplatedocumentName 
+ * @param objEzdoctemplatedocumentName
  * @param pkiEzdoctemplatedocumentID The unique ID of the Ezdoctemplatedocument
  * @param fkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype.
  * @param fkiEzdoctemplatefieldtypecategoryID The unique ID of the Ezdoctemplatefieldtypecategory
- * @param eEzdoctemplatedocumentPrivacylevel 
+ * @param eEzdoctemplatedocumentPrivacylevel
  */
 
 

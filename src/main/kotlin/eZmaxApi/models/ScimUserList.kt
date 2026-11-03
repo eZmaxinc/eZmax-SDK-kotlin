@@ -29,13 +29,11 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * 
- *
- * @param totalResults 
- * @param itemsPerPage 
- * @param startIndex 
- * @param schemas 
- * @param resources 
+ * @param totalResults
+ * @param itemsPerPage
+ * @param startIndex
+ * @param schemas
+ * @param resources
  */
 
 

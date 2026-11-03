@@ -33,7 +33,7 @@ import com.squareup.moshi.JsonClass
  *
  * @param pkiPhoneID The unique ID of the Phone.
  * @param fkiPhonetypeID The unique ID of the Phonetype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| |3|Mobile| |4|Fax| |5|Pager| |6|Toll Free|
- * @param ePhoneType 
+ * @param ePhoneType
  * @param sPhoneE164 A phone number in E.164 Format
  * @param sPhoneExtension The extension of the phone number.  The extension is the \"123\" section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers
  */

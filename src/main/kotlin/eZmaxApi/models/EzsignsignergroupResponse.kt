@@ -32,7 +32,7 @@ import com.squareup.moshi.JsonClass
  * An Ezsignsignergroup Object
  *
  * @param pkiEzsignsignergroupID The unique ID of the Ezsignsignergroup
- * @param objEzsignsignergroupDescription 
+ * @param objEzsignsignergroupDescription
  * @param sEzsignsignergroupDescriptionX The Description of the Ezsignsignergroup in the language of the requester
  */
 

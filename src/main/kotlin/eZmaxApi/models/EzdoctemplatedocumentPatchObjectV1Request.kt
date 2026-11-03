@@ -31,7 +31,7 @@ import com.squareup.moshi.JsonClass
 /**
  * Request for PATCH /1/object/ezdoctemplatedocument/{pkiEzdoctemplatedocumentID}
  *
- * @param objEzdoctemplatedocument 
+ * @param objEzdoctemplatedocument
  */
 
 

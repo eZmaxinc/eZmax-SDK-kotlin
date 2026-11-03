@@ -36,7 +36,7 @@ import com.squareup.moshi.JsonClass
  * @param sUserFirstname The first name of the user
  * @param sUserLastname The last name of the user
  * @param sEmailAddress The email address.
- * @param eUserType 
+ * @param eUserType
  */
 
 

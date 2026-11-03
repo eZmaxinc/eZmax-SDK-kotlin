@@ -32,8 +32,8 @@ import com.squareup.moshi.JsonClass
 /**
  * An Attachmentdocumenttype
  *
- * @param eAttachmentDocumenttype 
- * @param aObjAttachment 
+ * @param eAttachmentDocumenttype
+ * @param aObjAttachment
  */
 
 

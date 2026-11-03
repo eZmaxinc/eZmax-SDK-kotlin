@@ -32,8 +32,8 @@ import com.squareup.moshi.JsonClass
 /**
  * Response for PATCH /1/object/discussionmessage/{pkiDiscussionmessageID}
  *
- * @param objDebugPayload 
- * @param objDebug 
+ * @param objDebugPayload
+ * @param objDebug
  */
 
 

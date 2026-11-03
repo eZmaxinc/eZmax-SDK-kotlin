@@ -31,7 +31,7 @@ import com.squareup.moshi.JsonClass
 /**
  * A Ezmaxcustomer Object
  *
- * @param objEzmaxcustomerNote 
+ * @param objEzmaxcustomerNote
  */
 
 

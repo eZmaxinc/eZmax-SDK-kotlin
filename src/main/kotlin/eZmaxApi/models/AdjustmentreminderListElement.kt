@@ -34,7 +34,7 @@ import com.squareup.moshi.JsonClass
  * @param pkiAdjustmentreminderID The unique ID of the Adjustmentreminder
  * @param fkiAdjustmentID The unique ID of the Adjustment
  * @param fkiPeriodID The unique ID of the Period
- * @param eAdjustmentreminderType 
+ * @param eAdjustmentreminderType
  * @param sPeriodYYYYMM The YYYYMM of the Period
  * @param fkiUserIDCreated The unique ID of the User
  * @param sUserLoginname The login name of the User.

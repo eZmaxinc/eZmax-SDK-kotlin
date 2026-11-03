@@ -33,8 +33,8 @@ import com.squareup.moshi.JsonClass
  * A Billingentityinternal Object
  *
  * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal.
- * @param objBillingentityinternalDescription 
- * @param aObjBillingentityinternalproduct 
+ * @param objBillingentityinternalDescription
+ * @param aObjBillingentityinternalproduct
  */
 
 

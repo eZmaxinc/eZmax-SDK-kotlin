@@ -23,6 +23,7 @@
 
 package eZmaxApi.models
 
+import eZmaxApi.models.CustomInscription
 import eZmaxApi.models.FieldEInscriptionnotauthenticatedRemunerationtype
 import eZmaxApi.models.FieldEInscriptionnotauthenticatedResidenceType
 import eZmaxApi.models.FieldEInscriptionnotauthenticatedType
@@ -36,12 +37,13 @@ import com.squareup.moshi.JsonClass
  *
  * @param pkiInscriptionnotauthenticatedID The unique ID of the Inscriptionnotauthenticated.
  * @param fkiInscriptionID The unique ID of the Inscription.
+ * @param objInscription
  * @param fkiTaxassignmentID The unique ID of the Taxassignment.  Valid values:  |Value|Description| |-|-| |1|No tax| |2|GST| |3|HST (ON)| |4|HST (NB)| |5|HST (NS)| |6|HST (NL)| |7|HST (PE)| |8|GST + QST (QC)| |9|GST + QST (QC) Non-Recoverable| |10|GST + PST (BC)| |11|GST + PST (SK)| |12|GST + RST (MB)| |13|GST + PST (BC) Non-Recoverable| |14|GST + PST (SK) Non-Recoverable| |15|GST + RST (MB) Non-Recoverable|
- * @param eInscriptionnotauthenticatedType 
+ * @param eInscriptionnotauthenticatedType
  * @param dInscriptionnotauthenticatedMortgageloan The amount of the mortgage loan of the Inscriptionnotauthenticated
- * @param etInscriptionnotauthenticatedMortgagetype 
+ * @param etInscriptionnotauthenticatedMortgagetype
  * @param dInscriptionnotauthenticatedTransactionprice The transaction price of the Inscriptionnotauthenticated
- * @param eInscriptionnotauthenticatedRemunerationtype 
+ * @param eInscriptionnotauthenticatedRemunerationtype
  * @param dInscriptionnotauthenticatedRemuneration The amount for the remuneration of the Inscriptionnotauthenticated
  * @param dInscriptionnotauthenticatedRemunerationsubtotal The subtotal for the remuneration of the Inscriptionnotauthenticated
  * @param dInscriptionnotauthenticatedRemunerationtotal The total for the remuneration of the Inscriptionnotauthenticated
@@ -52,7 +54,7 @@ import com.squareup.moshi.JsonClass
  * @param tInscriptionnotauthenticatedConditions The conditions of the Inscriptionnotauthenticated
  * @param iInscriptionnotauthenticatedOrder The order of the Inscriptionnotauthenticated
  * @param bInscriptionnotauthenticatedIsactive Whether the inscriptionnotauthenticated is active or not
- * @param eInscriptionnotauthenticatedResidenceType 
+ * @param eInscriptionnotauthenticatedResidenceType
  * @param tInscriptionnotauthenticatedChecklistnote The checklist note of the Inscriptionnotauthenticated
  * @param dInscriptionnotauthenticatedSelleronlyretribution The amount retribution for the seller only of the Inscriptionnotauthenticated
  * @param bInscriptionnotauthenticatedDraft Whether the Inscriptionnotauthenticated is a draft or not
@@ -85,6 +87,9 @@ data class InscriptionnotauthenticatedResponse (
     /* The unique ID of the Inscription. */
     @Json(name = "fkiInscriptionID")
     val fkiInscriptionID: kotlin.Int,
+
+    @Json(name = "objInscription")
+    val objInscription: CustomInscription,
 
     /* The unique ID of the Taxassignment.  Valid values:  |Value|Description| |-|-| |1|No tax| |2|GST| |3|HST (ON)| |4|HST (NB)| |5|HST (NS)| |6|HST (NL)| |7|HST (PE)| |8|GST + QST (QC)| |9|GST + QST (QC) Non-Recoverable| |10|GST + PST (BC)| |11|GST + PST (SK)| |12|GST + RST (MB)| |13|GST + PST (BC) Non-Recoverable| |14|GST + PST (SK) Non-Recoverable| |15|GST + RST (MB) Non-Recoverable| */
     @Json(name = "fkiTaxassignmentID")

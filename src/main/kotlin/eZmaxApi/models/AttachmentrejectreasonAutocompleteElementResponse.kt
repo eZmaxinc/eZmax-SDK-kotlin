@@ -31,7 +31,7 @@ import com.squareup.moshi.JsonClass
  * A Attachmentrejectreason AutocompleteElement Response
  *
  * @param pkiAttachmentrejectreasonID The unique ID of the Attachmentrejectreason
- * @param sAttachmentrejectreasonnameX The name of the Attachmentrejectreason in the language of the requester
+ * @param sAttachmentrejectreasonNameX The name of the Attachmentrejectreason in the language of the requester
  * @param bAttachmentrejectreasonIsactive Whether the Attachmentrejectreason is active or not
  */
 
@@ -43,8 +43,8 @@ data class AttachmentrejectreasonAutocompleteElementResponse (
     val pkiAttachmentrejectreasonID: kotlin.Int,
 
     /* The name of the Attachmentrejectreason in the language of the requester */
-    @Json(name = "sAttachmentrejectreasonnameX")
-    val sAttachmentrejectreasonnameX: kotlin.String,
+    @Json(name = "sAttachmentrejectreasonNameX")
+    val sAttachmentrejectreasonNameX: kotlin.String,
 
     /* Whether the Attachmentrejectreason is active or not */
     @Json(name = "bAttachmentrejectreasonIsactive")

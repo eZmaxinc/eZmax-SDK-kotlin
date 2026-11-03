@@ -33,7 +33,7 @@ import com.squareup.moshi.JsonClass
  *
  * @param fksCreditcardtokenID The creditcard token identifier
  * @param sCreditcardCVV The creditcard card CVV
- * @param objCreditcarddetail 
+ * @param objCreditcarddetail
  */
 
 

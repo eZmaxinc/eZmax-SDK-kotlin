@@ -39,24 +39,24 @@ import com.squareup.moshi.JsonClass
  *
  * @param pkiEzsigntemplateformfieldgroupID The unique ID of the Ezsigntemplateformfieldgroup
  * @param fkiEzsigntemplatedocumentID The unique ID of the Ezsigntemplatedocument
- * @param eEzsigntemplateformfieldgroupType 
+ * @param eEzsigntemplateformfieldgroupType
  * @param sEzsigntemplateformfieldgroupLabel The Label for the Ezsigntemplateformfieldgroup
  * @param iEzsigntemplateformfieldgroupStep The step when the Ezsigntemplatesigner will be invited to fill the form fields
  * @param iEzsigntemplateformfieldgroupFilledmin The minimum number of Ezsigntemplateformfield that must be filled in the Ezsigntemplateformfieldgroup
  * @param iEzsigntemplateformfieldgroupFilledmax The maximum number of Ezsigntemplateformfield that must be filled in the Ezsigntemplateformfieldgroup
  * @param bEzsigntemplateformfieldgroupReadonly Whether the Ezsigntemplateformfieldgroup is read only or not.
- * @param aObjEzsigntemplateformfieldgroupsigner 
- * @param aObjEzsigntemplateformfield 
- * @param eEzsigntemplateformfieldgroupSignerrequirement 
+ * @param aObjEzsigntemplateformfieldgroupsigner
+ * @param aObjEzsigntemplateformfield
+ * @param eEzsigntemplateformfieldgroupSignerrequirement
  * @param sEzsigntemplateformfieldgroupDefaultvalue The default value for the Ezsigntemplateformfieldgroup  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | ------------------------- | ------------ | ------------ | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 |
  * @param iEzsigntemplateformfieldgroupMaxlength The maximum length for the value in the Ezsigntemplateformfieldgroup  This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea**
  * @param bEzsigntemplateformfieldgroupEncrypted Whether the Ezsigntemplateformfieldgroup is encrypted in the database or not. Encrypted values are not displayed on the Ezsigndocument. This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea**
  * @param sEzsigntemplateformfieldgroupRegexp A regular expression to indicate what values are acceptable for the Ezsigntemplateformfieldgroup.  This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea**
  * @param sEzsigntemplateformfieldgroupTextvalidationcustommessage Description of validation rule. Show by signatory.
- * @param eEzsigntemplateformfieldgroupTextvalidation 
+ * @param eEzsigntemplateformfieldgroupTextvalidation
  * @param tEzsigntemplateformfieldgroupTooltip A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplateformfieldgroup
- * @param eEzsigntemplateformfieldgroupTooltipposition 
- * @param aObjDropdownElement 
+ * @param eEzsigntemplateformfieldgroupTooltipposition
+ * @param aObjDropdownElement
  */
 
 

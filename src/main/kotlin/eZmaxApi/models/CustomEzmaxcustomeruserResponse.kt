@@ -33,13 +33,13 @@ import com.squareup.moshi.JsonClass
 /**
  * A Ezmaxcustomeruser Object
  *
- * @param objEzmaxcustomer 
+ * @param objEzmaxcustomer
  * @param fkiContacttitleID The unique ID of the Contacttitle.  Valid values:  |Value|Description| |-|-| |1|Ms.| |2|Mr.| |4|(Blank)| |5|Me (For Notaries)|
  * @param fkiLanguageID The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
  * @param sEzmaxcustomeruserFirstname The First name of the Ezmaxcustomeruser
  * @param sEzmaxcustomeruserLastname The First name of the Ezmaxcustomeruser
- * @param objEmail 
- * @param objPhone 
+ * @param objEmail
+ * @param objPhone
  */
 
 

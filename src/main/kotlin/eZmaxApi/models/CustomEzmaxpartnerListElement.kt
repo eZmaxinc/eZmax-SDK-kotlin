@@ -38,7 +38,7 @@ import com.squareup.moshi.JsonClass
  * @param sEzmaxpartnerNameX The name of the Ezmaxpartner in the language of the requester
  * @param sEzmaxpartnerPhoneE164X A phone number in E.164 Format
  * @param sEzmaxpartnerUrlX The url of the Ezmaxpartner website in the language of the requester
- * @param objEzmaxpartnerLogourl 
+ * @param objEzmaxpartnerLogourl
  */
 
 

@@ -31,7 +31,7 @@ import com.squareup.moshi.JsonClass
 /**
  * Request for PATCH /1/object/ezmaxcustomer/{pkiEzmaxcustomerID}
  *
- * @param objEzmaxcustomer 
+ * @param objEzmaxcustomer
  */
 
 

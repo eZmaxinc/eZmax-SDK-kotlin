@@ -53,13 +53,13 @@ import com.squareup.moshi.JsonClass
  * @param bDocumenttypeForeclosedsale Whether if it's an foreclosedsale
  * @param bDocumenttypeCommercialfunding Whether if it's an commercialfunding
  * @param bDocumenttypeCanafe Whether if it's an canafe
- * @param eDocumenttypeEzcom 
- * @param eDocumenttypePrivacydefault 
- * @param eDocumenttypeStatusdefault 
- * @param eDocumenttypeSalebyowner 
- * @param eDocumenttypeSaledisplaybyrole 
- * @param eDocumenttypeTransactiontype 
- * @param eDocumenttypeRepossession 
+ * @param eDocumenttypePrivacydefault
+ * @param eDocumenttypeStatusdefault
+ * @param eDocumenttypeSalebyowner
+ * @param eDocumenttypeSaledisplaybyrole
+ * @param eDocumenttypeTransactiontype
+ * @param eDocumenttypeRepossession
+ * @param eDocumenttypeEzcom
  */
 
 
@@ -129,9 +129,6 @@ data class DocumenttypeListElement (
     @Json(name = "bDocumenttypeCanafe")
     val bDocumenttypeCanafe: kotlin.Boolean,
 
-    @Json(name = "eDocumenttypeEzcom")
-    val eDocumenttypeEzcom: FieldEDocumenttypeEzcom,
-
     @Json(name = "eDocumenttypePrivacydefault")
     val eDocumenttypePrivacydefault: FieldEDocumenttypePrivacydefault,
 
@@ -148,7 +145,10 @@ data class DocumenttypeListElement (
     val eDocumenttypeTransactiontype: FieldEDocumenttypeTransactiontype,
 
     @Json(name = "eDocumenttypeRepossession")
-    val eDocumenttypeRepossession: FieldEDocumenttypeRepossession
+    val eDocumenttypeRepossession: FieldEDocumenttypeRepossession,
+
+    @Json(name = "eDocumenttypeEzcom")
+    val eDocumenttypeEzcom: FieldEDocumenttypeEzcom? = null
 
 ) {
 

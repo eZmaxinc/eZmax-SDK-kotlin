@@ -44,10 +44,10 @@ import com.squareup.moshi.JsonClass
  * @param bColleagueCanafe Whether the cloning user has access to canafe
  * @param bColleaguePermission Whether the cloning user copies the permission of the cloned user
  * @param bColleagueRealestatecompleted Whether if the cloning user has access to the completed folders in real estate
- * @param eColleagueEzsign 
- * @param eColleagueRealestateinprogress 
- * @param objUserName 
- * @param objAudit 
+ * @param eColleagueEzsign
+ * @param eColleagueRealestateinprogress
+ * @param objUserName
+ * @param objAudit
  * @param dtColleagueFrom The from of the Colleague
  * @param dtColleagueTo The to of the Colleague
  */

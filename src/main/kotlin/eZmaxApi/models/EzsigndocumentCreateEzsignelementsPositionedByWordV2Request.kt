@@ -32,8 +32,8 @@ import com.squareup.moshi.JsonClass
 /**
  * Request for POST /2/object/ezsigndocument/{pkiEzsigndocumentID}/createEzsignelementsPositionedByWord
  *
- * @param aObjEzsignformfieldgroup 
- * @param aObjEzsignsignature 
+ * @param aObjEzsignformfieldgroup
+ * @param aObjEzsignsignature
  */
 
 

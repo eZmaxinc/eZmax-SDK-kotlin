@@ -58,8 +58,8 @@ import com.squareup.moshi.JsonClass
  * @param bCustomerSupplychargefinanced Whether if it's an supplychargefinanced
  * @param bCustomerSupplychargefinancedtaxes Whether if it's an supplychargefinancedtaxes
  * @param bCustomerAttendance Whether if it's an attendance
- * @param eCustomerType 
- * @param eCustomerMarketingcorrespondence 
+ * @param eCustomerType
+ * @param eCustomerMarketingcorrespondence
  * @param bCustomerBlackcopycarbon Whether if it's an blackcopycarbon
  * @param bCustomerUnsubscribeinfo Whether if it's an unsubscribeinfo
  * @param tCustomerComment The comment of the Customer
@@ -83,7 +83,7 @@ import com.squareup.moshi.JsonClass
  * @param dCustomerFulltimeequivalent The fulltimeequivalent of the Customer
  * @param dtCustomerBirthdate The birthdate of the Customer
  * @param dtCustomerTransfersurvey The transfersurvey of the Customer
- * @param IMPORTID 
+ * @param IMPORTID
  */
 
 
