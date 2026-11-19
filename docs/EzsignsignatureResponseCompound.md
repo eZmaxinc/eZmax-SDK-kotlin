@@ -56,6 +56,7 @@
 | **aObjEzsignelementdependency** | [**kotlin.collections.List&lt;EzsignelementdependencyResponseCompound&gt;**](EzsignelementdependencyResponseCompound.md) |  |  [optional] |
 | **objTimezone** | [**CustomTimezoneWithCodeResponse**](CustomTimezoneWithCodeResponse.md) |  |  [optional] |
 | **aObjEzsignsignaturepaymentdetail** | [**kotlin.collections.List&lt;EzsignsignaturepaymentdetailResponseCompound&gt;**](EzsignsignaturepaymentdetailResponseCompound.md) |  |  [optional] |
+| **objCreditcardmerchant** | [**CustomCreditcardmerchantResponse**](CustomCreditcardmerchantResponse.md) |  |  [optional] |
 
 
 

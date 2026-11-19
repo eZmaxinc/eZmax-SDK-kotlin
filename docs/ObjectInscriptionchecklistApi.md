@@ -49,7 +49,7 @@ try {
 ### Parameters
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **sSelector** | **kotlin.String**| The type of Inscriptionchecklist to return | [enum: All] |
+| **sSelector** | **kotlin.String**| The type of Inscriptionchecklist to return | [enum: All, Required] |
 | **fkiBuyercontractID** | **kotlin.String**| Specify which Buyercontract we want to display. | [optional] |
 | **fkiInscriptionID** | **kotlin.String**| Specify which Inscription we want to display. | [optional] |
 | **fkiInscriptionnotauthenticatedID** | **kotlin.String**| Specify which Inscriptionnotauthenticated we want to display. | [optional] |

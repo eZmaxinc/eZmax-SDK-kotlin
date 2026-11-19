@@ -24,6 +24,7 @@
 package eZmaxApi.models
 
 import eZmaxApi.models.CustomContactNameResponse
+import eZmaxApi.models.CustomCreditcardmerchantResponse
 import eZmaxApi.models.CustomCreditcardtransactionResponse
 import eZmaxApi.models.CustomTimezoneWithCodeResponse
 import eZmaxApi.models.EnumTextvalidation
@@ -98,6 +99,7 @@ import com.squareup.moshi.JsonClass
  * @param aObjEzsignelementdependency
  * @param objTimezone
  * @param aObjEzsignsignaturepaymentdetail
+ * @param objCreditcardmerchant
  */
 
 
@@ -293,7 +295,10 @@ data class EzsignsignatureResponseCompound (
     val objTimezone: CustomTimezoneWithCodeResponse? = null,
 
     @Json(name = "a_objEzsignsignaturepaymentdetail")
-    val aObjEzsignsignaturepaymentdetail: kotlin.collections.List<EzsignsignaturepaymentdetailResponseCompound>? = null
+    val aObjEzsignsignaturepaymentdetail: kotlin.collections.List<EzsignsignaturepaymentdetailResponseCompound>? = null,
+
+    @Json(name = "objCreditcardmerchant")
+    val objCreditcardmerchant: CustomCreditcardmerchantResponse? = null
 
 ) {
 

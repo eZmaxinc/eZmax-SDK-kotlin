@@ -58,7 +58,8 @@ open class ObjectInscriptionchecklistApi(basePath: kotlin.String = defaultBasePa
      * enum for parameter sSelector
      */
      enum class SSelectorInscriptionchecklistGetAutocompleteV3(val value: kotlin.String) {
-         @Json(name = "All") All("All");
+         @Json(name = "All") All("All"),
+         @Json(name = "Required") Required("Required");
 
         /**
          * Override [toString()] to avoid using the enum variable name as the value, and instead use

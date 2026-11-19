@@ -408,6 +408,7 @@ docs/CustomCommunicationsenderResponse.md
 docs/CustomContactNameResponse.md
 docs/CustomCreateEzsignelementsPositionedByWordRequest.md
 docs/CustomCreditcardRequest.md
+docs/CustomCreditcardmerchantResponse.md
 docs/CustomCreditcardtransactionResponse.md
 docs/CustomCreditcardtransactionresponseResponse.md
 docs/CustomDiscussionconfigurationResponse.md
@@ -3225,6 +3226,7 @@ src/main/kotlin/eZmaxApi/models/CustomCommunicationsenderResponse.kt
 src/main/kotlin/eZmaxApi/models/CustomContactNameResponse.kt
 src/main/kotlin/eZmaxApi/models/CustomCreateEzsignelementsPositionedByWordRequest.kt
 src/main/kotlin/eZmaxApi/models/CustomCreditcardRequest.kt
+src/main/kotlin/eZmaxApi/models/CustomCreditcardmerchantResponse.kt
 src/main/kotlin/eZmaxApi/models/CustomCreditcardtransactionResponse.kt
 src/main/kotlin/eZmaxApi/models/CustomCreditcardtransactionresponseResponse.kt
 src/main/kotlin/eZmaxApi/models/CustomDiscussionconfigurationResponse.kt

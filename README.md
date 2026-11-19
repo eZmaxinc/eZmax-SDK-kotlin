@@ -1217,6 +1217,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.CustomContactNameResponse](docs/CustomContactNameResponse.md)
  - [eZmaxApi.models.CustomCreateEzsignelementsPositionedByWordRequest](docs/CustomCreateEzsignelementsPositionedByWordRequest.md)
  - [eZmaxApi.models.CustomCreditcardRequest](docs/CustomCreditcardRequest.md)
+ - [eZmaxApi.models.CustomCreditcardmerchantResponse](docs/CustomCreditcardmerchantResponse.md)
  - [eZmaxApi.models.CustomCreditcardtransactionResponse](docs/CustomCreditcardtransactionResponse.md)
  - [eZmaxApi.models.CustomCreditcardtransactionresponseResponse](docs/CustomCreditcardtransactionresponseResponse.md)
  - [eZmaxApi.models.CustomDiscussionconfigurationResponse](docs/CustomDiscussionconfigurationResponse.md)
