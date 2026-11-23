@@ -41,7 +41,7 @@ import com.squareup.moshi.JsonClass
  * @param objAudit
  * @param fkiEzmaxpartnerproductstageID The unique ID of the Ezmaxpartnerproductstage
  * @param sApikeyApikey The Apikey for the API key.  This will be hidden if we are not creating or regenerating the Apikey.
- * @param sApikeySecret The Secret for the API key.  This will be hidden if we are not creating or regenerating the Apikey.
+ * @param sApikeySecret The secret of the Apikey
  * @param bApikeyIssigned Whether the apikey is signed or not
  */
 
@@ -77,7 +77,7 @@ data class ApikeyResponseCompound (
     @Json(name = "sApikeyApikey")
     val sApikeyApikey: kotlin.String? = null,
 
-    /* The Secret for the API key.  This will be hidden if we are not creating or regenerating the Apikey. */
+    /* The secret of the Apikey */
     @Json(name = "sApikeySecret")
     val sApikeySecret: kotlin.String? = null,
 

@@ -7,8 +7,8 @@
 | **objWebhook** | [**CustomWebhookResponse**](CustomWebhookResponse.md) |  |  |
 | **aObjAttempt** | [**kotlin.collections.List&lt;AttemptResponseCompound&gt;**](AttemptResponseCompound.md) | An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt. |  |
 | **objEzmaxpartnerproduct** | [**CustomEzmaxpartnerproductSubscribe**](CustomEzmaxpartnerproductSubscribe.md) |  |  |
-| **sApikeyApikey** | **kotlin.String** |  |  |
-| **sApikeySecret** | **kotlin.String** |  |  |
+| **sApikeyApikey** | **kotlin.String** | The Apikey for the API key.  This will be hidden if we are not creating or regenerating the Apikey. |  |
+| **sApikeySecret** | **kotlin.String** | The secret of the Apikey |  |
 | **sExternalID** | **kotlin.String** |  |  [optional] |
 
 

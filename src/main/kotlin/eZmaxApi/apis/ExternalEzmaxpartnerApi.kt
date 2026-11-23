@@ -27,6 +27,7 @@ import java.io.IOException
 import okhttp3.Call
 import okhttp3.HttpUrl
 
+import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.EzmaxpartnerSubscribeV1Request
 import eZmaxApi.models.EzmaxpartnerSubscribeV1Response
 

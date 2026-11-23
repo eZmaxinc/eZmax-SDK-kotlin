@@ -208,6 +208,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | *ObjectDiscussionApi* | [**discussionCreateObjectV1**](docs/ObjectDiscussionApi.md#discussioncreateobjectv1) | **POST** /1/object/discussion | Create a new Discussion |
 | *ObjectDiscussionApi* | [**discussionDeleteObjectV1**](docs/ObjectDiscussionApi.md#discussiondeleteobjectv1) | **DELETE** /1/object/discussion/{pkiDiscussionID} | Delete an existing Discussion |
 | *ObjectDiscussionApi* | [**discussionGetObjectV2**](docs/ObjectDiscussionApi.md#discussiongetobjectv2) | **GET** /2/object/discussion/{pkiDiscussionID} | Retrieve an existing Discussion |
+| *ObjectDiscussionApi* | [**discussionImproveMessageV1**](docs/ObjectDiscussionApi.md#discussionimprovemessagev1) | **POST** /1/object/discussion/improveMessage | Improve a message using the AI |
 | *ObjectDiscussionApi* | [**discussionPatchObjectV1**](docs/ObjectDiscussionApi.md#discussionpatchobjectv1) | **PATCH** /1/object/discussion/{pkiDiscussionID} | Patch an existing Discussion |
 | *ObjectDiscussionApi* | [**discussionUpdateDiscussionreadstatusV1**](docs/ObjectDiscussionApi.md#discussionupdatediscussionreadstatusv1) | **POST** /1/object/discussion/{pkiDiscussionID}/updateDiscussionreadstatus | Update the read status of the discussion |
 | *ObjectDiscussionmembershipApi* | [**discussionmembershipCreateObjectV1**](docs/ObjectDiscussionmembershipApi.md#discussionmembershipcreateobjectv1) | **POST** /1/object/discussionmembership | Create a new Discussionmembership |
@@ -269,6 +270,12 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | *ObjectEzmaxmaillinglistApi* | [**ezmaxmaillinglistGetListV1**](docs/ObjectEzmaxmaillinglistApi.md#ezmaxmaillinglistgetlistv1) | **GET** /1/object/ezmaxmaillinglist/getList | Retrieve Ezmaxmaillinglist list |
 | *ObjectEzmaxpartnerApi* | [**ezmaxpartnerGetCustomDeveloppersV1**](docs/ObjectEzmaxpartnerApi.md#ezmaxpartnergetcustomdeveloppersv1) | **GET** /1/object/ezmaxpartner/getCustomDeveloppers | Retrieve Ezmaxpartner custom developpers list |
 | *ObjectEzmaxpartnerApi* | [**ezmaxpartnerGetObjectV2**](docs/ObjectEzmaxpartnerApi.md#ezmaxpartnergetobjectv2) | **GET** /2/object/ezmaxpartner/{pkiEzmaxpartnerID} | Retrieve an existing Ezmaxpartner |
+| *ObjectEzmaxpartnerproductstageApi* | [**ezmaxpartnerproductstageGetEzmaxpartnerproductstagepermissionsV1**](docs/ObjectEzmaxpartnerproductstageApi.md#ezmaxpartnerproductstagegetezmaxpartnerproductstagepermissionsv1) | **GET** /1/object/ezmaxpartnerproductstage/{pkiEzmaxpartnerproductstageID}/getEzmaxpartnerproductstagepermissions | Retrieve an existing Ezmaxpartnerproductstage's Ezmaxpartnerproductstagepermissions |
+| *ObjectEzmaxpartnerproductstageApi* | [**ezmaxpartnerproductstageGetEzmaxpartnerproductstagewebhooksV1**](docs/ObjectEzmaxpartnerproductstageApi.md#ezmaxpartnerproductstagegetezmaxpartnerproductstagewebhooksv1) | **GET** /1/object/ezmaxpartnerproductstage/{pkiEzmaxpartnerproductstageID}/getEzmaxpartnerproductstagewebhooks | Retrieve an existing Ezmaxpartnerproductstage's Ezmaxpartnerproductstagewebhooks |
+| *ObjectEzmaxpartnerproductstageApi* | [**ezmaxpartnerproductstageGetListV1**](docs/ObjectEzmaxpartnerproductstageApi.md#ezmaxpartnerproductstagegetlistv1) | **GET** /1/object/ezmaxpartnerproductstage/getList | Retrieve Ezmaxpartnerproductstage list |
+| *ObjectEzmaxpartnerproductstageApi* | [**ezmaxpartnerproductstageGetObjectV2**](docs/ObjectEzmaxpartnerproductstageApi.md#ezmaxpartnerproductstagegetobjectv2) | **GET** /2/object/ezmaxpartnerproductstage/{pkiEzmaxpartnerproductstageID} | Retrieve an existing Ezmaxpartnerproductstage |
+| *ObjectEzmaxpartnerproductstageApi* | [**ezmaxpartnerproductstageSubscribeV1**](docs/ObjectEzmaxpartnerproductstageApi.md#ezmaxpartnerproductstagesubscribev1) | **POST** /1/object/ezmaxpartnerproductstage/{pkiEzmaxpartnerproductstageID}/subscribe | Subscribe to the Ezmaxpartnerproductstage |
+| *ObjectEzmaxpartnerproductstageApi* | [**ezmaxpartnerproductstageUnsubscribeV1**](docs/ObjectEzmaxpartnerproductstageApi.md#ezmaxpartnerproductstageunsubscribev1) | **POST** /1/object/ezmaxpartnerproductstage/{pkiEzmaxpartnerproductstageID}/unsubscribe | Unsubscribe to the Ezmaxpartnerproductstage |
 | *ObjectEzmaxproductApi* | [**ezmaxproductGetAutocompleteV2**](docs/ObjectEzmaxproductApi.md#ezmaxproductgetautocompletev2) | **GET** /2/object/ezmaxproduct/getAutocomplete/{sSelector} | Retrieve Ezmaxproducts and IDs |
 | *ObjectEzsignannotationApi* | [**ezsignannotationCreateObjectV1**](docs/ObjectEzsignannotationApi.md#ezsignannotationcreateobjectv1) | **POST** /1/object/ezsignannotation | Create a new Ezsignannotation |
 | *ObjectEzsignannotationApi* | [**ezsignannotationDeleteObjectV1**](docs/ObjectEzsignannotationApi.md#ezsignannotationdeleteobjectv1) | **DELETE** /1/object/ezsignannotation/{pkiEzsignannotationID} | Delete an existing Ezsignannotation |
@@ -1268,6 +1275,9 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.CustomImportEzsigntemplatepackageRelationRequest](docs/CustomImportEzsigntemplatepackageRelationRequest.md)
  - [eZmaxApi.models.CustomInscription](docs/CustomInscription.md)
  - [eZmaxApi.models.CustomInscriptionnotauthenticatedconditionRequest](docs/CustomInscriptionnotauthenticatedconditionRequest.md)
+ - [eZmaxApi.models.CustomModulePartnerResponseCompound](docs/CustomModulePartnerResponseCompound.md)
+ - [eZmaxApi.models.CustomModulegroupPartnerResponseCompound](docs/CustomModulegroupPartnerResponseCompound.md)
+ - [eZmaxApi.models.CustomModulesectionPartnerResponseCompound](docs/CustomModulesectionPartnerResponseCompound.md)
  - [eZmaxApi.models.CustomNotificationsubsectiongetnotificationtestsResponse](docs/CustomNotificationsubsectiongetnotificationtestsResponse.md)
  - [eZmaxApi.models.CustomNotificationtestgetelementsResponse](docs/CustomNotificationtestgetelementsResponse.md)
  - [eZmaxApi.models.CustomNotificationtestgetnotificationtestsResponse](docs/CustomNotificationtestgetnotificationtestsResponse.md)
@@ -1361,6 +1371,9 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.DiscussionDeleteObjectV1Response](docs/DiscussionDeleteObjectV1Response.md)
  - [eZmaxApi.models.DiscussionGetObjectV2Response](docs/DiscussionGetObjectV2Response.md)
  - [eZmaxApi.models.DiscussionGetObjectV2ResponseMPayload](docs/DiscussionGetObjectV2ResponseMPayload.md)
+ - [eZmaxApi.models.DiscussionImproveMessageV1Request](docs/DiscussionImproveMessageV1Request.md)
+ - [eZmaxApi.models.DiscussionImproveMessageV1Response](docs/DiscussionImproveMessageV1Response.md)
+ - [eZmaxApi.models.DiscussionImproveMessageV1ResponseMPayload](docs/DiscussionImproveMessageV1ResponseMPayload.md)
  - [eZmaxApi.models.DiscussionPatchObjectV1Request](docs/DiscussionPatchObjectV1Request.md)
  - [eZmaxApi.models.DiscussionPatchObjectV1Response](docs/DiscussionPatchObjectV1Response.md)
  - [eZmaxApi.models.DiscussionRequest](docs/DiscussionRequest.md)
@@ -1562,6 +1575,22 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.EzmaxpartnerResponseCompound](docs/EzmaxpartnerResponseCompound.md)
  - [eZmaxApi.models.EzmaxpartnerSubscribeV1Request](docs/EzmaxpartnerSubscribeV1Request.md)
  - [eZmaxApi.models.EzmaxpartnerSubscribeV1Response](docs/EzmaxpartnerSubscribeV1Response.md)
+ - [eZmaxApi.models.EzmaxpartnerproductstageGetEzmaxpartnerproductstagepermissionsV1Response](docs/EzmaxpartnerproductstageGetEzmaxpartnerproductstagepermissionsV1Response.md)
+ - [eZmaxApi.models.EzmaxpartnerproductstageGetEzmaxpartnerproductstagepermissionsV1ResponseMPayload](docs/EzmaxpartnerproductstageGetEzmaxpartnerproductstagepermissionsV1ResponseMPayload.md)
+ - [eZmaxApi.models.EzmaxpartnerproductstageGetEzmaxpartnerproductstagewebhooksV1Response](docs/EzmaxpartnerproductstageGetEzmaxpartnerproductstagewebhooksV1Response.md)
+ - [eZmaxApi.models.EzmaxpartnerproductstageGetEzmaxpartnerproductstagewebhooksV1ResponseMPayload](docs/EzmaxpartnerproductstageGetEzmaxpartnerproductstagewebhooksV1ResponseMPayload.md)
+ - [eZmaxApi.models.EzmaxpartnerproductstageGetListV1Response](docs/EzmaxpartnerproductstageGetListV1Response.md)
+ - [eZmaxApi.models.EzmaxpartnerproductstageGetListV1ResponseMPayload](docs/EzmaxpartnerproductstageGetListV1ResponseMPayload.md)
+ - [eZmaxApi.models.EzmaxpartnerproductstageGetObjectV2Response](docs/EzmaxpartnerproductstageGetObjectV2Response.md)
+ - [eZmaxApi.models.EzmaxpartnerproductstageGetObjectV2ResponseMPayload](docs/EzmaxpartnerproductstageGetObjectV2ResponseMPayload.md)
+ - [eZmaxApi.models.EzmaxpartnerproductstageListElement](docs/EzmaxpartnerproductstageListElement.md)
+ - [eZmaxApi.models.EzmaxpartnerproductstageResponse](docs/EzmaxpartnerproductstageResponse.md)
+ - [eZmaxApi.models.EzmaxpartnerproductstageResponseCompound](docs/EzmaxpartnerproductstageResponseCompound.md)
+ - [eZmaxApi.models.EzmaxpartnerproductstageSubscribeV1Response](docs/EzmaxpartnerproductstageSubscribeV1Response.md)
+ - [eZmaxApi.models.EzmaxpartnerproductstageUnsubscribeV1Response](docs/EzmaxpartnerproductstageUnsubscribeV1Response.md)
+ - [eZmaxApi.models.EzmaxpartnerproductstagesubscriptionResponse](docs/EzmaxpartnerproductstagesubscriptionResponse.md)
+ - [eZmaxApi.models.EzmaxpartnerproductstagewebhookResponse](docs/EzmaxpartnerproductstagewebhookResponse.md)
+ - [eZmaxApi.models.EzmaxpartnerproductstagewebhookResponseCompound](docs/EzmaxpartnerproductstagewebhookResponseCompound.md)
  - [eZmaxApi.models.EzmaxproductAutocompleteElementResponse](docs/EzmaxproductAutocompleteElementResponse.md)
  - [eZmaxApi.models.EzmaxproductGetAutocompleteV2Response](docs/EzmaxproductGetAutocompleteV2Response.md)
  - [eZmaxApi.models.EzmaxproductGetAutocompleteV2ResponseMPayload](docs/EzmaxproductGetAutocompleteV2ResponseMPayload.md)
@@ -2428,6 +2457,13 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.FieldEEzmaxinvoicingcontractPaymenttype](docs/FieldEEzmaxinvoicingcontractPaymenttype.md)
  - [eZmaxApi.models.FieldEEzmaxinvoicinguserVariationezsign](docs/FieldEEzmaxinvoicinguserVariationezsign.md)
  - [eZmaxApi.models.FieldEEzmaxpartnerCustomdevelopment](docs/FieldEEzmaxpartnerCustomdevelopment.md)
+ - [eZmaxApi.models.FieldEEzmaxpartnerproductstageCode](docs/FieldEEzmaxpartnerproductstageCode.md)
+ - [eZmaxApi.models.FieldEEzmaxpartnerproductstageInstallationtype](docs/FieldEEzmaxpartnerproductstageInstallationtype.md)
+ - [eZmaxApi.models.FieldEEzmaxpartnerproductstagewebhookEzmaxpartnerevent](docs/FieldEEzmaxpartnerproductstagewebhookEzmaxpartnerevent.md)
+ - [eZmaxApi.models.FieldEEzmaxpartnerproductstagewebhookEzsignevent](docs/FieldEEzmaxpartnerproductstagewebhookEzsignevent.md)
+ - [eZmaxApi.models.FieldEEzmaxpartnerproductstagewebhookManagementevent](docs/FieldEEzmaxpartnerproductstagewebhookManagementevent.md)
+ - [eZmaxApi.models.FieldEEzmaxpartnerproductstagewebhookModule](docs/FieldEEzmaxpartnerproductstagewebhookModule.md)
+ - [eZmaxApi.models.FieldEEzmaxpartnerproductstagewebhookRealestateevent](docs/FieldEEzmaxpartnerproductstagewebhookRealestateevent.md)
  - [eZmaxApi.models.FieldEEzsignannotationType](docs/FieldEEzsignannotationType.md)
  - [eZmaxApi.models.FieldEEzsignbulksendEzsignformfieldorder](docs/FieldEEzsignbulksendEzsignformfieldorder.md)
  - [eZmaxApi.models.FieldEEzsignbulksendsignermappingRole](docs/FieldEEzsignbulksendsignermappingRole.md)
