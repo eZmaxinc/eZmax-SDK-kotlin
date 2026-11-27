@@ -10,9 +10,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**reconciliationGetCommunicationListV1**](ObjectReconciliationApi.md#reconciliationGetCommunicationListV1) | **GET** /1/object/reconciliation/{pkiReconciliationID}/getCommunicationList | Retrieve Communication list |
 | [**reconciliationGetCommunicationrecipientsV1**](ObjectReconciliationApi.md#reconciliationGetCommunicationrecipientsV1) | **GET** /1/object/reconciliation/{pkiReconciliationID}/getCommunicationrecipients | Retrieve Communication recipients |
 | [**reconciliationGetCommunicationsendersV1**](ObjectReconciliationApi.md#reconciliationGetCommunicationsendersV1) | **GET** /1/object/reconciliation/{pkiReconciliationID}/getCommunicationsenders | Retrieve Communication senders |
-| [**reconciliationGetDocumenttypechecklistV1**](ObjectReconciliationApi.md#reconciliationGetDocumenttypechecklistV1) | **GET** /1/object/reconciliation/{pkiReconciliationID}/getDocumenttypechecklist | Retrieve Document type checklist |
 | [**reconciliationImportIntoEDMV1**](ObjectReconciliationApi.md#reconciliationImportIntoEDMV1) | **POST** /1/object/reconciliation/{pkiReconciliationID}/importIntoEDM | Import attachments into the Reconciliation |
-| [**reconciliationSyncDocumenttypechecklistV1**](ObjectReconciliationApi.md#reconciliationSyncDocumenttypechecklistV1) | **POST** /1/object/reconciliation/{pkiReconciliationID}/syncDocumenttypechecklist | Synchronize Document type checklist |
 
 
 <a id="reconciliationBatchDownloadV1"></a>
@@ -299,53 +297,6 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a id="reconciliationGetDocumenttypechecklistV1"></a>
-# **reconciliationGetDocumenttypechecklistV1**
-> ReconciliationGetDocumenttypechecklistV1Response reconciliationGetDocumenttypechecklistV1(pkiReconciliationID)
-
-Retrieve Document type checklist
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectReconciliationApi()
-val pkiReconciliationID : kotlin.Int = 56 // kotlin.Int | 
-try {
-    val result : ReconciliationGetDocumenttypechecklistV1Response = apiInstance.reconciliationGetDocumenttypechecklistV1(pkiReconciliationID)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectReconciliationApi#reconciliationGetDocumenttypechecklistV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectReconciliationApi#reconciliationGetDocumenttypechecklistV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pkiReconciliationID** | **kotlin.Int**|  | |
-
-### Return type
-
-[**ReconciliationGetDocumenttypechecklistV1Response**](ReconciliationGetDocumenttypechecklistV1Response.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
 <a id="reconciliationImportIntoEDMV1"></a>
 # **reconciliationImportIntoEDMV1**
 > ReconciliationImportIntoEDMV1Response reconciliationImportIntoEDMV1(pkiReconciliationID, reconciliationImportIntoEDMV1Request)
@@ -382,55 +333,6 @@ try {
 ### Return type
 
 [**ReconciliationImportIntoEDMV1Response**](ReconciliationImportIntoEDMV1Response.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a id="reconciliationSyncDocumenttypechecklistV1"></a>
-# **reconciliationSyncDocumenttypechecklistV1**
-> ReconciliationSyncDocumenttypechecklistV1Response reconciliationSyncDocumenttypechecklistV1(pkiReconciliationID, body)
-
-Synchronize Document type checklist
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectReconciliationApi()
-val pkiReconciliationID : kotlin.Int = 56 // kotlin.Int | 
-val body : kotlin.Any = Object // kotlin.Any | 
-try {
-    val result : ReconciliationSyncDocumenttypechecklistV1Response = apiInstance.reconciliationSyncDocumenttypechecklistV1(pkiReconciliationID, body)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectReconciliationApi#reconciliationSyncDocumenttypechecklistV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectReconciliationApi#reconciliationSyncDocumenttypechecklistV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pkiReconciliationID** | **kotlin.Int**|  | |
-| **body** | **kotlin.Any**|  | [optional] |
-
-### Return type
-
-[**ReconciliationSyncDocumenttypechecklistV1Response**](ReconciliationSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

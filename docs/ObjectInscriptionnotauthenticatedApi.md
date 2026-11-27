@@ -11,12 +11,10 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**inscriptionnotauthenticatedGetCommunicationListV1**](ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedGetCommunicationListV1) | **GET** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationList | Retrieve Communication list |
 | [**inscriptionnotauthenticatedGetCommunicationrecipientsV1**](ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedGetCommunicationrecipientsV1) | **GET** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationrecipients | Retrieve Inscriptionnotauthenticated&#39;s Communicationrecipient |
 | [**inscriptionnotauthenticatedGetCommunicationsendersV1**](ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedGetCommunicationsendersV1) | **GET** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationsenders | Retrieve Inscriptionnotauthenticated&#39;s Communicationsender |
-| [**inscriptionnotauthenticatedGetDocumenttypechecklistV1**](ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedGetDocumenttypechecklistV1) | **GET** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getDocumenttypechecklist | Retrieve Document type checklist |
 | [**inscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1**](ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1) | **GET** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getInscriptionnotauthenticatedconditions | Retrieve Inscriptionnotauthenticated conditions |
 | [**inscriptionnotauthenticatedGetListV1**](ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedGetListV1) | **GET** /1/object/inscriptionnotauthenticated/getList | Retrieve Inscriptionnotauthenticated list |
 | [**inscriptionnotauthenticatedGetObjectV2**](ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedGetObjectV2) | **GET** /2/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID} | Retrieve an existing Inscriptionnotauthenticated |
 | [**inscriptionnotauthenticatedImportIntoEDMV1**](ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedImportIntoEDMV1) | **POST** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/importIntoEDM | Import attachments into the Inscriptionnotauthenticated |
-| [**inscriptionnotauthenticatedSyncDocumenttypechecklistV1**](ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedSyncDocumenttypechecklistV1) | **POST** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/syncDocumenttypechecklist | Synchronize Document type checklist |
 
 
 <a id="inscriptionnotauthenticatedBatchDownloadV1"></a>
@@ -362,53 +360,6 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a id="inscriptionnotauthenticatedGetDocumenttypechecklistV1"></a>
-# **inscriptionnotauthenticatedGetDocumenttypechecklistV1**
-> InscriptionnotauthenticatedGetDocumenttypechecklistV1Response inscriptionnotauthenticatedGetDocumenttypechecklistV1(pkiInscriptionnotauthenticatedID)
-
-Retrieve Document type checklist
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectInscriptionnotauthenticatedApi()
-val pkiInscriptionnotauthenticatedID : kotlin.Int = 56 // kotlin.Int | 
-try {
-    val result : InscriptionnotauthenticatedGetDocumenttypechecklistV1Response = apiInstance.inscriptionnotauthenticatedGetDocumenttypechecklistV1(pkiInscriptionnotauthenticatedID)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectInscriptionnotauthenticatedApi#inscriptionnotauthenticatedGetDocumenttypechecklistV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectInscriptionnotauthenticatedApi#inscriptionnotauthenticatedGetDocumenttypechecklistV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pkiInscriptionnotauthenticatedID** | **kotlin.Int**|  | |
-
-### Return type
-
-[**InscriptionnotauthenticatedGetDocumenttypechecklistV1Response**](InscriptionnotauthenticatedGetDocumenttypechecklistV1Response.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
 <a id="inscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1"></a>
 # **inscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1**
 > InscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1Response inscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1(pkiInscriptionnotauthenticatedID)
@@ -602,55 +553,6 @@ try {
 ### Return type
 
 [**InscriptionnotauthenticatedImportIntoEDMV1Response**](InscriptionnotauthenticatedImportIntoEDMV1Response.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a id="inscriptionnotauthenticatedSyncDocumenttypechecklistV1"></a>
-# **inscriptionnotauthenticatedSyncDocumenttypechecklistV1**
-> InscriptionnotauthenticatedSyncDocumenttypechecklistV1Response inscriptionnotauthenticatedSyncDocumenttypechecklistV1(pkiInscriptionnotauthenticatedID, body)
-
-Synchronize Document type checklist
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectInscriptionnotauthenticatedApi()
-val pkiInscriptionnotauthenticatedID : kotlin.Int = 56 // kotlin.Int | 
-val body : kotlin.Any = Object // kotlin.Any | 
-try {
-    val result : InscriptionnotauthenticatedSyncDocumenttypechecklistV1Response = apiInstance.inscriptionnotauthenticatedSyncDocumenttypechecklistV1(pkiInscriptionnotauthenticatedID, body)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectInscriptionnotauthenticatedApi#inscriptionnotauthenticatedSyncDocumenttypechecklistV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectInscriptionnotauthenticatedApi#inscriptionnotauthenticatedSyncDocumenttypechecklistV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pkiInscriptionnotauthenticatedID** | **kotlin.Int**|  | |
-| **body** | **kotlin.Any**|  | [optional] |
-
-### Return type
-
-[**InscriptionnotauthenticatedSyncDocumenttypechecklistV1Response**](InscriptionnotauthenticatedSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

@@ -34,11 +34,9 @@ import eZmaxApi.models.DepositGetCommunicationCountV1Response
 import eZmaxApi.models.DepositGetCommunicationListV1Response
 import eZmaxApi.models.DepositGetCommunicationrecipientsV1Response
 import eZmaxApi.models.DepositGetCommunicationsendersV1Response
-import eZmaxApi.models.DepositGetDocumenttypechecklistV1Response
 import eZmaxApi.models.DepositGetListV1Response
 import eZmaxApi.models.DepositImportIntoEDMV1Request
 import eZmaxApi.models.DepositImportIntoEDMV1Response
-import eZmaxApi.models.DepositSyncDocumenttypechecklistV1Response
 import eZmaxApi.models.HeaderAcceptLanguage
 
 import com.squareup.moshi.Json
@@ -508,79 +506,6 @@ open class ObjectDepositApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
-     * GET /1/object/deposit/{pkiDepositID}/getDocumenttypechecklist
-     * Retrieve Document type checklist
-     * 
-     * @param pkiDepositID 
-     * @return DepositGetDocumenttypechecklistV1Response
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun depositGetDocumenttypechecklistV1(pkiDepositID: kotlin.Int) : DepositGetDocumenttypechecklistV1Response {
-        val localVarResponse = depositGetDocumenttypechecklistV1WithHttpInfo(pkiDepositID = pkiDepositID)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as DepositGetDocumenttypechecklistV1Response
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * GET /1/object/deposit/{pkiDepositID}/getDocumenttypechecklist
-     * Retrieve Document type checklist
-     * 
-     * @param pkiDepositID 
-     * @return ApiResponse<DepositGetDocumenttypechecklistV1Response?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    fun depositGetDocumenttypechecklistV1WithHttpInfo(pkiDepositID: kotlin.Int) : ApiResponse<DepositGetDocumenttypechecklistV1Response?> {
-        val localVariableConfig = depositGetDocumenttypechecklistV1RequestConfig(pkiDepositID = pkiDepositID)
-
-        return request<Unit, DepositGetDocumenttypechecklistV1Response>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation depositGetDocumenttypechecklistV1
-     *
-     * @param pkiDepositID 
-     * @return RequestConfig
-     */
-    fun depositGetDocumenttypechecklistV1RequestConfig(pkiDepositID: kotlin.Int) : RequestConfig<Unit> {
-        val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.GET,
-            path = "/1/object/deposit/{pkiDepositID}/getDocumenttypechecklist".replace("{"+"pkiDepositID"+"}", encodeURIComponent(pkiDepositID.toString())),
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            requiresAuthentication = true,
-            body = localVariableBody
-        )
-    }
-
-    /**
      * enum for parameter eOrderBy
      */
      enum class EOrderByDepositGetListV1(val value: kotlin.String) {
@@ -793,83 +718,6 @@ open class ObjectDepositApi(basePath: kotlin.String = defaultBasePath, client: C
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/deposit/{pkiDepositID}/importIntoEDM".replace("{"+"pkiDepositID"+"}", encodeURIComponent(pkiDepositID.toString())),
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            requiresAuthentication = true,
-            body = localVariableBody
-        )
-    }
-
-    /**
-     * POST /1/object/deposit/{pkiDepositID}/syncDocumenttypechecklist
-     * Synchronize Document type checklist
-     * 
-     * @param pkiDepositID 
-     * @param body  (optional)
-     * @return DepositSyncDocumenttypechecklistV1Response
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun depositSyncDocumenttypechecklistV1(pkiDepositID: kotlin.Int, body: kotlin.Any? = null) : DepositSyncDocumenttypechecklistV1Response {
-        val localVarResponse = depositSyncDocumenttypechecklistV1WithHttpInfo(pkiDepositID = pkiDepositID, body = body)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as DepositSyncDocumenttypechecklistV1Response
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * POST /1/object/deposit/{pkiDepositID}/syncDocumenttypechecklist
-     * Synchronize Document type checklist
-     * 
-     * @param pkiDepositID 
-     * @param body  (optional)
-     * @return ApiResponse<DepositSyncDocumenttypechecklistV1Response?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    fun depositSyncDocumenttypechecklistV1WithHttpInfo(pkiDepositID: kotlin.Int, body: kotlin.Any?) : ApiResponse<DepositSyncDocumenttypechecklistV1Response?> {
-        val localVariableConfig = depositSyncDocumenttypechecklistV1RequestConfig(pkiDepositID = pkiDepositID, body = body)
-
-        return request<kotlin.Any, DepositSyncDocumenttypechecklistV1Response>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation depositSyncDocumenttypechecklistV1
-     *
-     * @param pkiDepositID 
-     * @param body  (optional)
-     * @return RequestConfig
-     */
-    fun depositSyncDocumenttypechecklistV1RequestConfig(pkiDepositID: kotlin.Int, body: kotlin.Any?) : RequestConfig<kotlin.Any> {
-        val localVariableBody = body
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Content-Type"] = "application/json"
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.POST,
-            path = "/1/object/deposit/{pkiDepositID}/syncDocumenttypechecklist".replace("{"+"pkiDepositID"+"}", encodeURIComponent(pkiDepositID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

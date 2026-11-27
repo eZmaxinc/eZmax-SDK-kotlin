@@ -35,11 +35,9 @@ import eZmaxApi.models.RejectedoffertopurchaseGetCommunicationCountV1Response
 import eZmaxApi.models.RejectedoffertopurchaseGetCommunicationListV1Response
 import eZmaxApi.models.RejectedoffertopurchaseGetCommunicationrecipientsV1Response
 import eZmaxApi.models.RejectedoffertopurchaseGetCommunicationsendersV1Response
-import eZmaxApi.models.RejectedoffertopurchaseGetDocumenttypechecklistV1Response
 import eZmaxApi.models.RejectedoffertopurchaseGetListV1Response
 import eZmaxApi.models.RejectedoffertopurchaseImportIntoEDMV1Request
 import eZmaxApi.models.RejectedoffertopurchaseImportIntoEDMV1Response
-import eZmaxApi.models.RejectedoffertopurchaseSyncDocumenttypechecklistV1Response
 
 import com.squareup.moshi.Json
 
@@ -508,79 +506,6 @@ open class ObjectRejectedoffertopurchaseApi(basePath: kotlin.String = defaultBas
     }
 
     /**
-     * GET /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getDocumenttypechecklist
-     * Retrieve Document type checklist
-     * 
-     * @param pkiRejectedoffertopurchaseID 
-     * @return RejectedoffertopurchaseGetDocumenttypechecklistV1Response
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun rejectedoffertopurchaseGetDocumenttypechecklistV1(pkiRejectedoffertopurchaseID: kotlin.Int) : RejectedoffertopurchaseGetDocumenttypechecklistV1Response {
-        val localVarResponse = rejectedoffertopurchaseGetDocumenttypechecklistV1WithHttpInfo(pkiRejectedoffertopurchaseID = pkiRejectedoffertopurchaseID)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as RejectedoffertopurchaseGetDocumenttypechecklistV1Response
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * GET /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getDocumenttypechecklist
-     * Retrieve Document type checklist
-     * 
-     * @param pkiRejectedoffertopurchaseID 
-     * @return ApiResponse<RejectedoffertopurchaseGetDocumenttypechecklistV1Response?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    fun rejectedoffertopurchaseGetDocumenttypechecklistV1WithHttpInfo(pkiRejectedoffertopurchaseID: kotlin.Int) : ApiResponse<RejectedoffertopurchaseGetDocumenttypechecklistV1Response?> {
-        val localVariableConfig = rejectedoffertopurchaseGetDocumenttypechecklistV1RequestConfig(pkiRejectedoffertopurchaseID = pkiRejectedoffertopurchaseID)
-
-        return request<Unit, RejectedoffertopurchaseGetDocumenttypechecklistV1Response>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation rejectedoffertopurchaseGetDocumenttypechecklistV1
-     *
-     * @param pkiRejectedoffertopurchaseID 
-     * @return RequestConfig
-     */
-    fun rejectedoffertopurchaseGetDocumenttypechecklistV1RequestConfig(pkiRejectedoffertopurchaseID: kotlin.Int) : RequestConfig<Unit> {
-        val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.GET,
-            path = "/1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getDocumenttypechecklist".replace("{"+"pkiRejectedoffertopurchaseID"+"}", encodeURIComponent(pkiRejectedoffertopurchaseID.toString())),
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            requiresAuthentication = true,
-            body = localVariableBody
-        )
-    }
-
-    /**
      * enum for parameter eOrderBy
      */
      enum class EOrderByRejectedoffertopurchaseGetListV1(val value: kotlin.String) {
@@ -791,83 +716,6 @@ open class ObjectRejectedoffertopurchaseApi(basePath: kotlin.String = defaultBas
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/importIntoEDM".replace("{"+"pkiRejectedoffertopurchaseID"+"}", encodeURIComponent(pkiRejectedoffertopurchaseID.toString())),
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            requiresAuthentication = true,
-            body = localVariableBody
-        )
-    }
-
-    /**
-     * POST /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/syncDocumenttypechecklist
-     * Synchronize Document type checklist
-     * 
-     * @param pkiRejectedoffertopurchaseID 
-     * @param body  (optional)
-     * @return RejectedoffertopurchaseSyncDocumenttypechecklistV1Response
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun rejectedoffertopurchaseSyncDocumenttypechecklistV1(pkiRejectedoffertopurchaseID: kotlin.Int, body: kotlin.Any? = null) : RejectedoffertopurchaseSyncDocumenttypechecklistV1Response {
-        val localVarResponse = rejectedoffertopurchaseSyncDocumenttypechecklistV1WithHttpInfo(pkiRejectedoffertopurchaseID = pkiRejectedoffertopurchaseID, body = body)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as RejectedoffertopurchaseSyncDocumenttypechecklistV1Response
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * POST /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/syncDocumenttypechecklist
-     * Synchronize Document type checklist
-     * 
-     * @param pkiRejectedoffertopurchaseID 
-     * @param body  (optional)
-     * @return ApiResponse<RejectedoffertopurchaseSyncDocumenttypechecklistV1Response?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    fun rejectedoffertopurchaseSyncDocumenttypechecklistV1WithHttpInfo(pkiRejectedoffertopurchaseID: kotlin.Int, body: kotlin.Any?) : ApiResponse<RejectedoffertopurchaseSyncDocumenttypechecklistV1Response?> {
-        val localVariableConfig = rejectedoffertopurchaseSyncDocumenttypechecklistV1RequestConfig(pkiRejectedoffertopurchaseID = pkiRejectedoffertopurchaseID, body = body)
-
-        return request<kotlin.Any, RejectedoffertopurchaseSyncDocumenttypechecklistV1Response>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation rejectedoffertopurchaseSyncDocumenttypechecklistV1
-     *
-     * @param pkiRejectedoffertopurchaseID 
-     * @param body  (optional)
-     * @return RequestConfig
-     */
-    fun rejectedoffertopurchaseSyncDocumenttypechecklistV1RequestConfig(pkiRejectedoffertopurchaseID: kotlin.Int, body: kotlin.Any?) : RequestConfig<kotlin.Any> {
-        val localVariableBody = body
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Content-Type"] = "application/json"
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.POST,
-            path = "/1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/syncDocumenttypechecklist".replace("{"+"pkiRejectedoffertopurchaseID"+"}", encodeURIComponent(pkiRejectedoffertopurchaseID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

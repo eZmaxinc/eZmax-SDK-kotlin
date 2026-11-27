@@ -34,8 +34,6 @@ import eZmaxApi.models.DiscussionCreateObjectV1Request
 import eZmaxApi.models.DiscussionCreateObjectV1Response
 import eZmaxApi.models.DiscussionDeleteObjectV1Response
 import eZmaxApi.models.DiscussionGetObjectV2Response
-import eZmaxApi.models.DiscussionImproveMessageV1Request
-import eZmaxApi.models.DiscussionImproveMessageV1Response
 import eZmaxApi.models.DiscussionPatchObjectV1Request
 import eZmaxApi.models.DiscussionPatchObjectV1Response
 import eZmaxApi.models.DiscussionUpdateDiscussionreadstatusV1Request
@@ -352,80 +350,6 @@ open class ObjectDiscussionApi(basePath: kotlin.String = defaultBasePath, client
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/2/object/discussion/{pkiDiscussionID}".replace("{"+"pkiDiscussionID"+"}", encodeURIComponent(pkiDiscussionID.toString())),
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            requiresAuthentication = true,
-            body = localVariableBody
-        )
-    }
-
-    /**
-     * POST /1/object/discussion/improveMessage
-     * Improve a message using the AI
-     * The endpoint allows to improve a discussion message using the AI.
-     * @param discussionImproveMessageV1Request 
-     * @return DiscussionImproveMessageV1Response
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun discussionImproveMessageV1(discussionImproveMessageV1Request: DiscussionImproveMessageV1Request) : DiscussionImproveMessageV1Response {
-        val localVarResponse = discussionImproveMessageV1WithHttpInfo(discussionImproveMessageV1Request = discussionImproveMessageV1Request)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as DiscussionImproveMessageV1Response
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * POST /1/object/discussion/improveMessage
-     * Improve a message using the AI
-     * The endpoint allows to improve a discussion message using the AI.
-     * @param discussionImproveMessageV1Request 
-     * @return ApiResponse<DiscussionImproveMessageV1Response?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    fun discussionImproveMessageV1WithHttpInfo(discussionImproveMessageV1Request: DiscussionImproveMessageV1Request) : ApiResponse<DiscussionImproveMessageV1Response?> {
-        val localVariableConfig = discussionImproveMessageV1RequestConfig(discussionImproveMessageV1Request = discussionImproveMessageV1Request)
-
-        return request<DiscussionImproveMessageV1Request, DiscussionImproveMessageV1Response>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation discussionImproveMessageV1
-     *
-     * @param discussionImproveMessageV1Request 
-     * @return RequestConfig
-     */
-    fun discussionImproveMessageV1RequestConfig(discussionImproveMessageV1Request: DiscussionImproveMessageV1Request) : RequestConfig<DiscussionImproveMessageV1Request> {
-        val localVariableBody = discussionImproveMessageV1Request
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Content-Type"] = "application/json"
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.POST,
-            path = "/1/object/discussion/improveMessage",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

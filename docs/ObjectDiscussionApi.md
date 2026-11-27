@@ -8,7 +8,6 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**discussionCreateObjectV1**](ObjectDiscussionApi.md#discussionCreateObjectV1) | **POST** /1/object/discussion | Create a new Discussion |
 | [**discussionDeleteObjectV1**](ObjectDiscussionApi.md#discussionDeleteObjectV1) | **DELETE** /1/object/discussion/{pkiDiscussionID} | Delete an existing Discussion |
 | [**discussionGetObjectV2**](ObjectDiscussionApi.md#discussionGetObjectV2) | **GET** /2/object/discussion/{pkiDiscussionID} | Retrieve an existing Discussion |
-| [**discussionImproveMessageV1**](ObjectDiscussionApi.md#discussionImproveMessageV1) | **POST** /1/object/discussion/improveMessage | Improve a message using the AI |
 | [**discussionPatchObjectV1**](ObjectDiscussionApi.md#discussionPatchObjectV1) | **PATCH** /1/object/discussion/{pkiDiscussionID} | Patch an existing Discussion |
 | [**discussionUpdateDiscussionreadstatusV1**](ObjectDiscussionApi.md#discussionUpdateDiscussionreadstatusV1) | **POST** /1/object/discussion/{pkiDiscussionID}/updateDiscussionreadstatus | Update the read status of the discussion |
 
@@ -207,55 +206,6 @@ Configure Authorization:
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a id="discussionImproveMessageV1"></a>
-# **discussionImproveMessageV1**
-> DiscussionImproveMessageV1Response discussionImproveMessageV1(discussionImproveMessageV1Request)
-
-Improve a message using the AI
-
-The endpoint allows to improve a discussion message using the AI.
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectDiscussionApi()
-val discussionImproveMessageV1Request : DiscussionImproveMessageV1Request =  // DiscussionImproveMessageV1Request | 
-try {
-    val result : DiscussionImproveMessageV1Response = apiInstance.discussionImproveMessageV1(discussionImproveMessageV1Request)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectDiscussionApi#discussionImproveMessageV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectDiscussionApi#discussionImproveMessageV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **discussionImproveMessageV1Request** | [**DiscussionImproveMessageV1Request**](DiscussionImproveMessageV1Request.md)|  | |
-
-### Return type
-
-[**DiscussionImproveMessageV1Response**](DiscussionImproveMessageV1Response.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a id="discussionPatchObjectV1"></a>

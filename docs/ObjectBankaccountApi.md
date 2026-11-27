@@ -11,10 +11,8 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**bankaccountGetCommunicationListV1**](ObjectBankaccountApi.md#bankaccountGetCommunicationListV1) | **GET** /1/object/bankaccount/{pkiBankaccountID}/getCommunicationList | Retrieve Communication list |
 | [**bankaccountGetCommunicationrecipientsV1**](ObjectBankaccountApi.md#bankaccountGetCommunicationrecipientsV1) | **GET** /1/object/bankaccount/{pkiBankaccountID}/getCommunicationrecipients | Retrieve Communication recipients |
 | [**bankaccountGetCommunicationsendersV1**](ObjectBankaccountApi.md#bankaccountGetCommunicationsendersV1) | **GET** /1/object/bankaccount/{pkiBankaccountID}/getCommunicationsenders | Retrieve Communication senders |
-| [**bankaccountGetDocumenttypechecklistV1**](ObjectBankaccountApi.md#bankaccountGetDocumenttypechecklistV1) | **GET** /1/object/bankaccount/{pkiBankaccountID}/getDocumenttypechecklist | Retrieve Document type checklist |
 | [**bankaccountGetListV1**](ObjectBankaccountApi.md#bankaccountGetListV1) | **GET** /1/object/bankaccount/getList | Retrieve Bankaccount list |
 | [**bankaccountImportIntoEDMV1**](ObjectBankaccountApi.md#bankaccountImportIntoEDMV1) | **POST** /1/object/bankaccount/{pkiBankaccountID}/importIntoEDM | Import attachments into the Bankaccount |
-| [**bankaccountSyncDocumenttypechecklistV1**](ObjectBankaccountApi.md#bankaccountSyncDocumenttypechecklistV1) | **POST** /1/object/bankaccount/{pkiBankaccountID}/syncDocumenttypechecklist | Synchronize Document type checklist |
 
 
 <a id="bankaccountBatchDownloadV1"></a>
@@ -356,53 +354,6 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a id="bankaccountGetDocumenttypechecklistV1"></a>
-# **bankaccountGetDocumenttypechecklistV1**
-> BankaccountGetDocumenttypechecklistV1Response bankaccountGetDocumenttypechecklistV1(pkiBankaccountID)
-
-Retrieve Document type checklist
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectBankaccountApi()
-val pkiBankaccountID : kotlin.Int = 56 // kotlin.Int | 
-try {
-    val result : BankaccountGetDocumenttypechecklistV1Response = apiInstance.bankaccountGetDocumenttypechecklistV1(pkiBankaccountID)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectBankaccountApi#bankaccountGetDocumenttypechecklistV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectBankaccountApi#bankaccountGetDocumenttypechecklistV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pkiBankaccountID** | **kotlin.Int**|  | |
-
-### Return type
-
-[**BankaccountGetDocumenttypechecklistV1Response**](BankaccountGetDocumenttypechecklistV1Response.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
 <a id="bankaccountGetListV1"></a>
 # **bankaccountGetListV1**
 > BankaccountGetListV1Response bankaccountGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
@@ -496,55 +447,6 @@ try {
 ### Return type
 
 [**BankaccountImportIntoEDMV1Response**](BankaccountImportIntoEDMV1Response.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a id="bankaccountSyncDocumenttypechecklistV1"></a>
-# **bankaccountSyncDocumenttypechecklistV1**
-> BankaccountSyncDocumenttypechecklistV1Response bankaccountSyncDocumenttypechecklistV1(pkiBankaccountID, body)
-
-Synchronize Document type checklist
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectBankaccountApi()
-val pkiBankaccountID : kotlin.Int = 56 // kotlin.Int | 
-val body : kotlin.Any = Object // kotlin.Any | 
-try {
-    val result : BankaccountSyncDocumenttypechecklistV1Response = apiInstance.bankaccountSyncDocumenttypechecklistV1(pkiBankaccountID, body)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectBankaccountApi#bankaccountSyncDocumenttypechecklistV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectBankaccountApi#bankaccountSyncDocumenttypechecklistV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pkiBankaccountID** | **kotlin.Int**|  | |
-| **body** | **kotlin.Any**|  | [optional] |
-
-### Return type
-
-[**BankaccountSyncDocumenttypechecklistV1Response**](BankaccountSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

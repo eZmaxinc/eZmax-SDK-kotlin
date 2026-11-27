@@ -34,10 +34,8 @@ import eZmaxApi.models.ReconciliationGetCommunicationCountV1Response
 import eZmaxApi.models.ReconciliationGetCommunicationListV1Response
 import eZmaxApi.models.ReconciliationGetCommunicationrecipientsV1Response
 import eZmaxApi.models.ReconciliationGetCommunicationsendersV1Response
-import eZmaxApi.models.ReconciliationGetDocumenttypechecklistV1Response
 import eZmaxApi.models.ReconciliationImportIntoEDMV1Request
 import eZmaxApi.models.ReconciliationImportIntoEDMV1Response
-import eZmaxApi.models.ReconciliationSyncDocumenttypechecklistV1Response
 
 import com.squareup.moshi.Json
 
@@ -506,79 +504,6 @@ open class ObjectReconciliationApi(basePath: kotlin.String = defaultBasePath, cl
     }
 
     /**
-     * GET /1/object/reconciliation/{pkiReconciliationID}/getDocumenttypechecklist
-     * Retrieve Document type checklist
-     * 
-     * @param pkiReconciliationID 
-     * @return ReconciliationGetDocumenttypechecklistV1Response
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun reconciliationGetDocumenttypechecklistV1(pkiReconciliationID: kotlin.Int) : ReconciliationGetDocumenttypechecklistV1Response {
-        val localVarResponse = reconciliationGetDocumenttypechecklistV1WithHttpInfo(pkiReconciliationID = pkiReconciliationID)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as ReconciliationGetDocumenttypechecklistV1Response
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * GET /1/object/reconciliation/{pkiReconciliationID}/getDocumenttypechecklist
-     * Retrieve Document type checklist
-     * 
-     * @param pkiReconciliationID 
-     * @return ApiResponse<ReconciliationGetDocumenttypechecklistV1Response?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    fun reconciliationGetDocumenttypechecklistV1WithHttpInfo(pkiReconciliationID: kotlin.Int) : ApiResponse<ReconciliationGetDocumenttypechecklistV1Response?> {
-        val localVariableConfig = reconciliationGetDocumenttypechecklistV1RequestConfig(pkiReconciliationID = pkiReconciliationID)
-
-        return request<Unit, ReconciliationGetDocumenttypechecklistV1Response>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation reconciliationGetDocumenttypechecklistV1
-     *
-     * @param pkiReconciliationID 
-     * @return RequestConfig
-     */
-    fun reconciliationGetDocumenttypechecklistV1RequestConfig(pkiReconciliationID: kotlin.Int) : RequestConfig<Unit> {
-        val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.GET,
-            path = "/1/object/reconciliation/{pkiReconciliationID}/getDocumenttypechecklist".replace("{"+"pkiReconciliationID"+"}", encodeURIComponent(pkiReconciliationID.toString())),
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            requiresAuthentication = true,
-            body = localVariableBody
-        )
-    }
-
-    /**
      * POST /1/object/reconciliation/{pkiReconciliationID}/importIntoEDM
      * Import attachments into the Reconciliation
      * 
@@ -648,83 +573,6 @@ open class ObjectReconciliationApi(basePath: kotlin.String = defaultBasePath, cl
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/reconciliation/{pkiReconciliationID}/importIntoEDM".replace("{"+"pkiReconciliationID"+"}", encodeURIComponent(pkiReconciliationID.toString())),
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            requiresAuthentication = true,
-            body = localVariableBody
-        )
-    }
-
-    /**
-     * POST /1/object/reconciliation/{pkiReconciliationID}/syncDocumenttypechecklist
-     * Synchronize Document type checklist
-     * 
-     * @param pkiReconciliationID 
-     * @param body  (optional)
-     * @return ReconciliationSyncDocumenttypechecklistV1Response
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun reconciliationSyncDocumenttypechecklistV1(pkiReconciliationID: kotlin.Int, body: kotlin.Any? = null) : ReconciliationSyncDocumenttypechecklistV1Response {
-        val localVarResponse = reconciliationSyncDocumenttypechecklistV1WithHttpInfo(pkiReconciliationID = pkiReconciliationID, body = body)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as ReconciliationSyncDocumenttypechecklistV1Response
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * POST /1/object/reconciliation/{pkiReconciliationID}/syncDocumenttypechecklist
-     * Synchronize Document type checklist
-     * 
-     * @param pkiReconciliationID 
-     * @param body  (optional)
-     * @return ApiResponse<ReconciliationSyncDocumenttypechecklistV1Response?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    fun reconciliationSyncDocumenttypechecklistV1WithHttpInfo(pkiReconciliationID: kotlin.Int, body: kotlin.Any?) : ApiResponse<ReconciliationSyncDocumenttypechecklistV1Response?> {
-        val localVariableConfig = reconciliationSyncDocumenttypechecklistV1RequestConfig(pkiReconciliationID = pkiReconciliationID, body = body)
-
-        return request<kotlin.Any, ReconciliationSyncDocumenttypechecklistV1Response>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation reconciliationSyncDocumenttypechecklistV1
-     *
-     * @param pkiReconciliationID 
-     * @param body  (optional)
-     * @return RequestConfig
-     */
-    fun reconciliationSyncDocumenttypechecklistV1RequestConfig(pkiReconciliationID: kotlin.Int, body: kotlin.Any?) : RequestConfig<kotlin.Any> {
-        val localVariableBody = body
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Content-Type"] = "application/json"
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.POST,
-            path = "/1/object/reconciliation/{pkiReconciliationID}/syncDocumenttypechecklist".replace("{"+"pkiReconciliationID"+"}", encodeURIComponent(pkiReconciliationID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

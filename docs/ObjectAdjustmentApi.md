@@ -10,10 +10,8 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**adjustmentGetCommunicationListV1**](ObjectAdjustmentApi.md#adjustmentGetCommunicationListV1) | **GET** /1/object/adjustment/{pkiAdjustmentID}/getCommunicationList | Retrieve Communication list |
 | [**adjustmentGetCommunicationrecipientsV1**](ObjectAdjustmentApi.md#adjustmentGetCommunicationrecipientsV1) | **GET** /1/object/adjustment/{pkiAdjustmentID}/getCommunicationrecipients | Retrieve Communication recipients |
 | [**adjustmentGetCommunicationsendersV1**](ObjectAdjustmentApi.md#adjustmentGetCommunicationsendersV1) | **GET** /1/object/adjustment/{pkiAdjustmentID}/getCommunicationsenders | Retrieve Communication senders |
-| [**adjustmentGetDocumenttypechecklistV1**](ObjectAdjustmentApi.md#adjustmentGetDocumenttypechecklistV1) | **GET** /1/object/adjustment/{pkiAdjustmentID}/getDocumenttypechecklist | Retrieve Document type checklist |
 | [**adjustmentGetListV1**](ObjectAdjustmentApi.md#adjustmentGetListV1) | **GET** /1/object/adjustment/getList | Retrieve Adjustment list |
 | [**adjustmentImportIntoEDMV1**](ObjectAdjustmentApi.md#adjustmentImportIntoEDMV1) | **POST** /1/object/adjustment/{pkiAdjustmentID}/importIntoEDM | Import attachments into the Adjustment |
-| [**adjustmentSyncDocumenttypechecklistV1**](ObjectAdjustmentApi.md#adjustmentSyncDocumenttypechecklistV1) | **POST** /1/object/adjustment/{pkiAdjustmentID}/syncDocumenttypechecklist | Synchronize Document type checklist |
 
 
 <a id="adjustmentBatchDownloadV1"></a>
@@ -300,53 +298,6 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a id="adjustmentGetDocumenttypechecklistV1"></a>
-# **adjustmentGetDocumenttypechecklistV1**
-> AdjustmentGetDocumenttypechecklistV1Response adjustmentGetDocumenttypechecklistV1(pkiAdjustmentID)
-
-Retrieve Document type checklist
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectAdjustmentApi()
-val pkiAdjustmentID : kotlin.Int = 56 // kotlin.Int | 
-try {
-    val result : AdjustmentGetDocumenttypechecklistV1Response = apiInstance.adjustmentGetDocumenttypechecklistV1(pkiAdjustmentID)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectAdjustmentApi#adjustmentGetDocumenttypechecklistV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectAdjustmentApi#adjustmentGetDocumenttypechecklistV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pkiAdjustmentID** | **kotlin.Int**|  | |
-
-### Return type
-
-[**AdjustmentGetDocumenttypechecklistV1Response**](AdjustmentGetDocumenttypechecklistV1Response.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
 <a id="adjustmentGetListV1"></a>
 # **adjustmentGetListV1**
 > AdjustmentGetListV1Response adjustmentGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
@@ -440,55 +391,6 @@ try {
 ### Return type
 
 [**AdjustmentImportIntoEDMV1Response**](AdjustmentImportIntoEDMV1Response.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a id="adjustmentSyncDocumenttypechecklistV1"></a>
-# **adjustmentSyncDocumenttypechecklistV1**
-> AdjustmentSyncDocumenttypechecklistV1Response adjustmentSyncDocumenttypechecklistV1(pkiAdjustmentID, body)
-
-Synchronize Document type checklist
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectAdjustmentApi()
-val pkiAdjustmentID : kotlin.Int = 56 // kotlin.Int | 
-val body : kotlin.Any = Object // kotlin.Any | 
-try {
-    val result : AdjustmentSyncDocumenttypechecklistV1Response = apiInstance.adjustmentSyncDocumenttypechecklistV1(pkiAdjustmentID, body)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectAdjustmentApi#adjustmentSyncDocumenttypechecklistV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectAdjustmentApi#adjustmentSyncDocumenttypechecklistV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pkiAdjustmentID** | **kotlin.Int**|  | |
-| **body** | **kotlin.Any**|  | [optional] |
-
-### Return type
-
-[**AdjustmentSyncDocumenttypechecklistV1Response**](AdjustmentSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

@@ -33,10 +33,8 @@ import eZmaxApi.models.CommissionadvanceGetCommunicationCountV1Response
 import eZmaxApi.models.CommissionadvanceGetCommunicationListV1Response
 import eZmaxApi.models.CommissionadvanceGetCommunicationrecipientsV1Response
 import eZmaxApi.models.CommissionadvanceGetCommunicationsendersV1Response
-import eZmaxApi.models.CommissionadvanceGetDocumenttypechecklistV1Response
 import eZmaxApi.models.CommissionadvanceImportIntoEDMV1Request
 import eZmaxApi.models.CommissionadvanceImportIntoEDMV1Response
-import eZmaxApi.models.CommissionadvanceSyncDocumenttypechecklistV1Response
 import eZmaxApi.models.CommonResponseError
 
 import com.squareup.moshi.Json
@@ -506,79 +504,6 @@ open class ObjectCommissionadvanceApi(basePath: kotlin.String = defaultBasePath,
     }
 
     /**
-     * GET /1/object/commissionadvance/{pkiCommissionadvanceID}/getDocumenttypechecklist
-     * Retrieve Document type checklist
-     * 
-     * @param pkiCommissionadvanceID 
-     * @return CommissionadvanceGetDocumenttypechecklistV1Response
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun commissionadvanceGetDocumenttypechecklistV1(pkiCommissionadvanceID: kotlin.Int) : CommissionadvanceGetDocumenttypechecklistV1Response {
-        val localVarResponse = commissionadvanceGetDocumenttypechecklistV1WithHttpInfo(pkiCommissionadvanceID = pkiCommissionadvanceID)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommissionadvanceGetDocumenttypechecklistV1Response
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * GET /1/object/commissionadvance/{pkiCommissionadvanceID}/getDocumenttypechecklist
-     * Retrieve Document type checklist
-     * 
-     * @param pkiCommissionadvanceID 
-     * @return ApiResponse<CommissionadvanceGetDocumenttypechecklistV1Response?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    fun commissionadvanceGetDocumenttypechecklistV1WithHttpInfo(pkiCommissionadvanceID: kotlin.Int) : ApiResponse<CommissionadvanceGetDocumenttypechecklistV1Response?> {
-        val localVariableConfig = commissionadvanceGetDocumenttypechecklistV1RequestConfig(pkiCommissionadvanceID = pkiCommissionadvanceID)
-
-        return request<Unit, CommissionadvanceGetDocumenttypechecklistV1Response>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation commissionadvanceGetDocumenttypechecklistV1
-     *
-     * @param pkiCommissionadvanceID 
-     * @return RequestConfig
-     */
-    fun commissionadvanceGetDocumenttypechecklistV1RequestConfig(pkiCommissionadvanceID: kotlin.Int) : RequestConfig<Unit> {
-        val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.GET,
-            path = "/1/object/commissionadvance/{pkiCommissionadvanceID}/getDocumenttypechecklist".replace("{"+"pkiCommissionadvanceID"+"}", encodeURIComponent(pkiCommissionadvanceID.toString())),
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            requiresAuthentication = true,
-            body = localVariableBody
-        )
-    }
-
-    /**
      * POST /1/object/commissionadvance/{pkiCommissionadvanceID}/importIntoEDM
      * Import attachments into the Commissionadvance
      * 
@@ -648,83 +573,6 @@ open class ObjectCommissionadvanceApi(basePath: kotlin.String = defaultBasePath,
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/commissionadvance/{pkiCommissionadvanceID}/importIntoEDM".replace("{"+"pkiCommissionadvanceID"+"}", encodeURIComponent(pkiCommissionadvanceID.toString())),
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            requiresAuthentication = true,
-            body = localVariableBody
-        )
-    }
-
-    /**
-     * POST /1/object/commissionadvance/{pkiCommissionadvanceID}/syncDocumenttypechecklist
-     * Synchronize Document type checklist
-     * 
-     * @param pkiCommissionadvanceID 
-     * @param body  (optional)
-     * @return CommissionadvanceSyncDocumenttypechecklistV1Response
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun commissionadvanceSyncDocumenttypechecklistV1(pkiCommissionadvanceID: kotlin.Int, body: kotlin.Any? = null) : CommissionadvanceSyncDocumenttypechecklistV1Response {
-        val localVarResponse = commissionadvanceSyncDocumenttypechecklistV1WithHttpInfo(pkiCommissionadvanceID = pkiCommissionadvanceID, body = body)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as CommissionadvanceSyncDocumenttypechecklistV1Response
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * POST /1/object/commissionadvance/{pkiCommissionadvanceID}/syncDocumenttypechecklist
-     * Synchronize Document type checklist
-     * 
-     * @param pkiCommissionadvanceID 
-     * @param body  (optional)
-     * @return ApiResponse<CommissionadvanceSyncDocumenttypechecklistV1Response?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    fun commissionadvanceSyncDocumenttypechecklistV1WithHttpInfo(pkiCommissionadvanceID: kotlin.Int, body: kotlin.Any?) : ApiResponse<CommissionadvanceSyncDocumenttypechecklistV1Response?> {
-        val localVariableConfig = commissionadvanceSyncDocumenttypechecklistV1RequestConfig(pkiCommissionadvanceID = pkiCommissionadvanceID, body = body)
-
-        return request<kotlin.Any, CommissionadvanceSyncDocumenttypechecklistV1Response>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation commissionadvanceSyncDocumenttypechecklistV1
-     *
-     * @param pkiCommissionadvanceID 
-     * @param body  (optional)
-     * @return RequestConfig
-     */
-    fun commissionadvanceSyncDocumenttypechecklistV1RequestConfig(pkiCommissionadvanceID: kotlin.Int, body: kotlin.Any?) : RequestConfig<kotlin.Any> {
-        val localVariableBody = body
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Content-Type"] = "application/json"
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.POST,
-            path = "/1/object/commissionadvance/{pkiCommissionadvanceID}/syncDocumenttypechecklist".replace("{"+"pkiCommissionadvanceID"+"}", encodeURIComponent(pkiCommissionadvanceID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

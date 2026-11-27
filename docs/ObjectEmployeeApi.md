@@ -10,10 +10,8 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**employeeGetCommunicationListV1**](ObjectEmployeeApi.md#employeeGetCommunicationListV1) | **GET** /1/object/employee/{pkiEmployeeID}/getCommunicationList | Retrieve Communication list |
 | [**employeeGetCommunicationrecipientsV1**](ObjectEmployeeApi.md#employeeGetCommunicationrecipientsV1) | **GET** /1/object/employee/{pkiEmployeeID}/getCommunicationrecipients | Retrieve Communication recipients |
 | [**employeeGetCommunicationsendersV1**](ObjectEmployeeApi.md#employeeGetCommunicationsendersV1) | **GET** /1/object/employee/{pkiEmployeeID}/getCommunicationsenders | Retrieve Communication senders |
-| [**employeeGetDocumenttypechecklistV1**](ObjectEmployeeApi.md#employeeGetDocumenttypechecklistV1) | **GET** /1/object/employee/{pkiEmployeeID}/getDocumenttypechecklist | Retrieve Document type checklist |
 | [**employeeGetListV1**](ObjectEmployeeApi.md#employeeGetListV1) | **GET** /1/object/employee/getList | Retrieve Employee list |
 | [**employeeImportIntoEDMV1**](ObjectEmployeeApi.md#employeeImportIntoEDMV1) | **POST** /1/object/employee/{pkiEmployeeID}/importIntoEDM | Import attachments into the Employee |
-| [**employeeSyncDocumenttypechecklistV1**](ObjectEmployeeApi.md#employeeSyncDocumenttypechecklistV1) | **POST** /1/object/employee/{pkiEmployeeID}/syncDocumenttypechecklist | Synchronize Document type checklist |
 
 
 <a id="employeeBatchDownloadV1"></a>
@@ -300,53 +298,6 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a id="employeeGetDocumenttypechecklistV1"></a>
-# **employeeGetDocumenttypechecklistV1**
-> EmployeeGetDocumenttypechecklistV1Response employeeGetDocumenttypechecklistV1(pkiEmployeeID)
-
-Retrieve Document type checklist
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectEmployeeApi()
-val pkiEmployeeID : kotlin.Int = 56 // kotlin.Int | 
-try {
-    val result : EmployeeGetDocumenttypechecklistV1Response = apiInstance.employeeGetDocumenttypechecklistV1(pkiEmployeeID)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectEmployeeApi#employeeGetDocumenttypechecklistV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectEmployeeApi#employeeGetDocumenttypechecklistV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pkiEmployeeID** | **kotlin.Int**|  | |
-
-### Return type
-
-[**EmployeeGetDocumenttypechecklistV1Response**](EmployeeGetDocumenttypechecklistV1Response.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
 <a id="employeeGetListV1"></a>
 # **employeeGetListV1**
 > EmployeeGetListV1Response employeeGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
@@ -442,55 +393,6 @@ try {
 ### Return type
 
 [**EmployeeImportIntoEDMV1Response**](EmployeeImportIntoEDMV1Response.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a id="employeeSyncDocumenttypechecklistV1"></a>
-# **employeeSyncDocumenttypechecklistV1**
-> EmployeeSyncDocumenttypechecklistV1Response employeeSyncDocumenttypechecklistV1(pkiEmployeeID, body)
-
-Synchronize Document type checklist
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectEmployeeApi()
-val pkiEmployeeID : kotlin.Int = 56 // kotlin.Int | 
-val body : kotlin.Any = Object // kotlin.Any | 
-try {
-    val result : EmployeeSyncDocumenttypechecklistV1Response = apiInstance.employeeSyncDocumenttypechecklistV1(pkiEmployeeID, body)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectEmployeeApi#employeeSyncDocumenttypechecklistV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectEmployeeApi#employeeSyncDocumenttypechecklistV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pkiEmployeeID** | **kotlin.Int**|  | |
-| **body** | **kotlin.Any**|  | [optional] |
-
-### Return type
-
-[**EmployeeSyncDocumenttypechecklistV1Response**](EmployeeSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

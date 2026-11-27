@@ -34,10 +34,8 @@ import eZmaxApi.models.PaymentpreparationGetCommunicationCountV1Response
 import eZmaxApi.models.PaymentpreparationGetCommunicationListV1Response
 import eZmaxApi.models.PaymentpreparationGetCommunicationrecipientsV1Response
 import eZmaxApi.models.PaymentpreparationGetCommunicationsendersV1Response
-import eZmaxApi.models.PaymentpreparationGetDocumenttypechecklistV1Response
 import eZmaxApi.models.PaymentpreparationImportIntoEDMV1Request
 import eZmaxApi.models.PaymentpreparationImportIntoEDMV1Response
-import eZmaxApi.models.PaymentpreparationSyncDocumenttypechecklistV1Response
 
 import com.squareup.moshi.Json
 
@@ -506,79 +504,6 @@ open class ObjectPaymentpreparationApi(basePath: kotlin.String = defaultBasePath
     }
 
     /**
-     * GET /1/object/paymentpreparation/{pkiPaymentpreparationID}/getDocumenttypechecklist
-     * Retrieve Document type checklist
-     * 
-     * @param pkiPaymentpreparationID 
-     * @return PaymentpreparationGetDocumenttypechecklistV1Response
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun paymentpreparationGetDocumenttypechecklistV1(pkiPaymentpreparationID: kotlin.Int) : PaymentpreparationGetDocumenttypechecklistV1Response {
-        val localVarResponse = paymentpreparationGetDocumenttypechecklistV1WithHttpInfo(pkiPaymentpreparationID = pkiPaymentpreparationID)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as PaymentpreparationGetDocumenttypechecklistV1Response
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * GET /1/object/paymentpreparation/{pkiPaymentpreparationID}/getDocumenttypechecklist
-     * Retrieve Document type checklist
-     * 
-     * @param pkiPaymentpreparationID 
-     * @return ApiResponse<PaymentpreparationGetDocumenttypechecklistV1Response?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    fun paymentpreparationGetDocumenttypechecklistV1WithHttpInfo(pkiPaymentpreparationID: kotlin.Int) : ApiResponse<PaymentpreparationGetDocumenttypechecklistV1Response?> {
-        val localVariableConfig = paymentpreparationGetDocumenttypechecklistV1RequestConfig(pkiPaymentpreparationID = pkiPaymentpreparationID)
-
-        return request<Unit, PaymentpreparationGetDocumenttypechecklistV1Response>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation paymentpreparationGetDocumenttypechecklistV1
-     *
-     * @param pkiPaymentpreparationID 
-     * @return RequestConfig
-     */
-    fun paymentpreparationGetDocumenttypechecklistV1RequestConfig(pkiPaymentpreparationID: kotlin.Int) : RequestConfig<Unit> {
-        val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.GET,
-            path = "/1/object/paymentpreparation/{pkiPaymentpreparationID}/getDocumenttypechecklist".replace("{"+"pkiPaymentpreparationID"+"}", encodeURIComponent(pkiPaymentpreparationID.toString())),
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            requiresAuthentication = true,
-            body = localVariableBody
-        )
-    }
-
-    /**
      * POST /1/object/paymentpreparation/{pkiPaymentpreparationID}/importIntoEDM
      * Import attachments into the Paymentpreparation
      * 
@@ -648,83 +573,6 @@ open class ObjectPaymentpreparationApi(basePath: kotlin.String = defaultBasePath
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/paymentpreparation/{pkiPaymentpreparationID}/importIntoEDM".replace("{"+"pkiPaymentpreparationID"+"}", encodeURIComponent(pkiPaymentpreparationID.toString())),
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            requiresAuthentication = true,
-            body = localVariableBody
-        )
-    }
-
-    /**
-     * POST /1/object/paymentpreparation/{pkiPaymentpreparationID}/syncDocumenttypechecklist
-     * Synchronize Document type checklist
-     * 
-     * @param pkiPaymentpreparationID 
-     * @param body  (optional)
-     * @return PaymentpreparationSyncDocumenttypechecklistV1Response
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun paymentpreparationSyncDocumenttypechecklistV1(pkiPaymentpreparationID: kotlin.Int, body: kotlin.Any? = null) : PaymentpreparationSyncDocumenttypechecklistV1Response {
-        val localVarResponse = paymentpreparationSyncDocumenttypechecklistV1WithHttpInfo(pkiPaymentpreparationID = pkiPaymentpreparationID, body = body)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as PaymentpreparationSyncDocumenttypechecklistV1Response
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * POST /1/object/paymentpreparation/{pkiPaymentpreparationID}/syncDocumenttypechecklist
-     * Synchronize Document type checklist
-     * 
-     * @param pkiPaymentpreparationID 
-     * @param body  (optional)
-     * @return ApiResponse<PaymentpreparationSyncDocumenttypechecklistV1Response?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    fun paymentpreparationSyncDocumenttypechecklistV1WithHttpInfo(pkiPaymentpreparationID: kotlin.Int, body: kotlin.Any?) : ApiResponse<PaymentpreparationSyncDocumenttypechecklistV1Response?> {
-        val localVariableConfig = paymentpreparationSyncDocumenttypechecklistV1RequestConfig(pkiPaymentpreparationID = pkiPaymentpreparationID, body = body)
-
-        return request<kotlin.Any, PaymentpreparationSyncDocumenttypechecklistV1Response>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation paymentpreparationSyncDocumenttypechecklistV1
-     *
-     * @param pkiPaymentpreparationID 
-     * @param body  (optional)
-     * @return RequestConfig
-     */
-    fun paymentpreparationSyncDocumenttypechecklistV1RequestConfig(pkiPaymentpreparationID: kotlin.Int, body: kotlin.Any?) : RequestConfig<kotlin.Any> {
-        val localVariableBody = body
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Content-Type"] = "application/json"
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.POST,
-            path = "/1/object/paymentpreparation/{pkiPaymentpreparationID}/syncDocumenttypechecklist".replace("{"+"pkiPaymentpreparationID"+"}", encodeURIComponent(pkiPaymentpreparationID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

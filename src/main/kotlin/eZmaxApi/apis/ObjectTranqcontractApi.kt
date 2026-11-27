@@ -32,10 +32,8 @@ import eZmaxApi.models.TranqcontractGetCommunicationCountV1Response
 import eZmaxApi.models.TranqcontractGetCommunicationListV1Response
 import eZmaxApi.models.TranqcontractGetCommunicationrecipientsV1Response
 import eZmaxApi.models.TranqcontractGetCommunicationsendersV1Response
-import eZmaxApi.models.TranqcontractGetDocumenttypechecklistV1Response
 import eZmaxApi.models.TranqcontractImportIntoEDMV1Request
 import eZmaxApi.models.TranqcontractImportIntoEDMV1Response
-import eZmaxApi.models.TranqcontractSyncDocumenttypechecklistV1Response
 
 import com.squareup.moshi.Json
 
@@ -354,79 +352,6 @@ open class ObjectTranqcontractApi(basePath: kotlin.String = defaultBasePath, cli
     }
 
     /**
-     * GET /1/object/tranqcontract/{pkiTranqcontractID}/getDocumenttypechecklist
-     * Retrieve Document type checklist
-     * 
-     * @param pkiTranqcontractID 
-     * @return TranqcontractGetDocumenttypechecklistV1Response
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun tranqcontractGetDocumenttypechecklistV1(pkiTranqcontractID: kotlin.Int) : TranqcontractGetDocumenttypechecklistV1Response {
-        val localVarResponse = tranqcontractGetDocumenttypechecklistV1WithHttpInfo(pkiTranqcontractID = pkiTranqcontractID)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as TranqcontractGetDocumenttypechecklistV1Response
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * GET /1/object/tranqcontract/{pkiTranqcontractID}/getDocumenttypechecklist
-     * Retrieve Document type checklist
-     * 
-     * @param pkiTranqcontractID 
-     * @return ApiResponse<TranqcontractGetDocumenttypechecklistV1Response?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    fun tranqcontractGetDocumenttypechecklistV1WithHttpInfo(pkiTranqcontractID: kotlin.Int) : ApiResponse<TranqcontractGetDocumenttypechecklistV1Response?> {
-        val localVariableConfig = tranqcontractGetDocumenttypechecklistV1RequestConfig(pkiTranqcontractID = pkiTranqcontractID)
-
-        return request<Unit, TranqcontractGetDocumenttypechecklistV1Response>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation tranqcontractGetDocumenttypechecklistV1
-     *
-     * @param pkiTranqcontractID 
-     * @return RequestConfig
-     */
-    fun tranqcontractGetDocumenttypechecklistV1RequestConfig(pkiTranqcontractID: kotlin.Int) : RequestConfig<Unit> {
-        val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.GET,
-            path = "/1/object/tranqcontract/{pkiTranqcontractID}/getDocumenttypechecklist".replace("{"+"pkiTranqcontractID"+"}", encodeURIComponent(pkiTranqcontractID.toString())),
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            requiresAuthentication = true,
-            body = localVariableBody
-        )
-    }
-
-    /**
      * POST /1/object/tranqcontract/{pkiTranqcontractID}/importIntoEDM
      * Import attachments into the Tranqcontract
      * 
@@ -496,83 +421,6 @@ open class ObjectTranqcontractApi(basePath: kotlin.String = defaultBasePath, cli
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/tranqcontract/{pkiTranqcontractID}/importIntoEDM".replace("{"+"pkiTranqcontractID"+"}", encodeURIComponent(pkiTranqcontractID.toString())),
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            requiresAuthentication = true,
-            body = localVariableBody
-        )
-    }
-
-    /**
-     * POST /1/object/tranqcontract/{pkiTranqcontractID}/syncDocumenttypechecklist
-     * Synchronize Document type checklist
-     * 
-     * @param pkiTranqcontractID 
-     * @param body  (optional)
-     * @return TranqcontractSyncDocumenttypechecklistV1Response
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun tranqcontractSyncDocumenttypechecklistV1(pkiTranqcontractID: kotlin.Int, body: kotlin.Any? = null) : TranqcontractSyncDocumenttypechecklistV1Response {
-        val localVarResponse = tranqcontractSyncDocumenttypechecklistV1WithHttpInfo(pkiTranqcontractID = pkiTranqcontractID, body = body)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as TranqcontractSyncDocumenttypechecklistV1Response
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * POST /1/object/tranqcontract/{pkiTranqcontractID}/syncDocumenttypechecklist
-     * Synchronize Document type checklist
-     * 
-     * @param pkiTranqcontractID 
-     * @param body  (optional)
-     * @return ApiResponse<TranqcontractSyncDocumenttypechecklistV1Response?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    fun tranqcontractSyncDocumenttypechecklistV1WithHttpInfo(pkiTranqcontractID: kotlin.Int, body: kotlin.Any?) : ApiResponse<TranqcontractSyncDocumenttypechecklistV1Response?> {
-        val localVariableConfig = tranqcontractSyncDocumenttypechecklistV1RequestConfig(pkiTranqcontractID = pkiTranqcontractID, body = body)
-
-        return request<kotlin.Any, TranqcontractSyncDocumenttypechecklistV1Response>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation tranqcontractSyncDocumenttypechecklistV1
-     *
-     * @param pkiTranqcontractID 
-     * @param body  (optional)
-     * @return RequestConfig
-     */
-    fun tranqcontractSyncDocumenttypechecklistV1RequestConfig(pkiTranqcontractID: kotlin.Int, body: kotlin.Any?) : RequestConfig<kotlin.Any> {
-        val localVariableBody = body
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Content-Type"] = "application/json"
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.POST,
-            path = "/1/object/tranqcontract/{pkiTranqcontractID}/syncDocumenttypechecklist".replace("{"+"pkiTranqcontractID"+"}", encodeURIComponent(pkiTranqcontractID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

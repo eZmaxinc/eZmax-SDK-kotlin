@@ -10,10 +10,8 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**rejectedoffertopurchaseGetCommunicationListV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseGetCommunicationListV1) | **GET** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationList | Retrieve Communication list |
 | [**rejectedoffertopurchaseGetCommunicationrecipientsV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseGetCommunicationrecipientsV1) | **GET** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationrecipients | Retrieve Rejectedoffertopurchase&#39;s Communicationrecipient |
 | [**rejectedoffertopurchaseGetCommunicationsendersV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseGetCommunicationsendersV1) | **GET** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationsenders | Retrieve Rejectedoffertopurchase&#39;s Communicationsender |
-| [**rejectedoffertopurchaseGetDocumenttypechecklistV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseGetDocumenttypechecklistV1) | **GET** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getDocumenttypechecklist | Retrieve Document type checklist |
 | [**rejectedoffertopurchaseGetListV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseGetListV1) | **GET** /1/object/rejectedoffertopurchase/getList | Retrieve Rejectedoffertopurchase list |
 | [**rejectedoffertopurchaseImportIntoEDMV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseImportIntoEDMV1) | **POST** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/importIntoEDM | Import attachments into the Rejectedoffertopurchase |
-| [**rejectedoffertopurchaseSyncDocumenttypechecklistV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseSyncDocumenttypechecklistV1) | **POST** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/syncDocumenttypechecklist | Synchronize Document type checklist |
 
 
 <a id="rejectedoffertopurchaseBatchDownloadV1"></a>
@@ -308,53 +306,6 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a id="rejectedoffertopurchaseGetDocumenttypechecklistV1"></a>
-# **rejectedoffertopurchaseGetDocumenttypechecklistV1**
-> RejectedoffertopurchaseGetDocumenttypechecklistV1Response rejectedoffertopurchaseGetDocumenttypechecklistV1(pkiRejectedoffertopurchaseID)
-
-Retrieve Document type checklist
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectRejectedoffertopurchaseApi()
-val pkiRejectedoffertopurchaseID : kotlin.Int = 56 // kotlin.Int | 
-try {
-    val result : RejectedoffertopurchaseGetDocumenttypechecklistV1Response = apiInstance.rejectedoffertopurchaseGetDocumenttypechecklistV1(pkiRejectedoffertopurchaseID)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectRejectedoffertopurchaseApi#rejectedoffertopurchaseGetDocumenttypechecklistV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectRejectedoffertopurchaseApi#rejectedoffertopurchaseGetDocumenttypechecklistV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pkiRejectedoffertopurchaseID** | **kotlin.Int**|  | |
-
-### Return type
-
-[**RejectedoffertopurchaseGetDocumenttypechecklistV1Response**](RejectedoffertopurchaseGetDocumenttypechecklistV1Response.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
 <a id="rejectedoffertopurchaseGetListV1"></a>
 # **rejectedoffertopurchaseGetListV1**
 > RejectedoffertopurchaseGetListV1Response rejectedoffertopurchaseGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
@@ -450,55 +401,6 @@ try {
 ### Return type
 
 [**RejectedoffertopurchaseImportIntoEDMV1Response**](RejectedoffertopurchaseImportIntoEDMV1Response.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a id="rejectedoffertopurchaseSyncDocumenttypechecklistV1"></a>
-# **rejectedoffertopurchaseSyncDocumenttypechecklistV1**
-> RejectedoffertopurchaseSyncDocumenttypechecklistV1Response rejectedoffertopurchaseSyncDocumenttypechecklistV1(pkiRejectedoffertopurchaseID, body)
-
-Synchronize Document type checklist
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectRejectedoffertopurchaseApi()
-val pkiRejectedoffertopurchaseID : kotlin.Int = 56 // kotlin.Int | 
-val body : kotlin.Any = Object // kotlin.Any | 
-try {
-    val result : RejectedoffertopurchaseSyncDocumenttypechecklistV1Response = apiInstance.rejectedoffertopurchaseSyncDocumenttypechecklistV1(pkiRejectedoffertopurchaseID, body)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectRejectedoffertopurchaseApi#rejectedoffertopurchaseSyncDocumenttypechecklistV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectRejectedoffertopurchaseApi#rejectedoffertopurchaseSyncDocumenttypechecklistV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pkiRejectedoffertopurchaseID** | **kotlin.Int**|  | |
-| **body** | **kotlin.Any**|  | [optional] |
-
-### Return type
-
-[**RejectedoffertopurchaseSyncDocumenttypechecklistV1Response**](RejectedoffertopurchaseSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

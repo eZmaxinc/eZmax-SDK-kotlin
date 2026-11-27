@@ -10,9 +10,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**externalbrokerGetCommunicationListV1**](ObjectExternalbrokerApi.md#externalbrokerGetCommunicationListV1) | **GET** /1/object/externalbroker/{pkiExternalbrokerID}/getCommunicationList | Retrieve Communication list |
 | [**externalbrokerGetCommunicationrecipientsV1**](ObjectExternalbrokerApi.md#externalbrokerGetCommunicationrecipientsV1) | **GET** /1/object/externalbroker/{pkiExternalbrokerID}/getCommunicationrecipients | Retrieve Communication recipients |
 | [**externalbrokerGetCommunicationsendersV1**](ObjectExternalbrokerApi.md#externalbrokerGetCommunicationsendersV1) | **GET** /1/object/externalbroker/{pkiExternalbrokerID}/getCommunicationsenders | Retrieve Communication senders |
-| [**externalbrokerGetDocumenttypechecklistV1**](ObjectExternalbrokerApi.md#externalbrokerGetDocumenttypechecklistV1) | **GET** /1/object/externalbroker/{pkiExternalbrokerID}/getDocumenttypechecklist | Retrieve Document type checklist |
 | [**externalbrokerImportIntoEDMV1**](ObjectExternalbrokerApi.md#externalbrokerImportIntoEDMV1) | **POST** /1/object/externalbroker/{pkiExternalbrokerID}/importIntoEDM | Import attachments into the Externalbroker |
-| [**externalbrokerSyncDocumenttypechecklistV1**](ObjectExternalbrokerApi.md#externalbrokerSyncDocumenttypechecklistV1) | **POST** /1/object/externalbroker/{pkiExternalbrokerID}/syncDocumenttypechecklist | Synchronize Document type checklist |
 
 
 <a id="externalbrokerBatchDownloadV1"></a>
@@ -299,53 +297,6 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a id="externalbrokerGetDocumenttypechecklistV1"></a>
-# **externalbrokerGetDocumenttypechecklistV1**
-> ExternalbrokerGetDocumenttypechecklistV1Response externalbrokerGetDocumenttypechecklistV1(pkiExternalbrokerID)
-
-Retrieve Document type checklist
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectExternalbrokerApi()
-val pkiExternalbrokerID : kotlin.Int = 56 // kotlin.Int | 
-try {
-    val result : ExternalbrokerGetDocumenttypechecklistV1Response = apiInstance.externalbrokerGetDocumenttypechecklistV1(pkiExternalbrokerID)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectExternalbrokerApi#externalbrokerGetDocumenttypechecklistV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectExternalbrokerApi#externalbrokerGetDocumenttypechecklistV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pkiExternalbrokerID** | **kotlin.Int**|  | |
-
-### Return type
-
-[**ExternalbrokerGetDocumenttypechecklistV1Response**](ExternalbrokerGetDocumenttypechecklistV1Response.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
 <a id="externalbrokerImportIntoEDMV1"></a>
 # **externalbrokerImportIntoEDMV1**
 > ExternalbrokerImportIntoEDMV1Response externalbrokerImportIntoEDMV1(pkiExternalbrokerID, externalbrokerImportIntoEDMV1Request)
@@ -384,55 +335,6 @@ try {
 ### Return type
 
 [**ExternalbrokerImportIntoEDMV1Response**](ExternalbrokerImportIntoEDMV1Response.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a id="externalbrokerSyncDocumenttypechecklistV1"></a>
-# **externalbrokerSyncDocumenttypechecklistV1**
-> ExternalbrokerSyncDocumenttypechecklistV1Response externalbrokerSyncDocumenttypechecklistV1(pkiExternalbrokerID, body)
-
-Synchronize Document type checklist
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectExternalbrokerApi()
-val pkiExternalbrokerID : kotlin.Int = 56 // kotlin.Int | 
-val body : kotlin.Any = Object // kotlin.Any | 
-try {
-    val result : ExternalbrokerSyncDocumenttypechecklistV1Response = apiInstance.externalbrokerSyncDocumenttypechecklistV1(pkiExternalbrokerID, body)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectExternalbrokerApi#externalbrokerSyncDocumenttypechecklistV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectExternalbrokerApi#externalbrokerSyncDocumenttypechecklistV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pkiExternalbrokerID** | **kotlin.Int**|  | |
-| **body** | **kotlin.Any**|  | [optional] |
-
-### Return type
-
-[**ExternalbrokerSyncDocumenttypechecklistV1Response**](ExternalbrokerSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

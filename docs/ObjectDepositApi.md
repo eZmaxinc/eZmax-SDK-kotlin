@@ -10,10 +10,8 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**depositGetCommunicationListV1**](ObjectDepositApi.md#depositGetCommunicationListV1) | **GET** /1/object/deposit/{pkiDepositID}/getCommunicationList | Retrieve Communication list |
 | [**depositGetCommunicationrecipientsV1**](ObjectDepositApi.md#depositGetCommunicationrecipientsV1) | **GET** /1/object/deposit/{pkiDepositID}/getCommunicationrecipients | Retrieve Communication recipients |
 | [**depositGetCommunicationsendersV1**](ObjectDepositApi.md#depositGetCommunicationsendersV1) | **GET** /1/object/deposit/{pkiDepositID}/getCommunicationsenders | Retrieve Communication senders |
-| [**depositGetDocumenttypechecklistV1**](ObjectDepositApi.md#depositGetDocumenttypechecklistV1) | **GET** /1/object/deposit/{pkiDepositID}/getDocumenttypechecklist | Retrieve Document type checklist |
 | [**depositGetListV1**](ObjectDepositApi.md#depositGetListV1) | **GET** /1/object/deposit/getList | Retrieve Deposit list |
 | [**depositImportIntoEDMV1**](ObjectDepositApi.md#depositImportIntoEDMV1) | **POST** /1/object/deposit/{pkiDepositID}/importIntoEDM | Import attachments into the Deposit |
-| [**depositSyncDocumenttypechecklistV1**](ObjectDepositApi.md#depositSyncDocumenttypechecklistV1) | **POST** /1/object/deposit/{pkiDepositID}/syncDocumenttypechecklist | Synchronize Document type checklist |
 
 
 <a id="depositBatchDownloadV1"></a>
@@ -300,53 +298,6 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a id="depositGetDocumenttypechecklistV1"></a>
-# **depositGetDocumenttypechecklistV1**
-> DepositGetDocumenttypechecklistV1Response depositGetDocumenttypechecklistV1(pkiDepositID)
-
-Retrieve Document type checklist
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectDepositApi()
-val pkiDepositID : kotlin.Int = 56 // kotlin.Int | 
-try {
-    val result : DepositGetDocumenttypechecklistV1Response = apiInstance.depositGetDocumenttypechecklistV1(pkiDepositID)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectDepositApi#depositGetDocumenttypechecklistV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectDepositApi#depositGetDocumenttypechecklistV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pkiDepositID** | **kotlin.Int**|  | |
-
-### Return type
-
-[**DepositGetDocumenttypechecklistV1Response**](DepositGetDocumenttypechecklistV1Response.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
 <a id="depositGetListV1"></a>
 # **depositGetListV1**
 > DepositGetListV1Response depositGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
@@ -440,55 +391,6 @@ try {
 ### Return type
 
 [**DepositImportIntoEDMV1Response**](DepositImportIntoEDMV1Response.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a id="depositSyncDocumenttypechecklistV1"></a>
-# **depositSyncDocumenttypechecklistV1**
-> DepositSyncDocumenttypechecklistV1Response depositSyncDocumenttypechecklistV1(pkiDepositID, body)
-
-Synchronize Document type checklist
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectDepositApi()
-val pkiDepositID : kotlin.Int = 56 // kotlin.Int | 
-val body : kotlin.Any = Object // kotlin.Any | 
-try {
-    val result : DepositSyncDocumenttypechecklistV1Response = apiInstance.depositSyncDocumenttypechecklistV1(pkiDepositID, body)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectDepositApi#depositSyncDocumenttypechecklistV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectDepositApi#depositSyncDocumenttypechecklistV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pkiDepositID** | **kotlin.Int**|  | |
-| **body** | **kotlin.Any**|  | [optional] |
-
-### Return type
-
-[**DepositSyncDocumenttypechecklistV1Response**](DepositSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

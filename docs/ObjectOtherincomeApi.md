@@ -10,10 +10,8 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**otherincomeGetCommunicationListV1**](ObjectOtherincomeApi.md#otherincomeGetCommunicationListV1) | **GET** /1/object/otherincome/{pkiOtherincomeID}/getCommunicationList | Retrieve Communication list |
 | [**otherincomeGetCommunicationrecipientsV1**](ObjectOtherincomeApi.md#otherincomeGetCommunicationrecipientsV1) | **GET** /1/object/otherincome/{pkiOtherincomeID}/getCommunicationrecipients | Retrieve Otherincome&#39;s Communicationrecipient |
 | [**otherincomeGetCommunicationsendersV1**](ObjectOtherincomeApi.md#otherincomeGetCommunicationsendersV1) | **GET** /1/object/otherincome/{pkiOtherincomeID}/getCommunicationsenders | Retrieve Otherincome&#39;s Communicationsender |
-| [**otherincomeGetDocumenttypechecklistV1**](ObjectOtherincomeApi.md#otherincomeGetDocumenttypechecklistV1) | **GET** /1/object/otherincome/{pkiOtherincomeID}/getDocumenttypechecklist | Retrieve Document type checklist |
 | [**otherincomeGetListV1**](ObjectOtherincomeApi.md#otherincomeGetListV1) | **GET** /1/object/otherincome/getList | Retrieve Otherincome list |
 | [**otherincomeImportIntoEDMV1**](ObjectOtherincomeApi.md#otherincomeImportIntoEDMV1) | **POST** /1/object/otherincome/{pkiOtherincomeID}/importIntoEDM | Import attachments into the Otherincome |
-| [**otherincomeSyncDocumenttypechecklistV1**](ObjectOtherincomeApi.md#otherincomeSyncDocumenttypechecklistV1) | **POST** /1/object/otherincome/{pkiOtherincomeID}/syncDocumenttypechecklist | Synchronize Document type checklist |
 
 
 <a id="otherincomeBatchDownloadV1"></a>
@@ -308,53 +306,6 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a id="otherincomeGetDocumenttypechecklistV1"></a>
-# **otherincomeGetDocumenttypechecklistV1**
-> OtherincomeGetDocumenttypechecklistV1Response otherincomeGetDocumenttypechecklistV1(pkiOtherincomeID)
-
-Retrieve Document type checklist
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectOtherincomeApi()
-val pkiOtherincomeID : kotlin.Int = 56 // kotlin.Int | 
-try {
-    val result : OtherincomeGetDocumenttypechecklistV1Response = apiInstance.otherincomeGetDocumenttypechecklistV1(pkiOtherincomeID)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectOtherincomeApi#otherincomeGetDocumenttypechecklistV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectOtherincomeApi#otherincomeGetDocumenttypechecklistV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pkiOtherincomeID** | **kotlin.Int**|  | |
-
-### Return type
-
-[**OtherincomeGetDocumenttypechecklistV1Response**](OtherincomeGetDocumenttypechecklistV1Response.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
 <a id="otherincomeGetListV1"></a>
 # **otherincomeGetListV1**
 > OtherincomeGetListV1Response otherincomeGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
@@ -450,55 +401,6 @@ try {
 ### Return type
 
 [**OtherincomeImportIntoEDMV1Response**](OtherincomeImportIntoEDMV1Response.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a id="otherincomeSyncDocumenttypechecklistV1"></a>
-# **otherincomeSyncDocumenttypechecklistV1**
-> OtherincomeSyncDocumenttypechecklistV1Response otherincomeSyncDocumenttypechecklistV1(pkiOtherincomeID, body)
-
-Synchronize Document type checklist
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectOtherincomeApi()
-val pkiOtherincomeID : kotlin.Int = 56 // kotlin.Int | 
-val body : kotlin.Any = Object // kotlin.Any | 
-try {
-    val result : OtherincomeSyncDocumenttypechecklistV1Response = apiInstance.otherincomeSyncDocumenttypechecklistV1(pkiOtherincomeID, body)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectOtherincomeApi#otherincomeSyncDocumenttypechecklistV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectOtherincomeApi#otherincomeSyncDocumenttypechecklistV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pkiOtherincomeID** | **kotlin.Int**|  | |
-| **body** | **kotlin.Any**|  | [optional] |
-
-### Return type
-
-[**OtherincomeSyncDocumenttypechecklistV1Response**](OtherincomeSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

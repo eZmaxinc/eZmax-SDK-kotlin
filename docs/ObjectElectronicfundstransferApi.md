@@ -10,10 +10,8 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**electronicfundstransferGetCommunicationListV1**](ObjectElectronicfundstransferApi.md#electronicfundstransferGetCommunicationListV1) | **GET** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationList | Retrieve Communication list |
 | [**electronicfundstransferGetCommunicationrecipientsV1**](ObjectElectronicfundstransferApi.md#electronicfundstransferGetCommunicationrecipientsV1) | **GET** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationrecipients | Retrieve Electronicfundstransfer&#39;s Communicationrecipient |
 | [**electronicfundstransferGetCommunicationsendersV1**](ObjectElectronicfundstransferApi.md#electronicfundstransferGetCommunicationsendersV1) | **GET** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationsenders | Retrieve Electronicfundstransfer&#39;s Communicationsender |
-| [**electronicfundstransferGetDocumenttypechecklistV1**](ObjectElectronicfundstransferApi.md#electronicfundstransferGetDocumenttypechecklistV1) | **GET** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getDocumenttypechecklist | Retrieve Document type checklist |
 | [**electronicfundstransferGetListV1**](ObjectElectronicfundstransferApi.md#electronicfundstransferGetListV1) | **GET** /1/object/electronicfundstransfer/getList | Retrieve Electronicfundstransfer list |
 | [**electronicfundstransferImportIntoEDMV1**](ObjectElectronicfundstransferApi.md#electronicfundstransferImportIntoEDMV1) | **POST** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/importIntoEDM | Import attachments into the Electronicfundstransfer |
-| [**electronicfundstransferSyncDocumenttypechecklistV1**](ObjectElectronicfundstransferApi.md#electronicfundstransferSyncDocumenttypechecklistV1) | **POST** /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/syncDocumenttypechecklist | Synchronize Document type checklist |
 
 
 <a id="electronicfundstransferBatchDownloadV1"></a>
@@ -308,53 +306,6 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a id="electronicfundstransferGetDocumenttypechecklistV1"></a>
-# **electronicfundstransferGetDocumenttypechecklistV1**
-> ElectronicfundstransferGetDocumenttypechecklistV1Response electronicfundstransferGetDocumenttypechecklistV1(pkiElectronicfundstransferID)
-
-Retrieve Document type checklist
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectElectronicfundstransferApi()
-val pkiElectronicfundstransferID : kotlin.Int = 56 // kotlin.Int | 
-try {
-    val result : ElectronicfundstransferGetDocumenttypechecklistV1Response = apiInstance.electronicfundstransferGetDocumenttypechecklistV1(pkiElectronicfundstransferID)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectElectronicfundstransferApi#electronicfundstransferGetDocumenttypechecklistV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectElectronicfundstransferApi#electronicfundstransferGetDocumenttypechecklistV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pkiElectronicfundstransferID** | **kotlin.Int**|  | |
-
-### Return type
-
-[**ElectronicfundstransferGetDocumenttypechecklistV1Response**](ElectronicfundstransferGetDocumenttypechecklistV1Response.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
 <a id="electronicfundstransferGetListV1"></a>
 # **electronicfundstransferGetListV1**
 > ElectronicfundstransferGetListV1Response electronicfundstransferGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
@@ -450,55 +401,6 @@ try {
 ### Return type
 
 [**ElectronicfundstransferImportIntoEDMV1Response**](ElectronicfundstransferImportIntoEDMV1Response.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a id="electronicfundstransferSyncDocumenttypechecklistV1"></a>
-# **electronicfundstransferSyncDocumenttypechecklistV1**
-> ElectronicfundstransferSyncDocumenttypechecklistV1Response electronicfundstransferSyncDocumenttypechecklistV1(pkiElectronicfundstransferID, body)
-
-Synchronize Document type checklist
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectElectronicfundstransferApi()
-val pkiElectronicfundstransferID : kotlin.Int = 56 // kotlin.Int | 
-val body : kotlin.Any = Object // kotlin.Any | 
-try {
-    val result : ElectronicfundstransferSyncDocumenttypechecklistV1Response = apiInstance.electronicfundstransferSyncDocumenttypechecklistV1(pkiElectronicfundstransferID, body)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectElectronicfundstransferApi#electronicfundstransferSyncDocumenttypechecklistV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectElectronicfundstransferApi#electronicfundstransferSyncDocumenttypechecklistV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pkiElectronicfundstransferID** | **kotlin.Int**|  | |
-| **body** | **kotlin.Any**|  | [optional] |
-
-### Return type
-
-[**ElectronicfundstransferSyncDocumenttypechecklistV1Response**](ElectronicfundstransferSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

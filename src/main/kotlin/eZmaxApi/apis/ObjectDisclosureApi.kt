@@ -34,11 +34,9 @@ import eZmaxApi.models.DisclosureGetCommunicationCountV1Response
 import eZmaxApi.models.DisclosureGetCommunicationListV1Response
 import eZmaxApi.models.DisclosureGetCommunicationrecipientsV1Response
 import eZmaxApi.models.DisclosureGetCommunicationsendersV1Response
-import eZmaxApi.models.DisclosureGetDocumenttypechecklistV1Response
 import eZmaxApi.models.DisclosureGetListV1Response
 import eZmaxApi.models.DisclosureImportIntoEDMV1Request
 import eZmaxApi.models.DisclosureImportIntoEDMV1Response
-import eZmaxApi.models.DisclosureSyncDocumenttypechecklistV1Response
 import eZmaxApi.models.HeaderAcceptLanguage
 
 import com.squareup.moshi.Json
@@ -508,79 +506,6 @@ open class ObjectDisclosureApi(basePath: kotlin.String = defaultBasePath, client
     }
 
     /**
-     * GET /1/object/disclosure/{pkiDisclosureID}/getDocumenttypechecklist
-     * Retrieve Document type checklist
-     * 
-     * @param pkiDisclosureID 
-     * @return DisclosureGetDocumenttypechecklistV1Response
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun disclosureGetDocumenttypechecklistV1(pkiDisclosureID: kotlin.Int) : DisclosureGetDocumenttypechecklistV1Response {
-        val localVarResponse = disclosureGetDocumenttypechecklistV1WithHttpInfo(pkiDisclosureID = pkiDisclosureID)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as DisclosureGetDocumenttypechecklistV1Response
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * GET /1/object/disclosure/{pkiDisclosureID}/getDocumenttypechecklist
-     * Retrieve Document type checklist
-     * 
-     * @param pkiDisclosureID 
-     * @return ApiResponse<DisclosureGetDocumenttypechecklistV1Response?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    fun disclosureGetDocumenttypechecklistV1WithHttpInfo(pkiDisclosureID: kotlin.Int) : ApiResponse<DisclosureGetDocumenttypechecklistV1Response?> {
-        val localVariableConfig = disclosureGetDocumenttypechecklistV1RequestConfig(pkiDisclosureID = pkiDisclosureID)
-
-        return request<Unit, DisclosureGetDocumenttypechecklistV1Response>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation disclosureGetDocumenttypechecklistV1
-     *
-     * @param pkiDisclosureID 
-     * @return RequestConfig
-     */
-    fun disclosureGetDocumenttypechecklistV1RequestConfig(pkiDisclosureID: kotlin.Int) : RequestConfig<Unit> {
-        val localVariableBody = null
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.GET,
-            path = "/1/object/disclosure/{pkiDisclosureID}/getDocumenttypechecklist".replace("{"+"pkiDisclosureID"+"}", encodeURIComponent(pkiDisclosureID.toString())),
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            requiresAuthentication = true,
-            body = localVariableBody
-        )
-    }
-
-    /**
      * enum for parameter eOrderBy
      */
      enum class EOrderByDisclosureGetListV1(val value: kotlin.String) {
@@ -791,83 +716,6 @@ open class ObjectDisclosureApi(basePath: kotlin.String = defaultBasePath, client
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/disclosure/{pkiDisclosureID}/importIntoEDM".replace("{"+"pkiDisclosureID"+"}", encodeURIComponent(pkiDisclosureID.toString())),
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            requiresAuthentication = true,
-            body = localVariableBody
-        )
-    }
-
-    /**
-     * POST /1/object/disclosure/{pkiDisclosureID}/syncDocumenttypechecklist
-     * Synchronize Document type checklist
-     * 
-     * @param pkiDisclosureID 
-     * @param body  (optional)
-     * @return DisclosureSyncDocumenttypechecklistV1Response
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun disclosureSyncDocumenttypechecklistV1(pkiDisclosureID: kotlin.Int, body: kotlin.Any? = null) : DisclosureSyncDocumenttypechecklistV1Response {
-        val localVarResponse = disclosureSyncDocumenttypechecklistV1WithHttpInfo(pkiDisclosureID = pkiDisclosureID, body = body)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as DisclosureSyncDocumenttypechecklistV1Response
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * POST /1/object/disclosure/{pkiDisclosureID}/syncDocumenttypechecklist
-     * Synchronize Document type checklist
-     * 
-     * @param pkiDisclosureID 
-     * @param body  (optional)
-     * @return ApiResponse<DisclosureSyncDocumenttypechecklistV1Response?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    fun disclosureSyncDocumenttypechecklistV1WithHttpInfo(pkiDisclosureID: kotlin.Int, body: kotlin.Any?) : ApiResponse<DisclosureSyncDocumenttypechecklistV1Response?> {
-        val localVariableConfig = disclosureSyncDocumenttypechecklistV1RequestConfig(pkiDisclosureID = pkiDisclosureID, body = body)
-
-        return request<kotlin.Any, DisclosureSyncDocumenttypechecklistV1Response>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation disclosureSyncDocumenttypechecklistV1
-     *
-     * @param pkiDisclosureID 
-     * @param body  (optional)
-     * @return RequestConfig
-     */
-    fun disclosureSyncDocumenttypechecklistV1RequestConfig(pkiDisclosureID: kotlin.Int, body: kotlin.Any?) : RequestConfig<kotlin.Any> {
-        val localVariableBody = body
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Content-Type"] = "application/json"
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.POST,
-            path = "/1/object/disclosure/{pkiDisclosureID}/syncDocumenttypechecklist".replace("{"+"pkiDisclosureID"+"}", encodeURIComponent(pkiDisclosureID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

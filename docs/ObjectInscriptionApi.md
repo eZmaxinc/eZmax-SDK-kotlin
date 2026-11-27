@@ -10,13 +10,11 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**inscriptionGetCommunicationListV1**](ObjectInscriptionApi.md#inscriptionGetCommunicationListV1) | **GET** /1/object/inscription/{pkiInscriptionID}/getCommunicationList | Retrieve Communication list |
 | [**inscriptionGetCommunicationrecipientsV1**](ObjectInscriptionApi.md#inscriptionGetCommunicationrecipientsV1) | **GET** /1/object/inscription/{pkiInscriptionID}/getCommunicationrecipients | Retrieve Inscription&#39;s Communicationrecipient |
 | [**inscriptionGetCommunicationsendersV1**](ObjectInscriptionApi.md#inscriptionGetCommunicationsendersV1) | **GET** /1/object/inscription/{pkiInscriptionID}/getCommunicationsenders | Retrieve Inscription&#39;s Communicationsender |
-| [**inscriptionGetDocumenttypechecklistV1**](ObjectInscriptionApi.md#inscriptionGetDocumenttypechecklistV1) | **GET** /1/object/inscription/{pkiInscriptionID}/getDocumenttypechecklist | Retrieve Document type checklist |
 | [**inscriptionGetInscriptionnotauthenticatedsV1**](ObjectInscriptionApi.md#inscriptionGetInscriptionnotauthenticatedsV1) | **GET** /1/object/inscription/{pkiInscriptionID}/getInscriptionnotauthenticateds | Retrieve Inscription&#39;s Inscriptionnotauthenticated |
 | [**inscriptionGetListV1**](ObjectInscriptionApi.md#inscriptionGetListV1) | **GET** /1/object/inscription/getList | Retrieve Inscription list |
 | [**inscriptionGetObjectV2**](ObjectInscriptionApi.md#inscriptionGetObjectV2) | **GET** /2/object/inscription/{pkiInscriptionID} | Retrieve an existing Inscription |
 | [**inscriptionImportIntoEDMV1**](ObjectInscriptionApi.md#inscriptionImportIntoEDMV1) | **POST** /1/object/inscription/{pkiInscriptionID}/importIntoEDM | Import attachments into the Inscription |
 | [**inscriptionPrepareFilesTransferV1**](ObjectInscriptionApi.md#inscriptionPrepareFilesTransferV1) | **POST** /1/object/inscription/{pkiInscriptionID}/prepareFilesTransfer | Prepares file transfer into EDM |
-| [**inscriptionSyncDocumenttypechecklistV1**](ObjectInscriptionApi.md#inscriptionSyncDocumenttypechecklistV1) | **POST** /1/object/inscription/{pkiInscriptionID}/syncDocumenttypechecklist | Synchronize Document type checklist |
 | [**inscriptionSynchronizationDocumenttypeV1**](ObjectInscriptionApi.md#inscriptionSynchronizationDocumenttypeV1) | **POST** /1/object/inscription/{pkiInscriptionID}/synchronizationDocumenttype | Synchronization of the Documenttype in the Inscription |
 
 
@@ -314,53 +312,6 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a id="inscriptionGetDocumenttypechecklistV1"></a>
-# **inscriptionGetDocumenttypechecklistV1**
-> InscriptionGetDocumenttypechecklistV1Response inscriptionGetDocumenttypechecklistV1(pkiInscriptionID)
-
-Retrieve Document type checklist
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectInscriptionApi()
-val pkiInscriptionID : kotlin.Int = 56 // kotlin.Int | 
-try {
-    val result : InscriptionGetDocumenttypechecklistV1Response = apiInstance.inscriptionGetDocumenttypechecklistV1(pkiInscriptionID)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectInscriptionApi#inscriptionGetDocumenttypechecklistV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectInscriptionApi#inscriptionGetDocumenttypechecklistV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pkiInscriptionID** | **kotlin.Int**|  | |
-
-### Return type
-
-[**InscriptionGetDocumenttypechecklistV1Response**](InscriptionGetDocumenttypechecklistV1Response.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
 <a id="inscriptionGetInscriptionnotauthenticatedsV1"></a>
 # **inscriptionGetInscriptionnotauthenticatedsV1**
 > InscriptionGetInscriptionnotauthenticatedsV1Response inscriptionGetInscriptionnotauthenticatedsV1(pkiInscriptionID)
@@ -603,55 +554,6 @@ try {
 ### Return type
 
 [**InscriptionPrepareFilesTransferV1Response**](InscriptionPrepareFilesTransferV1Response.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a id="inscriptionSyncDocumenttypechecklistV1"></a>
-# **inscriptionSyncDocumenttypechecklistV1**
-> InscriptionSyncDocumenttypechecklistV1Response inscriptionSyncDocumenttypechecklistV1(pkiInscriptionID, body)
-
-Synchronize Document type checklist
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectInscriptionApi()
-val pkiInscriptionID : kotlin.Int = 56 // kotlin.Int | 
-val body : kotlin.Any = Object // kotlin.Any | 
-try {
-    val result : InscriptionSyncDocumenttypechecklistV1Response = apiInstance.inscriptionSyncDocumenttypechecklistV1(pkiInscriptionID, body)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectInscriptionApi#inscriptionSyncDocumenttypechecklistV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectInscriptionApi#inscriptionSyncDocumenttypechecklistV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pkiInscriptionID** | **kotlin.Int**|  | |
-| **body** | **kotlin.Any**|  | [optional] |
-
-### Return type
-
-[**InscriptionSyncDocumenttypechecklistV1Response**](InscriptionSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

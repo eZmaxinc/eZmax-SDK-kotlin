@@ -11,10 +11,8 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**agentGetCommunicationListV1**](ObjectAgentApi.md#agentGetCommunicationListV1) | **GET** /1/object/agent/{pkiAgentID}/getCommunicationList | Retrieve Communication list |
 | [**agentGetCommunicationrecipientsV1**](ObjectAgentApi.md#agentGetCommunicationrecipientsV1) | **GET** /1/object/agent/{pkiAgentID}/getCommunicationrecipients | Retrieve Communication recipients |
 | [**agentGetCommunicationsendersV1**](ObjectAgentApi.md#agentGetCommunicationsendersV1) | **GET** /1/object/agent/{pkiAgentID}/getCommunicationsenders | Retrieve Communication senders |
-| [**agentGetDocumenttypechecklistV1**](ObjectAgentApi.md#agentGetDocumenttypechecklistV1) | **GET** /1/object/agent/{pkiAgentID}/getDocumenttypechecklist | Retrieve Document type checklist |
 | [**agentGetListV1**](ObjectAgentApi.md#agentGetListV1) | **GET** /1/object/agent/getList | Retrieve Agent list |
 | [**agentImportIntoEDMV1**](ObjectAgentApi.md#agentImportIntoEDMV1) | **POST** /1/object/agent/{pkiAgentID}/importIntoEDM | Import attachments into the Agent |
-| [**agentSyncDocumenttypechecklistV1**](ObjectAgentApi.md#agentSyncDocumenttypechecklistV1) | **POST** /1/object/agent/{pkiAgentID}/syncDocumenttypechecklist | Synchronize Document type checklist |
 
 
 <a id="agentBatchDownloadV1"></a>
@@ -356,53 +354,6 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a id="agentGetDocumenttypechecklistV1"></a>
-# **agentGetDocumenttypechecklistV1**
-> AgentGetDocumenttypechecklistV1Response agentGetDocumenttypechecklistV1(pkiAgentID)
-
-Retrieve Document type checklist
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectAgentApi()
-val pkiAgentID : kotlin.Int = 56 // kotlin.Int | 
-try {
-    val result : AgentGetDocumenttypechecklistV1Response = apiInstance.agentGetDocumenttypechecklistV1(pkiAgentID)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectAgentApi#agentGetDocumenttypechecklistV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectAgentApi#agentGetDocumenttypechecklistV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pkiAgentID** | **kotlin.Int**|  | |
-
-### Return type
-
-[**AgentGetDocumenttypechecklistV1Response**](AgentGetDocumenttypechecklistV1Response.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
 <a id="agentGetListV1"></a>
 # **agentGetListV1**
 > AgentGetListV1Response agentGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
@@ -498,55 +449,6 @@ try {
 ### Return type
 
 [**AgentImportIntoEDMV1Response**](AgentImportIntoEDMV1Response.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a id="agentSyncDocumenttypechecklistV1"></a>
-# **agentSyncDocumenttypechecklistV1**
-> AgentSyncDocumenttypechecklistV1Response agentSyncDocumenttypechecklistV1(pkiAgentID, body)
-
-Synchronize Document type checklist
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectAgentApi()
-val pkiAgentID : kotlin.Int = 56 // kotlin.Int | 
-val body : kotlin.Any = Object // kotlin.Any | 
-try {
-    val result : AgentSyncDocumenttypechecklistV1Response = apiInstance.agentSyncDocumenttypechecklistV1(pkiAgentID, body)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectAgentApi#agentSyncDocumenttypechecklistV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectAgentApi#agentSyncDocumenttypechecklistV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pkiAgentID** | **kotlin.Int**|  | |
-| **body** | **kotlin.Any**|  | [optional] |
-
-### Return type
-
-[**AgentSyncDocumenttypechecklistV1Response**](AgentSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

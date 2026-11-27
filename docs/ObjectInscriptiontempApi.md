@@ -10,10 +10,8 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**inscriptiontempGetCommunicationListV1**](ObjectInscriptiontempApi.md#inscriptiontempGetCommunicationListV1) | **GET** /1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationList | Retrieve Communication list |
 | [**inscriptiontempGetCommunicationrecipientsV1**](ObjectInscriptiontempApi.md#inscriptiontempGetCommunicationrecipientsV1) | **GET** /1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationrecipients | Retrieve Inscriptiontemp&#39;s Communicationrecipient |
 | [**inscriptiontempGetCommunicationsendersV1**](ObjectInscriptiontempApi.md#inscriptiontempGetCommunicationsendersV1) | **GET** /1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationsenders | Retrieve Inscriptiontemp&#39;s Communicationsender |
-| [**inscriptiontempGetDocumenttypechecklistV1**](ObjectInscriptiontempApi.md#inscriptiontempGetDocumenttypechecklistV1) | **GET** /1/object/inscriptiontemp/{pkiInscriptiontempID}/getDocumenttypechecklist | Retrieve Document type checklist |
 | [**inscriptiontempGetListV1**](ObjectInscriptiontempApi.md#inscriptiontempGetListV1) | **GET** /1/object/inscriptiontemp/getList | Retrieve Inscriptiontemp list |
 | [**inscriptiontempImportIntoEDMV1**](ObjectInscriptiontempApi.md#inscriptiontempImportIntoEDMV1) | **POST** /1/object/inscriptiontemp/{pkiInscriptiontempID}/importIntoEDM | Import attachments into the Inscriptiontemp |
-| [**inscriptiontempSyncDocumenttypechecklistV1**](ObjectInscriptiontempApi.md#inscriptiontempSyncDocumenttypechecklistV1) | **POST** /1/object/inscriptiontemp/{pkiInscriptiontempID}/syncDocumenttypechecklist | Synchronize Document type checklist |
 
 
 <a id="inscriptiontempBatchDownloadV1"></a>
@@ -308,53 +306,6 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a id="inscriptiontempGetDocumenttypechecklistV1"></a>
-# **inscriptiontempGetDocumenttypechecklistV1**
-> InscriptiontempGetDocumenttypechecklistV1Response inscriptiontempGetDocumenttypechecklistV1(pkiInscriptiontempID)
-
-Retrieve Document type checklist
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectInscriptiontempApi()
-val pkiInscriptiontempID : kotlin.Int = 56 // kotlin.Int | 
-try {
-    val result : InscriptiontempGetDocumenttypechecklistV1Response = apiInstance.inscriptiontempGetDocumenttypechecklistV1(pkiInscriptiontempID)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectInscriptiontempApi#inscriptiontempGetDocumenttypechecklistV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectInscriptiontempApi#inscriptiontempGetDocumenttypechecklistV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pkiInscriptiontempID** | **kotlin.Int**|  | |
-
-### Return type
-
-[**InscriptiontempGetDocumenttypechecklistV1Response**](InscriptiontempGetDocumenttypechecklistV1Response.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
 <a id="inscriptiontempGetListV1"></a>
 # **inscriptiontempGetListV1**
 > InscriptiontempGetListV1Response inscriptiontempGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
@@ -450,55 +401,6 @@ try {
 ### Return type
 
 [**InscriptiontempImportIntoEDMV1Response**](InscriptiontempImportIntoEDMV1Response.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a id="inscriptiontempSyncDocumenttypechecklistV1"></a>
-# **inscriptiontempSyncDocumenttypechecklistV1**
-> InscriptiontempSyncDocumenttypechecklistV1Response inscriptiontempSyncDocumenttypechecklistV1(pkiInscriptiontempID, body)
-
-Synchronize Document type checklist
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectInscriptiontempApi()
-val pkiInscriptiontempID : kotlin.Int = 56 // kotlin.Int | 
-val body : kotlin.Any = Object // kotlin.Any | 
-try {
-    val result : InscriptiontempSyncDocumenttypechecklistV1Response = apiInstance.inscriptiontempSyncDocumenttypechecklistV1(pkiInscriptiontempID, body)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectInscriptiontempApi#inscriptiontempSyncDocumenttypechecklistV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectInscriptiontempApi#inscriptiontempSyncDocumenttypechecklistV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pkiInscriptiontempID** | **kotlin.Int**|  | |
-| **body** | **kotlin.Any**|  | [optional] |
-
-### Return type
-
-[**InscriptiontempSyncDocumenttypechecklistV1Response**](InscriptiontempSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 
