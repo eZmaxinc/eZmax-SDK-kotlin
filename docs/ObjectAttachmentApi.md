@@ -9,7 +9,6 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**attachmentGetAttachmentlogsV1**](ObjectAttachmentApi.md#attachmentGetAttachmentlogsV1) | **GET** /1/object/attachment/{pkiAttachmentID}/getAttachmentlogs | Retrieve the Attachmentlogs |
 | [**attachmentRenameV1**](ObjectAttachmentApi.md#attachmentRenameV1) | **POST** /1/object/attachment/{pkiAttachmentID}/rename | Rename an attachment |
 | [**attachmentRestoreV1**](ObjectAttachmentApi.md#attachmentRestoreV1) | **POST** /1/object/attachment/{pkiAttachmentID}/restore | Restore a deleted attachment |
-| [**attachmentSetDocumentTypeV1**](ObjectAttachmentApi.md#attachmentSetDocumentTypeV1) | **POST** /1/object/attachment/{pkiAttachmentID}/setDocumentType | Change attachment document type |
 | [**attachmentSetPrivacyV1**](ObjectAttachmentApi.md#attachmentSetPrivacyV1) | **POST** /1/object/attachment/{pkiAttachmentID}/setPrivacy | Change the attachment privacy |
 | [**attachmentValidateV1**](ObjectAttachmentApi.md#attachmentValidateV1) | **POST** /1/object/attachment/{pkiAttachmentID}/validate | Validate an existing attachment |
 
@@ -254,57 +253,6 @@ try {
 ### Return type
 
 [**AttachmentRestoreV1Response**](AttachmentRestoreV1Response.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a id="attachmentSetDocumentTypeV1"></a>
-# **attachmentSetDocumentTypeV1**
-> AttachmentSetDocumentTypeV1Response attachmentSetDocumentTypeV1(pkiAttachmentID, attachmentSetDocumentTypeV1Request)
-
-Change attachment document type
-
-The endpoint allows to change the document type for an attachment.
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectAttachmentApi()
-val pkiAttachmentID : kotlin.Int = 56 // kotlin.Int | 
-val attachmentSetDocumentTypeV1Request : AttachmentSetDocumentTypeV1Request =  // AttachmentSetDocumentTypeV1Request | 
-try {
-    val result : AttachmentSetDocumentTypeV1Response = apiInstance.attachmentSetDocumentTypeV1(pkiAttachmentID, attachmentSetDocumentTypeV1Request)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectAttachmentApi#attachmentSetDocumentTypeV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectAttachmentApi#attachmentSetDocumentTypeV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pkiAttachmentID** | **kotlin.Int**|  | |
-| **attachmentSetDocumentTypeV1Request** | [**AttachmentSetDocumentTypeV1Request**](AttachmentSetDocumentTypeV1Request.md)|  | |
-
-### Return type
-
-[**AttachmentSetDocumentTypeV1Response**](AttachmentSetDocumentTypeV1Response.md)
 
 ### Authorization
 

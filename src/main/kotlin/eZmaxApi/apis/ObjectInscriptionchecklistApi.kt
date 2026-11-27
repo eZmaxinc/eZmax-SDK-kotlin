@@ -114,7 +114,9 @@ open class ObjectInscriptionchecklistApi(basePath: kotlin.String = defaultBasePa
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun inscriptionchecklistGetAutocompleteV3(sSelector: SSelectorInscriptionchecklistGetAutocompleteV3, fkiBuyercontractID: kotlin.String? = null, fkiInscriptionID: kotlin.String? = null, fkiInscriptionnotauthenticatedID: kotlin.String? = null, fkiInscriptiontempID: kotlin.String? = null, fkiAgentID: kotlin.String? = null, fkiBrokerID: kotlin.String? = null, fkiOtherincomeID: kotlin.String? = null, fkiRejectedoffertopurchaseID: kotlin.String? = null, eFilterActive: EFilterActiveInscriptionchecklistGetAutocompleteV3? = EFilterActiveInscriptionchecklistGetAutocompleteV3.Active, sQuery: kotlin.String? = null, acceptLanguage: HeaderAcceptLanguage? = null) : InscriptionchecklistGetAutocompleteV3Response {
+        @Suppress("DEPRECATION")
         val localVarResponse = inscriptionchecklistGetAutocompleteV3WithHttpInfo(sSelector = sSelector, fkiBuyercontractID = fkiBuyercontractID, fkiInscriptionID = fkiInscriptionID, fkiInscriptionnotauthenticatedID = fkiInscriptionnotauthenticatedID, fkiInscriptiontempID = fkiInscriptiontempID, fkiAgentID = fkiAgentID, fkiBrokerID = fkiBrokerID, fkiOtherincomeID = fkiOtherincomeID, fkiRejectedoffertopurchaseID = fkiRejectedoffertopurchaseID, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return when (localVarResponse.responseType) {
@@ -154,7 +156,9 @@ open class ObjectInscriptionchecklistApi(basePath: kotlin.String = defaultBasePa
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
+    @Deprecated(message = "This operation is deprecated.")
     fun inscriptionchecklistGetAutocompleteV3WithHttpInfo(sSelector: SSelectorInscriptionchecklistGetAutocompleteV3, fkiBuyercontractID: kotlin.String?, fkiInscriptionID: kotlin.String?, fkiInscriptionnotauthenticatedID: kotlin.String?, fkiInscriptiontempID: kotlin.String?, fkiAgentID: kotlin.String?, fkiBrokerID: kotlin.String?, fkiOtherincomeID: kotlin.String?, fkiRejectedoffertopurchaseID: kotlin.String?, eFilterActive: EFilterActiveInscriptionchecklistGetAutocompleteV3?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : ApiResponse<InscriptionchecklistGetAutocompleteV3Response?> {
+        @Suppress("DEPRECATION")
         val localVariableConfig = inscriptionchecklistGetAutocompleteV3RequestConfig(sSelector = sSelector, fkiBuyercontractID = fkiBuyercontractID, fkiInscriptionID = fkiInscriptionID, fkiInscriptionnotauthenticatedID = fkiInscriptionnotauthenticatedID, fkiInscriptiontempID = fkiInscriptiontempID, fkiAgentID = fkiAgentID, fkiBrokerID = fkiBrokerID, fkiOtherincomeID = fkiOtherincomeID, fkiRejectedoffertopurchaseID = fkiRejectedoffertopurchaseID, eFilterActive = eFilterActive, sQuery = sQuery, acceptLanguage = acceptLanguage)
 
         return request<Unit, InscriptionchecklistGetAutocompleteV3Response>(
@@ -179,6 +183,7 @@ open class ObjectInscriptionchecklistApi(basePath: kotlin.String = defaultBasePa
      * @param acceptLanguage  (optional)
      * @return RequestConfig
      */
+    @Deprecated(message = "This operation is deprecated.")
     fun inscriptionchecklistGetAutocompleteV3RequestConfig(sSelector: SSelectorInscriptionchecklistGetAutocompleteV3, fkiBuyercontractID: kotlin.String?, fkiInscriptionID: kotlin.String?, fkiInscriptionnotauthenticatedID: kotlin.String?, fkiInscriptiontempID: kotlin.String?, fkiAgentID: kotlin.String?, fkiBrokerID: kotlin.String?, fkiOtherincomeID: kotlin.String?, fkiRejectedoffertopurchaseID: kotlin.String?, eFilterActive: EFilterActiveInscriptionchecklistGetAutocompleteV3?, sQuery: kotlin.String?, acceptLanguage: HeaderAcceptLanguage?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()

@@ -91,7 +91,6 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | *ObjectAttachmentApi* | [**attachmentGetAttachmentlogsV1**](docs/ObjectAttachmentApi.md#attachmentgetattachmentlogsv1) | **GET** /1/object/attachment/{pkiAttachmentID}/getAttachmentlogs | Retrieve the Attachmentlogs |
 | *ObjectAttachmentApi* | [**attachmentRenameV1**](docs/ObjectAttachmentApi.md#attachmentrenamev1) | **POST** /1/object/attachment/{pkiAttachmentID}/rename | Rename an attachment |
 | *ObjectAttachmentApi* | [**attachmentRestoreV1**](docs/ObjectAttachmentApi.md#attachmentrestorev1) | **POST** /1/object/attachment/{pkiAttachmentID}/restore | Restore a deleted attachment |
-| *ObjectAttachmentApi* | [**attachmentSetDocumentTypeV1**](docs/ObjectAttachmentApi.md#attachmentsetdocumenttypev1) | **POST** /1/object/attachment/{pkiAttachmentID}/setDocumentType | Change attachment document type |
 | *ObjectAttachmentApi* | [**attachmentSetPrivacyV1**](docs/ObjectAttachmentApi.md#attachmentsetprivacyv1) | **POST** /1/object/attachment/{pkiAttachmentID}/setPrivacy | Change the attachment privacy |
 | *ObjectAttachmentApi* | [**attachmentValidateV1**](docs/ObjectAttachmentApi.md#attachmentvalidatev1) | **POST** /1/object/attachment/{pkiAttachmentID}/validate | Validate an existing attachment |
 | *ObjectAttachmentrejectreasonApi* | [**attachmentrejectreasonGetAutocompleteV2**](docs/ObjectAttachmentrejectreasonApi.md#attachmentrejectreasongetautocompletev2) | **GET** /2/object/attachmentrejectreason/getAutocomplete/{sSelector} | Retrieve Attachmentrejectreasons and IDs |
@@ -215,12 +214,6 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | *ObjectDiscussionmessageApi* | [**discussionmessageCreateObjectV1**](docs/ObjectDiscussionmessageApi.md#discussionmessagecreateobjectv1) | **POST** /1/object/discussionmessage | Create a new Discussionmessage |
 | *ObjectDiscussionmessageApi* | [**discussionmessageDeleteObjectV1**](docs/ObjectDiscussionmessageApi.md#discussionmessagedeleteobjectv1) | **DELETE** /1/object/discussionmessage/{pkiDiscussionmessageID} | Delete an existing Discussionmessage |
 | *ObjectDiscussionmessageApi* | [**discussionmessagePatchObjectV1**](docs/ObjectDiscussionmessageApi.md#discussionmessagepatchobjectv1) | **PATCH** /1/object/discussionmessage/{pkiDiscussionmessageID} | Patch an existing Discussionmessage |
-| *ObjectDocumenttypeApi* | [**documenttypeCreateObjectV1**](docs/ObjectDocumenttypeApi.md#documenttypecreateobjectv1) | **POST** /1/object/documenttype | Create a new Documenttype |
-| *ObjectDocumenttypeApi* | [**documenttypeEditObjectV1**](docs/ObjectDocumenttypeApi.md#documenttypeeditobjectv1) | **PUT** /1/object/documenttype/{pkiDocumenttypeID} | Edit an existing Documenttype |
-| *ObjectDocumenttypeApi* | [**documenttypeGetAutocompleteV2**](docs/ObjectDocumenttypeApi.md#documenttypegetautocompletev2) | **GET** /2/object/documenttype/getAutocomplete/{sSelector} | Retrieve Documenttypes and IDs |
-| *ObjectDocumenttypeApi* | [**documenttypeGetListV1**](docs/ObjectDocumenttypeApi.md#documenttypegetlistv1) | **GET** /1/object/documenttype/getList | Retrieve Documenttype list |
-| *ObjectDocumenttypeApi* | [**documenttypeGetObjectV2**](docs/ObjectDocumenttypeApi.md#documenttypegetobjectv2) | **GET** /2/object/documenttype/{pkiDocumenttypeID} | Retrieve an existing Documenttype |
-| *ObjectDocumenttypechecklistApi* | [**documenttypechecklistDeleteObjectV1**](docs/ObjectDocumenttypechecklistApi.md#documenttypechecklistdeleteobjectv1) | **DELETE** /1/object/documenttypechecklist/{pkiDocumenttypechecklistID} | Delete an existing Documenttypechecklist |
 | *ObjectDocumenttypechecklistApi* | [**documenttypechecklistPatchObjectV1**](docs/ObjectDocumenttypechecklistApi.md#documenttypechecklistpatchobjectv1) | **PATCH** /1/object/documenttypechecklist/{pkiDocumenttypechecklistID} | Patch an existing Documenttypechecklist |
 | *ObjectDomainApi* | [**domainCreateObjectV1**](docs/ObjectDomainApi.md#domaincreateobjectv1) | **POST** /1/object/domain | Create a new Domain |
 | *ObjectDomainApi* | [**domainDeleteObjectV1**](docs/ObjectDomainApi.md#domaindeleteobjectv1) | **DELETE** /1/object/domain/{pkiDomainID} | Delete an existing Domain |
@@ -570,7 +563,6 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | *ObjectInscriptionApi* | [**inscriptionGetObjectV2**](docs/ObjectInscriptionApi.md#inscriptiongetobjectv2) | **GET** /2/object/inscription/{pkiInscriptionID} | Retrieve an existing Inscription |
 | *ObjectInscriptionApi* | [**inscriptionImportIntoEDMV1**](docs/ObjectInscriptionApi.md#inscriptionimportintoedmv1) | **POST** /1/object/inscription/{pkiInscriptionID}/importIntoEDM | Import attachments into the Inscription |
 | *ObjectInscriptionApi* | [**inscriptionPrepareFilesTransferV1**](docs/ObjectInscriptionApi.md#inscriptionpreparefilestransferv1) | **POST** /1/object/inscription/{pkiInscriptionID}/prepareFilesTransfer | Prepares file transfer into EDM |
-| *ObjectInscriptionApi* | [**inscriptionSynchronizationDocumenttypeV1**](docs/ObjectInscriptionApi.md#inscriptionsynchronizationdocumenttypev1) | **POST** /1/object/inscription/{pkiInscriptionID}/synchronizationDocumenttype | Synchronization of the Documenttype in the Inscription |
 | *ObjectInscriptionchecklistApi* | [**inscriptionchecklistGetAutocompleteV3**](docs/ObjectInscriptionchecklistApi.md#inscriptionchecklistgetautocompletev3) | **GET** /3/object/inscriptionchecklist/getAutocomplete/{sSelector} | Retrieve Inscriptionchecklists and IDs |
 | *ObjectInscriptionnotauthenticatedApi* | [**inscriptionnotauthenticatedBatchDownloadV1**](docs/ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedbatchdownloadv1) | **POST** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/batchDownload | Download multiples attachments from a Inscriptionnotauthenticated |
 | *ObjectInscriptionnotauthenticatedApi* | [**inscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1**](docs/ObjectInscriptionnotauthenticatedApi.md#inscriptionnotauthenticatedfillinscriptionnotauthenticatedconditionv1) | **POST** /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/fillInscriptionnotauthenticatedcondition | Fills the Inscriptionnotauthenticatedcondition in the Inscriptionnotauthenticated |
@@ -918,9 +910,6 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.AttachmentRestoreV1Request](docs/AttachmentRestoreV1Request.md)
  - [eZmaxApi.models.AttachmentRestoreV1Response](docs/AttachmentRestoreV1Response.md)
  - [eZmaxApi.models.AttachmentRestoreV1ResponseMPayload](docs/AttachmentRestoreV1ResponseMPayload.md)
- - [eZmaxApi.models.AttachmentSetDocumentTypeV1Request](docs/AttachmentSetDocumentTypeV1Request.md)
- - [eZmaxApi.models.AttachmentSetDocumentTypeV1Response](docs/AttachmentSetDocumentTypeV1Response.md)
- - [eZmaxApi.models.AttachmentSetDocumentTypeV1ResponseMPayload](docs/AttachmentSetDocumentTypeV1ResponseMPayload.md)
  - [eZmaxApi.models.AttachmentSetPrivacyV1Request](docs/AttachmentSetPrivacyV1Request.md)
  - [eZmaxApi.models.AttachmentSetPrivacyV1Response](docs/AttachmentSetPrivacyV1Response.md)
  - [eZmaxApi.models.AttachmentSetPrivacyV1ResponseMPayload](docs/AttachmentSetPrivacyV1ResponseMPayload.md)
@@ -1129,7 +1118,6 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.CompanyGetAutocompleteV2Response](docs/CompanyGetAutocompleteV2Response.md)
  - [eZmaxApi.models.CompanyGetAutocompleteV2ResponseMPayload](docs/CompanyGetAutocompleteV2ResponseMPayload.md)
  - [eZmaxApi.models.ComputedECommunicationDirection](docs/ComputedECommunicationDirection.md)
- - [eZmaxApi.models.ComputedEDocumenttypeStep](docs/ComputedEDocumenttypeStep.md)
  - [eZmaxApi.models.ComputedEEzsigndocumentSteptype](docs/ComputedEEzsigndocumentSteptype.md)
  - [eZmaxApi.models.ComputedEEzsignfolderAccess](docs/ComputedEEzsignfolderAccess.md)
  - [eZmaxApi.models.ComputedEEzsignimportfolderStatus](docs/ComputedEEzsignimportfolderStatus.md)
@@ -1398,24 +1386,6 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.DiscussionmessageRequestPatch](docs/DiscussionmessageRequestPatch.md)
  - [eZmaxApi.models.DiscussionmessageResponse](docs/DiscussionmessageResponse.md)
  - [eZmaxApi.models.DiscussionmessageResponseCompound](docs/DiscussionmessageResponseCompound.md)
- - [eZmaxApi.models.DocumenttypeAutocompleteElementResponse](docs/DocumenttypeAutocompleteElementResponse.md)
- - [eZmaxApi.models.DocumenttypeCreateObjectV1Request](docs/DocumenttypeCreateObjectV1Request.md)
- - [eZmaxApi.models.DocumenttypeCreateObjectV1Response](docs/DocumenttypeCreateObjectV1Response.md)
- - [eZmaxApi.models.DocumenttypeCreateObjectV1ResponseMPayload](docs/DocumenttypeCreateObjectV1ResponseMPayload.md)
- - [eZmaxApi.models.DocumenttypeEditObjectV1Request](docs/DocumenttypeEditObjectV1Request.md)
- - [eZmaxApi.models.DocumenttypeEditObjectV1Response](docs/DocumenttypeEditObjectV1Response.md)
- - [eZmaxApi.models.DocumenttypeGetAutocompleteV2Response](docs/DocumenttypeGetAutocompleteV2Response.md)
- - [eZmaxApi.models.DocumenttypeGetAutocompleteV2ResponseMPayload](docs/DocumenttypeGetAutocompleteV2ResponseMPayload.md)
- - [eZmaxApi.models.DocumenttypeGetListV1Response](docs/DocumenttypeGetListV1Response.md)
- - [eZmaxApi.models.DocumenttypeGetListV1ResponseMPayload](docs/DocumenttypeGetListV1ResponseMPayload.md)
- - [eZmaxApi.models.DocumenttypeGetObjectV2Response](docs/DocumenttypeGetObjectV2Response.md)
- - [eZmaxApi.models.DocumenttypeGetObjectV2ResponseMPayload](docs/DocumenttypeGetObjectV2ResponseMPayload.md)
- - [eZmaxApi.models.DocumenttypeListElement](docs/DocumenttypeListElement.md)
- - [eZmaxApi.models.DocumenttypeRequest](docs/DocumenttypeRequest.md)
- - [eZmaxApi.models.DocumenttypeRequestCompound](docs/DocumenttypeRequestCompound.md)
- - [eZmaxApi.models.DocumenttypeResponse](docs/DocumenttypeResponse.md)
- - [eZmaxApi.models.DocumenttypeResponseCompound](docs/DocumenttypeResponseCompound.md)
- - [eZmaxApi.models.DocumenttypechecklistDeleteObjectV1Response](docs/DocumenttypechecklistDeleteObjectV1Response.md)
  - [eZmaxApi.models.DocumenttypechecklistPatchObjectV1Request](docs/DocumenttypechecklistPatchObjectV1Request.md)
  - [eZmaxApi.models.DocumenttypechecklistPatchObjectV1Response](docs/DocumenttypechecklistPatchObjectV1Response.md)
  - [eZmaxApi.models.DocumenttypechecklistRequestPatch](docs/DocumenttypechecklistRequestPatch.md)
@@ -2437,13 +2407,6 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.FieldEDisclosureInteresttype](docs/FieldEDisclosureInteresttype.md)
  - [eZmaxApi.models.FieldEDiscussionRobot](docs/FieldEDiscussionRobot.md)
  - [eZmaxApi.models.FieldEDiscussionmessageStatus](docs/FieldEDiscussionmessageStatus.md)
- - [eZmaxApi.models.FieldEDocumenttypeEzcom](docs/FieldEDocumenttypeEzcom.md)
- - [eZmaxApi.models.FieldEDocumenttypePrivacydefault](docs/FieldEDocumenttypePrivacydefault.md)
- - [eZmaxApi.models.FieldEDocumenttypeRepossession](docs/FieldEDocumenttypeRepossession.md)
- - [eZmaxApi.models.FieldEDocumenttypeSalebyowner](docs/FieldEDocumenttypeSalebyowner.md)
- - [eZmaxApi.models.FieldEDocumenttypeSaledisplaybyrole](docs/FieldEDocumenttypeSaledisplaybyrole.md)
- - [eZmaxApi.models.FieldEDocumenttypeStatusdefault](docs/FieldEDocumenttypeStatusdefault.md)
- - [eZmaxApi.models.FieldEDocumenttypeTransactiontype](docs/FieldEDocumenttypeTransactiontype.md)
  - [eZmaxApi.models.FieldEDocumenttypechecklistStatus](docs/FieldEDocumenttypechecklistStatus.md)
  - [eZmaxApi.models.FieldEErrorCode](docs/FieldEErrorCode.md)
  - [eZmaxApi.models.FieldEEzdoctemplatedocumentPrivacylevel](docs/FieldEEzdoctemplatedocumentPrivacylevel.md)
@@ -2642,7 +2605,6 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.InscriptionPrepareFilesTransferV1ResponseMPayload](docs/InscriptionPrepareFilesTransferV1ResponseMPayload.md)
  - [eZmaxApi.models.InscriptionResponse](docs/InscriptionResponse.md)
  - [eZmaxApi.models.InscriptionResponseCompound](docs/InscriptionResponseCompound.md)
- - [eZmaxApi.models.InscriptionSynchronizationDocumenttypeV1Response](docs/InscriptionSynchronizationDocumenttypeV1Response.md)
  - [eZmaxApi.models.InscriptionchecklistAutocompleteElementResponse](docs/InscriptionchecklistAutocompleteElementResponse.md)
  - [eZmaxApi.models.InscriptionchecklistGetAutocompleteV3Response](docs/InscriptionchecklistGetAutocompleteV3Response.md)
  - [eZmaxApi.models.InscriptionchecklistGetAutocompleteV3ResponseMPayload](docs/InscriptionchecklistGetAutocompleteV3ResponseMPayload.md)
@@ -2747,7 +2709,6 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.MultilingualApikeyDescription](docs/MultilingualApikeyDescription.md)
  - [eZmaxApi.models.MultilingualBillingentityinternalDescription](docs/MultilingualBillingentityinternalDescription.md)
  - [eZmaxApi.models.MultilingualBrandingDescription](docs/MultilingualBrandingDescription.md)
- - [eZmaxApi.models.MultilingualDocumenttypeName](docs/MultilingualDocumenttypeName.md)
  - [eZmaxApi.models.MultilingualEzdoctemplatedocumentName](docs/MultilingualEzdoctemplatedocumentName.md)
  - [eZmaxApi.models.MultilingualEzmaxcustomerCompany](docs/MultilingualEzmaxcustomerCompany.md)
  - [eZmaxApi.models.MultilingualEzmaxcustomerNote](docs/MultilingualEzmaxcustomerNote.md)

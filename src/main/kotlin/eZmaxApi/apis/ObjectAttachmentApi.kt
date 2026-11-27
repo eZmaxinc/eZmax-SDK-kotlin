@@ -33,8 +33,6 @@ import eZmaxApi.models.AttachmentRenameV1Request
 import eZmaxApi.models.AttachmentRenameV1Response
 import eZmaxApi.models.AttachmentRestoreV1Request
 import eZmaxApi.models.AttachmentRestoreV1Response
-import eZmaxApi.models.AttachmentSetDocumentTypeV1Request
-import eZmaxApi.models.AttachmentSetDocumentTypeV1Response
 import eZmaxApi.models.AttachmentSetPrivacyV1Request
 import eZmaxApi.models.AttachmentSetPrivacyV1Response
 import eZmaxApi.models.AttachmentValidateV1Request
@@ -433,83 +431,6 @@ open class ObjectAttachmentApi(basePath: kotlin.String = defaultBasePath, client
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/attachment/{pkiAttachmentID}/restore".replace("{"+"pkiAttachmentID"+"}", encodeURIComponent(pkiAttachmentID.toString())),
-            query = localVariableQuery,
-            headers = localVariableHeaders,
-            requiresAuthentication = true,
-            body = localVariableBody
-        )
-    }
-
-    /**
-     * POST /1/object/attachment/{pkiAttachmentID}/setDocumentType
-     * Change attachment document type
-     * The endpoint allows to change the document type for an attachment.
-     * @param pkiAttachmentID 
-     * @param attachmentSetDocumentTypeV1Request 
-     * @return AttachmentSetDocumentTypeV1Response
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     * @throws UnsupportedOperationException If the API returns an informational or redirection response
-     * @throws ClientException If the API returns a client error response
-     * @throws ServerException If the API returns a server error response
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun attachmentSetDocumentTypeV1(pkiAttachmentID: kotlin.Int, attachmentSetDocumentTypeV1Request: AttachmentSetDocumentTypeV1Request) : AttachmentSetDocumentTypeV1Response {
-        val localVarResponse = attachmentSetDocumentTypeV1WithHttpInfo(pkiAttachmentID = pkiAttachmentID, attachmentSetDocumentTypeV1Request = attachmentSetDocumentTypeV1Request)
-
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as AttachmentSetDocumentTypeV1Response
-            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
-            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
-            ResponseType.ClientError -> {
-                val localVarError = localVarResponse as ClientError<*>
-                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
-            }
-            ResponseType.ServerError -> {
-                val localVarError = localVarResponse as ServerError<*>
-                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
-            }
-        }
-    }
-
-    /**
-     * POST /1/object/attachment/{pkiAttachmentID}/setDocumentType
-     * Change attachment document type
-     * The endpoint allows to change the document type for an attachment.
-     * @param pkiAttachmentID 
-     * @param attachmentSetDocumentTypeV1Request 
-     * @return ApiResponse<AttachmentSetDocumentTypeV1Response?>
-     * @throws IllegalStateException If the request is not correctly configured
-     * @throws IOException Rethrows the OkHttp execute method exception
-     */
-    @Suppress("UNCHECKED_CAST")
-    @Throws(IllegalStateException::class, IOException::class)
-    fun attachmentSetDocumentTypeV1WithHttpInfo(pkiAttachmentID: kotlin.Int, attachmentSetDocumentTypeV1Request: AttachmentSetDocumentTypeV1Request) : ApiResponse<AttachmentSetDocumentTypeV1Response?> {
-        val localVariableConfig = attachmentSetDocumentTypeV1RequestConfig(pkiAttachmentID = pkiAttachmentID, attachmentSetDocumentTypeV1Request = attachmentSetDocumentTypeV1Request)
-
-        return request<AttachmentSetDocumentTypeV1Request, AttachmentSetDocumentTypeV1Response>(
-            localVariableConfig
-        )
-    }
-
-    /**
-     * To obtain the request config of the operation attachmentSetDocumentTypeV1
-     *
-     * @param pkiAttachmentID 
-     * @param attachmentSetDocumentTypeV1Request 
-     * @return RequestConfig
-     */
-    fun attachmentSetDocumentTypeV1RequestConfig(pkiAttachmentID: kotlin.Int, attachmentSetDocumentTypeV1Request: AttachmentSetDocumentTypeV1Request) : RequestConfig<AttachmentSetDocumentTypeV1Request> {
-        val localVariableBody = attachmentSetDocumentTypeV1Request
-        val localVariableQuery: MultiValueMap = mutableMapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Content-Type"] = "application/json"
-        localVariableHeaders["Accept"] = "application/json"
-
-        return RequestConfig(
-            method = RequestMethod.POST,
-            path = "/1/object/attachment/{pkiAttachmentID}/setDocumentType".replace("{"+"pkiAttachmentID"+"}", encodeURIComponent(pkiAttachmentID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

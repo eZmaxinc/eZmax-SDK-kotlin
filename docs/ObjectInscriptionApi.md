@@ -15,7 +15,6 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**inscriptionGetObjectV2**](ObjectInscriptionApi.md#inscriptionGetObjectV2) | **GET** /2/object/inscription/{pkiInscriptionID} | Retrieve an existing Inscription |
 | [**inscriptionImportIntoEDMV1**](ObjectInscriptionApi.md#inscriptionImportIntoEDMV1) | **POST** /1/object/inscription/{pkiInscriptionID}/importIntoEDM | Import attachments into the Inscription |
 | [**inscriptionPrepareFilesTransferV1**](ObjectInscriptionApi.md#inscriptionPrepareFilesTransferV1) | **POST** /1/object/inscription/{pkiInscriptionID}/prepareFilesTransfer | Prepares file transfer into EDM |
-| [**inscriptionSynchronizationDocumenttypeV1**](ObjectInscriptionApi.md#inscriptionSynchronizationDocumenttypeV1) | **POST** /1/object/inscription/{pkiInscriptionID}/synchronizationDocumenttype | Synchronization of the Documenttype in the Inscription |
 
 
 <a id="inscriptionBatchDownloadV1"></a>
@@ -554,57 +553,6 @@ try {
 ### Return type
 
 [**InscriptionPrepareFilesTransferV1Response**](InscriptionPrepareFilesTransferV1Response.md)
-
-### Authorization
-
-
-Configure Authorization:
-    ApiClient.apiKey["Authorization"] = ""
-    ApiClient.apiKeyPrefix["Authorization"] = ""
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a id="inscriptionSynchronizationDocumenttypeV1"></a>
-# **inscriptionSynchronizationDocumenttypeV1**
-> InscriptionSynchronizationDocumenttypeV1Response inscriptionSynchronizationDocumenttypeV1(pkiInscriptionID, body)
-
-Synchronization of the Documenttype in the Inscription
-
-
-
-### Example
-```kotlin
-// Import classes:
-//import eZmaxApi.infrastructure.*
-//import eZmaxApi.models.*
-
-val apiInstance = ObjectInscriptionApi()
-val pkiInscriptionID : kotlin.Int = 56 // kotlin.Int | 
-val body : kotlin.Any = Object // kotlin.Any | 
-try {
-    val result : InscriptionSynchronizationDocumenttypeV1Response = apiInstance.inscriptionSynchronizationDocumenttypeV1(pkiInscriptionID, body)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ObjectInscriptionApi#inscriptionSynchronizationDocumenttypeV1")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ObjectInscriptionApi#inscriptionSynchronizationDocumenttypeV1")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pkiInscriptionID** | **kotlin.Int**|  | |
-| **body** | **kotlin.Any**|  | |
-
-### Return type
-
-[**InscriptionSynchronizationDocumenttypeV1Response**](InscriptionSynchronizationDocumenttypeV1Response.md)
 
 ### Authorization
 
