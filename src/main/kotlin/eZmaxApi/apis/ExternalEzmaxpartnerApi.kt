@@ -57,8 +57,8 @@ open class ExternalEzmaxpartnerApi(basePath: kotlin.String = defaultBasePath, cl
 
     /**
      * POST /1/external/ezmaxpartner/subscribe
-     * Subscribe to an Ezmaxparnerproductstage
-     * Subscribe to an Ezmaxparnerproductstage
+     * Subscribe to an Ezmaxpartnerproductstage
+     * Subscribe to an Ezmaxpartnerproductstage
      * @param ezmaxpartnerSubscribeV1Request 
      * @return EzmaxpartnerSubscribeV1Response
      * @throws IllegalStateException If the request is not correctly configured
@@ -89,8 +89,8 @@ open class ExternalEzmaxpartnerApi(basePath: kotlin.String = defaultBasePath, cl
 
     /**
      * POST /1/external/ezmaxpartner/subscribe
-     * Subscribe to an Ezmaxparnerproductstage
-     * Subscribe to an Ezmaxparnerproductstage
+     * Subscribe to an Ezmaxpartnerproductstage
+     * Subscribe to an Ezmaxpartnerproductstage
      * @param ezmaxpartnerSubscribeV1Request 
      * @return ApiResponse<EzmaxpartnerSubscribeV1Response?>
      * @throws IllegalStateException If the request is not correctly configured

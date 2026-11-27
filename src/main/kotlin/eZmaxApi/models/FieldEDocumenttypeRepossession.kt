@@ -28,7 +28,7 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * The repossession of the Documenttype
+ * Whether the document type applies to repossession transactions
  *
  * Values: All,No,Yes
  */

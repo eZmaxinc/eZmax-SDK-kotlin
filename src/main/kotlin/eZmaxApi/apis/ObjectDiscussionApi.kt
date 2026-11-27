@@ -362,7 +362,7 @@ open class ObjectDiscussionApi(basePath: kotlin.String = defaultBasePath, client
     /**
      * POST /1/object/discussion/improveMessage
      * Improve a message using the AI
-     * Improve a message using the AI.
+     * The endpoint allows to improve a discussion message using the AI.
      * @param discussionImproveMessageV1Request 
      * @return DiscussionImproveMessageV1Response
      * @throws IllegalStateException If the request is not correctly configured
@@ -394,7 +394,7 @@ open class ObjectDiscussionApi(basePath: kotlin.String = defaultBasePath, client
     /**
      * POST /1/object/discussion/improveMessage
      * Improve a message using the AI
-     * Improve a message using the AI.
+     * The endpoint allows to improve a discussion message using the AI.
      * @param discussionImproveMessageV1Request 
      * @return ApiResponse<DiscussionImproveMessageV1Response?>
      * @throws IllegalStateException If the request is not correctly configured

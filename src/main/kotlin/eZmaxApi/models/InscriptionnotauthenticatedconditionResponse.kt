@@ -34,7 +34,7 @@ import com.squareup.moshi.JsonClass
  * @param fkiInscriptionnotauthenticatedconditiontypeID The unique ID of the Inscriptionnotauthenticatedconditiontype
  * @param sInscriptionnotauthenticatedconditiontypeNameX The name of the Inscriptionnotauthenticatedconditiontype in the language of the requester
  * @param fkiInscriptionnotauthenticatedID The unique ID of the Inscriptionnotauthenticated.
- * @param bInscriptionnotauthenticatedconditionFilled Can access attachment when we clone a user
+ * @param bInscriptionnotauthenticatedconditionFilled Whether the user can access attachments when their session is cloned
  * @param tInscriptionnotauthenticatedconditionComment The comment of the Inscriptionnotauthenticatedcondition
  * @param dtInscriptionnotauthenticatedconditionCompleted The date the Inscriptionnotauthenticatedcondition was completed
  * @param dtInscriptionnotauthenticatedconditionDue The date the Inscriptionnotauthenticatedcondition is due
@@ -59,7 +59,7 @@ data class InscriptionnotauthenticatedconditionResponse (
     @Json(name = "fkiInscriptionnotauthenticatedID")
     val fkiInscriptionnotauthenticatedID: kotlin.Int,
 
-    /* Can access attachment when we clone a user */
+    /* Whether the user can access attachments when their session is cloned */
     @Json(name = "bInscriptionnotauthenticatedconditionFilled")
     val bInscriptionnotauthenticatedconditionFilled: kotlin.Boolean,
 

@@ -10,8 +10,10 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**invoiceGetCommunicationListV1**](ObjectInvoiceApi.md#invoiceGetCommunicationListV1) | **GET** /1/object/invoice/{pkiInvoiceID}/getCommunicationList | Retrieve Communication list |
 | [**invoiceGetCommunicationrecipientsV1**](ObjectInvoiceApi.md#invoiceGetCommunicationrecipientsV1) | **GET** /1/object/invoice/{pkiInvoiceID}/getCommunicationrecipients | Retrieve Invoice&#39;s Communicationrecipient |
 | [**invoiceGetCommunicationsendersV1**](ObjectInvoiceApi.md#invoiceGetCommunicationsendersV1) | **GET** /1/object/invoice/{pkiInvoiceID}/getCommunicationsenders | Retrieve Invoice&#39;s Communicationsender |
+| [**invoiceGetDocumenttypechecklistV1**](ObjectInvoiceApi.md#invoiceGetDocumenttypechecklistV1) | **GET** /1/object/invoice/{pkiInvoiceID}/getDocumenttypechecklist | Retrieve Document type checklist |
 | [**invoiceGetListV1**](ObjectInvoiceApi.md#invoiceGetListV1) | **GET** /1/object/invoice/getList | Retrieve Invoice list |
 | [**invoiceImportIntoEDMV1**](ObjectInvoiceApi.md#invoiceImportIntoEDMV1) | **POST** /1/object/invoice/{pkiInvoiceID}/importIntoEDM | Import attachments into the Invoice |
+| [**invoiceSyncDocumenttypechecklistV1**](ObjectInvoiceApi.md#invoiceSyncDocumenttypechecklistV1) | **POST** /1/object/invoice/{pkiInvoiceID}/syncDocumenttypechecklist | Synchronize Document type checklist |
 
 
 <a id="invoiceBatchDownloadV1"></a>
@@ -308,6 +310,53 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+<a id="invoiceGetDocumenttypechecklistV1"></a>
+# **invoiceGetDocumenttypechecklistV1**
+> InvoiceGetDocumenttypechecklistV1Response invoiceGetDocumenttypechecklistV1(pkiInvoiceID)
+
+Retrieve Document type checklist
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectInvoiceApi()
+val pkiInvoiceID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : InvoiceGetDocumenttypechecklistV1Response = apiInstance.invoiceGetDocumenttypechecklistV1(pkiInvoiceID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectInvoiceApi#invoiceGetDocumenttypechecklistV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectInvoiceApi#invoiceGetDocumenttypechecklistV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiInvoiceID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**InvoiceGetDocumenttypechecklistV1Response**](InvoiceGetDocumenttypechecklistV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
 <a id="invoiceGetListV1"></a>
 # **invoiceGetListV1**
 > InvoiceGetListV1Response invoiceGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
@@ -403,6 +452,55 @@ try {
 ### Return type
 
 [**InvoiceImportIntoEDMV1Response**](InvoiceImportIntoEDMV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a id="invoiceSyncDocumenttypechecklistV1"></a>
+# **invoiceSyncDocumenttypechecklistV1**
+> InvoiceSyncDocumenttypechecklistV1Response invoiceSyncDocumenttypechecklistV1(pkiInvoiceID, body)
+
+Synchronize Document type checklist
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectInvoiceApi()
+val pkiInvoiceID : kotlin.Int = 56 // kotlin.Int | 
+val body : kotlin.Any = Object // kotlin.Any | 
+try {
+    val result : InvoiceSyncDocumenttypechecklistV1Response = apiInstance.invoiceSyncDocumenttypechecklistV1(pkiInvoiceID, body)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectInvoiceApi#invoiceSyncDocumenttypechecklistV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectInvoiceApi#invoiceSyncDocumenttypechecklistV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiInvoiceID** | **kotlin.Int**|  | |
+| **body** | **kotlin.Any**|  | [optional] |
+
+### Return type
+
+[**InvoiceSyncDocumenttypechecklistV1Response**](InvoiceSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

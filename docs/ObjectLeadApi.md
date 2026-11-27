@@ -10,8 +10,10 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**leadGetCommunicationListV1**](ObjectLeadApi.md#leadGetCommunicationListV1) | **GET** /1/object/lead/{pkiLeadID}/getCommunicationList | Retrieve Communication list |
 | [**leadGetCommunicationrecipientsV1**](ObjectLeadApi.md#leadGetCommunicationrecipientsV1) | **GET** /1/object/lead/{pkiLeadID}/getCommunicationrecipients | Retrieve Communication recipients |
 | [**leadGetCommunicationsendersV1**](ObjectLeadApi.md#leadGetCommunicationsendersV1) | **GET** /1/object/lead/{pkiLeadID}/getCommunicationsenders | Retrieve Communication senders |
+| [**leadGetDocumenttypechecklistV1**](ObjectLeadApi.md#leadGetDocumenttypechecklistV1) | **GET** /1/object/lead/{pkiLeadID}/getDocumenttypechecklist | Retrieve Document type checklist |
 | [**leadGetListV1**](ObjectLeadApi.md#leadGetListV1) | **GET** /1/object/lead/getList | Retrieve Lead list |
 | [**leadImportIntoEDMV1**](ObjectLeadApi.md#leadImportIntoEDMV1) | **POST** /1/object/lead/{pkiLeadID}/importIntoEDM | Import attachments into the Lead |
+| [**leadSyncDocumenttypechecklistV1**](ObjectLeadApi.md#leadSyncDocumenttypechecklistV1) | **POST** /1/object/lead/{pkiLeadID}/syncDocumenttypechecklist | Synchronize Document type checklist |
 
 
 <a id="leadBatchDownloadV1"></a>
@@ -298,6 +300,53 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+<a id="leadGetDocumenttypechecklistV1"></a>
+# **leadGetDocumenttypechecklistV1**
+> LeadGetDocumenttypechecklistV1Response leadGetDocumenttypechecklistV1(pkiLeadID)
+
+Retrieve Document type checklist
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectLeadApi()
+val pkiLeadID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : LeadGetDocumenttypechecklistV1Response = apiInstance.leadGetDocumenttypechecklistV1(pkiLeadID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectLeadApi#leadGetDocumenttypechecklistV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectLeadApi#leadGetDocumenttypechecklistV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiLeadID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**LeadGetDocumenttypechecklistV1Response**](LeadGetDocumenttypechecklistV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
 <a id="leadGetListV1"></a>
 # **leadGetListV1**
 > LeadGetListV1Response leadGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
@@ -393,6 +442,55 @@ try {
 ### Return type
 
 [**LeadImportIntoEDMV1Response**](LeadImportIntoEDMV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a id="leadSyncDocumenttypechecklistV1"></a>
+# **leadSyncDocumenttypechecklistV1**
+> LeadSyncDocumenttypechecklistV1Response leadSyncDocumenttypechecklistV1(pkiLeadID, body)
+
+Synchronize Document type checklist
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectLeadApi()
+val pkiLeadID : kotlin.Int = 56 // kotlin.Int | 
+val body : kotlin.Any = Object // kotlin.Any | 
+try {
+    val result : LeadSyncDocumenttypechecklistV1Response = apiInstance.leadSyncDocumenttypechecklistV1(pkiLeadID, body)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectLeadApi#leadSyncDocumenttypechecklistV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectLeadApi#leadSyncDocumenttypechecklistV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiLeadID** | **kotlin.Int**|  | |
+| **body** | **kotlin.Any**|  | [optional] |
+
+### Return type
+
+[**LeadSyncDocumenttypechecklistV1Response**](LeadSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

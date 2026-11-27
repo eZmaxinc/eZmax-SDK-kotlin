@@ -8,7 +8,9 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**tranqcontractGetCommunicationListV1**](ObjectTranqcontractApi.md#tranqcontractGetCommunicationListV1) | **GET** /1/object/tranqcontract/{pkiTranqcontractID}/getCommunicationList | Retrieve Communication list |
 | [**tranqcontractGetCommunicationrecipientsV1**](ObjectTranqcontractApi.md#tranqcontractGetCommunicationrecipientsV1) | **GET** /1/object/tranqcontract/{pkiTranqcontractID}/getCommunicationrecipients | Retrieve Tranqcontract&#39;s Communicationrecipient |
 | [**tranqcontractGetCommunicationsendersV1**](ObjectTranqcontractApi.md#tranqcontractGetCommunicationsendersV1) | **GET** /1/object/tranqcontract/{pkiTranqcontractID}/getCommunicationsenders | Retrieve Tranqcontract&#39;s Communicationsender |
+| [**tranqcontractGetDocumenttypechecklistV1**](ObjectTranqcontractApi.md#tranqcontractGetDocumenttypechecklistV1) | **GET** /1/object/tranqcontract/{pkiTranqcontractID}/getDocumenttypechecklist | Retrieve Document type checklist |
 | [**tranqcontractImportIntoEDMV1**](ObjectTranqcontractApi.md#tranqcontractImportIntoEDMV1) | **POST** /1/object/tranqcontract/{pkiTranqcontractID}/importIntoEDM | Import attachments into the Tranqcontract |
+| [**tranqcontractSyncDocumenttypechecklistV1**](ObjectTranqcontractApi.md#tranqcontractSyncDocumenttypechecklistV1) | **POST** /1/object/tranqcontract/{pkiTranqcontractID}/syncDocumenttypechecklist | Synchronize Document type checklist |
 
 
 <a id="tranqcontractGetCommunicationCountV1"></a>
@@ -207,6 +209,53 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+<a id="tranqcontractGetDocumenttypechecklistV1"></a>
+# **tranqcontractGetDocumenttypechecklistV1**
+> TranqcontractGetDocumenttypechecklistV1Response tranqcontractGetDocumenttypechecklistV1(pkiTranqcontractID)
+
+Retrieve Document type checklist
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectTranqcontractApi()
+val pkiTranqcontractID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : TranqcontractGetDocumenttypechecklistV1Response = apiInstance.tranqcontractGetDocumenttypechecklistV1(pkiTranqcontractID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectTranqcontractApi#tranqcontractGetDocumenttypechecklistV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectTranqcontractApi#tranqcontractGetDocumenttypechecklistV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiTranqcontractID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**TranqcontractGetDocumenttypechecklistV1Response**](TranqcontractGetDocumenttypechecklistV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
 <a id="tranqcontractImportIntoEDMV1"></a>
 # **tranqcontractImportIntoEDMV1**
 > TranqcontractImportIntoEDMV1Response tranqcontractImportIntoEDMV1(pkiTranqcontractID, tranqcontractImportIntoEDMV1Request)
@@ -245,6 +294,55 @@ try {
 ### Return type
 
 [**TranqcontractImportIntoEDMV1Response**](TranqcontractImportIntoEDMV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a id="tranqcontractSyncDocumenttypechecklistV1"></a>
+# **tranqcontractSyncDocumenttypechecklistV1**
+> TranqcontractSyncDocumenttypechecklistV1Response tranqcontractSyncDocumenttypechecklistV1(pkiTranqcontractID, body)
+
+Synchronize Document type checklist
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectTranqcontractApi()
+val pkiTranqcontractID : kotlin.Int = 56 // kotlin.Int | 
+val body : kotlin.Any = Object // kotlin.Any | 
+try {
+    val result : TranqcontractSyncDocumenttypechecklistV1Response = apiInstance.tranqcontractSyncDocumenttypechecklistV1(pkiTranqcontractID, body)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectTranqcontractApi#tranqcontractSyncDocumenttypechecklistV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectTranqcontractApi#tranqcontractSyncDocumenttypechecklistV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiTranqcontractID** | **kotlin.Int**|  | |
+| **body** | **kotlin.Any**|  | [optional] |
+
+### Return type
+
+[**TranqcontractSyncDocumenttypechecklistV1Response**](TranqcontractSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

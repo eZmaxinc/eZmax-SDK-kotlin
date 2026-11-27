@@ -35,9 +35,11 @@ import eZmaxApi.models.OtherincomeGetCommunicationCountV1Response
 import eZmaxApi.models.OtherincomeGetCommunicationListV1Response
 import eZmaxApi.models.OtherincomeGetCommunicationrecipientsV1Response
 import eZmaxApi.models.OtherincomeGetCommunicationsendersV1Response
+import eZmaxApi.models.OtherincomeGetDocumenttypechecklistV1Response
 import eZmaxApi.models.OtherincomeGetListV1Response
 import eZmaxApi.models.OtherincomeImportIntoEDMV1Request
 import eZmaxApi.models.OtherincomeImportIntoEDMV1Response
+import eZmaxApi.models.OtherincomeSyncDocumenttypechecklistV1Response
 
 import com.squareup.moshi.Json
 
@@ -506,6 +508,79 @@ open class ObjectOtherincomeApi(basePath: kotlin.String = defaultBasePath, clien
     }
 
     /**
+     * GET /1/object/otherincome/{pkiOtherincomeID}/getDocumenttypechecklist
+     * Retrieve Document type checklist
+     * 
+     * @param pkiOtherincomeID 
+     * @return OtherincomeGetDocumenttypechecklistV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun otherincomeGetDocumenttypechecklistV1(pkiOtherincomeID: kotlin.Int) : OtherincomeGetDocumenttypechecklistV1Response {
+        val localVarResponse = otherincomeGetDocumenttypechecklistV1WithHttpInfo(pkiOtherincomeID = pkiOtherincomeID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as OtherincomeGetDocumenttypechecklistV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/otherincome/{pkiOtherincomeID}/getDocumenttypechecklist
+     * Retrieve Document type checklist
+     * 
+     * @param pkiOtherincomeID 
+     * @return ApiResponse<OtherincomeGetDocumenttypechecklistV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun otherincomeGetDocumenttypechecklistV1WithHttpInfo(pkiOtherincomeID: kotlin.Int) : ApiResponse<OtherincomeGetDocumenttypechecklistV1Response?> {
+        val localVariableConfig = otherincomeGetDocumenttypechecklistV1RequestConfig(pkiOtherincomeID = pkiOtherincomeID)
+
+        return request<Unit, OtherincomeGetDocumenttypechecklistV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation otherincomeGetDocumenttypechecklistV1
+     *
+     * @param pkiOtherincomeID 
+     * @return RequestConfig
+     */
+    fun otherincomeGetDocumenttypechecklistV1RequestConfig(pkiOtherincomeID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/otherincome/{pkiOtherincomeID}/getDocumenttypechecklist".replace("{"+"pkiOtherincomeID"+"}", encodeURIComponent(pkiOtherincomeID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
      * enum for parameter eOrderBy
      */
      enum class EOrderByOtherincomeGetListV1(val value: kotlin.String) {
@@ -710,6 +785,83 @@ open class ObjectOtherincomeApi(basePath: kotlin.String = defaultBasePath, clien
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/otherincome/{pkiOtherincomeID}/importIntoEDM".replace("{"+"pkiOtherincomeID"+"}", encodeURIComponent(pkiOtherincomeID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * POST /1/object/otherincome/{pkiOtherincomeID}/syncDocumenttypechecklist
+     * Synchronize Document type checklist
+     * 
+     * @param pkiOtherincomeID 
+     * @param body  (optional)
+     * @return OtherincomeSyncDocumenttypechecklistV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun otherincomeSyncDocumenttypechecklistV1(pkiOtherincomeID: kotlin.Int, body: kotlin.Any? = null) : OtherincomeSyncDocumenttypechecklistV1Response {
+        val localVarResponse = otherincomeSyncDocumenttypechecklistV1WithHttpInfo(pkiOtherincomeID = pkiOtherincomeID, body = body)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as OtherincomeSyncDocumenttypechecklistV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /1/object/otherincome/{pkiOtherincomeID}/syncDocumenttypechecklist
+     * Synchronize Document type checklist
+     * 
+     * @param pkiOtherincomeID 
+     * @param body  (optional)
+     * @return ApiResponse<OtherincomeSyncDocumenttypechecklistV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun otherincomeSyncDocumenttypechecklistV1WithHttpInfo(pkiOtherincomeID: kotlin.Int, body: kotlin.Any?) : ApiResponse<OtherincomeSyncDocumenttypechecklistV1Response?> {
+        val localVariableConfig = otherincomeSyncDocumenttypechecklistV1RequestConfig(pkiOtherincomeID = pkiOtherincomeID, body = body)
+
+        return request<kotlin.Any, OtherincomeSyncDocumenttypechecklistV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation otherincomeSyncDocumenttypechecklistV1
+     *
+     * @param pkiOtherincomeID 
+     * @param body  (optional)
+     * @return RequestConfig
+     */
+    fun otherincomeSyncDocumenttypechecklistV1RequestConfig(pkiOtherincomeID: kotlin.Int, body: kotlin.Any?) : RequestConfig<kotlin.Any> {
+        val localVariableBody = body
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/otherincome/{pkiOtherincomeID}/syncDocumenttypechecklist".replace("{"+"pkiOtherincomeID"+"}", encodeURIComponent(pkiOtherincomeID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

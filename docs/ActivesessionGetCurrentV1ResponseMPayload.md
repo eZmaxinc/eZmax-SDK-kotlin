@@ -21,7 +21,7 @@
 | **aPkiPermissionID** | **kotlin.collections.List&lt;kotlin.Int&gt;** | An array of permissions granted to the user or api key |  |
 | **objUserReal** | [**ActivesessionResponseCompoundUser**](ActivesessionResponseCompoundUser.md) |  |  |
 | **aEModuleInternalname** | **kotlin.collections.List&lt;kotlin.String&gt;** | An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key. |  |
-| **bActivesessionAttachment** | **kotlin.Boolean** | Can access attachment when we clone a user |  [optional] |
+| **bActivesessionAttachment** | **kotlin.Boolean** | Whether the user can access attachments when their session is cloned |  [optional] |
 | **bActivesessionCanafe** | **kotlin.Boolean** | Can access canafe when we clone a user |  [optional] |
 | **bActivesessionFinancial** | **kotlin.Boolean** | Can access financial element when we clone a user |  [optional] |
 | **bActivesessionRealestatecompleted** | **kotlin.Boolean** | Can access closed realestate folders when we clone a user |  [optional] |

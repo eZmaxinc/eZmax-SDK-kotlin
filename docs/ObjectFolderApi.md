@@ -10,7 +10,9 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**folderGetCommunicationListV1**](ObjectFolderApi.md#folderGetCommunicationListV1) | **GET** /1/object/folder/{pkiFolderID}/getCommunicationList | Retrieve Communication list |
 | [**folderGetCommunicationrecipientsV1**](ObjectFolderApi.md#folderGetCommunicationrecipientsV1) | **GET** /1/object/folder/{pkiFolderID}/getCommunicationrecipients | Retrieve Communication recipients |
 | [**folderGetCommunicationsendersV1**](ObjectFolderApi.md#folderGetCommunicationsendersV1) | **GET** /1/object/folder/{pkiFolderID}/getCommunicationsenders | Retrieve Communication senders |
+| [**folderGetDocumenttypechecklistV1**](ObjectFolderApi.md#folderGetDocumenttypechecklistV1) | **GET** /1/object/folder/{pkiFolderID}/getDocumenttypechecklist | Retrieve Document type checklist |
 | [**folderImportIntoEDMV1**](ObjectFolderApi.md#folderImportIntoEDMV1) | **POST** /1/object/folder/{pkiFolderID}/importIntoEDM | Import attachments into the Folder |
+| [**folderSyncDocumenttypechecklistV1**](ObjectFolderApi.md#folderSyncDocumenttypechecklistV1) | **POST** /1/object/folder/{pkiFolderID}/syncDocumenttypechecklist | Synchronize Document type checklist |
 
 
 <a id="folderBatchDownloadV1"></a>
@@ -297,6 +299,53 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+<a id="folderGetDocumenttypechecklistV1"></a>
+# **folderGetDocumenttypechecklistV1**
+> FolderGetDocumenttypechecklistV1Response folderGetDocumenttypechecklistV1(pkiFolderID)
+
+Retrieve Document type checklist
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectFolderApi()
+val pkiFolderID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : FolderGetDocumenttypechecklistV1Response = apiInstance.folderGetDocumenttypechecklistV1(pkiFolderID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectFolderApi#folderGetDocumenttypechecklistV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectFolderApi#folderGetDocumenttypechecklistV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiFolderID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**FolderGetDocumenttypechecklistV1Response**](FolderGetDocumenttypechecklistV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
 <a id="folderImportIntoEDMV1"></a>
 # **folderImportIntoEDMV1**
 > FolderImportIntoEDMV1Response folderImportIntoEDMV1(pkiFolderID, folderImportIntoEDMV1Request)
@@ -333,6 +382,55 @@ try {
 ### Return type
 
 [**FolderImportIntoEDMV1Response**](FolderImportIntoEDMV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a id="folderSyncDocumenttypechecklistV1"></a>
+# **folderSyncDocumenttypechecklistV1**
+> FolderSyncDocumenttypechecklistV1Response folderSyncDocumenttypechecklistV1(pkiFolderID, body)
+
+Synchronize Document type checklist
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectFolderApi()
+val pkiFolderID : kotlin.Int = 56 // kotlin.Int | 
+val body : kotlin.Any = Object // kotlin.Any | 
+try {
+    val result : FolderSyncDocumenttypechecklistV1Response = apiInstance.folderSyncDocumenttypechecklistV1(pkiFolderID, body)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectFolderApi#folderSyncDocumenttypechecklistV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectFolderApi#folderSyncDocumenttypechecklistV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiFolderID** | **kotlin.Int**|  | |
+| **body** | **kotlin.Any**|  | [optional] |
+
+### Return type
+
+[**FolderSyncDocumenttypechecklistV1Response**](FolderSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

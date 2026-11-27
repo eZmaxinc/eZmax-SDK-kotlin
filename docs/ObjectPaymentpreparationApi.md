@@ -10,7 +10,9 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**paymentpreparationGetCommunicationListV1**](ObjectPaymentpreparationApi.md#paymentpreparationGetCommunicationListV1) | **GET** /1/object/paymentpreparation/{pkiPaymentpreparationID}/getCommunicationList | Retrieve Communication list |
 | [**paymentpreparationGetCommunicationrecipientsV1**](ObjectPaymentpreparationApi.md#paymentpreparationGetCommunicationrecipientsV1) | **GET** /1/object/paymentpreparation/{pkiPaymentpreparationID}/getCommunicationrecipients | Retrieve Communication recipients |
 | [**paymentpreparationGetCommunicationsendersV1**](ObjectPaymentpreparationApi.md#paymentpreparationGetCommunicationsendersV1) | **GET** /1/object/paymentpreparation/{pkiPaymentpreparationID}/getCommunicationsenders | Retrieve Communication senders |
+| [**paymentpreparationGetDocumenttypechecklistV1**](ObjectPaymentpreparationApi.md#paymentpreparationGetDocumenttypechecklistV1) | **GET** /1/object/paymentpreparation/{pkiPaymentpreparationID}/getDocumenttypechecklist | Retrieve Document type checklist |
 | [**paymentpreparationImportIntoEDMV1**](ObjectPaymentpreparationApi.md#paymentpreparationImportIntoEDMV1) | **POST** /1/object/paymentpreparation/{pkiPaymentpreparationID}/importIntoEDM | Import attachments into the Paymentpreparation |
+| [**paymentpreparationSyncDocumenttypechecklistV1**](ObjectPaymentpreparationApi.md#paymentpreparationSyncDocumenttypechecklistV1) | **POST** /1/object/paymentpreparation/{pkiPaymentpreparationID}/syncDocumenttypechecklist | Synchronize Document type checklist |
 
 
 <a id="paymentpreparationBatchDownloadV1"></a>
@@ -297,6 +299,53 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+<a id="paymentpreparationGetDocumenttypechecklistV1"></a>
+# **paymentpreparationGetDocumenttypechecklistV1**
+> PaymentpreparationGetDocumenttypechecklistV1Response paymentpreparationGetDocumenttypechecklistV1(pkiPaymentpreparationID)
+
+Retrieve Document type checklist
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectPaymentpreparationApi()
+val pkiPaymentpreparationID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : PaymentpreparationGetDocumenttypechecklistV1Response = apiInstance.paymentpreparationGetDocumenttypechecklistV1(pkiPaymentpreparationID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectPaymentpreparationApi#paymentpreparationGetDocumenttypechecklistV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectPaymentpreparationApi#paymentpreparationGetDocumenttypechecklistV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiPaymentpreparationID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**PaymentpreparationGetDocumenttypechecklistV1Response**](PaymentpreparationGetDocumenttypechecklistV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
 <a id="paymentpreparationImportIntoEDMV1"></a>
 # **paymentpreparationImportIntoEDMV1**
 > PaymentpreparationImportIntoEDMV1Response paymentpreparationImportIntoEDMV1(pkiPaymentpreparationID, paymentpreparationImportIntoEDMV1Request)
@@ -333,6 +382,55 @@ try {
 ### Return type
 
 [**PaymentpreparationImportIntoEDMV1Response**](PaymentpreparationImportIntoEDMV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a id="paymentpreparationSyncDocumenttypechecklistV1"></a>
+# **paymentpreparationSyncDocumenttypechecklistV1**
+> PaymentpreparationSyncDocumenttypechecklistV1Response paymentpreparationSyncDocumenttypechecklistV1(pkiPaymentpreparationID, body)
+
+Synchronize Document type checklist
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectPaymentpreparationApi()
+val pkiPaymentpreparationID : kotlin.Int = 56 // kotlin.Int | 
+val body : kotlin.Any = Object // kotlin.Any | 
+try {
+    val result : PaymentpreparationSyncDocumenttypechecklistV1Response = apiInstance.paymentpreparationSyncDocumenttypechecklistV1(pkiPaymentpreparationID, body)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectPaymentpreparationApi#paymentpreparationSyncDocumenttypechecklistV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectPaymentpreparationApi#paymentpreparationSyncDocumenttypechecklistV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiPaymentpreparationID** | **kotlin.Int**|  | |
+| **body** | **kotlin.Any**|  | [optional] |
+
+### Return type
+
+[**PaymentpreparationSyncDocumenttypechecklistV1Response**](PaymentpreparationSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

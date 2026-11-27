@@ -50,7 +50,7 @@ import com.squareup.moshi.JsonClass
  * @param eActivesessionEzsignaccess
  * @param pksCustomerCode The customer code assigned to your account
  * @param fkiSystemconfigurationtypeID The unique ID of the Systemconfigurationtype
- * @param bActivesessionAttachment Can access attachment when we clone a user
+ * @param bActivesessionAttachment Whether the user can access attachments when their session is cloned
  * @param bActivesessionCanafe Can access canafe when we clone a user
  * @param bActivesessionFinancial Can access financial element when we clone a user
  * @param bActivesessionRealestatecompleted Can access closed realestate folders when we clone a user
@@ -111,7 +111,7 @@ data class ActivesessionResponse (
     @Json(name = "fkiSystemconfigurationtypeID")
     val fkiSystemconfigurationtypeID: kotlin.Int,
 
-    /* Can access attachment when we clone a user */
+    /* Whether the user can access attachments when their session is cloned */
     @Json(name = "bActivesessionAttachment")
     val bActivesessionAttachment: kotlin.Boolean? = null,
 

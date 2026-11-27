@@ -30,7 +30,7 @@ import com.squareup.moshi.JsonClass
 /**
  * The status of the Documenttypechecklist
  *
- * Values: Not_required,Required,Filed,Justified
+ * Values: Not_required,Required,Filed,Justified,Mandatory
  */
 
 @JsonClass(generateAdapter = false)
@@ -46,7 +46,10 @@ enum class FieldEDocumenttypechecklistStatus(val value: kotlin.String) {
     Filed("Filed"),
 
     @Json(name = "Justified")
-    Justified("Justified");
+    Justified("Justified"),
+
+    @Json(name = "Mandatory")
+    Mandatory("Mandatory");
 
     /**
      * Override [toString()] to avoid using the enum variable name as the value, and instead use

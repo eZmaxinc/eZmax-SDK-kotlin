@@ -28,7 +28,7 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * The verified of the Attachment
+ * The verification status of the Attachment
  *
  * Values: No,Yes,Rejected,Pending
  */

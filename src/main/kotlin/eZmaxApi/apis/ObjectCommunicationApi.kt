@@ -28,8 +28,10 @@ import okhttp3.Call
 import okhttp3.HttpUrl
 
 import eZmaxApi.models.CommonResponseError
+import eZmaxApi.models.CommunicationGetDocumenttypechecklistV1Response
 import eZmaxApi.models.CommunicationSendV1Request
 import eZmaxApi.models.CommunicationSendV1Response
+import eZmaxApi.models.CommunicationSyncDocumenttypechecklistV1Response
 
 import com.squareup.moshi.Json
 
@@ -127,6 +129,79 @@ open class ObjectCommunicationApi(basePath: kotlin.String = defaultBasePath, cli
     }
 
     /**
+     * GET /1/object/communication/{pkiCommunicationID}/getDocumenttypechecklist
+     * Retrieve Document type checklist
+     * 
+     * @param pkiCommunicationID 
+     * @return CommunicationGetDocumenttypechecklistV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun communicationGetDocumenttypechecklistV1(pkiCommunicationID: kotlin.Int) : CommunicationGetDocumenttypechecklistV1Response {
+        val localVarResponse = communicationGetDocumenttypechecklistV1WithHttpInfo(pkiCommunicationID = pkiCommunicationID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommunicationGetDocumenttypechecklistV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/communication/{pkiCommunicationID}/getDocumenttypechecklist
+     * Retrieve Document type checklist
+     * 
+     * @param pkiCommunicationID 
+     * @return ApiResponse<CommunicationGetDocumenttypechecklistV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun communicationGetDocumenttypechecklistV1WithHttpInfo(pkiCommunicationID: kotlin.Int) : ApiResponse<CommunicationGetDocumenttypechecklistV1Response?> {
+        val localVariableConfig = communicationGetDocumenttypechecklistV1RequestConfig(pkiCommunicationID = pkiCommunicationID)
+
+        return request<Unit, CommunicationGetDocumenttypechecklistV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation communicationGetDocumenttypechecklistV1
+     *
+     * @param pkiCommunicationID 
+     * @return RequestConfig
+     */
+    fun communicationGetDocumenttypechecklistV1RequestConfig(pkiCommunicationID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/communication/{pkiCommunicationID}/getDocumenttypechecklist".replace("{"+"pkiCommunicationID"+"}", encodeURIComponent(pkiCommunicationID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
      * POST /1/object/communication/send
      * Send a new Communication
      * The endpoint allows to send one or many elements at once.
@@ -193,6 +268,83 @@ open class ObjectCommunicationApi(basePath: kotlin.String = defaultBasePath, cli
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/communication/send",
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * POST /1/object/communication/{pkiCommunicationID}/syncDocumenttypechecklist
+     * Synchronize Document type checklist
+     * 
+     * @param pkiCommunicationID 
+     * @param body  (optional)
+     * @return CommunicationSyncDocumenttypechecklistV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun communicationSyncDocumenttypechecklistV1(pkiCommunicationID: kotlin.Int, body: kotlin.Any? = null) : CommunicationSyncDocumenttypechecklistV1Response {
+        val localVarResponse = communicationSyncDocumenttypechecklistV1WithHttpInfo(pkiCommunicationID = pkiCommunicationID, body = body)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as CommunicationSyncDocumenttypechecklistV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /1/object/communication/{pkiCommunicationID}/syncDocumenttypechecklist
+     * Synchronize Document type checklist
+     * 
+     * @param pkiCommunicationID 
+     * @param body  (optional)
+     * @return ApiResponse<CommunicationSyncDocumenttypechecklistV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun communicationSyncDocumenttypechecklistV1WithHttpInfo(pkiCommunicationID: kotlin.Int, body: kotlin.Any?) : ApiResponse<CommunicationSyncDocumenttypechecklistV1Response?> {
+        val localVariableConfig = communicationSyncDocumenttypechecklistV1RequestConfig(pkiCommunicationID = pkiCommunicationID, body = body)
+
+        return request<kotlin.Any, CommunicationSyncDocumenttypechecklistV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation communicationSyncDocumenttypechecklistV1
+     *
+     * @param pkiCommunicationID 
+     * @param body  (optional)
+     * @return RequestConfig
+     */
+    fun communicationSyncDocumenttypechecklistV1RequestConfig(pkiCommunicationID: kotlin.Int, body: kotlin.Any?) : RequestConfig<kotlin.Any> {
+        val localVariableBody = body
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/communication/{pkiCommunicationID}/syncDocumenttypechecklist".replace("{"+"pkiCommunicationID"+"}", encodeURIComponent(pkiCommunicationID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

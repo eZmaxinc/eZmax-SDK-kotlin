@@ -10,8 +10,10 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**salaryGetCommunicationListV1**](ObjectSalaryApi.md#salaryGetCommunicationListV1) | **GET** /1/object/salary/{pkiSalaryID}/getCommunicationList | Retrieve Communication list |
 | [**salaryGetCommunicationrecipientsV1**](ObjectSalaryApi.md#salaryGetCommunicationrecipientsV1) | **GET** /1/object/salary/{pkiSalaryID}/getCommunicationrecipients | Retrieve Communication recipients |
 | [**salaryGetCommunicationsendersV1**](ObjectSalaryApi.md#salaryGetCommunicationsendersV1) | **GET** /1/object/salary/{pkiSalaryID}/getCommunicationsenders | Retrieve Communication senders |
+| [**salaryGetDocumenttypechecklistV1**](ObjectSalaryApi.md#salaryGetDocumenttypechecklistV1) | **GET** /1/object/salary/{pkiSalaryID}/getDocumenttypechecklist | Retrieve Document type checklist |
 | [**salaryGetListV1**](ObjectSalaryApi.md#salaryGetListV1) | **GET** /1/object/salary/getList | Retrieve Salary list |
 | [**salaryImportIntoEDMV1**](ObjectSalaryApi.md#salaryImportIntoEDMV1) | **POST** /1/object/salary/{pkiSalaryID}/importIntoEDM | Import attachments into the Salary |
+| [**salarySyncDocumenttypechecklistV1**](ObjectSalaryApi.md#salarySyncDocumenttypechecklistV1) | **POST** /1/object/salary/{pkiSalaryID}/syncDocumenttypechecklist | Synchronize Document type checklist |
 
 
 <a id="salaryBatchDownloadV1"></a>
@@ -298,6 +300,53 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+<a id="salaryGetDocumenttypechecklistV1"></a>
+# **salaryGetDocumenttypechecklistV1**
+> SalaryGetDocumenttypechecklistV1Response salaryGetDocumenttypechecklistV1(pkiSalaryID)
+
+Retrieve Document type checklist
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectSalaryApi()
+val pkiSalaryID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : SalaryGetDocumenttypechecklistV1Response = apiInstance.salaryGetDocumenttypechecklistV1(pkiSalaryID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectSalaryApi#salaryGetDocumenttypechecklistV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectSalaryApi#salaryGetDocumenttypechecklistV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiSalaryID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**SalaryGetDocumenttypechecklistV1Response**](SalaryGetDocumenttypechecklistV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
 <a id="salaryGetListV1"></a>
 # **salaryGetListV1**
 > SalaryGetListV1Response salaryGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
@@ -391,6 +440,55 @@ try {
 ### Return type
 
 [**SalaryImportIntoEDMV1Response**](SalaryImportIntoEDMV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a id="salarySyncDocumenttypechecklistV1"></a>
+# **salarySyncDocumenttypechecklistV1**
+> SalarySyncDocumenttypechecklistV1Response salarySyncDocumenttypechecklistV1(pkiSalaryID, body)
+
+Synchronize Document type checklist
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectSalaryApi()
+val pkiSalaryID : kotlin.Int = 56 // kotlin.Int | 
+val body : kotlin.Any = Object // kotlin.Any | 
+try {
+    val result : SalarySyncDocumenttypechecklistV1Response = apiInstance.salarySyncDocumenttypechecklistV1(pkiSalaryID, body)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectSalaryApi#salarySyncDocumenttypechecklistV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectSalaryApi#salarySyncDocumenttypechecklistV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiSalaryID** | **kotlin.Int**|  | |
+| **body** | **kotlin.Any**|  | [optional] |
+
+### Return type
+
+[**SalarySyncDocumenttypechecklistV1Response**](SalarySyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

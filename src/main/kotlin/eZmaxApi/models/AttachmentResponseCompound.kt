@@ -44,8 +44,8 @@ import com.squareup.moshi.JsonClass
  * @param eAttachmentType
  * @param iAttachmentSize The size of the Attachment
  * @param sAttachmentMD5 The MD5 of the Attachment
- * @param bAttachmentDeleted Whether if it's deleted
- * @param bAttachmentValid Whether if it's valid
+ * @param bAttachmentDeleted Whether the Attachment is deleted or not
+ * @param bAttachmentValid Whether the Attachment is valid or not
  * @param eAttachmentVerified
  * @param fkiComputerID The unique ID of the Computer
  * @param fkiAdjustmentID The unique ID of the Adjustment
@@ -88,7 +88,7 @@ import com.squareup.moshi.JsonClass
  * @param fkiTranqcontractID The unique ID of the Tranqcontract
  * @param fkiTemplateID The unique ID of the Template
  * @param fkiDocumenttypechecklistID The unique ID of the Documenttypechecklist
- * @param sDocumenttypeNameX The name of the Documenttype in the language of the requester
+ * @param sDocumenttypeNameX The name of the document type in the requester's language
  * @param fkiFolderID The unique ID of the Folder
  * @param fkiRejectedoffertopurchaseID The unique ID of the Rejectedoffertopurchase
  * @param fkiDisclosureID The unique ID of the Disclosure
@@ -134,11 +134,11 @@ data class AttachmentResponseCompound (
     @Json(name = "sAttachmentMD5")
     val sAttachmentMD5: kotlin.String,
 
-    /* Whether if it's deleted */
+    /* Whether the Attachment is deleted or not */
     @Json(name = "bAttachmentDeleted")
     val bAttachmentDeleted: kotlin.Boolean,
 
-    /* Whether if it's valid */
+    /* Whether the Attachment is valid or not */
     @Json(name = "bAttachmentValid")
     val bAttachmentValid: kotlin.Boolean,
 
@@ -309,7 +309,7 @@ data class AttachmentResponseCompound (
     @Json(name = "fkiDocumenttypechecklistID")
     val fkiDocumenttypechecklistID: kotlin.Int? = null,
 
-    /* The name of the Documenttype in the language of the requester */
+    /* The name of the document type in the requester's language */
     @Json(name = "sDocumenttypeNameX")
     val sDocumenttypeNameX: kotlin.String? = null,
 

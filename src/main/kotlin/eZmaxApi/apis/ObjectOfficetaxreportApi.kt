@@ -35,9 +35,11 @@ import eZmaxApi.models.OfficetaxreportGetCommunicationCountV1Response
 import eZmaxApi.models.OfficetaxreportGetCommunicationListV1Response
 import eZmaxApi.models.OfficetaxreportGetCommunicationrecipientsV1Response
 import eZmaxApi.models.OfficetaxreportGetCommunicationsendersV1Response
+import eZmaxApi.models.OfficetaxreportGetDocumenttypechecklistV1Response
 import eZmaxApi.models.OfficetaxreportGetListV1Response
 import eZmaxApi.models.OfficetaxreportImportIntoEDMV1Request
 import eZmaxApi.models.OfficetaxreportImportIntoEDMV1Response
+import eZmaxApi.models.OfficetaxreportSyncDocumenttypechecklistV1Response
 
 import com.squareup.moshi.Json
 
@@ -506,6 +508,79 @@ open class ObjectOfficetaxreportApi(basePath: kotlin.String = defaultBasePath, c
     }
 
     /**
+     * GET /1/object/officetaxreport/{pkiOfficetaxreportID}/getDocumenttypechecklist
+     * Retrieve Document type checklist
+     * 
+     * @param pkiOfficetaxreportID 
+     * @return OfficetaxreportGetDocumenttypechecklistV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun officetaxreportGetDocumenttypechecklistV1(pkiOfficetaxreportID: kotlin.Int) : OfficetaxreportGetDocumenttypechecklistV1Response {
+        val localVarResponse = officetaxreportGetDocumenttypechecklistV1WithHttpInfo(pkiOfficetaxreportID = pkiOfficetaxreportID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as OfficetaxreportGetDocumenttypechecklistV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/officetaxreport/{pkiOfficetaxreportID}/getDocumenttypechecklist
+     * Retrieve Document type checklist
+     * 
+     * @param pkiOfficetaxreportID 
+     * @return ApiResponse<OfficetaxreportGetDocumenttypechecklistV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun officetaxreportGetDocumenttypechecklistV1WithHttpInfo(pkiOfficetaxreportID: kotlin.Int) : ApiResponse<OfficetaxreportGetDocumenttypechecklistV1Response?> {
+        val localVariableConfig = officetaxreportGetDocumenttypechecklistV1RequestConfig(pkiOfficetaxreportID = pkiOfficetaxreportID)
+
+        return request<Unit, OfficetaxreportGetDocumenttypechecklistV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation officetaxreportGetDocumenttypechecklistV1
+     *
+     * @param pkiOfficetaxreportID 
+     * @return RequestConfig
+     */
+    fun officetaxreportGetDocumenttypechecklistV1RequestConfig(pkiOfficetaxreportID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/officetaxreport/{pkiOfficetaxreportID}/getDocumenttypechecklist".replace("{"+"pkiOfficetaxreportID"+"}", encodeURIComponent(pkiOfficetaxreportID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
      * enum for parameter eOrderBy
      */
      enum class EOrderByOfficetaxreportGetListV1(val value: kotlin.String) {
@@ -700,6 +775,83 @@ open class ObjectOfficetaxreportApi(basePath: kotlin.String = defaultBasePath, c
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/officetaxreport/{pkiOfficetaxreportID}/importIntoEDM".replace("{"+"pkiOfficetaxreportID"+"}", encodeURIComponent(pkiOfficetaxreportID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * POST /1/object/officetaxreport/{pkiOfficetaxreportID}/syncDocumenttypechecklist
+     * Synchronize Document type checklist
+     * 
+     * @param pkiOfficetaxreportID 
+     * @param body  (optional)
+     * @return OfficetaxreportSyncDocumenttypechecklistV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun officetaxreportSyncDocumenttypechecklistV1(pkiOfficetaxreportID: kotlin.Int, body: kotlin.Any? = null) : OfficetaxreportSyncDocumenttypechecklistV1Response {
+        val localVarResponse = officetaxreportSyncDocumenttypechecklistV1WithHttpInfo(pkiOfficetaxreportID = pkiOfficetaxreportID, body = body)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as OfficetaxreportSyncDocumenttypechecklistV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /1/object/officetaxreport/{pkiOfficetaxreportID}/syncDocumenttypechecklist
+     * Synchronize Document type checklist
+     * 
+     * @param pkiOfficetaxreportID 
+     * @param body  (optional)
+     * @return ApiResponse<OfficetaxreportSyncDocumenttypechecklistV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun officetaxreportSyncDocumenttypechecklistV1WithHttpInfo(pkiOfficetaxreportID: kotlin.Int, body: kotlin.Any?) : ApiResponse<OfficetaxreportSyncDocumenttypechecklistV1Response?> {
+        val localVariableConfig = officetaxreportSyncDocumenttypechecklistV1RequestConfig(pkiOfficetaxreportID = pkiOfficetaxreportID, body = body)
+
+        return request<kotlin.Any, OfficetaxreportSyncDocumenttypechecklistV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation officetaxreportSyncDocumenttypechecklistV1
+     *
+     * @param pkiOfficetaxreportID 
+     * @param body  (optional)
+     * @return RequestConfig
+     */
+    fun officetaxreportSyncDocumenttypechecklistV1RequestConfig(pkiOfficetaxreportID: kotlin.Int, body: kotlin.Any?) : RequestConfig<kotlin.Any> {
+        val localVariableBody = body
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/officetaxreport/{pkiOfficetaxreportID}/syncDocumenttypechecklist".replace("{"+"pkiOfficetaxreportID"+"}", encodeURIComponent(pkiOfficetaxreportID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

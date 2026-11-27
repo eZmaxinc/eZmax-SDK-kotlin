@@ -10,8 +10,10 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**deposittransitchequeGetCommunicationListV1**](ObjectDeposittransitchequeApi.md#deposittransitchequeGetCommunicationListV1) | **GET** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationList | Retrieve Communication list |
 | [**deposittransitchequeGetCommunicationrecipientsV1**](ObjectDeposittransitchequeApi.md#deposittransitchequeGetCommunicationrecipientsV1) | **GET** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationrecipients | Retrieve Communication recipients |
 | [**deposittransitchequeGetCommunicationsendersV1**](ObjectDeposittransitchequeApi.md#deposittransitchequeGetCommunicationsendersV1) | **GET** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationsenders | Retrieve Communication senders |
+| [**deposittransitchequeGetDocumenttypechecklistV1**](ObjectDeposittransitchequeApi.md#deposittransitchequeGetDocumenttypechecklistV1) | **GET** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getDocumenttypechecklist | Retrieve Document type checklist |
 | [**deposittransitchequeGetListV1**](ObjectDeposittransitchequeApi.md#deposittransitchequeGetListV1) | **GET** /1/object/deposittransitcheque/getList | Retrieve Deposittransitcheque list |
 | [**deposittransitchequeImportIntoEDMV1**](ObjectDeposittransitchequeApi.md#deposittransitchequeImportIntoEDMV1) | **POST** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/importIntoEDM | Import attachments into the Deposittransitcheque |
+| [**deposittransitchequeSyncDocumenttypechecklistV1**](ObjectDeposittransitchequeApi.md#deposittransitchequeSyncDocumenttypechecklistV1) | **POST** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/syncDocumenttypechecklist | Synchronize Document type checklist |
 
 
 <a id="deposittransitchequeBatchDownloadV1"></a>
@@ -298,6 +300,53 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+<a id="deposittransitchequeGetDocumenttypechecklistV1"></a>
+# **deposittransitchequeGetDocumenttypechecklistV1**
+> DeposittransitchequeGetDocumenttypechecklistV1Response deposittransitchequeGetDocumenttypechecklistV1(pkiDeposittransitchequeID)
+
+Retrieve Document type checklist
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectDeposittransitchequeApi()
+val pkiDeposittransitchequeID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : DeposittransitchequeGetDocumenttypechecklistV1Response = apiInstance.deposittransitchequeGetDocumenttypechecklistV1(pkiDeposittransitchequeID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectDeposittransitchequeApi#deposittransitchequeGetDocumenttypechecklistV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectDeposittransitchequeApi#deposittransitchequeGetDocumenttypechecklistV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiDeposittransitchequeID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**DeposittransitchequeGetDocumenttypechecklistV1Response**](DeposittransitchequeGetDocumenttypechecklistV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
 <a id="deposittransitchequeGetListV1"></a>
 # **deposittransitchequeGetListV1**
 > DeposittransitchequeGetListV1Response deposittransitchequeGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
@@ -391,6 +440,55 @@ try {
 ### Return type
 
 [**DeposittransitchequeImportIntoEDMV1Response**](DeposittransitchequeImportIntoEDMV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a id="deposittransitchequeSyncDocumenttypechecklistV1"></a>
+# **deposittransitchequeSyncDocumenttypechecklistV1**
+> DeposittransitchequeSyncDocumenttypechecklistV1Response deposittransitchequeSyncDocumenttypechecklistV1(pkiDeposittransitchequeID, body)
+
+Synchronize Document type checklist
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectDeposittransitchequeApi()
+val pkiDeposittransitchequeID : kotlin.Int = 56 // kotlin.Int | 
+val body : kotlin.Any = Object // kotlin.Any | 
+try {
+    val result : DeposittransitchequeSyncDocumenttypechecklistV1Response = apiInstance.deposittransitchequeSyncDocumenttypechecklistV1(pkiDeposittransitchequeID, body)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectDeposittransitchequeApi#deposittransitchequeSyncDocumenttypechecklistV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectDeposittransitchequeApi#deposittransitchequeSyncDocumenttypechecklistV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiDeposittransitchequeID** | **kotlin.Int**|  | |
+| **body** | **kotlin.Any**|  | [optional] |
+
+### Return type
+
+[**DeposittransitchequeSyncDocumenttypechecklistV1Response**](DeposittransitchequeSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

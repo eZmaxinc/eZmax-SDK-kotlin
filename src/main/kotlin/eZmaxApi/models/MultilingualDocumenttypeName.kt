@@ -30,18 +30,18 @@ import com.squareup.moshi.JsonClass
 /**
  * The name1 of the Documenttype
  *
- * @param sDocumenttypeName1 The name1 of the Documenttype
- * @param sDocumenttypeName2 The name2 of the Documenttype
+ * @param sDocumenttypeName1 The name of the document type in French
+ * @param sDocumenttypeName2 The name of the document type in English
  */
 
 
 data class MultilingualDocumenttypeName (
 
-    /* The name1 of the Documenttype */
+    /* The name of the document type in French */
     @Json(name = "sDocumenttypeName1")
     val sDocumenttypeName1: kotlin.String? = null,
 
-    /* The name2 of the Documenttype */
+    /* The name of the document type in English */
     @Json(name = "sDocumenttypeName2")
     val sDocumenttypeName2: kotlin.String? = null
 

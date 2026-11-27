@@ -35,9 +35,11 @@ import eZmaxApi.models.InvoiceGetCommunicationCountV1Response
 import eZmaxApi.models.InvoiceGetCommunicationListV1Response
 import eZmaxApi.models.InvoiceGetCommunicationrecipientsV1Response
 import eZmaxApi.models.InvoiceGetCommunicationsendersV1Response
+import eZmaxApi.models.InvoiceGetDocumenttypechecklistV1Response
 import eZmaxApi.models.InvoiceGetListV1Response
 import eZmaxApi.models.InvoiceImportIntoEDMV1Request
 import eZmaxApi.models.InvoiceImportIntoEDMV1Response
+import eZmaxApi.models.InvoiceSyncDocumenttypechecklistV1Response
 
 import com.squareup.moshi.Json
 
@@ -506,6 +508,79 @@ open class ObjectInvoiceApi(basePath: kotlin.String = defaultBasePath, client: C
     }
 
     /**
+     * GET /1/object/invoice/{pkiInvoiceID}/getDocumenttypechecklist
+     * Retrieve Document type checklist
+     * 
+     * @param pkiInvoiceID 
+     * @return InvoiceGetDocumenttypechecklistV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun invoiceGetDocumenttypechecklistV1(pkiInvoiceID: kotlin.Int) : InvoiceGetDocumenttypechecklistV1Response {
+        val localVarResponse = invoiceGetDocumenttypechecklistV1WithHttpInfo(pkiInvoiceID = pkiInvoiceID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as InvoiceGetDocumenttypechecklistV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/invoice/{pkiInvoiceID}/getDocumenttypechecklist
+     * Retrieve Document type checklist
+     * 
+     * @param pkiInvoiceID 
+     * @return ApiResponse<InvoiceGetDocumenttypechecklistV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun invoiceGetDocumenttypechecklistV1WithHttpInfo(pkiInvoiceID: kotlin.Int) : ApiResponse<InvoiceGetDocumenttypechecklistV1Response?> {
+        val localVariableConfig = invoiceGetDocumenttypechecklistV1RequestConfig(pkiInvoiceID = pkiInvoiceID)
+
+        return request<Unit, InvoiceGetDocumenttypechecklistV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation invoiceGetDocumenttypechecklistV1
+     *
+     * @param pkiInvoiceID 
+     * @return RequestConfig
+     */
+    fun invoiceGetDocumenttypechecklistV1RequestConfig(pkiInvoiceID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/invoice/{pkiInvoiceID}/getDocumenttypechecklist".replace("{"+"pkiInvoiceID"+"}", encodeURIComponent(pkiInvoiceID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
      * enum for parameter eOrderBy
      */
      enum class EOrderByInvoiceGetListV1(val value: kotlin.String) {
@@ -718,6 +793,83 @@ open class ObjectInvoiceApi(basePath: kotlin.String = defaultBasePath, client: C
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/invoice/{pkiInvoiceID}/importIntoEDM".replace("{"+"pkiInvoiceID"+"}", encodeURIComponent(pkiInvoiceID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * POST /1/object/invoice/{pkiInvoiceID}/syncDocumenttypechecklist
+     * Synchronize Document type checklist
+     * 
+     * @param pkiInvoiceID 
+     * @param body  (optional)
+     * @return InvoiceSyncDocumenttypechecklistV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun invoiceSyncDocumenttypechecklistV1(pkiInvoiceID: kotlin.Int, body: kotlin.Any? = null) : InvoiceSyncDocumenttypechecklistV1Response {
+        val localVarResponse = invoiceSyncDocumenttypechecklistV1WithHttpInfo(pkiInvoiceID = pkiInvoiceID, body = body)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as InvoiceSyncDocumenttypechecklistV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /1/object/invoice/{pkiInvoiceID}/syncDocumenttypechecklist
+     * Synchronize Document type checklist
+     * 
+     * @param pkiInvoiceID 
+     * @param body  (optional)
+     * @return ApiResponse<InvoiceSyncDocumenttypechecklistV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun invoiceSyncDocumenttypechecklistV1WithHttpInfo(pkiInvoiceID: kotlin.Int, body: kotlin.Any?) : ApiResponse<InvoiceSyncDocumenttypechecklistV1Response?> {
+        val localVariableConfig = invoiceSyncDocumenttypechecklistV1RequestConfig(pkiInvoiceID = pkiInvoiceID, body = body)
+
+        return request<kotlin.Any, InvoiceSyncDocumenttypechecklistV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation invoiceSyncDocumenttypechecklistV1
+     *
+     * @param pkiInvoiceID 
+     * @param body  (optional)
+     * @return RequestConfig
+     */
+    fun invoiceSyncDocumenttypechecklistV1RequestConfig(pkiInvoiceID: kotlin.Int, body: kotlin.Any?) : RequestConfig<kotlin.Any> {
+        val localVariableBody = body
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/invoice/{pkiInvoiceID}/syncDocumenttypechecklist".replace("{"+"pkiInvoiceID"+"}", encodeURIComponent(pkiInvoiceID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

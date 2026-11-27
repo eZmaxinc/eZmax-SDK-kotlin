@@ -59,7 +59,7 @@ import com.squareup.moshi.JsonClass
  * @param aPkiPermissionID An array of permissions granted to the user or api key
  * @param objUserReal
  * @param aEModuleInternalname An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key.
- * @param bActivesessionAttachment Can access attachment when we clone a user
+ * @param bActivesessionAttachment Whether the user can access attachments when their session is cloned
  * @param bActivesessionCanafe Can access canafe when we clone a user
  * @param bActivesessionFinancial Can access financial element when we clone a user
  * @param bActivesessionRealestatecompleted Can access closed realestate folders when we clone a user
@@ -145,7 +145,7 @@ data class ActivesessionGetCurrentV1ResponseMPayload (
     @Json(name = "a_eModuleInternalname")
     val aEModuleInternalname: kotlin.collections.List<kotlin.String>,
 
-    /* Can access attachment when we clone a user */
+    /* Whether the user can access attachments when their session is cloned */
     @Json(name = "bActivesessionAttachment")
     val bActivesessionAttachment: kotlin.Boolean? = null,
 

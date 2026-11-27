@@ -28,7 +28,7 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * The salebyowner of the Documenttype
+ * Whether the document type applies to sale by owner transactions
  *
  * Values: All,Yes,No
  */

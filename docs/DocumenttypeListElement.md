@@ -5,21 +5,20 @@
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
 | **pkiDocumenttypeID** | **kotlin.Int** | The unique ID of the Documenttype |  |
-| **sDocumenttypeNameX** | **kotlin.String** | The name of the Documenttype in the language of the requester |  |
-| **sDocumenttypeDefaultfilename** | **kotlin.String** | The defaultfilename of the Documenttype |  |
-| **bDocumenttypeShowagent** | **kotlin.Boolean** | Whether if it&#39;s an showagent |  |
+| **sDocumenttypeNameX** | **kotlin.String** | The name of the document type in the requester&#39;s language |  |
+| **sDocumenttypeDefaultfilename** | **kotlin.String** | The default filename for the document type |  |
+| **bDocumenttypeShowagent** | **kotlin.Boolean** | Whether the document type should be shown to the agent |  |
 | **bDocumenttypeIsactive** | **kotlin.Boolean** | Whether the documenttype is active or not |  |
-| **bDocumenttypeIsrequired** | **kotlin.Boolean** | Whether if it&#39;s an isrequired |  |
-| **bDocumenttypeSale** | **kotlin.Boolean** | Whether if it&#39;s an sale |  |
-| **bDocumenttypeRental** | **kotlin.Boolean** | Whether if it&#39;s an rental |  |
-| **bDocumenttypeReference** | **kotlin.Boolean** | Whether if it&#39;s an reference |  |
-| **bDocumenttypeMortgagereference** | **kotlin.Boolean** | Whether if it&#39;s an mortgagereference |  |
-| **bDocumenttypeEvaluation** | **kotlin.Boolean** | Whether if it&#39;s an evaluation |  |
-| **bDocumenttypeConsultation** | **kotlin.Boolean** | Whether if it&#39;s an consultation |  |
-| **bDocumenttypeOtherservices** | **kotlin.Boolean** | Whether if it&#39;s an otherservices |  |
-| **bDocumenttypeForeclosedsale** | **kotlin.Boolean** | Whether if it&#39;s an foreclosedsale |  |
-| **bDocumenttypeCommercialfunding** | **kotlin.Boolean** | Whether if it&#39;s an commercialfunding |  |
-| **bDocumenttypeCanafe** | **kotlin.Boolean** | Whether if it&#39;s an canafe |  |
+| **bDocumenttypeSale** | **kotlin.Boolean** | Whether the document type applies to sale transactions |  |
+| **bDocumenttypeRental** | **kotlin.Boolean** | Whether the document type applies to rental transactions |  |
+| **bDocumenttypeReference** | **kotlin.Boolean** | Whether the document type is a reference document |  |
+| **bDocumenttypeMortgagereference** | **kotlin.Boolean** | Whether the document type is a mortgage reference |  |
+| **bDocumenttypeEvaluation** | **kotlin.Boolean** | Whether the document type applies to evaluation transactions |  |
+| **bDocumenttypeConsultation** | **kotlin.Boolean** | Whether the document type applies to consultation transactions |  |
+| **bDocumenttypeOtherservices** | **kotlin.Boolean** | Whether the document type applies to other services |  |
+| **bDocumenttypeForeclosedsale** | **kotlin.Boolean** | Whether the document type applies to foreclosed sale transactions |  |
+| **bDocumenttypeCommercialfunding** | **kotlin.Boolean** | Whether the document type applies to commercial funding transactions |  |
+| **bDocumenttypeCanafe** | **kotlin.Boolean** | Whether the document type applies to Canafe transactions |  |
 | **eDocumenttypePrivacydefault** | [**FieldEDocumenttypePrivacydefault**](FieldEDocumenttypePrivacydefault.md) |  |  |
 | **eDocumenttypeStatusdefault** | [**FieldEDocumenttypeStatusdefault**](FieldEDocumenttypeStatusdefault.md) |  |  |
 | **eDocumenttypeSalebyowner** | [**FieldEDocumenttypeSalebyowner**](FieldEDocumenttypeSalebyowner.md) |  |  |

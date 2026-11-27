@@ -10,8 +10,10 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**notaryGetCommunicationListV1**](ObjectNotaryApi.md#notaryGetCommunicationListV1) | **GET** /1/object/notary/{pkiNotaryID}/getCommunicationList | Retrieve Communication list |
 | [**notaryGetCommunicationrecipientsV1**](ObjectNotaryApi.md#notaryGetCommunicationrecipientsV1) | **GET** /1/object/notary/{pkiNotaryID}/getCommunicationrecipients | Retrieve Communication recipients |
 | [**notaryGetCommunicationsendersV1**](ObjectNotaryApi.md#notaryGetCommunicationsendersV1) | **GET** /1/object/notary/{pkiNotaryID}/getCommunicationsenders | Retrieve Communication senders |
+| [**notaryGetDocumenttypechecklistV1**](ObjectNotaryApi.md#notaryGetDocumenttypechecklistV1) | **GET** /1/object/notary/{pkiNotaryID}/getDocumenttypechecklist | Retrieve Document type checklist |
 | [**notaryGetListV1**](ObjectNotaryApi.md#notaryGetListV1) | **GET** /1/object/notary/getList | Retrieve Notary list |
 | [**notaryImportIntoEDMV1**](ObjectNotaryApi.md#notaryImportIntoEDMV1) | **POST** /1/object/notary/{pkiNotaryID}/importIntoEDM | Import attachments into the Notary |
+| [**notarySyncDocumenttypechecklistV1**](ObjectNotaryApi.md#notarySyncDocumenttypechecklistV1) | **POST** /1/object/notary/{pkiNotaryID}/syncDocumenttypechecklist | Synchronize Document type checklist |
 
 
 <a id="notaryBatchDownloadV1"></a>
@@ -298,6 +300,53 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+<a id="notaryGetDocumenttypechecklistV1"></a>
+# **notaryGetDocumenttypechecklistV1**
+> NotaryGetDocumenttypechecklistV1Response notaryGetDocumenttypechecklistV1(pkiNotaryID)
+
+Retrieve Document type checklist
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectNotaryApi()
+val pkiNotaryID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : NotaryGetDocumenttypechecklistV1Response = apiInstance.notaryGetDocumenttypechecklistV1(pkiNotaryID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectNotaryApi#notaryGetDocumenttypechecklistV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectNotaryApi#notaryGetDocumenttypechecklistV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiNotaryID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**NotaryGetDocumenttypechecklistV1Response**](NotaryGetDocumenttypechecklistV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
 <a id="notaryGetListV1"></a>
 # **notaryGetListV1**
 > NotaryGetListV1Response notaryGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
@@ -391,6 +440,55 @@ try {
 ### Return type
 
 [**NotaryImportIntoEDMV1Response**](NotaryImportIntoEDMV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a id="notarySyncDocumenttypechecklistV1"></a>
+# **notarySyncDocumenttypechecklistV1**
+> NotarySyncDocumenttypechecklistV1Response notarySyncDocumenttypechecklistV1(pkiNotaryID, body)
+
+Synchronize Document type checklist
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectNotaryApi()
+val pkiNotaryID : kotlin.Int = 56 // kotlin.Int | 
+val body : kotlin.Any = Object // kotlin.Any | 
+try {
+    val result : NotarySyncDocumenttypechecklistV1Response = apiInstance.notarySyncDocumenttypechecklistV1(pkiNotaryID, body)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectNotaryApi#notarySyncDocumenttypechecklistV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectNotaryApi#notarySyncDocumenttypechecklistV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiNotaryID** | **kotlin.Int**|  | |
+| **body** | **kotlin.Any**|  | [optional] |
+
+### Return type
+
+[**NotarySyncDocumenttypechecklistV1Response**](NotarySyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

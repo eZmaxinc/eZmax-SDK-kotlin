@@ -34,9 +34,11 @@ import eZmaxApi.models.BankaccountGetCommunicationCountV1Response
 import eZmaxApi.models.BankaccountGetCommunicationListV1Response
 import eZmaxApi.models.BankaccountGetCommunicationrecipientsV1Response
 import eZmaxApi.models.BankaccountGetCommunicationsendersV1Response
+import eZmaxApi.models.BankaccountGetDocumenttypechecklistV1Response
 import eZmaxApi.models.BankaccountGetListV1Response
 import eZmaxApi.models.BankaccountImportIntoEDMV1Request
 import eZmaxApi.models.BankaccountImportIntoEDMV1Response
+import eZmaxApi.models.BankaccountSyncDocumenttypechecklistV1Response
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.HeaderAcceptLanguage
 
@@ -632,6 +634,79 @@ open class ObjectBankaccountApi(basePath: kotlin.String = defaultBasePath, clien
     }
 
     /**
+     * GET /1/object/bankaccount/{pkiBankaccountID}/getDocumenttypechecklist
+     * Retrieve Document type checklist
+     * 
+     * @param pkiBankaccountID 
+     * @return BankaccountGetDocumenttypechecklistV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun bankaccountGetDocumenttypechecklistV1(pkiBankaccountID: kotlin.Int) : BankaccountGetDocumenttypechecklistV1Response {
+        val localVarResponse = bankaccountGetDocumenttypechecklistV1WithHttpInfo(pkiBankaccountID = pkiBankaccountID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as BankaccountGetDocumenttypechecklistV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/bankaccount/{pkiBankaccountID}/getDocumenttypechecklist
+     * Retrieve Document type checklist
+     * 
+     * @param pkiBankaccountID 
+     * @return ApiResponse<BankaccountGetDocumenttypechecklistV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun bankaccountGetDocumenttypechecklistV1WithHttpInfo(pkiBankaccountID: kotlin.Int) : ApiResponse<BankaccountGetDocumenttypechecklistV1Response?> {
+        val localVariableConfig = bankaccountGetDocumenttypechecklistV1RequestConfig(pkiBankaccountID = pkiBankaccountID)
+
+        return request<Unit, BankaccountGetDocumenttypechecklistV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation bankaccountGetDocumenttypechecklistV1
+     *
+     * @param pkiBankaccountID 
+     * @return RequestConfig
+     */
+    fun bankaccountGetDocumenttypechecklistV1RequestConfig(pkiBankaccountID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/bankaccount/{pkiBankaccountID}/getDocumenttypechecklist".replace("{"+"pkiBankaccountID"+"}", encodeURIComponent(pkiBankaccountID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
      * enum for parameter eOrderBy
      */
      enum class EOrderByBankaccountGetListV1(val value: kotlin.String) {
@@ -838,6 +913,83 @@ open class ObjectBankaccountApi(basePath: kotlin.String = defaultBasePath, clien
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/bankaccount/{pkiBankaccountID}/importIntoEDM".replace("{"+"pkiBankaccountID"+"}", encodeURIComponent(pkiBankaccountID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * POST /1/object/bankaccount/{pkiBankaccountID}/syncDocumenttypechecklist
+     * Synchronize Document type checklist
+     * 
+     * @param pkiBankaccountID 
+     * @param body  (optional)
+     * @return BankaccountSyncDocumenttypechecklistV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun bankaccountSyncDocumenttypechecklistV1(pkiBankaccountID: kotlin.Int, body: kotlin.Any? = null) : BankaccountSyncDocumenttypechecklistV1Response {
+        val localVarResponse = bankaccountSyncDocumenttypechecklistV1WithHttpInfo(pkiBankaccountID = pkiBankaccountID, body = body)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as BankaccountSyncDocumenttypechecklistV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /1/object/bankaccount/{pkiBankaccountID}/syncDocumenttypechecklist
+     * Synchronize Document type checklist
+     * 
+     * @param pkiBankaccountID 
+     * @param body  (optional)
+     * @return ApiResponse<BankaccountSyncDocumenttypechecklistV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun bankaccountSyncDocumenttypechecklistV1WithHttpInfo(pkiBankaccountID: kotlin.Int, body: kotlin.Any?) : ApiResponse<BankaccountSyncDocumenttypechecklistV1Response?> {
+        val localVariableConfig = bankaccountSyncDocumenttypechecklistV1RequestConfig(pkiBankaccountID = pkiBankaccountID, body = body)
+
+        return request<kotlin.Any, BankaccountSyncDocumenttypechecklistV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation bankaccountSyncDocumenttypechecklistV1
+     *
+     * @param pkiBankaccountID 
+     * @param body  (optional)
+     * @return RequestConfig
+     */
+    fun bankaccountSyncDocumenttypechecklistV1RequestConfig(pkiBankaccountID: kotlin.Int, body: kotlin.Any?) : RequestConfig<kotlin.Any> {
+        val localVariableBody = body
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/bankaccount/{pkiBankaccountID}/syncDocumenttypechecklist".replace("{"+"pkiBankaccountID"+"}", encodeURIComponent(pkiBankaccountID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

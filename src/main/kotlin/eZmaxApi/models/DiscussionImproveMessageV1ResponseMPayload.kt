@@ -28,17 +28,17 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * Payload for POST /1/object/discussion
+ * Payload for POST /1/object/discussion/improveMessage
  *
- * @param aPkiDiscussionID An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request.
+ * @param tDiscussionMessage The Message of the Discussion
  */
 
 
 data class DiscussionImproveMessageV1ResponseMPayload (
 
-    /* An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request. */
-    @Json(name = "a_pkiDiscussionID")
-    val aPkiDiscussionID: kotlin.collections.List<kotlin.Int>
+    /* The Message of the Discussion */
+    @Json(name = "tDiscussionMessage")
+    val tDiscussionMessage: kotlin.String
 
 ) {
 

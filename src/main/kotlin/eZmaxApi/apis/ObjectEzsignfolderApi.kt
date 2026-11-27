@@ -55,6 +55,7 @@ import eZmaxApi.models.EzsignfolderGetCommunicationCountV1Response
 import eZmaxApi.models.EzsignfolderGetCommunicationListV1Response
 import eZmaxApi.models.EzsignfolderGetCommunicationrecipientsV1Response
 import eZmaxApi.models.EzsignfolderGetCommunicationsendersV1Response
+import eZmaxApi.models.EzsignfolderGetDocumenttypechecklistV1Response
 import eZmaxApi.models.EzsignfolderGetEzsignannotationsV1Response
 import eZmaxApi.models.EzsignfolderGetEzsigndocumentsV1Response
 import eZmaxApi.models.EzsignfolderGetEzsigndocumentsV2Response
@@ -82,6 +83,7 @@ import eZmaxApi.models.EzsignfolderSendV1Request
 import eZmaxApi.models.EzsignfolderSendV1Response
 import eZmaxApi.models.EzsignfolderSendV3Request
 import eZmaxApi.models.EzsignfolderSendV3Response
+import eZmaxApi.models.EzsignfolderSyncDocumenttypechecklistV1Response
 import eZmaxApi.models.EzsignfolderUnsendV1Response
 import eZmaxApi.models.HeaderAcceptLanguage
 
@@ -1726,6 +1728,79 @@ open class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, clie
     }
 
     /**
+     * GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getDocumenttypechecklist
+     * Retrieve Document type checklist
+     * 
+     * @param pkiEzsignfolderID 
+     * @return EzsignfolderGetDocumenttypechecklistV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignfolderGetDocumenttypechecklistV1(pkiEzsignfolderID: kotlin.Int) : EzsignfolderGetDocumenttypechecklistV1Response {
+        val localVarResponse = ezsignfolderGetDocumenttypechecklistV1WithHttpInfo(pkiEzsignfolderID = pkiEzsignfolderID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfolderGetDocumenttypechecklistV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getDocumenttypechecklist
+     * Retrieve Document type checklist
+     * 
+     * @param pkiEzsignfolderID 
+     * @return ApiResponse<EzsignfolderGetDocumenttypechecklistV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignfolderGetDocumenttypechecklistV1WithHttpInfo(pkiEzsignfolderID: kotlin.Int) : ApiResponse<EzsignfolderGetDocumenttypechecklistV1Response?> {
+        val localVariableConfig = ezsignfolderGetDocumenttypechecklistV1RequestConfig(pkiEzsignfolderID = pkiEzsignfolderID)
+
+        return request<Unit, EzsignfolderGetDocumenttypechecklistV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsignfolderGetDocumenttypechecklistV1
+     *
+     * @param pkiEzsignfolderID 
+     * @return RequestConfig
+     */
+    fun ezsignfolderGetDocumenttypechecklistV1RequestConfig(pkiEzsignfolderID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/getDocumenttypechecklist".replace("{"+"pkiEzsignfolderID"+"}", encodeURIComponent(pkiEzsignfolderID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
      * GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignannotations
      * Retrieve an existing Ezsignfolder&#39;s Ezsignannotations
      * 
@@ -3319,6 +3394,83 @@ open class ObjectEzsignfolderApi(basePath: kotlin.String = defaultBasePath, clie
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/3/object/ezsignfolder/{pkiEzsignfolderID}/send".replace("{"+"pkiEzsignfolderID"+"}", encodeURIComponent(pkiEzsignfolderID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * POST /1/object/ezsignfolder/{pkiEzsignfolderID}/syncDocumenttypechecklist
+     * Synchronize Document type checklist
+     * 
+     * @param pkiEzsignfolderID 
+     * @param body  (optional)
+     * @return EzsignfolderSyncDocumenttypechecklistV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun ezsignfolderSyncDocumenttypechecklistV1(pkiEzsignfolderID: kotlin.Int, body: kotlin.Any? = null) : EzsignfolderSyncDocumenttypechecklistV1Response {
+        val localVarResponse = ezsignfolderSyncDocumenttypechecklistV1WithHttpInfo(pkiEzsignfolderID = pkiEzsignfolderID, body = body)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EzsignfolderSyncDocumenttypechecklistV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /1/object/ezsignfolder/{pkiEzsignfolderID}/syncDocumenttypechecklist
+     * Synchronize Document type checklist
+     * 
+     * @param pkiEzsignfolderID 
+     * @param body  (optional)
+     * @return ApiResponse<EzsignfolderSyncDocumenttypechecklistV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun ezsignfolderSyncDocumenttypechecklistV1WithHttpInfo(pkiEzsignfolderID: kotlin.Int, body: kotlin.Any?) : ApiResponse<EzsignfolderSyncDocumenttypechecklistV1Response?> {
+        val localVariableConfig = ezsignfolderSyncDocumenttypechecklistV1RequestConfig(pkiEzsignfolderID = pkiEzsignfolderID, body = body)
+
+        return request<kotlin.Any, EzsignfolderSyncDocumenttypechecklistV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation ezsignfolderSyncDocumenttypechecklistV1
+     *
+     * @param pkiEzsignfolderID 
+     * @param body  (optional)
+     * @return RequestConfig
+     */
+    fun ezsignfolderSyncDocumenttypechecklistV1RequestConfig(pkiEzsignfolderID: kotlin.Int, body: kotlin.Any?) : RequestConfig<kotlin.Any> {
+        val localVariableBody = body
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/ezsignfolder/{pkiEzsignfolderID}/syncDocumenttypechecklist".replace("{"+"pkiEzsignfolderID"+"}", encodeURIComponent(pkiEzsignfolderID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

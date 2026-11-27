@@ -28,7 +28,7 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * The saledisplaybyrole of the Documenttype
+ * The role that determines document display in sale transactions
  *
  * Values: InscriptorSeller,Inscriptor,Seller
  */

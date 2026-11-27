@@ -38,21 +38,20 @@ import com.squareup.moshi.JsonClass
  * A Documenttype List Element
  *
  * @param pkiDocumenttypeID The unique ID of the Documenttype
- * @param sDocumenttypeNameX The name of the Documenttype in the language of the requester
- * @param sDocumenttypeDefaultfilename The defaultfilename of the Documenttype
- * @param bDocumenttypeShowagent Whether if it's an showagent
+ * @param sDocumenttypeNameX The name of the document type in the requester's language
+ * @param sDocumenttypeDefaultfilename The default filename for the document type
+ * @param bDocumenttypeShowagent Whether the document type should be shown to the agent
  * @param bDocumenttypeIsactive Whether the documenttype is active or not
- * @param bDocumenttypeIsrequired Whether if it's an isrequired
- * @param bDocumenttypeSale Whether if it's an sale
- * @param bDocumenttypeRental Whether if it's an rental
- * @param bDocumenttypeReference Whether if it's an reference
- * @param bDocumenttypeMortgagereference Whether if it's an mortgagereference
- * @param bDocumenttypeEvaluation Whether if it's an evaluation
- * @param bDocumenttypeConsultation Whether if it's an consultation
- * @param bDocumenttypeOtherservices Whether if it's an otherservices
- * @param bDocumenttypeForeclosedsale Whether if it's an foreclosedsale
- * @param bDocumenttypeCommercialfunding Whether if it's an commercialfunding
- * @param bDocumenttypeCanafe Whether if it's an canafe
+ * @param bDocumenttypeSale Whether the document type applies to sale transactions
+ * @param bDocumenttypeRental Whether the document type applies to rental transactions
+ * @param bDocumenttypeReference Whether the document type is a reference document
+ * @param bDocumenttypeMortgagereference Whether the document type is a mortgage reference
+ * @param bDocumenttypeEvaluation Whether the document type applies to evaluation transactions
+ * @param bDocumenttypeConsultation Whether the document type applies to consultation transactions
+ * @param bDocumenttypeOtherservices Whether the document type applies to other services
+ * @param bDocumenttypeForeclosedsale Whether the document type applies to foreclosed sale transactions
+ * @param bDocumenttypeCommercialfunding Whether the document type applies to commercial funding transactions
+ * @param bDocumenttypeCanafe Whether the document type applies to Canafe transactions
  * @param eDocumenttypePrivacydefault
  * @param eDocumenttypeStatusdefault
  * @param eDocumenttypeSalebyowner
@@ -69,15 +68,15 @@ data class DocumenttypeListElement (
     @Json(name = "pkiDocumenttypeID")
     val pkiDocumenttypeID: kotlin.Int,
 
-    /* The name of the Documenttype in the language of the requester */
+    /* The name of the document type in the requester's language */
     @Json(name = "sDocumenttypeNameX")
     val sDocumenttypeNameX: kotlin.String,
 
-    /* The defaultfilename of the Documenttype */
+    /* The default filename for the document type */
     @Json(name = "sDocumenttypeDefaultfilename")
     val sDocumenttypeDefaultfilename: kotlin.String,
 
-    /* Whether if it's an showagent */
+    /* Whether the document type should be shown to the agent */
     @Json(name = "bDocumenttypeShowagent")
     val bDocumenttypeShowagent: kotlin.Boolean,
 
@@ -85,47 +84,43 @@ data class DocumenttypeListElement (
     @Json(name = "bDocumenttypeIsactive")
     val bDocumenttypeIsactive: kotlin.Boolean,
 
-    /* Whether if it's an isrequired */
-    @Json(name = "bDocumenttypeIsrequired")
-    val bDocumenttypeIsrequired: kotlin.Boolean,
-
-    /* Whether if it's an sale */
+    /* Whether the document type applies to sale transactions */
     @Json(name = "bDocumenttypeSale")
     val bDocumenttypeSale: kotlin.Boolean,
 
-    /* Whether if it's an rental */
+    /* Whether the document type applies to rental transactions */
     @Json(name = "bDocumenttypeRental")
     val bDocumenttypeRental: kotlin.Boolean,
 
-    /* Whether if it's an reference */
+    /* Whether the document type is a reference document */
     @Json(name = "bDocumenttypeReference")
     val bDocumenttypeReference: kotlin.Boolean,
 
-    /* Whether if it's an mortgagereference */
+    /* Whether the document type is a mortgage reference */
     @Json(name = "bDocumenttypeMortgagereference")
     val bDocumenttypeMortgagereference: kotlin.Boolean,
 
-    /* Whether if it's an evaluation */
+    /* Whether the document type applies to evaluation transactions */
     @Json(name = "bDocumenttypeEvaluation")
     val bDocumenttypeEvaluation: kotlin.Boolean,
 
-    /* Whether if it's an consultation */
+    /* Whether the document type applies to consultation transactions */
     @Json(name = "bDocumenttypeConsultation")
     val bDocumenttypeConsultation: kotlin.Boolean,
 
-    /* Whether if it's an otherservices */
+    /* Whether the document type applies to other services */
     @Json(name = "bDocumenttypeOtherservices")
     val bDocumenttypeOtherservices: kotlin.Boolean,
 
-    /* Whether if it's an foreclosedsale */
+    /* Whether the document type applies to foreclosed sale transactions */
     @Json(name = "bDocumenttypeForeclosedsale")
     val bDocumenttypeForeclosedsale: kotlin.Boolean,
 
-    /* Whether if it's an commercialfunding */
+    /* Whether the document type applies to commercial funding transactions */
     @Json(name = "bDocumenttypeCommercialfunding")
     val bDocumenttypeCommercialfunding: kotlin.Boolean,
 
-    /* Whether if it's an canafe */
+    /* Whether the document type applies to Canafe transactions */
     @Json(name = "bDocumenttypeCanafe")
     val bDocumenttypeCanafe: kotlin.Boolean,
 

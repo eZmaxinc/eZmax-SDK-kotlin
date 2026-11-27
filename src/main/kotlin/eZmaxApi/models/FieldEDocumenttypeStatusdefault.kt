@@ -28,9 +28,9 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * The statusdefault of the Documenttype
+ * The default status requirement for the document type
  *
- * Values: Not_required,Required
+ * Values: Not_required,Required,Mandatory
  */
 
 @JsonClass(generateAdapter = false)
@@ -40,7 +40,10 @@ enum class FieldEDocumenttypeStatusdefault(val value: kotlin.String) {
     Not_required("Not required"),
 
     @Json(name = "Required")
-    Required("Required");
+    Required("Required"),
+
+    @Json(name = "Mandatory")
+    Mandatory("Mandatory");
 
     /**
      * Override [toString()] to avoid using the enum variable name as the value, and instead use

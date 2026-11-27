@@ -34,8 +34,10 @@ import eZmaxApi.models.ExternalbrokerGetCommunicationCountV1Response
 import eZmaxApi.models.ExternalbrokerGetCommunicationListV1Response
 import eZmaxApi.models.ExternalbrokerGetCommunicationrecipientsV1Response
 import eZmaxApi.models.ExternalbrokerGetCommunicationsendersV1Response
+import eZmaxApi.models.ExternalbrokerGetDocumenttypechecklistV1Response
 import eZmaxApi.models.ExternalbrokerImportIntoEDMV1Request
 import eZmaxApi.models.ExternalbrokerImportIntoEDMV1Response
+import eZmaxApi.models.ExternalbrokerSyncDocumenttypechecklistV1Response
 
 import com.squareup.moshi.Json
 
@@ -504,6 +506,79 @@ open class ObjectExternalbrokerApi(basePath: kotlin.String = defaultBasePath, cl
     }
 
     /**
+     * GET /1/object/externalbroker/{pkiExternalbrokerID}/getDocumenttypechecklist
+     * Retrieve Document type checklist
+     * 
+     * @param pkiExternalbrokerID 
+     * @return ExternalbrokerGetDocumenttypechecklistV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun externalbrokerGetDocumenttypechecklistV1(pkiExternalbrokerID: kotlin.Int) : ExternalbrokerGetDocumenttypechecklistV1Response {
+        val localVarResponse = externalbrokerGetDocumenttypechecklistV1WithHttpInfo(pkiExternalbrokerID = pkiExternalbrokerID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ExternalbrokerGetDocumenttypechecklistV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/externalbroker/{pkiExternalbrokerID}/getDocumenttypechecklist
+     * Retrieve Document type checklist
+     * 
+     * @param pkiExternalbrokerID 
+     * @return ApiResponse<ExternalbrokerGetDocumenttypechecklistV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun externalbrokerGetDocumenttypechecklistV1WithHttpInfo(pkiExternalbrokerID: kotlin.Int) : ApiResponse<ExternalbrokerGetDocumenttypechecklistV1Response?> {
+        val localVariableConfig = externalbrokerGetDocumenttypechecklistV1RequestConfig(pkiExternalbrokerID = pkiExternalbrokerID)
+
+        return request<Unit, ExternalbrokerGetDocumenttypechecklistV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation externalbrokerGetDocumenttypechecklistV1
+     *
+     * @param pkiExternalbrokerID 
+     * @return RequestConfig
+     */
+    fun externalbrokerGetDocumenttypechecklistV1RequestConfig(pkiExternalbrokerID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/externalbroker/{pkiExternalbrokerID}/getDocumenttypechecklist".replace("{"+"pkiExternalbrokerID"+"}", encodeURIComponent(pkiExternalbrokerID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
      * POST /1/object/externalbroker/{pkiExternalbrokerID}/importIntoEDM
      * Import attachments into the Externalbroker
      * 
@@ -573,6 +648,83 @@ open class ObjectExternalbrokerApi(basePath: kotlin.String = defaultBasePath, cl
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/externalbroker/{pkiExternalbrokerID}/importIntoEDM".replace("{"+"pkiExternalbrokerID"+"}", encodeURIComponent(pkiExternalbrokerID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * POST /1/object/externalbroker/{pkiExternalbrokerID}/syncDocumenttypechecklist
+     * Synchronize Document type checklist
+     * 
+     * @param pkiExternalbrokerID 
+     * @param body  (optional)
+     * @return ExternalbrokerSyncDocumenttypechecklistV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun externalbrokerSyncDocumenttypechecklistV1(pkiExternalbrokerID: kotlin.Int, body: kotlin.Any? = null) : ExternalbrokerSyncDocumenttypechecklistV1Response {
+        val localVarResponse = externalbrokerSyncDocumenttypechecklistV1WithHttpInfo(pkiExternalbrokerID = pkiExternalbrokerID, body = body)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ExternalbrokerSyncDocumenttypechecklistV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /1/object/externalbroker/{pkiExternalbrokerID}/syncDocumenttypechecklist
+     * Synchronize Document type checklist
+     * 
+     * @param pkiExternalbrokerID 
+     * @param body  (optional)
+     * @return ApiResponse<ExternalbrokerSyncDocumenttypechecklistV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun externalbrokerSyncDocumenttypechecklistV1WithHttpInfo(pkiExternalbrokerID: kotlin.Int, body: kotlin.Any?) : ApiResponse<ExternalbrokerSyncDocumenttypechecklistV1Response?> {
+        val localVariableConfig = externalbrokerSyncDocumenttypechecklistV1RequestConfig(pkiExternalbrokerID = pkiExternalbrokerID, body = body)
+
+        return request<kotlin.Any, ExternalbrokerSyncDocumenttypechecklistV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation externalbrokerSyncDocumenttypechecklistV1
+     *
+     * @param pkiExternalbrokerID 
+     * @param body  (optional)
+     * @return RequestConfig
+     */
+    fun externalbrokerSyncDocumenttypechecklistV1RequestConfig(pkiExternalbrokerID: kotlin.Int, body: kotlin.Any?) : RequestConfig<kotlin.Any> {
+        val localVariableBody = body
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/externalbroker/{pkiExternalbrokerID}/syncDocumenttypechecklist".replace("{"+"pkiExternalbrokerID"+"}", encodeURIComponent(pkiExternalbrokerID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

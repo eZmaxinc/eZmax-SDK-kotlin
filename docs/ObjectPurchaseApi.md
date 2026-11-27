@@ -10,8 +10,10 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**purchaseGetCommunicationListV1**](ObjectPurchaseApi.md#purchaseGetCommunicationListV1) | **GET** /1/object/purchase/{pkiPurchaseID}/getCommunicationList | Retrieve Communication list |
 | [**purchaseGetCommunicationrecipientsV1**](ObjectPurchaseApi.md#purchaseGetCommunicationrecipientsV1) | **GET** /1/object/purchase/{pkiPurchaseID}/getCommunicationrecipients | Retrieve Communication recipients |
 | [**purchaseGetCommunicationsendersV1**](ObjectPurchaseApi.md#purchaseGetCommunicationsendersV1) | **GET** /1/object/purchase/{pkiPurchaseID}/getCommunicationsenders | Retrieve Communication senders |
+| [**purchaseGetDocumenttypechecklistV1**](ObjectPurchaseApi.md#purchaseGetDocumenttypechecklistV1) | **GET** /1/object/purchase/{pkiPurchaseID}/getDocumenttypechecklist | Retrieve Document type checklist |
 | [**purchaseGetListV1**](ObjectPurchaseApi.md#purchaseGetListV1) | **GET** /1/object/purchase/getList | Retrieve Purchase list |
 | [**purchaseImportIntoEDMV1**](ObjectPurchaseApi.md#purchaseImportIntoEDMV1) | **POST** /1/object/purchase/{pkiPurchaseID}/importIntoEDM | Import attachments into the Purchase |
+| [**purchaseSyncDocumenttypechecklistV1**](ObjectPurchaseApi.md#purchaseSyncDocumenttypechecklistV1) | **POST** /1/object/purchase/{pkiPurchaseID}/syncDocumenttypechecklist | Synchronize Document type checklist |
 
 
 <a id="purchaseBatchDownloadV1"></a>
@@ -298,6 +300,53 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+<a id="purchaseGetDocumenttypechecklistV1"></a>
+# **purchaseGetDocumenttypechecklistV1**
+> PurchaseGetDocumenttypechecklistV1Response purchaseGetDocumenttypechecklistV1(pkiPurchaseID)
+
+Retrieve Document type checklist
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectPurchaseApi()
+val pkiPurchaseID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : PurchaseGetDocumenttypechecklistV1Response = apiInstance.purchaseGetDocumenttypechecklistV1(pkiPurchaseID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectPurchaseApi#purchaseGetDocumenttypechecklistV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectPurchaseApi#purchaseGetDocumenttypechecklistV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiPurchaseID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**PurchaseGetDocumenttypechecklistV1Response**](PurchaseGetDocumenttypechecklistV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
 <a id="purchaseGetListV1"></a>
 # **purchaseGetListV1**
 > PurchaseGetListV1Response purchaseGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
@@ -391,6 +440,55 @@ try {
 ### Return type
 
 [**PurchaseImportIntoEDMV1Response**](PurchaseImportIntoEDMV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a id="purchaseSyncDocumenttypechecklistV1"></a>
+# **purchaseSyncDocumenttypechecklistV1**
+> PurchaseSyncDocumenttypechecklistV1Response purchaseSyncDocumenttypechecklistV1(pkiPurchaseID, body)
+
+Synchronize Document type checklist
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectPurchaseApi()
+val pkiPurchaseID : kotlin.Int = 56 // kotlin.Int | 
+val body : kotlin.Any = Object // kotlin.Any | 
+try {
+    val result : PurchaseSyncDocumenttypechecklistV1Response = apiInstance.purchaseSyncDocumenttypechecklistV1(pkiPurchaseID, body)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectPurchaseApi#purchaseSyncDocumenttypechecklistV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectPurchaseApi#purchaseSyncDocumenttypechecklistV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiPurchaseID** | **kotlin.Int**|  | |
+| **body** | **kotlin.Any**|  | [optional] |
+
+### Return type
+
+[**PurchaseSyncDocumenttypechecklistV1Response**](PurchaseSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

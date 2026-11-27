@@ -11,8 +11,10 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**brokerGetCommunicationListV1**](ObjectBrokerApi.md#brokerGetCommunicationListV1) | **GET** /1/object/broker/{pkiBrokerID}/getCommunicationList | Retrieve Communication list |
 | [**brokerGetCommunicationrecipientsV1**](ObjectBrokerApi.md#brokerGetCommunicationrecipientsV1) | **GET** /1/object/broker/{pkiBrokerID}/getCommunicationrecipients | Retrieve Communication recipients |
 | [**brokerGetCommunicationsendersV1**](ObjectBrokerApi.md#brokerGetCommunicationsendersV1) | **GET** /1/object/broker/{pkiBrokerID}/getCommunicationsenders | Retrieve Communication senders |
+| [**brokerGetDocumenttypechecklistV1**](ObjectBrokerApi.md#brokerGetDocumenttypechecklistV1) | **GET** /1/object/broker/{pkiBrokerID}/getDocumenttypechecklist | Retrieve Document type checklist |
 | [**brokerGetListV1**](ObjectBrokerApi.md#brokerGetListV1) | **GET** /1/object/broker/getList | Retrieve Broker list |
 | [**brokerImportIntoEDMV1**](ObjectBrokerApi.md#brokerImportIntoEDMV1) | **POST** /1/object/broker/{pkiBrokerID}/importIntoEDM | Import attachments into the Broker |
+| [**brokerSyncDocumenttypechecklistV1**](ObjectBrokerApi.md#brokerSyncDocumenttypechecklistV1) | **POST** /1/object/broker/{pkiBrokerID}/syncDocumenttypechecklist | Synchronize Document type checklist |
 
 
 <a id="brokerBatchDownloadV1"></a>
@@ -354,6 +356,53 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+<a id="brokerGetDocumenttypechecklistV1"></a>
+# **brokerGetDocumenttypechecklistV1**
+> BrokerGetDocumenttypechecklistV1Response brokerGetDocumenttypechecklistV1(pkiBrokerID)
+
+Retrieve Document type checklist
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectBrokerApi()
+val pkiBrokerID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : BrokerGetDocumenttypechecklistV1Response = apiInstance.brokerGetDocumenttypechecklistV1(pkiBrokerID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectBrokerApi#brokerGetDocumenttypechecklistV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectBrokerApi#brokerGetDocumenttypechecklistV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiBrokerID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**BrokerGetDocumenttypechecklistV1Response**](BrokerGetDocumenttypechecklistV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
 <a id="brokerGetListV1"></a>
 # **brokerGetListV1**
 > BrokerGetListV1Response brokerGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
@@ -449,6 +498,55 @@ try {
 ### Return type
 
 [**BrokerImportIntoEDMV1Response**](BrokerImportIntoEDMV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a id="brokerSyncDocumenttypechecklistV1"></a>
+# **brokerSyncDocumenttypechecklistV1**
+> BrokerSyncDocumenttypechecklistV1Response brokerSyncDocumenttypechecklistV1(pkiBrokerID, body)
+
+Synchronize Document type checklist
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectBrokerApi()
+val pkiBrokerID : kotlin.Int = 56 // kotlin.Int | 
+val body : kotlin.Any = Object // kotlin.Any | 
+try {
+    val result : BrokerSyncDocumenttypechecklistV1Response = apiInstance.brokerSyncDocumenttypechecklistV1(pkiBrokerID, body)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectBrokerApi#brokerSyncDocumenttypechecklistV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectBrokerApi#brokerSyncDocumenttypechecklistV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiBrokerID** | **kotlin.Int**|  | |
+| **body** | **kotlin.Any**|  | [optional] |
+
+### Return type
+
+[**BrokerSyncDocumenttypechecklistV1Response**](BrokerSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

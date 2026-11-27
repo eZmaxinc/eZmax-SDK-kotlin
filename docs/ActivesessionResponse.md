@@ -17,7 +17,7 @@
 | **eActivesessionEzsignaccess** | [**FieldEActivesessionEzsignaccess**](FieldEActivesessionEzsignaccess.md) |  |  |
 | **pksCustomerCode** | **kotlin.String** | The customer code assigned to your account |  |
 | **fkiSystemconfigurationtypeID** | **kotlin.Int** | The unique ID of the Systemconfigurationtype |  |
-| **bActivesessionAttachment** | **kotlin.Boolean** | Can access attachment when we clone a user |  [optional] |
+| **bActivesessionAttachment** | **kotlin.Boolean** | Whether the user can access attachments when their session is cloned |  [optional] |
 | **bActivesessionCanafe** | **kotlin.Boolean** | Can access canafe when we clone a user |  [optional] |
 | **bActivesessionFinancial** | **kotlin.Boolean** | Can access financial element when we clone a user |  [optional] |
 | **bActivesessionRealestatecompleted** | **kotlin.Boolean** | Can access closed realestate folders when we clone a user |  [optional] |

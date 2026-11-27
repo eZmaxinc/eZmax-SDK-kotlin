@@ -68,7 +68,7 @@ open class ObjectAttachmentApi(basePath: kotlin.String = defaultBasePath, client
     /**
      * POST /1/object/attachment/{pkiAttachmentID}/delete
      * Delete an existing attachment
-     * Te endpoint allows to delete an attachment.
+     * The endpoint allows to delete an attachment.
      * @param pkiAttachmentID 
      * @param body 
      * @return AttachmentDeleteV1Response
@@ -101,7 +101,7 @@ open class ObjectAttachmentApi(basePath: kotlin.String = defaultBasePath, client
     /**
      * POST /1/object/attachment/{pkiAttachmentID}/delete
      * Delete an existing attachment
-     * Te endpoint allows to delete an attachment.
+     * The endpoint allows to delete an attachment.
      * @param pkiAttachmentID 
      * @param body 
      * @return ApiResponse<AttachmentDeleteV1Response?>
@@ -366,7 +366,7 @@ open class ObjectAttachmentApi(basePath: kotlin.String = defaultBasePath, client
     /**
      * POST /1/object/attachment/{pkiAttachmentID}/restore
      * Restore a deleted attachment
-     * The endpoints allows to restore a previously deleted attachment.
+     * The endpoint allows to restore a previously deleted attachment.
      * @param pkiAttachmentID 
      * @param attachmentRestoreV1Request 
      * @return AttachmentRestoreV1Response
@@ -399,7 +399,7 @@ open class ObjectAttachmentApi(basePath: kotlin.String = defaultBasePath, client
     /**
      * POST /1/object/attachment/{pkiAttachmentID}/restore
      * Restore a deleted attachment
-     * The endpoints allows to restore a previously deleted attachment.
+     * The endpoint allows to restore a previously deleted attachment.
      * @param pkiAttachmentID 
      * @param attachmentRestoreV1Request 
      * @return ApiResponse<AttachmentRestoreV1Response?>
@@ -443,7 +443,7 @@ open class ObjectAttachmentApi(basePath: kotlin.String = defaultBasePath, client
     /**
      * POST /1/object/attachment/{pkiAttachmentID}/setDocumentType
      * Change attachment document type
-     * The endpoint allows to change the checklist document type for an attachment.
+     * The endpoint allows to change the document type for an attachment.
      * @param pkiAttachmentID 
      * @param attachmentSetDocumentTypeV1Request 
      * @return AttachmentSetDocumentTypeV1Response
@@ -476,7 +476,7 @@ open class ObjectAttachmentApi(basePath: kotlin.String = defaultBasePath, client
     /**
      * POST /1/object/attachment/{pkiAttachmentID}/setDocumentType
      * Change attachment document type
-     * The endpoint allows to change the checklist document type for an attachment.
+     * The endpoint allows to change the document type for an attachment.
      * @param pkiAttachmentID 
      * @param attachmentSetDocumentTypeV1Request 
      * @return ApiResponse<AttachmentSetDocumentTypeV1Response?>

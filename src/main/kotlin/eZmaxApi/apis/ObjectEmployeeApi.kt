@@ -34,9 +34,11 @@ import eZmaxApi.models.EmployeeGetCommunicationCountV1Response
 import eZmaxApi.models.EmployeeGetCommunicationListV1Response
 import eZmaxApi.models.EmployeeGetCommunicationrecipientsV1Response
 import eZmaxApi.models.EmployeeGetCommunicationsendersV1Response
+import eZmaxApi.models.EmployeeGetDocumenttypechecklistV1Response
 import eZmaxApi.models.EmployeeGetListV1Response
 import eZmaxApi.models.EmployeeImportIntoEDMV1Request
 import eZmaxApi.models.EmployeeImportIntoEDMV1Response
+import eZmaxApi.models.EmployeeSyncDocumenttypechecklistV1Response
 import eZmaxApi.models.HeaderAcceptLanguage
 
 import com.squareup.moshi.Json
@@ -506,6 +508,79 @@ open class ObjectEmployeeApi(basePath: kotlin.String = defaultBasePath, client: 
     }
 
     /**
+     * GET /1/object/employee/{pkiEmployeeID}/getDocumenttypechecklist
+     * Retrieve Document type checklist
+     * 
+     * @param pkiEmployeeID 
+     * @return EmployeeGetDocumenttypechecklistV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun employeeGetDocumenttypechecklistV1(pkiEmployeeID: kotlin.Int) : EmployeeGetDocumenttypechecklistV1Response {
+        val localVarResponse = employeeGetDocumenttypechecklistV1WithHttpInfo(pkiEmployeeID = pkiEmployeeID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EmployeeGetDocumenttypechecklistV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/employee/{pkiEmployeeID}/getDocumenttypechecklist
+     * Retrieve Document type checklist
+     * 
+     * @param pkiEmployeeID 
+     * @return ApiResponse<EmployeeGetDocumenttypechecklistV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun employeeGetDocumenttypechecklistV1WithHttpInfo(pkiEmployeeID: kotlin.Int) : ApiResponse<EmployeeGetDocumenttypechecklistV1Response?> {
+        val localVariableConfig = employeeGetDocumenttypechecklistV1RequestConfig(pkiEmployeeID = pkiEmployeeID)
+
+        return request<Unit, EmployeeGetDocumenttypechecklistV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation employeeGetDocumenttypechecklistV1
+     *
+     * @param pkiEmployeeID 
+     * @return RequestConfig
+     */
+    fun employeeGetDocumenttypechecklistV1RequestConfig(pkiEmployeeID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/employee/{pkiEmployeeID}/getDocumenttypechecklist".replace("{"+"pkiEmployeeID"+"}", encodeURIComponent(pkiEmployeeID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
      * enum for parameter eOrderBy
      */
      enum class EOrderByEmployeeGetListV1(val value: kotlin.String) {
@@ -728,6 +803,83 @@ open class ObjectEmployeeApi(basePath: kotlin.String = defaultBasePath, client: 
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/employee/{pkiEmployeeID}/importIntoEDM".replace("{"+"pkiEmployeeID"+"}", encodeURIComponent(pkiEmployeeID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * POST /1/object/employee/{pkiEmployeeID}/syncDocumenttypechecklist
+     * Synchronize Document type checklist
+     * 
+     * @param pkiEmployeeID 
+     * @param body  (optional)
+     * @return EmployeeSyncDocumenttypechecklistV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun employeeSyncDocumenttypechecklistV1(pkiEmployeeID: kotlin.Int, body: kotlin.Any? = null) : EmployeeSyncDocumenttypechecklistV1Response {
+        val localVarResponse = employeeSyncDocumenttypechecklistV1WithHttpInfo(pkiEmployeeID = pkiEmployeeID, body = body)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as EmployeeSyncDocumenttypechecklistV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /1/object/employee/{pkiEmployeeID}/syncDocumenttypechecklist
+     * Synchronize Document type checklist
+     * 
+     * @param pkiEmployeeID 
+     * @param body  (optional)
+     * @return ApiResponse<EmployeeSyncDocumenttypechecklistV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun employeeSyncDocumenttypechecklistV1WithHttpInfo(pkiEmployeeID: kotlin.Int, body: kotlin.Any?) : ApiResponse<EmployeeSyncDocumenttypechecklistV1Response?> {
+        val localVariableConfig = employeeSyncDocumenttypechecklistV1RequestConfig(pkiEmployeeID = pkiEmployeeID, body = body)
+
+        return request<kotlin.Any, EmployeeSyncDocumenttypechecklistV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation employeeSyncDocumenttypechecklistV1
+     *
+     * @param pkiEmployeeID 
+     * @param body  (optional)
+     * @return RequestConfig
+     */
+    fun employeeSyncDocumenttypechecklistV1RequestConfig(pkiEmployeeID: kotlin.Int, body: kotlin.Any?) : RequestConfig<kotlin.Any> {
+        val localVariableBody = body
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/employee/{pkiEmployeeID}/syncDocumenttypechecklist".replace("{"+"pkiEmployeeID"+"}", encodeURIComponent(pkiEmployeeID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

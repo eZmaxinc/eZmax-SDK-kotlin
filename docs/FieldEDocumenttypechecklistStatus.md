@@ -12,5 +12,7 @@
 
     * `Justified` (value: `"Justified"`)
 
+    * `Mandatory` (value: `"Mandatory"`)
+
 
 

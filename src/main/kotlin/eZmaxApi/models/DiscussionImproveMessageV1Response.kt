@@ -31,7 +31,7 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * Response for POST /1/object/discussion
+ * Response for POST /1/object/discussion/improveMessage
  *
  * @param objDebugPayload
  * @param mPayload

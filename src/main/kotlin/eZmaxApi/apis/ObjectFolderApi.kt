@@ -34,8 +34,10 @@ import eZmaxApi.models.FolderGetCommunicationCountV1Response
 import eZmaxApi.models.FolderGetCommunicationListV1Response
 import eZmaxApi.models.FolderGetCommunicationrecipientsV1Response
 import eZmaxApi.models.FolderGetCommunicationsendersV1Response
+import eZmaxApi.models.FolderGetDocumenttypechecklistV1Response
 import eZmaxApi.models.FolderImportIntoEDMV1Request
 import eZmaxApi.models.FolderImportIntoEDMV1Response
+import eZmaxApi.models.FolderSyncDocumenttypechecklistV1Response
 
 import com.squareup.moshi.Json
 
@@ -504,6 +506,79 @@ open class ObjectFolderApi(basePath: kotlin.String = defaultBasePath, client: Ca
     }
 
     /**
+     * GET /1/object/folder/{pkiFolderID}/getDocumenttypechecklist
+     * Retrieve Document type checklist
+     * 
+     * @param pkiFolderID 
+     * @return FolderGetDocumenttypechecklistV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun folderGetDocumenttypechecklistV1(pkiFolderID: kotlin.Int) : FolderGetDocumenttypechecklistV1Response {
+        val localVarResponse = folderGetDocumenttypechecklistV1WithHttpInfo(pkiFolderID = pkiFolderID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as FolderGetDocumenttypechecklistV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/folder/{pkiFolderID}/getDocumenttypechecklist
+     * Retrieve Document type checklist
+     * 
+     * @param pkiFolderID 
+     * @return ApiResponse<FolderGetDocumenttypechecklistV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun folderGetDocumenttypechecklistV1WithHttpInfo(pkiFolderID: kotlin.Int) : ApiResponse<FolderGetDocumenttypechecklistV1Response?> {
+        val localVariableConfig = folderGetDocumenttypechecklistV1RequestConfig(pkiFolderID = pkiFolderID)
+
+        return request<Unit, FolderGetDocumenttypechecklistV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation folderGetDocumenttypechecklistV1
+     *
+     * @param pkiFolderID 
+     * @return RequestConfig
+     */
+    fun folderGetDocumenttypechecklistV1RequestConfig(pkiFolderID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/folder/{pkiFolderID}/getDocumenttypechecklist".replace("{"+"pkiFolderID"+"}", encodeURIComponent(pkiFolderID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
      * POST /1/object/folder/{pkiFolderID}/importIntoEDM
      * Import attachments into the Folder
      * 
@@ -573,6 +648,83 @@ open class ObjectFolderApi(basePath: kotlin.String = defaultBasePath, client: Ca
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/folder/{pkiFolderID}/importIntoEDM".replace("{"+"pkiFolderID"+"}", encodeURIComponent(pkiFolderID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * POST /1/object/folder/{pkiFolderID}/syncDocumenttypechecklist
+     * Synchronize Document type checklist
+     * 
+     * @param pkiFolderID 
+     * @param body  (optional)
+     * @return FolderSyncDocumenttypechecklistV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun folderSyncDocumenttypechecklistV1(pkiFolderID: kotlin.Int, body: kotlin.Any? = null) : FolderSyncDocumenttypechecklistV1Response {
+        val localVarResponse = folderSyncDocumenttypechecklistV1WithHttpInfo(pkiFolderID = pkiFolderID, body = body)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as FolderSyncDocumenttypechecklistV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /1/object/folder/{pkiFolderID}/syncDocumenttypechecklist
+     * Synchronize Document type checklist
+     * 
+     * @param pkiFolderID 
+     * @param body  (optional)
+     * @return ApiResponse<FolderSyncDocumenttypechecklistV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun folderSyncDocumenttypechecklistV1WithHttpInfo(pkiFolderID: kotlin.Int, body: kotlin.Any?) : ApiResponse<FolderSyncDocumenttypechecklistV1Response?> {
+        val localVariableConfig = folderSyncDocumenttypechecklistV1RequestConfig(pkiFolderID = pkiFolderID, body = body)
+
+        return request<kotlin.Any, FolderSyncDocumenttypechecklistV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation folderSyncDocumenttypechecklistV1
+     *
+     * @param pkiFolderID 
+     * @param body  (optional)
+     * @return RequestConfig
+     */
+    fun folderSyncDocumenttypechecklistV1RequestConfig(pkiFolderID: kotlin.Int, body: kotlin.Any?) : RequestConfig<kotlin.Any> {
+        val localVariableBody = body
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/folder/{pkiFolderID}/syncDocumenttypechecklist".replace("{"+"pkiFolderID"+"}", encodeURIComponent(pkiFolderID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

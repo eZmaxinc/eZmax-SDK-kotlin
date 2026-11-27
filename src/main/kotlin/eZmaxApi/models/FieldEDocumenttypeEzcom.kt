@@ -28,7 +28,7 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * The ezcom of the Documenttype
+ * The ezcom document type category
  *
  * Values: PromiseToPurchase,Annex,Modification,CounterOffer,Conditions,BankApproval,Other
  */

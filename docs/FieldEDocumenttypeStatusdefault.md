@@ -8,5 +8,7 @@
 
     * `Required` (value: `"Required"`)
 
+    * `Mandatory` (value: `"Mandatory"`)
+
 
 

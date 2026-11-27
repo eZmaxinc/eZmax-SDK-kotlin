@@ -9,7 +9,7 @@
 | **objUser** | [**CustomUserNameResponse**](CustomUserNameResponse.md) |  |  |
 | **dtAttachmentlogDatetime** | **kotlin.String** | The created date |  |
 | **eAttachmentlogType** | [**FieldEAttachmentlogType**](FieldEAttachmentlogType.md) |  |  |
-| **sAttachmentlogDetail** | **kotlin.String** | The additionnal detail |  [optional] |
+| **sAttachmentlogDetail** | **kotlin.String** | The additional detail for the Attachmentlog |  [optional] |
 
 
 

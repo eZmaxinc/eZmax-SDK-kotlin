@@ -10,8 +10,10 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**officetaxreportGetCommunicationListV1**](ObjectOfficetaxreportApi.md#officetaxreportGetCommunicationListV1) | **GET** /1/object/officetaxreport/{pkiOfficetaxreportID}/getCommunicationList | Retrieve Communication list |
 | [**officetaxreportGetCommunicationrecipientsV1**](ObjectOfficetaxreportApi.md#officetaxreportGetCommunicationrecipientsV1) | **GET** /1/object/officetaxreport/{pkiOfficetaxreportID}/getCommunicationrecipients | Retrieve Communication recipients |
 | [**officetaxreportGetCommunicationsendersV1**](ObjectOfficetaxreportApi.md#officetaxreportGetCommunicationsendersV1) | **GET** /1/object/officetaxreport/{pkiOfficetaxreportID}/getCommunicationsenders | Retrieve Communication senders |
+| [**officetaxreportGetDocumenttypechecklistV1**](ObjectOfficetaxreportApi.md#officetaxreportGetDocumenttypechecklistV1) | **GET** /1/object/officetaxreport/{pkiOfficetaxreportID}/getDocumenttypechecklist | Retrieve Document type checklist |
 | [**officetaxreportGetListV1**](ObjectOfficetaxreportApi.md#officetaxreportGetListV1) | **GET** /1/object/officetaxreport/getList | Retrieve Officetaxreport list |
 | [**officetaxreportImportIntoEDMV1**](ObjectOfficetaxreportApi.md#officetaxreportImportIntoEDMV1) | **POST** /1/object/officetaxreport/{pkiOfficetaxreportID}/importIntoEDM | Import attachments into the Officetaxreport |
+| [**officetaxreportSyncDocumenttypechecklistV1**](ObjectOfficetaxreportApi.md#officetaxreportSyncDocumenttypechecklistV1) | **POST** /1/object/officetaxreport/{pkiOfficetaxreportID}/syncDocumenttypechecklist | Synchronize Document type checklist |
 
 
 <a id="officetaxreportBatchDownloadV1"></a>
@@ -298,6 +300,53 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+<a id="officetaxreportGetDocumenttypechecklistV1"></a>
+# **officetaxreportGetDocumenttypechecklistV1**
+> OfficetaxreportGetDocumenttypechecklistV1Response officetaxreportGetDocumenttypechecklistV1(pkiOfficetaxreportID)
+
+Retrieve Document type checklist
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectOfficetaxreportApi()
+val pkiOfficetaxreportID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : OfficetaxreportGetDocumenttypechecklistV1Response = apiInstance.officetaxreportGetDocumenttypechecklistV1(pkiOfficetaxreportID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectOfficetaxreportApi#officetaxreportGetDocumenttypechecklistV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectOfficetaxreportApi#officetaxreportGetDocumenttypechecklistV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiOfficetaxreportID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**OfficetaxreportGetDocumenttypechecklistV1Response**](OfficetaxreportGetDocumenttypechecklistV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
 <a id="officetaxreportGetListV1"></a>
 # **officetaxreportGetListV1**
 > OfficetaxreportGetListV1Response officetaxreportGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
@@ -391,6 +440,55 @@ try {
 ### Return type
 
 [**OfficetaxreportImportIntoEDMV1Response**](OfficetaxreportImportIntoEDMV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a id="officetaxreportSyncDocumenttypechecklistV1"></a>
+# **officetaxreportSyncDocumenttypechecklistV1**
+> OfficetaxreportSyncDocumenttypechecklistV1Response officetaxreportSyncDocumenttypechecklistV1(pkiOfficetaxreportID, body)
+
+Synchronize Document type checklist
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectOfficetaxreportApi()
+val pkiOfficetaxreportID : kotlin.Int = 56 // kotlin.Int | 
+val body : kotlin.Any = Object // kotlin.Any | 
+try {
+    val result : OfficetaxreportSyncDocumenttypechecklistV1Response = apiInstance.officetaxreportSyncDocumenttypechecklistV1(pkiOfficetaxreportID, body)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectOfficetaxreportApi#officetaxreportSyncDocumenttypechecklistV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectOfficetaxreportApi#officetaxreportSyncDocumenttypechecklistV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiOfficetaxreportID** | **kotlin.Int**|  | |
+| **body** | **kotlin.Any**|  | [optional] |
+
+### Return type
+
+[**OfficetaxreportSyncDocumenttypechecklistV1Response**](OfficetaxreportSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

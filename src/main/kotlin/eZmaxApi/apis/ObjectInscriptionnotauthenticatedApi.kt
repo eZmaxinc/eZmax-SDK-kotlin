@@ -37,11 +37,13 @@ import eZmaxApi.models.InscriptionnotauthenticatedGetCommunicationCountV1Respons
 import eZmaxApi.models.InscriptionnotauthenticatedGetCommunicationListV1Response
 import eZmaxApi.models.InscriptionnotauthenticatedGetCommunicationrecipientsV1Response
 import eZmaxApi.models.InscriptionnotauthenticatedGetCommunicationsendersV1Response
+import eZmaxApi.models.InscriptionnotauthenticatedGetDocumenttypechecklistV1Response
 import eZmaxApi.models.InscriptionnotauthenticatedGetInscriptionnotauthenticatedconditionsV1Response
 import eZmaxApi.models.InscriptionnotauthenticatedGetListV1Response
 import eZmaxApi.models.InscriptionnotauthenticatedGetObjectV2Response
 import eZmaxApi.models.InscriptionnotauthenticatedImportIntoEDMV1Request
 import eZmaxApi.models.InscriptionnotauthenticatedImportIntoEDMV1Response
+import eZmaxApi.models.InscriptionnotauthenticatedSyncDocumenttypechecklistV1Response
 
 import com.squareup.moshi.Json
 
@@ -587,6 +589,79 @@ open class ObjectInscriptionnotauthenticatedApi(basePath: kotlin.String = defaul
     }
 
     /**
+     * GET /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getDocumenttypechecklist
+     * Retrieve Document type checklist
+     * 
+     * @param pkiInscriptionnotauthenticatedID 
+     * @return InscriptionnotauthenticatedGetDocumenttypechecklistV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun inscriptionnotauthenticatedGetDocumenttypechecklistV1(pkiInscriptionnotauthenticatedID: kotlin.Int) : InscriptionnotauthenticatedGetDocumenttypechecklistV1Response {
+        val localVarResponse = inscriptionnotauthenticatedGetDocumenttypechecklistV1WithHttpInfo(pkiInscriptionnotauthenticatedID = pkiInscriptionnotauthenticatedID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as InscriptionnotauthenticatedGetDocumenttypechecklistV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getDocumenttypechecklist
+     * Retrieve Document type checklist
+     * 
+     * @param pkiInscriptionnotauthenticatedID 
+     * @return ApiResponse<InscriptionnotauthenticatedGetDocumenttypechecklistV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun inscriptionnotauthenticatedGetDocumenttypechecklistV1WithHttpInfo(pkiInscriptionnotauthenticatedID: kotlin.Int) : ApiResponse<InscriptionnotauthenticatedGetDocumenttypechecklistV1Response?> {
+        val localVariableConfig = inscriptionnotauthenticatedGetDocumenttypechecklistV1RequestConfig(pkiInscriptionnotauthenticatedID = pkiInscriptionnotauthenticatedID)
+
+        return request<Unit, InscriptionnotauthenticatedGetDocumenttypechecklistV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation inscriptionnotauthenticatedGetDocumenttypechecklistV1
+     *
+     * @param pkiInscriptionnotauthenticatedID 
+     * @return RequestConfig
+     */
+    fun inscriptionnotauthenticatedGetDocumenttypechecklistV1RequestConfig(pkiInscriptionnotauthenticatedID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getDocumenttypechecklist".replace("{"+"pkiInscriptionnotauthenticatedID"+"}", encodeURIComponent(pkiInscriptionnotauthenticatedID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
      * GET /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getInscriptionnotauthenticatedconditions
      * Retrieve Inscriptionnotauthenticated conditions
      * 
@@ -973,6 +1048,83 @@ open class ObjectInscriptionnotauthenticatedApi(basePath: kotlin.String = defaul
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/importIntoEDM".replace("{"+"pkiInscriptionnotauthenticatedID"+"}", encodeURIComponent(pkiInscriptionnotauthenticatedID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * POST /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/syncDocumenttypechecklist
+     * Synchronize Document type checklist
+     * 
+     * @param pkiInscriptionnotauthenticatedID 
+     * @param body  (optional)
+     * @return InscriptionnotauthenticatedSyncDocumenttypechecklistV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun inscriptionnotauthenticatedSyncDocumenttypechecklistV1(pkiInscriptionnotauthenticatedID: kotlin.Int, body: kotlin.Any? = null) : InscriptionnotauthenticatedSyncDocumenttypechecklistV1Response {
+        val localVarResponse = inscriptionnotauthenticatedSyncDocumenttypechecklistV1WithHttpInfo(pkiInscriptionnotauthenticatedID = pkiInscriptionnotauthenticatedID, body = body)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as InscriptionnotauthenticatedSyncDocumenttypechecklistV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/syncDocumenttypechecklist
+     * Synchronize Document type checklist
+     * 
+     * @param pkiInscriptionnotauthenticatedID 
+     * @param body  (optional)
+     * @return ApiResponse<InscriptionnotauthenticatedSyncDocumenttypechecklistV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun inscriptionnotauthenticatedSyncDocumenttypechecklistV1WithHttpInfo(pkiInscriptionnotauthenticatedID: kotlin.Int, body: kotlin.Any?) : ApiResponse<InscriptionnotauthenticatedSyncDocumenttypechecklistV1Response?> {
+        val localVariableConfig = inscriptionnotauthenticatedSyncDocumenttypechecklistV1RequestConfig(pkiInscriptionnotauthenticatedID = pkiInscriptionnotauthenticatedID, body = body)
+
+        return request<kotlin.Any, InscriptionnotauthenticatedSyncDocumenttypechecklistV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation inscriptionnotauthenticatedSyncDocumenttypechecklistV1
+     *
+     * @param pkiInscriptionnotauthenticatedID 
+     * @param body  (optional)
+     * @return RequestConfig
+     */
+    fun inscriptionnotauthenticatedSyncDocumenttypechecklistV1RequestConfig(pkiInscriptionnotauthenticatedID: kotlin.Int, body: kotlin.Any?) : RequestConfig<kotlin.Any> {
+        val localVariableBody = body
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/syncDocumenttypechecklist".replace("{"+"pkiInscriptionnotauthenticatedID"+"}", encodeURIComponent(pkiInscriptionnotauthenticatedID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

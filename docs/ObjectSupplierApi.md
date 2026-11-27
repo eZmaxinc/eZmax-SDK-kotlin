@@ -10,8 +10,10 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**supplierGetCommunicationListV1**](ObjectSupplierApi.md#supplierGetCommunicationListV1) | **GET** /1/object/supplier/{pkiSupplierID}/getCommunicationList | Retrieve Communication list |
 | [**supplierGetCommunicationrecipientsV1**](ObjectSupplierApi.md#supplierGetCommunicationrecipientsV1) | **GET** /1/object/supplier/{pkiSupplierID}/getCommunicationrecipients | Retrieve Communication recipients |
 | [**supplierGetCommunicationsendersV1**](ObjectSupplierApi.md#supplierGetCommunicationsendersV1) | **GET** /1/object/supplier/{pkiSupplierID}/getCommunicationsenders | Retrieve Communication senders |
+| [**supplierGetDocumenttypechecklistV1**](ObjectSupplierApi.md#supplierGetDocumenttypechecklistV1) | **GET** /1/object/supplier/{pkiSupplierID}/getDocumenttypechecklist | Retrieve Document type checklist |
 | [**supplierGetListV1**](ObjectSupplierApi.md#supplierGetListV1) | **GET** /1/object/supplier/getList | Retrieve Supplier list |
 | [**supplierImportIntoEDMV1**](ObjectSupplierApi.md#supplierImportIntoEDMV1) | **POST** /1/object/supplier/{pkiSupplierID}/importIntoEDM | Import attachments into the Supplier |
+| [**supplierSyncDocumenttypechecklistV1**](ObjectSupplierApi.md#supplierSyncDocumenttypechecklistV1) | **POST** /1/object/supplier/{pkiSupplierID}/syncDocumenttypechecklist | Synchronize Document type checklist |
 
 
 <a id="supplierBatchDownloadV1"></a>
@@ -298,6 +300,53 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+<a id="supplierGetDocumenttypechecklistV1"></a>
+# **supplierGetDocumenttypechecklistV1**
+> SupplierGetDocumenttypechecklistV1Response supplierGetDocumenttypechecklistV1(pkiSupplierID)
+
+Retrieve Document type checklist
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectSupplierApi()
+val pkiSupplierID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : SupplierGetDocumenttypechecklistV1Response = apiInstance.supplierGetDocumenttypechecklistV1(pkiSupplierID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectSupplierApi#supplierGetDocumenttypechecklistV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectSupplierApi#supplierGetDocumenttypechecklistV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiSupplierID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**SupplierGetDocumenttypechecklistV1Response**](SupplierGetDocumenttypechecklistV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
 <a id="supplierGetListV1"></a>
 # **supplierGetListV1**
 > SupplierGetListV1Response supplierGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
@@ -393,6 +442,55 @@ try {
 ### Return type
 
 [**SupplierImportIntoEDMV1Response**](SupplierImportIntoEDMV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a id="supplierSyncDocumenttypechecklistV1"></a>
+# **supplierSyncDocumenttypechecklistV1**
+> SupplierSyncDocumenttypechecklistV1Response supplierSyncDocumenttypechecklistV1(pkiSupplierID, body)
+
+Synchronize Document type checklist
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectSupplierApi()
+val pkiSupplierID : kotlin.Int = 56 // kotlin.Int | 
+val body : kotlin.Any = Object // kotlin.Any | 
+try {
+    val result : SupplierSyncDocumenttypechecklistV1Response = apiInstance.supplierSyncDocumenttypechecklistV1(pkiSupplierID, body)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectSupplierApi#supplierSyncDocumenttypechecklistV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectSupplierApi#supplierSyncDocumenttypechecklistV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiSupplierID** | **kotlin.Int**|  | |
+| **body** | **kotlin.Any**|  | [optional] |
+
+### Return type
+
+[**SupplierSyncDocumenttypechecklistV1Response**](SupplierSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

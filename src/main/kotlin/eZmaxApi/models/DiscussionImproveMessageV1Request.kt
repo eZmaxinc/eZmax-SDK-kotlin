@@ -23,7 +23,6 @@
 
 package eZmaxApi.models
 
-import eZmaxApi.models.FieldEDiscussionRobot
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -31,24 +30,15 @@ import com.squareup.moshi.JsonClass
 /**
  * Request for POST /1/object/discussion/improveMessage
  *
- * @param eDiscussionRobot
  * @param tDiscussionMessage The Message of the Discussion
- * @param fkiDiscussionID The unique ID of the Discussion
  */
 
 
 data class DiscussionImproveMessageV1Request (
 
-    @Json(name = "eDiscussionRobot")
-    val eDiscussionRobot: FieldEDiscussionRobot,
-
     /* The Message of the Discussion */
     @Json(name = "tDiscussionMessage")
-    val tDiscussionMessage: kotlin.String,
-
-    /* The unique ID of the Discussion */
-    @Json(name = "fkiDiscussionID")
-    val fkiDiscussionID: kotlin.Int? = null
+    val tDiscussionMessage: kotlin.String
 
 ) {
 

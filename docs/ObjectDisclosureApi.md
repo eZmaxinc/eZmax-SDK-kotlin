@@ -10,8 +10,10 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**disclosureGetCommunicationListV1**](ObjectDisclosureApi.md#disclosureGetCommunicationListV1) | **GET** /1/object/disclosure/{pkiDisclosureID}/getCommunicationList | Retrieve Communication list |
 | [**disclosureGetCommunicationrecipientsV1**](ObjectDisclosureApi.md#disclosureGetCommunicationrecipientsV1) | **GET** /1/object/disclosure/{pkiDisclosureID}/getCommunicationrecipients | Retrieve Communication recipients |
 | [**disclosureGetCommunicationsendersV1**](ObjectDisclosureApi.md#disclosureGetCommunicationsendersV1) | **GET** /1/object/disclosure/{pkiDisclosureID}/getCommunicationsenders | Retrieve Communication senders |
+| [**disclosureGetDocumenttypechecklistV1**](ObjectDisclosureApi.md#disclosureGetDocumenttypechecklistV1) | **GET** /1/object/disclosure/{pkiDisclosureID}/getDocumenttypechecklist | Retrieve Document type checklist |
 | [**disclosureGetListV1**](ObjectDisclosureApi.md#disclosureGetListV1) | **GET** /1/object/disclosure/getList | Retrieve Disclosure list |
 | [**disclosureImportIntoEDMV1**](ObjectDisclosureApi.md#disclosureImportIntoEDMV1) | **POST** /1/object/disclosure/{pkiDisclosureID}/importIntoEDM | Import attachments into the Disclosure |
+| [**disclosureSyncDocumenttypechecklistV1**](ObjectDisclosureApi.md#disclosureSyncDocumenttypechecklistV1) | **POST** /1/object/disclosure/{pkiDisclosureID}/syncDocumenttypechecklist | Synchronize Document type checklist |
 
 
 <a id="disclosureBatchDownloadV1"></a>
@@ -298,6 +300,53 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+<a id="disclosureGetDocumenttypechecklistV1"></a>
+# **disclosureGetDocumenttypechecklistV1**
+> DisclosureGetDocumenttypechecklistV1Response disclosureGetDocumenttypechecklistV1(pkiDisclosureID)
+
+Retrieve Document type checklist
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectDisclosureApi()
+val pkiDisclosureID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : DisclosureGetDocumenttypechecklistV1Response = apiInstance.disclosureGetDocumenttypechecklistV1(pkiDisclosureID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectDisclosureApi#disclosureGetDocumenttypechecklistV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectDisclosureApi#disclosureGetDocumenttypechecklistV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiDisclosureID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**DisclosureGetDocumenttypechecklistV1Response**](DisclosureGetDocumenttypechecklistV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
 <a id="disclosureGetListV1"></a>
 # **disclosureGetListV1**
 > DisclosureGetListV1Response disclosureGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
@@ -391,6 +440,55 @@ try {
 ### Return type
 
 [**DisclosureImportIntoEDMV1Response**](DisclosureImportIntoEDMV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a id="disclosureSyncDocumenttypechecklistV1"></a>
+# **disclosureSyncDocumenttypechecklistV1**
+> DisclosureSyncDocumenttypechecklistV1Response disclosureSyncDocumenttypechecklistV1(pkiDisclosureID, body)
+
+Synchronize Document type checklist
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectDisclosureApi()
+val pkiDisclosureID : kotlin.Int = 56 // kotlin.Int | 
+val body : kotlin.Any = Object // kotlin.Any | 
+try {
+    val result : DisclosureSyncDocumenttypechecklistV1Response = apiInstance.disclosureSyncDocumenttypechecklistV1(pkiDisclosureID, body)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectDisclosureApi#disclosureSyncDocumenttypechecklistV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectDisclosureApi#disclosureSyncDocumenttypechecklistV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiDisclosureID** | **kotlin.Int**|  | |
+| **body** | **kotlin.Any**|  | [optional] |
+
+### Return type
+
+[**DisclosureSyncDocumenttypechecklistV1Response**](DisclosureSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

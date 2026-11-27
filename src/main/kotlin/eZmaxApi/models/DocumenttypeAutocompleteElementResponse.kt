@@ -31,7 +31,7 @@ import com.squareup.moshi.JsonClass
  * A Documenttype AutocompleteElement Response
  *
  * @param pkiDocumenttypeID The unique ID of the Documenttype
- * @param sDocumenttypeNameX The name of the Documenttype in the language of the requester
+ * @param sDocumenttypeNameX The name of the document type in the requester's language
  * @param bDocumenttypeIsactive Whether the documenttype is active or not
  */
 
@@ -42,7 +42,7 @@ data class DocumenttypeAutocompleteElementResponse (
     @Json(name = "pkiDocumenttypeID")
     val pkiDocumenttypeID: kotlin.Int,
 
-    /* The name of the Documenttype in the language of the requester */
+    /* The name of the document type in the requester's language */
     @Json(name = "sDocumenttypeNameX")
     val sDocumenttypeNameX: kotlin.String,
 

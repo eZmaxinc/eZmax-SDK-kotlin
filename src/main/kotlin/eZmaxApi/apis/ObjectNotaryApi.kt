@@ -35,9 +35,11 @@ import eZmaxApi.models.NotaryGetCommunicationCountV1Response
 import eZmaxApi.models.NotaryGetCommunicationListV1Response
 import eZmaxApi.models.NotaryGetCommunicationrecipientsV1Response
 import eZmaxApi.models.NotaryGetCommunicationsendersV1Response
+import eZmaxApi.models.NotaryGetDocumenttypechecklistV1Response
 import eZmaxApi.models.NotaryGetListV1Response
 import eZmaxApi.models.NotaryImportIntoEDMV1Request
 import eZmaxApi.models.NotaryImportIntoEDMV1Response
+import eZmaxApi.models.NotarySyncDocumenttypechecklistV1Response
 
 import com.squareup.moshi.Json
 
@@ -506,6 +508,79 @@ open class ObjectNotaryApi(basePath: kotlin.String = defaultBasePath, client: Ca
     }
 
     /**
+     * GET /1/object/notary/{pkiNotaryID}/getDocumenttypechecklist
+     * Retrieve Document type checklist
+     * 
+     * @param pkiNotaryID 
+     * @return NotaryGetDocumenttypechecklistV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun notaryGetDocumenttypechecklistV1(pkiNotaryID: kotlin.Int) : NotaryGetDocumenttypechecklistV1Response {
+        val localVarResponse = notaryGetDocumenttypechecklistV1WithHttpInfo(pkiNotaryID = pkiNotaryID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as NotaryGetDocumenttypechecklistV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/notary/{pkiNotaryID}/getDocumenttypechecklist
+     * Retrieve Document type checklist
+     * 
+     * @param pkiNotaryID 
+     * @return ApiResponse<NotaryGetDocumenttypechecklistV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun notaryGetDocumenttypechecklistV1WithHttpInfo(pkiNotaryID: kotlin.Int) : ApiResponse<NotaryGetDocumenttypechecklistV1Response?> {
+        val localVariableConfig = notaryGetDocumenttypechecklistV1RequestConfig(pkiNotaryID = pkiNotaryID)
+
+        return request<Unit, NotaryGetDocumenttypechecklistV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation notaryGetDocumenttypechecklistV1
+     *
+     * @param pkiNotaryID 
+     * @return RequestConfig
+     */
+    fun notaryGetDocumenttypechecklistV1RequestConfig(pkiNotaryID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/notary/{pkiNotaryID}/getDocumenttypechecklist".replace("{"+"pkiNotaryID"+"}", encodeURIComponent(pkiNotaryID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
      * enum for parameter eOrderBy
      */
      enum class EOrderByNotaryGetListV1(val value: kotlin.String) {
@@ -720,6 +795,83 @@ open class ObjectNotaryApi(basePath: kotlin.String = defaultBasePath, client: Ca
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/notary/{pkiNotaryID}/importIntoEDM".replace("{"+"pkiNotaryID"+"}", encodeURIComponent(pkiNotaryID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * POST /1/object/notary/{pkiNotaryID}/syncDocumenttypechecklist
+     * Synchronize Document type checklist
+     * 
+     * @param pkiNotaryID 
+     * @param body  (optional)
+     * @return NotarySyncDocumenttypechecklistV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun notarySyncDocumenttypechecklistV1(pkiNotaryID: kotlin.Int, body: kotlin.Any? = null) : NotarySyncDocumenttypechecklistV1Response {
+        val localVarResponse = notarySyncDocumenttypechecklistV1WithHttpInfo(pkiNotaryID = pkiNotaryID, body = body)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as NotarySyncDocumenttypechecklistV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /1/object/notary/{pkiNotaryID}/syncDocumenttypechecklist
+     * Synchronize Document type checklist
+     * 
+     * @param pkiNotaryID 
+     * @param body  (optional)
+     * @return ApiResponse<NotarySyncDocumenttypechecklistV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun notarySyncDocumenttypechecklistV1WithHttpInfo(pkiNotaryID: kotlin.Int, body: kotlin.Any?) : ApiResponse<NotarySyncDocumenttypechecklistV1Response?> {
+        val localVariableConfig = notarySyncDocumenttypechecklistV1RequestConfig(pkiNotaryID = pkiNotaryID, body = body)
+
+        return request<kotlin.Any, NotarySyncDocumenttypechecklistV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation notarySyncDocumenttypechecklistV1
+     *
+     * @param pkiNotaryID 
+     * @param body  (optional)
+     * @return RequestConfig
+     */
+    fun notarySyncDocumenttypechecklistV1RequestConfig(pkiNotaryID: kotlin.Int, body: kotlin.Any?) : RequestConfig<kotlin.Any> {
+        val localVariableBody = body
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/notary/{pkiNotaryID}/syncDocumenttypechecklist".replace("{"+"pkiNotaryID"+"}", encodeURIComponent(pkiNotaryID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

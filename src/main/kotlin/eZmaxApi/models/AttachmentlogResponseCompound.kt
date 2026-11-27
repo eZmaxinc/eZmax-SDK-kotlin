@@ -37,7 +37,7 @@ import com.squareup.moshi.JsonClass
  * @param objUser
  * @param dtAttachmentlogDatetime The created date
  * @param eAttachmentlogType
- * @param sAttachmentlogDetail The additionnal detail
+ * @param sAttachmentlogDetail The additional detail for the Attachmentlog
  */
 
 
@@ -61,7 +61,7 @@ data class AttachmentlogResponseCompound (
     @Json(name = "eAttachmentlogType")
     val eAttachmentlogType: FieldEAttachmentlogType,
 
-    /* The additionnal detail */
+    /* The additional detail for the Attachmentlog */
     @Json(name = "sAttachmentlogDetail")
     val sAttachmentlogDetail: kotlin.String? = null
 

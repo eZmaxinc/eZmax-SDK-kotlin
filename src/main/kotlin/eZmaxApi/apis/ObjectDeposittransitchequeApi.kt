@@ -34,9 +34,11 @@ import eZmaxApi.models.DeposittransitchequeGetCommunicationCountV1Response
 import eZmaxApi.models.DeposittransitchequeGetCommunicationListV1Response
 import eZmaxApi.models.DeposittransitchequeGetCommunicationrecipientsV1Response
 import eZmaxApi.models.DeposittransitchequeGetCommunicationsendersV1Response
+import eZmaxApi.models.DeposittransitchequeGetDocumenttypechecklistV1Response
 import eZmaxApi.models.DeposittransitchequeGetListV1Response
 import eZmaxApi.models.DeposittransitchequeImportIntoEDMV1Request
 import eZmaxApi.models.DeposittransitchequeImportIntoEDMV1Response
+import eZmaxApi.models.DeposittransitchequeSyncDocumenttypechecklistV1Response
 import eZmaxApi.models.HeaderAcceptLanguage
 
 import com.squareup.moshi.Json
@@ -506,6 +508,79 @@ open class ObjectDeposittransitchequeApi(basePath: kotlin.String = defaultBasePa
     }
 
     /**
+     * GET /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getDocumenttypechecklist
+     * Retrieve Document type checklist
+     * 
+     * @param pkiDeposittransitchequeID 
+     * @return DeposittransitchequeGetDocumenttypechecklistV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun deposittransitchequeGetDocumenttypechecklistV1(pkiDeposittransitchequeID: kotlin.Int) : DeposittransitchequeGetDocumenttypechecklistV1Response {
+        val localVarResponse = deposittransitchequeGetDocumenttypechecklistV1WithHttpInfo(pkiDeposittransitchequeID = pkiDeposittransitchequeID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as DeposittransitchequeGetDocumenttypechecklistV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getDocumenttypechecklist
+     * Retrieve Document type checklist
+     * 
+     * @param pkiDeposittransitchequeID 
+     * @return ApiResponse<DeposittransitchequeGetDocumenttypechecklistV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun deposittransitchequeGetDocumenttypechecklistV1WithHttpInfo(pkiDeposittransitchequeID: kotlin.Int) : ApiResponse<DeposittransitchequeGetDocumenttypechecklistV1Response?> {
+        val localVariableConfig = deposittransitchequeGetDocumenttypechecklistV1RequestConfig(pkiDeposittransitchequeID = pkiDeposittransitchequeID)
+
+        return request<Unit, DeposittransitchequeGetDocumenttypechecklistV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation deposittransitchequeGetDocumenttypechecklistV1
+     *
+     * @param pkiDeposittransitchequeID 
+     * @return RequestConfig
+     */
+    fun deposittransitchequeGetDocumenttypechecklistV1RequestConfig(pkiDeposittransitchequeID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getDocumenttypechecklist".replace("{"+"pkiDeposittransitchequeID"+"}", encodeURIComponent(pkiDeposittransitchequeID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
      * enum for parameter eOrderBy
      */
      enum class EOrderByDeposittransitchequeGetListV1(val value: kotlin.String) {
@@ -708,6 +783,83 @@ open class ObjectDeposittransitchequeApi(basePath: kotlin.String = defaultBasePa
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/deposittransitcheque/{pkiDeposittransitchequeID}/importIntoEDM".replace("{"+"pkiDeposittransitchequeID"+"}", encodeURIComponent(pkiDeposittransitchequeID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * POST /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/syncDocumenttypechecklist
+     * Synchronize Document type checklist
+     * 
+     * @param pkiDeposittransitchequeID 
+     * @param body  (optional)
+     * @return DeposittransitchequeSyncDocumenttypechecklistV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun deposittransitchequeSyncDocumenttypechecklistV1(pkiDeposittransitchequeID: kotlin.Int, body: kotlin.Any? = null) : DeposittransitchequeSyncDocumenttypechecklistV1Response {
+        val localVarResponse = deposittransitchequeSyncDocumenttypechecklistV1WithHttpInfo(pkiDeposittransitchequeID = pkiDeposittransitchequeID, body = body)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as DeposittransitchequeSyncDocumenttypechecklistV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/syncDocumenttypechecklist
+     * Synchronize Document type checklist
+     * 
+     * @param pkiDeposittransitchequeID 
+     * @param body  (optional)
+     * @return ApiResponse<DeposittransitchequeSyncDocumenttypechecklistV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun deposittransitchequeSyncDocumenttypechecklistV1WithHttpInfo(pkiDeposittransitchequeID: kotlin.Int, body: kotlin.Any?) : ApiResponse<DeposittransitchequeSyncDocumenttypechecklistV1Response?> {
+        val localVariableConfig = deposittransitchequeSyncDocumenttypechecklistV1RequestConfig(pkiDeposittransitchequeID = pkiDeposittransitchequeID, body = body)
+
+        return request<kotlin.Any, DeposittransitchequeSyncDocumenttypechecklistV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation deposittransitchequeSyncDocumenttypechecklistV1
+     *
+     * @param pkiDeposittransitchequeID 
+     * @param body  (optional)
+     * @return RequestConfig
+     */
+    fun deposittransitchequeSyncDocumenttypechecklistV1RequestConfig(pkiDeposittransitchequeID: kotlin.Int, body: kotlin.Any?) : RequestConfig<kotlin.Any> {
+        val localVariableBody = body
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/deposittransitcheque/{pkiDeposittransitchequeID}/syncDocumenttypechecklist".replace("{"+"pkiDeposittransitchequeID"+"}", encodeURIComponent(pkiDeposittransitchequeID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

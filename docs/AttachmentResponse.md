@@ -12,8 +12,8 @@
 | **eAttachmentType** | [**FieldEAttachmentType**](FieldEAttachmentType.md) |  |  |
 | **iAttachmentSize** | **kotlin.Int** | The size of the Attachment |  |
 | **sAttachmentMD5** | **kotlin.String** | The MD5 of the Attachment |  |
-| **bAttachmentDeleted** | **kotlin.Boolean** | Whether if it&#39;s deleted |  |
-| **bAttachmentValid** | **kotlin.Boolean** | Whether if it&#39;s valid |  |
+| **bAttachmentDeleted** | **kotlin.Boolean** | Whether the Attachment is deleted or not |  |
+| **bAttachmentValid** | **kotlin.Boolean** | Whether the Attachment is valid or not |  |
 | **eAttachmentVerified** | [**FieldEAttachmentVerified**](FieldEAttachmentVerified.md) |  |  |
 | **fkiComputerID** | **kotlin.Int** | The unique ID of the Computer |  [optional] |
 | **fkiAdjustmentID** | **kotlin.Int** | The unique ID of the Adjustment |  [optional] |
@@ -56,7 +56,7 @@
 | **fkiTranqcontractID** | **kotlin.Int** | The unique ID of the Tranqcontract |  [optional] |
 | **fkiTemplateID** | **kotlin.Int** | The unique ID of the Template |  [optional] |
 | **fkiDocumenttypechecklistID** | **kotlin.Int** | The unique ID of the Documenttypechecklist |  [optional] |
-| **sDocumenttypeNameX** | **kotlin.String** | The name of the Documenttype in the language of the requester |  [optional] |
+| **sDocumenttypeNameX** | **kotlin.String** | The name of the document type in the requester&#39;s language |  [optional] |
 | **fkiFolderID** | **kotlin.Int** | The unique ID of the Folder |  [optional] |
 | **fkiRejectedoffertopurchaseID** | **kotlin.Int** | The unique ID of the Rejectedoffertopurchase |  [optional] |
 | **fkiDisclosureID** | **kotlin.Int** | The unique ID of the Disclosure |  [optional] |

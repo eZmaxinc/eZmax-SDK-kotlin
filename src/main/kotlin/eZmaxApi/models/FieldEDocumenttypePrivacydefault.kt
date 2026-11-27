@@ -28,7 +28,7 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * The privacydefault of the Documenttype
+ * The default privacy setting for the document type
  *
  * Values: Administration,Administrator,All,Creator,Inscriptor,Myself,Seller
  */

@@ -10,7 +10,9 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**commissionadvanceGetCommunicationListV1**](ObjectCommissionadvanceApi.md#commissionadvanceGetCommunicationListV1) | **GET** /1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationList | Retrieve Communication list |
 | [**commissionadvanceGetCommunicationrecipientsV1**](ObjectCommissionadvanceApi.md#commissionadvanceGetCommunicationrecipientsV1) | **GET** /1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationrecipients | Retrieve Communication recipients |
 | [**commissionadvanceGetCommunicationsendersV1**](ObjectCommissionadvanceApi.md#commissionadvanceGetCommunicationsendersV1) | **GET** /1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationsenders | Retrieve Communication senders |
+| [**commissionadvanceGetDocumenttypechecklistV1**](ObjectCommissionadvanceApi.md#commissionadvanceGetDocumenttypechecklistV1) | **GET** /1/object/commissionadvance/{pkiCommissionadvanceID}/getDocumenttypechecklist | Retrieve Document type checklist |
 | [**commissionadvanceImportIntoEDMV1**](ObjectCommissionadvanceApi.md#commissionadvanceImportIntoEDMV1) | **POST** /1/object/commissionadvance/{pkiCommissionadvanceID}/importIntoEDM | Import attachments into the Commissionadvance |
+| [**commissionadvanceSyncDocumenttypechecklistV1**](ObjectCommissionadvanceApi.md#commissionadvanceSyncDocumenttypechecklistV1) | **POST** /1/object/commissionadvance/{pkiCommissionadvanceID}/syncDocumenttypechecklist | Synchronize Document type checklist |
 
 
 <a id="commissionadvanceBatchDownloadV1"></a>
@@ -297,6 +299,53 @@ Configure Authorization:
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+<a id="commissionadvanceGetDocumenttypechecklistV1"></a>
+# **commissionadvanceGetDocumenttypechecklistV1**
+> CommissionadvanceGetDocumenttypechecklistV1Response commissionadvanceGetDocumenttypechecklistV1(pkiCommissionadvanceID)
+
+Retrieve Document type checklist
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectCommissionadvanceApi()
+val pkiCommissionadvanceID : kotlin.Int = 56 // kotlin.Int | 
+try {
+    val result : CommissionadvanceGetDocumenttypechecklistV1Response = apiInstance.commissionadvanceGetDocumenttypechecklistV1(pkiCommissionadvanceID)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectCommissionadvanceApi#commissionadvanceGetDocumenttypechecklistV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectCommissionadvanceApi#commissionadvanceGetDocumenttypechecklistV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiCommissionadvanceID** | **kotlin.Int**|  | |
+
+### Return type
+
+[**CommissionadvanceGetDocumenttypechecklistV1Response**](CommissionadvanceGetDocumenttypechecklistV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
 <a id="commissionadvanceImportIntoEDMV1"></a>
 # **commissionadvanceImportIntoEDMV1**
 > CommissionadvanceImportIntoEDMV1Response commissionadvanceImportIntoEDMV1(pkiCommissionadvanceID, commissionadvanceImportIntoEDMV1Request)
@@ -333,6 +382,55 @@ try {
 ### Return type
 
 [**CommissionadvanceImportIntoEDMV1Response**](CommissionadvanceImportIntoEDMV1Response.md)
+
+### Authorization
+
+
+Configure Authorization:
+    ApiClient.apiKey["Authorization"] = ""
+    ApiClient.apiKeyPrefix["Authorization"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a id="commissionadvanceSyncDocumenttypechecklistV1"></a>
+# **commissionadvanceSyncDocumenttypechecklistV1**
+> CommissionadvanceSyncDocumenttypechecklistV1Response commissionadvanceSyncDocumenttypechecklistV1(pkiCommissionadvanceID, body)
+
+Synchronize Document type checklist
+
+### Example
+```kotlin
+// Import classes:
+//import eZmaxApi.infrastructure.*
+//import eZmaxApi.models.*
+
+val apiInstance = ObjectCommissionadvanceApi()
+val pkiCommissionadvanceID : kotlin.Int = 56 // kotlin.Int | 
+val body : kotlin.Any = Object // kotlin.Any | 
+try {
+    val result : CommissionadvanceSyncDocumenttypechecklistV1Response = apiInstance.commissionadvanceSyncDocumenttypechecklistV1(pkiCommissionadvanceID, body)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ObjectCommissionadvanceApi#commissionadvanceSyncDocumenttypechecklistV1")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ObjectCommissionadvanceApi#commissionadvanceSyncDocumenttypechecklistV1")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pkiCommissionadvanceID** | **kotlin.Int**|  | |
+| **body** | **kotlin.Any**|  | [optional] |
+
+### Return type
+
+[**CommissionadvanceSyncDocumenttypechecklistV1Response**](CommissionadvanceSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

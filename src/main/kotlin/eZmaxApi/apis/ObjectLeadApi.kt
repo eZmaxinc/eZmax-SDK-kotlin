@@ -35,9 +35,11 @@ import eZmaxApi.models.LeadGetCommunicationCountV1Response
 import eZmaxApi.models.LeadGetCommunicationListV1Response
 import eZmaxApi.models.LeadGetCommunicationrecipientsV1Response
 import eZmaxApi.models.LeadGetCommunicationsendersV1Response
+import eZmaxApi.models.LeadGetDocumenttypechecklistV1Response
 import eZmaxApi.models.LeadGetListV1Response
 import eZmaxApi.models.LeadImportIntoEDMV1Request
 import eZmaxApi.models.LeadImportIntoEDMV1Response
+import eZmaxApi.models.LeadSyncDocumenttypechecklistV1Response
 
 import com.squareup.moshi.Json
 
@@ -506,6 +508,79 @@ open class ObjectLeadApi(basePath: kotlin.String = defaultBasePath, client: Call
     }
 
     /**
+     * GET /1/object/lead/{pkiLeadID}/getDocumenttypechecklist
+     * Retrieve Document type checklist
+     * 
+     * @param pkiLeadID 
+     * @return LeadGetDocumenttypechecklistV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun leadGetDocumenttypechecklistV1(pkiLeadID: kotlin.Int) : LeadGetDocumenttypechecklistV1Response {
+        val localVarResponse = leadGetDocumenttypechecklistV1WithHttpInfo(pkiLeadID = pkiLeadID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as LeadGetDocumenttypechecklistV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/lead/{pkiLeadID}/getDocumenttypechecklist
+     * Retrieve Document type checklist
+     * 
+     * @param pkiLeadID 
+     * @return ApiResponse<LeadGetDocumenttypechecklistV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun leadGetDocumenttypechecklistV1WithHttpInfo(pkiLeadID: kotlin.Int) : ApiResponse<LeadGetDocumenttypechecklistV1Response?> {
+        val localVariableConfig = leadGetDocumenttypechecklistV1RequestConfig(pkiLeadID = pkiLeadID)
+
+        return request<Unit, LeadGetDocumenttypechecklistV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation leadGetDocumenttypechecklistV1
+     *
+     * @param pkiLeadID 
+     * @return RequestConfig
+     */
+    fun leadGetDocumenttypechecklistV1RequestConfig(pkiLeadID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/lead/{pkiLeadID}/getDocumenttypechecklist".replace("{"+"pkiLeadID"+"}", encodeURIComponent(pkiLeadID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
      * enum for parameter eOrderBy
      */
      enum class EOrderByLeadGetListV1(val value: kotlin.String) {
@@ -704,6 +779,83 @@ open class ObjectLeadApi(basePath: kotlin.String = defaultBasePath, client: Call
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/lead/{pkiLeadID}/importIntoEDM".replace("{"+"pkiLeadID"+"}", encodeURIComponent(pkiLeadID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * POST /1/object/lead/{pkiLeadID}/syncDocumenttypechecklist
+     * Synchronize Document type checklist
+     * 
+     * @param pkiLeadID 
+     * @param body  (optional)
+     * @return LeadSyncDocumenttypechecklistV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun leadSyncDocumenttypechecklistV1(pkiLeadID: kotlin.Int, body: kotlin.Any? = null) : LeadSyncDocumenttypechecklistV1Response {
+        val localVarResponse = leadSyncDocumenttypechecklistV1WithHttpInfo(pkiLeadID = pkiLeadID, body = body)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as LeadSyncDocumenttypechecklistV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /1/object/lead/{pkiLeadID}/syncDocumenttypechecklist
+     * Synchronize Document type checklist
+     * 
+     * @param pkiLeadID 
+     * @param body  (optional)
+     * @return ApiResponse<LeadSyncDocumenttypechecklistV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun leadSyncDocumenttypechecklistV1WithHttpInfo(pkiLeadID: kotlin.Int, body: kotlin.Any?) : ApiResponse<LeadSyncDocumenttypechecklistV1Response?> {
+        val localVariableConfig = leadSyncDocumenttypechecklistV1RequestConfig(pkiLeadID = pkiLeadID, body = body)
+
+        return request<kotlin.Any, LeadSyncDocumenttypechecklistV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation leadSyncDocumenttypechecklistV1
+     *
+     * @param pkiLeadID 
+     * @param body  (optional)
+     * @return RequestConfig
+     */
+    fun leadSyncDocumenttypechecklistV1RequestConfig(pkiLeadID: kotlin.Int, body: kotlin.Any?) : RequestConfig<kotlin.Any> {
+        val localVariableBody = body
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/lead/{pkiLeadID}/syncDocumenttypechecklist".replace("{"+"pkiLeadID"+"}", encodeURIComponent(pkiLeadID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

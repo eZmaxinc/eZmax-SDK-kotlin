@@ -33,9 +33,11 @@ import eZmaxApi.models.BuyercontractGetCommunicationCountV1Response
 import eZmaxApi.models.BuyercontractGetCommunicationListV1Response
 import eZmaxApi.models.BuyercontractGetCommunicationrecipientsV1Response
 import eZmaxApi.models.BuyercontractGetCommunicationsendersV1Response
+import eZmaxApi.models.BuyercontractGetDocumenttypechecklistV1Response
 import eZmaxApi.models.BuyercontractGetListV1Response
 import eZmaxApi.models.BuyercontractImportIntoEDMV1Request
 import eZmaxApi.models.BuyercontractImportIntoEDMV1Response
+import eZmaxApi.models.BuyercontractSyncDocumenttypechecklistV1Response
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.HeaderAcceptLanguage
 
@@ -506,6 +508,79 @@ open class ObjectBuyercontractApi(basePath: kotlin.String = defaultBasePath, cli
     }
 
     /**
+     * GET /1/object/buyercontract/{pkiBuyercontractID}/getDocumenttypechecklist
+     * Retrieve Document type checklist
+     * 
+     * @param pkiBuyercontractID 
+     * @return BuyercontractGetDocumenttypechecklistV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun buyercontractGetDocumenttypechecklistV1(pkiBuyercontractID: kotlin.Int) : BuyercontractGetDocumenttypechecklistV1Response {
+        val localVarResponse = buyercontractGetDocumenttypechecklistV1WithHttpInfo(pkiBuyercontractID = pkiBuyercontractID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as BuyercontractGetDocumenttypechecklistV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/buyercontract/{pkiBuyercontractID}/getDocumenttypechecklist
+     * Retrieve Document type checklist
+     * 
+     * @param pkiBuyercontractID 
+     * @return ApiResponse<BuyercontractGetDocumenttypechecklistV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun buyercontractGetDocumenttypechecklistV1WithHttpInfo(pkiBuyercontractID: kotlin.Int) : ApiResponse<BuyercontractGetDocumenttypechecklistV1Response?> {
+        val localVariableConfig = buyercontractGetDocumenttypechecklistV1RequestConfig(pkiBuyercontractID = pkiBuyercontractID)
+
+        return request<Unit, BuyercontractGetDocumenttypechecklistV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation buyercontractGetDocumenttypechecklistV1
+     *
+     * @param pkiBuyercontractID 
+     * @return RequestConfig
+     */
+    fun buyercontractGetDocumenttypechecklistV1RequestConfig(pkiBuyercontractID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/buyercontract/{pkiBuyercontractID}/getDocumenttypechecklist".replace("{"+"pkiBuyercontractID"+"}", encodeURIComponent(pkiBuyercontractID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
      * enum for parameter eOrderBy
      */
      enum class EOrderByBuyercontractGetListV1(val value: kotlin.String) {
@@ -710,6 +785,83 @@ open class ObjectBuyercontractApi(basePath: kotlin.String = defaultBasePath, cli
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/buyercontract/{pkiBuyercontractID}/importIntoEDM".replace("{"+"pkiBuyercontractID"+"}", encodeURIComponent(pkiBuyercontractID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * POST /1/object/buyercontract/{pkiBuyercontractID}/syncDocumenttypechecklist
+     * Synchronize Document type checklist
+     * 
+     * @param pkiBuyercontractID 
+     * @param body  (optional)
+     * @return BuyercontractSyncDocumenttypechecklistV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun buyercontractSyncDocumenttypechecklistV1(pkiBuyercontractID: kotlin.Int, body: kotlin.Any? = null) : BuyercontractSyncDocumenttypechecklistV1Response {
+        val localVarResponse = buyercontractSyncDocumenttypechecklistV1WithHttpInfo(pkiBuyercontractID = pkiBuyercontractID, body = body)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as BuyercontractSyncDocumenttypechecklistV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /1/object/buyercontract/{pkiBuyercontractID}/syncDocumenttypechecklist
+     * Synchronize Document type checklist
+     * 
+     * @param pkiBuyercontractID 
+     * @param body  (optional)
+     * @return ApiResponse<BuyercontractSyncDocumenttypechecklistV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun buyercontractSyncDocumenttypechecklistV1WithHttpInfo(pkiBuyercontractID: kotlin.Int, body: kotlin.Any?) : ApiResponse<BuyercontractSyncDocumenttypechecklistV1Response?> {
+        val localVariableConfig = buyercontractSyncDocumenttypechecklistV1RequestConfig(pkiBuyercontractID = pkiBuyercontractID, body = body)
+
+        return request<kotlin.Any, BuyercontractSyncDocumenttypechecklistV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation buyercontractSyncDocumenttypechecklistV1
+     *
+     * @param pkiBuyercontractID 
+     * @param body  (optional)
+     * @return RequestConfig
+     */
+    fun buyercontractSyncDocumenttypechecklistV1RequestConfig(pkiBuyercontractID: kotlin.Int, body: kotlin.Any?) : RequestConfig<kotlin.Any> {
+        val localVariableBody = body
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/buyercontract/{pkiBuyercontractID}/syncDocumenttypechecklist".replace("{"+"pkiBuyercontractID"+"}", encodeURIComponent(pkiBuyercontractID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

@@ -28,7 +28,7 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * The transactiontype of the Documenttype
+ * The transaction type for which the document is applicable
  *
  * Values: All,Inscriptor,InscriptorOnly,Seller,SellerOnly,InscriptorSeller
  */

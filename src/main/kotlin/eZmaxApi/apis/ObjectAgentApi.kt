@@ -34,9 +34,11 @@ import eZmaxApi.models.AgentGetCommunicationCountV1Response
 import eZmaxApi.models.AgentGetCommunicationListV1Response
 import eZmaxApi.models.AgentGetCommunicationrecipientsV1Response
 import eZmaxApi.models.AgentGetCommunicationsendersV1Response
+import eZmaxApi.models.AgentGetDocumenttypechecklistV1Response
 import eZmaxApi.models.AgentGetListV1Response
 import eZmaxApi.models.AgentImportIntoEDMV1Request
 import eZmaxApi.models.AgentImportIntoEDMV1Response
+import eZmaxApi.models.AgentSyncDocumenttypechecklistV1Response
 import eZmaxApi.models.CommonResponseError
 import eZmaxApi.models.HeaderAcceptLanguage
 
@@ -632,6 +634,79 @@ open class ObjectAgentApi(basePath: kotlin.String = defaultBasePath, client: Cal
     }
 
     /**
+     * GET /1/object/agent/{pkiAgentID}/getDocumenttypechecklist
+     * Retrieve Document type checklist
+     * 
+     * @param pkiAgentID 
+     * @return AgentGetDocumenttypechecklistV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun agentGetDocumenttypechecklistV1(pkiAgentID: kotlin.Int) : AgentGetDocumenttypechecklistV1Response {
+        val localVarResponse = agentGetDocumenttypechecklistV1WithHttpInfo(pkiAgentID = pkiAgentID)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as AgentGetDocumenttypechecklistV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * GET /1/object/agent/{pkiAgentID}/getDocumenttypechecklist
+     * Retrieve Document type checklist
+     * 
+     * @param pkiAgentID 
+     * @return ApiResponse<AgentGetDocumenttypechecklistV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun agentGetDocumenttypechecklistV1WithHttpInfo(pkiAgentID: kotlin.Int) : ApiResponse<AgentGetDocumenttypechecklistV1Response?> {
+        val localVariableConfig = agentGetDocumenttypechecklistV1RequestConfig(pkiAgentID = pkiAgentID)
+
+        return request<Unit, AgentGetDocumenttypechecklistV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation agentGetDocumenttypechecklistV1
+     *
+     * @param pkiAgentID 
+     * @return RequestConfig
+     */
+    fun agentGetDocumenttypechecklistV1RequestConfig(pkiAgentID: kotlin.Int) : RequestConfig<Unit> {
+        val localVariableBody = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.GET,
+            path = "/1/object/agent/{pkiAgentID}/getDocumenttypechecklist".replace("{"+"pkiAgentID"+"}", encodeURIComponent(pkiAgentID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
      * enum for parameter eOrderBy
      */
      enum class EOrderByAgentGetListV1(val value: kotlin.String) {
@@ -890,6 +965,83 @@ open class ObjectAgentApi(basePath: kotlin.String = defaultBasePath, client: Cal
         return RequestConfig(
             method = RequestMethod.POST,
             path = "/1/object/agent/{pkiAgentID}/importIntoEDM".replace("{"+"pkiAgentID"+"}", encodeURIComponent(pkiAgentID.toString())),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            requiresAuthentication = true,
+            body = localVariableBody
+        )
+    }
+
+    /**
+     * POST /1/object/agent/{pkiAgentID}/syncDocumenttypechecklist
+     * Synchronize Document type checklist
+     * 
+     * @param pkiAgentID 
+     * @param body  (optional)
+     * @return AgentSyncDocumenttypechecklistV1Response
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun agentSyncDocumenttypechecklistV1(pkiAgentID: kotlin.Int, body: kotlin.Any? = null) : AgentSyncDocumenttypechecklistV1Response {
+        val localVarResponse = agentSyncDocumenttypechecklistV1WithHttpInfo(pkiAgentID = pkiAgentID, body = body)
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as AgentSyncDocumenttypechecklistV1Response
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()} ${localVarError.body}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+     * POST /1/object/agent/{pkiAgentID}/syncDocumenttypechecklist
+     * Synchronize Document type checklist
+     * 
+     * @param pkiAgentID 
+     * @param body  (optional)
+     * @return ApiResponse<AgentSyncDocumenttypechecklistV1Response?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(IllegalStateException::class, IOException::class)
+    fun agentSyncDocumenttypechecklistV1WithHttpInfo(pkiAgentID: kotlin.Int, body: kotlin.Any?) : ApiResponse<AgentSyncDocumenttypechecklistV1Response?> {
+        val localVariableConfig = agentSyncDocumenttypechecklistV1RequestConfig(pkiAgentID = pkiAgentID, body = body)
+
+        return request<kotlin.Any, AgentSyncDocumenttypechecklistV1Response>(
+            localVariableConfig
+        )
+    }
+
+    /**
+     * To obtain the request config of the operation agentSyncDocumenttypechecklistV1
+     *
+     * @param pkiAgentID 
+     * @param body  (optional)
+     * @return RequestConfig
+     */
+    fun agentSyncDocumenttypechecklistV1RequestConfig(pkiAgentID: kotlin.Int, body: kotlin.Any?) : RequestConfig<kotlin.Any> {
+        val localVariableBody = body
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        localVariableHeaders["Content-Type"] = "application/json"
+        localVariableHeaders["Accept"] = "application/json"
+
+        return RequestConfig(
+            method = RequestMethod.POST,
+            path = "/1/object/agent/{pkiAgentID}/syncDocumenttypechecklist".replace("{"+"pkiAgentID"+"}", encodeURIComponent(pkiAgentID.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = true,

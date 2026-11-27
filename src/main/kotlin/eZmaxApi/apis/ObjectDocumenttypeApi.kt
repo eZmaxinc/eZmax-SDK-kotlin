@@ -351,8 +351,6 @@ open class ObjectDocumenttypeApi(basePath: kotlin.String = defaultBasePath, clie
          @Json(name = "bDocumenttypeShowagent_DESC") bDocumenttypeShowagent_DESC("bDocumenttypeShowagent_DESC"),
          @Json(name = "bDocumenttypeIsactive_ASC") bDocumenttypeIsactive_ASC("bDocumenttypeIsactive_ASC"),
          @Json(name = "bDocumenttypeIsactive_DESC") bDocumenttypeIsactive_DESC("bDocumenttypeIsactive_DESC"),
-         @Json(name = "bDocumenttypeIsrequired_ASC") bDocumenttypeIsrequired_ASC("bDocumenttypeIsrequired_ASC"),
-         @Json(name = "bDocumenttypeIsrequired_DESC") bDocumenttypeIsrequired_DESC("bDocumenttypeIsrequired_DESC"),
          @Json(name = "bDocumenttypeSale_ASC") bDocumenttypeSale_ASC("bDocumenttypeSale_ASC"),
          @Json(name = "bDocumenttypeSale_DESC") bDocumenttypeSale_DESC("bDocumenttypeSale_DESC"),
          @Json(name = "bDocumenttypeRental_ASC") bDocumenttypeRental_ASC("bDocumenttypeRental_ASC"),
@@ -401,7 +399,7 @@ open class ObjectDocumenttypeApi(basePath: kotlin.String = defaultBasePath, clie
     /**
      * GET /1/object/documenttype/getList
      * Retrieve Documenttype list
-     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---|  | Agentbroker&lt;br&gt;Buyercontract&lt;br&gt;Inscription&lt;br&gt;NotAuthenticated&lt;br&gt;Otherincome&lt;br&gt;RejectedOfferToPurchase | | eDocumenttypeEzcom | PromiseToPurchase&lt;br&gt;Annex&lt;br&gt;Modification&lt;br&gt;CounterOffer&lt;br&gt;Conditions&lt;br&gt;BankApproval&lt;br&gt;Other | | eDocumenttypePrivacydefault | Administration&lt;br&gt;Administrator&lt;br&gt;All&lt;br&gt;Creator&lt;br&gt;Inscriptor&lt;br&gt;Myself&lt;br&gt;Seller | | eDocumenttypeStatusdefault | Not required&lt;br&gt;Required | | eDocumenttypeSalebyowner | All&lt;br&gt;Yes&lt;br&gt;No | | eDocumenttypeSaledisplaybyrole | InscriptorSeller&lt;br&gt;Inscriptor&lt;br&gt;Seller | | eDocumenttypeTransactiontype | All&lt;br&gt;Inscriptor&lt;br&gt;InscriptorOnly&lt;br&gt;Seller&lt;br&gt;SellerOnly&lt;br&gt;InscriptorSeller | | eDocumenttypeRepossession | All&lt;br&gt;No&lt;br&gt;Yes |
+     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eDocumenttypeEzcom | PromiseToPurchase&lt;br&gt;Annex&lt;br&gt;Modification&lt;br&gt;CounterOffer&lt;br&gt;Conditions&lt;br&gt;BankApproval&lt;br&gt;Other | | eDocumenttypePrivacydefault | Administration&lt;br&gt;Administrator&lt;br&gt;All&lt;br&gt;Creator&lt;br&gt;Inscriptor&lt;br&gt;Myself&lt;br&gt;Seller | | eDocumenttypeStatusdefault | Not required&lt;br&gt;Required | | eDocumenttypeSalebyowner | All&lt;br&gt;Yes&lt;br&gt;No | | eDocumenttypeSaledisplaybyrole | InscriptorSeller&lt;br&gt;Inscriptor&lt;br&gt;Seller | | eDocumenttypeTransactiontype | All&lt;br&gt;Inscriptor&lt;br&gt;InscriptorOnly&lt;br&gt;Seller&lt;br&gt;SellerOnly&lt;br&gt;InscriptorSeller | | eDocumenttypeRepossession | All&lt;br&gt;No&lt;br&gt;Yes |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
      * @param iRowMax  (optional)
      * @param iRowOffset  (optional, default to 0)
@@ -437,7 +435,7 @@ open class ObjectDocumenttypeApi(basePath: kotlin.String = defaultBasePath, clie
     /**
      * GET /1/object/documenttype/getList
      * Retrieve Documenttype list
-     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---|  | Agentbroker&lt;br&gt;Buyercontract&lt;br&gt;Inscription&lt;br&gt;NotAuthenticated&lt;br&gt;Otherincome&lt;br&gt;RejectedOfferToPurchase | | eDocumenttypeEzcom | PromiseToPurchase&lt;br&gt;Annex&lt;br&gt;Modification&lt;br&gt;CounterOffer&lt;br&gt;Conditions&lt;br&gt;BankApproval&lt;br&gt;Other | | eDocumenttypePrivacydefault | Administration&lt;br&gt;Administrator&lt;br&gt;All&lt;br&gt;Creator&lt;br&gt;Inscriptor&lt;br&gt;Myself&lt;br&gt;Seller | | eDocumenttypeStatusdefault | Not required&lt;br&gt;Required | | eDocumenttypeSalebyowner | All&lt;br&gt;Yes&lt;br&gt;No | | eDocumenttypeSaledisplaybyrole | InscriptorSeller&lt;br&gt;Inscriptor&lt;br&gt;Seller | | eDocumenttypeTransactiontype | All&lt;br&gt;Inscriptor&lt;br&gt;InscriptorOnly&lt;br&gt;Seller&lt;br&gt;SellerOnly&lt;br&gt;InscriptorSeller | | eDocumenttypeRepossession | All&lt;br&gt;No&lt;br&gt;Yes |
+     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eDocumenttypeEzcom | PromiseToPurchase&lt;br&gt;Annex&lt;br&gt;Modification&lt;br&gt;CounterOffer&lt;br&gt;Conditions&lt;br&gt;BankApproval&lt;br&gt;Other | | eDocumenttypePrivacydefault | Administration&lt;br&gt;Administrator&lt;br&gt;All&lt;br&gt;Creator&lt;br&gt;Inscriptor&lt;br&gt;Myself&lt;br&gt;Seller | | eDocumenttypeStatusdefault | Not required&lt;br&gt;Required | | eDocumenttypeSalebyowner | All&lt;br&gt;Yes&lt;br&gt;No | | eDocumenttypeSaledisplaybyrole | InscriptorSeller&lt;br&gt;Inscriptor&lt;br&gt;Seller | | eDocumenttypeTransactiontype | All&lt;br&gt;Inscriptor&lt;br&gt;InscriptorOnly&lt;br&gt;Seller&lt;br&gt;SellerOnly&lt;br&gt;InscriptorSeller | | eDocumenttypeRepossession | All&lt;br&gt;No&lt;br&gt;Yes |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
      * @param iRowMax  (optional)
      * @param iRowOffset  (optional, default to 0)
