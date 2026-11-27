@@ -214,7 +214,6 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | *ObjectDiscussionmessageApi* | [**discussionmessageCreateObjectV1**](docs/ObjectDiscussionmessageApi.md#discussionmessagecreateobjectv1) | **POST** /1/object/discussionmessage | Create a new Discussionmessage |
 | *ObjectDiscussionmessageApi* | [**discussionmessageDeleteObjectV1**](docs/ObjectDiscussionmessageApi.md#discussionmessagedeleteobjectv1) | **DELETE** /1/object/discussionmessage/{pkiDiscussionmessageID} | Delete an existing Discussionmessage |
 | *ObjectDiscussionmessageApi* | [**discussionmessagePatchObjectV1**](docs/ObjectDiscussionmessageApi.md#discussionmessagepatchobjectv1) | **PATCH** /1/object/discussionmessage/{pkiDiscussionmessageID} | Patch an existing Discussionmessage |
-| *ObjectDocumenttypechecklistApi* | [**documenttypechecklistPatchObjectV1**](docs/ObjectDocumenttypechecklistApi.md#documenttypechecklistpatchobjectv1) | **PATCH** /1/object/documenttypechecklist/{pkiDocumenttypechecklistID} | Patch an existing Documenttypechecklist |
 | *ObjectDomainApi* | [**domainCreateObjectV1**](docs/ObjectDomainApi.md#domaincreateobjectv1) | **POST** /1/object/domain | Create a new Domain |
 | *ObjectDomainApi* | [**domainDeleteObjectV1**](docs/ObjectDomainApi.md#domaindeleteobjectv1) | **DELETE** /1/object/domain/{pkiDomainID} | Delete an existing Domain |
 | *ObjectDomainApi* | [**domainGetAutocompleteV2**](docs/ObjectDomainApi.md#domaingetautocompletev2) | **GET** /2/object/domain/getAutocomplete/{sSelector} | Retrieve Domain and IDs |
@@ -1386,9 +1385,6 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.DiscussionmessageRequestPatch](docs/DiscussionmessageRequestPatch.md)
  - [eZmaxApi.models.DiscussionmessageResponse](docs/DiscussionmessageResponse.md)
  - [eZmaxApi.models.DiscussionmessageResponseCompound](docs/DiscussionmessageResponseCompound.md)
- - [eZmaxApi.models.DocumenttypechecklistPatchObjectV1Request](docs/DocumenttypechecklistPatchObjectV1Request.md)
- - [eZmaxApi.models.DocumenttypechecklistPatchObjectV1Response](docs/DocumenttypechecklistPatchObjectV1Response.md)
- - [eZmaxApi.models.DocumenttypechecklistRequestPatch](docs/DocumenttypechecklistRequestPatch.md)
  - [eZmaxApi.models.DomainAutocompleteElementResponse](docs/DomainAutocompleteElementResponse.md)
  - [eZmaxApi.models.DomainCreateObjectV1Request](docs/DomainCreateObjectV1Request.md)
  - [eZmaxApi.models.DomainCreateObjectV1Response](docs/DomainCreateObjectV1Response.md)
@@ -2407,7 +2403,6 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
  - [eZmaxApi.models.FieldEDisclosureInteresttype](docs/FieldEDisclosureInteresttype.md)
  - [eZmaxApi.models.FieldEDiscussionRobot](docs/FieldEDiscussionRobot.md)
  - [eZmaxApi.models.FieldEDiscussionmessageStatus](docs/FieldEDiscussionmessageStatus.md)
- - [eZmaxApi.models.FieldEDocumenttypechecklistStatus](docs/FieldEDocumenttypechecklistStatus.md)
  - [eZmaxApi.models.FieldEErrorCode](docs/FieldEErrorCode.md)
  - [eZmaxApi.models.FieldEEzdoctemplatedocumentPrivacylevel](docs/FieldEEzdoctemplatedocumentPrivacylevel.md)
  - [eZmaxApi.models.FieldEEzmaxinvoicingPaymenttype](docs/FieldEEzmaxinvoicingPaymenttype.md)

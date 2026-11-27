@@ -579,9 +579,6 @@ docs/DiscussionmessageRequestCompound.md
 docs/DiscussionmessageRequestPatch.md
 docs/DiscussionmessageResponse.md
 docs/DiscussionmessageResponseCompound.md
-docs/DocumenttypechecklistPatchObjectV1Request.md
-docs/DocumenttypechecklistPatchObjectV1Response.md
-docs/DocumenttypechecklistRequestPatch.md
 docs/DomainAutocompleteElementResponse.md
 docs/DomainCreateObjectV1Request.md
 docs/DomainCreateObjectV1Response.md
@@ -1601,7 +1598,6 @@ docs/FieldECustomerType.md
 docs/FieldEDisclosureInteresttype.md
 docs/FieldEDiscussionRobot.md
 docs/FieldEDiscussionmessageStatus.md
-docs/FieldEDocumenttypechecklistStatus.md
 docs/FieldEErrorCode.md
 docs/FieldEEzdoctemplatedocumentPrivacylevel.md
 docs/FieldEEzmaxinvoicingPaymenttype.md
@@ -1993,7 +1989,6 @@ docs/ObjectDisclosureApi.md
 docs/ObjectDiscussionApi.md
 docs/ObjectDiscussionmembershipApi.md
 docs/ObjectDiscussionmessageApi.md
-docs/ObjectDocumenttypechecklistApi.md
 docs/ObjectDomainApi.md
 docs/ObjectElectronicfundstransferApi.md
 docs/ObjectElectronicfundstransfertransactionApi.md
@@ -2682,7 +2677,6 @@ src/main/kotlin/eZmaxApi/apis/ObjectDisclosureApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectDiscussionApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectDiscussionmembershipApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectDiscussionmessageApi.kt
-src/main/kotlin/eZmaxApi/apis/ObjectDocumenttypechecklistApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectDomainApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectElectronicfundstransferApi.kt
 src/main/kotlin/eZmaxApi/apis/ObjectElectronicfundstransfertransactionApi.kt
@@ -3392,9 +3386,6 @@ src/main/kotlin/eZmaxApi/models/DiscussionmessageRequestCompound.kt
 src/main/kotlin/eZmaxApi/models/DiscussionmessageRequestPatch.kt
 src/main/kotlin/eZmaxApi/models/DiscussionmessageResponse.kt
 src/main/kotlin/eZmaxApi/models/DiscussionmessageResponseCompound.kt
-src/main/kotlin/eZmaxApi/models/DocumenttypechecklistPatchObjectV1Request.kt
-src/main/kotlin/eZmaxApi/models/DocumenttypechecklistPatchObjectV1Response.kt
-src/main/kotlin/eZmaxApi/models/DocumenttypechecklistRequestPatch.kt
 src/main/kotlin/eZmaxApi/models/DomainAutocompleteElementResponse.kt
 src/main/kotlin/eZmaxApi/models/DomainCreateObjectV1Request.kt
 src/main/kotlin/eZmaxApi/models/DomainCreateObjectV1Response.kt
@@ -4413,7 +4404,6 @@ src/main/kotlin/eZmaxApi/models/FieldECustomerType.kt
 src/main/kotlin/eZmaxApi/models/FieldEDisclosureInteresttype.kt
 src/main/kotlin/eZmaxApi/models/FieldEDiscussionRobot.kt
 src/main/kotlin/eZmaxApi/models/FieldEDiscussionmessageStatus.kt
-src/main/kotlin/eZmaxApi/models/FieldEDocumenttypechecklistStatus.kt
 src/main/kotlin/eZmaxApi/models/FieldEErrorCode.kt
 src/main/kotlin/eZmaxApi/models/FieldEEzdoctemplatedocumentPrivacylevel.kt
 src/main/kotlin/eZmaxApi/models/FieldEEzmaxinvoicingPaymenttype.kt
